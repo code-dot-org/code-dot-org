@@ -108,6 +108,7 @@ sr:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': дијамант
             '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
@@ -167,6 +168,11 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': дијамант
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -287,6 +293,8 @@ sr:
             '"scale"': величина
       Mikelab_randomColor:
         text: насумична боја
+      Mikelab_repeatUntilComplete:
+        text: понављај заувек
       Mikelab_setBG:
         options:
           BG:

@@ -1,10 +1,5 @@
 ---
 title: Dziękujemy za rejestrację jako organizator Godziny Kodowania!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Dziękujemy za rejestrację jako organizator Godziny Kodowania!

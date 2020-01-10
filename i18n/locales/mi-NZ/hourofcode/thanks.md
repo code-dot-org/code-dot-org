@@ -1,10 +1,5 @@
 ---
 title: Tēnā koe i tō waitohu mai ki te taurima i tētahi Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Tēnā koe i tō waitohu mai ki te taurima i tētahi Hour of Code!

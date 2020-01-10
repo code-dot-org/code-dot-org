@@ -1,7 +1,5 @@
 ---
 title: 传播信息
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

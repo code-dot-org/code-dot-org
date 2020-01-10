@@ -177,6 +177,10 @@ si:
           PROPERTY:
             '"scale"': විශාලත්වය
             '"height"': උස
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -296,6 +300,8 @@ si:
             '"scale"': විශාලත්වය
       Mikelab_randomColor:
         text: අහඹු වර්ණයක්
+      Mikelab_repeatUntilComplete:
+        text: සදහටම නැවත කරන්න
       Mikelab_setBG:
         options:
           BG:

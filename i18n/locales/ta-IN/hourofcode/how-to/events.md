@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Event How-To
-layout: wide
-nav: how_to_nav
+title: Hour of Code நிகழ்வு எவ்வாறு செய்வது
 ---
 
 {{signup_button}}

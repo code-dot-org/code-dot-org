@@ -19,7 +19,7 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript
 } from '@cdo/apps/code-studio/hiddenStageRedux';
-import ConfirmAssignment from '../courseOverview/ConfirmAssignment';
+import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 
 const style = {
   root: {
@@ -58,6 +58,8 @@ class EditSectionForm extends Component {
     isNewSection: PropTypes.bool,
 
     //Comes from redux
+    initialScriptId: PropTypes.number,
+    initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
@@ -81,6 +83,7 @@ class EditSectionForm extends Component {
     const {section, hiddenStageState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
+
     const isScriptHidden =
       sectionId &&
       scriptId &&
@@ -184,12 +187,11 @@ class EditSectionForm extends Component {
           />
         </DialogFooter>
         {this.state.showHiddenUnitWarning && (
-          <ConfirmAssignment
+          <ConfirmHiddenAssignment
             sectionName={section.name}
             assignmentName={assignedScriptName}
             onClose={handleClose}
             onConfirm={this.handleConfirmAssign}
-            isHiddenFromSection={true}
           />
         )}
       </div>
@@ -201,6 +203,8 @@ export const UnconnectedEditSectionForm = EditSectionForm;
 
 export default connect(
   state => ({
+    initialCourseId: state.teacherSections.initialCourseId,
+    initialScriptId: state.teacherSections.initialScriptId,
     validGrades: state.teacherSections.validGrades,
     validAssignments: state.teacherSections.validAssignments,
     assignmentFamilies: state.teacherSections.assignmentFamilies,
@@ -235,6 +239,7 @@ const SectionNameField = ({value, onChange, disabled}) => (
       onChange={event => onChange(event.target.value)}
       style={style.sectionNameInput}
       disabled={disabled}
+      id="uitest-section-name"
     />
   </div>
 );

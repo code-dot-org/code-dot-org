@@ -10,6 +10,8 @@ require_relative '../i18n_script_utils'
 require_relative '../sync-codeorg-in'
 
 CLEAR = "\r\033[K"
+CODEORG_CONFIG_FILE = CROWDIN_PROJECTS["codeorg"][:config_file]
+CODEORG_IDENTITY_FILE = CROWDIN_PROJECTS["codeorg"][:identity_file]
 
 def download_translations(locale)
   system "crowdin --config #{CODEORG_CONFIG_FILE} --identity #{CODEORG_IDENTITY_FILE} -l #{locale} download translations"

@@ -47,6 +47,7 @@
   "jumpBackward": "lompat ke belakang ",
   "jumpForward": "lompat maju ",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Mengerakan artis tanpa meninggalkan bekas apapun.",
   "jumpEastTooltip": "Memindahkan karakter kearah timur tanpa ada bekas pada jalur yang dilalui.",

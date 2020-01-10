@@ -1,7 +1,5 @@
 ---
 title: Rozpowszechniaj inicjatywę
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

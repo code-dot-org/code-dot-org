@@ -118,6 +118,7 @@ lt:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': deimantą
             '"random"': atsitiktinis
       Dancelab_randomColor:
         text: Atsitiktinė spalva
@@ -177,6 +178,11 @@ lt:
           PROPERTY:
             '"scale"': dydis
             '"height"': aukštis
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': deimantą
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -312,6 +318,8 @@ lt:
             '"y"': y pozicija
       Mikelab_randomColor:
         text: Atsitiktinė spalva
+      Mikelab_repeatUntilComplete:
+        text: kartok visada
       Mikelab_setBG:
         options:
           BG:

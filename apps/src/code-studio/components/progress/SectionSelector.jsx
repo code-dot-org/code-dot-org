@@ -96,7 +96,7 @@ export const UnconnectedSectionSelector = SectionSelector;
 
 export default connect(
   state => ({
-    selectedSectionId: state.teacherSections.selectedSectionId,
+    selectedSectionId: state.teacherSections.selectedSectionId.toString(),
     sections: sectionsNameAndId(state.teacherSections)
   }),
   dispatch => ({

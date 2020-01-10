@@ -47,6 +47,7 @@
   "jumpBackward": "უკან გადახტომა",
   "jumpForward": "წინ გადახტომა",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "მხატვრის გადაადგილება კვალის დატოვების გარეშე.",
   "jumpEastTooltip": "გადააადგილებს მხატვარს აღმოსავლეთით კვალის დატოვების გარეშე.",

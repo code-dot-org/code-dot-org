@@ -23,11 +23,13 @@ sq:
     attributes:
       user:
         name: Shfaq Emrin
-        name_example: Shfaq Emrin<br/>(Psh. Cool Coder or Jane S.)
+        name_example: Shfaq Emrin (Psh. Cool Coder or Jane S.)
         email: Email
         parent_email: Prindi/ kujdestari email
         personal_email: Adresa vetjake e email-it <a href="%{url}">(kliko këtu nëse
           nuk ke një adresë email-i)</a>
+        personal_email_markdown: Adresa vetjake e email-it [(kliko këtu nëse nuk ke
+          një adresë email-i)](%{url})
         username: Emri i përdoruesit
         password: Fjalëkalimi
         password_confirmation: Konfirmimi i fjalëkalimit
@@ -39,9 +41,14 @@ sq:
         finish_sign_up_header: Përfundo krijimin e llogarisë
         finish_sign_up_subheader: Plotëso informacionin e mëposhtëm për të përfunduar
           krijimin e një llogarie në Code.org <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Plotëso informacionin e mëposhtëm për të
+          përfunduar krijimin e një llogarie në Code.org **%{email}**.
         finish_sign_up_subheader_provider: Plotëso informacionin e mëposhtëm për të
           përfunduar krijimin e një llogarie në Code.org <strong>%{provider}</strong>
           për <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Plotëso informacionin e mëposhtëm
+          për të përfunduar krijimin e një llogarie në Code.org **%{provider}** për
+          **%{email}**.
         error:
           future: nuk mund të jetë në të ardhmen
   beta: beta
@@ -121,6 +128,10 @@ sq:
       menaxhuar klasën tuaj. <a href="/"> Ju mund të shfletoni fazat e  ndryshme dhe
       puzzles </a>   pa një llogari, por do t'ju duhet të rregjistroheni  për të ruajtur
       progresin dhe projektet tuaja.
+    overview_markdown: Rregjistrohuni për një llogari për të ndjekur progresin tuaj
+      ose të menaxhuar klasën tuaj. [Ju mund të shfletoni fazat e ndryshme dhe puzzles](/)
+      pa një llogari, por do t'ju duhet të rregjistroheni për të ruajtur progresin
+      dhe projektet tuaja.
     hoc_already_signed_up_heading: 'Fillo pa u loguar '
     hoc_already_signed_up_content: |2-
 
@@ -693,6 +704,13 @@ sq:
       që kjo të përcaktoj një standard i ri për privatësinë e studentëve në shkollat
       teknologjike. Ne ju kemi  dërguar një përmbledhje të ndryshimeve të tjera përmes
       emailit.'
+    intro_desc_markdown: 'Ne kemi përditësuar kushtet tona të sherbimit dhe Rregullat
+      e Privatësisë, siç tregohet më poshtë. Ndryshimet janë në fuqi që nga 24 gusht
+      2016. Ndryshimi më i madh: ne _nuk do të ruajmë me adresat e e-mail për llogaritë
+      e studentëve në Code Studio<!-- i-->Kjo është një arritje e madhe për ne dhe
+      ne shpresojmë që kjo të përcaktoj një standard i ri për privatësinë e studentëve
+      në shkollat teknologjike. Ne ju kemi dërguar një përmbledhje të ndryshimeve
+      të tjera përmes emailit._'
     intro_instructions: Ju do të duhet të pranoni këto kushte të reja për studentët
       nën moshën 13 në klasën tuaj për të pasur qasje të plotë në të gjitha vecoritë
       e fundit në Code Studio. Kur regjistrimit një llogari për një student nën 13,
@@ -705,6 +723,10 @@ sq:
     accept_label: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
       Kushteve të Shërbimit </a> dhe <a href="%{privacy_url}" target="_blank"> Politika
       e Privatësisë </ a>
+    accept_label_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
     accept: Pranoj
     print: Printo
     reminder_desc: Unë pajtohem me përditësimet e <a href="%{tos_url}" Kushtet e target="_blank">
@@ -712,6 +734,12 @@ sq:
       e Privatësisë </ a>. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini
       re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion
       për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.
+    reminder_desc_markdown: |-
+      Unë pajtohem me përditësimet e [Kushteve të Shërbimit](%{tos_url}) dhe [Politika e Privatësisë](%{privacy_url})
+
+      <!-- a-->
+
+      [. Ju lutem lexoni me kujdes këto para pranimit të tyre. Vini re se mjetet tona të mësimdhënies së JavaScript mund të jenë në dispozicion për studentët tuaj para se të pranoni në mënyrë specifike kushtet e përditësuara.](%{privacy_url})
     review_terms: Rishikimi i kushteve të përditësimit
   school_info_interstitial:
     save: Ruaj
@@ -732,6 +760,9 @@ sq:
     decline: Mbyll
   zendesk_too_young_message: Na vjen keq, përdoruesit e vegjël nuk mund të futen tek
     faqja jonë e suportit. Ju mund të shfletosh në <a href="http://support.code.org">support.code.org</a>
+    pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.
+  zendesk_too_young_message_markdown: Na vjen keq, përdoruesit e vegjël nuk mund të
+    futen tek faqja jonë e suportit. Ju mund të shfletosh në [support.code.org](http://support.code.org)
     pa u loguar ose pyet prindërit ose mësuesit e tu që të na kontaktojnë.
   progress:
     not_started: nuk është nisur
@@ -840,6 +871,7 @@ sq:
     csp_functions: funksione
     csp_lists: Listat
     csp_loops: 'cikle '
+    k5_next_steps: Hapat e ardhshme
   external_links:
     disclaimer: Mohim
     leaving_domain: Ju tani jeni duke e lënë këtë domain, në një vend që nuk është

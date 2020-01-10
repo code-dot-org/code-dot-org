@@ -21,7 +21,8 @@ import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgress
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
-  setCurrentUserId
+  setCurrentUserId,
+  setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
 
@@ -33,6 +34,7 @@ const validScripts = scriptData.validScripts;
 const studentScriptIds = scriptData.studentScriptIds;
 const validCourses = scriptData.validCourses;
 const currentUserId = scriptData.currentUserId;
+const hasSeenStandardsReportInfo = scriptData.hasSeenStandardsReportInfo;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
 $(document).ready(function() {
@@ -50,6 +52,9 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setCurrentUserId(currentUserId));
+  store.dispatch(
+    setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
+  );
   store.dispatch(setSection(section));
   store.dispatch(setSections(sections));
   store.dispatch(selectSection(section.id));

@@ -1,7 +1,5 @@
 ---
 title: '''Hour of Code'' Persbericht voor Ambtenaren'
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

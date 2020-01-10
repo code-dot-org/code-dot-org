@@ -1,7 +1,5 @@
 ---
 title: ملخصات وإحصائيات مفيدة
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -44,7 +42,7 @@ nav: promote_nav
 
 ## شارك هذه على مزاقع التواصل الاجتماعي وعبر البريد الالكتروني
 
-[![صورة](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![صورة](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![صورة](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

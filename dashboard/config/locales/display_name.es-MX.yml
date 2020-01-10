@@ -2,6 +2,7 @@
 es-MX:
   data:
     display_name:
+      AB_Debug_Artist1: Depuración del Artista 1 (AB)
       Alien Defender: Defensor alienígena
       App Lab Intro 8 - Video Design Mode: 'Video: modo de diseño'
       App Lab Intro 8 - Video Getting Started: 'Video: primeros pasos'
@@ -421,8 +422,11 @@ es-MX:
       CSD U4L16 autoSFLP_2019: Resumen de la lección
       CSD U5 Amazon Data Video: Recopilar información sobre los usuarios
       CSD U5 Amazon Data Video_2018: Recopilar información sobre los usuarios
+      CSD U5 Amazon Data Video_2019: Cómo Amazon utiliza los datos
+      CSD U5 Netflix Data Video_2019: Cómo Netflix utiliza los datos
       CSD U5 Waze Data Video: Recopilar información sobre los usuarios
       CSD U5 Waze Data Video_2018: Recopilar información sobre los usuarios
+      CSD U5 Waze Data Video_2019: Cómo Waze utiliza los datos
       CSD U5 binary video: Binario y datos
       CSD U5 binary video_2018: Binario y datos
       CSD U5 binary video_2019: Binario y datos
@@ -639,6 +643,7 @@ es-MX:
       CSDU4 Project Import: 'Proyecto de aplicación: importación de pantallas'
       CSDU4 Project Import_2018: 'Proyecto de aplicación: importación de pantallas'
       CSDU4 Project Import_2019: 'Proyecto de aplicación: importación de pantallas'
+      CSDU6 - UI and Inputs - getNumber: obtenerNúmero
       CSDU6 - board event challenge_2018: Tarjeta de sonido
       CSDU6 - board event challenge_2019: Tarjeta de sonido
       CSDU6 buzzer 2d arrays_2018: Arreglos 2D
@@ -666,12 +671,20 @@ es-MX:
       CourseF_Project_SpriteLab: Proyecto del Laboratorio de sprites del Curso F
       CourseF_Project_SpriteLab_2019: Proyecto del Laboratorio de sprites del Curso
         F
+      Dance_Party_extras_alternate_2019: Ida y vuelta
       Dance_Party_extras_battle: Grupos de baile
+      Dance_Party_extras_battle_2019: Grupos de baile
       Dance_Party_extras_every_beat: Negras
+      Dance_Party_extras_every_beat_2019: Negras
       Dance_Party_extras_layout: Poner en Formación
+      Dance_Party_extras_layout_2019: Poner en Formación
+      Dance_Party_extras_mixed_2019: Más botones
       Dance_Party_extras_on_beat: Bajos, medios y agudos
+      Dance_Party_extras_on_beat_2019: Bajos, medios y agudos
       Dance_Party_extras_speed: Acelera, reduce la velocidad
+      Dance_Party_extras_speed_2019: Acelera, reduce la velocidad
       Dance_Party_extras_visible: "¿A dónde fueron?"
+      Dance_Party_extras_visible_2019: "¿A dónde fueron?"
       Final Personal Website: Sitio web personal final
       Final Personal Website_2018: Sitio web personal final
       Final Personal Website_2019: Sitio web personal final
@@ -714,6 +727,9 @@ es-MX:
       Making Music_2018: Crear música
       Making Music_2019: Crear música
       OPD-K5 WhatIsCS: "¿Qué son las Ciencias de la Computación?"
+      Oceans_Video_Machine_Learning: 'Video: aprendizaje automático'
+      Oceans_Video_Societal_Implications: 'Video: implicaciones para la sociedad'
+      Oceans_Video_Training_Data: 'Video: datos de entrenamiento'
       Revisiting the Counter Pattern_2018: Volver al patrón del contador
       Revisiting the Counter Pattern_2019: Volver al patrón del contador
       Robot Doodle_2018: Dibujo de robot

@@ -1,7 +1,5 @@
 ---
 title: Puka-aratohu mā ngā āpiha tūmatanui
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

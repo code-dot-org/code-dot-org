@@ -1,10 +1,5 @@
 ---
 title: Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet hast!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Danke, dass du dich als Veranstalter für eine Hour of Code angemeldet hast!

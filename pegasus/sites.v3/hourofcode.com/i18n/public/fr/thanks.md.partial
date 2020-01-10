@@ -3,20 +3,8 @@ title: Merci de vous être inscrit(e) pour organiser une Heure de Code !
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Une Heure de Code va arriver
-  og:description: Une Heure de Code est un mouvement mondial qui touche des dizaines
-    de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Une Heure de Code va arriver
-  twitter:description: Une Heure de Code est un mouvement mondial qui touche des dizaines
-    de millions d’élèves dans plus de 180 pays et plus de 30 langues. De 4 à 104 ans.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Merci de vous être inscrit(e) pour organiser une Heure de Code !

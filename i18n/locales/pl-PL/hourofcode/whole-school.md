@@ -1,6 +1,5 @@
 ---
 title: Uczestnictwo całej szkoły
-layout: wide
 ---
 
 {{ signup_button }}

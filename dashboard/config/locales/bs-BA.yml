@@ -437,6 +437,8 @@ bs:
       cta: Nauči kako
     dance:
       title: Plesna zabava
+    dance-2019:
+      title: Plesna zabava
     hoc:
       body: Isprobajte osnove informatike. Milijuni su im dali šansu.
     flappy:
@@ -581,6 +583,10 @@ bs:
     stranicu za podršku. Možeš pregledavati <a href="http://support.code.org"> support.code.org</a>
     bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
     tebe.
+  zendesk_too_young_message_markdown: Nažalost, mlađi korisnici se ne mogu prijaviti
+    na našu stranicu za podršku. Možeš pregledavati [support.code.org](http://support.code.org)
+    bez prijavljivanja ili pitaj roditelje ili učitelja da nas kontaktiraju umjesto
+    tebe.
   progress:
     not_started: nije započeto
     in_progress: u toku
@@ -670,6 +676,7 @@ bs:
     csp_functions: Funkcije
     csp_lists: Liste
     csp_loops: Petlje
+    k5_next_steps: Slijedeći Koraci
   external_links:
     leaving_domain: Sada napuštate ovu domenu, na stranicu koja nije rukovođena od
       strane Code.org-a.

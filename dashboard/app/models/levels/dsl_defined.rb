@@ -101,6 +101,7 @@ class DSLDefined < Level
 
   def self.create_from_level_builder(params, level_params, old_name = nil)
     text = level_params[:dsl_text] || params[:dsl_text]
+    text = set_editor_experiment(text, level_params[:editor_experiment])
     transaction do
       # Parse data, save updated level data to database
       data, _ = dsl_class.parse(text, '')
@@ -166,9 +167,7 @@ class DSLDefined < Level
     raise "name not formatted correctly in dsl text for level: '#{name}'" if old_dsl && old_dsl == new_dsl
 
     if new_dsl && editor_experiment
-      # define editor_experiment on the second line of the dsl file.
-      index = new_dsl.index("\n")
-      new_dsl = new_dsl.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+      new_dsl = self.class.set_editor_experiment(new_dsl, editor_experiment)
     end
 
     level_params = {}
@@ -201,6 +200,19 @@ class DSLDefined < Level
   # don't allow markdown in DSL levels unless child class overrides this
   def supports_markdown?
     false
+  end
+
+  def self.set_editor_experiment(dsl_text, editor_experiment)
+    return dsl_text unless editor_experiment
+
+    # remove previous editor experiment
+    dsl_text = dsl_text.sub(/\neditor_experiment.*/, '')
+
+    # define editor_experiment on the second line of the dsl file.
+    index = dsl_text.index("\n")
+    dsl_text = dsl_text.insert(index, "\neditor_experiment '#{editor_experiment}'") if index
+
+    dsl_text
   end
 
   private

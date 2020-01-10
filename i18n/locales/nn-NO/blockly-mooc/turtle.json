@@ -47,6 +47,7 @@
   "jumpBackward": "hopp bakover med",
   "jumpForward": "hopp framover med",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Flyttar kunstnaren sporlaust.",
   "jumpEastTooltip": "Flyttar kunstaren sporlaust austover utan å legge att spor.",

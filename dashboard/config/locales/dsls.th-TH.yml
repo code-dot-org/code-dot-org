@@ -8,7 +8,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Algorithms Multi 2:
@@ -17,7 +17,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -52,14 +52,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: คำถามแบบปรนัย
         questions:
         - text: คุณมีวิธีที่จะทำให้การวางลำดับนี้ง่ายขึ้นด้วยการใช้ลูปได้อย่างไร?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -80,7 +80,7 @@ th-TH:
         - text: โปรแกรมไหนใช้สร้างรูปนี้?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: จับคู่เขาวงกต
@@ -104,7 +104,7 @@ th-TH:
             บล็อก ` turn left` คือบล็อกให้ ` หันซ้าย `
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -114,7 +114,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: คำถามแบบปรนัย
         questions:
@@ -122,7 +122,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         title: ศิลปิน คำถามแบบปรนัยในเรื่องการดีบั๊ก 1
         questions:
@@ -135,7 +135,7 @@ th-TH:
             block: turn left by 18 degrees คือบล็อกที่ศิลปินหันซ้ายไป 18 องศา
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -143,7 +143,7 @@ th-TH:
         questions:
         - text: เลือกบล็อกที่ถูกต้องเพื่อวาดรูปนี้โดยใช้ฟังก์ชันที่กำหนด
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -166,7 +166,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: ลูปกับศิลปิน คำถามแบบปรนัย
@@ -176,7 +176,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: การจับคู่ สำหรับ ศิลปิน
         content1: จับคู่รูปทรงเรขาคณิต กับ บล๊อก ที่เข้ากันได้
@@ -196,14 +196,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: เลือกบล็อกที่ดีที่สุด
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -216,7 +216,7 @@ th-TH:
             block: move forward เป็น บล็อก ไปข้างหน้า
             block: get nectar เป็น บล็อก เก็บน้ำหวาน
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -237,7 +237,7 @@ th-TH:
         - text: กลุ่มบล๊อกไหนเป็นคำตอบที่ถูกต้อง?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -261,6 +261,7 @@ th-TH:
         - {}
         - {}
         - text: กล้วยหอม
+          correct: true
       4-5 Computational Thinking Match 1:
         title: การจับคู่
         questions:
@@ -279,7 +280,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Crowdsourcing Multi 1:
@@ -288,13 +289,14 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: คำถามแบบปรนัย
         questions:
         - {}
         answers:
         - text: ทำความสะอาดห้องของคุณ
+          correct: true
         - text: กินขนมหวานของคุณ
         - text: หวีผมของคุณ
         - text: ล้างหน้าของคุณ
@@ -305,6 +307,7 @@ th-TH:
         answers:
         - text: วัดเกิดของคุณ
         - text: อาหารที่คุณโปรดปราน
+          correct: true
         - text: ที่อยู่ของคุณ
         - {}
       4-5 Internet Multi 1:
@@ -315,14 +318,14 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: คำถามแบบปรนัย
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -331,7 +334,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -352,7 +355,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: ลูปกับศิลปิน คำถามแบบปรนัย
@@ -360,7 +363,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -369,7 +372,7 @@ th-TH:
         - text: บล็อกใดวาดสี่เหลี่ยมผืนผ้าที่มีเส้นรอบรูปเท่ากับ 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -379,7 +382,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: เงื่อนไขกับผึ้ง คำถามแบบปรนัย
@@ -388,7 +391,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: การดีบั๊ก ของผึ้ง คำถามแบบปรนัย
@@ -396,7 +399,7 @@ th-TH:
         - text: ฟังก์ชั่นอันไหนทำงานตามภาพ?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -404,7 +407,7 @@ th-TH:
         questions:
         - text: บล็อกไหนบ้างที่จะแก้ปริศนาอันนี้?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -413,7 +416,7 @@ th-TH:
         questions:
         - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -434,7 +437,7 @@ th-TH:
         questions:
         - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -443,19 +446,19 @@ th-TH:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -576,7 +579,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -585,7 +588,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -594,7 +597,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -602,19 +605,19 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -649,7 +652,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -657,7 +660,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -665,14 +668,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -680,7 +683,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -688,7 +691,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -746,7 +749,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -754,7 +757,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -762,14 +765,14 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 setProperty predict multi:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -777,8 +780,32 @@ th-TH:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+      Dance_Party_extras_intro:
+        markdown: "# เต้นรำกันต่อ!\n\nสำหรับส่วนที่ 2 คุณจะได้สร้างโปรเจ็กต์ของคุณเองจะไม่มีเกมปริศนาอีกแล้ว
+          แต่จะเป็นโปรเจ็กต์มากมายที่แสดงวิธีสร้างเกม Dance Party ที่สลับซับซ้อนยิ่งขึ้น\n\nคุณทำงานในเลเวลเหล่านี้ได้
+          _ในลำดับใดก็ได้_ข้ามไปดูสิว่า เราจะทำกิจกรรมต่างๆ ได้อย่างไรในเลเวลก่อนหน้านี้
+          หรือรวมแนวคิดของโปรเจ็กต์ต่างๆ เข้าด้วยกันได้อย่างไรลองทำทั้งหมดดู ก่อนเลือกอันที่คุณชอบมากที่สุด
+          แล้วใช้เวลาเพื่อเพิ่มเติมรายละเอียดลงในโปรเจ็กต์นั้นเพื่อสะท้อนความเป็นตัวตนของคุณ\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">ทำต่อ</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:10px\">\n
+          <a href=\"2\"> \n<h2>\n เดินหน้าถอยหลัง \n</h2> \n\n<img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin:10px\"> \n<a href=\"3\"> \n<h2>
+          \nปุ่มมากกว่านี้ \n</h2>\n\n <img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\">\n\n <a href=\"4\">\n
+          <h2>\n จัดรูปแบบกลุ่มนักเต้น\n </h2>\n\n <img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\"> \n<a href=\"5\"> \n<h2>\n
+          พวกเขาหายไปไหนกัน\n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin:10px\">\n <a href=\"6\">
+          \n<h2> \nนักเต้น\n </h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"7\"> \n<h2>\n
+          โน้ตตัวดำ \n</h2>\n\n <img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"8\">\n
+          <h2> \nเสียงต่ำ เสียงกลาง เสียงสูง \n</h2>\n\n <img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div>\n\n <div style=\"float: left; margin:10px\">\n <a href=\"9\">\n <h2>
+          \nเร่งจังหวะขึ้น ลดความเร็วลง \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
       Internet Simulator Setup 2:
         title: ชื่อเรื่อง
       K-1 Artist 1 Multi 1:
@@ -787,7 +814,7 @@ th-TH:
         - text: บล็อกไหนบ้างที่แก้ปริศนาอันนี้?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -795,7 +822,7 @@ th-TH:
         questions:
         - text: บล็อกกลุ่มไหน ที่วาดออกมาเป็นรูปสี่เหลี่ยมจตุรัส?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -818,7 +845,7 @@ th-TH:
         - text: มีน้ำหวานจากเกสรดอกไม้อยู่จำนวนเท่าใด?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -829,7 +856,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: การจับคู่
         content2: จับคู่บล๊อก
@@ -860,13 +887,13 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: คำถามแบบปรนัย
         questions:
         - text: คุณมีวิธีที่จะทำให้การวางลำดับนี้ง่ายขึ้นด้วยการใช้ลูปได้อย่างไร?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -875,7 +902,7 @@ th-TH:
         - text: ลูกศรอันไหนที่จะพาเจ้าเฉิ่มนี่ไปยังสมบัติได้?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -883,7 +910,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -891,7 +918,7 @@ th-TH:
         questions:
         - text: ทางเลือกใดที่ควรจะเป็นบล็อกสุดท้าย?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -900,7 +927,7 @@ th-TH:
         questions:
         - text: บล็อกทำซ้ำ(Repeat block) อันไหนที่เหมือนกัน?.
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -910,7 +937,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: การจับคู่
         content2: จับคู่ปริศนากับบล็อก
@@ -932,7 +959,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: คำถามแบบปรนัย
@@ -940,7 +967,7 @@ th-TH:
         - text: อัลกอริทึมอันไหนที่ช่วยพาเจ้าเฉิ่มนี่ไปที่ดอกไม้ได้?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -950,14 +977,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: คำถามแบบปรนัย
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: คำถามแบบปรนัย
@@ -965,7 +992,7 @@ th-TH:
         - text: บล็อกกลุ่มไหนสะกดคำว่า "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: คำถามแบบปรนัย
@@ -973,7 +1000,7 @@ th-TH:
         - text: สะกดเป็นคำว่าอะไร?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       Multi-Screen Apps:
         title: ชื่อเรื่อง
@@ -988,7 +1015,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: ไม่ถูกต้อง
       behaviors 4 predict:
@@ -996,7 +1023,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: ไม่ถูกต้อง
       courseC_multi_artist_prog6_predict1:
@@ -1005,7 +1032,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1013,7 +1040,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1021,38 +1048,41 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1060,7 +1090,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1068,7 +1098,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1076,7 +1106,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1084,7 +1114,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1092,7 +1122,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1101,7 +1131,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1109,7 +1139,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1117,14 +1147,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1132,7 +1162,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1140,7 +1170,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1151,6 +1181,7 @@ th-TH:
         - text: ข
         - text: ค
         - text: ง
+          correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1159,6 +1190,7 @@ th-TH:
         - text: ข
         - text: ค
         - text: ง
+          correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1167,11 +1199,13 @@ th-TH:
         - text: ข
         - text: ค
         - text: ง
+          correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
         - text: ก
+          correct: true
         - text: ข
         - text: ค
         - {}
@@ -1180,6 +1214,7 @@ th-TH:
         - {}
         answers:
         - text: ก
+          correct: true
         - text: ข
         - text: ค
         - {}
@@ -1188,6 +1223,7 @@ th-TH:
         - {}
         answers:
         - text: ก
+          correct: true
         - text: ข
         - text: ค
         - {}
@@ -1196,7 +1232,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1204,7 +1240,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1212,14 +1248,14 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1227,7 +1263,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1235,7 +1271,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1245,7 +1281,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1253,7 +1289,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1261,31 +1297,34 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1293,7 +1332,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1301,7 +1340,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1309,7 +1348,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1317,14 +1356,14 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1332,7 +1371,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1340,7 +1379,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1348,7 +1387,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1357,7 +1396,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1365,7 +1404,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1373,13 +1412,13 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1387,7 +1426,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1395,7 +1434,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1404,7 +1443,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1412,7 +1451,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1420,7 +1459,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1428,14 +1467,14 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1446,14 +1485,14 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1461,7 +1500,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1470,7 +1509,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1478,7 +1517,7 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1486,13 +1525,13 @@ th-TH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1500,7 +1539,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1509,7 +1548,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1517,7 +1556,7 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1525,13 +1564,13 @@ th-TH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1539,7 +1578,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1547,7 +1586,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1555,7 +1594,7 @@ th-TH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1564,14 +1603,14 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1580,7 +1619,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1588,7 +1627,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1596,7 +1635,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1604,14 +1643,14 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1620,7 +1659,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1628,7 +1667,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1636,7 +1675,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1644,7 +1683,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1652,7 +1691,7 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1660,6 +1699,6 @@ th-TH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

@@ -1,7 +1,5 @@
 ---
 title: Blurbs and useful stats
-layout: wide
-nav: promote_nav
 ---
 
 <a id="blurb"></a>
@@ -44,7 +42,7 @@ Code.org என்பது ஒரு 501c3 பொது லாபமல்ல�
 
 ## Share these on social media and in emails
 
-[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media//fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![[உங்கள் பெயர்], [தலைப்பு]](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 

@@ -1,6 +1,5 @@
 ---
 title: Penyertaan Seluruh Sekolah
-layout: wide
 ---
 
 {{ signup_button }}

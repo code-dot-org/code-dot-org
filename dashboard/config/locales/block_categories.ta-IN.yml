@@ -3,14 +3,11 @@ ta:
   data:
     block_categories:
       Actions: செயல்கள்
-      Loops: சுழற்சிகள்
-      Functions: செயல்பாடுகள்
       Color: நிறம்
-      Math: கணிதம்
+      Events: நிகழ்வுகள்
+      Functions: செயல்பாடுகள்
       Logic: தர்க்கம்
-      Variables: மாறிலிகள்
+      Loops: சுழற்சிகள்
+      Math: கணிதம்
       Text: உரை
-      Start: தொடங்குக
-      test: சோதனை
-      Name: பெயர்
-      Function: இயக்கி
+      Variables: மாறிலிகள்

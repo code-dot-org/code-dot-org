@@ -1030,6 +1030,31 @@ uk-UA:
           correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
+      Dance_Party_extras_intro:
+        markdown: "# Продовжуємо танцювати! \n\nУ частині 2 ви створите власний проект.
+          Тут немає головоломок — натомість є ряд проектів, які демонструють різні
+          способи створення ускладнених танцювальних вечірок. Ці рівні можна проходити
+          _у будь-якому порядку_. \n\nВи можете дивитися, як щось було зроблено на
+          попередньому рівні, або поєднувати концепції з різних проектів. Перегляньте
+          усі проекти, оберіть улюблений та вдоскональте його на власний розсуд. \n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton pull-right\">Продовжити</a>
+          \n\n<div class=\"clearfix\"></div> \n\n<div style=\"float: left; margin:
+          10px\"> \n<a href=\"2\">\n <h2> \nНазад і вперед \n</h2>\n\n <img src=\"https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"3\">\n
+          <h2> \nБільше кнопок \n</h2>\n\n <img src=\"https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif\"></a>
+          \n\n</div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"4\">
+          \n<h2> \nШикуймося \n</h2> \n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n\n<a href=\"5\">\n
+          <h2>\n Куди вони поділися? \n</h2> \n\n<img src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\">\n <a href=\"6\">\n
+          <h2> \nТанцювальні команди \n</h2> \n\n<img src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>
+          \n\n</div>\n\n <div style=\"float: left; margin: 10px\"> \n<a href=\"7\">\n
+          <h2> \nЧетвертні ноти \n</h2> \n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"8\"> \n<h2>
+          \nБаси, середні та високі частоти\n </h2> \n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n
+          </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\"> \n<h2>
+          \nПришвидшення та сповільнення \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n
+          </div>\n"
       Internet Simulator Setup:
         content1: опис тут
       Internet Simulator Setup 2:
@@ -1329,7 +1354,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1338,7 +1363,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1347,7 +1372,7 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
+        - text: '4'
         - text: '12'
           correct: true
         - text: '15'
@@ -1584,24 +1609,27 @@ uk-UA:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - correct: true
+        - text: '4'
+        - text: '8'
+          correct: true
         - text: '12'
         - text: Не знаю.
       courseD_multi_collector_debugging10_predict1:

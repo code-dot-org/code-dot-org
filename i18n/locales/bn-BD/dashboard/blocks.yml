@@ -167,6 +167,10 @@ bn:
           PROPERTY:
             '"scale"': আকার
             '"height"': উচ্চতা
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': এক্স
       Dancelab_whenKey:
         options:
           KEY:
@@ -286,6 +290,8 @@ bn:
             '"scale"': আকার
       Mikelab_randomColor:
         text: যেকোনো রঙ
+      Mikelab_repeatUntilComplete:
+        text: সবসময় পুনরাবৃত্তি করুন
       Mikelab_setBG:
         options:
           BG:

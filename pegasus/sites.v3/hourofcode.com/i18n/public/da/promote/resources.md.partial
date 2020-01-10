@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -24,7 +24,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -69,7 +68,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
 
----
+* * *
 
 <a id="email"></a>
 
@@ -87,7 +86,7 @@ Get the word out. Host an event. Ask a local school to sign up. Or try the Hour 
 
 Get started at http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
@@ -107,7 +106,7 @@ Computers are everywhere, changing every industry on the planet. But only 45% of
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
@@ -127,7 +126,7 @@ This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/{{ country }} for details, and help spread the word. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
@@ -141,7 +140,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+Derfor deltager alle [X number] eleverne på [SCHOOL NAME] i den største læringsbegivenhed i historien: Hour of Code i løbet af Computer Science Education-ugen (3-9. december).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -151,7 +150,7 @@ Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your
 
 I look forward to being in touch. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 

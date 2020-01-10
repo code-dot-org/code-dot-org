@@ -1,7 +1,5 @@
 ---
-title: வார்த்தையை பரப்புங்கள்
-layout: wide
-nav: promote_nav
+title: இது குறித்து பரப்புங்கள்
 ---
 
 {{signup_button}}

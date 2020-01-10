@@ -1,7 +1,5 @@
 ---
-title: எப்படி வழிநடத்துவதென்று
-layout: wide
-nav: how_to_nav
+title: எவ்வாறு செய்வது வழிகாட்டி
 ---
 
 {{signup_button}}

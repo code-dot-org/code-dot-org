@@ -1025,8 +1025,7 @@ describe('FirebaseStorage', () => {
     }
 
     it('loads new table data when no previous data exists', done => {
-      const overwrite = false;
-      FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
+      FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
         () => verifyTable(NEW_TABLE_DATA).then(done),
         error => {
           throw error;
@@ -1034,8 +1033,7 @@ describe('FirebaseStorage', () => {
       );
     });
 
-    it('does not overwrite existing data when overwrite is false', done => {
-      const overwrite = false;
+    it('does not overwrite existing data', done => {
       getProjectDatabase()
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
@@ -1045,7 +1043,7 @@ describe('FirebaseStorage', () => {
             .set(EXISTING_COUNTER_DATA)
         )
         .then(() => {
-          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
+          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
             () => verifyTable(EXISTING_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -1058,32 +1056,11 @@ describe('FirebaseStorage', () => {
     // but failed to write counters/tables due to a security rule violation. Make
     // sure we overwrite tables for users in that state.
     it('does overwrite existing data when counters/tables node is empty', done => {
-      const overwrite = false;
       getProjectDatabase()
         .child(`storage/tables`)
         .set(EXISTING_TABLE_DATA)
         .then(() => {
-          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
-            () => verifyTable(NEW_TABLE_DATA).then(done),
-            error => {
-              throw error;
-            }
-          );
-        });
-    });
-
-    it('does overwrite existing data when overwrite is true', done => {
-      const overwrite = true;
-      getProjectDatabase()
-        .child(`storage/tables`)
-        .set(EXISTING_TABLE_DATA)
-        .then(() =>
-          getProjectDatabase()
-            .child('counters/tables')
-            .set(EXISTING_COUNTER_DATA)
-        )
-        .then(() => {
-          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON, overwrite).then(
+          FirebaseStorage.populateTable(NEW_TABLE_DATA_JSON).then(
             () => verifyTable(NEW_TABLE_DATA).then(done),
             error => {
               throw error;
@@ -1093,9 +1070,7 @@ describe('FirebaseStorage', () => {
     });
 
     it('prints a friendly error message when given bad table json', done => {
-      const overwrite = false;
-
-      FirebaseStorage.populateTable(BAD_JSON, overwrite).then(() => {
+      FirebaseStorage.populateTable(BAD_JSON).then(() => {
         throw 'expected JSON error to be reported';
       }, validateError);
 
@@ -1134,10 +1109,8 @@ describe('FirebaseStorage', () => {
     }
 
     it('loads new key value data when no previous data exists', done => {
-      const overwrite = false;
       FirebaseStorage.populateKeyValue(
         NEW_KEY_VALUE_DATA_JSON,
-        overwrite,
         () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
         error => {
           throw error;
@@ -1145,15 +1118,13 @@ describe('FirebaseStorage', () => {
       );
     });
 
-    it('does not overwrite existing data when overwrite is false', done => {
-      const overwrite = false;
+    it('does not overwrite existing data', done => {
       getProjectDatabase()
         .child(`storage/keys`)
         .set(EXISTING_KEY_VALUE_DATA)
         .then(() => {
           FirebaseStorage.populateKeyValue(
             NEW_KEY_VALUE_DATA_JSON,
-            overwrite,
             () => verifyKeyValue(EXISTING_KEY_VALUE_DATA).then(done),
             error => {
               throw error;
@@ -1162,29 +1133,9 @@ describe('FirebaseStorage', () => {
         });
     });
 
-    it('does overwrite existing data when overwrite is true', done => {
-      const overwrite = true;
-      getProjectDatabase()
-        .child(`storage/keys`)
-        .set(EXISTING_KEY_VALUE_DATA)
-        .then(() => {
-          FirebaseStorage.populateKeyValue(
-            NEW_KEY_VALUE_DATA_JSON,
-            overwrite,
-            () => verifyKeyValue(NEW_KEY_VALUE_DATA).then(done),
-            error => {
-              throw error;
-            }
-          );
-        });
-    });
-
     it('prints a friendly error message when given bad key value json', done => {
-      const overwrite = false;
-
       FirebaseStorage.populateKeyValue(
         BAD_JSON,
-        overwrite,
         () => {
           throw 'expected JSON error to be reported';
         },

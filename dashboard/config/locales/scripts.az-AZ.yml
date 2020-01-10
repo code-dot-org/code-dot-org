@@ -792,8 +792,6 @@ az:
           stages:
             Artist:
               name: Rəssam
-        dance-extras:
-          title: Rəqs etməyə davam edin
         coursef-2019:
           stages:
             The Artist:
@@ -880,3 +878,19 @@ az:
           stages:
             Introduction:
               name: Giriş
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: dövrlər
+            Conditionals:
+              name: Şərti ifadələr
+            Events:
+              name: Hadisələr
+            Functions:
+              name: funksiyalar
+            Variables:
+              name: dəyişənlər
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Şərti ifadələr

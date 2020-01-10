@@ -1,7 +1,5 @@
 ---
 title: ทรัพยากร
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
@@ -141,7 +138,7 @@ Computers are everywhere, changing every industry on the planet, but only 45% of
 
 ด้วย Hour of Code วิชาวิทยาการคอมพิวเตอร์ได้อยู่บนหน้าหลักของ Google, MSN, Yahoo!, และ Disney มากกว่า 100 หุ้นส่วนได้ร่วมกันสนับสนุนการเคลื่อนไหวนี้ Apple Store ทุกแห่งในโลกได้จัดงาน Hour of Code แล้ว แม้แต่ประธานาธิบดี Obama ก็ได้เขียนโปรแกรมบรรทัดแรกของเขาเป็นส่วนหนึ่งของการรณรงค์นี้
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+ทั้งหมดนั้นคือเหตุผลที่นักเรียนทุกคน [จำนวน X คน] ที่ [SCHOOL NAME] มาเข้าร่วมกิจกรรมการเรียนรู้ที่ใหญ่ที่สุดในประวัติศาสตร์: Hour of Code ในระหว่างสัปดาห์การศึกษาเรื่องวิทยาศาสตร์คอมพิวเตอร์ (3-9 ธันวาคม)
 
 ฉันเขียนมาเพื่อเชิญชวนคุณให้เข้าร่วมการประชุมเริ่มต้นของเรา และมาดูเด็กๆเริ่มกิจกรรมในวันที่ [DATE]
 

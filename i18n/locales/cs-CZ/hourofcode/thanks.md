@@ -1,10 +1,5 @@
 ---
 title: Děkujeme za přihlášení k hostování akce Hodina kódu!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Děkujeme za přihlášení k hostování akce Hodina kódu!

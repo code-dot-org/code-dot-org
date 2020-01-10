@@ -1,10 +1,5 @@
 ---
 title: آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # آور-آف-کوڈ کو ھوسٹ کرنے کے لیے سائن-اَپ کرنے کا شکریہ!

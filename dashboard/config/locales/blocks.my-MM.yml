@@ -2,6 +2,14 @@
 my:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: အားလုံး
+          MOVE1:
+            MOVES.Rest: ဘာမှမရှိ
+          MOVE2:
+            MOVES.Rest: ဘာမှမရှိ
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
@@ -72,6 +80,8 @@ my:
             '18': '18'
             '19': '19'
             '20': '20'
+          LAYOUT:
+            '"diamond"': စိန်
       Dancelab_randomColor:
         text: ကျဘန်းအရောင်
       Dancelab_setBackgroundEffect:
@@ -136,6 +146,11 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': စိန်
+            '"x"': "×"
       Dancelab_whenKey:
         options:
           KEY:

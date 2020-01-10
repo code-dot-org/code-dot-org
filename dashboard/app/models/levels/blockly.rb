@@ -296,7 +296,7 @@ class Blockly < Level
         # Droplet, so we need to confirm the editor style before assuming that
         # these fields contain Blockly xml.
         unless uses_droplet?
-          set_unless_nil(level_options, 'toolbox', Blockly.localize_toolbox_blocks(level_options['toolbox']))
+          set_unless_nil(level_options, 'toolbox', localized_toolbox_blocks(level_options['toolbox']))
 
           %w(
             initializationBlocks
@@ -307,7 +307,7 @@ class Blockly < Level
             solutionBlocks
           ).each do |xml_block_prop|
             next unless level_options.key? xml_block_prop
-            set_unless_nil(level_options, xml_block_prop, Blockly.localize_function_blocks(level_options[xml_block_prop]))
+            set_unless_nil(level_options, xml_block_prop, localized_function_blocks(level_options[xml_block_prop]))
           end
         end
       end
@@ -365,6 +365,7 @@ class Blockly < Level
 
       if is_a? Gamelab
         level_prop['startAnimations'] = try(:project_template_level).try(:start_animations) || start_animations
+        level_prop['name'] = name
       end
 
       if is_a?(Maze) && step_mode
@@ -474,32 +475,43 @@ class Blockly < Level
     end
   end
 
-  def self.localize_toolbox_blocks(blocks)
+  def localized_toolbox_blocks(blocks)
     return nil if blocks.nil?
 
-    block_xml = Nokogiri::XML(localize_function_blocks(blocks), &:noblanks)
+    block_xml = Nokogiri::XML(localized_function_blocks(blocks), &:noblanks)
     block_xml.xpath('//../category').each do |category|
       name = category.attr('name')
       localized_name = I18n.t("data.block_categories.#{name}", default: nil)
+
       category.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def self.localize_function_blocks(blocks)
+  def localized_function_blocks(blocks)
     return nil if blocks.nil?
 
     block_xml = Nokogiri::XML(blocks, &:noblanks)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
-      name = function.at_xpath('./title[@name="NAME"]')
-      next unless name
-      localized_name = I18n.t("data.function_names.#{name.content}", default: nil)
-      name.content = localized_name if localized_name
+      function_name = function.at_xpath('./title[@name="NAME"]')
+      next unless function_name
+      localized_name = I18n.t(
+        function_name.content,
+        scope: [:data, :function_names, name],
+        default: nil,
+        smart: true
+      )
+      function_name.content = localized_name if localized_name
     end
     block_xml.xpath("//block[@type=\"procedures_callnoreturn\"]").each do |function|
       mutation = function.at_xpath('./mutation')
       next unless mutation
-      localized_name = I18n.t("data.function_names.#{mutation.attr('name')}", default: nil)
+      localized_name = I18n.t(
+        mutation.attr('name'),
+        scope: [:data, :function_names, name],
+        default: nil,
+        smart: true
+      )
       mutation.set_attribute('name', localized_name) if localized_name
     end
     return block_xml.serialize(save_with: XML_OPTIONS).strip

@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "bagi setiap item";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Bagi setiap item dalam senarai, tetapkan pembolehubah '%1' ke atas item, dan kemudian buat beberapa penyata.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "dari %1 hingga %2 dari %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "kira dengan";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Jadikan pembolehubah %1 mengambil nilai-nilai daripada nombor mula hingga nombor akhir, dikira dengan selang yang ditentukan, dan buat blok yang ditentukan.";

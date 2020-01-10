@@ -1,7 +1,5 @@
 ---
 title: Past Hour of Code Posters
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

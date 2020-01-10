@@ -1,7 +1,5 @@
 ---
-title: How to host an Hour of Code - Companies
-layout: wide
-nav: how_to_nav
+title: ஒரு Hour of Code –ஐ எவ்வாறு நடத்துவது - நிறுவனங்கள்
 ---
 
 {{signup_button}}

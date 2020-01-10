@@ -1,6 +1,5 @@
 ---
 title: Smjernice za aktivnosti
-layout: wide
 ---
 
 <style>

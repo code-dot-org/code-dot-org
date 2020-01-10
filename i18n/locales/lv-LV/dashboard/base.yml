@@ -477,6 +477,7 @@ lv:
     submit: "Iesniegt"
     decline: "Aizvērt"
   zendesk_too_young_message: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot <a href="http://support.code.org">support.code.org</a> bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar mums tavā vietā.'
+  zendesk_too_young_message_markdown: 'Atvainojiet, jaunākiem lietotājiem nav iespējas pierakstīties mūsu atbalsta lapā. Tu vari pārlūkot [support.code.org](http://support.code.org) bez pierakstīšanās vai vari prasīt savam vecākam vai skolotājam, lai sazinās ar mums tavā vietā.'
   progress:
     completed_too_many_blocks: Pabeigts, pārāk daudz bloki
     completed_perfect: pabeigts, ideāli

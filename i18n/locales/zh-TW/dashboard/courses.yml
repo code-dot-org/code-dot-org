@@ -5,19 +5,36 @@ zh-TW:
     course:
       name:
         csp-2017:
-          assignment_family_title: 計算機科學原理
-          title: 計算機科學原理 ('17-'18)
+          assignment_family_title: 電腦科學原理
+          title: 電腦科學原理 ('17-'18)
           version_title: "17-18"
           description_short: 學習計算機科學的基礎概念。
         csd-2017:
+          assignment_family_title: 電腦科學探索
+          title: 電腦科學探索 ('17-'18)
           version_title: "17-18"
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
         csd-2018:
-          title: 計算機科學探索 ('18-'19)
+          assignment_family_title: 電腦科學探索
+          title: 電腦科學探索 ('18-'19)
           version_title: "'18-'19"
+          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
         csp-2018:
-          assignment_family_title: 計算機科學原理
-          title: 計算機科學原理 ('18-'19)
+          assignment_family_title: 電腦科學原理
+          title: 電腦科學原理 ('18-'19)
           version_title: "'18-'19"
           description_short: 學習計算機科學的基礎概念。
         csp-2019:
+          title: 電腦科學原理 ('19-'20)
+          version_title: "'19-'20"
           description_short: 學習計算機科學的基礎概念。
+        csd-2019:
+          title: 電腦科學探索 ('19-'20)
+          version_title: "'19-'20"
+          description_short: 電腦科學入門課程，學生能夠透過學習製作出真實的人工產物。
+          description_student: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。
+          description_teacher: 電腦科學探索（CS Discoveries）是一堂電腦科學的入門課程，學生能夠藉由這堂課來製作真實的人工產物，並透過電腦科學作為媒介用以發揮創意、溝通、解決問題及娛樂。

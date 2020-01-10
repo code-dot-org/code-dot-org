@@ -1,7 +1,5 @@
 ---
 title: 支持计算机科学教育周和编程一小时的专栏样例
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

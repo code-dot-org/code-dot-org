@@ -1,6 +1,5 @@
 ---
 title: Participação da escola inteira
-layout: wide
 ---
 
 {{ signup_button }}

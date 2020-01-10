@@ -1,7 +1,5 @@
 ---
 title: Hour of Code 자원봉사자를 위한 How-to 가이드
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

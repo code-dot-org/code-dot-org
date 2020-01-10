@@ -1,10 +1,5 @@
 ---
 title: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!

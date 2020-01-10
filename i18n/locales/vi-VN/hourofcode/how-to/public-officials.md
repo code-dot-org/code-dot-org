@@ -1,7 +1,5 @@
 ---
 title: Làm thế nào để hướng dẫn cho các công chức
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

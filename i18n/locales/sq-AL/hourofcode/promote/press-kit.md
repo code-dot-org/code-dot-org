@@ -1,7 +1,5 @@
 ---
 title: Materiale për shtyp
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

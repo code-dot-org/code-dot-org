@@ -3,22 +3,8 @@ title: Paldies, ka uzņēmies vadīt Programmēšanas stundu!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Programmēšanas stunda tuvojas
-  og:description: Programmēšas stunda ir starptautiska kustība, kurā piedalās ap desmit
-    miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums no 4
-    līdz 104 gadiem.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Programmēšanas stunda tuvojas
-  twitter:description: Programmēšas stunda ir starptautiska kustība, kurā piedalās
-    ap desmit miljonu skolēnu vairāk nekā 180 valstīs un vairāk nekā 30 valodās. Vecums
-    no 4 līdz 104 gadiem.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Paldies, ka uzņēmies vadīt Programmēšanas stundu!

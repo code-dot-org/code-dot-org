@@ -101,13 +101,12 @@ module Honeybadger
   def self.get_recent_issues
     raise 'CDO.honeybadger_api_token undefined' unless CDO.honeybadger_api_token
     issues = []
-    midnight_epoch = Time.now.to_i / 86400 * 86400
 
     {cronjobs: 45435, dashboard: 3240, pegasus: 34365}.each do |project, project_id|
-      next_url = "https://app.honeybadger.io/v2/projects/#{project_id}/faults" \
-        "?occurred_after=#{midnight_epoch}&q=-is:resolved%20-is:paused%20-is:ignored"
+      next_url = "/v2/projects/#{project_id}/faults" \
+        "?occurred_after=#{1.day.ago.to_i}&q=-is:resolved%20-is:paused%20-is:ignored"
       while next_url
-        response = `curl -u #{CDO.honeybadger_api_token}: #{next_url}`
+        response = `curl -u #{CDO.honeybadger_api_token}: "https://app.honeybadger.io#{next_url}"`
         parsed_response = JSON.parse response
         parsed_response['results'].each do |issue|
           issues << {

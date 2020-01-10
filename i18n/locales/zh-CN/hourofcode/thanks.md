@@ -1,10 +1,5 @@
 ---
 title: 感谢注册并组织编程一小时活动！
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # 感谢注册并组织编程一小时活动！

@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "für jedes Element";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Setze für jedes Listenelement die Variable \"%1\" auf das aktuelle Listenelement und führe dann einige Anweisungen aus.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "http://de.wikipedia.org/wiki/For-Schleife";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "von %1 bis %2 mit Schrittweite %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "für";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Lasse die Variable %1 im angegebenen Intervall die Werte von einem Startwert bis zu einem Zielwert annehmen und führe die Anweisungen in den Bausteinen aus.";

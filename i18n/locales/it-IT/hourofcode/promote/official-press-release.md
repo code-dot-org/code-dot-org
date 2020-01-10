@@ -1,7 +1,5 @@
 ---
 title: L'Ora del Codice Comunicato Stampa per i rappresentanti eletti
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

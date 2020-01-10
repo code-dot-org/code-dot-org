@@ -1,7 +1,5 @@
 ---
 title: Guía de instrucciones de la Hora de código para los distritos
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

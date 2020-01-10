@@ -1,6 +1,5 @@
 ---
 title: Deltaking for heile skular
-layout: wide
 ---
 
 {{ signup_button }}

@@ -3,11 +3,8 @@ my:
   data:
     block_categories:
       Actions: လုပ်​ဆောင်ချက်များ
+      Logic: Logic
       Loops: Loops
       Math: သင်္ချာ
-      Logic: Logic
-      Variables: Variables
       Text: စာ
-      test: စမ်းသပ်မှု။
-      Name: အမည္
-      Function: လုပ်ဆောင်ချက်
+      Variables: Variables

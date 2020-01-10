@@ -3,11 +3,11 @@ ru-RU:
   data:
     callouts:
       2-3 Artist Debugging 1:
-        2-3_Artist_Debugging_1_a: У художника нет кнопки "Шаг", но вы можете перетащить
+        2-3_Artist_Debugging_1_a: У художника нет кнопки "Шаг", но ты можешь перетащить
           ползунок влево, чтобы тщательнее проследить за работой программы.
       2-3 Bee Conditionals 5:
         Bee_Cond_5_1a: У фиолетовых цветов могут быть значения "1" или "0" нектара...
-          но вы не будете знать наверняка, пока не запустите выполнение кода!
+          но ты не узнаешь наверняка, пока не запустишь код!
       4-5 Artist Patterns Free Play:
         4-5_Artist_Patterns_Free_Play_1: Теперь все ваши любимые блоки рассортированы
           по категориям. Нажмите на на эти слова, чтобы посмотреть куда ушли ваши
@@ -15,6 +15,9 @@ ru-RU:
       4-5 Bee Conditionals 2:
         4_5_Bee_Conditionals_2_1: Помните, вам нужно проверить каждое ли облако имеет
           свой цветок. Вам вовсе не нужно проверять для этого соты.
+      AppLab Intro 7 - Change Screen Color:
+        applab_hoc_finish: Страница стала зеленой? Если да, нажми "Готово". Если нет,
+          нажми "Сбросить", исправь код и нажми "Выполнить" снова.
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: Теперь вы в режиме дизайна.
       CSD U3 Variables Predict Where X:
@@ -159,6 +162,22 @@ ru-RU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Новый блок!
         dance_callout_11_b: Новый блок!
+      Dance_2019_01:
+        dance_callout_01: Добавьте этот блок в вашу программу!
+      Dance_2019_02:
+        dance_callout_11_a: Добавьте этот блок в свою программу.
+        arrow_buttons: Нажимайте на кнопки со стрелками для управления танцором.
+      Dance_2019_04:
+        dance_callout_02: Добавьте этот блок в вашу программу!
+      Dance_2019_05:
+        dance_callout_05: Добавьте новое событие в вашу программу.
+      Dance_2019_06:
+        dance_party_11_5_groups: Новый блок!
+      Dance_2019_07:
+        setprop_hint: Новый блок!
+      Dance_2019_09:
+        new_block_3: Новый блок!
+        new_block_4: Новый блок!
       Dance_Party_01:
         dance_callout_01: Добавьте этот блок в вашу программу!
       Dance_Party_02:
@@ -552,3 +571,5 @@ ru-RU:
       frozen square snowflake:
         replace_questions: Используй раскрывающийся список, чтобы заменить «???» на
           число
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Ищите блоки «все утки» здесь

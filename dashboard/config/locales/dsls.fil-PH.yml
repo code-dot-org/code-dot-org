@@ -9,7 +9,7 @@ fil-PH:
         answers:
         - text: Mag-umpisa sa square<br/>Maglagay ng triangle sa taas ng square<br/>Maglagay
             ng triangle sa ibaba ng square
-        - {}
+        - correct: true
         - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa taas
             ng parisukat<br/>Maglagay ng isang tatsulok sa kanan ng parigapay
         - text: Magsimula sa isang parisukat<br/>Maglagay ng isang parigapay sa baba
@@ -23,7 +23,7 @@ fil-PH:
             ito?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Big Event Match 1:
@@ -60,14 +60,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Getting Loopy Multi 1:
         title: Multiple Choice
         questions:
         - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -88,12 +88,12 @@ fil-PH:
         - text: Aling programa ang gumagawa sa larawang ito?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 Maze Match 2:
         title: Maze Match
         content1: Itugma ang mga palaisipan sa mga bloke
-        pre_title: Alituntunin
+        pre_title: Mga Tagubilin
         questions:
         - {}
         - {}
@@ -108,7 +108,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 Relay Programming Multi 1:
@@ -118,7 +118,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 Relay Programming Multi 2:
         title: Multiple Choice
         questions:
@@ -126,13 +126,13 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist debug multi 1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist functions multi 1:
@@ -141,7 +141,7 @@ fil-PH:
         - text: Pillin ang tamang mga block upang makaguhit ng ganitong imahe gamit
             ang mga binigay na mga function
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 artist loops match 1:
@@ -163,7 +163,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 artist loops multi 2:
         title: Artist Loops Multiple Choice
@@ -173,7 +173,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       2-3 artist match 1:
         title: Artist Matching
         content1: Itugma ang hugis ng mga bloke na kumukumpleto dito.
@@ -193,14 +193,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       2-3 bee conditionals multi 3:
         questions:
         - text: Piliin ang pinakamagaling na mga block.
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       2-3 bee loops multi 1:
@@ -208,7 +208,7 @@ fil-PH:
         questions:
         - text: Anong mga block ang kinukulekta ang lahat ng nectar?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -229,7 +229,7 @@ fil-PH:
         - text: Aling grupo ng mga bloke ang tamang sagot?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Algorithms Match 1:
@@ -257,6 +257,7 @@ fil-PH:
         - text: Pagluto ng mga biskwit
         - text: Pamimili mula sa listahan ng groseri
         - text: Saging
+          correct: true
       4-5 Computational Thinking Match 1:
         title: Magkapareho
         content1: Bawat isa sa mga sasakyan ay hinati sa mga maliliit na mga piraso.
@@ -279,6 +280,7 @@ fil-PH:
         answers:
         - text: Seattle _____ ay isang _____ _____.
         - text: Ang _____ ay isang _____ siyudad.
+          correct: true
         - text: _____ ay _____ isang _____.
         - text: Ang Eugene ay isang _____ na siyudad.
       4-5 Crowdsourcing Multi 1:
@@ -287,7 +289,7 @@ fil-PH:
         - text: Alin sa mga larawang ito ang pinkamahusay na kumakatawan sa crowdsourcing?
         answers:
         - {}
-        - {}
+        - correct: true
       4-5 Crowdsourcing Multi 2:
         title: Multiple Choice
         questions:
@@ -295,6 +297,7 @@ fil-PH:
             sa crowdsourcing?
         answers:
         - text: Paglinis sa iyong silid
+          correct: true
         - text: Pagkain ng iyong dessert
         - text: Pagsuklay sa iyong buhok
         - text: Paghugas ng iyong mukha
@@ -305,6 +308,7 @@ fil-PH:
         answers:
         - text: Iyong kaarawan
         - text: Iyong paboritong pagkain
+          correct: true
         - text: Iyong address
         - text: Numero ng credit card ng iyong magulang
       4-5 Internet Multi 1:
@@ -316,7 +320,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       4-5 Internet Multi 2:
         title: Multiple Choice
         questions:
@@ -324,7 +328,7 @@ fil-PH:
             aling website ka naroroon?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Songwriting Multi 1:
@@ -333,7 +337,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 Suncatchers Match 1:
@@ -357,7 +361,7 @@ fil-PH:
             kaparehas na pagkakasunod-sunod ng Programang 1?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 artist loops multi 1:
         title: Artist Loops Multiple Choice
@@ -365,7 +369,7 @@ fil-PH:
         - text: Aling mga bloke ang lilikha sa disenyo?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 1:
@@ -375,7 +379,7 @@ fil-PH:
             na 100?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 artist multi 2:
@@ -385,7 +389,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee conditionals multi 1:
         title: Mga Kondisyonal sa Bee Maraming Pagpipilian
@@ -394,7 +398,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       4-5 bee debug multi 1:
         title: Bee Debug Maraming Pagpipilian
@@ -402,7 +406,7 @@ fil-PH:
         - text: Aling bersyon ng mga function ang gagana?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       4-5 bee loops multi 1:
@@ -410,7 +414,7 @@ fil-PH:
         questions:
         - text: Aling mga bloke ang lulutas sa palaisipan?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -419,14 +423,14 @@ fil-PH:
         questions:
         - text: Aling mga bloke ang naglutas sa palaisipan?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
       4-5 maze match 1:
         title: Maze Match
         content1: Itugma ang mga palaisipan sa mga bloke
-        pre_title: Alituntunin
+        pre_title: Mga Tagubilin
         questions:
         - {}
         - {}
@@ -440,7 +444,7 @@ fil-PH:
         questions:
         - text: Aling mga bloke ang naglutas sa palaisipan?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -449,19 +453,19 @@ fil-PH:
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
@@ -582,7 +586,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -591,7 +595,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -600,7 +604,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -608,19 +612,19 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
         questions:
@@ -655,7 +659,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
         questions:
@@ -663,7 +667,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         questions:
@@ -671,14 +675,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Sprites intro predict multi:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018:
@@ -686,7 +690,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -694,7 +698,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U3 combining rep:
@@ -752,7 +756,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018:
         questions:
         - {}
@@ -760,7 +764,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 array multi_2018_2019:
         questions:
         - {}
@@ -768,14 +772,14 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       CSD U6 setProperty predict multi:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U6 setProperty predict multi_2018:
         questions:
@@ -783,7 +787,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       Internet Simulator Setup 2:
         title: title
@@ -793,7 +797,7 @@ fil-PH:
         - text: Aling mga bloke ang lulutas sa palaisipang ito?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Artist 1 Multi 2:
@@ -801,7 +805,7 @@ fil-PH:
         questions:
         - text: Aling mga bloke ang guguhit sa parisukat?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -824,7 +828,7 @@ fil-PH:
         - text: Ilang nektar ito?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Bee 1 Multi 2:
@@ -835,7 +839,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Bee Loops Match 1:
         title: Magkapareho
         content2: Itugma ang mga block
@@ -868,13 +872,13 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Getting Loopy Multi 1:
         title: Multiple Choice
         questions:
         - text: Paano mo gawing simple ang pagkakasunod na ito gamit ang mga loop?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Happy Maps Multi 1:
@@ -883,7 +887,7 @@ fil-PH:
         - text: Aling arrow ang nagdadala kay Flurb sa kayamanan?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Keep it Private Multi 1:
@@ -891,7 +895,7 @@ fil-PH:
         questions:
         - text: Aling impormasyon ang dapat mong <strong>hindi</strong> ibahagi online?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Debugging Multi 1:
@@ -899,7 +903,7 @@ fil-PH:
         questions:
         - text: Aling pagpipilian ang dapat gawing huling bloke?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -908,7 +912,7 @@ fil-PH:
         questions:
         - text: Aling repeat na bloke ang magkapareho?
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Maze Loops Multi 2:
@@ -918,11 +922,11 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Maze Match 1:
         title: Magkapareho
         content2: Itugma ang mga puzzle at mga block
-        pre_title: Alituntunin
+        pre_title: Mga Tagubilin
         questions:
         - {}
         - {}
@@ -940,7 +944,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Move It Multi 1:
         title: Multiple Choice
@@ -948,7 +952,7 @@ fil-PH:
         - text: Aling algoritmo ang magdadala kay Flurb sa mga bulaklak?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       K-1 Plant a Seed Multi 1:
@@ -958,14 +962,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
       K-1 Plant a Seed Multi 2:
         title: Multiple Choice
         questions:
         - text: Aling hakbang ang dapat pupunan sa puwang para sa algoritmong ito?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 1:
         title: Multiple Choice
@@ -973,7 +977,7 @@ fil-PH:
         - text: Aling mga bloke ang bumigkas nang "MOVE"?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       K-1 Word Search Multi 3:
         title: Multiple Choice
@@ -981,7 +985,7 @@ fil-PH:
         - text: Aling salita ang nabaybay?
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
       Multi-Screen Apps:
         title: title
@@ -996,7 +1000,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Hindi tama
       behaviors 4 predict:
@@ -1004,7 +1008,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - feedback: Hindi tama
       courseC_multi_artist_prog6_predict1:
@@ -1013,7 +1017,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018:
         questions:
@@ -1021,7 +1025,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
         questions:
@@ -1029,38 +1033,41 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseC_multi_harvester_loops11_predict1:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '12'
+          correct: true
+        - text: '15'
         - {}
       courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
@@ -1068,7 +1075,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
@@ -1076,7 +1083,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1:
@@ -1084,7 +1091,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018:
@@ -1092,7 +1099,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
@@ -1100,7 +1107,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict1:
@@ -1109,7 +1116,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Hindi ko alam
       courseC_multi_starWars_predict1_2018:
         questions:
@@ -1117,7 +1124,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Hindi ko alam
       courseC_multi_starWars_predict1_2018_2019:
         questions:
@@ -1125,14 +1132,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - text: Hindi ko alam
       courseC_multi_starWars_predict2:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018:
@@ -1140,7 +1147,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseC_multi_starWars_predict2_2018_2019:
@@ -1148,7 +1155,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_artist_binary8_predict1:
@@ -1158,7 +1165,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseD_multi_artist_binary8_predict1_2018:
         questions:
         - {}
@@ -1166,7 +1173,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseD_multi_artist_binary8_predict1_2018_2019:
         questions:
         - {}
@@ -1174,12 +1181,12 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1187,7 +1194,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1195,7 +1202,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1204,7 +1211,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -1212,7 +1219,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
@@ -1220,14 +1227,14 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1235,7 +1242,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1243,7 +1250,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1253,7 +1260,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         questions:
@@ -1261,7 +1268,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         questions:
@@ -1269,31 +1276,34 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         questions:
         - {}
         answers:
-        - {}
-        - {}
-        - {}
+        - text: '4'
+        - text: '8'
+          correct: true
+        - text: '12'
         - {}
       courseD_multi_collector_debugging10_predict1:
         questions:
@@ -1301,7 +1311,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1:
         questions:
@@ -1309,7 +1319,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         questions:
@@ -1317,7 +1327,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         questions:
@@ -1325,14 +1335,14 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_ramp13:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -1340,7 +1350,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -1348,7 +1358,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
@@ -1356,7 +1366,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -1365,7 +1375,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018:
         questions:
@@ -1373,7 +1383,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
         questions:
@@ -1381,13 +1391,13 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseD_multi_maze_until10_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1395,7 +1405,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1403,7 +1413,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1412,7 +1422,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -1420,7 +1430,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
@@ -1428,7 +1438,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseD_multi_scrat_predict1:
@@ -1436,14 +1446,14 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseE_multi_bee_functions_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1454,14 +1464,14 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_multi_farmer_functions11_predict_2018:
         questions:
         - {}
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
         questions:
@@ -1469,7 +1479,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseE_prediction_artistFunction1:
         questions:
@@ -1478,7 +1488,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018:
         questions:
         - {}
@@ -1486,7 +1496,7 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseE_prediction_artistFunction1_2018_2019:
         questions:
         - {}
@@ -1494,13 +1504,13 @@ fil-PH:
         - {}
         - {}
         - {}
-        - {}
+        - correct: true
       courseF_bee_variables_8a_2018:
         questions:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_bee_variables_8a_2018_2019:
@@ -1508,7 +1518,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_artist_for10_predict1:
@@ -1517,7 +1527,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018:
         questions:
@@ -1525,7 +1535,7 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
         questions:
@@ -1533,13 +1543,13 @@ fil-PH:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       courseF_multi_artist_fwp2_predict1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1547,7 +1557,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1555,7 +1565,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1563,7 +1573,7 @@ fil-PH:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1572,14 +1582,14 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_conditionals7_predict2:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1588,7 +1598,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -1596,7 +1606,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
@@ -1604,7 +1614,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_bee_fwp9_predict1:
@@ -1612,14 +1622,14 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       courseF_multi_playlab_variables4c_predictive1:
         questions:
         - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - {}
@@ -1628,7 +1638,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018:
@@ -1636,7 +1646,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       coursee_prediction_artistfunction2_2018_2019:
@@ -1644,7 +1654,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1:
@@ -1652,7 +1662,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018:
@@ -1660,7 +1670,7 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
@@ -1668,6 +1678,6 @@ fil-PH:
         - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}

@@ -2,6 +2,14 @@
 ka:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: ყველა
+          MOVE1:
+            MOVES.Rest: არცერთი
+          MOVE2:
+            MOVES.Rest: არცერთი
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -189,6 +197,7 @@ ka:
             '19': '19'
             '20': '20'
           LAYOUT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი
@@ -255,6 +264,7 @@ ka:
             '"width"': სიგრძე
             '"height"': სიმაღლე
             '"rotation"': შებრუნება
+            '"tint"': შეფერადება
       Dancelab_setPropRandom:
         options:
           PROPERTY:
@@ -339,6 +349,14 @@ ka:
             '"bass"': დაბალი
             '"mid"': საშუალო
             '"treble"': მაღალი
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ბრილიანტი
+            '"s"': s
+            '"w"': w
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
@@ -360,6 +378,8 @@ ka:
             '1': საშუალო
             '2': მაღალი
       Dancelab_whenSetup:
+        text: დაყენება
+      Dancelab_whenSetup2:
         text: დაყენება
       gamelab_changePropBy:
         options:
@@ -603,6 +623,8 @@ ka:
             MOVES.Rest: არცერთი
       Mikelab_randomColor:
         text: შემთხვევითი ფერი
+      Mikelab_repeatUntilComplete:
+        text: მუდამ გამეორება
       Mikelab_setBG:
         options:
           BG:

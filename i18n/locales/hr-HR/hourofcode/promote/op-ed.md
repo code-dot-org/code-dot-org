@@ -1,7 +1,5 @@
 ---
 title: Uzorak "op-ed" podrške tjednu podučavanja računalne znanosti i Sata Koda
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

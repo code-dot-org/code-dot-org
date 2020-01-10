@@ -3716,3 +3716,15 @@ fr:
     mc_2018_closing:
       2:
         text: 'Poulpe : Félicitations !'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Heure de Code | Fête dansante : Échauffement'
+    hoc_dance_events_2019:
+      1:
+        text: 'Heure de Code | Fête dansante : Événements'
+      4:
+        text: 'Quelques exemples d''évènements sont: l''écoute des clics de souris,
+          l’activation d’une touche fléchée du clavier ou un tapotement de l''écran.'
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Heure de Code | Fête dansante : C’est la fête !'

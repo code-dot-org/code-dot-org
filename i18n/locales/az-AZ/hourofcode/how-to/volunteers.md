@@ -1,7 +1,5 @@
 ---
 title: Kod Saatı könüllüləri üçün təlimat
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

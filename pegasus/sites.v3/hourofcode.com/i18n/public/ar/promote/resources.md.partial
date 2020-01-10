@@ -12,7 +12,7 @@ nav: promote_nav
 
 ### اعثر على كل الموارد التي تحتاجها لجلب الانتباه إلى حدثك لساعة البرمجة. لست متأكدا من أين ستبدأ؟ ابدأ ب[دليلنا لاستضافة ساعة البرمجة]({{ how_to_url }})!
 
----
+* * *
 
 {{ promote_handouts }} {{ promote_videos }}
 
@@ -24,8 +24,7 @@ nav: promote_nav
 
 {{ promote_new_posters }}
 
-* تريد تحميل المزيد من نسخ مصغرة للملصقات؟ <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">حملها من هنا</a>.
-* تبحث عن ملصقاتنا للسنة الماضية؟ [اعثر عليها هنا]({{ promote/previous_posters_url }})!
+* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
@@ -69,7 +68,7 @@ nav: promote_nav
 
 ### اعثر على [المويد من التفاصيل واللغات التي يمكن أن تستخدمها]({{ promote/stats_url }}) عند الحديث عن ساعة البرمجة.
 
----
+* * *
 
 <a id="email"></a>
 
@@ -87,7 +86,7 @@ nav: promote_nav
 
 Hبدأ على http://hourofcode.com/{{ country }} <br />
 
----
+* * *
 
 <a id="help-schools"></a>
 
@@ -107,7 +106,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 يمكنك قراءة المزيد عن الحدث على http://hourofcode.com. أو، إن كنت ستحدد موعدا للتحدث عن كيف يمكن للمدرسة [school name] المشاركة. <br />
 
----
+* * *
 
 <a id="parents"></a>
 
@@ -127,7 +126,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 للمزيد من التفاصيل شاهد http://hourofcode.com/{{ country }}، وساعد على نشر الرسالة. <br />
 
----
+* * *
 
 <a id="media-pitch"></a>
 
@@ -151,7 +150,7 @@ Hبدأ على http://hourofcode.com/{{ country }} <br />
 
 أتطلع لأان نكون على اتصال. <br />
 
----
+* * *
 
 <a id="politicians"></a>
 

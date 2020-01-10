@@ -38,10 +38,10 @@
     "validation_code": "if (World.validationStatus == undefined) {\r\n  World.validationStatus = 3;\r\n} else if (events['this.p5_.keyWentDown']) {\r\n  World.validationStatus = 0;\r\n}\r\n\r\nif (nativeAPI.getTime(\"measures\") > 8) {\r\n  if (World.validationStatus > 0) {\r\n    nativeAPI.fail(\"danceFeedbackKeyEvent\");\r\n  } else {\r\n    nativeAPI.pass();\r\n  }\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/dog_12.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/dog_13.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/dog_14.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/dog_15.png"
+      "https://curriculum.code.org/images/sprites/dance_20191106/dog_12.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/dog_13.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/dog_14.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/dog_15.png"
     ],
     "soft_buttons": [
       "leftButton",

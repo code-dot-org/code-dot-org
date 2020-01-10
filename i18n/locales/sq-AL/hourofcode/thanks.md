@@ -1,10 +1,5 @@
 ---
 title: Faleminderit që u regjistruat si organizator në Orën e Kodimit!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Faleminderit që u regjistruat si organizator në Orën e Kodimit!

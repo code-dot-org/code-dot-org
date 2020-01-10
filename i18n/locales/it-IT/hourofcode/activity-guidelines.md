@@ -1,6 +1,5 @@
 ---
 title: Linee Guida per i Corsi
-layout: wide
 ---
 
 <style>

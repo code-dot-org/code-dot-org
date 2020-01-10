@@ -6215,17 +6215,6 @@ zh-CN:
         看看循环里用来检查是否空格键被按下的`如果`语句。 ( [显示在哪里](#triggercallout=code_triggered1) )
         \*
         使用`rotationSpeed`模块来让彩色轮子在按下空格键时旋转。
-      CSD U3 abstraction rotation control_2019: |-
-        # 控制速度
-
-        你在循环外面用过了`rotatationSpeed`来让精灵能在游戏开始时旋转。你还能在循环**里面**用`rotationSpeed`来改变精灵的速度。例如，当用户按下空格键时，精灵会开始旋转，直到最后停止。
-
-        # 这样做
-
-        \*
-        看看循环里用来检查是否空格键被按下的`如果`语句。 ( [显示在哪里](#triggercallout=code_triggered1) )
-        \*
-        使用`rotationSpeed`模块来让彩色轮子在按下空格键时旋转。
       CSD U3 abstraction velocityX control: |-
         # 多个控制
 
@@ -6546,7 +6535,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://studio.code.org/docs/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -6570,7 +6559,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://studio.code.org/docs/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -6594,7 +6583,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
+        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://studio.code.org/docs/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
         PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
@@ -9057,14 +9046,6 @@ zh-CN:
         # 这样做
 
         创建一个函数将所有LED灯都关掉，然后增加一个“关闭"按钮来关闭所有的彩色LED灯。
-      CSD U6 light pattern off_2019: |-
-        # 关掉它
-
-        当你启动这个应用时，你的灯是关着的，但要尽快选择一个图案，现在没有办法将灯再关掉！
-
-        # 这样做
-
-        创建一个函数将所有LED灯都关掉，然后增加一个“关闭"按钮来关闭所有的彩色LED灯。
       CSD U6 move motorcycle: "# 用属性移动\n\n早先，我们用了`setProperty()`（设置属性）来改变屏幕上元素的x和y位置，但我们只能将它们要么移动到一个特定位置，要么移动到一个随机位置。通过使用`getProperty`（获取属性）来找到一个元素的当前位置，我们可以使用第3单元学会的**计数器模式**来更新位置。\n\n#
         \n\n这样做\n\n-   读一下程序，和你的伙伴讨论一下左按钮是如何让摩托车向上走的。\n-   用左按钮的代码为示例，给右按钮编程，让它能将摩托车向下移动。"
       CSD U6 move motorcycle_2018: "# 用属性移动\n\n早先，我们用了`setProperty()`（设置属性）来改变屏幕上元素的x和y位置，但我们只能将它们要么移动到一个特定位置，要么移动到一个随机位置。通过使用`getProperty`（获取属性）来找到一个元素的当前位置，我们可以使用第3单元学会的**计数器模式**来更新位置。\n\n#
@@ -10813,8 +10794,51 @@ zh-CN:
 
         -   创建两个时钟，让外星人在不同时钟的控制下完成不同的舞步
         -   当外星人相互接触时，让他们开始不同的舞蹈
+      Dance_2019_01: |-
+        _让我们跳舞吧！_
+
+        将<xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml>模块拖到工作区中，然后将其连接到<xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml>模块中以创建您的第一个舞者。
+
+        -   _如果您需要更多信息或其他挑战，也可以单击左侧的灯泡。_
+      Dance_2019_02: |-
+        <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml>模块用来在按下向上箭头时运行代码。使用<xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml>模块后，按下向上箭头即可令舞者鼓掌，或尝试其他动作！
+
+        _确保在单击“运行”按钮后按向上箭头或![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>)！_
+      Dance_2019_03: 开始跳舞吧！对每个舞者进行编程，让他们在您按下不同按键做出相应动作。为每个舞者选择您喜欢的动作，或者将其设置为`（随机）`来做出完全出乎您预料的动作！
+      Dance_2019_04: |-
+        让舞者随着音乐的节拍做出动作！
+
+        将<xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>模块拖出来放到工作区中。将它连接在<xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>模块下面。第四小节之后，舞者应该开始新的动作。
+
+        **小节**是个单位，用来计算音乐中的时间。在本教程中，一个小节长度为四拍。
+      Dance_2019_05: |-
+        _现在跟着节奏动起来！_
+
+        在工作区域添加一个 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"小节"</title></block></xml>模块。让舞者在 6 个小节后开始新的动作！
+      Dance_2019_06: |-
+        使用这个新模块来创建一组比较小的伴舞演员，将领舞者围绕在中间。
+          <xml><block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">???</title>
+            <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
+        现在，您可以一次创建一批舞者！
+      Dance_2019_07: |-
+        每个舞者都有一组_属性_来控制其外观。使用绿色事件模块
+
+        下面的 <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> 来调节舞者在音乐开始之后的距离远近。
+      Dance_2019_08: 舞者具有“色彩”属性，可以用来添加一层颜色。尝试更改其中一位舞者（或整个舞者）的色彩！
+      Dance_2019_09: |-
+        这是一种反复触发的特殊事件。
+
+        <xml><block type="Dancelab_everySeconds"><title name="N">2</title><title name="UNIT">"measures"</title></block></xml>
+
+        工具箱中的其他新模块可以用来随时间逐渐（或者随机！）改变舞者的属性。
+
+        _要有创造力，玩得开心！_
+      Dance_2019_10: 随着节奏律动吧！创建自己的舞蹈，并与朋友分享。
       Dance_Party_01: |-
-        _让我们开个舞会吧！_
+        _让我们开个舞会吧!_
 
         将“新建”模块拖到工作区，并关联到“设置”模块，创建您的第一个舞者。
 
@@ -10836,11 +10860,11 @@ zh-CN:
       Dance_Party_05: |-
         使用其他新模块让舞者**每 2 个小节**变换动作！
 
-        \*\*选择“(下一步)”、“(上一步)”或“(随机)”，让舞者在代码每次运行时做不同的动作。
+        -   选择`(下一步)`、`(上一步)`或`(随机)`，让舞者在代码每次运行时做不同的动作。
       Dance_Party_06: |-
         _我们需要更多舞者！_
 
-        创建名为“backup\_dancer1”的伴舞，与猫一起跳舞。
+        创建名为`backup_dancer1`的伴舞，与猫一起跳舞。
       Dance_Party_08: |-
         每个舞者都有一系列控制其外观的 _属性设置_。
 
@@ -10868,11 +10892,11 @@ zh-CN:
         查看此模块：
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"鸭子"</title>
-        <title name="LAYOUT">"圆圈"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         现在可以一次创建多个舞者了！
 
@@ -10890,6 +10914,14 @@ zh-CN:
         -   添加更多的键来控制舞蹈
         -   按下键时，可以让备选舞者也跟着响应
         -   通过设置舞者的可见性，可以每4个小节替换舞者
+      Dance_Party_extras_battle_2019: |-
+        # 舞蹈团队
+
+        下面是两个团队之间的舞蹈。箭头键控制其中一个舞者， “w, a, s, d” 键控制另一个舞者。和朋友跳支舞，然后试着改进这支舞。
+
+        -   添加更多的键来控制舞蹈
+        -   按下键时，可以让备选舞者也跟着响应
+        -   通过设置舞者的可见性，可以每4个小节替换舞者
       Dance_Party_extras_every_beat: |-
         # 四分音符
 
@@ -10900,6 +10932,15 @@ zh-CN:
         -   试着使用其他持续时间（如0.5为半个小节，或0.125为1/8小节)。
         -   添加一些`小节后`的事件。
         -   将"小节"切换为"秒"，并试着以这种方式给舞蹈安排节奏。
+      Dance_Party_extras_every_beat_2019: |-
+        # 四分音符
+
+        大部分舞蹈都是按照小节为单位来设计的，而每个小节由 4 个四分音符构成。这段舞蹈使用[blockly block][0]来让舞者从第 5 小节之后在每个四分音符时都拍一下手。
+
+        更改模块中的数字来试试看对舞蹈会有什么影响。
+
+        -   尝试采用其他音符时值（例如 0.5 是二分音符，0.125 是八分音符）。
+        -   添加其他事件。
       Dance_Party_extras_layout: |-
         # 开始编队！
 
@@ -10908,7 +10949,19 @@ zh-CN:
         -   在另一个布局中创建第二组舞者
         -   按下键时更改布局
         -   当舞者改变阵型时更改属性
+      Dance_Party_extras_layout_2019: |-
+        # 进入阵型！
+
+        使用<xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> 模块来改变伴舞演员在整个舞蹈中的阵型。尝试以下任意创意来扩展：
+
+        -   创建采用不同布局的另一组舞者
+        -   按下按键时更改布局
+        -   舞者改变阵型时更改属性
       Dance_Party_extras_on_beat: |-
+        # 低音、中音和高音
+
+        舞蹈会在音乐的不同部分变得响亮时使用“高峰”事件来触发代码。试着选择不同的歌曲，看看他们是如何改变舞蹈的。
+      Dance_Party_extras_on_beat_2019: |-
         # 低音、中音和高音
 
         舞蹈会在音乐的不同部分变得响亮时使用“高峰”事件来触发代码。试着选择不同的歌曲，看看他们是如何改变舞蹈的。
@@ -10916,7 +10969,19 @@ zh-CN:
         # 让它加速、减速
 
         这个最后的舞蹈使用“设定速度”模块来控制每个舞者的动作速度。在歌曲的不同点尝试不同的速度。随意地在这个舞蹈上做修改，或者回到之前的舞蹈中，让它们变得更酷。
+      Dance_Party_extras_speed_2019: |-
+        # 加速、减速
+
+        最后这段舞蹈采用<xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml>模块来控制每个舞者的动作速度。尝试在曲子的不同位置采用不同的速度看看。您可以在这段舞蹈里面随意调节，或者返回之前任意舞蹈，来让效果变得更精彩一些。
       Dance_Party_extras_visible: |-
+        # 让他们去哪儿？
+
+        这个舞蹈显示和隐藏了两组舞者。看看如何加入自己的天赋。
+
+        -   添加另一组舞者
+        -   使用箭头键显示和隐藏舞者
+        -   隐藏所有的舞者，并切换到一个令人兴奋的背景效果
+      Dance_Party_extras_visible_2019: |-
         # 让他们去哪儿？
 
         这个舞蹈显示和隐藏了两组舞者。看看如何加入自己的天赋。
@@ -11067,7 +11132,7 @@ zh-CN:
 
         -   添加一张门外的图片
         -   设置 ID （比如 _outside_）
-        -   隐藏这张图片（门开始它会自动显示）
+        -   隐藏这张图片（门开时它会自动显示）
       Standalone_Artist_2: 用 120 度和 60 度的角度，再加上长达150像素的边来画个钻石型。
       Standalone_Artist_3: 能够用100 像素的边和 60度的转度来绘制一个六边形吗？
       Standalone_Artist_4: 现在你已获得一个新的块—循环，该块可以重复执行一连串的指令。如果你循环这些指令6次，看看会发生什么？
@@ -15570,3 +15635,21 @@ zh-CN:
       ramp_artist_loops9: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2018: 画一个边长200像素的正方形来通过这关。
       ramp_artist_loops9_2019: 画一个边长200像素的正方形来通过这关。
+      Dance_Party_extras_alternate_2019: |-
+        ＃ 来来回回！
+
+        有时您可能想创建一种选择的舞蹈动作模式。这个新块使您可以做到这一点。
+
+        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
+
+        您在上方选择的移动将永远重复进行。
+
+        在前面为主舞者创建一个交替例程！
+        使用不同的数字来更改移动交替的速率。尝试使用“ 1”或“ 0.5”来更快地切换！
+      Dance_Party_extras_mixed_2019: |-
+        ＃更多按钮
+
+        此舞让您在舞者自动跳舞时实时控制他们的属性。尝试在按下按钮时更改其他属性。例如：
+
+        当您按下“向下”按钮时，将舞者的色彩随机化。
+        按“空格”时，添加一组具有随机布局的舞者。

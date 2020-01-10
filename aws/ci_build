@@ -85,7 +85,7 @@ def build
     status = begin
       result = RakeUtils.rake_stream_output 'ci'
 
-      if rack_env == :test && git_revision != RakeUtils.git_revision
+      if CDO.test_system? && git_revision != RakeUtils.git_revision
         ChatClient.log "git revision unexpectedly changed from #{git_revision} to #{RakeUtils.git_revision} during DTT", color: 'red'
         raise
       end
@@ -146,9 +146,7 @@ def main
 
       write_build_status rack_env, commit_hash_short, :success
 
-      # Only the managed test server should publish the commit hash of a successful Test Build
-      # This logic prevents staging-next server from corrupting the current successful commit hash.
-      if rack_env == :test && CDO.pegasus_hostname == 'test.code.org'
+      if CDO.test_system?
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
         mark_dtt_green
       end
@@ -185,7 +183,7 @@ def main
 
       write_build_status rack_env, commit_hash_short, :failed
 
-      if rack_env == :test
+      if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
       end
     end

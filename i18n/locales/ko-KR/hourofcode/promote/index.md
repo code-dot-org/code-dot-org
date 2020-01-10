@@ -1,7 +1,5 @@
 ---
 title: 전세계로 널리 퍼트려주세요.
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

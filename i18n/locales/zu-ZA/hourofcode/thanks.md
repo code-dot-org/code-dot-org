@@ -1,10 +1,5 @@
 ---
 title: Siyabonga ngokuzinikela ukuze usingathe iHora loKufingqwa!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Siyabonga ngokuzinikela ukuze usingathe iHora loKufingqwa!

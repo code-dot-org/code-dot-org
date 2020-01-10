@@ -1,10 +1,5 @@
 ---
 title: Maraming salamat sa pagsama bilang host ng Hour of Code!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Maraming salamat sa pagsama bilang host ng Hour of Code!

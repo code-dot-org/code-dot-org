@@ -1,2 +1,15 @@
 {
+  "backgroundSpace": "స్పేస్",
+  "catEvents": "ఈవెంట్లు",
+  "continue": "కొనసాగు",
+  "moveDirectionDown": "డౌన్",
+  "moveDirectionLeft": "ఎడమ",
+  "moveDirectionRight": "కుడి",
+  "moveDirectionUp": "అప్",
+  "no": "లేదు",
+  "saySpriteChoices_16": "అవును",
+  "saySpriteChoices_17": "లేదు",
+  "size": "సైజు",
+  "waitSeconds": "సెకండ్లు",
+  "yes": "అవును"
 }

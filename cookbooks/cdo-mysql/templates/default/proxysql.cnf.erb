@@ -4,8 +4,8 @@
 # Variable definitions:
 # https://github.com/sysown/proxysql/wiki/Global-variables
 
-datadir="/var/lib/proxysql"
-errorlog="/var/lib/proxysql/proxysql.log"
+datadir="<%=@data_dir%>"
+errorlog="<%=@data_dir%>/proxysql.log"
 
 # https://github.com/sysown/proxysql/wiki/Global-variables#admin-variables
 admin_variables=
@@ -36,11 +36,6 @@ mysql_variables=
   monitor_username="<%= @reader.user %>"
   monitor_password="<%= @reader.password %>"
 
-  # When a node change its read_only value from 1 to 0, this variable determines
-  # if the node should be present in both hostgroups or not.
-  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_writer_is_also_reader
-  monitor_writer_is_also_reader=false
-
   # If this variable is set, after an OK packet with `last_insert_id` is received,
   # multiplexing is temporary disabled for the number of queries specified (default 5).
   # This prevents inconsistent results if a query containing `LAST_INSERT_ID()` uses a
@@ -48,12 +43,39 @@ mysql_variables=
   # We can disable (set to 0) since our application doesn't use `LAST_INSERT_ID()` in any queries.
   # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-auto_increment_delay_multiplex
   auto_increment_delay_multiplex=0
+
+  # The timeout for a single attempt at checking the Read Only status on a backend server from the proxy.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_read_only_timeout
+  # [Milliseconds, default 800]
+  monitor_read_only_timeout=2000
+
+  # When the monitor thread performs a read_only check, AND the check exceeds mysql-monitor_read_only_timeout,
+  # repeat the read_only check up to this many times before setting OFFLINE HARD.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-monitor_read_only_max_timeout_count
+  # [Default 3]
+  monitor_read_only_max_timeout_count=5
+
+  # The timeout for a single attempt at connecting to a backend server from the proxy.
+  # If this fails, according to the other parameters, the attempt will be retried until too many errors
+  # per second are generated (and the server is automatically shunned) or until the final cut-off is reached
+  # and an error is returned to the client (see mysql-connect_timeout_server_max).
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-connect_timeout_server
+  # [Milliseconds, default 1000]
+  connect_timeout_server=2000
+
+  # The proxy internally pings the connections it has opened in order to keep them alive.
+  # This eliminates the cost of opening a new connection towards a hostgroup when a query needs to be routed,
+  # at the cost of additional memory footprint inside the proxy and some extra traffic.
+  # This is the timeout allowed for those pings to succeed.
+  # https://github.com/sysown/proxysql/wiki/Global-variables#mysql-ping_timeout_server
+  # [Milliseconds, default 200]
+  ping_timeout_server=1000
 }
 
 # https://github.com/sysown/proxysql/wiki/Main-(runtime)#mysql_servers
 mysql_servers =
 (
-<% [@writer, @reader].each_with_index do |server, hostgroup| -%>
+<% [@writer, @reader].uniq.product([1, 2]).push([@writer, 0]).each do |server, hostgroup| -%>
   {
     address =        "<%= server.host %>"
     port =            <%= server.port || 3306 %>
@@ -79,7 +101,8 @@ mysql_aws_aurora_hostgroups:
   {
     writer_hostgroup=0
     reader_hostgroup=1
-    new_reader_weight=1
+    new_reader_weight=10000000
+    writer_is_also_reader=1
     domain_name="<%=@writer.host.sub(/[^.]*/, '')%>"
   }
 )
@@ -127,11 +150,12 @@ mysql_query_rules:
     apply=1
   },
   {
-    # Global read-write split on SELECT, disabled by default (set active=1 to enable).
+    # Send writer-user SELECTs to the primary-reader (HG2).
     rule_id=3
-    active=0
+    username="<%= @writer.user %>"
+    active=1
     match_pattern="^SELECT"
-    destination_hostgroup=1
+    destination_hostgroup=2
     apply=1
   },
   {

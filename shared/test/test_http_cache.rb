@@ -99,7 +99,7 @@ module Cdo
         end
         session = build_rack_mock_session
         cookies.each do |key, value|
-          session.set_cookie("#{key}=#{value}")
+          session.set_cookie("#{key}=#{value}", URI.parse(url))
         end
         request url, method: method
       end
@@ -110,7 +110,7 @@ module Cdo
           session.header name, value
         end
         cookies.each do |key, value|
-          session.set_cookie("#{key}=#{value}")
+          session.set_cookie("#{key}=#{value}", URI.parse(url))
         end
         Rack::Test::Session.new(session).get(url)
       end

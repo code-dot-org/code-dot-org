@@ -1,6 +1,5 @@
 ---
-title: Whole School Participation
-layout: wide
+title: संपूर्ण शाळेचा सहभाग
 ---
 
 {{ signup_button }}

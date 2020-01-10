@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {showWarning} from '../redux/data';
 import LibraryCategory from './LibraryCategory';
-import SearchBar from '@cdo/apps/templates/SearchBar';
 import {categories} from './datasetManifest.json';
 import color from '../../util/color';
 import msg from '@cdo/locale';
@@ -37,7 +36,7 @@ class DataLibraryPane extends React.Component {
 
   onError = error => {
     if (error.type === WarningType.DUPLICATE_TABLE_NAME) {
-      this.props.onShowWarning(error);
+      this.props.onShowWarning(error.msg);
     }
   };
 
@@ -61,10 +60,6 @@ class DataLibraryPane extends React.Component {
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
-        <SearchBar
-          placeholderText={'Search'}
-          onChange={() => console.log('search!')}
-        />
         <hr style={styles.divider} />
         {categories.map(category => (
           <LibraryCategory

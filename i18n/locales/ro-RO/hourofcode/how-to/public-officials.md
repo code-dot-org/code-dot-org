@@ -1,7 +1,5 @@
 ---
 title: Ghidul de organizare pentru funcţionarii publici
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

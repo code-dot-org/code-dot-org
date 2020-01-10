@@ -34,7 +34,7 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
     :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
     :date_and_location_name, :regional_partner_name, :regional_partner_id,
-    :scholarship_workshop?, :can_delete
+    :scholarship_workshop?, :can_delete, :created_at
 
   def sessions
     object.sessions.map do |session|
@@ -44,6 +44,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def organizer
     {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
+  rescue
+    # Fallback value if workshop organizer, who is a user, no longer exists
+    {id: nil, name: nil, email: nil}
   end
 
   def facilitators

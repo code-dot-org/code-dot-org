@@ -29,7 +29,8 @@ import {
   deleteColumnName,
   renameColumnName,
   addMissingColumns,
-  getColumnsRef
+  getColumnsRef,
+  getColumnNamesFromRecords
 } from './firebaseMetadata';
 import {tableType} from './redux/data';
 import {WarningType} from './constants';
@@ -47,6 +48,26 @@ function getKeysRef() {
   let kv = getProjectDatabase().child('storage/keys');
   return kv;
 }
+
+/**
+ * @return {Promise<boolean>} whether the project channel exists
+ */
+FirebaseStorage.channelExists = function() {
+  return getProjectDatabase()
+    .once('value')
+    .then(snapshot => snapshot.val() !== null);
+};
+
+/**
+ * Deletes the entire channel in firebase.
+ * @param {function} onSuccess
+ * @param {function} onError
+ */
+FirebaseStorage.clearAllData = function(onSuccess, onError) {
+  getProjectDatabase()
+    .set(null)
+    .then(onSuccess, onError);
+};
 
 /**
  * Reads the value associated with the key, accessible to all users of the app.
@@ -200,6 +221,12 @@ FirebaseStorage.createRecord = function(tableName, record, onSuccess, onError) {
       );
       return recordRef.set(JSON.stringify(record));
     })
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords([JSON.stringify(record)])
+      )
+    )
     .then(() => onSuccess(record), onError);
 };
 
@@ -357,6 +384,12 @@ FirebaseStorage.updateRecord = function(
         incrementRateLimitCounters()
           .then(() => updateTableCounters(tableName, 0))
           .then(() => recordRef.set(recordJson))
+          .then(() =>
+            addMissingColumns(
+              tableName,
+              getColumnNamesFromRecords([recordJson])
+            )
+          )
           .then(() => onComplete(record, true), onError);
       }
     });
@@ -526,7 +559,11 @@ FirebaseStorage.copyStaticTable = function(tableName, onSuccess, onError) {
     })
     .then(snapshot => {
       getRecordsRef(tableName).set(snapshot.val());
+      return snapshot;
     })
+    .then(snapshot =>
+      addMissingColumns(tableName, getColumnNamesFromRecords(snapshot.val()))
+    )
     .then(onSuccess, onError);
 };
 
@@ -585,6 +622,7 @@ FirebaseStorage.createTable = function(tableName, onSuccess, onError) {
           return Promise.resolve();
         });
     })
+    .then(() => addColumnName(tableName, 'id'))
     .then(onSuccess, onError);
 };
 
@@ -632,14 +670,9 @@ FirebaseStorage.clearTable = function(tableName, onSuccess, onError) {
 /**
  * Returns a list of existing tables. The counters/tables node is the source of truth for
  * whether a table exists. See fileoverview in firebaseCounters.js for more details.
- * @param {boolean} overwrite
- * @returns {Promise.<Object>} Promise containing a map with existing table names as keys,
- *   or an empty map if overwrite is true.
+ * @returns {Promise.<Object>} Promise containing a map with existing table names as keys.
  */
-function getExistingTables(overwrite) {
-  if (overwrite) {
-    return Promise.resolve({});
-  }
+function getExistingTables() {
   const tablesRef = getProjectDatabase().child('counters/tables');
   return tablesRef.once('value').then(snapshot => snapshot.val() || {});
 }
@@ -668,17 +701,16 @@ function getRecordsData(records) {
  *     "table_name": [{ "name": "Trevor", "age": 30 }, { "name": "Hadi", "age": 72}],
  *     "table_name2": [{ "city": "Seattle", "state": "WA" }, { "city": "Chicago", "state": "IL"}]
  *   }
- * @param {bool} overwrite Whether to overwrite a table if it already exists.
  * @returns {Promise} which resolves when all table data has been written
  */
-FirebaseStorage.populateTable = function(jsonData, overwrite) {
+FirebaseStorage.populateTable = function(jsonData) {
   if (!jsonData || !jsonData.length) {
     return Promise.resolve();
   }
   // Ensure rate limit counters have been initialized, so that updates to the
   // counters/tables node will pass type definition checks in the security rules.
   return incrementRateLimitCounters()
-    .then(() => getExistingTables(overwrite))
+    .then(() => getExistingTables())
     .then(existingTables => {
       const promises = [];
       let newTables;
@@ -690,7 +722,7 @@ FirebaseStorage.populateTable = function(jsonData, overwrite) {
         );
       }
       for (const tableName in newTables) {
-        if (overwrite || existingTables[tableName] === undefined) {
+        if (existingTables[tableName] === undefined) {
           const newRecords = newTables[tableName];
           const recordsData = getRecordsData(newRecords);
           promises.push(overwriteTableData(tableName, recordsData));
@@ -701,14 +733,9 @@ FirebaseStorage.populateTable = function(jsonData, overwrite) {
 };
 
 /**
- * @param {boolean} overwrite
- * @returns {Promise} Promise containing a map of existing key/value pairs, or an
- *   empty map if overwrite is true.
+ * @returns {Promise} Promise containing a map of existing key/value pairs.
  */
-function getExistingKeyValues(overwrite) {
-  if (overwrite) {
-    return Promise.resolve({});
-  }
+function getExistingKeyValues() {
   return getKeysRef()
     .once('value')
     .then(snapshot => snapshot.val() || {});
@@ -722,20 +749,14 @@ function getExistingKeyValues(overwrite) {
  *     "click_count": 5,
  *     "button_color": "blue"
  *   }
- * @param {bool} overwrite Whether to overwrite a key if it already exists.
  * @param {function ()} onSuccess Function to call on success.
  * @param {function} onError Function to call with an error in case of failure.
  */
-FirebaseStorage.populateKeyValue = function(
-  jsonData,
-  overwrite,
-  onSuccess,
-  onError
-) {
+FirebaseStorage.populateKeyValue = function(jsonData, onSuccess, onError) {
   if (!jsonData || !jsonData.length) {
     return;
   }
-  getExistingKeyValues(overwrite)
+  getExistingKeyValues()
     .then(oldKeyValues => {
       let newKeyValues;
       try {
@@ -747,7 +768,7 @@ FirebaseStorage.populateKeyValue = function(
       }
       const keysData = {};
       for (const key in newKeyValues) {
-        if (overwrite || oldKeyValues[key] === undefined) {
+        if (oldKeyValues[key] === undefined) {
           keysData[key] = JSON.stringify(newKeyValues[key]);
         }
       }
@@ -1004,7 +1025,12 @@ function overwriteTableData(tableName, recordsData) {
         rowCount: count
       });
     })
-    .then(() => addMissingColumns(tableName));
+    .then(() =>
+      addMissingColumns(
+        tableName,
+        getColumnNamesFromRecords(Object.values(recordsData))
+      )
+    );
 }
 
 FirebaseStorage.importCsv = function(

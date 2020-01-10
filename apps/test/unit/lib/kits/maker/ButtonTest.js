@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {expect} from '../../../../util/deprecatedChai';
 import five from '@code-dot-org/johnny-five';
 import makeStubBoard from './makeStubBoard';
-import Button from '@cdo/apps/lib/kits/maker/Button';
+import {PlaygroundButton as Button} from '@cdo/apps/lib/kits/maker/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 describe('Button', function() {

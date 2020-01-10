@@ -1,7 +1,5 @@
 ---
 title: Eksempel på kunngjering som støtter opp om "Computer Science Education Week" og Kodetimen
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

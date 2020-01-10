@@ -1,7 +1,5 @@
 ---
 title: Cómo organizar un evento de la Hora del Código
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

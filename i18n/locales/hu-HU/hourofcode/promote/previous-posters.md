@@ -1,14 +1,12 @@
 ---
-title: Régebbi "Hour of Code" poszterek
-layout: wide
-nav: promote_nav
+title: Régebbi Kódolás órája poszterek
 ---
 
 {{ signup_button }}
 
-# Régebbi "Hour of Code" poszterek
+# Régebbi Kódolás órája poszterek
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Keressen a korábbi évek plakátjai között, és akassza ki osztálytermében! A legújabb plakátot keresi? [Kattintson ide]({{ promote/promote_posters_url }}).
 
 * * *
 

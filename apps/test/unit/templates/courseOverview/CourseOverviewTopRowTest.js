@@ -26,9 +26,9 @@ const defaultProps = {
 };
 
 describe('CourseOverviewTopRow', () => {
-  it('contains an AssignToSection button', () => {
+  it('contains a SectionAssigner', () => {
     const wrapper = shallow(<CourseOverviewTopRow {...defaultProps} />);
-    assert.equal(wrapper.find('Connect(AssignToSection)').length, 1);
+    assert.equal(wrapper.find('Connect(SectionAssigner)').length, 1);
   });
 
   it('has a button for each resource', () => {

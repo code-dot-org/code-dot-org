@@ -13,8 +13,10 @@
 #
 # Indexes
 #
+#  index_pd_attendances_on_marked_by_user_id             (marked_by_user_id)
 #  index_pd_attendances_on_pd_enrollment_id              (pd_enrollment_id)
 #  index_pd_attendances_on_pd_session_id_and_teacher_id  (pd_session_id,teacher_id) UNIQUE
+#  index_pd_attendances_on_teacher_id                    (teacher_id)
 #
 
 class Pd::Attendance < ActiveRecord::Base

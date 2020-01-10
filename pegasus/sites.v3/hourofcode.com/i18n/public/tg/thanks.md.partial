@@ -3,20 +3,8 @@ title: Ташаккур барои обунашавӣ бо мақсади таш
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Ҳар як фарзанд бояд имконият дошта бошад
-  og:description: The Hour of Code is a global movement reaching tens of millions
-    of students of all ages in 180+ countries and over 45 languages.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Ҳар як фарзанд бояд имконият дошта бошад
-  twitter:description: The Hour of Code is a global movement reaching tens of millions
-    of students of all ages in 180+ countries and over 45 languages.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Ташаккур барои обунашавӣ бо мақсади ташкилкунии Соати рамз!

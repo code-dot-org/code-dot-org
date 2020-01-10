@@ -1,7 +1,5 @@
 ---
-title: Hour of Code How-To for Districts
-layout: wide
-nav: how_to_nav
+title: ऑवर ऑफ़ कोड हाउ-टु जिलों के लि
 ---
 
 {{ signup_button }}

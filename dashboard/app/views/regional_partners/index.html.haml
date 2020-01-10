@@ -1,5 +1,17 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
+  :scss
+    .main .new-regional-partner {
+      font-size: 20px;
+      line-height: 40px;
+      margin: 10px 0;
+      float: right;
+    }
+
+- if can? :create, RegionalPartner
+  = link_to new_regional_partner_path, class: 'new-regional-partner' do
+    %i.fa.fa-plus-circle
+    = t('crud.new_model', model: RegionalPartner.model_name.human)
 
 %h1 Regional Partners
 

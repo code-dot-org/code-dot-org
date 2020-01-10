@@ -1,7 +1,5 @@
 ---
 title: Kuidas KoodiTund läbi viia - ettevõtetele
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,6 +1,5 @@
 ---
 title: Иштироки тамоми мактаб
-layout: wide
 ---
 
 {{ signup_button }}

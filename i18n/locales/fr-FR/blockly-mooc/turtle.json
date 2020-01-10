@@ -47,6 +47,7 @@
   "jumpBackward": "saute en arrière de",
   "jumpForward": "saute en avant de",
   "jumpToOverDown": "sauter de %1 par dessus %2 en bas",
+  "jumpToPosition": "",
   "jumpByDirection": "sauter %1 de %2 pixels",
   "jumpTooltip": "Déplace l'artiste sans laisser aucune trace.",
   "jumpEastTooltip": "Déplace l'artiste vers l'Est sans laisser aucune trace.",

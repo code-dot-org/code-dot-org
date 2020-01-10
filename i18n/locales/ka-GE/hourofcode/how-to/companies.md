@@ -1,7 +1,5 @@
 ---
 title: როგორ ჩავატაროთ კოდის ერთი საათი – ორგანიზაციებს
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: Hour of Code pressemeddelelse til politikere
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

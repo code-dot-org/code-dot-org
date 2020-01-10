@@ -1550,3 +1550,17 @@ zh-TW:
         image: notes/MC_2018_loops_2.png
       3:
         image: notes/MC_2018_loops_3.png
+    hoc_dance_warmup_2019:
+      1:
+        text: 一小時玩程式 | 舞蹈派對：暖身
+    hoc_dance_events_2019:
+      1:
+        text: 一小時玩程式 | 舞蹈派對：事件（Evnets）
+      4:
+        text: 舉一些事件的例子，像是點擊滑鼠、按下方向鍵，或在觸控螢幕上點了一下。
+    hoc_dance_properties_2019:
+      1:
+        text: 一小時玩程式 | 舞蹈派對：屬性（Properties）
+    hoc_dance_congrats_2019:
+      1:
+        text: 一小時玩程式 | 舞蹈派對：舞會開始啦！

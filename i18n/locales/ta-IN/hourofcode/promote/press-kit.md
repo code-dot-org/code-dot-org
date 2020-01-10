@@ -1,7 +1,5 @@
 ---
-title: பிரஸ் கிட்
-layout: wide
-nav: promote_nav
+title: ப்ரஸ் கிட்
 ---
 
 {{signup_button}}

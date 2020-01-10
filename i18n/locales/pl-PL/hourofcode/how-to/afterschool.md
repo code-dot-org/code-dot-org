@@ -1,7 +1,5 @@
 ---
 title: Porady
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -81,6 +79,6 @@ Rozpocznij Godzinę Kodowania inspirując uczestników i dyskutując, jaki jest 
 
 ## Co będzie się działo po Godzinie Kodowania?
 
-Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działają technologie i jak tworzyć aplikacje komputerowe. Pomóż uczniom kontynuować ich podróż i zachęć ich do [ poznania więcej online ](%= codeorg_url('/learn/beyond') %)!
+Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działają technologie i jak tworzyć aplikacje komputerowe. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: '''Hour of Code''-Handleiding voor Gemeenten'
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

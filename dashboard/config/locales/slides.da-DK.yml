@@ -530,6 +530,10 @@ da:
           af, hvordan man bygger en struktur der er mindst lige så høj som en af de
           her kopper, og den er nødt til at være stærk nok til at kunne holde vægten
           af en bog.
+      3:
+        text: Nogen gange virke det ikke, det du har kodet. Nogen gange bliver du
+          frustreret og har lyst til at give op. Det kan ske mange gange. Men hvis
+          du bliver ved, selv om det driller, så skal det nok snart lykkes for dig.
       4:
         text: Vedholdenhed er at hænge i, når du virkelig ønsker at give op. Hvis
           du ønsker at skabe noget nyt og anderledes, vil der være en masse fejl undervejs.
@@ -552,6 +556,11 @@ da:
           ny dans. Iteration. Vi kommer til at lære om løkker ved hjælp af en dans.
           Du vil lære et par nemme trin og gentage dem igen og igen for at fuldføre
           dansen.
+      4:
+        text: Her er de trin som du må lære. Klap i hænderne. Tag dine hænder bag
+          hovedet. Sæt dine hænder på hofterne. Løft din venstre hånd. Løft din højre
+          hånd. Det er da ret let ikke? Du vil finde ud af, at du kan forkorte disse
+          beskeder ved at putte nogle danste trin ind i en løkke.
       5:
         text: Vi bruger faktisk løkker i vores dans. Danserne er iført computere,
           alle i samme netværk. Jeg kan f.eks. køre lysene i en løkke mellem de samme
@@ -561,6 +570,15 @@ da:
           ved hjælp af løkker. Løkker er vigtige i datalogi, fordi de gør vores arbejde
           kortere og lettere.
     C1_happy_maps_unplugged:
+      1:
+        text: Denne opgave kaldes Sjove kort. I dag skal vi hjælpe vores lille lodne
+          ven Flurb, med at komme frem til hendes frugter.
+      2:
+        text: Hjælp Flurb med at komme hen til frugterne. For at kunne gøre det, skal
+          du finde ud af, hvilken vej Flurb skal gå og styrer hende med pile. Hvilken
+          retning skal Flurb gå, for at få æblet? Prøv at finde den rigtige vej.
+      3:
+        text: For at få den der hen, må du markere retningen som den skal gå.
       4:
         text: Opret din algoritme ved at lime pile ved siden af det kort, som du forsøger
           at løse. Den anden er den samme, men nedad.
@@ -885,3 +903,7 @@ da:
       6:
         text: Det hvide område til højre kaldes arbejdsområdet, og det er her, vi
           bygger vores program.
+    hoc_dance_events_2019:
+      4:
+        text: Eksempler på hændelser er at lytte efter et museklik, en piletast eller
+          at der tappes på skærmen.

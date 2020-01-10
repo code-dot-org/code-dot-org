@@ -47,6 +47,7 @@
   "jumpBackward": "hüppa tagasi",
   "jumpForward": "hüppa edasi",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Liigutab kunstnikku joont tõmbamata.",
   "jumpEastTooltip": "Liigutab kunstnikku ida suunas joont tõmbamata.",

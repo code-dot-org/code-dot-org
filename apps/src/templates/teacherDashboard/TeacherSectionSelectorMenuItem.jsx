@@ -9,13 +9,13 @@ const styles = {
   item: {
     height: 28,
     lineHeight: '28px',
-    width: 220,
+    width: 270,
     fontSize: 14,
-    fontFamily: '"Gotham 4r", sans-serif'
-  },
-  assigned: {
-    marginLeft: 20,
-    color: color.level_perfect
+    fontFamily: '"Gotham 4r", sans-serif',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: 10
   }
 };
 
@@ -27,14 +27,18 @@ export default class TeacherSectionSelectorMenuItem extends Component {
 
   render() {
     const {section, onClick} = this.props;
+    const checkMarkStyle = {
+      marginRight: 5,
+      color: color.level_perfect,
+      visibility: section.isAssigned ? 'visible' : 'hidden'
+    };
+
     return (
-      <PopUpMenu.Item onClick={onClick}>
-        <div style={styles.item}>
-          <span>{section.name}</span>
-          <span style={styles.assigned}>
-            {section.isAssigned && <FontAwesome icon="check" />}
-          </span>
-        </div>
+      <PopUpMenu.Item onClick={onClick} style={styles.item}>
+        <span style={checkMarkStyle}>
+          <FontAwesome icon="check" />
+        </span>
+        <span>{section.name}</span>
       </PopUpMenu.Item>
     );
   }

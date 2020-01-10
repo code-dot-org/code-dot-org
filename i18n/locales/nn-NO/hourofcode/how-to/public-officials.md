@@ -1,7 +1,5 @@
 ---
 title: Rettleiing for det offentlege
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

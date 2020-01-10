@@ -1,6 +1,5 @@
 ---
 title: Ghiduri de activitate
-layout: wide
 ---
 
 <style>

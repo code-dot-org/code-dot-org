@@ -1,7 +1,5 @@
 ---
 title: Beispiel für einen Aufruf zur Unterstützung einer Informatikwoche und der Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -14,7 +12,7 @@ nav: promote_nav
 
 * * *
 
-#### Title: Computing…Where the Jobs Are
+#### Titel: Computing... Wo die Jobs sind
 
 #### By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]
 
@@ -30,9 +28,9 @@ Why is this? And how can we address it?
 
 The problem begins in our middle and high schools. Nine out of ten of our schools do not offer computer programming classes. In **[SCHOOL DISTRICT]** last year, only **[NUMBER]** students took the college-level Advanced Placement (AP) Computer Science Exam, just **[%]** of all students who took an AP in our state. We’re simply not doing enough to prepare or encourage our students to pursue these high-paying, vital careers.
 
-Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
+Fast alle wichtigen Computerinnovationen wurden in den Vereinigten Staaten von Amerika erfunden. Wir laufen Gefahr, den Anschluss zu verlieren.
 
-We need to make some changes.
+Wir müssen etwas unternehmen.
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 

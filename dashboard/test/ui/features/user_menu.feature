@@ -60,6 +60,7 @@ Scenario: Pair Programming
   Given I create a student named "Thing_Two"
   And I join the section
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/7?noautoplay=true"
+  And I wait for the page to fully load
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Thing_Two"
   And I click selector ".display_name"

@@ -1,0 +1,36 @@
+name 'csp-u5-exam1-robot_2020'
+editor_experiment ''
+
+
+right '<pre>REPEAT 2 TIMES
+  REPEAT 3 TIMES
+    MOVE_FORWARD
+  TURN LEFT
+</pre>'
+
+wrong '<pre>REPEAT 3 TIMES
+  REPEAT 2 TIMES
+    MOVE_FORWARD
+  TURN LEFT  
+</pre>'
+
+wrong '<pre>REPEAT 3 TIMES
+  REPEAT 3 TIMES
+    MOVE_FORWARD
+  TURN LEFT 
+</pre>'
+
+wrong '<pre>REPEAT 2 TIMES
+  REPEAT 2 TIMES
+    MOVE_FORWARD
+  TURN LEFT
+</pre>'
+
+markdown <<MARKDOWN
+<img src="https://images.code.org/a2d08c5c0948e9418425c4fc8af621ef-image-1575301837741.png" style="width:200px">
+
+The following question uses a robot in a grid of squares. The robot is represented by a triangle, which is initially
+facing up.
+
+Which of the following programs will move the robot to the gray square following the path shown on the grid?
+MARKDOWN

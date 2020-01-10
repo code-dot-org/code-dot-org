@@ -1,6 +1,5 @@
 ---
 title: Иш-аракет жетектемелери
-layout: wide
 ---
 
 <style>

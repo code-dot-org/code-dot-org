@@ -1,3 +1,8 @@
 {
-  "shareGame": "Partilha o teu jogo:"
+  "shareGame": "Partilha o teu jogo:",
+  "spritelabFeedbackCreateFishWithBehavior": "Precisas de criar pelo menos um sprite dum peixe e dar-lhe um comportamento.",
+  "spritelabFeedbackMoveFishLeftRight": "O teu sprite dum peixe precisa de ser movido para a esquerda ou para a direita. Tenta mudar o seu comportamento.",
+  "spritelabFeedbackChangeBackgroundColor": "Necessitas de mudar o fundo para algo que não seja branco.",
+  "spritelabFeedbackCreateTwoSprites": "Precisas de criar exatamente dois sprites.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Os teus dois sprites precisam de vestuários diferentes."
 }

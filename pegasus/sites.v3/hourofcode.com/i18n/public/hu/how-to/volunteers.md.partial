@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### Csinálj különlegességet egy osztályteremben!
 
----
+* * *
 
 ## Miért legyél önkéntes?
 
@@ -44,11 +44,11 @@ A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy 
 
 <ol>
   <li>
-    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Küldd el ezt az e-mailt</a> gyermeked tanárának, hogy felhívd a figyelmét az Hour of Code-ra.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
+    Ajánld fel, hogy levezényelsz egy Hour of Code eseményt tanítási idő után valamelyik helyi iskolában. Itt egy hasznos <a href="{{ urls/how_to_guide }}">Útmutató</a> ahhoz, hogyan is kezdd el.
   </li>
 </ol>
 
@@ -57,7 +57,7 @@ A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy 
 </h2>
 
 <p>
-  Mesélj barátaidnak, munkatársaidnak a "Hour of Code" kezdeményezésről. Tanárok ezrei várják az önkénteseket, szóval kérd meg őket, hogy <a href="https://code.org/volunteer">jelentkezzenek önkéntesnek</a>. Kérdd meg a munkáltatód, hogy szintén csatlakozzon! <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
+  Mesélj barátaidnak, munkatársaidnak a "Hour of Code" kezdeményezésről. Tanárok ezrei várják az önkénteseket, szóval kérd meg őket, hogy <a href="https://code.org/volunteer">jelentkezzenek önkéntesnek</a>. Kérdd meg a munkáltatód, hogy szintén csatlakozzon! Küldd el felettesednek vagy munkáltatódnak ezt az<a href="{{ promote/sample_emails }}"> e-mailt</a>, hogy biztasd őket a csatlakozásra.
 </p>
 
 <h2>
@@ -66,13 +66,13 @@ A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy 
 
 <ul>
   <li>
-    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+    <a href="{{ promote/videos }}">Válassz ki egy videót</a>, hogy lelkesítsd őket és megmutasd nekik, milyen is az Hour of Code.
   </li>
   <li>
     Nézd meg az <a href="/files/hoc-volunteer-toolkit.pdf">"Hour of Code" önkénteseknek szóló segédletet</a>, mely egy összefoglaló mellett időtervet, előkészítő anyagokat és marketing anyagokat is tartalmaz. Minden ami szükséges készen áll a te önkénteskedésedhez!
   </li>
   <li>
-    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
+    Ha azt tervezed, hogy egy gyakorlatot fogsz a diákoknak bemutatni, fordíts legalább 30 percet a <a href="{{ urls/learn }}"> a gyakorlat </a> kipróbálására.
   </li>
   <li>
     Ha meglátogatsz egy iskolát, előtte végezd el a látogatáshoz esetlegesen szükséges papírmunkát.
@@ -120,7 +120,7 @@ A vendég előadó lehetsz egy tanteremben, vagy segíthetsz a tanítóknak egy 
     </td>
     
     <td>
-      <a href="{{ promote/videos }}">Show an inspirational video</a>.
+      <a href="{{ promote/videos }}">Mutass be egy inspiráló videót</a>.
     </td>
   </tr>
   

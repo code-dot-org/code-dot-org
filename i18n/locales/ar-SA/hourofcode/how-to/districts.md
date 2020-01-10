@@ -1,7 +1,5 @@
 ---
 title: دليل استعمال ساعة البرمجة للمقاطعات
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

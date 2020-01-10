@@ -148,6 +148,22 @@ it-IT:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Nuovo blocco!
         dance_callout_11_b: Nuovo blocco!
+      Dance_2019_01:
+        dance_callout_01: Qui scegli il tipo di ballerino.
+      Dance_2019_02:
+        dance_callout_11_a: Aggiungi questo blocco al tuo programma.
+        arrow_buttons: Premi i pulsanti freccia per controllare il tuo ballerino.
+      Dance_2019_04:
+        dance_callout_02: Aggiungi questo blocco al tuo programma!
+      Dance_2019_05:
+        dance_callout_05: Aggiungi un nuovo evento al tuo programma.
+      Dance_2019_06:
+        dance_party_11_5_groups: Nuovo blocco!
+      Dance_2019_07:
+        setprop_hint: Nuovo blocco!
+      Dance_2019_09:
+        new_block_3: Nuovo blocco!
+        new_block_4: Nuovo blocco!
       Dance_Party_01:
         dance_callout_01: Aggiungi questo blocco al tuo programma!
       Dance_Party_02:
@@ -282,6 +298,8 @@ it-IT:
         craft_what_is_iron: Estrai il ferro!
       Underground Iron_2019:
         craft_what_is_iron: Estrai il ferro!
+      Virtual Pet 2_2019:
+        '': Clicca qui!
       behaviors 3a:
         behavior_callout: Perché questo comportamento non funziona per la stella centrale?
         star2_callout: Rimuovi questo blocco costume e usa al suo posto il blocco
@@ -300,8 +318,8 @@ it-IT:
         courseE_artist_functions_challenge2_callout2: Se non ti piace questo progetto,
           cambialo con qualunque cosa vuoi!
       course3_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       course3_bee_functions_challenge3:
         courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
           funzione?
@@ -359,6 +377,8 @@ it-IT:
       courseA_collector_loops3_2019:
         gradek_adventurer_loops2_1: Questo numero ti dice quanti di questi blocchi
           puoi usare in questo esercizio.
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Clicca qui per eseguire il codice!
       courseA_collector_preLoops2:
         courseA_collector_loops1_1: Vedi qualche nuovo blocco nella cassetta degli
           attrezzi? Non preoccuparti, ti mostreremo come usarli più avanti in questa
@@ -636,11 +656,11 @@ it-IT:
         courseD_bee_conditionals_challenge2_1: Usa questo ciclo per raccogliere tutto
           il nettare da un fiore o fare tutto il miele in un favo.
       courseD_bee_debugging_challenge1:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       courseD_bee_debugging_challenge1a:
-        courseD_bee_debugging_challenge1_callout1: Usa questo comando per muovere
-          l'ape indietro.
+        courseD_bee_debugging_challenge1_callout1: Usa quest'istruzione per far andare
+          l'ape all'indietro.
       courseD_collector_ramp8:
         courseD_collector_ramp8_1: Usa questo blocco per raccogliere un diamante.
       courseD_farmer_while7_2018:
@@ -715,6 +735,8 @@ it-IT:
       courseD_scrat_ramp7:
         courseD_maze_ramp6_1: Qualiasi codice inserisci qui sarà ripetuto quante volte
           gli dici di farlo, poi continua ad eseguire il resto del programma.
+      courseE_aboutme_2:
+        '': Clicca qui!
       courseE_artist_functions1:
         courseD_artist_functions1_1: Cominciamo usando questo blocco per creare il
           primo quadrato.
@@ -857,11 +879,11 @@ it-IT:
       courseF_bee_for9_2019:
         courseF_bee_for9_1: I blocchi matematici li trovi qui dentro.
       courseF_bee_functions2:
-        courseF_bee_functions2_1: Questo blocco chiama una funzione. Clicca questo
-          bottono "modifica" per vedere cosa c'è all'interno!
+        courseF_bee_functions2_1: Questo blocco richiama una funzione. Clicca il pulsante
+          "modifica" per vedere cosa c'è all'interno!
       courseF_bee_functions6:
-        courseF_bee_functions6_1: Non dimenticare di guardare quì per più blocchi
-          che potrebbero aiutarti a renderlo più facile!
+        courseF_bee_functions6_1: Non dimenticarti che qui ci sono altri blocchi che
+          potrebbero semplificarti il lavoro!
       courseF_bee_functions_challenge1:
         courseF_bee_functions_challenge1_1: Quale codice dovresti inserire in questa
           funzione?
@@ -874,10 +896,15 @@ it-IT:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
       courseF_bee_variables_1_2019:
         courseF_bee_functions_1_2018_1: Puoi trovare qui le tue variabili!
+      courseF_playlab_variables1a:
+        courseF_playlab_variables1a_1: La cassetta degli attrezzi è stata organizzata
+          in categorie per farti trovare più facilmente i blocchi che ti servono.
       courseF_playlab_variables5c:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
       courseF_playlab_variables6c:
         courseF_playlab_variables5c_1: Troverai qui il tuo blocco variabile.
+      courseF_playlab_variables7c:
+        courseF_playlab_variables7c_1: Il blocco `chiedi` lo trovi qui!
       coursea_maze_ramp1_2018:
         grade2_CaringForNewPet_0_1: Dopo aver collegato insieme tutti i blocchi, premi
           "Esegui" per far partire il tuo programma.
@@ -934,3 +961,5 @@ it-IT:
         grade5_artist_variables_triangles1_1: 'Guarda: c''è una nuova modalità per
           introdurre numeri nei blocchi. Questi blocchi "matematici" possono essere
           presi e spostati da un blocco all''altro!'
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Guarda qui per blocchi "tutte le anatre"

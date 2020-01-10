@@ -25,7 +25,7 @@ module LevelsHelper
     elsif script_level.stage.lockable?
       script_lockable_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
     elsif script_level.bonus
-      query_params = params.merge(id: script_level.id)
+      query_params = params.merge(level_name: script_level.level.name)
       script_stage_extras_path(script_level.script.name, script_level.stage.relative_position, query_params)
     else
       script_stage_script_level_path(script_level.script, script_level.stage, script_level, params)
@@ -233,8 +233,8 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a? Weblab
-        weblab_options
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish)
+        non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
       elsif @level.is_a? Widget
@@ -368,15 +368,15 @@ module LevelsHelper
     level_options['stage_total'] = script_level ? script_level.stage_total : 1
   end
 
-  # Options hash for Weblab
-  def weblab_options
+  # Options hash for non-blockly puzzle apps
+  def non_blockly_puzzle_options
     # Level-dependent options
     app_options = {}
 
     l = @level
-    raise ArgumentError.new("#{l} is not a Weblab object") unless l.is_a? Weblab
+    raise ArgumentError.new("#{l} is not a non-blockly puzzle object") unless l.respond_to? :non_blockly_puzzle_level_options
 
-    level_options = l.weblab_level_options.dup
+    level_options = l.non_blockly_puzzle_level_options.dup
     app_options[:level] = level_options
 
     set_puzzle_position_options(level_options)
@@ -410,7 +410,7 @@ module LevelsHelper
       end
     end
 
-    app_options[:app] = 'weblab'
+    app_options[:app] = l.game.app
     app_options[:baseUrl] = Blockly.base_url
     app_options[:report] = {
       fallback_response: @fallback_response,
@@ -606,7 +606,9 @@ module LevelsHelper
   end
 
   def match_answer_as_image(path, width)
-    "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    attrs = {src: path.strip}
+    attrs[:width] = width.strip if width
+    content_tag(:img, '', attrs)
   end
 
   def match_answer_as_embedded_blockly(path)

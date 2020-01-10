@@ -1,0 +1,11 @@
+%legend.control-legend.collapsed{data: {toggle: "collapse", target: "#debuggingTools"}}
+  Debugging
+
+#debuggingTools.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :expand_debugger, description: "Expand Debugger by Default"}
+
+  = render partial: 'levels/editors/fields/watchers_ui', locals: {f: f}
+
+  .field.aligned-input-group
+    = boolean_check_box f, :debugger_disabled
+    =f.label 'Disable code debugger (Console is still enabled)'

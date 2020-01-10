@@ -2,6 +2,43 @@
 ca:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"ALIEN"': tots els extraterrestres
+            '"BEAR"': tots els óssos
+            '"CAT"': tots els gats
+            '"DOG"': tots els gossos
+            '"DUCK"': tots els ànecs
+            '"FROG"': totes les granotes
+            '"MOOSE"': tots els ants
+            '"PINEAPPLE"': totes les pinyes
+            '"ROBOT"': tots els robots
+            '"SHARK"': tots els taurons
+          MOVE1:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
+          MOVE2:
+            MOVES.Roll: Rodar per terra
+            MOVES.ClapHigh: aplaudir ben fort
+            MOVES.Dab: Dansa d'amagar el cap
+            MOVES.DoubleJam: Baixada doble
+            MOVES.Drop: Caiguda
+            MOVES.Floss: Provocació
+            MOVES.Fresh: Fresc
+            MOVES.Clown: Pallasso
+            MOVES.Kick: Estrella
+            MOVES.ThisOrThat: Aquest o aquell
+            MOVES.Rest: Cap
       Dancelab_atTimestamp:
         text: després de {TIMESTAMP} {UNIT}
         options:
@@ -406,7 +443,7 @@ ca:
             '"neon"': Neó
             '"warm"': Vermells
       Dancelab_setBackgroundEffectWithPalette:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+        text: definir l'efecte de fons {PALETTE} {EFFECT}
         options:
           EFFECT:
             '"none"': Cap
@@ -676,6 +713,11 @@ ca:
             '"bass"': baix
             '"mid"': mig
             '"treble"': agut
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"hearts_colorful"': Cors
+            '"x"': x
       Dancelab_whenKey:
         text: quan la {KEY} és premuda
         options:
@@ -694,6 +736,8 @@ ca:
             '1': mig
             '2': agut
       Dancelab_whenSetup:
+        text: configuració
+      Dancelab_whenSetup2:
         text: configuració
       gamelab_changePropBy:
         text: canvi {SPRITE} {PROPERTY} per {VAL}
@@ -861,6 +905,8 @@ ca:
             MOVES.Rest: Cap
       Mikelab_randomColor:
         text: color aleatori
+      Mikelab_repeatUntilComplete:
+        text: repetir per sempre
       Mikelab_setBG:
         options:
           BG:

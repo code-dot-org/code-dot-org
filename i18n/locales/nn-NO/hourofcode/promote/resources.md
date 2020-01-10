@@ -1,7 +1,5 @@
 ---
 title: Ressursar
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -24,7 +22,6 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 {{ promote_new_posters }}
 
-* Want to download smaller versions of these posters? <a href="https://www.dropbox.com/sh/8dqt7p9ioc4hnmu/AABQfTWLTPVh2Kgy32PSvLU3a?dl=0" target="_blank">Download them here</a>.
 * Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>

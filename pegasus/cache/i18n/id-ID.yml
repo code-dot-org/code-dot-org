@@ -9,7 +9,7 @@ id-ID:
     8, 9, dan 10. Silakan perbaruhi browser anda.
   upgrade_ie_message_csedweek: CSEdWeek.org akan menghapus dukungan terhadap Internet
     Explorer 8, 9, dan 10. Silakan perbaruhi browser anda.
-  upgrade_ie_link: Pelajari lebih banyak
+  upgrade_ie_link: Pelajari lebih lanjut
   en: Ilmu komputer
   computer_science_edweek: Minggu pendidikan ilmu komputer
   csedweek_dates: 8-14 Desember 2014
@@ -25,8 +25,8 @@ id-ID:
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
     untuk mempelajari ilmu komputer
-  petition_sign_message: 'Jika Anda setuju, bubuhkan nama Anda.  Bergabung dengan
-    # orang lain.'
+  petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda. Bergabunglah dengan
+    # orang lainnya.'
   petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabunglah
     dengan # orang lainnya.'
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
@@ -41,7 +41,7 @@ id-ID:
   og_title_soon: Jam kode akan segera hadir
   og_title_here: Jam kode di sini!
   og_description: Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk
-    belajar ilmu komputer. Ini mengubah segalanya.
+    belajar ilmu komputer.
   og_description_celeb: Mencoba tutorial yang baru, memenangkan video selebriti untuk
     dirimu sendiri atau chat kelasmu!
   csedweek_og_title: Minggu pendidikan ilmu komputer
@@ -320,7 +320,8 @@ id-ID:
   studiobar_title_nolink: Kunjungi Code Studio
   studiobar_elementary_title: Latihan-latihan dasar
   studiobar_elementary_body: Tiga latihan terbaru kami untuk for K&#8209;5
-  studiobar_dance_body: Buat dan bagikan pesta dansa anda
+  studiobar_dance_title: Pesta Tari
+  studiobar_dance_body: Buat dan bagikan pesta tari anda
   studiobar_hoc_title: Jam kode
   studiobar_hoc_body: Belajar menulis kode bersama Angry Birds
   studiobar_flappy_title: Kode Flappy
@@ -397,13 +398,13 @@ id-ID:
   homepage_slot_text_flappy: Kode Flappy
   homepage_action_text_hoc: Hour of Code untuk setiap pelajar.
   homepage_action_text_num_served: "# disajikan"
-  homepage_action_text_join_us: Bergabung dengan kami
+  homepage_action_text_join_us: Bergabunglah dengan kami
   homepage_action_text_sign_up: Daftar
   homepage_action_text_try_it: Cobalah
   homepage_action_text_volunteers: Teknis relawan yang diinginkan
-  homepage_action_text_codevideo: Tonton videonya
+  homepage_action_text_codevideo: Tonton video
   homepage_action_text_teachervideo: Tonton videonya
-  homepage_action_text_watchvideo: Tonton videonya
+  homepage_action_text_watchvideo: Tonton video
   homepage_action_text_girlvideo: Inspirasi seorang gadis
   homepage_action_text_learn: Mulailah belajar
   homepage_action_text_signpetition: Tandatangani petisi
@@ -414,15 +415,15 @@ id-ID:
   homepage_banner_link_prizes: 'Bergabung dengan acara belajar terbesar dalam sejarah. '
   homepage_banner_text_main: Code.org dan College Board membentuk aliansi untuk meningkatkan
     keberagaman dalam ilmu komputer.
-  homepage_banner_text_link: Pelajari lebih banyak
+  homepage_banner_text_link: Pelajari lebih lanjut
   homepage_banner_privacy_link: Pelajari lebih banyak
   homepage_banner_20k_teachers: 20.000 guru telah dilatih, dan sekarang mereka mengajar
     ilmu komputer di kelas-kelas.
-  homepage_banner_20k_teachers_link: Pelajari lebih banyak
+  homepage_banner_20k_teachers_link: Pelajari lebih lanjut
   homepage_banner_emailprivacy: Kami membuat perubahan penting tentang bagaimana kami
     mendukung privasi siswa.
   homepage_banner_emailprivacy_link: Baca selengkapnya
-  homepage_banner_40k_teachers_link: Pelajari lebih banyak
+  homepage_banner_40k_teachers_link: Pelajari lebih lanjut
   homepage_slot_text_title_hoc: Jam kode
   homepage_slot_text_blurb_hoc: Siapapun bisa belajar. Mulailah hari ini
   homepage_slot_text_link_hoc: Cobalah "Hour of Code"
@@ -451,13 +452,14 @@ id-ID:
   homepage_slot_text_link_donate: Membuat sumbangan
   homepage_slot_text_link_shop: Kaos, topi, & banyak lagi
   homepage_slot_text_link_administrators: Bawa CS ke sekolah mu
-  homepage_gallery_header: Lebih%{project_count}juta Code.org proyek telah dibuat
+  homepage_gallery_header: Lebih dari %{project_count} juta proyek Code.org telah
+    dibuat
   homepage_header_donors: Code.org mengucapkan terima kasih kepada para pendukungnya
   homepage_donors_seall: Lihat semua
   homepage_donors_donate: Donasi
   homepage_below_hero_announcement_text: Kami peduli pada privasi anda dan membuat
     beberapa pembaruan pada kebijakan privasi, efektif 25 mei.
-  homepage_below_hero_announcement_link_text: Pelajari lebih banyak
+  homepage_below_hero_announcement_link_text: Pelajari lebih lanjut
   contact_form_topic_student: Saya seorang siswa
   contact_form_topic_parent: Saya orang tua
   contact_form_topic_teacher: Saya seorang guru
@@ -583,7 +585,7 @@ id-ID:
   sports_og_description: Juara dan peraih medali memberanikan dirimu untuk mencoba
     Hour of Code. Kode permainan olahragamu.
   sports_title: Kode permainan olahraga Anda
-  sports_watch_video: Tonton videonya
+  sports_watch_video: Tonton video
   sports_video_title: Dorong dirimu. Setiap orang bisa belajar.
   sports_select_theme: Pilih tema tutorial Anda
   sports_basketball_title: Buat sebuah permainan basket
@@ -732,7 +734,7 @@ id-ID:
   volunteer_engineer_submission_commitment_annually: 2 - 3 kali per tahun
   volunteer_engineer_submission_commitment_monthly: Beberapa jam per bulan
   volunteer_engineer_submission_commitment_weekly: Beberapa jam per minggu
-  volunteer_engineer_submission_commitment_more: Lebih
+  volunteer_engineer_submission_commitment_more: Selengkapnya
   volunteer_engineer_submission_location_flexibility_onsite: Fasilitas di sekolah
   volunteer_engineer_submission_location_flexibility_remote: membimbing dari jarak
     jauh (guru atau siswa)
@@ -763,7 +765,7 @@ id-ID:
   dashboard_announce_hoc_scaling_progress: Kami mengalami Jam kode lalu lintas tinggi.
     Kami tidak bisa untuk menyimpan apa saja kemajuan minggu ini, tapi kemajuan ini
     dari minggu sebelumnya masih aman.
-  dashboard_announce_learn_more_button: Pelajari lebih banyak
+  dashboard_announce_learn_more_button: Pelajari lebih lanjut
   dashboard_landing_title: Beranda guru
   dashboard_landing_welcome: Selamat datang di dasbot guru yang baru dan termutakhir.
   dashboard_landing_video: Tonton video ini
@@ -1244,8 +1246,11 @@ id-ID:
   coursed-2017_name: Kursus D (2017)
   coursee-2017_name: Kursus E (2017)
   coursef-2017_name: Kursus F (2017)
+  express-2018_name: Kursus Cepat (2018)
   pre-express-2018_name: Kursus ekspres Pre-reader(2018)
   pre-express-2019_name: Kursus Express Pre-Reader(2019)
+  csd2_name: 'Unit 2: Pengembangan Web'
+  csd3_name: 'Unit 3: Animasi dan Game'
   accelerated_name: Kursus akselerasi
   pre-express_name: Kursus ekspres Pre-reader
   20-hour_name: Kursus akselerasi
@@ -2096,7 +2101,7 @@ id-ID:
   header_about: Tentang
   header_teacher_community: Komunitas guru
   header_help_support: 'Bantuan dan dukungan '
-  header_report_bug: Laporkan bug
+  header_report_bug: Laporkan masalah
   header_tutorials: Tutorial
   app_lab_documentation: Dokumentasi aplikasi Lab
   app_lab_tutorials: Tutorial aplikasi Lab
@@ -2109,11 +2114,12 @@ id-ID:
   user_header_settings: Akun saya
   user_header_logout: Keluar
   user_header_signin: Masuk
-  user_header_create: 'Buatlah '
+  user_header_create: 'Buat '
   user_header_applab: 'Aplikasi Lab '
   user_header_artist: 'Artis '
   user_header_gamelab: Laboratorium Game
   user_header_playlab: Play Lab/Lab Permainan
+  user_header_dance: Pesta Tari
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Lihat semua proyek...
@@ -2177,8 +2183,12 @@ id-ID:
     peluang lokal atau berita Sains komputer lain? (kira-kira sekali sebulan)
   account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
     tua atau wali hukum izin untuk menggunakan layanan Code.org.
+  hoc_overview_dance_title: Pesta Tari
   hoc_overview_dance_subtitle: Kode pesta dansa untuk dibagi dengan teman. Featuring
     Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 lainnya!
+  hoc_overview_dance_2019_subtitle: Kode Pesta Dansa untuk berbagi dengan teman-teman
+    Anda. Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas
+    Brothers, Nicki Minaj, dan 34 artis lainnya!
   hoc_overview_title: Aktifitas Hour of Code dari Code.org
   hoc_overview_subtitle: <a href="https://hourofcode.com">Hour of Code </a> adalah
     gerakan global mencapai puluhan juta siswa di 180+ negara.Siapapun,dimanapun bisa
@@ -2194,6 +2204,7 @@ id-ID:
   hoc2018_creativity: kreatifitas
   hoc2018_creativity_create: Buat
   hoc2018_creativity_hoc_coming: Hour of Code datang…
+  hoc2018_creativity_what_will_you_create: Apa yang akan kamu buat?
   hoc2018_creativity_homepage: Terbangkan imajinasi dan lahirkan inovasi. Mulai dengan
     Hour of Code dan brand kreatifitas anda sendiri, apapun itu. Tonton video kami.
   hoc2018_creativity_hoc_about: 'Tahun ini, Hour of Code semua tentang kreatifitas. '
@@ -2212,6 +2223,7 @@ id-ID:
     BARU untuk Hour of Code (Des 3-9). Pastikan untuk mengecek brand aktifitas minekraft
     baru untuk 2018, perjalanan air! Daftarkan kelasmu sekarang.
   hoc2018_mc_aquatic_title: Perjalanan air Minekraft
+  hoc2019_mc_aquatic_description: Jelajahi dan bangun dunia bawah laut dengan kode.
   hoc2018_mc_hero_title: 'Minecraft: Perjalanan Pahlawan'
   hoc2018_mc_designer_title: Perancang Minecraft
   hoc2018_mc_designer_description: Program animal dan objek - objek Minecraft lainnya
@@ -2261,10 +2273,11 @@ id-ID:
   hoc2018_mc_video_title_anybody_can_learn: Siapa pun bisa belajar
   hoc2018_mc_video_title_my_name_is_aracely: Nama saya Aracely
   hoc2018_mc_homepage_hoc_coming: Hour of Code datang...
+  hoc2018_mc_homepage_what_create: Apa yang akan kamu buat?
   hoc2018_mc_homepage_give_flight: Terbangkan imajinasi dan lahirkan inovasi. Mulai
     dengan Hour of Code dan brand kreatifitas anda sendiri, apapun itu.
   hoc2018_mc_homepage_watch_video: Tonton video kami
-  hoc2018_mc_homepage_join_us: Bergabung dengan kami
+  hoc2018_mc_homepage_join_us: Bergabunglah dengan kami
   hoc2018_mc_homepage_try_it: Cobalah
   hoc2018_mc_teacher_guide: Lihat petunjuk guru
   hoc2018_mc_minecraft_education: Pendidikan Minecraft
@@ -2276,9 +2289,11 @@ id-ID:
   hoc2018_mc_short_description_shorter: Gunakan kreatifitasmu dan keterampilan memecahkan
     masalah untuk mengeksplor dan membangun dunia bawah air dengan kode.
   hoc2018_mc_journey: Perjalanan melewati Minekraft dengan kode.
+  hoc2018_dance_party_main_heading: Pesta Tari
   hoc2018_dance_party_landing_title: Menari
   hoc2018_dance_party_subheading: Bantu menerjemahkan pesta dansa
   hoc2018_dance_create_your_own_dance_title: Buat pesta dansamu sendiri
+  hoc2018_dance_party_box_title: Pesta Tari
   hoc2018_dance_party_box_description: Kode sebuah pesta dansa dibagi dengan temanmu!
   hoc2018_dance_party_specs: Bahasa| Format | Usia 6-106
   hoc2018_dance_party_button: Mulai
@@ -2313,7 +2328,7 @@ id-ID:
     kanak kanak Amazon program karir untuk meningkatkan akses pendidikan ilmu komputer.
     Temukan informasi bagaimana terlibat dalam kamp musim panas, kelas CS SMU beasiswa,
     dan magang.
-  hoc2018_dance_amazon_about_future_engineer_button: Pelajari lebih banyak
+  hoc2018_dance_amazon_about_future_engineer_button: Pelajari lebih lanjut
   hoc2018_dance_amazon_try_coding_this_summer_title: Mencoba koding musim panas ini
   hoc2018_dance_amazon_try_coding_this_summer_description: Ikutlah dalam Amazon Future
     Engineer's, bebas biaya, menyenangkan, dan kamp ilmu komputer inklusif! Kamp musim
@@ -2337,8 +2352,8 @@ id-ID:
   hoc2018_dance_amazon_future_engineer_footer: "Artis yang musiknya digunakan dalam
     tutorial ini bukanlah sponsor atau endorse Amazon sebagai bagian lisensi menggunakan
     musik mereka untuk code.org.\n\n"
-  hoc2018_dance_measure: Mengukur
-  hoc2018_dance_measure_colon: 'Ukuran:'
+  hoc2018_dance_measure: Birama
+  hoc2018_dance_measure_colon: 'Birama:'
   hoc2018_aquatic_video1: Perjalanan air Minekraft-pendahuluan
   hoc2018_aquatic_video2: Perjalanan air Minekraft - Loops
   hoc2018_aquatic_video3: Perjalanan air Minekraft -kondisional
@@ -2356,3 +2371,5 @@ id-ID:
   hoc2018_mc_thank_microsoft: Kami berterima kasih kepada Mikrosoft atas dukungan
     visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar
     ilmu komputer dan keterampilan untuk sukses di abad ke 21.
+  hoc2019_mc_mee_description2: Akses sumber daya gratis termasuk rencana pelajaran,
+    video, kurikulum ilmu komputer, dan pelatihan guru.

@@ -41,7 +41,8 @@ class MultiCheckboxSelector extends Component {
     children: PropTypes.element,
     itemPropName: PropTypes.string,
     style: PropTypes.any,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    noHeader: PropTypes.bool
   };
 
   static defaultProps = {
@@ -81,16 +82,18 @@ class MultiCheckboxSelector extends Component {
   render() {
     return (
       <div style={this.props.style}>
-        <h2 style={styles.header}>
-          <input
-            type="checkbox"
-            style={[styles.checkbox, styles.selectAllCheckbox]}
-            checked={this.areAllSelected()}
-            onChange={this.toggleSelectAll}
-            disabled={this.props.disabled}
-          />
-          {this.props.header}
-        </h2>
+        {!this.props.noHeader && (
+          <h2 style={styles.header}>
+            <input
+              type="checkbox"
+              style={[styles.checkbox, styles.selectAllCheckbox]}
+              checked={this.areAllSelected()}
+              onChange={this.toggleSelectAll}
+              disabled={this.props.disabled}
+            />
+            {this.props.header}
+          </h2>
+        )}
         <ul style={styles.list}>
           {this.props.items.map((item, index) => (
             <li style={styles.listItem} key={index}>

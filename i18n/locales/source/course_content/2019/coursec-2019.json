@@ -1144,7 +1144,7 @@
   },
   "https://studio.code.org/s/coursec-2019/stage/16/puzzle/6": {
     "short_instructions": "Let's play a game. Score 5 points by moving the Penguin to the Octopus!",
-    "long_instructions": "Let's play a game. Score 5 points by moving the Penguin to the Octopus!",
+    "long_instructions": "Let's play a game. Move the penguin to the octopus to score a point. Score 5 points to win.",
     "authored_hints": {
       "courseC_PlayLab_eventsA_a": "Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.",
       "courseC_PlayLab_eventsA_b": "You will need to specifically drag a `when run` event block into the workspace to solve this puzzle."
@@ -1221,9 +1221,6 @@
   "https://studio.code.org/s/coursec-2019/stage/17/puzzle/2": {
     "short_instructions": "Press Run. \nThe wizard will make animals appear. \n\nCount them. \nWhat do you notice?",
     "long_instructions": "Press Run. The wizard will make animals appear. Count them. What do you notice?",
-    "authored_hints": {
-      "courseA_playLab_events7_a": "Use this block to control what happens when the actors collide.\n\n[blockly block][0]"
-    },
     "function_names": {
       "do something": "do something"
     }

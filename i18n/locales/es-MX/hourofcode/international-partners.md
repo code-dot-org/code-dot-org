@@ -1,6 +1,5 @@
 ---
 title: Contacta socios internacionales
-layout: wide
 ---
 
 <style>
