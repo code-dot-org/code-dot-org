@@ -1,6 +1,7 @@
 /**
  * @file Consolidates business logic for discount code eligibility into pure functions.
  */
+import moment from 'moment';
 
 /**
  * @enum {string} Possible answers to the Unit 6 question.
@@ -18,11 +19,9 @@ export const Unit6Intention = {
  *   conditional on their responses to the Unit 6 question.
  */
 export const eligibilityDates = {
-  yesFall2020: new Date('2020-07-01'),
-  yesSpring2021: new Date('2020-11-01')
+  yesFall2020: moment('2020-07-01'),
+  yesSpring2021: moment('2020-11-01')
 };
-
-const today = new Date();
 
 /**
  * @param {string} unit6Intention
@@ -44,6 +43,8 @@ export function isUnit6IntentionEligible(unit6Intention) {
  *   date is after the opening of the eligibility window.
  */
 export function inDiscountRedemptionWindow(unit6Intention) {
+  const today = moment();
+
   if (Unit6Intention.YES_SPRING_2020 === unit6Intention) {
     return true;
   } else if (
