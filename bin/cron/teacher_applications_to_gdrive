@@ -28,3 +28,19 @@ end
 
 drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
 drive.update_sheet applications, CDO.applications_2020_2021_gsheet_key, 'all_apps (auto)'
+
+metadata = [
+  ['AUTOMATION METADATA'],
+  [''],
+  ['The tabs "all_apps (auto)" and "meta (auto)" are auto-generated;'],
+  ['Any edits you make to them (besides formatting) may be lost.'],
+  [''],
+  ['Last updated:', DateTime.now.strftime('%Y-%m-%d %l:%M%P GMT%:::z')],
+  ['Written by:', CDO.gdrive_export_secret.client_email],
+  ['Teacher applications:', applications.length - 1],
+  [''],
+  ['Parts of this Google Sheet are auto-populated from our live application by an automated process.'],
+  ["The sheet is shared with a \"service account\" that updates it on the application's behalf."],
+  ["(Technical Details: https://github.com/code-dot-org/code-dot-org/pull/32597)"],
+]
+drive.update_sheet metadata, CDO.applications_2020_2021_gsheet_key, 'meta (auto)'
