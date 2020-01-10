@@ -39,7 +39,7 @@ else
   exit(-1)
 end
 
-populate_csv_data(filename, full_discount, Date.new(2021, 12, 31))
+populate_csv_data(filename, full_discount, Date.new(2021, 4, 30))
 
 puts 'Complete'
 
