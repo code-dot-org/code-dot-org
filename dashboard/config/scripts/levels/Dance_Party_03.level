@@ -38,10 +38,10 @@
     "validation_code": "if (World.frameCount == 1) {\r\n  World.validationStatus = 0;\r\n  World.previousDance = undefined;\r\n}\r\n\r\n// After 4 measures, record the dance that sprite 0 is doing. We want this to change\r\nif (nativeAPI.getTime(\"measures\") > 5.5 && World.previousDance == undefined) {\r\n  World.previousDance = sprites;\r\n  if (sprites.length > 0) {\r\n    World.previousDance = sprites[0].current_move;\r\n  } else {\r\n    // Fail if no sprites\r\n    World.validationStatus = 3;\r\n  }\r\n}\r\n\r\n// After 6 measures, check that the dance has changed since our previous check\r\nif (nativeAPI.getTime(\"measures\") > 7.5) {\r\n  if (sprites.length > 0) {\r\n    if (sprites[0].current_move == World.previousDance) {\r\n      // Fail immediately if dance is the same as it was after 4 measures\r\n      World.validationStatus = 3;\r\n      nativeAPI.fail(\"danceFeedbackNeedDifferentDance\");\r\n    }\r\n  } else {\r\n    // Fail if no sprites\r\n    World.validationStatus = 3;\r\n    nativeAPI.fail(\"danceFeedbackNoDancers\");\r\n  }\r\n\r\n}\r\n\r\n// After 12 measures, end\r\nif (nativeAPI.getTime(\"measures\") > 12) {\r\n  nativeAPI.pass();\r\n}",
     "block_pool": "Dancelab",
     "preload_asset_list": [
-      "https://curriculum.code.org/images/sprites/dance_20181127/duck_16.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/duck_17.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/duck_18.png",
-      "https://curriculum.code.org/images/sprites/dance_20181127/duck_19.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/duck_16.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/duck_17.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/duck_18.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/duck_19.png",
       "https://curriculum.code.org/images/DancePartyLoading.gif"
     ],
     "custom_helper_library": "World.SPRITE_NAMES = [\"CAT\", \"DUCK\", \"MOOSE\"];\r\n\r\n",

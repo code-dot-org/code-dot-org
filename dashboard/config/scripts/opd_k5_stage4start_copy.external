@@ -3,15 +3,13 @@ skip_dialog true
 markdown <<MARKDOWN
 # Overview: Loops
 
-<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/ec2f0877ef2c14cf64d611f47a11daa7-image-1573236152060.jpg" class="level-image">
 
-## Coding concept: Loops
+## Coding concept
 - Practice coding simple loops
-- Important in all CS Fundamentals courses (Courses A-F)
-
 
 ## Teaching practice: Pair programming
-- Two programmers working together at one computer
+- Understand the benefit of pair programming and how it is used in the real world
 
 MARKDOWN
 

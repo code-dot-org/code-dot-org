@@ -3,22 +3,8 @@ title: "¡Gracias por inscribirte para ser anfitrión de una Hora de Código!"
 layout: wide
 nav: how_to_nav
 social:
-  og:title: La Hora del Código está aquí
-  og:description: La hora del código es un movimiento global en el que participan
-    decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas,
-    con edades entre 4 y 104 años.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: La Hora del Código está aquí
-  twitter:description: La hora del código es un movimiento global en el que participan
-    decenas de millones de estudiantes en más de 180 países y en más de 40 idiomas,
-    con edades entre 4 y 104 años.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!

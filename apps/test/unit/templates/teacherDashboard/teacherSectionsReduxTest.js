@@ -52,6 +52,8 @@ const {
   USER_EDITABLE_SECTION_PROPS
 } = __testInterface__;
 
+const createdAt = '2019-10-21T23:45:34.345Z';
+
 const sections = [
   {
     id: 11,
@@ -65,6 +67,7 @@ const sections = [
     sharing_disabled: false,
     script: null,
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 10,
     hidden: false
   },
@@ -83,6 +86,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
+    createdAt: createdAt,
     studentCount: 1,
     hidden: false
   },
@@ -101,6 +105,7 @@ const sections = [
       name: 'csp1'
     },
     course_id: 29,
+    createdAt: createdAt,
     studentCount: 0,
     hidden: false
   }
@@ -547,7 +552,8 @@ describe('teacherSectionsRedux', () => {
         code: '',
         courseId: null,
         scriptId: null,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -569,8 +575,10 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         scriptId: 36,
         courseId: null,
+        createdAt: createdAt,
         studentCount: 1,
-        hidden: false
+        hidden: false,
+        isAssigned: undefined
       });
     });
   });
@@ -677,8 +685,9 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       student_count: 0,
       code: 'BCDFGH',
-      course_id: null,
-      script_id: null,
+      courseId: null,
+      scriptId: null,
+      createdAt: createdAt,
       hidden: false
     };
 
@@ -824,9 +833,11 @@ describe('teacherSectionsRedux', () => {
           sharingDisabled: undefined,
           studentCount: undefined,
           code: 'BCDFGH',
-          courseId: null,
+          courseId: undefined,
           scriptId: null,
-          hidden: false
+          createdAt: createdAt,
+          hidden: false,
+          isAssigned: undefined
         }
       });
     });
@@ -1108,6 +1119,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
+      createdAt: createdAt,
       studentCount: 10,
       hidden: false
     };

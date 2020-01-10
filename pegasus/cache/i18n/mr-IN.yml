@@ -1,5 +1,7 @@
 ---
 mr-IN:
+  'yes': होय
+  'no': नाही
   select_language: कृपया आपली भाषा निवडा
   csedweek_dates: ८-१४ डिसेंबर, २०१४
   csedweek_banner_hoc: "<a href=\"http://hourofcode.com\" style=\"color: white; text-decoration:underline;
@@ -25,8 +27,25 @@ mr-IN:
   thanks_for_voting: मतदानाबद्दल आभारी आहोत.
   participant_student: विध्यार्थी
   enter_country: जर तुम्ही अमेरिकेबाहेरील असाल तर तुमच्या देशाचे नाव
+  studiobar_dance_title: डांस पार्टी
   studiobar_donate_body: "- निवड करा -"
+  starwars_blocks_title: ब्लॉक्स
   volunteer_engineer_submission_field_name: नाव
+  volunteer_engineer_submission_field_email_preference_yes: होय
+  volunteer_engineer_submission_field_email_preference_no: नाही
+  dashboard_action_delete_yes: होय
+  dashboard_action_delete_no: नाही
   dashboard_students_name: नाव
   dashboard_student: विध्यार्थी
+  header_course_catalog: अभ्यासक्रमाचा कॅटलॉग
+  header_project_gallery: प्रकल्प
+  header_about: या बद्दल
+  header_help_support: 'सहाय्य आणि मदत '
+  header_report_bug: समस्या रिपोर्ट करा
+  user_header_signin: साइन इन करा
+  user_header_create: 'बनवा '
+  user_header_dance: डांस पार्टी
+  hoc_overview_dance_title: डांस पार्टी
   hoc2018_creativity_create: बनवा
+  hoc2018_dance_party_main_heading: डांस पार्टी
+  hoc2018_dance_party_box_title: डांस पार्टी

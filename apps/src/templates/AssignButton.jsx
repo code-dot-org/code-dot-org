@@ -3,56 +3,97 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import Button from './Button';
 import i18n from '@cdo/locale';
-import ConfirmAssignment from '@cdo/apps/templates/courseOverview/ConfirmAssignment';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {assignCourseToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
+import {
+  isScriptHiddenForSection,
+  updateHiddenScript
+} from '@cdo/apps/code-studio/hiddenStageRedux';
+
+const styles = {
+  buttonMargin: {
+    marginLeft: 10
+  }
+};
 
 class AssignButton extends React.Component {
   static propTypes = {
-    section: sectionForDropdownShape,
+    sectionId: PropTypes.number.isRequired,
+    sectionName: PropTypes.string,
     courseId: PropTypes.number,
     scriptId: PropTypes.number,
     assignmentName: PropTypes.string,
     // Redux
-    assignCourseToSection: PropTypes.func.isRequired
+    assignToSection: PropTypes.func.isRequired,
+    hiddenStageState: PropTypes.object,
+    updateHiddenScript: PropTypes.func.isRequired
   };
 
   state = {
-    dialogOpen: false,
-    errorString: null
+    confirmationDialogOpen: false
   };
 
-  onClickAssign = event => {
-    this.setState({dialogOpen: true});
+  onCloseDialog = () => {
+    this.setState({
+      confirmationDialogOpen: false
+    });
   };
 
-  onCloseDialog = event => {
-    this.setState({dialogOpen: false});
+  unhideAndAssign = () => {
+    const {
+      sectionId,
+      courseId,
+      scriptId,
+      assignToSection,
+      updateHiddenScript
+    } = this.props;
+    updateHiddenScript(sectionId, scriptId, false);
+    assignToSection(sectionId, courseId, scriptId);
   };
 
-  assignCourse = () => {
-    const {section, courseId, assignCourseToSection} = this.props;
-    assignCourseToSection(section.id, courseId);
-    this.setState({dialogOpen: false});
+  handleClick = () => {
+    const {
+      scriptId,
+      courseId,
+      sectionId,
+      hiddenStageState,
+      assignToSection
+    } = this.props;
+    const isHiddenFromSection =
+      sectionId &&
+      scriptId &&
+      hiddenStageState &&
+      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+    if (isHiddenFromSection) {
+      this.setState({
+        confirmationDialogOpen: true
+      });
+    } else {
+      assignToSection(sectionId, courseId, scriptId);
+    }
   };
 
   render() {
-    const {section, assignmentName} = this.props;
+    const {confirmationDialogOpen} = this.state;
+    const {assignmentName, sectionName} = this.props;
+
     return (
       <div>
-        <Button
-          color={Button.ButtonColor.orange}
-          text={i18n.assignToSection()}
-          icon="plus"
-          onClick={this.onClickAssign}
-        />
-        {this.state.dialogOpen && (
-          <ConfirmAssignment
-            sectionName={section.name}
+        <div style={styles.buttonMargin}>
+          <Button
+            color={Button.ButtonColor.orange}
+            text={i18n.assignToSection()}
+            icon="plus"
+            onClick={this.handleClick}
+            className={'uitest-assign-button'}
+          />
+        </div>
+        {confirmationDialogOpen && (
+          <ConfirmHiddenAssignment
+            sectionName={sectionName}
             assignmentName={assignmentName}
             onClose={this.onCloseDialog}
-            onConfirm={this.assignCourse}
-            isHiddenFromSection={false}
+            onConfirm={this.unhideAndAssign}
           />
         )}
       </div>
@@ -64,9 +105,11 @@ export const UnconnectedAssignButton = AssignButton;
 
 export default connect(
   state => ({
-    sections: state.teacherSections.sections
+    sections: state.teacherSections.sections,
+    hiddenStageState: state.hiddenStage
   }),
   {
-    assignCourseToSection
+    assignToSection,
+    updateHiddenScript
   }
 )(AssignButton);

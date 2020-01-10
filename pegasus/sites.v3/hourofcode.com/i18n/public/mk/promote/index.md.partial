@@ -1,8 +1,9 @@
 ---
-title: Spread the word
+title: "<%= hoc_s(:title_how_to_promote) %>"
 layout: wide
 nav: promote_nav
 ---
+
 <%= view :signup_button %>
 
 <% facebook = {:u=>"http://#{request.host}/us"}

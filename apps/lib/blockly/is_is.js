@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "fyrir hvert stak";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Fyrir hvert atriði í lista er breyta '%1' stillt á atriðið og skipanir gerðar.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "frá %1 til %2 talið um %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "frá";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Láta breytuna %1 taka inn gildi frá fyrstu tölu til síðustu tölu hlaupandi á bilinu og endurtaka kubbana fyrir hverja tölu.";

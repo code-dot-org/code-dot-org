@@ -10,6 +10,7 @@ class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
     principal_approval_completed_partner
     accepted_no_cost_registration
     registration_sent
+    registration_reminder
     declined
     waitlisted
   ).each do |mail_type|

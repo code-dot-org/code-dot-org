@@ -4,7 +4,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Tutorial from './tutorial';
-import TutorialSpecificLocale from './tutorialSpecificLocale';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
 import i18n from '@cdo/tutorialExplorer/locale';
@@ -21,7 +20,6 @@ const styles = {
 export default class TutorialSet extends React.Component {
   static propTypes = {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
-    specificLocale: PropTypes.bool,
     localeEnglish: PropTypes.bool.isRequired,
     disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
     grade: PropTypes.string.isRequired
@@ -52,10 +50,6 @@ export default class TutorialSet extends React.Component {
       this.props.disabledTutorials.indexOf(this.state.chosenItem.short_code) !==
         -1;
 
-    const TutorialComponent = this.props.specificLocale
-      ? TutorialSpecificLocale
-      : Tutorial;
-
     return (
       <div>
         <TutorialDetail
@@ -68,7 +62,7 @@ export default class TutorialSet extends React.Component {
           grade={this.props.grade}
         />
         {this.props.tutorials.map(item => (
-          <TutorialComponent
+          <Tutorial
             item={item}
             key={item.code}
             tutorialClicked={this.tutorialClicked.bind(this, item)}

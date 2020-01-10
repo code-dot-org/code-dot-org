@@ -38,6 +38,7 @@ nl-NL:
   twentyhours_text: Klaar met je eerste 'Hour of Code'? Leer meer over Informatica
     en programmeerconcepten in deze vervolgcursus.
   og_title: Ieder kind verdient een kans
+  og_title_soon: De Hour of Code komt eraan
   og_title_here: Het Code Uur is er!
   og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
     Dit verandert alles.
@@ -326,6 +327,7 @@ nl-NL:
     op Code Studio
   homepage_hero_text_stat_students: "#student_count studenten accounts op Code Studio"
   homepage_hero_text_stat_served: 'Uur van Code: #served geserveerd'
+  homepage_hero_hoc_is_coming: De Hour of Code komt eraan
   homepage_slot_text_hoc: Het Uur Code
   homepage_slot_text_frozen: Frozen met Anna en Elsa
   homepage_slot_text_teacher: Dashboard Leerkrachten
@@ -1682,6 +1684,11 @@ nl-NL:
   account_sign_up_email_opt_in: Mogen wij u e-mailen met updates over onze cursussen,
     lokale aanbiedingen of ander nieuws op het gebied van informatica?
   hoc_overview_dance_title: Dansfeest
+  hoc_overview_dance_subtitle: Codeer een Dance Party om te delen met je vrienden.
+    Met Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara en nog 25 anderen!
+  hoc_overview_dance_2019_subtitle: Codeer een Dance Party om te delen met je vrienden.
+    Met Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, en nog eens 34 anderen!
   hoc_overview_partner_activities_title: Meer activiteiten van onze partners
   hoc_overview_partner_activities_body: De website van Hour of Code heeft meer dan
     100 informatica-activiteiten voor alle leeftijden en ervaringsniveaus, ontwikkeld

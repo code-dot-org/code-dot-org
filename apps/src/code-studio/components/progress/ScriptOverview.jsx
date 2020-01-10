@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import LabeledSectionSelector from './LabeledSectionSelector';
 import ScriptOverviewTopRow, {
   NOT_STARTED,
   IN_PROGRESS,
@@ -11,11 +10,10 @@ import ScriptOverviewTopRow, {
 } from './ScriptOverviewTopRow';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {sectionsNameAndId} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {resourceShape} from '@cdo/apps/templates/courseOverview/resourceType';
-import {hasLockableStages} from '@cdo/apps/code-studio/progressRedux';
 import ScriptOverviewHeader from './ScriptOverviewHeader';
 import {isScriptHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
 import {
@@ -26,13 +24,14 @@ import {
   assignmentVersionShape,
   sectionForDropdownShape
 } from '@cdo/apps/templates/teacherDashboard/shapes';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
  */
 class ScriptOverview extends React.Component {
   static propTypes = {
+    id: PropTypes.number,
+    courseId: PropTypes.number,
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
@@ -44,6 +43,7 @@ class ScriptOverview extends React.Component {
     courseName: PropTypes.string,
     locale: PropTypes.string,
     showAssignButton: PropTypes.bool,
+    assignedSectionId: PropTypes.number,
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
@@ -54,18 +54,10 @@ class ScriptOverview extends React.Component {
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
-    sectionsInfo: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        name: PropTypes.string.isRequired
-      })
-    ).isRequired,
-    sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     currentCourseId: PropTypes.number,
-    scriptHasLockableStages: PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
     hiddenStageState: PropTypes.object,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     userId: PropTypes.number
   };
 
@@ -98,11 +90,8 @@ class ScriptOverview extends React.Component {
       professionalLearningCourse,
       viewAs,
       isRtl,
-      sectionsInfo,
-      sections,
+      sectionsForDropdown,
       currentCourseId,
-      scriptHasLockableStages,
-      scriptAllowsHiddenStages,
       showCourseUnitVersionWarning,
       showScriptVersionWarning,
       showRedirectWarning,
@@ -113,7 +102,8 @@ class ScriptOverview extends React.Component {
       courseName,
       locale,
       showAssignButton,
-      userId
+      userId,
+      assignedSectionId
     } = this.props;
 
     const displayRedirectDialog =
@@ -154,15 +144,8 @@ class ScriptOverview extends React.Component {
               locale={locale}
               userId={userId}
             />
-            {!professionalLearningCourse &&
-              viewAs === ViewType.Teacher &&
-              (scriptHasLockableStages || scriptAllowsHiddenStages) &&
-              !experiments.isEnabled(experiments.ASSIGNMENT_UPDATES) && (
-                <LabeledSectionSelector reloadOnSectionChange={true} />
-              )}
             <ScriptOverviewTopRow
-              sectionsInfo={sectionsInfo}
-              sections={sections}
+              sectionsForDropdown={sectionsForDropdown}
               selectedSectionId={parseInt(selectedSectionId)}
               professionalLearningCourse={professionalLearningCourse}
               scriptProgress={scriptProgress}
@@ -174,10 +157,10 @@ class ScriptOverview extends React.Component {
               isRtl={isRtl}
               resources={teacherResources}
               showAssignButton={showAssignButton}
+              assignedSectionId={assignedSectionId}
             />
           </div>
         )}
-
         <ProgressTable />
         {onOverviewPage && (
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend} />
@@ -188,7 +171,7 @@ class ScriptOverview extends React.Component {
 }
 
 export const UnconnectedScriptOverview = Radium(ScriptOverview);
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   perLevelProgress: state.progress.levelProgress,
   scriptCompleted: !!state.progress.scriptCompleted,
   scriptId: state.progress.scriptId,
@@ -197,11 +180,13 @@ export default connect(state => ({
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.viewAs,
   isRtl: state.isRtl,
-  sectionsInfo: sectionsNameAndId(state.teacherSections),
   currentCourseId: state.progress.courseId,
-  scriptHasLockableStages:
-    state.stageLock.lockableAuthorized && hasLockableStages(state.progress),
-  scriptAllowsHiddenStages: state.hiddenStage.hideableStagesAllowed,
   hiddenStageState: state.hiddenStage,
-  selectedSectionId: state.teacherSections.selectedSectionId
+  selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    ownProps.id,
+    ownProps.courseId,
+    false
+  )
 }))(UnconnectedScriptOverview);

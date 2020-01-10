@@ -45,10 +45,14 @@ $(document).ready(() => {
   const videoOptions = getScriptData('videoOptions');
   const videoWidth = getScriptData('videoWidth');
   const videoHeight = getScriptData('videoHeight');
+  const videoFullWidth = getScriptData('videoFullWidth');
+  const videoRoundedCorners = getScriptData('videoRoundedCorners');
   createVideoWithFallback(
     $('.video-content'),
     videoOptions,
     videoWidth,
-    videoHeight
+    videoHeight,
+    videoFullWidth,
+    videoRoundedCorners
   );
 });

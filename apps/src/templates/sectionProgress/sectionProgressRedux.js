@@ -41,7 +41,7 @@ export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
-    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    csf: scriptData.csf,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
@@ -116,8 +116,9 @@ const NUM_STUDENTS_PER_PAGE = 50;
 
 // Types of views of the progress tab
 export const ViewType = {
-  SUMMARY: 'summary',
-  DETAIL: 'detail'
+  SUMMARY: 'summary', // lessons
+  DETAIL: 'detail', // levels
+  STANDARDS: 'standards'
 };
 
 /**
@@ -128,7 +129,7 @@ export const ViewType = {
  */
 export const scriptDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  excludeCsfColumnInLegend: PropTypes.bool,
+  csf: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
   stages: PropTypes.arrayOf(

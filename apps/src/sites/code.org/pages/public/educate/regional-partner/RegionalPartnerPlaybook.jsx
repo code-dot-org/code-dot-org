@@ -82,9 +82,9 @@ const CARDS = [
   },
 
   {
-    title: 'Teacher & District Recruitment',
+    title: 'District & School Recruitment',
     description:
-      '&bull; How to recruit teachers and districts<br/> &bull; Teacher applications',
+      '&bull; How to recruit districts and schools<br/> &bull; Teacher applications',
     link: '/educate/regional-partner/playbook/teacher-recruitment'
   },
 

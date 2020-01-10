@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "për secilin artikull";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Secilit artikull në listë u'a vendosni ndryshoren \"%1\" e atëherë krijoni disa raporte.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "nga \"%1\" në \"%2\" me nga \"%3\"";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "për";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Bëje ndryshoren %1 që të marrë vlerat prej numrit fillestar deri tek numri i fundit, me interval të caktuar, dhe përdor blloqet e specifikuara.";

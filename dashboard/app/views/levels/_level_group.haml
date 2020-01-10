@@ -10,7 +10,7 @@
 - current_page = params[:puzzle_page] || 1
 
 -# Is this a survey where we've already submitted
-- user_level = UserLevel.find_by(user: current_user, script: @script_level.script, level: @level)
+- user_level = UserLevel.find_by(user: current_user, script: @script_level&.script, level: @level)
 - submitted_survey = @script_level.try(:anonymous?) && current_user && user_level.try(:submitted?)
 
 .level-group

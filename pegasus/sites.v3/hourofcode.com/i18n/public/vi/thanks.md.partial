@@ -3,22 +3,8 @@ title: Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: Sự kiện Giờ Mã đang đến gần
-  og:description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học sinh,
-    sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ 4 đến
-    104.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: Sự kiện Giờ Mã đang đến gần
-  twitter:description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu học
-    sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi từ
-    4 đến 104.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Cảm ơn bạn đã đăng ký để tổ chức Hour of Code!

@@ -24,9 +24,12 @@ const styles = {
 class SectionAssigner extends Component {
   static propTypes = {
     sections: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-    selectSection: PropTypes.func.isRequired,
     showAssignButton: PropTypes.bool,
     courseId: PropTypes.number,
+    scriptId: PropTypes.number,
+    forceReload: PropTypes.bool,
+    // Redux provided
+    selectSection: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.number,
     assignmentName: PropTypes.string
   };
@@ -40,8 +43,10 @@ class SectionAssigner extends Component {
       sections,
       showAssignButton,
       courseId,
-      assignmentName,
-      selectedSectionId
+      scriptId,
+      selectedSectionId,
+      forceReload,
+      assignmentName
     } = this.props;
     const selectedSection = sections.find(
       section => section.id === selectedSectionId
@@ -55,17 +60,24 @@ class SectionAssigner extends Component {
             sections={sections}
             onChangeSection={this.onChangeSection}
             selectedSection={selectedSection}
+            forceReload={forceReload}
+            courseId={courseId}
+            scriptId={scriptId}
           />
-          {selectedSection.isAssigned && (
+          {selectedSection && selectedSection.isAssigned && (
             <UnassignButton sectionId={selectedSection.id} />
           )}
-          {!selectedSection.isAssigned && showAssignButton && (
-            <AssignButton
-              section={selectedSection}
-              courseId={courseId}
-              assignmentName={assignmentName}
-            />
-          )}
+          {selectedSection &&
+            !selectedSection.isAssigned &&
+            showAssignButton && (
+              <AssignButton
+                sectionId={selectedSection.id}
+                courseId={courseId}
+                scriptId={scriptId}
+                assignmentName={assignmentName}
+                sectionName={selectedSection.name}
+              />
+            )}
         </div>
       </div>
     );

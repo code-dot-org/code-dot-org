@@ -106,6 +106,11 @@ module CourseBlockHelper
         url: CDO.code_org_url('/dance'),
         image_url: CDO.shared_image_url("courses/logo_tall_#{id}.gif")
       },
+      Script::DANCE_PARTY_2019_NAME => {
+        body: data_t_suffix('script.name', id, 'description_short'),
+        url: CDO.code_org_url('/dance'),
+        image_url: CDO.shared_image_url("courses/logo_tall_#{id}.gif")
+      },
       Script::FLAPPY_NAME => {
         url: script_reset_url(id),
         teacher_guide: CDO.code_org_url("/hourofcode/flappy")
@@ -173,6 +178,11 @@ module CourseBlockHelper
       Script::TWENTY_HOUR_NAME => {
         title: I18n.t('upsell.20hour.title'),
         body: I18n.t('upsell.20hour.body')
+      },
+      Script::OCEANS_NAME => {
+        url: CDO.code_org_url('/oceans'),
+        title: data_t_suffix('script.name', id, 'title'),
+        body: data_t_suffix('script.name', id, 'description_short')
       }
     }
 

@@ -47,6 +47,7 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     And the href of selector ".uitest-script-next-banner" contains the section id
+    And I wait for 3 seconds
     And the href of selector ".uitest-ProgressPill:first" contains the section id
     And the href of selector ".uitest-ProgressBubble:first" contains the section id
     And the href of selector "a:contains(Computer Science Principles)" contains the section id

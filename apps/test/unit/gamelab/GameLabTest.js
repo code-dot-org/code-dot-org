@@ -62,7 +62,7 @@ describe('GameLab', () => {
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('P5Lab requires a StudioApp');
+      expect(() => instance.init({})).to.throw('GameLab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {

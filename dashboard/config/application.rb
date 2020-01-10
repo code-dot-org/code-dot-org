@@ -108,6 +108,7 @@ module Dashboard
       # Following examples from: https://github.com/ruby-i18n/i18n/wiki/Fallbacks
       # and http://pawelgoscicki.com/archives/2015/02/enabling-i18n-locale-fallbacks-in-rails/
       I18n.fallbacks.map(es: :'es-MX')
+      I18n.fallbacks.map(pt: :'pt-BR')
     end
 
     config.assets.gzip = false # cloudfront gzips everything for us on the fly.

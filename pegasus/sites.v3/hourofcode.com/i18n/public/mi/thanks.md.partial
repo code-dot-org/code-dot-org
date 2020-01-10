@@ -3,22 +3,8 @@ title: Tēnā koe i tō waitohu mai ki te taurima i tētahi Hour of Code!
 layout: wide
 nav: how_to_nav
 social:
-  og:title: E tata mai ana te Hour of Code
-  og:description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona pakeke
-    katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki ngā reo
-    e 45 neke atu.
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: E tata mai ana te Hour of Code
-  twitter:description: He kuhunga ā-ao te Hour of Code kua pā ki ngā ākonga piriona
-    pakeke katoa, kua horapa ki ngā whenua 180 neke atu, kua whakamāoritia hoki ki
-    ngā reo e 45 neke atu.
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # Tēnā koe i tō waitohu mai ki te taurima i tētahi Hour of Code!

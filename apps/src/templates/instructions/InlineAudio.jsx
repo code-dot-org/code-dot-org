@@ -102,8 +102,13 @@ class InlineAudio extends React.Component {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false
+    hover: false,
+    loaded: false
   };
+
+  componentDidMount() {
+    this.getAudioElement();
+  }
 
   componentWillUpdate(nextProps) {
     const audioTargetWillChange =
@@ -137,6 +142,11 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
+
+    audio.addEventListener('canplay', () => {
+      this.setState({loaded: true});
+    });
+
     audio.addEventListener('ended', e => {
       this.setState({
         playing: false
@@ -210,6 +220,7 @@ class InlineAudio extends React.Component {
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
+      this.state.loaded &&
       this.isLocaleSupported() &&
       this.getAudioSrc()
     ) {
@@ -219,6 +230,7 @@ class InlineAudio extends React.Component {
           style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
+          onClick={this.toggleAudio}
         >
           <div
             style={[
@@ -245,7 +257,6 @@ class InlineAudio extends React.Component {
               this.props.style && this.props.style.button,
               this.state.hover && styles.hover
             ]}
-            onClick={this.toggleAudio}
           >
             <i
               className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}

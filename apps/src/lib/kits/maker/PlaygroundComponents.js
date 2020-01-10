@@ -13,8 +13,8 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
-import Button from './Button';
-import Thermometer from './Thermometer';
+import {PlaygroundButton} from './Button';
+import PlaygroundThermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
@@ -60,9 +60,9 @@ export function createCircuitPlaygroundComponents(board) {
 
       accelerometer: initializeAccelerometer(board),
 
-      buttonL: new Button({board, pin: 4}),
+      buttonL: new PlaygroundButton({board, pin: 4}),
 
-      buttonR: new Button({board, pin: 19}),
+      buttonR: new PlaygroundButton({board, pin: 19}),
 
       ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
@@ -173,7 +173,7 @@ export const componentConstructors = {
   Led,
   Board: five.Board,
   NeoPixel,
-  Button,
+  PlaygroundButton,
   Switch,
   Piezo,
   Sensor: five.Sensor,
@@ -264,7 +264,7 @@ function initializeThermometer(board) {
   return new Promise(resolve => {
     const thermometer = new five.Thermometer({
       board,
-      controller: Thermometer,
+      controller: PlaygroundThermometer,
       pin: 'A0',
       freq: 100
     });

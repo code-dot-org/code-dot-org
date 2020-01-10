@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "თითოეული ერთეულისთვის";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "სიაში თითოეული ერთეულისთვის, ცვლად '%1'-ს მიენიჭოს მნიშვნელობა, შემდეგ შესრულდეს მომდევნო მითითებები.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1-დან %2-მდე %3 ბიჯით";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "\"მიზნისთვის\"";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "გვინდა, რომ მოცემული ცვლადი %1 იღებდეს მნიშვნელობებს საწყისიდან საბოლოო მნიშვნელობამდე, იცვლებოდეს მოცემული ბიჯით და ასრულებდეს მითითებულ ბრძანებებს.";

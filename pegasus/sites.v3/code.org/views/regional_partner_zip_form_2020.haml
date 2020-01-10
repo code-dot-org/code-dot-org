@@ -1,0 +1,69 @@
+:scss
+  /* Teal full content width box with heading */
+  .full-width-box {
+    border: solid #bbb 1px;
+    margin-bottom: 25px;
+
+    .box-title {
+      background-color: #00adbc;
+      color: white;
+      margin-top: 0;
+      padding: 20px 30px;
+      font-size: 24px;
+      font-family: "Gotham 5r", sans-serif;
+    }
+
+    .box-contents {
+      padding: 0.5em 1em;
+    }
+  }
+
+  /* Styles specific to the regional partner zip form */
+  .rp-zip-form {
+    .column-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-column {
+      margin-right: 1em;
+    }
+
+    .right-column {
+      white-space: nowrap;
+    }
+
+    .zip-label {
+      font-size: 1.2em;
+    }
+
+    .zip-input {
+      padding: 10px;
+    }
+
+    .submit-button {
+      color: white;
+      background-color: orange;
+      padding: 10px;
+      font-size: 1.2em;
+    }
+  }
+
+.rp-zip-form.full-width-box
+  %h3.box-title
+    Find a Program Near You
+  .box-contents.column-wrapper
+    .left-column
+      %p
+        Professional learning programs are hosted by over 60 Regional Partners
+        throughout the U.S. and consist of 9 professional development days.
+      %p
+        %strong
+          5-day summer workshop + 4 full-day school year sessions
+    .right-column
+      %form.linktag#pl-zip-form{action: "/educate/professional-learning/program-information", method: "get"}
+        %span.zip-label Zip:
+        %input.zip-input{type: "text", name: "zip"}
+        - if params[:nominated]
+          %input{type: "text", name: "nominated", value: params[:nominated], hidden: "true"}
+        %input.submit-button{type: "submit", value: "Submit"}

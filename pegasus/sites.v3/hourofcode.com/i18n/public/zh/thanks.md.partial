@@ -3,18 +3,8 @@ title: 謝謝您報名舉辦一小時玩程式活動！
 layout: wide
 nav: how_to_nav
 social:
-  og:title: 一小時玩程式活動來囉
-  og:description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
-  og:image: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
-  og:image:width: 1440
-  og:image:height: 900
-  og:url: http://hourofcode.com
   twitter:card: player
   twitter:site: "@codeorg"
-  twitter:url: http://hourofcode.com
-  twitter:title: 一小時玩程式活動來囉
-  twitter:description: 一小時玩程式是一個全球性的活動，觸及數千萬個來自 180 多個國家，30 多種語言，由 4 歲到 104 歲的學生。
-  twitter:image:src: http://hourofcode.com/images/hourofcode-2015-video-thumbnail.png
 ---
 
 # 謝謝您報名舉辦一小時玩程式活動！

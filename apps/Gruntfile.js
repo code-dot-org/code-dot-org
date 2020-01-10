@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       : `require('${path.resolve(process.env.mocha_entry)}');`;
     const file = `/* eslint-disable */
 // Auto-generated from Gruntfile.js
-import 'babel-polyfill';
+import '@babel/polyfill';
 import 'whatwg-fetch';
 import Adapter from 'enzyme-adapter-react-15.4';
 import enzyme from 'enzyme';
@@ -74,6 +74,7 @@ describe('entry tests', () => {
     'craft',
     'dance',
     'eval',
+    'fish',
     'flappy',
     'gamelab',
     'spritelab',
@@ -175,6 +176,12 @@ describe('entry tests', () => {
         },
         {
           expand: true,
+          cwd: 'node_modules/@code-dot-org/ml-activities/dist/assets',
+          src: ['**'],
+          dest: 'build/package/media/skins/fish'
+        },
+        {
+          expand: true,
           cwd: 'node_modules/scratch-blocks/media',
           src: ['**'],
           dest: 'build/package/media/scratch-blocks'
@@ -201,12 +208,12 @@ describe('entry tests', () => {
         {
           expand: true,
           cwd: 'lib/blockly',
-          src: ['??_??.js'],
+          src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
-              /(.{2}_.{2})\.js/g,
+              /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
@@ -457,9 +464,8 @@ describe('entry tests', () => {
       }
     },
     unit: {
-      coverageReporter: {
-        dir: 'coverage/unit',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/unit'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'unit.xml'
@@ -467,9 +473,8 @@ describe('entry tests', () => {
       files: [{src: ['test/unit-tests.js'], watched: false}]
     },
     integration: {
-      coverageReporter: {
-        dir: 'coverage/integration',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/integration'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'integration.xml'
@@ -477,9 +482,8 @@ describe('entry tests', () => {
       files: [{src: ['test/integration-tests.js'], watched: false}]
     },
     scratch: {
-      coverageReporter: {
-        dir: 'coverage/scratch',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/scratch'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'scratch.xml'
@@ -487,9 +491,8 @@ describe('entry tests', () => {
       files: [{src: ['test/scratch-tests.js'], watched: false}]
     },
     storybook: {
-      coverageReporter: {
-        dir: 'coverage/storybook',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/storybook'
       },
       junitReporter: Object.assign({}, junitReporterBaseConfig, {
         outputFile: 'storybook.xml'
@@ -497,9 +500,8 @@ describe('entry tests', () => {
       files: [{src: ['test/storybook-tests.js'], watched: false}]
     },
     entry: {
-      coverageReporter: {
-        dir: 'coverage/entry',
-        reporters: [{type: 'html'}, {type: 'lcovonly'}]
+      coverageIstanbulReporter: {
+        dir: 'coverage/entry'
       },
       files: [{src: ['test/entry-tests.js'], watched: false}],
       preprocessors: {
@@ -526,6 +528,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/devise/registrations/_old_sign_up_form.js',
     'devise/registrations/edit':
       './src/sites/studio/pages/devise/registrations/edit.js',
+    essential: './src/sites/studio/pages/essential.js',
     'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
     'layouts/_header': './src/sites/studio/pages/layouts/_header.js',
     'layouts/_race_interstitial':
@@ -538,6 +541,7 @@ describe('entry tests', () => {
       './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
+    'levels/_content': './src/sites/studio/pages/levels/_content.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
@@ -593,12 +597,15 @@ describe('entry tests', () => {
     'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
     'levels/editors/_gamelab':
       './src/sites/studio/pages/levels/editors/_gamelab.js',
+    'levels/editors/_grid': './src/sites/studio/pages/levels/editors/_grid.js',
     'levels/editors/_pixelation':
       './src/sites/studio/pages/levels/editors/_pixelation.js',
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-    'scripts/_form': './src/sites/studio/pages/scripts/_form.js',
+    'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
+    'scripts/new': './src/sites/studio/pages/scripts/new.js',
+    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
     'shared_blockly_functions/edit':
       './src/sites/studio/pages/shared_blockly_functions/edit.js'
   };
@@ -644,6 +651,8 @@ describe('entry tests', () => {
   var professionalDevelopmentEntries = {
     'code.org/public/pd-workshop-survey/splat':
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
+    'code.org/public/learn/local':
+      './src/sites/code.org/pages/public/learn/local.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -686,9 +695,13 @@ describe('entry tests', () => {
     'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js'
   };
 
-  var otherEntries = {
-    essential: './src/sites/studio/pages/essential.js',
+  // Entries which are shared between dashboard and pegasus, which are included
+  // by haml partials in the shared/haml/ directory.
+  const sharedEntries = {
+    cookieBanner: './src/cookieBanner/cookieBanner.js'
+  };
 
+  var otherEntries = {
     // Build embedVideo.js in its own step (skipping factor-bundle) so that
     // we don't have to include the large code-studio-common file in the
     // embedded video page, keeping it fairly lightweight.
@@ -708,17 +721,13 @@ describe('entry tests', () => {
     'applab-api': './src/applab/api-entry.js',
     'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
-    'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
-
     'census_reviewers/review_reported_inaccuracies':
       './src/sites/studio/pages/census_reviewers/review_reported_inaccuracies.js',
 
     regionalPartnerMiniContact:
       './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 
-    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner',
-
-    cookieBanner: './src/cookieBanner/cookieBanner.js'
+    donorTeacherBanner: './src/donorTeacherBanner/donorTeacherBanner'
   };
 
   // Create a config for each of our bundles
@@ -736,13 +745,11 @@ describe('entry tests', () => {
           internalEntries,
           pegasusEntries,
           professionalDevelopmentEntries,
+          sharedEntries,
           otherEntries
         ),
         function(val) {
-          return [
-            './src/util/idempotent-babel-polyfill',
-            'whatwg-fetch'
-          ].concat(val);
+          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
         }
       ),
       externals: [
@@ -863,13 +870,14 @@ describe('entry tests', () => {
                   Object.keys(appsEntries),
                   Object.keys(pegasusEntries),
                   Object.keys(professionalDevelopmentEntries),
-                  Object.keys(internalEntries)
+                  Object.keys(internalEntries),
+                  Object.keys(sharedEntries)
                 );
                 return chunkNames.includes(chunk.name);
               },
               test(module) {
                 return [
-                  'babel-polyfill',
+                  '@babel/polyfill',
                   'immutable',
                   'lodash',
                   'moment',

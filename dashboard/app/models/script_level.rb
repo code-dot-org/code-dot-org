@@ -57,7 +57,7 @@ class ScriptLevel < ActiveRecord::Base
     super
   end
 
-  # WARNING: Using any of these four convenience methods can lead to bugs with
+  # WARNING: Using either of these two convenience methods can lead to bugs with
   # level swapping, because we might not actually be using the first level.
   # Consider using oldest_active_level instead, or see
   # ScriptLevelsController#select_level for how we select the right level to
@@ -67,16 +67,8 @@ class ScriptLevel < ActiveRecord::Base
     levels[0]
   end
 
-  def level=(l)
-    levels[0] = l
-  end
-
   def level_id
     levels[0].id
-  end
-
-  def level_id=(new_level_id)
-    levels[0] = Level.find(new_level_id)
   end
 
   def oldest_active_level

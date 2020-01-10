@@ -1,0 +1,52 @@
+:ruby
+  videos = [
+    {
+      id: 'seeing_ai',
+      code: 'DybczED-GKE',
+      text: hoc_s(:ai_video_title_seeing_ai)
+    },
+    {
+      id: 'algorithm_bias',
+      code: 'UG_X_7g63rY',
+      text: hoc_s(:ai_video_title_algorithm_bias)
+    },
+    {
+      id: 'ml_human_bias',
+      code: '59bMh59JQDo',
+      text: hoc_s(:ai_video_title_ml_human_bias)
+    },
+    {
+      id: 'ethics_of_ai',
+      code: 'GboOXAjGevA',
+      text: hoc_s(:ai_video_title_ethics_of_ai)
+    },
+    {
+      id: 'ml_big_small_prickly',
+      code: '_rdINNHLYaQ',
+      text: hoc_s(:ai_video_title_ml_big_small_prickly)
+    },
+    {
+      id: 'what_is_ml',
+      code: 'f_uwKZIAeM0',
+      text: hoc_s(:ai_video_title_what_is_ml)
+    },
+    {
+      id: 'phone_knows_dog',
+      code: 'bHvf7Tagt18',
+      text: hoc_s(:ai_video_title_phone_knows_dog)
+    },
+    {
+      id: 'what_is_ai',
+      code: 'mJeNghZXtMo',
+      text: hoc_s(:ai_video_title_what_is_ai)
+    }
+  ]
+
+%h2= hoc_s(:oceans_landing_videos)
+
+- videos.each do |video|
+  .col-50{style: "padding:10px"}
+    - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+    = view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]}", play_button: 'center'
+
+%div{style: 'clear: both'}

@@ -3,7 +3,8 @@ import currentUser, {
   setCurrentUserId,
   SignInState,
   setUserSignedIn,
-  setUserType
+  setUserType,
+  setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
@@ -35,6 +36,14 @@ describe('currentUserRedux', () => {
       const nextState = currentUser(initialState, action);
 
       assert.deepEqual(nextState.userType, 'teacher');
+    });
+  });
+  describe('setCurrentUserHasSeenStandardsReportInfo', () => {
+    it('can set the standards info dialog to seen', () => {
+      const action = setCurrentUserHasSeenStandardsReportInfo(true);
+      const nextState = currentUser(initialState, action);
+
+      assert.deepEqual(nextState.hasSeenStandardsReportInfo, true);
     });
   });
 });

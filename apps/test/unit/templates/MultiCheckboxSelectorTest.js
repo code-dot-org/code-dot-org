@@ -107,4 +107,23 @@ describe('MultiCheckboxSelector', () => {
       expect(onChange.lastCall.args[0]).to.deep.equal([]);
     });
   });
+  describe('no header', () => {
+    beforeEach(() => {
+      render(
+        <MultiCheckboxSelector
+          noHeader={true}
+          header="Some Items"
+          items={['one', 'two', 'three']}
+          selected={['two']}
+          onChange={onChange}
+        >
+          <ItemComponent />
+        </MultiCheckboxSelector>
+      );
+    });
+
+    it('should not render a header', () => {
+      expect(header).to.have.lengthOf(0);
+    });
+  });
 });

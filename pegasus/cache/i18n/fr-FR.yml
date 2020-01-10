@@ -38,7 +38,7 @@ fr-FR:
   twentyhours_text: Première Heure de Code complétée&#160;? Découvrez les concepts
     de l’informatique et de la programmation avec ce cours d’approfondissement.
   og_title: Chaque enfant mérite une opportunité
-  og_title_soon: L'Heure de Code arrive
+  og_title_soon: L'Heure du Code arrive
   og_title_here: L'Heure du Code est ici!
   og_description: Chaque élève de chaque école mérite une opportunité d'étudier l'informatique.
   og_description_celeb: Essayez les nouveaux tutoriels, gagnez une conversation avec
@@ -393,7 +393,7 @@ fr-FR:
     sur Code Studio
   homepage_hero_text_stat_students: "#student_count comptes d'élèves sur Code Studio"
   homepage_hero_text_stat_served: 'L’Heure de Code: #served servis'
-  homepage_hero_hoc_is_coming: L'Heure de Code arrive
+  homepage_hero_hoc_is_coming: L'Heure du Code arrive
   homepage_hero_hoc_is_here: L'Heure de Code est là
   homepage_slot_text_hoc: L'Heure de Code
   homepage_slot_text_frozen: La reine des neige avec Anna et Elsa
@@ -1284,7 +1284,9 @@ fr-FR:
   coursed-2017_name: Cours D (2017)
   coursee-2017_name: Cours E (2017)
   coursef-2017_name: Cours F (2017)
+  express-2018_name: Cour rapide (2017)
   pre-express-2018_name: Cours rapide pour les primo-lecteurs (2018)
+  express-2019_name: Cour rapide (2017)
   pre-express-2019_name: Cours rapide pour les primo-lecteurs (2019)
   csd3_name: 'Unité 3 : Animation et jeux'
   accelerated_name: Cours accéléré
@@ -2243,14 +2245,18 @@ fr-FR:
     seulement)
   applab_tile_start_tutorial: Commencer
   applab_tile_teacher_guide: Voir le guide de l'enseignant
+  aquatic_name: 'Minecraft : Voyage Aquatique'
   account_sign_up_email_opt_in: Pouvons-nous vous envoyer des e-mails d’information
     sur nos formations, des opportunités près de chez vous ou d’autres brèves dans
     le domaine informatique?
   account_sign_up_child_accept_terms: Je confirme que j’ai l'autorisation de mes parents
     ou de mon tuteur légal pour utiliser les services de Code.org.
   hoc_overview_dance_title: Fête dansante
-  hoc_overview_dance_subtitle: Codez une Fête dansante à partager avec vos amis. Avec
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara et 25 autres !
+  hoc_overview_dance_subtitle: Codez une soirée dansante à partager avec vos amis.
+    Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, et 25 autres !
+  hoc_overview_dance_2019_subtitle: Codez une soirée dansante à partager avec vos
+    amis. Avec Katy Perry, Shawn Mendes, Panic ! At The Disco, Lil Nas X, Jonas Brothers,
+    Nicki Minaj, et 34 autres !
   hoc_overview_title: Activités Heure de Code de Code.org
   hoc_overview_subtitle: L'<a href="https://hourofcode.com">Heure de Code</a> est
     un mouvement mondial qui touche des dizaines de millions d'étudiants dans plus

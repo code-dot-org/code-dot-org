@@ -1,5 +1,9 @@
 %h1
   = @pilot_name
+= form_tag controller: 'admin_search', action: 'add_to_pilot', method: "post" do
+  = text_field_tag :email, nil, placeholder: "Teacher's email", style: 'margin-bottom: 0'
+  = hidden_field_tag 'pilot_name', @pilot_name
+  = submit_tag "Add", class: 'btn'
 %table
   %tr
     %th

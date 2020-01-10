@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "ஒவ்வொரு உருப்படிக்கும்";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "பட்டியலில் உள்ள ஒவ்வொரு பொரு‌ட்க‌ளுக்கும், மாறலி %1யை அமைபடுத்தி, சில அறிக்கைகளை செய்யவும்.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 இல் இருந்து %2 வரை %3 ஆல்";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "for";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "%1 மாறிகளுக்கான மதிப்புகளை ஆரம்ப எண்னிலிருந்து இறுதி எண் வரை, குறிப்பிட்ட இடைவெளியில் எண்ணிக்கொண்டே குறிப்பிட்ட தொகுதிகளை இயக்கவும்.";
