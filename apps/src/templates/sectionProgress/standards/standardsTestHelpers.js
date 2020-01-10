@@ -20,7 +20,7 @@ export const lessonCompletedByStandard = {
         name: 'Mazes',
         lessonNumber: 1,
         completed: true,
-        numStudentsCompleted: 10,
+        numStudentsCompleted: 25,
         numStudents: 30,
         url: 'https://curriculum.code.org/csf-19/coursea/1/'
       },
@@ -28,7 +28,7 @@ export const lessonCompletedByStandard = {
         name: 'More Mazes',
         lessonNumber: 14,
         completed: true,
-        numStudentsCompleted: 10,
+        numStudentsCompleted: 28,
         numStudents: 30,
         url: 'https://curriculum.code.org/csf-19/coursea/14/'
       },
@@ -57,89 +57,6 @@ export const lessonCompletedByStandard = {
         url: 'https://curriculum.code.org/csf-19/coursea/17/'
       }
     ]
-  },
-  2: {
-    lessons: [
-      {
-        lessonNumber: 1,
-        completed: true
-      },
-      {
-        lessonNumber: 2,
-        completed: true
-      },
-      {
-        lessonNumber: 4,
-        completed: false
-      },
-      {
-        lessonNumber: 11,
-        completed: false
-      },
-      {
-        lessonNumber: 12,
-        completed: false
-      },
-      {
-        lessonNumber: 13,
-        completed: false
-      },
-      {
-        lessonNumber: 14,
-        completed: true
-      },
-      {
-        lessonNumber: 15,
-        completed: false
-      },
-      {
-        lessonNumber: 16,
-        completed: false
-      },
-      {
-        lessonNumber: 17,
-        completed: false
-      },
-      {
-        lessonNumber: 18,
-        completed: false
-      }
-    ]
-  },
-  3: {
-    lessons: [
-      {
-        lessonNumber: 1,
-        completed: true
-      },
-      {
-        lessonNumber: 14,
-        completed: true
-      },
-      {
-        lessonNumber: 15,
-        completed: false
-      },
-      {
-        lessonNumber: 16,
-        completed: false
-      },
-      {
-        lessonNumber: 17,
-        completed: false
-      }
-    ]
-  },
-  4: {
-    lessons: [
-      {
-        lessonNumber: 1,
-        completed: true
-      }
-    ]
-  },
-  5: {
-    lessons: []
   }
 };
 
