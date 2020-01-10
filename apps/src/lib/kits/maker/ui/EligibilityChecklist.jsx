@@ -113,6 +113,9 @@ export default class EligibilityChecklist extends React.Component {
     this.setState({discountCode, expiration});
   };
 
+  formattedEligibilityDate = yearChoice =>
+    eligibilityDates[yearChoice].format('MMMM Do, YYYY');
+
   render() {
     if (this.state.discountCode) {
       return (
@@ -183,7 +186,9 @@ export default class EligibilityChecklist extends React.Component {
           this.state.statusYear === Status.SUCCEEDED &&
           !this.props.adminSetStatus && (
             <div>
-              {redemptionWindowFail(eligibilityDates[this.state.yearChoice])}
+              {redemptionWindowFail(
+                this.formattedEligibilityDate(this.state.yearChoice)
+              )}
             </div>
           )}
         {((this.state.statusYear === Status.SUCCEEDED &&
