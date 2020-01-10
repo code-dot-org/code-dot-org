@@ -42,27 +42,32 @@ describe('discountLogic.js', () => {
     });
 
     it('yes if teaching CSD6 during spring 2020', () => {
-      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2020)).to.be.true;
+      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2020)).to.be
+        .true;
     });
 
     it('yes if teaching CSD6 during fall 2020 and inside redemption window', () => {
       clock = sinon.useFakeTimers(new Date('2020-09-01'));
-      expect(inDiscountRedemptionWindow(Unit6Intention.YES_FALL_2020)).to.be.true;
+      expect(inDiscountRedemptionWindow(Unit6Intention.YES_FALL_2020)).to.be
+        .true;
     });
 
     it('no if teaching CSD6 during fall 2020 and outside redemption window', () => {
       clock = sinon.useFakeTimers(new Date('2020-05-01'));
-      expect(inDiscountRedemptionWindow(Unit6Intention.YES_FALL_2020)).to.be.false;
+      expect(inDiscountRedemptionWindow(Unit6Intention.YES_FALL_2020)).to.be
+        .false;
     });
 
     it('yes if teaching CSD6 during spring 2021 and inside redemption window', () => {
       clock = sinon.useFakeTimers(new Date('2020-12-01'));
-      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2021)).to.be.true;
+      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2021)).to.be
+        .true;
     });
 
     it('no if teaching CSD6 during spring 2021 and outside redemption window', () => {
       clock = sinon.useFakeTimers(new Date('2020-05-01'));
-      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2021)).to.be.false;
+      expect(inDiscountRedemptionWindow(Unit6Intention.YES_SPRING_2021)).to.be
+        .false;
     });
 
     it('no if not teaching CSD6 ', () => {
