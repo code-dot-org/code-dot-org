@@ -341,6 +341,7 @@ GLOBS_AFFECTING_EVERYTHING = %w(
 
 def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base
+  puts "Base Branch: #{base_branch}"
   max_identifier_length = 12
   justified_test_name = test_name.ljust(max_identifier_length)
 
