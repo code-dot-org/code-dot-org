@@ -1,5 +1,5 @@
 class Announcements
-  @@announcements_data
+  @@announcements_data = nil
   @@loaded = false
   @@load_error = false
   @@json_path = File.join("#{pegasus_dir}/sites.v3/code.org", 'announcements.json')
