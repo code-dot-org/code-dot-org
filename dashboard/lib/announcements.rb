@@ -53,6 +53,7 @@ class Announcements
     return true
   end
 
+  # validate a banner has the required fields
   def self.validate_banner(banner)
     banner[:image] && banner[:title] && banner[:body] && banner[:buttonText] && banner[:buttonUrl] && banner[:buttonId]
   end

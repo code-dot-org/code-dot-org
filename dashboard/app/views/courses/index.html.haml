@@ -17,7 +17,7 @@
   @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
 
   if @is_teacher
-    courses_data[:specialannouncement] = Announcements.get_announcement_for_page("/courses")
+    courses_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/courses")
   end
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
