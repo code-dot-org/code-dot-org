@@ -1,0 +1,1 @@
+The presence of this file should trigger execution of Dashboard Unit Tests in a Continuous Integration (Drone) build.
