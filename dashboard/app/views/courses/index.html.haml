@@ -31,7 +31,7 @@
 .hiddenComponents{style: "display: none"}
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml'), locals: {responsive: true}
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
-  = render partial: 'home/all_courses'
+  = render partial: 'home/all_courses', locals: {user: current_user, locale: request.locale}
 
   #flashes
     = show_flashes.html_safe
