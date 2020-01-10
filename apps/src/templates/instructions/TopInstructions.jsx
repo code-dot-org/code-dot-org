@@ -488,14 +488,19 @@ class TopInstructions extends Component {
     {leading: true}
   );
 
-  render() {
+  showInstructions() {
     const {
       hidden,
       shortInstructions,
       longInstructions,
       hasContainedLevels
     } = this.props;
+    return (
+      !hidden && (shortInstructions || longInstructions || hasContainedLevels)
+    );
+  }
 
+  render() {
     const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
     const widgetWidth = WIDGET_WIDTH + 'px';
@@ -554,10 +559,7 @@ class TopInstructions extends Component {
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.teacherViewingStudentWork;
 
-    if (
-      hidden ||
-      (!shortInstructions && !longInstructions && !hasContainedLevels)
-    ) {
+    if (!this.showInstructions()) {
       return <div />;
     }
 
