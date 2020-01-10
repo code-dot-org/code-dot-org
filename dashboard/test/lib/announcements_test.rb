@@ -16,7 +16,6 @@ class AnnouncementsTest < ActiveSupport::TestCase
     assert_equal("teacher-apps-open-2020-sign-up", announcement[:buttonId])
   end
 
-
   test 'gets home announcement' do
     announcement = Announcements.get_announcement_for_page("/home")
     assert announcement
