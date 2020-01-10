@@ -158,7 +158,7 @@ gem 'gemoji'
 gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 1.15.0'
+gem 'cancancan', '~> 2.1'
 gem 'devise', '~> 4.4.0'
 gem 'devise_invitable', '~> 1.6.0'
 
@@ -200,7 +200,7 @@ gem 'rmagick'
 
 gem 'acts_as_list'
 
-gem 'kaminari' # pagination
+gem 'kaminari', '~> 1.1' # pagination
 
 gem 'stringex', '~> 2.5.2' # Provides String.to_ascii
 
@@ -228,7 +228,7 @@ gem 'paranoia'
 gem 'petit', github: 'code-dot-org/petit'  # For URL shortening
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers', ref: '2962f3f64e7c672bfb5a13a8f739b5db073e5473'
+gem 'active_model_serializers', '~> 0.10.0'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm', '~> 1'
@@ -346,3 +346,4 @@ gem 'hammerspace'
 gem 'require_all', require: false
 
 gem 'dotiw'
+gem 'alchemy_cms', '~> 4.4.1'
