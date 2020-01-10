@@ -2253,4 +2253,8 @@ class User < ActiveRecord::Base
     errors.add(:parent_email) unless parent_email.nil? ||
       Cdo::EmailValidator.email_address?(parent_email)
   end
+
+  def alchemy_roles
+    %w(admin)
+  end
 end
