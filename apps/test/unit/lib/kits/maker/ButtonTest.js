@@ -3,12 +3,12 @@ import _ from 'lodash';
 import {expect} from '../../../../util/deprecatedChai';
 import five from '@code-dot-org/johnny-five';
 import makeStubBoard from './makeStubBoard';
-import {PlaygroundButton as Button} from '@cdo/apps/lib/kits/maker/Button';
+import {PlaygroundButton} from '@cdo/apps/lib/kits/maker/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
-describe('Button', function() {
+describe('PlaygroundButton', function() {
   it('is a johnny-five Button component', function() {
-    const button = new Button({
+    const button = new PlaygroundButton({
       board: makeStubBoard(),
       pin: 0
     });
@@ -19,7 +19,7 @@ describe('Button', function() {
     let button;
 
     beforeEach(() => {
-      button = new Button({
+      button = new PlaygroundButton({
         board: makeStubBoard(),
         pin: 0
       });
@@ -37,7 +37,7 @@ describe('Button', function() {
 
   it('becomes a pullup when assigned to an external pin', () => {
     EXTERNAL_PINS.forEach(pin => {
-      const button = new Button({
+      const button = new PlaygroundButton({
         board: makeStubBoard(),
         pin
       });
@@ -49,7 +49,7 @@ describe('Button', function() {
     _.range(21)
       .filter(pin => !EXTERNAL_PINS.includes(pin))
       .forEach(pin => {
-        const button = new Button({
+        const button = new PlaygroundButton({
           board: makeStubBoard(),
           pin
         });
