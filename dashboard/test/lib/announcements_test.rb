@@ -64,4 +64,10 @@ class AnnouncementsTest < ActiveSupport::TestCase
     announcement = Announcements.get_announcement_for_page("/courses")
     refute announcement
   end
+
+  test 'quietly ignore missing file' do
+    Announcements.set_file_path(File.join("#{dashboard_dir}/test/lib", 'not-a-file.json'))
+    announcement = Announcements.get_announcement_for_page("/courses")
+    refute announcement
+  end
 end
