@@ -19,7 +19,8 @@ const styles = {
     zIndex: 2,
     paddingTop: 2,
     textAlign: 'center',
-    width: 20
+    width: 20,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
