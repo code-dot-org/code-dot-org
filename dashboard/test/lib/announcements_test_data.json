@@ -1,7 +1,8 @@
 {
   "pages": {
     "/home": "teacher-apps-closing-2020",
-    "/courses": "teacher-apps-open-2020"
+    "/courses": "teacher-apps-open-2020",
+    "/another-page": "not-a-banner"
   },
   "banners": {
     "teacher-apps-open-2020": {

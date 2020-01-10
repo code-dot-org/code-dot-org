@@ -11,16 +11,17 @@ class Announcements
     @@load_error = false
   end
 
+  # gets special announcement data for a page, or nil if not found
   def self.get_announcement_for_page(page)
     load_announcements
-    return false if @@load_error || !@@announcements_data
+    return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
     banners = @@announcements_data[:banners]
     page = page.to_sym
-    return false unless pages[page]
+    return nil unless pages[page]
 
     banner = banners[pages[page].to_sym]
-    banner ? banner : false
+    banner ? banner : nil
   end
 
   def self.load_announcements
