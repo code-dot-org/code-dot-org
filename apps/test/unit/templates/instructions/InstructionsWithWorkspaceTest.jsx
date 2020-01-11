@@ -206,7 +206,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        assert(rendersInstructions(), 'Rendered instructions');
+        assertRendersInstructions();
       });
 
       it('does not render instructions in share view', () => {
@@ -222,7 +222,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        refute(rendersInstructions(), 'Did not render instructions');
+        refuteRendersInstructions();
       });
 
       it('does not render instructions when there are no instructions', () => {
@@ -239,7 +239,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        refute(rendersInstructions(), 'Did not render instructions');
+        refuteRendersInstructions();
       });
 
       it('renders instructions when contained levels are present', () => {
@@ -257,19 +257,35 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        assert(rendersInstructions(), 'Rendered instructions');
+        assertRendersInstructions();
       });
 
-      function rendersInstructions() {
-        const wrapper = mount(
+      function assertRendersInstructions() {
+        const wrapper = mountWithFakeWorkspace();
+        assert(
+          wrapper.find('TopInstructions').exists() &&
+            wrapper.find('HeightResizer').exists(),
+          'Rendered instructions and height resizer'
+        );
+      }
+
+      function refuteRendersInstructions() {
+        const wrapper = mountWithFakeWorkspace();
+        assert.isFalse(
+          wrapper.find('TopInstructions').exists() ||
+            wrapper.find('HeightResizer').exists(),
+          'Did not render instructions or height resizer'
+        );
+      }
+
+      function mountWithFakeWorkspace() {
+        return mount(
           <Provider store={store}>
             <InstructionsWithWorkspace>
               <div>Fake workspace.</div>
             </InstructionsWithWorkspace>
           </Provider>
         );
-
-        return wrapper.find('TopInstructions').exists();
       }
     });
 
@@ -385,7 +401,3 @@ describe('InstructionsWithWorkspace', () => {
     });
   });
 });
-
-function refute(...args) {
-  assert.isNotOk(...args);
-}
