@@ -15,18 +15,22 @@
 
 %button.primary.padded-button#import-standards="Import Standards"
 
+= form_tag url_for(action: 'update_standards'), id: 'standards-form', method: 'post', class: 'form-inline', enforce_utf8: false do
+  %input#cb-response{type: "hidden", name: "cb_standards_data"}
+  #update-standards{style: 'display: none'}
+    = submit_tag
+
 :javascript
   $(document).ready(function() {
     $('#import-standards').click(function (e) {
-      console.log("import button was clicked!")
       $.ajax({
             url: 'http://curriculumbuilder.herokuapp.com/metadata/coursef/standards.json',
             type: "get",
           }).done(function(data) {
-            console.log(data)
-            // Put the data into rails?
+            $('#cb-response').val(JSON.stringify(data))
+            $("#standards-form").submit();
           }).fail(function () {
-
+            alert("Whoops! There was a problem with the import.");
           });
       });
     })
