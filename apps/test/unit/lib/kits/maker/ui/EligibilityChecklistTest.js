@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {assert} from '../../../../../util/deprecatedChai';
+import sinon from 'sinon';
 import EligibilityChecklist from '@cdo/apps/lib/kits/maker/ui/EligibilityChecklist';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';
@@ -13,6 +14,13 @@ describe('EligibilityChecklist', () => {
     adminSetStatus: false,
     currentlyDistributingDiscountCodes: true
   };
+
+  // By default, use normal time
+  let clock = sinon.useFakeTimers(new Date());
+
+  afterEach(function() {
+    clock.restore();
+  });
 
   it('renders a div if we have no discountCode', () => {
     const wrapper = shallow(<EligibilityChecklist {...defaultProps} />);
@@ -50,7 +58,48 @@ describe('EligibilityChecklist', () => {
       />
     );
     assert.equal(wrapper.find('Button').length, 0);
-    wrapper.instance().handleUnit6Submitted(true);
+    wrapper.instance().handleUnit6Submitted({
+      eligible: true,
+      unit6Intention: Unit6Intention.YES_SPRING_2020
+    });
+    assert.equal(wrapper.find('Button').length, 1);
+  });
+
+  it('does not render get code button if not in discount eligibility window', () => {
+    clock = sinon.useFakeTimers(new Date('2020-05-01'));
+
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+      />
+    );
+    assert.equal(wrapper.find('Button').length, 0);
+    wrapper.instance().handleUnit6Submitted({
+      eligible: true,
+      unit6Intention: Unit6Intention.YES_FALL_2020
+    });
+    assert.equal(wrapper.find('Button').length, 0);
+  });
+
+  it('renders get code button if in future discount eligibility window', () => {
+    clock = sinon.useFakeTimers(new Date('2020-12-01'));
+
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        schoolId="12345"
+        schoolName="Code.org Junior Academy"
+        hasConfirmedSchool={true}
+      />
+    );
+    assert.equal(wrapper.find('Button').length, 0);
+    wrapper.instance().handleUnit6Submitted({
+      eligible: true,
+      unit6Intention: Unit6Intention.YES_SPRING_2021
+    });
     assert.equal(wrapper.find('Button').length, 1);
   });
 
