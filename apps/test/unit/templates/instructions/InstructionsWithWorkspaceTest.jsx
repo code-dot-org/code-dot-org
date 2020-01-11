@@ -205,18 +205,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        const wrapper = mount(
-          <Provider store={store}>
-            <InstructionsWithWorkspace>
-              <div>Fake workspace.</div>
-            </InstructionsWithWorkspace>
-          </Provider>
-        );
-
-        assert.isFalse(
-          wrapper.find('TopInstructions').containsMatchingElement(<div />),
-          'No empty div found in TopInstructions'
-        );
+        assert(rendersInstructions(), 'Rendered instructions');
       });
 
       it('does not render instructions in share view', () => {
@@ -232,18 +221,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        const wrapper = mount(
-          <Provider store={store}>
-            <InstructionsWithWorkspace>
-              <div>Fake workspace.</div>
-            </InstructionsWithWorkspace>
-          </Provider>
-        );
-
-        assert.isTrue(
-          wrapper.find('TopInstructions').containsMatchingElement(<div />),
-          'Empty div found in TopInstructions'
-        );
+        refute(rendersInstructions(), 'Did not render instructions');
       });
 
       it('does not render instructions when there are no instructions', () => {
@@ -260,18 +238,7 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
-        const wrapper = mount(
-          <Provider store={store}>
-            <InstructionsWithWorkspace>
-              <div>Fake workspace.</div>
-            </InstructionsWithWorkspace>
-          </Provider>
-        );
-
-        assert.isTrue(
-          wrapper.find('TopInstructions').containsMatchingElement(<div />),
-          'Empty div found in TopInstructions'
-        );
+        refute(rendersInstructions(), 'Did not render instructions');
       });
 
       it('does not render instructions when contained levels are present', () => {
@@ -288,6 +255,10 @@ describe('InstructionsWithWorkspace', () => {
           })
         );
 
+        refute(rendersInstructions(), 'Did not render instructions');
+      });
+
+      function rendersInstructions() {
         const wrapper = mount(
           <Provider store={store}>
             <InstructionsWithWorkspace>
@@ -296,11 +267,10 @@ describe('InstructionsWithWorkspace', () => {
           </Provider>
         );
 
-        assert.isTrue(
-          wrapper.find('TopInstructions').containsMatchingElement(<div />),
-          'Empty div found in TopInstructions'
-        );
-      });
+        return !wrapper
+          .find('TopInstructions')
+          .containsMatchingElement(<div />);
+      }
     });
 
     // This is a set of integration tests over the draggable resize grippy's behavior,
@@ -415,3 +385,7 @@ describe('InstructionsWithWorkspace', () => {
     });
   });
 });
+
+function refute(...args) {
+  assert.isNotOk(...args);
+}
