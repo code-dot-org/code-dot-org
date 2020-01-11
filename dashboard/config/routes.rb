@@ -357,6 +357,7 @@ Dashboard::Application.routes.draw do
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
   get '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
+  post '/admin/standards', to: 'admin_standards#update_standards', as: 'admin_standards_update'
 
   get '/notes/:key', to: 'notes#index'
 
