@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import {expect} from '../../../../util/deprecatedChai';
 import five from '@code-dot-org/johnny-five';
-import makeStubBoard from './makeStubBoard';
+import {makeStubBoard, MicrobitStubBoard} from './makeStubBoard';
 import {
   PlaygroundButton,
   MicroBitButton
@@ -64,7 +64,7 @@ describe('PlaygroundButton', function() {
 describe('MicroBitButton', function() {
   it('is a johnny-five Button component', function() {
     const button = new MicroBitButton({
-      mb: new MicrobitFakeBoard(),
+      mb: new MicrobitStubBoard(),
       pin: 0
     });
     expect(button).to.be.an.instanceOf(five.Button);
@@ -75,7 +75,7 @@ describe('MicroBitButton', function() {
 
     beforeEach(() => {
       button = new MicroBitButton({
-        mb: new MicrobitFakeBoard(),
+        mb: new MicrobitStubBoard(),
         pin: 0
       });
     });
@@ -98,11 +98,3 @@ describe('MicroBitButton', function() {
     });
   });
 });
-
-class MicrobitFakeBoard {
-  constructor() {}
-
-  addFirmataEventListener(eventListenerFunction) {}
-
-  addFirmataUpdateListener(updateListenerFunction) {}
-}
