@@ -57,7 +57,10 @@ export default class Unit6ValidationStep extends Component {
       }
     })
       .done(data => {
-        this.props.onSubmit(data.eligible);
+        this.props.onSubmit({
+          eligible: data.eligible,
+          unit6Intention: this.state.choice
+        });
         this.setState({
           submitting: false,
           errorText: ''
