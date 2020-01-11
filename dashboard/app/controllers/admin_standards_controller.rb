@@ -6,6 +6,5 @@ class AdminStandardsController < ApplicationController
   end
 
   def update_standards
-    JSON.parse params[:cb_standards_data]
   end
 end
