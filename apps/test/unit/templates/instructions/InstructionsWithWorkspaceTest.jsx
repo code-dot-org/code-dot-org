@@ -25,7 +25,8 @@ describe('InstructionsWithWorkspace', () => {
   const DEFAULT_PROPS = {
     instructionsHeight: 400,
     instructionsMaxHeight: 400,
-    isEmbedView: false,
+    showInstructions: true,
+    showResizer: true,
     setInstructionsMaxHeightAvailable: () => {},
     setInstructionsRenderedHeight: () => {}
   };
@@ -241,7 +242,7 @@ describe('InstructionsWithWorkspace', () => {
         refute(rendersInstructions(), 'Did not render instructions');
       });
 
-      it('does not render instructions when contained levels are present', () => {
+      it('renders instructions when contained levels are present', () => {
         store.dispatch(
           setPageConstants({
             isShareView: false,
@@ -250,12 +251,13 @@ describe('InstructionsWithWorkspace', () => {
         );
         store.dispatch(
           setInstructionsConstants({
-            longInstructions: 'Fake instructions',
+            shortInstructions: null,
+            longInstructions: null,
             noInstructionsWhenCollapsed: true
           })
         );
 
-        refute(rendersInstructions(), 'Did not render instructions');
+        assert(rendersInstructions(), 'Rendered instructions');
       });
 
       function rendersInstructions() {
@@ -267,9 +269,7 @@ describe('InstructionsWithWorkspace', () => {
           </Provider>
         );
 
-        return !wrapper
-          .find('TopInstructions')
-          .containsMatchingElement(<div />);
+        return wrapper.find('TopInstructions').exists();
       }
     });
 

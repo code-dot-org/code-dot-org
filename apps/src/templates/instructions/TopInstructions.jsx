@@ -488,18 +488,6 @@ class TopInstructions extends Component {
     {leading: true}
   );
 
-  showInstructions() {
-    const {
-      hidden,
-      shortInstructions,
-      longInstructions,
-      hasContainedLevels
-    } = this.props;
-    return (
-      !hidden && (shortInstructions || longInstructions || hasContainedLevels)
-    );
-  }
-
   render() {
     const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
@@ -558,10 +546,6 @@ class TopInstructions extends Component {
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.teacherViewingStudentWork;
-
-    if (!this.showInstructions()) {
-      return <div />;
-    }
 
     /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =

@@ -24,7 +24,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
     instructionsMaxHeight: PropTypes.number.isRequired,
-    isEmbedView: PropTypes.bool.isRequired,
+    showInstructions: PropTypes.bool.isRequired,
+    showResizer: PropTypes.bool.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     setInstructionsRenderedHeight: PropTypes.func.isRequired
   };
@@ -132,8 +133,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   render() {
     return (
       <span>
-        <TopInstructions />
-        {!this.props.isEmbedView && (
+        {this.props.showInstructions && <TopInstructions />}
+        {this.props.showResizer && (
           <HeightResizer
             position={this.props.instructionsHeight}
             onResize={this.handleHeightResize}
@@ -152,13 +153,21 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
 export default connect(
   function propsFromStore(state) {
+    const {hasContainedLevels, isEmbedView, isShareView} = state.pageConstants;
+    const {shortInstructions, longInstructions} = state.instructions;
+    const showInstructions = !!(
+      !isShareView &&
+      (shortInstructions || longInstructions || hasContainedLevels)
+    );
+    const showResizer = showInstructions && !isEmbedView;
     return {
       instructionsHeight: state.instructions.renderedHeight,
       instructionsMaxHeight: Math.min(
         state.instructions.maxAvailableHeight,
         state.instructions.maxNeededHeight
       ),
-      isEmbedView: state.pageConstants.isEmbedView
+      showInstructions,
+      showResizer
     };
   },
   function propsFromDispatch(dispatch) {
