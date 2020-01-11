@@ -79,6 +79,9 @@ class UnconnectedEditProjectName extends React.Component {
     dashboard.project
       .rename(newName)
       .then(() => {
+        this.setState({
+          savingName: false
+        });
         dashboard.header.updateTimestamp();
         this.props.refreshProjectName();
         this.props.finishEdit();
@@ -87,8 +90,6 @@ class UnconnectedEditProjectName extends React.Component {
         if (error instanceof NameFailureError) {
           this.props.setNameFailure(error.nameFailure);
         }
-      })
-      .finally(() => {
         this.setState({
           savingName: false
         });
