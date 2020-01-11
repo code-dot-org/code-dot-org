@@ -3,7 +3,10 @@ import _ from 'lodash';
 import {expect} from '../../../../util/deprecatedChai';
 import five from '@code-dot-org/johnny-five';
 import makeStubBoard from './makeStubBoard';
-import {PlaygroundButton} from '@cdo/apps/lib/kits/maker/Button';
+import {
+  PlaygroundButton,
+  MicroBitButton
+} from '@cdo/apps/lib/kits/maker/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 
 describe('PlaygroundButton', function() {
@@ -57,3 +60,49 @@ describe('PlaygroundButton', function() {
       });
   });
 });
+
+describe('MicroBitButton', function() {
+  it('is a johnny-five Button component', function() {
+    const button = new MicroBitButton({
+      mb: new MicrobitFakeBoard(),
+      pin: 0
+    });
+    expect(button).to.be.an.instanceOf(five.Button);
+  });
+
+  describe('isPressed', () => {
+    let button;
+
+    beforeEach(() => {
+      button = new MicroBitButton({
+        mb: new MicrobitFakeBoard(),
+        pin: 0
+      });
+    });
+
+    it('is a readonly property', () => {
+      const descriptor = Object.getOwnPropertyDescriptor(button, 'isPressed');
+      expect(descriptor.get).to.be.a('function');
+      expect(descriptor.set).to.be.undefined;
+      expect(() => {
+        button.isPressed = true;
+      }).to.throw();
+    });
+
+    it('returns true when pressed and false when released', () => {
+      button.buttonEvents[1]++; // record a 'press down' event
+      expect(button.isPressed).to.equal(true);
+
+      button.buttonEvents[2]++; // record a 'release up' event
+      expect(button.isPressed).to.equal(false);
+    });
+  });
+});
+
+class MicrobitFakeBoard {
+  constructor() {}
+
+  addFirmataEventListener(eventListenerFunction) {}
+
+  addFirmataUpdateListener(updateListenerFunction) {}
+}
