@@ -1,2 +1,10 @@
 {
+  "continue": "Continuer",
+  "areYouSure": "Es-tu certain ?",
+  "cancel": "Annuler",
+  "yes": "Oui",
+  "no": "Non",
+  "run": "Démarrer",
+  "or": "ou",
+  "finish": "Terminer"
 }

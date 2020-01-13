@@ -11,6 +11,7 @@ import {SpecialAnnouncementActionBlock} from './TwoColumnActionBlock';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import styleConstants from '@cdo/apps/styleConstants';
+import shapes from './shapes';
 
 const styles = {
   content: {
@@ -28,7 +29,8 @@ class Courses extends Component {
     isSignedOut: PropTypes.bool.isRequired,
     linesCount: PropTypes.string.isRequired,
     studentsCount: PropTypes.string.isRequired,
-    modernElementaryCoursesAvailable: PropTypes.bool.isRequired
+    modernElementaryCoursesAvailable: PropTypes.bool.isRequired,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   componentDidMount() {
@@ -43,7 +45,8 @@ class Courses extends Component {
       isEnglish,
       isTeacher,
       isSignedOut,
-      modernElementaryCoursesAvailable
+      modernElementaryCoursesAvailable,
+      specialAnnouncement
     } = this.props;
     const headingText = isTeacher
       ? i18n.coursesHeadingTeacher()
@@ -55,7 +58,6 @@ class Courses extends Component {
     const headingDescription = isSignedOut
       ? i18n.coursesHeadingDescription()
       : null;
-    const showSpecialTeacherAnnouncement = false;
 
     return (
       <div style={styles.content}>
@@ -79,8 +81,10 @@ class Courses extends Component {
         {/* English, teacher.  (Also can be shown when signed out.) */}
         {isEnglish && isTeacher && (
           <div>
-            {showSpecialTeacherAnnouncement && (
-              <SpecialAnnouncementActionBlock />
+            {specialAnnouncement && (
+              <SpecialAnnouncementActionBlock
+                announcement={specialAnnouncement}
+              />
             )}
             <CoursesTeacherEnglish />
           </div>
