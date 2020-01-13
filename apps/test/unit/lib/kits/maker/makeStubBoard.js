@@ -20,6 +20,10 @@ export class MicrobitStubBoard {
 
   displayClear() {}
 
+  scrollString() {}
+
+  scrollInteger() {}
+
   receivedEvent(sourceID, eventID) {
     for (let f of this.eventListeners) {
       f.call(null, sourceID, eventID);
