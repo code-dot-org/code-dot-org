@@ -16,6 +16,10 @@ export class MicrobitStubBoard {
     this.eventListeners = [];
   }
 
+  displayPlot() {}
+
+  displayClear() {}
+
   receivedEvent(sourceID, eventID) {
     for (let f of this.eventListeners) {
       f.call(null, sourceID, eventID);
