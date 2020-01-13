@@ -26,7 +26,8 @@ class SectionProgressToggle extends React.Component {
     // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
   onChange = selectedToggle => {
@@ -38,7 +39,8 @@ class SectionProgressToggle extends React.Component {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           old_view: this.props.currentView,
-          new_view: selectedToggle
+          new_view: selectedToggle,
+          script_id: this.props.scriptId
         })
       },
       {includeUserId: true}
@@ -90,7 +92,8 @@ export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 export default connect(
   state => ({
     currentView: state.sectionProgress.currentView,
-    sectionId: state.sectionProgress.section.id
+    sectionId: state.sectionData.section.id,
+    scriptId: state.scriptSelection.scriptId
   }),
   dispatch => ({
     setCurrentView(viewType) {

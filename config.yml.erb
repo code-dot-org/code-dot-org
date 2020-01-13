@@ -170,6 +170,7 @@ google_maps_secret:       !Secret
 ga_account:               !Secret
 ga_profile_id:            !Secret
 google_safe_browsing_key: !Secret
+gdrive_export_secret:     !Secret
 
 # Mapbox
 mapbox_upload_token:
@@ -450,6 +451,9 @@ bundler_use_sudo: <%=chef_managed%>
 
 daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
+
+# Used for the teacher application data export
+applications_2020_2021_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.

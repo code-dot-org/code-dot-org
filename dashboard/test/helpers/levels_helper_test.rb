@@ -713,7 +713,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   test 'render_multi_or_match_content can generate images' do
-    assert_equal render_multi_or_match_content("example.png"), "<img src='example.png' ></img>"
+    assert_equal render_multi_or_match_content("example.png"), "<img src=\"example.png\"></img>"
   end
 
   test 'render_multi_or_match_content can generate embedded blockly' do

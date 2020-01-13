@@ -6,7 +6,11 @@ import DiscountCodeSchoolChoice from './DiscountCodeSchoolChoice';
 import Button from '@cdo/apps/templates/Button';
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import SafeMarkdown from '../../../../templates/SafeMarkdown';
-import {isUnit6IntentionEligible} from '../util/discountLogic';
+import {
+  isUnit6IntentionEligible,
+  inDiscountRedemptionWindow,
+  eligibilityDates
+} from '../util/discountLogic';
 import Unit6ValidationStep from './Unit6ValidationStep';
 import EligibilityConfirmDialog from './EligibilityConfirmDialog';
 import DiscountCodeInstructions from './DiscountCodeInstructions';
@@ -24,8 +28,8 @@ export default class EligibilityChecklist extends React.Component {
     unit6Intention: PropTypes.string,
     schoolId: PropTypes.string,
     schoolName: PropTypes.string,
+    schoolHighNeedsEligible: PropTypes.bool,
     hasConfirmedSchool: PropTypes.bool,
-    getsFullDiscount: PropTypes.bool,
     initialDiscountCode: PropTypes.string,
     initialExpiration: PropTypes.string,
     adminSetStatus: PropTypes.bool.isRequired,
@@ -36,6 +40,7 @@ export default class EligibilityChecklist extends React.Component {
     schoolId: null,
     schoolEligible: null,
     statusYear: Status.UNKNOWN,
+    statusRedemptionWindow: Status.UNKNOWN,
     yearChoice: null, // stores the teaching-year choice until submitted
     submitting: false,
     confirming: false,
@@ -52,6 +57,9 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         yearChoice: props.unit6Intention,
+        statusRedemptionWindow: inDiscountRedemptionWindow(props.unit6Intention)
+          ? Status.SUCCEEDED
+          : Status.FAILED,
         statusYear: isUnit6IntentionEligible(props.unit6Intention)
           ? Status.SUCCEEDED
           : Status.FAILED
@@ -61,7 +69,7 @@ export default class EligibilityChecklist extends React.Component {
     if (props.adminSetStatus) {
       this.state = {
         ...this.state,
-        statusYear: props.getsFullDiscount ? Status.SUCCEEDED : Status.FAILED
+        statusYear: Status.SUCCEEDED
       };
     }
 
@@ -69,7 +77,7 @@ export default class EligibilityChecklist extends React.Component {
       this.state = {
         ...this.state,
         schoolId: props.schoolId,
-        schoolEligible: !!props.getsFullDiscount
+        schoolEligible: !!props.schoolHighNeedsEligible
       };
     }
 
@@ -80,15 +88,19 @@ export default class EligibilityChecklist extends React.Component {
     };
   }
 
-  handleSchoolConfirmed = ({schoolId, fullDiscount}) => {
+  handleSchoolConfirmed = ({schoolId, schoolHighNeedsEligible}) => {
     this.setState({
       schoolId: schoolId,
-      schoolEligible: !!fullDiscount
+      schoolEligible: schoolHighNeedsEligible
     });
   };
 
-  handleUnit6Submitted = eligible => {
+  handleUnit6Submitted = ({eligible, unit6Intention}) => {
     this.setState({
+      statusRedemptionWindow: inDiscountRedemptionWindow(unit6Intention)
+        ? Status.SUCCEEDED
+        : Status.FAILED,
+      yearChoice: unit6Intention,
       statusYear: eligible ? Status.SUCCEEDED : Status.FAILED
     });
   };
@@ -100,6 +112,9 @@ export default class EligibilityChecklist extends React.Component {
   handleSuccessDialog = (discountCode, expiration) => {
     this.setState({discountCode, expiration});
   };
+
+  formattedEligibilityDate = yearChoice =>
+    eligibilityDates[yearChoice].format('MMMM Do, YYYY');
 
   render() {
     if (this.state.discountCode) {
@@ -167,7 +182,18 @@ export default class EligibilityChecklist extends React.Component {
             />
           </div>
         )}
-        {this.state.statusYear === Status.SUCCEEDED && (
+        {this.state.statusRedemptionWindow === Status.FAILED &&
+          this.state.statusYear === Status.SUCCEEDED &&
+          !this.props.adminSetStatus && (
+            <div>
+              {redemptionWindowFail(
+                this.formattedEligibilityDate(this.state.yearChoice)
+              )}
+            </div>
+          )}
+        {((this.state.statusYear === Status.SUCCEEDED &&
+          this.state.statusRedemptionWindow === Status.SUCCEEDED) ||
+          this.props.adminSetStatus) && (
           <div>
             <div>
               <strong>
@@ -196,7 +222,7 @@ export default class EligibilityChecklist extends React.Component {
 const discountPageHeader = `Subsidized Circuit Playground Kits`;
 const discountPageDescriptionMd = `
 Code.org is able to offer a 100% subsidy for one Circuit Playground classroom kit to eligible
-teachers at schools with 40% or greater free and reduced-price meals. To learn more about
+teachers at schools with 50% or greater free and reduced-price meals. To learn more about
 the full eligibility requirements, read the overview [here](//code.org/circuitplayground).
 `;
 
@@ -216,7 +242,7 @@ Just use the code \`ADAEDU\` at checkout.
 
 const schoolIsNotEligibleMd = ncesId => `
 Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
-your school has fewer than 40% of students that are eligible for free/reduced-price lunches
+your school has fewer than 50% of students that are eligible for free/reduced-price lunches
 ([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).
 However, you are still eligible for a discount! Adafruit has made available a 10% off educator
 discount that this kit is eligible for. Just use the code \`ADAEDU\` at checkout.
@@ -237,5 +263,14 @@ Sorry, it doesn’t look like you have enough students in your sections that hav
 Units 2 and 3. Please check back here once your students have finished the first semester of
 CS Discoveries. If you are using a different account to track the progress of students or if you
 think there has been an error in detecting how much progress your students have made in Units
-2 and 3, please contact us at [teacher@code.org](mailto:teacher@code.org). 
+2 and 3, please contact us at [teacher@code.org](mailto:teacher@code.org).
+`;
+
+const redemptionWindowFail = eligibilityDate => `
+Thanks for letting us know your plans! It appears that you qualify for the
+subsidized Circuit Playground classroom kit, but we’re not able to provide the
+hardware until the semester you plan to teach Unit 6. To receive your subsidized
+classroom kit, please visit this page again anytime after ${eligibilityDate}.
+The final date to request your subsidized kit is April 30, 2021. For any
+questions or concerns, please contact us at teacher@code.org.
 `;

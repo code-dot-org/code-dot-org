@@ -17,7 +17,8 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType
+  scriptDataPropType,
+  setCurrentView
 } from './sectionProgressRedux';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -71,6 +72,7 @@ class SectionProgress extends Component {
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
+    setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
@@ -81,6 +83,16 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
+  }
+
+  componentDidUpdate() {
+    // Check if we are on a non-CSF script and
+    // currentView is Standards. If so re-set currentView to Summary since
+    // Standards doesn't apply.
+    const isCSF = this.props.scriptData && this.props.scriptData.csf;
+    if (this.props.currentView === ViewType.STANDARDS && !isCSF) {
+      this.props.setCurrentView(ViewType.SUMMARY);
+    }
   }
 
   onChangeScript = scriptId => {
@@ -104,6 +116,20 @@ class SectionProgress extends Component {
 
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'jump_to_lesson',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId,
+          stage_id: this.props.scriptData.stages[lessonOfInterest].id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   renderTooltips() {
@@ -150,8 +176,7 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
-    const csfCourseSelected =
-      levelDataInitialized && !scriptData.excludeCsfColumnInLegend;
+    const csfCourseSelected = levelDataInitialized && scriptData.csf;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
@@ -239,6 +264,9 @@ export default connect(
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));
+    },
+    setCurrentView(viewType) {
+      dispatch(setCurrentView(viewType));
     }
   })
 )(SectionProgress);

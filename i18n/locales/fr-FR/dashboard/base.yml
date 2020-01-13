@@ -355,7 +355,7 @@ fr:
       basketball: 'Basket-ball'
       bounce: 'Rebond'
       calc: 'Calc'
-      dance: 'Fête dansante'
+      dance: 'Dance Party'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'La Reine des neiges'
@@ -599,9 +599,9 @@ fr:
       audience: 'Âge recommandé: 13 ans et plus'
       cta: 'Apprendre comment'
     dance:
-      title: 'Fête dansante'
+      title: 'Dance Party'
     dance-2019:
-      title: 'Fête dansante'
+      title: 'Dance Party'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'

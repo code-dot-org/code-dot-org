@@ -33,7 +33,7 @@ const styles = {
   }
 };
 
-export default class SummaryViewLegend extends Component {
+export default class StandardsLegend extends Component {
   render() {
     return (
       <div style={{marginTop: 60}}>

@@ -41,7 +41,7 @@ export const addScriptData = (scriptId, scriptData) => {
   // Filter to match scriptDataPropType
   const filteredScriptData = {
     id: scriptData.id,
-    excludeCsfColumnInLegend: scriptData.excludeCsfColumnInLegend,
+    csf: scriptData.csf,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
@@ -73,7 +73,7 @@ export const addStudentLevelPairing = (scriptId, studentLevelPairing) => {
 
 export const jumpToLessonDetails = lessonOfInterest => {
   return (dispatch, getState) => {
-    const state = getState().sectionProgress;
+    const state = getState();
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
     firehoseClient.putRecord(
@@ -82,9 +82,10 @@ export const jumpToLessonDetails = lessonOfInterest => {
         study_group: 'progress',
         event: 'view_change_toggle',
         data_json: JSON.stringify({
-          section_id: state.section.id,
+          section_id: state.sectionData.section.id,
           old_view: ViewType.SUMMARY,
-          new_view: ViewType.DETAIL
+          new_view: ViewType.DETAIL,
+          script_id: state.scriptSelection.scriptId
         })
       },
       {includeUserId: true}
@@ -129,7 +130,7 @@ export const ViewType = {
  */
 export const scriptDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
-  excludeCsfColumnInLegend: PropTypes.bool,
+  csf: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
   stages: PropTypes.arrayOf(
