@@ -80,14 +80,21 @@ describe('InlineAudio', function() {
     );
   });
 
-  it('renders controls if text-to-speech is enabled and sound is loaded', function() {
+  it('renders controls if text-to-speech is enabled', function() {
     const component = mount(
       <StatelessInlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
 
-    expect(component.exists('.inline-audio')).to.be.false;
-    component.setState({loaded: true});
-    expect(component.exists('.inline-audio')).to.be.true;
+    expect(component).to.containMatchingElement(
+      <div className="inline-audio">
+        <div id="volume">
+          <i className="fa fa-volume-up" />
+        </div>
+        <div className="playPause">
+          <i className="fa fa-play" />
+        </div>
+      </div>
+    );
   });
 
   it('can toggle audio', function() {
@@ -100,11 +107,11 @@ describe('InlineAudio', function() {
     expect(component.state().playing).to.be.false;
   });
 
-  it('only initializes Audio once', function() {
-    sinon.spy(window, 'Audio');
+  it('only gets Audio the first time it is played', function() {
     const component = mount(<StatelessInlineAudio {...DEFAULT_PROPS} />);
+    sinon.spy(window, 'Audio');
 
-    expect(window.Audio).to.have.been.calledOnce;
+    expect(window.Audio).not.to.have.been.called;
     component.instance().playAudio();
     expect(window.Audio).to.have.been.calledOnce;
     component.instance().pauseAudio();
