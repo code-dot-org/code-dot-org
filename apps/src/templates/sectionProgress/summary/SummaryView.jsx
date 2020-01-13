@@ -31,9 +31,7 @@ class SummaryView extends Component {
           scriptData={scriptData}
           onScroll={this.afterScroll}
         />
-        <SummaryViewLegend
-          showCSFProgressBox={!scriptData.excludeCsfColumnInLegend}
-        />
+        <SummaryViewLegend showCSFProgressBox={scriptData.csf} />
       </div>
     );
   }

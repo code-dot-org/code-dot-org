@@ -57,13 +57,13 @@ class School < ActiveRecord::Base
   # discount codes - this is not a definition we apply broadly.
   # @return [Boolean] True if high-needs, false otherwise.
   def maker_high_needs?
-    # As of January 2019, "high-needs" is defined as having >= 40% of the student population
+    # As of January 2020, "high-needs" is defined as having >= 50% of the student population
     # eligible for free-and-reduced lunch programs.
     stats = school_stats_by_year.order(school_year: :desc).first
     if stats.nil? || stats.frl_eligible_total.nil? || stats.students_total.nil?
       return false
     end
-    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.4
+    stats.frl_eligible_total.to_f / stats.students_total.to_f >= 0.5
   end
 
   # Public school ids from NCES are always 12 digits, possibly with

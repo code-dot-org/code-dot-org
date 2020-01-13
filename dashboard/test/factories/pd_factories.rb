@@ -628,7 +628,9 @@ FactoryGirl.define do
         name: 'name',
         email: 'foo@bar.com',
         zip: '45242',
-        notes: 'Sample notes to regional partner'
+        notes: 'Sample notes to regional partner',
+        role: 'Teacher',
+        grade_levels: %w(K-5 6-8)
       }
     end
   end

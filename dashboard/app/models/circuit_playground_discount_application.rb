@@ -33,10 +33,13 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     yesAfter: 4,
     unsure: 5,
     yes1920: 6,
+    yesSpring2020: 7,
+    yesFall2020: 8,
+    yesSpring2021: 9
   }
 
   def eligible_unit_6_intention?
-    yes1819? || yes1920?
+    yesSpring2020? || yesFall2020? || yesSpring2021?
   end
 
   # We will set the application's school_id when the user confirms their school. This means
@@ -53,12 +56,15 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     where(user_id: associated_user_ids).first
   end
 
+  # Checks whether a user has attended a workshop with a given subject.
+  # Used to check both attendance at 5-day summer workshops and quarterly workshops.
+  # @param workshop_subjects [Array] A list of workshop subjects (or single value) to check for a user's attendance.
   # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
-  def self.user_pd_eligible?(user)
-    user_pd_eligible_as_teacher?(user) || user_pd_eligible_as_facilitator?(user)
+  def self.user_pd_eligible?(user, workshop_subjects)
+    user_pd_eligible_as_teacher?(user, workshop_subjects) || user_pd_eligible_as_facilitator?(user)
   end
 
-  private_class_method def self.user_pd_eligible_as_teacher?(user)
+  private_class_method def self.user_pd_eligible_as_teacher?(user, workshop_subjects)
     Pd::Attendance.
       joins(:workshop).
       where(
@@ -67,13 +73,10 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
         },
         pd_workshops: {
           course: Pd::Workshop::COURSE_CSD,
-          subject: [
-            Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
-            Pd::Workshop::SUBJECT_TEACHER_CON
-          ]
+          subject: workshop_subjects
         }
       ).
-      where("pd_workshops.started_at > '2018-05-01'").
+      where("pd_workshops.started_at > '2019-05-01'").
       exists?
   end
 
@@ -84,11 +87,16 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     DCDO.get('facilitator_ids_eligible_for_maker_discount', []).include? user.id
   end
 
-  # Looks to see if any of the users associated with this studio_person_id are eligibile
-  # for our circuit playground discount
-  def self.studio_person_pd_eligible?(user)
-    accounts = user.studio_person_id.nil? ? [user] : User.where(studio_person_id: user.studio_person_id)
-    accounts.any? {|associated_user| user_pd_eligible?(associated_user)}
+  # Given a user (which has a studio person ID), get all associated accounts
+  def self.get_user_accounts(user)
+    user.studio_person_id.nil? ? [user] : User.where(studio_person_id: user.studio_person_id)
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligible
+  # for our circuit playground discount via their attendance at a given PD workshop
+  def self.studio_person_pd_eligible?(user, workshop_subjects)
+    accounts = get_user_accounts(user)
+    accounts.any? {|associated_user| user_pd_eligible?(associated_user, workshop_subjects)}
   end
 
   # @return {boolean} true if we have at least one section that meets our eligibility
@@ -111,13 +119,18 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
       has_confirmed_school: application.try(:has_confirmed_school?) || false,
       school_id: school_id,
       school_name: school_id ? School.find(school_id).name : nil,
+      school_high_needs_eligible: school_id ? School.find(school_id).try(:maker_high_needs?) : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
       expiration: application.try(:circuit_playground_discount_code).try(:expiration),
       admin_set_status: application.try(:admin_set_status) || false,
-      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_pd_eligible: studio_person_pd_eligible?(user,
+        [
+          Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+        ]
+      ),
       is_progress_eligible: student_progress_eligible?(user)
     }
   end
@@ -136,7 +149,11 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     # exception being if the user changed schools since confirming.
 
     {
-      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_pd_eligible: studio_person_pd_eligible?(user,
+        [
+          Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+        ]
+      ),
       is_progress_eligible: student_progress_eligible?(user),
       user_school: {
         id: user_school.try(:id),

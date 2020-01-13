@@ -606,7 +606,9 @@ module LevelsHelper
   end
 
   def match_answer_as_image(path, width)
-    "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    attrs = {src: path.strip}
+    attrs[:width] = width.strip if width
+    content_tag(:img, '', attrs)
   end
 
   def match_answer_as_embedded_blockly(path)

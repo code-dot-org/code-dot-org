@@ -13,8 +13,7 @@ describe('the level builder page init script', () => {
     initPage({
       script: {
         name: 'Test script',
-        stages: [],
-        excludeCsfColumnInLegend: false
+        stages: []
       },
       i18n: {
         stageDescriptions: []

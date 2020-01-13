@@ -148,6 +148,12 @@ class FirehoseClient {
     return device_info;
   }
 
+  getLocale() {
+    if (window.appOptions) {
+      return window.appOptions.locale;
+    }
+  }
+
   /**
    * Merge various key-value pairs into data.
    * @param {hash} data The data to add the key-value pairs to.
@@ -167,6 +173,7 @@ class FirehoseClient {
     data['environment'] = this.getEnvironment();
     data['uuid'] = this.getAnalyticsUuid();
     data['device'] = JSON.stringify(this.getDeviceInfo());
+    data['locale'] = this.getLocale();
 
     const state = getStore().getState();
     if (state) {
