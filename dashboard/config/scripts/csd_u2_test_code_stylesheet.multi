@@ -1,22 +1,8 @@
 name 'CSD U2 Test code stylesheet'
 title 'Question 5'
 question 'What code in the stylesheet could have made the text green?  
-  
-1.
+1. `.p { color:green; }` 2. `p { color:green; }` 3. `.special { color:green; }` 4. `special { color:green; }`'
 
-    .p { color:green; }
-
-2. 
-
-    p { color:green; }
-
-3. 
-
-    .special { color:green; }
-
-4. 
-
-    special { color:green; }'
 wrong '1 and 3'
 wrong '2 and 4'
 right '2 and 3'
