@@ -227,17 +227,17 @@ export class SpecialAnnouncementActionBlock extends Component {
     const buttonList = [];
     const {announcement} = this.props;
     buttonList.push({
-      id: announcement.buttonId,
+      id: announcement.buttonId
+        ? announcement.buttonId
+        : 'special-announcement-btn-1',
       url: announcement.buttonUrl,
       text: announcement.buttonText
     });
-    if (
-      announcement.buttonId2 &&
-      announcement.buttonUrl2 &&
-      announcement.buttonText2
-    ) {
+    if (announcement.buttonUrl2 && announcement.buttonText2) {
       buttonList.push({
-        id: announcement.buttonId2,
+        id: announcement.buttonId2
+          ? announcement.buttonId2
+          : 'special-announcement-btn-2',
         url: announcement.buttonUrl2,
         text: announcement.buttonText2
       });
