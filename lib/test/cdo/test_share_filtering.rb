@@ -150,4 +150,11 @@ class ShareFilteringTest < Minitest::Test
       '<block type="studio_showTitleScreen"></block></next></block></xml>'
     assert_nil ShareFiltering.find_share_failure(program, 'en')
   end
+
+  def test_find_name_failure_calls_find_failure
+    text = 'project title'
+    locale = 'en'
+    ShareFiltering.expects(:find_failure).with(text, locale).returns nil
+    assert_nil ShareFiltering.find_name_failure(text, locale)
+  end
 end
