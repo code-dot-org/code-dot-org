@@ -2681,11 +2681,9 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
       config.level.topLevelProcedureAutopopulate,
       false
     ),
-    useModalFunctionEditor: utils.valueOr(
+    useModalFunctionEditor:
       config.level.edit_blocks !== TOOLBOX_EDIT_MODE &&
-        config.level.useModalFunctionEditor,
-      false
-    ),
+      !!config.level.useModalFunctionEditor,
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),
     defaultNumExampleBlocks: utils.valueOr(
@@ -2705,7 +2703,10 @@ StudioApp.prototype.handleUsingBlockly_ = function(config) {
     typeHints: utils.valueOr(config.level.showTypeHints, false)
   };
 
-  // Never show unused blocks or disable autopopulate in edit mode
+  // Never show unused blocks in edit mode. Procedure autopopulate should always
+  // be enabled in edit mode. Except in toolbox mode where functions/behaviors
+  // should never be created (and therefore the autopopulated blocks would be
+  // confusing).
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
     options.disableProcedureAutopopulate =
