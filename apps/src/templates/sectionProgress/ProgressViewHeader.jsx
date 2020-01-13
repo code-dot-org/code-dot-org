@@ -22,7 +22,8 @@ const styles = {
     marginBottom: 10,
     display: 'flex',
     flexDirection: 'row',
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
+    justifyContent: 'space-between'
   },
   scriptLink: {
     color: color.teal
