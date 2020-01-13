@@ -44,7 +44,8 @@ export default class TeacherHomepage extends Component {
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number
+    schoolYear: PropTypes.number,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   state = {
@@ -153,7 +154,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
@@ -168,11 +168,9 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale
+      locale,
+      specialAnnouncement
     } = this.props;
-
-    // Show the special announcement for Hour of Code 2019.
-    const showSpecialAnnouncement = true;
 
     // Hide the regular announcement/notification for now.
     const showAnnouncement = false;
@@ -182,8 +180,8 @@ export default class TeacherHomepage extends Component {
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock hocLaunch={hocLaunch} />
+        {specialAnnouncement && (
+          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
           <div>
