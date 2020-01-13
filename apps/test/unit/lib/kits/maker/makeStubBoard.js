@@ -12,9 +12,19 @@ export function makeStubBoard() {
 }
 
 export class MicrobitStubBoard {
-  constructor() {}
+  constructor() {
+    this.eventListeners = [];
+  }
 
-  addFirmataEventListener(eventListenerFunction) {}
+  receivedEvent(sourceID, eventID) {
+    for (let f of this.eventListeners) {
+      f.call(null, sourceID, eventID);
+    }
+  }
+
+  addFirmataEventListener(eventListenerFunction) {
+    this.eventListeners.push(eventListenerFunction);
+  }
 
   addFirmataUpdateListener(updateListenerFunction) {}
 }
