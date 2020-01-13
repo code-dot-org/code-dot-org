@@ -28,26 +28,36 @@ const styles = {
   },
 };
 
-function getDropdownOptions(sections, selectedSectionName) {
-    console.log(selectedSectionName)
-    let options = Object.keys(sections).map(function(i)  {
-          let section = sections[i]
-          if (section.name === selectedSectionName) {
-              return <a> <FontAwesome icon="check"/> {section.name} </a>
-          }
-          else {
-              return <a> {section.name} </a>
-          }
-      })
-    console.log(options)
-    return options
-}
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
-    currentSectionName: PropTypes.string.isRequired,
-    currentScriptName: PropTypes.string.isRequired
+    sectionScript: PropTypes.object.isRequired,
+    selectedSection: PropTypes.object.isRequired,
+    sections: PropTypes.object.isRequired
   };
+
+  constructor(props) {
+    super(props)
+    this.getDropdownOptions = this.getDropdownOptions.bind(this)
+  }
+
+  getDropdownOptions(props) {
+      let options = Object.keys(props.sections).map(function(sectionId, i)  {
+            let section = props.sections[sectionId]
+            let linkProps = {
+              id: sectionId,
+              onClick: (link) => switchToSection(sectionId, props.selectedSection.id)
+            }
+            let icon = undefined;
+            if (sectionId == props.selectedSection.id) {
+                icon = <FontAwesome icon="check"/>
+            }
+            return <a key={i} id={sectionId} onClick={(link) => switchToSection(link.id) }>
+              {icon} {section.name}
+            </a>
+        })
+      return options
+  }
 
   render() {
     return (
@@ -60,17 +70,17 @@ class TeacherDashboardHeader extends React.Component {
         />
         <div>
           <div>
-            <h1>{this.props.currentSectionName}</h1>
+            <h1>{this.props.selectedSection.name}</h1>
             <div style={styles.headerSubtext}>
               <div>
                   <span style={styles.headerSectionPrompt}>Assigned to:</span>
-                  {` ${this.props.currentScriptName}`}
+                  {this.props.sectionScript.name}
               </div>
               <div style={styles.headerButtons}>
                 <Button
                   onClick={() => {
                     this.props.dispatch(
-                      beginEditingSection(this.props.currentSectionId)
+                      beginEditingSection(this.props.selectedSection.id)
                     );
                   }}
                   icon="gear"
@@ -81,7 +91,7 @@ class TeacherDashboardHeader extends React.Component {
                     text="Select section"
                     color="gray"
                 >
-                    {getDropdownOptions(this.props.allSections, this.props.currentSectionName)}
+                    {this.getDropdownOptions(this.props)}
                 </DropdownButton>
               </div>
             </div>
@@ -95,16 +105,21 @@ class TeacherDashboardHeader extends React.Component {
 }
 
 export default connect(state => {
-  let currentSectionId = state.teacherSections.selectedSectionId;
+/*  let currentSectionId = state.teacherSections.selectedSectionId;
   let currentSectionName =
     state.teacherSections.sections[currentSectionId].name;
 
-  let currentScriptId = state.scriptSelection.scriptId;
-  let currentScriptName = state.scriptSelection.validScripts.filter(
-    script => script.id === currentScriptId
-  )[0].name;
 
   let allSections = state.teacherSections.sections
+*/
+  let sections = state.teacherSections.sections;
 
-  return {currentSectionName, currentScriptName, currentSectionId, allSections};
+  let selectedSectionId = state.teacherSections.selectedSectionId;
+  let selectedSection = sections[selectedSectionId]
+
+  let sectionScriptId = state.scriptSelection.scriptId;
+  let sectionScript = state.scriptSelection.validScripts.filter(
+    script => script.id === sectionScriptId
+  )[0];
+  return {sections, selectedSection, sectionScript};
 })(TeacherDashboardHeader);
