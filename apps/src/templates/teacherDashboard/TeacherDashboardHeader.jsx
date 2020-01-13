@@ -41,15 +41,17 @@ class TeacherDashboardHeader extends React.Component {
     this.getDropdownOptions = this.getDropdownOptions.bind(this)
   }
 
-  getDropdownOptions(props) {
-      let options = Object.keys(props.sections).map(function(sectionId, i)  {
-            let section = props.sections[sectionId]
+  getDropdownOptions() {
+      let sections = this.props.sections
+      let selectedSection = this.props.selectedSection
+      let options = Object.keys(sections).map(function(sectionId, i)  {
+            let section = sections[sectionId]
             let linkProps = {
               id: sectionId,
-              onClick: (link) => switchToSection(sectionId, props.selectedSection.id)
+              onClick: (link) => switchToSection(sectionId, selectedSection.id)
             }
             let icon = undefined;
-            if (sectionId == props.selectedSection.id) {
+            if (sectionId == selectedSection.id) {
                 icon = <FontAwesome icon="check"/>
             }
             return <a key={i} id={sectionId} onClick={(link) => switchToSection(link.id) }>
@@ -91,7 +93,7 @@ class TeacherDashboardHeader extends React.Component {
                     text="Select section"
                     color="gray"
                 >
-                    {this.getDropdownOptions(this.props)}
+                    {this.getDropdownOptions()}
                 </DropdownButton>
               </div>
             </div>
