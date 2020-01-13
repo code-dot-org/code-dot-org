@@ -8,6 +8,7 @@ import {files as filesApi} from '../../clientApi';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
+import NameFailureError from '../NameFailureError';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -923,11 +924,11 @@ var projects = (module.exports = {
      * resolves once the data has been written to the server.
      */
     const completeAsyncSave = () =>
-      new Promise(resolve =>
+      new Promise((resolve, reject) =>
         this.getUpdatedSourceAndHtml_(sourceAndHtml =>
           this.saveSourceAndHtml_(
             sourceAndHtml,
-            resolve,
+            (err, result) => (err ? reject(err) : resolve()),
             forceNewVersion,
             preparingRemix
           )
@@ -1081,7 +1082,7 @@ var projects = (module.exports = {
       function(err, data) {
         initialSaveComplete = true;
         this.updateCurrentData_(err, data, false);
-        executeCallback(callback, data);
+        executeCallback(callback, err, data);
       }.bind(this)
     );
   },
@@ -1355,10 +1356,19 @@ var projects = (module.exports = {
   },
   /**
    * Renames and saves the project.
+   * @param {string} newName
+   * @return {Promise}
    */
-  rename(newName, callback) {
+  rename(newName) {
     this.setName(newName);
-    this.save().then(callback);
+    return this.save().catch(error => {
+      if (error.responseText) {
+        const parsed = JSON.parse(error.responseText);
+        throw new NameFailureError(parsed['nameFailure']);
+      } else {
+        throw new Error('Unknown error');
+      }
+    });
   },
   /**
    * Freezes the project. Also hides so that it's not available for
@@ -1803,9 +1813,9 @@ function setMakerAPIsStatusFromLevel() {
  * Only execute the given argument if it is a function.
  * @param callback
  */
-function executeCallback(callback, data) {
+function executeCallback(callback, ...args) {
   if (typeof callback === 'function') {
-    callback(data);
+    callback(...args);
   }
 }
 

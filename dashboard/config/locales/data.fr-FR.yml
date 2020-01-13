@@ -776,10 +776,10 @@ fr:
         MC_2018_loops: 'Minecraft : Voyage Aquatique - Répéter jusqu''à'
         mc_2018_conditionals: 'Minecraft : Voyage Aquatique - Instructions conditionnelles'
         mc_2018_closing: 'Minecraft : Voyage Aquatique - Félicitations'
-        hoc_dance_warmup: Fête dansante - Échauffement
+        hoc_dance_warmup: Dance Party - Warm Up
         hoc_dance_events: Soirée Dansante - Évènements
         hoc_dance_properties: Soirée Dansante - Propriétés
-        hoc_dance_congrats: Fête dansante - C'est la fête !
+        hoc_dance_congrats: Dance Party - C’est party !
         c_and_c_great_to_create: C'est bien de créer et de jouer équitablement
         c_and_c_digital_sharing: Partage numérique
         teaching_csf_how_it_works: 'Enseignement des fondamentaux de CS : Comment
@@ -810,6 +810,11 @@ fr:
         CSF_Spritelab_MakeSprite_v2: Comment créer un sprite
         CSF_SpriteLab_SpritesInAction_v2: Sprites en action
         csd_applab_designmode_short: Mode Création Labo des Applis
+        hoc_dance_congrats_2019: Dance Party 2019- C’est party !
+        hoc_dance_warmup_2019: Dance Party 2019- Warm Up
+        hoc_dance_events_2019: Dance Party 2019 - Évènements
+        hoc_dance_measures_2019: Dance Party 2019 - Temps
+        hoc_dance_properties_2019: Dance Party 2019 - Propriétés
     callout:
       text:
         drag_blocks: Déplace un bloc «Avancer» et emboîte-le sous l'autre bloc.

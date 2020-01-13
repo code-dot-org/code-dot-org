@@ -105,6 +105,21 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
+  getDisplayNameForChartType(chartType) {
+    switch (chartType) {
+      case ChartType.BAR_CHART:
+        return msg.barChart();
+      case ChartType.HISTOGRAM:
+        return msg.histogram();
+      case ChartType.SCATTER_PLOT:
+        return msg.scatterPlot();
+      case ChartType.CROSS_TAB:
+        return msg.crossTab();
+      default:
+        return chartType;
+    }
+  }
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
     const numericColumns = this.findNumericColumns(
@@ -168,6 +183,7 @@ class VisualizerModal extends React.Component {
                 ChartType.SCATTER_PLOT,
                 ChartType.CROSS_TAB
               ]}
+              getDisplayNameForOption={this.getDisplayNameForChartType}
               value={this.state.chartType}
               onChange={event =>
                 this.setState({
@@ -180,7 +196,9 @@ class VisualizerModal extends React.Component {
 
             {this.state.chartType === ChartType.HISTOGRAM && (
               <div style={styles.input}>
-                <label style={rowStyle.description}>Bucket Size</label>
+                <label style={rowStyle.description}>
+                  {msg.dataVisualizerBucketSize()}
+                </label>
                 <input
                   style={rowStyle.input}
                   value={this.state.bucketSize}

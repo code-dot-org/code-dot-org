@@ -5,6 +5,12 @@ exit unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 require 'cdo/google_drive'
 
+#
+# Uses a Google Cloud service account to write teacher application data for this year into
+# a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
+# by our programs team.
+#
+
 applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at)]
 
 Pd::Application::Teacher2021Application.find_each do |app|
@@ -20,4 +26,22 @@ Pd::Application::Teacher2021Application.find_each do |app|
   ]
 end
 
-Google::Drive.new.add_sheet_to_spreadsheet(applications, "2020-21 Teacher Applications", "all_apps (auto)")
+drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
+drive.update_sheet applications, CDO.applications_2020_2021_gsheet_key, 'all_apps (auto)'
+
+last_updated = DateTime.now.in_time_zone ActiveSupport::TimeZone.new "Pacific Time (US & Canada)"
+metadata = [
+  ['AUTOMATION METADATA'],
+  [''],
+  ['The tabs "all_apps (auto)" and "meta (auto)" are auto-generated;'],
+  ['Any edits you make to them (besides formatting) may be lost.'],
+  [''],
+  ['Last updated:', last_updated.strftime('%Y-%m-%d %l:%M%P GMT%:::z')],
+  ['Written by:', CDO.gdrive_export_secret.client_email],
+  ['Teacher applications:', applications.length - 1],
+  [''],
+  ['Parts of this Google Sheet are auto-populated from our live application by an automated process.'],
+  ["The sheet is shared with a \"service account\" that updates it on the application's behalf."],
+  ["(Technical Details: https://github.com/code-dot-org/code-dot-org/pull/32597)"],
+]
+drive.update_sheet metadata, CDO.applications_2020_2021_gsheet_key, 'meta (auto)'
