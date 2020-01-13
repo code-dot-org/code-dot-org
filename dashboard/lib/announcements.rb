@@ -2,7 +2,7 @@ class Announcements
   @@announcements_data = nil
   @@loaded = false
   @@load_error = false
-  @@json_path = File.join("#{pegasus_dir}/sites.v3/code.org", 'announcements.json')
+  @@json_path = pegasus_dir 'sites.v3/code.org/announcements.json'
 
   # enables unit tests
   def self.set_file_path(path)
@@ -17,10 +17,9 @@ class Announcements
     return nil if @@load_error || !@@announcements_data
     pages = @@announcements_data[:pages]
     banners = @@announcements_data[:banners]
-    page = page.to_sym
     return nil unless pages[page]
 
-    banner = banners[pages[page].to_sym]
+    banner = banners[pages[page]]
     banner ? banner : nil
   end
 
@@ -31,7 +30,11 @@ class Announcements
         return
       end
       begin
-        @@announcements_data = JSON.parse(IO.read(@@json_path), symbolize_names: true)
+        @@announcements_data = JSON.parse(
+          IO.read(@@json_path),
+          symbolize_names: true,
+          object_class: HashWithIndifferentAccess
+        )
         unless validate_announcements_data(@@announcements_data)
           @@load_error = true
         end
@@ -55,6 +58,6 @@ class Announcements
 
   # validate a banner has the required fields
   def self.validate_banner(banner)
-    banner[:image] && banner[:title] && banner[:body] && banner[:buttonText] && banner[:buttonUrl] && banner[:buttonId]
+    banner[:image] && banner[:title] && banner[:body] && banner[:buttonText] && banner[:buttonUrl]
   end
 end

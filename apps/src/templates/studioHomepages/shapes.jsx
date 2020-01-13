@@ -45,7 +45,7 @@ const shapes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,
-    buttonId: PropTypes.string.isRequired,
+    buttonId: PropTypes.string,
     buttonUrl: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     buttonId2: PropTypes.string,
