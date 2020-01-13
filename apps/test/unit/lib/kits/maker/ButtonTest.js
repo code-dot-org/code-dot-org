@@ -8,6 +8,7 @@ import {
   MicroBitButton
 } from '@cdo/apps/lib/kits/maker/Button';
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import sinon from 'sinon';
 
 describe('PlaygroundButton', function() {
   it('is a johnny-five Button component', function() {
@@ -95,6 +96,28 @@ describe('MicroBitButton', function() {
 
       button.buttonEvents[2]++; // record a 'release up' event
       expect(button.isPressed).to.equal(false);
+    });
+  });
+
+  describe('emitsEvent', () => {
+    it('emits the corresponding event and updates states when board receives event', () => {
+      let boardClient = new MicrobitStubBoard();
+      let button = new MicroBitButton({
+        mb: boardClient,
+        pin: 0
+      });
+
+      let emitSpy = sinon.spy(button, 'emit');
+
+      boardClient.receivedEvent(0, 1);
+      expect(button.isPressed).to.equal(true);
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('down');
+
+      boardClient.receivedEvent(0, 2);
+      expect(button.isPressed).to.equal(false);
+      expect(emitSpy).to.have.been.calledTwice;
+      expect(emitSpy).to.have.been.calledWith('up');
     });
   });
 });
