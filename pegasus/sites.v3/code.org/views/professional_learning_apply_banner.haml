@@ -1,5 +1,8 @@
 - link = "/educate/professional-learning/program-information"
 - link += "?nominated=true" if params[:nominated]
+- use_sign_up_text ||= false
+- font_size = use_sign_up_text ? '16px' : '18px'
+- padding = use_sign_up_text ? '25px 10px' : '20px 10px'
 
 - buttons = capture_haml do
   %div
@@ -16,8 +19,10 @@
         .arrowcontainer.desktop-feature{style: "float:left; width: 7%"}
           .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #ebe8f1"}
         .textcontainer{style: "float:left; width: 93%"}
-          .text{style: "color: white;  font-size: 18px; padding: 20px 10px 20px 10px; text-align: center; line-height: 1.5"}
-            - if params[:nominated]
+          .text{style: "color: white;  font-size: #{font_size}; padding: #{padding}; text-align: center; line-height: 1.5"}
+            - if use_sign_up_text
+              Sign up for Professional Learning! Applications now open for Middle and High School teachers.
+            - elsif params[:nominated]
               CONGRATULATIONS! You’ve been nominated for a scholarship!
             - else
               SEATS OPEN - 2020 Professional Learning for Middle and High School Teachers
