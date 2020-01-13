@@ -151,9 +151,10 @@ const styles = {
       lineHeight: '40px'
     },
     [ButtonSize.thin]: {
-      height: 20,
-      paddingLeft: 10,
-      paddingRight: 10,
+      height: 34,
+      paddingLeft: 12,
+      paddingRight: 12,
+      lineHeight: '34px'
     },
   }
 };

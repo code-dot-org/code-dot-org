@@ -16,16 +16,27 @@ import DropdownButton from '../DropdownButton';
 const styles = {
   headerContainer: {
   },
+  h1Overrides: {
+    lineHeight: '9px'
+  },
   headerSectionPrompt: {
     fontWeight: 'bold'
   },
-  headerSubtext: {
+  header: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    marginBottom: '5px'
+  },
+  headerButtonFloatControl: {
+    display: 'flex',
+    flexDirection: 'column-reverse'
   },
   headerButtons: {
-    display:'flex'
+    display:'flex',
   },
+  headerButtonMargin: {
+    marginRight: '5px'
+  }
 };
 
 
@@ -70,14 +81,15 @@ class TeacherDashboardHeader extends React.Component {
           isRtl={true}
           chevronSide="left"
         />
-        <div>
+        <div style={styles.header}>
           <div>
-            <h1>{this.props.selectedSection.name}</h1>
-            <div style={styles.headerSubtext}>
-              <div>
-                  <span style={styles.headerSectionPrompt}>Assigned to:</span>
-                  {this.props.sectionScript.name}
-              </div>
+            <h1 style={styles.h1Overrides}>{this.props.selectedSection.name}</h1>
+            <div>
+                <span style={styles.headerSectionPrompt}>Assigned to: </span>
+                {this.props.sectionScript.name}
+            </div>
+          </div>
+            <div style={styles.headerButtonFloatControl}>
               <div style={styles.headerButtons}>
                 <Button
                   onClick={() => {
@@ -86,8 +98,10 @@ class TeacherDashboardHeader extends React.Component {
                     );
                   }}
                   icon="gear"
+                  size="thin"
                   color="gray"
                   text="Edit section details"
+                  style={styles.headerButtonMargin}
                 />
                 <DropdownButton
                     text="Select section"
@@ -97,7 +111,6 @@ class TeacherDashboardHeader extends React.Component {
                 </DropdownButton>
               </div>
             </div>
-          </div>
         </div>
         <TeacherDashboardNavigation />
         <SetScriptIdEditSectionDialog />
