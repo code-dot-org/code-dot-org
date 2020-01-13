@@ -1,8 +1,9 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
 import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
-import Thermometer from '@cdo/apps/lib/kits/maker/Thermometer';
+import Thermometer, {MicroBitThermometer} from '@cdo/apps/lib/kits/maker/Thermometer';
 import Playground from 'playground-io';
+import {MicrobitStubBoard} from './makeStubBoard';
 
 describe('Thermometer', function() {
   let testObj;
@@ -61,4 +62,40 @@ describe('Thermometer', function() {
         .to.equal(i);
     }
   });
+});
+
+describe('MicroBitThermometer', function() {
+  let thermometer = new MicroBitThermometer({mb: new MicrobitStubBoard()});
+
+  it(`attributes are readonly`, () => {
+    let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];
+    let desc;
+
+    attributes.forEach((attr) => {
+      desc = Object.getOwnPropertyDescriptor(thermometer, attr);
+      expect(desc.set).to.be.undefined;
+      expect(desc.get).to.be.defined;
+    });
+  });
+
+  describe(`start() and stop()`, () => {
+    Thermometer.initialize.value.call(testObj);
+    expect(Thermometer.toCelsius.value.call(testObj, 0)).to.equal(-273);
+    expect(Thermometer.toCelsius.value.call(testObj, 1)).to.equal(-77);
+    expect(Thermometer.toCelsius.value.call(testObj, 15)).to.equal(-47);
+    expect(Thermometer.toCelsius.value.call(testObj, 230)).to.equal(0);
+    expect(Thermometer.toCelsius.value.call(testObj, 512)).to.equal(25);
+    expect(Thermometer.toCelsius.value.call(testObj, 1022)).to.equal(352);
+    expect(Thermometer.toCelsius.value.call(testObj, 1023)).to.equal(-273); // ?
+  });
+  //
+  // it(`raw sensor value passed to 'toCelsius' becomes new 'raw' and 'value' value`, () => {
+  //   Thermometer.initialize.value.call(testObj);
+  //   for (let i = 0; i < 1024; i++) {
+  //     Thermometer.toCelsius.value.call(testObj, i);
+  //     expect(testObj.raw)
+  //     .to.equal(testObj.value)
+  //     .to.equal(i);
+  //   }
+  // });
 });

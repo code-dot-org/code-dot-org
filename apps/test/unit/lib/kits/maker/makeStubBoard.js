@@ -27,4 +27,6 @@ export class MicrobitStubBoard {
   }
 
   addFirmataUpdateListener(updateListenerFunction) {}
+
+  streamAnalogChannel(chan) {}
 }
