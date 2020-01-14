@@ -1,8 +1,21 @@
+:ruby
+  courses = [
+    ["", ""],
+    ["Course A 2019", "coursea-2019"],
+    ["Course B 2019", "courseb-2019"],
+    ["Course C 2019", "coursec-2019"],
+    ["Course D 2019", "coursed-2019"],
+    ["Course E 2019", "coursee-2019"],
+    ["Course F 2019", "coursef-2019"],
+    ["Pre-Express 2019", "pre-express-2019"],
+    ["Express 2019", "express-2019"]
+  ]
+
 %h2
   Import Standards from Curriculum Builder
 
 %p
-  Standards and their associations with lessons are stored in Curriculum Builder and used to show standards alignment by course. For example:
+  The associations between standards and lessons are stored in Curriculum Builder and used to show standards alignment by course. For example:
 %a{href: 'curriculum.code.org/csf-19/standards/'}
   CSF Standards Alignment
 
@@ -10,18 +23,27 @@
 %br
 
 %p
-  Information about standards alignment is also used on the standards view of the progress tab of the Teacher Dashboard on Code Studio.
-  Click the button to sync the standards and their associations with lessons to Code Studio.
+  Information about CSTA standards alignment is also used on the standards view of the progress tab of the Teacher Dashboard on Code Studio for CSF courses. Select a course to import standards associated with that course's lessons.
 
-%button.primary.padded-button#import-standards="Import Standards"
+%h3 Select a Course
+= form_tag url_for(action: 'import_standards'), id: 'standards-form', method: 'post', class: 'form-inline', enforce_utf8: false do
+  = select_tag(:course, options_for_select(courses), id: "select")
+  %br
+  %br
+  %button.primary.padded-button#import-standards="Import Standards"
+
+%p#data-spew
 
 :javascript
   $(document).ready(function() {
     $('#import-standards').click(function (e) {
+      var courseCode = $("#select option:selected").val()
+      var url = 'http://curriculumbuilder.herokuapp.com/metadata/' + courseCode + '/standards.json'
       $.ajax({
-            url: 'http://curriculumbuilder.herokuapp.com/metadata/coursef/standards.json',
+            url: url,
             type: "get",
           }).done(function(data) {
+            $('#data-spew').text(JSON.stringify(data))
             $.ajax({
               url: '/admin/standards',
               method: 'POST',
