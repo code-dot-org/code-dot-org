@@ -1,9 +1,12 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
 import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
-import Thermometer, {MicroBitThermometer} from '@cdo/apps/lib/kits/maker/Thermometer';
+import Thermometer, {
+  MicroBitThermometer
+} from '@cdo/apps/lib/kits/maker/Thermometer';
 import Playground from 'playground-io';
 import {MicrobitStubBoard} from './makeStubBoard';
+import {sensor_channels} from '@cdo/apps/lib/kits/maker/MicroBitConstants';
 
 describe('Thermometer', function() {
   let testObj;
@@ -65,13 +68,14 @@ describe('Thermometer', function() {
 });
 
 describe('MicroBitThermometer', function() {
-  let thermometer = new MicroBitThermometer({mb: new MicrobitStubBoard()});
+  let boardClient = new MicrobitStubBoard();
+  let thermometer = new MicroBitThermometer({mb: boardClient});
 
   it(`attributes are readonly`, () => {
     let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];
     let desc;
 
-    attributes.forEach((attr) => {
+    attributes.forEach(attr => {
       desc = Object.getOwnPropertyDescriptor(thermometer, attr);
       expect(desc.set).to.be.undefined;
       expect(desc.get).to.be.defined;
@@ -79,23 +83,37 @@ describe('MicroBitThermometer', function() {
   });
 
   describe(`start() and stop()`, () => {
-    Thermometer.initialize.value.call(testObj);
-    expect(Thermometer.toCelsius.value.call(testObj, 0)).to.equal(-273);
-    expect(Thermometer.toCelsius.value.call(testObj, 1)).to.equal(-77);
-    expect(Thermometer.toCelsius.value.call(testObj, 15)).to.equal(-47);
-    expect(Thermometer.toCelsius.value.call(testObj, 230)).to.equal(0);
-    expect(Thermometer.toCelsius.value.call(testObj, 512)).to.equal(25);
-    expect(Thermometer.toCelsius.value.call(testObj, 1022)).to.equal(352);
-    expect(Thermometer.toCelsius.value.call(testObj, 1023)).to.equal(-273); // ?
+    it(`triggers the parent call`, () => {
+      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
+      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      thermometer.start();
+      expect(startSpy).to.have.been.calledOnce;
+      expect(startSpy).to.have.been.calledWith(sensor_channels.tempSensor);
+
+      thermometer.stop();
+      expect(stopSpy).to.have.been.calledOnce;
+      expect(stopSpy).to.have.been.calledWith(sensor_channels.tempSensor);
+    });
   });
-  //
-  // it(`raw sensor value passed to 'toCelsius' becomes new 'raw' and 'value' value`, () => {
-  //   Thermometer.initialize.value.call(testObj);
-  //   for (let i = 0; i < 1024; i++) {
-  //     Thermometer.toCelsius.value.call(testObj, i);
-  //     expect(testObj.raw)
-  //     .to.equal(testObj.value)
-  //     .to.equal(i);
-  //   }
-  // });
+
+  describe('emitsEvent', () => {
+    let emitSpy = sinon.spy(thermometer, 'emit');
+    it('emits the data event when it receives data', () => {
+      boardClient.receivedAnalogUpdate();
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('data');
+    });
+
+    it('emits the change event when it receives data that is different from previous', () => {
+      // Set the 'current Temp' to 0
+      boardClient.receivedAnalogUpdate();
+
+      // Seed the temp channel with 'different' data
+      boardClient.analogChannel[sensor_channels.tempSensor] = 3;
+
+      boardClient.receivedAnalogUpdate();
+      expect(emitSpy).to.have.been.calledWith('data');
+      expect(emitSpy).to.have.been.calledWith('change');
+    });
+  });
 });
