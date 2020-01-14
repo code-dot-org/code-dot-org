@@ -5,6 +5,7 @@ import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
+import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
 import {Goal, show} from '../AnimationPicker/animationPickerModule';
@@ -520,17 +521,19 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            'Create a Behavior',
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false
-    });
+    if (blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE) {
+      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+        initialize(flyout, cursor) {
+          if (behaviorEditor && !behaviorEditor.isOpen()) {
+            flyout.addButtonToFlyout_(
+              cursor,
+              i18n.createBlocklyBehavior(),
+              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+            );
+          }
+        },
+        addDefaultVar: false
+      });
+    }
   }
 };
