@@ -144,3 +144,5 @@ There is an issue with PhantomJS and React when running on Linux. The current wo
 BROWSER=Chrome bundle exec rake test:all
 ```
 This will tell Karma, the testing framework this project uses, to use the Google Chrome browser instead of PhantomJS. *Note* you need to install Google Chrome for this to work. If you would prefer to use Chromium, you can use the prefix `BROWSER=Chrome CHROME_BIN=$(which chromium-browser)` instead.
+
+You can also instead prepend the test command with `BROWSER=ChromeHeadless` to run the tests in a headless chrome browser, rather than having your machine open a google chrome window to run the tests in.
