@@ -23,7 +23,6 @@ import styleConstants from '../../styleConstants';
 import commonStyles from '../../commonStyles';
 import Instructions from './Instructions';
 import CollapserIcon from './CollapserIcon';
-import HeightResizer from './HeightResizer';
 import i18n from '@cdo/locale';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import queryString from 'query-string';
@@ -34,7 +33,7 @@ import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
 
-const MIN_HEIGHT = RESIZER_HEIGHT + 60;
+export const MIN_HEIGHT = RESIZER_HEIGHT + 60;
 
 const TabType = {
   INSTRUCTIONS: 'instructions',
@@ -326,22 +325,6 @@ class TopInstructions extends Component {
   };
 
   /**
-   * Given a prospective delta, determines how much we can actually change the
-   * height (accounting for min/max) and changes height by that much.
-   * @param {number} delta
-   * @returns {number} How much we actually changed
-   */
-  handleHeightResize = delta => {
-    const currentHeight = this.props.height;
-
-    let newHeight = Math.max(MIN_HEIGHT, currentHeight + delta);
-    newHeight = Math.min(newHeight, this.props.maxHeight);
-
-    this.props.setInstructionsRenderedHeight(newHeight);
-    return newHeight - currentHeight;
-  };
-
-  /**
    * Calculate how much height it would take to show top instructions with our
    * entire instructions visible and update store with this value.
    * @returns {number}
@@ -506,13 +489,6 @@ class TopInstructions extends Component {
   );
 
   render() {
-    const {
-      hidden,
-      shortInstructions,
-      longInstructions,
-      hasContainedLevels
-    } = this.props;
-
     const isCSF = !this.props.noInstructionsWhenCollapsed;
     const isCSDorCSP = this.props.noInstructionsWhenCollapsed;
     const widgetWidth = WIDGET_WIDTH + 'px';
@@ -570,13 +546,6 @@ class TopInstructions extends Component {
     const teacherOnly =
       this.state.tabSelected === TabType.COMMENTS &&
       this.state.teacherViewingStudentWork;
-
-    if (
-      hidden ||
-      (!shortInstructions && !longInstructions && !hasContainedLevels)
-    ) {
-      return <div />;
-    }
 
     /* TODO: When we move CSD and CSP to the Teacher Only tab remove CSF restriction here*/
     const showContainedLevelAnswer =
@@ -775,12 +744,6 @@ class TopInstructions extends Component {
                 </div>
               )}
           </div>
-          {!this.props.isEmbedView && (
-            <HeightResizer
-              position={this.props.height}
-              onResize={this.handleHeightResize}
-            />
-          )}
         </div>
       </div>
     );

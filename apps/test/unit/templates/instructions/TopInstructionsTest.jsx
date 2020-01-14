@@ -29,25 +29,6 @@ const DEFAULT_PROPS = {
 };
 
 describe('TopInstructions', () => {
-  it('is an empty div if passed the "hidden" property', () => {
-    const wrapper = shallow(
-      <TopInstructions {...DEFAULT_PROPS} hidden={true} />
-    );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
-  });
-
-  it('is an empty div if there are no instructions to display', () => {
-    const wrapper = shallow(
-      <TopInstructions
-        {...DEFAULT_PROPS}
-        shortInstructions={null}
-        longInstructions={null}
-        hasContainedLevels={false}
-      />
-    );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
-  });
-
   describe('viewing the Feedback Tab', () => {
     describe('as a teacher', () => {
       it('does not show the feedback tab on a level with no rubric where the teacher is not giving feedback', () => {

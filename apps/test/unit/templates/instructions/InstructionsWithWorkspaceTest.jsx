@@ -1,17 +1,39 @@
 import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {Provider} from 'react-redux';
+import {shallow, mount} from 'enzyme';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import instructionsReducer, {
+  setInstructionsConstants
+} from '@cdo/apps/redux/instructions';
+import pageConstantsReducer, {
+  setPageConstants
+} from '@cdo/apps/redux/pageConstants';
+import isRtlReducer, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
+import InstructionsWithWorkspace, {
+  UnwrappedInstructionsWithWorkspace
+} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
 describe('InstructionsWithWorkspace', () => {
+  const DEFAULT_PROPS = {
+    instructionsHeight: 400,
+    instructionsMaxHeight: 400,
+    showInstructions: true,
+    showResizer: true,
+    setInstructionsMaxHeightAvailable: () => {},
+    setInstructionsRenderedHeight: () => {}
+  };
+
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
-      <InstructionsWithWorkspace
-        instructionsHeight={400}
-        setInstructionsMaxHeightAvailable={() => {}}
-      />
+      <UnwrappedInstructionsWithWorkspace {...DEFAULT_PROPS} />
     );
 
     expect(wrapper.find('Connect(TopInstructions)')).to.have.lengthOf(1);
@@ -20,10 +42,7 @@ describe('InstructionsWithWorkspace', () => {
 
   it('initially does not know window width or height', () => {
     const wrapper = shallow(
-      <InstructionsWithWorkspace
-        instructionsHeight={400}
-        setInstructionsMaxHeightAvailable={() => {}}
-      />
+      <UnwrappedInstructionsWithWorkspace {...DEFAULT_PROPS} />
     );
     expect(wrapper.state()).to.deep.equal({
       windowWidth: undefined,
@@ -51,7 +70,8 @@ describe('InstructionsWithWorkspace', () => {
       codeWorkspaceHeight = 100
     } = {}) {
       const wrapper = shallow(
-        <InstructionsWithWorkspace
+        <UnwrappedInstructionsWithWorkspace
+          {...DEFAULT_PROPS}
           instructionsHeight={instructionsHeight}
           setInstructionsMaxHeightAvailable={setInstructionsMaxHeightAvailable}
         />
@@ -133,6 +153,251 @@ describe('InstructionsWithWorkspace', () => {
       const wrapper = setupComponent({codeWorkspaceHeight: 0});
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
+    });
+  });
+
+  // This is a collection of tests that deep-render InstructionsWithWorkspace and its children,
+  // to check interactions between them.
+  describe('integration tests', () => {
+    beforeEach(() => {
+      stubRedux();
+      // Setup minimum redux config for these integration tests
+      registerReducers({
+        instructions: instructionsReducer,
+        isRtl: isRtlReducer,
+        pageConstants: pageConstantsReducer
+      });
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    // This set of integration tests checks that we don't render the instructions when they
+    // are not available or not needed.
+    // These were originally written as integration tests to cover moving this logic from
+    // TopInstructions up to InstructionsWithWorkspace, but could be changed to unit tests
+    // later on.
+    describe('hiding the instructions', () => {
+      let store;
+
+      beforeEach(() => {
+        store = getStore();
+        store.dispatch(setRtl(false));
+        store.dispatch(
+          setPageConstants({
+            hideSource: false,
+            isEmbedView: false,
+            noVisualization: false
+          })
+        );
+      });
+
+      it('renders instructions in normal circumstances', () => {
+        store.dispatch(
+          setPageConstants({
+            isShareView: false
+          })
+        );
+        store.dispatch(
+          setInstructionsConstants({
+            longInstructions: `Fake instructions`,
+            noInstructionsWhenCollapsed: true
+          })
+        );
+
+        assertRendersInstructions();
+      });
+
+      it('does not render instructions in share view', () => {
+        store.dispatch(
+          setPageConstants({
+            isShareView: true
+          })
+        );
+        store.dispatch(
+          setInstructionsConstants({
+            longInstructions: `Fake instructions`,
+            noInstructionsWhenCollapsed: true
+          })
+        );
+
+        refuteRendersInstructions();
+      });
+
+      it('does not render instructions when there are no instructions', () => {
+        store.dispatch(
+          setPageConstants({
+            isShareView: false
+          })
+        );
+        store.dispatch(
+          setInstructionsConstants({
+            shortInstructions: null,
+            longInstructions: null,
+            noInstructionsWhenCollapsed: true
+          })
+        );
+
+        refuteRendersInstructions();
+      });
+
+      it('renders instructions when contained levels are present', () => {
+        store.dispatch(
+          setPageConstants({
+            isShareView: false,
+            hasContainedLevels: true
+          })
+        );
+        store.dispatch(
+          setInstructionsConstants({
+            shortInstructions: null,
+            longInstructions: null,
+            noInstructionsWhenCollapsed: true
+          })
+        );
+
+        assertRendersInstructions();
+      });
+
+      function assertRendersInstructions() {
+        const wrapper = mountWithFakeWorkspace();
+        assert(
+          wrapper.find('TopInstructions').exists() &&
+            wrapper.find('HeightResizer').exists(),
+          'Rendered instructions and height resizer'
+        );
+      }
+
+      function refuteRendersInstructions() {
+        const wrapper = mountWithFakeWorkspace();
+        assert.isFalse(
+          wrapper.find('TopInstructions').exists() ||
+            wrapper.find('HeightResizer').exists(),
+          'Did not render instructions or height resizer'
+        );
+      }
+
+      function mountWithFakeWorkspace() {
+        return mount(
+          <Provider store={store}>
+            <InstructionsWithWorkspace>
+              <div>Fake workspace.</div>
+            </InstructionsWithWorkspace>
+          </Provider>
+        );
+      }
+    });
+
+    // This is a set of integration tests over the draggable resize grippy's behavior,
+    // which lives between the instructions area and the code workspace.
+    // As a result, these tests use much heavier setup than the rest of the file.
+    describe('resize bar behavior', () => {
+      beforeEach(() => {
+        const store = getStore();
+        store.dispatch(setRtl(false));
+        store.dispatch(
+          setPageConstants({
+            hideSource: false,
+            isEmbedView: false,
+            isShareView: false,
+            noVisualization: false
+          })
+        );
+        store.dispatch(
+          setInstructionsConstants({
+            longInstructions: `Fake instructions`,
+            noInstructionsWhenCollapsed: true
+          })
+        );
+
+        // Stub $().outerHeight, which is used to find the height of the instructions content
+        // in the DOM but doesn't return anything in tests, to always give 500px as the height
+        // of the instructions content since it gives us something to resize.
+        sinon.stub($.fn, 'outerHeight').returns(500);
+      });
+
+      afterEach(() => {
+        $.fn.outerHeight.restore();
+      });
+
+      it('can resize instructions by dragging the resize bar', () => {
+        const store = getStore();
+        const wrapper = mount(
+          <Provider store={store}>
+            <InstructionsWithWorkspace>
+              <div style={{height: 400}}>
+                Fake workspace to give the workspace container a height.
+              </div>
+            </InstructionsWithWorkspace>
+          </Provider>
+        );
+
+        const resizer = () => wrapper.find('HeightResizer');
+        const instructionsHeight = () =>
+          wrapper
+            .find('TopInstructions')
+            .find('.editor-column')
+            .prop('style').height;
+
+        // Initial state
+        // Instructions content height is stubbed to 500.
+        // Initial render height is 300.
+        // Real 'height' style on relevant element is 287 due to 13px resize bar adjustment.
+        assert.equal(287, instructionsHeight());
+        assert.include(store.getState().instructions, {
+          renderedHeight: 300,
+          expandedHeight: 300,
+          maxNeededHeight: 543,
+          maxAvailableHeight: Infinity
+        });
+
+        // Drag the resize bar to make the instructions bigger by 100px
+        drag(resizer(), 100);
+        assert.equal(387, instructionsHeight());
+        assert.include(store.getState().instructions, {
+          renderedHeight: 400,
+          expandedHeight: 400,
+          maxNeededHeight: 543,
+          maxAvailableHeight: Infinity
+        });
+
+        // Drag the resize bar to make the instructions smaller by 100px
+        drag(resizer(), -100);
+        assert.equal(287, instructionsHeight());
+        assert.include(store.getState().instructions, {
+          renderedHeight: 300,
+          expandedHeight: 300,
+          maxNeededHeight: 543,
+          maxAvailableHeight: Infinity
+        });
+
+        // Drag the resize bar to make the instructions as large as possible
+        drag(resizer(), 1000);
+        assert.equal(530, instructionsHeight());
+        assert.include(store.getState().instructions, {
+          renderedHeight: 543,
+          expandedHeight: 543,
+          maxNeededHeight: 543,
+          maxAvailableHeight: Infinity
+        });
+
+        // Drag the resize bar to make the instructions as small as possible
+        drag(resizer(), -1000);
+        assert.equal(60, instructionsHeight());
+        assert.include(store.getState().instructions, {
+          renderedHeight: 73,
+          expandedHeight: 73,
+          maxNeededHeight: 543,
+          maxAvailableHeight: Infinity
+        });
+      });
+
+      function drag(element, distance) {
+        element.simulate('mousedown', {button: 0, pageY: 1000});
+        element.simulate('mousemove', {pageY: 1000 + distance});
+        element.simulate('mouseup', {});
+      }
     });
   });
 });
