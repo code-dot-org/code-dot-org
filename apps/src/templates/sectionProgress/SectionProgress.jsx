@@ -116,6 +116,20 @@ class SectionProgress extends Component {
 
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'jump_to_lesson',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId,
+          stage_id: this.props.scriptData.stages[lessonOfInterest].id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   renderTooltips() {
