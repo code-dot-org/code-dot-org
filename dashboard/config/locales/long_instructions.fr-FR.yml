@@ -5562,7 +5562,7 @@ fr-FR:
       Dance_Party_02: |-
         Faisons danser cet orignal !
 
-        Fais glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectes le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> . Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+        Fais glisser le bloc <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> sur l'espace de travail. Connectes le sous le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> . Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
 
         **Les mesures** sont utilisées pour compter le temps en musique. Dans ce tutoriel, une mesure dure quatre temps.
       Dance_Party_03: |-
@@ -5621,6 +5621,15 @@ fr-FR:
         appuyez sur la touche fléchée droite.
       Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
         vos amis.
+      Dance_Party_extras_alternate_2019: "# En avant, an arrière !\n\nVous pouvez
+        vouloir créer le modèle de mouvements de danse que vous voulez. C’est ce que
+        vous permet de faire ce nouveau bloc. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
+        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
+        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nLes mouvements que
+        vous avez choisis ci-dessus se répéteront indéfiniment. \n\n-   Créez une
+        répétition en alternance pour le danseur principal à l'avant ! \n-   Utilisez
+        différents nombres pour modifier le taux d'alternance des mouvements. Essayez
+        « 1 » ou « 0.5 » pour alterner plus rapidement !"
       Dance_Party_extras_battle: |-
         # Équipes de danse
 
@@ -5647,6 +5656,15 @@ fr-FR:
         -   Expérimente avec d'autres durées de notes (tel que 0,5 pour une blanche ou 0,125 pour une croche).
         -   Ajoute certains événements « après la mesure ».
         -   Change les « mesures » en « secondes » et essaie de chronométrer tes danses de cette façon.
+      Dance_Party_extras_every_beat_2019: |-
+        "# Quarter Notes
+
+        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> pour faire applaudir le danseur sur chaque noire mais uniquement pour les 4 premières mesures.
+
+        Essayez de changer les nombres dans le bloc pour voir comment cela modifie la danse.
+
+        -   Essayez avec d'autres durées de notes (0,5 pour une blanche ou 0,125 pour une croche).
+        -   Ajoutez d'autres événements.".
       Dance_Party_extras_layout: |-
         # Restons en formation !
 
@@ -5663,12 +5681,18 @@ fr-FR:
         -   Créer un deuxième groupe de danseurs dans une mise en page différente
         -   Changer la disposition quand on appuie sur une touche
         -   Changer une propriété quand les danseurs changent de formation
+      Dance_Party_extras_mixed_2019: "# Plus de touches\n\nCette danse vous permet
+        de contrôler les propriétés des danseurs en temps réel pendant qu'ils dansent
+        automatiquement. Essayez de modifier d’autres propriétés lorsque vous appuyez
+        sur les touches. Par exemple : \n\n-   Rendez la teinte du danseur aléatoire
+        en appuyant sur « bas ». \n-   Ajoutez un groupe de danseurs en aléatoire
+        en appuyant sur « espace »."
       Dance_Party_extras_on_beat: |-
-        # grave, médium et aigü
+        # Grave, Médium et Aigü
 
         Cette danse utilise des événements « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essaie de bricoler différentes chansons pour voir comment elles changent la danse.
       Dance_Party_extras_on_beat_2019: |-
-        # grave, médium et aigü
+        # Grave, Médium et Aigü
 
         Cette danse utilise des événements « de pointe » pour déclencher le code lorsque différentes parties de la musique deviennent fortes. Essaie de bricoler différentes chansons pour voir comment elles changent la danse.
       Dance_Party_extras_speed: |-
@@ -5688,7 +5712,7 @@ fr-FR:
         -   Affiche et masque les danseurs à l'aide des touches fléchées
         -   Cache tous les danseurs et passe à un effet d’arrière plan emballant
       Dance_Party_extras_visible_2019: |-
-        # Où iraient-ils ?
+        # Où iraient-ils ?
 
         Cette danse montre et cache deux groupes de danseurs différents. Jette-y un coup d'œil, puis essaie d'ajouter ton propre style.
 
@@ -9332,30 +9356,3 @@ fr-FR:
         de 200 pixels.
       ramp_artist_loops9_2019: Résous ce puzzle en dessinant un carré avec des côtés
         de 200 pixels.
-      Dance_Party_extras_alternate_2019: |-
-        # D'avant en arrière!
-
-        Parfois, vous pouvez créer un modèle de mouvements de danse que vous choisissez. Ce nouveau bloc vous permet de faire exactement cela.
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        Les mouvements que vous avez choisis ci-dessus se répètent indéfiniment.
-
-        -   Créez une routine en alternance pour la danseuse principale à l'avant!
-        -   Utilisez des nombres différents pour changer le taux d'alternance des mouvements. Essayez `1` ou`0.5` pour alterner plus rapidement!
-      Dance_Party_extras_every_beat_2019: |-
-        # Noires
-
-        La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> pour faire applaudir le danseur, mais seulement pour les 4 premières mesures.
-
-        Essaye de changer les chiffres dans le bloc pour voir comment cela change la danse.``
-
-        -   Expérimente avec d'autres durées de note (0,5 pour une demi-note ou 0,125 pour une croche).
-        -   Ajoute d'autres événements.
-      Dance_Party_extras_mixed_2019: |-
-        # Plus de boutons
-
-        Cette danse vous permet de contrôler les propriétés des danseurs en temps réel pendant qu'ils dansent automatiquement. Essayez de modifier d’autres propriétés lorsque vous appuyez sur les boutons. Par exemple:
-
-        -   Aléatoire la teinte du danseur lorsque vous appuyez sur "bas".
-        -   Ajoutez un groupe de danseurs avec une disposition aléatoire lorsque vous appuyez sur "espace".
