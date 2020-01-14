@@ -85,17 +85,13 @@ class VisualizerModal extends React.Component {
   };
 
   parseRecords = memoize(rawRecords => {
-    if (Object.keys(rawRecords).length === 0) {
-      return [];
-    } else {
-      let parsedRecords = [];
-      rawRecords.forEach(record => {
-        if (record) {
-          parsedRecords.push(JSON.parse(record));
-        }
-      });
-      return parsedRecords;
-    }
+    let parsedRecords = [];
+    rawRecords.forEach(record => {
+      if (record) {
+        parsedRecords.push(JSON.parse(record));
+      }
+    });
+    return parsedRecords;
   });
 
   findNumericColumns = memoize((records, columns) => {
@@ -121,7 +117,13 @@ class VisualizerModal extends React.Component {
   }
 
   render() {
-    const parsedRecords = this.parseRecords(this.props.tableRecords);
+    // this.props.tableRecords is either an object or an array (see propTypes comment). If it's an object, we want to
+    // convert it to an array before trying to parse the records.
+    const parsedRecords = this.parseRecords(
+      Array.isArray(this.props.tableRecords)
+        ? this.props.tableRecords
+        : Object.values(this.props.tableRecords)
+    );
     const numericColumns = this.findNumericColumns(
       parsedRecords,
       this.props.tableColumns
