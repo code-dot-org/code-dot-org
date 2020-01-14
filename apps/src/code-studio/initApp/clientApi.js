@@ -154,6 +154,7 @@ var base = {
       })
       .fail(function(request, status, error) {
         var err = new Error('status: ' + status + '; error: ' + error);
+        err.responseText = request.responseText;
         callback(err, false);
       });
   },
