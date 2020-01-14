@@ -15,7 +15,7 @@ const styles = {
   main: {
     position: 'absolute',
     height: RESIZER_HEIGHT,
-    left: 0,
+    marginLeft: 15,
     right: 0
   },
   ellipsis: {
@@ -102,6 +102,7 @@ class HeightResizer extends React.Component {
     return (
       <div
         id="ui-test-resizer"
+        className="editor-column"
         style={mainStyle}
         onMouseDown={this.onMouseDown}
         onMouseUp={this.onMouseUp}
