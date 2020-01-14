@@ -1,6 +1,6 @@
 import {expect, assert} from '../../../../util/reconfiguredChai';
 import React from 'react';
-import {mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
   PublishState
@@ -40,9 +40,7 @@ describe('LibraryCreationDialog', () => {
 
   const SUBMIT_SELECTOR = 'input[type="submit"]';
   const CHECKBOX_SELECTOR = 'input[type="checkbox"]';
-  const DESCRIPTION_SELECTOR = 'textarea';
   const CHANNEL_ID_SELECTOR = 'input[type="text"]';
-  const PUBLISH_ERROR_SELECTOR = '#error-alert';
 
   before(() => {
     replaceOnWindow('dashboard', {
@@ -68,7 +66,7 @@ describe('LibraryCreationDialog', () => {
   });
 
   beforeEach(() => {
-    wrapper = mount(
+    wrapper = shallow(
       <LibraryCreationDialog
         clientApi={clientApi}
         dialogIsOpen={true}
@@ -83,7 +81,7 @@ describe('LibraryCreationDialog', () => {
 
   describe('onOpen', () => {
     let getJSLintAnnotationsStub, sourceStub, functionStub;
-    let libraryName = 'name';
+    let libraryName = 'Name';
     let source = 'function foo() {}';
     beforeEach(() => {
       getJSLintAnnotationsStub = sinon.stub(
@@ -96,6 +94,7 @@ describe('LibraryCreationDialog', () => {
       );
       functionStub = sinon.stub(libraryParser, 'getFunctions');
       sinon.stub(libraryParser, 'sanitizeName').returns(libraryName);
+      sinon.stub(libraryParser, 'suggestName').returns(libraryName);
       sinon.stub(window.dashboard.project, 'getLevelName').returns(libraryName);
     });
 
@@ -104,6 +103,7 @@ describe('LibraryCreationDialog', () => {
       window.dashboard.project.getUpdatedSourceAndHtml_.restore();
       libraryParser.getFunctions.restore();
       libraryParser.sanitizeName.restore();
+      libraryParser.suggestName.restore();
       window.dashboard.project.getLevelName.restore();
     });
 
@@ -154,39 +154,10 @@ describe('LibraryCreationDialog', () => {
   });
 
   describe('UI', () => {
-    it('publish is disabled when nothing checked', () => {
-      wrapper.setState({
-        libraryName: 'testLibrary',
-        librarySource: LIBRARY_SOURCE,
-        publishState: PublishState.DONE_LOADING,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
-      });
-
-      assert.isTrue(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
-    });
-
-    it('publish is enabled when something is checked', () => {
-      wrapper.setState({
-        libraryName: 'testLibrary',
-        librarySource: LIBRARY_SOURCE,
-        publishState: PublishState.DONE_LOADING,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
-      });
-
-      wrapper
-        .find(CHECKBOX_SELECTOR)
-        .first()
-        .instance().checked = true;
-      wrapper
-        .find(CHECKBOX_SELECTOR)
-        .first()
-        .simulate('click');
-      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
-    });
-
+    let libraryName = 'testLibrary';
     it('checkbox is disabled for items without comments', () => {
       wrapper.setState({
-        libraryName: 'testLibrary',
+        libraryName: libraryName,
         librarySource: LIBRARY_SOURCE,
         publishState: PublishState.DONE_LOADING,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
@@ -205,93 +176,122 @@ describe('LibraryCreationDialog', () => {
       expect(wrapper.find(Spinner).exists()).to.be.true;
     });
 
-    it('description is required', () => {
-      wrapper.setState({
-        libraryName: 'testLibrary',
-        librarySource: LIBRARY_SOURCE,
-        publishState: PublishState.DONE_LOADING,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
-      });
-
-      assert.isTrue(
-        wrapper
-          .find(DESCRIPTION_SELECTOR)
-          .last()
-          .prop('required')
-      );
-    });
-
     it('displays channel id when in published state', () => {
       wrapper.setState({
-        libraryName: 'testLibrary',
+        libraryName: libraryName,
         librarySource: LIBRARY_SOURCE,
         publishState: PublishState.PUBLISHED,
         sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      assert.isTrue(
-        wrapper.find(CHANNEL_ID_SELECTOR).instance().value === '123'
-      );
-    });
-
-    it('does not display publish error message when loading is finished before publish', () => {
-      wrapper.setState({
-        libraryName: 'testLibrary',
-        librarySource: LIBRARY_SOURCE,
-        publishState: PublishState.LOADING,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
-      });
-
-      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.false;
-    });
-
-    it('displays publish error message after being set to error state', () => {
-      wrapper.setState({
-        libraryName: 'testLibrary',
-        librarySource: LIBRARY_SOURCE,
-        publishState: PublishState.ERROR_PUBLISH,
-        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
-      });
-
-      expect(wrapper.find(PUBLISH_ERROR_SELECTOR).exists()).to.be.true;
+      expect(wrapper.find(CHANNEL_ID_SELECTOR).props().value).to.equal('123');
     });
   });
 
   describe('publish', () => {
-    it('publishes only the selected functions and description', () => {
-      let functionList = libraryParser.getFunctions(LIBRARY_SOURCE);
+    let libraryName = 'testLibrary';
+    let description = 'description';
+    let selectedFunctions = {myFunc2: true};
+    it('is disabled when no functions are checked', () => {
       wrapper.setState({
-        libraryName: 'testLibrary',
+        libraryName: libraryName,
+        libraryDescription: description,
         librarySource: LIBRARY_SOURCE,
         publishState: PublishState.DONE_LOADING,
-        sourceFunctionList: functionList
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
       });
 
-      // Select a function and write a description
-      wrapper
-        .find(CHECKBOX_SELECTOR)
-        .first()
-        .instance().checked = true;
-      wrapper
-        .find(CHECKBOX_SELECTOR)
-        .first()
-        .simulate('click');
-      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
+      wrapper.instance().publish();
+      wrapper.update();
 
-      wrapper.find(DESCRIPTION_SELECTOR).instance().value =
-        'This is the description';
-      wrapper.find(DESCRIPTION_SELECTOR).simulate('change');
-      assert.isFalse(wrapper.find(SUBMIT_SELECTOR).prop('disabled'));
+      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+    });
 
-      wrapper.find(SUBMIT_SELECTOR).simulate('submit');
-      let submitValue = libraryParser.createLibraryJson(
-        LIBRARY_SOURCE,
-        [functionList[0]],
-        'testLibrary',
-        'This is the description'
-      );
+    it('is disabled when description is unset', () => {
+      wrapper.setState({
+        libraryName: libraryName,
+        librarySource: LIBRARY_SOURCE,
+        publishState: PublishState.DONE_LOADING,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
+        selectedFunctions: selectedFunctions
+      });
 
-      expect(publishSpy).to.have.been.calledOnceWith(submitValue);
+      wrapper.instance().publish();
+      wrapper.update();
+
+      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+    });
+
+    describe('with valid input', () => {
+      let libraryJsonSpy;
+      beforeEach(() => {
+        libraryJsonSpy = sinon.stub(libraryParser, 'createLibraryJson');
+      });
+
+      afterEach(() => {
+        libraryParser.createLibraryJson.restore();
+      });
+
+      it('sets error state when publish fails', () => {
+        publishSpy.callsArg(1);
+        sinon.stub(console, 'warn');
+        wrapper.setState({
+          libraryName: libraryName,
+          librarySource: LIBRARY_SOURCE,
+          publishState: PublishState.DONE_LOADING,
+          sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions
+        });
+
+        wrapper.instance().publish();
+        wrapper.update();
+
+        expect(wrapper.state().publishState).to.equal(
+          PublishState.ERROR_PUBLISH
+        );
+
+        console.warn.restore();
+      });
+
+      it('sets PUBLISHED state when it succeeds', () => {
+        publishSpy.callsArg(2);
+        wrapper.setState({
+          libraryName: libraryName,
+          librarySource: LIBRARY_SOURCE,
+          publishState: PublishState.DONE_LOADING,
+          sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE),
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions
+        });
+
+        wrapper.instance().publish();
+        wrapper.update();
+
+        expect(wrapper.state().publishState).to.equal(PublishState.PUBLISHED);
+      });
+
+      it('publishes only the selected functions and description', () => {
+        let functionList = libraryParser.getFunctions(LIBRARY_SOURCE);
+        wrapper.setState({
+          libraryName: libraryName,
+          librarySource: LIBRARY_SOURCE,
+          publishState: PublishState.DONE_LOADING,
+          sourceFunctionList: functionList,
+          libraryDescription: description,
+          selectedFunctions: selectedFunctions
+        });
+
+        wrapper.instance().publish();
+        wrapper.update();
+
+        expect(libraryJsonSpy).to.have.been.calledOnceWith(
+          LIBRARY_SOURCE,
+          [functionList[0]],
+          libraryName,
+          description
+        );
+      });
     });
   });
 });

@@ -12,20 +12,22 @@ describe('Library parser', () => {
       let libraryName = 'Test`~!Library🙃💩Name123';
       expect(parser.sanitizeName(libraryName)).to.equal('TestLibraryName123');
     });
+  });
 
+  describe('suggestName', () => {
     it('capitalizes the first letter of a library', () => {
       let libraryName = 'testLibrary';
-      expect(parser.sanitizeName(libraryName)).to.equal('TestLibrary');
+      expect(parser.suggestName(libraryName)).to.equal('TestLibrary');
     });
 
     it('prepends Lib to the beginning of a library starting with a number', () => {
       let libraryName = '123testLibrary';
-      expect(parser.sanitizeName(libraryName)).to.equal('Lib123testLibrary');
+      expect(parser.suggestName(libraryName)).to.equal('Lib123testLibrary');
     });
 
     it('names an empty library "Lib"', () => {
       let libraryName = '';
-      expect(parser.sanitizeName(libraryName)).to.equal('Lib');
+      expect(parser.suggestName(libraryName)).to.equal('Lib');
     });
   });
 
