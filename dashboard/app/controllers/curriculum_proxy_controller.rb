@@ -14,7 +14,7 @@ class CurriculumProxyController < ApplicationController
     render_proxied_url(
       URI.parse(request.original_url).path.sub(/^\/docs/, 'https://docs.code.org'),
       allowed_content_types: nil,
-      allowed_hostname_suffixes: %w(docs.code.org),
+      allowed_hostname_suffixes: %w(curriculum.code.org docs.code.org),
       expiry_time: EXPIRY_TIME,
       infer_content_type: true
     )
