@@ -1,6 +1,7 @@
 require 'cdo/share_filtering'
 require_relative './bucket_helper.rb'
 require_relative './source_bucket.rb'
+require 'cdo/firehose'
 
 class ProfanityPrivacyError < StandardError
   def initialize(flagged_text)
@@ -30,8 +31,18 @@ end
 def title_profanity_privacy_violation(name, locale)
   share_failure = begin
     ShareFiltering.find_name_failure(name, locale)
-  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable
-    # If WebPurify or Geocoder are unavailable, default to viewable
+  rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => error
+    # If WebPurify or Geocoder are unavailable, default to viewable, but log error
+    FirehoseClient.instance.put_record(
+      study: 'share_filtering',
+      study_group: 'v0',
+      event: 'share_filtering_error',
+      data_string: "#{error.class.name}: #{error}",
+      data_json: {
+        name: name,
+        locale: locale
+      }.to_json
+    )
     return false
   end
   share_failure
