@@ -15,7 +15,7 @@ VIRAL_50_WORLD_URL = 'https://spotifycharts.com/viral/global/daily/latest/downlo
 
 def get_top200_data(url)
   records = {}
-  columns = ['Position', 'Track Name', 'Artist', 'Streams', 'URL']
+  columns = ['id', 'Position', 'Track Name', 'Artist', 'Streams', 'URL']
   response = Net::HTTP.get_response(URI(url))
   return unless response.code == '200'
   id = 1
@@ -41,7 +41,7 @@ end
 
 def get_viral50_data(url)
   records = {}
-  columns = ['Position', 'Track Name', 'Artist', 'URL']
+  columns = ['id', 'Position', 'Track Name', 'Artist', 'URL']
   response = Net::HTTP.get_response(URI(url))
   return unless response.code == '200'
   id = 1
