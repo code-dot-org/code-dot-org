@@ -6,9 +6,9 @@
       .column
         %ul.match_questions
           - level.localized_property(:questions).each do |question|
-            %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
+            %li{style: "height: #{level.height}px"}= render_multi_or_match_content(question['text'])
       .column.match_answerdest
         %ul.match_answers
           - level.localized_property(:answers).each do |answer|
-            %li.answer.answerlist{style: "height: #{level.height}px"}!= render_multi_or_match_content(answer['text'])
+            %li.answer.answerlist{style: "height: #{level.height}px"}= render_multi_or_match_content(answer['text'])
       .clear
