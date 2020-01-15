@@ -17,7 +17,7 @@
     .column
       %ul.match_questions
         - level.localized_property(:questions).each do |question|
-          %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
+          %li{style: "height: #{level.height}px"}= render_multi_or_match_content(question['text'])
     .column.match_answerdest
       %ul.match_slots.draggablecolumn
         - level.answers.each do |_|
@@ -38,7 +38,7 @@
       %ul.match_answers.draggablecolumn
         - localized_answers = level.localized_property(:answers)
         - level.shuffled_answer_indexes.each do |index|
-          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: index}!= render_multi_or_match_content(localized_answers[index]['text'])
+          %li.answer.answerlist{style: "height: #{level.height}px", originalIndex: index}= render_multi_or_match_content(localized_answers[index]['text'])
 
     .clear
   - if standalone
