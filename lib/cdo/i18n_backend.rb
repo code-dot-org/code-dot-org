@@ -75,7 +75,7 @@ module Cdo
           # currently known ones. The actual "safe" think we should be doing is
           # redacting all URLs in strings given to outside translators.
           @renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Safe.new(safe_links_only: false))
-          @renderer.render(translation)
+          @renderer.render(translation).html_safe
         else
           translation
         end

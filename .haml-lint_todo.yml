@@ -14,7 +14,71 @@ linters:
 
   # Offense count: 7476
   RuboCop:
-    enabled: false
+    enabled: true
+    ignored_cops:
+      - Layout/AlignArray
+      - Layout/ElseAlignment
+      - Layout/IndentArray
+      - Layout/IndentHash
+      - Layout/IndentationWidth
+      - Layout/MultilineMethodCallBraceLayout
+      - Layout/SpaceInsideParens
+      - Layout/SpaceAfterColon
+      - Layout/SpaceAfterComma
+      - Layout/SpaceAfterNot
+      - Layout/SpaceAroundBlockParameters
+      - Layout/SpaceAroundKeyword
+      - Layout/SpaceAroundOperators
+      - Layout/SpaceBeforeBlockBraces
+      - Layout/SpaceBeforeComma
+      - Layout/SpaceBeforeFirstArg
+      - Layout/SpaceInsideArrayLiteralBrackets
+      - Layout/SpaceInsideBlockBraces
+      - Layout/SpaceInsideHashLiteralBraces
+      - Layout/TrailingBlankLines
+      - Layout/TrailingWhitespace
+      - Lint/BlockAlignment
+      - Lint/DeprecatedClassMethods
+      - Lint/DuplicateCaseCondition
+      - Lint/EndAlignment
+      - Lint/InterpolationCheck
+      - Lint/RedundantWithIndex
+      - Lint/ShadowingOuterLocalVariable
+      - Lint/StringConversionInInterpolation
+      - Lint/Syntax
+      - Lint/UnusedBlockArgument
+      - Lint/UselessAssignment
+      - Lint/Void
+      - Naming/VariableName
+      - Performance/StringReplacement
+      - Rails/Presence
+      - Style/AndOr
+      - Style/BlockDelimiters
+      - Style/ColonMethodCall
+      - Style/CommentAnnotation
+      - Style/ConditionalAssignment
+      - Style/EmptyElse
+      - Style/EvenOdd
+      - Style/For
+      - Style/HashSyntax
+      - Style/MethodCallWithoutArgsParentheses
+      - Style/MultipleComparison
+      - Style/NegatedIf
+      - Style/NestedTernaryOperator
+      - Style/Next
+      - Style/NilComparison
+      - Style/NonNilCheck
+      - Style/NumericLiterals
+      - Style/ParenthesesAroundCondition
+      - Style/PreferredHashMethods
+      - Style/RedundantFreeze
+      - Style/SelfAssignment
+      - Style/StringLiteralsInInterpolation
+      - Style/SymbolLiteral
+      - Style/SymbolProc
+      - Style/UnlessElse
+      - Style/UnneededInterpolation
+      - Style/ZeroLengthPredicate
 
   # Offense count: 18
   ConsecutiveComments:

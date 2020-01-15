@@ -186,7 +186,7 @@ Rails/Output:
 
 # Offense count: 6
 Rails/OutputSafety:
-  Enabled: false
+  Enabled: true 
 
 # Offense count: 24
 # Cop supports --auto-correct.
