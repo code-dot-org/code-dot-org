@@ -1,5 +1,5 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import Thermometer, {
   MicroBitThermometer
@@ -78,12 +78,12 @@ describe('MicroBitThermometer', function() {
 
   it(`attributes are readonly`, () => {
     let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];
-    let desc;
+    let descriptor;
 
     attributes.forEach(attr => {
-      desc = Object.getOwnPropertyDescriptor(thermometer, attr);
-      expect(desc.set).to.be.undefined;
-      expect(desc.get).to.be.defined;
+      descriptor = Object.getOwnPropertyDescriptor(thermometer, attr);
+      expect(descriptor.set).to.be.undefined;
+      expect(descriptor.get).to.be.defined;
     });
   });
 
@@ -99,7 +99,7 @@ describe('MicroBitThermometer', function() {
   });
 
   describe(`start() and stop()`, () => {
-    it(`triggers the parent call`, () => {
+    it(`trigger the parent call`, () => {
       let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
       let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
       thermometer.start();
