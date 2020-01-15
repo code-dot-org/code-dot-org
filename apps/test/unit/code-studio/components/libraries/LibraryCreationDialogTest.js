@@ -222,6 +222,32 @@ describe('LibraryCreationDialog', () => {
       expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
     });
 
+    it('is enabled once description and functions are set', () => {
+      wrapper.setState({
+        libraryName: libraryName,
+        librarySource: LIBRARY_SOURCE,
+        publishState: PublishState.DONE_LOADING,
+        sourceFunctionList: libraryParser.getFunctions(LIBRARY_SOURCE)
+      });
+
+      wrapper.instance().publish();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+
+      wrapper.instance().resetErrorMessage();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+
+      wrapper.setState({
+        selectedFunctions: selectedFunctions,
+        libraryDescription: description
+      });
+      wrapper.instance().resetErrorMessage();
+      wrapper.update();
+
+      expect(wrapper.state().publishState).to.equal(PublishState.DONE_LOADING);
+    });
+
     describe('with valid input', () => {
       let libraryJsonSpy;
       beforeEach(() => {
