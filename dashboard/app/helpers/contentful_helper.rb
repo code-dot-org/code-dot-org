@@ -28,6 +28,16 @@ module ContentfulHelper
     output
   end
 
+  def contentful_i18n_params(script)
+    {
+      name: script.name,
+      title: script.title,
+      description_audience: '',
+      description_short: script.short_description,
+      description: script.description,
+    }
+  end
+
   CONTENTFUL_LEVEL_TYPES = %w{
     multipleChoiceLevel
     externalMarkdownLevel
