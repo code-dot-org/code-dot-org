@@ -14,32 +14,75 @@ import annotationList from '@cdo/apps/acemode/annotationList';
  *                   successfully loaded. All details about the library are
  *                   passed to this callback.
  */
-export default function load(onCodeError, onMissingFunctions, onSuccess) {
+export default function load(clientApi, onCodeError, onMissingFunctions, onSuccess) {
   var error = annotationList.getJSLintAnnotations().find(annotation => {
     return annotation.type === 'error';
   });
+
   if (error) {
     onCodeError();
     return;
   }
 
-  dashboard.project.getUpdatedSourceAndHtml_(response => {
-    let functionsList = libraryParser.getFunctions(response.source);
+  let projectName = dashboard.project.getLevelName();
+  let sourceAndHtml, publishedLibrary;
+
+  let getSource = new Promise((resolve, reject) => {
+    dashboard.project.getUpdatedSourceAndHtml_(response => {
+      sourceAndHtml = response;
+      resolve();
+    });
+  });
+
+  let getLibrary = new Promise((resolve, reject) => {
+    clientApi.fetchLatest(
+      data => {
+        publishedLibrary = JSON.parse(data);
+        resolve();
+      },
+      error => {
+        resolve();
+      }
+    );
+  });
+
+  Promise.all([getSource, getLibrary]).then(() => {
+    let functionsList = libraryParser.getFunctions(sourceAndHtml.source);
     if (!functionsList || functionsList.length === 0) {
       onMissingFunctions();
       return;
     }
-    let librarySource = response.source;
-    if (response.libraries) {
-      response.libraries.forEach(library => {
+    let librarySource = sourceAndHtml.source;
+    if (sourceAndHtml.libraries) {
+      sourceAndHtml.libraries.forEach(library => {
         librarySource =
           libraryParser.createLibraryClosure(library) + librarySource;
       });
     }
+
+    let description = '';
+    let selectedFunctions = {};
+    if (publishedLibrary) {
+      description = publishedLibrary.description;
+      projectName = publishedLibrary.name;
+      publishedLibrary.functions.forEach(publishedFunction => {
+        if (
+          functionsList.find(
+            projectFunction =>
+              projectFunction.functionName === publishedFunction
+          )
+        ) {
+          selectedFunctions[publishedFunction] = true;
+        }
+      });
+    }
+
     onSuccess({
-      libraryName: dashboard.project.getLevelName(),
+      libraryName: projectName,
+      libraryDescription: description,
       librarySource: librarySource,
-      sourceFunctionList: functionsList
+      sourceFunctionList: functionsList,
+      selectedFunctions: selectedFunctions
     });
   });
 }

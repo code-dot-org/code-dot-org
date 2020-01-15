@@ -62,8 +62,8 @@ export default class LibraryPublisher extends React.Component {
     libraryName: libraryParser.suggestName(
       this.props.libraryDetails.libraryName
     ),
-    libraryDescription: '',
-    selectedFunctions: {}
+    libraryDescription: this.props.libraryDetails.libraryDescription,
+    selectedFunctions: this.props.libraryDetails.selectedFunctions
   };
 
   setLibraryName = event => {
@@ -166,19 +166,28 @@ export default class LibraryPublisher extends React.Component {
     return this.props.libraryDetails.sourceFunctionList.map(sourceFunction => {
       let name = sourceFunction.functionName;
       let comment = sourceFunction.comment;
+      let shouldDisable = comment.length === 0;
+      let checked = this.state.selectedFunctions[name] || false;
+      if (shouldDisable && checked) {
+        checked = false;
+        this.setState(state => {
+          state.selectedFunctions[name] = false;
+          return state;
+        });
+      }
       return (
         <div key={name}>
           <input
             style={styles.largerCheckbox}
             type="checkbox"
-            disabled={comment.length === 0}
+            disabled={shouldDisable}
             name={name}
-            checked={this.state.selectedFunctions[name] || false}
+            checked={checked}
             onChange={this.boxChecked(name)}
           />
           <span>{name}</span>
           <br />
-          {comment.length === 0 && (
+          {shouldDisable && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
           )}
           <pre style={styles.textInput}>{comment}</pre>
