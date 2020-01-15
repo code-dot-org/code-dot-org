@@ -89,8 +89,8 @@ export default class DiscountAdminOverride extends Component {
       applicationSchool: application.application_school,
       adminOverride: application.admin_set_status
         ? application.full_discount
-          ? 'Full Discount (with AK/HI shipping)'
-          : 'Full Discount (without AK/HI shipping)'
+          ? 'Full Discount (AK/HI)'
+          : 'Full Discount (continental US)'
         : 'None',
       fullDiscount: application.full_discount,
       discountCode: application.discount_code,

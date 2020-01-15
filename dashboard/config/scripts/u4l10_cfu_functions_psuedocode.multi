@@ -3,8 +3,10 @@ title 'AP Pseudocode: Functions'
 description ''
 right 'School Day'
 wrong 'Day Off'
-wrong 'Day Off <br> School Day'
-wrong 'School Day <br> Day Off'
+wrong 'Day Off   
+ School Day'
+wrong 'School Day   
+ Day Off'
 
 markdown <<MARKDOWN
 ## AP Pseudocode

@@ -11,11 +11,13 @@ import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import Spinner from '../../pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   alert: {
-    color: 'red',
-    width: '90%'
+    color: color.red,
+    width: '90%',
+    paddingTop: 8
   },
   libraryBoundary: {
     padding: 10,
@@ -24,7 +26,10 @@ const styles = {
   largerCheckbox: {
     width: 20,
     height: 20,
-    margin: 10
+    marginLeft: 0,
+    marginRight: 10,
+    marginTop: 10,
+    marginBottom: 10
   },
   functionItem: {
     marginBottom: 20
@@ -44,12 +49,21 @@ const styles = {
   button: {
     marginLeft: 10,
     marginRight: 10
+  },
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic'
+  },
+  textInput: {
+    fontSize: 14,
+    padding: 6,
+    color: color.dimgray
+  },
+  description: {
+    width: '98%',
+    resize: 'vertical'
   }
 };
-
-function select(event) {
-  event.target.select();
-}
 
 /**
  * @readonly
@@ -61,7 +75,8 @@ export const PublishState = {
   PUBLISHED: 'published',
   ERROR_PUBLISH: 'error_publish',
   CODE_ERROR: 'code_error',
-  NO_FUNCTIONS: 'no_functions'
+  NO_FUNCTIONS: 'no_functions',
+  INVALID_INPUT: 'invalid_input'
 };
 
 class LibraryCreationDialog extends React.Component {
@@ -76,7 +91,9 @@ class LibraryCreationDialog extends React.Component {
     sourceFunctionList: [],
     publishState: PublishState.LOADING,
     libraryName: '',
-    canPublish: false
+    libraryDescription: '',
+    canPublish: false,
+    selectedFunctions: {}
   };
 
   componentDidUpdate(prevProps) {
@@ -108,7 +125,7 @@ class LibraryCreationDialog extends React.Component {
         });
       }
       this.setState({
-        libraryName: libraryParser.sanitizeName(
+        libraryName: libraryParser.suggestName(
           dashboard.project.getLevelName()
         ),
         librarySource: librarySource,
@@ -124,28 +141,31 @@ class LibraryCreationDialog extends React.Component {
   };
 
   copyChannelId = () => {
-    let channelId = document.getElementById('library-sharing');
-    channelId.select();
+    this.channelId.select();
     document.execCommand('copy');
   };
 
-  publish = event => {
-    event.preventDefault();
-    let formElements = this.formElements.elements;
-    let selectedFunctionList = [];
-    let libraryDescription = '';
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        selectedFunctionList.push(this.state.sourceFunctionList[element.value]);
-      }
-      if (element.type === 'textarea') {
-        libraryDescription = element.value;
-      }
+  publish = () => {
+    let {
+      librarySource,
+      libraryName,
+      libraryDescription,
+      selectedFunctions,
+      sourceFunctionList
+    } = this.state;
+    let functionsToPublish = sourceFunctionList.filter(sourceFunction => {
+      return selectedFunctions[sourceFunction.functionName];
     });
+
+    if (!(libraryDescription && functionsToPublish.length > 0)) {
+      this.setState({publishState: PublishState.INVALID_INPUT});
+      return;
+    }
+
     let libraryJson = libraryParser.createLibraryJson(
-      this.state.librarySource,
-      selectedFunctionList,
-      this.state.libraryName,
+      librarySource,
+      functionsToPublish,
+      libraryName,
       libraryDescription
     );
 
@@ -164,21 +184,6 @@ class LibraryCreationDialog extends React.Component {
     dashboard.project.setLibraryDescription(libraryDescription);
   };
 
-  validateInput = () => {
-    // Check if any of the checkboxes are checked
-    // If this changes the publishable state, update
-    let formElements = this.formElements.elements;
-    let isChecked = false;
-    [...formElements].forEach(element => {
-      if (element.type === 'checkbox' && element.checked) {
-        isChecked = true;
-      }
-    });
-    if (isChecked !== this.state.canPublish) {
-      this.setState({canPublish: isChecked});
-    }
-  };
-
   displayError = errorMessage => {
     return <div>{errorMessage}</div>;
   };
@@ -191,69 +196,12 @@ class LibraryCreationDialog extends React.Component {
     );
   };
 
-  displayFunctions = () => {
-    let keyIndex = 0;
-    return (
-      <div>
-        <Heading2>
-          <b>{i18n.libraryName()}</b>
-          {this.state.libraryName}
-        </Heading2>
-        <form
-          ref={formElements => {
-            this.formElements = formElements;
-          }}
-          onSubmit={this.publish}
-        >
-          <textarea
-            required
-            name="description"
-            rows="2"
-            cols="200"
-            style={styles.textarea}
-            placeholder="Write a description of your library"
-          />
-          {this.state.sourceFunctionList.map(sourceFunction => {
-            let name = sourceFunction.functionName;
-            let comment = sourceFunction.comment;
-            return (
-              <div key={keyIndex} style={styles.functionItem}>
-                <input
-                  type="checkbox"
-                  style={styles.largerCheckbox}
-                  disabled={comment.length === 0}
-                  onClick={this.validateInput}
-                  value={keyIndex++}
-                />
-                {name}
-                <br />
-                {comment.length === 0 && (
-                  <p style={styles.alert}>
-                    {i18n.libraryExportNoCommentError()}
-                  </p>
-                )}
-                <pre>{comment}</pre>
-              </div>
-            );
-          })}
-          <div>
-            <input
-              className="btn btn-primary"
-              type="submit"
-              value={i18n.publish()}
-              disabled={!this.state.canPublish}
-            />
-            {this.state.publishState === PublishState.ERROR_PUBLISH && (
-              <div>
-                <p id="error-alert" style={styles.alert}>
-                  {i18n.libraryPublishFail()}
-                </p>
-              </div>
-            )}
-          </div>
-        </form>
-      </div>
-    );
+  setLibraryName = event => {
+    let sanitizedName = libraryParser.sanitizeName(event.target.value);
+    if (sanitizedName === this.state.libraryName) {
+      return;
+    }
+    this.setState({libraryName: sanitizedName});
   };
 
   displaySuccess = () => {
@@ -268,8 +216,8 @@ class LibraryCreationDialog extends React.Component {
           <div style={styles.centerContent}>
             <input
               type="text"
-              id="library-sharing"
-              onClick={select}
+              ref={channelId => (this.channelId = channelId)}
+              onClick={event => event.target.select()}
               readOnly="true"
               value={dashboard.project.getCurrentId()}
               style={styles.copy}
@@ -281,6 +229,117 @@ class LibraryCreationDialog extends React.Component {
             />
           </div>
         </div>
+      </div>
+    );
+  };
+
+  displayNameInput = () => {
+    return (
+      <div>
+        <input
+          style={styles.textInput}
+          type="text"
+          value={this.state.libraryName}
+          onChange={this.setLibraryName}
+          onBlur={event =>
+            this.setState({
+              libraryName: libraryParser.suggestName(event.target.value)
+            })
+          }
+        />
+        <div style={styles.info}>{i18n.libraryNameRequirements()}</div>
+      </div>
+    );
+  };
+
+  resetErrorMessage = () => {
+    if (
+      this.state.libraryDescription &&
+      Object.values(this.state.selectedFunctions).find(value => value) &&
+      this.state.publishState === PublishState.INVALID_INPUT
+    ) {
+      this.setState({publishState: PublishState.DONE_LOADING});
+    }
+  };
+
+  displayDescription = () => {
+    return (
+      <textarea
+        rows="2"
+        cols="200"
+        style={{...styles.textInput, ...styles.description}}
+        placeholder={i18n.libraryDescriptionPlaceholder()}
+        value={this.state.libraryDescription}
+        onChange={event =>
+          this.setState({libraryDescription: event.target.value})
+        }
+        onBlur={this.resetErrorMessage}
+      />
+    );
+  };
+
+  boxChecked = name => () => {
+    this.setState(state => {
+      state.selectedFunctions[name] = !state.selectedFunctions[name];
+      return state;
+    }, this.resetErrorMessage);
+  };
+
+  displayFunctions = () => {
+    return this.state.sourceFunctionList.map(sourceFunction => {
+      let name = sourceFunction.functionName;
+      let comment = sourceFunction.comment;
+      return (
+        <div key={name}>
+          <input
+            style={styles.largerCheckbox}
+            type="checkbox"
+            disabled={comment.length === 0}
+            name={name}
+            checked={this.state.selectedFunctions[name] || false}
+            onChange={this.boxChecked(name)}
+          />
+          <span>{name}</span>
+          <br />
+          {comment.length === 0 && (
+            <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
+          )}
+          <pre style={styles.textInput}>{comment}</pre>
+        </div>
+      );
+    });
+  };
+
+  displayAlert = () => {
+    let errorMessage;
+    if (this.state.publishState === PublishState.INVALID_INPUT) {
+      errorMessage = i18n.libraryPublishInvalid();
+    }
+    if (this.state.publishState === PublishState.ERROR_PUBLISH) {
+      errorMessage = i18n.libraryPublishFail();
+    }
+    return (
+      <div>
+        <p style={styles.alert}>{errorMessage}</p>
+      </div>
+    );
+  };
+
+  displayContent = () => {
+    return (
+      <div>
+        <Heading2>{i18n.libraryName()}</Heading2>
+        {this.displayNameInput()}
+        <Heading2>{i18n.description()}</Heading2>
+        {this.displayDescription()}
+        <Heading2>{i18n.catProcedures()}</Heading2>
+        {this.displayFunctions()}
+        <Button
+          style={{marginLeft: 0, marginTop: 20}}
+          onClick={this.publish}
+          text={i18n.publish()}
+        />
+        {this.displayAlert()}
       </div>
     );
   };
@@ -301,7 +360,7 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = this.displayError(i18n.libraryNoFunctonsError());
         break;
       default:
-        bodyContent = this.displayFunctions();
+        bodyContent = this.displayContent();
     }
     return (
       <Dialog
