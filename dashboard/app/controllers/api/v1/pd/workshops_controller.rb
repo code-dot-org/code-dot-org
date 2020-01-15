@@ -39,11 +39,17 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     enrollments = ::Pd::Enrollment.for_user(current_user).all.reject do |enrollment|
       enrollment.workshop&.future_or_current_teachercon_or_fit?
     end
-    workshops = enrollments.map do |enrollment|
-      Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
+
+    # Adds information about whether the user actually attended the workshop in question
+    serialized_workshops = []
+    enrollments.each do |enrollment|
+      workshop = Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
+      workshop[:user_id] = enrollment.user_id
+      workshop[:attended] = enrollment.attendances.exists?
+      serialized_workshops << workshop
     end
 
-    render json: workshops
+    render json: serialized_workshops
   end
 
   # GET /api/v1/pd/workshops/filter
