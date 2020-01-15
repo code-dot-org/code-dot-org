@@ -1,16 +1,3 @@
-:ruby
-  courses = [
-    ["", ""],
-    ["Course A 2019", "coursea-2019"],
-    ["Course B 2019", "courseb-2019"],
-    ["Course C 2019", "coursec-2019"],
-    ["Course D 2019", "coursed-2019"],
-    ["Course E 2019", "coursee-2019"],
-    ["Course F 2019", "coursef-2019"],
-    ["Pre-Express 2019", "pre-express-2019"],
-    ["Express 2019", "express-2019"]
-  ]
-
 %h2
   Import Standards from Curriculum Builder
 
@@ -27,7 +14,7 @@
 
 %h3 Select a Course
 = form_tag url_for(action: 'import_standards'), id: 'standards-form', method: 'post', class: 'form-inline', enforce_utf8: false do
-  = select_tag(:course, options_for_select(courses), id: "select")
+  = select_tag(:course, options_for_select(@scripts_for_standards), id: "select")
   %br
   %br
   %button.primary.padded-button#import-standards="Import Standards"
