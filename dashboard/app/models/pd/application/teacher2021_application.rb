@@ -797,7 +797,7 @@ module Pd::Application
           end
 
         meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course] == YES
+          if responses[:principal_wont_replace_existing_course].start_with?(YES)
             NO
           elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
