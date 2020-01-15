@@ -1,0 +1,252 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+class ProfessionalLearningApplyBanner extends React.Component {
+  static propTypes = {
+    useSignUpText: PropTypes.bool,
+    nominated: PropTypes.bool
+  };
+
+  state = {
+    link: this.generateLink()
+  };
+
+  styles = {
+    bigBanner: {
+      width: '100%',
+      padding: 5,
+      backgroundColor: '#ebe8f1'
+    },
+
+    textWrapper: {
+      backgroundColor: '#7665a0',
+      minHeight: 100
+    },
+
+    leftArrowContainer: {
+      float: 'left',
+      width: '7%'
+    },
+
+    leftArrow: {
+      width: 0,
+      height: 0,
+      borderStyle: 'solid',
+      borderWidth: '50px 0 50px 25px',
+      borderColor: 'transparent transparent transparent #ebe8f1'
+    },
+
+    textContainer: {
+      float: 'left',
+      width: '93%'
+    },
+
+    text: {
+      color: 'white',
+      fontSize: 16,
+      padding: '25px 10px',
+      textAlign: 'center',
+      lineHeight: 1.5
+    },
+
+    text18Font: {
+      color: 'white',
+      fontSize: 18,
+      padding: '20px 10px',
+      textAlign: 'center',
+      lineHeight: 1.5
+    },
+
+    imageButtonWrapper: {
+      backgroundColor: '#ebe8f1',
+      color: 'white',
+      height: 100,
+      fontSize: 18,
+      textAlign: 'center'
+    },
+
+    desktopFeature: {
+      float: 'left',
+      width: '30%'
+    },
+
+    rightArrowContainer: {
+      float: 'left'
+    },
+
+    rightArrow: {
+      width: 0,
+      height: 0,
+      borderStyle: 'solid',
+      borderWidth: '50px 0 50px 25px',
+      borderColor: 'transparent transparent transparent #7665a0'
+    },
+
+    plane: {
+      float: 'left',
+      paddingTop: 14
+    },
+
+    button: {
+      marginTop: 29,
+      padding: '10px 40px 10px 40px',
+      height: 'initial',
+      marginRight: 30,
+      fontSize: 18
+    },
+
+    image: {
+      width: 100
+    },
+
+    desktopBtnContainer: {
+      float: 'left',
+      width: '70%'
+    },
+
+    mobileBtnContainer: {
+      float: 'left',
+      width: '100%'
+    },
+
+    clear: {
+      clear: 'both'
+    }
+  };
+
+  generateLink() {
+    const link = '/educate/professional-learning/program-information';
+    if (this.props.nominated) {
+      return link + '?nominated=true';
+    } else {
+      return link;
+    }
+  }
+
+  getText() {
+    if (this.props.useSignUpText) {
+      return 'Sign up for Professional Learning! Applications are now open for Middle and High School teachers.';
+    } else if (this.props.nominated) {
+      return 'CONGRATULATIONS! You’ve been nominated for a scholarship!';
+    } else {
+      return 'SEATS OPEN - 2020 Professional Learning for Middle and High School Teachers';
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <a
+          className="linktag"
+          href="/educate/professional-learning/program-information"
+          id="pl-apply-banner"
+        >
+          <div style={this.styles.bigBanner}>
+            <div className="col-50" style={this.styles.textWrapper}>
+              <div
+                className="arrowcontainer desktop-feature"
+                style={this.styles.leftArrowContainer}
+              >
+                <div className="arrow" style={this.styles.leftArrow} />
+              </div>
+              <div className="textcontainer" style={this.styles.textContainer}>
+                <div
+                  className="text"
+                  style={
+                    this.props.useSignUpText
+                      ? this.styles.text
+                      : this.styles.text18Font
+                  }
+                >
+                  {this.getText()}
+                </div>
+              </div>
+            </div>
+            <div className="col-50" style={this.styles.imageButtonWrapper}>
+              <div
+                className="desktop-feature"
+                style={this.styles.desktopFeature}
+              >
+                <div
+                  className="arrowcontainer"
+                  style={this.styles.rightArrowContainer}
+                >
+                  <div className="arrow" style={this.styles.rightArrow} />
+                </div>
+                <div className="plane" style={this.styles.plane}>
+                  <img
+                    src="/images/professional-learning/plane.png"
+                    style={this.styles.image}
+                  />
+                </div>
+              </div>
+              <div
+                className="desktop-feature"
+                style={this.styles.desktopFeature}
+              >
+                <div>
+                  <button type="button" style={this.styles.button}>
+                    Apply Now
+                  </button>
+                </div>
+              </div>
+              <div
+                className="mobile-feature"
+                style={this.styles.mobileBtnContainer}
+              >
+                <div>
+                  <button type="button" style={this.styles.button}>
+                    Apply Now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="clear" style={this.styles.clear} />
+          </div>
+        </a>
+      </div>
+    );
+  }
+}
+
+/**- link = "/educate/professional-learning/program-information"
+- link += "?nominated=true" if params[:nominated]
+- use_sign_up_text ||= false
+- font_size = use_sign_up_text ? '16px' : '18px'
+- padding = use_sign_up_text ? '25px 10px' : '20px 10px'
+
+- buttons = capture_haml do
+  %div
+    %button{style: "margin-top: 29px; padding: 10px 40px 10px 40px; height: initial; margin-right: 30px; font-size: 18px;"}
+      Apply Now
+
+:css
+  .bigbanner p { margin: 0px }
+
+%div
+  %a.linktag#pl-apply-banner{href: link}
+    .bigbanner{style: "width: 100%; padding: 5px; background-color: #ebe8f1"}
+      .col-50{style: "background-color: #7665a0; min-height: 100px;"}
+        .arrowcontainer.desktop-feature{style: "float:left; width: 7%"}
+          .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #ebe8f1"}
+        .textcontainer{style: "float:left; width: 93%"}
+          .text{style: "color: white;  font-size: #{font_size}; padding: #{padding}; text-align: center; line-height: 1.5"}
+            - if use_sign_up_text
+              Sign up for Professional Learning! Applications are now open for Middle and High School teachers.
+            - elsif params[:nominated]
+              CONGRATULATIONS! You’ve been nominated for a scholarship!
+            - else
+              SEATS OPEN - 2020 Professional Learning for Middle and High School Teachers
+      .col-50{style: "background-color: #ebe8f1; color: white; height: 100px; font-size: 18px; text-align: center"}
+        .desktop-feature{style: "float:left; width: 30%"}
+          .arrowcontainer{style: "float:left"}
+            .arrow{style: "width: 0; height: 0; border-style: solid; border-width: 50px 0 50px 25px; border-color: transparent transparent transparent #7665a0;"}
+          .plane{style: "float:left; padding-top: 14px;"}
+            %img{src: "/images/professional-learning/plane.png", style: "width:100px"}
+        .desktop-feature{style: "float:left; width: 70%"}
+          = buttons
+        .mobile-feature{style: "float:left; width: 100%"}
+          = buttons
+
+      .clear{style: "clear: both"} */
+export default ProfessionalLearningApplyBanner;
