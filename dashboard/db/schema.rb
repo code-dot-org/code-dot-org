@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191122183555) do
+ActiveRecord::Schema.define(version: 20200114234015) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1337,6 +1337,13 @@ ActiveRecord::Schema.define(version: 20191122183555) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
+  end
+
+  create_table "standards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "organization",                  null: false
+    t.string "organization_id",               null: false
+    t.text   "description",     limit: 65535
+    t.text   "concept",         limit: 65535
   end
 
   create_table "state_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
