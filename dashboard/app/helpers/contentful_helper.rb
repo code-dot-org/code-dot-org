@@ -6,7 +6,8 @@ module ContentfulHelper
     @@contentful_client ||= Contentful::Client.new(
       space: '8xyti3jc6rnu',
       access_token: CDO.contentful_delivery_token,
-      dynamic_entries: :auto
+      dynamic_entries: :auto,
+      raise_for_empty_fields: false
     )
   end
 
@@ -36,6 +37,30 @@ module ContentfulHelper
       description_short: script.short_description,
       description: script.description,
     }
+  end
+
+  def contentful_general_params(script)
+    h = {
+      "curriculum_umbrella": "",
+      "family_name": "",
+      "version_year": "",
+      "curriculum_path": "",
+      "professional_learning_course": "",
+      "peer_reviews_to_complete": 0,
+      "wrapup_video": "",
+      "script_announcements": [],
+      "pilot_experiment": "",
+      "editor_experiment": "",
+      "resourceTypes": [
+        ""
+      ],
+      "resourceLinks": [
+        ""
+      ],
+      "hidden": !script.visible
+    }
+    h['login_required'] = "on" if script.login_required
+    h
   end
 
   CONTENTFUL_LEVEL_TYPES = %w{
