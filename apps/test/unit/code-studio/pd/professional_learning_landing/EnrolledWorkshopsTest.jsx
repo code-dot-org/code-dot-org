@@ -138,12 +138,12 @@ describe('EnrolledWorkshops', () => {
     );
   });
 
-  it('Clicking "Print Certificate" does not open the certificate if user did not attend workshop', function() {
+  it('"Print Certificate" button is disabled if user did not attend workshop', function() {
     const enrolledWorkshopsTable = shallow(
       <EnrolledWorkshopsTable workshops={workshops} />
     );
 
-    // Click the "Print Certificate" button
+    // Get disabled "Print Certificate" React Button component
     const printCertificateButton = enrolledWorkshopsTable
       .find('tbody tr')
       .at(3)
