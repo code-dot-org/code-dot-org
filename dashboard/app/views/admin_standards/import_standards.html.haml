@@ -1,3 +1,6 @@
+- content_for(:head) do
+  %script{ src: webpack_asset_path('js/admin_standards/import_standards.js')}
+
 %h2
   Import Standards from Curriculum Builder
 
@@ -20,25 +23,3 @@
   %button.primary.padded-button#import-standards="Import Standards"
 
 %p#data-spew
-
-:javascript
-  $(document).ready(function() {
-    $('#import-standards').click(function (e) {
-      var courseCode = $("#select option:selected").val()
-      var url = 'http://curriculumbuilder.herokuapp.com/metadata/' + courseCode + '/standards.json'
-      $.ajax({
-            url: url,
-            type: "get",
-          }).done(function(data) {
-            $('#data-spew').text(JSON.stringify(data))
-            $.ajax({
-              url: '/admin/standards',
-              method: 'POST',
-              contentType: 'application/json',
-              data: JSON.stringify(data)
-            });
-          }).fail(function () {
-            alert("Whoops! There was a problem with the import.");
-          });
-      });
-    })
