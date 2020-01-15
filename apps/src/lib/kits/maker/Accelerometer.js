@@ -4,9 +4,7 @@ import {sensor_channels, roundToHundredth} from './MicroBitConstants';
 // Transfer the acceleration units from milli-g to meters/second^2
 // Round to the nearest hundredth
 function unitsFromMGToMS2(val) {
-  // Using 1024 as a divisor because the Microbit gives values between 0 and 1024
-  // to represent the values between 0 and 1g
-  let g = val / 1024;
+  let g = val / 1000;
   let ms2 = g * 9.81;
   return roundToHundredth(ms2);
 }
@@ -78,7 +76,9 @@ export default class Accelerometer extends EventEmitter {
       },
       acceleration: {
         get: function() {
-          return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+          return roundToHundredth(
+            Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)
+          );
         }
       }
     });
