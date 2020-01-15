@@ -94,8 +94,6 @@ module GitUtils
 
   def self.circle_pr_branch_base_no_origin
     ENV['DRONE_TARGET_BRANCH']
-  rescue => _
-    nil
   end
 
   # Given a branch name, returns its likely base branch / merge destination
