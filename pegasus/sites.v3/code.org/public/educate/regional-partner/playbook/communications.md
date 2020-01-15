@@ -109,7 +109,7 @@ ________________
 
 ## Branding guidelines
 Please email your Regional Manager for access to the Regional Partner logos and the guidelines for co-branding as a Code.org Regional Partner.</br>
-The Code.org logo itself may be used with permission in reference to the Code.org organization, platform, curriculum, and program. Take a look at the <a href="https://docs.google.com/document/d/15mnINzIbsNWl4NEAQMHZlExUI0JioRZcLKQgToK8UJk/edit?ts=5d8cd273#" target=_blank>brand usage guidelines</a> and email questions to <permissions@code.org>
+The Code.org logo itself may be used with permission in reference to the Code.org organization, platform, curriculum, and program. Take a look at the <a href="https://code.org/about/brand-usage" target=_blank>brand usage guidelines</a> and email questions to <permissions@code.org>
 
 
 [**Back to the top**](#top)
