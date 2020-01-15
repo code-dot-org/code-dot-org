@@ -15,8 +15,7 @@ module ContentfulHelper
     contentful_client.entries(content_type: 'script', 'fields.name' => script_name).first
   end
 
-  def contentful_stage_dsl(script_name)
-    script = contentful_script(script_name)
+  def contentful_stage_dsl(script)
     stages = script.stages
     output = ''
     stages.each do |stage|

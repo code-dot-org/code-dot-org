@@ -1,5 +1,6 @@
 class ScriptsController < ApplicationController
   include VersionRedirectOverrider
+  include ContentfulHelper
 
   before_action :require_levelbuilder_mode, except: :show
   before_action :authenticate_user!, except: :show
@@ -140,6 +141,18 @@ class ScriptsController < ApplicationController
 
   def set_script
     script_id = params[:id]
+
+    contentful_script = contentful_script(script_id)
+    if contentful_script
+      script_params = {name: script_id}
+      @script = Script.find_or_create_by!(script_params)
+      script_text = contentful_stage_dsl(contentful_script)
+      i18n_params = contentful_i18n_params(contentful_script)
+      general_params = contentful_general_params(contentful_script)
+      @script.update_text(script_params, script_text, i18n_params, general_params)
+      return
+    end
+
     @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
       Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
       Script.get_from_cache(script_id)
