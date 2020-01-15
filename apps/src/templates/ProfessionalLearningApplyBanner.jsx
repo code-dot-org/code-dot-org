@@ -137,18 +137,17 @@ class ProfessionalLearningApplyBanner extends React.Component {
   render() {
     return (
       <div style={this.props.style}>
-        <a className="linktag" href={this.state.link} id="pl-apply-banner">
+        <a href={this.state.link} id="pl-apply-banner">
           <div style={this.styles.bigBanner}>
             <div className="col-50" style={this.styles.textWrapper}>
               <div
-                className="arrowcontainer desktop-feature"
+                className="desktop-feature"
                 style={this.styles.leftArrowContainer}
               >
-                <div className="arrow" style={this.styles.leftArrow} />
+                <div style={this.styles.leftArrow} />
               </div>
-              <div className="textcontainer" style={this.styles.textContainer}>
+              <div style={this.styles.textContainer}>
                 <div
-                  className="text"
                   style={
                     this.props.useSignUpText
                       ? this.styles.text
@@ -164,13 +163,10 @@ class ProfessionalLearningApplyBanner extends React.Component {
                 className="desktop-feature"
                 style={this.styles.desktopFeature}
               >
-                <div
-                  className="arrowcontainer"
-                  style={this.styles.rightArrowContainer}
-                >
-                  <div className="arrow" style={this.styles.rightArrow} />
+                <div style={this.styles.rightArrowContainer}>
+                  <div style={this.styles.rightArrow} />
                 </div>
-                <div className="plane" style={this.styles.plane}>
+                <div style={this.styles.plane}>
                   <img
                     src="/images/professional-learning/plane.png"
                     style={this.styles.image}
