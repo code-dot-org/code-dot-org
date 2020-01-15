@@ -27,14 +27,14 @@ export class MicrobitStubBoard {
   scrollInteger() {}
 
   receivedEvent(sourceID, eventID) {
-    for (let f of this.eventListeners) {
-      f.call(null, sourceID, eventID);
+    for (let listener of this.eventListeners) {
+      listener.call(null, sourceID, eventID);
     }
   }
 
   receivedAnalogUpdate() {
-    for (let f of this.updateListeners) {
-      f.call();
+    for (let listener of this.updateListeners) {
+      listener.call();
     }
   }
 
@@ -46,7 +46,7 @@ export class MicrobitStubBoard {
     this.updateListeners.push(updateListenerFunction);
   }
 
-  streamAnalogChannel(chan) {}
+  streamAnalogChannel(channel) {}
 
-  stopStreamingAnalogChannel(chan) {}
+  stopStreamingAnalogChannel(channel) {}
 }
