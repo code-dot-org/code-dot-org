@@ -1,5 +1,5 @@
 - if @homepage_data[:showCensusBanner]
-  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.37"}
+  %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry"}
 
 - content_for(:head) do
   %script{src: webpack_asset_path('js/home/_homepage.js'), data: {homepage: @homepage_data.to_json}}
