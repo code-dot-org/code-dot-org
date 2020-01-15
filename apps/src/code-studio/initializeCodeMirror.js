@@ -82,10 +82,10 @@ function initializeCodeMirror(target, mode, options = {}) {
       };
 
       callback = (editor, ...rest) => {
-        updatePreview(editor);
         if (originalCallback) {
           originalCallback(editor, ...rest);
         }
+        updatePreview(editor);
       };
     }
   }
