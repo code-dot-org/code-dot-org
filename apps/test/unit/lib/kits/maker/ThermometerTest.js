@@ -68,8 +68,13 @@ describe('Thermometer', function() {
 });
 
 describe('MicroBitThermometer', function() {
-  let boardClient = new MicrobitStubBoard();
-  let thermometer = new MicroBitThermometer({mb: boardClient});
+  let boardClient;
+  let thermometer;
+
+  beforeEach(() => {
+    boardClient = new MicrobitStubBoard();
+    thermometer = new MicroBitThermometer({mb: boardClient});
+  });
 
   it(`attributes are readonly`, () => {
     let attributes = ['raw', 'celsius', 'fahrenheit', 'C', 'F'];
@@ -80,6 +85,17 @@ describe('MicroBitThermometer', function() {
       expect(desc.set).to.be.undefined;
       expect(desc.get).to.be.defined;
     });
+  });
+
+  it(`fahrenheit is calculated from celsius`, () => {
+    // Seed the temp channel with celsius data
+    boardClient.analogChannel[sensor_channels.tempSensor] = 3;
+
+    expect(thermometer.celsius).to.equal(thermometer.C);
+    expect(thermometer.celsius).to.equal(3);
+
+    expect(thermometer.fahrenheit).to.equal(thermometer.F);
+    expect(thermometer.fahrenheit).to.equal(37.4);
   });
 
   describe(`start() and stop()`, () => {
@@ -97,7 +113,11 @@ describe('MicroBitThermometer', function() {
   });
 
   describe('emitsEvent', () => {
-    let emitSpy = sinon.spy(thermometer, 'emit');
+    let emitSpy;
+    beforeEach(() => {
+      emitSpy = sinon.spy(thermometer, 'emit');
+    });
+
     it('emits the data event when it receives data', () => {
       boardClient.receivedAnalogUpdate();
       expect(emitSpy).to.have.been.calledOnce;
