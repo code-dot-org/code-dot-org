@@ -50,4 +50,15 @@ describe('MicroBitAccelerometer', function() {
 
     expect(accelerometer.acceleration).to.equal(3.09);
   });
+
+  it(`pitch, roll, inclination are calculated from sensor data and rounded to hundredth`, () => {
+    // Seed the x, y, z channel with milli-g data
+    boardClient.analogChannel[sensor_channels.accelX] = 5;
+    boardClient.analogChannel[sensor_channels.accelY] = 12;
+    boardClient.analogChannel[sensor_channels.accelZ] = 5;
+
+    expect(accelerometer.pitch).to.equal(62.78);
+    expect(accelerometer.roll).to.equal(18.86);
+    expect(accelerometer.inclination).to.equal(70.01);
+  });
 });
