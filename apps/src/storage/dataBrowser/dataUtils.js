@@ -118,8 +118,11 @@ export function editableValue(val) {
  * @returns {string}
  */
 export function displayableValue(val) {
-  if (val === null || val === undefined || val === '') {
-    return '';
+  if (val === null) {
+    return 'null';
+  } else if (val === undefined) {
+    return 'undefined';
+  } else {
+    return JSON.stringify(val);
   }
-  return JSON.stringify(val);
 }
