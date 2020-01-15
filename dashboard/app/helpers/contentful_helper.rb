@@ -14,6 +14,20 @@ module ContentfulHelper
     contentful_client.entries(content_type: 'script', 'fields.name' => script_name).first
   end
 
+  def contentful_stage_dsl(script_name)
+    script = contentful_script(script_name)
+    stages = script.stages
+    output = ''
+    stages.each do |stage|
+      output += "stage '#{stage.name}'\n"
+      stage.level_names.each do |level_name|
+        output += "level '#{level_name}'\n"
+      end
+      output += "\n"
+    end
+    output
+  end
+
   CONTENTFUL_LEVEL_TYPES = %w{
     multipleChoiceLevel
     externalMarkdownLevel
