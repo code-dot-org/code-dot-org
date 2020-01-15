@@ -256,7 +256,7 @@ class LibraryCreationDialog extends React.Component {
     if (
       this.state.libraryDescription &&
       Object.values(this.state.selectedFunctions).find(value => value) &&
-      this.publishState === PublishState.INVALID_INPUT
+      this.state.publishState === PublishState.INVALID_INPUT
     ) {
       this.setState({publishState: PublishState.DONE_LOADING});
     }
@@ -310,7 +310,7 @@ class LibraryCreationDialog extends React.Component {
     });
   };
 
-  displayError = () => {
+  displayAlert = () => {
     let errorMessage;
     if (this.state.publishState === PublishState.INVALID_INPUT) {
       errorMessage = i18n.libraryPublishInvalid();
@@ -339,7 +339,7 @@ class LibraryCreationDialog extends React.Component {
           onClick={this.publish}
           text={i18n.publish()}
         />
-        {this.displayError()}
+        {this.displayAlert()}
       </div>
     );
   };
