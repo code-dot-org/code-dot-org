@@ -101,6 +101,7 @@
     "react-typist": "^2.0.5"
   },
   "files": [
-    "dist/**/!(oceans.js)"
+    "dist/**/!(oceans.js)",
+    "i18n/oceans.json"
   ]
 }
