@@ -174,7 +174,7 @@ class InlineAudio extends React.Component {
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
-    } else if (this.props.message) {
+    } else if (this.props.message && VOICES[this.props.locale]) {
       const voice = VOICES[this.props.locale];
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 

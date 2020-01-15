@@ -63,6 +63,20 @@ describe('InlineAudio', function() {
     );
   });
 
+  it('does not generate src from message text if no voice is available for locale', function() {
+    const component = mount(
+      <StatelessInlineAudio
+        assetUrl={function() {}}
+        isK1={true}
+        locale="aa_aa"
+        message={'test'}
+      />
+    );
+
+    const result = component.instance().getAudioSrc();
+    assert.equal(result, undefined);
+  });
+
   it('can handle (select) non-english locales', function() {
     const component = mount(
       <StatelessInlineAudio
