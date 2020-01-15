@@ -106,11 +106,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bird will end up one step short of the pig.",
@@ -131,6 +126,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "This code gets the bird perfectly to the pig."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read through the code below very carefully.  What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -217,11 +217,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -242,6 +237,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
             }
           ]
         }
@@ -353,11 +353,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at this code carefully. What do you think will happen when the program runs?"
-            }
-          ],
           "answers": [
             {
               "text": "Laurel will collect 4 pieces of treasure using this code.",
@@ -378,6 +373,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Laurel tries to collect treasure where there is none and it causes an error."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at this code carefully. What do you think will happen when the program runs?"
             }
           ]
         }
@@ -476,11 +476,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -501,6 +496,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -546,11 +546,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What do you think will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will not move.",
@@ -571,6 +566,11 @@
               "text": "I don't know",
               "correct": false,
               "feedback": "The repeat block will make the BB-8 move forward 5 times."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What do you think will happen when you click \"Run\"?"
             }
           ]
         }
@@ -650,11 +650,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "BB-8 will travel too far in the first loop.",
@@ -675,6 +670,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first loop only lets BB-8 move forward 2 spaces, when it needs to move forward by 3 spaces."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below.  What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -785,11 +785,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -810,6 +805,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will collect 4 pumpkins in each of 3 loops.  4 times 3 is 12!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How many pumpkins will the farmer collect after you click \"Run\"?"
             }
           ]
         }
@@ -1227,7 +1227,6 @@
   },
   "https://studio.code.org/s/coursec-2019/stage/18/puzzle/1": {
     "dsls": {
-      "title": "Begin planning your project",
       "content1": "description here",
       "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n| Hungry Squirrel | Alien Story |\n|---|---|\n| [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG \"Hungry Squirrel (Play Lab\")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG \"Alien Story (Play Lab\")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |\n| Try adding sounds to this game! | Try adding another scene to this story! |\n\n"
     }
