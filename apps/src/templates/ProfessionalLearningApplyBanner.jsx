@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 class ProfessionalLearningApplyBanner extends React.Component {
   static propTypes = {
     useSignUpText: PropTypes.bool,
-    nominated: PropTypes.bool
+    nominated: PropTypes.bool,
+    style: PropTypes.object
   };
 
   state = {
@@ -135,7 +136,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={this.props.style}>
         <a className="linktag" href={this.state.link} id="pl-apply-banner">
           <div style={this.styles.bigBanner}>
             <div className="col-50" style={this.styles.textWrapper}>
@@ -178,7 +179,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
               </div>
               <div
                 className="desktop-feature"
-                style={this.styles.desktopFeature}
+                style={this.styles.desktopBtnContainer}
               >
                 <div>
                   <button type="button" style={this.styles.button}>
