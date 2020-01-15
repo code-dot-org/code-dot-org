@@ -25,12 +25,11 @@ social:
 
 = I18n.t(:hoc_overview_subtitle)
 
-%br/
-%br/
-= view :professional_learning_apply_banner, use_sign_up_text: true
-%br/
-
 - if request.language == 'en'
+  %br/
+  %br/
+  = view :professional_learning_apply_banner, use_sign_up_text: true
+  %br/
   .tile-container-responsive{style: "margin-top: 20px;"}
     .col-50
       .tutorial-tile
