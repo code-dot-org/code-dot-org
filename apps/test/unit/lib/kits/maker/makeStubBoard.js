@@ -18,6 +18,14 @@ export class MicrobitStubBoard {
     this.analogChannel = new Array(16).fill(0);
   }
 
+  displayPlot() {}
+
+  displayClear() {}
+
+  scrollString() {}
+
+  scrollInteger() {}
+
   receivedEvent(sourceID, eventID) {
     for (let f of this.eventListeners) {
       f.call(null, sourceID, eventID);

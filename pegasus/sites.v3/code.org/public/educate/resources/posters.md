@@ -9,13 +9,13 @@ theme: responsive
 
 ## Print these posters for your school and inspire your students to try computer science
 
-[![image](/images/fit-250/poster_steph.png)](/files/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_malala.png)](/files/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_hadi.png)](/files/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_mary.png)](/files/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; 
+[![image](/images/fit-250/poster_steph.png)](//downloads.code.org/posters/poster_steph.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_malala.png)](//downloads.code.org/posters/poster_malala.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_hadi.png)](//downloads.code.org/posters/poster_hadi.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_mary.png)](//downloads.code.org/posters/poster_mary.pdf)&nbsp;&nbsp;&nbsp;&nbsp; 
 
-[![image](/images/fit-250/poster_satya.png)](/files/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
-[![image](/images/fit-250/poster_shakira.png)](/files/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_satya.png)](//downloads.code.org/posters/poster_satya.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/fit-250/poster_shakira.png)](//downloads.code.org/posters/poster_shakira.pdf)&nbsp;&nbsp;&nbsp;&nbsp;
 
 ***
 
