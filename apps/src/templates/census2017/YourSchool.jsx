@@ -32,6 +32,10 @@ const styles = {
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
   }
 };
 
@@ -123,8 +127,8 @@ class YourSchool extends Component {
         <ProfessionalLearningApplyBanner
           nominated={false}
           useSignUpText={true}
+          style={styles.banner}
         />
-        <br />
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">
