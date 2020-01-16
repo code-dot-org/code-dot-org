@@ -5,7 +5,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     @user = create :teacher
     sign_in(@user)
     @workshop = create :workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD
-    @enrollment = create :pd_enrollment, workshop: @workshop
+    @enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
 
     facilitator_1 = create :facilitator, name: 'Facilitator 1'
     facilitator_2 = create :facilitator, name: 'Facilitator 2'
@@ -30,12 +30,19 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     end
   end
 
+  test 'Generates no certificates if teacher did not attend workshop' do
+    @enrollment = create :pd_enrollment, workshop: @workshop
+
+    get :generate_certificate, params: {enrollment_code: @enrollment.code}
+    assert_response :missing
+  end
+
   # Disable this lint rule because it's very useful to use _ as shorthand for 'anything' matchers
   # rubocop:disable Lint/UnderscorePrefixedVariableName
 
   test 'Generates certificate for CSF 101 workshop' do
     workshop = create :csf_intro_workshop
-    enrollment = create :pd_enrollment, workshop: workshop
+    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     _ = anything
     mock_draw = expect_renders_certificate
@@ -49,7 +56,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   end
 
   test 'Generates certificate for regular CSD event' do
-    enrollment = create :pd_enrollment, workshop: @workshop
+    enrollment = create :pd_enrollment, :with_attendance, workshop: @workshop
     assert_equal Pd::Workshop::COURSE_CSD, @workshop.course
 
     _ = anything
@@ -69,7 +76,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
-    enrollment = create :pd_enrollment, workshop: workshop
+    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     _ = anything
     mock_draw = expect_renders_certificate
@@ -87,7 +94,7 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSP,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON
-    enrollment = create :pd_enrollment, workshop: workshop
+    enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     _ = anything
     mock_draw = expect_renders_certificate
