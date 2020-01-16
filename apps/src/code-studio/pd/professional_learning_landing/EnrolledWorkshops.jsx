@@ -78,7 +78,6 @@ class EnrolledWorkshopsTable extends React.Component {
           <Button
             onClick={() => this.openCertificate(workshop)}
             style={styles.button}
-            disabled={!workshop.attended}
           >
             Print certificate
           </Button>
