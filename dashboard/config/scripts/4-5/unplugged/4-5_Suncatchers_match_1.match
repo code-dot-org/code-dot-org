@@ -5,17 +5,13 @@ description 'Match each program to the word it makes, using the provided group o
 height '100'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a1.png'
-answer '&nbsp;  
-STACK'
+answer '<h4>STACK</h4>'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a2.png'
-answer '&nbsp;  
-STAMP'
+answer '<h4>STAMP</h4>'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a3.png'
-answer '&nbsp;  
-STAR'
+answer '<h4>STAR</h4>'
 
 question '/script_assets/4-5_images/unplugged/suncatchers_1_a4.png'
-answer '&nbsp;  
-RAMP'
+answer '<h4>RAMP</h4>'
