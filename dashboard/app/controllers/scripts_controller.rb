@@ -83,7 +83,7 @@ class ScriptsController < ApplicationController
   end
 
   def edit
-    beta = params[:beta].present?
+    beta = params[:beta] != '0'
     if @script.script_levels.any?(&:has_experiment?)
       beta = false
       beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."

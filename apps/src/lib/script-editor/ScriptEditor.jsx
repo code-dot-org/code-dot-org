@@ -497,14 +497,21 @@ export default class ScriptEditor extends React.Component {
         </div>
         <h2>Stages and Levels</h2>
         {this.props.beta ? (
-          <FlexGroup />
+          <div>
+            <a href="?beta=0">Switch to the text-based stage editor</a>
+            &nbsp;(will reload the page without saving)
+            <br />
+            <FlexGroup />
+          </div>
         ) : (
           <div>
             {betaWarning || (
-              <a href="?beta=true">
-                Try the beta Script Editor (will reload the page without saving)
-              </a>
+              <div>
+                <a href="?beta=1">Switch to the GUI Stage Editor</a>
+                &nbsp;(will reload the page without saving)
+              </div>
             )}
+            <br />
             <textarea
               id="script_text"
               name="script_text"
