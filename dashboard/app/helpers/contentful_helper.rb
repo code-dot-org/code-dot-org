@@ -11,8 +11,20 @@ module ContentfulHelper
     )
   end
 
-  def contentful_script(script_name)
-    contentful_client.entries(content_type: 'script', 'fields.name' => script_name).first
+  def contentful_preview_client
+    raise "CDO.contentful_preview_token is missing" unless CDO.contentful_preview_token
+    @@contentful_preview_client ||= Contentful::Client.new(
+      api_url: 'preview.contentful.com',
+      space: '8xyti3jc6rnu',
+      access_token: CDO.contentful_preview_token,
+      dynamic_entries: :auto,
+      raise_for_empty_fields: false
+    )
+  end
+
+  def contentful_script(script_name, preview: false)
+    client = preview ? contentful_preview_client : contentful_client
+    client.entries(content_type: 'script', 'fields.name' => script_name).first
   end
 
   def contentful_stage_dsl(script)

@@ -142,7 +142,7 @@ class ScriptsController < ApplicationController
   def set_script
     script_id = params[:id]
 
-    contentful_script = contentful_script(script_id)
+    contentful_script = contentful_script(script_id, preview: !!params[:preview])
     if contentful_script
       script_params = {name: script_id}
       @script = Script.find_or_create_by!(script_params)
@@ -150,6 +150,7 @@ class ScriptsController < ApplicationController
       i18n_params = contentful_i18n_params(contentful_script)
       general_params = contentful_general_params(contentful_script)
       @script.update_text(script_params, script_text, i18n_params, general_params)
+      I18n.reload!
       return
     end
 
