@@ -67,13 +67,17 @@ export default class LibraryClientApi {
     return library;
   }
 
-  delete() {
-    this.libraryApi.deleteObject(this.channelId + '/' + LIBRARY_NAME, error => {
-      if (error) {
-        // In the future, errors will be surfaced to the user in the libraries dialog
-        console.warn('Error deleting library: ' + error);
+  delete(onSuccess, onError) {
+    this.libraryApi.deleteObject(
+      this.channelId + '/' + LIBRARY_NAME,
+      (error, success) => {
+        if (success) {
+          onSuccess();
+        } else {
+          onError(error);
+        }
       }
-    });
+    );
   }
 
   async getClassLibraries(onSuccess, onError) {

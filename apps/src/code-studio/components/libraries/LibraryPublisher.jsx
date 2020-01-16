@@ -43,7 +43,8 @@ const styles = {
 export const PublishState = {
   DEFAULT: 'default',
   ERROR_PUBLISH: 'error_publish',
-  INVALID_INPUT: 'invalid_input'
+  INVALID_INPUT: 'invalid_input',
+  ERROR_UNPUBLISH: 'error_unpublish'
 };
 
 /**
@@ -53,6 +54,7 @@ export const PublishState = {
 export default class LibraryPublisher extends React.Component {
   static propTypes = {
     onPublishSuccess: PropTypes.func.isRequired,
+    onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired
   };
@@ -204,6 +206,9 @@ export default class LibraryPublisher extends React.Component {
     if (this.state.publishState === PublishState.ERROR_PUBLISH) {
       errorMessage = i18n.libraryPublishFail();
     }
+    if (this.state.publishState === PublishState.ERROR_UNPUBLISH) {
+      errorMessage = i18n.libraryUnPublishFail();
+    }
     return (
       errorMessage && (
         <div>
@@ -213,7 +218,15 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
+  unpublish = () => {
+    this.props.clientApi.delete(this.props.onUnpublishSuccess, error => {
+      console.warn(`Error publishing library: ${error}`);
+      this.setState({publishState: PublishState.ERROR_UNPUBLISH});
+    });
+  };
+
   render() {
+    let alreadyPublished = this.props.libraryDetails.alreadyPublished;
     return (
       <div>
         <Heading2>{i18n.libraryName()}</Heading2>
@@ -222,11 +235,21 @@ export default class LibraryPublisher extends React.Component {
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
         {this.displayFunctions()}
-        <Button
-          style={{marginLeft: 0, marginTop: 20}}
-          onClick={this.publish}
-          text={i18n.publish()}
-        />
+        <div style={{position: 'relative'}}>
+          <Button
+            style={{marginTop: 20}}
+            onClick={this.publish}
+            text={alreadyPublished ? i18n.update() : i18n.publish()}
+          />
+          {alreadyPublished && (
+            <Button
+              style={{right: 0, marginTop: 20, position: 'absolute'}}
+              onClick={this.unpublish}
+              text={i18n.unpublish()}
+              color={Button.ButtonColor.red}
+            />
+          )}
+        </div>
         {this.displayError()}
       </div>
     );

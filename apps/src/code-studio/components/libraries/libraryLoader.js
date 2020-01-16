@@ -62,7 +62,9 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
 
     let description = '';
     let selectedFunctions = {};
+    let alreadyPublished = false;
     if (publishedLibrary) {
+      alreadyPublished = true;
       description = publishedLibrary.description;
       projectName = publishedLibrary.name;
       publishedLibrary.functions.forEach(publishedFunction => {
@@ -82,7 +84,8 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
       libraryDescription: description,
       librarySource: librarySource,
       sourceFunctionList: functionsList,
-      selectedFunctions: selectedFunctions
+      selectedFunctions: selectedFunctions,
+      alreadyPublished: alreadyPublished
     });
   });
 }
