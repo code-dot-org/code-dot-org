@@ -122,4 +122,42 @@ describe('MicroBitAccelerometer', function() {
       expect(accelerometer.getAcceleration('z')).to.equal(accelerometer.z);
     });
   });
+
+  describe('emitsEvent', () => {
+    let emitSpy;
+    beforeEach(() => {
+      emitSpy = sinon.spy(accelerometer, 'emit');
+    });
+
+    it('emits the data event when it receives data', () => {
+      boardClient.receivedAnalogUpdate();
+      expect(emitSpy).to.have.been.calledOnce;
+      expect(emitSpy).to.have.been.calledWith('data');
+    });
+
+    it('emits the change event when it receives data that is different from previous', () => {
+      // Set the 'accelerometer' to 0
+      boardClient.receivedAnalogUpdate();
+
+      // Seed the x, y, z channel with 'different' data
+      boardClient.analogChannel[sensor_channels.accelX] = 5;
+      boardClient.analogChannel[sensor_channels.accelY] = 12;
+      boardClient.analogChannel[sensor_channels.accelZ] = 5;
+
+      boardClient.receivedAnalogUpdate();
+      expect(emitSpy).to.have.been.calledWith('data');
+      expect(emitSpy).to.have.been.calledWith('change');
+    });
+
+    it('emits the change event when only one variable changes', () => {
+      // Set the 'accelerometer' to 0
+      boardClient.receivedAnalogUpdate();
+
+      // Seed the x, y, z channel with 'different' data
+      boardClient.analogChannel[sensor_channels.accelX] = 6;
+
+      boardClient.receivedAnalogUpdate();
+      expect(emitSpy).to.have.been.calledWith('change');
+    });
+  });
 });
