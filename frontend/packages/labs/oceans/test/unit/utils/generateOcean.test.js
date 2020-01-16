@@ -4,7 +4,7 @@
 
 import {initFishData} from '@ml/utils/fishData';
 import {generateOcean, filterOcean} from '@ml/utils/generateOcean';
-import SimpleTrainer from '@ml/utils/SimpleTrainer';
+import KNNTrainer from '@ml/utils/KNNTrainer';
 
 describe('Generate ocean test', () => {
   beforeAll(() => {
@@ -34,7 +34,7 @@ describe('Generate ocean test', () => {
   test('Can generate predictions on a random set of fish', async () => {
     const numFish = 25;
     const trainingOcean = generateOcean(numFish);
-    const trainer = new SimpleTrainer(fish => fish.getTensor());
+    const trainer = new KNNTrainer(fish => fish.getTensor());
     trainingOcean.forEach(fish => {
       trainer.addTrainingExample(fish, Math.round(Math.random()));
     });

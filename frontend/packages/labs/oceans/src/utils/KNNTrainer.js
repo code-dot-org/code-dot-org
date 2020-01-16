@@ -1,7 +1,7 @@
 import * as tf from '@tensorflow/tfjs';
 import * as knnClassifier from '@tensorflow-models/knn-classifier';
 
-export default class SimpleTrainer {
+export default class KNNTrainer {
   constructor(converterFn) {
     this.converterFn = converterFn || (input => input); // Default to returning example as-is
     this.knn = knnClassifier.create();
@@ -41,7 +41,7 @@ export default class SimpleTrainer {
     return result;
   }
 
-  // SimpleTrainer-specific methods below
+  // KNNTrainer-specific methods below
 
   setTopK(k) {
     this.TOPK = k;

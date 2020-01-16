@@ -1,7 +1,7 @@
 import 'idempotent-babel-polyfill';
 import {setState, getState} from '../state';
 import {ClassType, AppMode} from '../constants';
-import SimpleTrainer from '../../utils/SimpleTrainer';
+import KNNTrainer from '../../utils/KNNTrainer';
 import SVMTrainer from '../../utils/SVMTrainer';
 import {generateOcean} from '../../utils/generateOcean';
 import I18n from '../i18n';
@@ -14,7 +14,7 @@ const init = () => {
     if ([AppMode.FishShort, AppMode.FishLong].includes(state.appMode)) {
       trainer = new SVMTrainer(fish => fish.getKnnData());
     } else {
-      trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
+      trainer = new KNNTrainer(oceanObj => oceanObj.getTensor());
     }
   }
 

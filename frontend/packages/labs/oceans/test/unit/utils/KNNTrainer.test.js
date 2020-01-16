@@ -2,12 +2,12 @@
  *  @jest-environment node
  */
 
-import SimpleTrainer from '@ml/utils/SimpleTrainer';
+import KNNTrainer from '@ml/utils/KNNTrainer';
 import * as tf from '@tensorflow/tfjs';
 
 describe('Simple Trainer tests', () => {
-  test('SimpleTrainer predicts', async () => {
-    const trainer = new SimpleTrainer();
+  test('KNNTrainer predicts', async () => {
+    const trainer = new KNNTrainer();
     trainer.setTopK(3);
 
     trainer.addTrainingExample(tf.tensor([1, 1]), 0);
@@ -24,8 +24,8 @@ describe('Simple Trainer tests', () => {
     trainer.dispose();
   });
 
-  test('SimpleTrainer can be restored', async () => {
-    const trainer = new SimpleTrainer();
+  test('KNNTrainer can be restored', async () => {
+    const trainer = new KNNTrainer();
     trainer.setTopK(3);
 
     trainer.addTrainingExample(tf.tensor([1, 1]), 0);
@@ -42,7 +42,7 @@ describe('Simple Trainer tests', () => {
     const classifierDatasetString = trainer.getDatasetJSON();
     trainer.clearAll();
 
-    const retrainedTrainer = new SimpleTrainer();
+    const retrainedTrainer = new KNNTrainer();
     retrainedTrainer.setTopK(3);
     const untrainedResult = await retrainedTrainer.predict(tf.tensor([1, 1]));
     expect(untrainedResult.predictedClassId).toEqual(null);

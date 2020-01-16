@@ -5,7 +5,7 @@ import {AppMode, Modes} from '../constants';
 import {initFishData} from '../../utils/fishData';
 import {getAppMode, $time, finishLoading} from '../helpers';
 import modeHelpers from '../modeHelpers';
-import SimpleTrainer from '../../utils/SimpleTrainer';
+import KNNTrainer from '../../utils/KNNTrainer';
 
 export const init = async () => {
   const startTime = $time();
@@ -23,7 +23,7 @@ export const init = async () => {
   ].includes(appModeBase);
 
   if (appModeBase === AppMode.CreaturesVTrashDemo) {
-    const trainer = new SimpleTrainer(oceanObj => oceanObj.getTensor());
+    const trainer = new KNNTrainer(oceanObj => oceanObj.getTensor());
     setState({trainer, word: 'fish'});
   }
 

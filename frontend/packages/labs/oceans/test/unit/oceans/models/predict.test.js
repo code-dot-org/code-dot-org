@@ -2,7 +2,7 @@ const {initFishData} = require('@ml/utils/fishData');
 import {setState, getState, resetState} from '@ml/oceans/state';
 import {ClassType, Modes, AppMode} from '@ml/oceans/constants';
 import {init, predictFish} from '@ml/oceans/models/predict';
-import SimpleTrainer from '@ml/utils/SimpleTrainer';
+import KNNTrainer from '@ml/utils/KNNTrainer';
 import {TrashOceanObject} from '@ml/oceans/OceanObject';
 
 describe('Predict test', () => {
@@ -12,7 +12,7 @@ describe('Predict test', () => {
   });
 
   beforeEach(() => {
-    const trainer = new SimpleTrainer();
+    const trainer = new KNNTrainer();
     trainer.predict = jest.fn(async example => {
       if (example instanceof TrashOceanObject) {
         return {predictedClassId: 1, confidenceByClassId: {0: 0, 1: 1}};
