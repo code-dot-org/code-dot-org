@@ -26,7 +26,7 @@ def parse_csv(filename)
     records[id] = record.to_h.to_json
     id += 1
   end
-  return records, table.headers
+  return records, table.headers.unshift('id')
 end
 
 def main

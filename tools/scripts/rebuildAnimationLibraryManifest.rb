@@ -26,8 +26,8 @@ require_relative './constants'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
-DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
-SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/spriteCostumeLibrary.json".freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/gamelab/animationLibrary.json".freeze
+SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
 
