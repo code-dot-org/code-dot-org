@@ -507,7 +507,7 @@ GEM
     kaminari (0.17.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
-    kgio (2.11.1)
+    kgio (2.11.3)
     launchy (2.4.3)
       addressable (~> 2.3)
     le (2.7.2)
