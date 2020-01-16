@@ -19,15 +19,15 @@ class AdminStandardsController < ApplicationController
     curriculum_builder_lessons&.each do |lesson|
       stage = code_studio_stages[lesson["title"]]
       lesson["standards"].each do |standard|
-        StageStandard.create(
-          standard_id: Standard.find_by(
+        code_studio_standard =
+          Standard.find_by(
             {
               organization: standard["framework"],
               organization_id: standard["shortcode"]
             }
-          ).id,
-          stage_id: stage.id
-        )
+          )
+        stage.standards << code_studio_standard
+        stage.save!
       end
     end
   end
