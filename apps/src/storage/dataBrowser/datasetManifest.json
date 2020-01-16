@@ -1,17 +1,17 @@
 {
   "tables": [
     {
-      "name": "Cats",
+      "name": "cats",
       "description": "Information about different cat breeds",
       "current": false
     },
     {
-      "name": "Dogs",
+      "name": "dogs",
       "description": "Information about different dog breeds",
       "current": false
     },
     {
-      "name": "States",
+      "name": "states",
       "description": "Interesting facts & statistics of the 50 states",
       "current": false
     },
@@ -21,7 +21,7 @@
       "current": true
     },
     {
-      "name": "Words",
+      "name": "words",
       "description": "Popular words and part of speech.",
       "current": false
     },
@@ -50,7 +50,7 @@
     {
       "name": "Test Data",
       "description": "datasets that are in the shared channel in dev firebase",
-      "datasets": ["Cats", "Dogs", "States", "Daily Weather", "Words"]
+      "datasets": ["cats", "dogs", "states", "Daily Weather", "words"]
     },
     {
       "name": "Spotify Charts",
@@ -65,7 +65,7 @@
     {
       "name": "Animals",
       "description": "description",
-      "datasets": ["Cats", "Dogs"]
+      "datasets": ["cats", "dogs"]
     }
   ]
 }
