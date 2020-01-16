@@ -2,7 +2,8 @@
 import {expect} from '../../../../util/reconfiguredChai';
 import {
   createMicroBitComponents,
-  cleanupMicroBitComponents
+  cleanupMicroBitComponents,
+  enableMicroBitComponents
 } from '@cdo/apps/lib/kits/maker/MicroBitComponents';
 import {MicrobitStubBoard} from './makeStubBoard';
 import five from '@code-dot-org/johnny-five';
@@ -189,6 +190,22 @@ describe('MicroBit Components', () => {
       expect(components.accelerometer.state.x).to.equal(0);
       expect(components.accelerometer.state.y).to.equal(0);
       expect(components.accelerometer.state.z).to.equal(0);
+    });
+  });
+
+  describe('enableMicroBitComponents()', () => {
+    let components;
+
+    beforeEach(() => {
+      return createMicroBitComponents(board).then(c => (components = c));
+    });
+
+    it('starts components with sensors', () => {
+      const tempSpy = sinon.spy(components.tempSensor, 'start');
+      const accelSpy = sinon.spy(components.accelerometer, 'start');
+      enableMicroBitComponents(components);
+      expect(tempSpy).to.have.been.calledOnce;
+      expect(accelSpy).to.have.been.calledOnce;
     });
   });
 });
