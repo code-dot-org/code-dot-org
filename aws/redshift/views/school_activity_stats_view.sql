@@ -97,7 +97,8 @@ csf_script_ids as
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select script_id from csf_script_ids) THEN f.student_user_id ELSE NULL END) students_csf_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csd')) THEN f.student_user_id ELSE NULL END) students_csd_l365,
          COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN f.student_user_id ELSE NULL END) students_csp_l365,      
-         COUNT(DISTINCT CASE WHEN scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro','aquatic','dance','dance-extras') THEN f.student_user_id ELSE NULL END) students_hoc,
+         COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro','aquatic','dance','dance-extras','dance-extras-2019','oceans') THEN f.student_user_id ELSE NULL END) students_hoc,
+
          -- pledge and HOC
          MAX(CASE WHEN pledged.school_id is not null then 1 end) pledged,
          MAX(CASE WHEN hoc_event.school_id is not null then 1 end) as hoc_event,
@@ -135,4 +136,3 @@ csf_script_ids as
   
 GRANT SELECT ON analysis.school_activity_stats_view TO GROUP reader;
 GRANT ALL PRIVILEGES ON analysis.school_activity_stats_view TO GROUP admin;
-
