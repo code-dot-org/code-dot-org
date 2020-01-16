@@ -7,7 +7,7 @@ import IconLibrary from './IconLibrary';
 import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 
 const extensionFilter = {
-  image: '.jpg, .jpeg, .gif, .png',
+  image: '.jpg, .jpeg, .jfif, .gif, .png',
   audio: '.mp3',
   document: '.jpg, .jpeg, .gif, .png, .pdf, .doc, .docx'
 };
