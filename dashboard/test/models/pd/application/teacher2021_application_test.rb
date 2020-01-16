@@ -526,9 +526,6 @@ module Pd::Application
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
-          bonus_points_scores: {
-            race: 2,
-          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -572,10 +569,6 @@ module Pd::Application
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
           },
-          bonus_points_scores: {
-            csp_how_offer: 2,
-            race: 2,
-          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -607,10 +600,6 @@ module Pd::Application
             replace_existing: YES,
           },
           meets_scholarship_criteria_scores: {},
-          bonus_points_scores: {
-            csp_how_offer: 2,
-            race: 2
-          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -653,9 +642,6 @@ module Pd::Application
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
           },
-          bonus_points_scores: {
-            race: 0,
-          },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -697,10 +683,6 @@ module Pd::Application
           meets_scholarship_criteria_scores: {
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-          },
-          bonus_points_scores: {
-            csp_how_offer: 0,
-            race: 0,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
