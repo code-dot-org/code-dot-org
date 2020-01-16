@@ -39,7 +39,6 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     enrollments = ::Pd::Enrollment.for_user(current_user).all.reject do |enrollment|
       enrollment.workshop&.future_or_current_teachercon_or_fit?
     end
-
     workshops = enrollments.map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
