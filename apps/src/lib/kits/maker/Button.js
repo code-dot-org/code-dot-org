@@ -24,8 +24,9 @@ PlaygroundButton.inherits(five.Button);
 export function MicroBitButton(board) {
   // There are six button events, ['', 'down', 'up', 'click', 'long-click', 'hold']
   this.buttonEvents = new Array(6).fill(0);
-  board.mb.addFirmataEventListener((sourceID, eventID) => {
-    if (board.pin === sourceID) {
+  this.board = board;
+  this.board.mb.addFirmataEventListener((sourceID, eventID) => {
+    if (this.board.pin === sourceID) {
       this.buttonEvents[eventID]++;
       if (eventID === 1) {
         this.emit('down');
