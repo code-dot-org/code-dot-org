@@ -2,7 +2,9 @@ name '4-5 Computational Thinking Multi 1'
 title 'Multiple Choice'
 banner ''
 description 'Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
-question 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+question 'Seattle is a big city.  
+Eugene is a medium city  
+Hillview is a small city.'
 #height '100'
 
 wrong 'Seattle _____ a _____ _____.'
