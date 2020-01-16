@@ -7,7 +7,6 @@ $(document).ready(function() {
       type: 'get'
     })
       .done(function(data) {
-        $('#data-spew').text(JSON.stringify(data));
         $.ajax({
           url: '/admin/standards',
           method: 'POST',
