@@ -1,5 +1,7 @@
 - show_teacher_guide ||= false
-- block_data ||= CourseBlockHelper.get_tall_course_block(id)
+-# the script family the script belongs to.
+- family_name ||= nil
+- block_data ||= CourseBlockHelper.get_tall_course_block(id, family_name)
 
 - if block_data
   .courseblock-span3.courseblock-tall
