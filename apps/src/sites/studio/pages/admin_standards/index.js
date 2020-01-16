@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $('#import-standards').click(function(e) {
     var script = $('#select option:selected').val();
-    var url = 'http://localhost:8000/metadata/' + script + '/standards.json';
+    var url =
+      'http://www.codecurricula.com/metadata/' + script + '/standards.json';
     $.ajax({
       url: url,
       type: 'get'
