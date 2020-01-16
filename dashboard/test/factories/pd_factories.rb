@@ -408,6 +408,12 @@ FactoryGirl.define do
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
+
+    trait :with_attendance do
+      after(:create) do |enrollment|
+        create_list(:pd_attendance, 1, enrollment: enrollment)
+      end
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
