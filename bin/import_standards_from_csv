@@ -3,7 +3,16 @@
 require_relative '../dashboard/config/environment'
 
 # Loads/merges the data from a CSV into the Standards table.
+# Can be used to overwrite the description and concept of
+# existing Standards and to create new Standards.
+# Will not delete existing Standards.
+
 # @param csv_path [String] The path to the CSV file.
+# Expected columns:
+# - organization
+# - organization_id,
+# - description
+# - concept
 def main(csv_path)
   CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
     parsed = {
