@@ -580,6 +580,17 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
   end
 
+  # Get all teachers who have attended all sessions of this workshop.
+  def teachers_attending_all_sessions(cdo_scholarship=false)
+    teacher_attendances = sessions.flat_map(&:attendances).flat_map(&:teacher)
+    sessions_attended_by_teacher = Hash[
+      teacher_attendances.uniq.map do |teacher|
+        [teacher, teacher_attendances.count(teacher)]
+      end
+    ]
+    sessions_attended_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
+  end
+
   def local_summer?
     subject == SUBJECT_SUMMER_WORKSHOP
   end
