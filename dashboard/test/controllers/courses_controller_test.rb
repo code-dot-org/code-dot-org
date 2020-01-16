@@ -28,7 +28,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :index, response: :success, user: :admin, queries: 12
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 13
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 11
 
   # Tests for show
 

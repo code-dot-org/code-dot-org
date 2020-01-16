@@ -580,9 +580,8 @@ class Script < ActiveRecord::Base
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    script_versions = Script.
-      where(family_name: family_name).
-      order("properties -> '$.version_year' DESC")
+    script_versions = Script.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
