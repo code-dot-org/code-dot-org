@@ -685,6 +685,13 @@ class Script < ActiveRecord::Base
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
+  def self.scripts_for_standards
+    Script.
+      where("properties -> '$.curriculum_umbrella' = 'CSF'").
+      where("properties -> '$.version_year' >= '2019'").
+      map {|script| [script.localized_title, script.name]}
+  end
+
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
