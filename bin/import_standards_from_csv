@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require_relative '../dashboard/config/environment'
+
+# Loads/merges the data from a CSV into the Standards table.
+# @param csv_path [String] The path to the CSV file.
+def main(csv_path)
+  CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
+    parsed = {
+      organization: row['organization'],
+      organization_id: row['organization_id'],
+      description: row['description'],
+      concept: row['concept']
+    }
+    loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
+    if loaded.nil?
+      begin
+        Standard.new(parsed).save!
+      rescue => error
+        puts "Error when processing #{parsed[:organization]} #{parsed[:organization_id]}: #{error.message}"
+      end
+    else
+      loaded.assign_attributes(parsed)
+      loaded.update!(parsed) if loaded.changed?
+    end
+  end
+end
+
+main(ARGV[0])
