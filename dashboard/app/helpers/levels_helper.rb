@@ -1,5 +1,4 @@
 require 'cdo/script_config'
-require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -673,8 +672,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline)
-    @@markdown_renderer.render(text).html_safe
+    text
   end
 
   def level_title
