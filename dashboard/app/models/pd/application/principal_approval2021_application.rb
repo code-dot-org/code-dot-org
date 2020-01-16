@@ -38,6 +38,11 @@ module Pd::Application
   class PrincipalApproval2021Application < PrincipalApprovalApplicationBase
     include Pd::PrincipalApproval2021ApplicationConstants
 
+    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher2021Application',
+               primary_key: :application_guid, foreign_key: :application_guid
+
+    validates_presence_of :teacher_application
+
     # @override
     def year
       self.class.year
@@ -46,10 +51,6 @@ module Pd::Application
     def self.year
       YEAR_20_21
     end
-
-    validates_presence_of :teacher_application
-    belongs_to :teacher_application, class_name: 'Pd::Application::Teacher2021Application',
-      primary_key: :application_guid, foreign_key: :application_guid
 
     def self.create_placeholder_and_send_mail(teacher_application)
       teacher_application.queue_email :principal_approval, deliver_now: true
