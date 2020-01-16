@@ -24,7 +24,8 @@ module ContentfulHelper
 
   def contentful_script(script_name, preview: false)
     client = preview ? contentful_preview_client : contentful_client
-    client.entries(content_type: 'script', 'fields.name' => script_name).first
+    locale = request&.locale == 'it-IT' ? 'it-IT' : 'en-US'
+    client.entries(content_type: 'script', 'fields.name' => script_name, locale: locale).first
   end
 
   def contentful_stage_dsl(script)
