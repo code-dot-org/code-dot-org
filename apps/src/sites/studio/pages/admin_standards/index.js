@@ -1,10 +1,7 @@
 $(document).ready(function() {
   $('#import-standards').click(function(e) {
-    var courseCode = $('#select option:selected').val();
-    var url =
-      'http://curriculumbuilder.herokuapp.com/metadata/' +
-      courseCode +
-      '/standards.json';
+    var script = $('#select option:selected').val();
+    var url = 'http://localhost:8000/metadata/' + script + '/standards.json';
     $.ajax({
       url: url,
       type: 'get'
