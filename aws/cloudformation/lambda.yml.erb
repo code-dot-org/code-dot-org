@@ -123,7 +123,7 @@ Resources:
         Variables:
           SLACK_ENDPOINT: !Ref SlackEndpoint
       Handler: slackCloudWatchEvent.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs10.x
       Timeout: 30
       Role: !GetAtt BasicLambdaRole.Arn
   BasicLambdaRole:
@@ -171,47 +171,19 @@ Resources:
                 - 's3:PutObjectAcl'
                 - 'S3:DeleteObject'
               Resource: !Sub "arn:aws:s3:::*"
-  GlueConfiguration:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: Adjusts Glue Configuration property.
-      FunctionName: GlueConfiguration
-      Handler: index.handler
-      Role: !GetAtt GlueConfigurationRole.Arn
-      Code:
-        ZipFile: <%=js 'glueConfiguration.js'%>
-      Timeout: 30
-      Runtime: nodejs6.10
-  GlueConfigurationRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Principal: {Service: [lambda.amazonaws.com]}
-          Action: ['sts:AssumeRole']
-      Path: /
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-      Policies:
-      - PolicyName: GluePolicy
-        PolicyDocument:
-          Version: '2012-10-17'
-          Statement:
-            - Effect: Allow
-              Action:
-                - 'glue:UpdateCrawler'
-              Resource: '*'
   S3PartitionCloudFrontLog:
     Type: AWS::Lambda::Function
     Properties:
       Description: 'Partition CloudFront Access Log stored on S3.'
       FunctionName: S3PartitionCloudFrontLog
+      Environment:
+        Variables:
+          ATHENA_DB: elb_logs
+          ATHENA_TABLE: cloudfront_logs
       Code:
         ZipFile: <%=js 's3PartitionCloudFrontLog.js'%>
       Handler: index.handler
-      Runtime: nodejs6.10
+      Runtime: nodejs12.x
       Timeout: 30
       Role: !GetAtt S3LogsRole.Arn
   S3LogsRole:
@@ -238,6 +210,11 @@ Resources:
             - 's3:PutObjectAcl'
             - 's3:DeleteObject'
             Resource: "arn:aws:s3:::cdo-logs/*"
+          - Effect: Allow
+            Action:
+            - "glue:CreatePartition"
+            - "glue:GetPartition"
+            Resource: '*'
   S3BucketConfiguration:
     Type: AWS::Lambda::Function
     Properties:
