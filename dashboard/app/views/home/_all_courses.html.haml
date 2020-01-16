@@ -1,6 +1,4 @@
 :ruby
-  # The student/teacher requesting page.
-  user ||= nil
   # The locale the user has set in the browser e.g. en-US.
   locale ||= nil
   show_state = Gatekeeper.allows('logged_in_studio_homepage', default: true)
@@ -57,19 +55,17 @@
 
   -# Creates a block for the recommended course version in the given course family.
   - family_tall_blocks.each do |family_name|
-    - script = Script.get_script_family_redirect_for_user(family_name, user: user, locale: locale)
+    - script = Script.latest_stable_version(family_name, locale: locale)
     - next unless script
-    - script_name = script.properties['redirect_to']
     %div{id: family_name}
-      = render partial: 'shared/course_tall_block', locals: { id: script_name, family_name: family_name}
+      = render partial: 'shared/course_tall_block', locals: { id: script.name, family_name: family_name}
 
   -# Creates a block for the recommended course version in the given course family.
   - family_wide_blocks.each do |family_name|
-    - script = Script.get_script_family_redirect_for_user(family_name, user: user, locale: locale)
+    - script = Script.latest_stable_version(family_name, locale: locale)
     - next unless script
-    - script_name = script.properties['redirect_to']
     %div{id: family_name}
-      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
+      = render partial: 'shared/course_wide_block', locals: { id: script.name, view: "small" }
 
 .csf-courses-header
   .row
