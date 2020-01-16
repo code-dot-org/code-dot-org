@@ -10,10 +10,12 @@ require_relative '../dashboard/config/environment'
 # @param csv_path [String] The path to the CSV file.
 # Expected columns:
 # - organization
-# - organization_id,
+# - organization_id
 # - description
 # - concept
 def main(csv_path)
+  created = 0
+  updated = 0
   CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
     parsed = {
       organization: row['organization'],
@@ -24,15 +26,22 @@ def main(csv_path)
     loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
     if loaded.nil?
       begin
-        Standard.new(parsed).save!
+        if Standard.new(parsed).save!
+          created += 1
+        end
       rescue => error
         puts "Error when processing #{parsed[:organization]} #{parsed[:organization_id]}: #{error.message}"
       end
     else
       loaded.assign_attributes(parsed)
-      loaded.update!(parsed) if loaded.changed?
+      if loaded.changed?
+        if loaded.update!(parsed)
+          updated += 1
+        end
+      end
     end
   end
+  puts "Created #{created} standards, updated #{updated}"
 end
 
 main(ARGV[0])
