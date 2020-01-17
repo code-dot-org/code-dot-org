@@ -14,10 +14,39 @@ import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 /**
  * Run the set of interface conformance tests on the provided class.
  * @param {function} BoardClass
- * @param {function} boardSpecificSetup
+ * @param {function} boardType
+ * @param {function} boardSpecificSetup optional
  */
+
+const CP_CONSTRUCTOR_COUNT = 13;
+const CP_COMPONENT_COUNT = 16;
+const MB_CONSTRUCTOR_COUNT = 4;
+const MB_COMPONENT_COUNT = 6;
+const CP_COMPONENTS = [
+  'Led',
+  'Board',
+  'NeoPixel',
+  'PlaygroundButton',
+  'Switch',
+  'Piezo',
+  'Sensor',
+  'Thermometer',
+  'Pin',
+  'Accelerometer',
+  'Animation',
+  'Servo',
+  'TouchSensor'
+];
+const MB_COMPONENTS = [
+  'LedMatrix',
+  'MicroBitButton',
+  'Accelerometer',
+  'MicroBitThermometer'
+];
+
 export function itImplementsTheMakerBoardInterface(
   BoardClass,
+  boardType,
   boardSpecificSetup = null
 ) {
   describe('implements the MakerBoard interface', () => {
@@ -74,8 +103,6 @@ export function itImplementsTheMakerBoardInterface(
      * @param {JSInterpreter} jsInterpreter
      */
     describe('installOnInterpreter(codegen, jsInterpreter)', () => {
-      const CONSTRUCTOR_COUNT = 13;
-      const COMPONENT_COUNT = 16;
       let jsInterpreter;
 
       beforeEach(() => {
@@ -100,25 +127,20 @@ export function itImplementsTheMakerBoardInterface(
           board.installOnInterpreter(jsInterpreter);
         });
 
-        it(`${CONSTRUCTOR_COUNT} of them`, () => {
-          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(13);
+        it(`correct number of them`, () => {
+          let constructorCount =
+            boardType === 'microbit'
+              ? MB_CONSTRUCTOR_COUNT
+              : CP_CONSTRUCTOR_COUNT;
+          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+            constructorCount
+          );
         });
 
-        [
-          'Led',
-          'Board',
-          'NeoPixel',
-          'PlaygroundButton',
-          'Switch',
-          'Piezo',
-          'Sensor',
-          'Thermometer',
-          'Pin',
-          'Accelerometer',
-          'Animation',
-          'Servo',
-          'TouchSensor'
-        ].forEach(constructor => {
+        let components =
+          boardType === 'microbit' ? MB_COMPONENTS : CP_COMPONENTS;
+
+        components.forEach(constructor => {
           it(constructor, () => {
             expect(jsInterpreter.globalProperties).to.have.ownProperty(
               constructor
@@ -141,9 +163,13 @@ export function itImplementsTheMakerBoardInterface(
           board.installOnInterpreter(jsInterpreter);
         });
 
-        it(`${COMPONENT_COUNT} of them`, () => {
+        it(`correct number of them`, () => {
+          let globalPropsCount =
+            boardType === 'microbit'
+              ? MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT
+              : CP_CONSTRUCTOR_COUNT + CP_COMPONENT_COUNT;
           expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
-            CONSTRUCTOR_COUNT + COMPONENT_COUNT
+            globalPropsCount
           );
         });
 
