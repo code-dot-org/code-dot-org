@@ -4,8 +4,10 @@ import annotationList from '@cdo/apps/acemode/annotationList';
 
 /**
  * Gathers all known metadata about a user-created library and passes that data
- * into the given callbacks. This metadata is gathered from the code in the
- * library's source project.
+ * into the given callbacks. This metadata is gathered from 2 places.
+ * 1. The code in the library's source project
+ * 2. The most recently published version of the library (if it exists)
+ * @param {object} clientApi the API used to perform S3 actions for libraries
  * @param {function} onCodeError the callback used when there is a bug detected
  *                   in the library's code.
  * @param {function} onMissingFunctions the callback used when no functions are
@@ -14,7 +16,12 @@ import annotationList from '@cdo/apps/acemode/annotationList';
  *                   successfully loaded. All details about the library are
  *                   passed to this callback.
  */
-export default function load(clientApi, onCodeError, onMissingFunctions, onSuccess) {
+export async function load(
+  clientApi,
+  onCodeError,
+  onMissingFunctions,
+  onSuccess
+) {
   var error = annotationList.getJSLintAnnotations().find(annotation => {
     return annotation.type === 'error';
   });
@@ -27,6 +34,7 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
   let projectName = dashboard.project.getLevelName();
   let sourceAndHtml, publishedLibrary;
 
+  // Get library metadata from the source project
   let getSource = new Promise((resolve, reject) => {
     dashboard.project.getUpdatedSourceAndHtml_(response => {
       sourceAndHtml = response;
@@ -34,6 +42,7 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
     });
   });
 
+  // Get library metadata from the previously published version of the library
   let getLibrary = new Promise((resolve, reject) => {
     clientApi.fetchLatest(
       data => {
@@ -46,7 +55,8 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
     );
   });
 
-  Promise.all([getSource, getLibrary]).then(() => {
+  // Merge the two streams of metadata.
+  await Promise.all([getSource, getLibrary]).then(() => {
     let functionsList = libraryParser.getFunctions(sourceAndHtml.source);
     if (!functionsList || functionsList.length === 0) {
       onMissingFunctions();
@@ -89,3 +99,7 @@ export default function load(clientApi, onCodeError, onMissingFunctions, onSucce
     });
   });
 }
+
+export default {
+  load
+};
