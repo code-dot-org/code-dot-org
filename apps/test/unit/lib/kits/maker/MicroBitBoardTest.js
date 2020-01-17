@@ -29,4 +29,16 @@ describe('MicroBitBoard', () => {
       });
     });
   });
+
+  describe(`boardConnected()`, () => {
+    it('returns false at first', () => {
+      expect(board.boardConnected()).to.be.false;
+    });
+
+    it('returns true after connecting', () => {
+      return board.connect().then(() => {
+        expect(board.boardConnected()).to.be.true;
+      });
+    });
+  });
 });
