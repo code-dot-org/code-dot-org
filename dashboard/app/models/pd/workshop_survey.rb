@@ -31,6 +31,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   NO = 'No'.freeze
 
   belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
+
   validates_presence_of :pd_enrollment
 
   def self.required_fields
