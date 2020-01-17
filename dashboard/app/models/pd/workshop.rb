@@ -582,13 +582,30 @@ class Pd::Workshop < ActiveRecord::Base
 
   # Get all teachers who have attended all sessions of this workshop.
   def teachers_attending_all_sessions(cdo_scholarship=false)
-    teacher_attendances = sessions.flat_map(&:attendances).flat_map(&:teacher)
-    sessions_attended_by_teacher = Hash[
-      teacher_attendances.uniq.map do |teacher|
-        [teacher, teacher_attendances.count(teacher)]
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+
+    # Filter attendances to only scholarship teachers
+    if cdo_scholarship
+      teachers_attending.select! do |teacher|
+        Pd::ScholarshipInfo.exists?(
+          {
+            user: teacher,
+            application_year: school_year,
+            course: course
+          }
+        )
+      end
+    end
+
+    # Get number of sessions attended by teacher
+    attendance_count_by_teacher = Hash[
+      teachers_attending.uniq.map do |teacher|
+        [teacher, teachers_attending.count(teacher)]
       end
     ]
-    sessions_attended_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
+
+    # Return only teachers who attended all sessions
+    attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
   def local_summer?
