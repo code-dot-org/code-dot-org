@@ -1,6 +1,7 @@
 import {expect} from '../../../../util/deprecatedChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
+import sinon from 'sinon';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -30,6 +31,19 @@ describe('MicroBitBoard', () => {
     });
   });
 
+  describe(`enableComponents())`, () => {
+    it('triggers a component start call if there are prewired components', () => {
+      return board.connect().then(() => {
+        let accelerometerSpy = sinon.spy(
+          board.prewiredComponents_.accelerometer,
+          'start'
+        );
+        board.enableComponents();
+        expect(accelerometerSpy).to.have.been.calledOnce;
+      });
+    });
+  });
+
   describe(`boardConnected()`, () => {
     it('returns false at first', () => {
       expect(board.boardConnected()).to.be.false;
@@ -38,6 +52,19 @@ describe('MicroBitBoard', () => {
     it('returns true after connecting', () => {
       return board.connect().then(() => {
         expect(board.boardConnected()).to.be.true;
+      });
+    });
+  });
+
+  describe(`reset()`, () => {
+    it('triggers a component cleanup', () => {
+      return board.connect().then(() => {
+        let ledMatrixSpy = sinon.spy(
+          board.prewiredComponents_.ledMatrix,
+          'allOff'
+        );
+        board.reset();
+        expect(ledMatrixSpy).to.have.been.calledOnce;
       });
     });
   });
