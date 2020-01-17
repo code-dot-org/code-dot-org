@@ -1,5 +1,4 @@
 name 'csp_U3_turtle_subgoal_q1_mc_2018_2019'
-editor_experiment ''
 wrong 'https://images.code.org/19fa1f31f881c194db391e20de5af54a-image-1506461545611.png,175'
 right 'https://images.code.org/0ac2007de60525613a731c7be7264de3-image-1508867676544.png,175'
 wrong 'https://images.code.org/24f044f9687625036b86caea6a8e91ec-image-1506461585574.png,200'

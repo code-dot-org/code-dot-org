@@ -1666,6 +1666,9 @@ class Script < ActiveRecord::Base
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
+    # a platformization partner should be able to view pilot scripts which they
+    # own, even if they are not in the pilot experiment.
+    return true if has_editor_experiment?(user)
 
     # A user without the experiment has pilot script access if
     # (1) they have been assigned to or have progress in the pilot script, and
@@ -1686,6 +1689,13 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+  end
+
+  # If a user is in the editor experiment of this script, that indicates that
+  # they are a platformization partner who owns this script.
+  def has_editor_experiment?(user)
+    return false unless editor_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
   end
 
   def self.get_version_year_options
