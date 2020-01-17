@@ -5,6 +5,16 @@ exit unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 require 'cdo/google_drive'
 
+# Squash an unhelpful warning that's causing a Honeybadger error
+# see https://github.com/nahi/httpclient/issues/252#issuecomment-302427338
+class WebAgent
+  class Cookie < HTTP::Cookie
+    def domain
+      original_domain
+    end
+  end
+end
+
 #
 # Uses a Google Cloud service account to write teacher application data for this year into
 # a spreadsheet in Google Drive (with permissions locked down to our organization) for exploration
