@@ -93,6 +93,34 @@ describe('LibraryPublisher', () => {
       expect(checkboxes.first().prop('disabled')).to.be.false;
       expect(checkboxes.last().prop('disabled')).to.be.true;
     });
+
+    it('checks checkboxes of selected functions', () => {
+      libraryDetails.sourceFunctionList.push({
+        functionName: 'bar',
+        comment: 'comment'
+      });
+      libraryDetails.sourceFunctionList.push({
+        functionName: 'baz',
+        comment: ''
+      });
+      libraryDetails.selectedFunctions = {bar: true, baz: true};
+      let wrapper = shallow(
+        <LibraryPublisher
+          onPublishSuccess={onPublishSuccess}
+          onUnpublishSuccess={onUnpublishSuccess}
+          libraryDetails={libraryDetails}
+          clientApi={clientApi}
+        />
+      );
+
+      let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
+      expect(checkboxes.at(0).prop('disabled')).to.be.false;
+      expect(checkboxes.at(1).prop('disabled')).to.be.false;
+      expect(checkboxes.at(2).prop('disabled')).to.be.true;
+      expect(checkboxes.at(0).prop('checked')).to.be.false;
+      expect(checkboxes.at(1).prop('checked')).to.be.true;
+      expect(checkboxes.at(2).prop('checked')).to.be.false;
+    });
   });
 
   describe('publish', () => {
@@ -216,5 +244,43 @@ describe('LibraryPublisher', () => {
     );
 
     libraryParser.createLibraryJson.restore();
+  });
+
+  describe('unpublish', () => {
+    let wrapper, deleteSpy;
+    beforeEach(() => {
+      deleteSpy = sinon.stub(clientApi, 'delete');
+      libraryDetails.alreadyPublished = true;
+      wrapper = shallow(
+        <LibraryPublisher
+          onPublishSuccess={onPublishSuccess}
+          onUnpublishSuccess={onUnpublishSuccess}
+          libraryDetails={libraryDetails}
+          clientApi={clientApi}
+        />
+      );
+    });
+
+    afterEach(() => {
+      clientApi.delete.restore();
+    });
+
+    it('calls onUnpublishSuccess when it succeeds', () => {
+      deleteSpy.callsArg(0);
+      wrapper.instance().unpublish();
+      expect(onUnpublishSuccess.called).to.be.true;
+    });
+
+    it('sets ERROR_UNPUBLISH when it fails', () => {
+      sinon.stub(console, 'warn');
+      deleteSpy.callsArg(1);
+      wrapper.instance().unpublish();
+      wrapper.update();
+      expect(wrapper.state().publishState).to.equal(
+        PublishState.ERROR_UNPUBLISH
+      );
+      expect(onUnpublishSuccess.called).to.be.false;
+      console.warn.restore();
+    });
   });
 });
