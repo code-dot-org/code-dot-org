@@ -173,99 +173,138 @@ export function itImplementsTheMakerBoardInterface(
           );
         });
 
-        describe('led', () => {
-          function expectLedToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
-              'function'
-            );
-          }
+        if (boardType === 'circuit playground') {
+          describe('led', () => {
+            function expectLedToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
+                'function'
+              );
+            }
 
-          // Set of required functions derived from our dropletConfig
-          ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
-            it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-          });
-        });
-
-        describe('colorLeds[]', () => {
-          function expectEachColorLedToHaveFunction(fnName) {
-            jsInterpreter.globalProperties.colorLeds.forEach(led => {
-              expect(led[fnName]).to.be.a('function');
-            });
-          }
-
-          it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
-            expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
-              .be.true;
-            expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
-              N_COLOR_LEDS
-            );
-          });
-
-          // Set of required functions derived from our dropletConfig
-          [
-            'on',
-            'off',
-            'toggle',
-            'blink',
-            'stop',
-            'intensity',
-            'color'
-          ].forEach(fnName => {
-            it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
-          });
-        });
-
-        describe('buzzer', () => {
-          function expectBuzzerToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
-              'function'
-            );
-          }
-
-          // Set of required functions derived from our dropletConfig
-          ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
-            it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
-          });
-        });
-
-        describe('toggleSwitch', () => {
-          it('isOpen', () => {
-            expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a(
-              'boolean'
-            );
-          });
-        });
-
-        ['soundSensor', 'lightSensor'].forEach(sensorName => {
-          describe(sensorName, () => {
-            let component;
-
-            beforeEach(() => {
-              component = jsInterpreter.globalProperties[sensorName];
-            });
-
-            it('start()', () => {
-              expect(component.start).to.be.a('function');
-            });
-
-            it('value', () => {
-              expect(component).to.have.property('value');
-            });
-
-            it('getAveragedValue()', () => {
-              expect(component.getAveragedValue).to.be.a('function');
-              expect(component.getAveragedValue()).to.be.a('number');
-            });
-
-            it('setScale()', () => {
-              expect(component.setScale).to.be.a('function');
-            });
-
-            it('threshold', () => {
-              expect(component.threshold).to.be.a('number');
+            // Set of required functions derived from our dropletConfig
+            ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
+              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
             });
           });
-        });
+
+          describe('colorLeds[]', () => {
+            function expectEachColorLedToHaveFunction(fnName) {
+              jsInterpreter.globalProperties.colorLeds.forEach(led => {
+                expect(led[fnName]).to.be.a('function');
+              });
+            }
+
+            it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
+              expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
+                .be.true;
+              expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
+                N_COLOR_LEDS
+              );
+            });
+
+            // Set of required functions derived from our dropletConfig
+            [
+              'on',
+              'off',
+              'toggle',
+              'blink',
+              'stop',
+              'intensity',
+              'color'
+            ].forEach(fnName => {
+              it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
+            });
+          });
+
+          describe('buzzer', () => {
+            function expectBuzzerToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
+                'function'
+              );
+            }
+
+            // Set of required functions derived from our dropletConfig
+            ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
+              it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
+            });
+          });
+
+          describe('toggleSwitch', () => {
+            it('isOpen', () => {
+              expect(
+                jsInterpreter.globalProperties.toggleSwitch.isOpen
+              ).to.be.a('boolean');
+            });
+          });
+
+          ['soundSensor', 'lightSensor'].forEach(sensorName => {
+            describe(sensorName, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[sensorName];
+              });
+
+              it('start()', () => {
+                expect(component.start).to.be.a('function');
+              });
+
+              it('value', () => {
+                expect(component).to.have.property('value');
+              });
+
+              it('getAveragedValue()', () => {
+                expect(component.getAveragedValue).to.be.a('function');
+                expect(component.getAveragedValue()).to.be.a('number');
+              });
+
+              it('setScale()', () => {
+                expect(component.setScale).to.be.a('function');
+              });
+
+              it('threshold', () => {
+                expect(component.threshold).to.be.a('number');
+              });
+            });
+          });
+
+          ['buttonL', 'buttonR'].forEach(button => {
+            describe(button, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[button];
+              });
+
+              it('isPressed', () =>
+                expect(component.isPressed).to.be.a('boolean'));
+              it('holdtime', () =>
+                expect(component.holdtime).to.be.a('number'));
+            });
+          });
+
+          describe('Constants', () => {
+            it('INPUT', () => {
+              expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
+            });
+
+            it('OUTPUT', () => {
+              expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
+            });
+
+            it('ANALOG', () => {
+              expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
+            });
+
+            it('PWM', () => {
+              expect(jsInterpreter.globalProperties.PWM).to.equal(3);
+            });
+
+            it('SERVO', () => {
+              expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
+            });
+          });
+        }
 
         describe('tempSensor', () => {
           let component;
@@ -297,45 +336,9 @@ export function itImplementsTheMakerBoardInterface(
             expect(component.getAcceleration).to.be.a('function'));
         });
 
-        ['buttonL', 'buttonR'].forEach(button => {
-          describe(button, () => {
-            let component;
-
-            beforeEach(() => {
-              component = jsInterpreter.globalProperties[button];
-            });
-
-            it('isPressed', () =>
-              expect(component.isPressed).to.be.a('boolean'));
-            it('holdtime', () => expect(component.holdtime).to.be.a('number'));
-          });
-        });
-
         describe('board', () => {
           it('exists', () => {
             expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
-          });
-        });
-
-        describe('Constants', () => {
-          it('INPUT', () => {
-            expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
-          });
-
-          it('OUTPUT', () => {
-            expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
-          });
-
-          it('ANALOG', () => {
-            expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
-          });
-
-          it('PWM', () => {
-            expect(jsInterpreter.globalProperties.PWM).to.equal(3);
-          });
-
-          it('SERVO', () => {
-            expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
           });
         });
       });
