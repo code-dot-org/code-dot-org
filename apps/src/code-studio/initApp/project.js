@@ -1527,13 +1527,17 @@ var projects = (module.exports = {
           } else {
             this.fetchSource(
               data,
-              () => {
-                if (current.isOwner && pathInfo.action === 'view') {
-                  isEditing = true;
+              err => {
+                if (err) {
+                  deferred.reject();
+                } else {
+                  if (current.isOwner && pathInfo.action === 'view') {
+                    isEditing = true;
+                  }
+                  fetchAbuseScoreAndPrivacyViolations(this, function() {
+                    deferred.resolve();
+                  });
                 }
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  deferred.resolve();
-                });
               },
               queryParams('version'),
               sourcesApi
@@ -1552,11 +1556,15 @@ var projects = (module.exports = {
         } else {
           this.fetchSource(
             data,
-            () => {
-              projects.showHeaderForProjectBacked();
-              fetchAbuseScoreAndPrivacyViolations(this, function() {
-                deferred.resolve();
-              });
+            err => {
+              if (err) {
+                deferred.reject();
+              } else {
+                projects.showHeaderForProjectBacked();
+                fetchAbuseScoreAndPrivacyViolations(this, function() {
+                  deferred.resolve();
+                });
+              }
             },
             queryParams('version'),
             sourcesApi
@@ -1684,12 +1692,9 @@ var projects = (module.exports = {
             null,
             `unable to fetch project source file: ${err}`
           );
-          console.warn();
-          data = {
-            source: '',
-            html: '',
-            animations: ''
-          };
+          console.warn(err);
+          callback(err);
+          return;
         }
         currentSourceVersionId =
           jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
