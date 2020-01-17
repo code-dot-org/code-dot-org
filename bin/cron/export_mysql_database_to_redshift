@@ -3,6 +3,7 @@ require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
+exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
 
 require 'aws-sdk-databasemigrationservice'
 require 'cdo/chat_client'
@@ -55,8 +56,9 @@ def execute_replication_task(replication_task_arn, current_task_status)
 
   # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
   task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
+  CDO.log.info task_status
 
-  ChatClient.message 'cron-daily', "DMS Task Completed: #{replication_task_arn} - #{task_status}"
+  ChatClient.message 'cron-daily', "DMS Task Completed Successfully: #{replication_task_arn}"
 rescue StandardError => error
   ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
   raise error
