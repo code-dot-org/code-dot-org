@@ -173,6 +173,7 @@ export function itImplementsTheMakerBoardInterface(
           );
         });
 
+        // Board-specific tests
         if (boardType === 'circuit playground') {
           describe('led', () => {
             function expectLedToHaveFunction(fnName) {
@@ -302,6 +303,42 @@ export function itImplementsTheMakerBoardInterface(
 
             it('SERVO', () => {
               expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
+            });
+          });
+        }
+
+        // Board-specific tests
+        if (boardType === 'microbit') {
+          ['buttonA', 'buttonB'].forEach(button => {
+            describe(button, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[button];
+              });
+
+              it('isPressed', () =>
+                expect(component.isPressed).to.be.a('boolean'));
+            });
+          });
+
+          describe('ledMatrix', () => {
+            function expectLedToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.ledMatrix[fnName]).to.be.a(
+                'function'
+              );
+            }
+
+            // Set of required functions derived from our dropletConfig
+            [
+              'on',
+              'off',
+              'toggle',
+              'allOff',
+              'scrollString',
+              'scrollInteger'
+            ].forEach(fnName => {
+              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
             });
           });
         }
