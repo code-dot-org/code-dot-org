@@ -13,10 +13,14 @@ $(document).ready(function() {
           method: 'POST',
           contentType: 'application/json',
           data: JSON.stringify(data)
+        }).done(function(data) {
+          $('#alert-message').text(data.message);
         });
       })
       .fail(function() {
-        alert('Whoops! There was a problem with the import.');
+        alert(
+          'Uh oh! There was a problem importing standards from curriculum builder.'
+        );
       });
   });
 });
