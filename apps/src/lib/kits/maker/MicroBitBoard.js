@@ -94,7 +94,9 @@ export default class MicroBitBoard extends EventEmitter {
   /**
    * Disconnect and clean up the board controller and all components.
    */
-  destroy() {}
+  destroy() {
+    return Promise.resolve();
+  }
 
   /**
    * Marshals the board component controllers and appropriate constants into the
