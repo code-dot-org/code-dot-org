@@ -7,10 +7,10 @@ class AdminStandardsController < ApplicationController
   end
 
   def import_standards
-    @script = Script.find_by_name(params["stage_name"])
+    script = Script.find_by_name(params["stage_name"])
 
     code_studio_stages = {}
-    @script&.stages&.each do |stage|
+    script&.stages&.each do |stage|
       code_studio_stages[stage.localized_name] = stage
     end
 
@@ -47,7 +47,7 @@ class AdminStandardsController < ApplicationController
     if !missing_standards.empty? || !missing_stages.empty?
       render json: {status: 'failure', message: "Couldn't find standards: #{missing_standards}. Couldn't find stages: #{missing_stages}"}
     else
-      render json: {status: 'success', message: "Hooray! It worked."}
+      render json: {status: 'success', message: "Hooray! Importing standards associations for #{script&.name} worked."}
     end
   end
 end
