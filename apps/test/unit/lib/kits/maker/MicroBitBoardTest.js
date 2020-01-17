@@ -34,6 +34,8 @@ describe('MicroBitBoard', () => {
   describe(`enableComponents())`, () => {
     it('triggers a component start call if there are prewired components', () => {
       return board.connect().then(() => {
+        // Spy on the accelerometer to see if enableComponents called
+        // enableMicroBitComponents which then starts the accelerometer.
         let accelerometerSpy = sinon.spy(
           board.prewiredComponents_.accelerometer,
           'start'
