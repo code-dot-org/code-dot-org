@@ -162,11 +162,11 @@ exports.install = function(blockly, blockInstallOptions) {
       this,
       'DO'
     );
-    var blockType = this.getTitleValue('TYPE');
+    var blockType = blockly.JavaScript.quote_(this.getTitleValue('TYPE'));
     return (
-      'ifBlockAhead("' +
+      'ifBlockAhead(' +
       blockType +
-      '", function() {\n' +
+      ', function() {\n' +
       innerCode +
       "}, 'block_id_" +
       this.id +
@@ -218,8 +218,8 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_placeBlock = function() {
-    var blockType = this.getTitleValue('TYPE');
-    return 'placeBlock("' + blockType + '", \'block_id_' + this.id + "');\n";
+    var blockType = blockly.JavaScript.quote_(this.getTitleValue('TYPE'));
+    return 'placeBlock(' + blockType + ", 'block_id_" + this.id + "');\n";
   };
 
   blockly.Blocks.craft_placeTorch = {
@@ -284,9 +284,7 @@ exports.install = function(blockly, blockInstallOptions) {
   };
 
   blockly.Generator.get('JavaScript').craft_placeBlockAhead = function() {
-    var blockType = this.getTitleValue('TYPE');
-    return (
-      'placeBlockAhead("' + blockType + '", \'block_id_' + this.id + "');\n"
-    );
+    var blockType = blockly.JavaScript.quote_(this.getTitleValue('TYPE'));
+    return 'placeBlockAhead(' + blockType + ", 'block_id_" + this.id + "');\n";
   };
 };
