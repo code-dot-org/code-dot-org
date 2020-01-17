@@ -14,13 +14,21 @@ import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 /**
  * Run the set of interface conformance tests on the provided class.
  * @param {function} BoardClass
+ * @param {function} boardSpecificSetup
  */
-export function itImplementsTheMakerBoardInterface(BoardClass) {
+export function itImplementsTheMakerBoardInterface(
+  BoardClass,
+  boardSpecificSetup = null
+) {
   describe('implements the MakerBoard interface', () => {
     let board;
 
     beforeEach(() => {
       board = new BoardClass();
+      // Opportunity to stub any needed to test a board
+      if (boardSpecificSetup) {
+        boardSpecificSetup(board);
+      }
     });
 
     it('is an EventEmitter', () => {
