@@ -591,7 +591,7 @@ class Pd::Workshop < ActiveRecord::Base
           {
             user: teacher,
             application_year: school_year,
-            course: course
+            course: course_key
           }
         )
       end
