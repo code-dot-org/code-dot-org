@@ -18,4 +18,16 @@ class RedshiftClient
   def exec(sql_query)
     @conn.exec(sql_query)
   end
+
+  def truncate_table(schema, table)
+    @conn.exec "TRUNCATE #{schema}.#{table}"
+  end
+
+  def drop_table(schema, table)
+    @conn.exec "DROP TABLE IF EXISTS #{schema}.#{table}"
+  end
+
+  def move_rows(source_schema, source_table, target_schema, target_table)
+    @conn.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table}"
+  end
 end
