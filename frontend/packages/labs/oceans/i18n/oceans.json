@@ -64,6 +64,7 @@
     "mostImportantParts": "These were the most important fish parts:",
     "clickIndividualFish": "Click individual fish to see their information.",
     "mostImportantPartsInDetermining": "These were the most important fish parts in determining whether this fish was",
+    "mostImportantPartsInDeterminingFullSentence": "These were the most important fish parts in determining whether this fish was “*{word}*“ or “**{notWord}**“.",
     "or": "or",
     "newWord": "New Word",
     "finish": "Finish",

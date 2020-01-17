@@ -1,0 +1,15 @@
+#pondTextMarkdown p {
+  margin: 0
+}
+
+#pondTextMarkdown strong {
+  color: #eb5757;
+  font-weight: normal;
+}
+
+#pondTextMarkdown em {
+  color: #56c568;
+  font-style: normal;
+}
+
+
