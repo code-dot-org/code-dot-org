@@ -1760,6 +1760,42 @@ endvariants
     assert Script.has_any_pilot_access?(levelbuilder)
   end
 
+  test 'platformization partner has pilot access' do
+    script = create :script
+    partner_pilot_script = create :script, pilot_experiment: 'my-experiment', editor_experiment: 'ed-experiment'
+
+    student = create :student
+    teacher = create :teacher
+    partner = create :teacher, editor_experiment: 'ed-experiment'
+
+    refute script.has_pilot_access?
+    refute script.has_pilot_access?(student)
+    refute script.has_pilot_access?(teacher)
+    refute script.has_pilot_access?(partner)
+
+    refute partner_pilot_script.has_pilot_access?
+    refute partner_pilot_script.has_pilot_access?(student)
+    refute partner_pilot_script.has_pilot_access?(teacher)
+    assert partner_pilot_script.has_pilot_access?(partner)
+  end
+
+  test 'platformization partner has editor experiment' do
+    script = create :script
+    partner_script = create :script, editor_experiment: 'ed-experiment'
+
+    student = create :student
+    teacher = create :teacher
+    partner = create :teacher, editor_experiment: 'ed-experiment'
+
+    refute script.has_editor_experiment?(student)
+    refute script.has_editor_experiment?(teacher)
+    refute script.has_editor_experiment?(partner)
+
+    refute partner_script.has_editor_experiment?(student)
+    refute partner_script.has_editor_experiment?(teacher)
+    assert partner_script.has_editor_experiment?(partner)
+  end
+
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
       [@csf_script.name],
