@@ -580,9 +580,8 @@ class Script < ActiveRecord::Base
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    script_versions = Script.
-      where(family_name: family_name).
-      order("properties -> '$.version_year' DESC")
+    script_versions = Script.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -683,6 +682,13 @@ class Script < ActiveRecord::Base
 
   def self.script_names_by_curriculum_umbrella(curriculum_umbrella)
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
+  end
+
+  def self.scripts_for_standards
+    Script.
+      where("properties -> '$.curriculum_umbrella' = 'CSF'").
+      where("properties -> '$.version_year' >= '2019'").
+      map {|script| [script.localized_title, script.name]}
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1477,6 +1483,8 @@ class Script < ActiveRecord::Base
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    @@script_family_cache = nil
+    @@level_cache = nil
     Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
