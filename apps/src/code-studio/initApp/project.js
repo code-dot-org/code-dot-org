@@ -1230,6 +1230,9 @@ var projects = (module.exports = {
     this.logError_(errorType, errorCount, errorText);
   },
   logError_: function(errorType, errorCount, errorText) {
+    // Share URLs only make sense for standalone app types.
+    const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
+
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
@@ -1246,7 +1249,7 @@ var projects = (module.exports = {
           errorText: errorText,
           isOwner: this.isOwner(),
           currentUrl: window.location.href,
-          shareUrl: this.getShareUrl(),
+          shareUrl: shareUrl,
           currentSourceVersionId: currentSourceVersionId
         })
       },
