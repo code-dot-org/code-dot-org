@@ -33,6 +33,11 @@ const styles = {
   description: {
     width: '98%',
     resize: 'vertical'
+  },
+  unpublishButton: {
+    right: 0,
+    marginTop: 20,
+    position: 'absolute'
   }
 };
 
@@ -69,8 +74,9 @@ export default class LibraryPublisher extends React.Component {
   };
 
   setLibraryName = event => {
+    const {libraryName} = this.state;
     let sanitizedName = libraryParser.sanitizeName(event.target.value);
-    if (sanitizedName === this.state.libraryName) {
+    if (sanitizedName === libraryName) {
       return;
     }
     this.setState({libraryName: sanitizedName});
@@ -111,12 +117,13 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayNameInput = () => {
+    const {libraryName} = this.state;
     return (
       <div>
         <input
           style={styles.textInput}
           type="text"
-          value={this.state.libraryName}
+          value={libraryName}
           onChange={this.setLibraryName}
           onBlur={event =>
             this.setState({
@@ -130,23 +137,25 @@ export default class LibraryPublisher extends React.Component {
   };
 
   resetErrorMessage = () => {
+    const {libraryDescription, selectedFunctions, publishState} = this.state;
     if (
-      this.state.libraryDescription &&
-      Object.values(this.state.selectedFunctions).find(value => value) &&
-      this.state.publishState === PublishState.INVALID_INPUT
+      libraryDescription &&
+      Object.values(selectedFunctions).find(value => value) &&
+      publishState === PublishState.INVALID_INPUT
     ) {
       this.setState({publishState: PublishState.DEFAULT});
     }
   };
 
   displayDescription = () => {
+    const {libraryDescription} = this.state;
     return (
       <textarea
         rows="2"
         cols="200"
         style={{...styles.textInput, ...styles.description}}
         placeholder={i18n.libraryDescriptionPlaceholder()}
-        value={this.state.libraryDescription}
+        value={libraryDescription}
         onChange={event => {
           this.setState(
             {libraryDescription: event.target.value},
@@ -165,29 +174,30 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayFunctions = () => {
-    return this.props.libraryDetails.sourceFunctionList.map(sourceFunction => {
-      let name = sourceFunction.functionName;
-      let comment = sourceFunction.comment;
-      let shouldDisable = comment.length === 0;
-      let checked = this.state.selectedFunctions[name] || false;
+    const {selectedFunctions} = this.state;
+    const {sourceFunctionList} = this.props.libraryDetails;
+    return sourceFunctionList.map(sourceFunction => {
+      const {functionName, comment} = sourceFunction;
+      const shouldDisable = comment.length === 0;
+      let checked = selectedFunctions[functionName] || false;
       if (shouldDisable && checked) {
         checked = false;
         this.setState(state => {
-          state.selectedFunctions[name] = false;
+          state.selectedFunctions[functionName] = false;
           return state;
         });
       }
       return (
-        <div key={name}>
+        <div key={functionName}>
           <input
             style={styles.largerCheckbox}
             type="checkbox"
             disabled={shouldDisable}
-            name={name}
+            name={functionName}
             checked={checked}
-            onChange={this.boxChecked(name)}
+            onChange={this.boxChecked(functionName)}
           />
-          <span>{name}</span>
+          <span>{functionName}</span>
           <br />
           {shouldDisable && (
             <p style={styles.alert}>{i18n.libraryExportNoCommentError()}</p>
@@ -199,14 +209,15 @@ export default class LibraryPublisher extends React.Component {
   };
 
   displayError = () => {
+    const {publishState} = this.state;
     let errorMessage;
-    if (this.state.publishState === PublishState.INVALID_INPUT) {
+    if (publishState === PublishState.INVALID_INPUT) {
       errorMessage = i18n.libraryPublishInvalid();
     }
-    if (this.state.publishState === PublishState.ERROR_PUBLISH) {
+    if (publishState === PublishState.ERROR_PUBLISH) {
       errorMessage = i18n.libraryPublishFail();
     }
-    if (this.state.publishState === PublishState.ERROR_UNPUBLISH) {
+    if (publishState === PublishState.ERROR_UNPUBLISH) {
       errorMessage = i18n.libraryUnPublishFail();
     }
     return (
@@ -219,14 +230,15 @@ export default class LibraryPublisher extends React.Component {
   };
 
   unpublish = () => {
-    this.props.clientApi.delete(this.props.onUnpublishSuccess, error => {
+    const {clientApi, onUnpublishSuccess} = this.props;
+    clientApi.delete(onUnpublishSuccess, error => {
       console.warn(`Error publishing library: ${error}`);
       this.setState({publishState: PublishState.ERROR_UNPUBLISH});
     });
   };
 
   render() {
-    let alreadyPublished = this.props.libraryDetails.alreadyPublished;
+    const {alreadyPublished} = this.props.libraryDetails;
     return (
       <div>
         <Heading2>{i18n.libraryName()}</Heading2>
@@ -243,7 +255,7 @@ export default class LibraryPublisher extends React.Component {
           />
           {alreadyPublished && (
             <Button
-              style={{right: 0, marginTop: 20, position: 'absolute'}}
+              style={styles.unpublishButton}
               onClick={this.unpublish}
               text={i18n.unpublish()}
               color={Button.ButtonColor.red}
