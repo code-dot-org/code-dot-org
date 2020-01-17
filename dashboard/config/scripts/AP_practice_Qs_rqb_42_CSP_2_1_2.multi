@@ -1,9 +1,6 @@
 name 'AP_practice_Qs_rqb_42_CSP_2_1_2'
-wrong 'Numbers are not rounded up in programming languages.
-'
-right 'A fixed number of bits representing real numbers, as floating point values, limits some mathematical operations and leads to potential rounding errors.
-
-'
+wrong 'Numbers are not rounded up in programming languages.'
+right 'A fixed number of bits representing real numbers, as floating point values, limits some mathematical operations and leads to potential rounding errors.'
 wrong 'This is a bug in the programming language.'
 wrong 'None of the above.'
 markdown <<MARKDOWN
