@@ -208,7 +208,10 @@ Resources:
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "AMICreate#{ami}",
     InstanceId: {Ref: "WebServerAMI" } %>
-
+  FastSnapshotRestore: <%= lambda_fn.call 'FastSnapshotRestore',
+    ImageIds: [{Ref: "AMI#{ami}" }],
+    AvailabilityZones: AVAILABILITY_ZONES
+  %>
   ASGCount: <%= lambda_fn.call 'CountASG',
     Default: {
       MinSize: 2,
@@ -291,6 +294,7 @@ Resources:
         - Granularity: 1Minute
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
+    DependsOn: FastSnapshotRestore
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: !Ref InstanceType
