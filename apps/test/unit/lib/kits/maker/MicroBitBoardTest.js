@@ -19,7 +19,7 @@ describe('MicroBitBoard', () => {
   });
 
   describe('Maker Board Interface', () => {
-    itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
+    itImplementsTheMakerBoardInterface(MicroBitBoard, 'microbit', board => {
       board.boardClient_ = new MicrobitStubBoard();
     });
   });
