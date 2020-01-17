@@ -18,6 +18,8 @@ export class MicrobitStubBoard {
     this.analogChannel = new Array(16).fill(0);
   }
 
+  connect() {}
+
   displayPlot() {}
 
   displayClear() {}
