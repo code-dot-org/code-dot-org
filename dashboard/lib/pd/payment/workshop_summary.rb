@@ -83,7 +83,7 @@ module Pd::Payment
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
-        scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true),
+        scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
         organizer_id: workshop.organizer&.id,
       }
 
