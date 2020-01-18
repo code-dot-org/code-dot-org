@@ -409,11 +409,26 @@ FactoryGirl.define do
       email {user.email}
     end
 
+    trait :with_scholarship do
+      after(:create) do |enrollment|
+        user = enrollment.user ? enrollment.user : create(:teacher)
+        create :pd_scholarship_info, enrollment: enrollment, user: user
+      end
+    end
+
     trait :with_attendance do
       after(:create) do |enrollment|
         create_list(:pd_attendance, 1, enrollment: enrollment)
       end
     end
+  end
+
+  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
+    association :user, factory: :teacher
+
+    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
+    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
