@@ -707,7 +707,7 @@ module Pd::Application
       )
     end
 
-    test 'principal responses override teacher responses for scoring' do
+    test 'autoscore principal responses override teacher responses' do
       options = Pd::Application::Teacher2021Application.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
@@ -734,7 +734,66 @@ module Pd::Application
         application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
     end
 
-    test 'nil results when applicable' do
+    test 'autoscore principal responses for replace_existing question' do
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
+
+      test_cases = [
+        # If the answer for replace_course is 'Yes', the application does not meet requirement
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].first},
+          meet_requirement: NO
+        },
+        {
+          principal_answers: {
+            replace_course: principal_options[:replace_course].first,
+            replace_which_course_csp: principal_options[:replace_which_course_csp].first
+          },
+          meet_requirement: NO
+        },
+        # If the answer for replace_course is 'No...', the application meets requirement
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].second},
+          meet_requirement: YES
+        },
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].third},
+          meet_requirement: YES
+        },
+        # If the answer for replace_course is 'I don't know...', the verdict is inconclusive
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].last},
+          meet_requirement: nil
+        }
+      ]
+
+      # Creates a teacher application with an inconclusive replace_existing answer.
+      # The principal's responses will override teacher's responses anyway.
+      application = build :pd_teacher2021_application,
+        form_data_hash: (
+          build :pd_teacher2021_application_hash, replace_existing: TEXT_FIELDS[:i_dont_know_explain]
+        )
+      application.auto_score!
+      assert_nil application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
+
+      # For each test case, creates an principal approval application and re-scores the
+      # teacher application.
+      test_cases.each_with_index do |test_case, index|
+        principal_approval = build :pd_principal_approval2021_application,
+          teacher_application: application,
+          form_data_hash: (
+            build :pd_principal_approval2021_application_hash_common, test_case[:principal_answers]
+          )
+
+        # Updates the application with principal's responses and run auto_score! again
+        application.on_successful_principal_approval_create(principal_approval)
+
+        assert_equal test_case[:meet_requirement],
+          application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+          "Test case index #{index} failed"
+      end
+    end
+
+    test 'autoscore nil results when applicable' do
       options = Pd::Application::Teacher2021Application.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
