@@ -1,19 +1,20 @@
 require 'aws-sdk-ec2'
 require 'json'
+require 'securerandom'
 require_relative './cfn_response'
 
 def handler(event:, context:)
   physical_resource_id = event['PhysicalResourceId']
+  physical_resource_id ||= SecureRandom.uuid
   properties = event['ResourceProperties']
   case event['RequestType']
   when 'Create'
-    physical_resource_id = create(properties)
+    create(properties)
   when 'Update'
-    delete(physical_resource_id)
-    physical_resource_id = create(properties)
+    delete(event['OldResourceProperties'])
+    create(properties)
   when 'Delete'
-    delete(physical_resource_id)
-    physical_resource_id = nil
+    delete(properties)
   else
     raise 'Unsupported type'
   end
@@ -24,7 +25,7 @@ end
 
 EC2 = Aws::EC2::Client.new
 
-def create(properties)
+def find(properties)
   azs = properties['AvailabilityZones']
   raise 'Invalid AvailabilityZones' if azs.empty? || azs.length > 10
   image_ids = properties['ImageIds']
@@ -34,6 +35,11 @@ def create(properties)
     images.
     map {|image| image.block_device_mappings[0].ebs.snapshot_id}
   raise 'No snapshots found' if snapshots.empty?
+  [azs, snapshots]
+end
+
+def create(properties)
+  azs, snapshots = find(properties)
   resp = EC2.enable_fast_snapshot_restores(
     availability_zones: azs,
     source_snapshot_ids: snapshots
@@ -42,11 +48,10 @@ def create(properties)
   unsuccessful = resp.unsuccessful
   puts "Successful: #{successful}" unless successful.empty?
   puts "Unsuccessful: #{unsuccessful}" unless unsuccessful.empty?
-  [azs, snapshots].to_json
 end
 
-def delete(physical_resource_id)
-  azs, snapshots = JSON.parse(physical_resource_id)
+def delete(properties)
+  azs, snapshots = find(properties)
   EC2.disable_fast_snapshot_restores(
     availability_zones: azs,
     source_snapshot_ids: snapshots
