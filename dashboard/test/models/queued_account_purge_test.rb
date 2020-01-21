@@ -61,6 +61,13 @@ class QueuedAccountPurgeTest < ActiveSupport::TestCase
     refute_includes QueuedAccountPurge.needing_manual_review, q2
   end
 
+  test "needing_manual_review omits Net::ReadTimeout" do
+    q1 = create :queued_account_purge
+    q2 = create :queued_account_purge, reason_for_review: 'Net::ReadTimeout'
+    assert_includes QueuedAccountPurge.needing_manual_review, q1
+    refute_includes QueuedAccountPurge.needing_manual_review, q2
+  end
+
   test "clean_up_resolved_purges drops records for purged users" do
     # This one should get cleaned up
     q1 = create(:queued_account_purge, user: create(:student, deleted_at: Time.now, purged_at: Time.now))

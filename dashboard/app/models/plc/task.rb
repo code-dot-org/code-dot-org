@@ -29,8 +29,8 @@
 #
 # Tasks correspond to ScriptLevels in our regular curriculum hierarchy.
 class Plc::Task < ActiveRecord::Base
+  attr_readonly :type
+
   belongs_to :script_level
   has_and_belongs_to_many :plc_learning_modules, class_name: '::Plc::LearningModule', foreign_key: 'plc_task_id', association_foreign_key: 'plc_learning_module_id'
-
-  attr_readonly :type
 end
