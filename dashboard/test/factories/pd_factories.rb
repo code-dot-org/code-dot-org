@@ -409,13 +409,6 @@ FactoryGirl.define do
       email {user.email}
     end
 
-    trait :with_scholarship do
-      after(:create) do |enrollment|
-        user = enrollment.user ? enrollment.user : create(:teacher)
-        create :pd_scholarship_info, enrollment: enrollment, user: user
-      end
-    end
-
     trait :with_attendance do
       after(:create) do |enrollment|
         create_list(:pd_attendance, 1, enrollment: enrollment)

@@ -847,14 +847,14 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       course: Pd::Workshop::COURSE_CSP,
       sessions_from: Date.new(2019, 7, 1)
 
-    3.times do
-      create :pd_enrollment, :from_user, workshop: workshop, session: workshop.sessions.first
-      create :pd_enrollment, :from_user, :with_attendance, workshop: workshop, session: workshop.sessions.first
-      create :pd_enrollment, :from_user, :with_scholarship, :with_attendance, workshop: workshop, session: workshop.sessions.first
+    2.times do
+      create :pd_workshop_participant, enrolled: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, cdo_scholarship_recipient: true, workshop: workshop
     end
 
-    assert_equal 6, workshop.teachers_attending_all_sessions.count
-    assert_equal 3, workshop.teachers_attending_all_sessions(true).count
+    assert_equal 4, workshop.teachers_attending_all_sessions.count
+    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
   end
 
   # TODO: remove this test when workshop_organizer is deprecated
