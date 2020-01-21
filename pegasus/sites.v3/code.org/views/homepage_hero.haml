@@ -6,9 +6,9 @@
 
 - main_actions = capture_haml do
   - if show_single_hero == "changeworld"
-    .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif"}
+    .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line1_mobile)
-    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif"}
+    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line2_mobile)
   - if show_single_hero == "dance2019"
     -# Two lines of text
