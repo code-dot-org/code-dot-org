@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import msg from '@cdo/locale';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -35,7 +36,6 @@ export const getChannelIdFromUrl = function(abuseUrl) {
 
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
-    i18n: PropTypes.object.isRequired,
     csrfToken: PropTypes.string.isRequired,
     abuseUrl: PropTypes.string.isRequired,
     name: PropTypes.string,
@@ -63,27 +63,26 @@ export default class ReportAbuseForm extends React.Component {
   }
 
   handleSubmit = event => {
-    const i18n = this.props.i18n;
     if (this.refs.email.value === '') {
-      alert(i18n.t('project.abuse.report_abuse_form.validation.email'));
+      alert(msg.provideEmail());
       event.preventDefault();
       return;
     }
 
     if (ReactDOM.findDOMNode(this.refs.age).value === '') {
-      alert(i18n.t('project.abuse.report_abuse_form.validation.age'));
+      alert(msg.provideAgeReportAbuse());
       event.preventDefault();
       return;
     }
 
     if (this.refs.abuse_type.value === '') {
-      alert(i18n.t('project.abuse.report_abuse_form.validation.abuse_type'));
+      alert(msg.abuseType());
       event.preventDefault();
       return;
     }
 
     if (this.refs.abuse_detail.value === '') {
-      alert(i18n.t('project.abuse.report_abuse_form.validation.abuse_detail'));
+      alert(msg.abuseDetail());
       event.preventDefault();
       return;
     }
@@ -91,11 +90,10 @@ export default class ReportAbuseForm extends React.Component {
   };
 
   render() {
-    const i18n = this.props.i18n;
     return (
       <div style={{width: DROPDOWN_WIDTH}}>
-        <h2>{i18n.t('footer.report_abuse')}</h2>
-        <p>{i18n.t('project.abuse.report_abuse_form.intro')}</p>
+        <h2>{msg.reportAbuse()}</h2>
+        <p>{msg.reportAbuseIntro()}</p>
         <br />
         <form action="/report_abuse" method="post">
           <input
@@ -106,7 +104,7 @@ export default class ReportAbuseForm extends React.Component {
           <input type="hidden" name="channel_id" value={this.getChannelId()} />
           <input type="hidden" name="name" value={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
-            <div>{i18n.t('activerecord.attributes.user.email')}</div>
+            <div>{msg.email()}</div>
             <input
               type="text"
               style={{width: INPUT_WIDTH}}
@@ -118,7 +116,7 @@ export default class ReportAbuseForm extends React.Component {
           </div>
 
           <div style={{display: this.props.age ? 'none' : 'block'}}>
-            <div>{i18n.t('activerecord.attributes.user.age')}</div>
+            <div>{msg.age()}</div>
             <AgeDropdown
               style={{width: DROPDOWN_WIDTH}}
               ref="age"
@@ -126,7 +124,7 @@ export default class ReportAbuseForm extends React.Component {
             />
           </div>
 
-          <div>{i18n.t('project.abuse.report_abuse_form.abusive_url')}</div>
+          <div>{msg.abusiveUrl()}</div>
           <input
             type="text"
             readOnly={!!this.props.abuseUrl}
@@ -137,13 +135,9 @@ export default class ReportAbuseForm extends React.Component {
 
           <div>
             <SafeMarkdown
-              markdown={i18n.t(
-                'project.abuse.report_abuse_form.abuse_type.question',
-                {
-                  link_start: '<a href="https://code.org/tos" target="_blank">',
-                  link_end: '</a>'
-                }
-              )}
+              markdown={msg.abuseTypeQuestion({
+                url: 'https://code.org/tos'
+              })}
             />
           </div>
           <select
@@ -153,23 +147,13 @@ export default class ReportAbuseForm extends React.Component {
             id="uitest-abuse-type"
           >
             <option value="" />
-            <option value="harassment">
-              {i18n.t('project.abuse.report_abuse_form.abuse_type.harassment')}
-            </option>
-            <option value="offensive">
-              {i18n.t('project.abuse.report_abuse_form.abuse_type.offensive')}
-            </option>
-            <option value="infringement">
-              {i18n.t(
-                'project.abuse.report_abuse_form.abuse_type.infringement'
-              )}
-            </option>
-            <option value="other">
-              {i18n.t('project.abuse.report_abuse_form.abuse_type.other')}
-            </option>
+            <option value="harassment">{msg.abuseTypeHarassment()}</option>
+            <option value="offensive">{msg.abuseTypeOffensive()}</option>
+            <option value="infringement">{msg.abuseTypeInfringement()}</option>
+            <option value="other">{msg.abuseTypeOther()}</option>
           </select>
 
-          <div>{i18n.t('project.abuse.report_abuse_form.detail')}</div>
+          <div>{msg.abuseFormDetail()}</div>
           <textarea
             style={{width: INPUT_WIDTH, height: 100}}
             name="abuse_detail"
@@ -179,12 +163,9 @@ export default class ReportAbuseForm extends React.Component {
 
           <div>
             <SafeMarkdown
-              markdown={i18n.t('project.abuse.report_abuse_form.acknowledge', {
-                link_start_privacy:
-                  '<a href="https://code.org/privacy" target="_blank">',
-                link_start_tos:
-                  '<a href="https://code.org/tos" target="_blank">',
-                link_end: '</a>'
+              markdown={msg.abuseFormAcknowledge({
+                privacy_url: 'https://code.org/privacy',
+                tos_url: 'https://code.org/tos'
               })}
             />
           </div>
@@ -193,7 +174,7 @@ export default class ReportAbuseForm extends React.Component {
             onClick={this.handleSubmit}
             id="uitest-submit-report-abuse"
           >
-            {i18n.t('submit')}
+            {msg.submit()}
           </button>
         </form>
       </div>
