@@ -65,6 +65,7 @@ module.exports = {
     "react/jsx-key": "off",
     "react/jsx-no-target-blank": "off",
     "react/jsx-wrap-multilines": "error", // autofixable
+    "react/no-danger": "error",
     "react/no-find-dom-node": "off",
     "react/no-render-return-value": "off",
     "react/no-string-refs": "off",
