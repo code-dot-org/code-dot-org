@@ -1184,7 +1184,7 @@ class PondPanel extends React.Component {
                 <div style={styles.pondPanelPreText} id="pondTextMarkdown">
                   <Markdown
                     markdown={I18n.t(
-                      'mostImportantPartsInDeterminingFullSentence',
+                      'mostImportantPartsDescription',
                       {
                         word: state.word.toLowerCase(),
                         notWord: I18n.t('notWord', {
