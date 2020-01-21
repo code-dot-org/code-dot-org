@@ -739,16 +739,14 @@ module Pd::Application
 
       meets_minimum_criteria_scores = {}
       meets_scholarship_criteria_scores = {}
-      bonus_points_scores = {}
 
       # Section 2
       if course == 'csd'
-        meets_minimum_criteria_scores[:csd_which_grades] = (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
-
+        meets_minimum_criteria_scores[:csd_which_grades] =
+          (responses[:csd_which_grades] & options[:csd_which_grades].first(5)).any? ? YES : NO
       elsif course == 'csp'
-        meets_minimum_criteria_scores[:csp_which_grades] = (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
-
-        bonus_points_scores[:csp_how_offer] = responses[:csp_how_offer].in?(options[:csp_how_offer].last(2)) ? 2 : 0
+        meets_minimum_criteria_scores[:csp_which_grades] =
+          (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
       end
 
       if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
@@ -778,9 +776,6 @@ module Pd::Application
       # Section 4
       meets_minimum_criteria_scores[:committed] = responses[:committed] == options[:committed].first ? YES : NO
 
-      # Section 5
-      bonus_points_scores[:race] = ((responses[:race] || []) & (options[:race].values_at(1, 2, 4, 5))).any? ? 2 : 0
-
       # Principal Approval
       if responses[:principal_approval]
         meets_minimum_criteria_scores[:principal_approval] =
@@ -796,12 +791,12 @@ module Pd::Application
           end
 
         meets_minimum_criteria_scores[:replace_existing] =
-          if responses[:principal_wont_replace_existing_course] == principal_options[:replace_course][1]
-            YES
+          if responses[:principal_wont_replace_existing_course].start_with?(YES)
+            NO
           elsif responses[:principal_wont_replace_existing_course] == TEXT_FIELDS[:i_dont_know_explain]
             nil
           else
-            NO
+            YES
           end
 
         school_stats = get_latest_school_stats(school_id)
@@ -835,7 +830,6 @@ module Pd::Application
           {
             meets_minimum_criteria_scores: meets_minimum_criteria_scores,
             meets_scholarship_criteria_scores: meets_scholarship_criteria_scores,
-            bonus_points_scores: bonus_points_scores
           }
         ) {|key, old, new| key == :replace_existing ? new : old}.to_json
       )
@@ -876,7 +870,7 @@ module Pd::Application
 
     # @override
     def total_score
-      (response_scores_hash[:bonus_points_scores] || {}).values.map(&:to_i).reduce(:+) || 0
+      0
     end
 
     # @override
@@ -962,7 +956,6 @@ module Pd::Application
       {
         meets_minimum_criteria_scores: {},
         meets_scholarship_criteria_scores: {},
-        bonus_points_scores: {}
       }
     end
   end
