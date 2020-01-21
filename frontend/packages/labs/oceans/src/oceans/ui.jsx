@@ -33,7 +33,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import I18n from './i18n';
 import Markdown from '@ml/utils/Markdown';
-import './ui.css';
 
 const styles = {
   body: {
