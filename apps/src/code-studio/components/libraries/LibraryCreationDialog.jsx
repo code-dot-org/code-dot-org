@@ -52,6 +52,7 @@ export const DialogState = {
  * DONE_LOADING: Information has been gathered for the library and the user can
  *     decide what data to publish from it
  * PUBLISHED: The user has successfully published the library
+ * UNPUBLISHED: The user has successfully unpublished the library
  * CODE_ERROR: There is an error in the code that the user must repair prior to
  *     publishing the library
  * NO_FUNCTIONS: The user's project is not a valid library and needs functions
@@ -80,7 +81,7 @@ class LibraryCreationDialog extends React.Component {
 
   onOpen = () => {
     loadLibrary(
-      this.props.clientApi,
+      this.props.libraryClientApi,
       () => this.setState({dialogState: DialogState.CODE_ERROR}),
       () => this.setState({dialogState: DialogState.NO_FUNCTIONS}),
       libraryDetails =>
