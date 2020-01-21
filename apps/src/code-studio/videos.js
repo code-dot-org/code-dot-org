@@ -8,6 +8,7 @@ import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionD
 var videojs = require('video.js');
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
+import i18n from '@cdo/locale';
 
 var videos = (module.exports = {});
 
@@ -64,13 +65,19 @@ function onYouTubeIframeAPIReady() {
 }
 
 function createVideo(options) {
-  return $('<iframe id="video"/>')
+  const videoDiv = $('<iframe id="video"/>')
     .addClass('video-player')
     .attr({
       src: options.src,
       allowfullscreen: 'true',
       scrolling: 'no'
     });
+
+  const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
+    videoDiv
+  );
+
+  return videoTabContainerDiv;
 }
 
 /**
@@ -202,8 +209,13 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
+  // Even though some React code will mount to this div and clear its
+  // contents, include the same link string as the React code will use, so that
+  // our calculations for the modal dimensions will account for its presence.
   var fallbackPlayerLinkDiv = $(
-    '<div id="fallback-player-caption-dialog-link"/>'
+    '<div id="fallback-player-caption-dialog-link"><a>' +
+      i18n.fallbackVideoClosedCaptioningLink() +
+      '</a></div>'
   ).css({
     'padding-right': '40px',
     'padding-top': '9px',
@@ -379,8 +391,8 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     '" type="video/mp4"/>' +
     '</video></div>';
 
-  // Swap current #video with new code
-  $('#video').replaceWith(playerCode);
+  $('#videoTabContainer').empty();
+  $('#videoTabContainer').append(playerCode);
 
   videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
   videojs.options.techOrder = ['flash', 'html5'];
@@ -417,7 +429,7 @@ function openNotesTab() {
 }
 
 function openVideoTab() {
-  var notesTabIndex = $('.dash_modal_body a[href="#video"]')
+  var notesTabIndex = $('.dash_modal_body a[href="#videoTabContainer"]')
     .parent()
     .index();
   $('.ui-tabs').tabs('option', 'active', notesTabIndex);
