@@ -83,8 +83,7 @@ module Pd::Payment
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
-        scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
-        organizer_id: workshop.organizer&.id,
+        num_scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
       }
 
       # Attendance days 1-5
@@ -96,6 +95,7 @@ module Pd::Payment
       # Waiting to add some columns until after attendance to make payment processing easier
       line_item.merge!(
         {
+          organizer_id: workshop.organizer&.id,
           on_map: workshop.on_map,
           facilitators: workshop.facilitators.pluck(:name).join(', '),
           workshop_id: workshop.id,
