@@ -5,7 +5,7 @@ import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-var videojs = require('video.js');
+var videojs = require('video.js').default;
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
@@ -394,12 +394,12 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
-  videojs.options.techOrder = ['flash', 'html5'];
+  //videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
+  //videojs.options.techOrder = ['flash', 'html5'];
 
   var videoPlayer = videojs(fallbackPlayerID, {}, function() {
     var $fallbackPlayer = $('#' + fallbackPlayerID);
-    var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
+    var showingErrorMessage = false; // $fallbackPlayer.find('p').length > 0;
     if (showingErrorMessage) {
       $fallbackPlayer.addClass('fallback-video-player-failed');
       if (hasNotesTab()) {

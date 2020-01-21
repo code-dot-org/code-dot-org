@@ -197,7 +197,7 @@ describe('entry tests', () => {
         // blockly media, etc).
         {
           expand: true,
-          cwd: './node_modules/video.js/dist/video-js',
+          cwd: './node_modules/video.js/dist',
           src: ['**'],
           dest: 'build/package/video-js'
         }
