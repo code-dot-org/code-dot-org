@@ -391,7 +391,7 @@ const styles = {
     pointerEvents: 'none'
   },
   pondPanelPreText: {
-    marginBottom: '5%',
+    marginBottom: '5%'
   },
   pondPanelRow: {
     position: 'relative',
@@ -1181,7 +1181,7 @@ class PondPanel extends React.Component {
           >
             {state.pondExplainFishSummary && (
               <div>
-                <div style={styles.pondPanelPreText} id='pondTextMarkdown'>
+                <div style={styles.pondPanelPreText} id="pondTextMarkdown">
                   <Markdown
                     markdown={I18n.t(
                       'mostImportantPartsInDeterminingFullSentence',
