@@ -93,7 +93,11 @@ module GitUtils
   end
 
   def self.circle_pr_branch_base_no_origin
-    ENV['DRONE_TARGET_BRANCH']
+    pr_number = ENV['CI_PULL_REQUEST'].gsub('https://github.com/code-dot-org/code-dot-org/pull/', '')
+    pr_json = JSON.parse(open("https://api.github.com/repos/code-dot-org/code-dot-org/pulls/#{pr_number}").read)
+    pr_json['base']['ref']
+  rescue => _
+    nil
   end
 
   # Given a branch name, returns its likely base branch / merge destination
@@ -105,6 +109,7 @@ module GitUtils
         'origin/production'
       else # levelbuilder, feature branches, etc.
         # In Continuous Integration (Drone) builds, use the base branch of the Pull Request, which might be staging-next.
+        puts "CDO.ci = #{CDO.ci}"
         puts "Pull Request Base Branch = #{circle_pr_branch_base_no_origin}"
         CDO.ci ? "origin/#{circle_pr_branch_base_no_origin}" : 'origin/staging'
     end
