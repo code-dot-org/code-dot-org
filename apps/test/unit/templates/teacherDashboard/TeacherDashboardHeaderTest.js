@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from '@cdo/locale';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
@@ -22,7 +23,8 @@ const MOCK_SCRIPT = {
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSectionId: 1,
-  selectedSectionScript: MOCK_SCRIPT
+  selectedSectionScript: MOCK_SCRIPT,
+  openEditSectionDialog: () => {}
 };
 
 describe('TeacherDashboardHeader', () => {
@@ -62,7 +64,7 @@ describe('TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
-        element.is('Button') && element.prop('text') === 'Edit section details'
+        element.is('Button') && element.prop('text') === i18n.editSectionDetails()
     );
     expect(editSectionButton).to.have.lengthOf(1);
     expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);

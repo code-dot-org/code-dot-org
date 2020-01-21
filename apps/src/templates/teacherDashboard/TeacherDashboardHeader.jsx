@@ -96,12 +96,12 @@ class TeacherDashboardHeader extends React.Component {
                 icon="gear"
                 size="narrow"
                 color="gray"
-                text={i18n.editSectionDetails}
+                text={i18n.editSectionDetails()}
                 style={styles.buttonWithMargin}
               />
               <DropdownButton
                 size="narrow"
-                text={i18n.selectSection}
+                text={i18n.selectSection()}
                 color="gray"
               >
                 {this.getDropdownOptions()}
