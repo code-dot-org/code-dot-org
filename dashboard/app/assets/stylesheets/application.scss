@@ -754,6 +754,10 @@ $default-modal-width: 640px;
   padding: 0;
 }
 
+#video {
+  border-width: 0;
+}
+
 .video-player {
   width: 100%;
   height: 100%;
