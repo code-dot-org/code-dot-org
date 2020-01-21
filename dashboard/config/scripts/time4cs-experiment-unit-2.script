@@ -1,5 +1,6 @@
 login_required true
 hideable_stages true
+pilot_experiment 'time4cs-experiment'
 editor_experiment 'broward'
 
 stage 'Introduction to the Problem', flex_category: 'time4cs_c1'
