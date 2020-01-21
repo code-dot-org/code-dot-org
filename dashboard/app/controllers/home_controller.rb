@@ -1,4 +1,6 @@
 require 'census_helper'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class HomeController < ApplicationController
   include UsersHelper
