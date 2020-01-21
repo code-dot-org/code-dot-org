@@ -99,7 +99,13 @@ export default function scriptSelection(state = initialState, action) {
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
-      idMap[action.selectedSection.script.id] = true;
+      let actionScriptId =
+        action.selectedSection &&
+        action.selectedSection.script &&
+        action.selectedSection.script.id;
+      if (!!actionScriptId) {
+        idMap[actionScriptId] = true;
+      }
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => (idMap[id] = true));
