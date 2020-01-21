@@ -6,3 +6,11 @@ curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit8/{LESSON}'
 pilot_experiment 'csp-piloters'
 curriculum_umbrella 'CSP'
 
+stage 'Create PT - Review the Task'
+level 'CSP U8L1 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Create PT - Make a Plan'
+level 'CSP U8L2 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Create PT - Complete the Task'
+level 'CSP U8L3 SFLP 20-21', progression: 'Lesson Overview'
