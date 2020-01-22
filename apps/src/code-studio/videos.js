@@ -5,7 +5,7 @@ import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-var videojs = require('video.js').default;
+import videojs from 'video.js';
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
