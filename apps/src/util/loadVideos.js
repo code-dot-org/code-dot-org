@@ -33,9 +33,6 @@ function setupVideos(player) {
     video_css.href = '/css/video-js.min.css';
     video_css.rel = 'stylesheet';
     doc.getElementsByTagName('head')[0].appendChild(video_css);
-    video_ie.type = 'text/javascript';
-    video_ie.src = '/js/videojs-ie8.min.js';
-    doc.body.appendChild(video_ie);
     video.type = 'text/javascript';
     video.src = '/js/video.min.js';
     doc.body.appendChild(video);
