@@ -7,7 +7,7 @@ Feature: Map Levels
   Background:
     Given I create a student named "Lillian"
 
-  Scenario: Load iframe then take screenshot
+  Scenario: Map level displays content
     Given I am on "http://studio.code.org/s/allthethings/stage/35/puzzle/1?noautoplay=true"
     Then I rotate to landscape
     And I wait to see "#curriculum-reference"
