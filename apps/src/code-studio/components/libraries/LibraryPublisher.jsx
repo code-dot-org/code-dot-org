@@ -46,11 +46,15 @@ export const PublishState = {
   INVALID_INPUT: 'invalid_input'
 };
 
+/**
+ * An interactive page for a dialog that can be used to publish or unpublish
+ * a library from a source project.
+ */
 export default class LibraryPublisher extends React.Component {
   static propTypes = {
     onPublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
-    clientApi: PropTypes.object.isRequired
+    libraryClientApi: PropTypes.object.isRequired
   };
 
   state = {
@@ -71,8 +75,9 @@ export default class LibraryPublisher extends React.Component {
   };
 
   publish = () => {
-    let {libraryDescription, libraryName, selectedFunctions} = this.state;
-    let {librarySource, sourceFunctionList} = this.props.libraryDetails;
+    const {libraryDescription, libraryName, selectedFunctions} = this.state;
+    const {librarySource, sourceFunctionList} = this.props.libraryDetails;
+    const {libraryClientApi, onPublishSuccess} = this.props;
     let functionsToPublish = sourceFunctionList.filter(sourceFunction => {
       return selectedFunctions[sourceFunction.functionName];
     });
@@ -90,17 +95,17 @@ export default class LibraryPublisher extends React.Component {
     );
 
     // TODO: Display final version of error and success messages to the user.
-    this.props.clientApi.publish(
+    libraryClientApi.publish(
       libraryJson,
       error => {
         console.warn(`Error publishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_PUBLISH});
       },
       () => {
-        this.props.onPublishSuccess(this.state.libraryName);
+        onPublishSuccess(libraryName);
       }
     );
-    dashboard.project.setLibraryName(this.state.libraryName);
+    dashboard.project.setLibraryName(libraryName);
     dashboard.project.setLibraryDescription(libraryDescription);
   };
 
@@ -141,10 +146,12 @@ export default class LibraryPublisher extends React.Component {
         style={{...styles.textInput, ...styles.description}}
         placeholder={i18n.libraryDescriptionPlaceholder()}
         value={this.state.libraryDescription}
-        onChange={event =>
-          this.setState({libraryDescription: event.target.value})
-        }
-        onBlur={this.resetErrorMessage}
+        onChange={event => {
+          this.setState(
+            {libraryDescription: event.target.value},
+            this.resetErrorMessage
+          );
+        }}
       />
     );
   };

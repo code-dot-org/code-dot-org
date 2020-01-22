@@ -10,7 +10,7 @@ import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
 import Button from '@cdo/apps/templates/Button';
 import LibraryPublisher from './LibraryPublisher';
-import libraryLoader from './libraryLoader';
+import loadLibrary from './libraryLoader';
 
 const styles = {
   libraryBoundary: {
@@ -44,11 +44,25 @@ export const DialogState = {
   NO_FUNCTIONS: 'no_functions'
 };
 
+/**
+ * Displays an interactive dialog that can be used to create a library. It
+ * includes the following displays:
+ * LOADING: Information is still being gathered for the library
+ * DONE_LOADING: Information has been gathered for the library and the user can
+ *     decide what data to publish from it
+ * PUBLISHED: The user has successfully published the library
+ * CODE_ERROR: There is an error in the code that the user must repair prior to
+ *     publishing the library
+ * NO_FUNCTIONS: The user's project is not a valid library and needs functions
+ *     before it can be published
+ */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
+    libraryClientApi: PropTypes.object.isRequired,
+
+    // From Redux
     dialogIsOpen: PropTypes.bool.isRequired,
-    onClose: PropTypes.func.isRequired,
-    clientApi: PropTypes.object.isRequired
+    onClose: PropTypes.func.isRequired
   };
 
   state = {
@@ -64,7 +78,7 @@ class LibraryCreationDialog extends React.Component {
   }
 
   onOpen = () => {
-    libraryLoader.load(
+    loadLibrary(
       () => this.setState({dialogState: DialogState.CODE_ERROR}),
       () => this.setState({dialogState: DialogState.NO_FUNCTIONS}),
       libraryDetails =>
@@ -80,29 +94,96 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  copyChannelId = () => {
-    this.channelId.select();
-    document.execCommand('copy');
+  displayContent = () => {
+    const {libraryClientApi} = this.props;
+    const {libraryDetails} = this.state;
+    return (
+      <LibraryPublisher
+        onPublishSuccess={libraryName =>
+          this.setState({
+            dialogState: DialogState.PUBLISHED,
+            libraryName: libraryName
+          })
+        }
+        libraryDetails={libraryDetails}
+        libraryClientApi={libraryClientApi}
+      />
+    );
   };
 
-  displayError = errorMessage => {
-    return <div>{errorMessage}</div>;
-  };
+  render() {
+    let bodyContent;
+    const {dialogState, libraryName} = this.state;
+    const {dialogIsOpen} = this.props;
+    switch (dialogState) {
+      case DialogState.LOADING:
+        bodyContent = <LoadingDisplay />;
+        break;
+      case DialogState.PUBLISHED:
+        bodyContent = <SuccessDisplay libraryName={libraryName} />;
+        break;
+      case DialogState.CODE_ERROR:
+        bodyContent = <ErrorDisplay message={i18n.libraryCodeError()} />;
+        break;
+      case DialogState.NO_FUNCTIONS:
+        bodyContent = <ErrorDisplay message={i18n.libraryNoFunctionsError()} />;
+        break;
+      default:
+        bodyContent = this.displayContent();
+    }
+    return (
+      <Dialog
+        isOpen={dialogIsOpen}
+        handleClose={this.handleClose}
+        useUpdatedStyles
+      >
+        <Body>
+          <PadAndCenter>
+            <div style={styles.libraryBoundary}>
+              <Heading1>{i18n.libraryExportTitle()}</Heading1>
+              {bodyContent}
+            </div>
+          </PadAndCenter>
+        </Body>
+      </Dialog>
+    );
+  }
+}
 
-  displayLoadingState = () => {
+class ErrorDisplay extends React.Component {
+  static propTypes = {message: PropTypes.string.isRequired};
+
+  render() {
+    const {message} = this.props;
+    return <div>{message}</div>;
+  }
+}
+
+class LoadingDisplay extends React.Component {
+  render() {
     return (
       <div style={styles.centerContent}>
         <Spinner />
       </div>
     );
+  }
+}
+
+class SuccessDisplay extends React.Component {
+  static propTypes = {libraryName: PropTypes.string.isRequired};
+
+  copyChannelId = () => {
+    this.channelId.select();
+    document.execCommand('copy');
   };
 
-  displaySuccess = () => {
+  render = () => {
+    const {libraryName} = this.props;
     return (
       <div>
         <Heading2>
           <b>{i18n.libraryPublishTitle()}</b>
-          {this.state.libraryName}
+          {libraryName}
         </Heading2>
         <div>
           <p>{i18n.libraryPublishExplanation()}</p>
@@ -125,57 +206,6 @@ class LibraryCreationDialog extends React.Component {
       </div>
     );
   };
-
-  displayContent = () => {
-    return (
-      <LibraryPublisher
-        onPublishSuccess={libraryName =>
-          this.setState({
-            dialogState: DialogState.PUBLISHED,
-            libraryName: libraryName
-          })
-        }
-        libraryDetails={this.state.libraryDetails}
-        clientApi={this.props.clientApi}
-      />
-    );
-  };
-
-  render() {
-    let bodyContent;
-    switch (this.state.dialogState) {
-      case DialogState.LOADING:
-        bodyContent = this.displayLoadingState();
-        break;
-      case DialogState.PUBLISHED:
-        bodyContent = this.displaySuccess();
-        break;
-      case DialogState.CODE_ERROR:
-        bodyContent = this.displayError(i18n.libraryCodeError());
-        break;
-      case DialogState.NO_FUNCTIONS:
-        bodyContent = this.displayError(i18n.libraryNoFunctonsError());
-        break;
-      default:
-        bodyContent = this.displayContent();
-    }
-    return (
-      <Dialog
-        isOpen={this.props.dialogIsOpen}
-        handleClose={this.handleClose}
-        useUpdatedStyles
-      >
-        <Body>
-          <PadAndCenter>
-            <div style={styles.libraryBoundary}>
-              <Heading1>{i18n.libraryExportTitle()}</Heading1>
-              {bodyContent}
-            </div>
-          </PadAndCenter>
-        </Body>
-      </Dialog>
-    );
-  }
 }
 
 export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;
