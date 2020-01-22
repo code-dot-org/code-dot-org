@@ -24,10 +24,9 @@ export function loadVideos(force_fallback) {
 // Parameter player is either "youtube" or "fallback".
 function setupVideos(player) {
   if (player === 'fallback') {
-    const doc = document,
-      video_css = doc.createElement('link'),
-      video = doc.createElement('script'),
-      video_ie = doc.createElement('script');
+    const doc = document;
+    let video_css = doc.createElement('link');
+    let video = doc.createElement('script');
 
     video_css.type = 'text/css';
     video_css.href = '/css/video-js.min.css';
@@ -53,7 +52,7 @@ function setupVideos(player) {
             'width="100%" height="100%" ' +
             'class="video-js lazyload" ' +
             'preload="none" ' +
-            'controls preload="auto" >' +
+            'controls>' +
             '  <source src="' +
             downloadPath +
             '" type="video/mp4"/>' +
