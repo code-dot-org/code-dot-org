@@ -691,6 +691,10 @@ class Script < ActiveRecord::Base
       map {|script| [script.localized_title, script.name]}
   end
 
+  def has_standards_associations?
+    Script.scripts_for_standards.include?([localized_title, name])
+  end
+
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -1378,7 +1382,8 @@ class Script < ActiveRecord::Base
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
-      assigned_section_id: assigned_section_id
+      assigned_section_id: assigned_section_id,
+      has_standards_associations: has_standards_associations?
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
