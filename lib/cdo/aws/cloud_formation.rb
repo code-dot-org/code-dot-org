@@ -197,18 +197,19 @@ module AWS
         base_options.merge(
           {
             parameters: parameters(template),
-            tags: [
-              {
-                key: 'environment',
-                value: rack_env
-              }
-            ],
+            tags: [],
           }
         ).merge(string_or_url(template)).tap do |options|
           options[:capabilities] = %w[
             CAPABILITY_IAM
             CAPABILITY_NAMED_IAM
           ]
+          if TEMPLATE == 'cloud_formation_stack.yml.erb'
+            options[:tags].push(
+              key: 'environment',
+              value: rack_env
+            )
+          end
           if rack_env?(:adhoc)
             options[:tags].push(
               key: 'owner',
@@ -554,22 +555,25 @@ module AWS
         erb_eval(str, filename).to_json
       end
 
-      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
-      def js_zip(files)
+      # Zip a Lambda package of files and upload to S3.
+      def lambda_zip(*files, key_prefix: 'lambda')
         hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.npm_install '--production'
           # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+          globs = files.map do |file|
+            file += '/**/*' if File.directory?(file)
+            file
+          end
           hash = Digest::MD5.hexdigest(
-            Dir[*files, 'node_modules/**/*'].
+            Dir[*globs].
               select(&File.method(:file?)).
               sort.
               map(&Digest::MD5.method(:file)).
               join
           )
-          `zip -qr - #{files.join(' ')} node_modules`
+          `zip -qr - #{files.join(' ')}`
         end
-        key = "lambdajs-#{hash}.zip"
+        key = "#{key_prefix}-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
@@ -580,6 +584,14 @@ module AWS
           S3Bucket: S3_BUCKET,
           S3Key: key
         }.to_json
+      end
+
+      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
+      def js_zip(files)
+        Dir.chdir(aws_dir('cloudformation')) do
+          RakeUtils.npm_install '--production'
+        end
+        lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
       end
 
       # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.

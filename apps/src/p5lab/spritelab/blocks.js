@@ -90,7 +90,7 @@ const customInputTypes = {
       currentInputRow.appendTitle(button, inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return `(${block.getTitleValue(arg.name)})`;
     }
   },
   locationVariableDropdown: {
