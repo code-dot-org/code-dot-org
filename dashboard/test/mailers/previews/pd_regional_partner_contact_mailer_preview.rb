@@ -31,7 +31,7 @@ class Pd::RegionalPartnerContactMailerPreview < ActionMailer::Preview
 
   private
 
-  def build_form_data(contact_factory, factory_options={})
+  def build_form_data(contact_factory, **factory_options)
     contact = build contact_factory, factory_options
     contact.sanitize_and_trim_form_data_hash
   end
