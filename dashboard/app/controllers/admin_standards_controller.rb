@@ -7,7 +7,7 @@ class AdminStandardsController < ApplicationController
   end
 
   def import_standards
-    script = Script.find_by_name(params["stage_name"])
+    script = Script.find_by_name(params["unit_name"])
 
     code_studio_stages = {}
     script&.stages&.each do |stage|
