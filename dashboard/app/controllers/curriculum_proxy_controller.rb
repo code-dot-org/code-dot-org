@@ -12,7 +12,7 @@ class CurriculumProxyController < ApplicationController
   # Proxy from studio.code.org/docs/ to curriculum.code.org/documentation
   def get_doc_landing
     render_proxied_url(
-      'https://curriculum.code.org/documentation/',
+      'https://curriculum.code.org/docs/',
       allowed_content_types: nil,
       allowed_hostname_suffixes: %w(curriculum.code.org),
       expiry_time: EXPIRY_TIME,
@@ -23,7 +23,7 @@ class CurriculumProxyController < ApplicationController
   # Proxy from studio.code.org/docs/foo to curriculum.code.org/documentation/foo
   def get_doc
     render_proxied_url(
-      URI.parse(request.original_url).path.sub(/^\/docs/, 'https://curriculum.code.org/documentation'),
+      URI.parse(request.original_url).path.sub(/^\/docs/, 'https://curriculum.code.org/docs'),
       allowed_content_types: nil,
       allowed_hostname_suffixes: %w(curriculum.code.org),
       expiry_time: EXPIRY_TIME,
