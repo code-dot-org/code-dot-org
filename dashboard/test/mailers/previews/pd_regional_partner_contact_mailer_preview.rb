@@ -19,7 +19,7 @@ class Pd::RegionalPartnerContactMailerPreview < ActionMailer::Preview
   end
 
   def mini_contact_matched_partner
-    rp_pm = build :regional_partner_program_manager
+    rp_pm = create :regional_partner_program_manager
     form = build_form_data(:pd_regional_partner_mini_contact, regional_partner: rp_pm.regional_partner)
     Pd::RegionalPartnerContactMailer.matched(form, rp_pm)
   end
