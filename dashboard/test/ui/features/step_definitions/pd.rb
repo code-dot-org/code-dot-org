@@ -101,7 +101,12 @@ Given(/^I am a teacher who has just followed a workshop certificate link$/) do
     And I create a workshop for course "CS Principles" attended by "#{test_teacher_name}" with 3 facilitators and end it
   }
 
-  enrollment = Pd::Enrollment.find_by(first_name: test_teacher_name)
+  enrollment = FactoryGirl.create(
+    :pd_enrollment,
+    :with_attendance,
+    :from_user,
+    user: User.find_by(email: @users[test_teacher_name][:email])
+  )
   steps %Q{
     And I am on "http://studio.code.org/pd/generate_workshop_certificate/#{enrollment.code}"
   }
