@@ -2,7 +2,8 @@ name 'PDAlg DR Multi 2'
 question "Now that this student has fixed their contract, it's time to move onto the purpose statement. Which of the following purpose statements covers all of the necessary information?"
 wrong 'How many treats can you buy with your dollars?'
 wrong 'For a given number of dollars, return the number of treats.'
-right 'Given a number of dollars, produce the number<br>of 50 cent treats you could purchase'
+right 'Given a number of dollars, produce the number  
+of 50 cent treats you could purchase'
 wrong 'How many times does 50 go into dollars?'
 
 markdown <<MARKDOWN
