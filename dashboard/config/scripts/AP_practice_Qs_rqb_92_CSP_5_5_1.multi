@@ -1,5 +1,5 @@
 name 'AP_practice_Qs_rqb_92_CSP_5_5_1'
-wrong 'IF  
+wrong 'IF
 ELSE'
 right 'AND
 OR'
@@ -12,6 +12,7 @@ Compound expressions are a facet of Boolean logic, and are part of most programm
 Which of the following operators are both examples of Boolean operators used in complex expressions?
 
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1F**
 <hr>

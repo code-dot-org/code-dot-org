@@ -1,7 +1,9 @@
 - use_sign_up_text ||= false
+- link_suffix ||= nil
 - data = {}
 - data[:useSignUpText] = use_sign_up_text
 - data[:nominated] = params[:nominated]
+- data[:linkSuffix] = link_suffix
 
 %script{src: webpack_asset_path('js/code.org/views/professional_learning_apply_banner.js'), data: {props: data.to_json}}
 

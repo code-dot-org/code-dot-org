@@ -74,6 +74,8 @@ require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
