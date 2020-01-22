@@ -26,18 +26,16 @@ def main(csv_path)
     loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
     if loaded.nil?
       begin
-        if Standard.new(parsed).save!
-          created += 1
-        end
+        Standard.new(parsed).save!
+        created += 1
       rescue => error
         puts "Error when processing #{parsed[:organization]} #{parsed[:organization_id]}: #{error.message}"
       end
     else
       loaded.assign_attributes(parsed)
       if loaded.changed?
-        if loaded.update!(parsed)
-          updated += 1
-        end
+        loaded.update!(parsed)
+        updated += 1
       end
     end
   end
