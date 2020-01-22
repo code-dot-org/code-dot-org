@@ -13,6 +13,9 @@ import color from '@cdo/apps/util/color';
 const DEFAULT_MARGIN = 7;
 
 const styles = {
+  dialog: {
+    padding: '0 15px'
+  },
   linkBox: {
     cursor: 'auto',
     height: '32px',
@@ -25,7 +28,7 @@ const styles = {
     fontSize: 'x-large',
     color: color.purple,
     margin: DEFAULT_MARGIN,
-    marginTop: 20
+    marginTop: 30
   },
   libraryList: {
     maxHeight: '140px',
@@ -51,7 +54,7 @@ const styles = {
   error: {
     color: color.red,
     textAlign: 'left',
-    margin: '0 10px',
+    margin: `0 ${DEFAULT_MARGIN}px`,
     minHeight: 30
   }
 };
@@ -219,14 +222,14 @@ export default class LibraryManagerDialog extends React.Component {
         <BaseDialog
           isOpen={isOpen}
           handleClose={this.closeLibraryManager}
-          style={isViewingCode ? styles.hidden : {}}
+          style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
           useUpdatedStyles
         >
-          <div style={styles.header}>Manage libraries in this project</div>
+          <div style={styles.header}>{i18n.libraryManage()}</div>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <div style={styles.header}>Import library from my class</div>
+          <div style={styles.header}>{i18n.libraryClassImport()}</div>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <div style={styles.header}>Import library from ID</div>
+          <div style={styles.header}>{i18n.libraryIdImport()}</div>
           <div style={styles.inputParent}>
             <input
               style={styles.linkBox}
