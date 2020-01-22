@@ -94,7 +94,6 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription
     );
 
-    // TODO: Display final version of error and success messages to the user.
     libraryClientApi.publish(
       libraryJson,
       error => {
@@ -197,9 +196,11 @@ export default class LibraryPublisher extends React.Component {
       errorMessage = i18n.libraryPublishFail();
     }
     return (
-      <div>
-        <p style={styles.alert}>{errorMessage}</p>
-      </div>
+      errorMessage && (
+        <div>
+          <p style={styles.alert}>{errorMessage}</p>
+        </div>
+      )
     );
   };
 
