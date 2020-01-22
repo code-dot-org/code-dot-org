@@ -13,7 +13,7 @@
     = "#{@form[:role]}"
     %br
     %b Grade Levels:
-    = "#{@form[:grade_levels].join(', ')}"
+    = @form[:grade_levels] ? "#{@form[:grade_levels].join(', ')}" : "Not specified"
 
   %p
     %b Message:
