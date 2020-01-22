@@ -9,6 +9,7 @@ Feature: Documentation Landing Page
     And I wait until ".content" contains text "Sprite Lab"
     And I wait until ".content" contains text "Concepts"
 
+  Scenario: Applab Documentation landing page displays
     Given I am on "http://studio.code.org/docs/applab/"
     And I wait until element ".container" is visible
     And I wait until "#doc_header" contains text "App Lab Documentation:"
@@ -16,6 +17,7 @@ Feature: Documentation Landing Page
     And I wait until ".content" contains text "onEvent"
     And I wait until ".category_list" contains text "UI Controls"
 
+  Scenario: Maps Documentation landing page displays
     Given I am on "http://studio.code.org/docs/concepts/"
     And I wait until element ".container" is visible
     And I wait until ".content" contains text "Concepts"
