@@ -150,7 +150,7 @@ class LibraryCreationDialog extends React.Component {
   }
 }
 
-class ErrorDisplay extends React.Component {
+export class ErrorDisplay extends React.Component {
   static propTypes = {message: PropTypes.string.isRequired};
 
   render() {
@@ -159,7 +159,7 @@ class ErrorDisplay extends React.Component {
   }
 }
 
-class LoadingDisplay extends React.Component {
+export class LoadingDisplay extends React.Component {
   render() {
     return (
       <div style={styles.centerContent}>
@@ -169,7 +169,7 @@ class LoadingDisplay extends React.Component {
   }
 }
 
-class SuccessDisplay extends React.Component {
+export class SuccessDisplay extends React.Component {
   static propTypes = {libraryName: PropTypes.string.isRequired};
 
   copyChannelId = () => {

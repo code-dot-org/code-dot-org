@@ -2,7 +2,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import sinon from 'sinon';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import libraryLoader from '@cdo/apps/code-studio/components/libraries/libraryLoader';
+import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
@@ -52,7 +52,7 @@ describe('libraryLoader.load', () => {
   it('calls onCodeError when an error exists in the code', () => {
     getJSLintAnnotationsStub.returns([{type: 'error'}]);
 
-    libraryLoader.load(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
+    loadLibrary(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
 
     expect(onCodeErrorStub.called).to.be.true;
     expect(onMissingFunctionsStub.called).to.be.false;
@@ -64,7 +64,7 @@ describe('libraryLoader.load', () => {
     sourceStub.yields({source: ''});
     functionStub.returns([]);
 
-    libraryLoader.load(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
+    loadLibrary(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
 
     expect(onCodeErrorStub.called).to.be.false;
     expect(onMissingFunctionsStub.called).to.be.true;
@@ -79,7 +79,7 @@ describe('libraryLoader.load', () => {
     sourceStub.yields({source: source, libraries: [library]});
     sinon.stub(libraryParser, 'createLibraryClosure').returns(library);
 
-    libraryLoader.load(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
+    loadLibrary(onCodeErrorStub, onMissingFunctionsStub, onSuccessStub);
 
     expect(onCodeErrorStub.called).to.be.false;
     expect(onMissingFunctionsStub.called).to.be.false;

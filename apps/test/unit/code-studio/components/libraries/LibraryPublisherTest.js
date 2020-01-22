@@ -10,7 +10,7 @@ import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {
-  let publishSpy, clientApi, libraryDetails;
+  let publishSpy, libraryClientApi, libraryDetails;
   let defaultSelectedFunctions, sourceFunctionList;
   const defaultDescription = '';
   const librarySource = '//comment\nfunction foo(){}';
@@ -30,8 +30,8 @@ describe('LibraryPublisher', () => {
       .returns(undefined);
     sinon.stub(libraryParser, 'suggestName').returns(libraryName);
     sinon.stub(libraryParser, 'sanitizeName').returns(libraryName);
-    clientApi = new LibraryClientApi('123');
-    publishSpy = sinon.stub(clientApi, 'publish');
+    libraryClientApi = new LibraryClientApi('123');
+    publishSpy = sinon.stub(libraryClientApi, 'publish');
   });
 
   after(() => {
@@ -68,7 +68,7 @@ describe('LibraryPublisher', () => {
           onPublishSuccess={onPublishSuccess}
           onUnpublishSuccess={onUnpublishSuccess}
           libraryDetails={libraryDetails}
-          clientApi={clientApi}
+          libraryClientApi={libraryClientApi}
         />
       );
 
@@ -85,7 +85,7 @@ describe('LibraryPublisher', () => {
           onPublishSuccess={onPublishSuccess}
           onUnpublishSuccess={onUnpublishSuccess}
           libraryDetails={libraryDetails}
-          clientApi={clientApi}
+          libraryClientApi={libraryClientApi}
         />
       );
 
@@ -105,7 +105,7 @@ describe('LibraryPublisher', () => {
           onPublishSuccess={onPublishSuccess}
           onUnpublishSuccess={onUnpublishSuccess}
           libraryDetails={libraryDetails}
-          clientApi={clientApi}
+          libraryClientApi={libraryClientApi}
         />
       );
     });
@@ -196,7 +196,7 @@ describe('LibraryPublisher', () => {
         onPublishSuccess={onPublishSuccess}
         onUnpublishSuccess={onUnpublishSuccess}
         libraryDetails={libraryDetails}
-        clientApi={clientApi}
+        libraryClientApi={libraryClientApi}
       />
     );
 
