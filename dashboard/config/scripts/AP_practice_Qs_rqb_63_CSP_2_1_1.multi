@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_63_CSP_2_1_1'
-wrong '8 more items can be uniquely identified.
-'
-wrong '8 times as many items can be uniquely identified.
-'
-right '2 times as many items can be uniquely identified.
-'
+wrong '8 more items can be uniquely identified.'
+wrong '8 times as many items can be uniquely identified.'
+right '2 times as many items can be uniquely identified.'
 wrong '10 times as many items can be uniquely identified.'
 markdown <<MARKDOWN
 You are asked to create a database that tracks items for a retail store. The store currently uses 7-bit binary barcodes to uniquely identify each item for sale. Which of the following best describes the result of increasing the barcode length from 7 bits to 8 bits?
