@@ -394,19 +394,18 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  //videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
-  //videojs.options.techOrder = ['flash', 'html5'];
-
   var videoPlayer = videojs(fallbackPlayerID, {}, function() {
     var $fallbackPlayer = $('#' + fallbackPlayerID);
-    var showingErrorMessage = false; // $fallbackPlayer.find('p').length > 0;
-    if (showingErrorMessage) {
+
+    // Handle a video.js player error.
+    this.on('error', function(e) {
       $fallbackPlayer.addClass('fallback-video-player-failed');
       if (hasNotesTab()) {
         openNotesTab();
       }
-    }
-    // Properly dispose of video.js player instance when hidden
+    });
+
+    // Properly dispose of video.js player instance when hidden.
     $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
       videoPlayer.dispose();
     });
