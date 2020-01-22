@@ -5,9 +5,10 @@ import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
   DialogState,
   LoadingDisplay,
-  ErrorDisplay,
-  SuccessDisplay
+  UnpublishSuccessDisplay,
+  ErrorDisplay
 } from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
+import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
 
 describe('LibraryCreationDialog', () => {
@@ -16,7 +17,7 @@ describe('LibraryCreationDialog', () => {
   beforeEach(() => {
     wrapper = shallow(
       <LibraryCreationDialog
-        libraryClientApi={{}}
+        channelId="123"
         dialogIsOpen={true}
         onClose={() => {}}
       />
@@ -34,7 +35,12 @@ describe('LibraryCreationDialog', () => {
 
     it('displays success while in the published state', () => {
       wrapper.setState({dialogState: DialogState.PUBLISHED});
-      expect(wrapper.find(SuccessDisplay).exists()).to.be.true;
+      expect(wrapper.find(PublishSuccessDisplay).exists()).to.be.true;
+    });
+
+    it('displays unpublish success while in the unpublished state', () => {
+      wrapper.setState({dialogState: DialogState.UNPUBLISHED});
+      expect(wrapper.find(UnpublishSuccessDisplay).exists()).to.be.true;
     });
 
     it('displays error while in the code error state', () => {

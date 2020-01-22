@@ -20,13 +20,11 @@ describe('LibraryPublisher', () => {
   before(() => {
     replaceOnWindow('dashboard', {
       project: {
-        setLibraryName: () => {},
-        setLibraryDescription: () => {}
+        setLibraryDetails: () => {}
       }
     });
-    sinon.stub(window.dashboard.project, 'setLibraryName').returns(undefined);
     sinon
-      .stub(window.dashboard.project, 'setLibraryDescription')
+      .stub(window.dashboard.project, 'setLibraryDetails')
       .returns(undefined);
     sinon.stub(libraryParser, 'suggestName').returns(libraryName);
     sinon.stub(libraryParser, 'sanitizeName').returns(libraryName);
@@ -109,7 +107,7 @@ describe('LibraryPublisher', () => {
           onPublishSuccess={onPublishSuccess}
           onUnpublishSuccess={onUnpublishSuccess}
           libraryDetails={libraryDetails}
-          clientApi={clientApi}
+          libraryClientApi={libraryClientApi}
         />
       );
 
@@ -249,20 +247,20 @@ describe('LibraryPublisher', () => {
   describe('unpublish', () => {
     let wrapper, deleteSpy;
     beforeEach(() => {
-      deleteSpy = sinon.stub(clientApi, 'delete');
+      deleteSpy = sinon.stub(libraryClientApi, 'delete');
       libraryDetails.alreadyPublished = true;
       wrapper = shallow(
         <LibraryPublisher
           onPublishSuccess={onPublishSuccess}
           onUnpublishSuccess={onUnpublishSuccess}
           libraryDetails={libraryDetails}
-          clientApi={clientApi}
+          libraryClientApi={libraryClientApi}
         />
       );
     });
 
     afterEach(() => {
-      clientApi.delete.restore();
+      libraryClientApi.delete.restore();
     });
 
     it('calls onUnpublishSuccess when it succeeds', () => {
