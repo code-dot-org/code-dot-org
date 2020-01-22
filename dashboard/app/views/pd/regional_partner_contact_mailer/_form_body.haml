@@ -8,6 +8,12 @@
     %br
     %b Zip:
     = @form[:zip]
+    %br
+    %b Role:
+    = "#{@form[:role]}"
+    %br
+    %b Grade Levels:
+    = "#{@form[:grade_levels].join(', ')}"
 
   %p
     %b Message:

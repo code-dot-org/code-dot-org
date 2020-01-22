@@ -16,4 +16,12 @@ class Pd::RegionalPartnerContactMailerPreview < ActionMailer::Preview
 
     Pd::RegionalPartnerContactMailer.receipt(form, nil)
   end
+
+  def mini_contact_matched_partner
+    rp_pm = build :regional_partner_program_manager
+    rp_mini_contact = build :pd_regional_partner_mini_contact, regional_partner: rp_pm.regional_partner
+    form = rp_mini_contact.sanitize_and_trim_form_data_hash
+
+    Pd::RegionalPartnerContactMailer.matched(form, rp_pm)
+  end
 end

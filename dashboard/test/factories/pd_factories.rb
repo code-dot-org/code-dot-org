@@ -631,6 +631,7 @@ FactoryGirl.define do
   factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
     initialize_with do
       {
+        mini: true,
         name: 'name',
         email: 'foo@bar.com',
         zip: '45242',
