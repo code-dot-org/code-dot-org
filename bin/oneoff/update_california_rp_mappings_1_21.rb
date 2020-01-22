@@ -43,6 +43,9 @@ if lausd_mappings.count > 0
     # any zips that are in the new LAUSD mapping and the current USC mapping should be removed from USC
     delete_result = Pd::RegionalPartnerMapping.where(regional_partner_id: USC_ID).where(zip_code: intersection).delete_all
     puts "Deleted #{delete_result} mappings"
+
+    # This script is a dry-run unless we comment out this last line
+    raise ActiveRecord::Rollback.new, "Intentional rollback"
   end
 else
   puts "Could not find LAUSD mappings"
