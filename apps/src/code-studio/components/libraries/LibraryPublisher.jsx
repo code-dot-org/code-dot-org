@@ -229,8 +229,8 @@ export default class LibraryPublisher extends React.Component {
   };
 
   unpublish = () => {
-    const {clientApi, onUnpublishSuccess} = this.props;
-    clientApi.delete(
+    const {libraryClientApi, onUnpublishSuccess} = this.props;
+    libraryClientApi.delete(
       () => {
         onUnpublishSuccess();
         dashboard.project.setLibraryDetails(undefined, undefined);

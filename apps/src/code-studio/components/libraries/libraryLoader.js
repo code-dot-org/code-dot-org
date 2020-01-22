@@ -7,7 +7,8 @@ import annotationList from '@cdo/apps/acemode/annotationList';
  * into the given callbacks. This metadata is gathered from 2 places.
  * 1. The code in the library's source project
  * 2. The most recently published version of the library (if it exists)
- * @param {object} clientApi the API used to perform S3 actions for libraries
+ * @param {object} libraryClientApi the API used to perform S3 actions for
+ *                   libraries
  * @param {function} onCodeError the callback used when there is a bug detected
  *                   in the library's code.
  * @param {function} onMissingFunctions the callback used when no functions are
@@ -16,8 +17,8 @@ import annotationList from '@cdo/apps/acemode/annotationList';
  *                   successfully loaded. All details about the library are
  *                   passed to this callback.
  */
-export async function load(
-  clientApi,
+export default async function load(
+  libraryClientApi,
   onCodeError,
   onMissingFunctions,
   onSuccess
@@ -44,7 +45,7 @@ export async function load(
 
   // Get library metadata from the previously published version of the library
   let getLibrary = new Promise((resolve, reject) => {
-    clientApi.fetchLatest(
+    libraryClientApi.fetchLatest(
       data => {
         publishedLibrary = JSON.parse(data);
         resolve();
@@ -99,7 +100,3 @@ export async function load(
     });
   });
 }
-
-export default {
-  load
-};
