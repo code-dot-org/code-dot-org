@@ -32,6 +32,7 @@ import {
   faTrash
 } from '@fortawesome/free-solid-svg-icons';
 import I18n from './i18n';
+import Markdown from '@ml/utils/Markdown';
 
 const styles = {
   body: {
@@ -1180,18 +1181,18 @@ class PondPanel extends React.Component {
           >
             {state.pondExplainFishSummary && (
               <div>
-                <div style={styles.pondPanelPreText}>
-                  {I18n.t('mostImportantPartsInDetermining')}
-                  {' “'}
-                  <span style={{color: colors.green}}>
-                    {state.word.toLowerCase()}
-                  </span>
-                  {'”'} {I18n.t('or')}
-                  {' “'}
-                  <span style={{color: colors.red}}>
-                    {I18n.t('notWord', {word: state.word}).toLowerCase()}
-                  </span>
-                  {'”'}.
+                <div style={styles.pondPanelPreText} id="pondTextMarkdown">
+                  <Markdown
+                    markdown={I18n.t(
+                      'mostImportantPartsDescription',
+                      {
+                        word: state.word.toLowerCase(),
+                        notWord: I18n.t('notWord', {
+                          word: state.word
+                        }).toLowerCase()
+                      }
+                    )}
+                  />
                 </div>
                 {state.pondExplainFishSummary.slice(0, 4).map((f, i) => (
                   <div key={i}>
