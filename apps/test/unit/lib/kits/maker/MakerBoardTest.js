@@ -484,28 +484,30 @@ export function itImplementsTheMakerBoardInterface(
       });
     });
 
-    /**
-     * @function
-     * @name MakerBoard#createLed
-     * @param {number} pin
-     * @return {Led} a newly constructed Led component
-     */
-    describe(`createLed(pin)`, () => {
-      beforeEach(() => {
-        return board.connect();
-      });
+    if (boardType === 'circuit playground') {
+      /**
+       * @function
+       * @name MakerBoard#createLed
+       * @param {number} pin
+       * @return {Led} a newly constructed Led component
+       */
+      describe(`createLed(pin)`, () => {
+        beforeEach(() => {
+          return board.connect();
+        });
 
-      it(`returns an Led component`, () => {
-        const led = board.createLed(10);
-        // FakeBoard doesn't provide an LED component, so check the basic LED
-        // shape instead.
-        expect(led.on).to.be.a('function');
-        expect(led.off).to.be.a('function');
-        expect(led.blink).to.be.a('function');
-        expect(led.toggle).to.be.a('function');
-        expect(led.pulse).to.be.a('function');
+        it(`returns an Led component`, () => {
+          const led = board.createLed(10);
+          // FakeBoard doesn't provide an LED component, so check the basic LED
+          // shape instead.
+          expect(led.on).to.be.a('function');
+          expect(led.off).to.be.a('function');
+          expect(led.blink).to.be.a('function');
+          expect(led.toggle).to.be.a('function');
+          expect(led.pulse).to.be.a('function');
+        });
       });
-    });
+    }
 
     /**
      * @function
@@ -524,12 +526,16 @@ export function itImplementsTheMakerBoardInterface(
         return board.connect();
       });
 
-      it(`returns an Led component`, () => {
+      it(`returns a Button component`, () => {
         const button = board.createButton(10);
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-        expect(button).to.have.property('holdtime');
+
+        // TODO - not yet implemented for microbit
+        if (boardType === 'circuit playground') {
+          expect(button).to.have.property('holdtime');
+        }
       });
     });
   });
