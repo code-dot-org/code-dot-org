@@ -7,8 +7,8 @@ import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/Library
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
-  let clientApi, fetchStub, getJSLintAnnotationsStub, sourceStub, functionStub;
-  let onCodeErrorStub, onMissingFunctionsStub, onSuccessStub;
+  let libraryClientApi, fetchStub, getJSLintAnnotationsStub, sourceStub;
+  let onCodeErrorStub, onMissingFunctionsStub, onSuccessStub, functionStub;
   let libraryName = 'Name';
   let source = 'function foo() {}';
   before(() => {
@@ -18,7 +18,7 @@ describe('libraryLoader.load', () => {
         getLevelName: () => {}
       }
     });
-    clientApi = new LibraryClientApi('123');
+    libraryClientApi = new LibraryClientApi('123');
   });
 
   after(() => {
@@ -36,7 +36,7 @@ describe('libraryLoader.load', () => {
     );
     functionStub = sinon.stub(libraryParser, 'getFunctions');
     sinon.stub(window.dashboard.project, 'getLevelName').returns(libraryName);
-    fetchStub = sinon.stub(clientApi, 'fetchLatest');
+    fetchStub = sinon.stub(libraryClientApi, 'fetchLatest');
     onCodeErrorStub = sinon.stub();
     onMissingFunctionsStub = sinon.stub();
     onSuccessStub = sinon.stub();
@@ -47,7 +47,7 @@ describe('libraryLoader.load', () => {
     window.dashboard.project.getUpdatedSourceAndHtml_.restore();
     libraryParser.getFunctions.restore();
     window.dashboard.project.getLevelName.restore();
-    clientApi.fetchLatest.restore();
+    libraryClientApi.fetchLatest.restore();
     onCodeErrorStub.resetHistory();
     onMissingFunctionsStub.resetHistory();
     onSuccessStub.resetHistory();
@@ -57,7 +57,7 @@ describe('libraryLoader.load', () => {
     getJSLintAnnotationsStub.returns([{type: 'error'}]);
 
     await loadLibrary(
-      clientApi,
+      libraryClientApi,
       onCodeErrorStub,
       onMissingFunctionsStub,
       onSuccessStub
@@ -75,7 +75,7 @@ describe('libraryLoader.load', () => {
     functionStub.returns([]);
 
     await loadLibrary(
-      clientApi,
+      libraryClientApi,
       onCodeErrorStub,
       onMissingFunctionsStub,
       onSuccessStub
@@ -96,7 +96,7 @@ describe('libraryLoader.load', () => {
     sinon.stub(libraryParser, 'createLibraryClosure').returns(library);
 
     await loadLibrary(
-      clientApi,
+      libraryClientApi,
       onCodeErrorStub,
       onMissingFunctionsStub,
       onSuccessStub
@@ -131,8 +131,8 @@ describe('libraryLoader.load', () => {
     sourceStub.yields({source: source});
     fetchStub.callsArgWith(0, JSON.stringify(existingLibrary));
 
-    await libraryLoader.load(
-      clientApi,
+    await loadLibrary(
+      libraryClientApi,
       onCodeErrorStub,
       onMissingFunctionsStub,
       onSuccessStub
