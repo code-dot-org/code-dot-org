@@ -13971,3 +13971,17 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp8-pilot:
+          stages:
+            new stage:
+              name: new stage
+            Create PT - Review the Task:
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: CSP Unit 8 Pilot - Create PT Prep
+          description_audience: ''
+          description_short: ''
+          description: ''

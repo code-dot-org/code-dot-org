@@ -1,10 +1,7 @@
 name 'AP_practice_Qs_rqb_84_CSP_3_2_1'
-wrong 'How many states have a higher percentage of female computer science majors than male computer science majors attending college in that state?
-'
-wrong 'Do female students majoring in computer science tend to have higher grade point averages than male students majoring in computer science?
-'
-right 'Do male students majoring in computer science tend to have higher grade point averages than male students majoring in other topic areas?
-'
+wrong 'How many states have a higher percentage of female computer science majors than male computer science majors attending college in that state?'
+wrong 'Do female students majoring in computer science tend to have higher grade point averages than male students majoring in computer science?'
+right 'Do male students majoring in computer science tend to have higher grade point averages than male students majoring in other topic areas?'
 wrong 'Which state has the highest number of female students majoring in computer science?'
 markdown <<MARKDOWN
 A large data set contains information about all students majoring in computer science in colleges across the united States.

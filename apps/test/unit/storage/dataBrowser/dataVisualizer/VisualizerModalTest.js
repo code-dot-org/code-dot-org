@@ -143,4 +143,59 @@ describe('VisualizerModal', () => {
       ).to.deep.equal(expectedNumericColumns);
     });
   });
+
+  describe('getValuesForFilterColumn', () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
+    });
+
+    it('shows quotes around strings', () => {
+      let records = [{id: 3, col: '123'}, {id: 4, col: 'abc'}];
+      expect(
+        wrapper.instance().getValuesForFilterColumn(records, 'col')
+      ).to.deep.equal(['"123"', '"abc"']);
+    });
+
+    it('shows numbers and booleans without quotes', () => {
+      let records = [
+        {id: 1, col: true},
+        {id: 2, col: 'false'},
+        {id: 3, col: 123},
+        {id: 4, col: '456'}
+      ];
+      expect(
+        wrapper.instance().getValuesForFilterColumn(records, 'col')
+      ).to.deep.equal(['true', '"false"', '123', '"456"']);
+    });
+
+    it('shows null, undefined, and "" separately', () => {
+      let records = [
+        {id: 1, col: null},
+        {id: 2, col: undefined},
+        {id: 3, col: ''}
+      ];
+      expect(
+        wrapper.instance().getValuesForFilterColumn(records, 'col')
+      ).to.deep.equal(['null', 'undefined', '""']);
+    });
+
+    it('returns a list of unique values in the column', () => {
+      let records = [
+        {id: 1, col: 'xyz'},
+        {id: 2, col: 'def'},
+        {id: 3, col: '123'},
+        {id: 4, col: 'xyz'}, // duplicate 'xyz'
+        {id: 5, col: undefined},
+        {id: 6}, // duplicate undefined
+        {id: 7, col: 123}, // not a duplicate because this is a number and above is a string
+        {id: 8, col: true},
+        {id: 9, col: true} // duplicate true
+      ];
+
+      expect(
+        wrapper.instance().getValuesForFilterColumn(records, 'col')
+      ).to.deep.equal(['"xyz"', '"def"', '"123"', 'undefined', '123', 'true']);
+    });
+  });
 });

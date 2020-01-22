@@ -580,9 +580,8 @@ class Script < ActiveRecord::Base
   def self.latest_stable_version(family_name, version_year: nil, locale: 'en-us')
     return nil unless family_name.present?
 
-    script_versions = Script.
-      where(family_name: family_name).
-      order("properties -> '$.version_year' DESC")
+    script_versions = Script.get_family_from_cache(family_name).
+      sort_by(&:version_year).reverse
 
     # Only select stable, supported scripts (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -1484,6 +1483,8 @@ class Script < ActiveRecord::Base
   def self.clear_cache
     raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    @@script_family_cache = nil
+    @@level_cache = nil
     Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
@@ -1665,6 +1666,9 @@ class Script < ActiveRecord::Base
     return false unless pilot? && user
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
+    # a platformization partner should be able to view pilot scripts which they
+    # own, even if they are not in the pilot experiment.
+    return true if has_editor_experiment?(user)
 
     # A user without the experiment has pilot script access if
     # (1) they have been assigned to or have progress in the pilot script, and
@@ -1685,6 +1689,13 @@ class Script < ActiveRecord::Base
     return false unless user&.teacher?
     return true if user.permission?(UserPermission::LEVELBUILDER)
     all_scripts.any? {|script| script.has_pilot_experiment?(user)}
+  end
+
+  # If a user is in the editor experiment of this script, that indicates that
+  # they are a platformization partner who owns this script.
+  def has_editor_experiment?(user)
+    return false unless editor_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: editor_experiment)
   end
 
   def self.get_version_year_options

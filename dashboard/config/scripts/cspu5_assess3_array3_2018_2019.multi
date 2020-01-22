@@ -1,9 +1,9 @@
 name 'cspu5_assess3_array3_2018_2019'
-wrong'<img src="https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png">'
-wrong'<img src="https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png">'
-wrong'<img src="https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png">'
-wrong'<img src="https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png">'
-right '<img src="https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png">'
+wrong 'https://images.code.org/68844f41da6225a8ae84d025d56534f5-image-1477186876917.png'
+wrong 'https://images.code.org/ce0eeff1b3e71ca0a397cc928ad60552-image-1477186891498.png'
+wrong 'https://images.code.org/79e1b6c7f8e4d6cada7ecc023aa7423b-image-1477186908088.png'
+wrong 'https://images.code.org/8ed7339108f8293fc6b460435921c317-image-1486075803894.png'
+right 'https://images.code.org/815b58254104592ae1f0cbf6fc195897-image-1477186938381.png'
 
 
 markdown <<MARKDOWN

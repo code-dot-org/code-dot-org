@@ -3,6 +3,7 @@ import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
+  setFeedback,
   setHasAuthoredHints,
   setInstructionsConstants
 } from '@cdo/apps/redux/instructions';
@@ -53,6 +54,12 @@ const createCommonStore = function(options = {}) {
 
     pageConstants.showNextHint = () => {};
     instructionsConstants.noInstructionsWhenCollapsed = false;
+    store.dispatch(
+      setFeedback({
+        message:
+          'some simple, plaintext feedback, used to indicate that something went wrong'
+      })
+    );
     store.dispatch(setHasAuthoredHints(true));
     store.dispatch(
       enqueueHints(
