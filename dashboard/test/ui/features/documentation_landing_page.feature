@@ -15,3 +15,8 @@ Feature: Documentation Landing Page
     And I wait until ".content" contains text "UI Controls"
     And I wait until ".content" contains text "onEvent"
     And I wait until ".category_list" contains text "UI Controls"
+
+    Given I am on "http://studio.code.org/docs/concepts/"
+    And I wait until element ".container" is visible
+    And I wait until ".content" contains text "Concepts"
+    And I wait until "#categories" contains text "Drawing Shapes"
