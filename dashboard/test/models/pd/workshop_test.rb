@@ -842,6 +842,21 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
 
+  test 'teachers_attending_all_sessions' do
+    workshop = create :workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      sessions_from: Date.new(2019, 7, 1)
+
+    2.times do
+      create :pd_workshop_participant, enrolled: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, workshop: workshop
+      create :pd_workshop_participant, enrolled: true, attended: true, cdo_scholarship_recipient: true, workshop: workshop
+    end
+
+    assert_equal 4, workshop.teachers_attending_all_sessions.count
+    assert_equal 2, workshop.teachers_attending_all_sessions(true).count
+  end
+
   # TODO: remove this test when workshop_organizer is deprecated
   test 'organizer_or_facilitator?' do
     facilitator = create :facilitator
