@@ -1553,24 +1553,19 @@ var projects = (module.exports = {
           }
         })
         .then(data => {
-          return new Promise((resolve, reject) => {
-            this.fetchSource(
-              data,
-              err => {
-                if (err) {
-                  reject();
-                } else {
-                  if (current.isOwner && pathInfo.action === 'view') {
-                    isEditing = true;
-                  }
-                  fetchAbuseScoreAndPrivacyViolations(this, function() {
-                    resolve();
-                  });
-                }
-              },
-              queryParams('version'),
-              sourcesApi
-            );
+          return this.fetchSource(
+            data,
+            queryParams('version'),
+            sourcesApi
+          ).then(() => {
+            if (current.isOwner && pathInfo.action === 'view') {
+              isEditing = true;
+            }
+            return new Promise(resolve => {
+              fetchAbuseScoreAndPrivacyViolations(this, function() {
+                resolve();
+              });
+            });
           });
         });
     } else {
@@ -1587,23 +1582,16 @@ var projects = (module.exports = {
   loadProjectBackedLevel_: function(sourcesApi) {
     isEditing = true;
     return this.fetchChannel(appOptions.channel).then(data => {
-      return new Promise((resolve, reject) => {
-        this.fetchSource(
-          data,
-          err => {
-            if (err) {
-              reject();
-            } else {
-              projects.showHeaderForProjectBacked();
-              fetchAbuseScoreAndPrivacyViolations(this, function() {
-                resolve();
-              });
-            }
-          },
-          queryParams('version'),
-          sourcesApi
-        );
-      });
+      return this.fetchSource(data, queryParams('version'), sourcesApi).then(
+        () => {
+          projects.showHeaderForProjectBacked();
+          return new Promise(resolve => {
+            fetchAbuseScoreAndPrivacyViolations(this, function() {
+              resolve();
+            });
+          });
+        }
+      );
     });
   },
 
@@ -1707,11 +1695,11 @@ var projects = (module.exports = {
    * Given data from our channels api, updates current and gets sources from
    * sources api
    * @param {object} channelData Data we fetched from channels api
-   * @param {function} callback
    * @param {string?} version Optional version to load
    * @param {boolean} sources api to use, if present.
+   * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData, callback, version, sourcesApi) {
+  fetchSource(channelData, version, sourcesApi) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1727,26 +1715,28 @@ var projects = (module.exports = {
       if (version) {
         url += '?version=' + version;
       }
-      sourcesApi.fetch(url, (err, data, jqXHR) => {
-        if (err) {
-          this.logError_(
-            'load-sources-error',
-            null,
-            `unable to fetch project source file: ${err}`
-          );
-          console.warn(err);
-          callback(err);
-          return;
-        }
-        currentSourceVersionId =
-          jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-        unpackSources(data);
-        callback();
+      return new Promise((resolve, reject) => {
+        sourcesApi.fetch(url, (err, data, jqXHR) => {
+          if (err) {
+            this.logError_(
+              'load-sources-error',
+              null,
+              `unable to fetch project source file: ${err}`
+            );
+            console.warn(err);
+            reject(err);
+            return;
+          }
+          currentSourceVersionId =
+            jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
+          unpackSources(data);
+          resolve();
+        });
       });
     } else {
       // It's possible that we created a channel, but failed to save anything to
       // S3. In this case, it's expected that html/levelSource are null.
-      callback();
+      return Promise.resolve();
     }
   }
 });
