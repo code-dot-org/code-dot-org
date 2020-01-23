@@ -684,7 +684,7 @@ class Script < ActiveRecord::Base
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def self.scripts_for_standards
+  def self.scripts_with_standards
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
       where("properties -> '$.version_year' >= '2019'").
@@ -692,7 +692,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_standards_associations?
-    Script.scripts_for_standards.include?([localized_title, name])
+    Script.scripts_with_standards.include?([localized_title, name])
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1383,7 +1383,7 @@ class Script < ActiveRecord::Base
       family_name: family_name,
       version_year: version_year,
       assigned_section_id: assigned_section_id,
-      has_standards_associations: has_standards_associations?
+      hasStandards: has_standards_associations?
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages

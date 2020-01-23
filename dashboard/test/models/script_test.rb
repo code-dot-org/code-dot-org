@@ -1822,14 +1822,14 @@ endvariants
     assert @csp_script.csp?
   end
 
-  test "scripts_for_standards" do
+  test "scripts_with_standards" do
     assert_equal(
       [
         [
           @csf_script_2019.localized_title, @csf_script_2019.name
         ]
       ],
-      Script.scripts_for_standards
+      Script.scripts_with_standards
     )
   end
 
