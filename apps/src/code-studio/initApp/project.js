@@ -1585,28 +1585,24 @@ var projects = (module.exports = {
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
   loadProjectBackedLevel_: function(sourcesApi) {
-    return new Promise((resolve, reject) => {
-      isEditing = true;
-      channels.fetch(appOptions.channel, (err, data) => {
-        if (err) {
-          reject();
-        } else {
-          this.fetchSource(
-            data,
-            err => {
-              if (err) {
-                reject();
-              } else {
-                projects.showHeaderForProjectBacked();
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  resolve();
-                });
-              }
-            },
-            queryParams('version'),
-            sourcesApi
-          );
-        }
+    isEditing = true;
+    return this.fetchChannel(appOptions.channel).then(data => {
+      return new Promise((resolve, reject) => {
+        this.fetchSource(
+          data,
+          err => {
+            if (err) {
+              reject();
+            } else {
+              projects.showHeaderForProjectBacked();
+              fetchAbuseScoreAndPrivacyViolations(this, function() {
+                resolve();
+              });
+            }
+          },
+          queryParams('version'),
+          sourcesApi
+        );
       });
     });
   },
