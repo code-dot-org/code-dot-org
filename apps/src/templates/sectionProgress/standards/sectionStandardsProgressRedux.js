@@ -30,6 +30,14 @@ export function getLessonsCompletedByStandardForScript(script) {
   return lessonCompletedByStandard;
 }
 
+export function getNumberLessonsCompleted(script) {
+  return 5;
+}
+
+export function getNumberLessonsInCourse(script) {
+  return 10;
+}
+
 export function getStandardsCoveredForScript(script) {
   return fakeStandards;
 }
