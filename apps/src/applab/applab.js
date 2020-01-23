@@ -783,11 +783,16 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    let channelExists = await Applab.storage.channelExists();
+    const channelExists = await Applab.storage.channelExists();
+    const libraryManifest = await Applab.storage.getLibraryManifest();
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
-        if (getDatasetInfo(table).current) {
+        const datasetInfo = getDatasetInfo(libraryManifest.tables, table);
+        if (!datasetInfo) {
+          // We don't know what this table is, we should just skip it.
+          console.warn(`unknown table ${table}`);
+        } else if (datasetInfo.current) {
           Applab.storage.addCurrentTableToProject(
             table,
             () => console.log('success'),

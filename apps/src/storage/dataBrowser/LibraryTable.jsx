@@ -56,15 +56,14 @@ class LibraryTable extends React.Component {
     name: PropTypes.string.isRequired,
     importTable: PropTypes.func.isRequired,
 
-    // from redux dispatch
+    // Provided via Redux
+    libraryManifest: PropTypes.object.isRequired,
     onShowPreview: PropTypes.func.isRequired
   };
 
   state = {
     collapsed: true
   };
-
-  datasetInfo = getDatasetInfo(this.props.name);
 
   toggleCollapsed = () =>
     this.setState({
@@ -73,6 +72,13 @@ class LibraryTable extends React.Component {
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+    const datasetInfo = getDatasetInfo(
+      this.props.libraryManifest,
+      this.props.name
+    );
+    if (!datasetInfo) {
+      return null;
+    }
 
     return (
       <div>
@@ -83,7 +89,7 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             {/* TODO: Add last updated time */}
-            <div>{this.datasetInfo.description}</div>
+            <div>{datasetInfo.description}</div>
             <div>
               <button
                 style={styles.preview}
@@ -95,7 +101,7 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={() => this.props.importTable(this.datasetInfo)}
+                onClick={() => this.props.importTable(datasetInfo)}
               >
                 {msg.import()}
               </button>
@@ -108,7 +114,9 @@ class LibraryTable extends React.Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    libraryManifest: state.data.libraryManifest || {}
+  }),
   dispatch => ({
     onShowPreview(tableName) {
       dispatch(showPreview(tableName));
