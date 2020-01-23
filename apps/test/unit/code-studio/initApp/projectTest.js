@@ -17,12 +17,14 @@ describe('project.js', () => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
     sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showProjectHeader');
     sinon.stub(header, 'showMinimalProjectHeader');
     sinon.stub(header, 'updateTimestamp');
   });
 
   afterEach(() => {
     utils.reload.restore();
+    header.showProjectHeader.restore();
     header.showMinimalProjectHeader.restore();
     header.updateTimestamp.restore();
     restoreAppOptions();
@@ -663,8 +665,6 @@ describe('project.js', () => {
 
     beforeEach(() => {
       window.appOptions.channel = 'mychannel';
-      window.dashboard = window.dashboard || {};
-      window.dashboard = {project};
       sinon.stub(utils, 'currentLocation').returns({
         pathname: '/projects/artist/mychannel',
         search: ''
