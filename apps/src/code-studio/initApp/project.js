@@ -1523,36 +1523,37 @@ var projects = (module.exports = {
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
   loadStandaloneProject_: function(sourcesApi) {
-    return new Promise((resolve, reject) => {
-      var pathInfo = parsePath();
+    var pathInfo = parsePath();
 
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
-          isEditing = true;
-        } else {
-          $('#betainfo').hide();
-        }
+    if (pathInfo.channelId) {
+      if (pathInfo.action === 'edit') {
+        isEditing = true;
+      } else {
+        $('#betainfo').hide();
+      }
 
-        // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, (err, data) => {
-          if (err) {
-            if (err.message.includes('error: Not Found')) {
-              // Project not found. Redirect to the most recent project of this
-              // type, or a new project of this type if none exists.
-              const newPath = utils
-                .currentLocation()
-                .pathname.split('/')
-                .slice(PathPart.START, PathPart.APP + 1)
-                .join('/');
-              utils.navigateToHref(newPath);
-              if (IN_UNIT_TEST) {
-                // Allow unit test to confirm that navigation has happened.
-                resolve();
-              }
-            } else {
-              reject();
+      // Load the project ID, if one exists
+      return this.fetchChannel(pathInfo.channelId)
+        .catch(err => {
+          if (err.message.includes('error: Not Found')) {
+            // Project not found. Redirect to the most recent project of this
+            // type, or a new project of this type if none exists.
+            const newPath = utils
+              .currentLocation()
+              .pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1)
+              .join('/');
+            utils.navigateToHref(newPath);
+            if (IN_UNIT_TEST) {
+              // Allow unit test to confirm that navigation has happened.
+              return Promise.reject();
             }
           } else {
+            return Promise.reject();
+          }
+        })
+        .then(data => {
+          return new Promise((resolve, reject) => {
             this.fetchSource(
               data,
               err => {
@@ -1570,13 +1571,12 @@ var projects = (module.exports = {
               queryParams('version'),
               sourcesApi
             );
-          }
+          });
         });
-      } else {
-        isEditing = true;
-        resolve();
-      }
-    });
+    } else {
+      isEditing = true;
+      return Promise.resolve();
+    }
   },
 
   /**
@@ -1693,6 +1693,18 @@ var projects = (module.exports = {
   setPublishedAt(publishedAt) {
     current = current || {};
     current.publishedAt = publishedAt;
+  },
+
+  fetchChannel(channelId) {
+    return new Promise((resolve, reject) => {
+      channels.fetch(channelId, (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    });
   },
 
   /**
