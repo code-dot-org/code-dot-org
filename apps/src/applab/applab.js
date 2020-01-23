@@ -49,7 +49,8 @@ import {
   deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData
+  updateKeyValueData,
+  setLibraryManifest
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -883,6 +884,11 @@ function setupReduxSubscribers(store) {
     );
 
     if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // get data library manifest from /v3/channels/shared/metadata/manifest
+      Applab.storage.getLibraryManifest().then(result => {
+        console.log(result);
+        store.dispatch(setLibraryManifest(result));
+      });
       // /v3/channels/<channel_id>/current_tables tracks which
       // current tables the project has imported. Here we initialize the
       // redux list of current tables and keep it in sync
