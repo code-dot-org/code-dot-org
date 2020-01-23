@@ -156,6 +156,26 @@ describe('LibraryManagerDialog', () => {
       expect(wrapper.state().importLibraryId).to.equal('id');
     });
 
+    it('onImportFailed displays an error', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+      const importErrorMsg = 'An error occurred while importing your library.';
+      const getErrorEl = wrapper =>
+        wrapper
+          .find('BaseDialog')
+          .children()
+          .last();
+
+      expect(wrapper.state().error).to.be.null;
+      expect(getErrorEl(wrapper).text()).to.equal('');
+
+      wrapper.instance().onImportFailed();
+
+      expect(wrapper.state().error).to.equal(importErrorMsg);
+      expect(getErrorEl(wrapper).text()).to.equal(importErrorMsg);
+    });
+
     it('removeLibrary calls setProjectLibrary without the given library', () => {
       getProjectLibrariesStub.returns([{name: 'first'}, {name: 'second'}]);
       let setProjectLibraries = sinon.spy(
