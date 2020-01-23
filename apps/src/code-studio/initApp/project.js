@@ -1564,32 +1564,36 @@ var projects = (module.exports = {
         deferred.resolve();
       }
     } else if (appOptions.channel) {
-      isEditing = true;
-      channels.fetch(appOptions.channel, (err, data) => {
-        if (err) {
-          deferred.reject();
-        } else {
-          this.fetchSource(
-            data,
-            err => {
-              if (err) {
-                deferred.reject();
-              } else {
-                projects.showHeaderForProjectBacked();
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  deferred.resolve();
-                });
-              }
-            },
-            queryParams('version'),
-            sourcesApi
-          );
-        }
-      });
+      this.loadProjectBackedLevel_(deferred, sourcesApi);
     } else {
       deferred.resolve();
     }
     return deferred;
+  },
+
+  loadProjectBackedLevel_: function(deferred, sourcesApi) {
+    isEditing = true;
+    channels.fetch(appOptions.channel, (err, data) => {
+      if (err) {
+        deferred.reject();
+      } else {
+        this.fetchSource(
+          data,
+          err => {
+            if (err) {
+              deferred.reject();
+            } else {
+              projects.showHeaderForProjectBacked();
+              fetchAbuseScoreAndPrivacyViolations(this, function() {
+                deferred.resolve();
+              });
+            }
+          },
+          queryParams('version'),
+          sourcesApi
+        );
+      }
+    });
   },
 
   /**
