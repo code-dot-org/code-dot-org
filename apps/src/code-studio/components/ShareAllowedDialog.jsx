@@ -492,7 +492,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
-        <LibraryCreationDialog clientApi={libraryClientAPI} />
+        <LibraryCreationDialog libraryClientApi={libraryClientAPI} />
       </div>
     );
   }
