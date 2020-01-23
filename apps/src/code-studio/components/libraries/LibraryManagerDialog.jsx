@@ -54,8 +54,10 @@ const styles = {
   error: {
     color: color.red,
     textAlign: 'left',
-    margin: `0 ${DEFAULT_MARGIN}px`,
-    minHeight: 30
+    margin: DEFAULT_MARGIN,
+    minHeight: 30,
+    whiteSpace: 'pre-wrap',
+    lineHeight: 1
   }
 };
 
