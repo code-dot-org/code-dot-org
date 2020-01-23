@@ -102,13 +102,8 @@ class InlineAudio extends React.Component {
     audio: undefined,
     playing: false,
     error: false,
-    hover: false,
-    loaded: false
+    hover: false
   };
-
-  componentDidMount() {
-    this.getAudioElement();
-  }
 
   componentWillUpdate(nextProps) {
     const audioTargetWillChange =
@@ -142,11 +137,6 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
-
-    audio.addEventListener('canplay', () => {
-      this.setState({loaded: true});
-    });
-
     audio.addEventListener('ended', e => {
       this.setState({
         playing: false
@@ -174,7 +164,7 @@ class InlineAudio extends React.Component {
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
-    } else if (this.props.message && VOICES[this.props.locale]) {
+    } else if (this.props.message) {
       const voice = VOICES[this.props.locale];
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
@@ -220,7 +210,6 @@ class InlineAudio extends React.Component {
     if (
       this.props.textToSpeechEnabled &&
       !this.state.error &&
-      this.state.loaded &&
       this.isLocaleSupported() &&
       this.getAudioSrc()
     ) {
