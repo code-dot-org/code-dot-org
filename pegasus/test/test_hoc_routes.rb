@@ -21,6 +21,11 @@ class HocRoutesTest < Minitest::Test
       @pegasus = Rack::Test::Session.new(@mock_session)
       DCDO.clear
       Gatekeeper.clear
+
+      # Ensure that AssetHelper#webpack_asset_path does not raise an exception
+      # when called from unit tests. See comments on that method for details.
+      CDO.stubs(optimize_webpack_assets: false)
+      CDO.stubs(use_my_apps: true)
     end
 
     it 'redirects to tutorial via shortcode' do
