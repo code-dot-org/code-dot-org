@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+
+require_relative '../dashboard/config/environment'
+
+# Loads/merges the data from a CSV into the Standards table.
+# Can be used to overwrite the description and concept of
+# existing Standards and to create new Standards.
+# Will not delete existing Standards.
+
+# @param csv_path [String] The path to the CSV file.
+# Expected columns:
+# - organization
+# - organization_id
+# - description
+# - concept
+def main(csv_path)
+  created = 0
+  updated = 0
+  CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
+    parsed = {
+      organization: row['organization'],
+      organization_id: row['organization_id'],
+      description: row['description'],
+      concept: row['concept']
+    }
+    loaded = Standard.find_by({organization: parsed[:organization], organization_id: parsed[:organization_id]})
+    if loaded.nil?
+      begin
+        Standard.new(parsed).save!
+        created += 1
+      rescue => error
+        puts "Error when processing #{parsed[:organization]} #{parsed[:organization_id]}: #{error.message}"
+      end
+    else
+      loaded.assign_attributes(parsed)
+      if loaded.changed?
+        loaded.update!(parsed)
+        updated += 1
+      end
+    end
+  end
+  puts "Created #{created} standards, updated #{updated}"
+end
+
+main(ARGV[0])
