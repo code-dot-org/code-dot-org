@@ -2,10 +2,10 @@ name 'csp-u5-exam1-simulation-2_2020'
 editor_experiment ''
 
 
-wrong '<pre>random(1,100) = 40</pre>'
-wrong '<pre>random(1,100) = 60</pre>'
-wrong '<pre>random(1,100) <= 40</pre>'
-right '<pre>random(1,100) <= 60</pre>'
+wrong '`random(1,100) = 40`'
+wrong '`random(1,100) = 60`'
+wrong '`random(1,100) <= 40`'
+right '`random(1,100) <= 60`'
 
 
 markdown <<MARKDOWN
