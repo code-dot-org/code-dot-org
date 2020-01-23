@@ -1537,13 +1537,12 @@ var projects = (module.exports = {
           // navigateToHref to confirm that navigation has happened.
           return Promise.reject(err);
         })
-        .then(data => {
-          return this.fetchSource(data, queryParams('version')).then(() => {
-            if (current.isOwner && pathInfo.action === 'view') {
-              isEditing = true;
-            }
-            return fetchAbuseScoreAndPrivacyViolations(this);
-          });
+        .then(this.fetchSource.bind(this))
+        .then(() => {
+          if (current.isOwner && pathInfo.action === 'view') {
+            isEditing = true;
+          }
+          return fetchAbuseScoreAndPrivacyViolations(this);
         });
     } else {
       isEditing = true;
@@ -1558,12 +1557,12 @@ var projects = (module.exports = {
    */
   loadProjectBackedLevel_: function() {
     isEditing = true;
-    return this.fetchChannel(appOptions.channel).then(data => {
-      return this.fetchSource(data, queryParams('version')).then(() => {
+    return this.fetchChannel(appOptions.channel)
+      .then(this.fetchSource.bind(this))
+      .then(() => {
         projects.showHeaderForProjectBacked();
         return fetchAbuseScoreAndPrivacyViolations(this);
       });
-    });
   },
 
   /**
@@ -1665,7 +1664,7 @@ var projects = (module.exports = {
    * @param {string?} version Optional version to load
    * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData, version) {
+  fetchSource(channelData) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1679,6 +1678,7 @@ var projects = (module.exports = {
     const sourcesApi = this.getSourcesApi_();
     if (sourcesApi && channelData.migratedToS3) {
       var url = current.id + '/' + SOURCE_FILE;
+      const version = queryParams('version');
       if (version) {
         url += '?version=' + version;
       }
