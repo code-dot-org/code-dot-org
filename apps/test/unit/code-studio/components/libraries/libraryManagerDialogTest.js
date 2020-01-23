@@ -10,6 +10,8 @@ import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
+  const IMPORT_ERROR_MSG = 'An error occurred while importing your library.';
+
   describe('viewCode', () => {
     it('sets the view library', () => {
       const wrapper = shallow(
@@ -156,11 +158,22 @@ describe('LibraryManagerDialog', () => {
       expect(wrapper.state().importLibraryId).to.equal('id');
     });
 
+    it('setLibraryToImport resets the error in state to null', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+
+      wrapper.instance().onImportFailed();
+      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+
+      wrapper.instance().setLibraryToImport({target: {value: 'id'}});
+      expect(wrapper.state().error).to.be.null;
+    });
+
     it('onImportFailed displays an error', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      const importErrorMsg = 'An error occurred while importing your library.';
       const getErrorEl = wrapper =>
         wrapper
           .find('BaseDialog')
@@ -172,8 +185,8 @@ describe('LibraryManagerDialog', () => {
 
       wrapper.instance().onImportFailed();
 
-      expect(wrapper.state().error).to.equal(importErrorMsg);
-      expect(getErrorEl(wrapper).text()).to.equal(importErrorMsg);
+      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      expect(getErrorEl(wrapper).text()).to.equal(IMPORT_ERROR_MSG);
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
