@@ -37,7 +37,8 @@ const styles = {
 class StandardsProgressTable extends Component {
   static propTypes = {
     standards: PropTypes.array,
-    lessonsCompletedByStandard: PropTypes.object
+    lessonsCompletedByStandard: PropTypes.object,
+    style: PropTypes.object
   };
 
   standardCategoryCellFormatter = (standard, {rowData, rowIndex}) => {
@@ -182,7 +183,10 @@ class StandardsProgressTable extends Component {
     });
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider
+        columns={columns}
+        style={{...tableLayoutStyles.table, ...this.props.style}}
+      >
         <Table.Header />
         <Table.Body rows={rowData} rowKey="id" />
       </Table.Provider>

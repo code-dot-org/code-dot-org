@@ -43,9 +43,11 @@ export default storybook => {
             }}
             scriptFriendlyName="Express Course (2019)"
             scriptDescription="This is the description of the script that will show up on the script overview page and now on the standards report"
-            numStudentsInSection={10}
+            numStudentsInSection={15}
             teacherName="Great Teacher"
             sectionName="My Amazing Section"
+            numLessonsCompleted={5}
+            numLessonsInUnit={10}
             teacherComment="Our class has been working so hard lately to learn computer science. The kids are having a blast and really enjoying getting to create cool projects. Plus they are learning to type better"
           />
         </Provider>
@@ -74,9 +76,11 @@ export default storybook => {
             }}
             scriptFriendlyName="Express Course (2019)"
             scriptDescription="This is the description of the script that will show up on the script overview page and now on the standards report"
-            numStudentsInSection={10}
+            numStudentsInSection={15}
             teacherName="Great Teacher"
             sectionName="My Amazing Section"
+            numLessonsCompleted={5}
+            numLessonsInUnit={10}
           />
         </Provider>
       );
