@@ -2,29 +2,13 @@ name 'csp-u5-exam1-list-iteration-3_2020'
 editor_experiment ''
 
 
-wrong '
-<pre>
-0
-</pre>
-'
+wrong '`0`'
 
-wrong '
-<pre>
-1000000
-</pre>
-'
+wrong '`1000000`'
 
-wrong '
-<pre>
-numList.length
-</pre>
-'
+wrong '`numList.length`'
 
-right '
-<pre>
-numList[0]
-</pre>
-'
+right '`numList[0]`'
 
 markdown <<MARKDOWN
 A program is designed to determine the minimum value in a list of positive numbers called `numList`. The following program was written
