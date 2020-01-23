@@ -1488,6 +1488,7 @@ var projects = (module.exports = {
       executeCallback(callback, data);
     });
   },
+
   /**
    * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
    */
@@ -1511,64 +1512,68 @@ var projects = (module.exports = {
         deferred.resolve();
         return deferred;
       }
-      var pathInfo = parsePath();
-
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
-          isEditing = true;
-        } else {
-          $('#betainfo').hide();
-        }
-
-        // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, (err, data) => {
-          if (err) {
-            if (err.message.includes('error: Not Found')) {
-              // Project not found. Redirect to the most recent project of this
-              // type, or a new project of this type if none exists.
-              const newPath = utils
-                .currentLocation()
-                .pathname.split('/')
-                .slice(PathPart.START, PathPart.APP + 1)
-                .join('/');
-              utils.navigateToHref(newPath);
-              if (IN_UNIT_TEST) {
-                // Allow unit test to confirm that navigation has happened.
-                deferred.resolve();
-              }
-            } else {
-              deferred.reject();
-            }
-          } else {
-            this.fetchSource(
-              data,
-              err => {
-                if (err) {
-                  deferred.reject();
-                } else {
-                  if (current.isOwner && pathInfo.action === 'view') {
-                    isEditing = true;
-                  }
-                  fetchAbuseScoreAndPrivacyViolations(this, function() {
-                    deferred.resolve();
-                  });
-                }
-              },
-              queryParams('version'),
-              sourcesApi
-            );
-          }
-        });
-      } else {
-        isEditing = true;
-        deferred.resolve();
-      }
+      this.loadStandaloneProject_(deferred, sourcesApi);
     } else if (appOptions.channel) {
       this.loadProjectBackedLevel_(deferred, sourcesApi);
     } else {
       deferred.resolve();
     }
     return deferred;
+  },
+
+  loadStandaloneProject_: function(deferred, sourcesApi) {
+    var pathInfo = parsePath();
+
+    if (pathInfo.channelId) {
+      if (pathInfo.action === 'edit') {
+        isEditing = true;
+      } else {
+        $('#betainfo').hide();
+      }
+
+      // Load the project ID, if one exists
+      channels.fetch(pathInfo.channelId, (err, data) => {
+        if (err) {
+          if (err.message.includes('error: Not Found')) {
+            // Project not found. Redirect to the most recent project of this
+            // type, or a new project of this type if none exists.
+            const newPath = utils
+              .currentLocation()
+              .pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1)
+              .join('/');
+            utils.navigateToHref(newPath);
+            if (IN_UNIT_TEST) {
+              // Allow unit test to confirm that navigation has happened.
+              deferred.resolve();
+            }
+          } else {
+            deferred.reject();
+          }
+        } else {
+          this.fetchSource(
+            data,
+            err => {
+              if (err) {
+                deferred.reject();
+              } else {
+                if (current.isOwner && pathInfo.action === 'view') {
+                  isEditing = true;
+                }
+                fetchAbuseScoreAndPrivacyViolations(this, function() {
+                  deferred.resolve();
+                });
+              }
+            },
+            queryParams('version'),
+            sourcesApi
+          );
+        }
+      });
+    } else {
+      isEditing = true;
+      deferred.resolve();
+    }
   },
 
   loadProjectBackedLevel_: function(deferred, sourcesApi) {
