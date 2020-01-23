@@ -75,7 +75,7 @@ export default class LibraryPublisher extends React.Component {
 
   setLibraryName = event => {
     const {libraryName} = this.state;
-    let sanitizedName = libraryParser.sanitizeName(event.target.value);
+    const sanitizedName = libraryParser.sanitizeName(event.target.value);
     if (sanitizedName === libraryName) {
       return;
     }
@@ -86,7 +86,7 @@ export default class LibraryPublisher extends React.Component {
     const {libraryDescription, libraryName, selectedFunctions} = this.state;
     const {librarySource, sourceFunctionList} = this.props.libraryDetails;
     const {libraryClientApi, onPublishSuccess} = this.props;
-    let functionsToPublish = sourceFunctionList.filter(sourceFunction => {
+    const functionsToPublish = sourceFunctionList.filter(sourceFunction => {
       return selectedFunctions[sourceFunction.functionName];
     });
 
@@ -95,7 +95,7 @@ export default class LibraryPublisher extends React.Component {
       return;
     }
 
-    let libraryJson = libraryParser.createLibraryJson(
+    const libraryJson = libraryParser.createLibraryJson(
       librarySource,
       functionsToPublish,
       libraryName,
@@ -210,21 +210,23 @@ export default class LibraryPublisher extends React.Component {
   displayError = () => {
     const {publishState} = this.state;
     let errorMessage;
-    if (publishState === PublishState.INVALID_INPUT) {
-      errorMessage = i18n.libraryPublishInvalid();
-    }
-    if (publishState === PublishState.ERROR_PUBLISH) {
-      errorMessage = i18n.libraryPublishFail();
-    }
-    if (publishState === PublishState.ERROR_UNPUBLISH) {
-      errorMessage = i18n.libraryUnPublishFail();
+    switch (publishState) {
+      case PublishState.INVALID_INPUT:
+        errorMessage = i18n.libraryPublishInvalid();
+        break;
+      case PublishState.ERROR_PUBLISH:
+        errorMessage = i18n.libraryPublishFail();
+        break;
+      case PublishState.ERROR_UNPUBLISH:
+        errorMessage = i18n.libraryUnPublishFail();
+        break;
+      default:
+        return;
     }
     return (
-      errorMessage && (
-        <div>
-          <p style={styles.alert}>{errorMessage}</p>
-        </div>
-      )
+      <div>
+        <p style={styles.alert}>{errorMessage}</p>
+      </div>
     );
   };
 
