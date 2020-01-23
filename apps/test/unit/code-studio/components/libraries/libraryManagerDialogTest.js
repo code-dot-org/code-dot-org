@@ -10,7 +10,8 @@ import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
-  const IMPORT_ERROR_MSG = 'An error occurred while importing your library.';
+  const IMPORT_ERROR_MSG =
+    'An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.';
 
   describe('viewCode', () => {
     it('sets the view library', () => {

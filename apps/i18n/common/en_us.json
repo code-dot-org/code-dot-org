@@ -845,7 +845,7 @@
   "libraryExportNoCommentError": "This function cannot be exported until you add a comment to it.",
   "libraryExportTitle": "Export Functions as a Library",
   "libraryIdImport": "Import library from ID",
-  "libraryImportError": "An error occurred while importing your library.",
+  "libraryImportError": "An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.",
   "libraryManage": "Manage libraries in this project",
   "libraryName": "Library Name",
   "libraryNameRequirements": "Your library's name must start with a capital letter and use only letters, numbers, and underscores.",
