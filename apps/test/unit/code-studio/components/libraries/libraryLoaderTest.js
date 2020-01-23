@@ -8,7 +8,7 @@ import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
   let libraryClientApi, fetchStub, getJSLintAnnotationsStub, sourceStub;
-  let onCodeErrorStub, onMissingFunctionsStub, onSuccessStub, functionStub;
+  let onErrorStub, onSuccessStub, functionStub;
   let libraryName = 'Name';
   let source = 'function foo() {}';
   before(() => {
@@ -37,8 +37,7 @@ describe('libraryLoader.load', () => {
     functionStub = sinon.stub(libraryParser, 'getFunctions');
     sinon.stub(window.dashboard.project, 'getLevelName').returns(libraryName);
     fetchStub = sinon.stub(libraryClientApi, 'fetchLatest');
-    onCodeErrorStub = sinon.stub();
-    onMissingFunctionsStub = sinon.stub();
+    onErrorStub = sinon.stub();
     onSuccessStub = sinon.stub();
   });
 
@@ -48,41 +47,28 @@ describe('libraryLoader.load', () => {
     libraryParser.getFunctions.restore();
     window.dashboard.project.getLevelName.restore();
     libraryClientApi.fetchLatest.restore();
-    onCodeErrorStub.resetHistory();
-    onMissingFunctionsStub.resetHistory();
+    onErrorStub.resetHistory();
     onSuccessStub.resetHistory();
   });
 
-  it('calls onCodeError when an error exists in the code', async () => {
+  it('calls onError when an error exists in the code', async () => {
     getJSLintAnnotationsStub.returns([{type: 'error'}]);
 
-    await loadLibrary(
-      libraryClientApi,
-      onCodeErrorStub,
-      onMissingFunctionsStub,
-      onSuccessStub
-    );
+    await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onCodeErrorStub.called).to.be.true;
-    expect(onMissingFunctionsStub.called).to.be.false;
+    expect(onErrorStub.called).to.be.true;
     expect(onSuccessStub.called).to.be.false;
   });
 
-  it('calls onMissingFunctions when there are no functions', async () => {
+  it('calls onError when there are no functions', async () => {
     getJSLintAnnotationsStub.returns([]);
     sourceStub.yields({source: ''});
-    fetchStub.callsArg(1);
+    fetchStub.callsArgWith(1, undefined, 404);
     functionStub.returns([]);
 
-    await loadLibrary(
-      libraryClientApi,
-      onCodeErrorStub,
-      onMissingFunctionsStub,
-      onSuccessStub
-    );
+    await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onCodeErrorStub.called).to.be.false;
-    expect(onMissingFunctionsStub.called).to.be.true;
+    expect(onErrorStub.called).to.be.true;
     expect(onSuccessStub.called).to.be.false;
   });
 
@@ -92,18 +78,12 @@ describe('libraryLoader.load', () => {
     getJSLintAnnotationsStub.returns([]);
     functionStub.returns(sourceFunctionList);
     sourceStub.yields({source: source, libraries: [library]});
-    fetchStub.callsArg(1);
+    fetchStub.callsArgWith(1, undefined, 404);
     sinon.stub(libraryParser, 'createLibraryClosure').returns(library);
 
-    await loadLibrary(
-      libraryClientApi,
-      onCodeErrorStub,
-      onMissingFunctionsStub,
-      onSuccessStub
-    );
+    await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onCodeErrorStub.called).to.be.false;
-    expect(onMissingFunctionsStub.called).to.be.false;
+    expect(onErrorStub.called).to.be.false;
     expect(onSuccessStub).to.have.been.calledWith({
       alreadyPublished: false,
       libraryDescription: '',
@@ -131,15 +111,9 @@ describe('libraryLoader.load', () => {
     sourceStub.yields({source: source});
     fetchStub.callsArgWith(0, JSON.stringify(existingLibrary));
 
-    await loadLibrary(
-      libraryClientApi,
-      onCodeErrorStub,
-      onMissingFunctionsStub,
-      onSuccessStub
-    );
+    await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onCodeErrorStub.called).to.be.false;
-    expect(onMissingFunctionsStub.called).to.be.false;
+    expect(onErrorStub.called).to.be.false;
     expect(onSuccessStub).to.have.been.calledWith({
       alreadyPublished: true,
       libraryDescription: existingLibrary.description,

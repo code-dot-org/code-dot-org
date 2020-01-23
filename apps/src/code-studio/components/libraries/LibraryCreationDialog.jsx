@@ -32,8 +32,7 @@ export const DialogState = {
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
-  CODE_ERROR: 'code_error',
-  NO_FUNCTIONS: 'no_functions'
+  ERROR: 'error'
 };
 
 /**
@@ -44,10 +43,7 @@ export const DialogState = {
  *     decide what data to publish from it
  * PUBLISHED: The user has successfully published the library
  * UNPUBLISHED: The user has successfully unpublished the library
- * CODE_ERROR: There is an error in the code that the user must repair prior to
- *     publishing the library
- * NO_FUNCTIONS: The user's project is not a valid library and needs functions
- *     before it can be published
+ * ERROR: There was an error loading the library
  */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
@@ -62,7 +58,8 @@ class LibraryCreationDialog extends React.Component {
     dialogState: DialogState.LOADING,
     libraryName: '',
     libraryDetails: {},
-    libraryClientApi: new LibraryClientApi(this.props.channelId)
+    libraryClientApi: new LibraryClientApi(this.props.channelId),
+    errorMessage: ''
   };
 
   componentDidUpdate(prevProps) {
@@ -74,8 +71,8 @@ class LibraryCreationDialog extends React.Component {
   onOpen = () => {
     loadLibrary(
       this.state.libraryClientApi,
-      () => this.setState({dialogState: DialogState.CODE_ERROR}),
-      () => this.setState({dialogState: DialogState.NO_FUNCTIONS}),
+      error =>
+        this.setState({dialogState: DialogState.ERROR, errorMessage: error}),
       libraryDetails =>
         this.setState({
           dialogState: DialogState.DONE_LOADING,
@@ -110,7 +107,7 @@ class LibraryCreationDialog extends React.Component {
 
   render() {
     let bodyContent;
-    const {dialogState, libraryName} = this.state;
+    const {dialogState, libraryName, errorMessage} = this.state;
     const {dialogIsOpen, channelId} = this.props;
     switch (dialogState) {
       case DialogState.LOADING:
@@ -127,14 +124,16 @@ class LibraryCreationDialog extends React.Component {
       case DialogState.UNPUBLISHED:
         bodyContent = <UnpublishSuccessDisplay />;
         break;
-      case DialogState.CODE_ERROR:
-        bodyContent = <ErrorDisplay message={i18n.libraryCodeError()} />;
+      case DialogState.ERROR:
+        bodyContent = <ErrorDisplay message={errorMessage} />;
         break;
-      case DialogState.NO_FUNCTIONS:
-        bodyContent = <ErrorDisplay message={i18n.libraryNoFunctionsError()} />;
+      case DialogState.DONE_LOADING:
+        bodyContent = this.displayContent();
         break;
       default:
-        bodyContent = this.displayContent();
+        // If we get to this state, we've shipped a bug.
+        bodyContent = <ErrorDisplay message={i18n.libraryCreatorError()} />;
+        break;
     }
     return (
       <Dialog

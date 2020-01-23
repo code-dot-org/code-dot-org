@@ -26,11 +26,11 @@ export default class LibraryClientApi {
   fetchLatest(onSuccess, onError) {
     this.libraryApi.fetch(
       this.channelId + '/' + LIBRARY_NAME,
-      (error, data) => {
+      (error, data, _, request) => {
         if (data) {
           onSuccess(data);
         } else {
-          onError(error);
+          onError(error, request.status);
         }
       }
     );

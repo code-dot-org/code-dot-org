@@ -1,6 +1,7 @@
 /*global dashboard*/
 import libraryParser from './libraryParser';
 import annotationList from '@cdo/apps/acemode/annotationList';
+import i18n from '@cdo/locale';
 
 /**
  * Gathers all known metadata about a user-created library and passes that data
@@ -17,18 +18,13 @@ import annotationList from '@cdo/apps/acemode/annotationList';
  *                   successfully loaded. All details about the library are
  *                   passed to this callback.
  */
-export default async function load(
-  libraryClientApi,
-  onCodeError,
-  onMissingFunctions,
-  onSuccess
-) {
+export default async function load(libraryClientApi, onError, onSuccess) {
   var error = annotationList.getJSLintAnnotations().find(annotation => {
     return annotation.type === 'error';
   });
 
   if (error) {
-    onCodeError();
+    onError(i18n.libraryCodeError());
     return;
   }
 
@@ -50,53 +46,60 @@ export default async function load(
         publishedLibrary = JSON.parse(data);
         resolve();
       },
-      error => {
-        resolve();
+      (_, errorCode) => {
+        if (errorCode === 404) {
+          // Not found is a valid state
+          resolve();
+        } else {
+          reject();
+        }
       }
     );
   });
 
   // Merge the two streams of metadata.
-  await Promise.all([getSource, getLibrary]).then(() => {
-    let functionsList = libraryParser.getFunctions(sourceAndHtml.source);
-    if (!functionsList || functionsList.length === 0) {
-      onMissingFunctions();
-      return;
-    }
-    let librarySource = sourceAndHtml.source;
-    if (sourceAndHtml.libraries) {
-      sourceAndHtml.libraries.forEach(library => {
-        librarySource =
-          libraryParser.createLibraryClosure(library) + librarySource;
-      });
-    }
+  await Promise.all([getSource, getLibrary])
+    .then(() => {
+      let functionsList = libraryParser.getFunctions(sourceAndHtml.source);
+      if (!functionsList || functionsList.length === 0) {
+        onError(i18n.libraryNoFunctionsError());
+        return;
+      }
+      let librarySource = sourceAndHtml.source;
+      if (sourceAndHtml.libraries) {
+        sourceAndHtml.libraries.forEach(library => {
+          librarySource =
+            libraryParser.createLibraryClosure(library) + librarySource;
+        });
+      }
 
-    let description = '';
-    let selectedFunctions = {};
-    let alreadyPublished = false;
-    if (publishedLibrary) {
-      alreadyPublished = true;
-      description = publishedLibrary.description;
-      projectName = publishedLibrary.name;
-      publishedLibrary.functions.forEach(publishedFunction => {
-        if (
-          functionsList.find(
-            projectFunction =>
-              projectFunction.functionName === publishedFunction
-          )
-        ) {
-          selectedFunctions[publishedFunction] = true;
-        }
-      });
-    }
+      let description = '';
+      let selectedFunctions = {};
+      let alreadyPublished = false;
+      if (publishedLibrary) {
+        alreadyPublished = true;
+        description = publishedLibrary.description;
+        projectName = publishedLibrary.name;
+        publishedLibrary.functions.forEach(publishedFunction => {
+          if (
+            functionsList.find(
+              projectFunction =>
+                projectFunction.functionName === publishedFunction
+            )
+          ) {
+            selectedFunctions[publishedFunction] = true;
+          }
+        });
+      }
 
-    onSuccess({
-      libraryName: projectName,
-      libraryDescription: description,
-      librarySource: librarySource,
-      sourceFunctionList: functionsList,
-      selectedFunctions: selectedFunctions,
-      alreadyPublished: alreadyPublished
-    });
-  });
+      onSuccess({
+        libraryName: projectName,
+        libraryDescription: description,
+        librarySource: librarySource,
+        sourceFunctionList: functionsList,
+        selectedFunctions: selectedFunctions,
+        alreadyPublished: alreadyPublished
+      });
+    })
+    .catch(() => onError(i18n.libraryLoadError()));
 }
