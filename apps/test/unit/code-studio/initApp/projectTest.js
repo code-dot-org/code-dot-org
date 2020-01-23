@@ -712,13 +712,13 @@ describe('project.js', () => {
 
       it('fails when channels request fails', done => {
         stubGetChannelsWithError(server);
-        project.load().fail(done);
+        project.load().catch(done);
       });
 
       it('fails when sources request fails', done => {
         stubGetChannels(server);
         stubGetMainJsonWithError(server);
-        project.load().fail(done);
+        project.load().catch(done);
       });
     });
 
@@ -736,13 +736,13 @@ describe('project.js', () => {
 
       it('fails when channels request fails', done => {
         stubGetChannelsWithError(server);
-        project.load().fail(done);
+        project.load().catch(done);
       });
 
       it('fails when sources request fails', done => {
         stubGetChannels(server);
         stubGetMainJsonWithError(server);
-        project.load().fail(done);
+        project.load().catch(done);
       });
     });
 
