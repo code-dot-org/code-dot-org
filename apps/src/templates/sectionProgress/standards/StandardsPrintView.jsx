@@ -100,7 +100,7 @@ class StandardsPrintView extends Component {
           </div>
         </div>
         <div>
-          <h2>Current course</h2>
+          <h2>{i18n.currentCourse()}</h2>
           <div style={styles.currentClass}>
             <div style={styles.courseOverview}>
               <a href={linkToOverview} style={styles.scriptLink}>
@@ -118,45 +118,41 @@ class StandardsPrintView extends Component {
               </ul>
             </div>
             <div style={styles.classProgress}>
-              <h3>Class Progress</h3>
+              <h3>{i18n.classProgress()}</h3>
               <div style={styles.statsRow}>
-                <span>{'Lessons completed: '}</span>
+                <span>{i18n.lessonsCompletedWithColon()}</span>
                 <span>{'5'}</span>
               </div>
               <div style={styles.statsRow}>
-                <span>{'Lessons available: '}</span>
+                <span>{i18n.lessonsAvailableWithColon()}</span>
                 <span>{'5'}</span>
               </div>
               <div style={styles.statsRow}>
-                <span>{'Students in section:'}</span>
+                <span>{i18n.studentsInSection()}</span>
                 <span>{this.props.numStudentsInSection}</span>
               </div>
-              <span>
-                {
-                  '*Lessons in this course offer between 45 and 65 minutes of instruction'
-                }
-              </span>
+              <span>{i18n.standardsReportLessonLengthInfo()}</span>
             </div>
           </div>
         </div>
         {this.props.teacherComment && (
           <div>
-            <h2>Teacher comments</h2>
+            <h2>{i18n.teacherComments()}</h2>
             <p>{this.props.teacherComment}</p>
           </div>
         )}
         <div>
-          <h2>CSTA standards practiced</h2>
+          <h2>{i18n.CSTAStandardsPracticed()}</h2>
           <StandardsProgressTable />
         </div>
         <div style={styles.key}>
-          <span>{'Key: '}</span>
+          <span>{i18n.key()}</span>
           <span style={styles.keyItems}>
-            {'Completed lessons'}
+            {i18n.completedLessons()}
             <ProgressBoxForLessonNumber completed={true} lessonNumber={1} />
           </span>
           <span style={styles.keyItems}>
-            {'Lesson not completed'}
+            {i18n.uncompeltedLessons()}
             <ProgressBoxForLessonNumber completed={false} lessonNumber={1} />
           </span>
         </div>
