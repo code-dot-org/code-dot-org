@@ -214,18 +214,15 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '123')
-      ).to.deep.equal([
-        {id: 1, filterCol: 123, chartCol: 2},
-        {id: 3, filterCol: 123, chartCol: 5}
-      ]);
+      ).to.deep.equal([records[0], records[2]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '456')
-      ).to.deep.equal([{id: 2, filterCol: 456, chartCol: 3}]);
+      ).to.deep.equal([records[1]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', '0')
-      ).to.deep.equal([{id: 5, filterCol: 0, chartCol: 5}]);
+      ).to.deep.equal([records[4]]);
     });
 
     it('works with booleans', () => {
@@ -237,14 +234,11 @@ describe('VisualizerModal', () => {
       ];
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'true')
-      ).to.deep.equal([
-        {id: 1, filterCol: true, chartCol: 2},
-        {id: 3, filterCol: true, chartCol: 5}
-      ]);
+      ).to.deep.equal([records[0], records[2]]);
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'false')
-      ).to.deep.equal([{id: 2, filterCol: false, chartCol: 3}]);
+      ).to.deep.equal([records[1]]);
     });
 
     it('works with null', () => {
@@ -257,10 +251,7 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'null')
-      ).to.deep.equal([
-        {id: 1, filterCol: null, chartCol: 2},
-        {id: 4, filterCol: null, chartCol: 7}
-      ]);
+      ).to.deep.equal([records[0], records[3]]);
     });
 
     it('works with undefined', () => {
@@ -273,10 +264,7 @@ describe('VisualizerModal', () => {
 
       expect(
         wrapper.instance().filterRecords(records, 'filterCol', 'undefined')
-      ).to.deep.equal([
-        {id: 1, chartCol: 2},
-        {id: 2, filterCol: undefined, chartCol: 3}
-      ]);
+      ).to.deep.equal([records[0], records[1]]);
     });
 
     describe('filtering with strings', () => {
@@ -290,10 +278,7 @@ describe('VisualizerModal', () => {
 
         expect(
           wrapper.instance().filterRecords(records, 'filterCol', '"part"')
-        ).to.deep.equal([
-          {id: 1, filterCol: 'part', chartCol: 3},
-          {id: 3, filterCol: 'part', chartCol: 5}
-        ]);
+        ).to.deep.equal([records[0], records[2]]);
       });
 
       it('works with empty string', () => {
@@ -306,10 +291,7 @@ describe('VisualizerModal', () => {
 
         expect(
           wrapper.instance().filterRecords(records, 'filterCol', '""')
-        ).to.deep.equal([
-          {id: 1, filterCol: '', chartCol: 3},
-          {id: 4, filterCol: '', chartCol: 7}
-        ]);
+        ).to.deep.equal([records[0], records[3]]);
       });
 
       it('works with strings that contain quotes', () => {
@@ -326,26 +308,17 @@ describe('VisualizerModal', () => {
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `'"hello", he said'`)
-        ).to.deep.equal([
-          {id: 1, filterCol: '"hello", he said', chartCol: 3},
-          {id: 4, filterCol: '"hello", he said', chartCol: 'a'}
-        ]);
+        ).to.deep.equal([records[0], records[3]]);
         expect(
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `"'single quoted string'"`)
-        ).to.deep.equal([
-          {id: 2, filterCol: "'single quoted string'", chartCol: 3},
-          {id: 5, filterCol: "'single quoted string'", chartCol: 'b'}
-        ]);
+        ).to.deep.equal([records[1], records[4]]);
         expect(
           wrapper
             .instance()
             .filterRecords(records, 'filterCol', `"it's a contraction"`)
-        ).to.deep.equal([
-          {id: 3, filterCol: "it's a contraction", chartCol: 5},
-          {id: 6, filterCol: "it's a contraction", chartCol: 'c'}
-        ]);
+        ).to.deep.equal([records[2], records[5]]);
       });
     });
   });
