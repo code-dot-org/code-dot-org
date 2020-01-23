@@ -46,6 +46,11 @@ class FirebaseHelper
     create_client.delete "/v3/channels/#{encrypted_channel_id}/"
   end
 
+  def get_library_manifest
+    response = @firebase.get("/v3/channels/shared/metadata/manifest")
+    response.body
+  end
+
   def self.create_client
     raise "CDO.firebase_name not defined" unless CDO.firebase_name
     raise "CDO.firebase_secret not defined" unless CDO.firebase_secret
