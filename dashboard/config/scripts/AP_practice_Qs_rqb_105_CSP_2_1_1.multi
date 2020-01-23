@@ -1,6 +1,5 @@
 name 'AP_practice_Qs_rqb_105_CSP_2_1_1'
-wrong 'The day of the month
-'
+wrong 'The day of the month'
 right 'The month of the year'
 wrong 'The age of a person'
 wrong 'The weight of a child'
