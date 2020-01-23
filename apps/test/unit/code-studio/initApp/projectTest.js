@@ -731,7 +731,7 @@ describe('project.js', () => {
       it('succeeds when ajax requests succeed', done => {
         stubGetChannels(server);
         stubGetMainJson(server);
-        project.load().then(done);
+        project.load().then(() => done());
       });
 
       it('fails when channels request fails', done => {

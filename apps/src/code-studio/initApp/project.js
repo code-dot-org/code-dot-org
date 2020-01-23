@@ -1561,11 +1561,7 @@ var projects = (module.exports = {
             if (current.isOwner && pathInfo.action === 'view') {
               isEditing = true;
             }
-            return new Promise(resolve => {
-              fetchAbuseScoreAndPrivacyViolations(this, function() {
-                resolve();
-              });
-            });
+            return fetchAbuseScoreAndPrivacyViolations(this);
           });
         });
     } else {
@@ -1585,11 +1581,7 @@ var projects = (module.exports = {
       return this.fetchSource(data, queryParams('version'), sourcesApi).then(
         () => {
           projects.showHeaderForProjectBacked();
-          return new Promise(resolve => {
-            fetchAbuseScoreAndPrivacyViolations(this, function() {
-              resolve();
-            });
-          });
+          return fetchAbuseScoreAndPrivacyViolations(this);
         }
       );
     });
@@ -1799,24 +1791,26 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [
+/**
+ * @param project
+ * @returns {Promise} A Promise which resolves when all network calls complete.
+ */
+function fetchAbuseScoreAndPrivacyViolations(project) {
+  const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure)
   ];
 
   if (project.getStandaloneApp() === 'playlab') {
-    deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
+    promises.push(new Promise(fetchPrivacyProfanityViolations));
   } else if (
     project.getStandaloneApp() === 'applab' ||
     project.getStandaloneApp() === 'gamelab' ||
     project.isWebLab()
   ) {
-    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
+    promises.push(new Promise(fetchSharingDisabled));
   }
-  Promise.all(deferredCallsToMake).then(function() {
-    callback();
-  });
+  return Promise.all(promises);
 }
 
 /**
