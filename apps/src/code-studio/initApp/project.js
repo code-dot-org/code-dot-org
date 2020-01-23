@@ -1544,13 +1544,10 @@ var projects = (module.exports = {
               .slice(PathPart.START, PathPart.APP + 1)
               .join('/');
             utils.navigateToHref(newPath);
-            if (IN_UNIT_TEST) {
-              // Allow unit test to confirm that navigation has happened.
-              return Promise.reject();
-            }
-          } else {
-            return Promise.reject();
           }
+          // Reject even after navigation, to allow unit tests which stub
+          // navigateToHref to confirm that navigation has happened.
+          return Promise.reject(err);
         })
         .then(data => {
           return this.fetchSource(
@@ -1673,13 +1670,9 @@ var projects = (module.exports = {
 
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
-      channels.fetch(channelId, (err, data) => {
-        if (err) {
-          reject(err);
-        } else {
-          resolve(data);
-        }
-      });
+      channels.fetch(channelId, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
     });
   },
 
