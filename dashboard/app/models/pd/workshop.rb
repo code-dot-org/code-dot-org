@@ -581,20 +581,19 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(cdo_scholarship=false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
 
     # Filter attendances to only scholarship teachers
-    if cdo_scholarship
-      teachers_attending.select! do |teacher|
-        Pd::ScholarshipInfo.exists?(
-          {
-            user: teacher,
-            application_year: school_year,
-            course: course_key
-          }
-        )
-      end
+    if filter_by_cdo_scholarship
+      scholarship_teachers = Pd::ScholarshipInfo.where(
+        {
+          application_year: school_year,
+          course: course_key,
+          scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
+        }
+      ).pluck(:user_id)
+      teachers_attending.select! {|teacher| scholarship_teachers.include? teacher.id}
     end
 
     # Get number of sessions attended by teacher
