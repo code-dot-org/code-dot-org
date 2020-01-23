@@ -13,6 +13,11 @@ const styles = {
     cursor: 'pointer',
     color: color.dark_charcoal
   },
+  tableDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    wordBreak: 'break-word'
+  },
   preview: {
     backgroundColor: color.background_gray,
     borderColor: color.lighter_gray,
@@ -64,8 +69,6 @@ class LibraryTable extends React.Component {
     collapsed: true
   };
 
-  datasetInfo = getDatasetInfo(this.props.name);
-
   toggleCollapsed = () =>
     this.setState({
       collapsed: !this.state.collapsed
@@ -73,6 +76,7 @@ class LibraryTable extends React.Component {
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+    const datasetInfo = getDatasetInfo(this.props.name);
 
     return (
       <div>
@@ -83,7 +87,17 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             {/* TODO: Add last updated time */}
-            <div>{this.datasetInfo.description}</div>
+            <div style={styles.tableDescription}>
+              {datasetInfo.description}
+              {datasetInfo.sourceUrl && (
+                <span style={{display: 'inline-block'}}>
+                  {msg.dataSource() + ': '}
+                  <a href={datasetInfo.sourceUrl}>
+                    {datasetInfo.sourceText || datasetInfo.sourceUrl}
+                  </a>
+                </span>
+              )}
+            </div>
             <div>
               <button
                 style={styles.preview}
@@ -95,7 +109,7 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={() => this.props.importTable(this.datasetInfo)}
+                onClick={() => this.props.importTable(datasetInfo)}
               >
                 {msg.import()}
               </button>
