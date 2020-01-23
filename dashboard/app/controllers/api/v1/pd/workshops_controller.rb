@@ -197,9 +197,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
 
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
-    render json: @workshop.potential_organizers.pluck(:name, :id).map do |name, id|
-      {label: name, value: id}
-    end
+    render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
   end
 
   private
