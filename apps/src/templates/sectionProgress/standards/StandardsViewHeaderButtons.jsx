@@ -3,6 +3,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {LessonStatusDialog} from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
 
 const styles = {
   buttonsGroup: {
@@ -18,7 +19,8 @@ const styles = {
 export class StandardsViewHeaderButtons extends Component {
   state = {
     isLessonStatusDialogOpen: false,
-    isCreateReportDialogOpen: false
+    isCreateReportDialogOpen: false,
+    comment: ''
   };
 
   openLessonStatusDialog = () => {
@@ -35,6 +37,27 @@ export class StandardsViewHeaderButtons extends Component {
 
   closeCreateReportDialog = () => {
     this.setState({isCreateReportDialogOpen: false});
+    setTeacherCommentForReport(this.state.comment);
+    this.printStandards();
+  };
+
+  onCommentChange = value => {
+    this.setState({comment: value});
+  };
+
+  printStandards = () => {
+    console.log('Print standards with teacher comment: ' + this.state.comment);
+    // Adding a unique ID to the window name allows for multiple instances of this window
+    // to be open at once without affecting each other.
+    /* const windowName = `printWindow-${_.uniqueId()}`;
+    let printWindow = window.open('', windowName, '');
+
+    printWindow.document.open();
+    printWindow.addEventListener('load', event => {
+      printWindow.print();
+    });
+    printWindow.document.write(<StandardsPrintView/>);
+    printWindow.document.close(); */
   };
 
   render() {
@@ -61,6 +84,7 @@ export class StandardsViewHeaderButtons extends Component {
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
           handleConfirm={this.closeCreateReportDialog}
+          onCommentChange={this.onCommentChange}
         />
       </div>
     );

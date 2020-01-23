@@ -23,7 +23,8 @@ const styles = {
 export class CreateStandardsReportStep2 extends Component {
   static propTypes = {
     onBack: PropTypes.func.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -51,7 +52,7 @@ export class CreateStandardsReportStep2 extends Component {
         <textarea
           type="text"
           value={i18n.createStandardsReportSampleNoteText()}
-          onChange={() => {}}
+          onChange={this.props.onCommentChange}
           style={styles.textArea}
         />
         <DialogFooter>
