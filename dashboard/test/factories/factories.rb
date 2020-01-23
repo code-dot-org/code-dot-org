@@ -175,7 +175,8 @@ FactoryGirl.define do
             create :pd_scholarship_info,
               user: teacher,
               course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
-              application_year: evaluator.workshop.school_year
+              application_year: evaluator.workshop.school_year,
+              scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
           end
         end
       end
