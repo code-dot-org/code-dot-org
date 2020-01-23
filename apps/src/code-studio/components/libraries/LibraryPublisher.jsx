@@ -165,7 +165,7 @@ export default class LibraryPublisher extends React.Component {
     );
   };
 
-  boxChecked = name => () => {
+  boxChecked = name => {
     this.setState(state => {
       state.selectedFunctions[name] = !state.selectedFunctions[name];
       return state;
@@ -194,7 +194,7 @@ export default class LibraryPublisher extends React.Component {
             disabled={shouldDisable}
             name={functionName}
             checked={checked}
-            onChange={this.boxChecked(functionName)}
+            onChange={() => this.boxChecked(functionName)}
           />
           <span>{functionName}</span>
           <br />

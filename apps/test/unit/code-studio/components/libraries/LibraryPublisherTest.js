@@ -71,6 +71,12 @@ describe('LibraryPublisher', () => {
       );
 
       expect(wrapper.state().libraryName).to.equal(libraryName);
+      expect(
+        wrapper
+          .find('input')
+          .first()
+          .props().value
+      ).to.equal(libraryName);
     });
 
     it('disables checkbox for items without comments', () => {

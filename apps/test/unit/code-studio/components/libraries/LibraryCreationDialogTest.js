@@ -43,13 +43,13 @@ describe('LibraryCreationDialog', () => {
       expect(wrapper.find(UnpublishSuccessDisplay).exists()).to.be.true;
     });
 
-    it('displays error while in the code error state', () => {
-      wrapper.setState({dialogState: DialogState.CODE_ERROR});
+    it('displays error while in the error state', () => {
+      wrapper.setState({dialogState: DialogState.ERROR});
       expect(wrapper.find(ErrorDisplay).exists()).to.be.true;
     });
 
-    it('displays error while in the no functions state', () => {
-      wrapper.setState({dialogState: DialogState.NO_FUNCTIONS});
+    it('displays error when no state is set', () => {
+      wrapper.setState({dialogState: undefined});
       expect(wrapper.find(ErrorDisplay).exists()).to.be.true;
     });
 
