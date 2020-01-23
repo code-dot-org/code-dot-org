@@ -1231,6 +1231,7 @@ var projects = (module.exports = {
   },
   logError_: function(errorType, errorCount, errorText) {
     // Share URLs only make sense for standalone app types.
+    // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
     firehoseClient.putRecord(
