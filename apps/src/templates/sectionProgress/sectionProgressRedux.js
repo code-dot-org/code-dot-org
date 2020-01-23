@@ -42,7 +42,7 @@ export const addScriptData = (scriptId, scriptData) => {
   const filteredScriptData = {
     id: scriptData.id,
     csf: scriptData.csf,
-    hasStandards: scriptData.has_standards_associations,
+    hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
