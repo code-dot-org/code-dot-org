@@ -1,0 +1,149 @@
+name 'csp-pt-tech-setup-and-tools_2020'
+editor_experiment ''
+markdown <<MARKDOWN
+# Tech Setup and Tools for the AP Performance Tasks
+
+## Background
+
+You need to setup your AP Digital Portfolio to officially submit your performance tasks and to sign up for the exam. There are also several tools you should be familiar with in order to create the necessary PDF documents and Video screen captures that you need to submit.
+
+## Resources and Quick Links
+
+**UPDATE WITH INFO ON SETTING UP DIGITAL PORTFOLIO FOR 20-21**
+
+* xxx
+* xxx
+
+* [Code Print](https://bakerfranke.github.io/codePrint/) - useful tool for preparing PDF of code for Create PT
+
+---
+
+## AP Digital Portfolio Setup
+
+*Goal: Students should be aware of the Digital Portfolio and how to access it. They should know what's there and be familiar with the basic mechanics of uploading and submitting their projects.*
+
+*If your students have not done this yet, they will need to register themselves with AP digital portfolio in order to upload their projects.*
+
+#### Follow College Board Instructions to Setup Portfolio
+
+* Here is the [Student Guide for the digital portfolio] **UPDATE WITH STUDENT GUIDE FOR 20-21** . Follow these instructions to get setup.
+
+The digital portfolio and guide contains a few helpful other things students should know about such as:
+
+* Guidance about how to create a PDF
+* Templates for the written prompts
+* Ways to save drafts of written responses on the site and come back to it
+
+---
+
+## Written Responses
+
+### Making PDFs for Written Responses
+
+You are required to make a PDF of your written responses to prompts. It's recommended that you use the College Board templates for filling out your responses. At some point you will have your written responses in a word processing document such as Microsoft Word, Google Docs, or Pages.
+
+*What follows is copied from the [AP Student Guide for the digital portfolio]* **UPDATE WITH STUDENT GUIDE FOR 20-21**
+
+#### How to make a PDF 
+
+* Recent versions of applications like: Word, PowerPoint, Pages, and Google Docs, have built-in features that allow you to save or export your file as a PDF. Instructions are provided below.
+* If your software does not have a PDF option, visit the Adobe site and learn more about whether Acrobat from Adobe Systems can convert your document to PDF.
+* You are responsible for ensuring that your file is properly formatted and readable. After you have created your PDF, be sure to check it by opening and reviewing your PDF in Adobe Reader, a free application that can be downloaded from the Adobe site. 
+
+**Microsoft Office (Word, PowerPoint)**
+
+* In Word, Powerpoint, and other Microsoft Office programs you will “Save as PDF.” Visit the Microsoft Office support page for more information about “Save as PDF.”  To save a Word or Powerpoint document as PDF:
+	* Open your Word or Powerpoint document.
+    * From the top menu select “File,” and select “Save As.”
+    * In the dialog window, go to the drop-down menu for “Save as type,” and select “PDF.”
+    * Click “Save.”
+ 
+**Google Docs**
+
+* In Google Docs, you will “Download as” PDF. Visit the Google support page for more information on “Download a file.”  To download a Google Doc as a PDF:
+* Open your Google doc
+    * From the top menu select “File,” and select “Download as,” and select “PDF
+Document (.pdf)”
+
+
+**Pages**
+
+* In Pages, you will “Export to” PDF. Visit the Apple support page for more information or
+follow the steps below:
+
+   * Open your Pages document.
+   * From the top menu select “File,” and select “Export to,” and select “PDF.”
+   * In the dialogue window select “Best,” image quality.
+   * Choose a destination for the export and click “Export.”
+
+---
+
+## Program Code
+
+### Making PDF of Program Code
+
+You need to make a PDF of your code.
+
+* Our recommendation: Use [CodePrint](https://bakerfranke.github.io/codePrint/) - a tool for doing everything from the browser.
+
+	* Note: For the 20-21 exam and following, you no longer need to put rectangles or ovals around code segments. 
+    
+* Or: Copy/Paste Code into a Word (or Google) document and export as a PDF.
+
+#### Details: how to make a pdf of your code
+
+**Step 1** - copy your code in App Lab
+
+ * Switch App Lab into text mode
+ * Select all the code(highlight all with your mouse or Ctrl+A)
+ * Copy it (Edit -> Copy, or Ctrl+C)
+
+**Step 2** - paste the code into a page or doc for printing
+
+* **If using [CodePrint](https://bakerfranke.github.io/codePrint/)**
+    
+    * If you can print a PDF from the browser, this should be all you need.
+    * You can take screenshots of the code segments, including line numbers, for the appropriate sections in the Written Response. 
+
+* **Other options**
+
+ * **Option: Github Gist** -- [GitHub Gist](https://gist.github.com) is a tool designed to let you quickly share code.  We can use it to quickly print as well.
+   
+    * Go to [GitHub Gist](https://gist.github.com)
+    * Paste your code into the code area (the large open area with line numbers)
+    * Optional: In the filename box type `.js` -- this forces the box to recognize the code as javascript
+    * Click "Create Secret Gist" - this will save the code to a new page anonymously
+    * From your Browser choose "File -> Print" and use your computer's option to print to PDF.
+
+ * **Option: use a word processor Google docs or MS Word**
+   
+    * This option is fine but you won't get line numbers next to your code which can be convenient.
+    * If you choose this option you should add your annotations (rectangle and circle) here in the word processor.
+
+---
+
+## Video
+
+### Making a Video Screen Capture
+
+Students are required to make at least one video that is a "Screen capture" of themselves using the program they wrote for the Create PT.
+
+#### How To Make a Screencast
+
+If you have not made any screencapture videos in class to this point students may ask how to do it.
+You will need to use 3rd party screen capture software. We recommend investigating options that will work for your school's software requirements. Here are two options:
+    
+  * Online/Web: [Screencast-o-matic](https://screencast-o-matic.com) (may require download depending on browser/plugins)
+  * Windows / Mac: [Snagit from Techsmith](https://www.techsmith.com/screen-capture.html) (requires download and signing up for a free trial)
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**For the Teacher**
+
+* Here is the [AP Digital Portfolio: Teacher User Guide for AP Computer Science Principles](https://apcentral.collegeboard.org/pdf/computer-science-principles-digital-portfolio-teacher-guide.pdf)
+* You will need to follow these instructions to setup your class and to approve students
+
+* The Video screen capture requires using 3rd party software. We recommend investigating options that will work for your school's software requirements. 
+MARKDOWN
