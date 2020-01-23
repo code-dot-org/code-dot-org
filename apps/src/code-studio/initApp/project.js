@@ -1493,25 +1493,13 @@ var projects = (module.exports = {
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
   load() {
-    // Use the sources-public API for dancelab shares. Responses from this API
-    // can be publicly cached, which is helpful for HoC scalability in the
-    // celebrity tweet scenario where a single share link gets many hits.
-    const useSourcesPublic =
-      appOptions.share &&
-      appOptions.level &&
-      appOptions.level.projectType === 'dance';
-    let sourcesApi;
-    if (this.useSourcesApi()) {
-      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
-    }
-
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
         return Promise.resolve();
       }
-      return this.loadStandaloneProject_(sourcesApi);
+      return this.loadStandaloneProject_();
     } else if (appOptions.channel) {
-      return this.loadProjectBackedLevel_(sourcesApi);
+      return this.loadProjectBackedLevel_();
     } else {
       return Promise.resolve();
     }
@@ -1522,7 +1510,7 @@ var projects = (module.exports = {
    * is determined by parsing the current url path.
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
-  loadStandaloneProject_: function(sourcesApi) {
+  loadStandaloneProject_: function() {
     var pathInfo = parsePath();
 
     if (pathInfo.channelId) {
@@ -1550,11 +1538,7 @@ var projects = (module.exports = {
           return Promise.reject(err);
         })
         .then(data => {
-          return this.fetchSource(
-            data,
-            queryParams('version'),
-            sourcesApi
-          ).then(() => {
+          return this.fetchSource(data, queryParams('version')).then(() => {
             if (current.isOwner && pathInfo.action === 'view') {
               isEditing = true;
             }
@@ -1572,15 +1556,13 @@ var projects = (module.exports = {
    * is determined by appOptions.channel.
    * @returns {Promise} A Promise which will resolve when the project loads.
    */
-  loadProjectBackedLevel_: function(sourcesApi) {
+  loadProjectBackedLevel_: function() {
     isEditing = true;
     return this.fetchChannel(appOptions.channel).then(data => {
-      return this.fetchSource(data, queryParams('version'), sourcesApi).then(
-        () => {
-          projects.showHeaderForProjectBacked();
-          return fetchAbuseScoreAndPrivacyViolations(this);
-        }
-      );
+      return this.fetchSource(data, queryParams('version')).then(() => {
+        projects.showHeaderForProjectBacked();
+        return fetchAbuseScoreAndPrivacyViolations(this);
+      });
     });
   },
 
@@ -1681,10 +1663,9 @@ var projects = (module.exports = {
    * sources api
    * @param {object} channelData Data we fetched from channels api
    * @param {string?} version Optional version to load
-   * @param {boolean} sources api to use, if present.
    * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData, version, sourcesApi) {
+  fetchSource(channelData, version) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1695,6 +1676,7 @@ var projects = (module.exports = {
     current = channelData;
 
     projects.setTitle(current.name);
+    const sourcesApi = this.getSourcesApi_();
     if (sourcesApi && channelData.migratedToS3) {
       var url = current.id + '/' + SOURCE_FILE;
       if (version) {
@@ -1723,6 +1705,21 @@ var projects = (module.exports = {
       // S3. In this case, it's expected that html/levelSource are null.
       return Promise.resolve();
     }
+  },
+
+  getSourcesApi_() {
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic =
+      appOptions.share &&
+      appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+    return sourcesApi;
   }
 });
 
