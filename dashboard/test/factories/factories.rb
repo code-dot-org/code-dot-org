@@ -160,6 +160,7 @@ FactoryGirl.define do
           workshop nil
           enrolled true
           attended false
+          cdo_scholarship_recipient false
         end
         after(:create) do |teacher, evaluator|
           raise 'workshop required' unless evaluator.workshop
@@ -169,6 +170,13 @@ FactoryGirl.define do
             attended_sessions.each do |session|
               create :pd_attendance, session: session, teacher: teacher
             end
+          end
+          if evaluator.cdo_scholarship_recipient
+            create :pd_scholarship_info,
+              user: teacher,
+              course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+              application_year: evaluator.workshop.school_year,
+              scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
           end
         end
       end
