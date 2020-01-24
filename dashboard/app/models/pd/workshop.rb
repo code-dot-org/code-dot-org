@@ -34,6 +34,17 @@ class Pd::Workshop < ActiveRecord::Base
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  belongs_to :organizer, class_name: 'User'
+  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
+
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  accepts_nested_attributes_for :sessions, allow_destroy: true
+
+  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  belongs_to :regional_partner
+
+  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -46,17 +57,6 @@ class Pd::Workshop < ActiveRecord::Base
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
-
-  belongs_to :organizer, class_name: 'User'
-  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
-
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  accepts_nested_attributes_for :sessions, allow_destroy: true
-
-  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  belongs_to :regional_partner
-
-  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
@@ -578,6 +578,33 @@ class Pd::Workshop < ActiveRecord::Base
   # Get all the teachers that have actually attended this workshop via the attendence.
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq
+  end
+
+  # Get all teachers who have attended all sessions of this workshop.
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+    teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher)
+
+    # Filter attendances to only scholarship teachers
+    if filter_by_cdo_scholarship
+      scholarship_teachers = Pd::ScholarshipInfo.where(
+        {
+          application_year: school_year,
+          course: course_key,
+          scholarship_status: Pd::ScholarshipInfoConstants::YES_CDO
+        }
+      ).pluck(:user_id)
+      teachers_attending.select! {|teacher| scholarship_teachers.include? teacher.id}
+    end
+
+    # Get number of sessions attended by teacher
+    attendance_count_by_teacher = Hash[
+      teachers_attending.uniq.map do |teacher|
+        [teacher, teachers_attending.count(teacher)]
+      end
+    ]
+
+    # Return only teachers who attended all sessions
+    attendance_count_by_teacher.select {|_, attendances| attendances == sessions.count}.keys
   end
 
   def local_summer?

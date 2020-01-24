@@ -16,6 +16,11 @@ export class MicrobitStubBoard {
     this.eventListeners = [];
     this.updateListeners = [];
     this.analogChannel = new Array(16).fill(0);
+    this.myPort = null;
+  }
+
+  connect() {
+    this.myPort = true;
   }
 
   displayPlot() {}

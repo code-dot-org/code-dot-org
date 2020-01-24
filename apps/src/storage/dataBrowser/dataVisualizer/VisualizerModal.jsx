@@ -101,6 +101,14 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
+  getValuesForFilterColumn = memoize((records, column) => {
+    let values = [];
+    values = Array.from(new Set(records.map(record => record[column])));
+    values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
+
+    return values;
+  });
+
   getDisplayNameForChartType(chartType) {
     switch (chartType) {
       case ChartType.BAR_CHART:
@@ -258,7 +266,7 @@ class VisualizerModal extends React.Component {
           <div style={{paddingTop: 20}}>
             <DropdownField
               displayName={msg.filter()}
-              options={[1, 2, 3]}
+              options={this.props.tableColumns}
               disabledOptions={[]}
               value={this.state.filterColumn}
               onChange={event =>
@@ -271,7 +279,10 @@ class VisualizerModal extends React.Component {
             />
             <DropdownField
               displayName={msg.by()}
-              options={[]}
+              options={this.getValuesForFilterColumn(
+                parsedRecords,
+                this.state.filterColumn
+              )}
               disabledOptions={[]}
               value={this.state.filterValue}
               onChange={event =>
