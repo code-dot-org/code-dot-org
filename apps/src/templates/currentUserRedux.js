@@ -27,7 +27,7 @@ export const setUserType = userType => ({type: SET_USER_TYPE, userType});
 
 const initialState = {
   userId: null,
-  name: null,
+  userName: null,
   userType: 'unknown',
   signInState: SignInState.Unknown,
   hasSeenStandardsReportInfo: false
@@ -43,7 +43,7 @@ export default function currentUser(state = initialState, action) {
   if (action.type === SET_CURRENT_USER_NAME) {
     return {
       ...state,
-      name: action.name
+      userName: action.userName
     };
   }
   if (action.type === SET_HAS_SEEN_STANDARDS_REPORT) {

@@ -8,7 +8,10 @@ import {
   getCurrentScriptData,
   scriptDataPropType
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {
+  getSelectedScriptFriendlyName,
+  getSelectedScriptDescription
+} from '@cdo/apps/redux/scriptSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsProgressTable from './StandardsProgressTable';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -128,7 +131,7 @@ export default connect(state => ({
   section: state.sectionData.section,
   scriptData: getCurrentScriptData(state),
   scriptFriendlyName: getSelectedScriptFriendlyName(state),
-  scriptDescription: state.progress.scriptDescription,
+  scriptDescription: getSelectedScriptDescription(state),
   numStudentsInSection: state.sectionData.section.students.length,
   teacherComment: state.sectionStandardsProgress.teacherComment,
   teacherName: state.currentUser.userName,

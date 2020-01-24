@@ -80,7 +80,9 @@ class ProgressViewHeader extends Component {
             {scriptFriendlyName}
           </a>
         </span>
-        {currentView === ViewType.STANDARDS && <StandardsViewHeaderButtons />}
+        {currentView === ViewType.STANDARDS && (
+          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
+        )}
       </div>
     );
   }
