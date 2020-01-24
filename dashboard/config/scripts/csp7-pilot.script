@@ -42,8 +42,8 @@ level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: true
 
 stage 'Libraries Investigate', flex_category: 'csp_libraries'
-level 'Full Year Pilot Experiments Dashboard - Libraries', progression: 'Turn On Student Created Libraries'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'Full Year Pilot Experiments Dashboard - Libraries', progression: 'Turn On Student Created Libraries'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
