@@ -672,14 +672,12 @@ describe('project.js', () => {
       sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
-      sinon.stub(console, 'warn');
     });
 
     afterEach(() => {
       server.restore();
       project.getStandaloneApp.restore();
       utils.currentLocation.restore();
-      console.warn.restore();
     });
 
     describe('standalone project', () => {
