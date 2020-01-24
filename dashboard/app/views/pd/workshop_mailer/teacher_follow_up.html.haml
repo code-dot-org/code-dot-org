@@ -52,7 +52,7 @@
 
   %p
     Remember that you can always reach out to us for support at
-    - mail_to('teacher@code.org') + after_teacher_contact
+    = mail_to('teacher@code.org') + after_teacher_contact
     - if has_partner
       to your regional partner at
       = mail_to(@regional_partner.contact_email) + (has_facilitator ? ', or' : '.')
@@ -60,7 +60,7 @@
       to your facilitator(s) at
       - @facilitators.each_with_index do |facilitator, i|
         - if i < @facilitators.length - 1
-          - succeed_text = (i == @facilitators.length - 2) ? ', or ' : ', '
+          - succeed_text = (i == @facilitators.length - 2) ? ' or ' : ', '
           = succeed succeed_text do
             = mail_to(facilitator)
         -  else
