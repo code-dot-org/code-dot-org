@@ -6,12 +6,12 @@
 
 .container.wide-index-content
 
-  - if header['nav']
+  - if @header['nav']
     .row
       .col-sm-9
         = body
       .col-sm-3.nav-col
-        = view(header['nav'])
+        = view(@header['nav'])
   - else
     = body
 
