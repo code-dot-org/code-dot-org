@@ -10,6 +10,9 @@ import sinon from 'sinon';
 
 describe('LibraryManagerDialog', () => {
   const ID = 123;
+  const IMPORT_ERROR_MSG =
+    'An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.';
+
   describe('viewCode', () => {
     it('sets the view library', () => {
       const wrapper = shallow(
@@ -154,6 +157,37 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().onOpen();
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
       expect(wrapper.state().importLibraryId).to.equal('id');
+    });
+
+    it('setLibraryToImport resets the error in state to null', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+
+      wrapper.instance().onImportFailed();
+      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+
+      wrapper.instance().setLibraryToImport({target: {value: 'id'}});
+      expect(wrapper.state().error).to.be.null;
+    });
+
+    it('onImportFailed displays an error', () => {
+      const wrapper = shallow(
+        <LibraryManagerDialog onClose={() => {}} isOpen={true} />
+      );
+      const getErrorEl = wrapper =>
+        wrapper
+          .find('BaseDialog')
+          .children()
+          .last();
+
+      expect(wrapper.state().error).to.be.null;
+      expect(getErrorEl(wrapper).text()).to.equal('');
+
+      wrapper.instance().onImportFailed();
+
+      expect(wrapper.state().error).to.equal(IMPORT_ERROR_MSG);
+      expect(getErrorEl(wrapper).text()).to.equal(IMPORT_ERROR_MSG);
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
