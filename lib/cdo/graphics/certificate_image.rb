@@ -10,17 +10,6 @@ require_relative '../script_constants'
 def create_certificate_image2(image_path, name, params={})
   # Load the certificate template
   background = Magick::Image.read(image_path).first
-
-  # If the name is just whitespace characters, then return just the certificate
-  # template without a name.
-  name = name.strip
-  return background if name.empty?
-
-  # Limit the name length to prevent attacks where students send names hundreds
-  # of characters long and our system wastes memory trying to render a huge
-  # image.
-  name = name[0, 50] if name.size > 50
-
   font = "Times bold"
   color = "#575757"
   pointsize = 68
@@ -32,6 +21,16 @@ end
 
 # applies the given text to the given image object.
 def apply_text(image, text, pointsize, font, color, x_offset, y_offset)
+  # If there is no text, don't try to render it.
+  return if text.nil? || text.strip.empty?
+
+  text = escape_image_magick_string(text)
+
+  # Limit the text length to prevent attacks where students send names hundreds
+  # of characters long and our system wastes memory trying to render a huge
+  # image.
+  text = text[0, 50] if text.size > 50
+
   begin
     # The text will be put into an image with a transparent background.  This
     # uses 'pango', the OS's text layout engine, in order to dynamically select
@@ -50,7 +49,6 @@ def apply_text(image, text, pointsize, font, color, x_offset, y_offset)
     Honeybadger.notify(
       exception,
       context: {
-        image_path: image_path,
         text: text,
       }
     )
@@ -75,7 +73,7 @@ def create_workshop_certificate_image(image_path, fields)
   background = Magick::Image.read(image_path).first
 
   fields.each do |field|
-    string = escape_image_magick_string(field[:string].to_s)
+    string = field[:string].to_s
     next if string.empty?
 
     y = field[:y] || 0
@@ -90,7 +88,7 @@ end
 
 # Prepare the given string for using in Image Magick.
 def escape_image_magick_string(string)
-  string = string.force_8859_to_utf8
+  string = string.dup.force_8859_to_utf8
   # Escape special Image Magick symbols \, @, %, and \n
   # Note we are using the gsub block replacement in order to avoid having to do
   # extra '\' escaping. Otherwise we would have to write '\\\\\\' to insert two
@@ -111,8 +109,7 @@ end
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
-  name = escape_image_magick_string(name)
-  name = ' ' if name.empty?
+  name = ' ' if name.nil? || name.empty?
 
   course ||= ScriptConstants::HOC_NAME
 
