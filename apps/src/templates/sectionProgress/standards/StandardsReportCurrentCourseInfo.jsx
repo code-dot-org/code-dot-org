@@ -16,10 +16,11 @@ const styles = {
   },
   classProgress: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginLeft: 30
   },
   courseOverview: {
-    width: '40%'
+    width: '75%'
   },
   scriptLink: {
     color: color.teal

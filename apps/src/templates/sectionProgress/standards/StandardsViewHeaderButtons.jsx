@@ -47,17 +47,6 @@ export class StandardsViewHeaderButtons extends Component {
 
   printStandards = () => {
     console.log('Print standards with teacher comment: ' + this.state.comment);
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    /* const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
-
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
-    });
-    printWindow.document.write(<StandardsPrintView/>);
-    printWindow.document.close(); */
   };
 
   render() {
