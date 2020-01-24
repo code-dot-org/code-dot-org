@@ -1688,23 +1688,24 @@ var projects = (module.exports = {
         url += '?version=' + version;
       }
       return new Promise((resolve, reject) => {
-        sourcesApi.fetch(url, (err, data, jqXHR) => {
-          if (err) {
-            this.logError_(
-              'load-sources-error',
-              null,
-              `unable to fetch project source file: ${err}`
-            );
-            console.warn(err);
-            reject(err);
-            return;
-          }
+        sourcesApi.fetch(url, (err, data, jqXHR) =>
+          err ? reject(err) : resolve({data, jqXHR})
+        );
+      })
+        .catch(err => {
+          this.logError_(
+            'load-sources-error',
+            null,
+            `unable to fetch project source file: ${err}`
+          );
+          console.warn(err);
+          return Promise.reject(err);
+        })
+        .then(({data, jqXHR}) => {
           currentSourceVersionId =
             jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
           unpackSources(data);
-          resolve();
         });
-      });
     } else {
       // It's possible that we created a channel, but failed to save anything to
       // S3. In this case, it's expected that html/levelSource are null.
