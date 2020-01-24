@@ -80,5 +80,37 @@ module Cdo
           any? {|tag| tag.key == 'environment' && tag.value == 'production'}
       end
     end
+
+    # Determine whether a Full Load Replication Task has completed successfully.
+    def self.replication_task_completed_successfully?(replication_task_arn)
+      dms_client = Aws::DatabaseMigrationService::Client.new
+      task = dms_client.describe_replication_tasks(
+        {
+          filters: [
+            {
+              name: 'replication-task-arn',
+              values: [replication_task_arn]
+            }
+          ]
+        },
+        max_records: 1,
+        without_settings: true
+      ).replication_tasks[0]
+
+      task_table_statistics = dms_client.describe_table_statistics(
+        {
+          replication_task_arn: replication_task_arn
+        }
+      ).table_statistics
+
+      return task.status == 'stopped' &&
+        task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
+        task.replication_task_stats.full_load_progress_percent == 100 &&
+        task.replication_task_stats.tables_loaded > 0 &&
+        task.replication_task_stats.tables_loading == 0 &&
+        task.replication_task_stats.tables_queued == 0 &&
+        task.replication_task_stats.tables_errored == 0 &&
+        task_table_statistics.all? {|table| table.table_state == 'Table completed'}
+    end
   end
 end
