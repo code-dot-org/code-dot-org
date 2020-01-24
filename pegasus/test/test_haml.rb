@@ -10,13 +10,6 @@ class HamlTest < Minitest::Test
     Documents.new
   end
 
-  def setup
-    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
-    # when called from unit tests. See comments on that method for details.
-    CDO.stubs(optimize_webpack_assets: false)
-    CDO.stubs(use_my_apps: true)
-  end
-
   def test_resources_videos
     path = '/educate/resources/videos'
     resp = get(path)
