@@ -42,6 +42,12 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center'
+  },
+  infoStrings: {
+    width: 200,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
   }
 };
 
@@ -65,9 +71,11 @@ export default class StandardsReportHeader extends Component {
             <div>{i18n.dateWithColon()}</div>
           </div>
           <div style={styles.headerRightColumnItems}>
-            <span>{this.props.teacherName}</span>
-            <span>{this.props.sectionName}</span>
-            <span>{new Date().toLocaleString()}</span>
+            <span style={styles.infoStrings}>{this.props.teacherName}</span>
+            <span style={styles.infoStrings}>{this.props.sectionName}</span>
+            <span style={styles.infoStrings}>
+              {new Date().toLocaleString()}
+            </span>
           </div>
         </div>
       </div>

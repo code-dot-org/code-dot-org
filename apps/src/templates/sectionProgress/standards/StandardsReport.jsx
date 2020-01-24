@@ -48,7 +48,7 @@ const styles = {
   }
 };
 
-class StandardsPrintView extends Component {
+class StandardsReport extends Component {
   static propTypes = {
     //redux
     section: sectionDataPropType.isRequired,
@@ -125,7 +125,7 @@ class StandardsPrintView extends Component {
   }
 }
 
-export const UnconnectedStandardsPrintView = StandardsPrintView;
+export const UnconnectedStandardsReport = StandardsReport;
 
 export default connect(state => ({
   section: state.sectionData.section,
@@ -138,4 +138,4 @@ export default connect(state => ({
   sectionName: sectionName(state, state.sectionData.section.id),
   numLessonsCompleted: getNumberLessonsCompleted(state),
   numLessonsInUnit: getNumberLessonsInCourse(state)
-}))(StandardsPrintView);
+}))(StandardsReport);
