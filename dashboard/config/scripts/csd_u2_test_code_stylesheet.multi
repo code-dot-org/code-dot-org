@@ -1,7 +1,7 @@
 name 'CSD U2 Test code stylesheet'
 editor_experiment ''
 title 'Question 5'
-question 'What code in the stylesheet could have made the text green?'
+
 wrong '1 and 3'
 wrong '2 and 4'
 right '2 and 3'
@@ -15,28 +15,21 @@ Questions 5 and 6 deal with the following web page:
 
 ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
 
-1.
-```
-.p {
+What code in the stylesheet could have made the text green?<br><br>
+<div>
+1. <pre style="display:inline-block;width:100px">.p {
+  color:green;
+}</pre>
+2. <pre style="display:inline-block;width:100px">p {
+  color:green;
+}</pre>
+3. <pre style="display:inline-block;width:100px">.special {
+  color:green;
+}</pre>
+4. <pre style="display:inline-block;width:100px">special {
   color:green;
 }
-```
-2.
-```
-p {
-  color:green;
-}
-```
-3.
-```
-.special {
-  color:green;
-}
-```
-4.
-```
-special {
-  color:green;
-}
-```
+</pre>
+</div>
+
 MARKDOWN
