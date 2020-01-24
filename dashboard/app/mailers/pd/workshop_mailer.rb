@@ -213,6 +213,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
+    @regional_partner = @workshop.regional_partner
+    @facilitators = []
+    @workshop.facilitators.each {|facilitator| @facilitators << facilitator.email}
 
     # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
