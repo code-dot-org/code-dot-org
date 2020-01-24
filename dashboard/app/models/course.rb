@@ -53,6 +53,10 @@ class Course < ApplicationRecord
     I18n.t("data.course.name.#{name}.title", default: name)
   end
 
+  def localized_description
+    I18n.t("data.course.name.#{name}.description_short", default: '')
+  end
+
   def localized_assignment_family_title
     I18n.t("data.course.name.#{name}.assignment_family_title", default: localized_title)
   end

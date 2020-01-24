@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {LessonStatusDialog} from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   buttonsGroup: {
@@ -17,6 +19,9 @@ const styles = {
 };
 
 export class StandardsViewHeaderButtons extends Component {
+  static propTypes = {
+    sectionId: PropTypes.number
+  };
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
@@ -42,11 +47,15 @@ export class StandardsViewHeaderButtons extends Component {
   };
 
   onCommentChange = value => {
+    console.log(value);
     this.setState({comment: value});
   };
 
   printStandards = () => {
-    console.log('Print standards with teacher comment: ' + this.state.comment);
+    window.open(
+      teacherDashboardUrl(this.props.sectionId, '/standards_report'),
+      '_blank'
+    );
   };
 
   render() {
