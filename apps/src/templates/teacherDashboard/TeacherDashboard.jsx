@@ -13,7 +13,7 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
-import StandardsPrintView from '../sectionProgress/standards/StandardsPrintView';
+import StandardsReport from '../sectionProgress/standards/StandardsReport';
 
 class TeacherDashboard extends Component {
   static propTypes = {
@@ -99,7 +99,7 @@ class TeacherDashboard extends Component {
           />
           <Route
             path={TeacherDashboardPath.standardsReport}
-            component={props => <StandardsPrintView />}
+            component={props => <StandardsReport />}
           />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (

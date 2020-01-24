@@ -1,5 +1,5 @@
 import React from 'react';
-import {UnconnectedStandardsPrintView as StandardsPrintView} from './StandardsPrintView';
+import {UnconnectedStandardsReport as StandardsReport} from './StandardsReport';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
@@ -19,11 +19,11 @@ export default storybook => {
     })
   );
   return storybook
-    .storiesOf('Standards/StandardsPrintView', module)
+    .storiesOf('Standards/StandardsReport', module)
     .add('overview', () => {
       return (
         <Provider store={store}>
-          <StandardsPrintView
+          <StandardsReport
             section={{
               id: 6,
               script: {
@@ -53,10 +53,42 @@ export default storybook => {
         </Provider>
       );
     })
+    .add('Long section and teacher name', () => {
+      return (
+        <Provider store={store}>
+          <StandardsReport
+            section={{
+              id: 6,
+              script: {
+                id: 1163,
+                name: 'express-2019',
+                project_sharing: true
+              },
+              students: [],
+              stageExtras: false
+            }}
+            scriptData={{
+              id: 1163,
+              excludeCsfColumnInLegend: false,
+              title: 'Express Course (2019)',
+              path: '//localhost-studio.code.org:3000/s/express-2019',
+              stages: []
+            }}
+            scriptFriendlyName="Express Course (2019)"
+            scriptDescription="This is the description of the script that will show up on the script overview page and now on the standards report"
+            numStudentsInSection={15}
+            teacherName="Great Teacher Great Teacher Great Teacher"
+            sectionName="My Amazing Section My Amazing Section My Amazing Section"
+            numLessonsCompleted={5}
+            numLessonsInUnit={10}
+          />
+        </Provider>
+      );
+    })
     .add('No Teacher Comment', () => {
       return (
         <Provider store={store}>
-          <StandardsPrintView
+          <StandardsReport
             section={{
               id: 6,
               script: {
