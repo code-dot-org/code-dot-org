@@ -1240,7 +1240,7 @@ var projects = (module.exports = {
         study_group: 'v4',
         event: errorType,
         data_int: errorCount,
-        project_id: current.id + '',
+        project_id: current && current.id + '',
         data_string: errorText,
         // Some fields in the data_json are repeated in separate fields above, so
         // that they can be easily searched on as separate fields, and also have
@@ -1659,6 +1659,13 @@ var projects = (module.exports = {
       channels.fetch(channelId, (err, data) =>
         err ? reject(err) : resolve(data)
       );
+    }).catch(err => {
+      this.logError_(
+        'load-channel-error',
+        null,
+        `unable to fetch project channel: ${err}`
+      );
+      return Promise.reject(err);
     });
   },
 
