@@ -41,14 +41,16 @@ export class StandardsViewHeaderButtons extends Component {
   };
 
   closeCreateReportDialog = () => {
-    this.setState({isCreateReportDialogOpen: false}, () => {
-      console.log(this.state.comment);
-      setTeacherCommentForReport(this.state.comment);
-      window.open(
-        teacherDashboardUrl(this.props.sectionId, '/standards_report'),
-        '_blank'
-      );
-    });
+    this.setState({isCreateReportDialogOpen: false}, this.openReport);
+  };
+
+  openReport = () => {
+    console.log(this.state.comment);
+    setTeacherCommentForReport(this.state.comment);
+    window.open(
+      teacherDashboardUrl(this.props.sectionId, '/standards_report'),
+      '_blank'
+    );
   };
 
   onCommentChange = value => {
