@@ -990,6 +990,7 @@
   "moreInfo": "More info.",
   "moveStudents": "Move students",
   "moveStudentsConfirm": "No, I want to move student(s) to be in the new section only.",
+  "movingStudents": "Moving students...",
   "moveToSection": "Move to section",
   "multipleChoiceQuestionsOverview": "Multiple choice questions overview ({numSubmissions} / {numStudents} students)",
   "multipleChoiceStudentOverview": "Multiple choice questions overview ({studentName})",
