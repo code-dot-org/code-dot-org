@@ -1649,6 +1649,11 @@ var projects = (module.exports = {
     current.publishedAt = publishedAt;
   },
 
+  /**
+   * Given a channel id, fetches the channel's data from the server.
+   * @param {string} channelId to fetch.
+   * @returns {Promise} A promise which resolves with the channel data.
+   */
   fetchChannel(channelId) {
     return new Promise((resolve, reject) => {
       channels.fetch(channelId, (err, data) =>
