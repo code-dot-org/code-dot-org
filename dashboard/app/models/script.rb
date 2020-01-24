@@ -674,7 +674,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_standards_associations?
-    curriculum_umbrella == 'CSF' && version_year >= 2019
+    curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
