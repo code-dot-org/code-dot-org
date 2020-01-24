@@ -19,6 +19,8 @@ const initialState = {
 };
 
 export default function sectionStandardsProgress(state = initialState, action) {
+  console.log(action);
+  console.log(state);
   if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {
     return {
       ...state,
