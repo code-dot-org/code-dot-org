@@ -1705,7 +1705,6 @@ var projects = (module.exports = {
             null,
             `unable to fetch project source file: ${err}`
           );
-          console.warn(err);
           return Promise.reject(err);
         })
         .then(({data, jqXHR}) => {
