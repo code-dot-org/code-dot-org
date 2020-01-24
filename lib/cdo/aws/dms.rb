@@ -1,4 +1,5 @@
 require_relative '../../../deployment'
+require 'aws-sdk-databasemigrationservice'
 
 module Cdo
   class DMS
@@ -63,6 +64,20 @@ module Cdo
         end
 
         [task_name, {rules: rules}]
+      end
+    end
+
+    # Get list of production Replication Tasks and return as an array of
+    # Aws::DatabaseMigrationService::Types::ReplicationTask
+    # https://docs.aws.amazon.com/ja_jp/sdk-for-ruby/v3/api/Aws/DatabaseMigrationService/Types/ReplicationTask.html
+    def self.production_replication_tasks
+      dms_client = Aws::DatabaseMigrationService::Client.new
+      replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
+      replication_tasks.select do |task|
+        dms_client.
+          list_tags_for_resource({resource_arn: task.replication_task_arn}).
+          tag_list.
+          any? {|tag| tag.key == 'environment' && tag.value == 'production'}
       end
     end
   end
