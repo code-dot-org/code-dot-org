@@ -8,6 +8,7 @@ version          '0.2.414'
 
 depends 'apt'
 depends 'build-essential'
+depends 'tar'
 depends 'yarn'
 
 depends 'cdo-cloudwatch-extra-metrics'

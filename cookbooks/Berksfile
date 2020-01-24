@@ -9,6 +9,7 @@ cookbook 'chef-client'
 cookbook 'ntp'
 cookbook 'seven_zip'
 cookbook 'chef_client_updater'
+cookbook 'tar'
 
 # List all local cookbooks using local-mode Chef.
 require 'chef/local_mode'
