@@ -416,6 +416,14 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
+    association :user, factory: :teacher
+
+    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
+    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
+  end
+
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :teacher
@@ -658,6 +666,7 @@ FactoryGirl.define do
   factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
     initialize_with do
       {
+        mini: true,
         name: 'name',
         email: 'foo@bar.com',
         zip: '45242',
