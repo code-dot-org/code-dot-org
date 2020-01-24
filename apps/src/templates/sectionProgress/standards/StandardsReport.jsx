@@ -23,6 +23,8 @@ import StandardsLegendForPrint from './StandardsLegendForPrint';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
+import Button from '../../Button';
+import _ from 'lodash';
 
 const styles = {
   printView: {
@@ -45,6 +47,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  button: {
+    margin: '20px 0px'
   }
 };
 
@@ -68,58 +73,97 @@ class StandardsReport extends Component {
     return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
+  printReport = () => {
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Adding a unique ID to the window name allows for multiple instances of this window
+    // to be open at once without affecting each other.
+    const windowName = `printWindow-${_.uniqueId()}`;
+    let printWindow = window.open('', windowName, '');
+
+    printWindow.document.open();
+    printWindow.addEventListener('load', event => {
+      printWindow.print();
+    });
+
+    printWindow.document.write(
+      `<html><head><title>${i18n.printReportWindowTitle({
+        sectionName: this.props.section.name
+      })}</title></head>`
+    );
+    printWindow.document.write('<body onafterprint="self.close()">');
+    printWindow.document.write(printArea);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+  };
+
   render() {
     const {scriptFriendlyName} = this.props;
     const linkToOverview = this.getLinkToOverview();
     return (
-      <div style={styles.printView}>
-        <StandardsReportHeader
-          sectionName={this.props.sectionName}
-          teacherName={this.props.teacherName}
+      <div>
+        <Button
+          onClick={this.printReport}
+          color={Button.ButtonColor.orange}
+          text={i18n.printReport()}
+          size={'narrow'}
+          style={styles.button}
         />
-        <div style={styles.reportContent}>
-          <h2 style={styles.headerColor}>{i18n.currentCourse()}</h2>
-          <StandardsReportCurrentCourseInfo
-            section={this.props.section}
-            scriptFriendlyName={this.props.scriptFriendlyName}
-            scriptData={this.props.scriptData}
-            scriptDescription={this.props.scriptDescription}
-            numStudentsInSection={this.props.numStudentsInSection}
-            numLessonsCompleted={this.props.numLessonsCompleted}
-            numLessonsInUnit={this.props.numLessonsInUnit}
+        <div id="printArea" style={styles.printView}>
+          <StandardsReportHeader
+            sectionName={this.props.sectionName}
+            teacherName={this.props.teacherName}
           />
-          {this.props.teacherComment && (
-            <div>
-              <h2 style={styles.headerColor}>{i18n.teacherComments()}</h2>
-              <p>{this.props.teacherComment}</p>
+          <div style={styles.reportContent}>
+            <h2 style={styles.headerColor}>{i18n.currentCourse()}</h2>
+            <StandardsReportCurrentCourseInfo
+              section={this.props.section}
+              scriptFriendlyName={this.props.scriptFriendlyName}
+              scriptData={this.props.scriptData}
+              scriptDescription={this.props.scriptDescription}
+              numStudentsInSection={this.props.numStudentsInSection}
+              numLessonsCompleted={this.props.numLessonsCompleted}
+              numLessonsInUnit={this.props.numLessonsInUnit}
+            />
+            {this.props.teacherComment && (
+              <div>
+                <h2 style={styles.headerColor}>{i18n.teacherComments()}</h2>
+                <p>{this.props.teacherComment}</p>
+              </div>
+            )}
+            <h2 style={styles.headerColor}>{i18n.CSTAStandardsPracticed()}</h2>
+            <StandardsProgressTable style={styles.table} />
+            <StandardsLegendForPrint />
+            <h2 style={styles.headerColor}>{i18n.standardsHowToForPrint()}</h2>
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={i18n.standardsHowToDetailsForPrint({
+                courseName: scriptFriendlyName,
+                courseLink: linkToOverview,
+                cstaLink: 'https://www.csteachers.org/page/standards'
+              })}
+            />
+            <h2 style={styles.headerColor}>{i18n.standardsGetInvolved()}</h2>
+            <SafeMarkdown
+              markdown={i18n.standardsGetInvolvedDetailsForPrint({
+                adminLink: pegasus('/administrator'),
+                parentLink: pegasus('/help'),
+                teacherLink: '/courses'
+              })}
+            />
+          </div>
+          <div style={styles.footer}>
+            <div style={styles.mission}>
+              <SafeMarkdown markdown={i18n.missionStatement()} />
             </div>
-          )}
-          <h2 style={styles.headerColor}>{i18n.CSTAStandardsPracticed()}</h2>
-          <StandardsProgressTable style={styles.table} />
-          <StandardsLegendForPrint />
-          <h2 style={styles.headerColor}>{i18n.standardsHowToForPrint()}</h2>
-          <SafeMarkdown
-            openExternalLinksInNewTab={true}
-            markdown={i18n.standardsHowToDetailsForPrint({
-              courseName: scriptFriendlyName,
-              courseLink: linkToOverview,
-              cstaLink: 'https://www.csteachers.org/page/standards'
-            })}
-          />
-          <h2 style={styles.headerColor}>{i18n.standardsGetInvolved()}</h2>
-          <SafeMarkdown
-            markdown={i18n.standardsGetInvolvedDetailsForPrint({
-              adminLink: pegasus('/administrator'),
-              parentLink: pegasus('/help'),
-              teacherLink: '/courses'
-            })}
-          />
+          </div>
         </div>
-        <div style={styles.footer}>
-          <p style={styles.mission}>
-            <SafeMarkdown markdown={i18n.missionStatement()} />
-          </p>
-        </div>
+        <Button
+          onClick={this.printReport}
+          color={Button.ButtonColor.orange}
+          text={i18n.printReport()}
+          size={'narrow'}
+          style={styles.button}
+        />
       </div>
     );
   }
