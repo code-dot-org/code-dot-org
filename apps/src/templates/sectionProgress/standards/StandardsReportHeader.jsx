@@ -7,17 +7,41 @@ const styles = {
   header: {
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: color.teal,
     color: color.white
   },
   headerRightColumn: {
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'row',
+    padding: '5px 20px'
+  },
+  headerRightColumnTitles: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    paddingRight: 10
+  },
+  headerRightColumnItems: {
+    display: 'flex',
+    flexDirection: 'column',
+    fontFamily: '"Gotham 7r", sans-serif',
+    alignItems: 'flex-start',
+    paddingRight: 25
   },
   headerName: {
-    fontSize: 40
+    fontSize: 40,
+    marginLeft: 15
+  },
+  logo: {
+    height: 30,
+    marginLeft: 30
+  },
+  imageAndTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 };
 
@@ -30,15 +54,21 @@ export default class StandardsReportHeader extends Component {
   render() {
     return (
       <div style={styles.header}>
-        <div style={styles.headerName}>{i18n.standardsReportHeader()}</div>
+        <div style={styles.imageAndTitle}>
+          <img src="/shared/images/CodeLogo_White.png" style={styles.logo} />
+          <div style={styles.headerName}>{i18n.standardsReportHeader()}</div>
+        </div>
         <div style={styles.headerRightColumn}>
-          <span>
-            {i18n.teacherWithColon({teacher: this.props.teacherName})}
-          </span>
-          <span>
-            {i18n.sectionAndName({sectionName: this.props.sectionName})}
-          </span>
-          <span>{i18n.dateAndDate({date: new Date().toLocaleString()})}</span>
+          <div style={styles.headerRightColumnTitles}>
+            <div>{i18n.teacherWithColon()}</div>
+            <div>{i18n.sectionAndName()}</div>
+            <div>{i18n.dateWithColon()}</div>
+          </div>
+          <div style={styles.headerRightColumnItems}>
+            <span>{this.props.teacherName}</span>
+            <span>{this.props.sectionName}</span>
+            <span>{new Date().toLocaleString()}</span>
+          </div>
         </div>
       </div>
     );
