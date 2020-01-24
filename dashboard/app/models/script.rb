@@ -416,7 +416,7 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id_or_name, version_year: nil, with_associated_models: true)
+  def self.get_without_cache(id_or_name, with_associated_models: true)
     # Also serve any script by its new_name, if it has one.
     script = id_or_name && Script.find_by(new_name: id_or_name)
     return script if script
@@ -433,28 +433,22 @@ class Script < ActiveRecord::Base
   end
 
   # Returns the script with the specified id, or a script with the specified
-  # name, or a redirect to the latest version of the script within the specified
-  # family. Also populates the script cache so that future responses will be cached.
+  # name. Also populates the script cache so that future responses will be cached.
   # For example:
   #   get_from_cache('11') --> script_cache['11'] = <Script id=11, name=...>
   #   get_from_cache('frozen') --> script_cache['frozen'] = <Script name="frozen", id=...>
-  #   get_from_cache('csp1') --> script_cache['csp1'] = <Script redirect_to="csp1-2018">
-  #   get_from_cache('csp1', version_year: '2017') --> script_cache['csp1/2017'] = <Script redirect_to="csp1-2017">
-  #
-  # @param id_or_name [String|Integer] script id, script name, or script family name.
-  # @param version_year [String] If specified, when looking for a script to redirect
-  #   to within a script family, redirect to this version rather than the latest.
-  def self.get_from_cache(id_or_name, version_year: nil)
+  # @param id_or_name [String|Integer] script id or name.
+  # @return [Script]
+  def self.get_from_cache(id_or_name)
     if ScriptConstants::FAMILY_NAMES.include?(id_or_name)
       raise "Do not call Script.get_from_cache with a family_name. Call Script.get_script_family_redirect_for_user instead.  Family: #{id_or_name}"
     end
 
-    return get_without_cache(id_or_name, version_year: version_year, with_associated_models: false) unless should_cache?
-    cache_key_suffix = version_year ? "/#{version_year}" : ''
-    cache_key = "#{id_or_name}#{cache_key_suffix}"
+    return get_without_cache(id_or_name, with_associated_models: false) unless should_cache?
+    cache_key = id_or_name&.to_s
     script_cache.fetch(cache_key) do
       # Populate cache on miss.
-      script_cache[cache_key] = get_without_cache(id_or_name, version_year: version_year)
+      script_cache[cache_key] = get_without_cache(id_or_name)
     end
   end
 
@@ -505,18 +499,6 @@ class Script < ActiveRecord::Base
     end
 
     script_name = latest_version&.name
-    script_name ? Script.new(redirect_to: script_name) : nil
-  end
-
-  # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
-  # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
-  # @return [Script|nil] A dummy script object, not persisted to the database,
-  #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
