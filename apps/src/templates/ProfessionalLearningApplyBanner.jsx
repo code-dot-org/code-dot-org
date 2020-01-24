@@ -5,11 +5,8 @@ class ProfessionalLearningApplyBanner extends React.Component {
   static propTypes = {
     useSignUpText: PropTypes.bool,
     nominated: PropTypes.bool,
-    style: PropTypes.object
-  };
-
-  state = {
-    link: this.generateLink()
+    style: PropTypes.object,
+    linkSuffix: PropTypes.string
   };
 
   styles = {
@@ -116,7 +113,10 @@ class ProfessionalLearningApplyBanner extends React.Component {
   };
 
   generateLink() {
-    const link = '/educate/professional-learning/program-information';
+    let link = '/educate/professional-learning';
+    if (this.props.linkSuffix) {
+      link = `${link}/${this.props.linkSuffix}`;
+    }
     if (this.props.nominated) {
       return link + '?nominated=true';
     } else {
@@ -137,7 +137,7 @@ class ProfessionalLearningApplyBanner extends React.Component {
   render() {
     return (
       <div style={this.props.style}>
-        <a href={this.state.link} id="pl-apply-banner">
+        <a href={this.generateLink()} id="pl-apply-banner">
           <div style={this.styles.bigBanner}>
             <div className="col-50" style={this.styles.textWrapper}>
               <div

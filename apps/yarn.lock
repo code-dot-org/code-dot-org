@@ -1616,10 +1616,10 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@code-dot-org/maze/-/maze-1.1.0.tgz#7c8185adf06a9172e3bde4ccd6f6738a787b2a7c"
 
-"@code-dot-org/ml-activities@0.0.23":
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.23.tgz#251d714ef2374872ab20038e3221fbd3fc4210b0"
-  integrity sha512-dlb+foyp09Qcqomlztn2AKAt9JoMZ1MPY8fvbKGMantYfdL1HSsv3l6IRyzan5fN+jbKchnOqwov8KGnC3WUlw==
+"@code-dot-org/ml-activities@0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/ml-activities/-/ml-activities-0.0.25.tgz#e7308b02d7cc37e6efb970ca4596eaa459b89cc0"
+  integrity sha512-Ic8H7GnQum1PZyjToWxmM1XetBc+5aXmqdDSBmI4IMT32zeJH9CCvyMRlCLXFIGo7VVGXz+GEcYLBi1pFTzCCw==
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.25"
     "@fortawesome/free-solid-svg-icons" "^5.11.2"

@@ -14,6 +14,13 @@ export function makeStubBoard() {
 export class MicrobitStubBoard {
   constructor() {
     this.eventListeners = [];
+    this.updateListeners = [];
+    this.analogChannel = new Array(16).fill(0);
+    this.myPort = null;
+  }
+
+  connect() {
+    this.myPort = true;
   }
 
   displayPlot() {}
@@ -25,8 +32,14 @@ export class MicrobitStubBoard {
   scrollInteger() {}
 
   receivedEvent(sourceID, eventID) {
-    for (let f of this.eventListeners) {
-      f.call(null, sourceID, eventID);
+    for (let listener of this.eventListeners) {
+      listener.call(null, sourceID, eventID);
+    }
+  }
+
+  receivedAnalogUpdate() {
+    for (let listener of this.updateListeners) {
+      listener.call();
     }
   }
 
@@ -34,5 +47,11 @@ export class MicrobitStubBoard {
     this.eventListeners.push(eventListenerFunction);
   }
 
-  addFirmataUpdateListener(updateListenerFunction) {}
+  addFirmataUpdateListener(updateListenerFunction) {
+    this.updateListeners.push(updateListenerFunction);
+  }
+
+  streamAnalogChannel(channel) {}
+
+  stopStreamingAnalogChannel(channel) {}
 }
