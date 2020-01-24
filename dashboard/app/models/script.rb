@@ -502,18 +502,6 @@ class Script < ActiveRecord::Base
     script_name ? Script.new(redirect_to: script_name) : nil
   end
 
-  # Given a script family name, return a dummy Script with redirect_to field
-  # pointing toward the latest stable script in that family, or to a specific
-  # version_year if one is specified.
-  # @param family_name [String] The name of the script family to search in.
-  # @param version_year [String] Version year to return. Optional.
-  # @return [Script|nil] A dummy script object, not persisted to the database,
-  #   with only the redirect_to field set.
-  def self.get_script_family_redirect(family_name, version_year: nil)
-    script_name = Script.latest_stable_version(family_name, version_year: version_year).try(:name)
-    script_name ? Script.new(redirect_to: script_name) : nil
-  end
-
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [String|nil] URL to the script overview page the user should be redirected to (if any).
