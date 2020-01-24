@@ -9,11 +9,6 @@ class CongratsRoutesTest < Minitest::Test
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @mock_session = Rack::MockSession.new(MockPegasus.new, 'code.org')
       @pegasus = Rack::Test::Session.new(@mock_session)
-
-      # Ensure that AssetHelper#webpack_asset_path does not raise an exception
-      # when called from unit tests. See comments on that method for details.
-      CDO.stubs(optimize_webpack_assets: false)
-      CDO.stubs(use_my_apps: true)
     end
 
     it 'shows a course-specific congrats page for appropriate courses' do

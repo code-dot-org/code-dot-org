@@ -8,13 +8,6 @@ class SiteTest < Minitest::Test
     Rack::Builder.parse_file(File.absolute_path('../config.ru', __dir__)).first
   end
 
-  def setup
-    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
-    # when called from unit tests. See comments on that method for details.
-    CDO.stubs(optimize_webpack_assets: false)
-    CDO.stubs(use_my_apps: true)
-  end
-
   def test_post_whitelist
     header 'host', 'code.org'
     # Ensure POST requests to Pegasus template paths return a 405 error by default.

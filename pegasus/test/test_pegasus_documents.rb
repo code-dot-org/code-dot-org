@@ -74,13 +74,6 @@ class PegasusTest < Minitest::Test
     code.org/page_mode
   ]
 
-  def setup
-    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
-    # when called from unit tests. See comments on that method for details.
-    CDO.stubs(optimize_webpack_assets: false)
-    CDO.stubs(use_my_apps: true)
-  end
-
   def test_render_pegasus_documents
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
