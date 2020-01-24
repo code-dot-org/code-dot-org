@@ -27,6 +27,10 @@ export class CreateStandardsReportStep2 extends Component {
     onCommentChange: PropTypes.func.isRequired
   };
 
+  commentChanged = event => {
+    this.props.onCommentChange(event.target.value);
+  };
+
   render() {
     return (
       <div>
@@ -51,8 +55,8 @@ export class CreateStandardsReportStep2 extends Component {
         </ul>
         <textarea
           type="text"
-          value={i18n.createStandardsReportSampleNoteText()}
-          onChange={this.props.onCommentChange}
+          placeholder={i18n.createStandardsReportSampleNoteText()}
+          onChange={this.commentChanged}
           style={styles.textArea}
         />
         <DialogFooter>
