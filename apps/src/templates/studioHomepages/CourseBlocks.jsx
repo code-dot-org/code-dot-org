@@ -26,28 +26,28 @@ export class CourseBlocksCsf extends Component {
 
 class CourseBlocksCsfModern extends Component {
   componentDidMount() {
-    $('#coursea-2017')
+    $('#coursea')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
       .show();
-    $('#courseb-2017')
+    $('#courseb')
       .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
       .show();
-    $('#coursec-2017')
+    $('#coursec')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
       .show();
-    $('#coursed-2017')
+    $('#coursed')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
       .show();
-    $('#coursee-2017')
+    $('#coursee')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
       .show();
-    $('#coursef-2017')
+    $('#coursef')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
       .show();
-    $('#pre-express-2017')
+    $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
-    $('#express-2017')
+    $('#express')
       .appendTo(ReactDOM.findDOMNode(this.refs.express))
       .show();
   }

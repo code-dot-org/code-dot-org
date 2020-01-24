@@ -17,12 +17,14 @@ describe('project.js', () => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
     sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showProjectHeader');
     sinon.stub(header, 'showMinimalProjectHeader');
     sinon.stub(header, 'updateTimestamp');
   });
 
   afterEach(() => {
     utils.reload.restore();
+    header.showProjectHeader.restore();
     header.showMinimalProjectHeader.restore();
     header.updateTimestamp.restore();
     restoreAppOptions();
@@ -658,6 +660,101 @@ describe('project.js', () => {
     });
   });
 
+  describe('load', () => {
+    let server;
+
+    beforeEach(() => {
+      window.appOptions.channel = 'mychannel';
+      sinon.stub(utils, 'currentLocation').returns({
+        pathname: '/projects/artist/mychannel',
+        search: ''
+      });
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      server = sinon.createFakeServer({autoRespond: true});
+      project.init(sourceHandler);
+      sinon.stub(console, 'warn');
+    });
+
+    afterEach(() => {
+      server.restore();
+      project.getStandaloneApp.restore();
+      utils.currentLocation.restore();
+      console.warn.restore();
+    });
+
+    describe('standalone project', () => {
+      beforeEach(() => {
+        sinon.stub(utils, 'navigateToHref');
+      });
+
+      afterEach(() => {
+        utils.navigateToHref.restore();
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(() => {
+          expect(utils.navigateToHref).not.to.have.been.called;
+          done();
+        });
+      });
+
+      it('redirects to new project when channel not found', done => {
+        project.load().then(() => {
+          expect(utils.navigateToHref).to.have.been.calledOnce;
+          expect(utils.navigateToHref.firstCall.args[0]).to.equal(
+            '/projects/artist'
+          );
+          done();
+        });
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().fail(done);
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().fail(done);
+      });
+    });
+
+    describe('project-backed level', () => {
+      beforeEach(() => {
+        // This was stubbed at the top level in this file, so unstub it here
+        window.appOptions.level.isProjectLevel = false;
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(done);
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().fail(done);
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().fail(done);
+      });
+    });
+
+    describe('no channel', () => {
+      it('always succeeds', done => {
+        window.appOptions.level.isProjectLevel = false;
+        window.appOptions.channel = null;
+        project.load().then(done);
+      });
+    });
+  });
+
   describe('serverSideRemix()', () => {
     let server;
 
@@ -821,6 +918,34 @@ function restoreAppOptions() {
   restoreOnWindow('appOptions');
 }
 
+function stubGetChannelsWithError(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.error();
+  });
+}
+
+function stubGetChannels(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        createdAt: '2018-10-22T21:59:43.000-07:00',
+        updatedAt: '2018-10-22T21:59:45.000-07:00',
+        isOwner: true,
+        publishedAt: null,
+        level: '/projects/artist',
+        migratedToS3: true,
+        name: 'artist project',
+        id: 'kmz3weHzTpZTbRWrHRzMJA',
+        projectType: 'artist'
+      })
+    );
+  });
+}
+
 function stubPostChannels(server) {
   server.respondWith('POST', /\/v3\/channels/, xhr => {
     xhr.respond(
@@ -841,6 +966,30 @@ function stubPostChannels(server) {
       })
     );
   });
+}
+
+function stubGetMainJson(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      })
+    );
+  });
+}
+
+function stubGetMainJsonWithError(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr =>
+    xhr.error()
+  );
 }
 
 function stubPutMainJson(server) {

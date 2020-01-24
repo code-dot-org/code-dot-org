@@ -10,19 +10,25 @@ class CoursesControllerTest < ActionController::TestCase
     @levelbuilder = create :levelbuilder
 
     Script.stubs(:should_cache?).returns true
+    Script.clear_cache
+
     @course_regular = create :course, name: 'non-plc-course'
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
   end
 
+  teardown do
+    Script.clear_cache
+  end
+
   # Tests for index
 
-  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
+  test_user_gets_response_for :index, response: :success, user: :teacher, queries: 12
 
-  test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
+  test_user_gets_response_for :index, response: :success, user: :admin, queries: 12
 
-  test_user_gets_response_for :index, response: :success, user: :user, queries: 3
+  test_user_gets_response_for :index, response: :success, user: :user, queries: 11
 
   # Tests for show
 

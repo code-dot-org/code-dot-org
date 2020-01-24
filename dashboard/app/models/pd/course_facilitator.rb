@@ -13,10 +13,10 @@
 #
 
 class Pd::CourseFacilitator < ActiveRecord::Base
+  belongs_to :facilitator, class_name: 'User'
+
   validates_inclusion_of :course, in: Pd::Workshop::COURSES
   validates_uniqueness_of :course, scope: :facilitator_id
-
-  belongs_to :facilitator, class_name: 'User'
 
   def self.facilitators_for_course(course)
     User.joins(:courses_as_facilitator).
