@@ -52,7 +52,7 @@ function setupVideos(player) {
             'width="100%" height="100%" ' +
             'class="video-js lazyload" ' +
             'preload="none" ' +
-            'controls>' +
+            'controls playsinline>' +
             '  <source src="' +
             downloadPath +
             '" type="video/mp4"/>' +

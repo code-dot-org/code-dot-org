@@ -382,7 +382,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     '" ' +
     (videoInfo.autoplay ? 'autoplay ' : '') +
     'class="video-js vjs-default-skin vjs-big-play-centered" ' +
-    'controls preload="auto" ' +
+    'controls playsinline preload="auto" ' +
     'poster="' +
     videoInfo.thumbnail +
     '">' +
