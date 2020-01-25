@@ -15,8 +15,6 @@ require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative 'hoc_sync_utils'
 
-CLEAR = "\r\033[K"
-
 def sync_out
   rename_from_crowdin_name_to_locale
   restore_redacted_files
@@ -72,11 +70,11 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    original_files.each_with_index do |original_path, file_index|
+    print "Restoring #{locale} (#{locale_index}/#{total_locales})"
+    original_files.each do |original_path|
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
 
-      print "#{CLEAR}Restoring #{locale} (#{locale_index}/#{total_locales}) file #{file_index}/#{original_files.count}"
       $stdout.flush
 
       if original_path.include? "course_content"
@@ -200,7 +198,7 @@ def distribute_translations
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
-    print "#{CLEAR}Distributing #{locale} (#{i}/#{total_locales})"
+    print "Distributing #{locale} (#{i}/#{total_locales})"
     $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
@@ -240,7 +238,7 @@ def distribute_translations
     sanitize_file_and_write(loc_file, destination)
   end
 
-  puts "#{CLEAR}Distribution finished!"
+  puts "Distribution finished!"
 end
 
 # For untranslated apps, copy English file for all locales
@@ -259,7 +257,11 @@ end
 def rebuild_blockly_js_files
   I18nScriptUtils.run_bash_script "apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh"
   Dir.chdir('apps') do
-    puts `yarn build`
+    _stdout, stderr, status = Open3.capture3('yarn build')
+    unless status == 0
+      puts "Error building apps:"
+      puts stderr
+    end
   end
 end
 
