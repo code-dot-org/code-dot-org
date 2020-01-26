@@ -81,6 +81,47 @@ module Cdo
       end
     end
 
+    # Get current status of a Replication Task
+    def self.replication_task_status(replication_task_arn)
+      dms_client.describe_replication_tasks(
+        {
+          filters: [
+            {
+              name: 'replication-task-arn',
+              values: [replication_task_arn]
+            }
+          ]
+        },
+        max_records: 1,
+        without_settings: true
+      ).replication_tasks[0]
+    end
+
+    # Start a replication task and wait until it completes, raising an error if the task did not complete within a
+    # configurable time period or did not complete successfully.
+    # @replication_task_arn [String]
+    def self.start_replication_task(replication_task_arn)
+      CDO.log.info "Starting DMS Replication Task: #{replication_task_arn}"
+      dms_client = Aws::DatabaseMigrationService::Client.new
+      current_task_status = replication_task_status(replication_task_arn).status
+      dms_client.start_replication_task(
+        {
+          replication_task_arn: replication_task_arn,
+          # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
+          start_replication_task_type: current_task_status != 'not-started' ? 'reload-target' : 'start-replication'
+        }
+      )
+
+      # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
+      task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
+      CDO.log.info task_status
+
+      CDO.log.info "DMS Task Completed Successfully: #{replication_task_arn}"
+    rescue StandardError => error
+      CDO.log.info "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}"
+      raise error
+    end
+
     # Determine whether a Full Load Replication Task has completed successfully.
     def self.replication_task_completed_successfully?(replication_task_arn)
       dms_client = Aws::DatabaseMigrationService::Client.new
