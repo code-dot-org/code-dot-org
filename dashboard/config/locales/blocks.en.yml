@@ -366,10 +366,15 @@ en:
           FORMAT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -829,7 +834,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMapping:
-        text: "{SPRITE} stop {PROPERTY} following {RANGE}"
+        text: "{SPRITE} stops {PROPERTY} following {RANGE}"
         options:
           PROPERTY:
             '"scale"': size
@@ -845,7 +850,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
-        text: "{GROUP} stops {PROPERTY} following {RANGE}"
+        text: "{GROUP} stop {PROPERTY} following {RANGE}"
         options:
           GROUP:
             sprites: all
