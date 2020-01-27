@@ -12,6 +12,5 @@ Feature: Help and Tips Map Link
     When I click selector "a:contains(The Circuit Playground is a simple single board computer with many built in Inputs and Outputs for us to explore.)"
     And I wait until element ".instructions-container" is visible
     And I switch to the first iframe
-    And I wait for 1 seconds
-    And I wait until element ".container" is visible
+    And I wait until element ".documentation-ui-test" is visible
     And I wait until ".content" contains text "Welcome to the Circuit Playground"
