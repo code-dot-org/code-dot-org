@@ -12,7 +12,7 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
-import {StandardsViewHeaderButtons} from './standards/StandardsViewHeaderButtons';
+import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 const styles = {
   heading: {
