@@ -1,12 +1,8 @@
 name 'csp-20-21-u5-mini-assessment-5'
-encrypted 'AZ/n8cqmh0MxBR4P80wL/Kr0E69efUh7hhTAgue/u2hOLrUhI+3ijKBvZbUH
-CA5WmPV4olurmt6hJbMfr84UCeRO/jyPVE5mQTG8/mA+zehCXvDCTY6XeSh1
-KK4K4G7enAyQblssLJ/Gulsh0WPT4jS/edCFAES9/JhQTr+Y56ztiawDoULm
-nwPWR/32qyfCroJDY//WX18kjcSj35kTKME5tNGWves2T+MVJ3Nd7XLz3KQ1
-PABzMVVwqHn2wO0PlJ9Hqt3QDsNK/pdWVX3OWZoeotYpUZo9BsHXRiqfSqTC
-McSDrX6+sCyJT/HbsDzO+RpnY4b+dWbkBRW1jdDcbuJ2wEklomXZ00xUobkT
-boxOKvYuzV4m3xHUasvcuiNQfMJ8k6HE/Z0O/Qc/ho6uNFNRE3uc2WpRzL6w
-3ZBFDCngcVX6PmbJjvtdTVm77YzbhQ/N3LIFH0zqGfiabYw7+R7jlovIRtXn
-gnp108X74yEg0Abk0aQkZB+hRSBpWQwafHkCe8A6Qgb7MUIIxxbt82efHNeL
-kawWMmSiKw2o0Kroipk8vduQnmotxeyaObLB7Tk3Q/k40FDYED+erPtQmg==
-'
+editor_experiment ''
+wrong '![](https://images.code.org/dfad678ad74a0b098cecbc0b0006fd58-image-1557849847631.PNG)'
+right '![](https://images.code.org/bb987eec85b2a9c6991d905a28971006-image-1557849842379.PNG)'
+wrong '![](https://images.code.org/90cd656f4548ba2a65b3571cd7d1773a-image-1557849853417.PNG)'
+markdown <<MARKDOWN
+Which program will correctly print to the console the smallest number in the list? 
+MARKDOWN

@@ -35,6 +35,7 @@ level 'U4 L03 Variable Scope: Local vs. Global', progression: 'Debugging Scope I
 level 'U4 L03 Scope Issue', progression: 'Debugging Scope Issues'
 level 'U4 L03 Variables operator practice 4', progression: 'Putting it Together'
 level 'U4L3 CFU Variables Psuedocode', progression: 'Check For Understanding: AP Practice', assessment: true
+level 'U4L3 CFU Variables Randomness Psuedocode', progression: 'Check for Understanding: AP Practice', assessment: true
 
 stage 'Variables Make', flex_category: 'csp_variables'
 level 'CSP U4L4 SFLP 20-21', progression: 'Lesson Overview'
