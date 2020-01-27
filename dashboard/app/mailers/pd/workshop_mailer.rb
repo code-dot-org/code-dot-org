@@ -213,9 +213,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    @regional_partner = @workshop.regional_partner
-    @facilitators = []
-    @workshop.facilitators.each {|facilitator| @facilitators << facilitator.email}
+    @contact_text = get_contact_text_for_teacher_follow_up(@workshop)
 
     # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
@@ -290,5 +288,41 @@ class Pd::WorkshopMailer < ActionMailer::Base
     else
       'Details for your upcoming Code.org workshop have changed'
     end
+  end
+
+  def get_contact_text_for_teacher_follow_up(workshop)
+    regional_partner = workshop.regional_partner
+    facilitators = []
+    workshop.facilitators.each {|facilitator| facilitators << facilitator.email}
+    has_partner = regional_partner && regional_partner.contact_email
+    has_facilitator = !facilitators.empty?
+    after_teacher_contact = '.'
+
+    if has_facilitator || has_partner
+      after_teacher_contact = has_facilitator && has_partner ? ',' : ' or'
+    end
+
+    contact_text = "Remember that you can always reach out to us for support at "
+    contact_text += "#{email_tag('teacher@code.org')}#{after_teacher_contact}"
+    if has_partner
+      contact_text += " to your regional partner at #{email_tag(regional_partner.contact_email)}"
+      contact_text += has_facilitator ? ', or' : '.'
+    end
+    if has_facilitator
+      contact_text += " to your facilitator(s) at "
+      facilitators.each_with_index do |facilitator, i|
+        if i < facilitators.length - 1
+          succeed_text = (i == facilitators.length - 2) ? ' or ' : ', '
+          contact_text += "#{email_tag(facilitator)}#{succeed_text}"
+        else
+          contact_text += "#{email_tag(facilitator)}."
+        end
+      end
+    end
+    return contact_text
+  end
+
+  def email_tag(email)
+    "<a href=mailto:#{email}>#{email}</a>"
   end
 end
