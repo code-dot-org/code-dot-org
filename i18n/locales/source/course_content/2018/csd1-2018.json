@@ -1,4 +1,9 @@
 {
+  "https://studio.code.org/s/csd1-2018/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "CS Discoveries Student Pre-Course Survey"
+    }
+  },
   "https://studio.code.org/s/csd1-2018/stage/1/puzzle/1": {
     "display_name": "Lesson Overview"
   },
@@ -25,5 +30,10 @@
   },
   "https://studio.code.org/s/csd1-2018/stage/8/puzzle/1": {
     "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd1-2018/stage/8/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
   }
 }
