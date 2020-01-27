@@ -213,7 +213,8 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   // contents, include the same link string as the React code will use, so that
   // our calculations for the modal dimensions will account for its presence.
   var fallbackPlayerLinkDiv = $(
-    '<div id="fallback-player-caption-dialog-link"><a>' +
+    '<div id="fallback-player-caption-dialog-link">' +
+      '<a style="opacity: 0; pointer-events: none">' +
       i18n.fallbackVideoClosedCaptioningLink() +
       '</a></div>'
   ).css({
