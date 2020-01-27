@@ -152,4 +152,8 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     assert_equal ['noreply@code.org'], mail.from
     assert_sendable mail
   end
+
+  test 'Fails lookup with nil zip' do
+    assert_equal RegionalPartner.find_by_zip(nil), [nil, nil]
+  end
 end
