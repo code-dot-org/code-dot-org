@@ -86,11 +86,12 @@ class SectionProgress extends Component {
   }
 
   componentDidUpdate() {
-    // Check if we are on a non-CSF script and
+    // Check if we are on a script that does NOT have standards associations and
     // currentView is Standards. If so re-set currentView to Summary since
     // Standards doesn't apply.
-    const isCSF = this.props.scriptData && this.props.scriptData.csf;
-    if (this.props.currentView === ViewType.STANDARDS && !isCSF) {
+    const hasStandards =
+      this.props.scriptData && this.props.scriptData.hasStandards;
+    if (this.props.currentView === ViewType.STANDARDS && !hasStandards) {
       this.props.setCurrentView(ViewType.SUMMARY);
     }
   }
@@ -176,7 +177,8 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
-    const csfCourseSelected = levelDataInitialized && scriptData.csf;
+    const scriptWithStandardsSelected =
+      levelDataInitialized && scriptData.hasStandards;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
@@ -199,7 +201,9 @@ class SectionProgress extends Component {
           {levelDataInitialized && (
             <div style={styles.toggle}>
               <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-              <SectionProgressToggle showStandardsToggle={csfCourseSelected} />
+              <SectionProgressToggle
+                showStandardsToggle={scriptWithStandardsSelected}
+              />
             </div>
           )}
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (

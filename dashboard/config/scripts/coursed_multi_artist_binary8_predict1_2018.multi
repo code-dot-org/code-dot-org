@@ -1,5 +1,5 @@
 name 'courseD_multi_artist_binary8_predict1_2018'
-question 'Take a close look at the code below.  Which image will it create after you click "Run"?'
+question 'Take a close look at the code below. Which image will it create after you click "Run"?'
 wrong 'A', feedback: 'Incorrect.'
 wrong 'B', feedback: 'Incorrect.'
 wrong 'C', feedback: 'Incorrect.'

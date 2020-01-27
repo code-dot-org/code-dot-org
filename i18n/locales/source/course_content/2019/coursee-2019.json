@@ -220,11 +220,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing will happen.",
@@ -245,6 +240,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The farmer will remove dirt as long as there is a pile, then stop when the pile is gone"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
             }
           ]
         }
@@ -451,11 +451,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -476,6 +471,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -548,11 +548,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -573,6 +568,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -687,11 +687,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Take a good look at the code below.  Which drawing will this program make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "A",
@@ -714,7 +709,12 @@
               "feedback": "The inner loop makes a pentagon, and the outer loop repeats it 4 times in a circle."
             }
           ],
-          "markdown": "<table>\n<tr><td>A</td><td><img src=\"https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src=\"https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src=\"https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png\" width=\"80px\" style=\"mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);\"/></td></tr>\n</table>\n\n<br/><br/>\n\n"
+          "markdown": "<table>\n<tr><td>A</td><td><img src=\"https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src=\"https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png\" width=\"100px\" style=\"mix-blend-mode: multiply;\"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src=\"https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png\" width=\"80px\" style=\"mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);\"/></td></tr>\n</table>\n\n<br/><br/>\n\n",
+          "questions": [
+            {
+              "text": "Take a good look at the code below. Which drawing will this program make when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1108,11 +1108,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at the functions defined below.  What will the harvester pick?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will pick two pumpkins.",
@@ -1134,6 +1129,11 @@
               "correct": false,
               "feedback": "Incorrect. The harvester goes forward until the end of the path, then turns around and moves back until she picks the lettuce."
             }
+          ],
+          "questions": [
+            {
+              "text": "Look at the functions defined below. What will the harvester pick?"
+            }
           ]
         }
       }
@@ -1148,11 +1148,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -1173,6 +1168,11 @@
               "text": "The artist will draw two squares with a small gap in between.",
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
             }
           ]
         }
@@ -1322,11 +1322,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press the \"Run\" button?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will solve the puzzle correctly.",
@@ -1347,6 +1342,11 @@
               "text": "The artist will draw four squares on top of one another.",
               "correct": false,
               "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
             }
           ]
         }
@@ -1397,7 +1397,6 @@
   },
   "https://studio.code.org/s/coursee-2019/stage/18/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
       "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Monster Dance (Sprite Lab) | Cupcake Game (Sprite Lab) |\n|---|---|\n| [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png \"Monster Dance (Sprite Lab\")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png \"Cupcake Game (Sprite Lab\")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Pattern (Artist) | Function Flowers (Arist) |\n|---|---|\n| [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png \"Pattern (Artist)\")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png \"Function Flowers (Artist)\")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |\n| Let's get creative with nested loops! | Let's get creative with functions! |\n\n"
     }

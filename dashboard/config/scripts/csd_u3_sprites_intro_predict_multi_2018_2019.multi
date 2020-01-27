@@ -1,5 +1,5 @@
 name 'CSD U3 Sprites intro predict multi_2018_2019'
-question 'When run, where will the sprite <code>mySprite</code> be located?'
+question 'When run, where will the sprite `mySprite` be located?'
 
 layout 'wrap'
 wrong '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 150px; border: 1px solid">'

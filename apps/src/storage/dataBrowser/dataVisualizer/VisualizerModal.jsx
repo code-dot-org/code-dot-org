@@ -8,7 +8,7 @@ import msg from '@cdo/locale';
 import color from '../../../util/color';
 import * as dataStyles from '../dataStyles';
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {ChartType, isBlank} from '../dataUtils';
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DropdownField from './DropdownField';
 import DataVisualizer from './DataVisualizer';
@@ -101,6 +101,32 @@ class VisualizerModal extends React.Component {
     return columns.filter(column => isColumnNumeric(records, column));
   });
 
+  getValuesForFilterColumn = memoize((records, column) => {
+    let values = [];
+    values = Array.from(new Set(records.map(record => record[column])));
+    values = values.map(x => (typeof x === 'string' ? `"${x}"` : `${x}`));
+
+    return values;
+  });
+
+  filterRecords = memoize((records = [], column, value) => {
+    let parsedValue;
+    if (isNumber(value)) {
+      parsedValue = parseFloat(value);
+    } else if (isBoolean(value)) {
+      parsedValue = toBoolean(value);
+    } else if (value === 'undefined') {
+      parsedValue = undefined;
+    } else if (value === 'null') {
+      parsedValue = null;
+    } else {
+      // We add quotes around strings to display in the dropdown, remove the quotes here so that
+      // we filter on the actual value
+      parsedValue = value.slice(1, -1);
+    }
+    return records.filter(record => record[column] === parsedValue);
+  });
+
   getDisplayNameForChartType(chartType) {
     switch (chartType) {
       case ChartType.BAR_CHART:
@@ -124,6 +150,14 @@ class VisualizerModal extends React.Component {
         ? this.props.tableRecords
         : Object.values(this.props.tableRecords)
     );
+    let filteredRecords = parsedRecords;
+    if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
+      filteredRecords = this.filterRecords(
+        parsedRecords,
+        this.state.filterColumn,
+        this.state.filterValue
+      );
+    }
     const numericColumns = this.findNumericColumns(
       parsedRecords,
       this.props.tableColumns
@@ -239,7 +273,7 @@ class VisualizerModal extends React.Component {
           </div>
           {this.canDisplayChart() ? (
             <DataVisualizer
-              records={parsedRecords}
+              records={filteredRecords}
               numericColumns={numericColumns}
               chartType={this.state.chartType}
               bucketSize={this.state.bucketSize}
@@ -258,7 +292,7 @@ class VisualizerModal extends React.Component {
           <div style={{paddingTop: 20}}>
             <DropdownField
               displayName={msg.filter()}
-              options={[1, 2, 3]}
+              options={this.props.tableColumns}
               disabledOptions={[]}
               value={this.state.filterColumn}
               onChange={event =>
@@ -271,7 +305,10 @@ class VisualizerModal extends React.Component {
             />
             <DropdownField
               displayName={msg.by()}
-              options={[]}
+              options={this.getValuesForFilterColumn(
+                parsedRecords,
+                this.state.filterColumn
+              )}
               disabledOptions={[]}
               value={this.state.filterValue}
               onChange={event =>
