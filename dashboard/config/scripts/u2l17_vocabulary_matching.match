@@ -1,25 +1,28 @@
 name 'U2L17 - Vocabulary matching'
-encrypted '/yYLNXJcOG4j84W2yyYfzuQdB9qIEausMzYXhmr6KZ9VzlWdJIqRDsf+lCKq
-AR7qhSnnAk5b89vAL68FbjFiRlG0Gs+QPX0sJZnVRvaXX/HHFYjOmJ272EPr
-XKR3naZFgFlAbNkdpHKW2KLofd/WNP5jwCXbnyBX5/oN7+AWh+4lL9AJo18n
-uDf26R8H2TbcVSc5LM/biiwzinbtJA1TOHVSAqckkz3WtPKO9pJ7ypDX8d18
-qz9WEvIMkaxjgVb+ESbLd7bzoHFr7okuBEVom/+zwE6TbO3+Wb8o7nyMbbDb
-v3ue2EGyoMn72l2xeUTt+/AgFs1VaHvB8lnGCG+OFoI3U7TzyR4i5KOHsMtQ
-HnlKiUkOPeGx+8dpjsQ5+e1OQ2p4aOoPJZlod3GQaH4gXlb4YqTjsHPG57dn
-J/gAiOfwzbJdVW+cGE+s7nGvYltmb5pV2GzrO6VmEBTKs60yKdTjyV3NkdzR
-j/VjO1gMf6nADN7Bdpa7vND8YkGavZd5XOWPZQRzNyQL2FrCBeFAozVX0l0I
-tIP4stXUooibn6Gz1QNLQp4RqyugzOD8hqXnSgbjpDNJ4yvsVWxsk5+WzDOK
-pWPN2DelZ1DrqY8eajFhvWLeB5UdgBb2AjcPpiDqcORtgH1lT1GF+GupIeNa
-Njw2JtG9XxhxPwvOeosTub9LRqgdqBkkfE2/yqs62Yh4Efzsog0iqOEcpt+5
-KPWtq9mgtIjMf+kAh3RA9KaammFKinG1dkP37JVrPcX0Nf1ay361VKMmZqiK
-6BeDZTb7Pp9B2//D85eRiTxQ79TIcw4wwAl2lw9foGvQn4QQlAbVfTPdnUer
-edzmnAzYik19WmH9jvhpjfbbP+Omi+zRvU7EFOHgZ8RcNuRkZ3O4BrWtqhDW
-zLN0IrWP7Sk7ZHTdmgCkoRDzNU0ibbfFw+bFq7TFfSOmt6ZyRAP7RdjMsTAe
-P/TdKdFSEHAxogxXFZu6JXEDSZdv/J9a4WyC0zQrEOnaIDzK5t/iwMwG6uIa
-TTg09/zWOu7BPUkv5RXSK/9/9qt8boXDYj4i0ajpoohUiKfWuUlQd/JH+BWv
-wAU+Jaez8Fx+W0XE3Cyl0R/CZE51zyLzRj1TUtGQd6SpbNIoIqLIgNA4dAMq
-VCyi7zmUoeYZdZHrLv3tizRlETOjSB45QNdqYKpvIxu4tZHRr1vfhFCFKTnY
-dZwDk9pfEOY8/FpFWgKNq7UFkNw2Ani3ss8jnSEf3efqBWNDE2MSQ64yTHmW
-eJvtEoEE+38Uh6M75/FBasmJkc+oHu0TuVMPi677Ueq1qOBEtPmU5CYCYAA5
-E9xpN/VX1IR/psqdMVrmzpgR9n7KmWa936iH5ihh58U1WQ==
-'
+editor_experiment ''
+title 'Assessment 2 - Matching'
+height '65'
+question 'Rules or an algorithm for finding an approximate solution'
+answer 'Heuristic'
+
+question 'Trying every possible solution to a problem to find the answer'
+answer 'Brute force'
+
+question 'An algorithm that is easy to run but results in output that is hard or impossible to reverse'
+answer 'One Way Function'
+
+question 'A problem that requires an unreasonable amount of time to solve, even for many computers'
+answer 'Computationally hard'
+
+teacher_markdown <<MARKDOWN
+Answers:
+
+- Rules or an algorithm for finding an approximate solution: Heuristic
+
+- Trying every possible solution to a problem to find the answer: Brute force
+
+- An algorithm that is easy to run but results in output that is hard or impossible to reverse: One-Way function
+
+- A problem that requires an unreasonable amount of time to solve, even for many computers: Computationally hard
+
+MARKDOWN
