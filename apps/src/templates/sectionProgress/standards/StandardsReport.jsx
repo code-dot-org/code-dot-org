@@ -90,7 +90,7 @@ class StandardsReport extends Component {
         sectionName: this.props.section.name
       })}</title></head>`
     );
-    printWindow.document.write('<body onafterprint="self.close()">');
+    printWindow.document.write('<body>'); //onafterprint="self.close()"
     printWindow.document.write(printArea);
     printWindow.document.write('</body></html>');
     printWindow.document.close();

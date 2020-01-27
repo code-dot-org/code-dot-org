@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -18,9 +19,11 @@ const styles = {
   }
 };
 
-export class StandardsViewHeaderButtons extends Component {
+class StandardsViewHeaderButtons extends Component {
   static propTypes = {
-    sectionId: PropTypes.number
+    sectionId: PropTypes.number,
+    // redux
+    setTeacherCommentForReport: PropTypes.func.isRequired
   };
   state = {
     isLessonStatusDialogOpen: false,
@@ -45,8 +48,6 @@ export class StandardsViewHeaderButtons extends Component {
   };
 
   openReport = () => {
-    console.log(this.state.comment);
-    setTeacherCommentForReport(this.state.comment);
     window.open(
       teacherDashboardUrl(this.props.sectionId, '/standards_report'),
       '_blank'
@@ -54,7 +55,9 @@ export class StandardsViewHeaderButtons extends Component {
   };
 
   onCommentChange = value => {
-    this.setState({comment: value});
+    this.setState({comment: value}, () => {
+      this.props.setTeacherCommentForReport(this.state.comment);
+    });
   };
 
   render() {
@@ -87,3 +90,12 @@ export class StandardsViewHeaderButtons extends Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    setTeacherCommentForReport(comment) {
+      dispatch(setTeacherCommentForReport(comment));
+    }
+  })
+)(StandardsViewHeaderButtons);
