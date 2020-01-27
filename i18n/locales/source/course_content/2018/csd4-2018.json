@@ -20,6 +20,11 @@
   "https://studio.code.org/s/csd4-2018/stage/7/puzzle/1": {
     "display_name": "Lesson Overview"
   },
+  "https://studio.code.org/s/csd4-2018/stage/7/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
   "https://studio.code.org/s/csd4-2018/stage/8/puzzle/1": {
     "display_name": "Lesson Overview"
   },
@@ -148,6 +153,11 @@
   },
   "https://studio.code.org/s/csd4-2018/stage/16/puzzle/1": {
     "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd4-2018/stage/16/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
   },
   "https://studio.code.org/s/csd4-2018/stage/17/puzzle/1": {
     "dsls": {
