@@ -1,5 +1,4 @@
 @no_mobile
-@single_session
 Feature: Help and Tips Map Link
 
   Background:

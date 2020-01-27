@@ -1,5 +1,4 @@
 @no_mobile
-@single_session
 Feature: Map Levels
 
   # Map levels should render the content from curriculum builder inside an iframe
