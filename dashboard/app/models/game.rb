@@ -20,15 +20,16 @@
 # Game.name also maps to localized strings, e.g. [data.en.yml]: game: name: 'Unplug1': 'Introduction to Computer Science'
 class Game < ActiveRecord::Base
   include Seeded
+  include StaticCache
   has_many :levels
   belongs_to :intro_video, foreign_key: 'intro_video_id', class_name: 'Video'
 
   def self.by_name(name)
-    (@@game_cache ||= Game.all.index_by(&:name))[name].try(:id)
+    find_by_name(name).try(:id)
   end
 
   def self.custom_maze
-    @@game_custom_maze ||= find_by_name("CustomMaze")
+    find_by_name("CustomMaze")
   end
 
   UNPLUG = 'unplug'.freeze
@@ -57,115 +58,115 @@ class Game < ActiveRecord::Base
   FISH = 'fish'.freeze
 
   def self.bounce
-    @@game_bounce ||= find_by_name("Bounce")
+    find_by_name("Bounce")
   end
 
   def self.unplugged
-    @@game_unplugged ||= find_by_name("Unplugged")
+    find_by_name("Unplugged")
   end
 
   def self.custom_studio
-    @@game_custom_studio ||= find_by_name("CustomStudio")
+    find_by_name("CustomStudio")
   end
 
   def self.studio_ec
-    @@game_studio_ec ||= find_by_name("StudioEC")
+    find_by_name("StudioEC")
   end
 
   def self.custom_artist
-    @@game_custom_artist ||= find_by_name("Custom")
+    find_by_name("Custom")
   end
 
   def self.custom_flappy
-    @@game_custom_flappy ||= find_by_name("CustomFlappy")
+    find_by_name("CustomFlappy")
   end
 
   def self.calc
-    @@game_calc ||= find_by_name("Calc")
+    find_by_name("Calc")
   end
 
   def self.eval
-    @@game_eval ||= find_by_name("Eval")
+    find_by_name("Eval")
   end
 
   def self.applab
-    @@game_applab ||= find_by_name("Applab")
+    find_by_name("Applab")
   end
 
   def self.gamelab
-    @@game_gamelab ||= find_by_name("Gamelab")
+    find_by_name("Gamelab")
   end
 
   def self.weblab
-    @@game_weblab ||= find_by_name("Weblab")
+    find_by_name("Weblab")
   end
 
   def self.netsim
-    @@game_netsim ||= find_by_name("NetSim")
+    find_by_name("NetSim")
   end
 
   def self.craft
-    @@game_craft ||= find_by_name("Craft")
+    find_by_name("Craft")
   end
 
   def self.pixelation
-    @@game_pixelation ||= find_by_name("Pixelation")
+    find_by_name("Pixelation")
   end
 
   def self.text_compression
-    @@game_text_compression ||= find_by_name("TextCompression")
+    find_by_name("TextCompression")
   end
 
   def self.odometer
-    @@game_odometer ||= find_by_name("Odometer")
+    find_by_name("Odometer")
   end
 
   def self.vigenere
-    @@game_vigenere ||= find_by_name("Vigenere")
+    find_by_name("Vigenere")
   end
 
   def self.frequency_analysis
-    @@game_frequency_analysis ||= find_by_name("FrequencyAnalysis")
+    find_by_name("FrequencyAnalysis")
   end
 
   def self.public_key_cryptography
-    @@game_public_key_cryptography ||= find_by_name("PublicKeyCryptography")
+    find_by_name("PublicKeyCryptography")
   end
 
   def self.multi
-    @@game_multi ||= find_by_name("Multi")
+    find_by_name("Multi")
   end
 
   def self.free_response
-    @@game_free_response ||= find_by_name("FreeResponse")
+    find_by_name("FreeResponse")
   end
 
   def self.standalone_video
-    @@game_standalone_video ||= find_by_name("StandaloneVideo")
+    find_by_name("StandaloneVideo")
   end
 
   def self.external_link
-    @@game_external_link ||= find_by_name('ExternalLink')
+    find_by_name('ExternalLink')
   end
 
   def self.curriculum_reference
-    @@game_curriculum_reference ||= find_by_name('CurriculumReference')
+    find_by_name('CurriculumReference')
   end
 
   def self.scratch
-    @@game_scratch ||= find_by_name('Scratch')
+    find_by_name('Scratch')
   end
 
   def self.dance
-    @@game_dance ||= find_by_name('Dance')
+    find_by_name('Dance')
   end
 
   def self.spritelab
-    @@game_spritelab ||= find_by_name('Spritelab')
+    find_by_name('Spritelab')
   end
 
   def self.fish
-    @@game_fish ||= find_by_name('Fish')
+    find_by_name('Fish')
   end
 
   def unplugged?

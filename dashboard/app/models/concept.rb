@@ -18,18 +18,15 @@
 # Trophies are awarded based on percentage completion of Concepts
 class Concept < ActiveRecord::Base
   include Seeded
+  include StaticCache
   has_and_belongs_to_many :levels
 
   def self.by_name(name)
-    Rails.cache.fetch("concepts/names/#{name}") do
-      Concept.find_by_name(name).try(:id)
-    end
+    Concept.find_by_name(name).try(:id)
   end
 
   def self.cached
-    Rails.cache.fetch("concepts/all") do
-      Concept.all
-    end
+    Concept.all
   end
 
   CONCEPT_NAMES_BY_INDEX = %w(
