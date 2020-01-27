@@ -192,7 +192,7 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var download = $('<a/>')
     .append($('<img src="/shared/images/download_button.png"/>'))
     .addClass('download-video')
-    .css('float', 'left')
+    .css('float', 'inherit')
     .attr('href', options.download)
     .click(function() {
       // track download in Google Analytics
