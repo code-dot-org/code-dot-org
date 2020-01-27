@@ -50,7 +50,7 @@ function setupVideos(player) {
           '<video ' +
             'style="position:absolute; top: 0; left: 0; width: 100%; height: 100%" ' +
             'width="100%" height="100%" ' +
-            'class="video-js lazyload" ' +
+            'class="video-js lazyload vjs-big-play-centered" ' +
             'preload="none" ' +
             'data-setup=\'{"nativeControlsForTouch": true}\' ' +
             'controls>' +
