@@ -396,22 +396,26 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  var videoPlayer = videojs(fallbackPlayerID, {}, function() {
-    var $fallbackPlayer = $('#' + fallbackPlayerID);
+  var videoPlayer = videojs(
+    fallbackPlayerID,
+    {nativeControlsForTouch: true},
+    function() {
+      var $fallbackPlayer = $('#' + fallbackPlayerID);
 
-    // Handle a video.js player error.
-    this.on('error', function(e) {
-      $fallbackPlayer.addClass('fallback-video-player-failed');
-      if (hasNotesTab()) {
-        openNotesTab();
-      }
-    });
+      // Handle a video.js player error.
+      this.on('error', function(e) {
+        $fallbackPlayer.addClass('fallback-video-player-failed');
+        if (hasNotesTab()) {
+          openNotesTab();
+        }
+      });
 
-    // Properly dispose of video.js player instance when hidden.
-    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
-      videoPlayer.dispose();
-    });
-  });
+      // Properly dispose of video.js player instance when hidden.
+      $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
+        videoPlayer.dispose();
+      });
+    }
+  );
 
   videoPlayer.on('ended', onVideoEnded);
 
