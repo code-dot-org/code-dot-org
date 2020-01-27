@@ -38,7 +38,8 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        csf: false
+        csf: true,
+        hasStandards: true
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',

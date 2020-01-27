@@ -1138,7 +1138,7 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
       gamelab_setSizes:
-        text: "{SPRITE} {PROPERTY}‘yi %{N} olarak ayarla"
+        text: "{SPRITE} {PROPERTY}‘yi % {N} olarak ayarla"
         options:
           PROPERTY:
             '"scale"': boyut
