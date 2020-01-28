@@ -290,11 +290,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
     end
   end
 
+  # Returns contact information for CSF workshop follow up email
+  # The text will always include teacher@code.org, as well as the
+  # email for the regional partner and facilitator(s) if available
+  # Ex if all are available it will return:
+  # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
+  # patty@we_teach_code.ex.net, or to your facilitator(s) at
+  # fiona_facilitator@example.net or fred_facilitator@example.net.""
   def get_contact_text_for_teacher_follow_up(workshop)
     regional_partner = workshop.regional_partner
     facilitators = []
     workshop.facilitators.each {|facilitator| facilitators << facilitator.email}
-    has_partner = regional_partner && regional_partner.contact_email
+    has_partner = !!regional_partner&.contact_email
     has_facilitator = !facilitators.empty?
     after_teacher_contact = '.'
 
@@ -319,7 +326,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
         end
       end
     end
-    return contact_text
+    contact_text
   end
 
   def email_tag(email)
