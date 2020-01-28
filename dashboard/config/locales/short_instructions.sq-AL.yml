@@ -699,16 +699,3 @@ sq-AL:
         -   16 piksele nga 16 pixels! \\ r
             \\ r
       k-1 maze 1: A mund të më bësh që të leviz në perëndim dhe të marr derrkucin?
-      scrat 16: Lajthi! Lajthi! Lajthi! Përdor bllokun "if" për të më çuar mua atje
-        me numrin më të vogël të blloqeve.
-      scrat 17: Në rregull, le ta bëjmë përsëri për tu praktikuar - kjo nuk është
-        shumë e ndryshme, por kujdes nga muri!
-      scrat 18: "Blloqet \"if-else\" kontrollojnë një kusht dhe më pas \nbëjnë një
-        gjë ose diçka tjetër. Për të më çuar tek lisi provo të përdorësh këtë bllok
-        të ri."
-      scrat 19: |-
-        Një praktikë më shumë për bllokun
-        "if-else", a mund ta bësh si duhet me përpjekjen e parë?
-      scrat 20: A mund të shtosh vetëm 3 blloqe për të më ndihmuar mua të zgjidh një
-        maze të ndërlikuar? Nëse e bën si duhet, unë mund të ec n çdo rrugë me kthesa
-        pavarësisht gjatësisë. Nxito! Akulli po shkrin!
