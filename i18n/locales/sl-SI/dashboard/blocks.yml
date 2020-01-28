@@ -154,6 +154,7 @@ sl:
             '"ROBOT"': roboti
             '"SHARK"': morski psi
           FORMAT:
+            '"diamond"': diamant
             '"random"': naključno
       Dancelab_makeAnonymousDanceSprite:
         options:
