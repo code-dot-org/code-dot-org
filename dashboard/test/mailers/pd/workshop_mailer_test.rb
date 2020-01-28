@@ -265,7 +265,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
     end
     facilitators = facilitators.take(num_facilitators)
 
-
     workshop = build :workshop, course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101,
                      facilitators: facilitators, regional_partner: regional_partner
     create :pd_enrollment, workshop: workshop
