@@ -15,7 +15,27 @@ pl-PL:
         draw_rect: narysuj trojkat
       2-3 Artist Debugging 10:
         draw square: narysuj kwadrat
+        jump to controller top left: skocz do lewego górnego kontrolera
+        jump to middle: skocz do środka
         draw a circle: narysuj okrąg
+        draw a button: narysuj przycisk
+        draw cord: narysuj kabel
+        draw R pad: narysuj pad R
+      2-3 Artist Debugging 5:
+        draw left leg: narysuj lewą nogę
+        draw right leg: narysuj prawą nogę
+        draw body and arms: narysuj ciało i ręce
+        draw a head: narysuj głowę
+      2-3 Artist Debugging 6:
+        draw right leg: narysuj prawą nogę
+        draw sitting stick figure: narysuj siedzącego patyczaka
+        draw arms: narysuj ręce
+        jump to neck: skocz do szyi
+        draw left leg: narysuj lewą nogę
+      2-3 Artist Debugging 7:
+        draw O: narysuj O
+        draw D: narysuj D
+        draw E: narysuj E
       2-3 Artist Functions 11:
         draw a hexagon: narysuj sześciokąt
       2-3 Artist Functions 11.5:
