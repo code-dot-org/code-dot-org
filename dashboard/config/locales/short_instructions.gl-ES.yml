@@ -618,18 +618,3 @@ gl-ES:
         - 16 pixels por 16 pixels!\\\r\n\\\r\nViches o que acontece cando\ncomezamos
         a ser creativos cos bits?"
       k-1 maze 1: Podes me mover para o oeste para chegar até o porco?
-      scrat 16: |-
-        Landra! Landra! Landra! Usa un bloque "se" para me levar até alá
-        co menor número de bloques.
-      scrat 17: |-
-        Ok, ímolo facer novamente para coller práctica - este non é
-        moi diferente, pero coidado coa parede!
-      scrat 18: |-
-        Os bloques "se-senón" verifican unha condición e en consecuencia
-        fan unha cousa OU outra. Para que eu chegue até a landra, tenta usar este novo bloque.
-      scrat 19: |-
-        Imos praticar o uso do bloque "se-senón" unha vez máis. Consegues
-        acertar na primeira tentativa?
-      scrat 20: Consegues agregar somente 3 bloques para me axudar a resolver un labirinto
-        máis complexo? Se fas isto correctamente, podo percorrer calquera camiño cheo
-        de curvas, non importa a lonxitude. Depresa! O xeo está derretendo!
