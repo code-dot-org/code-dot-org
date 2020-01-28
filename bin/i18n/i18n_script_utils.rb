@@ -116,20 +116,36 @@ class I18nScriptUtils
   def self.get_level_from_url(url)
     # memoize to reduce repeated database interactions
     @levels_by_url ||= Hash.new do |hash, new_url|
-      url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
-      matches = new_url.match(url_regex)
-      hash[new_url] =
-        if matches[:level_info].starts_with?("extras")
-          level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
-          level_name = matches[:level_info].match(level_info_regex)[:level_name]
-          Level.find_by_name(CGI.unescape(level_name))
+      route = Rails.application.routes.recognize_path(new_url)
+
+      unless route[:controller] == "script_levels"
+        puts "unknown route #{route[:controller]}"
+        next
+      end
+
+      script = Script.get_from_cache(route[:script_id])
+      unless script.present?
+        puts "unknown script #{route[:script_id]}"
+        next
+      end
+
+      # copied from script_levels_controller
+      script_level =
+        if route[:chapter]
+          script.get_script_level_by_chapter(route[:chapter])
+        elsif route[:stage_position]
+          script.get_script_level_by_relative_position_and_puzzle_position(route[:stage_position], route[:id], false)
+        elsif route[:lockable_stage_position]
+          script.get_script_level_by_relative_position_and_puzzle_position(route[:lockable_stage_position], route[:id], true)
         else
-          script = Script.find_by_name(matches[:script_name])
-          stage = script.stages.find_by_relative_position(matches[:stage_pos])
-          level_info_regex = %r{puzzle/(?<level_pos>[0-9]+)}
-          level_pos = matches[:level_info].match(level_info_regex)[:level_pos]
-          stage.script_levels.find_by_position(level_pos.to_i).oldest_active_level
+          script.get_script_level_by_id(route[:id])
         end
+      unless script_level.present?
+        puts "could not find script_level"
+        next
+      end
+
+      hash[new_url] = script_level.level
     end
 
     @levels_by_url[url]
