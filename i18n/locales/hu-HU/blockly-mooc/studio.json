@@ -34,6 +34,7 @@
   "bird": "madár",
   "calloutPutCommandsHereRunStart": "Ide tedd a parancsokat, hogy lefussanak, amikor a program kezdődik",
   "calloutBlocklyPlaceGoUpHere": "Húzd ide a \"mozogjon fel\" blokkot, hogy felfelé mozogjon",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Kattints az események fülre, hogy lásd az összes esemény típusú függvény blokkot.",
   "calloutUseArrowButtons": "Nyomd le ezeket a gombokat, vagy a billentyűzeteden a nyilakat, hogy a mozgatásos események lejátszódjanak",
   "calloutUseArrowButtonsAutoSteer": "Elrejtettük az általad írt kódot, de még mindig tudsz mozogni a nyíl gombokkal",

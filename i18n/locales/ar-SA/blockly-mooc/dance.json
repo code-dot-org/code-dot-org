@@ -1,7 +1,7 @@
 {
   "danceFeedbackNeedNewDancer": "تحتاج أن تقوم بصنع راقصاً.",
   "danceFeedbackNoDancers": "لا يوجد لديك راقصون.",
-  "danceFeedbackNoBackground": "تحتاج إلى إضافة تأثير خلفية.",
+  "danceFeedbackNoBackground": "تحتاج إلى إضافة خلفية.",
   "danceFeedbackTooManyDancers": "كن حذرًا! إذا وضعت كتلة 'اصنع جديداً' داخل 'كل 2 إجراء'، سوف تصنع الكثير من الراقصين.",
   "danceFeedbackUseSetSize": "استخدم المربع البرمجي 'set backup_dancer2 size' لجعل حجم الراقص أصغر.",
   "danceFeedbackUseSetTint": "استخدام كتلة 'تعيين لون' لتغيير لون الراقص.",
