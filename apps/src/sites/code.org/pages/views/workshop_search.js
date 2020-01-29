@@ -70,7 +70,7 @@ function processPdWorkshops(workshops) {
       markersByLocation[hash].infoWindowContent += infoWindowContent;
       // Upgrade any marker containing a deep dive workshop to the deep dive icon
       if (workshop.subject === SubjectNames.SUBJECT_CSF_201) {
-        markersByLocation[hash].icon = {url: iconForSubject(workshop.subject)};
+        markersByLocation[hash].icon = iconForSubject(workshop.subject);
       }
     }
   });
@@ -82,10 +82,7 @@ function createNewMarker(latLng, title, infoWindowContent, subject) {
     map: gmap,
     title: title,
     infoWindowContent: infoWindowContent,
-    icon: {
-      url: iconForSubject(subject),
-      scaledSize: new google.maps.Size(40, 40)
-    }
+    icon: iconForSubject(subject)
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(this.get('infoWindowContent'));
@@ -95,12 +92,13 @@ function createNewMarker(latLng, title, infoWindowContent, subject) {
   return marker;
 }
 
-function iconForSubject(subject) {
-  if (subject === SubjectNames.SUBJECT_CSF_201) {
-    return 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png';
-  }
-  return 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png';
-}
+const iconForSubject = subject => ({
+  url:
+    subject === SubjectNames.SUBJECT_CSF_201
+      ? 'https://maps.google.com/mapfiles/kml/paddle/red-stars.png'
+      : 'https://maps.google.com/mapfiles/kml/paddle/red-blank.png',
+  scaledSize: new google.maps.Size(40, 40)
+});
 
 function completeProcessingPdWorkshops() {
   addGeocomplete();
