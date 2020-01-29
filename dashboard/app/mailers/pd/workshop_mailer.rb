@@ -213,8 +213,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    facilitators = []
-    @workshop.facilitators.each {|facilitator| facilitators << facilitator.email}
+    facilitators = @workshop.facilitators.map(&:email)
     @contact_text = get_contact_text_for_teacher_follow_up(@workshop.regional_partner, facilitators)
 
     # The subject below is only applicable for CSF Intro
