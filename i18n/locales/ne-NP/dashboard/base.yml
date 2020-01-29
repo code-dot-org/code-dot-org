@@ -485,6 +485,8 @@ ne:
     report_bug: "Report Bug"
     support: "Get Help"
     help_resources: "Help and Resources"
+  free_response:
+    placeholder: "Enter your answer here"
   multi:
     wrong_title: "Incorrect answer"
     wrong_body: "The answer you've entered is not correct.  Please try again!"

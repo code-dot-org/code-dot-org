@@ -299,10 +299,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_jumpToEach:
         text: lompat {GROUP} ke {LOCATION}
@@ -326,10 +326,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": rawak
       Dancelab_layoutSprites:
         text: susun atur {GROUP} seperti {FORMAT}
@@ -352,8 +352,12 @@ ms:
             '"inner"': dalam segi empat
             '"circle"': bulatan
             '"grid"': grid
+            '"top"': barisan Atas
             '"row"': baris
+            '"bottom"': barisan Bawah
+            '"left"': lajur Kiri
             '"column"': lajur
+            '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
             '"random"': rawak
@@ -375,10 +379,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSprite:
         text: "buatkan {COSTUME} \nbaharudipanggil {NAME} di {LOCATION}"
@@ -398,10 +402,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": rawak
       Dancelab_makeNewDanceSpriteGroup:
         text: "buat {N} {COSTUME} \nbaharudalam {LAYOUT}"
@@ -486,7 +490,7 @@ ms:
             '"rainbow"': Pelangi
             '"snowflakes"': Salji
             '"text"': Nama Lagu
-            '"galaxy"': Angkasa
+            '"galaxy"': Ruang
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
@@ -503,7 +507,7 @@ ms:
             '"warm"': Hangat
       Dancelab_setBackgroundEffectWithPalette:
         text: |-
-          Tetapkan kesan latar belakang
+          tetapkan kesan latar belakang
           {PALETTE} {EFFECT}
         options:
           EFFECT:
@@ -527,7 +531,7 @@ ms:
             '"snowflakes"': Salji
             '"text"': Nama Lagu
             '"squiggles"': Cacing Kerawit
-            '"galaxy"': Angkasa
+            '"galaxy"': Ruang
             '"sparkles"': Berkilau
             '"spiral"': Lingkaran
             '"disco"': Segi Empat
@@ -1212,10 +1216,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_getNext:
         text: dapatkan objek seterusnya
       Mikelab_getProp:
@@ -1247,10 +1251,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_groupDestroy:
         text: keluarkan {SELECT} {COSTUME}
         options:
@@ -1394,10 +1398,10 @@ ms:
             "{x: 100, y: 200}": kiri
             "{x: 300, y: 200}": kanan
             "{x: 200, y: 200}": pusat
-            "{x: 100, y: 100}": kiri atas
-            "{x: 300, y: 100}": kanan atas
-            "{x: 100, y: 300}": kiri bawah
-            "{x: 300, y: 300}": kanan bawah
+            "{x: 100, y: 100}": bahagian atas sebelah kiri
+            "{x: 300, y: 100}": bahagian atas sebelah kanan
+            "{x: 100, y: 300}": bahagian bawah sebelah kiri
+            "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_whenClickedOn:
         text: ketika {SPRITE} diklik
       Mikelab_whenKeyPressed:

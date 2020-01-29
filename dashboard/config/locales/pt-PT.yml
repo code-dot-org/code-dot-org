@@ -750,6 +750,8 @@ pt:
     help_support: Ajuda e suporte
     documentation: Documentação
     tutorials: Tutoriais
+  free_response:
+    placeholder: Insira sua resposta aqui
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A tua resposta não está correta. Não desistas! Volta tentar!

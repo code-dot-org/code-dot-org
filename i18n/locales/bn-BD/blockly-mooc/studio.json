@@ -34,6 +34,7 @@
   "bird": "",
   "calloutPutCommandsHereRunStart": "কমান্ডগুলো এখানে রাখুন যাতে প্রোগ্রাম চালু হলে তা ব্যবহার করতে পারেন",
   "calloutBlocklyPlaceGoUpHere": "একটি 'গো-আপ' ব্লক দিন যাতে উপরে যেতে পারেন",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "ঘটনার ফাংশন ব্লক দেখতে ঘটনার হেডারে ক্লিক করুন.",
   "calloutUseArrowButtons": "এই বোতামটি ধর অথবা কীবোর্ড এর নির্দেশনা বোতামগুলোতে চাপ দিয়ে ইভেন্টগুলো সরাও",
   "calloutUseArrowButtonsAutoSteer": "কোডগুলো লুকায়িত আছে, কিন্তু তীর বোতামগুলোর মাধ্যমে নড়াতে পারবেন",

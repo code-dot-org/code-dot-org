@@ -82,7 +82,10 @@ function createNewMarker(latLng, title, infoWindowContent, subject) {
     map: gmap,
     title: title,
     infoWindowContent: infoWindowContent,
-    icon: {url: iconForSubject(subject)}
+    icon: {
+      url: iconForSubject(subject),
+      scaledSize: new google.maps.Size(40, 40)
+    }
   });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.setContent(this.get('infoWindowContent'));

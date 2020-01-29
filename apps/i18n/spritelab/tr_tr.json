@@ -1,3 +1,6 @@
 {
-  "shareGame": "Oyununu paylaş:"
+  "shareGame": "Oyununu paylaş:",
+  "spritelabFeedbackChangeBackgroundColor": "Arka planı beyazdan başka bir şeyle değiştirmeniz gerekiyor.",
+  "spritelabFeedbackCreateTwoSprites": "Tam olarak iki hareketli nesne oluşturmanız gerekiyor.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Iki hareketli nesnenin farklı kostümlere ihtiyacı var."
 }

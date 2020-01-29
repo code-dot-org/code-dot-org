@@ -399,7 +399,15 @@ uz:
               name: Funksiyalar
             Variables:
               name: O‘zgaruvchilar
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
         time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
+        time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Shart buyruqlari

@@ -116,7 +116,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -139,7 +139,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -251,7 +251,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -351,10 +351,15 @@ hi:
           FORMAT:
             '"border"': बॉर्डर
             '"inner"': अंदर वर्ग
+            '"diamond"': हीरा
             '"circle"': गोला
             '"grid"': ग्रिड
+            '"top"': सबसे ऊपर की पंक्ति
             '"row"': पंक्ति
+            '"bottom"': सबसे नीचे की पंक्ति
+            '"left"': बायां कॉलम
             '"column"': कॉलम
+            '"right"': दायां कॉलम
             '"x"': आड़ा-तिरछा
             '"plus"': जोड़
             '"random"': यादृच्छिक
@@ -627,7 +632,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -650,7 +655,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -661,7 +666,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -685,7 +690,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -757,7 +762,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -785,7 +790,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -800,7 +805,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -829,7 +834,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
             '"rotation"': आवर्तन
             '"x"': क्षैतिज स्थिति
             '"y"': लंबवत स्थिति
@@ -1124,7 +1129,7 @@ hi:
           PROPERTY:
             '"scale"': आकार
             '"width"': चौड़ाई
-            '"height"': ऊँचाई
+            '"height"': ऊंचाई
       gamelab_setTint:
         text: "{THIS} का रंग {COLOR} पर सेट करें"
       gamelab_setupSim:
@@ -1433,11 +1438,9 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
-            '"w"': W
+            '"w"': पश्चिम
             '"a"': A
-            '"s"': |-
-              S
-              S
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenKeyReleased:
         options:
@@ -1446,11 +1449,9 @@ hi:
             '"down"': नीचे तीर
             '"left"': बायाँ तीर
             '"right"': दायाँ तीर
-            '"w"': W
+            '"w"': पश्चिम
             '"a"': A
-            '"s"': |-
-              S
-              S
+            '"s"': दक्षिण
             '"d"': D
       Mikelab_whenMouseClicked:
         text: when mouse clicked
@@ -1474,9 +1475,9 @@ hi:
       RyanLab_moveForward:
         text: आगे जाएं
       RyanLab_turnLeft:
-        text: बाएँ मुड़ें
+        text: बाएं मुड़ें
       RyanLab_turnRight:
-        text: दाएँ मुड़ें
+        text: दाएं मुड़ें
       SpriteLab2Beta_spriteSay:
         text: स्प्राइट {SPRITE} {TEXT} को {SECONDS} सेकंड तक कहता है
       Vector_createSpriteWith:

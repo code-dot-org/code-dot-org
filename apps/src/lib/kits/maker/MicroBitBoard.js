@@ -8,6 +8,7 @@ import {
   enableMicroBitComponents,
   componentConstructors
 } from './MicroBitComponents';
+import {MicroBitButton} from './Button';
 
 /**
  * Controller interface for BBC micro:bit board using
@@ -24,6 +25,9 @@ export default class MicroBitBoard extends EventEmitter {
 
     /** @private {MicrobitFirmataClient} serial port controller */
     this.boardClient_ = new MBFirmataClient(SerialPort);
+
+    /** @private {Array} List of dynamically-created component controllers. */
+    this.dynamicComponents_ = [];
   }
 
   /**
@@ -76,25 +80,34 @@ export default class MicroBitBoard extends EventEmitter {
   digitalWrite(pin, value) {}
 
   // TODO
-  digitalRead(pin, callback) {}
+  digitalRead(pin, callback) {
+    callback(pin);
+  }
 
   // TODO
   analogWrite(pin, value) {}
 
   // TODO
-  analogRead(pin, callback) {}
+  analogRead(pin, callback) {
+    callback(pin);
+  }
 
   // TODO
   createLed(pin) {}
 
-  // TODO
-  createButton(pin) {}
+  createButton(pin) {
+    const newButton = new MicroBitButton({mb: this.boardClient_, pin: pin});
+    this.dynamicComponents_.push(newButton);
+    return newButton;
+  }
 
   // TODO
   /**
    * Disconnect and clean up the board controller and all components.
    */
-  destroy() {}
+  destroy() {
+    return Promise.resolve();
+  }
 
   /**
    * Marshals the board component controllers and appropriate constants into the

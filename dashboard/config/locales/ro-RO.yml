@@ -823,6 +823,8 @@ ro:
     help_support: Ajutor şi suport
     documentation: Documentație
     tutorials: Tutoriale
+  free_response:
+    placeholder: Completează răspunsul tău aici
   multi:
     wrong_title: Răspuns incorect
     wrong_body: Răspunsul introdus nu este corect.  Te rugăm să încerci din nou!

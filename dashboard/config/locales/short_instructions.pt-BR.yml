@@ -1100,14 +1100,14 @@ pt-BR:
       CourseD_Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar
         com seus amigos.
       CourseE_HOC 2018 Level_1: Colete um barco no baú.
-      CourseE_HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
+      CourseE_HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       CourseE_HOC 2018 Level_11: Construa um canal usando Prismarinho dentro do Monumento
         Oceânico.
       CourseE_HOC 2018 Level_2: Vá até o final do cais.
       CourseE_HOC 2018 Level_3: Atravesse o mar aberto para conseguir o bacalhau.
       CourseE_HOC 2018 Level_4: Use um loop para chegar até o golfinho.
       CourseE_HOC 2018 Level_5: Explore o naufrágio para chegar até o baú.
-      CourseE_HOC 2018 Level_6: Navegue no gelo para chegar até o salmão.
+      CourseE_HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
       CourseE_HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
       CourseE_HOC 2018 Level_9b: Use os corais como pontos passagem para alcançar
         o tesouro.
@@ -1129,18 +1129,19 @@ pt-BR:
         e faça com que todos os seus alienígenas formem uma fila. '
       Dance Party 5: Adicione código para alterar a cor de cada alienígena quando
         ele é clicado.
-      Dance Party 5_2019: Adicione código para alterar a cor de cada alienígena quando
-        ele é clicado.
+      Dance Party 5_2019: Crie um único evento de pressionamento de tecla usando o
+        bloco de eventos de pressionamento de tecla. Para este evento, faça com que,
+        quando uma tecla for pressionada, cada um de seus alienígenas mude de cor!
       Dance Party 6: Use o bloco 'para tudo' para fazer cada alienígena parar de se
         mover quando ele for clicado.
-      Dance Party 6_2019: Use o bloco 'para tudo' para fazer cada alienígena parar
-        de se mover quando ele for clicado.
+      Dance Party 6_2019: Adicione um sprite que se pareça com um sino e, em seguida,
+        adicione um evento que faça com que cada alienígena pare de dançar ao ser
+        clicado.
       Dance Party 7: Adicione um novo sprite de sino chamado `meuSino` que faz com
         que todos os alienígenas comecem a fazer o mesmo movimento de dança quando
         ele é clicado.
-      Dance Party 7_2019: Adicione um novo sprite que se pareça com um sino. Faça
-        com que todos os alienígenas comecem a fazer o mesmo movimento de dança quando
-        o sino é clicado.
+      Dance Party 7_2019: Faça o alienígena azul começar a dançar quando o alienígena
+        rosa tocar. Use o evento \`quando tocar '.
       Dance Party Freeplay: Agora crie o seu próprio disco alienígena!
       Dance Party Freeplay_2019: Agora crie o seu próprio disco alienígena!
       Dance Party Predict: 'O que acha que vai acontecer quando você clicar no alienígena?  '
@@ -1190,8 +1191,7 @@ pt-BR:
         cima. Faça o movimento dança drop-dança do fio dental o mais rápido que puder!
       Dance_Party_12: Entre no ritmo! Crie sua própria dança para compartilhar com
         seus amigos.
-      Dance_Party_extras_alternate_2019: Para Frente e Para Trás! (Clique "mais" para
-        detalhes)
+      Dance_Party_extras_alternate_2019: Vai e volta! (Clique em "Mais" para detalhes)
       Dance_Party_extras_battle: Equipes de Dança (Clique em "Mais" para mais detalhes)
       Dance_Party_extras_battle_2019: Equipes de Dança (Clique em "Mais" para mais
         detalhes)
@@ -1217,7 +1217,7 @@ pt-BR:
       Find the Wizard: Construa o que você quiser. Este é um exemplo de um jogo de
         adivinhação de números!
       Fish Tank 2-validated: Mude Dusty (o amaranto) para um peixe.
-      Fish Tank 2-validated_2019: Troque a bola de feno por qualquer tipo de peixe!
+      Fish Tank 2-validated_2019: Mude Dusty (o amaranto) para um peixe.
       Fish Tank 3-validated: Mude o comportamento do peixe de modo que ele consiga
         nadar ao redor do tanque.
       Fish Tank 3-validated_2019: Mude o comportamento do peixe de modo que ele consiga
@@ -1251,7 +1251,7 @@ pt-BR:
       Guess The Number: Construa o que você quiser. Este é um exemplo de um jogo de
         adivinhação de números!
       HOC 2018 Level_1: Colete um barco no baú.
-      HOC 2018 Level_10: Vá até a entrada do Monumento Oceânico.
+      HOC 2018 Level_10: Vá para a entrada do Monumento do Oceano.
       HOC 2018 Level_11: Construa um canal usando Prismarinho dentro do Monumento
         Oceânico.
       HOC 2018 Level_12: Desenvolva seu próprio ambiente subaquático. Use sua imaginação!
@@ -1259,7 +1259,7 @@ pt-BR:
       HOC 2018 Level_3: Atravesse o mar aberto para conseguir o bacalhau.
       HOC 2018 Level_4: Use um loop para chegar até o golfinho.
       HOC 2018 Level_5: Explore o naufrágio para chegar até o baú.
-      HOC 2018 Level_6: Navegue no gelo para chegar até o salmão.
+      HOC 2018 Level_6: Navegue através do gelo para chegar ao templo.
       HOC 2018 Level_7a: Procure um baú nas ruínas subaquáticas.
       HOC 2018 Level_9b: Use os corais como pontos passagem para alcançar o tesouro.
       Infinity_catch: |-
@@ -1710,7 +1710,7 @@ pt-BR:
         de vermelho. Linha 2 - sombras de verde. Linha 3 - sombras de azul. Linha
         4 - sombras de cinza.'
       Pixelation - Lesson 15 - Complete 3-bit color: Vamos começar com você com a
-        imagem 4x2 que Maddie estava criando, más deixamos de fora os últimos dois
+        imagem 4x2 que Maddie estava criando, mas deixamos de fora os últimos dois
         quadrados. Termine a imagem descobrindo quais duas cores estão faltando e
         codifique-as.
       Pixelation 4x4 Empty: |-
@@ -2836,8 +2836,8 @@ pt-BR:
         desenhe um pássaro usando um adesivo.
       courseC_artist_loops1a_2018: Leve o artista para o centro da área de jogo, em
         seguida, desenhe um pássaro usando um adesivo.
-      courseC_artist_loops1a_2019: Leve o artista para o centro da área de jogo, em
-        seguida, desenhe um pássaro usando um adesivo.
+      courseC_artist_loops1a_2019: 'Leve o artista para o centro da área de jogo e,
+        em seguida, desenhe um adesivo. '
       courseC_artist_loops1b_2019: 'Mude a direção pra qual seu adesivo está virado,
         adicionando um comando `girar` ao seu código. '
       courseC_artist_loops2a: Agora, use um laço para girar o pássaro ao redor 12
@@ -2849,10 +2849,10 @@ pt-BR:
         padrões diferentes.
       courseC_artist_loops3a: Agora adicione um morcego!
       courseC_artist_loops3a_2018: Agora adicione um morcego!
-      courseC_artist_loops3a_2019: Agora adicione um morcego!
+      courseC_artist_loops3a_2019: Agora adicione um segundo adesivo!
       courseC_artist_loops4a: Tente avançar 75 pixels.
       courseC_artist_loops4a_2018: Tente avançar 75 pixels.
-      courseC_artist_loops4a_2019: Tente avançar 75 pixels.
+      courseC_artist_loops4a_2019: Edite seu código para avançar entre os dois adesivos.
       courseC_artist_loops5a: Experimente novos adesivos!
       courseC_artist_loops5a_2018: Experimente novos adesivos!
       courseC_artist_loops5a_2019: Experimente novos adesivos!
@@ -4953,19 +4953,3 @@ pt-BR:
       ramp_artist_loops9: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2018: Resolva este enigma desenhando um quadrado.
       ramp_artist_loops9_2019: Resolva este enigma desenhando um quadrado.
-      scrat 16: |-
-        Bolota! Bolota! Bolota! Use um bloco "se" para me levar até lá
-        com o menor número de blocos.
-      scrat 17: |-
-        Ok, vamos fazer novamente para pegar a prática - este não é
-        muito diferente, mas cuidado com a parede!
-      scrat 18: |-
-        Os blocos "se-senão" verificam uma condição e, em seguida,
-        fazem uma coisa OU outra. Para que eu chegue até a bolota, tente usar este novo bloco.
-      scrat 19: |-
-        Vamos praticar o uso do bloco "se-senão" mais uma vez. Você consegue
-        acertar na primeira tentativa?
-      scrat 20: |-
-        Você consegue adicionar somente 3 blocos para me ajudar a resolver um labirinto mais
-        complexo? Se você fizer isso corretamente, eu posso percorrer qualquer caminho cheio de curvas,
-        não importa o comprimento. Depressa! O gelo está derretendo!
