@@ -64,7 +64,8 @@ describe('TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let editSectionButton = wrapper.findWhere(
       element =>
-        element.is('Button') && element.prop('text') === i18n.editSectionDetails()
+        element.is('Button') &&
+        element.prop('text') === i18n.editSectionDetails()
     );
     expect(editSectionButton).to.have.lengthOf(1);
     expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
