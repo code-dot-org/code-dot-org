@@ -1,2 +1,9 @@
 {
+  "continue": "Doorgaan",
+  "areYouSure": "Weet je het zeker?",
+  "cancel": "Annuleren",
+  "yes": "Ja",
+  "no": "Nee",
+  "run": "Start",
+  "finish": "Voltooien"
 }

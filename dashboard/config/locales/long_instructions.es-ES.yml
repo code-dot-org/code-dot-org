@@ -357,6 +357,16 @@ es-ES:
 
         -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
         -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Adding Paragraphs pt 2: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -453,6 +463,26 @@ es-ES:
 
         -   Coloque el texto que acaba de escribir dentro de al menos dos párrafos separados rodeándolo con las etiquetas `<p>` y `</p>`
         -   Comparar los resultados con un vecino. ¿Qué ha cambiado en la forma en que se muestra su texto?
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1273,11 +1303,11 @@ es-ES:
         Echa un vistazo a este bloque:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         ¡Ahora puedes crear un montón de bailarines a la vez!
 

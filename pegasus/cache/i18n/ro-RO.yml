@@ -228,6 +228,7 @@ ro-RO:
   if_you_enjoyed: Dacă ți-a făcut plăcere să înveți, sugerează-le și prietenilor tăi
     să încerce acest lucru. Vrem ca toată lumea să învețe.
   personalize_certificate: Personalizează-ți certificatul
+  print_certificates: Tipărește certificatele
   share_achievement: Distribuie realizarea personală
   beyond_hour_message: Continuă cu <a href='http://studio.code.org'>celelalte cursuri</a>
     ale noastre, sau vezi mai multe opţiuni pentru a <a href='/learn/beyond'>Învăţa
@@ -2147,8 +2148,9 @@ ro-RO:
   account_sign_up_child_accept_terms: Confirm că am permisiunea părintelui sau tutorelui
     meu legal de a utiliza serviciile Code.org.
   hoc_overview_dance_title: Petrecere dansantă
-  hoc_overview_dance_subtitle: Naprogramuj Dance Party a sdílej ji s kamarády. Vystupují
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara a dalších 25 umělců!
+  hoc_overview_dance_subtitle: Codează o petrecere dansantă pentru a o partaja cu
+    prietenii. Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara
+    și încă 25!
   hoc_overview_dance_2019_subtitle: Codează o petrecere dansantă pentru a o partaja
     cu prietenii. Împreună cu Katy Perry, Shawn Mendes, Panic! La discotecă, Lil Nas
     X, Jonas Brothers, Nicki Minaj și încă 34!

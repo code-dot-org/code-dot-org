@@ -702,7 +702,9 @@ nn:
         CSF_bb8_skinOverview_C-F: BB-8
         CSF_bb8_skinOverview_K-1: BB-8
         CSF_harvester_skinOverview_K-1: Samler
-        CSF_if_allskins: Hvis Blokken
+        CSF_if_allskins: Dersom-blokka
+        CSF_ifelse_allskins: Bruke Dersom/Elles-blokker
+        CSF_ifelseifelse_allskins: Bruke Dersom/Elles-blokker
         CSF_loops_AB: Løkker
         hoc_dance_events: Dansefest - hendingar
         hoc_dance_properties: Dansefest - eigenskapar

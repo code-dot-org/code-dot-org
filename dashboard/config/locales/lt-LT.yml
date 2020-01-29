@@ -553,6 +553,8 @@ lt:
     support: Pagalba
     support_url: "//support.code.org"
     help_resources: Pagalba ir ištekliai
+  free_response:
+    placeholder: Įveskite savo atsakymą čia
   multi:
     wrong_title: Neteisingas atsakymas
     wrong_body: Atsakymas, kurį įvedei, nėra teisingas. Pabandyk dar kartą!

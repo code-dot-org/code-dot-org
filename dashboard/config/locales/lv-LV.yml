@@ -443,6 +443,8 @@ lv:
     support_url: "//support.code.org"
     help_support: Palīdzība un atbalsts
     documentation: Dokumentācija
+  free_response:
+    placeholder: Ievadi savu atbildi šeit
   multi:
     wrong_title: Nepareiza atbilde
     wrong_body: Ievadītā atbilde ir nekorekta. Lūdzu mēģini vēlreiz!

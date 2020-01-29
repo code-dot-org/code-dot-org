@@ -34,6 +34,7 @@
   "bird": "",
   "calloutPutCommandsHereRunStart": "Dastur ishga tushganda bajarish uchun buyruqlarni shu yerga joylang",
   "calloutBlocklyPlaceGoUpHere": "",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "",
   "calloutUseArrowButtons": "",
   "calloutUseArrowButtonsAutoSteer": "",

@@ -1607,7 +1607,7 @@ hy:
               name: փոփոխականների
             For Loops:
               name: For Loops
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: conditionals
@@ -1617,3 +1617,11 @@ hy:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Conditionals with Cards
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: conditionals
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: conditionals
