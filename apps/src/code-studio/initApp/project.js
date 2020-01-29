@@ -579,6 +579,17 @@ var projects = (module.exports = {
       this.updateChannels_(callback);
     }
   },
+  setLibraryDetails(newName, newDescription, callback) {
+    current = current || {};
+    if (
+      current.libraryName !== newName ||
+      current.libraryDescription !== newDescription
+    ) {
+      current.libraryName = newName;
+      current.libraryDescription = newDescription;
+      this.updateChannels_(callback);
+    }
+  },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;
@@ -1018,14 +1029,14 @@ var projects = (module.exports = {
                 saveSourcesErrorCount,
                 err.message
               );
-              window.location.reload();
+              utils.reload();
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
                 err.message
               );
-              window.location.reload();
+              utils.reload();
             } else {
               saveSourcesErrorCount++;
               this.showSaveError_(
@@ -1230,6 +1241,10 @@ var projects = (module.exports = {
     this.logError_(errorType, errorCount, errorText);
   },
   logError_: function(errorType, errorCount, errorText) {
+    // Share URLs only make sense for standalone app types.
+    // This includes most app types, but excludes pixelation.
+    const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
+
     firehoseClient.putRecord(
       {
         study: 'project-data-integrity',
@@ -1246,7 +1261,7 @@ var projects = (module.exports = {
           errorText: errorText,
           isOwner: this.isOwner(),
           currentUrl: window.location.href,
-          shareUrl: this.getShareUrl(),
+          shareUrl: shareUrl,
           currentSourceVersionId: currentSourceVersionId
         })
       },
@@ -1519,21 +1534,36 @@ var projects = (module.exports = {
         // Load the project ID, if one exists
         channels.fetch(pathInfo.channelId, (err, data) => {
           if (err) {
-            // Project not found, redirect to the new project experience.
-            location.href = location.pathname
-              .split('/')
-              .slice(PathPart.START, PathPart.APP + 1)
-              .join('/');
+            if (err.message.includes('error: Not Found')) {
+              // Project not found. Redirect to the most recent project of this
+              // type, or a new project of this type if none exists.
+              const newPath = utils
+                .currentLocation()
+                .pathname.split('/')
+                .slice(PathPart.START, PathPart.APP + 1)
+                .join('/');
+              utils.navigateToHref(newPath);
+              if (IN_UNIT_TEST) {
+                // Allow unit test to confirm that navigation has happened.
+                deferred.resolve();
+              }
+            } else {
+              deferred.reject();
+            }
           } else {
             this.fetchSource(
               data,
-              () => {
-                if (current.isOwner && pathInfo.action === 'view') {
-                  isEditing = true;
+              err => {
+                if (err) {
+                  deferred.reject();
+                } else {
+                  if (current.isOwner && pathInfo.action === 'view') {
+                    isEditing = true;
+                  }
+                  fetchAbuseScoreAndPrivacyViolations(this, function() {
+                    deferred.resolve();
+                  });
                 }
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  deferred.resolve();
-                });
               },
               queryParams('version'),
               sourcesApi
@@ -1552,11 +1582,15 @@ var projects = (module.exports = {
         } else {
           this.fetchSource(
             data,
-            () => {
-              projects.showHeaderForProjectBacked();
-              fetchAbuseScoreAndPrivacyViolations(this, function() {
-                deferred.resolve();
-              });
+            err => {
+              if (err) {
+                deferred.reject();
+              } else {
+                projects.showHeaderForProjectBacked();
+                fetchAbuseScoreAndPrivacyViolations(this, function() {
+                  deferred.resolve();
+                });
+              }
             },
             queryParams('version'),
             sourcesApi
@@ -1684,12 +1718,9 @@ var projects = (module.exports = {
             null,
             `unable to fetch project source file: ${err}`
           );
-          console.warn();
-          data = {
-            source: '',
-            html: '',
-            animations: ''
-          };
+          console.warn(err);
+          callback(err);
+          return;
         }
         currentSourceVersionId =
           jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
@@ -1889,12 +1920,12 @@ function redirectFromHashUrl() {
  * that we may have hash based route or not
  */
 function parsePath() {
-  var pathname = location.pathname;
+  var pathname = utils.currentLocation().pathname;
 
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path
-  if (location.hash) {
-    pathname += location.hash.replace('#', '/');
+  if (utils.currentLocation().hash) {
+    pathname += utils.currentLocation().hash.replace('#', '/');
   }
 
   var tokens = pathname.split('/');
@@ -1918,7 +1949,7 @@ function parsePath() {
   // embed url. Since a lot of our javascript depends on having the decoded channel
   // id, we do that here when parsing the page's path.
   let channelId = tokens[PathPart.CHANNEL_ID];
-  if (location.search.indexOf('nosource') >= 0) {
+  if (utils.currentLocation().search.indexOf('nosource') >= 0) {
     channelId = channelId
       .split('')
       .map(char => ALPHABET[CIPHER.indexOf(char)] || char)
