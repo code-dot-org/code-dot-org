@@ -1,6 +1,7 @@
 import Firebase from 'firebase';
 let config;
 let firebaseCache;
+let sharedFirebaseCache;
 let firebaseConfig;
 
 export function init(setupConfig) {
@@ -84,7 +85,7 @@ export function getProjectCountersRef(tableName) {
 }
 
 export function getSharedDatabase() {
-  return getFirebase().child('v3/channels/shared');
+  return getSharedFirebase().child('v3/channels/shared');
 }
 
 export function getProjectDatabase() {
@@ -92,6 +93,28 @@ export function getProjectDatabase() {
     config.firebaseChannelIdSuffix
   }`;
   return getFirebase().child(path);
+}
+
+function getSharedFirebase() {
+  let sharedFb = sharedFirebaseCache;
+  if (!sharedFb) {
+    if (!config.firebaseSharedAuthToken) {
+      throw new Error(
+        'Error connecting to Firebase: Shared token not specified'
+      );
+    }
+    sharedFb = new Firebase('https://cdo-v3-shared.firebaseio.com');
+    sharedFb.authWithCustomToken(
+      config.firebaseSharedAuthToken,
+      (err, user) => {
+        if (err) {
+          throw new Error(`error authenticating to shared Firebase: ${err}`);
+        }
+      }
+    );
+    sharedFirebaseCache = sharedFb;
+  }
+  return sharedFb;
 }
 
 function getFirebase() {
