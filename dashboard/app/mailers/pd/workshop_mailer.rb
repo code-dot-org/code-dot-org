@@ -213,7 +213,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-    @contact_text = get_contact_text_for_teacher_follow_up(@workshop)
+    facilitators = []
+    @workshop.facilitators.each {|facilitator| facilitators << facilitator.email}
+    @contact_text = get_contact_text_for_teacher_follow_up(@workshop.regional_partner, facilitators)
 
     # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
@@ -297,10 +299,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
   # patty@we_teach_code.ex.net, or to your facilitator(s) at
   # fiona_facilitator@example.net or fred_facilitator@example.net.""
-  def get_contact_text_for_teacher_follow_up(workshop)
-    regional_partner = workshop.regional_partner
-    facilitators = []
-    workshop.facilitators.each {|facilitator| facilitators << facilitator.email}
+  def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
     has_partner = !!regional_partner&.contact_email
     has_facilitator = !facilitators.empty?
     after_teacher_contact = '.'
