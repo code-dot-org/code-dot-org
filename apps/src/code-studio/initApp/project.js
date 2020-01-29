@@ -579,6 +579,17 @@ var projects = (module.exports = {
       this.updateChannels_(callback);
     }
   },
+  setLibraryDetails(newName, newDescription, callback) {
+    current = current || {};
+    if (
+      current.libraryName !== newName ||
+      current.libraryDescription !== newDescription
+    ) {
+      current.libraryName = newName;
+      current.libraryDescription = newDescription;
+      this.updateChannels_(callback);
+    }
+  },
   setTitle(newName) {
     if (newName && appOptions.gameDisplayName) {
       document.title = newName + ' - ' + appOptions.gameDisplayName;

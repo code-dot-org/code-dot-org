@@ -1,8 +1,8 @@
 ---
-title: Hour of Code and CSEdWeek Advisory Committee
+title: Az Hour of Code és a CSEdWeek Tanácsadó Testülete
 ---
 
-# Hour of Code and CSEdWeek Advisory Committee
+# Az Hour of Code és a CSEdWeek Tanácsadó Testülete
 
 {{ advisory-committee/about_headshots }}
 
