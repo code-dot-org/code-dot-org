@@ -3,6 +3,9 @@ sk:
   data:
     blocks:
       Dancelab_alternateMoves:
+        text: |-
+          {GROUP} striedať každé {N} merania
+          medzi {MOVE1} a {MOVE2}
         options:
           GROUP:
             sprites: všetky
@@ -16,6 +19,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           MOVE1:
             MOVES.Roll: Body Roll
@@ -69,6 +73,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': všetky jednorožce
           MOVE:
             '"next"': "(Ďalší)"
@@ -120,6 +125,7 @@ sk:
             '"x"': horizontálna pozícia
             '"y"': vertikálna pozícia
       Dancelab_changePropEachBy:
+        text: zmeň {GROUP} {PROPERTY} o {VAL}
         options:
           GROUP:
             sprites: všetky
@@ -133,6 +139,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           PROPERTY:
             '"scale"': veľkosť
@@ -156,6 +163,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           MOVE:
             '"rand"': "(Náhodné)"
@@ -216,6 +224,8 @@ sk:
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_everyMeasuresRange:
+        text: 'opakuj každé {N} merania po {START} '
       Dancelab_everySeconds:
         text: 'opakuj každé {N} {UNIT} '
         options:
@@ -316,6 +326,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -343,14 +354,20 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           FORMAT:
             '"border"': okraj
             '"inner"': vnútorný štvorec
+            '"diamond"': diamant
             '"circle"': kruh
             '"grid"': mriežka
+            '"top"': vrchný riadok
             '"row"': riadok
+            '"bottom"': spodný riadok
+            '"left"': ľavý stĺpec
             '"column"': stĺpec
+            '"right"': pravý stĺpec
             '"x"': uhlopriečka
             '"plus"': plus
             '"random"': náhodný
@@ -368,6 +385,7 @@ sk:
             '"PINEAPPLE"': Ananás
             '"ROBOT"': robot
             '"SHARK"': Žralok
+            '"SLOTH"': leňoch
             '"UNICORN"': jednorožec
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -394,6 +412,7 @@ sk:
             '"PINEAPPLE"': Ananás
             '"ROBOT"': Robot
             '"SHARK"': Žralok
+            '"SLOTH"': leňoch
             '"UNICORN"': Jednorožec
           LOCATION:
             "{x: 200, y: 100}": hore
@@ -440,6 +459,7 @@ sk:
             '"PINEAPPLE"': Ananásov
             '"ROBOT"': Robotov
             '"SHARK"': Žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           LAYOUT:
             '"border"': okraj
@@ -487,6 +507,7 @@ sk:
             '"rainbow"': Dúha
             '"snowflakes"': Sneženie
             '"text"': Názvy pesničiek
+            '"galaxy"': Vesmír
             '"sparkles"': Trblietky
             '"spiral"': Špirála
             '"disco"': Štvorce
@@ -510,18 +531,24 @@ sk:
             '"none"': Žiadne
             '"rand"': "(Náhodné)"
             '"circles"': Kruhy
+            '"quads"': Uhly
             '"color_cycle"': Farby
             '"diamonds"': Diamanty
             '"disco_ball"': Disco guľa
             '"fireworks"': Ohňostroj
             '"flowers"': Kvety
+            '"growing_stars"': Rastúce hviezdy
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Laserový tanečný parket
             '"splatter"': Fŕkanie farby
             '"rainbow"': Dúha
+            '"ripples_random"': Náhodné vlnky
+            '"ripples"': Vlnky
             '"snowflakes"': Sneženie
             '"text"': Názvy pesničiek
+            '"squiggles"': Haky - baky
+            '"galaxy"': Vesmír
             '"sparkles"': Trblietky
             '"spiral"': Špirála
             '"disco"': Štvorce
@@ -561,6 +588,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           SPEED:
             '1': normálny
@@ -598,6 +626,7 @@ sk:
             '"emojis"': Emotikony
             '"hearts_red"': Srdiečka
             '"music_notes"': Noty
+            '"paint_drip"': Kvapkanie farby
             '"pineapples"': Ananásov
             '"pizzas"': Pizza
             '"smiling_poop"': Hovienka
@@ -606,6 +635,7 @@ sk:
             '"smile_face"': Smajlíci
             '"spotlight"': Reflektor
             '"color_lights"': Javiskové svetlá
+            '"exploding_stars"': Žiara
             '"raining_tacos"': Tacos
       Dancelab_setProp:
         text: 'nastav {SPRITE} {PROPERTY} na {VAL} '
@@ -632,6 +662,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           PROPERTY:
             '"scale"': veľkosť
@@ -667,6 +698,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           PROPERTY:
             '"scale"': veľkosť
@@ -693,6 +725,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
       Dancelab_setTintEachInline:
         text: nastav {THIS} sfarbenie na {VAL}
@@ -709,6 +742,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
       Dancelab_setTintInline:
         text: nastav {SPRITE} sfarbenie na {VAL}
@@ -733,6 +767,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           VISIBILITY:
             'true': viditeľný
@@ -767,6 +802,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           PROPERTY:
             '"scale"': veľkosť
@@ -811,6 +847,7 @@ sk:
             '"PINEAPPLE"': ananásov
             '"ROBOT"': robotov
             '"SHARK"': žralokov
+            '"SLOTH"': ľeňoši
             '"UNICORN"': Jednorožcov
           PROPERTY:
             '"scale"': veľkosť
@@ -830,14 +867,23 @@ sk:
         options:
           STRING:
             '"music_wave"': Vlny
+            '"ripples"': Vlnky
+            '"ripples_random"': Náhodné vlnky
+            '"quads"': Uhly
             '"flowers"': Kvety
+            '"popsicles"': Lízatká
+            '"squiggles"': Haky - baky
+            '"growing_stars"': Rastúce hviezdy
             '"emojis"': Emotikony
             '"hearts_colorful"': Srdiečka
+            '"paint_drio"': Kvapkanie farby
+            '"exploding_stars"': Žiara
             '"row_top"': vrchný riadok
             '"row_bottom"': spodný riadok
             '"column_left"': ľavý stĺpec
             '"column_right"': pravý stĺpec
             '"diamond"': diamant
+            '"mural"': Maľba
             '"safari"': Safari
             '"network"': Sieť
             '"highway"': Dialnica
@@ -852,6 +898,8 @@ sk:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -875,14 +923,18 @@ sk:
             '"c"': c
             '"d"': d
             '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -892,6 +944,8 @@ sk:
             '"x"': x
             '"y"': 'y'
             '"z"': z
+            '"0"': '0'
+            '"1"': '1'
             '"2"': '2'
             '"3"': '3'
             '"4"': '4'
@@ -986,14 +1040,18 @@ sk:
             '"c"': c
             '"d"': d
             '"e"': e
+            '"f"': f
+            '"g"': g
             '"h"': h
             '"i"': i
             '"j"': j
             '"k"': k
             '"l"': l
             '"m"': m
+            '"n"': 'n'
             '"o"': o
             '"p"': p
+            '"q"': q
             '"r"': r
             '"s"': s
             '"t"': t
@@ -1241,6 +1299,10 @@ sk:
           SELECT:
             '"all"': všetky
             '"this"': toto
+      Mikelab_groupDisplace:
+        text: všetky {COSTUME} blokujú pohyb {COSTUME2}
+      Mikelab_groupEdgesDisplace:
+        text: okraje blokujú pohyb {COSTUME}
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
@@ -1272,6 +1334,7 @@ sk:
             '"all"': všetky
             '"this"': toto
       Mikelab_groupSetProp:
+        text: zmeňiť {PROPERTY} {SELECT} {COSTUME} cez {VAL}
         options:
           SELECT:
             '"all"': všetky
@@ -1288,6 +1351,16 @@ sk:
           SELECT:
             '"all"': všetky
             '"this"': toto
+      Mikelab_groupWhenClickedOn:
+        text: po kliknutí {COSTUME}
+      Mikelab_groupWhenXTouchesY:
+        text: keď sa {COSTUME} dotkne {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: počas klikania na {COSTUME}
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          kým sa{COSTUME} dotýka {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} práve {BEHAVIOR}"
       Mikelab_hideFish:
@@ -1314,16 +1387,23 @@ sk:
             MOVES.ThisOrThat: This or That
             MOVES.Rest: Žiadne
       Mikelab_ifLabel:
+        text: ak {DANCE} robí {DO1} inak {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: môj-štítok
       Mikelab_ifRecognizeLabel:
+        text: |-
+          ak rozozná objekt ako {DANCE}
+          robí {DO1} inak {DO2}
         options:
           DANCE:
             MOVES.ClapHigh: ryba
             MOVES.Clown: môj-štítok
       Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          ak rozozná objekt ako {DANCE}
+          robí {DO1}
         options:
           DANCE:
             MOVES.ClapHigh: ryba
@@ -1397,7 +1477,10 @@ sk:
             '"a"': A
             '"s"': J
             '"d"': D
+      Mikelab_whenMouseClicked:
+        text: po kliknutí myšou
       Mikelab_whenYesNoClicked:
+        text: po kliknutí {KEY}
         options:
           KEY:
             '"yes"': áno
@@ -1419,6 +1502,14 @@ sk:
         text: otoč sa vľavo
       RyanLab_turnRight:
         text: otoč sa vpravo
+      SpriteLab2Beta_spriteSay:
+        text: postava {SPRITE} hovorí {TEXT} po dobu {SECONDS} sekúnd
+      Vector_createSpriteWith:
+        text: |-
+          vytvoriť postavu
+          robiť{STATEMENT}
+      Vector_log:
+        text: zaznamenať správu {MESSAGE}
       Vector_positionCenter:
         text: v strede
       Vector_push:
@@ -1427,14 +1518,19 @@ sk:
         text: náhodná poloha
       Vector_setColor:
         text: nastaviť farbu na {COLOR}
+      Vector_setSize:
+        text: nastaviť šírku {WIDTH} výšku {HEIGHT}
       Vector_teleportTo:
         text: nastaviť pozíciu {POSITION}
       Vector_vectorNorth:
         text: sever
       Vector_where:
+        text: každá postava kde {PROPERTY} je {VALUE} robí {STATEMENT}
         options:
           PROPERTY:
             "'shapeColor'": farba
+      aalab_addBehaviorForDuration:
+        text: aalab postava {SPRITE} začne {BEHAVIOR} po dobu {SECONDS} sekúnd
       aalab_addBehaviorUntilBoolean:
         text: postava {SPRITE} začni {BEHAVIOR} až kým {CONDITION}
       aalab_createNewSpriteAnonReturn2:
@@ -1544,6 +1640,8 @@ sk:
             "'sand'": piesok
             "'darkPrismarine'": tmavý prismarín
             "'seaLantern'": morský lampáš
+      craft_log:
+        text: zaznamenať správu {MESSAGE}
       craft_moveForward:
         text: posuň sa dopredu
       craft_placeBlock:

@@ -25,8 +25,8 @@ id-ID:
   learn_now: Pelajari sekarang
   petition_message: Setiap siswa di setiap sekolah seharusnya memiliki kesempatan
     untuk mempelajari ilmu komputer
-  petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda. Bergabunglah dengan
-    # orang lainnya.'
+  petition_sign_message: 'Jika Anda setuju, daftarkan nama Anda dan bergabunglah dengan
+    milis kami dengan # orang lainnya.'
   petition_sign_message_support: 'Jika Anda mendukung kami, cantumkan nama Anda.  Bergabunglah
     dengan # orang lainnya.'
   petition_join_others: 'Bergabunglah dengan # orang-orang lainnya'
@@ -224,6 +224,7 @@ id-ID:
   if_you_enjoyed: Jika Anda suka mengikuti pelajaran ini, ajaklah teman-temanmu untuk
     mencoba juga!  Kami ingin seluruh dunia untuk ikut belajar.
   personalize_certificate: Personalisasi sertifikat Anda
+  print_certificates: Cetak Sertifikat
   share_achievement: Tunjukkanlah prestasi Anda
   beyond_hour_message: Teruskan dengan <a href='http://studio.code.org'>kursus lain</a>
     kami, atau lihat lebih banyak pilihan untuk <a href='/learn/beyond'> belajar melampaui
@@ -2070,7 +2071,7 @@ id-ID:
   header_home: Beranda
   header_my_dashboard: Dasbor saya
   header_courses: Kursus
-  header_course_catalog: Katalog kursus
+  header_course_catalog: Katalog Kursus
   header_project_gallery: Proyek
   header_sections: Sesi
   header_professional_learning: Belajar profesional
@@ -2107,6 +2108,8 @@ id-ID:
   app_lab_tutorials: Tutorial aplikasi Lab
   game_lab_documentation: Dokumentasi lab permainan
   game_lab_tutorials: Tutorial lab permainan
+  sprite_lab_documentation: Dokumentasi Lab Sprite
+  sprite_lab_tutorials: Tutorial Lab Sprite
   header_documentation: Dokumentasi
   user_header_label: Halo %{username}
   user_header_team: Tim
@@ -2184,8 +2187,9 @@ id-ID:
   account_sign_up_child_accept_terms: Saya mengkonfirmasi bahwa saya telah saya orang
     tua atau wali hukum izin untuk menggunakan layanan Code.org.
   hoc_overview_dance_title: Pesta Tari
-  hoc_overview_dance_subtitle: Kode pesta dansa untuk dibagi dengan teman. Featuring
-    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 lainnya!
+  hoc_overview_dance_subtitle: Kodekan Pesta Tari untuk dibagikan ke teman-teman Anda.
+    Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, dan 25 orang
+    lainnya!
   hoc_overview_dance_2019_subtitle: Kode Pesta Dansa untuk berbagi dengan teman-teman
     Anda. Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas
     Brothers, Nicki Minaj, dan 34 artis lainnya!
@@ -2371,5 +2375,13 @@ id-ID:
   hoc2018_mc_thank_microsoft: Kami berterima kasih kepada Mikrosoft atas dukungan
     visi dan misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar
     ilmu komputer dan keterampilan untuk sukses di abad ke 21.
+  hoc2019_mc_mee_title: AI Minecraft untuk Kebaikan
+  hoc2019_mc_mee_description1: 'Tutorial Hour of Code Minecraft kini tersedia di Minecraft:
+    Edisi Pendidikan untuk Windows, Mac, dan iPad. Pelajari dasar-dasar koding dan
+    jelajahi AI bersama siswa Anda!'
   hoc2019_mc_mee_description2: Akses sumber daya gratis termasuk rencana pelajaran,
     video, kurikulum ilmu komputer, dan pelatihan guru.
+  hoc2019_mc_more_coding_resources: Sumber daya coding lainnya
+  hoc2019_dance_previous_versions: |-
+    Mencari Dance Party versi yang lama?
+    Klik di sini untuk memulai [Bagian 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) edisi tahun lalu.

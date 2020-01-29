@@ -5,11 +5,11 @@ zh-TW:
       Actions: 動作
       Advanced: 進階設定
       Behaviors: 行為
-      Brushes: 筆刷
+      Brushes: 畫筆
       Color: 顏色
       Comment: 回應
-      Comments: 評論
-      Conditionals: 條件判斷（Conditionals）
+      Comments: 註解
+      Conditionals: 條件判斷
       Dancers: 舞者
       Default: 預設值
       Events: 事件
@@ -23,7 +23,7 @@ zh-TW:
       Logic: 邏輯
       Loops: 迴圈
       Math: 運算
-      Numbers: 數字
+      Numbers: 運算
       Properties: 屬性
       Sprites: 角色
       Text: 文字

@@ -366,10 +366,15 @@ pl:
           FORMAT:
             '"border"': brzeg
             '"inner"': wewnątrz kwadratu
+            '"diamond"': diament
             '"circle"': koło
             '"grid"': siatka
+            '"top"': górny wiersz
             '"row"': rząd
+            '"bottom"': dolny wiersz
+            '"left"': lewa kolumna
             '"column"': kolumna
+            '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
             '"random"': losowy
@@ -837,7 +842,7 @@ pl:
             '"mid"': średni ton
             '"treble"': wysoki ton
       Dancelab_stopMappingEach:
-        text: "{GROUP} zatrzymuje {PROPERTY} po {RANGE}"
+        text: "{GROUP} zmieniaj co {PROPERTY} takty/taktów pomiędzy {RANGE} a [MOVE2][3]"
         options:
           GROUP:
             sprites: wszystkie
@@ -875,7 +880,7 @@ pl:
             '"ripples_random"': Losowe fale
             '"quads"': Kąty
             '"flowers"': Kwiaty
-            '"popsicles"': Lody
+            '"popsicles"': Lody na patyku
             '"squiggles"': Pokręcone linie
             '"growing_stars"': Powiększające się gwiazdy
             '"emojis"': Emotikony
@@ -920,7 +925,7 @@ pl:
             '"left"': w lewo
             '"down"': do dołu
             '"right"': w prawo
-            '"space"': przestrzeń
+            '"space"': kosmos
             '"enter"': wprowadź
             '"a"': a
             '"b"': b

@@ -680,6 +680,8 @@ sk:
       gamelab_unsupported_tablet: Game Lab funguje najlepšie na stolnom počítači alebo
         notebooku s myšou a klávesnicou. Pri používaní Game Lab na tomto zariadení
         sa môžu vyskytnúť chyby alebo problémy.
+      oceans_unsupported_browser: Návod sa nedá otvoriť v tomto internetovom prehliadači.
+        Skús otvoriť stránku cez Edge, Chrome, Firefox, alebo iný prehliadač.
       weblab_unsupported_browser: Je nám ľúto, ale v tomto prehliadači nefunguje Web
         Lab správne. Do vyriešenia problému použite prosím iný internetový prehliadač.
         Ospravedlňujeme sa za prípadné nepríjemnosti.
@@ -841,6 +843,8 @@ sk:
     help_support: Pomoc a podpora
     documentation: Dokumentácia
     tutorials: Návody
+  free_response:
+    placeholder: Zadajte vašu odpoveď
   multi:
     wrong_title: Nesprávna odpoveď
     wrong_body: Zadaná odpoveď je nesprávna.  Prosím skúste to znova!

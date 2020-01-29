@@ -267,6 +267,7 @@ eu:
             '"ROBOT"': robot guztiak
             '"SHARK"': marrazo guztiak
           FORMAT:
+            '"diamond"': diamantea
             '"random"': ausazkoa
       Dancelab_makeAnonymousDanceSprite:
         options:

@@ -1,2 +1,9 @@
 {
+  "continue": "Jatka",
+  "areYouSure": "Oletko varma?",
+  "cancel": "Peru",
+  "yes": "Kyllä",
+  "no": "Ei",
+  "run": "Suorita",
+  "finish": "Valmis"
 }
