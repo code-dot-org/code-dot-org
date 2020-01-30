@@ -25,6 +25,7 @@ experiments.APPLAB_DATASETS = 'applabDatasets';
 experiments.STUDENT_LIBRARIES = 'student-libraries';
 experiments.STANDARDS_REPORT = 'standardsReport';
 experiments.BETT_DEMO = 'bett-demo';
+experiments.TEACHER_DASHBOARD_SECTION_BUTTONS = 'teacher-dashboard-section-buttons';
 
 /**
  * Get our query string. Provided as a method so that tests can mock this.
