@@ -386,7 +386,7 @@ designMode.updateProperty = function(
       if (ICON_PREFIX_REGEX.test(value)) {
         element.src = assetPrefix.renderIconToString(value, element);
       } else if (DATA_PREFIX_REGEX.test(value)) {
-        element.src = assetPrefix.fixPath(value);
+        element.src = value;
       } else {
         element.src =
           value === ''
