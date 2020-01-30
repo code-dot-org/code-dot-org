@@ -194,7 +194,7 @@ function initProjects() {
 
         pixelationDisplay();
       })
-      .fail(function() {
+      .catch(function() {
         window.alert(
           "the pixelation level failed to load. Please reload the page to try again."
         );

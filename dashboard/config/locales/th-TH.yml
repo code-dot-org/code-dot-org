@@ -472,6 +472,8 @@ th:
   landing:
     support: ขอความช่วยเหลือ
     help_support: การช่วยเหลือและสนับสนุน
+  free_response:
+    placeholder: กรอกคำตอบของคุณที่นี่
   multi:
     wrong_title: คำตอบไม่ถูกต้อง
     wrong_body: คำตอบที่คุณเลือก ไม่ถูกต้อง โปรดลองใหม่อีกครั้ง!

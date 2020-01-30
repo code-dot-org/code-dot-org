@@ -54,6 +54,8 @@ hu-HU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat
       Dance_2019_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
       Dance_2019_02:
@@ -81,6 +83,8 @@ hu-HU:
       Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat
       Function intro Ryan:
         Function_intro_Ryan_1: Ez a kis utasítás azt mondja a számítógépnek, hogy
           futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen.
@@ -227,5 +231,3 @@ hu-HU:
       frozen square snowflake:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
-      Dance_Party_11_5:
-        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat

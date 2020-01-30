@@ -98,6 +98,7 @@ ga:
           GROUP:
             sprites: uile
           FORMAT:
+            '"diamond"': diamant
             '"random"': randamach
       Dancelab_makeAnonymousDanceSprite:
         options:

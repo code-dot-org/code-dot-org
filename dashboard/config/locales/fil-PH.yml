@@ -790,6 +790,8 @@ fil:
     help_support: Tulong at Suporta
     documentation: Dokumentasyon
     tutorials: Mga Tutorial
+  free_response:
+    placeholder: Ilagay ang iyong sagot dito
   multi:
     wrong_title: Maling sagot
     wrong_body: Ang sagot na iyong ipinasok ay hindi tama. Pakisubukang uli!

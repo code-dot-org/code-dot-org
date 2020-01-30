@@ -1589,7 +1589,7 @@ kk:
               name: Айнымалылар
             For Loops:
               name: For ілмектері
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Шарттар
@@ -1599,3 +1599,11 @@ kk:
               name: Кроудсорсинг
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Шарттар
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Шарттар
