@@ -43,7 +43,7 @@
         %h3
           Directory for Workshop Admins
     - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
-    -if not courses_facilitated.empty?
+    -if courses_facilitated.any?
       %h1
         Facilitator Landing Page
 
