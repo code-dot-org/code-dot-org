@@ -2,7 +2,7 @@
 hi-IN:
   hour_of_code: आवर ऑफ़ कोड
   hello: हैलो वर्ल्ड
-  'yes': हाँ
+  'yes': हां
   'no': नहीं
   select_language: कृपया अपनी भाषा चुनें
   upgrade_ie_message: Code.org जल्द ही Internet Explorer 8, 9, और 10 को समर्थित करना
@@ -234,6 +234,7 @@ hi-IN:
   if_you_enjoyed: यदि आपको सीखने में मज़ा आया, तो अपने दोस्तों से भी इसे आजमाने को
     कहें!  हम चाहते हैं कि पूरी दुनिया इसे सीखे।
   personalize_certificate: आपके प्रमाण पत्र को व्यक्तिगत करें
+  print_certificates: प्रमाण-पत्र प्रिंट करें
   share_achievement: आपकी उपलब्धि साझा करें
   beyond_hour_message: हमारे <a href='http://studio.code.org'>अन्य कोर्सों के साथ
     आगे बढ़ते रहें</a>, या <a href='/learn/beyond'>घंटे से आगे कैसे सीखें</a> के और
@@ -716,7 +717,7 @@ hi-IN:
     आपको ईमेल भेज सकते हैं?
   volunteer_engineer_submission_field_email_preference_privacy: "(हमारी गोपनीयता नीति
     देखें)"
-  volunteer_engineer_submission_field_email_preference_yes: हाँ
+  volunteer_engineer_submission_field_email_preference_yes: हां
   volunteer_engineer_submission_field_email_preference_no: नहीं
   volunteer_engineer_submission_final_paragraph: आपको मानचित्र पर सूचीबद्ध किया जाएगा,
     ताकि स्थानीय अध्यापक आवर ऑफ़ कोड या स्वयं सेवकों के लिए अन्य अवसरों हेतु आपसे
@@ -851,7 +852,7 @@ hi-IN:
   dashboard_landing_loading: लोड हो रहा है...
   dashboard_action_cancel: रद्द करें
   dashboard_action_delete: मिटाएँ
-  dashboard_action_delete_yes: हाँ
+  dashboard_action_delete_yes: हां
   dashboard_action_delete_no: नहीं
   dashboard_action_confirm: मिटाएँ?
   dashboard_action_done: हो गया
@@ -2159,6 +2160,9 @@ hi-IN:
   hoc_overview_dance_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी को
     कोड करें। इसमें कैटी पेरी, मैडोना, जे, बाल्विन, सिया, कीथ अर्बन, कियारा और 25
     और को पेश करें!
+  hoc_overview_dance_2019_subtitle: अपने दोस्तों के साथ साझा करने के लिए डांस पार्टी
+    को कोड करें।पेश करते हैं कैटी पेरी, शॉन मेंडेस, पैनिक को! डिस्को, लिल नास एक्स,
+    जोनास ब्रदर्स, निकी मिनाज और 34 और में!
   hoc_overview_title: ऑवर ऑफ़ कोड गतिविधियां code.org के तरफ से
   hoc_overview_subtitle: <a href="https://hourofcode.com">आवर ऑफ़ कोड</a> एक वैश्विक
     अभियान है, जो 180 से अधिक देशों में लाखों छात्रों तक पहुंच रहा है। कोई भी, कहीं
