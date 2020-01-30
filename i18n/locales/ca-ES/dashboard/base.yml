@@ -517,6 +517,8 @@ ca:
     support: "Obtenir ajuda"
     support_url: "support.code.org"
     help_support: "Ajuda i suport"
+  free_response:
+    placeholder: "Introdueix la teva resposta aquí"
   multi:
     wrong_title: "Resposta incorrecta"
     wrong_body: "La resposta que he introduït no és correcta.  Si us plau, intenta-ho de nou!"

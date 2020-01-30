@@ -853,6 +853,8 @@ es:
     help_support: Ayuda y soporte
     documentation: Documentacion
     tutorials: Tutoriales
+  free_response:
+    placeholder: Escribe aquí tu respuesta
   multi:
     wrong_title: Respuesta incorrecta
     wrong_body: La respuesta no es correcta. ¡Inténtalo de nuevo!

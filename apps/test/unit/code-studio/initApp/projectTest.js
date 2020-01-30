@@ -672,14 +672,12 @@ describe('project.js', () => {
       sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
-      sinon.stub(console, 'warn');
     });
 
     afterEach(() => {
       server.restore();
       project.getStandaloneApp.restore();
       utils.currentLocation.restore();
-      console.warn.restore();
     });
 
     describe('standalone project', () => {
@@ -701,7 +699,7 @@ describe('project.js', () => {
       });
 
       it('redirects to new project when channel not found', done => {
-        project.load().then(() => {
+        project.load().catch(() => {
           expect(utils.navigateToHref).to.have.been.calledOnce;
           expect(utils.navigateToHref.firstCall.args[0]).to.equal(
             '/projects/artist'
@@ -712,13 +710,13 @@ describe('project.js', () => {
 
       it('fails when channels request fails', done => {
         stubGetChannelsWithError(server);
-        project.load().fail(done);
+        project.load().catch(() => done());
       });
 
       it('fails when sources request fails', done => {
         stubGetChannels(server);
         stubGetMainJsonWithError(server);
-        project.load().fail(done);
+        project.load().catch(() => done());
       });
     });
 
@@ -731,18 +729,18 @@ describe('project.js', () => {
       it('succeeds when ajax requests succeed', done => {
         stubGetChannels(server);
         stubGetMainJson(server);
-        project.load().then(done);
+        project.load().then(() => done());
       });
 
       it('fails when channels request fails', done => {
         stubGetChannelsWithError(server);
-        project.load().fail(done);
+        project.load().catch(() => done());
       });
 
       it('fails when sources request fails', done => {
         stubGetChannels(server);
         stubGetMainJsonWithError(server);
-        project.load().fail(done);
+        project.load().catch(() => done());
       });
     });
 

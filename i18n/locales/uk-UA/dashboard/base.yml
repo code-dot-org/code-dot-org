@@ -317,6 +317,7 @@ uk:
       district_dashboard: 'Панель області'
       label: 'Привіт %{username}'
       stats: 'Студія коду'
+      my_projects: 'Мої проекти'
       settings: 'Мій профіль'
       logout: 'Вийти'
       signin: 'Увійти'
@@ -657,6 +658,8 @@ uk:
     help_support: "Допомога та підтримка"
     documentation: "Документація"
     tutorials: "Навчальні матеріали"
+  free_response:
+    placeholder: "Введіть свою відповідь тут"
   multi:
     wrong_title: "Неправильна відповідь"
     wrong_body: "Подана відповідь не є правильною.  Будь ласка, спробуйте ще раз!"
@@ -1025,3 +1028,5 @@ uk:
     accept: 'Погоджуюся'
   gdpr_dialog:
     yes: 'Так'
+  page_not_found_title: "Сторінка не знайдена"
+  page_not_found_header: '404: Сторінка не знайдена'

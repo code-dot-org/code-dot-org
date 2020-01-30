@@ -527,6 +527,8 @@ et:
     help_resources: "Abiinfo ja ressursid"
     help_support: "Abi & Klienditugi"
     documentation: "Dokumentatsioon"
+  free_response:
+    placeholder: "Sisesta siia oma vastus"
   multi:
     wrong_title: "Vale vastus"
     wrong_body: "Sinu poolt sisestatud vastus ei ole õige. Palun proovi uuesti!"
