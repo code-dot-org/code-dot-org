@@ -27,7 +27,7 @@ def sync_down
         line.gsub!(/[\|\/\-\\][\b]/, '')
 
         # skip lines detailing individual file extraction
-        next if line.start_with?("Extracting: ") || line.starts_with?("Building ")
+        next if line.start_with?("Extracting: ", "Building ")
 
         puts line
       end
