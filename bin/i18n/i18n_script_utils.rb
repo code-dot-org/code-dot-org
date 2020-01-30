@@ -130,22 +130,39 @@ class I18nScriptUtils
       end
 
       # copied from script_levels_controller
-      script_level =
-        if route[:chapter]
-          script.get_script_level_by_chapter(route[:chapter])
-        elsif route[:stage_position]
-          script.get_script_level_by_relative_position_and_puzzle_position(route[:stage_position], route[:id], false)
-        elsif route[:lockable_stage_position]
-          script.get_script_level_by_relative_position_and_puzzle_position(route[:lockable_stage_position], route[:id], true)
-        else
-          script.get_script_level_by_id(route[:id])
-        end
-      unless script_level.present?
-        puts "could not find script_level"
+      # TODO: find a more-generalizable way to do this
+      level = case route[:action]
+              when "show"
+                script_level = if route[:chapter]
+                                 script.get_script_level_by_chapter(route[:chapter])
+                               elsif route[:stage_position]
+                                 script.get_script_level_by_relative_position_and_puzzle_position(route[:stage_position], route[:id], false)
+                               elsif route[:lockable_stage_position]
+                                 script.get_script_level_by_relative_position_and_puzzle_position(route[:lockable_stage_position], route[:id], true)
+                               else
+                                 script.get_script_level_by_id(route[:id])
+                               end
+                script_level.level
+              when "stage_extras"
+                uri = URI.parse(new_url)
+                params = CGI.parse(uri.query)
+                if params.key?('id')
+                  script_level = Script.cache_find_script_level(params['id'].first)
+                  script_level.level
+                elsif params.key?('level_name')
+                  Level.find_by_name(params['level_name'].first)
+                end
+              else
+                puts "unknown route action #{route[:action]}"
+                nil
+              end
+
+      unless level.present?
+        puts "could not find level"
         next
       end
 
-      hash[new_url] = script_level.level
+      hash[new_url] = level
     end
 
     @levels_by_url[url]
