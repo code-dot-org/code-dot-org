@@ -70,7 +70,7 @@ def restore_redacted_files
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
 
-    print "Restoring #{locale} (#{locale_index}/#{total_locales})"
+    puts "Restoring #{locale} (#{locale_index}/#{total_locales})"
     original_files.each do |original_path|
       translated_path = original_path.sub("original", locale)
       next unless File.file?(translated_path)
@@ -198,7 +198,7 @@ def distribute_translations
   total_locales = Languages.get_locale.count
   Languages.get_locale.each_with_index do |prop, i|
     locale = prop[:locale_s]
-    print "Distributing #{locale} (#{i}/#{total_locales})"
+    puts "Distributing #{locale} (#{i}/#{total_locales})"
     $stdout.flush
     next if locale == 'en-US'
     next unless File.directory?("i18n/locales/#{locale}/")
