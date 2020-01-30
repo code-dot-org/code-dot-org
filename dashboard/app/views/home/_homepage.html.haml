@@ -38,6 +38,20 @@
     %a{href:'/pd/workshop_dashboard'}
       %h3
         Manage PD Workshops
+    - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
+    - puts courses_facilitated
+    -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
+      %a{href: "https://curriculum.code.org/plcsf/", target: '_blank'}
+        %h3
+          CSF Facilitator Landing Page
+    -if courses_facilitated.include? Pd::Workshop::COURSE_CSD
+      %a{href: "https://curriculum.code.org/plcsd/", target: '_blank'}
+        %h3
+          CSD Facilitator Landing Page
+    -if courses_facilitated.include? Pd::Workshop::COURSE_CSP
+      %a{href: "https://curriculum.code.org/plcsp/", target: '_blank'}
+        %h3
+          CSP Facilitator Landing Page
     -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
       = link_to pd_workshop_admins_path do
         %h3
