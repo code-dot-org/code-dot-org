@@ -34,10 +34,16 @@
         Manage Applications
   -if can? :read, Pd::Workshop
     %h1
-      Workshop Resources
+      Workshop Dashboard
     %a{href:'/pd/workshop_dashboard'}
       %h3
-        Workshop Dashboard
+        Manage PD Workshops
+    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+      = link_to pd_workshop_admins_path do
+        %h3
+          Directory for Workshop Admins
+    %h1
+      Facilitator Landing Page
     - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
     - puts courses_facilitated
     -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
@@ -52,7 +58,3 @@
       %a{href: "https://curriculum.code.org/plcsp/", target: '_blank'}
         %h3
           CSP Facilitator Landing Page
-    -if current_user.permission?(UserPermission::WORKSHOP_ADMIN)
-      = link_to pd_workshop_admins_path do
-        %h3
-          Directory for Workshop Admins
