@@ -34,10 +34,10 @@
         Manage Applications
   -if can? :read, Pd::Workshop
     %h1
-      Workshop Dashboard
+      Workshop Resources
     %a{href:'/pd/workshop_dashboard'}
       %h3
-        Manage PD Workshops
+        Workshop Dashboard
     - courses_facilitated = Pd::CourseFacilitator.where(facilitator: current_user).map(&:course)
     - puts courses_facilitated
     -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
