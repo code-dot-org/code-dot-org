@@ -35,6 +35,7 @@ sv-SE:
   twentyhours_text: Avslutat din första Hour of Code? Lär dig mer om grunderna i datavetenskap
     och programmering i den här uppföljningskursen.
   og_title: 'Code.org: Alla kan lära sig'
+  og_title_soon: Hour of Code är på gång
   og_description: Alla elever i skolan förtjänar att kunna studera datavetenskap.
   csedweek_og_title: Timmen av kod är här
   hoc2014_heading: Gå med i <a href="http://hourofcode.com"> kodtimmen</a> <br/> 8-14
@@ -187,7 +188,7 @@ sv-SE:
   studiobar_elementary_title: Grundkurser
   studiobar_elementary_body: Våra tre nya kurser för grundskolan
   studiobar_dance_title: Dansparty
-  studiobar_dance_body: Skapa och dela ditt egna dansparty
+  studiobar_dance_body: Skapa och dela ditt eget Dance Party
   studiobar_hoc_title: Timme med Kod
   studiobar_hoc_body: Lär dig programmera med Angry Birds
   studiobar_flappy_title: Flappy kod
@@ -239,6 +240,7 @@ sv-SE:
   homepage_hero_text_stat_loc: "#loc rader kod skriven av studenter"
   homepage_hero_text_stat_students: "#student_count student konton i Kod Studio"
   homepage_hero_text_stat_served: 'Timmen av kod: #served serverad'
+  homepage_hero_hoc_is_coming: Hour of Code är på gång
   homepage_slot_text_hoc: Timme med Kod
   homepage_slot_text_frozen: Frozen med Anna och Elsa
   homepage_slot_text_teacher: Lärare Dashboard
@@ -1552,6 +1554,11 @@ sv-SE:
   account_sign_up_email_opt_in: Får vi skicka e-post till dig med nyheter om våra
     kurser, lokala erbjudanden eller andra nyheter i ämnet datavetenskap?
   hoc_overview_dance_title: Dansparty
+  hoc_overview_dance_subtitle: Koda ett Dance Party och dela med dina vänner. Med
+    Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, och 25 till!
+  hoc_overview_dance_2019_subtitle: Koda ett Dance Party att dela med vänner. Med
+    Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki
+    Minaj, och 34 andra!
   hoc_overview_partner_activities_title: Fler aktiviteter från våra partner
   hoc_overview_partner_activities_body: Webbplatsen för Hour of Code har över 100
     datarelaterade aktiviteter för alla åldrar och erfarenhetsnivåer och är utvecklad
