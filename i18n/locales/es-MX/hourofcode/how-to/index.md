@@ -1,5 +1,5 @@
 ---
-title: Guía de instrucciones
+title: Guía práctica
 ---
 
 {{ signup_button }}

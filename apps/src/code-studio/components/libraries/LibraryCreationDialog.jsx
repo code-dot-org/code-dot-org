@@ -1,4 +1,3 @@
-/*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
@@ -8,9 +7,10 @@ import i18n from '@cdo/locale';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import PublishSuccessDisplay from './PublishSuccessDisplay';
 import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
+import LibraryClientApi from './LibraryClientApi';
 
 const styles = {
   libraryBoundary: {
@@ -20,15 +20,6 @@ const styles = {
   centerContent: {
     display: 'flex',
     justifyContent: 'center'
-  },
-  copy: {
-    cursor: 'copy',
-    width: 300,
-    height: 25
-  },
-  button: {
-    marginLeft: 10,
-    marginRight: 10
   }
 };
 
@@ -40,8 +31,8 @@ export const DialogState = {
   LOADING: 'loading',
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
-  CODE_ERROR: 'code_error',
-  NO_FUNCTIONS: 'no_functions'
+  UNPUBLISHED: 'unpublished',
+  ERROR: 'error'
 };
 
 /**
@@ -51,14 +42,12 @@ export const DialogState = {
  * DONE_LOADING: Information has been gathered for the library and the user can
  *     decide what data to publish from it
  * PUBLISHED: The user has successfully published the library
- * CODE_ERROR: There is an error in the code that the user must repair prior to
- *     publishing the library
- * NO_FUNCTIONS: The user's project is not a valid library and needs functions
- *     before it can be published
+ * UNPUBLISHED: The user has successfully unpublished the library
+ * ERROR: There was an error loading the library
  */
 class LibraryCreationDialog extends React.Component {
   static propTypes = {
-    libraryClientApi: PropTypes.object.isRequired,
+    channelId: PropTypes.string.isRequired,
 
     // From Redux
     dialogIsOpen: PropTypes.bool.isRequired,
@@ -68,7 +57,9 @@ class LibraryCreationDialog extends React.Component {
   state = {
     dialogState: DialogState.LOADING,
     libraryName: '',
-    libraryDetails: {}
+    libraryDetails: {},
+    libraryClientApi: new LibraryClientApi(this.props.channelId),
+    errorMessage: ''
   };
 
   componentDidUpdate(prevProps) {
@@ -79,8 +70,9 @@ class LibraryCreationDialog extends React.Component {
 
   onOpen = () => {
     loadLibrary(
-      () => this.setState({dialogState: DialogState.CODE_ERROR}),
-      () => this.setState({dialogState: DialogState.NO_FUNCTIONS}),
+      this.state.libraryClientApi,
+      error =>
+        this.setState({dialogState: DialogState.ERROR, errorMessage: error}),
       libraryDetails =>
         this.setState({
           dialogState: DialogState.DONE_LOADING,
@@ -95,8 +87,7 @@ class LibraryCreationDialog extends React.Component {
   };
 
   displayContent = () => {
-    const {libraryClientApi} = this.props;
-    const {libraryDetails} = this.state;
+    const {libraryDetails, libraryClientApi} = this.state;
     return (
       <LibraryPublisher
         onPublishSuccess={libraryName =>
@@ -104,6 +95,9 @@ class LibraryCreationDialog extends React.Component {
             dialogState: DialogState.PUBLISHED,
             libraryName: libraryName
           })
+        }
+        onUnpublishSuccess={() =>
+          this.setState({dialogState: DialogState.UNPUBLISHED})
         }
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
@@ -113,23 +107,33 @@ class LibraryCreationDialog extends React.Component {
 
   render() {
     let bodyContent;
-    const {dialogState, libraryName} = this.state;
-    const {dialogIsOpen} = this.props;
+    const {dialogState, libraryName, errorMessage} = this.state;
+    const {dialogIsOpen, channelId} = this.props;
     switch (dialogState) {
       case DialogState.LOADING:
         bodyContent = <LoadingDisplay />;
         break;
       case DialogState.PUBLISHED:
-        bodyContent = <SuccessDisplay libraryName={libraryName} />;
+        bodyContent = (
+          <PublishSuccessDisplay
+            libraryName={libraryName}
+            channelId={channelId}
+          />
+        );
         break;
-      case DialogState.CODE_ERROR:
-        bodyContent = <ErrorDisplay message={i18n.libraryCodeError()} />;
+      case DialogState.UNPUBLISHED:
+        bodyContent = <UnpublishSuccessDisplay />;
         break;
-      case DialogState.NO_FUNCTIONS:
-        bodyContent = <ErrorDisplay message={i18n.libraryNoFunctionsError()} />;
+      case DialogState.ERROR:
+        bodyContent = <ErrorDisplay message={errorMessage} />;
+        break;
+      case DialogState.DONE_LOADING:
+        bodyContent = this.displayContent();
         break;
       default:
-        bodyContent = this.displayContent();
+        // If we get to this state, we've shipped a bug.
+        bodyContent = <ErrorDisplay message={i18n.libraryCreatorError()} />;
+        break;
     }
     return (
       <Dialog
@@ -169,43 +173,17 @@ export class LoadingDisplay extends React.Component {
   }
 }
 
-export class SuccessDisplay extends React.Component {
-  static propTypes = {libraryName: PropTypes.string.isRequired};
-
-  copyChannelId = () => {
-    this.channelId.select();
-    document.execCommand('copy');
-  };
-
-  render = () => {
-    const {libraryName} = this.props;
+export class UnpublishSuccessDisplay extends React.Component {
+  render() {
     return (
       <div>
         <Heading2>
-          <b>{i18n.libraryPublishTitle()}</b>
-          {libraryName}
+          <b>{i18n.libraryUnPublishTitle()}</b>
         </Heading2>
-        <div>
-          <p>{i18n.libraryPublishExplanation()}</p>
-          <div style={styles.centerContent}>
-            <input
-              type="text"
-              ref={channelId => (this.channelId = channelId)}
-              onClick={event => event.target.select()}
-              readOnly="true"
-              value={dashboard.project.getCurrentId()}
-              style={styles.copy}
-            />
-            <Button
-              onClick={this.copyChannelId}
-              text={i18n.copyId()}
-              style={styles.button}
-            />
-          </div>
-        </div>
+        <p>{i18n.libraryUnPublishExplanation()}</p>
       </div>
     );
-  };
+  }
 }
 
 export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;

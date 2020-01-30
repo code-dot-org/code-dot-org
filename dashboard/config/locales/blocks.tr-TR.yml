@@ -21,26 +21,26 @@ tr:
             '"SLOTH"': tembel hayvanlar
             '"UNICORN"': Tek boynuzlu atlar
           MOVE1:
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
           MOVE2:
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -78,14 +78,14 @@ tr:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -99,14 +99,14 @@ tr:
             '"next"': "(Sonraki)"
             '"prev"': "(Önceki)"
             '"rand"': "(Rastgele)"
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -167,7 +167,7 @@ tr:
           MOVE:
             '"rand"': "(Rastgele)"
             MOVES.XBend: Kıvır
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.XClapSide: Alkışla
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
@@ -176,7 +176,7 @@ tr:
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Baş + Kalçalar
             MOVES.XHop: Sıçra
             MOVES.XHighKick: Tekmele
@@ -198,7 +198,7 @@ tr:
           MOVE:
             '"rand"': "(Rastgele)"
             MOVES.XBend: Kıvır
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.XClapSide: Alkışla
             MOVES.ClapHigh: Yüksek Alkış
             MOVES.Dab: Dab
@@ -207,7 +207,7 @@ tr:
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Baş + Kalçalar
             MOVES.XHop: Sıçra
             MOVES.XHighKick: Tekmele
@@ -226,7 +226,7 @@ tr:
       Dancelab_everyMeasuresRange:
         text: "{N} ölçütünü her {START} sonrasında tekrarlayın "
       Dancelab_everySeconds:
-        text: 'her {N} {UNIT}’de bir '
+        text: 'повторювати кожні {N} {UNIT} '
         options:
           UNIT:
             '"measures"': ölçü
@@ -274,13 +274,13 @@ tr:
         options:
           DANCE:
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri
@@ -356,10 +356,15 @@ tr:
           FORMAT:
             '"border"': kenarlık
             '"inner"': iç kare
+            '"diamond"': elmas
             '"circle"': çember
             '"grid"': ızgara
+            '"top"': üst sıra
             '"row"': satır
+            '"bottom"': alt sıra
+            '"left"': sol sütun
             '"column"': sütun
+            '"right"': sağ sütun
             '"x"': çapraz geçiş
             '"plus"': artı
             '"random"': gelişigüzel
@@ -496,27 +501,27 @@ tr:
             '"diamonds"': Karolar
             '"disco_ball"': Disko Topu
             '"fireworks"': Havai fişek
-            '"swirl"': Hipno
+            '"swirl"': Hipnozcu
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
             '"splatter"': Boya Lekesi
             '"rainbow"': Gökkuşağı
             '"snowflakes"': Kar
-            '"text"': Şarkı Adı
+            '"text"': Şarkı İsimleri
             '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"spiral"': Spiral
             '"disco"': Kareler
             '"stars"': Yıldızlar
           PALETTE:
-            '"rave"': Siyah Beyaz
-            '"cool"': Maviler
+            '"rave"': Siyah ve Beyaz
+            '"cool"': Güzel
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
             '"default"': Aydınlık
             '"neon"': Neon
             '"tropical"': Tropikal
-            '"vintage"': Vintage
+            '"vintage"': Bağbozumu
             '"warm"': Kırmızılar
       Dancelab_setBackgroundEffectWithPalette:
         text: arka plan efektini {PALETTE} {EFFECT} olarak ayarla
@@ -532,16 +537,16 @@ tr:
             '"fireworks"': Havai fişek
             '"flowers"': Çiçekler
             '"growing_stars"': Büyüyen Yıldızlar
-            '"swirl"': Hipno
+            '"swirl"': Hipnozcu
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
             '"splatter"': Boya Lekesi
             '"rainbow"': Gökkuşağı
             '"ripples_random"': Rastgele Dalgalar
-            '"ripples"': Dalgalar
+            '"ripples"': Dalgaları
             '"snowflakes"': Kar
-            '"text"': Şarkı Adı
-            '"squiggles"': Squiggles
+            '"text"': Şarkı İsimleri
+            '"squiggles"': Karalamalar
             '"galaxy"': Uzay
             '"sparkles"': Kıvılcımlar
             '"spiral"': Spiral
@@ -549,14 +554,14 @@ tr:
             '"stars"': Yıldızlar
             '"music_wave"': Dalgalar
           PALETTE:
-            '"rave"': Siyah Beyaz
-            '"cool"': Maviler
+            '"rave"': Siyah ve Beyaz
+            '"cool"': Güzel
             '"electronic"': Elektronik
             '"iceCream"': Dondurma
             '"default"': Aydınlık
             '"neon"': Neon
             '"tropical"': Tropikal
-            '"vintage"': Vintage
+            '"vintage"': Bağbozumu
             '"warm"': Kırmızılar
       Dancelab_setDanceSpeed:
         text: "{SPRITE} dans hızını {SPEED} olarak değiştir"
@@ -598,13 +603,13 @@ tr:
             '"bubbles"': Baloncuklar
             '"confetti"': Konfeti
             '"hearts_red"': Kalpler
-            '"music_notes"': Müzik Notaları
+            '"music_notes"': Müzik Notları
             '"pineapples"': Ananaslar
             '"pizzas"': Pizzalar
-            '"smiling_poop"': Kaka
+            '"smiling_poop"': Yorgun Düşürmek
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
-            '"smile_face"': Gülen Yüz
+            '"smile_face"': Gülümsemeler
             '"spotlight"': Spot
             '"color_lights"': Sahne Işıkları
             '"raining_tacos"': Tacolar
@@ -617,16 +622,16 @@ tr:
             '"bubbles"': Baloncuklar
             '"hearts_colorful"': Renkli Kalpler
             '"confetti"': Konfeti
-            '"emojis"': Emoji
+            '"emojis"': Emojiler
             '"hearts_red"': Kalpler
-            '"music_notes"': Müzik Notaları
+            '"music_notes"': Müzik Notları
             '"paint_drip"': Boya Damla
             '"pineapples"': Ananaslar
             '"pizzas"': Pizzalar
-            '"smiling_poop"': Kaka
+            '"smiling_poop"': Yorgun Düşürmek
             '"rain"': Yağmur
             '"floating_rainbows"': Gökkuşağı
-            '"smile_face"': Gülen Yüz
+            '"smile_face"': Gülümsemeler
             '"spotlight"': Spot
             '"color_lights"': Sahne Işıkları
             '"exploding_stars"': Yıldız patlaması
@@ -857,18 +862,18 @@ tr:
             '"mid"': orta
             '"treble"': tiz
       Dancelab_translateStrings:
-        text: çevirmek {STRING}
+        text: çevir {STRING}
         options:
           STRING:
             '"music_wave"': Dalgalar
-            '"ripples"': Dalgalar
+            '"ripples"': Dalgaları
             '"ripples_random"': Rastgele Dalgalar
             '"quads"': Açılar
             '"flowers"': Çiçekler
-            '"popsicles"': Buzlu dondurma
-            '"squiggles"': Squiggles
+            '"popsicles"': Buzparmak
+            '"squiggles"': Karalamalar
             '"growing_stars"': Büyüyen Yıldızlar
-            '"emojis"': Emoji
+            '"emojis"': Emojiler
             '"hearts_colorful"': Kalpler
             '"paint_drio"': Boya Damla
             '"exploding_stars"': Yıldız patlaması
@@ -910,7 +915,7 @@ tr:
             '"left"': sol
             '"down"': aşağı
             '"right"': sağ
-            '"space"': uzay
+            '"space"': alan
             '"enter"': girmek
             '"a"': bir
             '"b"': b
@@ -1138,7 +1143,7 @@ tr:
             '"y"': y konumu
             '"direction"': hareket yönü
       gamelab_setSizes:
-        text: "{SPRITE} {PROPERTY}‘yi %{N} olarak ayarla"
+        text: "{SPRITE} {PROPERTY}‘yi % {N} olarak ayarla"
         options:
           PROPERTY:
             '"scale"': boyut
@@ -1375,13 +1380,13 @@ tr:
         options:
           DANCE:
             MOVES.ClapHigh: Yüksek Alkış
-            MOVES.Clown: Palyaço
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dab
             MOVES.DoubleJam: Çift Aşağı
             MOVES.Drop: Bırak
             MOVES.Floss: Diş ipi
             MOVES.Fresh: Taze
-            MOVES.Roll: Yuvarlanma
+            MOVES.Roll: Vücut Rulo
             MOVES.Kick: Yıldız
             MOVES.ThisOrThat: Şu ya da Bu
             MOVES.Rest: Hiçbiri

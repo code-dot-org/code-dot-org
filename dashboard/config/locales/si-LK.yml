@@ -567,6 +567,8 @@ si:
     support: උපකාර ලබාගන්න
     support_url: "//support.code.org"
     help_resources: උදවු සහ සම්පත්
+  free_response:
+    placeholder: ඔබගේ පිළිතුර මෙතනට ඇතුල් කරන්න
   multi:
     wrong_title: පිළිතුර වැරදියි
     wrong_body: ඔබ ඇතුලත් කල පිළිතුර වැරදියි. කරුණාකර නැවත උත්සාහ කරන්න!

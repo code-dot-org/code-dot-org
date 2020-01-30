@@ -231,6 +231,7 @@ mi:
       artist: Rehetoi
       bounce: Tupana
       calc: Calc
+      dance: Te Paati Kanikani
       eval: Eval
       flappy: Flappy
       frozen: Frozen
@@ -474,6 +475,10 @@ mi:
         kia mahi ai, ā, tiria tō taupānga i te wā poto noa iho.
       audience: Pakeke 13+
       cta: Ako me pēhea
+    dance:
+      title: Te Paati Kanikani
+    dance-2019:
+      title: Te Paati Kanikani
     hoc:
       title: Rīrapa Tauhira
       body: Whakamātauria ngā mahi waiwai o te pūtaiao rorohiko. He miriona tāngata
@@ -561,6 +566,8 @@ mi:
     report_bug: Pūrongotia tētahi Iro
     support: Tono Āwhina
     help_resources: Te Āwhina me ngā Rauemi
+  free_response:
+    placeholder: Whakaurua tō whakautu i konei
   multi:
     wrong_title: Whakautu hē
     wrong_body: E hē ana te whakautu nāu i whakauru. Tēnā whakamātau anō!
