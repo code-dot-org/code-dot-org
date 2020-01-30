@@ -2,7 +2,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
-import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
+import {UnconnectedTeacherDashboardHeaderWithButtons as TeacherDashboardHeaderWithButtons} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeaderWithButtons';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const MOCK_SECTIONS = {
@@ -27,21 +27,27 @@ const DEFAULT_PROPS = {
   openEditSectionDialog: () => {}
 };
 
-describe('TeacherDashboardHeader', () => {
+describe('TeacherDashboardHeaderWithButtons', () => {
   it('renders section name in header', () => {
-    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
     let h1Elements = wrapper.find('h1');
     expect(h1Elements).to.have.lengthOf(1);
     expect(h1Elements.contains('intro to computer science I')).to.equal(true);
   });
 
   it('renders selected section script name', () => {
-    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
     expect(wrapper.contains('Course D (2019)')).to.equal(true);
   });
 
   it('renders dropdown button with links to sections, highlighting current section', () => {
-    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
     let dropdownButton = wrapper.find('DropdownButton');
     expect(dropdownButton).to.have.lengthOf(1);
 
@@ -61,7 +67,9 @@ describe('TeacherDashboardHeader', () => {
   });
 
   it('renders button to edit section details', () => {
-    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
     let editSectionButton = wrapper.findWhere(
       element =>
         element.is('Button') &&
