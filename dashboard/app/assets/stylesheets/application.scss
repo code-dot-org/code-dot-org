@@ -750,8 +750,12 @@ $default-modal-width: 640px;
   background-color: $orange;
 }
 
-#video {
+#videoTabContainer {
   padding: 0;
+}
+
+#video {
+  border-width: 0;
 }
 
 .video-player {
