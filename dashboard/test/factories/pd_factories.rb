@@ -416,14 +416,6 @@ FactoryGirl.define do
     end
   end
 
-  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
-    association :user, factory: :teacher
-
-    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
-    application_year Pd::Application::ApplicationConstants::YEAR_19_20
-    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
-  end
-
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :teacher
