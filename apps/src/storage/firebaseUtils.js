@@ -100,7 +100,7 @@ function getSharedFirebase() {
   if (!sharedFb) {
     if (!config.firebaseSharedAuthToken) {
       throw new Error(
-        'Error connecting to Firebase: Shared token not specified'
+        'Error connecting to Firebase: CDO.firebase_shared_secret not specified'
       );
     }
     sharedFb = new Firebase('https://cdo-v3-shared.firebaseio.com');
