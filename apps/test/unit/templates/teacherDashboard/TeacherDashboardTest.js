@@ -13,7 +13,6 @@ const DEFAULT_PROPS = {
 };
 
 describe('TeacherDashboard', () => {
-
   it('renders TeacherDashboardHeader', () => {
     const wrapper = shallow(<TeacherDashboard {...DEFAULT_PROPS} />);
     expect(wrapper.find('Header')).to.exist;
