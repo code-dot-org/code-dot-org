@@ -5,7 +5,7 @@ import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-var videojs = require('video.js');
+import videojs from 'video.js';
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
 import i18n from '@cdo/locale';
@@ -363,11 +363,15 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   // to expand to its edges.  This is currently implemented by a standalone
   // video.
   let containerDivStyle;
+  let extraVideoStyle = '';
+  let dimensions = '';
   if (playerWidth === '100%' && playerHeight === '100%') {
     containerDivStyle =
       'position: absolute; top: 0; bottom: 0; left: 0; right: 0';
+    extraVideoStyle = 'vjs-fill';
   } else {
     containerDivStyle = '';
+    dimensions = 'width="' + playerWidth + '" height="' + playerHeight + '" ';
   }
 
   var playerCode =
@@ -376,13 +380,11 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     '"><video id="' +
     fallbackPlayerID +
     '" ' +
-    'width="' +
-    playerWidth +
-    '" height="' +
-    playerHeight +
-    '" ' +
+    dimensions +
     (videoInfo.autoplay ? 'autoplay ' : '') +
-    'class="video-js vjs-default-skin vjs-big-play-centered" ' +
+    'class="video-js vjs-default-skin vjs-big-play-centered ' +
+    extraVideoStyle +
+    '" ' +
     'controls preload="auto" ' +
     'poster="' +
     videoInfo.thumbnail +
@@ -395,23 +397,26 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   $('#videoTabContainer').empty();
   $('#videoTabContainer').append(playerCode);
 
-  videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
-  videojs.options.techOrder = ['flash', 'html5'];
+  var videoPlayer = videojs(
+    fallbackPlayerID,
+    {nativeControlsForTouch: true},
+    function() {
+      var $fallbackPlayer = $('#' + fallbackPlayerID);
 
-  var videoPlayer = videojs(fallbackPlayerID, {}, function() {
-    var $fallbackPlayer = $('#' + fallbackPlayerID);
-    var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
-    if (showingErrorMessage) {
-      $fallbackPlayer.addClass('fallback-video-player-failed');
-      if (hasNotesTab()) {
-        openNotesTab();
-      }
+      // Handle a video.js player error.
+      this.on('error', function(e) {
+        $fallbackPlayer.addClass('fallback-video-player-failed');
+        if (hasNotesTab()) {
+          openNotesTab();
+        }
+      });
+
+      // Properly dispose of video.js player instance when hidden.
+      $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
+        videoPlayer.dispose();
+      });
     }
-    // Properly dispose of video.js player instance when hidden
-    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
-      videoPlayer.dispose();
-    });
-  });
+  );
 
   videoPlayer.on('ended', onVideoEnded);
 
