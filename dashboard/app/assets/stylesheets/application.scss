@@ -764,6 +764,10 @@ $default-modal-width: 640px;
   margin: 0;
 }
 
+.vjs-tech:focus, .vjs-poster:focus {
+  outline: 0;
+}
+
 .video-player-rounded-corners {
   border-radius: 10px;
   border-width: 0;
