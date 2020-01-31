@@ -151,8 +151,8 @@ def main
   )
 
   generate_shared_js_file(
-    generate_multiple_constants(
-      %w(COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS),
+    generate_constants(
+      'COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS',
       source_module: Pd::ScholarshipInfoConstants,
       transform_keys: true
     ),
