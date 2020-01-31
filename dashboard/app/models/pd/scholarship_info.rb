@@ -33,9 +33,9 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
   belongs_to :application, class_name: 'Pd::Application::TeacherApplicationBase', foreign_key: :pd_application_id
 
+  validate :course_specific_scholarship_status
   validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
-  validates_inclusion_of :scholarship_status, in: SCHOLARSHIP_STATUSES
   validates_inclusion_of :course, in: COURSE_KEY_MAP.values
 
   def self.update_or_create(user, application_year, course, scholarship_status)
@@ -52,5 +52,12 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   # Translate a SCHOLARSHIP_STATUSES value to a more friendly label
   def self.get_scholarship_label(value)
     SCHOLARSHIP_DROPDOWN_OPTIONS.find {|option| option[:value] == value}[:label]
+  end
+
+  # Confirm scholarship status is valid (course-specific)
+  def course_specific_scholarship_status
+    unless COURSE_SPECIFIC_SCHOLARSHIP_STATUSES[course].include? scholarship_status
+      errors.add(:scholarship_status, 'must be in list of possible statuses.')
+    end
   end
 end
