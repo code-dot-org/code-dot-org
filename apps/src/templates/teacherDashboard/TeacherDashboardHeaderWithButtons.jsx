@@ -38,7 +38,7 @@ const styles = {
   }
 };
 
-class TeacherDashboardHeader extends React.Component {
+class TeacherDashboardHeaderWithButtons extends React.Component {
   static propTypes = {
     sections: PropTypes.object.isRequired,
     selectedSectionId: PropTypes.number.isRequired,
@@ -127,7 +127,7 @@ class TeacherDashboardHeader extends React.Component {
   }
 }
 
-export const UnconnectedTeacherDashboardHeader = TeacherDashboardHeader;
+export const UnconnectedTeacherDashboardHeaderWithButtons = TeacherDashboardHeaderWithButtons;
 
 export default connect(
   state => {
@@ -145,4 +145,4 @@ export default connect(
       openEditSectionDialog: id => dispatch(beginEditingSection(id))
     };
   }
-)(TeacherDashboardHeader);
+)(TeacherDashboardHeaderWithButtons);
