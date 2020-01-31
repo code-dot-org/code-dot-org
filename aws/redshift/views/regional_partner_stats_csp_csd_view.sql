@@ -156,18 +156,18 @@ SELECT distinct
        sa_csd.students as students_csd,
        sa_csd.students_started as students_started_csd,
        sa_csd.students_completed as students_completed_csd,
-       sa_csp.sections + sa_csd.sections as sections,
-       sa_csp.students + sa_csd.students as students,
-       sa_csp.students_started + sa_csd.students_started as students_started,
-       sa_csp.students_completed + sa_csd.students_completed as students_completed,
-       sa_csp.students_female + sa_csd.students_female as students_female,
-       sa_csp.students_gender + sa_csd.students_gender as students_gender,
-       sa_csp.students_urm + sa_csd.students_urm as students_urm,
-       sa_csp.students_black + sa_csd.students_black as students_black,
-       sa_csp.students_hispanic + sa_csd.students_hispanic as students_hispanic,
-       sa_csp.students_native + sa_csd.students_native as students_native,
-       sa_csp.students_hawaiian + sa_csd.students_hawaiian as students_hawaiian,
-       sa_csp.students_race + sa_csd.students_race as students_race
+       coalesce(sa_csp.sections, 0) + coalesce(sa_csd.sections, 0) as sections,
+       coalesce(sa_csp.students, 0) + coalesce(sa_csd.students, 0) as students,
+       coalesce(sa_csp.students_started, 0) + coalesce(sa_csd.students_started, 0) as students_started,
+       coalesce(sa_csp.students_completed, 0) + coalesce(sa_csd.students_completed, 0) as students_completed,
+       coalesce(sa_csp.students_female, 0) + coalesce(sa_csd.students_female, 0) as students_female,
+       coalesce(sa_csp.students_gender, 0) + coalesce(sa_csd.students_gender, 0) as students_gender,
+       coalesce(sa_csp.students_urm, 0) + coalesce(sa_csd.students_urm, 0) as students_urm,
+       coalesce(sa_csp.students_black, 0) + coalesce(sa_csd.students_black, 0) as students_black,
+       coalesce(sa_csp.students_hispanic, 0) + coalesce(sa_csd.students_hispanic, 0) as students_hispanic,
+       coalesce(sa_csp.students_native, 0) + coalesce(sa_csd.students_native, 0) as students_native,
+       coalesce(sa_csp.students_hawaiian, 0) + coalesce(sa_csd.students_hawaiian, 0) as students_hawaiian,
+       coalesce(sa_csp.students_race, 0) + coalesce(sa_csd.students_race, 0) as students_race
 FROM all_trained_taught_combos d
 LEFT JOIN names n
       ON d.studio_person_id = n.studio_person_id
