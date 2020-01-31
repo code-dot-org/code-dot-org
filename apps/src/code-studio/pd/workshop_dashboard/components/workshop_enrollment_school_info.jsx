@@ -106,11 +106,6 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     return strs.join(', ');
   }
 
-  // Gets
-  courseAbbreviation(course) {
-    return CourseKeyMap[course];
-  }
-
   // Gets variable containing appropriate list of dropdown options given a course
   scholarshipDropdownOptions(course) {
     return CourseSpecificScholarshipDropdownOptions[course];
@@ -121,9 +116,7 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       return <td>{enrollment.scholarship_ineligible_reason}</td>;
     }
 
-    let workshopCourseAbbreviation = this.courseAbbreviation(
-      this.props.workshopCourse
-    );
+    let workshopCourseAbbreviation = CourseKeyMap[this.props.workshopCourse];
     let dropdownOptions = this.scholarshipDropdownOptions(
       workshopCourseAbbreviation
     );
