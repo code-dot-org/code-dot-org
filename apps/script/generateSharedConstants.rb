@@ -90,6 +90,7 @@ def main
     generate_multiple_constants(
       %w(
         COURSES
+        COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
         LEGACY_SUBJECTS
