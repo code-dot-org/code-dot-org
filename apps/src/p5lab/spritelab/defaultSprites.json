@@ -202,7 +202,7 @@
     },
     "b3459b90-8953-4229-9826-9a67f46f3349": {
       "name": "pig",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/5FpA35UqhK1IFv9vJUyd8XMCL2pMiOTL/category_animals/pig.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3/category_animals/pig.png",
       "frameSize": {
         "x": 288,
         "y": 257
@@ -210,7 +210,7 @@
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "5FpA35UqhK1IFv9vJUyd8XMCL2pMiOTL"
+      "version": "A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3"
     },
     "f3899dc4-8a21-46cf-8fe1-19de2f851a20": {
       "name": "bell",
@@ -658,7 +658,7 @@
     },
     "9a39f1aa-2b4a-4587-ba2a-36f4df582f99": {
       "name": "target",
-      "sourceUrl": "https://studio.code.org/api/v1/animation-library/YlULbfssTPClW8I44AvKP4LP4bt_DiKR/category_gameplay/target_red3_outline.png",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC/category_gameplay/target_red3_outline.png",
       "frameSize": {
         "x": 142,
         "y": 142
@@ -666,7 +666,7 @@
       "frameCount": 1,
       "looping": true,
       "frameDelay": 2,
-      "version": "YlULbfssTPClW8I44AvKP4LP4bt_DiKR"
+      "version": "Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC"
     },
     "84e4e25b-ab5c-43fe-8c54-d0a2d89787d4": {
       "name": "cactus",
