@@ -30,6 +30,7 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
+import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -78,11 +79,13 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool
+    showStandardsIntroDialog: PropTypes.bool,
+    getStandardsCoveredForScript: PropTypes.func.isRequired
   };
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
+    this.props.getStandardsCoveredForScript(this.props.scriptId);
   }
 
   componentDidUpdate() {
@@ -271,6 +274,9 @@ export default connect(
     },
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
+    },
+    getStandardsCoveredForScript(scriptId) {
+      dispatch(getStandardsCoveredForScript(scriptId));
     }
   })
 )(SectionProgress);
