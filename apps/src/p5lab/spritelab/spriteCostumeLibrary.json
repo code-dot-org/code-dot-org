@@ -563,6 +563,24 @@
         "y": 300
       }
     },
+    "category_animals/pig": {
+      "name": "pig",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 288,
+        "y": 257
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2020-02-01 00:38:33 UTC",
+      "pngLastModified": "2020-02-01 00:38:33 UTC",
+      "version": "A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3",
+      "sourceUrl": "/api/v1/animation-library/spritelab/A8YFs.SdlbWk..8K5pSt_fGAc.F_oGE3/category_animals/pig.png",
+      "sourceSize": {
+        "x": 288,
+        "y": 257
+      }
+    },
     "category_animals/pig_pink": {
       "name": "pig_pink",
       "frameCount": 1,
@@ -3407,6 +3425,24 @@
         "y": 119
       }
     },
+    "category_gameplay/target_red3_outline": {
+      "name": "target_red3_outline",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 142,
+        "y": 142
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "jsonLastModified": "2020-02-01 00:44:11 UTC",
+      "pngLastModified": "2020-02-01 00:44:11 UTC",
+      "version": "Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC",
+      "sourceUrl": "/api/v1/animation-library/spritelab/Ni9UlmGl0cBLI14MCNOniT4tNaMJJSzC/category_gameplay/target_red3_outline.png",
+      "sourceSize": {
+        "x": 142,
+        "y": 142
+      }
+    },
     "category_gameplay/textGameOver": {
       "name": "textGameOver",
       "frameCount": 1,
@@ -6148,6 +6184,7 @@
       "category_animals/fly",
       "category_animals/ladybug",
       "category_animals/mouse",
+      "category_animals/pig",
       "category_animals/snail"
     ],
     "annoyed": [
@@ -6401,6 +6438,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -6518,6 +6556,7 @@
       "category_animals/mouse",
       "category_animals/mouse_gray",
       "category_animals/orange_cat",
+      "category_animals/pig",
       "category_animals/pig_pink",
       "category_animals/polar_bear",
       "category_animals/pterodactyl",
@@ -6685,6 +6724,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -6908,6 +6948,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -7318,6 +7359,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -8102,6 +8144,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -8385,6 +8428,9 @@
     "pick": [
       "category_generic_items/pick",
       "category_tools/pick"
+    ],
+    "pig": [
+      "category_animals/pig"
     ],
     "pig_pink": [
       "category_animals/pig_pink"
@@ -8674,6 +8720,7 @@
       "category_gameplay/medalBronze",
       "category_gameplay/medalGold",
       "category_gameplay/medalSilver",
+      "category_gameplay/target_red3_outline",
       "category_gameplay/textGameOver",
       "category_gameplay/textGetReady",
       "category_gameplay/ufoBlue",
@@ -8706,6 +8753,9 @@
     "talking": [
       "category_characters/kid_22",
       "category_characters/kid_22_side"
+    ],
+    "target_red3_outline": [
+      "category_gameplay/target_red3_outline"
     ],
     "teapot": [
       "category_generic_items/teapot"
