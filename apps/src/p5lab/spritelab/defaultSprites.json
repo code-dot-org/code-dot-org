@@ -142,15 +142,15 @@
     },
     "e4b42ce0-9510-46c2-910c-0c4b69cf612c": {
       "name": "elephant",
-      "sourceUrl": "https://studio.code.org/v3/animations/pPIy6SojmqKru9-me0lakrIb69iO-IfiboxR51iuq8c/e4b42ce0-9510-46c2-910c-0c4b69cf612c.png?version=ofSrM4hsFsE7Q_k3D7c8Ds7.JOZvkIBn",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ/category_animals/elephant2.png",
       "frameSize": {
         "x": 99,
         "y": 97
       },
       "frameCount": 1,
       "looping": true,
-      "frameDelay": 12,
-      "version": "ofSrM4hsFsE7Q_k3D7c8Ds7.JOZvkIBn"
+      "frameDelay": 2,
+      "version": "jK3q6UNbOMNbaiWBwclkhL3D8isE1cLQ.JOZvkIBn"
     },
     "31942aad-c011-4676-bc37-3385ba6dfdbd": {
       "name": "fish",
@@ -694,15 +694,15 @@
     },
     "2dc1905c-3851-4590-b4a7-52167d05c64a": {
       "name": "soap",
-      "sourceUrl": "https://studio.code.org/v3/animations/pPIy6SojmqKru9-me0lakrIb69iO-IfiboxR51iuq8c/2dc1905c-3851-4590-b4a7-52167d05c64a.png?version=NAX11vlHDlNEpW2f0OJF4DDOYeAafQfB",
+      "sourceUrl": "https://studio.code.org/api/v1/animation-library/spritelab/RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ/category_generic_items/soap.png",
       "frameSize": {
         "x": 97,
         "y": 97
       },
       "frameCount": 1,
       "looping": true,
-      "frameDelay": 12,
-      "version": "NAX11vlHDlNEpW2f0OJF4DDOYeAafQfB"
+      "frameDelay": 2,
+      "version": "RV2Re1P6P8WVQ_g_HytRqSBokiQG1uUZ"
     }
   }
 }
