@@ -1,8 +1,10 @@
 import testImageAccess from '../code-studio/url_test';
 
-export function loadVideos(force_fallback) {
-  if (force_fallback) {
-    setupVideos('fallback');
+// forcePlayer can be "youtube", "fallback", or false if we just want to
+// detect the appropriate player.
+export function loadVideos(forcePlayer) {
+  if (forcePlayer) {
+    setupVideos(forcePlayer);
   } else {
     testImageAccess(
       'https://www.youtube-nocookie.com/favicon.ico?' + Math.random(),
