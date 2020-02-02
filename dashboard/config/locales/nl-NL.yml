@@ -68,6 +68,7 @@ nl:
   join_section:
     code:
       placeholder: Sectiecode (ABCDEF)
+      instructions_short: Voer je code van 6 letters van de sectie in
   add_hint_form:
     placeholder: Voer hier uw hint
     submit: Hint toevoegen
@@ -329,6 +330,7 @@ nl:
       signin: Aanmelden
       signup: Maak een account aan
       already_registered: Al aangemeld?
+      pair_programming: Programmeren in Tweetallen
       team: Team
       driver: Ingelogd
       navigator: Navigator
@@ -354,6 +356,7 @@ nl:
       minecraft_hero: Minecraft Held
       playlab: Speel Lab
       playlab_k1: Play Lab (Peuter)
+      scratch: Scratch
       starwars: Star Wars
       weblab: Web Lab
     popup:
@@ -398,6 +401,7 @@ nl:
     email_confirm_needed_required: 'Je e-mailadres %{email} is nog niet bevestigd:'
     email_confirm_wrong_email: "(Verkeerde e-mailadres?)"
     email_resend_confirm: Verstuur de bevestigingsinstructie nog een keer
+    new_email_hint: "(Wees er zeker van dat je emails kan ontvangen op dit email adres.)"
     new_password_hint: "(laat leeg als je het niet wilt veranderen)"
     current_password_hint: "(we hebben je huidige wachtwoord nodig om je veranderingen
       te bevestigen)"
@@ -693,6 +697,8 @@ nl:
     help_support: Hulp en ondersteuning
     documentation: Documentatie
     tutorials: Tutorials
+  free_response:
+    placeholder: Voer uw antwoord hier in
   multi:
     wrong_title: Onjuist antwoord
     wrong_body: Het antwoord dat je hebt ingevoerd is niet correct.  Probeer het opnieuw!
@@ -894,6 +900,7 @@ nl:
     disclaimer: Disclaimer
   hoc_download:
     instructions_headline: Geen Internet?
+    minecraft_name: Minecraft Uur Code
     download_in_Chinese: 'Download in het Chinees:'
     download_in_Croatian: 'Download in het Kroatisch:'
     download_in_Dutch: 'Downloaden in het Nederlands:'
@@ -923,8 +930,10 @@ nl:
         la: Taalvaardigheden
       resources:
         bootstrap: Bootstrap
+        khan: Khan Academy
         kodable: Kodable
         lightbot: LightBot
+        scratch: Scratch
       robotics:
         kodable: Kodable
       workshop_course:
@@ -936,6 +945,9 @@ nl:
   cookie_banner:
     accept: Ik ga akkoord
   gdpr_dialog:
+    heading: Gaat u akkoord met het gebruik van een website die in de Verenigde Staten
+      gevestigd is?
     message: Gegevens over uw gebruik van deze site kunnen worden verzonden naar en
       opgeslagen of verwerkt worden in de Verenigde Staten.
     true: Ja
+  page_not_found_title: Pagina niet gevonden

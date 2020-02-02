@@ -11052,6 +11052,8 @@ fil:
               name: bagong yugto
             Dance Party:
               name: Dance Party
+          description_short: Itinatampok sina Katy Perry, Madonna, J. Balvin, Sia,
+            Keith Urban, Ciara, at dagdag pa na 25!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -14552,6 +14554,10 @@ fil:
           stages:
             new stage:
               name: bagong yugto
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: Pagdedebug
         csl-vn:
           stages:
             Programming in Maze:
@@ -14684,7 +14690,7 @@ fil:
           stages:
             new stage:
               name: bagong yugto
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Mga conditional
@@ -14716,3 +14722,21 @@ fil:
               name: Naka-Nest na mga Loops sa Frozen
             Functions with Artist:
               name: Mga Function sa Artist
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Mga conditional
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Mga conditional
+            Private and Personal Information:
+              name: Pribado at Personal na Impormasyon
+        csp8-pilot:
+          stages:
+            new stage:
+              name: bagong yugto
+            Create PT - Complete the Task:
+              name: Lumkiha ng PT - Kompletuhin ang Gawain

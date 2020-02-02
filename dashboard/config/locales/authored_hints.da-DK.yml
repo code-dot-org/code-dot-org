@@ -229,6 +229,8 @@ da-DK:
         validation: "**Hvordan består jeg dette niveau?** \n\n-   Brug `når venstre
           pil trykkes ned`-blokken, for at få robotten til at gøre et dansetrin, når
           du trykker på den. \n\n_Dette niveau slutter efter 7 takter._"
+      Dance_Party_extras_alternate_2019:
+        alternate: '''Skift'' blokken er i kategorien "Dansere".'
       Function intro Ryan:
         Function_intro_Ryan_a: Du kan kalde en funktion mange gange i dit program!  Prøv
           at kalde den to gange for at løse opgaven.
@@ -354,6 +356,61 @@ da-DK:
       course1_maze_seq_challenge1:
         courseA_maze_seq_challenge2_a: Prøv at tælle felterne med din finger. Husk
           ikke at tælle det felt hvor du begynder!
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "Få pingvinen vist, når du klikker på
+          Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Få spøgelset vist, når du klikker på
+          Pingvinen!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Få monsteret vist, når du klikker på
+          spøgelset!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Få robotten vist, når du klikker på
+          monsteret!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      course1_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "Du kan få en fugl til at synge.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kan få en robot til at bippe.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kan få et monster til at knurre.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       course2_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: Hvis du sender mig baglæns, så være
           ekstra opmærksom på, jeg vender den rigtige vej!
@@ -824,6 +881,294 @@ da-DK:
               <title name="SPRITE">1</title>
               <title name="DIR">2</title>
             </block></next></block></xml>
+      courseA_playLab_events5:
+        courseA_playLab_events5_a: "Her er handlingsblokken, som du skal bruge til,
+          at bevæge Jorge op eller ned:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Ved du, at du kan ændre på tasten til en handling, ved at klikke på pilen i blokken og vælge en ny?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_a: "Her er handlingsblokken, som du skal bruge til,
+          at bevæge Jorge op eller ned:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Ved du, at du kan ændre på tasten til en handling, ved at klikke på pilen i blokken og vælge en ny?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_a: "Her er handlingsblokken, som du skal bruge til,
+          at bevæge Jorge op eller ned:\n\n<xml><block type=\"studio_whenArrow\">\n
+          \   <title name=\"VALUE\">up</title>\n  </block></xml>\n\nand \n\n<xml><block
+          type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>"
+        courseA_playLab_events5_b: |-
+          Ved du, at du kan ændre på tasten til en handling, ved at klikke på pilen i blokken og vælge en ny?
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
+      courseA_playLab_events6:
+        courseA_playLab_events6_a: |-
+          Her er den grønne 'event' blok, som du skal bruge for at få Jorge til, at gøre noget når du klikker på den:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Her er den blok du skal bruge til at ændre baggrunden:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Her er den blok som du kan bruge til at spille en tilfældig lyd:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_a: |-
+          Her er den grønne 'event' blok, som du skal bruge for at få Jorge til, at gøre noget når du klikker på den:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Her er den blok du skal bruge til at ændre baggrunden:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Her er den blok som du kan bruge til at spille en tilfældig lyd:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_a: |-
+          Her er den grønne 'event' blok, som du skal bruge for at få Jorge til, at gøre noget når du klikker på den:
+
+          <xml><block type="studio_whenSpriteClicked">
+              <title name="SPRITE">1</title>
+            </block></xml>
+        courseA_playLab_events6_b: |-
+          Her er den blok du skal bruge til at ændre baggrunden:
+
+          <xml><block type="studio_setBackground">
+              <title name="VALUE">random</title>
+            </block></xml>
+        courseA_playLab_events6_c: |-
+          Her er den blok som du kan bruge til at spille en tilfældig lyd:
+
+          <xml><block type="studio_playSound">
+              <title name="SOUND">random</title>
+            </block></xml>
+      courseA_playLab_events7:
+        courseA_playLab_events7_a: |-
+          Brug den blok til at styre hvad der skal ske, når figurer støder sammen.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2018:
+        courseA_playLab_events7_a: |-
+          Brug den blok til at styre hvad der skal ske, når figurer støder sammen.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playLab_events7_2019:
+        courseA_playLab_events7_a: |-
+          Brug den blok til at styre hvad der skal ske, når figurer støder sammen.
+
+          <xml><block type="studio_whenSpriteCollided">
+              <title name="SPRITE1">1</title>
+              <title name="SPRITE2">0</title>
+            </block></xml>
+      courseA_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_a: "Få pingvinen vist, når du klikker på
+          Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Få spøgelset vist, når du klikker på
+          Pingvinen!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Få monsteret vist, når du klikker på
+          spøgelset!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Få robotten vist, når du klikker på
+          monsteret!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Tilsidst skal du få troldmanden vist,
+          når du klikker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2018:
+        courseA_playlab_events_challenge1_a: "Få pingvinen vist, når du klikker på
+          Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Få spøgelset vist, når du klikker på
+          Pingvinen!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Få monsteret vist, når du klikker på
+          spøgelset!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Få robotten vist, når du klikker på
+          monsteret!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Tilsidst skal du få troldmanden vist,
+          når du klikker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1_2019:
+        courseA_playlab_events_challenge1_a: "Få pingvinen vist, når du klikker på
+          Robin!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Få spøgelset vist, når du klikker på
+          Pingvinen!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Få monsteret vist, når du klikker på
+          spøgelset!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Få robotten vist, når du klikker på
+          monsteret!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Tilsidst skal du få troldmanden vist,
+          når du klikker på Spiff!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge2:
+        courseA_playlab_events_challenge2_a: "Du kan få en fugl til at synge.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kan få en robot til at bippe.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kan få et monster til at knurre.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2018:
+        courseA_playlab_events_challenge2_a: "Du kan få en fugl til at synge.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kan få en robot til at bippe.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kan få et monster til at knurre.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
+      courseA_playlab_events_challenge2_2019:
+        courseA_playlab_events_challenge2_a: "Du kan få en fugl til at synge.\n\n<xml>
+          \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Du kan få en robot til at bippe.\n\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Du kan få et monster til at knurre.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+              <title name="SPRITE">5</title>
+              <next>
+                <block type="studio_setSpriteEmotion">
+                  <title name="SPRITE">5</title>
+                  <title name="VALUE">2</title>
+                  <next>
+                    <block type="studio_saySprite">
+                      <title name="SPRITE">5</title>
+                      <title name="TEXT">Roar!</title>
+                      <next>
+                        <block type="studio_setSpriteEmotion">
+                          <title name="SPRITE">5</title>
+                          <title name="VALUE">0</title>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block></xml>
       courseB_collector_loops2:
         courseB_collector_loops2_a: Du skal bevæge den, før den kan samle skatten
           op.
@@ -842,6 +1187,30 @@ da-DK:
       courseB_collector_loops4_2019:
         courseB_collector_loops4_b: For at skifte hvor langt Laurel gå, så skal du
           ændre antallet af gange, som løkke skal gentages.
+      courseB_collector_loops_challenge2a:
+        courseB_collector_loops_challenge2a_a: Hvis der er noget der går galt, så
+          prøv at finde fejlen. Giv ikke op!
+        courseB_collector_loops_challenge2a_b: Prøv at se denne mulighed for at komme
+          gennem labyrinten. Kan du se et mønster som du kan gentage?
+        courseB_collector_loops_challenge2a_c: For at samle alle skattene, må du enten
+          tilføje to  <xml> <block type="collector_collect"/></xml> blokke inden i
+          en løkke, eller sætte blokken ind i dens egen 'gentag' blok.
+      courseB_collector_loops_challenge2a_2018:
+        courseB_collector_loops_challenge2a_a: Hvis der er noget der går galt, så
+          prøv at finde fejlen. Giv ikke op!
+        courseB_collector_loops_challenge2a_b: Prøv at se denne mulighed for at komme
+          gennem labyrinten. Kan du se et mønster som du kan gentage?
+        courseB_collector_loops_challenge2a_c: For at samle alle skattene, må du enten
+          tilføje to  <xml> <block type="collector_collect"/></xml> blokke inden i
+          en løkke, eller sætte blokken ind i dens egen 'gentag' blok.
+      courseB_collector_loops_challenge2a_2019:
+        courseB_collector_loops_challenge2a_a: Hvis der er noget der går galt, så
+          prøv at finde fejlen. Giv ikke op!
+        courseB_collector_loops_challenge2a_b: Prøv at se denne mulighed for at komme
+          gennem labyrinten. Kan du se et mønster som du kan gentage?
+        courseB_collector_loops_challenge2a_c: For at samle alle skattene, må du enten
+          tilføje to  <xml> <block type="collector_collect"/></xml> blokke inden i
+          en løkke, eller sætte blokken ind i dens egen 'gentag' blok.
       courseC_maze_debugging2:
         courseC_maze_debugging2_c: Kan du ikke finde ud af hvad der er galt? Prøv
           at køre koden flere gange for at se hvad der sker.
@@ -860,5 +1229,3 @@ da-DK:
       courseC_maze_debugging3_2019:
         courseC_maze_debugging3_b: Kan du ikke finde ud af hvad der er galt? Prøv
           at køre koden flere gange for at se hvad der sker.
-      Dance_Party_extras_alternate_2019:
-        alternate: '''Skift'' blokken er i kategorien "Dansere".'

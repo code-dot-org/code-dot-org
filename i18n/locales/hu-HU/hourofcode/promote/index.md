@@ -22,7 +22,7 @@ Küldd el ezt az [e-mailt]({{ promote/sample_emails }}) az iskolaigazgatónak.
 
 ## 4. Népszerűsítsd a Kódolás óráját a közösségben
 
-Toborozz [helyi csapatot]({{ promote/sample_emails }}) - ami lehet akár fiú/lány cserkész klub, egyházi, egyetemi vagy veterán csoport, szakszervezet, sőt akár néhány barát is. Nem kell az iskolába járnod ahhoz, hogy új készségeket sajátíts el. Használt fel ezeket a [plakátokat, bannereket, matricákat, videókat és egyéb tartalmakat](/promote/resources) arra, hogy megszervezd a saját eseményedet.
+Toborozz [helyi csapatot]({{ promote/sample_emails }}) - ami lehet akár fiú/lány cserkész klub, egyházi, egyetemi vagy veterán csoport, szakszervezet, sőt akár néhány barát is. Nem kell iskolába járnod ahhoz, hogy új készségeket sajátíts el. Használt fel ezeket a [plakátokat, bannereket, matricákat, videókat és egyéb tartalmakat](/promote/resources) arra, hogy megszervezd a saját eseményedet.
 
 ## 5. Kérj meg egy helyi választott vezetőt, hogy támogassa a Kódolás órája kezdeményezést
 

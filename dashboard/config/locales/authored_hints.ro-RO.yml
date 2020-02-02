@@ -1089,6 +1089,8 @@ ro-RO:
           -   Folosește blocul `când se apasă săgeata stânga` pentru a-l face pe Robot să execute o mișcare de dans când îl apeși.
 
           _Acest nivel se termină după 7 măsuri._"
+      Dance_Party_extras_alternate_2019:
+        alternate: Blocul alternează este în categoria „Dansatori”.
       NEW Course 4 Artist Functions 13:
         NEW_Course_4_Artist_Functions_13_a: Încearcă să editezi funcţia `desenează
           o linie de pătrate` pentru a nu fi nevoie să o apelezi de două ori.
@@ -2265,5 +2267,3 @@ ro-RO:
           Dacă puzzle-ul pare a fi o provocare, încercați să vă construiți funcția câte puțin de fiecare dată.
 
           Adăugați câteva blocuri, apoi încercați să vedeți ce se întâmplă. Adăugați mai multe, apoi încercați din nou. În curând, veți reuși!
-      Dance_Party_extras_alternate_2019:
-        alternate: Blocul alternativ se află în categoria „Dansatori”.

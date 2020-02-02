@@ -2216,29 +2216,29 @@ pt-BR:
           _Esta fase termina após quatro compassos._
         challenges: |-
           **Desafios opcionais**
+
           \*Escolha uma música diferente para tocar.
-          \*Escolha um dançarino(a) diferente que se pareça com um alce!
           \*Renomeie seu(sua) dançarino(a).
       CourseD_Dance_Party_02:
         validation: |-
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       CourseD_Dance_Party_03:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
       CourseD_Dance_Party_04:
         validation: |-
           **Como passar desta fase?**
 
           \*Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
 
-          _Esta fase termina após 10 compassos._
+          _Esta fase termina após 9 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2261,7 +2261,7 @@ pt-BR:
 
           -   Dois dançarinos precisam ter um tamanho diferente de 100.
 
-          _Esta fase termina após seis compassos._
+          _Esta fase termina após 5 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2272,37 +2272,37 @@ pt-BR:
 
           -   Altere a tonalidade de pelo menos um(a) dançarino(a).
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_10:
         validation: |-
           **Como passar desta fase?**
 
           -   As propriedades de dois ou mais dançarinos devem mudar.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11_5:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11b:
         validation: |-
           **Como passar desta fase?**
 
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseE_HOC 2018 Level_10:
-        voyage_aquatic_10a: Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Veja as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?
       CourseE_HOC 2018 Level_7a:
         aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
@@ -2342,7 +2342,7 @@ pt-BR:
           -   Ambos os dançarinos devem executar um movimento.
           -   Você deve pressionar as teclas de seta.
 
-          _Este nível termina após 4 compassos._
+          _Este nível termina após 6 compassos._
         challenges: |-
           \*\* Desafio opcional \*\*
 
@@ -2352,14 +2352,14 @@ pt-BR:
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       Dance_2019_05:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
         challenges: |-
           \*\* Desafio opcional \*\*
 
@@ -2428,29 +2428,29 @@ pt-BR:
           _Esta fase termina após quatro compassos._
         challenges: |-
           **Desafios opcionais**
+
           \*Escolha uma música diferente para tocar.
-          \*Escolha um dançarino(a) diferente que se pareça com um alce!
           \*Renomeie seu(sua) dançarino(a).
       Dance_Party_02:
         validation: |-
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       Dance_Party_03:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
       Dance_Party_04:
         validation: |-
           **Como passar desta fase?**
 
           \*Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
 
-          _Esta fase termina após 10 compassos._
+          _Esta fase termina após 9 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2480,7 +2480,7 @@ pt-BR:
 
           -   Dois dançarinos precisam ter um tamanho diferente de 100.
 
-          _Esta fase termina após seis compassos._
+          _Esta fase termina após 5 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2491,35 +2491,35 @@ pt-BR:
 
           -   Altere a tonalidade de pelo menos um(a) dançarino(a).
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_10:
         validation: |-
           **Como passar desta fase?**
 
           -   As propriedades de dois ou mais dançarinos devem mudar.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11_5:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11b:
         validation: |-
           **Como passar desta fase?**
 
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_extras_alternate_2019:
         alternate: O bloco alternativo está na categoria "Dançarinos".
       Function intro Ryan:
@@ -2533,7 +2533,7 @@ pt-BR:
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
           seu programa! Tente executá-la duas vezes para resolver este enigma.
       HOC 2018 Level_10:
-        voyage_aquatic_10a: Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Veja as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?
       HOC 2018 Level_7a:
         aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
@@ -2999,7 +2999,7 @@ pt-BR:
         behaviors_hint1: Voce pode criar um novo comportamento que usa duas ações
           diferentes ou juntar dois comportamentos existentes.
         sprites_idea1: |-
-          Por diversão, você usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
+          Por diversão, você pode usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
 
           ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
 
@@ -4237,19 +4237,19 @@ pt-BR:
           </value>
           </block></xml>
       courseA_artist_loops2:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
           para resolver essa charada.
       courseA_artist_loops2_2018:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
           para resolver essa charada.
       courseA_artist_loops2_2019:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
@@ -4491,7 +4491,7 @@ pt-BR:
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: |-
-          Experimente usar um laço
+          Experimente usar um laço de repetição
 
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>!
         courseA_collector_loops3_b: Lembre-se, você pode colocar mais de 1 bloco dentro
@@ -4732,7 +4732,7 @@ pt-BR:
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
           oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
-          \ blocos <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
+          <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
@@ -7785,9 +7785,8 @@ pt-BR:
         courseC_artist_loops2a_b: Clique no número no topo do laço `repetir` para
           mudar quantas vezes ele repete.
       courseC_artist_loops2a_2019:
-        courseC_artist_loops2a_a: Dentro do seu loop, você vai querer saltar para
-          200 mais de 200 para baixo, em seguida, desenhe o adesivo do pássaro, em
-          seguida, gire 30 graus.
+        courseC_artist_loops2a_a: Dentro do seu laço de repetição, você vai querer
+          pular para o meio, depois desenhe um adesivo.
         courseC_artist_loops2a_b: Clique no número no topo do laço `repetir` para
           mudar quantas vezes ele repete.
       courseC_artist_loops3a:
@@ -7803,8 +7802,41 @@ pt-BR:
       courseC_artist_loops3a_2019:
         courseC_artist_loops3a_a: Você vai querer adicionar apenas um bloco dentro
           do seu loop, após o adesivo do pássaro.
-        courseC_artist_loops3a_b: Use o menu suspenso no bloco 'desenhar adesivo'
-          para encontrar o adesivo de morcego.
+        courseC_artist_loops3a_b: |-
+          Seu programa deve ficar assim!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          Você pode usar os adesivos que quiser!
       courseC_artist_loops4a:
         courseC_artist_loops4a_a: "Use este bloco para pular para frente: \n\n<xml>\n<block
           type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title
@@ -8671,6 +8703,30 @@ pt-BR:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
           milho` quantas vezes precisar, depois `virar à direita` em cada esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          Após colher os dois primeiros milhos, você pode usar a repetição aninhada para pegar as próximas oito espigas.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
@@ -8803,19 +8859,19 @@ pt-BR:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging4_2019:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging5:
         courseC_maze_debugging5_a: "Existem muitos blocos úteis no espaço de trabalho.
@@ -12596,6 +12652,8 @@ pt-BR:
         courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
           de `repetição` deve repetir três vezes.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Tente usar os blocos de repetição `repita` ou `enquanto`
+          aninhados para resolver este desafio.
         courseE_bee_concept3a_b: Se você não consegue descobrir onde colocar os laços
           de repetições, tente escrever seu código passo a passo e procurar por padrões.
       courseE_bee_concept4:
@@ -14253,15 +14311,200 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables4_2019:
-        courseF_artist_variables4_a: Seu código não será muito diferente do que foi
-          no último desafio, exceto que você vai precisar virar o artista para que
-          ele pule para baixo, para então virá-lo de volta para que esteja pronto
-          para desenhar o próximo triângulo.
+        courseF_artist_variables4_a: Seu código não será muito diferente do que estava
+          no último desafio, exceto que você precisará virar o artista para baixo,
+          então volte-o para ficar pronto para saltar novamente.
         courseF_artist_variables4_c: |-
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables5:
         courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
           o mesmo que a primeira metade, exceto você estará virando para _esquerda_,
@@ -16127,7 +16370,7 @@ pt-BR:
           </block></xml>
       courseF_bee_variables_4_2019:
         courseF_bee_variables_4_2019_1: Ao invés de subtrair 1 de `obter`, adicione
-          1 a cada vez. Qual deve ser o valor de partida que a variável deverá ter?
+          1 a cada vez. Qual deve ser o valor que a variável terá primeiro?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Você vai querer substituir as palavras “O que
           devo gritar?” no bloco verde com "Objetivo!”
@@ -16352,7 +16595,8 @@ pt-BR:
         iceage_click_hello_a: Adicione um ou mais blocos `personagem 1 say` ao evento
           `quando clicado` para completar este desafio.
       iceage_free_play:
-        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
+        iceage_free_play_a: 'Você pode fazer com que Sid e Manny tenham uma luta de
+          Cristal de Gelo?  '
         iceage_free_play_b: Faça Granny perseguir Diego. Termine o jogo como uma vitória
           se ela o capturar.
         iceage_free_play_c: Você consegue fazer Sid jogar flocos de neve em Diego

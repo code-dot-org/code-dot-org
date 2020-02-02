@@ -1340,6 +1340,8 @@ sk-SK:
         a poliam!
       course2_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
         jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      course4_artist_binary_challenge1: V tejto úlohe môžeš použiť každú binárnu hodnotu
+        (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       course4_artist_binary_challenge2: |-
         V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
 
@@ -2601,6 +2603,87 @@ sk-SK:
         ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png) _"Pokračuj!"_
 
         Použi, čo si sa zatiaľ naučil a pozbieraj všetok šrot!
+      courseD_artist_1_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_“Ahoj,
+        som Elza z Arendellu, pomôž mi nakresliť tvar.\"_\n\nNakresli šesťuholník
+        so stranami dlhými 50 pixelov.  \n\n* * *\n\nAby si nakreslil šesťuholník,
+        potrebuješ: \n\n-   posunúť sa dopredu o **50** pixelov\n-   otočiť sa vpravo
+        o **60** stupňov\n-   zopakovať to **6** krát"
+      courseD_artist_1_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_“Ahoj,
+        som Elza z Arendellu, pomôž mi nakresliť tvar.\"_\n\nNakresli šesťuholník
+        so stranami dlhými 50 pixelov.  \n\n* * *\n\nAby si nakreslil šesťuholník,
+        potrebuješ: \n\n-   posunúť sa dopredu o **50** pixelov\n-   otočiť sa vpravo
+        o **60** stupňov\n-   zopakovať to **6** krát"
+      courseD_artist_2_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Dobrá
+        práca!\"_\n\nZa šesťuholníkom sa otoč vpravo o **60** stupňov a nakresli úsečku
+        dlhú **150** pixelov.   \n\nDokonči tak, že umiestniš Elzu do stredu herného
+        poľa, pričom použiješ <xml><block type=\"jump_to\"><title name=\"VALUE\">middle
+        center</title></block></xml> block."
+      courseD_artist_2_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)_\"Dobrá
+        práca!\"_\n\nZa šesťuholníkom sa otoč vpravo o **60** stupňov a nakresli úsečku
+        dlhú **150** pixelov.   \n\nDokonči tak, že umiestniš Elzu do stredu herného
+        poľa, pričom použiješ <xml><block type=\"jump_to\" block-text=\"jump to the
+        middle center position\"><title name=\"VALUE\">middle center</title></block></xml>
+        block."
+      courseD_artist_3_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Skús vytvoriť snehovú vločku.”_
+
+        Na vytvorenie snehovej vločky z tohto kódu, vnor celý kód do vnútra `opakujúceho sa` cyklu a spusti ho dokopy **6** krát. Mal by ti na to stačiť jeden blok.
+      courseD_artist_3_2018_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _Skús vytvoriť snehovú vločku.”_
+
+        Na vytvorenie snehovej vločky z tohto kódu, vnor celý kód do vnútra `opakujúceho sa` cyklu a spusti ho dokopy **6** krát. Mal by ti na to stačiť jeden blok.
+      courseD_artist_4_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Skús naše snehové vločky ozvláštniť!"_
+
+        **Pre inšpiráciu:** Kam potrebuješ pridať kód, ak chceš nakresliť malý štvorec na vrchu každej dlhej úsečky?
+
+        * * *
+
+        Pri tejto úlohe môžeš skúšať čokoľvek chceš, ale mám nápad:
+
+        Skús vytvoriť malý štvorec na konci každej úsečky
+
+        -   každá strana by mala byť dlhá 15 pixelov
+        -   otoč sa o 90 stupňov
+        -   zopakuj akciu dokopy 4 krát
+      courseD_artist_4_2018_2019: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Skús naše snehové vločky ozvláštniť!"_
+
+        **Pre inšpiráciu:** Kam potrebuješ pridať kód, ak chceš nakresliť malý štvorec na vrchu každej dlhej úsečky?
+
+        * * *
+
+        Pri tejto úlohe môžeš skúšať čokoľvek chceš, ale mám nápad:
+
+        Skús vytvoriť malý štvorec na konci každej úsečky
+
+        -   každá strana by mala byť dlhá 15 pixelov
+        -   otoč sa o 90 stupňov
+        -   zopakuj akciu dokopy 4 krát
+      courseD_artist_5_2018: |-
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Skús meniť tvary alebo dĺžku úsečiek tak, aby si vytvoril svoje vlastné!"_
+
+        **Pre inšpiráciu:**Svoju kresbu môžeš akokoľvek meniť, ale mám nápad:
+
+        -   Skús vymeniť typy tvarov v strede snehových vločiek s tvarmi na konci každej úsečky!
+      courseD_artist_6_2018: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vyskúšajme niečo nové. Teraz poďme korčuľovať kľukato.\"_\n\n<br/>  \n\n**Inšpiruj
+        sa:** Skús zmeniť dlhú 150 pixelovú úsečku na 6 krátkych úsečiek po **25**
+        pixelov\n\n-   Otoč sa striedavo o **45** stupňov na rôzne strany a rob krátke
+        úsečky, aby vznikol kľukatý vzor\n-   Kam potrebuješ vložiť blok `opakuj`,
+        aby sa to podarilo?\n-   Koľko krát potrebuješ zopakovať vzor z 2 krátkych
+        úsečiek, aby ich bolo spolu 6?"
+      courseD_artist_6_2018_2019: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Vyskúšajme niečo nové. Teraz poďme korčuľovať kľukato.\"_\n\n<br/>  \n\n**Inšpiruj
+        sa:** Skús zmeniť dlhú 150 pixelovú úsečku na 6 krátkych úsečiek po **25**
+        pixelov\n\n-   Otoč sa striedavo o **45** stupňov na rôzne strany a rob krátke
+        úsečky, aby vznikol kľukatý vzor\n-   Kam potrebuješ vložiť blok `opakuj`,
+        aby sa to podarilo?\n-   Koľko krát potrebuješ zopakovať vzor z 2 krátkych
+        úsečiek, aby ich bolo spolu 6?"
+      courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
+        hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
+      courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
+        hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
       courseD_artist_binary_challenge2_2018: |-
         V tejto mriežke je 256 bitov - to znamená, že aj pri malej zmene môžu vzniknúť veľké problémy. Si dostatočne vytrvalý/á, aby si vrátil/a logo späť do pôvodného stavu?
 
@@ -2960,6 +3043,14 @@ sk-SK:
       courseD_artist_project5_2019: '![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
         _"Využi svoju tvorivú fantáziu a vyskúšaj rôzne tvary a uhly - uvidíme aké
         rôzne nové snehové vločky sa ti podarí nakresliť!"_  '
+      courseD_bee_conditionals7_predict2_2018: "Niekedy sa pod oblakom skrýva kvet
+        a niekedy plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
+        medu z plástov. Zapamätaj si, že pod každým oblakom je vždy len _jeden_plást
+        alebo _jeden_kvet."
+      courseD_bee_conditionals7_predict2_2019: "Niekedy sa pod oblakom skrýva kvet
+        a niekedy plást! \n\nPouži blok `ak/inak` na získanie nektáru z kvetov a výrobu
+        medu z plástov. Zapamätaj si, že pod každým oblakom je vždy len _jeden_plást
+        alebo _jeden_kvet."
       courseD_bee_nestedLoops1: |-
         "_Chystá sa niečo **VČEĽKÉ**!_"
 
@@ -3180,6 +3271,16 @@ sk-SK:
       courseD_collector_nested_loops_challenge2a: "_\"Poďme pátrať po poklade - pomocou
         cyklov!\"_ \n\nPomôž Laurel získať aspoň 2 drahokamy len s blokmi, ktoré máš
         v paneli nástrojov. Je však možné pozbierať všetky 4."
+      courseD_farmer_condLoops4_2018: "_\"A sakra! Šalát sa začal rozrastať!\"_  \n\nPestovateľka
+        chce pozbierať všetok šalát zo svojej záhrady. Každá rastlina má teraz viac
+        ako len jednu hlávku šalátu, takže pestovateľka musí zbierať, zatiaľ čo nový
+        šalát stále dorastá.  \n\n##### (Zapamätaj si: V tejto záhrade rastie len
+        šalát!)"
+      courseD_farmer_condLoops4_2019: "_\"A sakra! Šalát sa začal rozrastať!\"_  \n\nPestovateľka
+        chce pozbierať všetok šalát zo svojej záhrady. Každá rastlina má teraz viac
+        ako len jednu hlávku šalátu, takže pestovateľka musí zbierať, zatiaľ čo nový
+        šalát stále dorastá.  \n\n##### (Zapamätaj si: V tejto záhrade rastie len
+        šalát!)"
       courseD_harvester_nested_loops_challenge1: _"Potrebujem pomoc na farme! Pomôž
         mi pozbierať túto kukuricu a použi na to len tie bloky, ktoré sú v paneli
         nástrojov."_

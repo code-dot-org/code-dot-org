@@ -1,8 +1,9 @@
 {
+  "https://studio.code.org/s/csd4-2019/stage/1/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
   "https://studio.code.org/s/csd4-2019/stage/2/puzzle/1": {
-    "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
-    }
+    "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd4-2019/stage/3/puzzle/1": {
     "display_name": "Lesson Overview"
@@ -18,6 +19,11 @@
   },
   "https://studio.code.org/s/csd4-2019/stage/7/puzzle/1": {
     "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd4-2019/stage/7/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
   },
   "https://studio.code.org/s/csd4-2019/stage/8/puzzle/1": {
     "display_name": "Lesson Overview"
@@ -148,5 +154,25 @@
   },
   "https://studio.code.org/s/csd4-2019/stage/16/puzzle/1": {
     "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd4-2019/stage/16/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd4-2019/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "User Centered Design: Post-Project Test"
+    }
+  },
+  "https://studio.code.org/s/csd4-2019/lockable/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2019/lockable/2/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries End of Semester Student Survey"
+    }
   }
 }

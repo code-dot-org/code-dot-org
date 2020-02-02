@@ -3551,6 +3551,7 @@ ro:
               name: Petrecere dansantă
           title: Petrecere dansantă
           description_audience: '[șir gol]'
+          description_short: Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!
         frozen-2018-test-b:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -4761,7 +4762,7 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Condiţionale
@@ -4776,6 +4777,97 @@ ro:
               name: Condiționale cu Carduri
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
-          description: '[șir gol]'
         time4cs-experiment-unit-2:
           description_audience: '[șir gol]'
+        time4cs-control-unit-1:
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Sequencing in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming and Loops with the Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Simon Says:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Learning Sprites with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Alien Dance Party with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Private and Personal Information:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            About Me:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Access Ability:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals Review:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        time4cs-experiment-unit-1:
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Sequencing in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming and Loops with the Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Simon Says:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Learning Sprites with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Alien Dance Party with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Private and Personal Information:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            About Me:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Access Ability:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals Review:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csp7-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp8-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'

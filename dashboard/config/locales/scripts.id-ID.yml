@@ -4860,6 +4860,8 @@ id:
             Dance Party:
               name: Pesta Tari
           title: Pesta Tari
+          description_short: Menampilkan Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara, dan 25 orang lainnya!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -5767,7 +5769,7 @@ id:
               name: Untuk Pengulangan
         dance-extras-2019:
           description: Lewatilah jam pertama dengan ide ide proyek yang luas.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Kondisi
@@ -5777,3 +5779,15 @@ id:
               name: Sumber kerumunan
             Conditionals with Cards:
               name: Bersyarat dengan kartu
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Kondisi
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Kondisi
+        csp8-pilot:
+          stages:
+            Create PT - Complete the Task:
+              name: Membuat PT - Menyelesaikan tugas
