@@ -162,17 +162,9 @@ class CourseBlocksCsfLegacy extends Component {
   }
 }
 
-export class FooBlocks extends Component {
-  render() {
-    return (
-        <div>Whoo hooo</div>
-    );
-  }
-}
-
 export class CourseBlocks extends Component {
   static propTypes = {
-    tiles: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tiles: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   componentDidMount() {
@@ -185,62 +177,28 @@ export class CourseBlocks extends Component {
     return (
       <div className="tutorial-row">
         {this.props.tiles.map((tile, index) => (
-          <ProtectedStatefulDiv className="tutorial-block" ref="{index}" />
+          <ProtectedStatefulDiv className="tutorial-block" ref={index} />
         ))}
       </div>
     );
   }
 }
 
-/* */
 export class CourseBlocksHoc extends Component {
   static propTypes = {
     isInternational: PropTypes.bool
   };
 
   tiles() {
-    return ['#frozen', '#aquatic', '#dance-2019'];
-    /* this.props.isInternational
-        ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
-        : ['#dance-2019', '#aquatic', '#oceans', '#flappy']; */
+    return this.props.isInternational
+      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
   }
 
   render() {
-    return (
-        <CourseBlocks tiles={this.tiles()} />
-    );
+    return <CourseBlocks tiles={this.tiles()} />;
   }
 }
-
-/*  */
-
-export class NotCourseBlocksHoc extends Component {
-  static propTypes = {
-    isInternational: PropTypes.bool
-  };
-
-  componentDidMount() {
-    const tiles = ['#aquatic', '#dance-2019', '#frozen', '#frozen'];
-    /* this.props.isInternational
-      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance-2019', '#aquatic', '#oceans', '#flappy', '#hourofcode'];*/
-
-    tiles.forEach((tile, index) => {
-      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
-    });
-  }
-
-  render() {
-    return (
-      <div className="tutorial-row">
-        <ProtectedStatefulDiv className="tutorial-block" ref="0" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="1" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="2" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="3" />
-      </div>
-    );
-  }
-}  /*  */
 
 export class CourseBlocksAll extends Component {
   static propTypes = {
