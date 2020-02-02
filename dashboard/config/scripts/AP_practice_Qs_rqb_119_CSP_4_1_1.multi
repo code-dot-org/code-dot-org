@@ -1,34 +1,19 @@
 name 'AP_practice_Qs_rqb_119_CSP_4_1_1'
-wrong '<pre>
-IF   ( (number % 2 = 0)  OR  (number % 3 = 0) )
-{
-   DISPLAY ("Number is divisible by 6")
-}
-</pre>'
-right '<pre>
-IF  ( (number % 2 = 0)  AND  (number % 3 = 0) )
-{
-   DISPLAY ("Number is divisible by 6")
-}
-</pre>'
-wrong '<pre>
-IF  ( (number % 2 != 0)  AND  (number % 3 = 0) )
-{
-   DISPLAY ("Number is divisible by 6")
-}
-</pre>'
-wrong '<pre>
-IF  ( (number % 2 = 0)  OR  (number % 3 != 0) )
-{
-   DISPLAY ("Number is divisible by 6")
-}
-</pre>'
+editor_experiment ''
+wrong '![](https://images.code.org/782363fb52294a6b4be535454c0c0757-image-1579896984492.png)'
+right '![](https://images.code.org/4b47bd9f49e793e0b989183748aea99a-image-1579896999720.png)'
+wrong '![](https://images.code.org/ebba11f1aaa6ed87fa32e972629421be-image-1579897011511.png) '
+wrong '![](https://images.code.org/dfd9b09e98680568965cd369566a6799-image-1579897020966.png) '
+
+
 markdown <<MARKDOWN
 A student is writing a program to solve a problem. She decides to draw a flowchart to visually represent the algorithm. The flowchart uses the oval block to represent the start or end of the algorithm,  a diamond to represent the conditional or decision step which determines the execution path of the algorithm, a rectangle to represent one or more processing steps, and a parallelogram to represent an input statement. 
-<br><img src="https://curriculum.code.org/media/uploads/csp/8d97b1823065d613b57c323b95ef4665" width="300"><br>
+
+![](https://images.code.org/e8162bce568911e3a089a614139e5f25-image-1579897289909.png)
 
 Which of the following statements is equivalent to the algorithm in the flowchart?
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1B, 4.1.1C, 4.1.1A**
 <hr>
