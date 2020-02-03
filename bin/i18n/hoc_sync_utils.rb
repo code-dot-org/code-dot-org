@@ -41,7 +41,6 @@ class HocSyncUtils
   def self.rename_downloads_from_crowdin_code_to_locale
     puts "Updating crowdin codes to our locale codes..."
     Languages.get_hoc_languages.each do |prop|
-      puts "Renaming #{prop[:locale_s]}.yml to #{prop[:unique_language_s]}.yml"
       # move downloaded folders to root source directory and rename from
       # language to locale
       crowdin_dir = File.join(I18N_SOURCE_DIR, "hourofcode", prop[:crowdin_name_s])

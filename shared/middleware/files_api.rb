@@ -142,6 +142,9 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    if endpoint == 'libraries'
+      dont_cache
+    end
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
