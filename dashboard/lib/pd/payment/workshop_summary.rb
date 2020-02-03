@@ -83,7 +83,7 @@ module Pd::Payment
         attendance_url: attendance_url,
         num_facilitators: workshop.facilitators.count,
         num_registered: workshop.enrollments.count,
-        num_scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
+        num_scholarship_teachers_attending_all_sessions: workshop.account_required_for_attendance? ? workshop.teachers_attending_all_sessions(true).count : nil,
       }
 
       # Attendance days 1-5
