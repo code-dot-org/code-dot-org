@@ -3,7 +3,7 @@ class AdminStandardsController < ApplicationController
   before_action :require_admin
 
   def index
-    @scripts_for_standards = Script.scripts_for_standards
+    @scripts_for_standards = Script.scripts_with_standards
   end
 
   def import_standards
