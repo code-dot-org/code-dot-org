@@ -109,6 +109,39 @@ class RegionalPartnersController < ApplicationController
     redirect_to @regional_partner
   end
 
+  # POST /regional_partners/:id/replace_mappings
+  def replace_mappings
+    regions = params[:regions]
+    mappings = []
+    # validate
+    errors = []
+    regions.each do |region|
+      state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
+      zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
+      if !state && !zip_code
+        errors << {region: region, message: "Invalid region"}
+        next
+      end
+      mapping = @regional_partner.mappings.build({state: state, zip_code: zip_code})
+      mapping.valid?
+      if !mapping.errors[:base].nil_or_empty?
+        errors << {region: region, message: mapping.errors[:base].join(',')}
+      else
+        mappings << mapping
+      end
+    end
+    # upload
+    if !errors.empty?
+      flash[:notice] = errors
+      redirect_to @regional_partner
+    else
+      @regional_partner.mappings.clear
+      @regional_partner.mappings = mappings
+      flash[:notice] = "Successfully replaced mappings"
+      redirect_to @regional_partner
+    end
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.
