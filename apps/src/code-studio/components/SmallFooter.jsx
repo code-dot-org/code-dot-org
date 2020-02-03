@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import $ from 'jquery';
 import cookies from 'js-cookie';
 import _ from 'lodash';

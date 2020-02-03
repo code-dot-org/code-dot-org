@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
@@ -686,27 +686,9 @@ describe('Applab Exporter,', function() {
 
           new Function(getAppOptionsFile())();
           setAppOptions(Object.assign(window.APP_OPTIONS, {isExported: true}));
-
-          // load unminified webpack-runtime and applab-api from the webpack
-          // output directory, allowing for any hash that may have been added to
-          // the filename and making sure not to match any minified files.
-
           // webpack-runtime must appear exactly once on any page containing webpack entries.
-          testUtils.loadContext(
-            require.context(
-              '../../../build/package/js/',
-              false,
-              /webpack-runtime(wp[a-f0-9]{20})?.js/
-            )
-          );
-          testUtils.loadContext(
-            require.context(
-              '../../../build/package/js/',
-              false,
-              /applab-api(wp[a-f0-9]{20})?.js/
-            )
-          );
-
+          require('../../../build/package/js/webpack-runtime.js');
+          require('../../../build/package/js/applab-api.js');
           new Function(zipFiles['my-app/code.js'])();
           if (globalPromiseName) {
             await window[globalPromiseName];

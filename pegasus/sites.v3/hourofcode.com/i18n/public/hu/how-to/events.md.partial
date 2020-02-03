@@ -10,21 +10,21 @@ nav: how_to_nav
 
 ### Vond be az egész iskolai közösséget a "Hour of Code" eseménybe!
 
----
+* * *
 
 ## 1. Készítsd elő a rendezvényt
 
 - Határozd meg, a helyszínt, a dátumot és az időt.
-- Küldj [egy levelet](https://hourofcode.com/promote/resources#sample-emails) a helyi polgármesternek, küldöttségi tagnak, képviselőnek, hivatalvezetőnek vagy befolyásosabb üzletembernek és hívd meg őket, hogy tartsanak egy rövid beszédet. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Küldj [egy levelet](https://hourofcode.com/promote/resources#sample-emails) a helyi polgármesternek, küldöttségi tagnak, képviselőnek, hivatalvezetőnek vagy befolyásosabb üzletembernek és hívd meg őket, hogy tartsanak egy rövid beszédet. Nézd meg a [hogyan csináljuk csomagunkat]({{ localized_files/elected_official }}) további információkhoz, amikor egy vendég előadóval adtok elő egy Kódolás Órája rendezvényen.
+- Hívd meg a sajtót/médiát, mint például helyi hírügynökséget, újságot, oktatási/tech bloggereket. Nézd meg a [sajtó csomagunkat]({{ promote/press_kit_url }}) segítség gyanánt.
 
 ## 2. A rendezvény ideje alatt
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Indítsd el az eseményed az egyik [inspirációs videónkkal]({{ promote/videos }}).
+- Az eseményed felvezetéseként mutasd be a számítástechnika fontosságát ezen [statisztikák és infografikák]({{ promote/stats_url }}) felhasználásával.   
       
     
-- **Egyéb esemény ötletek:**: 
+- **Egyéb rendezvény ötletek**: 
     - Hívj meg egy helyi cégvezetőt, hogy meséljen a munkája és az informatika kapcsolatáról.
     - Hívj meg egy helyi képviselőt és kérd meg, hogy tanuljon programozni a diákoktól.
     - Kérj meg egy csapat diákot, hogy találjanak ki valamilyen közös feladatot.
@@ -35,19 +35,19 @@ nav: how_to_nav
 
 Oszd meg a rendezvényen készült képeket Facebookon vagy Twitteren a **#HourOfCode** hashtag használatával.
 
----
+* * *
 
 ## Tarts egy "Family Code Night" eseményt a "Hour of Code" keretében, vond be a szülőket is a programba
 
 Rendezz egy K-5 estet, amelyre meghívod a tanulók szüleit is, hogy csatlakozzanak be az informatika órába. Ez egy remek módja a közösségépítésnek és annak, hogy a szülők megbizonyosodjanak az iskolában történő informatika használatának fontosságáról. Partnereink a "Family Code Night" eseménynél létrehoznak egy mindenegyben eseménycsomagot, melyben többek között megtalálható egy tervezőlista, előadói szöveg, meghívólevelek, poszterek, prezentációk és sok minden más, melyek mind azért vannak, hogy segítsenek az esemény megszervezésében. [Kattits ide, hogy letöltsd ezt a segédanyag csomagot](http://www.familycodenight.org/DownloadCodeDotOrg.html)!
 
----
+* * *
 
 ## Egy iskolai esemény, összejövetel mintaterve
 
 **Esemény:** Egész iskolát átható informatikai, számítástudományi hét
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Dátum:** {{ campaign_date/start_short }} (Computer Science Education Week kezdete)
 
 **Ideje:** Iskolaidőben, délelőtti programok, melyek körülbelül 1 órásak.
 
@@ -55,13 +55,13 @@ Rendezz egy K-5 estet, amelyre meghívod a tanulók szüleit is, hogy csatlakozz
 
 ## Az előadás időrendje
 
-| Idő           | Program                                                                                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                              |
-| 10:05 - 10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                           |
-| 10:15 - 10:30 | Különleges vendég beszél a hátterükről, valamint arról, hogy milyen fontos szerepet játszik mindennapjainkban a technológia és számítástechnikai tudomány.      |
-| 10:30 - 10:40 | A tanulók tartanak egy "Hour of Code" bemutatót az egész iskolának. Egy kis csavar: A diákok is taníthatják az igazgatót, képviselőket vagy a többi tanulót is. |
-| 10:40 - 11:00 | A diákok bemutatnak egy számítógép-nélküli foglalkozást és azt, hogy hogyan lehet tartani informatika órát számítógépek nélkül.                                 |
-| 11:00 - 11:05 | A tanár, aki segített az esemény létrejöttében beszédével zárja azt.                                                                                            |
+| Idő           | Program                                                                                                                                                           |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 10:00 - 10:05 | Kezdj az egyik [inspirációs videónkkal]({{ promote/videos }}).                                                                                                    |
+| 10:05 - 10:15 | Az igazgató tart egy rövid bevezetőt, amely a számítástechnika fontosságáról szól. Használd ezeket a [statisztikákat és infografikákat]({{ promote/stats_url }}). |
+| 10:15 - 10:30 | Különleges vendég beszél a hátterükről, valamint arról, hogy milyen fontos szerepet játszik mindennapjainkban a technológia és számítástechnikai tudomány.        |
+| 10:30 - 10:40 | A tanulók tartanak egy "Hour of Code" bemutatót az egész iskolának. Egy kis csavar: A diákok is taníthatják az igazgatót, képviselőket vagy a többi tanulót is.   |
+| 10:40 - 11:00 | A diákok bemutatnak egy számítógép-nélküli foglalkozást és azt, hogy hogyan lehet tartani informatika órát számítógépek nélkül.                                   |
+| 11:00 - 11:05 | A tanár, aki segített az esemény létrejöttében beszédével zárja azt.                                                                                              |
 
 {{ signup_button }}

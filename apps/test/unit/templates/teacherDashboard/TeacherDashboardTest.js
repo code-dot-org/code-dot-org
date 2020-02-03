@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {UnconnectedTeacherDashboard as TeacherDashboard} from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 
 const DEFAULT_PROPS = {

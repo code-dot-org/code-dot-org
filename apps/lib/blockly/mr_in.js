@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "प्रत्येक घटकासाठी";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "%1 पासून %2 पर्यंत, %3 च्या फरकाने";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "या साठी";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "";

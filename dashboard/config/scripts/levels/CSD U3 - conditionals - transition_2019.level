@@ -30,7 +30,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "long_instructions": "# Booleans\r\n\r\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\r\n\r\n# Do This\r\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement inside the draw loop. ( [Show me where](#triggercallout=callout) )\r\n* Add an Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\r\n* Look at the output of the program as the car moves. When does the output change? Why?",
+    "long_instructions": "# Booleans\r\n\r\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\r\n\r\n# Do This\r\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\r\n\r\n* Add a `console.log` statement inside the draw loop. ( [Show me where](#triggercallout=callout) )\r\n* Add a Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\r\n* Look at the output of the program as the car moves. When does the output change? Why?",
     "callout_json": "[ {\r\n  \"localization_key\": \"CSD_U3_L8_S6_C1\",\r\n  \"callout_text\": \"Put the console log statement here\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"callout\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"raceCar.x = raceCar.x - 2;\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 160,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "project_template_level_name": "CSD U3 - car template_2019",
     "instructions_important": "false",
@@ -99,13 +99,13 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-05 23:40:47 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:18:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-25 22:44:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-05 23:40:47 +0000\",\"changed\":[\"markdown_instructions\",\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-05-15 20:18:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-06-25 22:44:12 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":959,\"changed_by_email\":\"george.zhang@code.org\"},{\"changed_at\":\"2019-10-31 20:41:20 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

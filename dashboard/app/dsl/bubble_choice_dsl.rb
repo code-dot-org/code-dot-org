@@ -4,7 +4,11 @@ class BubbleChoiceDSL < LevelDSL
     @hash[:display_name] = nil
     @hash[:description] = nil
     @hash[:sublevels] = []
-    @i18n_strings = Hash.new({})
+  end
+
+  # @override
+  def self.i18n_fields
+    super + %w(description display_name)
   end
 
   def display_name(text) @hash[:display_name] = text end
@@ -27,12 +31,6 @@ class BubbleChoiceDSL < LevelDSL
     end
 
     @hash[:sublevels] << name
-  end
-
-  def i18n_strings
-    @i18n_strings['display_name'] = @hash[:display_name] if @hash[:display_name]
-    @i18n_strings['description'] = @hash[:description] if @hash[:description]
-    @i18n_strings
   end
 
   def self.parse_file(filename)

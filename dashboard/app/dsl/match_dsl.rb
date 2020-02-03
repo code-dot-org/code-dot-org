@@ -17,14 +17,12 @@ class MatchDSL < ContentDSL
 
   def layout(text) @hash[:layout] = text end
 
-  def i18n_strings
-    strings = super
-    %i(
-      questions
+  # @override
+  def self.i18n_fields
+    super + %w(
       answers
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
-    end
-    strings.deep_stringify_keys
+      feedback
+      questions
+    )
   end
 end

@@ -244,6 +244,77 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     assert_equal expected_response, JSON.parse(@response.body)
   end
 
+  test "multi choose 2 questions are only correct if both answers are correct" do
+    # Sign in and create a new script.
+    sign_in @teacher
+    script = create :script
+
+    # Set up an assessment for that script.
+    sub_level1 = create :multi, name: 'level_multi2_correct', type: 'Multi',
+                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Correct Answer", "correct" => true},
+                                                 {"text" => "Correct Answer", "correct" => true}]}
+    sub_level2 = create :multi, name: 'level_multi2_incorrect_only_one_choice', type: 'Multi',
+                        properties: {"answers": [{"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Incorrect Answer", "correct" => false},
+                                                 {"text" => "Correct Answer", "correct" => true},
+                                                 {"text" => "Correct Answer", "correct" => true}]}
+
+    level1 = create :level_group, name: 'LevelGroupLevel1', type: 'LevelGroup'
+    level1.properties['title'] =  'Long assessment 1'
+    level1.properties['pages'] = [{levels: ['level_multi2_correct', 'level_multi2_incorrect_only_one_choice']}]
+    level1.save!
+    create :script_level, script: script, levels: [level1], assessment: true
+
+    # Student has completed an assessment.
+    level_source = create(
+      :level_source,
+      level: level1,
+      data: %Q({"#{sub_level1.id}":{"result":"2,3"},"#{sub_level2.id}":{"result":"3"}})
+    )
+    create :activity, user: @student_1, level: level1,
+           level_source: level_source
+
+    updated_at = Time.now
+
+    user_level = create :user_level, user: @student_1, best_result: 100, script: script, level: level1, submitted: true, updated_at: updated_at, level_source: level_source
+
+    # Call the controller method.
+    get :section_responses, params: {
+      section_id: @section.id,
+      script_id: script.id
+    }
+
+    assert_response :success
+
+    # Stage translation missing because we don't actually generate i18n files in tests.
+    expected_response = {
+      @student_1.id.to_s => {
+        "student_name" => @student_1.name,
+          "responses_by_assessment" => {
+            level1.id.to_s => {
+              "stage" => "translation missing: en-US.data.script.name.#{script.name}.title",
+              "puzzle" => 1,
+              "question" => "Long assessment 1",
+              "url" => "http://test.host/s/#{script.name}/stage/1/puzzle/1?section_id=#{@section.id}&user_id=#{@student_1.id}",
+              "multi_correct" => 1,
+              "multi_count" => 2,
+              "match_correct" => 0,
+              "match_count" => 0,
+              "submitted" => true,
+              "timestamp" => user_level[:updated_at],
+              "level_results" => [
+                {"type" => "Multi", "student_result" => [2, 3], "status" => "correct",},
+                {"type" => "Multi", "student_result" => [3], "status" => "incorrect",}
+              ]
+            }
+          }
+      }
+    }
+    assert_equal expected_response, JSON.parse(@response.body)
+  end
+
   test "gets no anonymous survey data via assessment responses call" do
     # Sign in as teacher and create a new script.
     sign_in @teacher

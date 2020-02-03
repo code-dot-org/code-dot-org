@@ -44,7 +44,8 @@ export default class TeacherHomepage extends Component {
     teacherName: PropTypes.string,
     teacherId: PropTypes.number,
     teacherEmail: PropTypes.string,
-    schoolYear: PropTypes.number
+    schoolYear: PropTypes.number,
+    specialAnnouncement: shapes.specialAnnouncement
   };
 
   state = {
@@ -153,7 +154,6 @@ export default class TeacherHomepage extends Component {
 
   render() {
     const {
-      hocLaunch,
       courses,
       topCourse,
       announcement,
@@ -168,25 +168,20 @@ export default class TeacherHomepage extends Component {
       canViewAdvancedTools,
       queryStringOpen,
       isEnglish,
-      locale
+      locale,
+      specialAnnouncement
     } = this.props;
 
-    // Hide the special announcement for now.
-    const showSpecialAnnouncement = false;
-
     // Hide the regular announcement/notification for now.
-    const showAnnouncement = true;
+    const showAnnouncement = false;
 
     return (
       <div>
         <HeaderBanner headingText={i18n.homepageHeading()} short={true} />
         <ProtectedStatefulDiv ref="flashes" />
         <ProtectedStatefulDiv ref="teacherReminders" />
-        {isEnglish && showSpecialAnnouncement && (
-          <SpecialAnnouncementActionBlock
-            hocLaunch={hocLaunch}
-            hasIncompleteApplication={!!sessionStorage['TeacherApplication']}
-          />
+        {specialAnnouncement && (
+          <SpecialAnnouncementActionBlock announcement={specialAnnouncement} />
         )}
         {announcement && showAnnouncement && (
           <div>
@@ -194,7 +189,7 @@ export default class TeacherHomepage extends Component {
               type={announcement.type || 'bullhorn'}
               notice={announcement.heading}
               details={announcement.description}
-              dismissible={false}
+              dismissible={true}
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}

@@ -19,7 +19,7 @@ eu,eu,eu,eu-ES,Euskara,Basque,TRUE,FALSE,eu,Basque,FALSE,FALSE,FALSE,FALSE,FALSE
 fa-AF,af,fa,fa-AF,دريلو,Dari,FALSE,TRUE,fa-AF,Dari,FALSE,TRUE,FALSE,FALSE,FALSE
 fa-IR,fa,fa,fa-IR,فارسی,Persian,TRUE,TRUE,fa,Persian,FALSE,TRUE,FALSE,TRUE,FALSE
 fi,fi,fi,fi-FI,Suomi,Finnish,TRUE,FALSE,fi,Finnish,FALSE,FALSE,TRUE,FALSE,FALSE
-fil,ph,fil,fil-PH,Pilipino,Filipino,FALSE,FALSE,fil,Filipino,TRUE,TRUE,FALSE,TRUE,FALSE
+fil,ph,fil,fil-PH,Pilipino,Filipino,FALSE,TRUE,fil,Filipino,TRUE,TRUE,FALSE,TRUE,FALSE
 fr,fr,fr,fr-FR,Français,French,TRUE,TRUE,fr,French,TRUE,FALSE,FALSE,FALSE,FALSE
 ga,ga,ga,ga-IE,Gaeilge,Irish,TRUE,FALSE,ga-IE,Irish,TRUE,TRUE,FALSE,TRUE,TRUE
 gl,gl,gl,gl-ES,Galego,Galician,TRUE,FALSE,gl,Galician,FALSE,FALSE,FALSE,FALSE,FALSE
@@ -43,7 +43,7 @@ lt,lt,lt,lt-LT,Lietuvių,Lithuanian,TRUE,FALSE,lt,Lithuanian,FALSE,FALSE,FALSE,F
 lv,lv,lv,lv-LV,Latviešu,Latvian,TRUE,TRUE,lv,Latvian,FALSE,FALSE,FALSE,FALSE,FALSE
 mi,mi,mi,mi-NZ,Māori (NZ),Maori,TRUE,TRUE,mi,Maori,FALSE,FALSE,FALSE,FALSE,TRUE
 mk,mk,mk,mk-MK,Mакедонски,Macedonian (FYROM),FALSE,FALSE,mk,Macedonian (FYROM),FALSE,FALSE,FALSE,FALSE,FALSE
-mr,mr,mr,mr-IN,मराठी,Marathi,FALSE,FALSE,mr,Marathi,FALSE,FALSE,FALSE,FALSE,FALSE
+mr,mr,mr,mr-IN,मराठी,Marathi,FALSE,TRUE,mr,Marathi,FALSE,FALSE,FALSE,FALSE,FALSE
 ms,ms,ms,ms-MY,بهاس ملايو,Malay,FALSE,TRUE,ms,Malay,FALSE,FALSE,FALSE,FALSE,FALSE
 mt,mt,mt,mt-MT,Malti,Maltese,FALSE,FALSE,mt,Maltese,FALSE,FALSE,FALSE,FALSE,FALSE
 my,my,my,my-MM,ဗမာစာ,Burmese,TRUE,FALSE,my,Burmese,FALSE,FALSE,FALSE,FALSE,FALSE
@@ -64,8 +64,8 @@ sl,sl,sl,sl-SI,Slovenščina,Slovenian,TRUE,TRUE,sl,Slovenian,FALSE,TRUE,FALSE,F
 sq,sq,sq,sq-AL,Shqip,Albanian,TRUE,TRUE,sq,Albanian,FALSE,TRUE,FALSE,TRUE,TRUE
 sr,sr,sr,sr-SP,Cрпски,Serbian (Cyrillic),TRUE,FALSE,sr,Serbian (Cyrillic),TRUE,TRUE,FALSE,TRUE,TRUE
 sv,sv,sv,sv-SE,Svenska,Swedish,TRUE,TRUE,sv-SE,Swedish,FALSE,FALSE,FALSE,FALSE,FALSE
-ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,FALSE,ta,Tamil,FALSE,FALSE,FALSE,FALSE,FALSE
-te,te,te,te-IN,తెలుగు,Telugu,FALSE,FALSE,te,Telugu,FALSE,FALSE,FALSE,FALSE,FALSE
+ta,ta,ta,ta-IN,தமிழ்,Tamil,FALSE,TRUE,ta,Tamil,FALSE,FALSE,FALSE,FALSE,FALSE
+te,te,te,te-IN,తెలుగు,Telugu,FALSE,TRUE,te,Telugu,FALSE,FALSE,FALSE,FALSE,FALSE
 tg,tg,tg,tg-TJ,тоҷикӣ,Tajik,FALSE,FALSE,tg,Tajik,FALSE,TRUE,FALSE,TRUE,TRUE
 th,th,th,th-TH,ภาษาไทย,Thai,TRUE,FALSE,th,Thai,FALSE,TRUE,FALSE,FALSE,TRUE
 tr,tr,tr,tr-TR,Türkçe,Turkish,TRUE,TRUE,tr,Turkish,TRUE,FALSE,TRUE,FALSE,TRUE

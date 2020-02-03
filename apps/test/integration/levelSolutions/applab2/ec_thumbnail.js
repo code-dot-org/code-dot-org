@@ -1,7 +1,7 @@
 import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import project from '@cdo/apps/code-studio/initApp/project';
 import * as htmlToCanvasWrapper from '@cdo/apps/util/htmlToCanvasWrapper';
 import {CAPTURE_TICK_COUNT} from '@cdo/apps/applab/constants';

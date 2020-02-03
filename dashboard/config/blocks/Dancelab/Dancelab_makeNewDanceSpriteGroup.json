@@ -77,47 +77,51 @@
         "name": "COSTUME",
         "options": [
           [
-            "Aliens",
+            "aliens",
             "\"ALIEN\""
           ],
           [
-            "Bears",
+            "bears",
             "\"BEAR\""
           ],
           [
-            "Cats",
+            "cats",
             "\"CAT\""
           ],
           [
-            "Dogs",
+            "dogs",
             "\"DOG\""
           ],
           [
-            "Ducks",
+            "ducks",
             "\"DUCK\""
           ],
           [
-            "Frogs",
+            "frogs",
             "\"FROG\""
           ],
           [
-            "Moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "Pineapples",
+            "pineapples",
             "\"PINEAPPLE\""
           ],
           [
-            "Robots",
+            "robots",
             "\"ROBOT\""
           ],
           [
-            "Sharks",
+            "sharks",
             "\"SHARK\""
           ],
           [
-            "Unicorns",
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
             "\"UNICORN\""
           ]
         ]
@@ -134,6 +138,10 @@
             "\"inner\""
           ],
           [
+            "diamond",
+            "\"diamond\""
+          ],
+          [
             "circle",
             "\"circle\""
           ],
@@ -142,12 +150,28 @@
             "\"grid\""
           ],
           [
+            "top row",
+            "\"top\""
+          ],
+          [
             "row",
             "\"row\""
           ],
           [
+            "bottom row",
+            "\"bottom\""
+          ],
+          [
+            "left column",
+            "\"left\""
+          ],
+          [
             "column",
             "\"column\""
+          ],
+          [
+            "right column",
+            "\"right\""
           ],
           [
             "criss-cross",

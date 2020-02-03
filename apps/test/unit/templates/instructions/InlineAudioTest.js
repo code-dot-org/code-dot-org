@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {setExternalGlobals} from '../../../util/testUtils';

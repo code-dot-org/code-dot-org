@@ -12,47 +12,51 @@
             "sprites"
           ],
           [
-            "all aliens",
+            "aliens",
             "\"ALIEN\""
           ],
           [
-            "all bears",
+            "bears",
             "\"BEAR\""
           ],
           [
-            "all cats",
+            "cats",
             "\"CAT\""
           ],
           [
-            "all dogs",
+            "dogs",
             "\"DOG\""
           ],
           [
-            "all ducks",
+            "ducks",
             "\"DUCK\""
           ],
           [
-            "all frogs",
+            "frogs",
             "\"FROG\""
           ],
           [
-            "all moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "all pineapples",
+            "pineapples",
             "\"PINEAPPLE\""
           ],
           [
-            "all robots",
+            "robots",
             "\"ROBOT\""
           ],
           [
-            "all sharks",
+            "sharks",
             "\"SHARK\""
           ],
           [
-            "all unicorns",
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
             "\"UNICORN\""
           ]
         ]
@@ -69,6 +73,10 @@
             "\"inner\""
           ],
           [
+            "diamond",
+            "\"diamond\""
+          ],
+          [
             "circle",
             "\"circle\""
           ],
@@ -77,12 +85,28 @@
             "\"grid\""
           ],
           [
+            "top row",
+            "\"top\""
+          ],
+          [
             "row",
             "\"row\""
           ],
           [
+            "bottom row",
+            "\"bottom\""
+          ],
+          [
+            "left column",
+            "\"left\""
+          ],
+          [
             "column",
             "\"column\""
+          ],
+          [
+            "right column",
+            "\"right\""
           ],
           [
             "criss-cross",

@@ -12,9 +12,8 @@ import Notification, {NotificationType} from '../Notification';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
 import i18n from '@cdo/locale';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
-import CensusMap from './CensusMap';
 import CensusMapReplacement from './CensusMapReplacement';
-import experiments from '@cdo/apps/util/experiments';
+import ProfessionalLearningApplyBanner from '../ProfessionalLearningApplyBanner';
 
 const styles = {
   heading: {
@@ -33,6 +32,10 @@ const styles = {
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25
+  },
+
+  banner: {
+    marginBottom: 35
   }
 };
 
@@ -43,7 +46,6 @@ class YourSchool extends Component {
     alertText: PropTypes.string,
     alertUrl: PropTypes.string,
     prefillData: censusFormPrefillDataShape,
-    fusionTableId: PropTypes.string,
     hideMap: PropTypes.bool,
     currentCensusYear: PropTypes.number
   };
@@ -122,6 +124,11 @@ class YourSchool extends Component {
           )}
         <h1 style={styles.heading}>{i18n.yourSchoolHeading()}</h1>
         <h3 style={styles.description}>{i18n.yourSchoolDescription()}</h3>
+        <ProfessionalLearningApplyBanner
+          nominated={false}
+          useSignUpText={true}
+          style={styles.banner}
+        />
         <YourSchoolResources />
         {!this.props.hideMap && (
           <div id="map">
@@ -145,20 +152,10 @@ class YourSchool extends Component {
               schoolFilter={this.hasLocation}
             />
             <br />
-            {experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMapReplacement
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
-            {!experiments.isEnabled('censusMapOnMapbox') && (
-              <CensusMap
-                fusionTableId={this.props.fusionTableId}
-                school={schoolForMap}
-                onTakeSurveyClick={this.handleTakeSurveyClick}
-              />
-            )}
+            <CensusMapReplacement
+              school={schoolForMap}
+              onTakeSurveyClick={this.handleTakeSurveyClick}
+            />
           </div>
         )}
         <CensusForm

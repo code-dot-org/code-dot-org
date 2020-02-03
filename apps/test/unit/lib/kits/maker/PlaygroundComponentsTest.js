@@ -2,7 +2,7 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,

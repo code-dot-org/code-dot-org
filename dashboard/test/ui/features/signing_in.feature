@@ -77,4 +77,4 @@ Scenario: Join existing section from sign in page goes to section join page
   And I type the section code into "#section_code"
   And I click ".section-sign-in button" to load a new page
   Then I wait to see ".main"
-  And element ".main" contains text "Register to join the class"
+  And element ".main" contains text "Register to join section"

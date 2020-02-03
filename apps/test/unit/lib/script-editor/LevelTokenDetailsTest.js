@@ -24,6 +24,13 @@ const defaultLevel = {
   activeId: 2
 };
 
+const assertCheckboxVisible = (wrapper, name, visible) => {
+  const label = wrapper
+    .find('.level-token-checkboxes')
+    .findWhere(n => n.name() === 'label' && n.text().includes(name));
+  expect(label).to.have.lengthOf(visible ? 1 : 0);
+};
+
 const assertChecked = (wrapper, name, checked) => {
   const label = wrapper
     .find('.level-token-checkboxes')
@@ -78,7 +85,10 @@ describe('LevelTokenDetails', () => {
   it('renders with default props', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
 
-    assertChecked(wrapper, 'named', false);
+    assertCheckboxVisible(wrapper, 'named', false);
+    assertCheckboxVisible(wrapper, 'assessment', true);
+    assertCheckboxVisible(wrapper, 'challenge', true);
+
     assertChecked(wrapper, 'assessment', false);
     assertChecked(wrapper, 'challenge', false);
 

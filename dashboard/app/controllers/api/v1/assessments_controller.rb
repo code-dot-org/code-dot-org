@@ -149,7 +149,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                 level_result[:student_result] = []
                 level_result[:status] = "unsubmitted"
               # Deep comparison of arrays of indexes
-              elsif student_result.present? && student_result - answer_indexes == []
+              elsif student_result.present? && student_result - answer_indexes == [] && answer_indexes.length == student_result.length
                 multi_count_correct += 1
                 level_result[:status] = "correct"
               else

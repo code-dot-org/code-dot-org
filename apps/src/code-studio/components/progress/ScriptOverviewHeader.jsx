@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {SignInState} from '@cdo/apps/code-studio/progressRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ScriptAnnouncements from './ScriptAnnouncements';
 import {
   announcementShape,
@@ -275,7 +275,7 @@ export default connect(state => ({
   scriptTitle: state.progress.scriptTitle,
   scriptDescription: state.progress.scriptDescription,
   betaTitle: state.progress.betaTitle,
-  isSignedIn: state.progress.signInState === SignInState.SignedIn,
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
   viewAs: state.viewAs,
   isVerifiedTeacher: state.verifiedTeacher.isVerified,
   hasVerifiedResources: state.verifiedTeacher.hasVerifiedResources

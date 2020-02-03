@@ -37,6 +37,7 @@ class Level < ActiveRecord::Base
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
+  validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
@@ -320,6 +321,7 @@ class Level < ActiveRecord::Base
     'EvaluationMulti', # unknown
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
+    'Fish', # no ideal solution
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Flappy', # no ideal solution
@@ -421,6 +423,14 @@ class Level < ActiveRecord::Base
 
   def strip_name
     self.name = name.to_s.strip unless name.nil?
+  end
+
+  def reject_illegal_chars
+    if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
+      "and the following characters: !\"&'()+,\-.:=?_|"
+      errors.add(:name, msg)
+    end
   end
 
   def log_changes(user=nil)
@@ -580,7 +590,8 @@ class Level < ActiveRecord::Base
   #   editor_experiment property to on the newly-created level.
   def clone_with_suffix(new_suffix, editor_experiment: nil)
     # Make sure we don't go over the 70 character limit.
-    new_name = "#{base_name[0..64]}#{new_suffix}"
+    max_index = 70 - new_suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{new_suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 

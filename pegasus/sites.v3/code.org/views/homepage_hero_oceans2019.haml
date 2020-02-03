@@ -1,0 +1,118 @@
+-hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+
+-# Two lines of text
+.hero-message-line0{style: "font-size: 18px; line-height: 18px; padding-bottom: 28px; color: white"}
+  - if hoc_mode == "actual-hoc"
+    The Hour of Code is here!
+  - else
+    The Hour of Code is coming...
+.hero-message-line1{style: "font-size: 28px; line-height: 28px; padding-bottom: 10px; color: white"}
+  Dive into machine learning with
+.hero-message-line2{style: "font-size: 48px; line-height: 48px; color: white; font-family: 'Gotham 5r', sans-serif; margin-bottom: 20px"}
+  AI for Oceans
+
+:css
+  .sea-creature {
+    position: absolute;
+    display: none;
+  }
+
+  .crab {
+    position: absolute;
+    width: 60px;
+    top: 245px;
+    left: 200px;
+  }
+
+  .snail {
+    position: absolute;
+    width: 60px;
+    top: 270px;
+    left: 1020px;
+  }
+
+  .scanning-bot {
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    top: 20px;
+    left: 700px;
+  }
+
+  .ai-bot {
+    width: 150px;
+  }
+
+  .ai-light {
+    width: 150px;
+    left: 700px;
+    top: 290px;
+    position: absolute;
+  }
+
+  .ai-fish {
+    position: absolute;
+    width: 80px;
+    top: 185px;
+    left: 737px;
+  }
+
+.img-container.desktop-feature
+  %img.sea-creature{src: 'images/oceans/turtle.png'}
+  .scanning-bot
+    %img.ai-bot{src: 'images/oceans/ai-bot.png'}
+  %img.ai-light{src: 'images/oceans/bot-beam-puddle.png'}
+  %img.ai-fish{src: 'images/oceans/fish-in-beam.png'}
+  %img.snail{src: 'images/oceans/snail.png'}
+
+.img-container
+  %img.sea-creature{src: 'images/oceans/big-sunfish.png'}
+  %img.sea-creature{src: 'images/oceans/small-sunfish.png'}
+  %img.sea-creature{src: 'images/oceans/gorgon-fish.png'}
+  %img.sea-creature{src: 'images/oceans/orange-fish.png'}
+.img-container.tablet-feature
+  %img.sea-creature{src: 'images/oceans/shark.png'}
+  %img.sea-creature.crab{src: 'images/oceans/crab.png'}
+
+:javascript
+  $time =
+    Date.now ||
+    function() {
+      return +new Date();
+    };
+  var fishLocations = [
+    {x: 1120, y: 160},   // turtle
+    {x: 920, y: 90},     // big-sunfish
+    {x: 970, y: 70},     // small-sunfish
+    {x: 560, y: 215},    // gorgon-fish
+    {x: 495, y: 85},     // orange-fish
+    {x: 300, y: 180},    // shark
+    {x: 235, y: 285}     // crab
+  ];
+  var fishWidths = [
+    '85px',  // turtle
+    '45px',   // big-sunfish
+    '30px',   // small-sunfish
+    '80px',   // gorgon-fish
+    '45px',   // orange-fish
+    '100px',  // shark
+    '80px'    // crab
+  ]
+  $(document).ready(function() {
+    setInterval(function() {
+      $(".sea-creature").each(function(index) {
+        var swayValue =
+          (($time() * 360) / (20 * 1000) + (index + 1) * 10) % 360;
+        var swayOffsetX = Math.sin(((swayValue * Math.PI) / 180) * 2) * 25;
+        var swayOffsetY = Math.sin(((swayValue * Math.PI) / 180) * 6) * 2;
+        var x = fishLocations[index].x + swayOffsetX;
+        var y;
+        if (index == 6) {
+          y = fishLocations[index].y;
+        } else {
+          y = fishLocations[index].y + swayOffsetY;
+        }
+        $(this).css({left: x, top: y, display: 'block', width: fishWidths[index]});
+      });
+    }, 1000 / 30);
+  });

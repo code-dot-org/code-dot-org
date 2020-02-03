@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "برای هر مورد";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "برای هر مورد در این فهرست، متغیر «%1» را به مورد نسبت، و بعد چند دستور انجام بده.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "از %1 به %2 با گام‌های %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "حلقه for";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "با متغیر %1 مقادیر را از عدد ابتدایی تا عدد انتهایی بردار، به بازه ی مشخص‌شده اضافه کن و بلوک های مشخص‌شده را انجام بده.";

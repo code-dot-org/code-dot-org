@@ -1,5 +1,6 @@
 professional_learning_course 'K5 Support'
 login_required true
+script_announcements [{"notice"=>"Updated version of this course available! ", "details"=>"We have released a new and improved version of this course! Click \"learn more\" to be routed to the 2019 version of Teaching Computer Science Fundamentals.", "link"=>"https://studio.code.org/s/k5-onlinepd-2019", "type"=>"warning", "visibility"=>"Teacher-only"}]
 
 stage 'Getting Started'
 level 'OPD-K5 Intro'
@@ -8,7 +9,7 @@ level 'OPD-K5 Welcome 2'
 level 'OPD-K5 About'
 level 'OPD-K5 Outline'
 level 'OPD-K5 Participation'
-level 'OPD-K5 CS'
+level 'OPD-K5 CS Video'
 level 'OPD-K5 CS Tips'
 level 'OPD-K5 Stage1Go'
 
@@ -23,7 +24,7 @@ level 'OPD-K5 Stage2Go'
 stage 'Looking Ahead'
 level 'OPD-Stage3Start'
 level 'OPD-K5 Puzzles'
-level 'OPD-K5 Unplugged'
+level 'OPD-K5 Unplugged Video'
 level 'OPD-K5 What is Mastery'
 
 stage 'Mastering the Basics: Sequencing'

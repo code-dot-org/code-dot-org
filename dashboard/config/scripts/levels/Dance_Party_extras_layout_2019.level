@@ -1,0 +1,350 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2019-10-31T19:28:25.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "true",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "parent_level_id": 14699,
+    "block_pool": "Dancelab",
+    "name_suffix": "_2019",
+    "skip_autosave": true,
+    "default_song": "isawthesign_aceofbase",
+    "long_instructions": "# Let's Get in Formation!\r\n\r\nCheck out this dance that uses the <xml><block type=\"Dancelab_layoutSprites\" block-text=\"layout\"><title name=\"GROUP\">\"MOOSE\"</title><title name=\"FORMAT\">???</title></block></xml> block to change the backup dancers' formation throughout the dance. Try one of these ideas to extend it:\r\n\r\n* Create a second group of dancers in a different layout\r\n* Change layout when a key is pressed\r\n* Change a property when the dancers change formation",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "display_name": "Get In Formation",
+    "short_instructions": "Let's Get in Formation! (Click \"More\" for details)",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "tts_long_instructions_override": "Let's Get in  Formation!\r\n\r\nCheck out this dance that uses the layout block to change the backup dancers' formation throughout the dance. Try one of these ideas to extend it:\r\n\r\nCreate a second group of dancers in a different layout.\r\nChange layout when a key is pressed.\r\nChange a property when the dancers change formation",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-29 15:46:23 +0000\",\"changed\":[\"notes\",\"hide_animation_mode\",\"show_type_hints\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:47:46 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:48:10 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:53:30 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:55:34 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:57:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 15:59:27 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:00:15 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:02:53 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:03:51 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:04:09 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:07:29 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:08:46 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:09:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:10:46 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:12:43 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:15:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:16:29 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:17:11 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:03 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:18:26 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:19:56 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:25:02 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:27:07 +0000\",\"changed\":[\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-08-29 16:27:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-09-14 15:37:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:37:58 +0000\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:38:10 +0000\",\"changed\":[\"start_blocks\",\"hide_custom_blocks\",\"contained_level_names\",\"encrypted_examples\",\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:45:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:47:52 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:48:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-14 15:54:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 05:30:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 15:27:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-18 15:28:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 03:04:37 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 03:37:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-19 03:38:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-20 20:59:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 03:25:39 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 03:27:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-21 03:45:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-24 18:45:51 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-24 22:14:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-09-24 22:15:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-02 17:56:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"free_play\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"},{\"changed_at\":\"2018-10-05 15:45:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-05 15:49:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2018-10-05 22:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"markdown_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":53,\"changed_by_email\":\"test5@code.org\"},{\"changed_at\":\"2018-10-17 18:26:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-10-23 18:56:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-23 18:57:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-30 21:44:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-30 21:46:55 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-30 21:51:12 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-10-30 21:52:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-05 20:51:01 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-08 19:12:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-09 06:32:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-12 20:15:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:26:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 05:38:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-13 21:21:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"skin\",\"default_song\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-13 21:34:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-11-29 16:55:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2018-11-29 16:56:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2019-11-01 15:19:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-01 15:19:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-01 16:29:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-12 21:36:18 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-14 22:15:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2019-11-15 15:35:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-15 15:38:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-11-15 16:11:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-12-05 16:11:31 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="Dancelab_whenSetup" movable="false">
+          <statement name="DO">
+            <block type="Dancelab_makeNewDanceSpriteGroup">
+              <title name="N">12</title>
+              <title name="COSTUME">"MOOSE"</title>
+              <title name="LAYOUT">"circle"</title>
+            </block>
+          </statement>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+          <statement name="DO">
+            <block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">"MOOSE"</title>
+              <title name="MOVE">"next"</title>
+              <title name="DIR">-1</title>
+            </block>
+          </statement>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">2</title>
+          <title name="UNIT">"measures"</title>
+          <next>
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="EFFECT">"disco"</title>
+              <title name="PALETTE">"default"</title>
+              <next>
+                <block type="Dancelab_layoutSprites">
+                  <title name="GROUP">"MOOSE"</title>
+                  <title name="FORMAT">"grid"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">4</title>
+          <title name="UNIT">"measures"</title>
+          <next>
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="EFFECT">"diamonds"</title>
+              <title name="PALETTE">"default"</title>
+              <next>
+                <block type="Dancelab_layoutSprites">
+                  <title name="GROUP">"MOOSE"</title>
+                  <title name="FORMAT">"x"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">6</title>
+          <title name="UNIT">"measures"</title>
+          <next>
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="EFFECT">"rainbow"</title>
+              <title name="PALETTE">"default"</title>
+              <next>
+                <block type="Dancelab_layoutSprites">
+                  <title name="GROUP">"MOOSE"</title>
+                  <title name="FORMAT">"border"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">8</title>
+          <title name="UNIT">"measures"</title>
+          <next>
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="EFFECT">"splatter"</title>
+              <title name="PALETTE">"default"</title>
+              <next>
+                <block type="Dancelab_layoutSprites">
+                  <title name="GROUP">"MOOSE"</title>
+                  <title name="FORMAT">"random"</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="Dancelab_setBackgroundEffectWithPalette">
+            <title name="PALETTE">"rave"</title>
+            <title name="EFFECT">"color_cycle"</title>
+          </block>
+          <block type="Dancelab_setForegroundEffectExtended">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Dancelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="Dancelab_randomColor"/>
+          <block type="Dancelab_mixColors">
+            <value name="COLOR1">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+            <value name="COLOR2">
+              <block type="colour_picker">
+                <title name="COLOUR">#000099</title>
+              </block>
+            </value>
+          </block>
+          <block type="Dancelab_changeColorBy">
+            <title name="METHOD">"hue"</title>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+            <value name="AMOUNT">
+              <block type="math_number">
+                <title name="NUM">10</title>
+              </block>
+            </value>
+          </block>
+          <block type="Dancelab_getTime">
+            <title name="UNIT">"measures"</title>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
+        <category name="Dancers">
+          <block type="Dancelab_makeAnonymousDanceSprite">
+            <title name="COSTUME">"CAT"</title>
+            <title name="LOCATION">{x: 200, y: 100}</title>
+          </block>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"BEAR"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block>
+          <block type="Dancelab_layoutSprites">
+            <title name="GROUP">sprites</title>
+            <title name="FORMAT">"grid"</title>
+          </block>
+          <block type="Dancelab_jumpToEach">
+            <title name="GROUP">sprites</title>
+            <title name="LOCATION">{x: 200, y: 100}</title>
+          </block>
+          <block type="Dancelab_changeMoveEachLR">
+            <title name="GROUP">sprites</title>
+            <title name="MOVE">MOVES.ClapHigh</title>
+            <title name="DIR">-1</title>
+          </block>
+          <block type="Dancelab_doMoveEachLR">
+            <title name="GROUP">sprites</title>
+            <title name="MOVE">MOVES.Clown</title>
+            <title name="DIR">-1</title>
+          </block>
+          <block type="Dancelab_alternateMoves">
+            <title name="GROUP">sprites</title>
+            <title name="N">2</title>
+            <title name="MOVE1">MOVES.Roll</title>
+            <title name="MOVE2">MOVES.ClapHigh</title>
+          </block>
+        </category>
+        <category name="Properties">
+          <block type="Dancelab_setTintEachInline">
+            <title name="THIS">sprites</title>
+            <title name="VAL">#ff0000</title>
+          </block>
+          <block type="Dancelab_setPropEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="VAL">50</title>
+          </block>
+          <block type="Dancelab_changePropEachBy">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="VAL">0</title>
+          </block>
+          <block type="Dancelab_setVisibleEach">
+            <title name="THIS">sprites</title>
+            <title name="VISIBILITY">true</title>
+          </block>
+          <block type="Dancelab_setPropRandomEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+          </block>
+          <block type="Dancelab_setDanceSpeedEach">
+            <title name="GROUP">sprites</title>
+            <title name="SPEED">2</title>
+          </block>
+          <block type="Dancelab_startMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <title name="GROUP">sprites</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="Dancelab_whenKey">
+            <title name="KEY">"up"</title>
+          </block>
+          <block type="Dancelab_whenPeak">
+            <title name="RANGE">0</title>
+          </block>
+          <block type="Dancelab_atTimestamp">
+            <title name="TIMESTAMP">4</title>
+            <title name="UNIT">"measures"</title>
+          </block>
+          <block type="Dancelab_everySeconds">
+            <title name="N">4</title>
+            <title name="UNIT">"measures"</title>
+          </block>
+        </category>
+        <category name="Numbers">
+          <block type="math_random_int">
+            <value name="FROM">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TO">
+              <block type="math_number">
+                <title name="NUM">100</title>
+              </block>
+            </value>
+          </block>
+          <block type="math_number">
+            <title name="NUM">0</title>
+          </block>
+          <block type="math_arithmetic">
+            <title name="OP">ADD</title>
+            <value name="A">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number">
+                <title name="NUM">0</title>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Logic">
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_compare">
+                <title name="OP">GT</title>
+                <value name="A">
+                  <block type="Dancelab_getTime">
+                    <title name="UNIT">"measures"</title>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="math_number">
+                    <title name="NUM">8</title>
+                  </block>
+                </value>
+              </block>
+            </value>
+          </block>
+          <block type="logic_compare">
+            <title name="OP">EQ</title>
+          </block>
+          <block type="logic_operation">
+            <title name="OP">AND</title>
+          </block>
+          <block type="logic_negate"/>
+          <block type="logic_boolean">
+            <title name="BOOL">TRUE</title>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Dancelab>

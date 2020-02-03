@@ -30,4 +30,21 @@ class FirebaseHelperTest < Minitest::Test
     Firebase::Client.expects(:new).returns(stub(:delete, nil))
     FirebaseHelper.delete_channel fake_channel_name
   end
+
+  def test_delete_shared_table
+    Firebase::Client.expects(:new).returns(stub(:delete, nil))
+    fb = FirebaseHelper.new('shared')
+    fb.delete_shared_table 'fake-table-name'
+  end
+
+  def test_upload_shared_table
+    fake_table_name = 'fake-table-name'
+    fb_client = mock
+    fb_client.expects(:delete).with("/v3/channels/shared/metadata/tables/#{fake_table_name}/columns").returns(nil)
+    fb_client.expects(:set).twice.returns(nil)
+    fb_client.expects(:push).twice.returns(nil)
+    Firebase::Client.expects(:new).returns(fb_client)
+    fb = FirebaseHelper.new('shared')
+    fb.upload_shared_table(fake_table_name, [{id: 1, name: 'alice'}, {id: 2, name: 'bob'}], ['id', 'name'])
+  end
 end

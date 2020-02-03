@@ -38,17 +38,14 @@ class ContentDSL < LevelDSL
     @hash[:options][key.to_sym] = args.first
   end
 
-  def i18n_strings
-    strings = {}
-    %i(
-      title
+  # @override
+  def self.i18n_fields
+    super + %w(
       content1
       content2
       content3
-      pre_title
-    ).each do |property|
-      strings[property] = @hash[property] unless @hash[property].blank?
-    end
-    strings.stringify_keys
+      markdown
+      title
+    )
   end
 end

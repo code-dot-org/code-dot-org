@@ -2,6 +2,7 @@ import {assert} from 'chai';
 import {combineReducers} from 'redux';
 import reducers, {
   reorderLevel,
+  moveLevelToStage,
   addGroup,
   addStage,
   moveStage,
@@ -57,6 +58,11 @@ describe('editorRedux reducer tests', () => {
   it('reorder levels', () => {
     const nextState = reducer(initialState, reorderLevel(1, 3, 1)).stages;
     assert.deepEqual(nextState[0].levels.map(l => l.activeId), [5, 1, 4, 6]);
+  });
+  it('moves level to stage', () => {
+    const nextState = reducer(initialState, moveLevelToStage(1, 3, 2)).stages;
+    assert.deepEqual(nextState[0].levels.map(l => l.activeId), [1, 4, 6]);
+    assert.deepEqual(nextState[1].levels.map(l => l.activeId), [3, 5]);
   });
   it('add group', () => {
     const nextState = reducer(

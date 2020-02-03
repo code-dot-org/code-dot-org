@@ -1,0 +1,20 @@
+name 'OPD-K5 diving deeper intro'
+title 'Diving Deepr'
+description 'description here'
+markdown <<MARKDOWN
+# Diving Deeper: Courses E and F
+
+## Are you teaching Courses E and F? 
+
+Courses E and F are designed for 4th and 5th grade. In these courses, we dive deeper into some concepts and introduce new coding environments. 
+
+If you are planning to teach these courses, we recommend completing the following lessons. If you are not planning to teach these courses, you can skip this concept chunk and move onto "Next Steps".
+
+## What will you find in this concept chunk?
+In this concept chunk, we will cover:
+- More advanced coding concepts: functions, variables and advanced forms of loops (nested loops and for loops)
+- "Sprites" and a new coding environment called Sprite Lab
+- End-of-course projects
+
+
+MARKDOWN

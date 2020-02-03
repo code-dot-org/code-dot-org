@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert} from '../../../../../util/configuredChai';
+import {assert} from '../../../../../util/deprecatedChai';
 import Unit6ValidationStep from '@cdo/apps/lib/kits/maker/ui/Unit6ValidationStep';
 import {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {Unit6Intention} from '@cdo/apps/lib/kits/maker/util/discountLogic';
@@ -50,11 +50,12 @@ describe('Unit6ValidationStep', () => {
       <Unit6ValidationStep
         {...defaultProps}
         stepStatus={Status.SUCCEEDED}
-        initialChoice={Unit6Intention.YES_18_19}
+        initialChoice={Unit6Intention.YES_SPRING_2020}
       />
     );
     assert.equal(
-      wrapper.find(`[value="${Unit6Intention.YES_18_19}"]`).props().checked,
+      wrapper.find(`[value="${Unit6Intention.YES_SPRING_2020}"]`).props()
+        .checked,
       true
     );
     assert.equal(wrapper.find('Button').length, 0);

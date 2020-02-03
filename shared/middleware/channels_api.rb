@@ -161,9 +161,16 @@ class ChannelsApi < Sinatra::Base
     project_type = value.delete('projectType')
 
     begin
-      value = StorageApps.new(get_storage_id).update(id, value, request.ip, project_type: project_type)
-    rescue ArgumentError, OpenSSL::Cipher::CipherError
-      bad_request
+      value = StorageApps.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
+    rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError => e
+      if e.class == ProfanityPrivacyError
+        dont_cache
+        status 422
+        content_type :json
+        return {nameFailure: e.flagged_text}.to_json
+      else
+        bad_request
+      end
     end
 
     dont_cache

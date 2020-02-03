@@ -1,0 +1,121 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "startMappingEach",
+    "blockText": "{GROUP} begin {PROPERTY} following {RANGE}",
+    "color": [
+      136,
+      0.84,
+      0.8
+    ],
+    "args": [
+      {
+        "name": "GROUP",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "bears",
+            "\"BEAR\""
+          ],
+          [
+            "cats",
+            "\"CAT\""
+          ],
+          [
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ],
+          [
+            "width",
+            "\"width\""
+          ],
+          [
+            "height",
+            "\"height\""
+          ],
+          [
+            "rotation",
+            "\"rotation\""
+          ],
+          [
+            "horizontal position",
+            "\"x\""
+          ],
+          [
+            "vertical position",
+            "\"y\""
+          ],
+          [
+            "tint",
+            "\"tint\""
+          ]
+        ]
+      },
+      {
+        "name": "RANGE",
+        "options": [
+          [
+            "bass",
+            "\"bass\""
+          ],
+          [
+            "mid",
+            "\"mid\""
+          ],
+          [
+            "treble",
+            "\"treble\""
+          ]
+        ]
+      }
+    ]
+  }
+}

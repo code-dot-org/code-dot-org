@@ -1,19 +1,20 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {expect} from '../util/configuredChai';
+import {expect} from '../util/deprecatedChai';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
-import i18n from '@cdo/apps/code-studio/i18n';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {sandboxDocumentBody} from '../util/testUtils';
+import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -110,15 +111,11 @@ describe('StudioApp', () => {
     beforeEach(() => {
       sinon.stub(project, 'getUrl');
       sinon.stub(project, 'getStandaloneApp');
-      sinon.stub(i18n, 't').callsFake(function(txt) {
-        return txt;
-      });
     });
 
     afterEach(() => {
       project.getUrl.restore();
       project.getStandaloneApp.restore();
-      i18n.t.restore();
     });
 
     it('returns a How It Works link to the project edit page from an embed page in GameLab', () => {
@@ -128,7 +125,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
@@ -142,7 +139,7 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       const footItems = makeFooterMenuItems();
       const howItWorksItem = footItems.find(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       expect(howItWorksItem.link).to.equal(
         'https://studio.code.org/projects/gamelab/C_2x38fH_jElONWxTLrCHw/edit'
@@ -156,10 +153,10 @@ describe('StudioApp', () => {
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
       var howItWorksIndex = footItems.findIndex(
-        item => item.text === 'footer.how_it_works'
+        item => item.key === 'how-it-works'
       );
       var reportAbuseIndex = footItems.findIndex(
-        item => item.text === 'footer.report_abuse'
+        item => item.key === 'report-abuse'
       );
       expect(howItWorksIndex).to.be.below(reportAbuseIndex);
     });
@@ -170,8 +167,8 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('gamelab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).not.to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).not.to.include('try-hoc');
     });
 
     it('does return Try-HOC menu item in PlayLab', () => {
@@ -180,8 +177,79 @@ describe('StudioApp', () => {
       );
       project.getStandaloneApp.returns('playlab');
       var footItems = makeFooterMenuItems();
-      var itemTexts = footItems.map(item => item.text);
-      expect(itemTexts).to.include('footer.try_hour_of_code');
+      var itemKeys = footItems.map(item => item.key);
+      expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('loadLibraryBlocks', () => {
+    const initialConfig = {
+      level: {
+        codeFunctions: {preExistingFunction: null}
+      },
+      dropletConfig: {
+        additionalPredefValues: ['preExistingValue'],
+        blocks: ['preExistingBlock']
+      }
+    };
+
+    it('given no libraries, leaves the config unchanged', () => {
+      let config = initialConfig;
+      studioApp().loadLibraryBlocks(config);
+      expect(config).to.deep.equal(initialConfig);
+    });
+
+    it('given empty libraries array, leaves the config unchanged', () => {
+      let config = initialConfig;
+      config.level.libraries = [];
+      studioApp().loadLibraryBlocks(config);
+      expect(config).to.deep.equal(initialConfig);
+    });
+
+    it('given a library, creates a libraryCode string', () => {
+      let config, targetConfig;
+      config = targetConfig = initialConfig;
+      studioApp().loadLibraryBlocks(config);
+      targetConfig.level.libraryCode = '';
+      expect(config).to.deep.equal(targetConfig);
+    });
+
+    it('given some libraries, adds all blocks to the droplet config', () => {
+      let config = initialConfig;
+      let targetBlocks = [
+        'preExistingBlock',
+        ...sampleLibrary.libraries[0].dropletConfig,
+        ...sampleLibrary.libraries[1].dropletConfig
+      ];
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.dropletConfig.blocks).to.deep.equal(targetBlocks);
+    });
+
+    it('given a library, adds all library closures to libraryCode', () => {
+      let config = initialConfig;
+      let librarycode =
+        createLibraryClosure(sampleLibrary.libraries[0]) +
+        createLibraryClosure(sampleLibrary.libraries[1]);
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.level.libraryCode).to.deep.equal(librarycode);
+    });
+
+    it('given a library, adds all functions to codeFunctions', () => {
+      let config = initialConfig;
+      let targetCodeFunctions = {
+        preExistingFunction: null,
+        'twoFunctionLibrary.functionWithParams': null,
+        'twoFunctionLibrary.functionWithGlobalVariable': null,
+        'oneFunctionLibrary.functionWithPrivateFunctionCall': null
+      };
+
+      config.level.libraries = sampleLibrary.libraries;
+      studioApp().loadLibraryBlocks(config);
+      expect(config.level.codeFunctions).to.deep.equal(targetCodeFunctions);
     });
   });
 

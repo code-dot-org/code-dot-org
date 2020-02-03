@@ -219,6 +219,11 @@ class WordOrPictureLogins extends React.Component {
     let printWindow = window.open('', windowName, '');
     const {section} = this.props;
 
+    printWindow.document.open();
+    printWindow.addEventListener('load', event => {
+      printWindow.print();
+    });
+
     printWindow.document.write(
       `<html><head><title>${i18n.printLoginCards_windowTitle({
         sectionName: section.name
@@ -227,6 +232,7 @@ class WordOrPictureLogins extends React.Component {
     printWindow.document.write('<body onafterprint="self.close()">');
     printWindow.document.write(printArea);
     printWindow.document.write('</body></html>');
+    printWindow.document.close();
   };
 
   render() {

@@ -143,16 +143,8 @@ Replica:
 
 # System variables for the Aurora DB cluster.
 AuroraCluster: &aurora
-  # When using row-based logging, the master writes events to the binary log that indicate how individual table rows are changed.
-  # Replication of the master to the slave works by copying the events representing the changes to the table rows to the slave.
-  # ROW required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_format: ROW
-  # When enabled, this variable causes the master to write a checksum for each event in the binary log.
-  # When disabled (value NONE), write and check the event length (rather than a checksum) for each event.
-  # NONE required for DMS Change Data Capture:
-  # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.AmazonManaged
-  binlog_checksum: NONE
+  # Disable binary logging to improve write performance.
+  binlog_format: 'OFF'
 
   # Enable GTIDs: https://aws.amazon.com/blogs/database/amazon-aurora-for-mysql-compatibility-now-supports-global-transaction-identifiers-gtids-replication/
   gtid-mode: ON_PERMISSIVE
@@ -183,14 +175,8 @@ AuroraReportingCluster:
 
 # System variables for the Aurora DB writer.
 AuroraWriter:
-  # Performance Schema and several related Parameter Group settings are enabled automatically on an Aurora Instance
-  # when Performance Insights is enabled on the Instance.  These additional, automatically applied, settings
-  # enable Performance Insights to display detailed Aurora-specific wait events.  Explicitly setting
-  # performance_schema=1 disables the RDS service automatically enabling the related settings that allow for detailed
-  # wait events to be logged in Performance Insights, so we do NOT set it.
-  # https://docs.aws.amazon.com/en_pv/AmazonRDS/latest/AuroraUserGuide/USER_PerfInsights.Enabling.html
-  # Note that our Percona Monitoring server also relies on performance_schema=1 being set automatically by RDS.
-  performance_schema: null
+  # Enable Performance Schema.
+  performance_schema: 1
 
   # Relax transaction isolation for improved concurrency under load.
   tx_isolation: READ-COMMITTED

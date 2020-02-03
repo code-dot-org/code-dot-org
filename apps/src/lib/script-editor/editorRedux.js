@@ -11,6 +11,7 @@ const REMOVE_VARIANT = 'scriptEditor/REMOVE_VARIANT';
 const SET_ACTIVE_VARIANT = 'scriptEditor/SET_ACTIVE_VARIANT';
 const SET_FIELD = 'scriptEditor/SET_FIELD';
 const REORDER_LEVEL = 'scriptEditor/REORDER_LEVEL';
+const MOVE_LEVEL_TO_STAGE = 'scriptEditor/MOVE_LEVEL_TO_STAGE';
 const ADD_LEVEL = 'scriptEditor/ADD_LEVEL';
 const MOVE_GROUP = 'scriptEditor/MOVE_GROUP';
 const MOVE_STAGE = 'scriptEditor/MOVE_STAGE';
@@ -92,6 +93,13 @@ export const reorderLevel = (stage, originalPosition, newPosition) => ({
   newPosition
 });
 
+export const moveLevelToStage = (stage, position, newStage) => ({
+  type: MOVE_LEVEL_TO_STAGE,
+  stage,
+  position,
+  newStage
+});
+
 export const addLevel = stage => ({
   type: ADD_LEVEL,
   stage
@@ -163,6 +171,15 @@ function stages(state = [], action) {
       const temp = levels.splice(action.originalPosition - 1, 1);
       levels.splice(action.newPosition - 1, 0, temp[0]);
       updateLevelPositions(levels);
+      break;
+    }
+    case MOVE_LEVEL_TO_STAGE: {
+      const levels = newState[action.stage - 1].levels;
+      const level = levels.splice(action.position - 1, 1)[0];
+      updateLevelPositions(levels);
+      const newLevels = newState[action.newStage - 1].levels;
+      newLevels.push(level);
+      updateLevelPositions(newLevels);
       break;
     }
     case ADD_GROUP: {

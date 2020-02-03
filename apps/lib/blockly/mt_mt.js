@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "għal kull oġġett";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Għal kull oġett li jkun qiegħed fl'lista, stabilixxi varjabbli (variable) \"%1\" lejn l'oġett, u mbagħad għamel xi stqarrijiet (statements).";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "min %1 sa %2 bi %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "għodd mal";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Ħu l'varjabbli %1 u ħu l'valuri min-numru tal-bidu san-numru ta l'aħħar, billi taqbeż b'intervall speċifiku, u aħdem il-blokki speċifikati.";

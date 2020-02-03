@@ -1,3 +1,4 @@
+/*global Blockly*/
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
@@ -6,6 +7,7 @@ import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {SpritelabReservedWords} from './spritelab/constants';
+import {TOOLBOX_EDIT_MODE} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -266,12 +268,18 @@ P5Lab.prototype.init = function(config) {
   });
 
   config.afterClearPuzzle = function() {
+    let startLibraries;
+    if (config.level.startLibraries) {
+      startLibraries = JSON.parse(config.level.startLibraries);
+    }
+    project.sourceHandler.setInitialLibrariesList(startLibraries);
     getStore().dispatch(setInitialAnimationList(this.startAnimations));
     this.studioApp_.resetButtonClick();
   }.bind(this);
 
   config.dropletConfig = dropletConfig;
   config.appMsg = this.isSpritelab ? spritelabMsg : gamelabMsg;
+  this.studioApp_.loadLibraryBlocks(config);
 
   // hide makeYourOwn on the share page
   config.makeYourOwn = false;
@@ -415,7 +423,8 @@ P5Lab.prototype.init = function(config) {
     isIframeEmbed: !!config.level.iframeEmbed,
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
-    isSubmitted: !!config.level.submitted
+    isSubmitted: !!config.level.submitted,
+    librariesEnabled: !!config.level.librariesEnabled
   });
 
   if (startInAnimationTab(getStore().getState())) {
@@ -820,6 +829,24 @@ P5Lab.prototype.onPuzzleComplete = function(submit, testResult, message) {
   } else {
     // We're using blockly, report the program as xml
     var xml = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
+
+    // When SharedFunctions (aka shared behavior_definitions) are enabled, they
+    // are always appended to startBlocks on page load.
+    // See StudioApp -> setStartBlocks_
+    // Because of this, we need to remove the SharedFunctions when we are in
+    // toolbox edit mode. Otherwise, they end up in a student's toolbox.
+    if (this.level.edit_blocks === TOOLBOX_EDIT_MODE) {
+      var allBlocks = Array.from(xml.querySelectorAll('xml > block'));
+      var toRemove = allBlocks.filter(element => {
+        return (
+          element.getAttribute('type') === 'behavior_definition' &&
+          element.getAttribute('usercreated') !== 'true'
+        );
+      });
+      toRemove.forEach(element => {
+        xml.removeChild(element);
+      });
+    }
     program = encodeURIComponent(Blockly.Xml.domToText(xml));
   }
 
@@ -1018,6 +1045,7 @@ P5Lab.prototype.initInterpreter = function(attachDebugger = true) {
   code += this.studioApp_.getCode();
   this.JSInterpreter.parse({
     code,
+    libraryCode: this.level.libraryCode,
     blocks: dropletConfig.blocks,
     blockFilter: this.level.executePaletteApisOnly && this.level.codeFunctions,
     enableEvents: true,

@@ -225,10 +225,16 @@ export class CohortViewTable extends React.Component {
       )
     ) {
       columns.push({
-        property: 'registered_workshop',
+        property: 'registered_workshop_id',
         header: {
           label: 'Registered Workshop',
           transforms: [sortable]
+        },
+        cell: {
+          formatters: [
+            workshopId =>
+              workshopId ? this.formatWorkshopUrl(workshopId) : 'No'
+          ]
         }
       });
     }
@@ -322,6 +328,18 @@ export class CohortViewTable extends React.Component {
       >
         View Application
       </Button>
+    );
+  };
+
+  formatWorkshopUrl = workshopId => {
+    return (
+      <a
+        href={
+          location.origin + '/pd/workshop_dashboard/workshops/' + workshopId
+        }
+      >
+        Workshop {workshopId}
+      </a>
     );
   };
 

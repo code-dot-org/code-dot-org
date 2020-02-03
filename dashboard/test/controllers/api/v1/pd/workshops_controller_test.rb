@@ -405,6 +405,13 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'created_at is included in a serialized workshop response' do
+    sign_in @organizer
+    get :show, params: {id: @workshop.id}
+    refute_nil JSON.parse(response.body)['created_at']
+    assert_equal @workshop.created_at, JSON.parse(response.body)['created_at']
+  end
+
   # Action: Create
 
   test 'admins can create workshops' do

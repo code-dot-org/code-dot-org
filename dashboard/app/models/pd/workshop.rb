@@ -34,6 +34,17 @@ class Pd::Workshop < ActiveRecord::Base
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  belongs_to :organizer, class_name: 'User'
+  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
+
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  accepts_nested_attributes_for :sessions, allow_destroy: true
+
+  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  belongs_to :regional_partner
+
+  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -46,15 +57,6 @@ class Pd::Workshop < ActiveRecord::Base
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
-
-  belongs_to :organizer, class_name: 'User'
-  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
-
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  accepts_nested_attributes_for :sessions, allow_destroy: true
-
-  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  belongs_to :regional_partner
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
@@ -342,9 +344,14 @@ class Pd::Workshop < ActiveRecord::Base
   # Returns the school year the summer workshop is preparing for, in
   # the form "2019-2020", like application_year on Pd Applications.
   # The school year runs 6/1-5/31.
+  # @see Pd::Application::ActiveApplicationModels::APPLICATION_YEARS
   def school_year
     return nil if sessions.empty?
-    sessions.order(:start).first.start.month >= 6 ? "#{year}-#{year.to_i + 1}" : "#{year.to_i - 1}-#{year}"
+
+    workshop_year = year
+    sessions.order(:start).first.start.month >= 6 ?
+      "#{workshop_year}-#{workshop_year.to_i + 1}" :
+      "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
@@ -688,39 +695,30 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   # Users who could be re-assigned to be the organizer of this workshop
+  # @return [ActiveRecord::Relation]
   def potential_organizers
-    potential_organizer_ids = []
-    potential_organizers = []
-
-    # if there is a regional partner, only that partner's PMs can become the organizer
-    # otherwise, any PM can become the organizer
-    if regional_partner
-      regional_partner.program_managers.each do |pm|
-        potential_organizers << {label: pm.name, value: pm.id}
-      end
-    else
-      UserPermission.where(permission: UserPermission::PROGRAM_MANAGER).pluck(:user_id)&.map do |user_id|
-        potential_organizer_ids << user_id
-      end
-    end
-
-    # any CSF facilitator can become the organizer of a CSF workshhop
-    if course == Pd::Workshop::COURSE_CSF
-      Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF).pluck(:facilitator_id)&.map do |user_id|
-        potential_organizer_ids << user_id
-      end
-    end
+    user_queries = []
 
     # workshop admins can become the organizer of any workshop
-    UserPermission.where(permission: UserPermission::WORKSHOP_ADMIN).pluck(:user_id)&.map do |user_id|
-      potential_organizer_ids << user_id
+    organizer_roles = [UserPermission::WORKSHOP_ADMIN]
+
+    if regional_partner_id
+      # if there is a regional partner, only that partner's PMs can become the organizer
+      user_queries << regional_partner_program_managers
+    else
+      # otherwise, any PM can become the organizer
+      organizer_roles << UserPermission::PROGRAM_MANAGER
     end
 
-    User.where(id: potential_organizer_ids).pluck(:name, :id)&.map do |name, id|
-      potential_organizers << {label: name, value: id}
+    user_queries << User.joins(:permissions).merge(UserPermission.where(permission: organizer_roles))
+
+    # any CSF facilitator can become the organizer of a CSF workshop
+    if course == Pd::Workshop::COURSE_CSF
+      user_queries << User.joins(:courses_as_facilitator).merge(Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF))
     end
 
-    potential_organizers
+    # Combine multiple queries into single result set.
+    user_queries.inject(:union)
   end
 
   def can_user_delete?(user)

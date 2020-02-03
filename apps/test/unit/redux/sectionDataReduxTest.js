@@ -1,4 +1,4 @@
-import {assert} from '../../util/configuredChai';
+import {assert} from '../../util/deprecatedChai';
 import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {

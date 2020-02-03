@@ -219,6 +219,7 @@ class InlineAudio extends React.Component {
           style={[styles.wrapper, this.props.style && this.props.style.wrapper]}
           onMouseOver={this.toggleHover}
           onMouseOut={this.toggleHover}
+          onClick={this.toggleAudio}
         >
           <div
             style={[
@@ -245,7 +246,6 @@ class InlineAudio extends React.Component {
               this.props.style && this.props.style.button,
               this.state.hover && styles.hover
             ]}
-            onClick={this.toggleAudio}
           >
             <i
               className={this.state.playing ? 'fa fa-pause' : 'fa fa-play'}

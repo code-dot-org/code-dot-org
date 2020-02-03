@@ -1,4 +1,7 @@
 {
+  "https://studio.code.org/s/csd3-2019/stage/1/puzzle/1": {
+    "display_name": "Lesson Overview"
+  },
   "https://studio.code.org/s/csd3-2019/stage/1/puzzle/2": {
     "dsls": {
       "markdown": "# Starting Your Search\n\nTo find out more about how computer science and programming play a role in entertainment, you'll need to do some research. Try searching for \"Computer science and &#95;&#95;&#95;&#95;&#95;&#95;\" and trying out different types of entertainment such as film, television, music, games, animation, fashion, etc.\n\n\n"
@@ -19,9 +22,11 @@
     "long_instructions": "# Hungry Bunny\n\nThe bunny is hungry, and it's looking for mushrooms and carrots for dinner.\n\nTo win, you'll need to find a dinner bowl, then collect at least ten carrots and five mushrooms.\n\nMake sure to avoid the bugs.  Ladybugs and snails will eat your food, and bees will sting you, making you drop everything!\n\nUse the space bar to jump.  You can squash ladybugs and snails by jumping on them.\n\nClick \"Run\" to start the program."
   },
   "https://studio.code.org/s/csd3-2019/stage/2/puzzle/1": {
-    "dsls": {
-      "markdown": "# This survey is still under development\n"
-    }
+    "display_name": "Lesson Overview"
+  },
+  "https://studio.code.org/s/csd3-2019/stage/2/puzzle/2": {
+    "display_name": "Drawing Shapes",
+    "long_instructions": "# Drawing Shapes\n\nExplore using this tool that lets you draw different colored shapes. \n\nMake sure you hit \"Run\" and try out turning on the grid to help you place shapes precisely.\n\n[][0]"
   },
   "https://studio.code.org/s/csd3-2019/stage/3/puzzle/1": {
     "display_name": "Lesson Overview"
@@ -210,11 +215,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "When run, where will the sprite <code>mySprite</code> be located?"
-            }
-          ],
           "answers": [
             {
               "text": "<img src=\"https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png\" style=\"width: 150px; border: 1px solid\">",
@@ -231,6 +231,11 @@
             {
               "text": "<img src=\"https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png\" style=\"width: 150px; border: 1px solid\">",
               "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "When run, where will the sprite `mySprite` be located?"
             }
           ]
         }
@@ -261,36 +266,36 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/6/puzzle/12": {
     "dsls": {
-      "title": "drawSprites",
+      "answers": [
+        {
+          "text": "https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png,300px"
+        },
+        {
+          "text": "https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png"
+        },
+        {
+          "text": "https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png"
+        },
+        {
+          "text": "https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png"
+        }
+      ],
       "content1": "Match the code to the image that it will produce.",
       "questions": [
         {
-          "text": "<img src=\"https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png\">"
+          "text": "https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08 AM.png"
         },
         {
-          "text": "<img src=\"https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png\">"
+          "text": "https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21 AM.png"
         },
         {
-          "text": "<img src=\"https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png\">"
+          "text": "https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12 AM.png"
         },
         {
-          "text": "<img src=\"https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png\">"
+          "text": "https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34 AM.png"
         }
       ],
-      "answers": [
-        {
-          "text": "<img width=\"300px\" src=\"https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48 AM.png\">"
-        },
-        {
-          "text": "<img src=\"https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09 AM.png\">"
-        },
-        {
-          "text": "<img src=\"https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00 AM.png\">"
-        },
-        {
-          "text": "<img src=\"https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28 AM.png\">"
-        }
-      ]
+      "title": "drawSprites"
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/6/puzzle/13": {
@@ -400,27 +405,27 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read this program and predict which of the following animations will be produced."
-            }
-          ],
           "answers": [
             {
-              "text": "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)",
               "correct": false
             },
             {
-              "text": "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)",
               "correct": false
             },
             {
-              "text": "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)",
               "correct": true
             },
             {
-              "text": "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif' style='border: 1px solid #ccc'>",
+              "text": "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)",
               "correct": false
+            }
+          ],
+          "questions": [
+            {
+              "text": "Read this program and predict which of the following animations will be produced."
             }
           ]
         }
@@ -482,30 +487,31 @@
     "contained levels": [
       {
         "dsls": {
-          "title": "title",
+          "answers": [
+            {
+              "text": "true  \nfalse  \ntrue",
+              "correct": true
+            },
+            {
+              "text": "0  \n200  \n100",
+              "correct": false
+            },
+            {
+              "text": "true  \nerror  \ntrue",
+              "correct": false
+            },
+            {
+              "text": "false  \ntrue  \nfalse",
+              "correct": false
+            }
+          ],
+          "markdown": "# Boolean Expressions\n\nDecision-making on computers are based on statements called **boolean expressions**. A boolean expression is **any expression that can only evaluate to either `TRUE` or `FALSE`**. This can be particularly useful when used to compare the properties of two sprites. For example, you could figure out which one is larger or placed higher up. In the next few puzzles we'll use simple boolean expressions to compare sprite properties.\n\n# Predict\n\nRead the code below. There are some new symbols in it which you haven't been introduced to. Take a guess at what they mean and try to answer the following question\n",
           "questions": [
             {
               "text": "Which result will be printed in the console by this program?"
             }
           ],
-          "answers": [
-            {
-              "text": "true<br>false<br>true",
-              "correct": true
-            },
-            {
-              "text": "  0<br>200<br>100",
-              "correct": false
-            },
-            {
-              "text": "  true<br>error<br>true",
-              "correct": false
-            },
-            {
-              "text": "  false<br>true<br>false",
-              "correct": false
-            }
-          ]
+          "title": "title"
         }
       }
     ]
@@ -520,7 +526,23 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/5": {
     "dsls": {
-      "title": "Matching: Comparison Operators",
+      "answers": [
+        {
+          "text": "dog.rotation &lt; cat.rotation"
+        },
+        {
+          "text": "dog.x &lt; cat.x"
+        },
+        {
+          "text": "dog.scale &gt; cat.scale"
+        },
+        {
+          "text": "dog.x &gt; cat.x"
+        },
+        {
+          "text": "dog.x == cat.x"
+        }
+      ],
       "content1": "Match the boolean expression to the English description.",
       "questions": [
         {
@@ -539,27 +561,11 @@
           "text": "Is the dog sprite's x equal to the cat sprite's x?"
         }
       ],
-      "answers": [
-        {
-          "text": "dog.rotation &lt; cat.rotation"
-        },
-        {
-          "text": "dog.x &lt; cat.x"
-        },
-        {
-          "text": "dog.scale &gt; cat.scale"
-        },
-        {
-          "text": "dog.x &gt; cat.x"
-        },
-        {
-          "text": "dog.x == cat.x"
-        }
-      ]
+      "title": "Matching: Comparison Operators"
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/6": {
-    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add an Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
+    "long_instructions": "# Booleans\n\nIn the past few levels, we have been comparing values of sprites to find out whether something is true or false. Let's start putting that in the context of an animation.\n\n# Do This\n\nThe program draws a race car and a finish line. We are going to figure out when the race car crosses the finish line. The sprites have all been set up for you.\n\n-   Add a `console.log` statement inside the draw loop. ( [Show me where][0] )\n-   Add a Boolean expression inside the `console.log` that asks \"Is the x position of the race car less than the x position of the finish line?\"\n-   Look at the output of the program as the car moves. When does the output change? Why?",
     "callouts": {
       "CSD_U3_L8_S6_C1": "Put the console log statement here"
     }
@@ -575,7 +581,7 @@
     "long_instructions": "## Question to Consider\n\n-   When would you want to use an if statement?"
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/10": {
-    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\n\n# If Statement\n\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\n\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \n\n# Do This\n\nThe race car program you wrote earlier is loaded here for you.\n\n-   Add an `if` statement after you update the position of the race car.\n-   Move the Boolean expression from the console.log statement to the condition of the if statement.\n-   Inside the `if` statement add a statement to draw text on the screen to say \"Winner\"."
+    "long_instructions": "<img src=\"https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03 PM.png\" style=\"float:right;width:100px\">\n\n# If Statement\n\nThe Boolean expressions you used earlier allow us to ask questions, but in order to _respond to those questions_, we need to use an `if` statement.\n\n`if` statements usually go inside your draw loop because we want to check them each time the loop runs. \n\n# Do This\n\nThe race car program you wrote earlier is loaded here for you.\n\n-   Add an `if` statement after you update the position of the race car.\n-   Move the Boolean expression from the console.log statement to the condition of the if statement.\n-   Inside the `if` statement, add a statement to draw text on the screen to say \"Winner\"."
   },
   "https://studio.code.org/s/csd3-2019/stage/11/puzzle/11": {
     "long_instructions": "# Changing Fruit\n\nNow that we know how to use _if_ statements, you can do more than just check if the apple has reached a scale of 2. You turn it into a pear once it happens.\n\n# Do This\n\nUse a conditional in the draw loop to check whether `fruit.scale` is greater than 2.  If it is, change the fruit's animation to \"pear\".\n\n_Challenge: Can you also make the fruit stop growing once it turns into a pear?_"
@@ -680,7 +686,17 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/13/puzzle/10": {
     "dsls": {
-      "title": "Matching: Responding to Keypresses",
+      "answers": [
+        {
+          "text": "keyWentDown()"
+        },
+        {
+          "text": "keyWentUp()"
+        },
+        {
+          "text": "keyDown()"
+        }
+      ],
       "content1": "Match the keypress block with the description of how it works. Feel free to go back to the previous bubble if you need to experiment with them.",
       "questions": [
         {
@@ -693,17 +709,7 @@
           "text": "Is true the whole time the key is pressed or held down."
         }
       ],
-      "answers": [
-        {
-          "text": "keyWentDown()"
-        },
-        {
-          "text": "keyWentUp()"
-        },
-        {
-          "text": "keyDown()"
-        }
-      ]
+      "title": "Matching: Responding to Keypresses"
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/13/puzzle/11": {
@@ -732,7 +738,6 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/14/puzzle/3": {
     "dsls": {
-      "title": "Making an Interactive Card",
       "content1": "description here",
       "markdown": "# Your Interactive Card\n\nIn the next few levels, you'll be completing your own interactive card.  Here are some examples to give you some ideas.  Don't forget to look at the code to see how they work.\n\n## Examples\n\n[![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)\n"
     }
@@ -751,6 +756,11 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/14/puzzle/8": {
     "long_instructions": "# Finishing Touches\n\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\n\n# Do This\n\nConsider adding any of the following to finish up your card:\n\n-   Text\n-   Additional images for your sprites\n-   Subtle animation in the background\n-   Sound effects  (Can you figure out how to do this?)\n-   More ways for a user to interact with your card"
+  },
+  "https://studio.code.org/s/csd3-2019/stage/14/puzzle/9": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
   },
   "https://studio.code.org/s/csd3-2019/stage/15/puzzle/1": {
     "display_name": "Lesson Overview"
@@ -778,7 +788,7 @@
     }
   },
   "https://studio.code.org/s/csd3-2019/stage/15/puzzle/6": {
-    "long_instructions": "# Controlling Speed\n\nYou used `rotatationSpeed` outside the draw loop to make your sprite rotate when your program started.  You can also use `rotationSpeed` **inside** the draw loop to change the speed of the sprite during the game.  For example, a sprite can start rotating when the user presses the space bar, and it will keep rotating until it's told to stop.\n\n# Do This\n\n-   Look at the `if` statement inside the draw loop that checks whether the space bar has been pressed. ( [Show me where][0] )\n-   Use the `rotationSpeed` block to make the color wheel start spinning when the user presses the space bar.",
+    "long_instructions": "# Controlling Speed\n\nYou used `rotationSpeed` outside the draw loop to make your sprite rotate when your program started.  You can also use `rotationSpeed` **inside** the draw loop to change the speed of the sprite during the game.  For example, a sprite can start rotating when the user presses the space bar, and it will keep rotating until it's told to stop.\n\n# Do This\n\n-   Look at the `if` statement inside the draw loop that checks whether the space bar has been pressed. ( [Show me where][0] )\n-   Use the `rotationSpeed` block to make the color wheel start spinning when the user presses the space bar.",
     "callouts": {
       "CSD_U3_L11_S5_C1": "Look at this code."
     }
@@ -853,7 +863,7 @@
     "long_instructions": "# Applesauce\n\nWhen the apple hits the blender, the blender should turn on.\n\n# Do This\n\nUse the `isTouching` block to make the blender shake back and forth when the apple sprite touches the blender sprite.  The shaking motion is already coded using the random block, so you just have to check when the two sprites are touching.\n\n_Challenge: Can you make the apple disappear when it touches the blender?_\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\""
   },
   "https://studio.code.org/s/csd3-2019/stage/16/puzzle/6": {
-    "long_instructions": "# Making Sounds\n\nYou can also use code to play a blender sound.\n\n# Do This\n\nUse the `playSound` block from the \"World\" drawer to play the \"<https://docs.code.org/sounds/blender.mp3>\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: [][0]\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\"\n\n[//]: # \"https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png\""
+    "long_instructions": "# Making Sounds\n\nYou can also use code to play a blender sound.\n\n# Do This\n\nUse the `playSound` block from the \"World\" drawer to play the \"<https://studio.code.org/docs/sounds/blender.mp3>\" sound when the apple touches the blender.  You will need to paste the address of the sound into the block, so it looks like this: [][0]\n\n[//]: # \"https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png\"\n\n[//]: # \"https://images.code.org/ea5def7998ed88d016ac7d8223aabb75-image-1470247399852.png\"\n\n[//]: # \"https://images.code.org/b3a38abe5aeb799e61b7368ceb210873-image-1470247402163.png\"\n\n[//]: # \"https://images.code.org/57c724cf77b338f3c13dc8271a76dd77-image-1470247525113.png\"\n\n[//]: # \"https://images.code.org/68b31e0fe8b8b454225d87b0f4a0a5f8-image-1470317549553.png\"\n\n[//]: # \"https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png\"\n\n[//]: # \"https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png\""
   },
   "https://studio.code.org/s/csd3-2019/stage/16/puzzle/7": {
     "long_instructions": "# Rainbow Horse\n\nWhen the rainbow touches the horse, it should turn into a unicorn.\n\n# Do This\n\nUse the `if`, `isTouching`, and `setAnimation` blocks to change the horse sprite's image when the rainbow touches it.  The unicorn image is already loaded in the animations tab for you.\n\n[//]: # \"https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png\"\n\n[//]: # \"https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png\"\n\n[//]: # \"https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png\"\n\n[//]: # \"https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png\""
@@ -1039,7 +1049,8 @@
               "correct": false,
               "feedback": "Functions can be created anywhere you like in your code. It is still a good idea to keep them all at the bottom for organization though!"
             }
-          ]
+          ],
+          "markdown": "# Does It Matter Where You Create Functions?\n\nSo far all your functions have been created at the bottom of your code. What do you think will happen if you call a function before it's defined?\n\nNotice that the red square is drawn **before** its function is created while the green square is drawn **after** its function is created. Which of these do you think will be drawn?\n"
         }
       }
     ]
@@ -1135,7 +1146,6 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/21/puzzle/3": {
     "dsls": {
-      "title": "Build a Platform Jumper",
       "content1": "description here",
       "markdown": "# Build a Platform Jumper\n\nIn the next several levels, you'll be building a platform jumper game.  Before you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher before clicking to the next level.\n"
     }
@@ -1213,7 +1223,6 @@
   },
   "https://studio.code.org/s/csd3-2019/stage/22/puzzle/2": {
     "dsls": {
-      "title": "Create Your Own Game",
       "content1": "description here",
       "markdown": "# Create your own game\n\nNow that you have all the skills you need, it's time to make your own game!\n\nWith a partner, brainstorm some different ideas for your game.  You can think about the games you've already seen, or look at some more sample games to give you ideas.\n\n[<img src=\"https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png\" style=\"width: 200px; float: left; margin: 10px;\">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)\n\n[<img src=\"https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png\" style=\"width: 200px; float: left; margin: 10px;\">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)\n\n[<img src=\"https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png\" style=\"width: 200px; margin: 10px;\">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)\n\n[<img src=\"https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png\" style=\"width: 200px; margin: 10px;\">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)\n\nOnce you have settled on a type of game with your partner, fill out the Project Guide with the backgrounds, variables, sprites, and functions that you will need to make the game.  You'll spend the next few levels creating your game.\n"
     }
@@ -1256,5 +1265,25 @@
   "https://studio.code.org/s/csd3-2019/stage/22/puzzle/12": {
     "display_name": "Project - Finishing Touches",
     "long_instructions": "# Finishing Touches\n\nNow that you have the basis for your game, it's time to add some finishing touches.\n\nTo make your game even better, try making at least two improvements to it. You can use the list below to help you, or you can come up with your own improvements that you'd like to make.\n\n-   Find a way to keep your player from going off the edges of the screen.\n-   Add a different item for your player to collect or avoid that are worth different point values.\n-   Make a variable to keep track of how many lives your player has, and then end the game when the lives run out.\n-   Add sprites that move in the background of your game.\n-   Make another background to switch to when the score gets even higher, or when the game ends.\n-   Give your game a way to end. Possible events to end your game could be the score reaching a certain value, or the amount of lives to keep the game running runs out.\n-   If your game has platforms, try making the objects in your game interact with these platforms in some way."
+  },
+  "https://studio.code.org/s/csd3-2019/stage/22/puzzle/13": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd3-2019/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "Interactive Animations and Games Post-Project Test"
+    }
+  },
+  "https://studio.code.org/s/csd3-2019/lockable/2/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Principles even better!\n\n"
+    }
+  },
+  "https://studio.code.org/s/csd3-2019/lockable/2/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries End of Semester Student Survey"
+    }
   }
 }

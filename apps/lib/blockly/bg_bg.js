@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "за всеки елемент";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "За всеки елемент от списъка,  задава променливата '%1' да бъде равна на елемента и след това изпълнява действията.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "от %1 до %2 със стъпка %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "за";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Кара променливата %1 да приеме стойностите от началното до последното число, броейки през зададения интервал, и  я използвай в \"направи\" блокове като условие.";

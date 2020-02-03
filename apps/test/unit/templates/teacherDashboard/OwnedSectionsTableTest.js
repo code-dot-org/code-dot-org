@@ -1,4 +1,4 @@
-import {assert, expect} from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import React from 'react';
 import {shallow} from 'enzyme';
 import * as Table from 'reactabular-table';

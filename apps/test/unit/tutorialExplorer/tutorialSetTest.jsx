@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';

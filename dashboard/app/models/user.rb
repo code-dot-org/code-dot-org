@@ -74,6 +74,8 @@ require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -99,6 +101,7 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
+    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
@@ -110,7 +113,6 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
@@ -125,24 +127,6 @@ class User < ActiveRecord::Base
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
   after_create_commit :migrate_to_multi_auth
-
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
-  OAUTH_PROVIDERS = %w(
-    clever
-    facebook
-    google_oauth2
-    lti_lti_prod_kids.qwikcamps.com
-    the_school_project
-    twitter
-    windowslive
-    microsoft_v2_auth
-    powerschool
-  ).freeze
-
-  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
-    clever
-    powerschool
-  ).freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
@@ -467,6 +451,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
@@ -496,6 +481,28 @@ class User < ActiveRecord::Base
     self.races = Policies::Races.sanitized(races).join(',')
     self.races = nil if races.empty?
     self.urm = Policies::Races.any_urm?(races)
+
+    # Make sure we explicitly return true here so Rails doesn't interpret a
+    # potential `self.urm = false` as us trying to halt the callback chain
+    true
+  end
+
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
+  validate :enforce_google_sso_for_admin
+  def enforce_google_sso_for_admin
+    return unless admin
+
+    errors.add(:admin, 'must be a migrated user') unless migrated?
+
+    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
+    return if rack_env?(:development, :adhoc)
+
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
+      errors.add(:admin, 'must be a code.org account with only google oauth')
+    end
+
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
   end
 
   def fix_by_user_type
@@ -538,7 +545,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_email(email)
     return nil if email.blank?
-    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
     migrated_user || User.find_by(email: email)
   end
 
@@ -547,7 +554,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_hashed_email(hashed_email)
     return nil if hashed_email.blank?
-    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
@@ -669,12 +676,9 @@ class User < ActiveRecord::Base
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
-    # Store emails, except when using Clever
-    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
-
-    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-      user.email = user.email + '.oauthemailalreadytaken'
-    end
+    # Store emails, except when using an authentication provider whose emails
+    # we don't trust
+    user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
 
     if auth.provider == :the_school_project
       user.username = auth.extra.raw_info.nickname
@@ -708,7 +712,7 @@ class User < ActiveRecord::Base
     if migrated?
       authentication_options.any?(&:oauth?)
     else
-      OAUTH_PROVIDERS.include? provider
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
     end
   end
 
@@ -716,7 +720,7 @@ class User < ActiveRecord::Base
     if migrated?
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
-      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
   end
 
@@ -1028,7 +1032,7 @@ class User < ActiveRecord::Base
   def next_unpassed_visible_progression_level(script)
     # If all levels in the script are complete, no need to find the next level,
     # will be redirected to /congrats.
-    return nil if completed?(script)
+    return nil if Policies::ScriptActivity.completed?(self, script)
 
     visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
 
@@ -1456,16 +1460,6 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def in_progress_and_completed_scripts
-    user_scripts.compact.reject do |user_script|
-      user_script.script.nil?
-    rescue
-      # Getting user_script.script can raise if the script does not exist
-      # In that case we should also reject this user_script.
-      true
-    end
-  end
-
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
@@ -1550,12 +1544,12 @@ class User < ActiveRecord::Base
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
   def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = primary_script.try(:id)
+    primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
     course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
-    user_scripts = in_progress_and_completed_scripts.
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
@@ -1617,49 +1611,6 @@ class User < ActiveRecord::Base
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
-  end
-
-  def completed?(script)
-    user_script = user_scripts.where(script_id: script.id).first
-    return false unless user_script
-    !!user_script.completed_at || completed_progression_levels?(script)
-  end
-
-  def not_started?(script)
-    !completed?(script) && !a_level_passed?(script)
-  end
-
-  def a_level_passed?(script)
-    user_levels_by_level = user_levels_by_level(script)
-    script.script_levels.detect do |script_level|
-      user_level = user_levels_by_level[script_level.level_id]
-      is_passed = (user_level && user_level.passing?)
-      script_level.valid_progression_level? && is_passed
-    end
-  end
-
-  def working_on?(script)
-    working_on_scripts.include?(script)
-  end
-
-  def working_on_scripts
-    scripts.where('user_scripts.completed_at is null').map(&:cached)
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def working_on_user_scripts
-    user_scripts.where('user_scripts.completed_at is null')
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def completed_user_scripts
-    user_scripts.where('user_scripts.completed_at is not null')
-  end
-
-  def primary_script
-    working_on_scripts.first.try(:cached)
   end
 
   # Returns integer days since account creation, rounded down
