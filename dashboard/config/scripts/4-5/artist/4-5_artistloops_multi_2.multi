@@ -3,7 +3,7 @@ title 'Artist Functions Multiple Choice'
 
 height '120'
 
-question 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+question 'Pick the for loop that represents the following pattern: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
 
 right '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a1.png'
 wrong '/script_assets/4-5_images/artist/4-5_artistloops_multi_2_a2.png'

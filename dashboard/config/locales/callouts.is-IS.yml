@@ -176,8 +176,15 @@ is-IS:
         dance_callout_11_b: Nýr kubbur!
       CourseD_Dance_Party_11_5:
         dance_party_11_5_groups: Hérna eru "allt endur" kubbar
+      Dance_2019_01:
+        dance_callout_01: Veldu tegund dansara hér.
+      Dance_2019_02:
+        dance_callout_11_a: Bættu þessum kubbi í forritið þitt.
+        arrow_buttons: Ýttu á örvarlyklana til að stjórna dansaranum.
       Dance_2019_04:
         dance_callout_02: Bættu þessum kubb í forritið þitt!
+      Dance_2019_05:
+        dance_callout_05: Bættu nýju atviki í forritið þitt.
       Dance_2019_06:
         dance_party_11_5_groups: Nýr kubbur!
       Dance_2019_07:

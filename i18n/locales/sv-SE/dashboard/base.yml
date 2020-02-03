@@ -34,6 +34,7 @@ sv:
         age: 'Ålder'
         gender: 'Kön'
         edit_header: 'Redigera kontouppgifter'
+        finish_sign_up_header: 'Fortsätt färdigställa ditt konto'
         error:
           future: kan inte vara i framtiden
   beta: "beta"
@@ -564,6 +565,8 @@ sv:
     help_resources: "Hjälp och resurser"
     help_support: "Hjälp och support"
     documentation: "Dokumentation"
+  free_response:
+    placeholder: "Skriv in ditt svar här"
   multi:
     wrong_title: "Felaktigt svar"
     wrong_body: "Svaret du angett är inte korrekt.  Försök igen!"

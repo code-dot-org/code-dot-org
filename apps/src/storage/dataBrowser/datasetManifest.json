@@ -28,21 +28,29 @@
     {
       "name": "Top 200 USA",
       "description": "Top 200 Songs on Spotify for the United States, updated daily.",
+      "sourceUrl": "https://spotifycharts.com/regional/us/daily/latest",
+      "sourceText": "Spotify",
       "current": true
     },
     {
       "name": "Viral 50 USA",
       "description": "Spotify's most viral 50 songs in the United States, updated daily.",
+      "sourceUrl": "https://spotifycharts.com/viral/us/daily/latest",
+      "sourceText": "Spotify",
       "current": true
     },
     {
       "name": "Top 200 Worldwide",
       "description": "The top 200 Songs in the world on Spotify, updated daily.",
+      "sourceUrl": "https://spotifycharts.com/regional/global/daily/latest",
+      "sourceText": "Spotify",
       "current": true
     },
     {
       "name": "Viral 50 Worldwide",
       "description": "Spotify's most viral 50 songs in the world, updated daily.",
+      "sourceUrl": "https://spotifycharts.com/viral/global/daily/latest",
+      "sourceText": "Spotify",
       "current": true
     }
   ],

@@ -161,8 +161,6 @@ class Documents < Sinatra::Base
         base = settings.configs[base][:base]
       end
     end
-
-    @locals = {header: @header}
   end
 
   # Language selection
@@ -243,27 +241,27 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
-    if params.key?('embedded') && @locals[:header]['embedded_layout']
-      @locals[:header]['layout'] = @locals[:header]['embedded_layout']
-      @locals[:header]['theme'] ||= 'none'
+    if params.key?('embedded') && @header['embedded_layout']
+      @header['layout'] = @header['embedded_layout']
+      @header['theme'] ||= 'none'
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
-    if @locals[:header]['content-type']
-      response.headers['Content-Type'] = @locals[:header]['content-type']
+    if @header['content-type']
+      response.headers['Content-Type'] = @header['content-type']
     end
-    layout = @locals[:header]['layout'] || 'default'
+    layout = @header['layout'] || 'default'
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, @locals.merge({body: body.join('')}))
+      body render_template(template, {body: body.join('')})
     end
 
-    theme = @locals[:header]['theme'] || 'default'
+    theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, @locals.merge({body: body.join('')}))
+      body render_template(template, {body: body.join('')})
     end
   end
 
@@ -483,7 +481,6 @@ class Documents < Sinatra::Base
     end
 
     def render_(body, path=nil, line=0, locals={})
-      locals = @locals.merge(locals).symbolize_keys
       options = {locals: locals, line: line, path: path}
 
       extensions = MultipleExtnameFileUtils.all_extnames(path)

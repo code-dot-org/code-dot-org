@@ -565,6 +565,8 @@ gl:
   landing:
     report_bug: "Comunicar erro"
     support: "Obter axuda"
+  free_response:
+    placeholder: "Insira a súa resposta aquí"
   multi:
     wrong_title: "Resposta incorrecta"
     wrong_body: "A resposta que vostede tecleou non é correcta. Tente novamente!"
