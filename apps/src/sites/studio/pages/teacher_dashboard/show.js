@@ -18,6 +18,7 @@ import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import textResponses from '@cdo/apps/templates/textResponses/textResponsesRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
@@ -26,7 +27,6 @@ import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
-import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);

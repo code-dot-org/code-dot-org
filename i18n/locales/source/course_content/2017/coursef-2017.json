@@ -144,11 +144,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -169,6 +164,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -252,11 +252,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -277,6 +272,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -357,11 +357,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -382,6 +377,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -454,11 +454,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -479,6 +474,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -614,11 +614,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. Scrat will not move at all.",
@@ -639,6 +634,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ]
         }
@@ -956,11 +956,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -981,6 +976,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1134,11 +1134,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
-            }
-          ],
           "answers": [
             {
               "text": "The pirate would say, \"Pleasure to meet you, Ali.\" and that is all.",
@@ -1161,7 +1156,12 @@
               "feedback": "Incorrect. Notice that the `join` block inserts the provided name (Ali) into the pirate's sentence. "
             }
           ],
-          "markdown": "**This puzzle uses a new block called the `ask` block.**\n\nThe `ask` block stops the program and prompts the user to enter some text. \n\nWhatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it's the variable `name`.\n"
+          "markdown": "**This puzzle uses a new block called the `ask` block.**\n\nThe `ask` block stops the program and prompts the user to enter some text. \n\nWhatever text the user enters is then saved to the variable shown at the end of the `ask` block.  In this case, it's the variable `name`.\n",
+          "questions": [
+            {
+              "text": "What would happen if the user entered the name \"Ali\" at the prompt?"
+            }
+          ]
         }
       }
     ]
@@ -1255,11 +1255,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -1282,7 +1277,12 @@
               "feedback": "Incorrect. The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
             }
           ],
-          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n"
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1461,11 +1461,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -1488,7 +1483,12 @@
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
             }
           ],
-          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n"
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1528,11 +1528,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move to the cloud and try to get nectar, no matter what. ",
@@ -1555,7 +1550,12 @@
               "feedback": "The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud."
             }
           ],
-          "markdown": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. \n"
+          "markdown": "The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar **once**. \n",
+          "questions": [
+            {
+              "text": "If there is not a flower the bee should do nothing. Take a good look at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1611,11 +1611,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What do you think will happen after you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will get nectar at each flower, otherwise it will make honey.",
@@ -1638,7 +1633,12 @@
               "feedback": "The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey."
             }
           ],
-          "markdown": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. \n"
+          "markdown": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be **one** flower or **one** honeycomb under each cloud. \n",
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What do you think will happen after you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -1834,11 +1834,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you run this program?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will use the same function to draw two different sized boxes.",
@@ -1861,7 +1856,12 @@
               "feedback": "The program uses parameters to allow a single function to create two different size boxes."
             }
           ],
-          "markdown": "We have added parameters to the 'draw a square' function.  Click the blue \"edit\" button to see the entire function definition.\n\n\n"
+          "markdown": "We have added parameters to the 'draw a square' function.  Click the blue \"edit\" button to see the entire function definition.\n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you run this program?"
+            }
+          ]
         }
       }
     ]
@@ -2110,11 +2110,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will not collect any nectar or honey.",
@@ -2137,7 +2132,12 @@
               "feedback": "Clicking to look inside of the function shows that it is set to collect as many nectar or honey as is passed through a parameter."
             }
           ],
-          "markdown": "Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue \"edit\" button on the function to see what is inside before answering the question below.\n\n\n"
+          "markdown": "Underneath these clouds, there is either a flower with exactly 1 nectar, or a honeycomb with exactly 1 honey.  Click the blue \"edit\" button on the function to see what is inside before answering the question below.\n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
+            }
+          ]
         }
       }
     ]
@@ -2212,14 +2212,12 @@
   },
   "https://studio.code.org/s/coursef-2017/stage/26/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
   },
   "https://studio.code.org/s/coursef-2017/stage/29/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }

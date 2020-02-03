@@ -8,7 +8,22 @@ question 'What is the largest chunk of this song that you can define as the chor
 height '150'
 
 wrong 'Lou, Lou, skip to my Lou,'
-right 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-wrong "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
-wrong "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+right 'Lou, Lou, skip to my Lou,   
+Lou, Lou, skip to my Lou,   
+Lou, Lou, skip to my Lou,   
+Skip to my Lou, my darlin.'
+wrong "Lou, Lou, skip to my Lou,   
+Lou, Lou, skip to my Lou,   
+Lou, Lou, skip to my Lou,   
+Skip to my Lou, my darlin.
+
+Fly's in the buttermilk,   
+Shoo, fly, shoo,"
+wrong "Fly's in the buttermilk,   
+Shoo, fly, shoo,   
+Fly's in the buttermilk,   
+Shoo, fly, shoo,   
+Fly's in the buttermilk,   
+Shoo, fly, shoo,   
+Skip to my Lou, my darlin."
 

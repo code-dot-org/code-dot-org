@@ -43,6 +43,7 @@ level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: 
 
 stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'Full Year Pilot Experiments Dashboard - Libraries', progression: 'Turn On Student Created Libraries'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
@@ -70,6 +71,12 @@ level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessme
 
 stage 'Assessment Day'
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Unit 7 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U7 20-21 Student Pilot Survey', progression: 'Unit 7 STUDENT Survey', assessment: true
+
+stage 'Unit 7 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U7 20-21 Teacher Pilot Survey', progression: 'Unit 7 TEACHER Survey', assessment: true
 
 stage 'Variables Make Demo', flex_category: 'csp_variables'
 level 'CSP Variables Make Test Level 1', progression: 'Lesson Overview'
