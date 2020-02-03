@@ -48,14 +48,11 @@
         Facilitator Landing Page
 
       -if courses_facilitated.include? Pd::Workshop::COURSE_CSF
-        %a{href: "https://curriculum.code.org/plcsf/", target: '_blank'}
-          %h3
-            CSF Facilitator Landing Page
+        %h3
+          = link_to "CSF Facilitator Landing Page", "https://curriculum.code.org/plcsf/"
       -if courses_facilitated.include? Pd::Workshop::COURSE_CSD
-        %a{href: "https://curriculum.code.org/plcsd/", target: '_blank'}
-          %h3
-            CSD Facilitator Landing Page
+        %h3
+          = link_to "CSD Facilitator Landing Page", "https://curriculum.code.org/plcsd/"
       -if courses_facilitated.include? Pd::Workshop::COURSE_CSP
-        %a{href: "https://curriculum.code.org/plcsp/", target: '_blank'}
-          %h3
-            CSP Facilitator Landing Page
+        %h3
+          = link_to "CSP Facilitator Landing Page", "https://curriculum.code.org/plcsp/"
