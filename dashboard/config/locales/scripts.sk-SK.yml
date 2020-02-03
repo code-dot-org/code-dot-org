@@ -2596,8 +2596,8 @@ sk:
               name: Podmienky a cykly so Záhradníčkou
             Until Loops in Maze:
               name: Cykly "dovtedy kým" v bludisku
-          title: Zrýchlený kurz (2018)
-          assignment_family_title: Zrýchlený kurz (2018)
+          title: Zrýchlený kurz
+          assignment_family_title: Zrýchlený kurz
           description_audience: 'Vek: 9-18'
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
@@ -3166,7 +3166,7 @@ sk:
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie a jej veľký projekt
         express-2018:
-          title: Zrýchlený kurz (2018)
+          title: Zrýchlený kurz
           assignment_family_title: Zrýchlený kurz
           description: Nauč sa základy informatiky a bezpečnosti na internete. Na
             konci kurzu si vytvoríš vlastnú hru alebo príbeh, ktorý môžeš zdieľať
@@ -4346,6 +4346,8 @@ sk:
               name: Záverečný projekt
             Digital Sharing:
               name: Digitálne zdieľanie
+            Simon Says:
+              name: Simon vraví
             Songwriting:
               name: Písanie pesničiek
         express-2019:
@@ -4541,6 +4543,8 @@ sk:
               name: Moji zacyklení robotickí kamaráti (ml.)
             Graphing Data:
               name: Zobrazenie dát v grafoch
+            Powerful Passwords:
+              name: Silné heslá
             Sticker Art with Loops:
               name: Pečiatkovanie v cykloch
             Picturing Data:
@@ -4914,6 +4918,10 @@ sk:
               name: Funkcie
             Sprite Properties:
               name: Vlastnosti postáv
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: Hľadanie a odstraňovanie chýb
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -4978,16 +4986,20 @@ sk:
           stages:
             Dance Party - Go Further:
               name: Tanečná párty - Pokračuj ďalej
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Podmienky
             'Events: The Big Event':
               name: 'Udalosti: Veľká udalosť'
+            Simon Says:
+              name: Simon vraví
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Private and Personal Information:
               name: Súkromné a osobné údaje
+            Access Ability:
+              name: Uľahčenie prístupu
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -5024,3 +5036,31 @@ sk:
               name: Funkcie so Záhradníčkou
             Functions with Artist:
               name: Funkcie s Umelcom
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Podmienky
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+            Simon Says:
+              name: Simon vraví
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Private and Personal Information:
+              name: Súkromné a osobné údaje
+            Access Ability:
+              name: Uľahčenie prístupu
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Podmienky
+            'Events: The Big Event':
+              name: 'Udalosti: Veľká udalosť'
+            Simon Says:
+              name: Simon vraví
+            Alien Dance Party with Sprite Lab:
+              name: Mimozemská tanečná párty so Sprite Labom
+            Private and Personal Information:
+              name: Súkromné a osobné údaje
+            Access Ability:
+              name: Uľahčenie prístupu

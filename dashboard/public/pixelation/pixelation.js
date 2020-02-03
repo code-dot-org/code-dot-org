@@ -69,8 +69,8 @@ function customizeStyles() {
     $(".hide_on_v1").hide();
 
     // Default initial width and height (only available to widget v1)
-    const initialWidth = parseInt(options.v1InitialWidth, 10);
-    const initialHeight = parseInt(options.v1InitialHeight, 10);
+    var initialWidth = parseInt(options.v1InitialWidth, 10);
+    var initialHeight = parseInt(options.v1InitialHeight, 10);
     if (!isNaN(initialWidth)) {
       $("#width").val(initialWidth);
     }
@@ -178,18 +178,26 @@ function initProjects() {
     dashboard.project
       .load()
       .then(function() {
-        // Only enable saving if the initial load succeeds. This means new work
-        // will not be saved, but old work will not be erased and may become
-        // available by refreshing the page.
+        // Only enable saving if the initial load succeeds. This ensures that
+        // any previous work will not be erased if the initial load fails.
         options.saveProject = dashboard.project.save.bind(dashboard.project);
         options.projectChanged = dashboard.project.projectChanged;
         window.dashboard.project.init(sourceHandler);
 
         // Complete project initialization sequence.
         $(document).trigger("appInitialized");
-      })
-      .always(function() {
+
+        // Only enable UI controls if the initial load succeeds. This ensures
+        // the user cannot create any work which we are then unable to save if
+        // the initial load fails.
+        enableUiControls();
+
         pixelationDisplay();
+      })
+      .catch(function() {
+        window.alert(
+          "the pixelation level failed to load. Please reload the page to try again."
+        );
       });
   } else {
     pixelationDisplay();
@@ -703,6 +711,31 @@ function startOverConfirmed() {
   pixel_data.value = options.data;
   drawGraph(null, false, true);
   formatBitDisplay();
+}
+
+var UI_CONTROL_IDS = [
+  "width",
+  "widthRange",
+  "height",
+  "heightRange",
+  "bitsPerPixel",
+  "bitsPerPixelSlider",
+  "hex_to_bin",
+  "bin_to_hex",
+  "actual_size",
+  "save_image",
+  "pixel_data",
+  "readable_format",
+  "raw_format",
+  "start_over",
+  "finished"
+];
+
+function enableUiControls() {
+  UI_CONTROL_IDS.forEach(function(id) {
+    var el = document.getElementById(id);
+    el.removeAttribute("disabled");
+  });
 }
 
 pixelationInit();

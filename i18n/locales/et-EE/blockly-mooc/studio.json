@@ -34,6 +34,7 @@
   "bird": "lind",
   "calloutPutCommandsHereRunStart": "Pane käsuplokid siia, et need käivituksid programmi käivitamisel",
   "calloutBlocklyPlaceGoUpHere": "Üles liikumiseks aseta siia plokk „liigu üles“",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Sündmuste funktsiooniplokkide nägemiseks kliki sündmuste päisel.",
   "calloutUseArrowButtons": "Teisaldamissündmuste käivitamiseks vajuta pikalt neid nuppe või klaviatuuri nooleklahve",
   "calloutUseArrowButtonsAutoSteer": "Oleme kirjutatud koodi peitnud, aga liikumiseks saad ikka kasutada noolenuppe",

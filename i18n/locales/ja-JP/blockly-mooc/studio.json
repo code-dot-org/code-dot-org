@@ -34,6 +34,7 @@
   "bird": "鳥",
   "calloutPutCommandsHereRunStart": "「実行（じっこう）」ボタンをクリックしたときに、ここに おいたプログラムがうごきます。",
   "calloutBlocklyPlaceGoUpHere": "ここに「うごかす 上に」ブロックを くっつけます。",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "イベント関数ブロックを見るにはイベントヘッダーをクリックします。",
   "calloutUseArrowButtons": "このボタンか、キーボードの矢じるしキーで、うごかします。",
   "calloutUseArrowButtonsAutoSteer": "あなたが書いたプログラムを見えなくしましたが、いままでと同じように、矢じるしキーをつかって、R2-D2を うごかすことができます。",

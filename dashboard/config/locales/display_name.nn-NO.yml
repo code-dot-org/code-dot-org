@@ -2,6 +2,21 @@
 nn-NO:
   data:
     display_name:
+      App Lab Intro 8 - Video Design Mode: 'Video: Designmodus'
+      App Lab Intro 8 - Video Getting Started: 'Video: Kom i gang'
+      App Lab Intro 8 - Video Images and Sounds: 'Video: Bilete og lydar'
+      App Lab Intro 8 - Video Make It Interactive: 'Video: Gjer den interaktiv'
+      App Lab Intro 8 - Video Share Your App: 'Video: Del appen din'
+      AppLab Intro 7 - Change Screen Color: Bytt skjermfarge
+      AppLab Intro 7 - Change Text 2: Endre tekst
+      AppLab Intro 7 - Full Text: To knappar
+      AppLab Intro 7 - onEvent intro: Få knappane til å virke
+      AppLab Intro 7 - onEvent twoButtons: Fleire påHending-øvingar
+      AppLab Intro 7 - playSound: Bruk spelLyd
+      AppLab Intro 7 - thisOrThatAddButton: Dette eller dette
+      AppLab Intro 7 - thisOrThatAddScreen: Dette eller dette
+      AppLab Intro 7 - thisOrThatPersonalize: Dette eller dette
+      AppLab Intro 7 - thisOrThatSetScreen: Dette eller dette
       CSD U2 Pair Programming Video: Parprogrammering
       CSD U2 Pair Programming Video_2018: Parprogrammering
       CSD U2 Pair Programming Video_2019: Parprogrammering
@@ -77,6 +92,9 @@ nn-NO:
       Dance_Party_extras_speed_2019: Fortare, saktare
       Dance_Party_extras_visible: Kor forsvann dei?
       Dance_Party_extras_visible_2019: Kor forsvann dei?
+      Oceans_Video_Machine_Learning: 'Video: Maskinlæring'
+      Oceans_Video_Societal_Implications: 'Video: Samfunnsmessige implikasjonar'
+      Oceans_Video_Training_Data: 'Video: grunnlagsdata'
       courseA_video_Stevie: Stevie og det store prosjektet
       courseA_video_Stevie_2018: Stevie og det store prosjektet
       courseB_video_Unspotted: Feil som ikkje er funne
