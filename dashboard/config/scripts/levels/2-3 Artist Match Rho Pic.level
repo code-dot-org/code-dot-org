@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Match:  Finish the missing code.",
+    "short_instructions": "Match:  Finish the missing code.",
     "x": "250",
     "y": "250",
     "start_direction": "270",

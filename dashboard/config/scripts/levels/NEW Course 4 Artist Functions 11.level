@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
+    "short_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  Can you build this function using this `draw a square 20` function that we created for you?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  \r\n\r\nCan you build this function using this `draw a square 20` function that we created for you?\r\n<br/><br/>\r\n\r\n*Note: See that we've changed the pen to be much thinner. Click \"edit\" on the `draw a square 20` function to see how!*",
+    "long_instructions": "Now we want to create a new function called `draw a line of squares` that draws six squares all in a row.  \r\n\r\nCan you build this function using this `draw a square 20` function that we created for you?\r\n<br/><br/>\r\n\r\n*Note: See that we've changed the pen to be much thinner. Click \"edit\" on the `draw a square 20` function to see how!*",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

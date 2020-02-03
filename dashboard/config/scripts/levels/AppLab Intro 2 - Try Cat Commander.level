@@ -51,7 +51,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "This is what the code for Cat Commander looks like. Take one minute to scroll through the code and see if you can understand how it works. Talk about it with a partner. What patterns do you see? \r\n\r\nOnce you're done, move on by clicking \"Run\" then \"Finish\", to learn to build your own adventure.",
+    "long_instructions": "This is what the code for Cat Commander looks like. Take one minute to scroll through the code and see if you can understand how it works. Talk about it with a partner. What patterns do you see? \r\n\r\nOnce you're done, move on by clicking \"Run\" then \"Finish\", to learn to build your own adventure.",
     "contained_level_names": null
   },
   "published": true,

@@ -582,6 +582,8 @@ lv:
           stages:
             Functions:
               name: Funkcijas
+            Velocity:
+              name: Ātrums
         CSF_Secret_Sample:
           description_audience: Vecumā no 8 gadiem (pēc 2. kursa)
         algebraFacilitator:
@@ -666,6 +668,8 @@ lv:
               name: 'Lauksaimnieks: Nosacījuma cikli'
         csd3-2017:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             Variables:
@@ -721,6 +725,8 @@ lv:
               name: Binārās aproces
             Binary Images:
               name: Binārie Attēli
+            Play Lab:
+              name: Spēles laboratorija
         csd2-2017:
           stages:
             Lists:
@@ -857,10 +863,14 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-old:
           stages:
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-draft:
@@ -873,6 +883,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
             'null':
@@ -943,6 +955,10 @@ lv:
               name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
             Spelling Bee:
               name: Burtošanas bite
+        subgoal-labels-opt-in:
+          stages:
+            Thanks:
+              name: Paldies
         csp3-research-mxghyt:
           stages:
             Creating Functions:
@@ -1045,6 +1061,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd3-2018:
@@ -1053,6 +1071,8 @@ lv:
               name: Mainīgie
             Conditionals:
               name: Sazarojumi
+            Velocity:
+              name: Ātrums
             Functions:
               name: Funkcijas
         csd2-2018:
@@ -1099,6 +1119,8 @@ lv:
               name: Pūļa ieguve
             Relay Programming:
               name: Releju programmēšana
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1207,3 +1229,201 @@ lv:
           stages:
             Artist:
               name: Mākslinieks
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            The Artist:
+              name: Mākslinieks
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Rūtiņpapīra programmēšana
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Digital Citizenship:
+              name: Digitālā pilsonība
+            'Unplugged: Binary':
+              name: Binārie Attēli
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Veidot pamatus
+            Nested Loops:
+              name: Cikls ciklā
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Functions: Songwriting':
+              name: Dziesmu rakstīšana
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Songwriting:
+              name: Dziesmu rakstīšana
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Binary Bracelets:
+              name: Binārās aproces
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        andrea-test:
+          stages:
+            'null':
+              name: bez vērtības
+        coursec-2019:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Reālās dzīves algoritmi: Papīra lidmašīnas'
+            'Events: The Big Event':
+              name: Lielais notikums
+            Binary Bracelets:
+              name: Binārās aproces
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: Laimīgās kartes
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            'Loops: Getting Loopy':
+              name: Kļūst ciklisks
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Ej, ej
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Spelling Bee:
+              name: Burtošanas bite
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Patiesas dzīves algoritms: Iestādi auga sēklas'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Saraksti
+        csd3-2019:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Funkcijas ar parametriem
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internets
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Funkciju veidošana
+        csp5-2019:
+          stages:
+            While Loops:
+              name: Nosacījuma cikli
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            Building a Foundation:
+              name: Veidot pamatus
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Rūtiņpapīra programmēšana
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Saraksti
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Mainīgie
+            Conditionals:
+              name: Sazarojumi
+            Velocity:
+              name: Ātrums
+            Functions:
+              name: Funkcijas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Ievads
+            Nested Loops:
+              name: Cikls ciklā
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Cikli
+            Conditionals:
+              name: Sazarojumi
+            Events:
+              name: Pasākumi
+            Functions:
+              name: Funkcijas
+            Variables:
+              name: Mainīgie
+            For Loops:
+              name: '"par" cikli'
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Sazarojumi
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Pūļa ieguve
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Sazarojumi
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Sazarojumi

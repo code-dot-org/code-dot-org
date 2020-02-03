@@ -49,7 +49,6 @@ class ScriptLevel < ActiveRecord::Base
   serialized_attrs %w(
     variants
     progression
-    target
     challenge
   )
 
@@ -58,7 +57,7 @@ class ScriptLevel < ActiveRecord::Base
     super
   end
 
-  # WARNING: Using any of these four convenience methods can lead to bugs with
+  # WARNING: Using either of these two convenience methods can lead to bugs with
   # level swapping, because we might not actually be using the first level.
   # Consider using oldest_active_level instead, or see
   # ScriptLevelsController#select_level for how we select the right level to
@@ -68,16 +67,8 @@ class ScriptLevel < ActiveRecord::Base
     levels[0]
   end
 
-  def level=(l)
-    levels[0] = l
-  end
-
   def level_id
     levels[0].id
-  end
-
-  def level_id=(new_level_id)
-    levels[0] = Level.find(new_level_id)
   end
 
   def oldest_active_level
@@ -128,14 +119,17 @@ class ScriptLevel < ActiveRecord::Base
   end
 
   def next_level_or_redirect_path_for_user(user, extras_stage=nil)
-    # if we're coming from an unplugged level, it's ok to continue to unplugged
-    # level (example: if you start a sequence of assessments associated with an
-    # unplugged level you should continue on that sequence instead of skipping to
-    # next stage)
-    if valid_progression_level?(user)
+    if bubble_choice?
+      # Redirect user back to the BubbleChoice activity page.
+      level_to_follow = self
+    elsif valid_progression_level?(user)
+      # if we're coming from an unplugged level, it's ok to continue to unplugged
+      # level (example: if you start a sequence of assessments associated with an
+      # unplugged level you should continue on that sequence instead of skipping to
+      # next stage)
       level_to_follow = next_progression_level(user)
     else
-      # don't ever continue continue to a locked/hidden level
+      # don't ever continue to a locked/hidden level
       level_to_follow = next_level
       level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     end
@@ -203,7 +197,11 @@ class ScriptLevel < ActiveRecord::Base
     # in the stage, which is an assessment. Thus, to answer the question of
     # whether the nth level is locked, we must look at the last level
     last_script_level = stage.script_levels.last
-    user_level = user.user_level_for(last_script_level, last_script_level.oldest_active_level)
+    user_level = UserLevel.find_by(
+      user: user,
+      script: last_script_level.script,
+      level: last_script_level.oldest_active_level
+    )
     # There will initially be no user_level for the assessment level, at which
     # point it is considered locked. As soon as it gets unlocked, we will always
     # have a user_level
@@ -231,6 +229,10 @@ class ScriptLevel < ActiveRecord::Base
 
   def anonymous?
     return level.properties["anonymous"] == "true"
+  end
+
+  def bubble_choice?
+    oldest_active_level.is_a? BubbleChoice
   end
 
   def name
@@ -276,6 +278,12 @@ class ScriptLevel < ActiveRecord::Base
       ids.concat(l.contained_levels.map(&:id))
     end
 
+    # Levelbuilders can select if External/
+    # Markdown levels should display as Unplugged.
+    display_as_unplugged =
+      level.unplugged? ||
+      level.properties["display_as_unplugged"] == "true"
+
     summary = {
       ids: ids,
       activeId: oldest_active_level.id,
@@ -286,6 +294,8 @@ class ScriptLevel < ActiveRecord::Base
       title: level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
+      bonus: bonus,
+      display_as_unplugged: display_as_unplugged
     }
 
     summary[:progression] = progression if progression
@@ -300,6 +310,8 @@ class ScriptLevel < ActiveRecord::Base
       summary[:videoKey] = level.video_key
       summary[:concepts] = level.summarize_concepts
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
+      summary[:assessment] = !!assessment
+      summary[:challenge] = !!challenge
     end
 
     if include_prev_next
@@ -362,6 +374,86 @@ class ScriptLevel < ActiveRecord::Base
       solution_image_url: level.try(:solution_image_url),
       level: level.summarize_as_bonus.camelize_keys,
     }.camelize_keys
+  end
+
+  def self.summarize_as_bonus_for_teacher_panel(script, bonus_level_ids, student)
+    # Just get the most recently stage extra they worked on
+    stage_extra_user_level = student.user_levels.where(script: script, level: bonus_level_ids)&.first
+    if stage_extra_user_level
+      {
+        bonus: true,
+        user_id: student.id,
+        status: SharedConstants::LEVEL_STATUS.perfect,
+        passed: true
+      }.merge!(stage_extra_user_level.attributes)
+    else
+      {
+        bonus: true,
+        user_id: student.id,
+        passed: false,
+        status: SharedConstants::LEVEL_STATUS.not_tried
+      }
+    end
+  end
+
+  # Bring together all the information needed to show the teacher panel on a level
+  def summarize_for_teacher_panel(student)
+    contained_levels = levels.map(&:contained_levels).flatten
+    contained = contained_levels.any?
+
+    levels = if bubble_choice?
+               [level.best_result_sublevel(student) || level]
+             elsif contained
+               contained_levels
+             else
+               [level]
+             end
+
+    user_level = student.last_attempt_for_any(levels)
+    status = activity_css_class(user_level)
+    passed = [SharedConstants::LEVEL_STATUS.passed, SharedConstants::LEVEL_STATUS.perfect].include?(status)
+
+    if user_level
+      paired = user_level.paired?
+
+      driver_info = UserLevel.most_recent_driver(script, levels, student)
+      driver = driver_info[0] if driver_info
+
+      navigator_info = UserLevel.most_recent_navigator(script, levels, student)
+      navigator = navigator_info[0] if navigator_info
+    end
+
+    teacher_panel_summary = {
+      contained: contained,
+      submitLevel: level.properties['submittable'] == 'true',
+      paired: paired,
+      driver: driver,
+      navigator: navigator,
+      isConceptLevel: level.concept_level?,
+      user_id: student.id,
+      passed: passed,
+      status: status,
+      levelNumber: position,
+      assessment: assessment,
+      bonus: bonus
+    }
+    if user_level
+      teacher_panel_summary.merge!(user_level.attributes)
+    end
+
+    teacher_panel_summary
+  end
+
+  def summary_for_feedback
+    lesson_num = stage.lockable ? stage.absolute_position : stage.relative_position
+
+    {
+      lessonName: stage.name,
+      lessonNum: lesson_num,
+      levelNum: position,
+      linkToLevel: path,
+      unitName: stage.script.localized_title
+    }
   end
 
   def self.cache_find(id)

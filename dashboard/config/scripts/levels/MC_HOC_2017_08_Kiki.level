@@ -48,8 +48,8 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[1,9]",
-    "instructions": "Change the function to work for this puzzle.",
-    "markdown_instructions": "Now, instead of destroying cacti, you will need to place stone over lava, then destroy standstone.  \r\n\r\nChange the function to work for this level.",
+    "short_instructions": "Change the function to work for this puzzle.",
+    "long_instructions": "Now, instead of destroying cacti, you will need to place stone over lava, then destroy standstone.  \r\n\r\nChange the function to work for this level.",
     "place_block_options": "[\"lava\",  \"oreIron\", \"sand\", \"sandstone\", \"stone\"]",
     "contained_level_names": null
   },

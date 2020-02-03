@@ -3,6 +3,8 @@
 # As part of this content, it also provides CSS classes which determine
 # responsive visibility for the header itself and the items inside it.
 
+require_relative 'help_header'
+
 class Hamburger
   # These are the CSS classes applied to items in the hamburger,
   # and to the hamburger itself.
@@ -10,17 +12,23 @@ class Hamburger
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
 
+  def self.get_divider_visibility(above_section_visibility, below_section_visibility)
+    return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
+    return SHOW_MOBILE if above_section_visibility == SHOW_MOBILE || below_section_visibility == SHOW_MOBILE
+    return SHOW_ALWAYS
+  end
+
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
     show_signed_out_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
-    show_help_options = HIDE_ALWAYS
+    show_intl_about = SHOW_MOBILE
+    show_help_options = SHOW_MOBILE
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
       # to show whatever would show up in the header at desktop (and mobile) widths.
-      show_help_options = SHOW_ALWAYS
 
       if options[:user_type] == "teacher"
         show_teacher_options = SHOW_ALWAYS
@@ -51,20 +59,13 @@ class Hamburger
       if options[:language] == "en"
         # We want to show the pegasus options.  They're in the hamburger for desktop
         # if they didn't fit on the header, or they're just in it for mobile if they did.
-        if options[:user_type] == "teacher" || options[:user_type] == "student"
-          show_pegasus_options = SHOW_ALWAYS
-          show_help_options = SHOW_ALWAYS
-        else
-          show_pegasus_options = SHOW_MOBILE
-          show_help_options = SHOW_MOBILE
-        end
-      else
-        show_help_options = SHOW_ALWAYS
+        show_pegasus_options =
+          (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
       end
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options, show_help_options]
+    show_set = [show_teacher_options, show_student_options, show_signed_out_options, show_pegasus_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -81,6 +82,7 @@ class Hamburger
       show_student_options: show_student_options,
       show_signed_out_options: show_signed_out_options,
       show_pegasus_options: show_pegasus_options,
+      show_intl_about: show_intl_about,
       show_help_options: show_help_options
     }
   end
@@ -92,10 +94,9 @@ class Hamburger
       {title: "my_dashboard", url: CDO.studio_url("/home")},
       {title: "course_catalog", url: CDO.studio_url("/courses?view=teacher")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
-      {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
 
     student_entries = [
       {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
@@ -103,14 +104,32 @@ class Hamburger
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
 
     signed_out_entries = [
       {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end.freeze
+    end
+
+    if  options[:language] == "en"
+      if options[:user_type] == "teacher"
+        teacher_entries << {
+          title: I18n.t("#{loc_prefix}professional_learning"),
+          url: CDO.studio_url("/my-professional-learning"),
+        }
+      end
+    else
+      entries = [teacher_entries, student_entries, signed_out_entries]
+      entries.each do |entry|
+        entry << {
+          title: I18n.t("#{loc_prefix}about"),
+          url: CDO.code_org_url("/international/about"),
+          id: "header-intl-about"
+        }
+      end
+    end
 
     # When viewing courses, a signed-out user in English gets the teacher view.
     teach_url =
@@ -162,82 +181,18 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       entries = entries.concat teacher_entries.each {|e| e[:class] = visibility[:show_teacher_options]}
-      entries << {type: "divider", class: visibility[:show_teacher_options], id: "after-teacher"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_teacher_options], visibility[:show_help_options]), id: "after-teacher"}
     elsif options[:user_type] == "student"
       entries = entries.concat student_entries.each {|e| e[:class] = visibility[:show_student_options]}
-      entries << {type: "divider", class: visibility[:show_student_options], id: "after-student"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
     else
       entries = entries.concat signed_out_entries.each {|e| e[:class] = visibility[:show_signed_out_options]}
-      entries << {type: "divider", class: visibility[:show_signed_out_options], id: "after-signed-out"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_signed_out_options], visibility[:show_help_options]), id: "after-signed-out"}
     end
 
-    # Help-related.
-
-    if options[:level] || options[:script_level]
-      report_url = options[:script_level] ?
-        options[:script_level].report_bug_url(options[:request]) :
-        options[:level].report_bug_url(options[:request])
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: report_url,
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    else
-      entries << {
-        title: I18n.t("#{loc_prefix}report_bug"),
-        url: "https://support.code.org/hc/en-us/requests/new",
-        class: visibility[:show_help_options],
-        id: "report-bug",
-        target: "_blank"
-      }
-    end
-
-    entries << {
-      title: I18n.t("#{loc_prefix}help_support"),
-      url: "https://support.code.org",
-      class: visibility[:show_help_options],
-      id: "support",
-      target: "_blank"
-    }
-
-    if options[:user_type] == "teacher"
-      entries << {
-        title: I18n.t("#{loc_prefix}teacher_community"),
-        url: "http://forum.code.org/",
-        class: visibility[:show_help_options],
-        target: "_blank",
-        id: "teacher-community"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.gamelab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/gamelab/",
-        class: visibility[:show_help_options],
-        id: "gamelab-docs"
-      }
-    end
-
-    if options[:level] && options[:level].try(:is_project_level) && options[:level].game == Game.applab
-      entries << {
-        title: I18n.t("#{loc_prefix}documentation"),
-        url: "https://docs.code.org/applab/",
-        class: visibility[:show_help_options],
-        id: "applab-docs"
-      }
-
-      entries << {
-        title: I18n.t("#{loc_prefix}tutorials"),
-        url: CDO.code_org_url('/educate/applab'),
-        class: visibility[:show_help_options],
-        id: "applab-tutorials"
-      }
-    end
-
-    entries << {type: "divider", class: visibility[:show_pegasus_options], id: "before-pegasus"}
+    help_contents = HelpHeader.get_help_contents(options)
+    entries.concat help_contents.each {|e| e[:class] = visibility[:show_help_options]}
+    entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
 
     # Pegasus options.
 
@@ -287,36 +242,63 @@ class Hamburger
 
   def self.get_header_contents(options)
     loc_prefix = options[:loc_prefix]
+    header_links = []
+
+    any_teacher_links = [
+      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
+    ]
+
+    en_teacher = [
+      {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
+    ]
+
+    student_links = [
+      {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
+    ]
+
+    en_signed_out_links = [
+      # When signed out, "Learn" will take an English user to the student view of /courses.
+      {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
+      # When signed out, "Teach" will take an English user to the teacher view of /courses.
+      {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
+      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
+      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
+    ]
+
+    non_en_signed_out_links = [
+      {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
+      {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"},
+    ]
+
+    about_intl = [
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/international/about"), id: "header-non-en-about"}
+    ]
 
     if options[:user_type] == "teacher"
-      [
-        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
-        {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
-      ]
+      header_links = any_teacher_links
+      if options[:language] == "en"
+        header_links.concat(en_teacher)
+      else
+        header_links.concat(about_intl)
+      end
     elsif options[:user_type] == "student"
-      [
-        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
-      ]
-    elsif options[:language] == "en"
-      [
-        # When signed out, "Learn" will take an English user to the student view of /courses.
-        {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
-        # When signed out, "Teach" will take an English user to the teacher view of /courses.
-        {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"},
-        {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
-        {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
-        {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-      ]
+      header_links = student_links
+      if options[:language] != "en"
+        header_links.concat(about_intl)
+      end
     else
-      [
-        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"}
-      ]
+      if options[:language] == "en"
+        header_links = en_signed_out_links
+      else
+        header_links.concat(non_en_signed_out_links).concat(about_intl)
+      end
     end
+    header_links
   end
 end

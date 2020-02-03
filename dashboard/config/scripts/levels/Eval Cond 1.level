@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "The cond block checks the boolean expressions in the left column, and as soon as it finds one that returns \"true\" it runs the corresponding code on the right. If none of the expressions evaluate to \"true,\" it runs the bottom block. Update the \"temperature\" variable so that this block returns \"It's just right.\"",
+    "short_instructions": "The cond block checks the boolean expressions in the left column, and as soon as it finds one that returns \"true\" it runs the corresponding code on the right. If none of the expressions evaluate to \"true,\" it runs the bottom block. Update the \"temperature\" variable so that this block returns \"It's just right.\"",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

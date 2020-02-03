@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Desert Temple",
-    "instructions": "Destroy these cacti so that the player can get to the goal.",
-    "markdown_instructions": "Sometimes you need to knock down things that get in the way of your player.  \r\nUse the `destroy` block to clear all of the cactii between the Agent and the pressure plate.",
+    "short_instructions": "Destroy these cacti so that the player can get to the goal.",
+    "long_instructions": "Sometimes you need to knock down things that get in the way of your player.  \r\nUse the `destroy` block to clear all of the cactii between the Agent and the pressure plate.",
     "contained_level_names": null
   },
   "published": true,

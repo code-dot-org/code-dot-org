@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Functions\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Then click on the Save and Close in the upper right hand corner. Hint: Create a triangle that is 100 pixels in length. Good luck!",
+    "short_instructions": "Are you ready to create your own \"Function Block\"? Click on the \"Functions\" block in the tool box, name it \"draw a triangle\", then create a triangle as you have done before with the Action and Loops blocks. Then click on the Save and Close in the upper right hand corner. Hint: Create a triangle that is 100 pixels in length. Good luck!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

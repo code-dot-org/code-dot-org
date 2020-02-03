@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 
 **Lesson Type:** Programming | Loops | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/11/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/11/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 Often, a programmer will want to repeat a set of steps until a particular condition is met.  For this reason, students introduced to a **while** loop.  This lesson demonstrates how a slight manipulation of a conditional statement can allow for the creation of a new and powerful tool in constructing programs, a **while** loop. Students are introduced to a **while** loop by analyzing the flow chart of a conditional statement in which the “true” branch leads back to the original condition.**while** loops are the most primitive type of loop. The **for** loop, which students used in a very basic form during turtle programming, is just a more specific case of a **while** loop. **while** loops repeat a set of steps until a certain condition is met. Thus, like conditional statements, **while** loops use boolean expressions to determine if they will run and how many times. One of the biggest problems a programmer can run into with a **while** loop is to create an infinite loop. There are a couple different defensive programming strategies introduced in this lesson to help prevent infinite loops.
 
@@ -21,7 +21,7 @@ Often, a programmer will want to repeat a set of steps until a particular condit
 
 **Lesson Type:** Programming| App Lab | Simulation
 
-<a href = “https://curriculum.code.org/csp/unit5/12/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/12/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 The ability to model and simulate real-world phenomena on a computer has changed countless fields. Researchers use simulations to predict the weather, the stock market, or the next viral outbreak. Scientists from all disciplines increasingly rely on computer simulation, rather than real-life experiments, to rapidly test their hypotheses in simulated environments. Programmers might simulate users moving across their sites to ensure they can handle spikes in traffic, and of course videogame and virtual reality technology is built around the ability to simulate some aspects of the real world.
 
@@ -36,7 +36,7 @@ resides within the big idea of Abstraction.  This is important because it means 
 
 **Lesson Type:** Programming | Arrays | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/13/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/13/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 The link between programming and abstraction is identified explicitly in the enduring understanding:
 > Programming is facilitated by appropriate abstraction.
@@ -50,7 +50,7 @@ One such abstraction called out in the CSP Framework is that of lists: **Lists a
 
 **Lesson Type:** Programming | Project | App Lab
 
-<a href = “https://curriculum.code.org/csp/unit5/14/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = “https://curriculum.code.org/csp/unit5/14/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 In this lesson, students will use arrays to maintain a collection of data in a program.  They will need to incorporate their understanding of events into their program, creating an app that allows user interaction through keystroke events.  They will also be introduced to the idea of refactoring code.  Most applications you use are not based on static pieces of code. Instead the software will be continuously updated both to correct errors and introduce new pieces of functionality. If later improvements are anticipated it is generally possible to develop programs in a way that easily incorporates new functionality. At other times it is necessary to make larger changes to the way a program operates in order to incorporate new features while maintaining existing functionality. Refactoring code in this way can be a tedious and challenging endeavor, but it helps ensure that the final product is consistent and easy to maintain. If software is not kept in a logical, consistent, and succinct form, then it will only get harder to keep introducing new features, increasing the likelihood of errors.
 

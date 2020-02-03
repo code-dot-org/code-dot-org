@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
   blankStudentTransfer,
@@ -15,12 +15,12 @@ const studentData = [
   {id: 3, name: 'studentc'},
   {id: 0, name: 'studenta'}
 ];
-const sections = {
-  0: {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
-  1: {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
-  2: {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
-  3: {id: 3, name: 'sectiond', loginType: SectionLoginType.word},
-};
+const sections = [
+  {id: 0, name: 'sectiona', loginType: SectionLoginType.google_classroom},
+  {id: 1, name: 'sectionb', loginType: SectionLoginType.email},
+  {id: 2, name: 'sectionc', loginType: SectionLoginType.clever},
+  {id: 3, name: 'sectiond', loginType: SectionLoginType.word}
+];
 
 describe('MoveStudents', () => {
   let updateStudentTransfer;
@@ -45,9 +45,7 @@ describe('MoveStudents', () => {
   });
 
   it('opens a dialog with a table', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     expect(wrapper.find('BaseDialog').exists()).to.be.true;
@@ -55,9 +53,7 @@ describe('MoveStudents', () => {
   });
 
   it('renders students as rows', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
@@ -65,34 +61,28 @@ describe('MoveStudents', () => {
   });
 
   it('sorts students by name (ascending) by default', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0)).to.have.text('studenta');
-    expect(nameCells.at(1)).to.have.text('studentb');
-    expect(nameCells.at(2)).to.have.text('studentc');
+    expect(nameCells.at(0).text()).to.equal('studenta');
+    expect(nameCells.at(1).text()).to.equal('studentb');
+    expect(nameCells.at(2).text()).to.equal('studentc');
   });
 
   it('sorts students by name (descending) on click', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     wrapper.find('#uitest-name-header').simulate('click');
     const nameCells = wrapper.find('.uitest-name-cell');
-    expect(nameCells.at(0)).to.have.text('studentc');
-    expect(nameCells.at(1)).to.have.text('studentb');
-    expect(nameCells.at(2)).to.have.text('studenta');
+    expect(nameCells.at(0).text()).to.equal('studentc');
+    expect(nameCells.at(1).text()).to.equal('studentb');
+    expect(nameCells.at(2).text()).to.equal('studenta');
   });
 
   it('renders only movable sections in dropdown', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     const dropdownOptions = wrapper.find('select').find('option');
@@ -102,9 +92,9 @@ describe('MoveStudents', () => {
      * and 'Other teacher' option
      */
     expect(dropdownOptions).to.have.length(3);
-    expect(dropdownOptions.at(0)).to.have.text('');
-    expect(dropdownOptions.at(1)).to.have.text('sectiond');
-    expect(dropdownOptions.at(2)).to.have.text('Other teacher');
+    expect(dropdownOptions.at(0).text()).to.equal('');
+    expect(dropdownOptions.at(1).text()).to.equal('sectiond');
+    expect(dropdownOptions.at(2).text()).to.equal('Other teacher');
   });
 
   it('renders additional inputs if other teacher is selected', () => {
@@ -113,10 +103,7 @@ describe('MoveStudents', () => {
       otherTeacher: true
     };
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        transferData={transferData}
-      />
+      <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
     wrapper.find('Button').simulate('click');
@@ -130,26 +117,27 @@ describe('MoveStudents', () => {
       sectionId: 2
     };
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        transferData={transferData}
-      />
+      <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
     wrapper.find('Button').simulate('click');
     expect(transferStudents).not.to.have.been.called;
-    wrapper.find('#uitest-submit').simulate('click');
+    wrapper
+      .find('#uitest-submit')
+      .first()
+      .simulate('click');
     expect(transferStudents).to.have.been.calledOnce;
   });
 
   it('calls cancelStudentTransfer on close', () => {
-    const wrapper = mount(
-      <MoveStudents {...DEFAULT_PROPS}/>
-    );
+    const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
     wrapper.find('Button').simulate('click');
     expect(cancelStudentTransfer).not.to.have.been.called;
-    wrapper.find("#uitest-cancel").simulate('click');
+    wrapper
+      .find('#uitest-cancel')
+      .first()
+      .simulate('click');
     expect(cancelStudentTransfer).to.have.been.calledOnce;
   });
 
@@ -159,15 +147,12 @@ describe('MoveStudents', () => {
       error: 'failed to transfer students!'
     };
     const wrapper = mount(
-      <MoveStudents
-        {...DEFAULT_PROPS}
-        transferStatus={transferStatus}
-      />
+      <MoveStudents {...DEFAULT_PROPS} transferStatus={transferStatus} />
     );
 
     wrapper.find('Button').simulate('click');
-    const errorElement = wrapper.find("#uitest-error");
+    const errorElement = wrapper.find('#uitest-error');
     expect(errorElement.exists()).to.be.true;
-    expect(errorElement).to.have.text(transferStatus.error);
+    expect(errorElement.text()).to.equal(transferStatus.error);
   });
 });

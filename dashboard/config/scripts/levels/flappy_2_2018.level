@@ -11,7 +11,7 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        // this only happens after avatar hits ground, and we spin him because of\r\n\t        // game over\r\n\t        return Flappy.avatarY === 322 && Flappy.avatarX === 110;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        var avatarBottom = Flappy.avatarY + 24;\r\n\t        var ground = Flappy.MAZE_HEIGHT - Flappy.GROUND_HEIGHT;\r\n\t        return avatarBottom >= ground && Flappy.gameState === Flappy.GameStates.ACTIVE;\r\n\t      }",
-    "instructions": "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes.",
+    "short_instructions": "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

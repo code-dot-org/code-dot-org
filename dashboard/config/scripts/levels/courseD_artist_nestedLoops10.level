@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row.",
+    "short_instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

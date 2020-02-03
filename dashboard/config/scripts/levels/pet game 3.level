@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-03-28T18:18:30.000Z",
   "level_num": "custom",
   "user_id": 156,
@@ -8,12 +8,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "instructions": "Pets love toys! Use a second \"make sprite\" block to give your pet a toy, then use the \"move towards\" behavior to make your pet run to their new toy.",
+    "short_instructions": "Pets love toys! Use a second \"make sprite\" block to give your pet a toy, then use the \"move towards\" behavior to make your pet run to their new toy.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -1,12 +1,12 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
-const TEST_UNIT_NAME = "Test Unit";
-const TEST_COURSE_VIEW_PATH = "http://example.com/course";
-const TEST_PAGE_NAME = "Test Page";
-const TEST_UNIT_VIEW_PATH = "http://example.com/unit";
+const TEST_UNIT_NAME = 'Test Unit';
+const TEST_COURSE_VIEW_PATH = 'http://example.com/course';
+const TEST_PAGE_NAME = 'Test Page';
+const TEST_UNIT_VIEW_PATH = 'http://example.com/unit';
 
 describe('PlcHeader', () => {
   it('renders a simple header with no page name', () => {
@@ -17,17 +17,15 @@ describe('PlcHeader', () => {
       />
     );
 
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <a href={TEST_COURSE_VIEW_PATH}>
-          My Learning Plan
-        </a>
-        <span className="fa fa-caret-right"/>
-        <span>
-          {TEST_UNIT_NAME}
-        </span>
-      </div>
-    );
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
+          <span className="fa fa-caret-right" />
+          <span>{TEST_UNIT_NAME}</span>
+        </div>
+      )
+    ).to.be.ok;
   });
 
   it('renders an extra layer of breadcrumb with a page name', () => {
@@ -40,22 +38,18 @@ describe('PlcHeader', () => {
       />
     );
 
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <a href={TEST_COURSE_VIEW_PATH}>
-          My Learning Plan
-        </a>
-        <span className="fa fa-caret-right"/>
-        <span>
-          <a href={TEST_UNIT_VIEW_PATH}>
-            {TEST_UNIT_NAME}
-          </a>
-          <span className="fa fa-caret-right"/>
+    expect(
+      wrapper.containsMatchingElement(
+        <div>
+          <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
+          <span className="fa fa-caret-right" />
           <span>
-            {TEST_PAGE_NAME}
+            <a href={TEST_UNIT_VIEW_PATH}>{TEST_UNIT_NAME}</a>
+            <span className="fa fa-caret-right" />
+            <span>{TEST_PAGE_NAME}</span>
           </span>
-        </span>
-      </div>
-    );
+        </div>
+      )
+    ).to.be.ok;
   });
 });

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you complete the program by placing the blocks inside a \"for\" block that counts from 10 to 200 by 10? You can find the \"for\" block in the Loops category.",
+    "short_instructions": "Can you complete the program by placing the blocks inside a \"for\" block that counts from 10 to 200 by 10? You can find the \"for\" block in the Loops category.",
     "x": "200",
     "y": "270",
     "start_direction": "90",

@@ -1,12 +1,13 @@
-import React, {PropTypes} from 'react';
-import color from "../../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../../util/color';
 import * as rowStyle from './rowStyle';
 import FontAwesome from '../../templates/FontAwesome';
 
 export default class ZOrderRow extends React.Component {
   static propTypes = {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
   };
 
   render() {
@@ -14,7 +15,10 @@ export default class ZOrderRow extends React.Component {
 
     // Element will be wrapped in a resizable div
     const outerElement = element.parentNode;
-    const index = Array.prototype.indexOf.call(outerElement.parentNode.children, outerElement);
+    const index = Array.prototype.indexOf.call(
+      outerElement.parentNode.children,
+      outerElement
+    );
     const isBackMost = index === 0;
     const isFrontMost = index + 1 === outerElement.parentNode.children.length;
 
@@ -35,11 +39,10 @@ export default class ZOrderRow extends React.Component {
 
     return (
       <div style={rowStyle.container}>
-        <div style={rowStyle.description}>
-          depth
-        </div>
+        <div style={rowStyle.description}>depth</div>
         <div>
           <button
+            type="button"
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toBack')}
             disabled={isBackMost}
@@ -48,6 +51,7 @@ export default class ZOrderRow extends React.Component {
             <FontAwesome icon="angle-double-left" />
           </button>
           <button
+            type="button"
             style={isBackMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'backward')}
             disabled={isBackMost}
@@ -56,6 +60,7 @@ export default class ZOrderRow extends React.Component {
             <FontAwesome icon="angle-left" />
           </button>
           <button
+            type="button"
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'forward')}
             disabled={isFrontMost}
@@ -64,6 +69,7 @@ export default class ZOrderRow extends React.Component {
             <FontAwesome icon="angle-right" />
           </button>
           <button
+            type="button"
             style={isFrontMost ? squareButtonDisabled : squareButton}
             onClick={this.props.onDepthChange.bind(this, element, 'toFront')}
             disabled={isFrontMost}

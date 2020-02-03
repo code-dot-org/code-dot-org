@@ -43,6 +43,8 @@ id:
       Kiki_StarWars_Test_5_failure_message_override: Permainan telah berakhir!
       Kiki_StarWars_Test_5_Example_failure_message_override: Permainan telah berakhir!
       WhileAdventure_failure_message_override: Selamat! Anda mengumpulkan koin X!
+      courseC19_playLab_EOC3_failure_message_override: Anda harus menambahkan dua
+        atau lebih aktor baru ke dalam permainan Anda dan memprogramnya untuk bergerak.
       courseE_playLab_scaffold3_failure_message_override: Anda harus menambahkan dua
         atau lebih aktor baru ke dalam permainan Anda dan memprogramnya untuk bergerak.
       courseE_playLab_scaffold3_2018_failure_message_override: Anda harus menambahkan

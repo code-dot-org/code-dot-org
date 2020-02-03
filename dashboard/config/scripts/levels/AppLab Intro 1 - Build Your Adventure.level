@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Build Your Adventure\r\n\r\nUse this blank project to build your project. To get you started there's already a home screen with a couple of buttons. If you want you can **quickly make copies of screens** to build out your world. What will you create?!\r\n\r\nWhen you're done you can \"Share\" your work with a friend by phone or with a link. Create your own account to keep building in App Lab!",
+    "long_instructions": "# Build Your Adventure\r\n\r\nUse this blank project to build your project. To get you started there's already a home screen with a couple of buttons. If you want you can **quickly make copies of screens** to build out your world. What will you create?!\r\n\r\nWhen you're done you can \"Share\" your work with a friend by phone or with a link. Create your own account to keep building in App Lab!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

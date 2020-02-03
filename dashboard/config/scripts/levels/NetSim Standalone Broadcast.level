@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n",
+    "short_instructions": "In this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -51,7 +51,7 @@
     "connected_routers": "false",
     "show_log_browser_button": "false",
     "video_key": "csp_internetsimulator_3",
-    "markdown_instructions": "# Broadcast messages in the Internet Simulator\r\n\r\nIn this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "long_instructions": "# Broadcast messages in the Internet Simulator\r\n\r\nIn this version of the Internet Simulator, you can connect to up to 5 other people in a room. When you send messages in the room, everyone receives them. What are some of the challenges of this system, and how might you solve them?\r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>

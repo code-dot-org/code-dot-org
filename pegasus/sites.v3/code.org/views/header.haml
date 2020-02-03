@@ -1,5 +1,5 @@
 :ruby
-  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
 
@@ -49,8 +49,9 @@
               %a.headerlink.linktag{id: entry[:id], href: entry[:url]}= entry[:title]
 
         #right
-          #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+          #sign_in_or_user
             =view :sign_in_or_user
+          = view :help_button, hamburger_options
           = view :hamburger, hamburger_options
 
       #clear{:style=>'clear:both'}

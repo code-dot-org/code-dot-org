@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "use_contract_editor": "true",
-    "instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 * 5",
+    "short_instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 * 5",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 * 5",
+    "long_instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 * 5",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

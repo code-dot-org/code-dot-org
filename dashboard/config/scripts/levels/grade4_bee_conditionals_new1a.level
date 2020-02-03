@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help the bee make all of the honey. You can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb.",
+    "short_instructions": "Help the bee make all of the honey. You can only make honey at a honeycomb, but you can check any space to see if there is a honeycomb.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

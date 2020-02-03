@@ -1,6 +1,7 @@
 import React from 'react';
+import { Platform, StyleSheet, View } from 'react-native';
+import { WebView } from 'react-native-webview';
 import { AppLoading } from 'expo';
-import { AsyncStorage, Platform, StyleSheet, View, WebView } from 'react-native';
 
 import CustomAsset from './CustomAsset';
 import DataWarning from './DataWarning';
@@ -8,8 +9,8 @@ import packagedFiles from './packagedFiles';
 
 export default class App extends React.Component {
 
-  static APPLAB_HEIGHT = 450;
-  static APPLAB_WIDTH = 320;
+  static APP_HEIGHT = <%- appHeight %>;
+  static APP_WIDTH = <%- appWidth %>;
 
   constructor(props) {
     super(props);
@@ -17,6 +18,7 @@ export default class App extends React.Component {
 <% if (!hasDataAPIs) { -%>
       age: DataWarning.AGE_MINIMUM,
 <% } -%>
+      needsEmptyRender: Platform.OS === 'android',
     };
   }
 
@@ -56,25 +58,42 @@ export default class App extends React.Component {
     });
   };
 
+  onLoad = () => {
+    //
+    // NOTE: wait for 2 frames after the WebView says it is loaded before we set our state to
+    // loaded and remove the "cover" View (without this delay, we see a white flash from the WebView)
+    //
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        this.setState({
+          loaded: true,
+        });
+      });
+    });
+  };
+
   webViewScale() {
     const { height, width } = this.state;
 
-    const heightScale = height / App.APPLAB_HEIGHT;
-    const widthScale = width / App.APPLAB_WIDTH;
+    const heightScale = height / App.APP_HEIGHT;
+    const widthScale = width / App.APP_WIDTH;
     return Math.min(heightScale, widthScale);
   }
 
   webViewContainerStyle() {
     const scale = this.webViewScale();
 
-    return {
-      height: App.APPLAB_HEIGHT * scale,
-      width: App.APPLAB_WIDTH * scale,
-    };
+    return [
+      styles.webViewContainer,
+      {
+        height: App.APP_HEIGHT * scale,
+        width: App.APP_WIDTH * scale,
+      }
+    ];
   }
 
   render() {
-    const { age, height, indexUri } = this.state;
+    const { age, height, indexUri, loaded, needsEmptyRender } = this.state;
 
     if (!age || age < DataWarning.AGE_MINIMUM) {
       return (
@@ -88,18 +107,39 @@ export default class App extends React.Component {
       );
     }
 
+    const showWebView = !!height && indexUri;
+
+    if (showWebView && needsEmptyRender) {
+      // Workaround for react-native-webview issue with Android 10
+      // See https://github.com/react-native-community/react-native-webview/issues/656#issuecomment-551312436
+      this.setState({needsEmptyRender: false});
+    }
+
+    let readAccessToURL;
+    if (Platform.OS === 'ios' && indexUri) {
+      readAccessToURL = indexUri.substring(0, indexUri.lastIndexOf('/') + 1);
+    }
+
     return (
       <View onLayout={this.onLayout} style={styles.container}>
-        {height && <View style={this.webViewContainerStyle()}>
+        {showWebView && <View style={this.webViewContainerStyle()}>
           <WebView
-            source={{uri: indexUri}}
-            style={styles.webView}
-            javaScriptEnabled={true}
+            allowUniversalAccessFromFileURLs
+            originWhitelist={['*']}
+            allowFileAccess
+            allowFileAccessFromFileURLs
+            allowingReadAccessToURL={readAccessToURL}
+            source={needsEmptyRender ? undefined : {uri: indexUri}}
+            style={Platform.OS === 'ios' ? styles.webViewIOS : styles.webViewAndroid}
+            javaScriptEnabled
+            mediaPlaybackRequiresUserAction={false}
             scrollEnabled={false}
             bounces={false}
-            scalesPageToFit={Platform.OS === 'ios'}
+            onLoad={this.onLoad}
+            useWebkit
           />
         </View>}
+        {!loaded && <View style={styles.cover} />}
       </View>
     );
   }
@@ -111,8 +151,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     justifyContent: 'center',
   },
-  webView: {
+  cover: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'white',
+  },
+  webViewIOS: {
     backgroundColor: 'black',
     flex: 1,
+  },
+  webViewAndroid: {
+    backgroundColor: 'white',
+    flex: 1,
+  },
+  webViewContainer: {
+    backgroundColor: 'black',
   }
 });

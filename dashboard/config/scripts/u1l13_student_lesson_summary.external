@@ -1,35 +1,30 @@
 name 'U1L13 Student Lesson Summary'
-encrypted 'loBqdz8yrKxFG1or7m3fzXiRsHHnokNW5rYzdHFjzFkZSet1uBJhYGirmguW
-LV1L1Peu6erbUh0yUkyUyFiUeG0j+OsdwBsO+rOtVHh/l8c52cY8zmb2Vqld
-VFABJxFmzgDn3hnV+YuJg8jDx4jwloucQ7ZcwmjPZsidNN8H1yrk6sZ5csJs
-2aT/QvTTel1YQzvVGArlxefZj0K1wRbL5ENE+9pu52QmyFxAygTqFOEUvQIs
-XqN9wx2fO+YAdTpdkSS82SscQ4jybdrK6tcKa079KazrAqpasBsu8Ya2MXK6
-3U9YZnRr7PxFLy3LSHWgFGGCKxB2tAuk3+QlPyvuYN5f4jPeTPYjUjWHxzE7
-RM0fTVxiQgNgmjo2NAYZhwh89Fx78FZo3pIlCSZn9a+HP1lI93e5KnngKLim
-Yid86dLA2DNOARZ98Q33gtrR4SMrcoc4dl3lRMKtTqTwfPD7FJTAT87lmUTx
-uLkNaOjz7LVMcLlQZche4zAcbHuQmIefPkZtiDGTr8RhMtTAV1pWLdbInan6
-QxmRIxEfmIk/iacoMqacVKBHx2Xx1KT9Uz6NLJsY/I15WGLzV4Q20g9Lhyn+
-46Dk1K+V1G5q6x8+YU2a5JwaTGbkONvLcnZ3TPP+MiY+S0MA6PuTl3m5sL9J
-hdHgAIGYgFWkcX7tBgPshVRFNgvIEGmtDi6RZQUBHl/7gL7o0QqLmuUfAzHp
-Wck3zwrybEm8P+f/6XF7z9nq4bcW77GKzQHrDSqZbO+0p///FBNfRWN0Q+QF
-HPlnLvkrG7YL46rRer2Sjof3W3tcqh0MNyuwdpdGKWHbcPz1HcdwOF3VjMTG
-NtVKdmikZU/vhGnDun73uGExdavCnxsUAQ/jHi7pGjXHuUpl/0E6NbwmeEHA
-ijeLc6JXVjYQ3Wwr8a63hdIEVpjy6wmsAqDcpgiTLtcxhhNwRssQCh32cJ4i
-wKP5B0ybmyO6WrlWaznwffyc8SqBixpdAhOf/AedGGAbHu1oQr0tEHdDwYpD
-/AaT6ROovHeyuleSDgaoZzhHArMgIsXgzr6LcLK/kPOeZbGVtpZCt6zTkDkH
-nndjfIfZmal0/idF77UFu/VEafsjqMTEwJTtg6wonzkDwbdx0P6MYvGBOAXA
-M81s4Yj6NvuCz56I3jhuyycxb37zfj+iS3txhU1jzDrRSNELcYfPZa9l+XGL
-KWbe6roK9fXbAs1PV1FUUnBxOYXfEi922tGmWwKkVxtR7jFq61r4AnNm9xVD
-wFZ0WhhI3stSDUEC0BNUmsn8IeH/kdxATgcrpitkmhmoWK1yW3eYdHncNFf7
-bF6zL8+tHI43YzrwS+qjz4FlG/hVYncDrHAUOovFN6l2xopByIwH0PDQ+nMN
-znHMlW8Q1PU80NCgz4lJsH8fNMuE8wQo8zCK5dIq4K2JbWVfkI5BTHcjj7z9
-2oxLpxey4uxRs+voMJtpXZKEa1igZcLL4KeCKHg0DUbEM47UCZdUC47Wt5rl
-nWDfGS4vISeLieKbXlgWWOowamKccrGrr3LPoLXoOnAlPfimxc8N5noCpgjW
-UWBZyQ0JPQcSTlDG85Z/LKH6adrCSGhjZSIqFz4WLxffmAU+9AZl+NJkb0C1
-hXkN9dI1thzO41Nj4yRt0jzd+vfWfmWm4qyUU4ZgRFKPapv6QR8G/Wll5reH
-J7m4uW7oV04DQdt+0p1Z4tk+uQHBwkTBIaEN5WX/tiKsCS6xQZkUH8AO7gsP
-fNAHYAqclu0NO1nXDjkcNlPAfCi3jQaopg1pUQspa6LfiV8szq7Oac7QQ+yz
-EynX9MlCO5qRV46WKrmOrBT5voRMKTa08bZBC9cw6537A34F2sV6Kgq5b+RG
-ts5Sk7jfoCzxpXnwehFGcmpmtgY+YmKd/W9IPNKobBFeStpMVxWiZzldj7uF
-0RHBOHbHKsF3d66lwEky+Q==
-'
+title 'title'
+description 'description here'
+css 'unplugged'
+skip_dialog 'true'
+markdown <<MARKDOWN
+# Unit 1: Lesson 13 - Text Compression
+
+## Background
+
+Compression is a method or protocol for using fewer bits to represent the original information. Compression can be achieved in a variety of methods including looking for patterns and substituting symbols for the larger patterns of data. Compression is one of the "hard problems" for computers because it is difficult to verify a good solution in a reasonable amount of time.
+
+## Vocabulary
+
+* Compress: to decrease the number of bits used to represent a piece of information
+* Algorithm: a precise sequence of instructions designed to complete a task
+* Heuristic: a specific type of algorithm, usually used when exact solutions are difficult or impossible. Heuristics are generally simple to use and are designed to provide reasonably good results without guaranteeing a perfect solution.
+
+## Lesson 
+
+* Compress a piece of text using the Text Compression Tool.
+* Develop a heuristic for text compression.
+* Describe why compression is challenging.
+ 
+## Resources 
+
+* Activity Guide: [Text Compression](https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/copy)
+
+<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN

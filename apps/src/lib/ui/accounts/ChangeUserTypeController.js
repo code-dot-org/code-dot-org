@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 import * as utils from '../../../utils';
 import ChangeUserTypeModal from './ChangeUserTypeModal';
 import i18n from '@cdo/locale';
@@ -51,11 +51,11 @@ export default class ChangeUserTypeController {
    * current type.
    * @param {string} selectedType
    */
-  onUserTypeDropdownChange = (selectedType) => {
+  onUserTypeDropdownChange = selectedType => {
     this.button.prop('disabled', selectedType === this.initialUserType);
   };
 
-  onChangeUserTypeButtonClick = (e) => {
+  onChangeUserTypeButtonClick = e => {
     // Email confirmation is required when changing from a student account
     // to a teacher account.
     const needEmailConfirmation = this.dropdown.val() === 'teacher';
@@ -68,13 +68,11 @@ export default class ChangeUserTypeController {
       this.button.prop('disabled', true);
       this.status.text(i18n.saving());
       // Note: this.submitPromise is exposed as a property for testing.
-      this.submitPromise = promise
-        .then(utils.reload)
-        .catch(err => {
-          this.dropdown.prop('disabled', false);
-          this.button.prop('disabled', false);
-          this.status.text(i18n.changeUserTypeModal_unexpectedError());
-        });
+      this.submitPromise = promise.then(utils.reload).catch(err => {
+        this.dropdown.prop('disabled', false);
+        this.button.prop('disabled', false);
+        this.status.text(i18n.changeUserTypeModal_unexpectedError());
+      });
     }
 
     e.preventDefault();
@@ -85,10 +83,8 @@ export default class ChangeUserTypeController {
       return; // Idempotent show
     }
 
-    const handleSubmit = (values) => (
-      this.submitUserTypeChange(values)
-        .then(() => utils.reload())
-    );
+    const handleSubmit = values =>
+      this.submitUserTypeChange(values).then(() => utils.reload());
 
     this.mountPoint = document.createElement('div');
     document.body.appendChild(this.mountPoint);
@@ -134,7 +130,8 @@ export default class ChangeUserTypeController {
                 // TODO: (madelynkasula) The line below can be deleted once all users have been migrated.
                 // We no longer have the requirement that the given email address must match an existing
                 // email address upon changing user type.
-                (validationErrors.current_password && i18n.changeUserTypeModal_email_mustMatch()),
+                (validationErrors.current_password &&
+                  i18n.changeUserTypeModal_email_mustMatch())
             }
           };
         } else {
@@ -153,7 +150,9 @@ export default class ChangeUserTypeController {
       this.form.on('ajax:success', onSuccess);
       this.form.on('ajax:error', onFailure);
       this.form.find('#change-user-type_user_email').val(email);
-      this.form.find('#change-user-type_user_email_preference_opt_in').val(emailOptIn);
+      this.form
+        .find('#change-user-type_user_email_preference_opt_in')
+        .val(emailOptIn);
       this.form.submit();
     });
   }

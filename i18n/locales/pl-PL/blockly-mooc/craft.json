@@ -2,7 +2,7 @@
   "absolute": "wartość bezwzględna",
   "agentGenericFailureMessage": "Koduj dalej! Pamiętaj, żeby korzystać z pomocy Agenta.",
   "agentTooFewBlocksFailureMessage": "Spróbuj dodawać tylko jeden blok na raz, aby przenieść Agenta na właściwe miejsce.",
-  "at": "na\/w\/o",
+  "at": "na/w/o",
   "agentDiamondPathCongrats": "Gratulacje, znalazłeś diamentową ścieżkę! Jak dotąd zebrałeś {count, plural, one {1 diamond} other {# diamonds}}!",
   "blockActionAdd": "dodaj",
   "blockActionAttack": "atakuj",

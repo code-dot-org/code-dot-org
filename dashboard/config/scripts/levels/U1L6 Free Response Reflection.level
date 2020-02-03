@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Number Systems",
-    "markdown_instructions": " In 50 words or less, describe the concept of a number system. \n\nWhy are rules required for a number system to be useful?\n",
+    "long_instructions": " In 50 words or less, describe the concept of a number system. \n\nWhy are rules required for a number system to be useful?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

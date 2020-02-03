@@ -41,7 +41,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "\r\nDO THIS:\r\n\r\n* add an if statement to updateScore\r\n* if currentPlayer == player1\r\n      player1Score += amt\r\n* else\r\n       player2score += amt\r\n       \r\nNote: cleverness of `amt` var.  Means we don't need to decide whether to add or subtract.  \r\n\r\n",
+    "long_instructions": "\r\nDO THIS:\r\n\r\n* add an if statement to updateScore\r\n* if currentPlayer == player1\r\n      player1Score += amt\r\n* else\r\n       player2score += amt\r\n       \r\nNote: cleverness of `amt` var.  Means we don't need to decide whether to add or subtract.  \r\n\r\n",
     "contained_level_names": null
   },
   "published": true,

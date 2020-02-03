@@ -27,12 +27,12 @@ export default function reducer(state = initialState, action) {
   }
 }
 
-export const setPermission = (permissionList) => ({
+export const setPermission = permissionList => ({
   type: SET_PERMISSION,
   permissionList
 });
 
-export const setFacilitatorCourses = (facilitatorCourses) => ({
+export const setFacilitatorCourses = facilitatorCourses => ({
   type: SET_FACILITATOR_COURSES,
   facilitatorCourses
 });

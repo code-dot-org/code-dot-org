@@ -1,3 +1,4 @@
+---
 zu:
   data:
     blocks:
@@ -15,6 +16,10 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_doMoveEachLR:
         options:
           DIR:
@@ -29,7 +34,37 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -41,7 +76,23 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"height"': ubude
@@ -49,15 +100,49 @@ zu:
         options:
           PROPERTY:
             '"height"': ubude
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"height"': ubude
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': nini
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': nini
       gamelab_setSizes:
         options:
           PROPERTY:
             '"height"': ubude
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': nini
+      RyanLab_moveForward:
+        text: qubekela phambili
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
       craft_ifPath:
         options:
           DIR:
             "'ahead'": ngaphambili
       craft_ifStandingOn:
+        options:
+          TYPE:
+            "'sand'": isihlabathi
+      craft_ifStandingOnLimit:
         options:
           TYPE:
             "'sand'": isihlabathi

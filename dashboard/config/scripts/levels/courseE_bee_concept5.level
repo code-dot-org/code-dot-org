@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help the bee collect the nectar from the flowers?",
+    "short_instructions": "Help the bee collect the nectar from the flowers?",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "3",
@@ -34,7 +34,7 @@
     "nectar_goal": "7",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side.\",\"hint_id\":\"courseE_bee_concept5_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/96af47373834918398825ac61abf906f/courseE_bee_concept5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here's a picture of a rectangular path the bee could take.\\n\\n![](https://images.code.org/39554a528b5ed168737e846c161f00ee-image-1510202150660.33.23.png)\",\"hint_id\":\"courseE_bee_concept5_c\",\"hint_type\":\"general\",\"hint_path\":\"[[3,1],[2,1],[2,6],[5,6],[5,0]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c05aa56255f36794b30546709049a468/courseE_bee_concept5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can check every square for a flower using the `if` block, even if you already know there's not one there.\",\"hint_id\":\"courseE_bee_concept5_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b974e173ae73f10e6f1afd19faf8d5d5/courseE_bee_concept5.mp3\"}]",
-    "markdown_instructions": "Can you help the bee collect the nectar from the flowers? \r\n\r\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
+    "long_instructions": "Can you help the bee collect the nectar from the flowers? \r\n\r\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "step_speed": "1",

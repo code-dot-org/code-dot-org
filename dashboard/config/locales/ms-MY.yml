@@ -18,15 +18,15 @@ ms:
         edit_header: Edit Maklumat Akaun
         error:
           future: tidak boleh ada di masa depan
+  beta: beta
   hello: Helo dunia
   welcome_back: Selamat datang kembali, % {nama}
   submit: Hantar
   cancel: Batal
-  add_teacher_form:
+  or: atau
+  join_section:
     code:
-      label: 'Tambahkan guru:'
       placeholder: Kod Seksyen (ABCDEF)
-    submit: Tambah guru
   add_hint_form:
     placeholder: Sila masukkan petunjuk anda di sini
     submit: Tambah petunjuk
@@ -40,7 +40,6 @@ ms:
   of: dari
   more: LAGI
   less: KURANG
-  beta: beta
   try_hoc: 'Cuba Kod Sejam, klik di sini >> '
   try_k8intro: Cuba pengenalan K-8 kami untuk kursus Sains Komputer (15-25 jam)
   k8intro: Pengenalan K-8 untuk kursus Sains Komputer (15-25 jam)
@@ -52,15 +51,13 @@ ms:
   auth:
     sign_in_with: Daftar Masuk dengan % {pembekal}
     signed_in: Daftar masuk!
-    signed_out: Anda telah mendaftar keluar daripada <a href="%{url}">Code.org</a>.
-    sign_out_of: Anda telah mengunakkan %{provider} untuk mendaftar masuk. <a href="%{url}">Klik
-      di sini</a> untuk mendaftar keluar daripada %{provider}.
     already_signedup: Sudah mendaftar?
     notyet_signedup: Belum menyertai lagi?
     google_oauth2: Akaun Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Akaun Microsoft
+    microsoft_v2_auth: Akaun Microsoft
     forgot_password: Lupa kata laluan anda?
     need_confirmation: Tidak menerima arahan pengesahan?
     need_unlock: Tidak menerima kunci arahan?
@@ -163,8 +160,12 @@ ms:
     header:
       finished_hoc: Saya telah menyelesaikan Hour of Code saya
       sign_in_to_save: Daftar Masuk untuk menyimpan kemajuan
-      courses: kursus-kursus
+      course_catalog: Katalog Kursus
+      project_gallery: Projek
+      help_support: Bantuan dan sokongan
+      report_bug: Laporkan masalah
       educate_hoc: Hour of Code
+      about: Tentang
     user:
       classroom: Laman Utama Guru
       label: Hi %{username}
@@ -172,6 +173,12 @@ ms:
       settings: Akaun saya
       logout: Daftar keluar
       signin: Log masuk
+      signup: Buat akaun
+      create: Buat
+      bounce: Lantunan
+      dance: Majlis Tari-Menari
+      flappy: Flappy
+      infinity: Infiniti
     popup:
       progress: Kemajuan anda
       lines: 'Total baris kod: %{lines}'
@@ -198,6 +205,7 @@ ms:
     new_password_hint: "(biarkan kosong jika anda tidak mahu mengubahnya)"
     current_password_hint: "(kami memerlukan kata laluan semasa anda untuk mengesahkan
       perubahan anda)"
+    update_email: Kemas kini
   user_level:
     completed: Lengkap
     tried: Telah dicuba
@@ -235,8 +243,6 @@ ms:
       programming. Kursus ini direka untuk kegunaan di bilik darjah bagi gred K-8,
       tetapi ia adalah menyeronokkan untuk belajar di semua peringkat umur.
     test_videos_help: Uji pemain video baru kami di sekolah anda
-    announcement_learn_more_button: Ketahui lebih lanjut
-    announcement_try_now_button: Cuba sekarang
   gender:
     male: Lelaki
     female: Perempuan
@@ -245,15 +251,17 @@ ms:
     student: pelajar
     teacher: Guru
   footer:
+    copyright: Hak Cipta
     more: Lagi
     feedback: Sediakan maklum balas
-    translate: Bantu kami menterjemahkan ke bahasa anda
+    translate: Sukarela menterjemah kandungan kami
     support: Bantuan dan Komuniti
-    tos: Terma
-    privacy: Dasar privasi
+    tos: Terma Perkhidmatan
+    privacy: Dasar Privasi
     secure: Versi Dilindungi
+    report_abuse: Lapor Salah Guna
   reference_area:
-    title: Perlukan bantuan?
+    title: Perlu bantuan?
     subtitle: Lihat video dan petunjuk ini
     teacher: Lihat penyelesaian
     auth_error: Anda tidak disahkan untuk melihat penyelesaian tersebut.
@@ -287,6 +295,10 @@ ms:
       current: Tahap semasa
       unused: Tahap yang tidak digunakan
   upsell:
+    dance:
+      title: Majlis Tari-Menari
+    dance-2019:
+      title: Majlis Tari-Menari
     hoc:
       body: Cuba asas-asas sains komputer. Ramai yang telah mencuba.
     flappy:
@@ -306,6 +318,9 @@ ms:
       melihat program dimainkan.
     want_to_make_your_own: Ingin buat anda punya sendiri?
     more: Lagi &rarr;
+    report_abuse: Lapor Salah Guna
+  landing:
+    help_support: Bantuan dan sokongan
   multi:
     wrong_title: Jawapan yang salah
     wrong_body: Jawapan yang telah anda masukkan adalah tidak betul.  Sila cuba lagi!
@@ -327,8 +342,8 @@ ms:
     startover_ok: Mula Sekali Lagi
     startover_cancel: Batal
   terms_interstitial:
-    tos: Terma
-    privacy: Dasar privasi
+    tos: Terma Perkhidmatan
+    privacy: Dasar Privasi
     print: Cetak
   school_info_interstitial:
     save: Simpan
@@ -337,20 +352,26 @@ ms:
       other: Lain-lain
     submit: Hantar
   project:
-    save: Simpan
-    delete: Padam
-    share: Kongsi
-    more: Lagi
+    projects: Projek
+    project_gallery: Projek
     name: Nama
-    really_delete: Padam?
-    delete_yes: Ya
-    delete_no: Tidak
     saved: Disimpan di dalam galeri!
-    cancel: Batal
     abuse:
       report_abuse_form:
         abuse_type:
           other: Lain-lain
+  flex_category:
+    csf_loops: Gelung
+    csf_events: Acara-acara
+    csf_conditionals: Bersyarat
+    csf_functions: Fungsi
+    csf_variables: Pembolehubah
+    csf_internet: Internet
+    csp_variables: Pembolehubah
+    csp_conditionals: Bersyarat
+    csp_functions: Fungsi
+    csp_lists: Senarai
+    csp_loops: Gelung
   pd:
     form_labels:
       email: E-mel

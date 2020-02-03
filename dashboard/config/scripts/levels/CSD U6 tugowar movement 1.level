@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Tracking the Score\r\n\r\nYour `score` variable should keep track of how many times each user has clicked their button. Instead of just going up, `score` should _decrease_ if the player 1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r\n\r\n# Do This\r\n\r\nInside each `onBoardEvent`, use the counter pattern to increase or decrease `score`. The amount that you change `score` will change how difficult the game is to win. Start with changing by 10 - you can always experiment with different values when the program is more complete.\r\n",
+    "long_instructions": "# Tracking the Score\r\n\r\nYour `score` variable should keep track of how many times each user has clicked their button. Instead of just going up, `score` should _decrease_ if the player 1 clicks `buttonL` and _increase_ if player 2 clicks `buttonR`.\r\n\r\n# Do This\r\n\r\nInside each `onBoardEvent`, use the counter pattern to increase or decrease `score`. The amount that you change `score` will change how difficult the game is to win. Start with changing by 10 - you can always experiment with different values when the program is more complete.\r\n",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

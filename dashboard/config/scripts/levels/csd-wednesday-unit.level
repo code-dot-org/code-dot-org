@@ -12,7 +12,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Wednesday Unit Reflection Part 1\r\n\r\n## Unit 1 and Unit 2 Connections\r\n\r\nWhat connections or hooks into Unit 1 can be used to motivate early lessons in Unit 2?"
+    "long_instructions": "# Wednesday Unit Reflection Part 1\r\n\r\n## Unit 1 and Unit 2 Connections\r\n\r\nWhat connections or hooks into Unit 1 can be used to motivate early lessons in Unit 2?"
   },
   "published": true,
   "notes": "",

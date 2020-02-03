@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "Now, let's blend the variables from Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn this puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\" variable to 10 at the beginning of your code to see what happens.",
+    "short_instructions": "Now, let's blend the variables from Stage 7 together with your \"counter\" variable to make some magic happen.   \r\n\r\nIn this puzzle, Dog will count from 0 to 1000 by \"increment\".  Set the \"increment\" variable to 10 at the beginning of your code to see what happens.",
     "ideal": "11",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
@@ -35,7 +35,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Now, let's blend the variables from Stage 7 together with your `counter` variable to make some magic happen.   \r\n\r\nIn this puzzle, Dog will count from **0** to **1000** by `increment`.  Set the `increment` variable to **10** at the beginning of your code to see what happens."
+    "long_instructions": "Now, let's blend the variables from Stage 7 together with your `counter` variable to make some magic happen.   \r\n\r\nIn this puzzle, Dog will count from **0** to **1000** by `increment`.  Set the `increment` variable to **10** at the beginning of your code to see what happens."
   }
 }]]></config>
   <blocks>

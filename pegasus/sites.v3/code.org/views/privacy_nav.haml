@@ -1,0 +1,11 @@
+#privacy_nav
+  %span.privacy_list
+    -current_url = request.path_info
+    -{ 'Computer Science Fundamentals'=>'/privacy/student-privacy', 'Computer Science Discoveries'=>'/privacy/student-privacy-csd', 'Computer Science Principles'=>'/privacy/student-privacy-csp', 'About Code.org'=>'/about'}.each_pair do |label,url|
+      - if current_url == url
+        %span.privacy_list_item_selected= label
+      -else
+        %a.privacy_list_item{:href=>url}= label
+      %hr.narrow_hr
+
+-# Changes here should match About navigation links in mobile_header_responsive.

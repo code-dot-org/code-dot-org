@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
+    "short_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
+    "long_instructions": "Do you notice anything different about these function blocks? Click “Run” to see what happens.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

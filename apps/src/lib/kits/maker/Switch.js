@@ -10,7 +10,13 @@ import five from '@code-dot-org/johnny-five';
 const SWITCH_PIN = 21;
 
 // Properties that should pass through to the inner controller.
-export const READ_ONLY_PROPERTIES = ['isOpen', 'isClosed', 'board', 'pin', 'value'];
+export const READ_ONLY_PROPERTIES = [
+  'isOpen',
+  'isClosed',
+  'board',
+  'pin',
+  'value'
+];
 export const READ_WRITE_PROPERTIES = ['closeValue', 'invert', 'openValue'];
 
 /**
@@ -37,8 +43,6 @@ export default class Switch extends EventEmitter {
      * fired, even if the state didn't change.
      * We cache the last known state of the switch so we only emit events when
      * the switch state changes.
-     * We don't initialize the lastKnownState so that we fire an event the first
-     * time we receive it, when the program starts.
      */
     let lastKnownState = undefined;
 
@@ -47,19 +51,19 @@ export default class Switch extends EventEmitter {
       .map(name => [
         name,
         {
-          get: () => fiveSwitch[name],
+          get: () => fiveSwitch[name]
         }
       ])
       .fromPairs()
       .value();
 
     // Define read-write properties that pass through to the five.Switch controller
-    const readWriteProperties= _(READ_WRITE_PROPERTIES)
+    const readWriteProperties = _(READ_WRITE_PROPERTIES)
       .map(name => [
         name,
         {
           get: () => fiveSwitch[name],
-          set: x => fiveSwitch[name] = x,
+          set: x => (fiveSwitch[name] = x)
         }
       ])
       .fromPairs()
@@ -67,13 +71,13 @@ export default class Switch extends EventEmitter {
 
     Object.defineProperties(this, {
       ...readOnlyProperties,
-      ...readWriteProperties,
+      ...readWriteProperties
     });
 
     // Listen to 'open' and 'close' events on the wrapped five.Switch controller.
     // Emit our own events only when we detect a state change.
     fiveSwitch.on('open', () => {
-      if (lastKnownState !== fiveSwitch.openValue) {
+      if (lastKnownState === fiveSwitch.closeValue) {
         this.emit('open');
         this.emit('change', fiveSwitch.openValue);
       }
@@ -81,7 +85,7 @@ export default class Switch extends EventEmitter {
     });
 
     fiveSwitch.on('close', () => {
-      if (lastKnownState !== fiveSwitch.closeValue) {
+      if (lastKnownState === fiveSwitch.openValue) {
         this.emit('close');
         this.emit('change', fiveSwitch.closeValue);
       }

@@ -1,19 +1,23 @@
-import React, {Component, PropTypes} from 'react';
-import {Table, sort} from 'reactabular';
-import {tableLayoutStyles, sortableOptions} from "../tables/tableConstants";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import * as Table from 'reactabular-table';
+import * as sort from 'sortabular';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
+import {studentOverviewDataPropType} from './assessmentDataShapes';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
   name: TABLE_WIDTH / 3,
-  numMultipleChoiceCorrect: TABLE_WIDTH / 8,
-  numMultipleChoice: TABLE_WIDTH / 8,
-  percentCorrect: TABLE_WIDTH / 8,
-  submissionTimeStamp: TABLE_WIDTH / 5
+  numMultipleChoiceCorrect: TABLE_WIDTH / 12,
+  numMultipleChoice: TABLE_WIDTH / 12,
+  numMatchCorrect: TABLE_WIDTH / 12,
+  numMatch: TABLE_WIDTH / 12,
+  submissionTimeStamp: TABLE_WIDTH / 3
 };
 
 const styles = {
@@ -22,22 +26,22 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'row',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   icon: {
     color: color.purple,
-    fontSize: 16,
+    fontSize: 16
   },
   text: {
-    marginRight: 5,
+    marginRight: 5
   },
   headerLabels: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   studentNameColumn: {
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 
@@ -45,18 +49,10 @@ export const COLUMNS = {
   NAME: 0,
   NUM_MULTIPLE_CHOICE_CORRECT: 1,
   NUM_MULTIPLE_CHOICE: 2,
-  SUBMISSION_TIMESTAMP: 3,
+  NUM_MATCH_CORRECT: 3,
+  NUM_MATCH: 4,
+  SUBMISSION_TIMESTAMP: 5
 };
-
-export const studentOverviewDataPropType = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  numMultipleChoiceCorrect: PropTypes.number,
-  numMultipleChoice: PropTypes.number,
-  submissionTimeStamp: PropTypes.string.isRequired,
-  isSubmitted: PropTypes.bool.isRequired,
-  url: PropTypes.string,
-});
 
 /**
  * A table that shows the summary data for each student in a section.
@@ -68,13 +64,15 @@ export const studentOverviewDataPropType = PropTypes.shape({
  */
 class SubmissionStatusAssessmentsTable extends Component {
   static propTypes = {
-    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType),
+    studentOverviewData: PropTypes.arrayOf(studentOverviewDataPropType)
   };
 
   state = {
-    [COLUMNS.NAME]: {
-      direction: 'desc',
-      position: 0
+    sortingColumns: {
+      [COLUMNS.NAME]: {
+        direction: 'asc',
+        position: 0
+      }
     }
   };
 
@@ -82,7 +80,7 @@ class SubmissionStatusAssessmentsTable extends Component {
     return this.state.sortingColumns || {};
   };
 
-  onSort = (selectedColumn) => {
+  onSort = selectedColumn => {
     this.setState({
       sortingColumns: sort.byColumn({
         sortingColumns: this.state.sortingColumns,
@@ -100,7 +98,9 @@ class SubmissionStatusAssessmentsTable extends Component {
   nameCellFormatter = (name, {rowData}) => {
     if (rowData.url) {
       return (
-        <a href={rowData.url} style={styles.studentNameColumn}>{name}</a>
+        <a href={rowData.url} style={styles.studentNameColumn}>
+          {name}
+        </a>
       );
     } else {
       return name;
@@ -109,22 +109,32 @@ class SubmissionStatusAssessmentsTable extends Component {
 
   submissionTimestampColumnFormatter = (submissionTimeStamp, {rowData}) => {
     const isSubmitted = rowData.isSubmitted;
+    const inProgress = rowData.inProgress;
+    var submissionTimeStampText;
+    switch (true) {
+      case isSubmitted:
+        submissionTimeStampText = rowData.submissionTimeStamp.toLocaleString();
+        break;
+      case inProgress:
+        submissionTimeStampText = i18n.inProgress();
+        break;
+      default:
+        submissionTimeStampText = i18n.notStarted();
+    }
 
     return (
-      <div style={styles.main}>
-        <div style={styles.text}>
-          {submissionTimeStamp}
-        </div>
-        {isSubmitted &&
+      <div style={styles.main} id="timestampCell">
+        <div style={styles.text}>{submissionTimeStampText}</div>
+        {isSubmitted && (
           <div style={styles.icon}>
-            <FontAwesome id="checkmark" icon="check-circle"/>
+            <FontAwesome id="checkmark" icon="check-circle" />
           </div>
-        }
+        )}
       </div>
     );
   };
 
-  getColumns = (sortable) => {
+  getColumns = sortable => {
     let dataColumns = [
       {
         property: 'name',
@@ -133,18 +143,18 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.name},
+              ...{width: TABLE_COLUMN_WIDTHS.name}
             }
           },
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
-          format: this.nameCellFormatter,
+          formatters: [this.nameCellFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
-              ...styles.studentNameColumn,
-            },
+              ...styles.studentNameColumn
+            }
           }
         }
       },
@@ -155,12 +165,12 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoiceCorrect},
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoiceCorrect}
             }
-          },
+          }
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -170,12 +180,42 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice},
+              ...{width: TABLE_COLUMN_WIDTHS.numMultipleChoice}
             }
-          },
+          }
         },
         cell: {
-          props: {style: tableLayoutStyles.cell},
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatchCorrect',
+        header: {
+          label: i18n.numMatchCorrect(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatchCorrect}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
+        }
+      },
+      {
+        property: 'numMatch',
+        header: {
+          label: i18n.numMatch(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...{width: TABLE_COLUMN_WIDTHS.numMatch}
+            }
+          }
+        },
+        cell: {
+          props: {style: tableLayoutStyles.cell}
         }
       },
       {
@@ -185,36 +225,42 @@ class SubmissionStatusAssessmentsTable extends Component {
           props: {
             style: {
               ...tableLayoutStyles.headerCell,
-              ...{width: TABLE_COLUMN_WIDTHS.timeStamp},
-            }
+              ...{width: TABLE_COLUMN_WIDTHS.timeStamp}
+            },
+            id: 'timestampHeaderCell'
           },
-          transforms: [sortable],
+          transforms: [sortable]
         },
         cell: {
-          format: this.submissionTimestampColumnFormatter,
-          props: {style: tableLayoutStyles.cell},
+          formatters: [this.submissionTimestampColumnFormatter],
+          props: {style: tableLayoutStyles.cell}
         }
-      },
+      }
     ];
     return dataColumns;
   };
 
   render() {
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const sortable = wrappedSortable(
+      this.getSortingColumns,
+      this.onSort,
+      sortableOptions
+    );
     const columns = this.getColumns(sortable);
     const sortingColumns = this.getSortingColumns();
 
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy,
+      sort: orderBy
     })(this.props.studentOverviewData);
 
     return (
       <Table.Provider
         columns={columns}
         style={tableLayoutStyles.table}
+        id="uitest-submission-status-table"
       >
         <Table.Header />
         <Table.Body rows={sortedRows} rowKey="id" />

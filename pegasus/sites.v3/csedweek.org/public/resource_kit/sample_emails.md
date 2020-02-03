@@ -115,7 +115,7 @@ Our Hour of Code is a statement that [SCHOOL NAME] is ready to teach these found
 
 This is a chance to change the future of education in [TOWN/CITY NAME].
 
-See http://hourofcode.org for details, and please help us spread the word.
+See https://hourofcode.com for details, and please help us spread the word.
 
 Sincerely,
 

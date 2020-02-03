@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Instead of using \"move forward by 150,\" the \"move\" block is now referencing a variable called \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
+    "short_instructions": "Instead of using \"move forward by 150,\" the \"move\" block is now referencing a variable called \"length.\" Can you set \"length\" to 150 to draw this new triangle?",
     "x": "125",
     "y": "250",
     "start_direction": "90",
@@ -24,7 +24,7 @@
     "disable_sharing": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"#variable_set_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "video_key": "C4_variables_artist",
-    "markdown_instructions": "Instead of using `move forward by 150`, the `move` block is now referencing a variable called `length`. Can you set `length` to 150 to draw this new triangle?",
+    "long_instructions": "Instead of using `move forward by 150`, the `move` block is now referencing a variable called `length`. Can you set `length` to 150 to draw this new triangle?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

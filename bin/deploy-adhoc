@@ -4,10 +4,7 @@
 # Creates or updates the AWS CloudFormation stack, returning on completion.
 # Requires AWS credentials to be provided in the environment.
 
+ENV['RAILS_ENV'] = 'adhoc'
 require_relative '../deployment'
-require 'cdo/aws/cloud_formation'
-
-CDO.chef_local_mode = true
-
-# Update local-mode cookbooks for this branch
-AWS::CloudFormation.create_or_update
+require 'cdo/rake_utils'
+RakeUtils.rake('adhoc:start')

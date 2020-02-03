@@ -13,8 +13,8 @@ import LookbackLogger from './LookbackLogger';
 import _ from 'lodash';
 import five from '@code-dot-org/johnny-five';
 import PlaygroundIO from 'playground-io';
-import Button from './Button';
-import Thermometer from './Thermometer';
+import {PlaygroundButton} from './Button';
+import PlaygroundThermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
@@ -37,7 +37,7 @@ export function createCircuitPlaygroundComponents(board) {
   return Promise.all([
     initializeSoundSensor(board),
     initializeLightSensor(board),
-    initializeThermometer(board),
+    initializeThermometer(board)
   ]).then(([soundSensor, lightSensor, tempSensor]) => {
     return {
       colorLeds: initializeColorLeds(board),
@@ -60,9 +60,9 @@ export function createCircuitPlaygroundComponents(board) {
 
       accelerometer: initializeAccelerometer(board),
 
-      buttonL: new Button({board, pin: 4}),
+      buttonL: new PlaygroundButton({board, pin: 4}),
 
-      buttonR: new Button({board, pin: 19}),
+      buttonR: new PlaygroundButton({board, pin: 19}),
 
       ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
@@ -76,55 +76,92 @@ export function createCircuitPlaygroundComponents(board) {
  *   createCircuitPlaygroundComponents.  This object will be mutated: Destroyed
  *   components will be removed. Additional members of this object will be
  *   ignored.
+ * @param {boolean} shouldDestroyComponents - whether or not to fully delete the
+ *   components, or just reset to their initial state.
  */
-export function destroyCircuitPlaygroundComponents(components) {
+export function cleanupCircuitPlaygroundComponents(
+  components,
+  shouldDestroyComponents
+) {
   if (components.colorLeds) {
-    components.colorLeds.forEach(led => led.stop());
+    components.colorLeds.forEach(led => {
+      led.color('white');
+      led.intensity(100);
+      led.off();
+    });
   }
-  delete components.colorLeds;
 
   if (components.led) {
-    components.led.stop();
+    components.led.intensity(0);
+    components.led.off();
   }
-  delete components.led;
-
-  // No reset needed for Switch
-  delete components.toggleSwitch;
 
   if (components.buzzer) {
+    components.buzzer.off();
     components.buzzer.stop();
   }
-  delete components.buzzer;
 
+  //Disable and clear sensors
   if (components.soundSensor) {
     components.soundSensor.disable();
+    components.soundSensor._events = {};
   }
-  delete components.soundSensor;
 
   if (components.lightSensor) {
     components.lightSensor.disable();
+    components.lightSensor._events = {};
   }
-  delete components.lightSensor;
 
   if (components.tempSensor) {
     components.tempSensor.disable();
+    components.tempSensor._events = {};
   }
-  delete components.tempSensor;
 
   if (components.accelerometer) {
     components.accelerometer.stop();
+    components.accelerometer._events = {};
   }
-  delete components.accelerometer;
+  if (shouldDestroyComponents) {
+    delete components.colorLeds;
+    delete components.led;
+    delete components.toggleSwitch;
+    delete components.buzzer;
+    delete components.soundSensor;
+    delete components.lightSensor;
+    delete components.tempSensor;
+    delete components.accelerometer;
+    delete components.buttonL;
+    delete components.buttonR;
 
-  // No reset needed for Button
-  delete components.buttonL;
-  delete components.buttonR;
+    if (experiments.isEnabled('maker-captouch')) {
+      // Remove listeners from each TouchSensor
+      TOUCH_PINS.forEach(pin => {
+        delete components[`touchPad${pin}`];
+      });
+    }
+  }
+}
 
-  if (experiments.isEnabled('maker-captouch')) {
-    // Remove listeners from each TouchSensor
-    TOUCH_PINS.forEach(pin => {
-      delete components[`touchPad${pin}`];
-    });
+/**
+ * Re-initializes sensor components and accelerometer
+ * @param {Object} components - map of components, as originally returned by
+ *   createCircuitPlaygroundComponents.
+ */
+export function enableCircuitPlaygroundComponents(components) {
+  if (components.soundSensor) {
+    components.soundSensor.enable();
+  }
+
+  if (components.lightSensor) {
+    components.lightSensor.enable();
+  }
+
+  if (components.tempSensor) {
+    components.tempSensor.enable();
+  }
+
+  if (components.accelerometer) {
+    components.accelerometer.start();
   }
 }
 
@@ -136,7 +173,7 @@ export const componentConstructors = {
   Led,
   Board: five.Board,
   NeoPixel,
-  Button,
+  PlaygroundButton,
   Switch,
   Piezo,
   Sensor: five.Sensor,
@@ -170,7 +207,7 @@ function initializeSoundSensor(board) {
   return new Promise(resolve => {
     const sensor = new five.Sensor({
       board,
-      pin: "A4",
+      pin: 'A4',
       freq: 100
     });
     addSensorFeatures(five.Board.fmap, sensor);
@@ -182,7 +219,7 @@ function initializeLightSensor(board) {
   return new Promise(resolve => {
     const sensor = new five.Sensor({
       board,
-      pin: "A5",
+      pin: 'A5',
       freq: 100
     });
     addSensorFeatures(five.Board.fmap, sensor);
@@ -210,7 +247,7 @@ function addSensorFeatures(fmap, sensor) {
       sensor.lookbackLogger.addData(sensor.raw);
     });
   };
-  sensor.getAveragedValue = (n) => {
+  sensor.getAveragedValue = n => {
     const [low, high] = scale || [0, 1023];
     return fmap(sensor.lookbackLogger.getLast(n), 0, 1023, low, high);
   };
@@ -227,8 +264,8 @@ function initializeThermometer(board) {
   return new Promise(resolve => {
     const thermometer = new five.Thermometer({
       board,
-      controller: Thermometer,
-      pin: "A0",
+      controller: PlaygroundThermometer,
+      pin: 'A0',
       freq: 100
     });
     thermometer.once('data', () => resolve(thermometer));
@@ -240,10 +277,10 @@ function initializeAccelerometer(board) {
     board,
     controller: PlaygroundIO.Accelerometer
   });
-  accelerometer.start = function () {
+  accelerometer.start = function() {
     accelerometer.io.sysexCommand([CP_COMMAND, CP_ACCEL_STREAM_ON]);
   };
-  accelerometer.getOrientation = function (orientationType) {
+  accelerometer.getOrientation = function(orientationType) {
     if (undefined === orientationType) {
       return [
         accelerometer.getOrientation('x'),
@@ -251,9 +288,19 @@ function initializeAccelerometer(board) {
         accelerometer.getOrientation('z')
       ];
     }
+
+    // Accelerometer on the express board is rotated 90 degrees from classic board.
+    // Conditional ensures consistent output of 'pitch'/'roll' across both boards
+    if (board.isExpressBoard) {
+      if (orientationType === 'pitch') {
+        return accelerometer['roll'];
+      } else if (orientationType === 'roll') {
+        return -1 * accelerometer['pitch'];
+      }
+    }
     return accelerometer[orientationType];
   };
-  accelerometer.getAcceleration = function (accelerationDirection) {
+  accelerometer.getAcceleration = function(accelerationDirection) {
     if (undefined === accelerationDirection) {
       return [
         accelerometer.getAcceleration('x'),

@@ -1,4 +1,4 @@
-import { assert } from 'chai';
+import {assert} from 'chai';
 import {
   setWindowLocation,
   resetWindowLocation,
@@ -16,7 +16,7 @@ describe('utils', () => {
 
   describe('queryParams', () => {
     beforeEach(() => {
-      fakeWindowLocation.search='?param1=one&param2=two';
+      fakeWindowLocation.search = '?param1=one&param2=two';
     });
 
     it('can pull out a specific param from the url', () => {

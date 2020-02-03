@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,4,0,0,0],[0,0,0,1,3,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "short_instructions": "Avoid the cracked ice to keep Scrat safe!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can turn right or left from Scrat's point of view. If you are facing right, turning right will make you point downwards.\",\"hint_id\":\"courseC_maze_programming4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5c55befcabf4ef9eeaa660ba09d84e93/courseD_scrat_ramp4.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the acorn.\",\"hint_id\":\"courseC_maze_programming4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/02300d3fa5f8081a49622345df54a194/courseD_scrat_ramp4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseC_maze_programming4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseD_scrat_ramp4.mp3\"}]",
-    "markdown_instructions": "Avoid the cracked ice to keep Scrat safe!",
+    "long_instructions": "Avoid the cracked ice to keep Scrat safe!",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming4_1\",\r\n  \"callout_text\": \"This is your block limit.  It tells you how many of these blocks you have left to use.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 7,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

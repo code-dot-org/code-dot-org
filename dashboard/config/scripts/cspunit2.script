@@ -3,88 +3,88 @@ has_lesson_plan true
 
 stage 'The Internet'
 level 'U2L1 Student Lesson Introduction'
-assessment 'U2L01 Assessment 1'
-assessment 'U2L01 Assessment 2'
-assessment 'U2L01 Assessment 3'
-assessment 'U2L01 Assessment 4'
+level 'U2L01 Assessment 1', assessment: true
+level 'U2L01 Assessment 2', assessment: true
+level 'U2L01 Assessment 3', assessment: true
+level 'U2L01 Assessment 4', assessment: true
 
 stage 'The Need for Addressing'
 level 'U2L2 Student Lesson Introduction'
 level 'U2L2 NetSim Hub Mode'
-assessment 'U2L02 Free Response Reflection'
-assessment 'U2L02 Assessment 3'
-assessment 'U2L02 Assessment 4'
-assessment 'U2L02 Assessment 5'
+level 'U2L02 Free Response Reflection', assessment: true
+level 'U2L02 Assessment 3', assessment: true
+level 'U2L02 Assessment 4', assessment: true
+level 'U2L02 Assessment 5', assessment: true
 
 stage 'Invent an Addressing Protocol'
 level 'U2L3 Student Lesson Introduction'
 level 'U2L3: IP DNS Video'
-assessment 'U2L3 Assessment'
+level 'U2L3 Assessment', assessment: true
 level 'U2L3 NetSim Hub Mode'
-assessment 'U2L3 Assessment 2'
-assessment 'U2L3 Assessment 3'
-assessment 'U2L3 Assessment 4'
+level 'U2L3 Assessment 2', assessment: true
+level 'U2L3 Assessment 3', assessment: true
+level 'U2L3 Assessment 4', assessment: true
 
 stage 'Routers and Redundancy'
 level 'U2L4 Student Lesson Introduction'
 level 'U2L04 - NetSim Routers with Addresses'
-assessment 'U2L04 Assessment1'
-assessment 'U2L04 Assessment4'
-assessment 'U2L04 Assessment5'
-assessment 'U2L04 Assessment2'
-assessment 'U2L04 Assessment3'
+level 'U2L04 Assessment1', assessment: true
+level 'U2L04 Assessment4', assessment: true
+level 'U2L04 Assessment5', assessment: true
+level 'U2L04 Assessment2', assessment: true
+level 'U2L04 Assessment3', assessment: true
 
 stage 'Packets and Making a Reliable Internet'
 level 'U2L5 Student Lesson Introduction'
 level 'U2L05 - NetSim - Packets and Building TCP'
 level 'U2L5 Packets and Reliability - Video'
-assessment 'U2L05 Assessment 1'
-assessment 'U2L05 Assessment 2'
-assessment 'U2L05 Reflection 1'
+level 'U2L05 Assessment 1', assessment: true
+level 'U2L05 Assessment 2', assessment: true
+level 'U2L05 Reflection 1', assessment: true
 
 stage 'Algorithms Detour - Minimum Spanning Tree'
 level 'U2L6 Student Lesson Introduction'
-assessment 'U2L06 - Matching: Label the Diagram'
-assessment 'U2L06- MC: what is an MST?'
-assessment 'U2L06 - MC: Which is an MST?'
+level 'U2L06 - Matching: Label the Diagram', assessment: true
+level 'U2L06- MC: what is an MST?', assessment: true
+level 'U2L06 - MC: Which is an MST?', assessment: true
 
 stage 'Algorithms Detour - Shortest Path'
 level 'U2L7 Student Lesson Introduction'
-assessment 'U1L07 Assessment 1'
-assessment 'U2L07 Assessment2'
-assessment 'U2L07 Assessment3'
-assessment 'U2L07 Assessment4'
-assessment 'U2L07 Assessment5'
+level 'U1L07 Assessment 1', assessment: true
+level 'U2L07 Assessment2', assessment: true
+level 'U2L07 Assessment3', assessment: true
+level 'U2L07 Assessment4', assessment: true
+level 'U2L07 Assessment5', assessment: true
 
 stage 'Algorithms Detour - How Routers Learn'
 level 'U2L8 Student Lesson Introduction'
-assessment 'U2L08 Free Response 3'
-assessment 'U2L08 Free Response 1'
-assessment 'U2L08 Free Response 2'
-assessment 'U2L08 Assessment 0'
-assessment 'U2L08 Assessment 1'
+level 'U2L08 Free Response 3', assessment: true
+level 'U2L08 Free Response 1', assessment: true
+level 'U2L08 Free Response 2', assessment: true
+level 'U2L08 Assessment 0', assessment: true
+level 'U2L08 Assessment 1', assessment: true
 
 stage 'The Need for DNS'
 level 'U2L9 Student Lesson Introduction'
 level 'U2L10 NetSim Automatic DNS'
-assessment 'U2L09 Assessment1'
-assessment 'U2L09 Assessment2'
-assessment 'U2L09 Free Response Wrap Up'
+level 'U2L09 Assessment1', assessment: true
+level 'U2L09 Assessment2', assessment: true
+level 'U2L09 Free Response Wrap Up', assessment: true
 
 stage 'DNS in the Real World'
 level 'U2L10 Student Lesson Introduction'
-assessment 'U2L10 Free Response Getting Started'
-assessment 'U2L10 Assessment1'
-assessment 'U2L10 Assessment2'
-assessment 'U2L10 Assessment3'
-assessment 'U2L10 Free Response Wrap Up'
+level 'U2L10 Free Response Getting Started', assessment: true
+level 'U2L10 Assessment1', assessment: true
+level 'U2L10 Assessment2', assessment: true
+level 'U2L10 Assessment3', assessment: true
+level 'U2L10 Free Response Wrap Up', assessment: true
 
 stage 'HTTP and Abstraction'
 level 'U2L11 Student Lesson Introduction'
 level 'U2 HTTP and HTML - Video'
-assessment 'U2L11 Assessment 1'
-assessment 'U2L11 Assessment 2'
-assessment 'U2L11 Free Response'
+level 'U2L11 Assessment 1', assessment: true
+level 'U2L11 Assessment 2', assessment: true
+level 'U2L11 Free Response', assessment: true
 
 stage 'Practice PT - The Internet and Society'
 level 'U2L12 Student Lesson Introduction'
@@ -92,60 +92,60 @@ level 'U2L12 Student Lesson Introduction'
 stage 'Tell Me a Secret - Encrypting Text'
 level 'U2L13 Student Lesson Introduction'
 level 'U2 frequency caesar'
-assessment 'U2L13 Free Response Getting Started'
-assessment 'U2L13 Assessment1'
-assessment 'U2L13 Assessment3'
-assessment 'U2L13 Assessment4'
-assessment 'U2L13 Free Response Wrap Up'
+level 'U2L13 Free Response Getting Started', assessment: true
+level 'U2L13 Assessment1', assessment: true
+level 'U2L13 Assessment3', assessment: true
+level 'U2L13 Assessment4', assessment: true
+level 'U2L13 Free Response Wrap Up', assessment: true
 
 stage 'Cracking the Code'
 level 'U2L14 Student Lesson Introduction'
 level 'U2 frequency random sub'
 level 'U2 vigenere cipher'
-assessment 'U2L14 Free Response Getting Started'
-assessment 'U2L14 Assessment'
-assessment 'U2L14 Free Response Wrap Up'
-assessment 'U2L14 Assessment2'
-assessment 'U2L14 Assessment3'
-assessment 'U2L14 Assessment4'
+level 'U2L14 Free Response Getting Started', assessment: true
+level 'U2L14 Assessment', assessment: true
+level 'U2L14 Free Response Wrap Up', assessment: true
+level 'U2L14 Assessment2', assessment: true
+level 'U2L14 Assessment3', assessment: true
+level 'U2L14 Assessment4', assessment: true
 
 stage 'Encryption Algorithms'
 level 'U2L15 Student Lesson Introduction'
-assessment 'U2L15 Assessment1'
-assessment 'U2L15 Assessment2'
-assessment 'U2L15 Assessment3'
-assessment 'U2L15 Assessment4'
+level 'U2L15 Assessment1', assessment: true
+level 'U2L15 Assessment2', assessment: true
+level 'U2L15 Assessment3', assessment: true
+level 'U2L15 Assessment4', assessment: true
 
 stage 'Algorithms Detour - Hard Problems TSP'
 level 'U2L17 Student Lesson Introduction'
-assessment 'U2L17 Assessment 1'
-assessment 'U2L17 Assessment 2'
-assessment 'U2L16 Free Response Assessment 3'
-assessment 'U2L17 Free Response Wrap Up'
+level 'U2L17 Assessment 1', assessment: true
+level 'U2L17 Assessment 2', assessment: true
+level 'U2L16 Free Response Assessment 3', assessment: true
+level 'U2L17 Free Response Wrap Up', assessment: true
 
 stage 'One Way Functions - Ice Cream Vans'
 level 'U2L18 Student Lesson Introduction'
-assessment 'U2L17 Free Response Getting Started'
-assessment 'U2L17 Free Responses Assessment 1'
-assessment 'U2L17 - Vocabulary matching'
-assessment 'U2L18 Free Response Getting Started'
-assessment 'U2L18 Assessment'
-assessment 'U2L18 Free Response Wrap Up'
+level 'U2L17 Free Response Getting Started', assessment: true
+level 'U2L17 Free Responses Assessment 1', assessment: true
+level 'U2L17 - Vocabulary matching', assessment: true
+level 'U2L18 Free Response Getting Started', assessment: true
+level 'U2L18 Assessment', assessment: true
+level 'U2L18 Free Response Wrap Up', assessment: true
 
 stage 'Alice and Bob and Asymmetric Keys'
 level 'U2L16 Student Lesson Introduction'
 level 'U2 Encryption and Public Keys - Video'
-assessment 'U2L18 Free Response Assessment 1'
-assessment 'U2L18 Match terms to cups and beans analogy'
-assessment 'U2L18 Free Response Assessment 3'
+level 'U2L18 Free Response Assessment 1', assessment: true
+level 'U2L18 Match terms to cups and beans analogy', assessment: true
+level 'U2L18 Free Response Assessment 3', assessment: true
 
 stage 'Public Key Crypto'
 level 'U2L19 Student Lesson Introduction'
-assessment 'U2L19 Free Response Getting Started'
-assessment 'U2L19 mutlichoice 20 mod 15'
-assessment 'U2L19 multichoice 13 MOD 17'
-assessment 'U2L19 Assessment'
-assessment 'U2L19 Free Response Wrap Up'
+level 'U2L19 Free Response Getting Started', assessment: true
+level 'U2L19 mutlichoice 20 mod 15', assessment: true
+level 'U2L19 multichoice 13 MOD 17', assessment: true
+level 'U2L19 Assessment', assessment: true
+level 'U2L19 Free Response Wrap Up', assessment: true
 
 stage 'Practice PT - Cybersecurity Innovations'
 level 'U2L20 Student Lesson Introduction'

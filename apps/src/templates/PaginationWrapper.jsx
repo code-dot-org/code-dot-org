@@ -1,21 +1,28 @@
 /** Pagination controls */
-import React, {PropTypes} from 'react';
-var Radium = require('radium');
-import color from "../util/color";
-import {Style} from 'radium';
-import Pagination from "react-bootstrap/lib/Pagination";
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
+import Radium, {Style} from 'radium';
+import color from '../util/color';
+import {Pagination} from '@react-bootstrap/pagination';
+
+const styles = {
+  label: {
+    float: 'left'
+  }
+};
 /**
  * Pagination control for navigating between pages of a list.
  */
-var PaginationWrapper = React.createClass({
-  propTypes: {
+class PaginationWrapper extends Component {
+  static propTypes = {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,
-    onChangePage: PropTypes.func.isRequired
-  },
+    onChangePage: PropTypes.func.isRequired,
+    label: PropTypes.string
+  };
 
-  render: function () {
+  render() {
     return (
       <div className="paginationControl">
         <Style
@@ -42,8 +49,11 @@ var PaginationWrapper = React.createClass({
             }
           }}
         />
+        {this.props.label && (
+          <span style={styles.label}>{this.props.label}</span>
+        )}
         <Pagination
-          bsSize={"small"}
+          bsSize={'small'}
           items={this.props.totalPages}
           activePage={this.props.currentPage}
           onSelect={this.props.onChangePage}
@@ -52,6 +62,6 @@ var PaginationWrapper = React.createClass({
       </div>
     );
   }
-});
-PaginationWrapper = Radium(PaginationWrapper);
-module.exports = PaginationWrapper;
+}
+
+export default Radium(PaginationWrapper);

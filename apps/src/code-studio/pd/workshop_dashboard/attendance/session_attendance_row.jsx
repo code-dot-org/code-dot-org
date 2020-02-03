@@ -2,15 +2,17 @@
  * Display and edit attendance for a single teacher in a session,
  * for use in SessionAttendance.
  */
-import React, {PropTypes} from "react";
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import $ from 'jquery';
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const styles = {
   contents: {
     height: '100%',
     width: '100%',
-    cursor:'pointer'
+    cursor: 'pointer'
   }
 };
 
@@ -26,14 +28,15 @@ export default class SessionAttendanceRow extends React.Component {
       user_id: PropTypes.number,
       verified_teacher_account: PropTypes.bool.isRequired,
       attended: PropTypes.bool.isRequired,
-      puzzles_completed: PropTypes.number.isRequired
+      cdo_scholarship: PropTypes.bool,
+      other_scholarship: PropTypes.bool
     }).isRequired,
     adminOverride: PropTypes.bool,
     isReadOnly: PropTypes.bool,
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
-    showPuzzlesCompleted: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     displayYesNoAttendance: PropTypes.bool.isRequired
   };
 
@@ -48,7 +51,9 @@ export default class SessionAttendanceRow extends React.Component {
   }
 
   isValid() {
-    return !this.props.accountRequiredForAttendance || this.props.attendance.user_id;
+    return (
+      !this.props.accountRequiredForAttendance || this.props.attendance.user_id
+    );
   }
 
   handleClickAttended = () => {
@@ -79,23 +84,15 @@ export default class SessionAttendanceRow extends React.Component {
       url += '?admin_override=1';
     }
 
-    this.save(
-      'PUT',
-      url,
-      {
-        attended: true
-      }
-    );
+    this.save('PUT', url, {
+      attended: true
+    });
   }
 
   deleteAttendance() {
-    this.save(
-      'DELETE',
-      this.getApiUrl(),
-      {
-        attended: false
-      }
-    );
+    this.save('DELETE', this.getApiUrl(), {
+      attended: false
+    });
   }
 
   // Saves via the specified method and url, merging in the newAttendanceValues on success.
@@ -103,21 +100,24 @@ export default class SessionAttendanceRow extends React.Component {
     const pendingRequest = $.ajax({
       method,
       url,
-      dataType: "json"
-    }).done(() => {
-      // Clone attendance, merge the new values, and send upstream.
-      this.props.onSaved({
-        ...this.props.attendance,
-        ...newAttendanceValues
+      dataType: 'json'
+    })
+      .done(() => {
+        // Clone attendance, merge the new values, and send upstream.
+        this.props.onSaved({
+          ...this.props.attendance,
+          ...newAttendanceValues
+        });
+      })
+      .fail(() => {
+        // Tell the parent we failed to save.
+        this.props.onSaved({
+          error: true
+        });
+      })
+      .always(() => {
+        this.setState({pendingRequest: null});
       });
-    }).fail(() => {
-      // Tell the parent we failed to save.
-      this.props.onSaved({
-        error: true
-      });
-    }).always(() => {
-      this.setState({pendingRequest: null});
-    });
 
     // Tell the parent we are saving.
     this.setState({pendingRequest});
@@ -133,25 +133,28 @@ export default class SessionAttendanceRow extends React.Component {
   }
 
   renderEditableAttendedCellContents() {
-    const checkBoxClass = this.props.attendance.attended ? "fa fa-check-square-o" : "fa fa-square-o";
+    const checkBoxClass = this.props.attendance.attended
+      ? 'fa fa-check-square-o'
+      : 'fa fa-square-o';
     if (this.props.isReadOnly || this.state.pendingRequest) {
       return (
         <div>
-          <i className={checkBoxClass}/>
+          <i className={checkBoxClass} />
         </div>
       );
     }
 
     const contents = (
       <div style={styles.contents} onClick={this.handleClickAttended}>
-        <i className={checkBoxClass}/>
+        <i className={checkBoxClass} />
       </div>
     );
 
     if (!this.isValid()) {
       const tooltip = (
         <Tooltip id={0}>
-          Teachers must have a Code Studio account before they can be marked attended.
+          Teachers must have a Code Studio account before they can be marked
+          attended.
         </Tooltip>
       );
       return (
@@ -167,38 +170,17 @@ export default class SessionAttendanceRow extends React.Component {
   render() {
     return (
       <tr className={this.props.attendance.attended ? 'success' : null}>
-        <td>
-          {this.props.attendance.first_name}
-        </td>
-        <td>
-          {this.props.attendance.last_name}
-        </td>
-        <td>
-          {this.props.attendance.email}
-        </td>
-        {
-          this.props.accountRequiredForAttendance &&
-          <td>
-            {this.props.attendance.user_id ? "Yes" : "No"}
-          </td>
-        }
-        <td>
-          {this.props.attendance.verified_teacher_account ? "Yes" : "No"}
-        </td>
-        {
-          this.props.showPuzzlesCompleted &&
-          <td>
-            {
-              // Only show for attended teachers
-              this.props.attendance.attended
-                ? this.props.attendance.puzzles_completed
-                : null
-            }
-          </td>
-        }
-        <td>
-          {this.renderAttendedCellContents()}
-        </td>
+        <td>{this.props.attendance.first_name}</td>
+        <td>{this.props.attendance.last_name}</td>
+        <td>{this.props.attendance.email}</td>
+        <td>{this.props.attendance.verified_teacher_account ? 'Yes' : 'No'}</td>
+        {this.props.scholarshipWorkshop && (
+          <td>{this.props.attendance.cdo_scholarship ? 'Yes' : ''}</td>
+        )}
+        {this.props.scholarshipWorkshop && (
+          <td>{this.props.attendance.other_scholarship ? 'Yes' : ''}</td>
+        )}
+        <td>{this.renderAttendedCellContents()}</td>
       </tr>
     );
   }

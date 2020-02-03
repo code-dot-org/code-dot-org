@@ -76,6 +76,9 @@ class ProjectsController < ApplicationController
     minecraft_hero: {
       name: 'New Minecraft Hero Project'
     },
+    minecraft_aquatic: {
+      name: 'New Minecraft Aquatic Project'
+    },
     applab: {
       name: 'New App Lab Project',
       login_required: true
@@ -93,7 +96,7 @@ class ProjectsController < ApplicationController
     },
     dance: {
       name: 'New Dance Lab Project',
-      levelbuilder_required: true,
+      default_image_url: '/blockly/media/dance/placeholder.png',
     },
     makerlab: {
       name: 'New Maker Lab Project',
@@ -212,16 +215,6 @@ class ProjectsController < ApplicationController
     render layout: nil
   end
 
-  GALLERY_PER_PAGE = 5
-
-  def angular
-    if current_user
-      @gallery_activities =
-        current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
-    end
-    render template: "projects/projects", layout: nil
-  end
-
   def load
     if current_user.try(:admin)
       redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
@@ -247,7 +240,7 @@ class ProjectsController < ApplicationController
     return if redirect_under_13_without_tos_teacher(@level)
     channel = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(storage_id('user')),
+      StorageApps.new(get_storage_id),
       data: initial_data,
       type: params[:key]
     )
@@ -316,10 +309,16 @@ class ProjectsController < ApplicationController
       no_header: sharing,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
-      game_display_name: data_t("game.name", @game.name)
+      game_display_name: data_t("game.name", @game.name),
     )
+
     if params[:key] == 'artist'
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/_share_image.png", 'https:'
+    end
+
+    if params[:key] == 'dance'
+      @project_image = CDO.studio_url "v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
+      replay_video_view_options unless sharing || readonly
     end
 
     begin
@@ -366,18 +365,31 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
+    project_type = params[:key]
     new_channel_id = ChannelToken.create_channel(
       request.ip,
-      StorageApps.new(storage_id('user')),
+      StorageApps.new(get_storage_id),
       src: src_channel_id,
-      type: params[:key],
+      type: project_type,
       remix_parent_id: remix_parent_id,
     )
-    AssetBucket.new.copy_files src_channel_id, new_channel_id
-    animation_list = AnimationBucket.new.copy_files src_channel_id, new_channel_id
+    AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
-    FileBucket.new.copy_files src_channel_id, new_channel_id
+    FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
     redirect_to action: 'edit', channel_id: new_channel_id
+  end
+
+  private def uses_asset_bucket?(project_type)
+    %w(applab makerlab gamelab spritelab).include? project_type
+  end
+
+  private def uses_animation_bucket?(project_type)
+    %w(gamelab spritelab).include? project_type
+  end
+
+  private def uses_file_bucket?(project_type)
+    %w(weblab).include? project_type
   end
 
   def export_create_channel
@@ -388,7 +400,7 @@ class ProjectsController < ApplicationController
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       return head :bad_request
     end
-    storage_app = StorageApps.new(storage_id('user'))
+    storage_app = StorageApps.new(get_storage_id)
     src_data = storage_app.get(src_channel_id)
     data = initial_data
     data['name'] = "Exported: #{src_data['name']}"

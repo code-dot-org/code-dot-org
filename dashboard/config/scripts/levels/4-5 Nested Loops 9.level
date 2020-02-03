@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the teeth in the alligator's mouth!",
+    "short_instructions": "Draw the teeth in the alligator's mouth!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Draw the teeth in the alligator's mouth!",
+    "long_instructions": "Draw the teeth in the alligator's mouth!",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 7,

@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "This app is only SLIGHTLY different from the previous one, but much more dynamic.  See if you can figure out how and why the count is going up.  Once you've figured it out then you should be able to DO THIS: add a button to the app that when clicked makes the count go down, and updates the label.  When you're done the app should work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif",
+    "short_instructions": "This app is only SLIGHTLY different from the previous one, but much more dynamic.  See if you can figure out how and why the count is going up.  Once you've figured it out then you should be able to DO THIS: add a button to the app that when clicked makes the count go down, and updates the label.  When you're done the app should work as shown in the demonstration.  GIF: U3L19 - upDownCountApp.gif",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

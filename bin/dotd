@@ -41,7 +41,9 @@ def check_for_cdo_keys
       https://api.slack.com/custom-integrations/legacy-tokens
       https://app.honeybadger.io/users/edit#authentication
 
-    Get the devinternal_db_writer configuration from another developer.
+    Get the devinternal_db_writer key from the cdo-secrets section at:
+
+      https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
 
     Please add them to your locals.yml and rerun the script.
 
@@ -58,19 +60,16 @@ def puts_script_intro
     #{bold 'Documentation'}
 
       Dev-of-the-Day Checklist
-      #{dim 'http://wiki.code.org/display/PROD/Dev+of+the+Day+Checklist'}
-
-      Known Issues
-      #{dim 'https://docs.google.com/document/d/1zaHwuosda-6YYCkNdTFG7gw_iMHTm_BYCNlf6UqEJLg/edit#'}
+      #{dim 'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
   EOS
 end
 
-# Marks the most recent DTT red, updating Slack#developers topic to allow a new
+# Marks the most recent DTT red, updating Slack#deploy-status topic to allow a new
 # test run, but leaving the Slack#infra-test topic with the hash of the previous
 # green run. Inserts a 'dtt_red' row into the metrics table.
 def mark_dtt_red
-  TestServerStatus.mark_red GitHub.sha('test')
+  TestServerStatus.mark_red GitHub.sha('test', true)
   puts <<-EOS.unindent
 
     Reset DTT: yes
@@ -79,10 +78,10 @@ def mark_dtt_red
   @logger.info 'marks DTT red'
 end
 
-# Marks the most recent DTT green, updating Slack#infra-test and Slack#developers topics
+# Marks the most recent DTT green, updating Slack#infra-test and Slack#deploy-status topics
 # appropriately. Inserts a 'dtt_green' row into the metrics table.
 def mark_dtt_green
-  TestServerStatus.mark_green GitHub.sha('test')
+  TestServerStatus.mark_green GitHub.sha('test', true)
   puts <<-EOS.unindent
 
     Reset DTT: yes and updated green commit in Slack#infra-test.
@@ -117,7 +116,6 @@ def do_dtp(dotd_name)
     )
   end
   GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
-  delete_branch branch_name
   @logger.info "DTPs #{test_green_commit} in #{GitHub.url(production_pr_number)}"
 end
 
@@ -137,7 +135,6 @@ def do_dtl(dotd_name)
     head: branch_name,
     title: "DTL (Test > Levelbuilder: #{test_green_commit})"
   )
-  delete_branch branch_name
   puts "MERGED DTL: PR#{levelbuilder_pr_number} (#{GitHub.url(levelbuilder_pr_number)})"
   @logger.info "DTLs #{test_green_commit} in #{GitHub.url(levelbuilder_pr_number)}"
 end
@@ -266,7 +263,7 @@ def dotd_menu(dotd_name)
 
         EOS
         @logger.info 'manually DTTs from staging'
-        TestServerStatus.mark_started GitHub.sha('test')
+        TestServerStatus.mark_started GitHub.sha('test', true)
       end
       menu.choice(:G) {mark_dtt_green}
       menu.choice(:R) {mark_dtt_red}
@@ -328,7 +325,7 @@ def puts_quit_message
   puts <<-EOS.unindent
 
     #{bold 'Something weird going on? Take a look at: '\
-      'http://wiki.code.org/display/PROD/Daily+Deployment'}
+      'https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit?usp=sharing'}
 
     You can find a log of your day at #{LOG_FILE}
 
@@ -490,21 +487,6 @@ def create_branch_from_commit(branch_name, commit)
   )
 end
 
-# Deletes the specified branch, both from the test server and from GitHub.
-# @param [String] branch_name The name of the branch to delete.
-def delete_branch(branch_name)
-  # We use the test server as a workspace because we don't want to require that
-  # the DOTD script be run from within the repo.
-  run_on(
-    'test',
-    [
-      'cd test',
-      "git branch -D #{branch_name}",
-      "git push origin --delete #{branch_name}"
-    ].join(' && ')
-  )
-end
-
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
   check_for_cdo_keys
@@ -515,6 +497,7 @@ def main
   Slack.join_room('deploy-status')
   Slack.join_room('infra-staging')
   Slack.join_room('infra-test')
+  Slack.join_room('infra-production')
   Slack.join_room('levelbuilder')
 
   puts_script_intro

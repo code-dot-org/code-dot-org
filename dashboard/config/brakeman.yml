@@ -1,0 +1,11 @@
+:ensure_latest: true
+:run_all_checks: true
+:report_progress: true
+:exit_on_warn: false
+:exit_on_error: false
+:collapse_mass_assignment: false
+:output_files:
+- brakeman_security_report.htm
+:output_format: :to_html
+:message_limit: 500
+:github_repo: code-dot-org/code-dot-org/dashboard@staging

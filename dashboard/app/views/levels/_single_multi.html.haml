@@ -1,5 +1,7 @@
 -# inhibit brakeman warning about unescaped model attribute - comes from static data in database, level.properties does not contain XSS attacks
 - data = brakeman_no_warn(level.properties)
+- data['answers'] ||= []
+- localized_answers = level.localized_property(:answers)
 - contained_mode = local_assigns.fetch :contained_mode, false
 - app = 'multi'
 - use_tight_layout = data['layout'] == "tight" || tight_layout
@@ -10,6 +12,27 @@
 - layout_class = use_tight_layout ? "tight" : "default"
 - layout_class += " contained" if contained_mode
 
+- if data['height'] == 'auto' || data['height'].blank?
+  - height = 'auto'
+- else
+  - height = "#{data['height']}px"
+
+  -# multi2 gets checkboxes; regular multi gets radio buttons.
+- if data['type'] == 'multi2'
+  - unchecked_class = 'fa-square-o'
+  - checked_class = 'fa-check-square-o'
+  - cross_class = 'fa-times'
+- else
+  - unchecked_class = 'fa-circle-o'
+  - checked_class = 'fa-dot-circle-o'
+  - cross_class = 'fa-times'
+
+- if contained_mode && (data['answers'].present? || data['teacher_markdown'].present?) && can_view_teacher_markdown?
+  %div{id: "containedLevelAnswer0"}
+    .multi.contained{id: "level_#{level.id}", class: layout_class}
+      = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone, contained_mode: contained_mode}
+      = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+
 .multi{id: "level_#{level.id}", class: layout_class}
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank
@@ -19,9 +42,9 @@
 
   = render partial: 'levels/content', locals: {app: app, data: data, content_class: question_content_class, source_level: level, hide_header: !standalone}
 
-  - if data['questions']
-    - question_text = multi_t(level, data['questions'][0]['text'])
-    .multi-question!= question_text
+  - localized_questions = level.localized_property(:questions)
+  - if localized_questions.any?
+    .multi-question!= render_multi_or_match_content(localized_questions[0]["text"])
 
   - answers_class = 'answers ' + (question_content_blank ? 'question-content-blank' : '')
 
@@ -44,21 +67,6 @@
         %a.btn.btn-large.btn-primary.unsubmitButton{style: "display: none", id: "unsubmit_level_#{level.id}"}
           =t('unsubmit')
 
-    - if data['height'] == 'auto' || data['height'].blank?
-      - height = 'auto'
-    - else
-      - height = "#{data['height']}px"
-
-    -# multi2 gets checkboxes; regular multi gets radio buttons.
-    - if data['type'] == 'multi2'
-      - unchecked_class = 'fa-square-o'
-      - checked_class = 'fa-check-square-o'
-      - cross_class = 'fa-times'
-    - else
-      - unchecked_class = 'fa-circle-o'
-      - checked_class = 'fa-dot-circle-o'
-      - cross_class = 'fa-times'
-
     .mainblock
       %form#voteform{onsubmit: 'return false;'}
         - data['answers'].each_with_index do |answer, i|
@@ -77,7 +85,7 @@
                 ="#{multi_answer_characters[i]}. "
                 &nbsp;
             %label.item-label{style: "height: #{height}"}
-              != multi_t(level, answer['text'])
+              != render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/
 
@@ -87,8 +95,9 @@
         = render partial: 'levels/dialog', locals: {app: app}
 
   .clear
-  = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone}
-  = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
+  -unless contained_mode
+    = render partial: 'levels/multi_answer', locals: {data: level.properties, height: height, unchecked_class: unchecked_class, checked_class: checked_class, cross_class: cross_class, level: level, standalone: standalone, contained_mode: contained_mode}
+    = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
   %br/
   - if standalone
@@ -105,9 +114,9 @@
   - else
     -# When LevelGroup-hosted, with students (or teachers doing PD), dont include answers
     - if contained_mode || include_multi_answers?(standalone)
-      - answers = data['answers'].map {|answer| answer['correct'] || false}
+      - answers = localized_answers.map {|answer| answer['correct'] || false}
 
-    - answers_feedback = data['answers'].map {|answer| answer['feedback']}
+    - answers_feedback = localized_answers.map {|answer| answer['feedback']}
 
   :javascript
     window.dashboard.codeStudioLevels.registerLevel(#{level.id}, new Multi(

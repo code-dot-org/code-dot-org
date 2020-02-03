@@ -1,12 +1,13 @@
-import React, { PropTypes, Component } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import TopCourse from './TopCourse';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import ViewFeedback from './ViewFeedback';
 import styleConstants from '../../styleConstants';
-import i18n from "@cdo/locale";
+import i18n from '@cdo/locale';
 import shapes from './shapes';
 
 const contentWidth = styleConstants['content-width'];
@@ -14,30 +15,35 @@ const contentWidth = styleConstants['content-width'];
 const styles = {
   container: {
     width: contentWidth,
-    display: "flex",
-    justifyContent: "space-between",
+    display: 'flex',
+    justifyContent: 'space-between',
     flexWrap: 'wrap'
-  },
+  }
 };
 
 export default class RecentCourses extends Component {
   static propTypes = {
     courses: shapes.courses,
     topCourse: shapes.topCourse,
-    isTeacher: PropTypes.bool.isRequired
+    isTeacher: PropTypes.bool.isRequired,
+    hasFeedback: PropTypes.bool.isRequired
+  };
+
+  static defaultProps = {
+    courses: [],
+    isTeacher: false,
+    hasFeedback: false
   };
 
   render() {
-    const { courses, topCourse, isTeacher } = this.props;
-    const topFourCourses = courses.slice(0,4);
+    const {courses, topCourse, isTeacher, hasFeedback} = this.props;
+    const topFourCourses = courses.slice(0, 4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || topCourse;
+    const hasCourse = courses.length > 0 || !!topCourse;
 
     return (
       <div id="recent-courses">
-        <ContentContainer
-          heading={i18n.myCourses()}
-        >
+        <ContentContainer heading={i18n.myCourses()}>
           {topCourse && (
             <TopCourse
               assignableName={topCourse.assignableName}
@@ -48,7 +54,7 @@ export default class RecentCourses extends Component {
           )}
           {topFourCourses.length > 0 && (
             <div style={styles.container}>
-              {topFourCourses.map((course, index) =>
+              {topFourCourses.map((course, index) => (
                 <div key={index}>
                   <CourseCard
                     title={course.title}
@@ -56,31 +62,12 @@ export default class RecentCourses extends Component {
                     link={course.link}
                   />
                 </div>
-              )}
+              ))}
             </div>
           )}
-          {moreCourses.length > 0 && (
-            <SeeMoreCourses
-              courses={moreCourses}
-            />
-          )}
-          {hasCourse && (
-            <div>
-              <Notification
-                type={NotificationType.course}
-                notice={i18n.findCourse()}
-                details={i18n.findCourseDescription()}
-                buttonText={i18n.findCourse()}
-                buttonLink="/courses"
-                dismissible={false}
-              />
-            </div>
-          )}
-          {!hasCourse && (
-            <SetUpCourses
-              isTeacher={isTeacher}
-            />
-          )}
+          {moreCourses.length > 0 && <SeeMoreCourses courses={moreCourses} />}
+          {!isTeacher && hasFeedback && <ViewFeedback />}
+          <SetUpCourses isTeacher={isTeacher} hasCourse={hasCourse} />
         </ContentContainer>
       </div>
     );

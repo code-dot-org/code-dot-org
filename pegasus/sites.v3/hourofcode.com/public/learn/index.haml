@@ -2,22 +2,20 @@
 title: Learn
 layout: wide_index
 social:
-  "twitter:card": photo
-  "twitter:site": "@codeorg"
-  "twitter:url": "https://<%=request.host%>/learn"
-  "twitter:image:src" : "https://code.org/images/learn/og-learn-student.png"
-  "twitter:title": "Hour of Code"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students. One-hour tutorials are available in 45+ languages for all ages."
-  "og:title": "Hour of Code"
-  "og:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event. One-hour tutorials are available in over 45 languages for all ages."
-  "og:image" : "https://code.org/images/learn/og-learn-student.png"
-  "og:image:width": "853"
-  "og:image:height": "447"
-  "og:video": ""
-  "og:video:width": ""
-  "og:video:height": ""
-  "og:video:type": ""
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  og:image:width: '1200'
+  og:image:height: '630'
 ---
+:ruby
+  @header["social"]["twitter:url"] = "https://#{request.host}/learn"
+  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
+  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+  @header["social"]["og:title"] = hoc_s(:hour_of_code)
+  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/hoc-2018-creativity.png'
+
 -# hourofcode.com uses an early version of Bootstrap 3 which didn't have this wider dialog.
 :css
   @media (min-width: 992px)
@@ -33,12 +31,9 @@ social:
   }
 
   #fullwidth {
-    background: #0094a3; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#0094a3, #00adbc); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#0094a3, #00adbc); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#0094a3, #00adbc); /* For Firefox 3.6 to 15 */
-    background: background: linear-gradient(#0094a3, #00adbc); /* Standard syntax */
     overflow: hidden;
+    background-size: cover;
+    background-image: url(#{CDO.code_org_url('/images/learn/hoc2019_background.png')})
   }
   .banner {
     color: white;
@@ -71,6 +66,14 @@ social:
   #studentImage {
     height: 278px;
   }
+  /* Center the foreground image when it's below the header text. */
+  @media screen and (max-width: 991px) {
+    #studentImage img {
+      position: absolute;
+      transform: translateX(-50%);
+      height: 278px;
+    }
+  }
 
 #fullwidth
   = view :header
@@ -89,8 +92,8 @@ social:
 -# Not ideal but we can pull the undigested files from /blockly.
 - locale_code = hoc_get_locale_code
 - js_locale = locale_code.to_s.downcase.tr('-', '_')
-%script{src: asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
-%script{src: minifiable_asset_path("js/tutorialExplorer.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/tutorialExplorer_locale.js")}
+%script{src: webpack_asset_path("js/tutorialExplorer.js")}
 
 -# Load tutorial images from code.org so we don't have to duplicate them on hourofcode.com.
 - tutorials_contents = Tutorials.new(:tutorials).contents(request.host_with_port)
@@ -121,11 +124,13 @@ social:
       tutorials: #{tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])},
+      defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
-    var studentImage = "#{CDO.code_org_url('/images/learn/students.png')}";
+    var studentImage = "#{CDO.code_org_url('/images/learn/hoc2019_foreground.png')}";
     var img = $('<img>');
     img.attr('src', studentImage);
     img.attr('style', 'opacity: 0');

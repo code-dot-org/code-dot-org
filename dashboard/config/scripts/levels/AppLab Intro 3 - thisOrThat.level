@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Make a This or That app. Decide what happens to the screen and text when the user clicks each button.\r\n\r\nWhen you're done with your app click \"Share\" at the top to send it to a friend to play! Click the picture to see how to share.\r\n\r\n![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)",
+    "long_instructions": "Make a This or That app. Decide what happens to the screen and text when the user clicks each button.\r\n\r\nWhen you're done with your app click \"Share\" at the top to send it to a friend to play! Click the picture to see how to share.\r\n\r\n![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

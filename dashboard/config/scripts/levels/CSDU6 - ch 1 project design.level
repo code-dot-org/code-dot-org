@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Set Up Your Screen\r\n\r\nUsing the project guide, set up the elements of your screen in Design Mode.",
+    "long_instructions": "# Set Up Your Screen\r\n\r\nUsing the project guide, set up the elements of your screen in Design Mode.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

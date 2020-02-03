@@ -1,7 +1,7 @@
 <Craft>
   <config><![CDATA[{
   "game_id": 49,
-  "created_at": "2016-10-10T18:55:50.000Z",
+  "created_at": "2019-01-24T06:00:02.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -42,10 +42,21 @@
     "level_verification_timeout": "0",
     "use_score": "true",
     "instructions_important": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false"
   },
   "published": true,
   "notes": "Puzzle 10: Free Play - on 30x30 screen\r\n\r\nFree play! The player is given all the tools they have Clicked up until this point, and more.\r\n\r\n·       The player should be able to make a wide variety of scenarios and games. We can save out the level image and post it on social media like we did last year.\r\n",
+  "audit_log": "[{\"changed_at\":\"2019-02-26 17:18:24 -0800\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":1,\"changed_by_email\":\"anjali@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -70,9 +81,6 @@
           <title name="DIRECTION">up</title>
         </block>
         <block type="craft_forever"/>
-        <block type="craft_repeatDropdown">
-          <title name="TIMES">2</title>
-        </block>
         <block type="craft_moveForward"/>
         <block type="craft_moveToward">
           <title name="TYPE">Player</title>

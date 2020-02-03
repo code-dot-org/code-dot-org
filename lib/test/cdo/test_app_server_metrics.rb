@@ -55,7 +55,7 @@ class AppServerMetricsTest < Minitest::Test
     )
     listener.spawn_reporting_task
     Cdo::Metrics.expects(:push).at_least(1)
-    sleep 0.3
+    sleep 1
   ensure
     listener && listener.shutdown
   end

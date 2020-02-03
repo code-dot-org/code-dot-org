@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import StudentsBeyondHoc from '@cdo/apps/templates/StudentsBeyondHoc';
 import {combineReducers, createStore} from 'redux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
@@ -15,7 +15,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink=""
         userType="signedOut"
         isEnglish={true}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper.find('VerticalImageResourceCardRow').exists());
   });
@@ -27,7 +28,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         userType="signedOut"
         isEnglish={true}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper.find('CourseBlocksStudentGradeBands').exists());
   });
@@ -39,7 +41,8 @@ describe('StudentsBeyondHoc', () => {
         MCShareLink="code.org/minecraft/sharelink"
         userType="signedOut"
         isEnglish={true}
-      />, {context: {store}},
+      />,
+      {context: {store}}
     ).dive();
     expect(wrapper.find('LocalClassActionBlock').exists());
   });

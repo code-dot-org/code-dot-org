@@ -1,4 +1,4 @@
-class LevelGroupDSL < BaseDSL
+class LevelGroupDSL < LevelDSL
   def initialize
     super
     @id = nil
@@ -10,17 +10,21 @@ class LevelGroupDSL < BaseDSL
     @hash[:options] = {skip_dialog: true, skip_sound: true}
     @current_page_level_names = []
     @level_names = []
-    @i18n_strings = Hash.new({})
+  end
+
+  # @override
+  def self.i18n_fields
+    super + %w(
+      description
+      description_short
+      title
+    )
   end
 
   integer :id
   string :title
   string :description_short
   string :description
-
-  def parse_output
-    {name: @name, properties: @hash}
-  end
 
   def title(text) @hash[:title] = text end
 
@@ -61,7 +65,7 @@ class LevelGroupDSL < BaseDSL
       raise "User uploads aren't supported in a LevelGroup (due to global channel) '#{name}'"
     end
     level_class = level.class.to_s.underscore
-    unless %w(multi text_match free_response evaluation_multi).include? level_class
+    unless %w(multi match text_match free_response evaluation_multi).include? level_class
       raise "LevelGroup cannot contain level type #{level_class}"
     end
 
@@ -77,13 +81,6 @@ class LevelGroupDSL < BaseDSL
   # students' submissions for such levels.
   def anonymous(text)
     @hash[:anonymous] = text
-  end
-
-  def i18n_strings
-    @i18n_strings['title'] = @title if @title
-    @i18n_strings['description_short'] = @description_short if @description_short
-    @i18n_strings['description'] = @description if @description
-    {'name' => {@name => @i18n_strings}}
   end
 
   def self.serialize(level)

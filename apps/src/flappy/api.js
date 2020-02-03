@@ -32,68 +32,68 @@ exports.Gravity = {
   VERY_HIGH: 1.5
 };
 
-exports.random = function (values) {
+exports.random = function(values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
 };
 
-exports.setScore = function (id, value) {
+exports.setScore = function(id, value) {
   studioApp().highlight(id);
   Flappy.playerScore = value;
   Flappy.displayScore();
 };
 
-exports.setGravity = function (id, value) {
+exports.setGravity = function(id, value) {
   studioApp().highlight(id);
   Flappy.gravity = value;
 };
 
-exports.setGround = function (id, value) {
+exports.setGround = function(id, value) {
   studioApp().highlight(id);
   Flappy.setGround(value);
 };
 
-exports.setObstacle = function (id, value) {
+exports.setObstacle = function(id, value) {
   studioApp().highlight(id);
   Flappy.setObstacle(value);
 };
 
-exports.setPlayer = function (id, value) {
+exports.setPlayer = function(id, value) {
   studioApp().highlight(id);
   Flappy.setPlayer(value);
 };
 
-exports.setGapHeight = function (id, value) {
+exports.setGapHeight = function(id, value) {
   studioApp().highlight(id);
   Flappy.setGapHeight(value);
 };
 
-exports.setBackground = function (id, value) {
+exports.setBackground = function(id, value) {
   studioApp().highlight(id);
   Flappy.setBackground(value);
 };
 
-exports.setSpeed = function (id, value) {
+exports.setSpeed = function(id, value) {
   studioApp().highlight(id);
   Flappy.SPEED = value;
 };
 
-exports.playSound = function (id, soundName) {
+exports.playSound = function(id, soundName) {
   studioApp().highlight(id);
   studioApp().playAudio(soundName);
 };
 
-exports.flap = function (id, amount) {
+exports.flap = function(id, amount) {
   studioApp().highlight(id);
   Flappy.flap(amount);
 };
 
-exports.endGame = function (id) {
+exports.endGame = function(id) {
   studioApp().highlight(id);
   Flappy.gameState = Flappy.GameStates.ENDING;
 };
 
-exports.incrementPlayerScore = function (id) {
+exports.incrementPlayerScore = function(id) {
   studioApp().highlight(id);
   Flappy.playerScore++;
   Flappy.displayScore();

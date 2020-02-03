@@ -1,8 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
-const ChatBubbleTip = ({ isRtl, color, background }) => {
+const ChatBubbleTip = ({isRtl, color, background}) => {
   background = background || 'white';
   color = color || 'none';
 
@@ -23,7 +24,7 @@ const ChatBubbleTip = ({ isRtl, color, background }) => {
   return (
     <svg height="30" width="30" style={styles.svg}>
       <polyline
-        points={isRtl ? "5,25 25,25 5,5" : "25,25 5,25 25,5"}
+        points={isRtl ? '5,25 25,25 5,5' : '25,25 5,25 25,5'}
         style={styles.polyline}
         strokeDasharray="3,3"
       />
@@ -39,6 +40,6 @@ ChatBubbleTip.propTypes = {
 
 export default connect(state => {
   return {
-    isRtl: state.isRtl,
+    isRtl: state.isRtl
   };
 })(Radium(ChatBubbleTip));

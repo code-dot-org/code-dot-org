@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect, assert} from '../util/configuredChai';
+import {expect, assert} from '../util/deprecatedChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 var clientApi = require('@cdo/apps/clientApi');
 
@@ -10,7 +10,7 @@ describe('clientApi module', () => {
     sinon.stub(project, 'getCurrentId').returns('some-project');
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function (xhr) {
+    xhr.onCreate = function(xhr) {
       requests.push(xhr);
     };
   });
@@ -29,8 +29,7 @@ describe('clientApi module', () => {
     });
   });
 
-  describe('the ajax function', (done) => {
-
+  describe('the ajax function', done => {
     it('will call the error handler with the xhr object when response status is >= 400', done => {
       clientApi.assets.ajax(
         'GET',
@@ -46,10 +45,8 @@ describe('clientApi module', () => {
     });
 
     it('will fail silently if no error handler is passed in', () => {
-      clientApi.assets.ajax(
-        'GET',
-        'does-not-exist',
-        () => assert.fail('success called', 'error called')
+      clientApi.assets.ajax('GET', 'does-not-exist', () =>
+        assert.fail('success called', 'error called')
       );
       requests[0].respond(404, {}, 'Not Found');
     });
@@ -78,25 +75,72 @@ describe('clientApi module', () => {
 
   describe('assets api', () => {
     it('should have a copyAssets method', () => {
-      clientApi.assets.copyAssets(
-        'some-source-project',
-        ['some-file.png']
-      );
+      clientApi.assets.copyAssets('some-source-project', ['some-file.png']);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('POST');
-      expect(requests[0].url).to.equal('/v3/copy-assets/some-project?src_channel=some-source-project&src_files=%5B%22some-file.png%22%5D');
+      expect(requests[0].url).to.equal(
+        '/v3/copy-assets/some-project?src_channel=some-source-project&src_files=%5B%22some-file.png%22%5D'
+      );
     });
 
     it('puts an audio asset to the correct url', () => {
-      clientApi.assets.putAsset(
-        'some-source-project',
-        ['some-audio.mp3']
-      );
+      clientApi.assets.putAsset('some-source-project', ['some-audio.mp3']);
 
       expect(requests).to.have.length(1);
       expect(requests[0].method).to.equal('PUT');
-      expect(requests[0].url).to.equal('/v3/assets/some-project/some-source-project');
+      expect(requests[0].url).to.equal(
+        '/v3/assets/some-project/some-source-project'
+      );
+    });
+  });
+
+  describe('starter assets api', () => {
+    const levelName = 1;
+
+    describe('getStarterAssets', () => {
+      it('makes an ajax request to the correct url', () => {
+        clientApi.starterAssets.getStarterAssets(levelName, () => {}, () => {});
+
+        expect(requests).to.have.length(1);
+        expect(requests[0].method).to.equal('GET');
+        expect(requests[0].url).to.equal(`/level_starter_assets/${levelName}/`);
+      });
+    });
+
+    describe('withLevelName', () => {
+      it('binds levelName to the api and returns the bound api', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
+
+        assert.equal(levelName, boundApi.levelName);
+      });
+    });
+
+    describe('basePath', () => {
+      it('returns the correct base path', () => {
+        const path = 'some-path';
+        const boundApi = clientApi.starterAssets.withLevelName(levelName);
+
+        assert.equal(
+          `/level_starter_assets/${levelName}/${path}`,
+          boundApi.basePath(path)
+        );
+      });
+
+      it('throws an error if StarterAssetsApi is not bound', () => {
+        assert.throws(
+          clientApi.starterAssets.basePath,
+          'You must bind the API and set levelName before creating a base path.'
+        );
+      });
+
+      it('throws an error if levelName is not set', () => {
+        const boundApi = clientApi.starterAssets.withLevelName(undefined);
+        assert.throws(
+          boundApi.basePath,
+          'You must bind the API and set levelName before creating a base path.'
+        );
+      });
     });
   });
 });

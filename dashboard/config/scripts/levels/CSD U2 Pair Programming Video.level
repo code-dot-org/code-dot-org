@@ -5,14 +5,16 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "video_key": "C1_pair_programming",
+    "video_key": "csd_pair_programming",
     "instructions_important": "false",
     "display_name": "Pair Programming",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "encrypted": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-04-02 00:01:50 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

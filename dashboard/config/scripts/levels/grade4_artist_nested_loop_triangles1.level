@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.",
+    "short_instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.",
     "level_num": "custom",
     "x": "200",
     "y": "200",
@@ -30,7 +30,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.\r\n\r\n",
+    "long_instructions": "Complete the code to draw these triangles.  The first one is done for you.  Hint:  3 triangles in a 360 degree rotation.\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

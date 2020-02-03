@@ -6,7 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "honeybadger": "^1.3.0"
+  },
   "devDependencies": {
     "aws-sdk": "^2.50.0",
     "lambda-tester": "^3.4.1",

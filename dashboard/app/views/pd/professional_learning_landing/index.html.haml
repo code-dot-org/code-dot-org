@@ -3,4 +3,4 @@
   = stylesheet_link_tag 'css/pd', media: 'all'
 
 %div#landing-page-container
-%script{src: minifiable_asset_path('js/pd/professional_learning_landing/index.js'), data: {landingPageData: @landing_page_data.to_json}}
+%script{src: webpack_asset_path('js/pd/professional_learning_landing/index.js'), data: {landingPageData: @landing_page_data.to_json}}

@@ -3,11 +3,10 @@
 
 %table
   %tr
-    %td.heading
-      Date(s):
+    %td.heading= 'Date'.pluralize(@workshop.sessions.length) + ':'
     %td
       - @workshop.sessions.each do |session|
-        = session.formatted_date_with_start_and_end_times
+        = session.start_date_with_start_and_end_times_us_format
         %br
   %tr
     %td.heading
@@ -22,3 +21,11 @@
     %td
       = @workshop.organizer.name
       (#{mail_to(@workshop.organizer.email)})
+  - if @workshop.facilitators.any?
+    %tr
+      %td.heading= 'Facilitator'.pluralize(@workshop.facilitators.length) + ':'
+      %td
+        - @workshop.facilitators.each do |facilitator|
+          = facilitator.name
+          (#{mail_to(facilitator.email)})
+          %br

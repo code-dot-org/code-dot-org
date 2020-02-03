@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  var seconds = Studio.customLogic.seconds;\r\n  var height = Studio.customLogic.height;\r\n  // Note: We're not using the default customLogic.SECONDS_TO_RUN here\r\n  var SECONDS_TO_RUN = 6;\r\n  var targetHeight = SECONDS_TO_RUN * SECONDS_TO_RUN * 10 + 5;\r\n\r\n  // If at target time, make sure we have the right height for this time and\r\n  // the next time.\r\n  return seconds === SECONDS_TO_RUN && height === targetHeight &&\r\n    Studio.customLogic.rocket_height(2) === 2 * 2 * 10 + 5;\r\n}",
     "failure_condition": "function () {\r\n  return Studio.customLogic.seconds > 6;\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Much better, but let's write one more function with simple acceleration. This time the rocket should be 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and 165 at 4 seconds.",
+    "short_instructions": "Much better, but let's write one more function with simple acceleration. This time the rocket should be 15 meters at 1 second, 45 meters at 2 seconds, 95 at 3 seconds, and 165 at 4 seconds.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

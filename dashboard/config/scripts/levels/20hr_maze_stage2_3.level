@@ -24,7 +24,7 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!",
+    "short_instructions": "Trace the path and lead me to the silly pig. Avoid TNT or the feathers will fly!",
     "contained_level_names": null
   },
   "published": true,

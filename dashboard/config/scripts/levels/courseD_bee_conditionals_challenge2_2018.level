@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Collect all of the nectar and make all the honey.",
+    "short_instructions": "Collect all of the nectar and make all the honey.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
@@ -33,7 +33,7 @@
     "serialized_maze": "[[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":1},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":0},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}],[{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2}]]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The difference is that the code inside will run over and over until there is no nectar left.  Try this pattern:\\n\\n<xml>  <block type=\\\"bee_whileNectarAmount\\\">\\n    <title name=\\\"ARG1\\\">nectarRemaining</title>\\n    <title name=\\\"OP\\\">&gt;</title>\\n    <title name=\\\"ARG2\\\">0</title>                    <statement name=\\\"DO\\\">\\n                      <block type=\\\"maze_nectar\\\"/>\\n                    </statement>\\n  </block></xml>\",\"hint_id\":\"courseD_bee_conditionals_challenge1_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b806668474524406d80b738c43c1640/courseD_bee_conditionals_challenge2.mp3\"}]",
     "instructions_important": "false",
-    "markdown_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
+    "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "step_speed": "1",
@@ -45,11 +45,18 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 9159,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-02 21:58:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:36:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-31 21:53:41 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-31 21:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-08-02 21:58:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-23 16:36:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-01-31 21:53:41 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-01-31 21:54:40 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "repeat_until_while": 5,
+    "conditionals": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

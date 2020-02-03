@@ -17,7 +17,24 @@ insert into analysis.csf_plugged_stage_counts values
 (240,8),
 (241,10),
 (258,19),
-(259,7);
+(259,7),
+(297,7),
+(301,7),
+(302,14),
+(303,27),
+(307,10),
+(309,8),
+(310,8),
+(341,9),
+-- 2019 courses
+(369,7),
+(370,6),
+(366,10),
+(360,12),
+(361,13),
+(357,13),
+(363,27),
+(371,12);
 
 GRANT ALL PRIVILEGES ON analysis.csf_plugged_stage_counts TO GROUP admin;
 GRANT SELECT ON analysis.csf_plugged_stage_counts TO GROUP reader, GROUP reader_pii;

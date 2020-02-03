@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Functions\r\n\r\nCreate all of the functions that you identified in your project guide.",
+    "long_instructions": "# Functions\r\n\r\nCreate all of the functions that you identified in your project guide.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

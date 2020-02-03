@@ -3,17 +3,28 @@ nn:
   data:
     block_categories:
       Actions: Handlingar
-      Loops: Løkker
-      Functions: Funksjonar
+      Advanced: Avansert
+      Behaviors: Atferd
+      Brushes: Penslar
       Color: Farge
-      Math: Matematikk
-      Logic: Logikk
-      Variables: Variablar
+      Comment: Kommentar
+      Comments: Kommentar
       Conditionals: Betingelser
+      Dancers: Dansarar
+      Default: Standard
       Events: Hendingar
+      Functions: Funksjonar
+      'Functions ': 'Funksjonar '
+      Game/Score: Spel/Poengsum
+      Games/Score: Spel/Poengsum
+      Groups: Grupper
+      Locations: Stadar
+      Logic: Logikk
+      Loops: Løkker
+      Math: Matematikk
+      Numbers: Tal
+      Properties: Eigenskapar
       Text: Tekst
-      Start: Start
-      Booleans: Boolske verdiar
-      test: test
-      Name: Namn
-      Function: Funksjon
+      Variables: Variablar
+      'Variables ': 'Variablar '
+      World: Verd

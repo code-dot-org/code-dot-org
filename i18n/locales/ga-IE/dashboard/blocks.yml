@@ -1,6 +1,15 @@
+---
 ga:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            sprites: uile
+          MOVE1:
+            MOVES.Rest: Dada
+          MOVE2:
+            MOVES.Rest: Dada
       Dancelab_atTimestamp:
         options:
           UNIT:
@@ -10,8 +19,6 @@ ga:
           GROUP:
             sprites: uile
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -19,8 +26,6 @@ ga:
       Dancelab_changeMoveLR:
         options:
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -30,13 +35,18 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_doMoveEachLR:
         options:
           GROUP:
             sprites: uile
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -44,8 +54,6 @@ ga:
       Dancelab_doMoveLR:
         options:
           MOVE:
-            '"next"': Ar Aghaidh
-            '"prev"': Siar
             MOVES.Rest: Dada
           DIR:
             '1': "→"
@@ -59,39 +67,97 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': soicind
       Dancelab_ifDanceIs:
         options:
           DANCE:
-            '0': Clap High
-            '1': Clown
-            '2': Dab
-            '3': Double Jam
-            '4': Drop
-            '5': Floss
-            '6': Fresh
-            '7': Kick
-            '8': Dada
-            '9': Roll
-            '10': This or That
-            '11': Thiller
+            MOVES.Rest: Dada
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': soicind
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            sprites: uile
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": randamach
       Dancelab_layoutSprites:
         options:
           GROUP:
             sprites: uile
-      Dancelab_makeNewDanceSprite:
+          FORMAT:
+            '"diamond"': diamant
+            '"random"': randamach
+      Dancelab_makeAnonymousDanceSprite:
         options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
           LOCATION:
             "{x: 100, y: 200}": ar chlé
             "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': eachtrán
+            '"CAT"': cat
+            '"DOG"': madra
+            '"DUCK"': lacha
+            '"ROBOT"': róbat
+            '"UNICORN"': aonbheannach
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": randamach
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"diamond"': diamant
+            '"random"': randamach
       Dancelab_randomColor:
         text: dath randamach
       Dancelab_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"none"': Dada
+      Dancelab_setBackgroundEffectWithPalette:
         options:
           EFFECT:
             '"none"': Dada
@@ -103,7 +169,21 @@ ga:
             '4': very fast
             '0.5': slow
             '0.25': very slow
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            sprites: uile
+          SPEED:
+            '1': gnáthmhód
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       Dancelab_setForegroundEffect:
+        options:
+          EFFECT:
+            '"none"': Dada
+      Dancelab_setForegroundEffectExtended:
         options:
           EFFECT:
             '"none"': Dada
@@ -112,6 +192,33 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_setPropEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            sprites: uile
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            sprites: uile
       Dancelab_setVisibleEach:
         options:
           THIS:
@@ -121,48 +228,71 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            sprites: uile
+          PROPERTY:
+            '"scale"': méid
+            '"height"': airde
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': diamant
+            '"x"': x
+            '"y"': 'y'
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': ag an mbarr
-            '"down"': ag an mbun
             '"left"': ar chlé
+            '"down"': ag an mbun
             '"right"': ar dheis
             '"space"': spás
-      Dancelab_whileKey:
-        options:
-          KEY:
-            '"up"': ag an mbarr
-            '"down"': ag an mbun
-            '"left"': ar chlé
-            '"right"': ar dheis
-            '"space"': spás
+            '"x"': x
+            '"y"': 'y'
       gamelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
-      gamelab_debugSprite:
+      gamelab_checkTouching:
         options:
-          VAL:
-            'true': 'fíor'
-            'false': 'bréagach'
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
       gamelab_getProp:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
-      gamelab_locationDelta:
+      gamelab_keyPressed:
         options:
-          DIR:
-            "'random'": randamach
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
+            '"x"': x
+            '"y"': 'y'
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -172,10 +302,15 @@ ga:
         text: dath randamach
       gamelab_randomColor:
         text: dath randamach
-      gamelab_setPosition:
+      gamelab_setBackgroundImage:
         options:
-          POSITION:
-            '"random"': randamach
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': pluais
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': fásach
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tuar ceatha
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': faoi uisce
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': geimhreadh
       gamelab_setProp:
         options:
           PROPERTY:
@@ -187,18 +322,11 @@ ga:
           PROPERTY:
             '"scale"': méid
             '"height"': airde
-      gamelab_spritesWhere:
+      gamelab_spriteClicked:
         options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': méid
-            '"x"': ionad x
-            '"y"': ionad y
+          CONDITION:
+            '"when"': nuair
+            '"while"': chomh fada is atá
       gamelab_turn:
         options:
           DIRECTION:
@@ -212,13 +340,6 @@ ga:
             '"left"': ar chlé
             '"right"': ar dheis
             '"space"': spás
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": ag an mbarr
-            "'down'": ag an mbun
-            "'left'": ar chlé
-            "'right'": ar dheis
       gamelab_whileKey:
         options:
           KEY:
@@ -233,14 +354,76 @@ ga:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': méid
             '"x"': ionad x
             '"y"': ionad y
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupChangePropBy:
+        options:
+          SELECT:
+            '"all"': uile
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_groupSetProp:
+        options:
+          SELECT:
+            '"all"': uile
+          PROPERTY:
+            '"scale"': méid
+            '"x"': ionad x
+            '"y"': ionad y
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': uile
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.Rest: Dada
       Mikelab_randomColor:
         text: dath randamach
+      Mikelab_repeatUntilComplete:
+        text: go deo na ndeor
       Mikelab_setBG:
         options:
           BG:
@@ -256,6 +439,11 @@ ga:
           CORNER:
             '"right"': ar dheis
             '"left"': ar chlé
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ar chlé
+            "{x: 300, y: 200}": ar dheis
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -285,6 +473,44 @@ ga:
             '"down"': a bhrúitear an tsaighead síos
             '"left"': a bhrúitear an tsaighead chlé
             '"right"': a bhrúitear an tsaighead dheas
+      RyanLab_moveForward:
+        text: téigh ar aghaidh
+      RyanLab_turnLeft:
+        text: cas ar chlé
+      RyanLab_turnRight:
+        text: cas ar dheis
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
+        options:
+          OPTION:
+            '"show"': taispeáin
+            '"hide"': folaigh
+      binary_move:
+        options:
+          DIR:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': ag an mbarr
+            '"down"': ag an mbun
+            '"left"': ar chlé
+            '"right"': ar dheis
+            '"space"': spás
       craft_ifPath:
         options:
           DIR:
@@ -294,6 +520,10 @@ ga:
           TYPE:
             "'sand'": gaineamh
             "'planksOak'": plainc dharach
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": gaineamh
       craft_moveForward:
         text: téigh ar aghaidh
       craft_placeTorch:

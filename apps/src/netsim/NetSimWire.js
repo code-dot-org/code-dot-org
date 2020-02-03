@@ -30,7 +30,7 @@ var ArgumentUtils = require('./ArgumentUtils');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = module.exports = function (shard, wireRow) {
+var NetSimWire = (module.exports = function(shard, wireRow) {
   wireRow = wireRow !== undefined ? wireRow : {};
   NetSimEntity.call(this, shard, wireRow);
 
@@ -58,7 +58,7 @@ var NetSimWire = module.exports = function (shard, wireRow) {
   this.localHostname = wireRow.localHostname;
   /** @type {string} */
   this.remoteHostname = wireRow.remoteHostname;
-};
+});
 NetSimWire.inherits(NetSimEntity);
 
 /**
@@ -68,14 +68,20 @@ NetSimWire.inherits(NetSimEntity);
  * @param {!NodeStyleCallback} onComplete - Method that will be given the
  *        created entity, or null if entity creation failed.
  */
-NetSimWire.create = function (shard, initialRow, onComplete) {
-  ArgumentUtils.validateRequired(initialRow, "initialRow");
-  ArgumentUtils.validateRequired(initialRow.localNodeID, "localNodeID",
-      ArgumentUtils.isPositiveNoninfiniteNumber);
-  ArgumentUtils.validateRequired(initialRow.remoteNodeID, "remoteNodeID",
-      ArgumentUtils.isPositiveNoninfiniteNumber);
+NetSimWire.create = function(shard, initialRow, onComplete) {
+  ArgumentUtils.validateRequired(initialRow, 'initialRow');
+  ArgumentUtils.validateRequired(
+    initialRow.localNodeID,
+    'localNodeID',
+    ArgumentUtils.isPositiveNoninfiniteNumber
+  );
+  ArgumentUtils.validateRequired(
+    initialRow.remoteNodeID,
+    'remoteNodeID',
+    ArgumentUtils.isPositiveNoninfiniteNumber
+  );
   var entity = new NetSimWire(shard, initialRow);
-  entity.getTable().create(entity.buildRow(), function (err, row) {
+  entity.getTable().create(entity.buildRow(), function(err, row) {
     if (err) {
       onComplete(err, null);
       return;
@@ -88,7 +94,7 @@ NetSimWire.create = function (shard, initialRow, onComplete) {
  * Helper that gets the wires table for the configured shard.
  * @returns {NetSimTable}
  */
-NetSimWire.prototype.getTable = function () {
+NetSimWire.prototype.getTable = function() {
   return this.shard_.wireTable;
 };
 
@@ -96,7 +102,7 @@ NetSimWire.prototype.getTable = function () {
  * Build own row for the wire table
  * @returns {WireRow}
  */
-NetSimWire.prototype.buildRow = function () {
+NetSimWire.prototype.buildRow = function() {
   return {
     localNodeID: this.localNodeID,
     remoteNodeID: this.remoteNodeID,
@@ -112,9 +118,11 @@ NetSimWire.prototype.buildRow = function () {
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in the wire's direction.
  */
-NetSimWire.prototype.isMessageRowOnDuplexWire = function (messageRow) {
-  return this.localNodeID === messageRow.fromNodeID &&
-      this.remoteNodeID === messageRow.toNodeID;
+NetSimWire.prototype.isMessageRowOnDuplexWire = function(messageRow) {
+  return (
+    this.localNodeID === messageRow.fromNodeID &&
+    this.remoteNodeID === messageRow.toNodeID
+  );
 };
 
 /**
@@ -122,9 +130,10 @@ NetSimWire.prototype.isMessageRowOnDuplexWire = function (messageRow) {
  * @returns {boolean} TRUE if the given message is travelling between the nodes
  *          that this wire connects, in either direction.
  */
-NetSimWire.prototype.isMessageRowOnSimplexWire = function (messageRow) {
+NetSimWire.prototype.isMessageRowOnSimplexWire = function(messageRow) {
   var onWire = this.isMessageRowOnDuplexWire(messageRow);
-  var onReverseWire = this.localNodeID === messageRow.toNodeID &&
-      this.remoteNodeID === messageRow.fromNodeID;
+  var onReverseWire =
+    this.localNodeID === messageRow.toNodeID &&
+    this.remoteNodeID === messageRow.fromNodeID;
   return onWire || onReverseWire;
 };

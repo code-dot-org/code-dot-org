@@ -9,9 +9,7 @@ export default storybook => {
       {
         name: 'YourSchoolResources',
         description: `ResourceCards on /yourschool`,
-        story: () => (
-          <YourSchoolResources/>
-        )
-      },
+        story: () => <YourSchoolResources />
+      }
     ]);
 };

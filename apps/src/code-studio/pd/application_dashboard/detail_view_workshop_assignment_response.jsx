@@ -1,6 +1,8 @@
-import React, {PropTypes} from 'react';
-import DetailViewResponse from './detail_view_response';
-import WorkshopAssignmentLoader, {SUBJECT_TYPES} from "./workshop_assignment_loader";
+import PropTypes from 'prop-types';
+import React from 'react';
+import WorkshopAssignmentLoader, {
+  SUBJECT_TYPES
+} from './workshop_assignment_loader';
 
 export default class DetailViewWorkshopAssignmentResponse extends React.Component {
   static propTypes = {
@@ -12,6 +14,7 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
       name: PropTypes.string,
       url: PropTypes.string
     }).isRequired,
+    year: PropTypes.number,
     editing: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired
   };
@@ -19,12 +22,12 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
   render() {
     let answer;
     if (this.props.editing) {
-
       answer = (
         <WorkshopAssignmentLoader
           courseName={this.props.courseName}
           subjectType={this.props.subjectType}
           assignedWorkshopId={this.props.assignedWorkshop.id}
+          year={this.props.year}
           onChange={this.props.onChange}
         />
       );
@@ -34,19 +37,14 @@ export default class DetailViewWorkshopAssignmentResponse extends React.Componen
           {this.props.assignedWorkshop.name} (
           <a href={this.props.assignedWorkshop.url} target="_blank">
             see workshop
-          </a>)
+          </a>
+          )
         </span>
       );
     } else {
-      answer = "Unassigned";
+      answer = 'Unassigned';
     }
 
-    return (
-      <DetailViewResponse
-        question={this.props.question}
-        answer={answer}
-        layout="lineItem"
-      />
-    );
+    return <div>{answer}</div>;
   }
 }

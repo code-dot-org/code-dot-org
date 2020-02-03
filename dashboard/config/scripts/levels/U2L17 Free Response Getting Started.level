@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Hard Problems: Getting Started",
-    "markdown_instructions": "What kinds of problems do you think are “computationally hard\"?",
+    "long_instructions": "What kinds of problems do you think are “computationally hard\"?",
     "encrypted_solution": "cJlSfL+DD1jrBlM/cpx+hEuiKnq4YZWaELt1DeE6hvQesZLhpJhwBW4l8tyy\nLiJfnZ5d4RxcU/81656C8GnZ9RJtyqxmfEMRvDSoWI4mY0Ec5tSneFQwEsn+\nf16pZgzMjcSLAnxjNydE5tHXdr0b+2l6mQnwB10moTGH811ambmld/GxnGZz\nQ4ASwlehIyyr\n",
     "skip_dialog": true,
     "skip_sound": true

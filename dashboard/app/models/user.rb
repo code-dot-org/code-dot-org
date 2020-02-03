@@ -72,9 +72,10 @@
 require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
-require 'cdo/race_interstitial_helper'
 require 'school_info_interstitial_helper'
 require 'sign_up_tracking'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -84,37 +85,6 @@ class User < ActiveRecord::Base
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
-  # races: array of strings, the races that a student has selected.
-  # Allowed values for race are:
-  #   white: "White"
-  #   black: "Black or African American"
-  #   hispanic: "Hispanic or Latino"
-  #   asian: "Asian"
-  #   hawaiian: "Native Hawaiian or other Pacific Islander"
-  #   american_indian: "American Indian/Alaska Native"
-  #   other: "Other"
-  #   opt_out: "Prefer not to say" (but selected this value and hit "Submit")
-  #
-  # Depending on the user's actions, the following values may also be applied:
-  #   closed_dialog: This is a special value indicating that the user closed the
-  #     dialog rather than selecting a race.
-  #   nonsense: This is a special value indicating that the user chose
-  #     (strictly) more than five races.
-  DISPLAY_RACES = %w(
-    white
-    black
-    hispanic
-    asian
-    hawaiian
-    american_indian
-    other
-    opt_out
-  ).freeze
-
-  VALID_RACES = DISPLAY_RACES + %w(
-    closed_dialog
-    nonsense
-  ).freeze
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
@@ -131,19 +101,18 @@ class User < ActiveRecord::Base
     ops_gender
     using_text_mode
     last_seen_school_info_interstitial
-    ui_tip_dismissed_homepage_header
-    ui_tip_dismissed_teacher_courses
+    has_seen_standards_report_info_dialog
     oauth_refresh_token
     oauth_token
     oauth_token_expiration
     sharing_disabled
     next_census_display
+    donor_teacher_banner_dismissed
     data_transfer_agreement_accepted
     data_transfer_agreement_request_ip
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:
@@ -157,25 +126,7 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
   PROVIDER_MIGRATED = 'migrated'.freeze
-  after_create :set_multi_auth_status
-
-  # Powerschool note: the Powerschool plugin lives at https://github.com/code-dot-org/powerschool
-  OAUTH_PROVIDERS = %w(
-    clever
-    facebook
-    google_oauth2
-    lti_lti_prod_kids.qwikcamps.com
-    the_school_project
-    twitter
-    windowslive
-    microsoft_v2_auth
-    powerschool
-  ).freeze
-
-  OAUTH_PROVIDERS_UNTRUSTED_EMAIL = %w(
-    clever
-    powerschool
-  ).freeze
+  after_create_commit :migrate_to_multi_auth
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
@@ -193,28 +144,11 @@ class User < ActiveRecord::Base
   belongs_to :studio_person
   has_many :hint_view_requests
 
-  # Teachers can be in multiple cohorts
-  has_and_belongs_to_many :cohorts
-
-  # workshops that I am attending
-  has_many :workshops, through: :cohorts
-  has_many :segments, through: :workshops
-
   # courses a facilitator is able to teach
   has_many :courses_as_facilitator,
     class_name: Pd::CourseFacilitator,
     foreign_key: :facilitator_id,
     dependent: :destroy
-
-  has_and_belongs_to_many :workshops_as_facilitator,
-    class_name: Workshop,
-    foreign_key: :facilitator_id,
-    join_table: :facilitators_workshops
-
-  # you can be associated with a district if you are the district contact
-  has_one :district_as_contact,
-    class_name: 'District',
-    foreign_key: 'contact_id'
 
   has_many :regional_partner_program_managers,
     foreign_key: :program_manager_id
@@ -223,13 +157,9 @@ class User < ActiveRecord::Base
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
 
-  has_many :districts_users, class_name: 'DistrictsUsers'
-  has_many :districts, through: :districts_users
-
   has_many :authentication_options, dependent: :destroy
   belongs_to :primary_contact_info, class_name: 'AuthenticationOption'
 
-  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -237,6 +167,10 @@ class User < ActiveRecord::Base
   # we are fully migrated to multi-auth, we may want to remove this code and
   # check that we handle validation errors from AuthenticationOption everywhere.
   validate if: :migrated? do |user|
+    if user.primary_contact_info && !user.primary_contact_info.valid?
+      user.primary_contact_info.errors.each {|k, v| user.errors.add k, v}
+    end
+
     user.authentication_options.each do |ao|
       unless ao.valid?
         ao.errors.each {|k, v| user.errors.add k, v}
@@ -244,9 +178,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
+
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
-  validates_presence_of :school_info, unless: :school_info_optional?
+
+  has_many :user_school_infos
+  after_save :update_and_add_users_school_infos, if: :school_info_id_changed?
+  validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
   has_one :circuit_playground_discount_application
 
@@ -296,9 +235,41 @@ class User < ActiveRecord::Base
     student? || deduplicate_school_info(school_info_attr, self)
   end
 
-  # Not deployed to everyone, so we don't require this for anybody, yet
-  def school_info_optional?
-    true # update if/when A/B test is done and accepted
+  # takes a new school info object collected somewhere (e.g., PD enrollment) and compares to
+  # a user's current school information.
+  # overwrites if:
+  # new school info object has a NCES school ID associated with it
+  # old school info object doesn't have a NCES school ID associated with it
+  # @param new_school_info a school_info object to compare to the user current school information.
+  def update_school_info(new_school_info)
+    if new_school_info.complete?
+      self.school_info_id = new_school_info.id
+      save(validate: false)
+    end
+  end
+
+  def update_and_add_users_school_infos
+    last_school = user_school_infos.find_by(end_date: nil)
+    current_time = DateTime.now
+    if last_school
+      last_school.end_date = current_time
+      last_school.save!
+    end
+    UserSchoolInfo.create(
+      user: self,
+      school_info: school_info,
+      start_date: last_school ? current_time : created_at,
+      last_confirmation_date: current_time
+    )
+  end
+
+  def complete_school_info
+    # Check user_school_infos count to verify if new or existing user
+    # If user_school_infos count == 0, new user
+    # If user_school_infos count > 0, existing user
+    if user_school_infos.count > 0 && !school_info&.complete?
+      errors.add(:school_info_id, "cannot add new school id")
+    end
   end
 
   belongs_to :invited_by, polymorphic: true
@@ -331,69 +302,51 @@ class User < ActiveRecord::Base
     courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
-  def district_contact?
-    return false unless teacher?
-    district_as_contact.present?
-  end
-
-  def district
-    District.find(district_id) if district_id
-  end
-
-  def district_name
-    district.try(:name)
-  end
-
   # Given a user_id, username, or email, attempts to find the relevant user
   def self.from_identifier(identifier)
     (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
       where(username: identifier).first ||
       find_by_email_or_hashed_email(identifier)
+  rescue ActiveModel::RangeError
+    # Given too large of a user id this can produce a range error
+    # @see https://app.honeybadger.io/projects/3240/faults/44740400
+    nil
   end
 
   def self.find_or_create_teacher(params, invited_by_user, permission = nil)
     user = User.find_by_email_or_hashed_email(params[:email])
-    unless user
+
+    if user
+      user.update!(params.merge(user_type: TYPE_TEACHER))
+    else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
+      params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
       # See https://github.com/scambra/devise_invitable/blob/5eb76d259a954927308bfdbab363a473c520748d/lib/devise_invitable/model.rb#L151
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(
-        email: params[:email],
-        user_type: TYPE_TEACHER,
-        age: 21
-      )
-      user.invited_by = invited_by_user
+      user = User.invite!(attributes: params)
+      user.update!(invited_by: invited_by_user)
     end
-
-    user.update!(params.merge(user_type: TYPE_TEACHER))
 
     if permission
       user.permission = permission
       user.save!
     end
+
     user
   end
 
   def self.find_or_create_facilitator(params, invited_by_user)
     find_or_create_teacher(params, invited_by_user, UserPermission::FACILITATOR)
   end
-
-  GENDER_OPTIONS = [
-    [nil, ''],
-    ['gender.male', 'm'],
-    ['gender.female', 'f'],
-    ['gender.non_binary', 'n'],
-    ['gender.not_listed', 'o'],
-    ['gender.none', '-'],
-  ].freeze
 
   DATA_TRANSFER_AGREEMENT_SOURCE_TYPES = [
     ACCOUNT_SIGN_UP = 'ACCOUNT_SIGN_UP'.freeze,
@@ -430,8 +383,6 @@ class User < ActiveRecord::Base
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
-
-  before_create :suppress_ui_tips_for_new_users
 
   before_create :update_default_share_setting
 
@@ -500,6 +451,7 @@ class User < ActiveRecord::Base
     :hash_email,
     :sanitize_race_data_set_urm,
     :fix_by_user_type
+
   before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
 
   before_validation :update_share_setting, unless: :under_13?
@@ -523,40 +475,34 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
-  # under-represented minority.
-  #   - true: Yes, a URM user.
-  #   - false: No, not a URM user.
-  #   - nil: Don't know, may or may not be a URM user.
-  def urm_from_races
-    return nil unless races
+  def sanitize_race_data_set_urm
+    return unless races_changed?
 
-    races_as_list = races.split ','
-    return nil if races_as_list.empty?
-    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
-    false
+    self.races = Policies::Races.sanitized(races).join(',')
+    self.races = nil if races.empty?
+    self.urm = Policies::Races.any_urm?(races)
+
+    # Make sure we explicitly return true here so Rails doesn't interpret a
+    # potential `self.urm = false` as us trying to halt the callback chain
+    true
   end
 
-  def sanitize_race_data_set_urm
-    return true unless races_changed?
+  # Only allow admin permission for studio accounts with Google OAuth authentication.
+  validate :enforce_google_sso_for_admin
+  def enforce_google_sso_for_admin
+    return unless admin
 
-    if races
-      races_as_list = races.split ','
-      if races_as_list.include? 'closed_dialog'
-        self.races = 'closed_dialog'
-      elsif races_as_list.length > 5
-        self.races = 'nonsense'
-      else
-        races_as_list.each do |race|
-          self.races = 'nonsense' unless VALID_RACES.include? race
-        end
-      end
+    errors.add(:admin, 'must be a migrated user') unless migrated?
+
+    # Exception for development and adhoc environments where Google is not available as an authentication provider by default
+    return if rack_env?(:development, :adhoc)
+
+    unless (authentication_options.count == 1) && (authentication_options.all? {|ao| ao.google? && ao.codeorg_email?})
+      errors.add(:admin, 'must be a code.org account with only google oauth')
     end
 
-    self.urm = urm_from_races
-
-    true
+    # Code studio admins should not have a password
+    errors.add(:admin, 'cannot have a password') if password.present?
   end
 
   def fix_by_user_type
@@ -599,7 +545,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_email(email)
     return nil if email.blank?
-    migrated_user = AuthenticationOption.find_by(email: email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(email: email)&.user
     migrated_user || User.find_by(email: email)
   end
 
@@ -608,7 +554,7 @@ class User < ActiveRecord::Base
   # @return [User|nil]
   def self.find_by_hashed_email(hashed_email)
     return nil if hashed_email.blank?
-    migrated_user = AuthenticationOption.find_by(hashed_email: hashed_email)&.user
+    migrated_user = AuthenticationOption.trusted_email.find_by(hashed_email: hashed_email)&.user
     migrated_user || User.find_by(hashed_email: hashed_email)
   end
 
@@ -641,7 +587,7 @@ class User < ActiveRecord::Base
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
     User.find(user_id)
-  rescue ArgumentError, OpenSSL::Cipher::CipherError
+  rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
   end
 
@@ -685,20 +631,21 @@ class User < ActiveRecord::Base
     end
   end
 
-  def self.normalize_gender(v)
-    return nil if v.blank?
-    case v.downcase
-    when 'f', 'female'
-      'f'
-    when 'm', 'male'
-      'm'
-    when 'o', 'notlisted'
-      'o'
-    when 'n', 'nonbinary', 'non-binary'
-      'n'
-    else
-      nil
+  # For a user signing up with email/password, we require certain fields to be present and valid
+  # before the user can move on to the "finish signup" step.
+  def validate_for_finish_sign_up
+    raise "Cannot call validate_for_finish_sign_up on a persisted user" if persisted?
+
+    valid? # Run all validations
+
+    # For this step, we only care about email, password, and password confirmation.
+    # Remove any other validation errors for now.
+    required_fields = [:email, :password, :password_confirmation]
+    errors.each do |attribute, _|
+      errors.delete(attribute) unless required_fields.include?(attribute)
     end
+
+    email_and_hashed_email_must_be_unique # Always check email uniqueness
   end
 
   def self.name_from_omniauth(raw_name)
@@ -729,12 +676,9 @@ class User < ActiveRecord::Base
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
-    # Store emails, except when using Clever
-    user.email = auth.info.email unless user.user_type == 'student' && OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider)
-
-    if OAUTH_PROVIDERS_UNTRUSTED_EMAIL.include?(auth.provider) && User.find_by_email_or_hashed_email(user.email)
-      user.email = user.email + '.oauthemailalreadytaken'
-    end
+    # Store emails, except when using an authentication provider whose emails
+    # we don't trust
+    user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
 
     if auth.provider == :the_school_project
       user.username = auth.extra.raw_info.nickname
@@ -761,14 +705,14 @@ class User < ActiveRecord::Base
       user.birthday = nil
       user.age = user_age
     end
-    user.gender = normalize_gender auth.info.gender
+    user.gender = Policies::Gender.normalize auth.info.gender
   end
 
   def oauth?
     if migrated?
       authentication_options.any?(&:oauth?)
     else
-      OAUTH_PROVIDERS.include? provider
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include? provider
     end
   end
 
@@ -776,7 +720,7 @@ class User < ActiveRecord::Base
     if migrated?
       authentication_options.all?(&:oauth?) && encrypted_password.blank?
     else
-      OAUTH_PROVIDERS.include?(provider) && encrypted_password.blank?
+      AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
   end
 
@@ -787,17 +731,35 @@ class User < ActiveRecord::Base
     end
   end
 
+  def managing_own_credentials?
+    if provider.blank?
+      true
+    elsif manual?
+      true
+    elsif migrated?
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
+  end
+
   def password_required?
-    # password is required if:
-    (!persisted? || # you are a new user
-     !password.nil? || !password_confirmation.nil?) && # or changing your password
-      (provider.blank? || (User::PROVIDER_MANUAL == provider)) # and you are a person creating your own account
-    # (as opposed to a person who had their account created for them or are logging in with oauth)
+    # Password is not required if the user is not managing their own account
+    # (i.e., someone is creating their account for them or the user is using OAuth).
+    return false unless managing_own_credentials?
+
+    # Password is required for:
+    # New users with no encrypted_password set and users changing their password.
+    new_without_password = !persisted? && encrypted_password.blank?
+    is_changing_password = password.present? || password_confirmation.present?
+    new_without_password || is_changing_password
   end
 
   def email_required?
     return true if teacher?
-    return false if provider == User::PROVIDER_MANUAL
+    return false if manual?
     return false if sponsored?
     return false if oauth?
     return false if parent_managed_account?
@@ -805,7 +767,7 @@ class User < ActiveRecord::Base
   end
 
   def username_required?
-    provider == User::PROVIDER_MANUAL || username_changed?
+    manual? || username_changed?
   end
 
   def update_without_password(params, *options)
@@ -836,9 +798,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def update_primary_contact_info(user: {email: nil, hashed_email: nil})
-    new_email = user[:email]
-    new_hashed_email = new_email.present? ? User.hash_email(new_email) : user[:hashed_email]
+  def update_primary_contact_info(new_email: nil, new_hashed_email: nil)
+    new_hashed_email = new_email.present? ? User.hash_email(new_email) : new_hashed_email
 
     return false if new_email.nil? && new_hashed_email.nil?
     return false if teacher? && new_email.nil?
@@ -874,8 +835,8 @@ class User < ActiveRecord::Base
     success
   end
 
-  def update_primary_contact_info!(user: {email: nil, hashed_email: nil})
-    success = update_primary_contact_info(user: user)
+  def update_primary_contact_info!(new_email: nil, new_hashed_email: nil)
+    success = update_primary_contact_info(new_email: new_email, new_hashed_email: new_hashed_email)
     raise "User's primary contact info was not updated successfully" unless success
     success
   end
@@ -898,7 +859,7 @@ class User < ActiveRecord::Base
     hashed_email = params.delete(:hashed_email)
     should_update_contact_info = email.present? || hashed_email.present?
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email}) if should_update_contact_info
+      update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email) if should_update_contact_info
       update!(params)
     end
   rescue
@@ -921,15 +882,22 @@ class User < ActiveRecord::Base
     update(user_type: TYPE_STUDENT)
   end
 
-  def upgrade_to_teacher(email, email_preference)
+  def upgrade_to_teacher(email, email_preference = nil)
     return true if teacher? # No-op if user is already a teacher
     return false unless email.present?
 
     hashed_email = User.hash_email(email)
     self.user_type = TYPE_TEACHER
+
+    new_attributes = email_preference.nil? ? {} : email_preference
+
     transaction do
-      update_primary_contact_info!(user: {email: email, hashed_email: hashed_email})
-      update!(email_preference)
+      if migrated?
+        update_primary_contact_info!(new_email: email, new_hashed_email: hashed_email)
+      else
+        new_attributes[:email] = email
+      end
+      update!(new_attributes)
     end
   rescue
     false # Relevant errors are set on the user model, so we rescue and return false here.
@@ -960,14 +928,20 @@ class User < ActiveRecord::Base
     sections_as_student.find_by_login_type(Section::LOGIN_TYPE_CLEVER).present?
   end
 
+  # True if user is a student in a section that uses any oauth login type
+  def oauth_student?
+    sections_as_student.find_by_login_type(Section::LOGIN_TYPES_OAUTH).present?
+  end
+
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
   # see https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L245
   def self.find_for_authentication(tainted_conditions)
+    max_credential_size = 255
     conditions = devise_parameter_filter.filter(tainted_conditions.dup)
     # we get either a login (username) or hashed_email
     login = conditions.delete(:login)
     if login.present?
-      return nil if login.utf8mb4?
+      return nil if login.size > max_credential_size || login.utf8mb4?
       # TODO: multi-auth (@eric, before merge!) have to handle this path, and make sure that whatever
       # indexing problems bit us on the users table don't affect the multi-auth table
       from("users IGNORE INDEX(index_users_on_deleted_at)").where(
@@ -976,8 +950,8 @@ class User < ActiveRecord::Base
           {value: login.downcase, hashed_value: hash_email(login.downcase)}
         ]
       ).first
-    elsif hashed_email = conditions.delete(:hashed_email)
-      return nil if hashed_email.utf8mb4?
+    elsif (hashed_email = conditions.delete(:hashed_email))
+      return nil if hashed_email.size > max_credential_size || hashed_email.utf8mb4?
       return find_by_hashed_email(hashed_email)
     else
       nil
@@ -1049,20 +1023,66 @@ class User < ActiveRecord::Base
       end
   end
 
-  def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
-    user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
-  end
-
-  def user_level_for(script_level, level)
-    user_levels.find_by(
-      script_id: script_level.script_id,
-      level_id: level.id
-    )
-  end
-
   def has_activity?
     user_levels.attempted.exists?
+  end
+
+  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
+  # the user most recently submitted
+  def next_unpassed_visible_progression_level(script)
+    # If all levels in the script are complete, no need to find the next level,
+    # will be redirected to /congrats.
+    return nil if Policies::ScriptActivity.completed?(self, script)
+
+    visible_sls = visible_script_levels(script).reject {|sl| sl.bonus || sl.level.unplugged? || sl.locked?(self)}
+
+    sl_level_ids = visible_sls.map(&:level_ids).flatten
+
+    # Levels the user made progress in
+    ul_level_ids = user_levels_by_level(script).keys
+
+    visible_completed_level_ids = sl_level_ids & ul_level_ids
+    visible_incomplete_level_ids = sl_level_ids - ul_level_ids
+
+    first_visible_level = visible_sls.min_by(&:chapter)
+
+    completed_all_visible_levels = visible_incomplete_level_ids.empty?
+
+    # Find the user_levels associated with visible script_levels
+    visible_user_levels = user_levels.where(level_id: visible_completed_level_ids)
+
+    # The user has not made any visible progress or has completed all visible
+    # levels but not the entire script, return the first visible script_level
+    return first_visible_level if visible_user_levels.empty? || completed_all_visible_levels
+
+    # Most recently completed user_level of the visible subset
+    most_recent_ul = visible_user_levels.max_by(&:created_at)
+
+    # Find the script_level that goes with the most recent user_level
+    most_recent_sl = visible_sls.find {|sl| sl.level_id == most_recent_ul.level_id}
+
+    last_visible_level = visible_sls.max_by(&:chapter)
+
+    visible_incomplete_sls = visible_sls.find_all {|sl| visible_incomplete_level_ids.include?(sl.level_id)}
+
+    first_visible_incomplete_level = visible_incomplete_sls.min_by(&:chapter)
+
+    # The user has completed the last level in the progression, but not all
+    # previous levels, return the first visible incomplete script_level
+    return first_visible_incomplete_level || first_visible_level if
+      (most_recent_sl == last_visible_level) || most_recent_sl.nil?
+
+    # Find the chapter for the script_level that goes with the most recent user_level
+    most_recent_completed_chapter = most_recent_sl.chapter
+
+    # Find the script_level that has the next highest chapter level from the one above and is not complete
+    later_unpassed_visible_sls = visible_incomplete_sls.select do |sl|
+      sl.chapter > most_recent_completed_chapter
+    end
+
+    next_unpassed_visible_progression_sl = later_unpassed_visible_sls.min_by(&:chapter)
+
+    next_unpassed_visible_progression_sl
   end
 
   # Returns the next script_level for the next progression level in the given
@@ -1157,6 +1177,12 @@ class User < ActiveRecord::Base
       # if we have no sections matching this script id, we consider a stage hidden if any of the sections we're in
       # hide it
       sections.any? {|s| script_level.hidden_for_section?(s.id)}
+    end
+  end
+
+  def visible_script_levels(script)
+    script.script_levels.select do |sl|
+      !script_level_hidden?(sl)
     end
   end
 
@@ -1277,6 +1303,10 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
+  def second_name
+    name.split.second # 'second name'
+  end
+
   def initial
     UserHelpers.initial(name)
   end
@@ -1352,15 +1382,17 @@ class User < ActiveRecord::Base
       return not_found_user
     end
 
+    unique_users = users.uniq
+
     # Normal case: single user, owner of the email attached to this account
-    if users.length == 1 && (users.first.email == email || users.first.hashed_email == User.hash_email(email))
-      primary_user = users.first
+    if unique_users.length == 1 && (unique_users.first.email == email || unique_users.first.hashed_email == User.hash_email(email))
+      primary_user = unique_users.first
       primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
       return primary_user
     end
 
     # One or more users are associated with parent email, generate reset tokens for each one
-    users.each do |user|
+    unique_users.each do |user|
       raw, enc = Devise.token_generator.generate(User, :reset_password_token)
       user.raw_token = raw
       user.reset_password_token   = enc
@@ -1371,7 +1403,7 @@ class User < ActiveRecord::Base
     begin
       # Send the password reset to the parent
       raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
-      self.child_users = users
+      self.child_users = unique_users
       send_devise_notification(:reset_password_instructions, raw, {to: email})
     rescue ArgumentError
       errors.add :base, I18n.t('password.reset_errors.invalid_email')
@@ -1428,37 +1460,18 @@ class User < ActiveRecord::Base
     Experiment.get_all_enabled(user: self).pluck(:name)
   end
 
-  def suppress_ui_tips_for_new_users
-    # New teachers don't need to see the UI tips for their home and course pages,
-    # so set them as already dismissed.
-    self.ui_tip_dismissed_homepage_header = true
-    self.ui_tip_dismissed_teacher_courses = true
-  end
-
-  def advertised_scripts
-    [
-      Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
-      Script.flappy_script, Script.playlab_script, Script.artist_script,
-      Script.course1_script, Script.course2_script, Script.course3_script,
-      Script.course4_script, Script.twenty_hour_script, Script.starwars_script,
-      Script.starwars_blocks_script, Script.minecraft_script
-    ]
-  end
-
-  def in_progress_and_completed_scripts
-    user_scripts.compact.reject do |user_script|
-      user_script.script.nil?
-    rescue
-      # Getting user_script.script can raise if the script does not exist
-      # In that case we should also reject this user_script.
-      true
-    end
-  end
-
   # Returns an array of hashes storing data for each unique course assigned to # sections that this user is a part of.
   # @return [Array{CourseData}]
   def assigned_courses
     section_courses.map(&:summarize_short)
+  end
+
+  def assigned_course?(course)
+    section_courses.include?(course)
+  end
+
+  def assigned_script?(script)
+    section_scripts.include?(script) || section_courses.include?(script&.course)
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
@@ -1467,12 +1480,54 @@ class User < ActiveRecord::Base
   end
 
   # Checks if there are any non-hidden scripts assigned to the user.
-  # @return [Boolean]
-  def any_visible_assigned_scripts?
+  # @return [Array] of Scripts
+  def visible_assigned_scripts
     user_scripts.where("assigned_at").
       map {|user_script| Script.where(id: user_script.script.id, hidden: 'false')}.
-      flatten.
-      any?
+      flatten
+  end
+
+  # Checks if there are any non-hidden scripts assigned to the user.
+  # @return [Boolean]
+  def any_visible_assigned_scripts?
+    visible_assigned_scripts.any?
+  end
+
+  def most_recently_assigned_user_script
+    user_scripts.
+    where("assigned_at").
+    order(assigned_at: :desc).
+    first
+  end
+
+  def most_recently_assigned_script
+    most_recently_assigned_user_script.script
+  end
+
+  def can_access_most_recently_assigned_script?
+    return false unless script = most_recently_assigned_user_script&.script
+
+    !script.pilot? || script.has_pilot_access?(self)
+  end
+
+  def user_script_with_most_recent_progress
+    user_scripts.
+    where("last_progress_at").
+    order(last_progress_at: :desc).
+    first
+  end
+
+  def script_with_most_recent_progress
+    user_script_with_most_recent_progress.script
+  end
+
+  def most_recent_progress_in_recently_assigned_script?
+    script_with_most_recent_progress == most_recently_assigned_script
+  end
+
+  def last_assignment_after_most_recent_progress?
+    most_recently_assigned_user_script[:assigned_at] >=
+    user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Checks if there are any non-hidden scripts or courses assigned to the user.
@@ -1489,12 +1544,12 @@ class User < ActiveRecord::Base
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
   def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = primary_script.try(:id)
+    primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
     course_scripts_script_ids = courses_as_student.map(&:default_course_scripts).flatten.pluck(:script_id).uniq
 
-    user_scripts = in_progress_and_completed_scripts.
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !course_scripts_script_ids.include?(user_script.script_id)}
 
     user_script_data = user_scripts.map do |user_script|
@@ -1530,6 +1585,23 @@ class User < ActiveRecord::Base
     all_sections.map(&:course).compact.uniq
   end
 
+  # Figures out the unique set of scripts assigned to sections that this user
+  # is a part of. Includes default scripts for any assigned courses as well.
+  # @return [Array<Script>]
+  def section_scripts
+    all_sections = sections.to_a.concat(sections_as_student).uniq
+    all_scripts = []
+    all_sections.each do |section|
+      if section.script.present?
+        all_scripts << section.script
+      elsif section.course.present?
+        all_scripts.concat(section.course.default_scripts)
+      end
+    end
+
+    all_scripts
+  end
+
   # return the id of the section the user most recently created.
   def last_section_id
     teacher? ? sections.where(hidden: false).last&.id : nil
@@ -1539,53 +1611,6 @@ class User < ActiveRecord::Base
   # @return [Section|nil]
   def last_joined_section
     Follower.where(student_user: self).order(created_at: :desc).first.try(:section)
-  end
-
-  def all_advertised_scripts_completed?
-    advertised_scripts.all? {|script| completed?(script)}
-  end
-
-  def completed?(script)
-    user_script = user_scripts.where(script_id: script.id).first
-    return false unless user_script
-    !!user_script.completed_at || completed_progression_levels?(script)
-  end
-
-  def not_started?(script)
-    !completed?(script) && !a_level_passed?(script)
-  end
-
-  def a_level_passed?(script)
-    user_levels_by_level = user_levels_by_level(script)
-    script.script_levels.detect do |script_level|
-      user_level = user_levels_by_level[script_level.level_id]
-      is_passed = (user_level && user_level.passing?)
-      script_level.valid_progression_level? && is_passed
-    end
-  end
-
-  def working_on?(script)
-    working_on_scripts.include?(script)
-  end
-
-  def working_on_scripts
-    scripts.where('user_scripts.completed_at is null').map(&:cached)
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def working_on_user_scripts
-    user_scripts.where('user_scripts.completed_at is null')
-  end
-
-  # NOTE: Changes to this method should be mirrored in
-  # in_progress_and_completed_scripts.
-  def completed_user_scripts
-    user_scripts.where('user_scripts.completed_at is not null')
-  end
-
-  def primary_script
-    working_on_scripts.first.try(:cached)
   end
 
   # Returns integer days since account creation, rounded down
@@ -1635,41 +1660,9 @@ class User < ActiveRecord::Base
     end
   end
 
-  # Asynchronously enqueues an operation to update the level progress.
-  # @return [Boolean] whether a new level has been completed.
-  def track_level_progress_async(script_level:, level:, new_result:, submitted:, level_source_id:, pairing_user_ids:)
-    level_id = level.id
-    script_id = script_level.script_id
-    old_user_level = UserLevel.where(
-      user_id: id,
-      level_id: level_id,
-      script_id: script_id
-    ).first
-
-    async_op = {
-      'model' => 'User',
-      'action' => 'track_level_progress',
-      'user_id' => id,
-      'level_id' => level_id,
-      'script_id' => script_id,
-      'new_result' => new_result,
-      'level_source_id' => level_source_id,
-      'submitted' => submitted,
-      'pairing_user_ids' => pairing_user_ids
-    }
-    if Gatekeeper.allows('async_activity_writes', where: {hostname: Socket.gethostname})
-      User.progress_queue.enqueue(async_op.to_json)
-    else
-      User.handle_async_op(async_op)
-    end
-
-    old_result = old_user_level.try(:best_result)
-    !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(new_result)
-  end
-
   # The synchronous handler for the track_level_progress helper.
   # @return [UserLevel]
-  def self.track_level_progress_sync(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
+  def self.track_level_progress(user_id:, level_id:, script_id:, new_result:, submitted:, level_source_id:, pairing_user_ids: nil, is_navigator: false)
     new_level_completed = false
     new_csf_level_perfected = false
 
@@ -1708,7 +1701,7 @@ class User < ActiveRecord::Base
 
     if pairing_user_ids
       pairing_user_ids.each do |navigator_user_id|
-        navigator_user_level = User.track_level_progress_sync(
+        navigator_user_level, _ = User.track_level_progress(
           user_id: navigator_user_id,
           level_id: level_id,
           script_id: script_id,
@@ -1727,15 +1720,6 @@ class User < ActiveRecord::Base
       end
     end
 
-    # Create peer reviews after submitting a peer_reviewable solution
-    if user_level.submitted && Level.cache_find(level_id).try(:peer_reviewable?)
-      learning_module = Level.cache_find(level_id).script_levels.find_by(script_id: script_id).try(:stage).try(:plc_learning_module)
-
-      if learning_module && Plc::EnrollmentModuleAssignment.exists?(user_id: user_id, plc_learning_module: learning_module)
-        PeerReview.create_for_submission(user_level, level_source_id)
-      end
-    end
-
     if new_level_completed && script_id
       User.track_script_progress(user_id, script_id)
     end
@@ -1743,25 +1727,7 @@ class User < ActiveRecord::Base
     if new_csf_level_perfected && pairing_user_ids.blank? && !is_navigator
       User.track_proficiency(user_id, script_id, level_id)
     end
-    user_level
-  end
-
-  def self.handle_async_op(op)
-    raise 'Model must be User' if op['model'] != 'User'
-    case op['action']
-      when 'track_level_progress'
-        User.track_level_progress_sync(
-          user_id: op['user_id'],
-          level_id: op['level_id'],
-          script_id: op['script_id'],
-          new_result: op['new_result'],
-          submitted: op['submitted'],
-          level_source_id: op['level_source_id'],
-          pairing_user_ids: op['pairing_user_ids']
-        )
-      else
-        raise "Unknown action in #{op}"
-    end
+    [user_level, new_level_completed]
   end
 
   # This method is called when a section the user belongs to is assigned to
@@ -1807,8 +1773,8 @@ class User < ActiveRecord::Base
       birthday: birthday,
       total_lines: total_lines,
       secret_words: secret_words,
-      secret_picture_name: secret_picture.name,
-      secret_picture_path: secret_picture.path,
+      secret_picture_name: secret_picture&.name,
+      secret_picture_path: secret_picture&.path,
       location: "/v2/users/#{id}",
       age: age,
       sharing_disabled: sharing_disabled?,
@@ -1820,12 +1786,12 @@ class User < ActiveRecord::Base
     current_sign_in_at.present?
   end
 
-  def self.progress_queue
-    AsyncProgressHandler.progress_queue
-  end
-
   def migrated?
     provider == PROVIDER_MIGRATED
+  end
+
+  def manual?
+    provider == PROVIDER_MANUAL
   end
 
   def sponsored?
@@ -1849,6 +1815,14 @@ class User < ActiveRecord::Base
   def should_see_add_password_form?
     !can_create_personal_login? && # mutually exclusive with personal login UI
       can_edit_password? && encrypted_password.blank?
+  end
+
+  def should_disable_user_type?
+    user_type.present? && oauth_provided_user_type
+  end
+
+  def oauth_provided_user_type
+    [AuthenticationOption::CLEVER].include?(provider)
   end
 
   # We restrict certain users from editing their email address, because we
@@ -1974,28 +1948,19 @@ class User < ActiveRecord::Base
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
-  def should_see_inline_answer?(script_level)
-    return true if Rails.application.config.levelbuilder_mode
-
-    script = script_level.try(:script)
-
-    (authorized_teacher? && script && !script.professional_learning_course?) ||
-      (script_level && UserLevel.find_by(user: self, level: script_level.level).try(:readonly_answers))
-  end
-
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
     teacher? && users_school && (next_census_display.nil? || Date.today >= next_census_display.to_date)
   end
 
-  def show_race_interstitial?(ip = nil)
-    ip_to_check = ip || current_sign_in_ip
-    RaceInterstitialHelper.show_race_interstitial?(self, ip_to_check)
-  end
+  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
+  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
+  def school_donor_name
+    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
+    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
-  def show_school_info_interstitial?
-    SchoolInfoInterstitialHelper.show_school_info_interstitial?(self)
+    donor_name
   end
 
   # Removes PII and other information from the user and marks the user as having been purged.
@@ -2005,9 +1970,7 @@ class User < ActiveRecord::Base
     random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     authentication_options.with_deleted.each(&:really_destroy!)
-
-    districts.clear
-    self.district_as_contact = nil
+    self.primary_contact_info = nil
 
     self.studio_person_id = nil
     self.name = nil
@@ -2103,7 +2066,7 @@ class User < ActiveRecord::Base
           # attached to the template level, thus we look to see if we have a channel
           # for the host_level
           next unless channel_level_ids.include?(level.host_level.id)
-          User.track_level_progress_sync(
+          User.track_level_progress(
             user_id: id,
             level_id: level.id,
             script_id: script_level.script_id,
@@ -2156,6 +2119,21 @@ class User < ActiveRecord::Base
       update(state: 'deleted', updated_at: Time.now)
   end
 
+  # Restores all of this user's projects that were soft-deleted after the given time
+  # Called after undestroy
+  private def restore_channels_deleted_after(deleted_at)
+    return unless user_storage_id
+
+    channel_ids = PEGASUS_DB[:storage_apps].
+      where(storage_id: user_storage_id).
+      map(:id)
+
+    PEGASUS_DB[:storage_apps].
+      where(id: channel_ids, state: 'deleted').
+      where(Sequel.lit('updated_at >= ?', deleted_at.localtime)).
+      update(state: 'active', updated_at: Time.now)
+  end
+
   # Gets the user's user_storage_id from the pegasus database, if it's available.
   # Note: Known that this duplicates some logic in storage_id_for_user_id, but
   # that method is globally stubbed in tests :cry: and therefore not very helpful.
@@ -2165,12 +2143,17 @@ class User < ActiveRecord::Base
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
   # destroys done around the time of the delete / destroy.
+  # Note: This does not restore any of the user's permissions, which are hard-deleted.
   # @raise [RuntimeError] If the user is purged.
   def undestroy
     raise 'Unable to restore a purged user' if purged_at
 
+    soft_delete_time = deleted_at
+
     # Paranoia documentation at https://github.com/rubysherpas/paranoia#usage.
-    restore(recursive: true, recovery_window: 5.minutes)
+    result = restore(recursive: true, recovery_window: 5.minutes)
+    restore_channels_deleted_after(soft_delete_time - 5.minutes)
+    result
   end
 
   def depended_upon_for_login?

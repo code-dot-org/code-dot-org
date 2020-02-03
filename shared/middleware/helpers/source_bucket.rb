@@ -5,15 +5,19 @@ MAIN_JSON_FILENAME = 'main.json'.freeze unless defined? MAIN_JSON_FILENAME
 
 #
 # SourceBucket
+# Assumes only main.json files will be uploaded to this bucket.
 #
 class SourceBucket < BucketHelper
   def initialize
     super CDO.sources_s3_bucket, CDO.sources_s3_directory
   end
 
+  def allowed_file_name?(filename)
+    MAIN_JSON_FILENAME == filename
+  end
+
   def allowed_file_types
-    # Only allow JavaScript and Blockly XML source files.
-    %w(.js .xml .txt .json)
+    %w(.json)
   end
 
   def cache_duration_seconds
@@ -27,8 +31,8 @@ class SourceBucket < BucketHelper
     # In most cases fall back on the generic restore behavior.
     return super(encrypted_channel_id, filename, version_id, user_id) unless MAIN_JSON_FILENAME == filename
 
-    owner_id, channel_id = storage_decrypt_channel_id(encrypted_channel_id)
-    key = s3_path owner_id, channel_id, filename
+    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, storage_app_id, filename
 
     source_object = s3.get_object(bucket: @bucket, key: key, version_id: version_id)
     source_body = source_object.body.read
@@ -66,48 +70,54 @@ class SourceBucket < BucketHelper
     response.to_h
   end
 
-  # Copies the files in the src_channel to the dest_channel
+  # Copies the main.json in the src_channel to the dest_channel
   # Update the animation manifest to include the version ids of the animations
   # in dest_channel
   # Note: this function assumes that the animations have already been copied
   def remix_source(src_channel, dest_channel, animation_list)
-    src_owner_id, src_channel_id = storage_decrypt_channel_id(src_channel)
-    dest_owner_id, dest_channel_id = storage_decrypt_channel_id(dest_channel)
+    src_owner_id, src_storage_app_id = storage_decrypt_channel_id(src_channel)
+    dest_owner_id, dest_storage_app_id = storage_decrypt_channel_id(dest_channel)
 
-    src_prefix = s3_path src_owner_id, src_channel_id
+    src = s3_path src_owner_id, src_storage_app_id, MAIN_JSON_FILENAME
+    dest = s3_path dest_owner_id, dest_storage_app_id, MAIN_JSON_FILENAME
 
-    # For each file, copy it, update the animations, return it
-    s3.list_objects(bucket: @bucket, prefix: src_prefix).contents.map do |fileinfo|
-      filename = %r{#{src_prefix}(.+)$}.match(fileinfo.key)[1]
+    # Get animation manifest
+    src_object = s3.get_object(bucket: @bucket, key: src)
+    src_body = src_object.body.read
 
-      dest = s3_path dest_owner_id, dest_channel_id, filename
+    # Only update version ids for main.json files
+    unless animation_list.empty?
+      src_body = ProjectSourceJson.new(src_body)
 
-      # Get animation manifest
-      key = s3_path src_owner_id, src_channel_id, filename
-      src_object = s3.get_object(bucket: @bucket, key: key)
-      src_body = src_object.body.read
-
-      # Only update version ids for main.json files
-      if filename.casecmp?(MAIN_JSON_FILENAME) && !animation_list.empty?
-        src_body = ProjectSourceJson.new(src_body)
-
-        if src_body.animation_manifest?
-          # Update the manifest to reference the newest version of the animations
-          # in the destination channel
-          src_body.each_animation do |a|
-            next if library_animation? a
-            anim_response = animation_list.find do |item|
-              item[:filename] == "#{a['key']}.png"
-            end
-            src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response.nil? || anim_response.empty?
+      if src_body.animation_manifest?
+        # Update the manifest to reference the newest version of the animations
+        # in the destination channel
+        src_body.each_animation do |a|
+          next if library_animation? a
+          anim_response = animation_list.find do |item|
+            item[:filename] == "#{a['key']}.png"
           end
+          src_body.set_animation_version(a['key'], anim_response[:versionId]) unless anim_response.nil? || anim_response.empty?
         end
-
-        src_body = src_body.to_json
       end
-      # Write the updated main.json file back to S3 as the latest version
-      s3.put_object(bucket: @bucket, key: dest, body: src_body)
+
+      src_body = src_body.to_json
     end
+    # Write the updated main.json file back to S3 as the latest version
+    s3.put_object(bucket: @bucket, key: dest, body: src_body)
+  rescue Aws::S3::Errors::NoSuchKey
+    # No main.json, nothing to copy
+  end
+
+  # Special app_size implementation for Sources bucket that assumes the only file in this
+  # bucket will be called main.json.
+  # This avoids a potentially expensive LIST request to S3.
+  def app_size(encrypted_channel_id)
+    owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
+    key = s3_path owner_id, storage_app_id, MAIN_JSON_FILENAME
+    s3.head_object(bucket: @bucket, key: key).content_length.to_i
+  rescue Aws::S3::Errors::NotFound
+    0
   end
 
   private

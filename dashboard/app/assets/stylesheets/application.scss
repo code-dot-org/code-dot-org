@@ -23,7 +23,6 @@
  * Shared
  *= require user-menu
  *= require user-progress
- *= require teacher-announcement
  *= require buttons
  *= require course-blocks
  *= require details-polyfill
@@ -248,19 +247,6 @@ img.video_thumbnail {
     }
   }
 
-  .header_status_bar {
-    background-color: $dark_color;
-    border-radius: 5px;
-    min-width: 20px;
-    padding: 3px;
-    font-size: 16px;
-    display: inline-block;
-  }
-
-  a.header_status_bar:hover {
-    background-color: $orange;
-  }
-
   .header_text {
     font-size: 16px;
     display: inline-block;
@@ -305,7 +291,7 @@ img.video_thumbnail {
     }
 
     html[dir=rtl] & {
-      padding-right: 300px;
+      padding-right: 350px;
     }
   }
 
@@ -323,6 +309,7 @@ img.video_thumbnail {
     font-size: 14px;
     line-height: 20px;
     box-sizing: border-box;
+    float: left;
     cursor: pointer;
     a:hover {
       text-decoration: none;
@@ -330,101 +317,24 @@ img.video_thumbnail {
     }
   }
 
-  .user_icon {
-    font-size: 25px;
-    border-width: 0;
-  }
-
-  #sign_in_or_user {
-    html[dir=rtl] & {
-      padding-right: 20px;
-    }
-  }
-
-  .user_menu, .create_menu {
+  .user_menu, .create_menu, .help_button {
     margin-top: 6px;
-    height: 38px;
-    user-select: none;
+    .create_button, .display_name, .pairing_name {
+      html[dir=rtl] & {
+        float: right;
+      }
+    }
 
-    .user_name, .create_button {
-      max-width: 120px;
+    .pairing_icon {
       display: inline-block;
       float: left;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+      padding-right: 5px;
+      padding-top: 3px;
     }
 
-    .user_menu_arrow_down,
-    .user_menu_arrow_up,
-    .create_menu_arrow_down,
-    .create_menu_arrow_up, {
-      font-size: 30px;
-    }
-
-    .user_options {
-      position: absolute;
-      top: 55px;
-      right: 55px;
+    .user_options, .help_contents {
       font-size: 14px;
       line-height: 20px;
-    }
-
-    .create_options {
-      position: absolute;
-      top: 55px;
-      right: 55px;
-      font-size: 14px;
-      background-color: $white;
-      width: 200px;
-      a {
-        color: $teal;
-        font-family: $gotham-bold;
-        height: 70px;
-        width: 198px;
-        float: left;
-        border-left: 1px solid $charcoal;
-        border-right: 1px solid $charcoal;
-        border-top: 1px solid $charcoal;
-      }
-      a:hover {
-        color: $teal;
-        font-family: $gotham-bold;
-        background-color: $white;
-        cursor: pointer;
-      }
-      img {
-        height: 70px;
-        width: 70px;
-        float: left;
-      }
-      .project_link {
-        padding-left: 10px;
-        line-height: 62px;
-        float: left;
-      }
-      #view_all_projects {
-        width: 189px;
-        height: 70px;
-        border-bottom: 1px solid $charcoal;
-      }
-    }
-
-    .user_menu_arrow_down,
-    .user_menu_arrow_up,
-    .create_menu_arrow_down,
-    .create_menu_arrow_up, {
-      font-size: 25px;
-    }
-
-    .user_menu_arrow_up,
-    .create_menu_arrow_up {
-      margin-top: -3px;
-    }
-
-    .user_menu_arrow_down,
-    .create_menu_arrow_down {
-      margin-top: -2px;
     }
   }
 
@@ -445,21 +355,29 @@ img.video_thumbnail {
 
   #hamburger {
     padding-top: 4px;
-    padding-left: 20px;
+    padding-left: 16px;
+  }
+
+  .help_button {
+    margin-top: 0;
+    padding-top: 4px;
+    padding-left: 16px;
   }
 
   #signin_button .header_button {
     margin-top: 6px;
   }
+}
 
-  .freeplay_links {
-    float: left;
-    padding-top: 13px;
-  }
-
-  .project_list {
-    float: left;
-    margin-top: 6px;
+#language_dir.rtl #pageheader-wrapper {
+  .create_options {
+    direction: rtl;
+    .project_link {
+      padding: 0 4px 0 10px;
+    }
+    #view_all_projects {
+      padding-right: 10px;
+    }
   }
 }
 
@@ -733,9 +651,8 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options, .project_more_popup {
+.user_options, .help_contents {
   display: none;
-  background-color: $white;
   a:link {
     color: $black;
   }
@@ -752,19 +669,8 @@ $small-footer-standard-width: 400px;
     background-color: $dark_color;
   }
   border: 1px solid $black;
-  z-index: 100001;
-  text-align: left;
-  white-space: nowrap;
   color: $black;
-  position: absolute;
-  right: 0;
   padding: 10px;
-  left: auto;
-  bottom: auto;
-}
-
-.user_options a {
-  color: $black;
 }
 
 .user_options .pairing_summary {
@@ -844,14 +750,93 @@ $default-modal-width: 640px;
   background-color: $orange;
 }
 
-#video {
+#videoTabContainer {
   padding: 0;
+}
+
+#video {
+  border-width: 0;
 }
 
 .video-player {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+
+.vjs-tech:focus, .vjs-poster:focus {
+  outline: 0;
+}
+
+.video-player-rounded-corners {
+  border-radius: 10px;
+  border-width: 0;
+}
+
+.video-player-full-width {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.video-content-full-width {
+  position: relative;
+  // Specifically supports 16x9 aspect ratio
+  padding-top: 56.25%;
+}
+
+@media screen and (max-height: 1330px) {
+  .standalone-video-full-width {
+    max-width: 1973px;
+  }
+}
+@media screen and (max-height: 1240px) {
+  .standalone-video-full-width {
+    max-width: 1813px;
+  }
+}
+@media screen and (max-height: 1150px) {
+  .standalone-video-full-width {
+    max-width: 1653px;
+  }
+}
+@media screen and (max-height: 1060px) {
+  .standalone-video-full-width {
+    max-width: 1493px;
+  }
+}
+@media screen and (max-height: 970px) {
+  .standalone-video-full-width {
+    max-width: 1333px;
+  }
+}
+@media screen and (max-height: 880px) {
+  .standalone-video-full-width {
+    max-width: 1173px;
+  }
+}
+@media screen and (max-height: 790px) {
+  .standalone-video-full-width {
+    max-width: 1013px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .standalone-video-full-width {
+    max-width: 853px;
+  }
+}
+@media screen and (max-height: 610px) {
+  .standalone-video-full-width {
+    max-width: 693px;
+  }
+}
+
+.buttons-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: -44px;
 }
 
 .fallback-video-player-failed {
@@ -916,6 +901,9 @@ $default-modal-width: 640px;
 
   .header_text, .header_button {
     float: left;
+  }
+  .project_name_wrapper {
+    min-width: 160px;
   }
   .project_name_wrapper .header_text {
     float: left;
@@ -1025,11 +1013,6 @@ $default-modal-width: 640px;
   right: 16px;
 }
 
-.freeplay_links {
-  display: inline-block;
-  text-align: center;
-}
-
 input.header_input {
   font-size: 14px;
   line-height: 20px;
@@ -1038,7 +1021,9 @@ input.header_input {
 
 .header_user {
   text-align: right;
-  margin-left: 5px;
+  margin-left: 6px;
+  margin-top: 6px;
+  height: 38px;
 }
 
 .header_popup {
@@ -1371,62 +1356,7 @@ a.download-video {
   padding-left: 5px;
 }
 
-#section-management {
-  #edit_teachers {
-    .padtopbottom {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-}
-
 #landingpage {
-  .welcome {
-    background-color: $light_purple;
-    border-radius: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: $white;
-    overflow: hidden;
-  }
-
-  .welcomeleft {
-    float: left;
-    text-align: center;
-    img {
-      padding-left: 65px;
-    }
-  }
-
-  .welcomeright {
-    float: left;
-    text-align: center;
-  }
-
-  .lines_of_code_header {
-    width: 100%;
-    color: $white;
-    padding-left: 30px;
-    padding-top: 0;
-    font-size: 24px;
-    line-height: 34px;
-  }
-
-  a.lines_of_code_link {
-    color: $white;
-    text-decoration: none;
-    font-family: $gotham-bold;
-    font-weight: normal;
-    line-height: 34px;
-    text-transform: uppercase;
-  }
-
-  .description {
-    margin-top: 15px;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   .row#continue {
     background-color: $teal;
     color: $white;
@@ -1499,19 +1429,17 @@ a.download-video {
     #heading {
       width: 700px;
     }
-    .betatext {
+
+    /**
+     * betatext can be used to style a span directly, or betacontainer can be
+     * used on a node containing markdown to apply the beta styling to all
+     * **strong** nodes in the markdown
+     */
+    .betatext, .betacontainer strong {
       background: $white;
       color: $cyan;
       padding: 2px 4px;
       border: 1px solid $cyan;
-    }
-  }
-
-  #edit_teachers {
-    background-color: $lightest_gray;
-    margin: 20px 0 20px -20px;
-    form {
-      margin: 0;
     }
   }
 }
@@ -1545,59 +1473,8 @@ a.download-video {
   }
 }
 
-#angular-my-projects-wrapper .gallery {
-  margin-left: 45px;
-}
-
 .course_progress {
   margin: 10px 0;
-}
-
-#signin {
-  .tryfirst {
-    margin-bottom: 10px;
-    a {
-      font-size: 18px;
-      font-family: $gotham-regular;
-      font-weight: normal;
-    }
-  }
-  .itemblock {
-    display: inline-block;
-    width: 600px;
-  }
-  .singleitemblock {
-    padding-left: 144px;
-    width: 364px;
-  }
-  .labelblock {
-    display: inline-block;
-    width: 140px;
-  }
-  .rememberme {
-    font-size: 13px;
-    margin-bottom: 22px;
-
-    #user_remember_me {
-      margin-top: -2px;
-      margin-right: 3px;
-    }
-  }
-  button {
-    width: 220px;
-  }
-  #signin-button {
-    margin-bottom: 7px;
-  }
-  #signup-button {
-    margin-top: 4px;
-  }
-  .forgotpassword {
-    margin-bottom: 10px;
-  }
-  .sidebar {
-    padding-left: 20px;
-  }
 }
 
 #signinsection {
@@ -1640,13 +1517,85 @@ a.download-video {
   }
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#change-password {
+  max-width: 600px;
+}
+
+#signin,
+#change-password {
+  $field-width: 310px;
+  $button-width: 324px;
+
+  min-width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    input[type=text], input[type=password] {
+      width: $field-width;
+      height: 40px;
+      padding: 0 6px;
+    }
+  }
+
+  .field-aligned {
+    width: $button-width;
+    align-self: flex-end;
+  }
+
+  #forgot-password {
+    font-family: $gotham-extra-bold-italics;
+  }
+
+  button {
+    align-self: flex-end;
+    background-color: $orange;
+    border: 1px solid $orange;
+    color: $white;
+    font-family: $gotham-extra-bold;
+    margin: 5px 0;
+    width: $button-width;
+  }
+
+  .blue-button {
+    background-color: $blue;
+    border: 1px solid $blue;
+  }
+}
+
 #signup, #school-info-modal {
   // NEW SIGN-UP FORM
-  .finish-signup {
-    width: 600px;
+  .signup {
+    margin: 20px 0;
+  }
 
+  .finish-signup {
+    width: 800px;
+  }
+  /* FND-893 - Stop using markdown in <Label>s*/
+  .finish-signup #instructions p {
+    display: inline;
+  }
+
+  .signup, .finish-signup {
     $school-info-background: #f7f7f7;
     $school-info-border-color: #e5e5e5;
+
     #school-info-inputs {
       width: 100%;
       background-color: $school-info-background;
@@ -1655,45 +1604,108 @@ a.download-video {
       h5 {
         font-weight: bold;
       }
+
       hr {
         border: 1px solid $school-info-border-color;
       }
     }
+
     .checkbox {
       display: flex;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      width: 600px;
+      padding: 10px;
 
       label {
         padding-left: 10px;
       }
     }
+
+    .radio {
+      display: flex;
+
+      input[type=radio] {
+        margin-right: 5px;
+      }
+    }
+
+    .field-row {
+      display: flex;
+      align-items: center;
+    }
+
     .field {
+      width: 600px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    select, input[type=text] {
+
+    .field-sm {
+      width: 400px;
+    }
+
+    .field_with_errors label {
+      color: $black;
+    }
+
+    .field_with_errors > input,
+    .field_with_errors > select {
+      background-color: $white;
+    }
+
+    .error {
+      color: $red;
+      font-style: italic;
+    }
+
+    .padded {
+      padding-left: 10px;
+      max-width: 150px;
+    }
+
+    select, input[type=text], input[type=password] {
       height: 36px;
       width: 350px;
     }
-    input[type=text] {
+
+    input[type=text], input[type=password] {
       width: 338px;
       padding-top: 0;
       padding-bottom: 0;
     }
-    #submit {
+
+    .input-sm input {
+      width: 250px;
+    }
+
+    #school-type {
+      width: 370px !important;
+    }
+
+    .submit-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .submit {
       background-color: $orange;
       border: 1px solid $orange;
       color: $white;
       font-weight: bolder;
-      min-width: 400px;
+      padding: 0 20px;
+      margin: 5px 0;
+    }
+
+    #forgot-password {
+      align-self: center;
+      font-style: italic;
     }
   }
 
   // OLD SIGN-UP FORM
   .signupform {
-    padding: 20px;
+    padding: 20px 0;
     margin-bottom: 0;
   }
   .itemblock {
@@ -1703,14 +1715,10 @@ a.download-video {
       margin-top: -4px;
       margin-right: 4px;
     }
-
-    label {
-      display: inline-block;
-    }
   }
   .labelblock {
     display: table-cell;
-    width: 140px;
+    width: 180px;
     vertical-align: middle;
   }
   .labelblock-wide {
@@ -1730,7 +1738,25 @@ a.download-video {
     margin-bottom: 5px;
     margin-top: 5px;
   }
-  .terms-checkbox, .race-checkbox {
+
+  /* FND-893 - Stop using markdown in <Label>s*/
+  label.terms {
+    font-size: inherit;
+    line-height: inherit;
+  }
+  .terms-text {
+    overflow: hidden;
+  }
+  .terms-text p {
+    display: inline;
+    margin: 0;
+  }
+  .terms-checkbox {
+    margin: 0 5px 0 0;
+    float: left;
+  }
+
+  .race-checkbox {
     margin: 0 5px 2px 0;
   }
   .right {
@@ -1823,33 +1849,93 @@ a.download-video {
   #user_type-block {
     margin-bottom: 20px;
   }
-  .devise_links {
-    padding-left: 20px;
-    margin-top: 20px;
+}
+
+.vertical-or {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: bolder;
+  color: $charcoal;
+
+  hr {
+    width: 1px;
+    height: 100%;
+    background-color: $light_gray;
   }
 }
 
-.devise_link_section {
+.horizontal-or {
+  width: 400px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  .or_break {
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bolder;
+  color: $charcoal;
+
+  hr {
+    width: 40%;
+    border-color: $light_gray;
+  }
+}
+
+.signup-header {
+  width: 400px;
+  text-align: center;
+}
+
+// NEW STYLES FOR devise/shared/_new_links
+.devise-links {
+  flex-grow: 2;
+
+  form {
+    margin: 0;
+  }
+
+  .section-sign-in {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin-right: 20px;
-    margin-left: -20px;
-    .vertical_bar {
-      width: 2px;
-      height: 100%;
-      background-color: $light_gray;
+
+    input[type=text] {
+      flex-grow: 2;
+      height: 40px;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
     }
-    p {
-      font-size: 20px;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      color: $teal;
-      font-weight: bolder;
+
+    button {
+      background-color: $orange;
+      border: 1px solid $orange;
+      color: $white;
+      font-family: $gotham-extra-bold;
+      padding: 10px 20px;
+      margin-right: 0;
+    }
+  }
+
+  .oauth-sign-in {
+    color: $white;
+    font-family: $gotham-extra-bold;
+    width: 100%;
+    margin: 5px 0;
+
+    &.with-google_oauth2 {
+      background-color: $google_red;
+      border: 1px solid $google_red;
+    }
+
+    &.with-facebook {
+      background-color: $facebook_blue;
+      border: 1px solid $facebook_blue;
+    }
+
+    &.with-microsoft_v2_auth {
+      background-color: $microsoft_blue;
+      border: 1px solid $microsoft_blue;
     }
   }
 }
@@ -1875,9 +1961,17 @@ a.download-video {
   transform: translateY($offset);
 }
 
+/* overrides .unplugged for match levels in level groups */
+.level-group-content .unplugged.match {
+  width: auto;
+}
+
 .match {
   .mainblock {
     margin-left: 0;
+    .level-group-content & {
+      margin-left: 50px;
+    }
   }
   .column {
     width: 260px;
@@ -1910,7 +2004,7 @@ a.download-video {
     border-color: transparent;
     border-width: 6px;
   }
-  #questions {
+  .match_questions {
     list-style-type: none;
     margin-left: 0;
     li {
@@ -1921,7 +2015,7 @@ a.download-video {
   li {
     text-align: center;
   }
-  #slots {
+  .match_slots {
     list-style-type: none;
     margin-left: 0;
     .emptyslot {
@@ -1943,6 +2037,12 @@ a.download-video {
       background-color: $lighter_yellow;
     }
   }
+  .question {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
   .answer {
     background-color: $white;
     border-color: $lighter_cyan;
@@ -1951,7 +2051,7 @@ a.download-video {
     border-color: $light_green;
     cursor: move;
   }
-  #answerdest {
+  .match_answerdest {
     width: 240px;
   }
   .answerlist {
@@ -1961,7 +2061,7 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #answers {
+  .match_answers {
     list-style-type: none;
     margin-left: 0;
   }
@@ -1972,11 +2072,11 @@ a.download-video {
       @include yTranslation(-50%);
     }
   }
-  #correctmarkscolumn {
+  .match_correctmarkscolumn {
     width: 20px;
     padding-right: 20px;
   }
-  #correctmarks {
+  .match_correctmarks {
     margin-left: 0;
   }
   .correctmark {
@@ -2023,6 +2123,10 @@ a.download-video {
   overflow: hidden;
 }
 
+.external-video-container {
+  margin-left: 93px;
+}
+
 .peer-review input[type=radio] {
   margin: 0 3px 3px 5px;
 }
@@ -2033,9 +2137,7 @@ a.download-video {
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 1em;
-  &.outdated {
-    color: $light_gray;
-  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -2044,8 +2146,18 @@ a.download-video {
   }
   .peer-review-status {
     font-size: 1em;
-    & > strong {
-      font-family: inherit;
+  }
+  &.from-instructor {
+    border: 2px solid $cyan;
+
+    .peer-review-title {
+      color: $cyan;
+    }
+  }
+  &.outdated {
+    color: $charcoal;
+    &.from-instructor {
+      border: 2px solid $lighter_cyan;
     }
   }
 }
@@ -2085,22 +2197,29 @@ a.download-video {
 .multi,
 .match {
   #markdown.teacher {
-    max-width: 800px;
+    max-width: 1000px;
     border: 5px solid $cyan;
     background-color: $lightest_cyan;
     border-radius: 5px;
     margin: 10px auto;
+    .level-group-content & {
+      margin-left: 50px;
+    }
     .content {
       padding: 10px;
     }
     h3 {
       padding: 5px;
       font-size: 18px;
+      line-height: 18px;
       font-family: $gotham-extra-bold;
       font-weight: normal;
       color: $white;
       background: $cyan;
       margin: 0;
+    }
+    p {
+      font-size: 13px;
     }
   }
 
@@ -2116,6 +2235,14 @@ a.download-video {
     h2:first-child {
       margin-top: 5px;
     }
+  }
+}
+
+.multi.contained, .contained.free-response {
+  margin: 20px;
+  max-width: 100%;
+  #markdown.teacher {
+    max-width: 100%;
   }
 }
 
@@ -2154,12 +2281,20 @@ a.download-video {
     display: inline-block;
   }
 
+  &-full-width {
+    width: unset;
+  }
 }
 
 .multi #markdown.teacher {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
+}
+
+.multi.contained #markdown.teacher {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .text-match #markdown.teacher, .free-response #markdown.teacher {
@@ -2901,6 +3036,17 @@ $width: 400px;
   box-shadow: 0 0 7px 2px $shadow;
 }
 
+#assumed_identity_tag {
+  position: fixed;
+  top: 0;
+  right: 0;
+  color: $white;
+  background-color: $red;
+  padding: 3px;
+  z-index: 200;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
 #level-body {
   height: 100%;
 }
@@ -2916,10 +3062,11 @@ code {
 }
 
 #diversity_survey {
-  background-color: $lighter_purple;
+  background-color: $background_gray;
   color: $dark_charcoal;
   border-radius: 5px;
   overflow: hidden;
+  border: solid 1px $purple;
 
   #surveythanks {
     font-size: 14px;
@@ -2980,7 +3127,7 @@ code {
     .survey_right {
       width: 45%;
       float: left;
-      border-left: 1px solid $purple;
+      border-left: 1px solid $charcoal;
       padding-left: 20px;
 
       li {
@@ -3050,135 +3197,6 @@ code {
   }
 }
 
-.arrow_box_up {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up::after, .arrow_box_up::before {
-  bottom: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-/* An arrow box with an arrow going up, but the pointer is in the
- * top-right corner */
-
-.arrow_box_up_corner {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_up_corner::after, .arrow_box_up_corner::before {
-  bottom: 100%;
-  left: 90%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_up_corner::after {
-  border-bottom-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_up_corner::before {
-  border-bottom-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
-.arrow_box_down {
-  width: 300px;
-  padding: 5px 5px 20px 20px;
-  position: absolute;
-  cursor: pointer;
-  margin-bottom: 40px;
-  color: $dark_charcoal;
-
-  background: $white;
-  border: 2px solid $border_gray;
-}
-.arrow_box_down::after, .arrow_box_down::before {
-  top: 100%;
-  left: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-}
-.arrow_box_down::after {
-  border-top-color: $white;
-  border-width: 20px;
-  margin-left: -20px;
-}
-.arrow_box_down::before {
-  border-top-color: $border_gray;
-  border-width: 23px;
-  margin-left: -23px;
-}
-
 #script-breadcrumb {
   padding-bottom: 10px;
   a:hover {
@@ -3222,4 +3240,49 @@ h2.danger {
 .label-bold {
   font-weight: bold;
   color: $dark_charcoal;
+}
+
+#donor-footer {
+  color: $white;
+  text-align: center;
+  padding: 30px 10px 36px 10px;
+
+  h1 {
+    color: $white;
+    margin-bottom: 24px;
+    margin-top: 0;
+    font-family: "Gotham 5r", sans-serif;
+    font-size: 38px;
+  }
+
+  h3 {
+    font-family: "Gotham 5r", sans-serif;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  p {
+    color: $white;
+    margin-bottom: 22px;
+    max-width: 720px;
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .logo {
+    max-width: 235px;
+    max-height: 128px;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .resources {
+    margin-top: 20px;
+  }
+
+  .learn-more {
+    color: $yellow;
+  }
 }

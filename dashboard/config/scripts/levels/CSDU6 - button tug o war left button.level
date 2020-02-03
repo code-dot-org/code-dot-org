@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making Both Buttons Work\r\n\r\nIf you were successful in the last level, the slider should move to the right when the right button is pressed. To get the left button to work you need to add another event handler, only this time it should **decrease** the variable _score_ and update the slider on each press.",
+    "long_instructions": "# Making Both Buttons Work\r\n\r\nIf you were successful in the last level, the slider should move to the right when the right button is pressed. To get the left button to work you need to add another event handler, only this time it should **decrease** the variable _score_ and update the slider on each press.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

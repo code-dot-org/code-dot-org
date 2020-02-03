@@ -1,58 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: '¡Gracias por inscribirte para ser anfitrión de una Hora de Código!'
 ---
-<% facebook = {:u=>"http://#{request.host}/es"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HoraDeCódigo' %>
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras siga disponible el material y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. Entendemos que esto puede no estar dentro de su presupuesto, y le recomendamos que imprima los [archivos PDF](https://code.org/inspire) para su clase.)  
-<br /> [<button>Obtener carteles</button>](https://store.code.org/products/code-org-posters-set-of-12) Utilice el código de oferta FREEPOSTERS
+<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<% if @country == 'us' %> ¡Gracias a la generosidad de Ozobot, Dexter Industries, littleBits y Wonder Workshop, más de 100 clases serán seleccionadas para recibir robots o circuitos para su clase! Para poder recibir un conjunto, asegúrese de completar la encuesta enviada desde Code.org después de la Hora del Código. Code.org seleccionará las clases ganadoras. Mientras tanto, revisa algunas de las actividades de robótica y circuitos. Tenga en cuenta que esto solo está disponible para las escuelas de EE. UU. <% end %>
-
-<br /> **La Hora del código se celebra durante <%= campaign_date('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. Corre la voz en tu escuela y comunidad
 
-Se acaba de unir al movimiento de la Hora del Código. ¡Díselo a tus amigos con **#HoraDelCódigo**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Anime a otros a participar [con nuestros correos electrónicos de muestra.](%= resolve_url('/promote/resources#sample-emails') %) Póngase en contacto con su director y desafíe a cada aula de su escuela para que se registren. Reclute un grupo local - club de scouts, iglesia, universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a un político local o autoridad a visitar su escuela durante la Hora del Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a local politician or policy maker to visit your school for the Hour of Code. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
 
-Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](%= resolve_url('/promote/resources') %) para su propio evento.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. Encuentre un voluntario local para ayudarte con tu evento.
 
-[Busque en nuestro mapa de voluntarios](%= codeorg_url('/volunteer/local') %) para que los voluntarios puedan visitar su clase o chatear por video de forma remota para inspirar a sus estudiantes sobre la amplitud de posibilidades de la informática.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
-## 3. Planifique su Hora del Código
+## 3. Planifica tu Hora del Código
 
-Elija una [actividad de la Hora del Código](https://hourofcode.com/learn) para su clase y [revisa esta guía práctica](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+
+### 4. Stock up on swag
+
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Vaya más allá de una Hora de Código
 
-<% if @country == 'us' %> Una Hora de Código es sólo el comienzo. Sea administrador, maestro o abogado, tenemos [desarrollo profesional, plan de estudios y recursos para ayudarte a llevar clases de informática a tu escuela o ampliar tus ofertas.](https://code.org/yourschool) Si ya enseñas informática, usa estos recursos durante la semana de educación en informatica para reunir el apoyo de tu administración, padres y comunidad.
+{{ go_beyond_hoc }}
 
-Tienes muchas opciones para adaptarte a tu escuela. La mayoría de las organizaciones que ofrecen tutoriales de la Hora de Código también tienen plan de estudios y desarrollo profesional disponible. Si encuentras una lección que le gusta, pregúnta para ir más allá. Para ayudarlo a comenzar, hemos resaltado un número de [proveedores de planes de estudios que lo ayudarán a usted o a sus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
-
-<% else %> Una Hora de Código es sólo el comienzo. La mayoría de las organizaciones que ofrecen clases de Hora del Código también tienen planes de estudios disponibles para ir más allá. Para ayudarlo a comenzar, hemos resaltado un número de [proveedores de planes de estudios que lo ayudarán a usted o a sus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
-
-Code.org también ofrece cursos completos de [introducción a la informática](https://code.org/educate/curriculum/cs-fundamentals-international) traducidos a más de 25 idiomas sin ningún coste para usted o su escuela. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

@@ -4,11 +4,11 @@ var commonMsg = require('@cdo/locale');
 var levelDef = {
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0,16, 0, 0, 0, 0, 0, 0],
+    [0, 16, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0,16, 0, 0],
+    [0, 0, 0, 0, 0, 16, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0]
   ],
@@ -17,19 +17,20 @@ var levelDef = {
   edgeCollisions: true,
   allowSpritesOutsidePlayspace: false,
   spritesHiddenToStart: true,
-  customGameType: 'Rocket Height',
+  customGameType: 'Rocket Height'
 };
 
 module.exports = {
-  app: "studio",
-  skinId: "studio",
+  app: 'studio',
+  skinId: 'studio',
   levelDefinition: levelDef,
   tests: [
     {
       timeout: 15000,
-      description: "rocket_height = (2 + 4) / 2",
+      description: 'rocket_height = (2 + 4) / 2',
       // make sprite visible, have them say something
-      xml:  '' +
+      xml:
+        '' +
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
         '    <arg name="seconds" type="Number"></arg>' +
@@ -68,7 +69,7 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function (assert) {
+      customValidator: function(assert) {
         // Validate that we use parens correctly. (Otherwise we'd end up with
         // 2 + 4 / 2 = 4).
         var height = Studio.Globals.rocket_height(1);
@@ -81,14 +82,17 @@ module.exports = {
       }
     },
     {
-      description: "empty start",
+      description: 'empty start',
       // make sprite visible, have them say something
-      xml:  '' +
+      xml:
+        '' +
         '<block type="functional_start_setValue" inline="false" deletable="false" movable="false" editable="false">' +
         '</block>',
-      customValidator: function (assert) {
-        assert.equal(Studio.message,
-          commonMsg.emptyTopLevelBlock({topLevelBlockName: 'start (function)'}));
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          commonMsg.emptyTopLevelBlock({topLevelBlockName: 'start (function)'})
+        );
         return true;
       },
       expected: {
@@ -98,16 +102,17 @@ module.exports = {
     },
 
     {
-      description: "empty input inside variable",
+      description: 'empty input inside variable',
       // make sprite visible, have them say something
-      xml:  '' +
+      xml:
+        '' +
         '<block type="functional_definition" inline="false" editable="false">' +
         '  <mutation>' +
         '    <outputtype>Number</outputtype>' +
         '    <isfunctionalvariable>true</isfunctionalvariable>' +
         '  </mutation>' +
         '  <title name="NAME">foobar</title>' +
-           // This variable has no input
+        // This variable has no input
         '</block>' +
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
@@ -147,8 +152,11 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function (assert) {
-        assert.equal(Studio.message, commonMsg.emptyBlockInVariable({name: 'foobar'}));
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          commonMsg.emptyBlockInVariable({name: 'foobar'})
+        );
         return true;
       },
       expected: {
@@ -158,9 +166,10 @@ module.exports = {
     },
 
     {
-      description: "empty block inside function",
+      description: 'empty block inside function',
       // make sprite visible, have them say something
-      xml:  '' +
+      xml:
+        '' +
         '<block type="functional_definition" inline="false">' +
         '  <mutation>' +
         '    <arg name="seconds" type="Number"></arg>' +
@@ -173,7 +182,7 @@ module.exports = {
         '      <functional_input name="ARG1">' +
         '        <block type="functional_plus" inline="false">' +
         '          <functional_input name="ARG1">' +
-                    // missing input here
+        // missing input here
         '          </functional_input>' +
         '          <functional_input name="ARG2">' +
         '            <block type="functional_math_number">' +
@@ -197,9 +206,11 @@ module.exports = {
         '    </block>' +
         '  </functional_input>' +
         '</block>',
-      customValidator: function (assert) {
-        assert.equal(Studio.message,
-          commonMsg.emptyBlockInFunction({name: 'rocket-height'}));
+      customValidator: function(assert) {
+        assert.equal(
+          Studio.message,
+          commonMsg.emptyBlockInFunction({name: 'rocket-height'})
+        );
         return true;
       },
       expected: {

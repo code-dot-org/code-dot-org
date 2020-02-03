@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Make the Balloon Fly\r\n\r\nIn this game, you have to click on the correct buttons to make the balloon fly into the sky.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* When does the value stored in the variable `correct` change?\r\n* Why does the program need this line: `var choice = randomNumber(1,3);`?\r\n\r\nOnce you have answered the questions, run the code and see what happens.",
+    "long_instructions": "# Make the Balloon Fly\r\n\r\nIn this game, you have to click on the correct buttons to make the balloon fly into the sky.\r\n\r\nLook at the code with your partner and answer the following questions:\r\n\r\n* When does the value stored in the variable `correct` change?\r\n* Why does the program need this line: `var choice = randomNumber(1,3);`?\r\n\r\nOnce you have answered the questions, run the code and see what happens.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
+    "short_instructions": "Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "step_speed": "2",
     "ideal": "9",
-    "markdown_instructions": "*\"Let's take this one step further!\"*\r\n\r\nCan you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
+    "long_instructions": "*\"Let's take this one step further!\"*\r\n\r\nCan you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `while path ahead` loop to move the farmer down each piece of the spiral.\",\"hint_id\":\"grade3_RunningFarm_6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4724ac2825e10effef27a4e96a825273/grade3_RunningFarm_6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program.\",\"hint_id\":\"grade3_RunningFarm_6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c59579b3b985fbebc622052d523c00d/grade3_RunningFarm_6.mp3\"}]",
     "contained_level_names": null

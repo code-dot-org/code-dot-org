@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "2",
-    "instructions": "The chicken is frozen. Place `move` and `turn` blocks in the `when spawned` slot to get it to move.",
+    "short_instructions": "The chicken is frozen. Place `move` and `turn` blocks in the `when spawned` slot to get it to move.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",

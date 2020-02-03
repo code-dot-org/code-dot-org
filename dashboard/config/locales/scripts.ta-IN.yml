@@ -105,6 +105,10 @@ ta:
               name: கலைஞர்
             The Maze:
               name: புதிர்பாதை
+        events:
+          title: நிகழ்வுகள்
+          description: நிகழ்வுகள்
+          description_short: நிகழ்வுகள்
         step:
           title: அடி
           stages:
@@ -134,6 +138,8 @@ ta:
               name: செயல்பாடுகள்
         gradeKinder:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         grade4:
@@ -142,6 +148,8 @@ ta:
               name: பாடல் எழுதுதல்
         grade1:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Loops:
               name: சுழற்சிகள்
         csd3-2017:
@@ -152,6 +160,8 @@ ta:
               name: மாறிலிகள்
         k5concepts:
           stages:
+            Events:
+              name: நிகழ்வுகள்
             Functions:
               name: செயல்பாடுகள்
             Loops:
@@ -220,6 +230,8 @@ ta:
               name: பாடல் எழுதுதல்
             Internet:
               name: இணையம்
+            Graph Paper Programming:
+              name: வரைதாள் செய்நிரல்
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -236,3 +248,61 @@ ta:
           stages:
             The Internet:
               name: இணையம்
+        coursef-2019:
+          stages:
+            The Artist:
+              name: கலைஞர்
+            Internet:
+              name: இணையம்
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: வரைதாள் செய்நிரல்
+        coursee-2019:
+          stages:
+            'Functions: Songwriting':
+              name: பாடல் எழுதுதல்
+            Songwriting:
+              name: பாடல் எழுதுதல்
+        andrea-test:
+          stages:
+            'null':
+              name: வெறுமை
+        csd2-2019:
+          stages:
+            Lists:
+              name: பட்டியல்கள்
+        csd3-2019:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்
+        csp1-2019:
+          stages:
+            The Internet:
+              name: இணையம்
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: வரைதாள் செய்நிரல்
+        csd2-pilot:
+          stages:
+            Lists:
+              name: பட்டியல்கள்
+        csd3-pilot:
+          stages:
+            Variables:
+              name: மாறிலிகள்
+            Functions:
+              name: செயல்பாடுகள்
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: சுழற்சிகள்
+            Events:
+              name: நிகழ்வுகள்
+            Functions:
+              name: செயல்பாடுகள்
+            Variables:
+              name: மாறிலிகள்

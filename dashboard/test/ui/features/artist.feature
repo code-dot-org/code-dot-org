@@ -4,7 +4,6 @@ Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/5/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
@@ -27,7 +26,7 @@ Scenario: Losing the first level
   And element "#resetButton" is visible
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
-  And element ".uitest-topInstructions-inline-feedback" has text "Keep coding! Something's not quite right yet."
+  And element ".uitest-topInstructions-inline-feedback" has escaped text "Keep coding! Something's not quite right yet."
   And I press "resetButton"
   And element "#runButton" is visible
   And element "#resetButton" is hidden

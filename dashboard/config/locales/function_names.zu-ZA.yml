@@ -1,6 +1,12 @@
 ---
-zu:
+zu-ZA:
   data:
     function_names:
-      jump: gxuma
-      move forward: qubekela phambili
+      Course 4 Play Lab Params 1:
+        jump: gxuma
+      Course 4 Play Lab Params 2:
+        jump: gxuma
+      Course 4 Play Lab Params 3:
+        jump: gxuma
+      NEW Course 4 Play Lab Params 11:
+        jump: gxuma

@@ -1,4 +1,5 @@
 # Example configuration file set up with sensible defaults for local development.
+# See `config.yml.erb` for full list of available configuration options.
 
 # Whether to prefix bundler commands with 'sudo'.
 # It may be useful to set this false when doing local development on Linux.
@@ -13,14 +14,16 @@ dashboard_enable_pegasus: true
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
 
+# Keeps from taking eyes snapshots when running feature files
+#disable_all_eyes_running: true
 
 # Whether rake:build should rebuild the apps package
-#build_apps: true
+build_apps: true
 
 
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
-#use_my_apps: true
+use_my_apps: true
 
 # Allows your local server to render non-English locales, defaults to false.
 # If false, choosing a locale other than English will have no effect.
@@ -46,14 +49,10 @@ dashboard_enable_pegasus: true
 #stub_school_data: false
 
 
-# The Fusion Table ID for the census map shown at code.org/yourschool.  If this
-# is set to the ID for the production site, be careful not to run
-# update_census_map as it will overwrite that table.
-#census_map_table_id: ''
-
-
 # Encryption key required for decoding certain protected level sources.
-# Ask a Code.org dev for this if you need access to protected levels.
+# Code.org engineers should obtain this from cdo-secrets at:
+# https://manage.chef.io/organizations/code-dot-org/environments/development/attributes
+# Contributors should ask a Code.org engineer for this if needed.
 #properties_encryption_key: ''
 
 
@@ -101,3 +100,11 @@ dashboard_enable_pegasus: true
 #google_maps_client_id:
 #google_maps_secret:
 #freegeoip_host:
+
+
+# Specify `use_mailcatcher: true` if you are running mailcatcher on localhost.
+# You should have also run this once:
+#   `gem install mailcatcher`
+# And this each time you need to start mailcatcher in the background again:
+#   `mailcatcher --ip=0.0.0.0`
+#use_mailcatcher: true

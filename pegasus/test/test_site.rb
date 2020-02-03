@@ -18,9 +18,6 @@ class SiteTest < Minitest::Test
     ).each do |path|
       assert_equal 405, post(path).status
     end
-
-    # Ensure POST requests to whitelisted paths are allowed.
-    assert_equal 200, post('/custom-certificates').status
   end
 
   def test_get_list

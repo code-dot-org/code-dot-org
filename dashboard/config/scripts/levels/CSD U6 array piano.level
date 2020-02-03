@@ -46,7 +46,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Piano Panic\r\n\r\nSo far you’ve just been using the elements of an array. Now, you're going to change what's inside the array.\r\n\r\nOur good friend the piano is back, except now it plays notes from two arrays: `notes`, which holds natural notes (C, D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#, G#, A#).\r\n\r\n# Do this\r\n\r\nThe `sharpNotes` array only has one item inside of it right now.\r\n\r\n* Fix the array so that the sharp keys on the piano can actually play the right note.\r\n\r\n_Hint: Modifying arrays is much easier in text mode.  You can always switch between block and text mode by clicking the button at the top right of your code workspace._",
+    "long_instructions": "# Piano Panic\r\n\r\nSo far you’ve just been using the elements of an array. Now, you're going to change what's inside the array.\r\n\r\nOur good friend the piano is back, except now it plays notes from two arrays: `notes`, which holds natural notes (C, D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#, G#, A#).\r\n\r\n# Do this\r\n\r\nThe `sharpNotes` array only has one item inside of it right now.\r\n\r\n* Fix the array so that the sharp keys on the piano can actually play the right note.\r\n\r\n_Hint: Modifying arrays is much easier in text mode.  You can always switch between block and text mode by clicking the button at the top right of your code workspace._",
     "code_functions": {
       "onBoardEvent": null,
       "buzzer.note": null,

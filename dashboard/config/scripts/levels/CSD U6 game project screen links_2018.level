@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# UI Element Events\r\n\r\nNow that all of your screens are designed, you can add any event handlers that will respond to _screen interaction_. These should be listed in the \"Events\" section of your activity guide. If you run into new events that you hadn't thought of in the planning stage, make sure you add them to your project guide.\r\n\r\nDon't worry about making these completely functional yet. If your events rely on board elements or your own functions, we'll take care of that in later levels.",
+    "long_instructions": "# UI Element Events\r\n\r\nNow that all of your screens are designed, you can add any event handlers that will respond to _screen interaction_. These should be listed in the \"Events\" section of your activity guide. If you run into new events that you hadn't thought of in the planning stage, make sure you add them to your project guide.\r\n\r\nDon't worry about making these completely functional yet. If your events rely on board elements or your own functions, we'll take care of that in later levels.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

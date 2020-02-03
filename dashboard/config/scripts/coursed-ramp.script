@@ -16,4 +16,4 @@ level 'courseD_collector_ramp10'
 level 'courseD_artist_ramp11'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
-assessment 'courseD_farmer_ramp14'
+level 'courseD_farmer_ramp14', assessment: true

@@ -3,8 +3,8 @@
  * A draggable, horizontal toolbar. As it is dragged, it calls back to onResize
  * which handles any movement.
  */
-
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '../../util/color';
 import styleConstants from '../../styleConstants';
@@ -38,7 +38,7 @@ class HeightResizer extends React.Component {
      * @returns {number} delta - amount we've actually resized
      */
     onResize: PropTypes.func.isRequired,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   state = {
@@ -57,24 +57,24 @@ class HeightResizer extends React.Component {
     }
   }
 
-  onMouseDown = (event) => {
+  onMouseDown = event => {
     if (event.button !== 0) {
       return;
     }
     event.stopPropagation();
     event.preventDefault();
 
-    this.setState({ dragging: true, dragStart: event.pageY });
+    this.setState({dragging: true, dragStart: event.pageY});
   };
 
-  onMouseUp = (event) => {
+  onMouseUp = event => {
     event.stopPropagation();
     event.preventDefault();
 
-    this.setState({ dragging: false });
+    this.setState({dragging: false});
   };
 
-  onMouseMove = (event) => {
+  onMouseMove = event => {
     event.stopPropagation();
     event.preventDefault();
 
@@ -87,7 +87,7 @@ class HeightResizer extends React.Component {
     // onResize can choose to limit how much we actually move, and will report
     // back the value
     const actualDelta = this.props.onResize(delta);
-    this.setState({ dragStart: this.state.dragStart + actualDelta });
+    this.setState({dragStart: this.state.dragStart + actualDelta});
   };
 
   render() {
@@ -96,7 +96,7 @@ class HeightResizer extends React.Component {
       {
         top: this.props.position - RESIZER_HEIGHT
       },
-      this.props.style,
+      this.props.style
     ];
 
     return (
@@ -107,7 +107,7 @@ class HeightResizer extends React.Component {
         onMouseUp={this.onMouseUp}
         onMouseMove={this.onMouseMove}
       >
-        <div style={styles.ellipsis} className="fa fa-ellipsis-h"/>
+        <div style={styles.ellipsis} className="fa fa-ellipsis-h" />
       </div>
     );
   }

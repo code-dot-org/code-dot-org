@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the \"draw a square\" and \"draw a triangle functions\" to draw a house. (Hint: The square's sides are 200 pixels)",
+    "short_instructions": "Use the \"draw a square\" and \"draw a triangle functions\" to draw a house. (Hint: The square's sides are 200 pixels)",
     "x": "100",
     "y": "185",
     "start_direction": "90",

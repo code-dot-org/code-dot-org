@@ -1,10 +1,6 @@
 {
-  "continue": "",
-  "nextLevel": "",
-  "no": "",
-  "numBlocksNeeded": "",
-  "reinfFeedbackMsg": "",
+  "continue": "सुरू ठेवा",
+  "no": "नाही",
   "share": "वाटा",
-  "shareGame": "",
-  "yes": ""
+  "yes": "होय"
 }

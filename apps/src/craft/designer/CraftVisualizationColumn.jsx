@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import msg from '@cdo/locale';
-import craftMsg from './locale';
+import craftMsg from '../locale';
 
 import {default as GameButtons} from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
@@ -18,28 +19,33 @@ export default class CraftVisualizationColumn extends React.Component {
       <span>
         <ProtectedVisualizationDiv>
           <div id="minecraft-frame">
-            <div id="phaser-game">
-            </div>
-            {this.props.showScore &&
+            <div id="phaser-game" />
+            {this.props.showScore && (
               <div id="score-container">
                 <div id="score-inner">
                   <span>{craftMsg.score()}: </span>
                   <span id="score-number">0</span>
                 </div>
               </div>
-            }
+            )}
           </div>
         </ProtectedVisualizationDiv>
         <GameButtons>
-          <ArrowButtons/>
+          <ArrowButtons />
 
-          {this.props.showFinishButton && <div id="right-button-cell">
-            <button id="rightButton" className="share mc-share-button">
-              <div>{msg.finish()}</div>
-            </button>
-          </div>}
+          {this.props.showFinishButton && (
+            <div id="right-button-cell">
+              <button
+                type="button"
+                id="rightButton"
+                className="share mc-share-button"
+              >
+                <div>{msg.finish()}</div>
+              </button>
+            </div>
+          )}
         </GameButtons>
-        <BelowVisualization/>
+        <BelowVisualization />
       </span>
     );
   }

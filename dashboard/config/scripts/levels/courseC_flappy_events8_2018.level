@@ -12,9 +12,9 @@
     "goal": "{}",
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
-    "instructions": "Try setting a **random** scene when other events happen...for example, when passing an obstacle.",
+    "short_instructions": "Try setting a **random** scene when other events happen...for example, when passing an obstacle.",
     "embed": "false",
-    "markdown_instructions": "You can set the background under any event, not just when the game starts. \r\n\r\nTry setting a **random** scene when other events happen...for example, when passing an obstacle.",
+    "long_instructions": "You can set the background under any event, not just when the game starts. \r\n\r\nTry setting a **random** scene when other events happen...for example, when passing an obstacle.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.\",\"hint_id\":\"courseC_flappy_events8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/02095f986e9c5c534bdc7407e36fa923/courseC_flappy_events8.mp3\"}]",
     "instructions_important": "false",
     "is_k1": "false",
@@ -41,11 +41,16 @@
     "project_template_level_name": "courseC_flappy_events_template_2018",
     "parent_level_id": 9522,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-27 20:20:04 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:21:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:21:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:05:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-27 20:20:04 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:21:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:21:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:05:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

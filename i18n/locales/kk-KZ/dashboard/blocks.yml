@@ -1,3 +1,4 @@
+---
 kk:
   data:
     blocks:
@@ -7,17 +8,11 @@ kk:
             '"seconds"': секунд
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -26,19 +21,18 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Келесі
-            '"prev"': Алдыңғы
           DIR:
             '1': "→"
             "-1": "←"
@@ -51,20 +45,83 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунд
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
-      Dancelab_makeNewDanceSprite:
+      Dancelab_jumpToEach:
         options:
           LOCATION:
             "{x: 100, y: 200}": солға
             "{x: 300, y: 200}": оңға
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": кездейсоқ
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': алмас
+            '"random"': кездейсоқ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': үйрек
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': үйрек
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": кездейсоқ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"diamond"': алмас
+            '"random"': кездейсоқ
       Dancelab_randomColor:
         text: кездейсоқ түс
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -77,7 +134,27 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': шама
@@ -87,39 +164,50 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': шама
+            '"height"': биіктік
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': алмас
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': жоғары
-            '"down"': төмен
             '"left"': солға
+            '"down"': төмен
             '"right"': оңға
             '"space"': кеңестік
-      Dancelab_whileKey:
+            '"x"': x
+      gamelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
           KEY:
             '"up"': жоғары
             '"down"': төмен
             '"left"': солға
             '"right"': оңға
             '"space"': кеңестік
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': шама
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'дұрыс'
-            'false': 'Жалған'
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': шама
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": кездейсоқ
+            '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -129,10 +217,15 @@ kk:
         text: кездейсоқ түс
       gamelab_randomColor:
         text: кездейсоқ түс
-      gamelab_setPosition:
+      gamelab_setBackgroundImage:
         options:
-          POSITION:
-            '"random"': кездейсоқ
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': үңгір
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': қала
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': шөлдала
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': кемпірқосақ
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': су асты
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': қыс
       gamelab_setProp:
         options:
           PROPERTY:
@@ -142,14 +235,11 @@ kk:
           PROPERTY:
             '"scale"': шама
             '"height"': биіктік
-      gamelab_spritesWhere:
+      gamelab_spriteClicked:
         options:
-          PROPERTY:
-            '"scale"': шама
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': шама
+          CONDITION:
+            '"when"': кезде
+            '"while"': болған кезде
       gamelab_turn:
         options:
           DIRECTION:
@@ -163,13 +253,6 @@ kk:
             '"left"': солға
             '"right"': оңға
             '"space"': кеңестік
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": жоғары
-            "'down'": төмен
-            "'left'": солға
-            "'right'": оңға
       gamelab_whileKey:
         options:
           KEY:
@@ -182,12 +265,36 @@ kk:
         options:
           PROPERTY:
             '"scale"': шама
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': шама
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': шама
       Mikelab_randomColor:
         text: кездейсоқ түс
+      Mikelab_repeatUntilComplete:
+        text: әрқашан қайтала
       Mikelab_setBG:
         options:
           BG:
@@ -201,6 +308,11 @@ kk:
           CORNER:
             '"right"': оңға
             '"left"': солға
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": солға
+            "{x: 300, y: 200}": оңға
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -226,6 +338,44 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      RyanLab_moveForward:
+        text: алдыға қозғалу
+      RyanLab_turnLeft:
+        text: солға бұрылу
+      RyanLab_turnRight:
+        text: оңға бұрылу
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
+        options:
+          OPTION:
+            '"show"': көрсет
+            '"hide"': жасырылған бейнесі
+      binary_move:
+        options:
+          DIR:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': жоғары
+            '"down"': төмен
+            '"left"': солға
+            '"right"': оңға
+            '"space"': кеңестік
       craft_ifPath:
         options:
           DIR:
@@ -235,6 +385,10 @@ kk:
           TYPE:
             "'sand'": құм
             "'planksOak'": емен тақталар
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": құм
       craft_moveForward:
         text: алдыға қозғалу
       craft_placeTorch:

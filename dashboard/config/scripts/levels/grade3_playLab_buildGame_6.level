@@ -35,7 +35,7 @@
     "sprites_hidden_to_start": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "There are three more cards with special names in the deck. Add to your code so that a card number 11 is called a \"Jack\", a 12 is a \"Queen\" and a 13 is a \"King\"",
+    "short_instructions": "There are three more cards with special names in the deck. Add to your code so that a card number 11 is called a \"Jack\", a 12 is a \"Queen\" and a 13 is a \"King\"",
     "contained_level_names": null
   },
   "published": true,

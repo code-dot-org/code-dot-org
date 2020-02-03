@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Your program can use multiple `onEvent()` blocks. The left button already sets both buttons' `\"background-color\"` to `\"purple\"`. Add code to make the right button set both buttons' `\"background-color\"` to `\"green\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/5cd0c24b0f7f855daa2225a4b6a08087-image-1505932139152.gif)",
+    "long_instructions": "Your program can use multiple `onEvent()` blocks. The left button already sets both buttons' `\"background-color\"` to `\"purple\"`. Add code to make the right button set both buttons' `\"background-color\"` to `\"green\"`. Click the picture to see how.\r\n\r\n![expandable](https://images.code.org/5cd0c24b0f7f855daa2225a4b6a08087-image-1505932139152.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

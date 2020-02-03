@@ -12,7 +12,7 @@
     "player_start_position": "[3, 6]",
     "available_blocks": "[\"cobblestone\"]",
     "verification_function": "function (verificationAPI) {\r\n      // the player has collected at least 2 iron\r\n      return verificationAPI.getInventoryAmount(\"oreIron\") >= 2;\r\n}",
-    "instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
+    "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -1,11 +1,10 @@
 Feature: Applab Project
 
-# dashboard_db_access for sign in
 # as_student to actually perform sign-in/out before/after scenario
 # no_mobile because we don't end up with open-workspace on mobile
 # no_ie because applab is broken on IE9, and on IE10 this test crashes when we
 #   try to execute any JS after our redirect on line 42
-@dashboard_db_access @as_student
+@as_student
 @no_mobile @no_ie
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
@@ -85,8 +84,8 @@ Scenario: Applab Flow
 
   Then I am on "http://studio.code.org/users/sign_out"
   And I am on "http://studio.code.org/"
-
   # TODO - maybe we do a remix and/or create new as well
+
 
 @no_mobile
 Scenario: Save Project After Signing Out
@@ -117,6 +116,7 @@ Scenario: Save Project After Signing Out
 @no_mobile
 Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
+  Given I am assigned to script "csp3-2017"
   And I am on "http://studio.code.org/s/csp3-2017/stage/5/puzzle/3"
   And I wait for the page to fully load
   And I wait for initial project save to complete
@@ -139,7 +139,7 @@ Scenario: Save Script Level After Signing Out
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"
 
-@dashboard_db_access @as_student
+@as_student
 @no_mobile
 Scenario: Remix project creates and redirects to new channel
   Given I am on "http://studio.code.org/projects/applab"
@@ -163,4 +163,4 @@ Scenario: Remix project creates and redirects to new channel
   And check that the URL contains "http://studio.code.org/projects/applab"
   And current URL is different from the last saved URL
   And element "#runButton" is visible
-  And I click selector "#runButton"
+  And I press "runButton"

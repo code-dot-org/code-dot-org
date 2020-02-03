@@ -1,23 +1,22 @@
 ---
-title: <%= hoc_s(:title_press_release) %>
-layout: wide
-nav: promote_nav
+title: KoodiTund pressiteade rahvasaadikutele
 ---
-<%= view :signup_button %>
 
-# Sample press release for elected officials
+{{ signup_button }}
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+# Pressiteate näidis
+
+### Kasuta seda pressiteate näidis KoodiTund reklaamimiseks.
 
 * * *
 
-#### For Immediate Release  
+#### Koheseks avaldamiseks  
 
 
 #### [DATE]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Kontaktisik: [Kontaktandmed]
 
 <br />
 
@@ -44,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

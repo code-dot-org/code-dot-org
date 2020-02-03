@@ -1,0 +1,14 @@
+{
+  "category": "Events",
+  "config": {
+    "func": "clickedSpritePointer",
+    "blockText": "clicked {SPRITE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "spritePointer"
+      }
+    ],
+    "returnType": "Sprite"
+  }
+}

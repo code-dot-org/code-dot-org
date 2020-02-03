@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "The definition in this Design Recipe doesn't match both examples. Test each example to see which is failing, and then fix the definition to match.",
+    "short_instructions": "The definition in this Design Recipe doesn't match both examples. Test each example to see which is failing, and then fix the definition to match.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

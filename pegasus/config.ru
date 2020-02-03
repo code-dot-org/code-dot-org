@@ -1,3 +1,7 @@
+require_relative '../deployment'
+# Ensure all application secrets are loaded.
+CDO.cdo_secrets&.required! unless rack_env?(:development)
+
 require File.expand_path('../router', __FILE__)
 
 unless rack_env?(:development)
@@ -47,6 +51,10 @@ if CDO.image_optim
   require 'cdo/rack/optimize'
   use Rack::Optimize
 end
+
+# Disable Sinatra auto-initialization.
+# Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
+use Honeybadger::Rack::ErrorNotifier
 
 require 'files_api'
 use FilesApi

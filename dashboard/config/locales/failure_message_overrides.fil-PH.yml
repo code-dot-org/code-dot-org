@@ -94,6 +94,8 @@ fil:
       Valentine_playlab_01_failure_message_override: Malapit na! Subukan ulit.
       WhileAdventure_failure_message_override: Maligayang bati! Nakatipon ka nang
         X na mga barya!
+      courseC19_playLab_EOC3_failure_message_override: Dapat kang magdagdag nang dalawa
+        o higit pa na mga bagong aktor sa iyong laro at i-program sila para makagalaw.
       courseE_playLab_scaffold3_failure_message_override: Dapat kang magdagdag nang
         dalawa o higit pa na mga bagong aktor sa iyong laro at i-program sila para
         makagalaw.

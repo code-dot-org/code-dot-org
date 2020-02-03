@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Creating and assigning in one line\r\n\r\nYou can use `var` and `=` in a single line to **assign a value to a variable as soon as it is created**, for example: `var size = 10;`\r\n\r\n# Do This\r\n\r\n* **Create a new variable and assign it a value** in a single line.",
+    "long_instructions": "# Creating and assigning in one line\r\n\r\nYou can use `var` and `=` in a single line to **assign a value to a variable as soon as it is created**, for example: `var size = 10;`\r\n\r\n# Do This\r\n\r\n* **Create a new variable and assign it a value** in a single line.",
     "start_blocks": "var bestTemperature = 72;\r\n//Create your own variable and give it a value in a single line.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -37,7 +37,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Create and assign a new variable in a single line.",
+    "short_instructions": "Create and assign a new variable in a single line.",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

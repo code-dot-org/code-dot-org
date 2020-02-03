@@ -3,11 +3,11 @@
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */
-
 import _ from 'lodash';
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "@cdo/apps/util/color";
+import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const ButtonColor = {
@@ -16,11 +16,13 @@ const ButtonColor = {
   blue: 'blue',
   white: 'white',
   red: 'red',
+  green: 'green'
 };
 
 const ButtonSize = {
   default: 'default',
   large: 'large',
+  narrow: 'narrow'
 };
 
 const styles = {
@@ -28,24 +30,24 @@ const styles = {
     display: 'inline-block',
     fontSize: 12,
     fontFamily: '"Gotham 4r", sans-serif',
+    borderWidth: '1px',
     borderStyle: 'solid',
-    borderWidth: 1,
-    borderRadiusTopLeft: 3,
-    borderRadiusTopRight: 3,
-    borderRadiusBottomLeft: 3,
-    borderRadiusBottomRight: 3,
-    textDecoration: 'none',
     borderColor: color.border_gray,
+    borderBottomLeftRadius: 3,
+    borderBottomRightRadius: 3,
+    borderTopLeftRadius: 3,
+    borderTopRightRadius: 3,
+    textDecoration: 'none',
     ':hover': {
       backgroundColor: color.white,
-      cursor: 'pointer',
+      cursor: 'pointer'
     },
     boxSizing: 'border-box',
     overflow: 'hidden',
     whiteSpace: 'nowrap'
   },
   icon: {
-    marginRight: 5,
+    marginRight: 5
   },
   colors: {
     [ButtonColor.orange]: {
@@ -55,13 +57,13 @@ const styles = {
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.63)',
       ':hover': {
         color: color.orange,
-        borderColor: color.orange,
+        borderColor: color.orange
       },
       ':disabled': {
         // This color is in Mike's styleguide, but we don't use it anywhere else,
         // and it might be changed by Mark soon - so just hard-coding the string.
         backgroundColor: '#FFD27F',
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
     [ButtonColor.gray]: {
@@ -70,7 +72,7 @@ const styles = {
       boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.73)',
       ':disabled': {
         backgroundColor: color.lighter_gray,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
     [ButtonColor.blue]: {
@@ -87,7 +89,7 @@ const styles = {
       ':disabled': {
         color: color.lighter_cyan,
         backgroundColor: color.lightest_cyan,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
     [ButtonColor.white]: {
@@ -100,7 +102,7 @@ const styles = {
       },
       ':disabled': {
         backgroundColor: color.lightest_gray,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
     [ButtonColor.red]: {
@@ -111,13 +113,29 @@ const styles = {
       ':hover': {
         boxShadow: 'none',
         color: color.red,
-        borderColor: color.red,
+        borderColor: color.red
       },
       ':disabled': {
         backgroundColor: color.lightest_red,
-        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
       }
     },
+    [ButtonColor.green]: {
+      color: color.white,
+      backgroundColor: color.level_perfect,
+      fontWeight: 'bold',
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.charcoal,
+        borderColor: color.lightest_gray,
+        backgroundColor: color.lightest_gray
+      },
+      ':disabled': {
+        backgroundColor: color.lightest_gray,
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)'
+      }
+    }
   },
   sizes: {
     [ButtonSize.default]: {
@@ -132,7 +150,13 @@ const styles = {
       paddingRight: 30,
       lineHeight: '40px'
     },
-  },
+    [ButtonSize.narrow]: {
+      height: 40,
+      paddingLeft: 10,
+      paddingRight: 10,
+      lineHeight: '40px'
+    }
+  }
 };
 
 class Button extends React.Component {
@@ -152,10 +176,10 @@ class Button extends React.Component {
     id: PropTypes.string,
     tabIndex: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     isPending: PropTypes.bool,
-    pendingText: PropTypes.string,
+    pendingText: PropTypes.string
   };
 
-  onKeyDown = (event) => {
+  onKeyDown = event => {
     const {href, disabled, onClick} = this.props;
     if (event.key === 'Enter' && !disabled && !href) {
       event.preventDefault();
@@ -165,8 +189,22 @@ class Button extends React.Component {
   };
 
   render() {
-    const { className, href, text, icon, iconClassName, iconStyle, target,
-      style, onClick, disabled, id, tabIndex, isPending, pendingText } = this.props;
+    const {
+      className,
+      href,
+      text,
+      icon,
+      iconClassName,
+      iconStyle,
+      target,
+      style,
+      onClick,
+      disabled,
+      id,
+      tabIndex,
+      isPending,
+      pendingText
+    } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -190,22 +228,20 @@ class Button extends React.Component {
         id={id}
       >
         <div style={_.pick(style, ['textAlign'])}>
-          {icon &&
+          {icon && (
             <FontAwesome
               icon={icon}
               className={iconClassName}
               style={{...styles.icon, ...iconStyle}}
             />
-          }
-          {isPending && pendingText &&
+          )}
+          {isPending && pendingText && (
             <span>
               {pendingText}&nbsp;
-              <FontAwesome icon="spinner" className="fa-spin"/>
+              <FontAwesome icon="spinner" className="fa-spin" />
             </span>
-          }
-          {!isPending &&
-            text
-          }
+          )}
+          {!isPending && text}
         </div>
       </Tag>
     );

@@ -17,9 +17,13 @@ module Pd
       american_indian: 'American Indian or Native Alaskan',
       other: 'Other',
       replace_course: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
+      replace_which_course_csp: 'Which existing course or curriculum will CS Principles replace? Mark all that apply.',
+      replace_which_course_csd: 'Which existing course or curriculum will CS Discoveries replace? Mark all that apply.',
       understand_fee: 'By checking this box, you indicate that you understand there may be a fee for the professional learning program your teacher attends.',
-      pay_fee: 'If there is a fee for the program, will your teacher or your school be able to pay for the fee?',
-      confirm_principal: 'By submitting this application, I confirm I am the principal of this school.',
+      pay_fee: 'If there is a fee for the program, will your school be able to pay for the fee?',
+      contact_invoicing: "Contact name for invoicing (if applicable)",
+      contact_invoicing_detail: "Contact email or phone number for invoicing (if applicable)",
+      confirm_principal: 'By submitting this application, I confirm that I am the principal of this school and agree to share my contact info, school info, and this application with my local Code.org Regional Partner.',
 
       school: 'School',
       school_name: 'School Name',
@@ -29,5 +33,15 @@ module Pd
       school_zip_code: 'Zip Code',
       school_type: 'My school is a',
     }.freeze
+
+    # These fields have labels determined on the client
+    FIELDS_WITH_DYNAMIC_LABELS = [
+      :do_you_approve
+    ].freeze
+
+    ALL_LABELS = PAGE_LABELS.merge(
+      # map array of field names to hash of {field_name: nil}
+      Hash[FIELDS_WITH_DYNAMIC_LABELS.map {|field_name| [field_name, nil]}]
+    ).freeze
   end
 end

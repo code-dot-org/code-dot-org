@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
+    "short_instructions": "This image is similar to the last. Can you use a `for` loop with your function to make this design?",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,7 +22,7 @@
     "y": "150",
     "ideal": "17",
     "slider_speed": ".5",
-    "markdown_instructions": "This image is similar to the last.  \r\n\r\nCan you use a `for` loop with your function to make this design?",
+    "long_instructions": "This image is similar to the last.  \r\n\r\nCan you use a `for` loop with your function to make this design?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

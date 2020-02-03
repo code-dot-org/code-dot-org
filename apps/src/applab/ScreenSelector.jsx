@@ -1,7 +1,8 @@
 /** @file Dropdown for selecting design mode screens */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Radium from 'radium';
-import color from "../util/color";
+import color from '../util/color';
 import commonStyles from '../commonStyles';
 import * as constants from './constants';
 import {connect} from 'react-redux';
@@ -36,10 +37,10 @@ class ScreenSelector extends React.Component {
 
     // passed explicitly
     screenIds: PropTypes.array.isRequired,
-    onCreate: PropTypes.func.isRequired,
+    onCreate: PropTypes.func.isRequired
   };
 
-  handleChange = (evt) => {
+  handleChange = evt => {
     let screenId = evt.target.value;
     if (screenId === constants.NEW_SCREEN) {
       screenId = this.props.onCreate();
@@ -51,13 +52,21 @@ class ScreenSelector extends React.Component {
   };
 
   render() {
-    const options = this.props.screenIds.map(function (item) {
-      return <option key={item} value={item}>{item}</option>;
+    const options = this.props.screenIds.map(function(item) {
+      return (
+        <option key={item} value={item}>
+          {item}
+        </option>
+      );
     });
 
-    const defaultScreenId = elementUtils.getScreens().first().attr('id') || '';
+    const defaultScreenId =
+      elementUtils
+        .getScreens()
+        .first()
+        .attr('id') || '';
 
-    options.sort(function (a, b) {
+    options.sort(function(a, b) {
       if (a.key === defaultScreenId) {
         return -1;
       } else if (b.key === defaultScreenId) {
@@ -67,43 +76,45 @@ class ScreenSelector extends React.Component {
       }
     });
 
-    const canAddScreen = this.props.interfaceMode === constants.ApplabInterfaceMode.DESIGN;
+    const canAddScreen =
+      this.props.interfaceMode === constants.ApplabInterfaceMode.DESIGN;
 
     return (
       <select
         id="screenSelector"
         style={[
           styles.dropdown,
-          (!this.props.hasDesignMode) &&
-            commonStyles.hidden
+          !this.props.hasDesignMode && commonStyles.hidden
         ]}
         value={this.props.currentScreenId || ''}
         onChange={this.handleChange}
         disabled={this.props.isRunning}
       >
         {options}
-        {canAddScreen &&
-         <option>{constants.IMPORT_SCREEN}</option>}
+        {canAddScreen && <option>{constants.IMPORT_SCREEN}</option>}
         {canAddScreen && <option>{constants.NEW_SCREEN}</option>}
       </select>
     );
   }
 }
 
-export default connect(function propsFromStore(state) {
-  return {
-    currentScreenId: state.screens.currentScreenId,
-    interfaceMode: state.interfaceMode,
-    hasDesignMode: state.pageConstants.hasDesignMode,
-    isRunning: state.runState.isRunning,
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    onScreenChange: function (screenId) {
-      dispatch(screens.changeScreen(screenId));
-    },
-    onImport() {
-      dispatch(screens.toggleImportScreen(true));
-    },
-  };
-})(Radium(ScreenSelector));
+export default connect(
+  function propsFromStore(state) {
+    return {
+      currentScreenId: state.screens.currentScreenId,
+      interfaceMode: state.interfaceMode,
+      hasDesignMode: state.pageConstants.hasDesignMode,
+      isRunning: state.runState.isRunning
+    };
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      onScreenChange: function(screenId) {
+        dispatch(screens.changeScreen(screenId));
+      },
+      onImport() {
+        dispatch(screens.toggleImportScreen(true));
+      }
+    };
+  }
+)(Radium(ScreenSelector));

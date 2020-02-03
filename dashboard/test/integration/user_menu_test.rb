@@ -53,10 +53,22 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     assert_select 'a[href="//test-studio.code.org/users/sign_out"]', 'Sign out'
   end
 
-  test 'show link to pair programming when in a section' do
-    student = create(:follower).student_user
+  test "don't show link to pair programming when not in a section" do
+    student = create(:student)
     sign_in student
 
+    get '/home'
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/pairing"]', false
+  end
+
+  test 'show link to pair programming when in a section that has pairing enabled' do
+    student = create(:follower).student_user
+    sign_in student
+    section = student.sections_as_student.first
+
+    assert section.pairing_allowed?
     assert student.can_pair?
 
     get '/home'
@@ -65,9 +77,19 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     assert_select '#pairing_link'
   end
 
-  test "don't show link to pair programming when not in a section" do
-    student = create(:student)
+  test "don't show link to pair programming when in a section that has pairing disabled" do
+    student = create(:follower).student_user
     sign_in student
+    section = student.sections_as_student.first
+
+    assert section.pairing_allowed?
+    assert student.can_pair?
+
+    section.update!(pairing_allowed: false)
+    student.reload
+
+    refute section.pairing_allowed?
+    refute student.can_pair?
 
     get '/home'
 

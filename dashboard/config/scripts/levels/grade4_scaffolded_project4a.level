@@ -35,10 +35,10 @@
     "disable_sharing": "true",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Just getting the actors moving is a great step, but we need to program some interactions to make this really feel like a game. A simple way to do this is to add or remove points when actors collide with projectiles or each other. Find some interesting ways to change the score in your game.",
+    "short_instructions": "Just getting the actors moving is a great step, but we need to program some interactions to make this really feel like a game. A simple way to do this is to add or remove points when actors collide with projectiles or each other. Find some interesting ways to change the score in your game.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Just getting the actors moving is a great step, but we need to program some interactions to make this really feel like a game. A simple way to do this is to add or remove points when actors collide with projectiles or each other. Find some interesting ways to change the score in your game.\r\n\r\n*Don't expect to get this right on the first try. Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n\r\n![](https://images.code.org/876b13abf8a7984f94342dd9a5c8a8f0-image-1472069578010.42.30 PM.png)",
+    "long_instructions": "Just getting the actors moving is a great step, but we need to program some interactions to make this really feel like a game. A simple way to do this is to add or remove points when actors collide with projectiles or each other. Find some interesting ways to change the score in your game.\r\n\r\n*Don't expect to get this right on the first try. Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n\r\n![](https://images.code.org/876b13abf8a7984f94342dd9a5c8a8f0-image-1472069578010.42.30 PM.png)",
     "contained_level_names": null
   },
   "published": true,

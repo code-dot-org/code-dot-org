@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Predict\r\n\r\nHow many times will the for loop below run?",
+    "long_instructions": "# Predict\r\n\r\nHow many times will the for loop below run?",
     "instructions_important": "false",
     "submittable": "false",
     "allow_user_uploads": "false",

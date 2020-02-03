@@ -18,15 +18,18 @@ gl:
       messages:
         blank: é obrigatorio
         blank_plural: obrigatorio
+        invalid: e inválido
         invalid_plural: inválidas
     attributes:
       user:
         name: Nome a mostrar
-        name_example: 'Nome amosado<br/>(ex: Antía C. ou Trasno)'
+        name_example: 'Nome amosado (ex: Antía C. ou Trasno)'
         email: E-mail
         parent_email: Enderezo de correo electrónico da persoa responsable
         personal_email: Enderezo do correo persoal <a href="%{url}">(preme aquí se
           non tes un enderezo de correo)</a>
+        personal_email_markdown: Enderezo do correo persoal [(preme aquí se non tes
+          un enderezo de correo)](%{url})
         username: Nome de usuario
         password: Contrasinal
         password_confirmation: Confirmación do contrasinal
@@ -35,8 +38,18 @@ gl:
         age: Idade
         gender: Xénero
         edit_header: Editar os Detalles da Conta
+        finish_sign_up_header: Remata de crear a túa conta
+        finish_sign_up_subheader: Completa a seguinte información para acabar de crear
+          unha conta de Code.org para <strong>%{email}</strong>.
+        finish_sign_up_subheader_markdown: Completa a seguinte información para acabar
+          de crear unha conta de Code.org para **%{email}**.
+        finish_sign_up_subheader_provider: Completa a seguinte información para acabar
+          de crear unha conta de Code.org con <strong>%{provider}</strong> para <strong>%{email}</strong>.
+        finish_sign_up_subheader_provider_markdown: Completa a seguinte información
+          para acabar de crear unha conta de Code.org con **%{provider}** para **%{email}**.
         error:
           future: non pode estar no futuro
+  beta: beta
   hello: Ola, mundo
   welcome_back: Ola outra vez, %{name}
   your_professional_learning_plan: O teu plan de aprendizaxe profesional
@@ -48,15 +61,11 @@ gl:
   next_resource: Recurso seguinte
   cancel: Cancelar
   okay: De acordo
+  or: ou
   heading_x_of_y: "%{heading} (páxina %{x} de %{y})"
-  add_teacher_form:
+  join_section:
     code:
-      label: 'Agrega un profesor:'
       placeholder: Código da sección (ABCDEF)
-      instructions: Por favor, introduce o código compartido entre ti e a túa mestra.
-        O código ten 6 letras, como por exemplo "ABCDEF".
-      instructions_short: Introduce o teu código de sección de 6 letras
-    submit: Agregar profesor
   add_hint_form:
     placeholder: Por favor, dixite a súa pista aquí
     submit: Agregar pista
@@ -73,7 +82,6 @@ gl:
   of: de
   more: MÁIS
   less: MENOS
-  beta: beta
   try_hoc: 'Experimenta a Hora de Código, clica aquí >> '
   try_k8intro: Experimenta o noso curso de Introdución á Informática para o Ensino
     Básico (15-25 horas)
@@ -84,31 +92,42 @@ gl:
   prize: premio
   more_info: Máis información
   auth:
+    continue_with: Continúa con %{provider}
     sign_in_with: Entre con %{provider}
     signed_in: Sesión iniciada!
-    signed_out: Vostede saiu da <a href="%{url}">Code.org</a>.
-    sign_out_of: Vostede usou %{provider} para entrar. <a href="%{url}">Clique aquí</a>
-      para saír de %{provider}.
     already_signedup: Xa estás rexistrado?
     notyet_signedup: Aínda non creaches unha conta?
     google_oauth2: Conta do Google
     twitter: Twitter
     facebook: Facebook
     windowslive: Conta da Microsoft
+    microsoft_v2_auth: Conta da Microsoft
     clever: Conta intelixente
+    powerschool: Conta Powerschool
     forgot_password: Esqueceu o seu contrasinal?
+    migration_success: Exito! Actualizacheste para a nosa nova experiencia de conta.
+    demigration_success: A nove experiencia de conta agora está desativada na túa
+      conta.
     need_confirmation: Non recebeu as instrucións de confirmación?
     need_unlock: Non recibiches as instrucións de desbloqueo?
     not_linked: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
       Terá vostede que iniciar sesión escribindo o seu contrasinal.
     use_clever: Sentímolo, pero a súa conta de Code.org non está ligada ao seu %{provider}.
       Terá vostede que iniciar sesión a través do seu Portal Intelixente.
+    unable_to_connect_provider: Non foi posíbel conectar a túa conta de Code.org a
+      o teu %{provider}. Por favor intentao de novo.
+    already_in_use: O teu %{provider} xa está conectado a outra conta de Code.org.
+    already_linked: O teu %{provider} xa está ligado a túa conta de Code.org.
   signup_form:
+    email_signup: Rexístrate co teu enderezo de correo electrónico
     student_count: "%{count} alumnos xa crearon unha conta."
     teacher_count: "%{count} profesores xa crearon unha conta."
     overview: Rexístrese para seguir os seus progresos ou administrar a súa aula.
       <a href="/">Pode explorar as etapas e os desafíos</a> sen ter unha conta, pero
       cómpre un rexistro para gardar os avances e os proxectos.
+    overview_markdown: Rexístrese para seguir os seus progresos ou administrar a súa
+      aula. [Pode explorar as etapas e os desafíos](/) sen ter unha conta, pero cómpre
+      un rexistro para gardar os avances e os proxectos.
     hoc_already_signed_up_heading: Comezar sen iniciar sesión
     teacher_educator_guide: Consultar a guía do profesor
     title: Rexístrese en Code.org
@@ -120,6 +139,7 @@ gl:
     age: Idade
     user_type: Alumno ou profesor?
     submit: Crear conta
+    go_to_account: Ir a miña conta
     teacher: É un profesor?
     valid_username: Dispoñíbel!
     invalid_username: O nome de usuario ten que ter, polo menos, 5 caracteres
@@ -127,25 +147,28 @@ gl:
     valid_password: Contrasinal válido!
     invalid_password: O contrasinal  ten que ter, polo menos, 6 caracteres
     mismatch_password: Os dous contrasinais que metiches non se corresponden
-    student_terms: Acepto os <a href='http://code.org/tos'>Termos de uso</a> de Code.org.
-      Se son menor de 13 anos, declaro neste formulario que teño autorización de meus
-      pais para usar os servizos de Code.org.<br/><br/>Os enderezos de correo non
-      son gardados, o que impide a Code.org contactar cos alumnos, exceto cando para
-      recuperar o contrasinal. Consulta a nosa <a href='http://code.org/privacy'>Política
-      de privacidade</a> para saber máis.
-    teacher_terms: Acepto os Termos de Servizo de Code.org. Para máis información
-      sobre privacidade, consulte a nosa <a href='http://code.org/privacy'>política
-      de privacidade</a>.
+    under_13_consent: De ter menos de 13 anos, confirmo que teño autorización de meus
+      pais ou titores legais para empregar os servizos de Code.org.
+    student_consent: Confirmo que teño autorización de meus pais ou titores legais
+      para empregrar os servizos de Code.org.
+    agree_us_website: Estou de acordo en usar un sitio web localizado nos Estados
+      Unidos.
     additional_information: Necesitamos máis informacións para continuarmos o proceso
       de creacción da conta.
+    user_type_button: Actualizar tipo de conta
     user_type_label: Tipo de conta
     user_type_teacher: Profesor
     user_type_student: Estudante
     field_is_required: é obrigatorio
     accept_terms: Debe estar de acordo para crear unha conta
     error: Ocorreu un erro.
+    email_preference_question: Marca esta casilla para recibir correos sobre melloras
+      nos nosos cursos, oportunidades locales, ou outras noticias de informática.
+      (aproximadamente unha ao mes)
+    email_preference_privacy: "(Ver a nosa política de privacidade)"
     email_preference_yes: Si
     email_preference_no: Non
+    email_preference_required: Tes que especificar un e-mail de preferencia.
   school_info:
     title: Información da escola (opcional)
     school_country: País da escola
@@ -186,8 +209,6 @@ gl:
     login: Iniciar Sesión
     invalid_login: Inicio de sesión non válido; por favor, tente de novo
     pair_programming: Estou traballando a medias no ordenador
-    student_privacy: Saiba máis sobre por que non está vendo o seu nome completo <a
-      href='%{student_privacy_blog}' target='_blank'>aquí</a>.
   password:
     reset_form:
       title: Esqueceu o seu contrasinal?
@@ -225,6 +246,7 @@ gl:
     code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
       remove: "¿Seguro que queres abandonar este grupo?"
+    default_name: Sección sin título
     remove: "(eliminar grupo)"
     type:
       picture: Contrasinal de imaxe
@@ -279,15 +301,7 @@ gl:
     header:
       finished_hoc: Rematei a miña Hora de Código
       sign_in_to_save: Inicia sesión para gardares o teu progreso
-      free_play:
-        playlab: Crear unha aplicación
-        artist: Debuxar algunha cousa
-        applab: Crea unha aplicación do Laboratorio de Aplicacións
-        gamelab: Crea un proxecto de Laboratorio de Xogos
-        weblab: Crea un proxecto (beta) de Laboratorio Web
-      home: Inicio
       my_dashboard: O meu panel de control
-      courses: Cursos
       course_catalog: Catálogo de cursos
       project_gallery: Proxectos
       sections: Seccións
@@ -329,6 +343,22 @@ gl:
       signup: Crear unha conta
       already_registered: Xa creaches unha conta?
       pair_programming: Programación por parellas
+      team: Equipo
+      driver: Logado
+      navigator: Compañeiro
+      create: Crear
+      applab: Laboratorio de aplicacións
+      artist: Artista
+      bounce: Rebote
+      flappy: Flappy bird
+      frozen: Frozen
+      gumball: Gumball
+      iceage: Era do Xeo
+      infinity: Infinito
+      minecraft_designer: Minecraft
+      playlab: Laboratorio de Xogos
+      playlab_k1: Play Lab (para Educación Infantil)
+      starwars: Star Wars
     popup:
       progress_for_user: progreso de %{name}'s
       progress: O teu progreso
@@ -361,12 +391,18 @@ gl:
       example: Solución exemplo
       example_with_number: Solución exemplo %{solution_number}
       submitted_on: Enviado o %{date}
+      last_updated: 'Ultima actialización:'
       unsubmit: Cancelar envío
+      worked_with: Traballou com
+      update_lock_settings: Actualiza as opcións de bloqueo aquí.
+      clear_response: Borrar resposta
   user:
     email_confirm_needed: 'O enderezo de email non foi confirmado:'
     email_confirm_needed_required: 'O seu enderezo de e-mail %{email} non foi confirmado:'
     email_confirm_wrong_email: "(Enderezo de e-mail errado?)"
     email_resend_confirm: Reenviar instrucións de confirmación
+    new_email_hint: "(asegúrate de que podes recibir mensaxes nesta dirección de correo
+      electrónico)"
     new_password_hint: "(deixe en branco se non quixese facer alteración)"
     current_password_hint: "(necesitamos o seu contrasinal actual para confirmar os
       seus cambios)"
@@ -375,19 +411,21 @@ gl:
     delete_text_teacher_note: 'Lémbrese: a eliminación da súa conta non vai eliminar
       as contas dos seus alumnos.'
     delete_confirm: Ten certeza de que desexa eliminar a súa conta?
+    deleted_user: usuario borrado
     create_personal_login_terms: Ao crear unha conta individual, acepto os <a href='%{terms_of_service_url}',
       target='_blank'>termos de serviço</a> do Code.org. Se son menor de 13 anos,
       declaro que teño autorización de meus pais ou responsables legais para usar
       os servizos de Code.org incluso sen a supervisión dun profesor.
+    create_personal_login_terms_markdown: Ao crear unha conta individual, acepto os
+      [termos de serviço](%{terms_of_service_url}) do Code.org. Se son menor de 13
+      anos, declaro que teño autorización de meus pais ou responsables legais para
+      usar os servizos de Code.org incluso sen a supervisión dun profesor.
+    update_email: Actualizar
   user_level:
     completed: Concluído
     tried: Probado
   home:
     title: Code Studio
-    description: No Code Studio podes atopar os cursos online da Code.org
-    lines_of_code: "%{lines_count} LIÑAS DE CÓDIGO ESCRITAS POR ALUMNOS"
-    lines_of_code_linebreak: "%{lines_count} LIÑAS DE CÓDIGO<br/>ESCRITAS %{students_count}
-      MILLÓNS DE ALUMNOS"
     all_courses: Visión xeral dos cursos 1, 2 e 3
     lesson_plans: Plan de estudo
     signin_message: Xa estás rexistrado? %{link}
@@ -426,18 +464,10 @@ gl:
     try_beta_courses: Novo! Coñeza os nosos cursos experimentais para alumnos do pré
       ao 5º ano
     use_as_teacher: Use este sitio Web como profesor
-    heading_hoc2014: "<h2>A Hora de Código para</h2><h1>Todas as idades</h1>"
-    heading_elementary: "<h2>Cursos de 20 horas para</h2><h1>Principiantes (todas
-      as idades)</h1>"
-    heading_apps: "<h2>Diversión para</h2><h1>todos</h1>"
-    heading_legacy: "<h2>O noso curso acelerado para</h2><h1>Todas as idades</h1>"
     your_gallery: Galería
     no_primary_course: Faga un curso no Code Studio
     choose_next_course: Experimenta un dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
-    announcement_title: Anuncios
-    announcement_learn_more_button: Aprender máis
-    announcement_try_now_button: Proba agora
   move_students:
     all_students_must_be_in_current_section: Todo o alumnado debe estar inscrito no
       teu grupo.
@@ -527,7 +557,6 @@ gl:
   pdf_download: Baixar PDF
   download_coming_soon: Actividade disponíbel para baixar en breve.
   video_coming_soon: Vídeo en breve!
-  not_started: O alumno aínda non practicou este nivel.
   share_code:
     title: Premer en 'Executar' para ver o meu programa en acción
     bounce_og_title: Bota unha ollada ao meu xogo de Ping-pong
@@ -590,6 +619,8 @@ gl:
       body: Explora o mundo de Minecraft a través do código
     minecraft2016:
       title: Minecraft
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged_conditionals:
@@ -612,13 +643,10 @@ gl:
     header_artist: Artista
     report_abuse: Reportar abuso
   landing:
-    prerelease: Este curso está na súa versión <span class='betatext'>beta</span>.
-      Isto significa que esta non é a versión final do curso, e está suxeito a revisións
-      segundo imos recibindo comentarios e se fan melloras.
-    prerelease_hoc2014: Este titorial está na versión <span class='betatext'>beta</span>.
-      Está suxeito a revisións segundo imos recibindo comentarios e se fan melloras.
     report_bug: Comunicar erro
     support: Obter axuda
+  free_response:
+    placeholder: Insira a súa resposta aquí
   multi:
     wrong_title: Resposta incorrecta
     wrong_body: A resposta que vostede tecleou non é correcta. Tente novamente!
@@ -668,11 +696,6 @@ gl:
   age_interstitial:
     age: A súa idade
     header: Actualización de informacións da conta
-    message: Estamos actualizando nosa experiencia para que vostede teña proteccións
-      de privacidade aínda máis fortes. Para iso, precisamos que os usunrios nos informem
-      da súa idade.<br/>Como sempre, a code.org nunca vai alugar, vender ou compartir
-      esta información con terceiros.
-    sign_out: Se vostede non quere informar a súa idade, vostede pode <a href="%{url}">saír</a>.
   terms_interstitial:
     tos: Termos de Servizo
     privacy: Política de Privacidade
@@ -686,6 +709,10 @@ gl:
     decline: Pechar
   zendesk_too_young_message: Pedimos desculpa, pero os usuarios máis novos non poden
     crear unha conta no noso sitio Web. Podes acceder a <a href="http://support.code.org">support.code.org</a>
+    sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
+    en contacto connosco.
+  zendesk_too_young_message_markdown: Pedimos desculpa, pero os usuarios máis novos
+    non poden crear unha conta no noso sitio Web. Podes acceder a [support.code.org](http://support.code.org)
     sen creares unha conta ou podes pedir aos teus pais ou a un profesor entraren
     en contacto connosco.
   progress:
@@ -704,17 +731,10 @@ gl:
     create: Crear proxecto
     create_a_project: 'Crea un proxecto novo:'
     new: Crear novo
-    rename: Renomear
-    save: Salvar
-    delete: Eliminar
     exit: Voltar ao curso
-    my_projects: Os meus proxectos
     project_gallery: Proxectos
-    share: Compartir
     share_title: Comparte o teu proxecto
     share_copy_link: 'Copia a ligazón:'
-    close: Pechar
-    more: Máis
     name: Nome
     updated: Última actualización
     project_type: Tipo de proxecto
@@ -723,19 +743,9 @@ gl:
       un Proxecto de artista!<br/>Podes voltar a traballar nos teus proxectos cando
       quixeres.
     need_help: Precisas de axuda para comezares?
-    really_delete: Eliminar?
-    delete_yes: Si
-    delete_no: Non
     saved: Gardado na Galería!
     not_saved: Non gardado
-    cancel: Cancelar
-    delete_confirm_title: Tes a certeza de que pretendes eliminar este proxecto?
-    delete_confirm_text: Ao borrares este proxecto estás eliminándoo permanentemente
-      de “Os meus proxectos”. Calquera persoa coa que compartiras a ligazón para este
-      proxecto xa non poderá velo.
     view_all: Ver os meus proxectos
-    remix: Remix
-    click_to_remix: Clique em "Remix" para facer a súa propia versión!
     edit_project: Editar proxecto
     abuse:
       tos: Este proxecto foi reportado por violar os <a href='http://code.org/tos'>Termos
@@ -768,6 +778,22 @@ gl:
           e dos %{link_start_tos}Termos de Utilización%{link_end}
   flex_category:
     required: Visión xeral
+    csf_digcit: Cidadanía dixital
+    csf_jigsaw: Crebacabezas
+    csf_loops: Bucles
+    csf_events: Eventos
+    csf_binary: Binario
+    csf_conditionals: Condicionais
+    csf_nested_loops: Bucles aniñados
+    csf_functions: Funcións
+    csf_variables: Variables
+    csf_for_loops: Bucles "Para" (For)
+    csf_internet: Internet
+    csp_variables: Variables
+    csp_conditionals: Condicionais
+    csp_functions: Funcións
+    csp_lists: Listas
+    csp_loops: Bucles
   pd:
     form_labels:
       email: E-mail

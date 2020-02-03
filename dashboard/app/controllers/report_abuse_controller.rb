@@ -20,7 +20,7 @@ class ReportAbuseController < ApplicationController
   AGE_CUSTOM_FIELD_ID = 24_024_923
 
   def report_abuse
-    unless Rails.env.development?
+    unless Rails.env.development? || Rails.env.test?
       subject = FeaturedProject.featured_channel_id?(params[:channel_id]) ?
         'Featured Project: Abuse Reported' :
         'Abuse Reported'

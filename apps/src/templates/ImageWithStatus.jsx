@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 
 /**
  * @fileoverview Wraps an <img> with a <div> that indicates the status of the
@@ -10,7 +11,7 @@ import React, {Component, PropTypes} from 'react';
 export const STATUS = {
   LOADING: 'loading',
   LOADED: 'loaded',
-  ERROR: 'error',
+  ERROR: 'error'
 };
 
 export class ImageWithStatus extends Component {
@@ -18,7 +19,7 @@ export class ImageWithStatus extends Component {
     src: PropTypes.string.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number,
-    wrapperStyle: PropTypes.object,
+    wrapperStyle: PropTypes.object
   };
 
   constructor(props) {
@@ -28,7 +29,7 @@ export class ImageWithStatus extends Component {
     this.handleImageError = this.handleImageError.bind(this);
 
     this.state = {
-      imageStatus: STATUS.LOADING,
+      imageStatus: STATUS.LOADING
     };
   }
 
@@ -56,7 +57,7 @@ export class ImageWithStatus extends Component {
           onLoad={this.handleImageLoad}
           onError={this.handleImageError}
         />
-        <div data-image-status={this.state.imageStatus}/>
+        <div data-image-status={this.state.imageStatus} />
       </div>
     );
   }

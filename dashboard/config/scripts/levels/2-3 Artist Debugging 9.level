@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?",
+    "short_instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?",
     "x": "100",
     "y": "400",
     "start_direction": "90",
@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?",
+    "long_instructions": "Something is off!\r\n\r\nThe code for this stem is wrong. Can you figure out how to get the artist to trace the stem the right way?",
     "examples_required": "false",
     "disable_examples": "false",
     "never_autoplay_video": "false",

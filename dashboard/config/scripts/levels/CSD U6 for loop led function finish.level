@@ -112,7 +112,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Finish the App\r\n\r\nIf your red button worked, the only thing left is to call your new function when all of the remaining buttons is pressed.\r\n\r\n# Do This\r\n\r\nFor each of the remaining buttons (green, blue, and white):\r\n\r\n* Create a new event handler\r\n* Call your `setLedsColor` function with the appropriate color (\"green\", \"blue\", or \"white\")\r\n* Test your program to make sure all of the buttons work\r\n\r\nWhen you've got all of your buttons working properly, click \"Submit\" to turn your program in.",
+    "long_instructions": "# Finish the App\r\n\r\nIf your red button worked, the only thing left is to call your new function when all of the remaining buttons is pressed.\r\n\r\n# Do This\r\n\r\nFor each of the remaining buttons (green, blue, and white):\r\n\r\n* Create a new event handler\r\n* Call your `setLedsColor` function with the appropriate color (\"green\", \"blue\", or \"white\")\r\n* Test your program to make sure all of the buttons work\r\n\r\nWhen you've got all of your buttons working properly, click \"Submit\" to turn your program in.",
     "project_template_level_name": "CSD U6 for loop led template",
     "palette_category_at_start": "functions",
     "encrypted_examples": "YT7Cns4+81oBfmNW9Vkh1uusMYMvpPTjlLzZi6sF1Fq4urE6ymKskHGyVlzv\nOu8uJkHvSId9ogEY0J1l46BAFw==\n",

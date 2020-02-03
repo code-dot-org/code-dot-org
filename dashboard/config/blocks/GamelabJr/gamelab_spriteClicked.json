@@ -1,0 +1,35 @@
+{
+  "category": "Events",
+  "config": {
+    "color": [
+      140,
+      1,
+      0.74
+    ],
+    "func": "spriteClicked",
+    "blockText": "{CONDITION} {SPRITE} clicked",
+    "callbackParams": [
+      "extraArgs"
+    ],
+    "args": [
+      {
+        "name": "CONDITION",
+        "options": [
+          [
+            "when",
+            "\"when\""
+          ],
+          [
+            "while",
+            "\"while\""
+          ]
+        ]
+      },
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      }
+    ],
+    "eventBlock": true
+  }
+}

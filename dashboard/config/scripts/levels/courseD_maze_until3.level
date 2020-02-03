@@ -8,7 +8,7 @@
     "skin": "birds",
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,0,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,1,1,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "video_key": "loop_until",
-    "instructions": "Get the bird to the pig.",
+    "short_instructions": "Get the bird to the pig.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

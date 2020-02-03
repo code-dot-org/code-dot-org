@@ -1,0 +1,3 @@
+# Markdown With Partials
+
+{{ partial }}

@@ -1,0 +1,109 @@
+.tutorial-promo-container {
+  width: 100%;
+  padding-left: 5px;
+  position: relative;
+}
+
+.background-img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.tutorial-heading {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 470px;
+}
+
+.specific-tutorial {
+  position: absolute;
+  height: 330px;
+  padding: 5px;
+  top: 70px;
+}
+
+.left-tutorial {
+  right: 20px;
+}
+
+.right-tutorial {
+  right: 270px;
+}
+
+.tutorial-promo-container .tutorial-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.specific-tutorial-heading {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.tutorial-details {
+  height: 100px;
+}
+
+.tutorial-specs {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tutorial-button {
+  font-size: 18px;
+  height: 40px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  .tutorial-promo-container .tutorial-box h2 {
+    font-size: 17px;
+  }
+
+  .specific-tutorial {
+    width: 100%;
+    height: 220px;
+    padding: 5px;
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .tutorial-heading {
+    top: 15px;
+    left: 290px;
+  }
+
+  .img-container {
+    padding: 0px 5px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .tutorial-promo-container .tutorial-box h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 512px) {
+  .specific-tutorial {
+    width: 100%;
+    height: 220px;
+    position: static;
+  }
+
+  .tutorial-heading {
+    position: static;
+    color: #00adbc;
+    text-align: center;
+  }
+
+  .tutorial-promo-container .tutorial-box {
+    /* Ensure background doesn't repeat in the wider box */
+    background-size: cover;
+  }
+}

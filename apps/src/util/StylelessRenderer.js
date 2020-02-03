@@ -13,16 +13,16 @@ const EXPANDABLE = 'expandable';
  *   have the class "expandable-image" and the image url will be in a data
  *   field.
  */
-export function makeRenderer(options={}) {
+export function makeRenderer(options = {}) {
   const renderer = new marked.Renderer();
   if (options.stripStyles) {
-    renderer.html = function (html) {
+    renderer.html = function(html) {
       return html.indexOf('<style>') !== -1 ? '' : html;
     };
   }
   if (options.expandableImages) {
     renderer.normalImage = renderer.image;
-    renderer.image = function (href, title, text) {
+    renderer.image = function(href, title, text) {
       if (!text.endsWith(EXPANDABLE)) {
         return renderer.normalImage(href, title, text);
       }

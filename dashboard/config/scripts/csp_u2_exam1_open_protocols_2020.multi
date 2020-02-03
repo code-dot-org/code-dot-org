@@ -1,0 +1,12 @@
+name 'csp-u2-exam1-open-protocols_2020'
+height 'auto'
+
+question 'Jesse purchases a new smartphone and is immediately able to use it to send a photo over the Internet to a friend who lives in a different country. Which of the following is NOT necessary to make this possible?'
+wrong 'Both devices are using the same shared and open protocols'
+right 'A single direct connection is established between any two devices connected to the Internet'
+wrong 'The data of the image is routed through a sequence of directly connected devices before arriving at its destination.’  
+wrong 'Both devices are directly connected to at least one part of the Internet’
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

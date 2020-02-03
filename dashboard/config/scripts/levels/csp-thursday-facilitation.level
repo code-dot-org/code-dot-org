@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Thursday Facilitation Reflection\r\n\r\n## Discussion-Based Sessions\r\n\r\nYou have now seen a couple discussion heavy sessions. Some specific examples include the Community (Wednesday), and Recruitment/Student Needs (Thursday) sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?",
+    "long_instructions": "# Thursday Facilitation Reflection\r\n\r\n## Discussion-Based Sessions\r\n\r\nYou have now seen a couple discussion heavy sessions. Some specific examples include the Community (Wednesday), and Recruitment/Student Needs (Thursday) sessions. What common facilitator strategies were used in these sessions?\r\n\r\n* What are facilitators doing?\r\n* What are teachers doing?",
     "instructions_important": "false",
     "display_name": "Facilitation Reflection",
     "allow_user_uploads": "false",

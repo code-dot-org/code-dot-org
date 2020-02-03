@@ -54,25 +54,11 @@ class ContactRollupsValidation
       max: 4_000
     },
     {
-      name: "Workshop Organizer count",
-      query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
-              LIKE '%Workshop Organizer%'",
-      min: 250,
-      max: 2_500
-    },
-    {
       name: "District Contact count",
       query: "SELECT COUNT(*) from contact_rollups_daily WHERE roles
               LIKE '%District Contact%'",
       min: 50,
       max: 500
-    },
-    {
-      name: "Regional Partner count",
-      query: "SELECT COUNT(*) from contact_rollups_daily where roles
-              LIKE '%Regional Partner%'",
-      min: 25,
-      max: 250
     },
     {
       name: "Petition Signer count",
@@ -182,15 +168,6 @@ class ContactRollupsValidation
       max: 40_000
     },
     {
-      name: "Check that all contacts with courses facilitated are "\
-            "facilitators",
-      query: "SELECT COUNT(*) FROM contact_rollups_daily
-              WHERE courses_facilitated IS NOT NULL
-              AND Roles NOT LIKE '%Facilitator%'",
-      min: 0,
-      max: 0
-    },
-    {
       name: "Count of contacts with professional learning enrollment",
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE professional_learning_enrolled IS NOT NULL",
@@ -232,7 +209,7 @@ class ContactRollupsValidation
       query:  "SELECT COUNT(*) FROM contact_rollups_daily
               WHERE ages_taught IS NOT NULL",
       min: 190_000,
-      max: 400_000
+      max: 600_000
     },
     {
       name: "Check that all contacts with ages taught are "\

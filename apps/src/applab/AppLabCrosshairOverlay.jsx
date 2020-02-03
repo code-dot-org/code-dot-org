@@ -1,8 +1,9 @@
 /** @file App Lab-specific Crosshair Overlay */
 
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
-import { draggedElementDropPoint } from './gridUtils';
+import {draggedElementDropPoint} from './gridUtils';
 
 export default class AppLabCrosshairOverlay extends React.Component {
   static propTypes = {
@@ -16,12 +17,12 @@ export default class AppLabCrosshairOverlay extends React.Component {
   render() {
     const dragPoint = draggedElementDropPoint();
     return (
-        <CrosshairOverlay
-          width={this.props.width}
-          height={this.props.height}
-          mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
-          mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
-        />
+      <CrosshairOverlay
+        width={this.props.width}
+        height={this.props.height}
+        mouseX={dragPoint ? dragPoint.left : this.props.mouseX}
+        mouseY={dragPoint ? dragPoint.top : this.props.mouseY}
+      />
     );
   }
 }

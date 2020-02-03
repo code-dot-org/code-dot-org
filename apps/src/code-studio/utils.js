@@ -39,7 +39,7 @@ export function queryParams(name) {
  * @param {boolean} useReplaceState - optional param if you wish to use replaceState
  *   instead of pushState
  */
-export function updateQueryParam(param, value, useReplaceState=false) {
+export function updateQueryParam(param, value, useReplaceState = false) {
   const newString = queryString.stringify({
     ...queryString.parse(windowLocation.search),
     [param]: value
@@ -78,5 +78,8 @@ export function environmentSpecificCookieName(name) {
  * @returns {string} The root domain name for the host name
  */
 export function getRootDomainFromHostname(hostname) {
-  return hostname.split('.').slice(-2).join('.');
+  return hostname
+    .split('.')
+    .slice(-2)
+    .join('.');
 }

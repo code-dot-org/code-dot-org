@@ -33,7 +33,7 @@
     "nectar_goal": "10",
     "step_speed": "1",
     "instructions_important": "false",
-    "markdown_instructions": "You can make code shorter and more efficient when you combine functions with other programming elements.  \r\n<hr/>\r\n<h3>What blocks can you use with your function to build a short and sweet solution to this puzzle?</h3>",
+    "long_instructions": "You can make code shorter and more efficient when you combine functions with other programming elements.  \r\n<hr/>\r\n<h3>What blocks can you use with your function to build a short and sweet solution to this puzzle?</h3>",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Which block automatically increments a variable that you could use as a parameter?\",\"hint_id\":\"grade5_bee_parameters_new6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ddf058fb76bd8674dfcf6268065b580d/grade5_bee_parameters_new6.mp3\"}]",
     "contained_level_names": null
   },

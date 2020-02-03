@@ -1,6 +1,3 @@
-@no_firefox
-@no_ie
-
 Feature: Swapped levels
   Scenario: Signed-out user sees active version
     When I am on "http://studio.code.org/s/allthethings/stage/29/puzzle/1"

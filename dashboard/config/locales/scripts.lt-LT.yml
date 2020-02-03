@@ -997,6 +997,8 @@ lt:
               name: Dvejetainės apyrankės
             Binary Images:
               name: Dvejetainiai vaizdai
+            Play Lab:
+              name: Laboratorija
         csd2-2017:
           stages:
             Peer Review:
@@ -1419,6 +1421,8 @@ lt:
               name: Komandinis programavimas
             Relay Programming:
               name: Programavimas komandoje
+            Graph Paper Programming:
+              name: Programavimas ant languoto popieriaus
         courseb-2018:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1533,3 +1537,213 @@ lt:
           stages:
             Artist:
               name: Menininkas
+        aquatic:
+          title: 'Minecraft: Kelionės vandeniu'
+        coursef-2019:
+          stages:
+            Building a Foundation:
+              name: Laiptuota piramidė
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            The Artist:
+              name: Menininkas
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Programavimas ant languoto popieriaus
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Digital Citizenship:
+              name: Virtuali pilietybė
+            'Unplugged: Binary':
+              name: Dvejetainiai vaizdai
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+        coursee-2019:
+          stages:
+            Building a Foundation:
+              name: Laiptuota piramidė
+            Nested Loops:
+              name: Kartojimas kartojime
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            'Functions: Songwriting':
+              name: Dainų rašymas
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+            Songwriting:
+              name: Dainų rašymas
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+            'Unplugged: Binary':
+              name: 'Be kompiuterio: dvejetainiai skaičiai'
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+        andrea-test:
+          stages:
+            'null':
+              name: nieko
+        coursec-2019:
+          stages:
+            'Real-life Algorithms: Paper Planes':
+              name: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+            'Events: The Big Event':
+              name: Didelis įvykis
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+        gamelab:
+          title: Žaidimų laboratorija
+        coursea-2019:
+          stages:
+            'Programming: Happy Maps':
+              name: Laimingieji žemėlapiai
+            Going Places Safely:
+              name: Saugus naršymas internete
+        courseb-2019:
+          stages:
+            Move It, Move It:
+              name: Judėk, judėk
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+            'Loops: Getting Loopy':
+              name: Kartojimo supratimas
+        pre-express-2019:
+          stages:
+            Move It, Move It:
+              name: Judėk, judėk
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+            Spelling Bee:
+              name: Rašanti bitė
+        removed19:
+          stages:
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Sąrašai
+        csd3-2019:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        csd6-2019:
+          stages:
+            Functions with Parameters:
+              name: Komandos su parametrais
+        csp1-2019:
+          stages:
+            Sending Binary Messages:
+              name: Dvejetainių žinučių siuntimas
+            Number Systems:
+              name: Skaičių sistemos
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
+            The Internet:
+              name: Internetas
+        csp3-2019:
+          stages:
+            Creating Functions:
+              name: Komandų kūrimas
+        csp5-2019:
+          stages:
+            While Loops:
+              name: "„Kol“ kartojimas"
+        csp1-pilot:
+          stages:
+            Number Systems:
+              name: Skaičių sistemos
+            Sending Binary Messages:
+              name: Dvejetainių žinučių siuntimas
+            Binary Numbers:
+              name: Dvejetainiai skaičiai
+        time4csdemo:
+          stages:
+            Crowdsourcing:
+              name: Komandinis programavimas
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            Building a Foundation:
+              name: Laiptuota piramidė
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Programavimas ant languoto popieriaus
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Sąrašai
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas
+        peru-2019:
+          stages:
+            Introduction:
+              name: Įvadas
+            Nested Loops:
+              name: Kartojimas kartojime
+        k5-onlinepd-2019:
+          stages:
+            Next Steps:
+              name: Kiti žingsniai
+            Loops:
+              name: Kartojimas
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Events:
+              name: Įvykiai
+            Functions:
+              name: Komandų kūrimas
+            Variables:
+              name: Kintamieji
+            For Loops:
+              name: Kartojimas
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        time4cs-control-unit-2:
+          stages:
+            Crowdsourcing:
+              name: Komandinis programavimas
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai

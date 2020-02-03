@@ -8,6 +8,7 @@ import dom from './dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DialogButtons from './templates/DialogButtons';
+import {getLastServerResponse} from './code-studio/reporting';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;
@@ -41,11 +42,15 @@ export function initializeSubmitHelper(params) {
 /**
  * If submit succeeds, then redirect appropriately.  Called by the app.
  *
- * @param {Object} response
- * @param {string} response.redirect - URL to go to.
+ * @param {string} [response.redirect] - URL to go to.  When not provided, we'll use the
+ *   last server response from reporting.js to pick a redirect.  This sometimes happens on
+ *   contained levels where the milestone post and submit are two separate operations.
  */
 export function onSubmitComplete(response) {
-  window.location.href = response.redirect;
+  const redirect = response
+    ? response.redirect
+    : getLastServerResponse().nextRedirect;
+  window.location.href = redirect;
 }
 
 /**
@@ -76,10 +81,11 @@ function onPuzzleUnsubmit() {
 function unsubmit() {
   $.post(
     unsubmitUrl,
-    {"_method": 'PUT', user_level: {submitted: false}},
-    function () {
+    {_method: 'PUT', user_level: {submitted: false}},
+    function() {
       location.reload();
-    });
+    }
+  );
 }
 
 /**
@@ -90,19 +96,26 @@ function unsubmit() {
  * @param {string} [filterSelector] Optional selector to filter for.
  */
 function showConfirmationDialog(config) {
-  config.text = config.text || "";
-  config.title = config.title || "";
+  config.text = config.text || '';
+  config.title = config.title || '';
 
   const contentDiv = document.createElement('div');
-  contentDiv.innerHTML = '<p class="dialog-title">' + config.title + '</p>' +
-      '<p>' + config.text + '</p>';
+  contentDiv.innerHTML =
+    '<p class="dialog-title">' +
+    config.title +
+    '</p>' +
+    '<p>' +
+    config.text +
+    '</p>';
 
   const buttons = document.createElement('div');
   ReactDOM.render(
     <DialogButtons
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}
-    />, buttons);
+    />,
+    buttons
+  );
   contentDiv.appendChild(buttons);
 
   const dialog = studioApp.createModalDialog({
@@ -112,14 +125,14 @@ function showConfirmationDialog(config) {
 
   const cancelButton = buttons.querySelector('#again-button');
   if (cancelButton) {
-    dom.addClickTouchEvent(cancelButton, function () {
+    dom.addClickTouchEvent(cancelButton, function() {
       dialog.hide();
     });
   }
 
   const confirmButton = buttons.querySelector('#confirm-button');
   if (confirmButton) {
-    dom.addClickTouchEvent(confirmButton, function () {
+    dom.addClickTouchEvent(confirmButton, function() {
       if (config.onConfirm) {
         config.onConfirm();
       }

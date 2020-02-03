@@ -1,17 +1,26 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { createStoreWithReducers, registerReducers } from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import { LevelKind } from '@cdo/apps/util/sharedConstants';
-import { initProgress, lessons, showTeacherInfo } from '@cdo/apps/code-studio/progressRedux';
-import { authorizeLockable, setSectionLockStatus } from '@cdo/apps/code-studio/stageLockRedux';
-import { setViewType, ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { setHiddenStages } from '@cdo/apps/code-studio/hiddenStageRedux';
-import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {LevelKind} from '@cdo/apps/util/sharedConstants';
+import {
+  initProgress,
+  lessons,
+  showTeacherInfo
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  authorizeLockable,
+  setSectionLockStatus
+} from '@cdo/apps/code-studio/stageLockRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {setHiddenStages} from '@cdo/apps/code-studio/hiddenStageRedux';
+import teacherSections, {
+  setSections
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const lockableStage = {
   id: 123,
-  levels: [1,2,3,4].map(id => ({
+  levels: [1, 2, 3, 4].map(id => ({
     ids: [id],
     icon: 'fa-check-square-o',
     kind: LevelKind.assessment,
@@ -19,7 +28,7 @@ const lockableStage = {
   })),
   lockable: true,
   name: 'CS Principles Pre-survey',
-  position: 1,
+  position: 1
 };
 
 const nonLockableStage = {
@@ -38,11 +47,10 @@ const lockableWithLessonPlan = {
 const nonLockableNoLessonPlan = {
   ...lockableStage,
   id: 126,
-  lockable: false,
+  lockable: false
 };
 
-
-const createStore = ({preload=false, allowHidden=true} = {}) => {
+const createStore = ({preload = false, allowHidden = true} = {}) => {
   registerReducers({teacherSections});
   const store = createStoreWithReducers();
   const stages = [
@@ -51,16 +59,23 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
     lockableWithLessonPlan,
     nonLockableNoLessonPlan
   ];
-  store.dispatch(initProgress({
-    scriptName: 'csp1',
-    stages
-  }));
+  store.dispatch(
+    initProgress({
+      scriptName: 'csp1',
+      stages
+    })
+  );
   store.dispatch(authorizeLockable());
   store.dispatch(showTeacherInfo());
   store.dispatch(setViewType(ViewType.Teacher));
-  store.dispatch(setHiddenStages({
-    11: [lockableWithLessonPlan.id]
-  }, allowHidden));
+  store.dispatch(
+    setHiddenStages(
+      {
+        11: [lockableWithLessonPlan.id]
+      },
+      allowHidden
+    )
+  );
   if (!preload) {
     const sections = {
       '11': {
@@ -70,22 +85,26 @@ const createStore = ({preload=false, allowHidden=true} = {}) => {
       }
     };
     stages.forEach(stage => {
-      sections[11].stages[stage.id] = [0,1,2].map(id => ({
+      sections[11].stages[stage.id] = [0, 1, 2].map(id => ({
         locked: true,
         name: `student${id}`,
         readonly_answers: false
       }));
     });
-    store.dispatch(setSections([{
-      id: sections[11].section_id,
-      name: sections[11].section_name
-    }]));
+    store.dispatch(
+      setSections([
+        {
+          id: sections[11].section_id,
+          name: sections[11].section_name
+        }
+      ])
+    );
     store.dispatch(setSectionLockStatus(sections));
   }
   return store;
 };
 
-const style= {
+const style = {
   width: 200,
   height: 200
 };
@@ -95,9 +114,9 @@ export default storybook => {
     .storiesOf('Progress/ProgressLessonTeacherInfo', module)
     .addStoryTable([
       {
-        name:'loading',
+        name: 'loading',
         story: () => {
-          const store = createStore({ preload: true });
+          const store = createStore({preload: true});
           const state = store.getState();
           return (
             <Provider store={store}>
@@ -111,7 +130,7 @@ export default storybook => {
         }
       },
       {
-        name:'hideable allowed, lockable lesson with no lesson plan',
+        name: 'hideable allowed, lockable lesson with no lesson plan',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -128,7 +147,7 @@ export default storybook => {
       },
 
       {
-        name:'hideable allowed, lockable lesson with lesson plan',
+        name: 'hideable allowed, lockable lesson with lesson plan',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -145,7 +164,7 @@ export default storybook => {
       },
 
       {
-        name:'hideable allowed, nonlockable lesson with lesson plan',
+        name: 'hideable allowed, nonlockable lesson with lesson plan',
         story: () => {
           const store = createStore();
           const state = store.getState();
@@ -162,7 +181,7 @@ export default storybook => {
       },
 
       {
-        name:'hideable not allowed, nonlockable lesson with no lesson plan',
+        name: 'hideable not allowed, nonlockable lesson with no lesson plan',
         description: 'shouldnt render anything',
         story: () => {
           const store = createStore({allowHidden: false});
@@ -177,6 +196,6 @@ export default storybook => {
             </Provider>
           );
         }
-      },
+      }
     ]);
 };

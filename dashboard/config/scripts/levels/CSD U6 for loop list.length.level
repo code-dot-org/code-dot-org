@@ -81,7 +81,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Array Length\r\n\r\nIn the last program we told the loop to run three times with the code `for (var i = 0; i < 3; i++)`. This works, but we could write smarter programs by using the length of the array to decide how many times to loop.\r\n\r\n# Do This\r\n\r\nChange the exit condition of this for loop so that it runs while `i < buttons.length`.",
+    "long_instructions": "# Array Length\r\n\r\nIn the last program we told the loop to run three times with the code `for (var i = 0; i < 3; i++)`. This works, but we could write smarter programs by using the length of the array to decide how many times to loop.\r\n\r\n# Do This\r\n\r\nChange the exit condition of this for loop so that it runs while `i < buttons.length`.",
     "encrypted_examples": "jhpWZk40dd4sKG0sbuYiOHZuVjQRkFo/Cs22SxBeCbpjCySJHdoMGdeHfy8p\no8zBkyU5bpzWyIJT3JkuFCS/5A==\n",
     "contained_level_names": null
   },

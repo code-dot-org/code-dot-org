@@ -81,7 +81,7 @@
 #   INNER JOIN level_concept_difficulties
 #     ON level_concept_difficulties.level_id = user_levels.level_id
 #   WHERE user_levels.best_result = 100
-#     AND user_levels.script_id IN (238, 239, 240, 241, 258)
+#     AND user_levels.script_id IN #{script_ids}
 #     AND user_levels.id > #{start_id}
 #     AND user_levels.id < #{end_id}
 #     AND user_levels.created_at > #{start_date}
@@ -106,16 +106,27 @@
 require 'csv'
 require_relative '../../../dashboard/config/environment'
 
+# Fields:
+# start_date, end_date, end_timestamp, already_recorded
+# end_timestamp is what will be written as the basic_proficiency_timestamp for that date range
+# already_recorded should be false for the date ranges of the backfill, and true for date ranges
+# that had the correct LCD data.
 DATE_RANGES = [
-  ['20170601', '20170701', '2017-06-30 23:59:59', false],
-  ['20170701', '20170801', '2017-07-31 23:59:59', false],
-  ['20170801', '20170901', '2017-08-31 23:59:59', false],
-  ['20170901', '20170913', '2017-09-12 23:59:59', false],
-  ['20170913', '20171001', '2017-09-30 23:59:59', true]
+  ['20190601', '20190701', '2019-06-30 23:59:59', false],
+  ['20190701', '20190801', '2019-07-31 23:59:59', false],
+  ['20190801', '20190901', '2019-08-31 23:59:59', false],
+  ['20190901', '20190914', '2019-09-13 23:59:59', false],
+  ['20190914', '20191001', '2019-09-30 23:59:59', true],
+  ['20191001', '20191101', '2019-10-31 23:59:59', true],
+  ['20191101', '20191201', '2019-11-30 23:59:59', true],
+  ['20191201', '20191211', '2019-12-10 23:59:59', true]
 ].freeze
 
-MONTHLY_FILENAME_PREFIX = '/tmp/proficiency/user_proficiencies'.freeze
-AGGREGATE_FILENAME = '/tmp/proficiency/aggregate_20170601_20171001'.freeze
+# This script wasn't written to take in arguments; instead it uses these hardcoded paths
+# (together with DATE_RANGES) above for input and output files.
+DATA_DIRECTORY = '/tmp'.freeze
+MONTHLY_FILENAME_PREFIX = (DATA_DIRECTORY + '/user_proficiencies').freeze
+AGGREGATE_FILENAME = (DATA_DIRECTORY + '/aggregate_20190601_20191211').freeze
 
 SLICE_SIZE = 5_000
 
@@ -345,7 +356,7 @@ def update_database
           db_proficiency.conditionals_d4_count += proficiency[49]
           db_proficiency.conditionals_d5_count += proficiency[50]
 
-          if db_proficiency.last_progress_at.nil? || db_proficiency.last_progress_at < proficiency[51]
+          if db_proficiency.last_progress_at.nil? || (proficiency[51] && db_proficiency.last_progress_at < proficiency[51])
             db_proficiency.last_progress_at = proficiency[51]
           end
 

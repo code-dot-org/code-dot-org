@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative './storage_id'
+require_relative './profanity_privacy_helper'
 
 #
 # StorageApps
@@ -35,10 +36,10 @@ class StorageApps
   end
 
   def delete(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
 
-    delete_count = @table.where(id: id).update(state: 'deleted')
+    delete_count = @table.where(id: storage_app_id).update(state: 'deleted')
     raise NotFound, "channel `#{channel_id}` not found" if delete_count == 0
 
     # TODO: Delete all storage associated with this channel (e.g. properties and tables and assets)
@@ -47,8 +48,8 @@ class StorageApps
   end
 
   def get(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
-    row = @table.where(id: id).exclude(state: 'deleted').first
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
     # For some apps, if it was created by a signed out user, we don't want anyone
@@ -68,9 +69,18 @@ class StorageApps
     StorageApps.merged_row_value(row, channel_id: channel_id, is_owner: owner == @storage_id)
   end
 
-  def update(channel_id, value, ip_address, project_type: nil)
-    owner, id = storage_decrypt_channel_id(channel_id)
+  def update(channel_id, value, ip_address, project_type: nil, locale: 'en')
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+
+    new_name = value['name']
+    project = @table.where(id: storage_app_id).first
+    old_name = JSON.parse(project[:value])['name']
+    if new_name != old_name
+      share_failure = title_profanity_privacy_violation(new_name, locale)
+
+      raise ProfanityPrivacyError.new(share_failure.content) if share_failure
+    end
 
     row = {
       value: value.to_json,
@@ -78,7 +88,7 @@ class StorageApps
       updated_ip: ip_address,
     }
     row[:project_type] = project_type if project_type
-    update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     # We can't include :created_at here without an extra DB query. Most consumers won't need :created_at during updates, so omit it.
@@ -86,16 +96,16 @@ class StorageApps
   end
 
   def publish(channel_id, type, user)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       project_type: type,
       published_at: DateTime.now,
     }
-    update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
-    project = @table.where(id: id).first
+    project = @table.where(id: storage_app_id).first
     StorageApps.get_published_project_data(project, channel_id).merge(
       # For privacy reasons, include only the first initial of the student's name.
       studentName: user && UserHelpers.initial(user[:name]),
@@ -123,22 +133,13 @@ class StorageApps
   end
 
   def unpublish(channel_id)
-    owner, id = storage_decrypt_channel_id(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
     row = {
       published_at: nil,
     }
-    update_count = @table.where(id: id).exclude(state: 'deleted').update(row)
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update(row)
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
-  end
-
-  def get_abuse(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
-
-    row = @table.where(id: id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
-
-    row[:abuse_score]
   end
 
   # Determine if the current user can view the project
@@ -181,36 +182,45 @@ class StorageApps
   end
 
   def increment_abuse(channel_id, amount = 10)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
-    row = @table.where(id: id).exclude(state: 'deleted').first
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
     new_score = row[:abuse_score] + (JSON.parse(row[:value])['frozen'] ? 0 : amount)
 
-    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: new_score})
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update({abuse_score: new_score})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     new_score
   end
 
   def reset_abuse(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
 
-    row = @table.where(id: id).exclude(state: 'deleted').first
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
     raise NotFound, "channel `#{channel_id}` not found" unless row
 
-    update_count = @table.where(id: id).exclude(state: 'deleted').update({abuse_score: 0})
+    update_count = @table.where(id: storage_app_id).exclude(state: 'deleted').update({abuse_score: 0})
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     0
   end
 
-  def content_moderation_disabled?(channel_id)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+  def buffer_abuse_score(channel_id)
+    buffered_abuse_score = -50
+    # Reset to 0 first so projects that are featured,
+    # unfeatured, then re-featured don't have super low
+    # abuse scores.
+    reset_abuse(channel_id)
+    increment_abuse(channel_id, buffered_abuse_score)
+  end
 
-    row = @table.where(id: id).exclude(state: 'deleted').first
-    raise NotFound, "channel `#{channel_id}` not found" unless row
+  def content_moderation_disabled?(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
+
+    row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
+    return false unless row
 
     row[:skip_content_moderation]
   end
@@ -225,9 +235,9 @@ class StorageApps
   # value for content_moderation_disabled.
   #
   def set_content_moderation(channel_id, disable)
-    _owner, id = storage_decrypt_channel_id(channel_id)
+    _owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     rows_changed = @table.
-      where(id: id).
+      where(id: storage_app_id).
       exclude(state: 'deleted').
       update({skip_content_moderation: disable})
     raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
@@ -313,8 +323,8 @@ class StorageApps
   #
   def self.remix_ancestry(channel_id, depth: 1)
     [].tap do |ancestors|
-      _, id = storage_decrypt_channel_id(channel_id)
-      next_row = PEGASUS_DB[:storage_apps].where(id: id).first
+      _, storage_app_id = storage_decrypt_channel_id(channel_id)
+      next_row = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
       while next_row&.[](:remix_parent_id)
         next_row = PEGASUS_DB[:storage_apps].where(id: next_row[:remix_parent_id]).first
         ancestors.push storage_encrypt_channel_id(next_row[:storage_id], next_row[:id]) if next_row
@@ -323,6 +333,12 @@ class StorageApps
     end
   rescue
     []
+  end
+
+  def self.get_abuse(channel_id)
+    _, storage_app_id = storage_decrypt_channel_id(channel_id)
+    project_info = PEGASUS_DB[:storage_apps].where(id: storage_app_id).first
+    project_info[:abuse_score]
   end
 
   private

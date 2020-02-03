@@ -90,24 +90,26 @@ class Pardot
 
   # Perform inserts, updates and reconciliation from contact rollups into Pardot
   # @return [Hash] Hash containing number of insert and update operations performed
-  def self.sync_contact_rollups_to_pardot
+  def self.sync_contact_rollups_to_pardot(log_collector)
     # In case previous process was interrupted, first look in Pardot to see if
     # it has any Pardot IDs that we have not yet recorded on our side. This will
     # keep us from erroneously creating a new prospect when it should be an
     # update.
-    update_pardot_ids_of_new_contacts
+    log_collector.time!('update_pardot_ids_of_new_contacts') {update_pardot_ids_of_new_contacts}
 
     # Handle any new contacts and create corresponding prospects in Pardot.
-    num_inserts = sync_new_contacts_with_pardot
+    num_inserts = 0
+    log_collector.time!('sync_new_contacts_with_pardot') {num_inserts = sync_new_contacts_with_pardot}
 
     # Retrieve Pardot IDs for newly created contacts and store them in our DB.
     # We do this as a separate pass for efficient batching of API calls to help
     # ensure we don't hit our 25K/day limit.
-    update_pardot_ids_of_new_contacts
+    log_collector.time!('update_pardot_ids_of_new_contacts') {update_pardot_ids_of_new_contacts}
 
     # Handle any contact changes that should update existing prospects in
     # Pardot.
-    num_updates = sync_updated_contacts_with_pardot
+    num_updates = 0
+    log_collector.time!('sync_updated_contacts_with_pardot') {num_updates = sync_updated_contacts_with_pardot}
 
     {num_inserts: num_inserts, num_updates: num_updates}
   end
@@ -271,11 +273,8 @@ class Pardot
     end
 
     # The custom Pardot db_Opt_In field has type "Dropdown" with permitted values "Yes" or "No".
-    # Explicitly check for the source opt_in field to be true or false, because nil is 'falsey'
-    # and it's a little misleading to set a value for db_Opt_In in Pardot when there's no information either
-    # way from the user in our database.
-    dest[:db_Opt_In] = 'Yes' if src[:opt_in] == true
-    dest[:db_Opt_In] = 'No' if src[:opt_in] == false
+    # Set db_Opt_in to 'No' when there is no source entry, matching the process used by Marketing team.
+    dest[:db_Opt_In] = src[:opt_in] == true ? 'Yes' : 'No'
 
     # If this contact has a dashboard user ID (which means it is a teacher
     # account), mark that in a Pardot field so we can segment on that.
@@ -451,9 +450,15 @@ class Pardot
   # @return [Nokogiri::XML] XML response from Pardot
   def self.post_request_with_auth(url)
     request_pardot_api_key if $pardot_api_key.nil?
-    # add the API key and user key parameters to the URL
-    auth_url = append_auth_params_to_url(url)
-    post_request(auth_url, {})
+
+    # add the API key and user key parameters to body of the POST request
+    post_request(
+      url,
+      {
+        api_key: $pardot_api_key,
+        user_key: CDO.pardot_user_key
+      }
+    )
   end
 
   # Make an API request. This method may raise exceptions.
@@ -485,14 +490,6 @@ class Pardot
     raise "Pardot response did not include status" if status.nil?
 
     doc
-  end
-
-  # Append standard Pardot auth parameters (per-session API key and fixed user
-  # key) to a Pardot API request
-  # @param url [String] URL to post to
-  # @return [String] URL with auth parameters appended
-  def self.append_auth_params_to_url(url)
-    "#{url}&api_key=#{$pardot_api_key}&user_key=#{CDO.pardot_user_key}"
   end
 
   # Parse a Pardot XML response and raise an exception on the first error

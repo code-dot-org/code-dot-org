@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Thursday Unit Reflection Part 2\r\n\r\n## Teachers in Plugged Unit\r\n\r\nWhat’s the role of the teacher in this unit, where much of the computer science content is embedded in the levels?",
+    "long_instructions": "# Thursday Unit Reflection Part 2\r\n\r\n## Teachers in Plugged Unit\r\n\r\nWhat’s the role of the teacher in this unit, where much of the computer science content is embedded in the levels?",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

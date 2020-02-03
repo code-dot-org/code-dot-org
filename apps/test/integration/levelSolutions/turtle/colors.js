@@ -1,4 +1,4 @@
-import { TestResults } from '@cdo/apps/constants.js';
+import {TestResults} from '@cdo/apps/constants.js';
 
 const setColor = `
   <xml>
@@ -92,26 +92,30 @@ const levelDef = {
   solutionBlocks: noSetColor,
   ideal: Infinity,
   toolbox: null,
-  freePlay: false,
+  freePlay: false
 };
 
 module.exports = {
-  app: "turtle",
-  skinId: "artist",
+  app: 'turtle',
+  skinId: 'artist',
   levelDefinition: levelDef,
 
-  tests: [{
-    description: "Level With Set Color: setting color in user code but not answer doesn't invalidate solution",
-    expected: {
-      testResult: TestResults.ALL_PASS
+  tests: [
+    {
+      description:
+        "Level With Set Color: setting color in user code but not answer doesn't invalidate solution",
+      expected: {
+        testResult: TestResults.ALL_PASS
+      },
+      xml: setColor
     },
-    xml: setColor
-  }, {
-    description: "Level With Set Color: using random color doesn't invalidate solution",
-    expected: {
-      testResult: TestResults.ALL_PASS
-    },
-    xml: setRandomColor
-  }]
+    {
+      description:
+        "Level With Set Color: using random color doesn't invalidate solution",
+      expected: {
+        testResult: TestResults.ALL_PASS
+      },
+      xml: setRandomColor
+    }
+  ]
 };
-

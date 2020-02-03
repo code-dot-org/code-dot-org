@@ -22,8 +22,7 @@ var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
  * @param {!DashboardUser} options.user
  * @constructor
  */
-var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
-
+var NetSimRouterLogModal = (module.exports = function(rootDiv, options) {
   /**
    * Component root, which we fill whenever we call render()
    * @private {jQuery}
@@ -123,7 +122,7 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
   this.setTrafficFilterMode_ = this.setTrafficFilterMode_.bind(this);
 
   this.render();
-};
+});
 
 /**
  * Create a comparator function that can be used to sort log entries, configured
@@ -134,10 +133,11 @@ var NetSimRouterLogModal = module.exports = function (rootDiv, options) {
  *          same sort position.
  * @private
  */
-NetSimRouterLogModal.prototype.getSortComparator_ = function () {
-  var getSortValue = NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
+NetSimRouterLogModal.prototype.getSortComparator_ = function() {
+  var getSortValue =
+    NetSimRouterLogModal.sortKeyToSortValueGetterMap[this.sortBy_];
   var invertMultiplier = this.sortDescending_ ? -1 : 1;
-  return function (a, b) {
+  return function(a, b) {
     var x = getSortValue(a);
     var y = getSortValue(b);
     return (x < y ? -1 : x > y ? 1 : 0) * invertMultiplier;
@@ -145,12 +145,11 @@ NetSimRouterLogModal.prototype.getSortComparator_ = function () {
 };
 
 NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
-
-  'timestamp': function (logEntry) {
+  timestamp: function(logEntry) {
     return logEntry.timestamp;
   },
 
-  'logged-by': function (logEntry) {
+  'logged-by': function(logEntry) {
     var originNode = logEntry.getOriginNode();
     if (originNode) {
       return originNode.getDisplayName();
@@ -158,36 +157,36 @@ NetSimRouterLogModal.sortKeyToSortValueGetterMap = {
     return logEntry.nodeID.toString(10);
   },
 
-  'status': function (logEntry) {
+  status: function(logEntry) {
     return logEntry.getLocalizedStatus();
   },
 
-  'from-address': function (logEntry) {
+  'from-address': function(logEntry) {
     return logEntry.getHeaderField(Packet.HeaderType.FROM_ADDRESS);
   },
 
-  'to-address': function (logEntry) {
+  'to-address': function(logEntry) {
     return logEntry.getHeaderField(Packet.HeaderType.TO_ADDRESS);
   },
 
-  'packet-info': function (logEntry) {
+  'packet-info': function(logEntry) {
     return logEntry.getLocalizedPacketInfo();
   },
 
-  'message': function (logEntry) {
+  message: function(logEntry) {
     return logEntry.getMessageAscii();
   }
-
 };
 
-NetSimRouterLogModal.prototype.show = function (teacherView=false) {
+NetSimRouterLogModal.prototype.show = function(teacherView = false) {
   // Extra check for setting teacherView here - must own the shard
-  this.teacherView_ = teacherView &&
-      (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
+  this.teacherView_ =
+    teacherView &&
+    (this.shard_ && doesUserOwnShard(this.user_, this.shard_.id));
   this.onShow_();
 };
 
-NetSimRouterLogModal.prototype.hide = function () {
+NetSimRouterLogModal.prototype.hide = function() {
   this.onHide_();
   this.render();
 };
@@ -196,7 +195,7 @@ NetSimRouterLogModal.prototype.hide = function () {
  * State changes that occur when showing the log.
  * @private
  */
-NetSimRouterLogModal.prototype.onShow_ = function () {
+NetSimRouterLogModal.prototype.onShow_ = function() {
   if (this.shard_) {
     this.shard_.logTable.subscribe();
   }
@@ -208,7 +207,7 @@ NetSimRouterLogModal.prototype.onShow_ = function () {
  * State changes that occur when hiding the log.
  * @private
  */
-NetSimRouterLogModal.prototype.onHide_ = function () {
+NetSimRouterLogModal.prototype.onHide_ = function() {
   if (this.shard_) {
     this.shard_.logTable.unsubscribe();
   }
@@ -218,29 +217,31 @@ NetSimRouterLogModal.prototype.onHide_ = function () {
 /**
  * @returns {boolean} TRUE if the modal is currently showing.
  */
-NetSimRouterLogModal.prototype.isVisible = function () {
+NetSimRouterLogModal.prototype.isVisible = function() {
   return this.isVisible_;
 };
 
 /**
  * Fill the root div with new elements reflecting the current state
  */
-NetSimRouterLogModal.prototype.render = function () {
+NetSimRouterLogModal.prototype.render = function() {
   const getOriginNodeName = entry => {
     const originNode = entry.getOriginNode();
     return originNode ? originNode.getDisplayName() : entry.nodeID;
   };
-  const tableRows = this.getSortedFilteredLogEntries(this.logEntries_).map(entry => ({
-    'uuid': entry.uuid,
-    'timestamp': entry.timestamp,
-    'sent-by': entry.sentBy,
-    'logged-by': getOriginNodeName(entry),
-    'status': entry.getLocalizedStatus(),
-    'from-address': entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS),
-    'to-address': entry.getHeaderField(Packet.HeaderType.TO_ADDRESS),
-    'packet-info': entry.getLocalizedPacketInfo(),
-    'message': entry.getMessageAscii()
-  }));
+  const tableRows = this.getSortedFilteredLogEntries(this.logEntries_).map(
+    entry => ({
+      uuid: entry.uuid,
+      timestamp: entry.timestamp,
+      'sent-by': entry.sentBy,
+      'logged-by': getOriginNodeName(entry),
+      status: entry.getLocalizedStatus(),
+      'from-address': entry.getHeaderField(Packet.HeaderType.FROM_ADDRESS),
+      'to-address': entry.getHeaderField(Packet.HeaderType.TO_ADDRESS),
+      'packet-info': entry.getLocalizedPacketInfo(),
+      message: entry.getMessageAscii()
+    })
+  );
   ReactDOM.render(
     <NetSimLogBrowser
       isOpen={this.isVisible()}
@@ -267,7 +268,9 @@ NetSimRouterLogModal.prototype.render = function () {
  * @returns {NetSimLogEntry[]} subset of logEntries, sorted and filtered
  *          according to the log browser's current settings.
  */
-NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntries) {
+NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function(
+  logEntries
+) {
   let filterPredicates = [];
 
   // Add router mode filter
@@ -278,8 +281,10 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
   // Add traffic filter
   const match = /^(from|to|with) ([\d\.]+)/.exec(this.currentTrafficFilter_);
   if (match) {
-    const fromPredicate = e => e.getHeaderField(Packet.HeaderType.FROM_ADDRESS) === match[2];
-    const toPredicate = e => e.getHeaderField(Packet.HeaderType.TO_ADDRESS) === match[2];
+    const fromPredicate = e =>
+      e.getHeaderField(Packet.HeaderType.FROM_ADDRESS) === match[2];
+    const toPredicate = e =>
+      e.getHeaderField(Packet.HeaderType.TO_ADDRESS) === match[2];
     const withPredicate = e => fromPredicate(e) || toPredicate(e);
     if ('from' === match[1]) {
       filterPredicates.push(fromPredicate);
@@ -291,8 +296,8 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
   }
 
   return logEntries
-      .filter(e => filterPredicates.every(p => p(e)))
-      .sort(this.getSortComparator_());
+    .filter(e => filterPredicates.every(p => p(e)))
+    .sort(this.getSortComparator_());
 };
 
 /**
@@ -301,7 +306,7 @@ NetSimRouterLogModal.prototype.getSortedFilteredLogEntries = function (logEntrie
  * a rerender
  * @param {NetSimRouterNode} router
  */
-NetSimRouterLogModal.prototype.setRouter = function (router) {
+NetSimRouterLogModal.prototype.setRouter = function(router) {
   this.router_ = router;
   this.isAllRouterLogMode_ = !this.hasLocalRouter_();
   if (!this.hasLocalRouter_()) {
@@ -317,8 +322,10 @@ NetSimRouterLogModal.prototype.setRouter = function (router) {
  * @returns {boolean}
  * @private
  */
-NetSimRouterLogModal.prototype.canLogAllRouters_ = function () {
-  return NetSimGlobals.getLevelConfig().connectedRouters || !this.hasLocalRouter_();
+NetSimRouterLogModal.prototype.canLogAllRouters_ = function() {
+  return (
+    NetSimGlobals.getLevelConfig().connectedRouters || !this.hasLocalRouter_()
+  );
 };
 
 /**
@@ -326,8 +333,8 @@ NetSimRouterLogModal.prototype.canLogAllRouters_ = function () {
  * @returns {boolean}
  * @private
  */
-NetSimRouterLogModal.prototype.hasLocalRouter_ = function () {
-  return !!(this.router_);
+NetSimRouterLogModal.prototype.hasLocalRouter_ = function() {
+  return !!this.router_;
 };
 
 /**
@@ -337,7 +344,7 @@ NetSimRouterLogModal.prototype.hasLocalRouter_ = function () {
  * @returns {boolean}
  * @private
  */
-NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
+NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function() {
   if (this.isAllRouterLogMode_) {
     return this.hasLocalRouter_();
   } else {
@@ -350,18 +357,17 @@ NetSimRouterLogModal.prototype.canSetRouterLogMode_ = function () {
  * @param {string} mode - either "all" or "mine"
  * @private
  */
-NetSimRouterLogModal.prototype.setRouterLogMode_ = function (mode) {
+NetSimRouterLogModal.prototype.setRouterLogMode_ = function(mode) {
   this.isAllRouterLogMode_ = mode === 'all';
   this.render();
 };
-
 
 /**
  * Sets this.currentTrafficFilter_.
  * @param {string} newMode - the new traffic filter mode
  * @private
  */
-NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
+NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function(newMode) {
   this.currentTrafficFilter_ = newMode;
   this.render();
 };
@@ -372,16 +378,18 @@ NetSimRouterLogModal.prototype.setTrafficFilterMode_ = function (newMode) {
  * @param {NetSimShard|null} newShard
  * @param {NetSimLocalClientNode|null} localNode
  */
-NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
+NetSimRouterLogModal.prototype.onShardChange = function(newShard, localNode) {
   if (this.eventKeys_.registeredWithShard) {
     this.eventKeys_.registeredWithShard.logTable.tableChange.unregister(
-        this.eventKeys_.logTableChange);
+      this.eventKeys_.logTableChange
+    );
     this.eventKeys_.registeredWithShard = null;
   }
 
   if (newShard) {
     this.eventKeys_.logTableChange = newShard.logTable.tableChange.register(
-        this.onLogTableChange_.bind(this));
+      this.onLogTableChange_.bind(this)
+    );
     this.eventKeys_.registeredWithShard = newShard;
   }
 
@@ -397,10 +405,10 @@ NetSimRouterLogModal.prototype.onShardChange = function (newShard, localNode) {
  * Handle log table changes.
  * @private
  */
-NetSimRouterLogModal.prototype.onLogTableChange_ = function () {
+NetSimRouterLogModal.prototype.onLogTableChange_ = function() {
   var headerSpec = NetSimGlobals.getLevelConfig().routerExpectsPacketHeader;
   var newRows = this.shard_.logTable.readAllFromID(this.latestRowID_ + 1);
-  var newLogEntries = newRows.map(function (row) {
+  var newLogEntries = newRows.map(function(row) {
     this.latestRowID_ = Math.max(row.id, this.latestRowID_);
     return new NetSimLogEntry(this.shard_, row, headerSpec);
   }, this);

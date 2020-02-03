@@ -7,7 +7,7 @@
   "properties": {
     "title": "Goals for using Code.org in your Classroom",
     "height": "200",
-    "markdown_instructions": "What are your goals or intentions for integrating Code.org in your classroom?\n",
+    "long_instructions": "What are your goals or intentions for integrating Code.org in your classroom?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

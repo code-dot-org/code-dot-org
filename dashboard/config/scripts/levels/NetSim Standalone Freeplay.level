@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this configuration, most of the options are turned on, and you can play with them. Have fun!",
+    "short_instructions": "In this configuration, most of the options are turned on, and you can play with them. Have fun!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -52,7 +52,7 @@
     "show_router_memory_control": "true",
     "show_dns_mode_control": "true",
     "default_dns_mode": "none",
-    "markdown_instructions": "# Internet Simulator Freeplay\r\n\r\nIn this version of the Internet Simulator, most of the options are turned on and are configurable. Messages can be sent to any router within the class, and messages will take different paths to reach their destination.\r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "long_instructions": "# Internet Simulator Freeplay\r\n\r\nIn this version of the Internet Simulator, most of the options are turned on and are configurable. Messages can be sent to any router within the class, and messages will take different paths to reach their destination.\r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>

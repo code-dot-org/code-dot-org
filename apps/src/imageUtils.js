@@ -1,5 +1,4 @@
 import artistShareFrame from '../static/turtle/blank_sharing_drawing.png';
-import './util/svgelement-polyfill';
 
 export function fetchURLAsBlob(url, onComplete) {
   let xhr = new XMLHttpRequest();
@@ -9,10 +8,17 @@ export function fetchURLAsBlob(url, onComplete) {
     if (e.target.status === 200) {
       onComplete(null, e.target.response);
     } else {
-      onComplete(new Error(`URL ${url} responded with code ${e.target.status}`));
+      onComplete(
+        new Error(`URL ${url} responded with code ${e.target.status}`)
+      );
     }
   };
-  xhr.onerror = e => onComplete(new Error(`Error ${e.target.status} occurred while receiving the document.`));
+  xhr.onerror = e =>
+    onComplete(
+      new Error(
+        `Error ${e.target.status} occurred while receiving the document.`
+      )
+    );
   xhr.send();
 }
 
@@ -23,8 +29,10 @@ export function blobToDataURI(blob, onComplete) {
 }
 
 export function dataURIToSourceSize(dataURI) {
-  return imageFromURI(dataURI).then(
-      image => ({x: image.width, y: image.height}));
+  return imageFromURI(dataURI).then(image => ({
+    x: image.width,
+    y: image.height
+  }));
 }
 
 export function imageDataFromURI(uri) {
@@ -93,7 +101,10 @@ export function imageFromURI(uri) {
 export function svgToDataURI(svg, imageType) {
   imageType = imageType || 'image/png';
   return new Promise(resolve => {
-    svg.toDataURL(imageType, {callback: resolve});
+    // Use lazy-loading to keep canvg (60KB) out of the initial download.
+    import('./util/svgelement-polyfill').then(() => {
+      svg.toDataURL(imageType, {callback: resolve});
+    });
   });
 }
 
@@ -104,5 +115,7 @@ export function canvasToBlob(canvas) {
 }
 
 export function dataURIToBlob(uri) {
-  return imageFromURI(uri).then(canvasFromImage).then(canvasToBlob);
+  return imageFromURI(uri)
+    .then(canvasFromImage)
+    .then(canvasToBlob);
 }

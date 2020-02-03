@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 
 The following links provide additional links and information about booleans.  Many of these links are also found in the curriculum, but are consolidated here for convenience.
 
-- <a href = “http://www.cs.utah.edu/~germain/PPS/Topics/while_loops.html” target=_blank> The “while” loop - University of Utah <i class="fa fa-external-link-square"/></a>
-- <a href = “https://www.youtube.com/watch?v=F8H-41bpJ6E&feature=youtu.be” target=_blank> Video - While Loop (Code Studio video from other courses) <i class="fa fa-external-link-square"/></a> **Note** that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a loop, which is shared across all programming languages.
+- <a href = “http://www.cs.utah.edu/~germain/PPS/Topics/while_loops.html” target=_blank> The “while” loop - University of Utah <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://www.youtube.com/watch?v=F8H-41bpJ6E&feature=youtu.be” target=_blank> Video - While Loop (Code Studio video from other courses) <i class="fa fa-external-link-square"></i></a> **Note** that this video references the block-only environment used by our Intro to Computer Science courses intended for younger students, but still describes the basic concept of a loop, which is shared across all programming languages.
 
 MARKDOWN

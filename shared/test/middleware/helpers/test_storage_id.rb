@@ -92,4 +92,37 @@ class StorageIdTest < Minitest::Test
     assert_nil storage_id
     assert_nil @user_storage_ids_table.where(user_id: user_id).first
   end
+
+  def test_storage_id_from_cookie
+    request = mock
+    stubs(:request).returns(request)
+
+    cookie_storage_id = 3
+    cookie_value = CGI.escape(storage_encrypt_id(cookie_storage_id))
+    request.stubs(:cookies).returns({storage_id_cookie_name => cookie_value})
+
+    # returns nil if storage id is invalid
+    assert_nil storage_id_from_cookie
+
+    # returns storage id from cookie if unowned
+    @user_storage_ids_table.insert(user_id: nil, id: cookie_storage_id)
+    assert_equal cookie_storage_id, storage_id_from_cookie
+
+    # returns nil if storage id from cookie is owned by a user
+    @user_storage_ids_table.where(id: cookie_storage_id).update(user_id: 2)
+    assert_nil storage_id_from_cookie
+  end
+
+  # Ensures decrypt/encrypt performance exceeds a minimum iterations per second threshold.
+  def test_encrypt_performance
+    require 'benchmark/ips'
+    result = Benchmark.ips(time: 1, warmup: 0.5, quiet: true) do |x|
+      id_range = 1..10000
+      x.report do
+        id = rand(id_range)
+        assert_equal id, storage_decrypt_id(storage_encrypt_id(id))
+      end
+    end
+    assert_operator result.entries.first.ips, :>, 3000
+  end
 end

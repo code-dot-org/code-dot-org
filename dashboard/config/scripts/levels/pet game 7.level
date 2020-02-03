@@ -1,6 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 50,
+  "game_id": 64,
   "created_at": "2018-03-28T18:54:05.000Z",
   "level_num": "custom",
   "user_id": 156,
@@ -8,12 +8,12 @@
     "skin": "gamelab",
     "show_debug_watch": "true",
     "helper_libraries": [
-      "GameLabJr"
+      "NativeSpriteLab"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
     "embed": "false",
-    "instructions": "Pets need to learn to stop, too! Use the \"when clicked\" block to teach your pet to stop wandering after you click on them.",
+    "short_instructions": "Pets need to learn to stop, too! Use the \"when clicked\" block to teach your pet to stop wandering after you click on them.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

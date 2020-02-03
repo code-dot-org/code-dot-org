@@ -12,7 +12,7 @@
     "goal": "{}",
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
-    "instructions": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.",
+    "short_instructions": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",

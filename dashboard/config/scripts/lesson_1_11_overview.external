@@ -8,7 +8,7 @@ Internet Simulator | Group Problem Solving
 In this lesson student develop a protocol for reliably sending a message over an unreliable internet. The Internet Simulator has been setup for this lesson to restrict messages to no more than 8 characters each, and messages get dropped messages with some probability on every hop.
 
 <h2>
-<a href= "https://curriculum.code.org/csp/unit1/11" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"/></a>
+<a href= "https://curriculum.code.org/csp/unit1/11" target=_blank>Lesson Plan Link<i class="fa fa-external-link-square"></i></a>
 </h2>
 
 <br><br><br><br>

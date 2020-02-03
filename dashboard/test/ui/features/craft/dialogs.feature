@@ -9,7 +9,6 @@ Feature: Minecraft dialog levels
     And "move forward" refers to block "1"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "Character select dialog"
     And I press "close-character-select"
@@ -19,7 +18,7 @@ Feature: Minecraft dialog levels
     Then I wait until the Minecraft game is loaded
     And I press "runButton"
     Then I wait to see a ".uitest-topInstructions-inline-feedback"
-    And element ".uitest-topInstructions-inline-feedback" has text "Try using more commands to walk to the sheep."
+    And element ".uitest-topInstructions-inline-feedback" has escaped text "Try using more commands to walk to the sheep."
 #    And I see no difference for "Try again dialog"
     And I wait to see "#resetButton"
     And I press "resetButton"
@@ -47,7 +46,6 @@ Feature: Minecraft dialog levels
     And "inner repeat" refers to block "13"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then I wait to see a "#getting-started-header"
 #    And I see no difference for "House select dialog"
     And I press "close-house-select"

@@ -49,8 +49,8 @@
     "default_dns_mode": "none",
     "show_log_browser_button": "false",
     "connected_routers": "false",
-    "instructions": "Now that you've transmitted information represented as decimal numbers, you can map those numbers to text characters to send text-based information back and forth. With a text-based protocol, you can easily represent and communicate all kinds of information. ",
-    "markdown_instructions": "# Sending Text with the Internet Simulator\r\n\r\nNow that you've transmitted information represented as decimal numbers, you can map those numbers to text characters to send text-based information back and forth. With a text-based protocol, you can easily represent and communicate all kinds of information. \r\n\r\nYour teacher will hand out more specific instructions for this activity."
+    "short_instructions": "Now that you've transmitted information represented as decimal numbers, you can map those numbers to text characters to send text-based information back and forth. With a text-based protocol, you can easily represent and communicate all kinds of information. ",
+    "long_instructions": "# Sending Text with the Internet Simulator\r\n\r\nNow that you've transmitted information represented as decimal numbers, you can map those numbers to text characters to send text-based information back and forth. With a text-based protocol, you can easily represent and communicate all kinds of information. \r\n\r\nYour teacher will hand out more specific instructions for this activity."
   }
 }]]></config>
   <blocks/>

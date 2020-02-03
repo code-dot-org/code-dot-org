@@ -7,7 +7,8 @@ export default storybook => {
     .addStoryTable([
       {
         name: 'Multiple choice responses for a question',
-        description: 'This table is rendered in the detail view for a particular question.',
+        description:
+          'This table is rendered in the detail view for a particular question.',
         story: () => (
           <MultipleChoiceByQuestionTable
             studentAnswers={[
@@ -17,7 +18,6 @@ export default storybook => {
             ]}
           />
         )
-      },
+      }
     ]);
-
 };

@@ -24,6 +24,9 @@
     %button.button-color-share<
       %i{:class=>"fa fa-download"}<
       Download presentation
+  %a{:href=>'https://code.org/promote/morestats'}
+    %button.button-color-share<
+      More Stats
 .stats-sources-link
   %a{:href=>'https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub'}<
     Source data
@@ -55,15 +58,19 @@
     });
 
     function update_share_buttons() {
-      var pos = $(id + ' .slides').triggerHandler("currentPosition");
-      if(statistics[pos] != null) {
-        var facebook_anchor = $('#stats-section .share-button-facebook').parents('a.window-popup');
-        var new_facebook_href = facebook_anchor.attr('href');
+      // Share buttons are hidden for students younger than 13, so check that
+      // these buttons are in the DOM before trying to set the FB link.
+      if ($('.share_buttons').length) {
+        var pos = $(id + ' .slides').triggerHandler("currentPosition");
+        if(statistics[pos] != null) {
+          var facebook_anchor = $('#stats-section .share-button-facebook').parents('a.window-popup');
+          var new_facebook_href = facebook_anchor.attr('href');
 
-        if(statistics[pos].share_url_s != null) {
-          new_facebook_href = new_facebook_href.replace(/u=[^&]*/i, 'u=' + encodeURIComponent(statistics[pos].share_url_s));
+          if(statistics[pos].share_url_s != null) {
+            new_facebook_href = new_facebook_href.replace(/u=[^&]*/i, 'u=' + encodeURIComponent(statistics[pos].share_url_s));
+          }
+          facebook_anchor.attr('href', new_facebook_href);
         }
-        facebook_anchor.attr('href', new_facebook_href);
       }
     }
   });

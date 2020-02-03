@@ -1,3 +1,4 @@
+@single_session
 Feature: Step Mode
 
 Scenario: Step Only - Failure
@@ -10,7 +11,8 @@ Scenario: Step Only - Failure
 
   When I drag block "1" to block "5"
     And I press "stepButton"
-    And I wait until "#stepButton" is enabled
+    And I wait for 1 second
+    And I wait until "#stepButton" is not disabled
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is not disabled
@@ -43,9 +45,11 @@ Scenario: Step Only - Success
   When I drag block "1" to block "4"
     And I drag block "1" to block "5"
     And I press "stepButton"
-      And I wait until "#stepButton" is enabled
+      And I wait for 1 second
+      And I wait until "#stepButton" is not disabled
     And I press "stepButton"
-      And I wait until "#stepButton" is enabled
+      And I wait for 1 second
+      And I wait until "#stepButton" is not disabled
     And I press "stepButton"
     And I wait to see "#x-close"
   Then element ".congrats" has text "Congratulations! You completed Puzzle 1."
@@ -60,7 +64,8 @@ Scenario: Step Only - Reset while stepping
 
   When I drag block "1" to block "5"
     And I press "stepButton"
-    And I wait until "#stepButton" is enabled
+    And I wait for 1 second
+    And I wait until "#stepButton" is not disabled
   Then element "#runButton" is hidden
     And element "#resetButton" is visible
     And element "#stepButton" is visible
@@ -82,7 +87,8 @@ Scenario: Step and Run - Stepping
 
   When I drag block "1" to block "5"
     And I press "stepButton"
-    And I wait until "#stepButton" is enabled
+    And I wait for 1 second
+    And I wait until "#stepButton" is not disabled
   Then block "5" has class "blocklySelected"
     And block "6" doesn't have class "blocklySelected"
     And element "#runButton" is hidden

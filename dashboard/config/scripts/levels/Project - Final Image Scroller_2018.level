@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:04:24.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -138,7 +134,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key event functionality to your app! As you are doing so, keep an eye out for places where you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how key events work, you can always go back to the example from earlier in this lesson.  You will need to add `if` statements to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n* Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
+    "long_instructions": "# Final Image Scroller\r\n\r\nYou're now ready to add key event functionality to your app! As you are doing so, keep an eye out for places where you need to **refactor** old code in order to prevent redundancy. **Create functions** that carry out repeated tasks and make other changes to keep your code **readable and consistent**. \r\n\r\nIf you want a reminder of how key events work, you can always go back to the example from earlier in this lesson.  You will need to add `if` statements to check for which keys were pressed, just as before.\r\n\r\n# Do This:\r\n\r\n* Add the ability to respond to **key events** to your app.\r\n\r\n* **Refactor your old code** to remove redundant portions.\r\n\r\n* Keeping adding to your program. What other features do you want to include?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -169,19 +165,23 @@
     "debugger_disabled": "false",
     "slider_speed": "1.0",
     "project_template_level_name": "U3 - Arrays - favThings template_2018",
-    "instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
+    "short_instructions": "Update the image scroller to respond to buttons and key presses. (Click to see full instructions)",
     "encrypted_examples": "nU5ZBmISYMCtPZSntFE3cPjHKyjK41u/d5qa1SokNjTovI79y2G6xkcT5Ub/\n5Uwr\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
     "parent_level_id": 6920,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:04:24.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true,
   "notes": ""
 }]]></config>

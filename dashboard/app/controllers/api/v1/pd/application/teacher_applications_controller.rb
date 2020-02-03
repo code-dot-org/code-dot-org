@@ -3,7 +3,7 @@ module Api::V1::Pd::Application
     include Pd::Application::ApplicationConstants
     include Pd::Application::ActiveApplicationModels
 
-    authorize_resource :teacher_application, class: 'Pd::Application::Teacher1819Application'
+    load_and_authorize_resource class: TEACHER_APPLICATION_CLASS.name, instance_name: 'application'
 
     def new_form
       @application = TEACHER_APPLICATION_CLASS.new(
@@ -11,18 +11,23 @@ module Api::V1::Pd::Application
       )
     end
 
-    def resend_principal_approval
-      PRINCIPAL_APPROVAL_APPLICATION_CLASS.create_placeholder_and_send_mail(
-        TEACHER_APPLICATION_CLASS.find(params[:id])
-      )
+    def send_principal_approval
+      if @application.allow_sending_principal_email?
+        @application.queue_email :principal_approval, deliver_now: true
+      end
+      render json: {principal_approval: @application.principal_approval_state}
+    end
+
+    def principal_approval_not_required
+      @application.update!(principal_approval_not_required: true)
+      render json: {principal_approval: @application.principal_approval_state}
     end
 
     protected
 
     def on_successful_create
-      @application.update_user_school_info!
-
-      TEACHER_APPLICATION_MAILER_CLASS.confirmation(@application).deliver_now
+      @application.on_successful_create
+      @application.update_status_timestamp_change_log(current_user)
     end
   end
 end

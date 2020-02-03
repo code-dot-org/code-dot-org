@@ -1,3 +1,8 @@
+#TODO: Wrap numeric keys in quotes & rectify translations on Crowdin.
+#Why? Well...
+#1) Numeric keys in Yaml are loaded as Fixnums, not strings.
+#2) Rails' i18n can only look up string or symbol keys.
+#3) Crowdin proofreaders are translating filepaths, despite being hidden.
 lv:
   slides:
     maze_intro:
@@ -257,6 +262,10 @@ lv:
         text: "Ja vēlamies, lai tēls kaut ko nemitīgi atkārto bez spēlētāja iejaukšanās, šo darbību blokus ievietosim iekš \"atkārtot nepārtraukti\" bloka."
       3:
         text: "Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā ietaupīsi daudz laika, kad veidosi savu spēli."
+    C1_artist_intro:
+      1:
+      2:
+        text: "Tie ir lēkšanas bloki. Kad tos lieto, mākslinieks kustās, bet nezīmē, tāpēc izmanto tos, lai lēktu uz nākamo pelēko līniju."
     C2_playlab_createstory:
       1:
         text: "Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu katru reizi, kad to palaiž. Nu tu varēsi veidot interaktīvas spēles, kuras tiešām var spēlēt."
@@ -267,3 +276,13 @@ lv:
         text: "Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu katru reizi, kad to palaiž. Nu tu varēsi veidot interaktīvas spēles, kuras tiešām var spēlēt."
       2:
         text: "Ir pieejams \"kad bultiņa\" bloks un \"pārvietot tēlu\" bloks. Savienojot šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām."
+    hoc_dance_events_2019:
+      1:
+      2:
+      3:
+      4:
+        text: "Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu vai pieskārienu ekrānam."
+      5:
+      6:
+      7:
+      8:

@@ -33,7 +33,7 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "instructions": "Let's draw an equilateral triangle that is exactly 50 pixels long on each side.",
+    "short_instructions": "Let's draw an equilateral triangle that is exactly 50 pixels long on each side.",
     "contained_level_names": null
   },
   "published": true,

@@ -1,5 +1,6 @@
-import React, { PropTypes, Component } from 'react';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 
 const styles = {
   box: {
@@ -7,10 +8,19 @@ const styles = {
     width: 20,
     borderWidth: 1,
     borderStyle: 'solid',
-    boxSizing: 'content-box',
+    boxSizing: 'content-box'
   },
   filler: {
-    width: 20
+    width: 20,
+    position: 'absolute'
+  },
+  lessonNumber: {
+    position: 'absolute',
+    zIndex: 2,
+    paddingTop: 2,
+    textAlign: 'center',
+    width: 20,
+    fontFamily: '"Gotham 4r", sans-serif'
   }
 };
 
@@ -20,19 +30,39 @@ export default class ProgressBox extends Component {
     incomplete: PropTypes.number,
     imperfect: PropTypes.number,
     perfect: PropTypes.number,
+    style: PropTypes.object,
+    stageIsAllAssessment: PropTypes.bool,
+    lessonNumber: PropTypes.number
   };
 
   render() {
-    const {started, incomplete, imperfect, perfect} = this.props;
+    const {
+      started,
+      incomplete,
+      imperfect,
+      perfect,
+      stageIsAllAssessment
+    } = this.props;
 
     const boxWithBorderStyle = {
       ...styles.box,
-      borderColor: started ? color.level_perfect : color.light_gray
+      borderColor: started
+        ? stageIsAllAssessment
+          ? color.level_submitted
+          : color.level_perfect
+        : color.light_gray,
+      ...this.props.style
     };
 
     const perfectLevels = {
       ...styles.filler,
       backgroundColor: color.level_perfect,
+      height: perfect
+    };
+
+    const assessmentLevels = {
+      ...styles.filler,
+      backgroundColor: color.level_submitted,
       height: perfect
     };
 
@@ -48,11 +78,21 @@ export default class ProgressBox extends Component {
       height: imperfect
     };
 
+    const lessonNumberStyle = {
+      ...styles.lessonNumber,
+      color: perfect ? color.white : color.charcoal
+    };
     return (
       <div style={boxWithBorderStyle}>
-        <div style={incompleteLevels}/>
-        <div style={imperfectLevels}/>
-        <div className={"uitest-perfect-bar"} style={perfectLevels}/>
+        {this.props.lessonNumber && (
+          <div style={lessonNumberStyle}>{this.props.lessonNumber}</div>
+        )}
+        <div style={incompleteLevels} />
+        <div style={imperfectLevels} />
+        <div
+          className={'uitest-perfect-bar'}
+          style={stageIsAllAssessment ? assessmentLevels : perfectLevels}
+        />
       </div>
     );
   }

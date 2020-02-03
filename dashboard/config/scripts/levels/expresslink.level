@@ -8,7 +8,7 @@
     "link_title": "Express Course",
     "url": "https://studio.code.org/s/express",
     "instructions_important": "false",
-    "markdown_instructions": "<a href=\"https://studio.code.org/s/express\"><img src=\"https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01 AM.png\"/><img src=\"https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48 AM.png\"/></a>",
+    "long_instructions": "<a href=\"https://studio.code.org/s/express\"><img src=\"https://images.code.org/32b135ea9a16684b30f89ffe0f6606b1-image-1507039514762.05.01 AM.png\"/><img src=\"https://images.code.org/cfea3adf1aec120e23e039ed06856f6f-image-1507039555039.05.48 AM.png\"/></a>",
     "display_name": "Express Course"
   },
   "published": true,

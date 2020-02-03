@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Finishing Touches and Testing\r\n\r\nAt this point you should have most of your program in place. Now you need to add whatever finishing touches are needed and do a little testing. When your app is ready, have your classmates try it out. See if you can find any bugs, confusing design choices, or missing features you'd like to work on.\r\n\r\nOnce you're all done with this version of your program, click Submit to turn it in.",
+    "long_instructions": "# Finishing Touches and Testing\r\n\r\nAt this point you should have most of your program in place. Now you need to add whatever finishing touches are needed and do a little testing. When your app is ready, have your classmates try it out. See if you can find any bugs, confusing design choices, or missing features you'd like to work on.\r\n\r\nOnce you're all done with this version of your program, click Submit to turn it in.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

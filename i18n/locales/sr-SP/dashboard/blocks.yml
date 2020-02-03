@@ -1,3 +1,4 @@
+---
 sr:
   data:
     blocks:
@@ -7,17 +8,11 @@ sr:
             '"seconds"': секунде
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '"next"': Следећи
-            '"prev"': Претходни
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '"next"': Следећи
-            '"prev"': Претходни
           DIR:
             '1': "→"
             "-1": "←"
@@ -26,19 +21,18 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '"next"': Следећи
-            '"prev"': Претходни
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '"next"': Следећи
-            '"prev"': Претходни
           DIR:
             '1': "→"
             "-1": "←"
@@ -51,20 +45,83 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_getTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
+      Dancelab_ifTime:
+        options:
+          UNIT:
+            '"seconds"': секунде
       Dancelab_jumpTo:
         options:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
-      Dancelab_makeNewDanceSprite:
+      Dancelab_jumpToEach:
         options:
           LOCATION:
             "{x: 100, y: 200}": лево
             "{x: 300, y: 200}": десно
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": насумичан
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': дијамант
+            '"random"': насумичан
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': патка
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"DUCK"': патка
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": насумичан
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"diamond"': дијамант
+            '"random"': насумичан
       Dancelab_randomColor:
         text: насумична боја
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -77,7 +134,27 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"scale"': величина
@@ -87,39 +164,50 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': величина
+            '"height"': висина
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': дијамант
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': горе
-            '"down"': доле
             '"left"': лево
+            '"down"': доле
             '"right"': десно
             '"space"': Простор
-      Dancelab_whileKey:
+            '"x"': x
+      gamelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': када
+            '"while"': док је
           KEY:
             '"up"': горе
             '"down"': доле
             '"left"': лево
             '"right"': десно
             '"space"': Простор
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'тачно'
-            'false': 'нетачно'
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': величина
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": насумичан
+            '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -129,10 +217,15 @@ sr:
         text: насумична боја
       gamelab_randomColor:
         text: насумична боја
-      gamelab_setPosition:
+      gamelab_setBackgroundImage:
         options:
-          POSITION:
-            '"random"': насумичан
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': Пећина
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Град
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': Пустиња
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': Дуга
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Под водом
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Зима
       gamelab_setProp:
         options:
           PROPERTY:
@@ -142,14 +235,11 @@ sr:
           PROPERTY:
             '"scale"': величина
             '"height"': висина
-      gamelab_spritesWhere:
+      gamelab_spriteClicked:
         options:
-          PROPERTY:
-            '"scale"': величина
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': величина
+          CONDITION:
+            '"when"': када
+            '"while"': док је
       gamelab_turn:
         options:
           DIRECTION:
@@ -163,13 +253,6 @@ sr:
             '"left"': лево
             '"right"': десно
             '"space"': Простор
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": горе
-            "'down'": доле
-            "'left'": лево
-            "'right'": десно
       gamelab_whileKey:
         options:
           KEY:
@@ -182,12 +265,36 @@ sr:
         options:
           PROPERTY:
             '"scale"': величина
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
       Mikelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': величина
+      Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': величина
       Mikelab_randomColor:
         text: насумична боја
+      Mikelab_repeatUntilComplete:
+        text: понављај заувек
       Mikelab_setBG:
         options:
           BG:
@@ -201,6 +308,11 @@ sr:
           CORNER:
             '"right"': десно
             '"left"': лево
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": лево
+            "{x: 300, y: 200}": десно
       Mikelab_whenKeyPressed:
         options:
           KEY:
@@ -226,6 +338,44 @@ sr:
             '"down"': стрелица доле
             '"left"': стрелица лево
             '"right"': стрелица десно
+      RyanLab_moveForward:
+        text: помери се напред
+      RyanLab_turnLeft:
+        text: окрени се лево
+      RyanLab_turnRight:
+        text: окрени се десно
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
+        options:
+          OPTION:
+            '"show"': прикажи
+            '"hide"': сакриј
+      binary_move:
+        options:
+          DIR:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': горе
+            '"down"': доле
+            '"left"': лево
+            '"right"': десно
+            '"space"': Простор
       craft_ifPath:
         options:
           DIR:
@@ -235,6 +385,10 @@ sr:
           TYPE:
             "'sand'": песак
             "'planksOak'": храстова даска
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": песак
       craft_moveForward:
         text: помери се напред
       craft_placeTorch:

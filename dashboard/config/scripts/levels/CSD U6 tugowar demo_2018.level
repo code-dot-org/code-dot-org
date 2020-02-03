@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
+    "long_instructions": "# Grab that Bug!\r\n\r\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "var score = 0;\r\nvar starting_position = getProperty(\"bug\", \"x\");\r\n\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  score = score - 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score < -100) {\r\n    setProperty(\"winner\", \"text\", \"Player 1\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(900, 1000);\r\n  }\r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  score = score + 10;\r\n  setProperty(\"bug\", \"x\", starting_position + score);\r\n  if (score > 100) {\r\n    setProperty(\"winner\", \"text\", \"Player 2\");\r\n    setScreen(\"win_screen\");\r\n    buzzer.frequency(200, 1000);\r\n  }\r\n});",
@@ -228,11 +228,17 @@
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 10386,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": "4jIwRzckEKvKg8eTWIVtDURXUFh/62KPQ2QcCvMhJVv0ptGVIqPS7Nv/wzJw\nJbuPtU2s/ZXavVL3Wz4KiX6TFQ==\n",
+    "mini_rubric": "false",
+    "text_mode_at_start": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-24 19:53:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-24 19:56:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 22:48:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-04-04 18:31:40 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-24 19:53:29 +0000\",\"changed\":[\"notes\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-24 19:56:33 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-11-01 22:48:50 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"display_name\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-04-04 18:31:40 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-02 21:15:27 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>

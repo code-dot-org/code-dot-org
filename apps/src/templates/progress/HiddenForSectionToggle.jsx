@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Button from '../Button';
 import i18n from '@cdo/locale';
 
@@ -10,7 +11,7 @@ const styles = {
     marginRight: 15
   },
   disabled: {
-    opacity: 0.5,
+    opacity: 0.5
   },
   button: {
     display: 'inline-block',
@@ -21,12 +22,12 @@ const styles = {
   },
   leftButton: {
     borderTopRightRadius: 0,
-    borderBottomRightRadius: 0,
+    borderBottomRightRadius: 0
   },
   rightButton: {
     borderTopLeftRadius: 0,
-    borderBottomLeftRadius: 0,
-  },
+    borderBottomLeftRadius: 0
+  }
 };
 
 /**
@@ -41,12 +42,12 @@ export default class HiddenForSectionToggle extends React.Component {
   };
 
   render() {
-    const { hidden, disabled, onChange } = this.props;
+    const {hidden, disabled, onChange} = this.props;
     return (
       <div
         style={{
           ...styles.main,
-          ...(disabled && styles.disabled),
+          ...(disabled && styles.disabled)
         }}
         className="uitest-togglehidden"
       >

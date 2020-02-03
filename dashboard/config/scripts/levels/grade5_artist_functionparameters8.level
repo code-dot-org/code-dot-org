@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "The triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.  Use the `multiplication` block to make this all happen with just one function call. Be sure to jump 100 pixels between polygons.",
+    "short_instructions": "The triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.  Use the `multiplication` block to make this all happen with just one function call. Be sure to jump 100 pixels between polygons.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use the function from the last puzzle to draw this series of shapes.  \r\n\r\n\r\nThe triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.   \r\nUse the `multiplication`block to make this all happen with just one function call.\r\n<hr/>\r\nBe sure to jump 100 pixels between polygons. <br>\r\nThe multipication block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r\n\r\n",
+    "long_instructions": "Use the function from the last puzzle to draw this series of shapes.  \r\n\r\n\r\nThe triangle has 21 pixel sides, and the sides in each following shape are 7 pixels longer than the last.   \r\nUse the `multiplication`block to make this all happen with just one function call.\r\n<hr/>\r\nBe sure to jump 100 pixels between polygons. <br>\r\nThe multipication block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r\n\r\n",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The length of sides for each shape is 7 times the number of sides it has.\",\"hint_id\":\"NEW_Course_4_Artist_Params_13_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9aa06898d49c6a6faa2752e93958b98/grade5_artist_functionparameters8.mp3\"}]",

@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Welcome to App Lab! Right now you're in **Design Mode** where you can personalize the look of your app. Get your adventure started by picking a fun title!\r\n\r\n1. Click the title of your app. ([Show me where](#triggercallout=titleCallout))\r\n2. Change the \"text\" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\r\n3. Scroll down the menu to change the color of your title ([Show me where](#triggercallout=changeTextColor))\r\n\r\nOnce you like the look of your title hit \"Run\" once to make sure it's looking good. Then hit \"Finish\" to move on!\r\n\r\n![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif) Click here to see all three steps in a GIF",
+    "long_instructions": "Welcome to App Lab! Right now you're in **Design Mode** where you can personalize the look of your app. Get your adventure started by picking a fun title!\r\n\r\n1. Click the title of your app. ([Show me where](#triggercallout=titleCallout))\r\n2. Change the \"text\" to pick whatever name you like! ([Show me where](#triggercallout=designMenu))\r\n3. Scroll down the menu to change the color of your title ([Show me where](#triggercallout=changeTextColor))\r\n\r\nOnce you like the look of your title hit \"Run\" once to make sure it's looking good. Then hit \"Finish\" to move on!\r\n\r\n![expandable](https://images.code.org/47c8fc2986226beaa39e382bc0759797-image-1505765264098.com-gif-maker.gif) Click here to see all three steps in a GIF",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

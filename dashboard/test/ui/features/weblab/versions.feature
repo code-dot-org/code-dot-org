@@ -1,7 +1,6 @@
 # Brad investigating (2018-04-25)
 @skip
 @no_circle
-@dashboard_db_access
 @as_student
 Feature: Weblab Versions
 
@@ -25,11 +24,11 @@ Scenario: Weblab Versions
   And I wait until element "#submitButton" is visible
 
   # Restore to the previous version
-  Then I click selector "#versions-header"
+  Then I press "versions-header"
   And I wait to see a dialog titled "Version History"
   And I close the dialog
   And I wait for 3 seconds
-  Then I click selector "#versions-header"
+  Then I press "versions-header"
   And I wait until element "button:contains(Restore this Version):eq(0)" is visible
   And element "button.version-preview" is visible
   And I click selector "button:contains(Restore this Version):eq(0)"
@@ -42,7 +41,7 @@ Scenario: Weblab Versions
   # And I wait until element ".jstree-brackets li:nth-child(2)" contains text "new-1"
 
   # Instead, we simply verify that there are now 2 earlier versions that can be restored
-  Then I click selector "#versions-header"
+  Then I press "versions-header"
   And I wait to see a dialog titled "Version History"
   And I wait until element "button:contains(Restore this Version):eq(1)" is visible
   And I close the dialog

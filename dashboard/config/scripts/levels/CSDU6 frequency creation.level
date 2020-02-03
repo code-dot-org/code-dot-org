@@ -23,7 +23,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Making the Buzzer Buzz\r\n\r\nNow that you can use the buzzer's frequency, try to make the buzzer play a high sound when the same button pops back up.\r\n\r\n# Do this\r\n* Add another onBoardEvent block so the buzzer plays a high sound when the left button comes back **up**",
+    "long_instructions": "# Making the Buzzer Buzz\r\n\r\nNow that you can use the buzzer's frequency, try to make the buzzer play a high sound when the same button pops back up.\r\n\r\n# Do this\r\n* Add another onBoardEvent block so the buzzer plays a high sound when the left button comes back **up**",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

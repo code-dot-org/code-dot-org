@@ -1,200 +1,235 @@
 ---
-ca:
+ca-ES:
   data:
     authored_hints:
-      courseA_maze_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+      2-3 Artist 7:
+        2-3_Artist_7_a: La millor manera de resoldre aquest nivell és dibuixant el
+          primer quadre deixant el personatge mirant cap avall abans de començar el
+          segon quadre.
+      CourseD_Dance_Party_01:
+        validation: |-
+          **Com passo aquest nivell?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp2a_2018_authored_hint:
-        '1': Snap both `East` blocks to the bottom of the `when run` block.
-      courseA_maze_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          _Aquest nivell acaba després de quatre mesures._
+        challenges: |-
+          **Reptes opcionals**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
+      CourseD_Dance_Party_02:
+        validation: |-
+          **Com passo aquest nivell?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseA_maze_seq5_2018_authored_hint:
-        '1': Try writing down the steps on paper to find a solution!
-        '2': |-
-          You will need to use this block:
+          _Aquest nivell acaba després de 8 mesures._
+      CourseD_Dance_Party_03:
+        validation: |-
+          **Com passo aquest nivell?**
 
-          <xml><block type="maze_moveSouth"/></xml>
-      courseA_maze_seq5a_2018_authored_hint:
-        '1': Say the steps out loud and see if it helps you figure out the answer.
-      courseB_Scrat_ramp1_2018_authored_hint:
-        '1': If Scrat isn't doing what you want, make sure both of the blocks have
-          been fully clicked together, then click "Run" again.
-        '2': Don't be afraid to make a mistake! Try something, and if it doesn't work,
-          try something else!
-      courseB_Scrat_ramp2_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3a_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          _Aquest nivell acaba després de 12 mesures._
+      CourseD_Dance_Party_04:
+        validation: |-
+          **Com passo aquest nivell?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveNorth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp3b_2018_authored_hint:
-        '1': |
-          Your code should look like this:
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveSouth">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp4a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          _Aquest nivell acaba després de 10 mesures._
+        challenges: |-
+          **Repte opcional**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveEast">
-          <next>
-          <block type="maze_moveSouth"/>
-          </next>
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseB_Scrat_ramp5a_2018_authored_hint:
-        '1': |-
-          Your code should look like this:
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      CourseD_Dance_Party_06:
+        validation: |-
+          **Com passo aquest nivell?**
 
-          <xml>
-          <block type="when_run" deletable="false" movable="false">
-          <next>
-          <block type="maze_moveWest">
-          <next>
-          <block type="maze_moveWest">
-          </block>
-          </next>
-          </block>
-          </next>
-          </block>
-          </xml>
-      courseD_artist_5_2018_authored_hint:
-        '1': If you are switching your shapes, don't forget that you will need to
-          switch their angles, too!
+          -   Has de tenir com a mínim dos dansaires.
+
+          _Aquest nivell acaba després de 6 mesures._
+        challenges: |-
+          **Repte opcional**
+
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      CourseD_Dance_Party_08:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          _Aquest nivell acaba després de 6 mesures._
+        challenges: |-
+          **Repte opcional**
+
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      CourseD_Dance_Party_09:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Canvia la tinta de, com a mínim, un dansaire.
+
+          _Aquest nivell acaba després de 8 mesures._
+      CourseD_Dance_Party_10:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Les propietats de dos o més ballarins han de canviar.
+
+          _Aquest nivell acaba després de 8 mesures._
+      CourseD_Dance_Party_11:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Sigues creatiu!
+
+          _Aquest nivell acaba després de 8 mesures._
+      CourseD_Dance_Party_11_5:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Sigues creatiu!
+
+          _Aquest nivell acaba després de 8 mesures._
+      CourseD_Dance_Party_11b:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+
+          _Aquest nivell acaba després de 8 mesures._
+      CourseE_HOC 2018 Level_10:
+        voyage_aquatic_10a: Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Com es pot fer servir un condicional amb ells per passar a través del Monument
+          de l'Oceà?
+      CourseE_HOC 2018 Level_9b:
+        voyage_aquatic_9a: Quin escull de corall més preciós! El corall blau està
+          bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!
+      Dance_2019_01:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
+      Dance_2019_04:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_2019_05:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          _Aquest nivell acaba després de 12 mesures._
+      Dance_Party_01:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Assegura-te'n que el ballarí aparegui a la pantalla.
+
+          _Aquest nivell acaba després de quatre mesures._
+        challenges: |-
+          **Reptes opcionals**
+
+          -   Escull una cançó diferent per reproduir.
+          -   Escull-ne un de diferent que sembli un ant!
+          -   Torna a posar-li nom al dansaire.
+      Dance_Party_02:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   El ballarí ha de canviar a un nou moviment després de 4 mesures.
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_Party_03:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Després de 6 mesures, el teu ballarí necessita estar fent una dansa diferent a la que feia 4 mesures abans.
+
+          _Aquest nivell acaba després de 12 mesures._
+      Dance_Party_04:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Cal que facis el canvi d'efecte de fons en algun moment de la setena mesura de la cançó.
+
+          _Aquest nivell acaba després de 10 mesures._
+        challenges: |-
+          **Repte opcional**
+
+          Canvia l'efecte de fons en diferents punts mentre dura la cançó tot connectant el nou bloc sota els esdeveniments de <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"mesures"</title></block></xml>.
+      Dance_Party_06:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Has de tenir com a mínim dos dansaires.
+
+          _Aquest nivell acaba després de 6 mesures._
+        challenges: |-
+          **Repte opcional**
+
+          -   Afegeix un tercer dansaire (o tants com vulguis!)
+          -   Fés que tots els teus ballarins realitzin diferents moviments a diferents punts de la cançó.
+      Dance_Party_08:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Els dos ballarins necessiten tenir una mida diferent de 100.
+
+          _Aquest nivell acaba després de 6 mesures._
+        challenges: |-
+          **Repte opcional**
+
+          -   Experimenta tot canviant d'altres propietats (amplada, alçada, rotació, etc.)
+      Dance_Party_09:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Canvia la tinta de, com a mínim, un dansaire.
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_Party_10:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Les propietats de dos o més ballarins han de canviar.
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_Party_11:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Sigues creatiu!
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_Party_11_5:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Sigues creatiu!
+
+          _Aquest nivell acaba després de 8 mesures._
+      Dance_Party_11b:
+        validation: |-
+          **Com passo aquest nivell?**
+
+          -   Emprar el bloc `quan prems la fletxa esquerra` per fer que el robot faci un moviment de dansa quan el prems.
+
+          _Aquest nivell acaba després de 8 mesures._
+      HOC 2018 Level_10:
+        voyage_aquatic_10a: Mira les **Llanternes de la mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+          Com es pot fer servir un condicional amb ells per passar a través del Monument
+          de l'Oceà?
+      HOC 2018 Level_9b:
+        voyage_aquatic_9a: Quin escull de corall més preciós! El corall blau està
+          bé si és a la **dreta**, i assegura-te'n que el corall vermell queda a l'**esquerra**!

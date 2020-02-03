@@ -1,7 +1,8 @@
 /** @file Non-editable integer field that checks its value against an expected
  *        value and communicates a correct match or a failure. */
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 import IntegerField from './IntegerField';
 
 const UNKNOWN = 0;
@@ -25,19 +26,19 @@ const FIELD_STYLES = {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black,
+    borderColor: color.black
   },
   [INCORRECT]: {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black,
+    borderColor: color.black
   },
   [CORRECT]: {
     color: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.black,
+    borderColor: color.black
   }
 };
 
@@ -58,10 +59,10 @@ export default function ValidatorField(props) {
           color={FIELD_COLORS[status]}
           style={FIELD_STYLES[status]}
         />
-      </span>
-      {' '}
+      </span>{' '}
       <span style={TEXT_STYLES[status]}>{STATUS_TEXT[status]}</span>
-    </span>);
+    </span>
+  );
 }
 ValidatorField.propTypes = {
   className: PropTypes.string,

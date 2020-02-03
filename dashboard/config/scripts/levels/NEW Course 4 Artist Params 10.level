@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Create a `draw a hexagon` function block with a length parameter. This hexagon has sides that are 100 pixels in length. ",
+    "short_instructions": "Create a `draw a hexagon` function block with a length parameter. This hexagon has sides that are 100 pixels in length. ",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -23,7 +23,7 @@
     "y": "275",
     "callout_json": "[\r\n  {\"localization_key\":\"create_function\",\"callout_text\":\"Click here to open the \\\"Functions\\\" flyout, then click the \\\"Create a Function\\\" button.\",\"element_id\":\".blocklyTreeLabel:contains(Functions)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "ideal": "12",
-    "markdown_instructions": "Create a `draw a hexagon` function block with a length parameter. \r\n\r\nThis hexagon has sides that are 100 pixels in length.",
+    "long_instructions": "Create a `draw a hexagon` function block with a length parameter. \r\n\r\nThis hexagon has sides that are 100 pixels in length.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

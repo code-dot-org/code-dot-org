@@ -1,29 +1,28 @@
 ---
-title: <%= hoc_s(:title_press_release) %>
-layout: wide
-nav: promote_nav
+title: Versión de prensa de la hora del código para funcionarios electos
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Muestra del comunicado a la prensa para los funcionarios electos
 
-### Use this sample press release language to help craft your message about participating in the Hour of Code.
+### Utiliza este ejemplo de comunicado de prensa para ayudarte a crear tu texto sobre la participación en la Hora del Código.
 
 * * *
 
-#### For Immediate Release  
+#### Para su publicación inmediata  
 
 
-#### [DATE]  
+#### [FECHA]  
 
 
-#### Contact: [CONTACT INFORMATION]
+#### Contacto: [INFORMACIÓN DE CONTACTO]
 
 <br />
 
-**GOVERNOR/SENATOR/ASSEMBLYMEMBER/REPRESENTATIVE/MAYOR/ COUNCILMEMBER [INSERT NAME] PARTICIPATED IN THE HOUR OF CODE WITH LOCAL STUDENTS** <br />
+EL **GOBERNADOR/SENADOR/MIEMBRO DE LA ASAMBLEA/ALCALDE/CONCEJAL/MIEMBRO DEL CONSEJO [ESCRIBIR NOMBRE] PARTICIPÓ EN LA HORA DEL CÓDIGO CON ESTUDIANTES LOCALES** <br />
 
-Community comes together to raise awareness about importance of computer science education by participating in Computer Science Education Week <br /> <br />
+La comunidad se une para concienciar sobre la importancia de la formación en informática participando en la Semana de la Educación en la Informática <br /> <br />
 
 **DATE** - [**INSERT NAME**] joined the principal and faculty members of [**INSERT NAME OF SCHOOL**], business leaders, and local families today for [**NAME OF EVENT**] and participated in the Hour of Code as part of Computer Science Education Week . [**INSERT NAME**] and community members were among tens of millions of people around the world to take part in the largest learning event in history. <br />
 
@@ -44,4 +43,4 @@ Over 100 million students worldwide have already tried an Hour of Code. Thanks t
 
 For more information about [**EVENT/PROGRAM/ETC**], visit [**INSERT WEBSITE**] or contact [**INSERT CONTACT INFORMATION**]
 
-<%= view :signup_button %>
+{{ signup_button }}

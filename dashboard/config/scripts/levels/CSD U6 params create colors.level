@@ -80,7 +80,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Color Picker\r\n\r\nIn this program, pressing the buttons at the bottom of the screen changes the color of the images and the color LEDs.\r\n\r\n# Do This\r\n* Create a function `chooseColor(color)` that changes each of the images and the color LEDs to the given color.\r\n* Call your function in the event blocks so that all the buttons work.",
+    "long_instructions": "# Color Picker\r\n\r\nIn this program, pressing the buttons at the bottom of the screen changes the color of the images and the color LEDs.\r\n\r\n# Do This\r\n* Create a function `chooseColor(color)` that changes each of the images and the color LEDs to the given color.\r\n* Call your function in the event blocks so that all the buttons work.",
     "instructions_important": "false",
     "start_blocks": "onEvent(\"redButton\", \"click\", function() {\r\n  setProperty(\"star0\", \"icon-color\", \"red\");\r\n  setProperty(\"star1\", \"icon-color\", \"red\");\r\n  setProperty(\"star2\", \"icon-color\", \"red\");\r\n  setProperty(\"star3\", \"icon-color\", \"red\");\r\n  setProperty(\"star4\", \"icon-color\", \"red\");\r\n  setProperty(\"lightbulb\", \"icon-color\", \"red\");\r\n  for (var i=0; i<colorLeds.length; i++) {\r\n    colorLeds[i].color(\"red\");\r\n  }\r\n});\r\nonEvent(\"yellowButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"blueButton\", \"click\", function() {\r\n  \r\n});",
     "is_k1": "false",

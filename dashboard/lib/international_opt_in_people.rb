@@ -5,10 +5,11 @@
 #
 module InternationalOptInPeople
   INTERNATIONAL_OPT_IN_FACILITATORS = [
+    "Centro de Innovación - Mineduc",
     "Eleanor Cheah",
     "Rodrigo Fabrega",
-    "Justin Feller & Beth Zigmont",
     "Weena Naowaprateep",
+    "Beth Zigmont & Hana Zimmerman Karl",
     "My facilitator is not listed"
   ].freeze
 
@@ -17,6 +18,7 @@ module InternationalOptInPeople
     "Cuantrix",
     "Fundacion Kodea",
     "Malaysia Digital Economy Corporation",
+    "Mineduc",
     "Wix.com",
     "My organizer is not listed"
   ].freeze

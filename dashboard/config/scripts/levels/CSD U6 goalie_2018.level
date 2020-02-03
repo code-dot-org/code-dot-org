@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Updating Values with Data\r\n\r\nIn this program the goalie is trying to block the soccer ball, but right now the ball isn't moving.\r\n\r\n\r\n# Do This\r\n\r\n* Use the counter pattern to update the ball's `x` value so that it moves across the screen.",
+    "long_instructions": "# Updating Values with Data\r\n\r\nIn this program the goalie is trying to block the soccer ball, but right now the ball isn't moving.\r\n\r\n\r\n# Do This\r\n\r\n* Use the counter pattern to update the ball's `x` value so that it moves across the screen.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "var pitch;\r\nvar ball_x;\r\nvar player_y;\r\nonBoardEvent(accelerometer, \"data\", function(event) {\r\n  pitch = accelerometer.getOrientation(\"pitch\");\r\n  ball_x = getProperty(\"ball\", \"x\");\r\n  player_y = getProperty(\"player\", \"y\");\r\n  setProperty(\"player\", \"y\", player_y + pitch);\r\n});\r\n",

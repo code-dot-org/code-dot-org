@@ -1,0 +1,12 @@
+name 'dlp19_overview5'
+title 'Deeper Learning Description'
+description 'description here'
+markdown <<MARKDOWN
+# Deeper Learning Program
+
+## What are the requirements, due dates, and compensation?
+All facilitators are required to respond to one set of reflection questions, or a module, per workshop as part of the Facilitator Development Program. Modules are due three weeks before each of your workshops (see table below for details) but may be submitted before your due date. Note that you will have multiple opportunities to resubmit your responses if they do not demonstrate proficiency.  
+
+
+
+MARKDOWN

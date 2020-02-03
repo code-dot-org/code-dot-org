@@ -1,0 +1,17 @@
+name 'csp-u3-exam1-development-process-1_2020'
+height 'auto'
+
+question 'In which of the following stages of the development process is a team MOST likely to interview a potential user of an app?'
+right 'investigating and reflecting'
+wrong 'designing'
+wrong 'prototyping'
+wrong 'testing'
+
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

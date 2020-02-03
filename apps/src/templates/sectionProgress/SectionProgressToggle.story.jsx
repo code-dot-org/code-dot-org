@@ -5,11 +5,13 @@ import {ViewType} from './sectionProgressRedux';
 export default storybook => {
   function isSummaryTrue() {
     return {
-      name:'Summary view toggle on',
+      name: 'Summary view toggle on',
       story: () => (
         <SectionProgressToggle
           currentView={ViewType.SUMMARY}
-          setCurrentView={() => {console.log("Toggle view.");}}
+          setCurrentView={() => {
+            console.log('Toggle view.');
+          }}
         />
       )
     };
@@ -17,11 +19,28 @@ export default storybook => {
 
   function isSummaryFalse() {
     return {
-      name:'Detail view toggle on',
+      name: 'Detail view toggle on',
       story: () => (
         <SectionProgressToggle
           currentView={ViewType.DETAIL}
-          setCurrentView={() => {console.log("Toggle view.");}}
+          setCurrentView={() => {
+            console.log('Toggle view.');
+          }}
+        />
+      )
+    };
+  }
+
+  function isStandardsTrue() {
+    return {
+      name: 'Standards view toggle on',
+      story: () => (
+        <SectionProgressToggle
+          currentView={ViewType.STANDARDS}
+          showStandardsToggle={true}
+          setCurrentView={() => {
+            console.log('Toggle view.');
+          }}
         />
       )
     };
@@ -29,8 +48,5 @@ export default storybook => {
 
   storybook
     .storiesOf('Progress/SectionProgressToggle', module)
-    .addStoryTable([
-      isSummaryTrue(),
-      isSummaryFalse(),
-    ]);
+    .addStoryTable([isSummaryTrue(), isSummaryFalse(), isStandardsTrue()]);
 };

@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen will start out blue. Add code so it turns green when you click the \"Green-ify\" button.\r\n\r\n**How:** Add code inside the `onEvent()` that sets the screen's `\"background-color\"` to `\"green\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen will start out blue. Add code so it turns green when you click the \"Green-ify\" button.\r\n\r\n**How:** Add code inside the `onEvent()` that sets the screen's `\"background-color\"` to `\"green\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

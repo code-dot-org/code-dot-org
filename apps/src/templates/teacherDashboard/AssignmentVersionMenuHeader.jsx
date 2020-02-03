@@ -1,41 +1,41 @@
-import React, { Component } from 'react';
-import PopUpMenu from "../../lib/ui/PopUpMenu";
+import React, {Component} from 'react';
+import PopUpMenu from '../../lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
-import color from "../../util/color";
-import {columnWidths, rowHeight, cellStyle} from "./AssignmentVersionMenuItem";
+import color from '../../util/color';
+import {columnWidths, rowHeight, cellStyle} from './AssignmentVersionMenuItem';
 
 const style = {
   item: {
     backgroundColor: color.charcoal,
     ':hover': {
-      backgroundColor: color.charcoal,
+      backgroundColor: color.charcoal
     },
-    cursor: 'default',
+    cursor: 'default'
   },
   wrapper: {
     fontSize: 16,
     fontWeight: 'bold',
     height: rowHeight,
-    color: 'white',
+    color: 'white'
   },
   selectedColumn: {
     ...cellStyle,
     width: columnWidths.selected,
-    marginLeft: -10,
+    marginLeft: -10
   },
   titleColumn: {
     ...cellStyle,
-    width: columnWidths.title,
+    width: columnWidths.title
   },
   statusColumn: {
     ...cellStyle,
-    width: columnWidths.status,
+    width: columnWidths.status
   },
   languageColumn: {
     ...cellStyle,
     width: columnWidths.language,
-    marginRight: -10,
-  },
+    marginRight: -10
+  }
 };
 
 export default class AssignmentVersionMenuHeader extends Component {
@@ -43,14 +43,10 @@ export default class AssignmentVersionMenuHeader extends Component {
     return (
       <PopUpMenu.Item onClick={() => {}} style={style.item}>
         <div style={style.wrapper}>
-          <span style={style.selectedColumn}/>
-          <span style={style.titleColumn}>
-            {i18n.version()}
-          </span>
-          <span style={style.statusColumn}/>
-          <span style={style.languageColumn}>
-            {i18n.languages()}
-          </span>
+          <span style={style.selectedColumn} />
+          <span style={style.titleColumn}>{i18n.version()}</span>
+          <span style={style.statusColumn} />
+          <span style={style.languageColumn}>{i18n.languages()}</span>
         </div>
       </PopUpMenu.Item>
     );

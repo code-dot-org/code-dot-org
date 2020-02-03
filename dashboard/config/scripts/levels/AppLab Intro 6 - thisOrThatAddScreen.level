@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Create a new screen called `\"rightScreen\"`. Add a short text label to the screen.\r\n\r\n**How:** In Design Mode add a new screen. Change its `\"id\"` to be `\"rightScreen\"`. Then drag a label onto the screen with a short message to your user. You can also duplicate the `\"leftScreen\"` to do this.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Create a new screen called `\"rightScreen\"`. Add a short text label to the screen.\r\n\r\n**How:** In Design Mode add a new screen. Change its `\"id\"` to be `\"rightScreen\"`. Then drag a label onto the screen with a short message to your user. You can also duplicate the `\"leftScreen\"` to do this.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

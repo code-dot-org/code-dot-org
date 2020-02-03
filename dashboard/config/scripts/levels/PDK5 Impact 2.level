@@ -7,7 +7,7 @@
   "properties": {
     "title": "Connections to other Subjects",
     "placeholder": "Your thoughts here",
-    "markdown_instructions": "Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.",
+    "long_instructions": "Does computer science connect to other topics or subjects your students are learning about? Explain why or why not.",
     "skip_dialog": true,
     "skip_sound": true
   },

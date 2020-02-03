@@ -18,16 +18,18 @@ A screen is just a UI element like anything else in Design Mode.  But it has a f
 2. Only one screen can be visible at a time
 3. Only elements that "belong" to a screen will visible when that screen is active.
 4. **Multiple screens, but only one coding workspace**
-  * Even though your *design elements* might be spread across multiple screens, your code does not get broken up like that.
-  * There is only one coding workspace, that will still house all of your code for the app.
+   * Even though your *design elements* might be spread across multiple screens, your code does not get broken up like that.
+   * There is only one coding workspace, that will still house all of your code for the app.
 
 <details><summary>A little bit more about screens...[click to expand]</summary>
-<strong>In reality, screens aren't really "real"**</strong><br>
-<li>A screen is just a convenient way to show and hide certain UI elements</li>
-<li>Every program you write in App Lab could be done <em>without</em> screens by simply being clever about what elements show and hide at any given time</li>
-<li>But programs like that are very difficult and annoying to write.  So the concept of a "screen" makes the UI much easier to design.</li>
-<br><br>
-**If you must know, a screen is just an HTML &lt;div&gt; tag that contains other html elements. To show a screen it is made visible and the other divs are hidden.
+<strong>In reality, screens aren't really "real"*</strong><br>
+
+- A screen is just a convenient way to show and hide certain UI elements
+- Every program you write in App Lab could be done _without_ screens by simply being clever about what elements show and hide at any given time
+- But programs like that are very difficult and annoying to write.  So the concept of a "screen" makes the UI much easier to design.
+
+*If you must know, a screen is just an HTML &lt;div&gt; tag that contains other html elements. To show a screen it is made visible and the other divs are hidden.
+
 </details>
 
 ## How to Make a new Screen

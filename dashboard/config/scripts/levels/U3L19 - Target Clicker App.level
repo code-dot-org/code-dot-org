@@ -133,7 +133,7 @@
     "free_play": "true",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
-    "markdown_instructions": "# The Goal\r\n\r\nWe have seen a couple different versions of this app before. At the end of the design mode lesson we made something very similar to this app. There are a couple new elements in the app now. Study how those new elements work. \r\n\r\n# Do This\r\n* Run the example program\r\n* Investigate: What happens when you **click on the Code.org logo**? \r\n* Investigate: What happens when you **click somewhere else**? \r\n* Investigate: What happens when you hit the **reset button**.   ",
+    "long_instructions": "# The Goal\r\n\r\nWe have seen a couple different versions of this app before. At the end of the design mode lesson we made something very similar to this app. There are a couple new elements in the app now. Study how those new elements work. \r\n\r\n# Do This\r\n* Run the example program\r\n* Investigate: What happens when you **click on the Code.org logo**? \r\n* Investigate: What happens when you **click somewhere else**? \r\n* Investigate: What happens when you hit the **reset button**.   ",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -144,7 +144,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Investigate the new elements of the 'chaser-game'"
+    "short_instructions": "Investigate the new elements of the 'chaser-game'"
   }
 }]]></config>
   <blocks/>

@@ -1,30 +1,29 @@
 ---
-title: <%= hoc_s(:title_proclamation) %>
-layout: wide
-nav: promote_nav
+title: Bilgisayar Bilimleri Haftası ve Kodlama Saati Kararname Örneği
 ---
-<%= view :signup_button %>
 
-# Sample Computer Science Education Week resolution
+{{ signup_button }}
 
-### Below is language for a sample resolution supportive of Computer Science Education Week and its goals that can be used by state and local legislators.
+# Örnek Bilgisayar Bilimi Eğitim haftasi onerisi
+
+### Aşağıda, Bilgisayar Bilimleri Eğitim Haftasını destekleyen bir örnek onerge ve bu programın eyalet ve yerel yasama organları tarafından kullanılabilecek hedefleri bulunmaktadır.
 
 * * *
 
-#### **RESOLUTION**  
+#### **çözüm**  
 
 
-#### Supporting the goals and ideals of "Computer Science Education Week"
+#### "Bilgisayar bilim eğitim haftası" nın hedeflerini ve ideallerini destekleme
 
-Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;
+Madem ki Bilgisayar Bilimleri Egitim Haftasi bilgisayar bilimlerinin toplumumuzu donustrumede oynadigi kritik rolu ve nasil bilgisayar bilimleri yenilige yon verdigini ve ekonomik olanaklar sagladiginin altini ciziyor;
 
-Whereas computing technology is an integral part of modern culture and is transforming how people interact with each other and the world around them;
+Madem ki bilgisayar teknolojileri modern kulturun vazgecilmez bir parcasi ve o, insanlarin nasil birbirileri ile ve etrafindaki dunya ile iletisimini degistiriyor;
 
-Whereas computer science is transforming industry, creating new fields of commerce, driving innovation in all fields of science, and bolstering productivity in established economic sectors;
+Madem ki bilgisayar bilimleri sanayii donusturuyor, yeni ticari alanlar olusturuyor, tum bilim dallarinda yenilige oncu oluyor, ve varolan ekonomik sektorlerde uretkenligi desekliyor;
 
-Whereas the field of computer science underpins the information technology sector of our economy, which is a significant contributor to United States economic output;
+Madem ki bilgisayar bilimleri alani American ekonomik uretimine onemli destek saglayan ekonomimizin bilgi teknolojileri sektorune zemin teskil ediyor;
 
-Whereas the field of computer science is a foundational science for the digital age;
+Madem ki bilgisayar bilimleri alani dijital cag icin bit temel bilimdir;
 
 Whereas the information technology sector is uniquely positioned to help with economic recovery through the research and development of new innovations;
 
@@ -42,11 +41,11 @@ Whereas the field of computer science has significant equity barriers to address
 
 Whereas Grace Murray Hopper, one of the first females in the field of computer science, engineered new programming languages and pioneered standards for computer systems which laid the foundation for many advancements in computer science; and
 
-Whereas the week of <%= campaign_date('start-long') %>, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
+Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's birthday, is designated as ‘Computer Science Education Week’: Now, therefore, be it <br />
 
 Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) supports the designation of Computer Science Education Week (<%= campaign_date('full') %>);
+(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 
@@ -56,4 +55,4 @@ Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
 (5) encourages opportunities, including through existing programs, for females and underrepresented minorities in computer science.
 
-<%= view :signup_button %>
+{{ signup_button }}

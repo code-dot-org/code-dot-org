@@ -51,7 +51,7 @@ var MILLIS_PER_HOUR = MILLIS_PER_MINUTE * MINUTES_PER_HOUR;
  * @param {jQuery} rootDiv
  * @constructor
  */
-var NetSimRouterStatsTable = module.exports = function (rootDiv) {
+var NetSimRouterStatsTable = (module.exports = function(rootDiv) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -138,12 +138,12 @@ var NetSimRouterStatsTable = module.exports = function (rootDiv) {
   this.usedMemory_ = 0;
 
   this.render({});
-};
+});
 
 /**
  * @param {RunLoop} runLoop
  */
-NetSimRouterStatsTable.prototype.attachToRunLoop = function (runLoop) {
+NetSimRouterStatsTable.prototype.attachToRunLoop = function(runLoop) {
   runLoop.render.register(this.render.bind(this));
 };
 
@@ -151,23 +151,25 @@ NetSimRouterStatsTable.prototype.attachToRunLoop = function (runLoop) {
  * Fill the root div with new elements reflecting the current state
  * @param {RunLoop.Clock} clock
  */
-NetSimRouterStatsTable.prototype.render = function (clock) {
+NetSimRouterStatsTable.prototype.render = function(clock) {
   if (!this.needsRender(clock)) {
     return;
   }
 
-  var renderedMarkup = $(markup({
-    uptime: this.getLocalizedUptime(),
-    queuedPackets: this.queuedPackets_,
-    totalPackets: this.totalPackets_,
-    successfulPackets: this.successfulPackets_,
-    totalData: this.totalData_,
-    successfulData: this.successfulData_,
-    bandwidthLimit: this.bandwidthLimit_,
-    dataRate: this.dataRate_,
-    totalMemory: this.totalMemory_,
-    usedMemory: this.usedMemory_
-  }));
+  var renderedMarkup = $(
+    markup({
+      uptime: this.getLocalizedUptime(),
+      queuedPackets: this.queuedPackets_,
+      totalPackets: this.totalPackets_,
+      successfulPackets: this.successfulPackets_,
+      totalData: this.totalData_,
+      successfulData: this.successfulData_,
+      bandwidthLimit: this.bandwidthLimit_,
+      dataRate: this.dataRate_,
+      totalMemory: this.totalMemory_,
+      usedMemory: this.usedMemory_
+    })
+  );
   this.rootDiv_.html(renderedMarkup);
   this.lastRenderTime_ = clock.time;
 };
@@ -176,16 +178,18 @@ NetSimRouterStatsTable.prototype.render = function (clock) {
  * @param {RunLoop.Clock} clock
  * @returns {boolean} whether a render operation is needed.
  */
-NetSimRouterStatsTable.prototype.needsRender = function (clock) {
-  return (!this.lastRenderTime_ ||
-      clock.time - this.lastRenderTime_ > MAX_RENDER_DELAY_MS);
+NetSimRouterStatsTable.prototype.needsRender = function(clock) {
+  return (
+    !this.lastRenderTime_ ||
+    clock.time - this.lastRenderTime_ > MAX_RENDER_DELAY_MS
+  );
 };
 
 /**
  * Mark the router log data dirty, so that it will re-render on the
  * next frame.
  */
-NetSimRouterStatsTable.prototype.setNeedsRender = function () {
+NetSimRouterStatsTable.prototype.setNeedsRender = function() {
   this.lastRenderTime_ = null;
 };
 
@@ -193,7 +197,7 @@ NetSimRouterStatsTable.prototype.setNeedsRender = function () {
  * Get a duration string for the current router uptime.
  * @returns {string}
  */
-NetSimRouterStatsTable.prototype.getLocalizedUptime = function () {
+NetSimRouterStatsTable.prototype.getLocalizedUptime = function() {
   var hoursUptime = 0;
   var minutesUptime = 0;
   var secondsUptime = 0;
@@ -205,9 +209,13 @@ NetSimRouterStatsTable.prototype.getLocalizedUptime = function () {
     millisecondsUptime -= minutesUptime * MILLIS_PER_MINUTE;
     secondsUptime = Math.floor(millisecondsUptime / MILLIS_PER_SECOND);
   }
-  return hoursUptime.toString() +
-      ':' + NetSimUtils.zeroPadLeft(minutesUptime, 2) +
-      ':' + NetSimUtils.zeroPadLeft(secondsUptime, 2);
+  return (
+    hoursUptime.toString() +
+    ':' +
+    NetSimUtils.zeroPadLeft(minutesUptime, 2) +
+    ':' +
+    NetSimUtils.zeroPadLeft(secondsUptime, 2)
+  );
 };
 
 /**
@@ -215,8 +223,8 @@ NetSimRouterStatsTable.prototype.getLocalizedUptime = function () {
  * @returns {number} total data size, in bits, of packets represented by the
  *          given log entries.
  */
-var totalSizeOfPackets = function (logEntries) {
-  return logEntries.reduce(function (prev, cur) {
+var totalSizeOfPackets = function(logEntries) {
+  return logEntries.reduce(function(prev, cur) {
     return prev + cur.binary.length;
   }, 0);
 };
@@ -224,8 +232,8 @@ var totalSizeOfPackets = function (logEntries) {
 /**
  * @param {NetSimLogEntry[]} logData
  */
-NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
-  var successLogs = logData.filter(function (logEntry) {
+NetSimRouterStatsTable.prototype.setRouterLogData = function(logData) {
+  var successLogs = logData.filter(function(logEntry) {
     return logEntry.status === NetSimLogEntry.LogStatus.SUCCESS;
   });
 
@@ -239,19 +247,21 @@ NetSimRouterStatsTable.prototype.setRouterLogData = function (logData) {
 };
 
 /** @param {number} creationTimestampMs */
-NetSimRouterStatsTable.prototype.setRouterCreationTime = function (creationTimestampMs) {
+NetSimRouterStatsTable.prototype.setRouterCreationTime = function(
+  creationTimestampMs
+) {
   this.routerCreationTime_ = creationTimestampMs;
   this.setNeedsRender();
 };
 
 /** @param {number} newBandwidth in bits per second */
-NetSimRouterStatsTable.prototype.setBandwidth = function (newBandwidth) {
+NetSimRouterStatsTable.prototype.setBandwidth = function(newBandwidth) {
   this.bandwidthLimit_ = newBandwidth;
   this.setNeedsRender();
 };
 
 /** @param {number} totalMemoryInBits */
-NetSimRouterStatsTable.prototype.setTotalMemory = function (totalMemoryInBits) {
+NetSimRouterStatsTable.prototype.setTotalMemory = function(totalMemoryInBits) {
   this.totalMemory_ = totalMemoryInBits;
   this.setNeedsRender();
 };
@@ -259,20 +269,21 @@ NetSimRouterStatsTable.prototype.setTotalMemory = function (totalMemoryInBits) {
 /**
  * @param {number} queuedPacketCount
  */
-NetSimRouterStatsTable.prototype.setRouterQueuedPacketCount = function (
-    queuedPacketCount) {
+NetSimRouterStatsTable.prototype.setRouterQueuedPacketCount = function(
+  queuedPacketCount
+) {
   this.queuedPackets_ = queuedPacketCount;
   this.setNeedsRender();
 };
 
 /** @param {number} usedMemoryInBits */
-NetSimRouterStatsTable.prototype.setMemoryInUse = function (usedMemoryInBits) {
+NetSimRouterStatsTable.prototype.setMemoryInUse = function(usedMemoryInBits) {
   this.usedMemory_ = usedMemoryInBits;
   this.setNeedsRender();
 };
 
 /** @param {number} dataRateBitsPerSecond */
-NetSimRouterStatsTable.prototype.setDataRate = function (dataRateBitsPerSecond) {
+NetSimRouterStatsTable.prototype.setDataRate = function(dataRateBitsPerSecond) {
   this.dataRate_ = dataRateBitsPerSecond;
   this.setNeedsRender();
 };

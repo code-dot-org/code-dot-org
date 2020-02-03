@@ -1,15 +1,14 @@
 ---
-title: <%= hoc_s(:title_how_to) %>
-layout: wide
-nav: how_to_nav
+title: Porady
 ---
-<%= view :signup_button %>
 
-# How to teach one Hour of Code with your class
+{{ signup_button }}
 
-### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza](%= codeorg_url('/volunteer/local') %) do wsparcia Cię w przeprowadzeniu Godziny Kodowania w Twojej klasie.
+# Jak przeprowadzić Godzinę Kodowania ze swoją klasą
 
-### Take a look at our [participation guide if you still have questions](%= localized_file('/files/participation-guide.pdf') %).
+### Przyłącz się do tej inicjatywy i pomóż grupie uczniów, by rozpoczęli swoją pierwszą godzinę informatyki postępując następująco. Godzina Kodowania jest łatwa do wykonania - nawet dla początkujących! Jeśli szukasz dodatkowych rąk do pomocy, znajdź [lokalnego wolontariusza]({{ urls/volunteer_local }}), aby pomógł przeprowadzić Ci Godzinę Kodowania w Twojej klasie.
+
+### Zobacz nasz [przewodnik uczestnictwa, jeśli nadal masz pytania]({{ localized_files/participation_guide }}).
 
 * * *
 
@@ -17,11 +16,11 @@ nav: how_to_nav
 
 ## 2. Wybierz samouczek dla Waszej Godziny Kodowania
 
-We provide a variety of fun, [student-guided tutorials](%= resolve_url('/learn') %) for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. [![](/images/fit-700/tutorials.png)](%=resolve_url('/learn') %)
+Oferujemy wiele zabawy, [ samouczki dla uczniów ]({{ urls/learn }}) dla wszystkich grup wiekowych i poziomów zaawansowania. Uczniowie pracują samodzielnie, chociaż wielu aktywnościom towarzyszą plany lekcji dla nauczycieli (zobaczysz link, po kliknięciu na aktywność), do poprowadzenia dyskusji lub poszerzenia aktywności. [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3. Promuj swoją Godzinę Kodowania
 
-Promote your Hour of Code [with these tools](%= resolve_url('/promote/resources') %) and encourage others to host their own events.
+Promuj swoją Godzinę Kodowania [przy pomocy tych narzędzi]({{ urls/promote_resources }}) i zachęć innych do organizowania ich własnych wydarzeń.
 
 ## 4. Zaplanuj potrzebny sprzęt - komputery nie są niezbędne
 
@@ -31,41 +30,41 @@ Przetestuj samouczki na komputerach lub innych urządzeniach uczniów, aby upewn
 
 Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samouczek, który wybrałeś, działa najlepiej z dźwiękiem.
 
-**Czy nie masz wystarczająco urządzeń?** Wykorzystaj [programowanie parami](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie dobierają się w pary, to pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
+**Czy nie masz wystarczająco urządzeń?** Wykorzystaj [programowanie w parach](https://www.youtube.com/watch?v=vgkahOzFH2Q). Gdy uczniowie dobierają się w pary, to pomagają sobie nawzajem i mniej potrzebują pomocy nauczyciela. Zobaczą także, że praca z komputerem jest działalnością zespołową i uspołeczniającą.
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
 ## 5. Rozpocznij swoją Godzinę Kodowania od obejrzenia inspirującego filmu
 
-**Invite a [local volunteer](%= codeorg_url('/volunteer/local') %) to inspire your students by talking about the breadth of possibilities in computer science.** There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!
+** Zaproś [ lokalnego wolontariusza]({{ urls/volunteer_local }}), by zainspirował Twoich uczniów, opowiadając o szerokich możliwościach w informatyce. ** Tysiące wolontariuszy na całym świecie jest gotowych pomóc w Twojej Godzinie Kodeksu odwiedzając Twoją klasę lub przez czat z Twoimi uczniami!
 
 **Pokaż inspirujący film:**
 
 - W oryginalnym wideo Code.org występują Bill Gates, Mark Zuckerberg i gwiazda NBA Chris Bosh. (Do wyboru są wersje trwające [1 minutę](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minut](https://www.youtube.com/watch?v=nKIu9yen5nc) oraz [9 minut](https://www.youtube.com/watch?v=dU1xS07N-FA))
-- Znajdź więcej inspirujących [zasobów](%= codeorg_url('/inspire') %) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Znajdź więcej inspirujących [zasobów]({{ urls/inspire }}) i [filmów](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**Jeśli Ty i Twoi uczniowie jesteście nowicjuszami w informatyce, to nie ma problemu. Oto kilka pomysłów na rozpoczęcie Godziny Kodowania:**
 
 - Wyjaśnij, jak technologia wpływa na nasze życie, używając przykładów, które zainteresują zarówno chłopców, jak i dziewczęta (opowiedz o ratowaniu życia, pomaganiu ludziom, łączeniu ludzi itp.).
 - Wymieńcie wspólnie rzeczy, które używają kodu w życiu codziennym.
-- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj](%= codeorg_url('/girls')%).
+- Wskazówki, jak zainteresować dziewczęta informatyką, zobacz [tutaj]({{ urls/girls }}).
 
 ## 6. Programuj!
 
-**Direct students to the activity**
+**Skieruj uczniów na zadania**
 
-- Napisz link do samouczka na tablicy. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka](%= resolve_url('/learn') %) pod liczbą uczestników.
+- Napisz na tablicy link do samouczka. Znajdź link wymieniony w [informacji dla Twojego wybranego samouczka]({{ urls/learn }}) pod liczbą uczestników.
 
-**When your students come across difficulties it's okay to respond:**
+**Kiedy Twoi uczniowie napotkają trudności, możesz powiedzieć:**
 
 - "Nie wiem. Sprawdźmy to razem."
 - "Technologia nie zawsze działa w sposób, jaki chcemy."
 - "Nauka programowania jest jak nauka nowego języka; nie od razu władasz nim biegle."
 
-**What if a student finishes early?**
+**A co zrobić, jeśli któryś z uczniów skończy wcześniej?**
 
-- Uczniowie mogą zobaczyć wszystkie samouczki i [ spróbować innej aktywności w Godzinie Kodowania](%= resolve_url('/learn')%).
-- Albo poproś uczniów, którzy skończyli wcześniej, by pomogli innym, którym idzie nieco wolniej.
+- Uczniowie mogą zobaczyć wszystkie samouczki i [ spróbować innej aktywności w Godzinie Kodowania]({{ urls/learn }}).
+- Albo poproś uczniów, którzy skończyli wcześniej, by pomogli innym, którzy mają trudności.
 
 [col-33]
 
@@ -83,8 +82,8 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 [/col-33]
 
-- [Wydrukuj certyfikaty](%= codeorg_url('/certificates')%) dla Twoich uczniów.
-- [Wydrukuj naklejki "I did an Hour of Code!"](%= resolve_url('/promote/resources#stickers') %) dla swoich uczniów.
+- [Wydrukuj certyfikaty]({{ urls/certificates }}) dla swoich uczniów.
+- [Wydrukuj naklejki "I did an Hour of Code!"]({{ urls/promote_stickers }}) dla swoich uczniów.
 - [Zamów specjalne koszulki](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) dla Twojej szkoły.
 - Udostępnij w mediach społecznościowych zdjęcia i wideo ze swojej Godziny Kodowania. Użyj #HourOfCode i @codeorg, byśmy również mogli wyróżnić Twój sukces!
 
@@ -98,14 +97,14 @@ Zapewnij uczniom słuchawki lub poproś, by przynieśli własne, jeśli samoucze
 
 ## Inne zasoby Godziny Kodowania dla nauczycieli:
 
-- Odwiedź [Forum Nauczycieli Godziny Kodowania](http://forum.code.org/c/plc/hour-of-code), aby znaleźć porady, wyjaśnienia i wsparcie ze strony innych edukatorów. <% if @country == 'us' %>
-- Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code). <% end %>
+- Odwiedź [Forum Nauczycieli Godziny Kodowania](http://forum.code.org/c/plc/hour-of-code), aby znaleźć porady, wyjaśnienia i wsparcie ze strony innych edukatorów.
+- Przejrzyj [FAQ Godziny Kodowania](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Co będzie się działo po Godzinie Kodowania?
 
 Godzina Kodowanie jest dopiero pierwszym krokiem na drodze do poznania, jak działa technologia i jak tworzyć aplikacje komputerowe. Aby kontynuować tę podróż:
 
-- Zachęć uczniów do kontynuowania [nauki online](%= codeorg_url('/learn/beyond')%).
-- [Uczestnicz](%= codeorg_url('/professional-development-workshops') %) osobiście w jednodniowych warsztatach by uzyskać instruktaż od doświadczonych informatyków. (Wyłącznie dla dydaktyków ze Stanów Zjednoczonych.)
+- Zachęć uczniów do kontynuowania [ nauki online]({{ urls/learn_beyond }}).
+- [Weź udział ]({{ urls/professional_development_workshops }}) osobiście w jednodniowych warsztatach, by uzyskać instrukcje od doświadczonych informatyków. (Wyłącznie dla dydaktyków ze Stanów Zjednoczonych.)
 
-<%= view :signup_button %>
+{{ signup_button }}

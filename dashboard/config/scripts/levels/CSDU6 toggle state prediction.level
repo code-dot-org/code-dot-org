@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 568,
   "properties": {
-    "markdown_instructions": "# More on the Toggle Switch\r\n\r\nYou can also check whether the toggle switch is in the `open` or `close` position anywhere in your program. \r\n\r\nWhat different things does the button do when the toggle switch is `open` or `close`?",
+    "long_instructions": "# More on the Toggle Switch\r\n\r\nYou can also check whether the toggle switch is in the `open` or `close` position anywhere in your program. \r\n\r\nWhat different things does the button do when the toggle switch is `open` or `close`?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

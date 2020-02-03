@@ -12,7 +12,7 @@
     },
     "ball_direction": "4.0369465598628835",
     "use_flag_goal": "true",
-    "instructions": "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag.",
+    "short_instructions": "We're going to send a ball flying down towards the hand. Attach a block to the \"when ball hits hand\" block to ensure the ball reaches the flag.",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[32,0,0,0,0,0,0,0],[0,0,0,0,0,0,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0]]",
     "contained_level_names": null
   },

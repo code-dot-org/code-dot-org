@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "I worry because of another reason:",
+    "long_instructions": "I worry because of another reason:",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

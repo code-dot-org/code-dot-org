@@ -1,11 +1,21 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import Button from '../Button';
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isScriptHiddenForSection, toggleHiddenScript } from '@cdo/apps/code-studio/hiddenStageRedux';
+import AssignButton from '@cdo/apps/templates/AssignButton';
+import UnassignButton from '@cdo/apps/templates/UnassignButton';
+import Assigned from '@cdo/apps/templates/Assigned';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  isScriptHiddenForSection,
+  toggleHiddenScript
+} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const styles = {
   main: {
@@ -17,7 +27,7 @@ const styles = {
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
-    marginBottom: 12,
+    marginBottom: 12
   },
   content: {
     padding: 20
@@ -28,7 +38,7 @@ const styles = {
   },
   title: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif'
   },
   // TODO: share better with ProgressLesson
   hidden: {
@@ -37,8 +47,11 @@ const styles = {
     marginTop: 0,
     marginBottom: 12,
     marginLeft: 0,
-    marginRight: 0,
+    marginRight: 0
   },
+  flex: {
+    display: 'flex'
+  }
 };
 
 class CourseScript extends Component {
@@ -46,19 +59,35 @@ class CourseScript extends Component {
     title: PropTypes.string.isRequired,
     name: PropTypes.string,
     id: PropTypes.number.isRequired,
+    courseId: PropTypes.number,
     description: PropTypes.string,
-
+    assignedSectionId: PropTypes.number,
+    showAssignButton: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    selectedSectionId: PropTypes.string.isRequired,
+    selectedSectionId: PropTypes.number,
     hiddenStageState: PropTypes.object.isRequired,
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
   onClickHiddenToggle = value => {
-    const { name, selectedSectionId, id, toggleHiddenScript } = this.props;
+    const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
+    firehoseClient.putRecord(
+      {
+        study: 'hidden-units',
+        study_group: 'v0',
+        event: value,
+        script_id: id,
+        data_json: JSON.stringify({
+          script_name: name,
+          section_id: selectedSectionId
+        })
+      },
+      {useProgressScriptId: false}
+    );
   };
 
   render() {
@@ -70,14 +99,32 @@ class CourseScript extends Component {
       viewAs,
       selectedSectionId,
       hiddenStageState,
-      hasNoSections
+      hasNoSections,
+      assignedSectionId,
+      courseId,
+      sectionsForDropdown,
+      showAssignButton
     } = this.props;
 
-    const isHidden = isScriptHiddenForSection(hiddenStageState, selectedSectionId, id);
+    const isHidden = isScriptHiddenForSection(
+      hiddenStageState,
+      selectedSectionId,
+      id
+    );
 
     if (isHidden && viewAs === ViewType.Student) {
       return null;
     }
+
+    const assignedToStudent = viewAs === ViewType.Student && assignedSectionId;
+    const selectedSection = sectionsForDropdown.find(
+      section => section.id === selectedSectionId
+    );
+    const assignedByTeacher =
+      viewAs === ViewType.Teacher &&
+      selectedSection &&
+      selectedSection.scriptId === id;
+    const isAssigned = assignedToStudent || assignedByTeacher;
 
     return (
       <div
@@ -91,30 +138,58 @@ class CourseScript extends Component {
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
-          <Button
-            text={i18n.goToUnit()}
-            href={`/s/${name}${location.search}`}
-            color={Button.ButtonColor.gray}
-            className="uitest-go-to-unit-button"
-          />
+          <span style={styles.flex}>
+            <Button
+              text={i18n.goToUnit()}
+              href={`/s/${name}${location.search}`}
+              color={Button.ButtonColor.gray}
+              className="uitest-go-to-unit-button"
+            />
+            {isAssigned && viewAs === ViewType.Student && <Assigned />}
+            {isAssigned && viewAs === ViewType.Teacher && selectedSectionId && (
+              <UnassignButton sectionId={selectedSectionId} />
+            )}
+            {!isAssigned &&
+              viewAs === ViewType.Teacher &&
+              showAssignButton &&
+              selectedSection && (
+                <AssignButton
+                  sectionId={selectedSection.id}
+                  scriptId={id}
+                  courseId={courseId}
+                  assignmentName={title}
+                  sectionName={selectedSection.name}
+                />
+              )}
+          </span>
         </div>
-        {viewAs === ViewType.Teacher && !hasNoSections &&
+        {viewAs === ViewType.Teacher && !hasNoSections && (
           <CourseScriptTeacherInfo
             disabled={!selectedSectionId}
             isHidden={isHidden}
             onToggleHiddenScript={this.onClickHiddenToggle}
           />
-        }
+        )}
       </div>
     );
   }
 }
 export const UnconnectedCourseScript = CourseScript;
 
-export default connect(state => ({
-  viewAs: state.viewAs,
-  selectedSectionId: state.teacherSections.selectedSectionId,
-  hiddenStageState: state.hiddenStage,
-  hasNoSections: state.teacherSections.sectionsAreLoaded &&
-    state.teacherSections.sectionIds.length === 0,
-}), { toggleHiddenScript })(CourseScript);
+export default connect(
+  (state, ownProps) => ({
+    viewAs: state.viewAs,
+    selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+    sectionsForDropdown: sectionsForDropdown(
+      state.teacherSections,
+      ownProps.id,
+      ownProps.courseId,
+      true
+    ),
+    hiddenStageState: state.hiddenStage,
+    hasNoSections:
+      state.teacherSections.sectionsAreLoaded &&
+      state.teacherSections.sectionIds.length === 0
+  }),
+  {toggleHiddenScript}
+)(CourseScript);

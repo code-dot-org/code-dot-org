@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "These triangles go from 20 pixel sides to 200 pixel sides, and each triangle is 20 pixels larger than the last. ",
+    "short_instructions": "These triangles go from 20 pixel sides to 200 pixel sides, and each triangle is 20 pixels larger than the last. ",
     "x": "100",
     "y": "300",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Create these triangles that go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger than the last.",
+    "long_instructions": "Create these triangles that go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger than the last.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -41,12 +41,17 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "No scaffolding should be needed",
   "audit_log": "[{\"changed_at\":\"2017-07-28 22:47:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-09 17:35:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 16:02:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-05 00:44:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "for_loops": 4,
+    "variables": 1
   }
 }]]></config>
   <blocks>

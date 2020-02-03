@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Assessment: Encoding B&W Images",
-    "markdown_instructions": "What would happen if we didn't include width and height bits in our protocol?\r\n\r\nAssume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels). Could you recover the original image? If so, how? If not, why not?\r\n\r\n\r\n",
+    "long_instructions": "What would happen if we didn't include width and height bits in our protocol?\r\n\r\nAssume your friend just sent you 32 bits of pixel data (just the 0s and 1s for black and white pixels). Could you recover the original image? If so, how? If not, why not?\r\n\r\n\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "allow_user_uploads": "false",

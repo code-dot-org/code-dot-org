@@ -61,7 +61,7 @@ class CourseTest < ActiveSupport::TestCase
   end
 
   test "should serialize to json" do
-    course = create(:course, name: 'my-course')
+    course = create(:course, name: 'my-course', is_stable: true)
     create(:course_script, course: course, position: 1, script: create(:script, name: "script1"))
     create(:course_script, course: course, position: 2, script: create(:script, name: "script2"))
     create(:course_script, course: course, position: 3, script: create(:script, name: "script3"))
@@ -71,6 +71,30 @@ class CourseTest < ActiveSupport::TestCase
     obj = JSON.parse(serialization)
     assert_equal 'my-course', obj['name']
     assert_equal ['script1', 'script2', 'script3'], obj['script_names']
+    assert obj['properties']['is_stable']
+  end
+
+  test "stable?: true if course has plc_course" do
+    course = Course.new(family_name: 'plc')
+    course.plc_course = Plc::Course.new(course: course)
+    course.save
+
+    assert course.stable?
+  end
+
+  test "stable?: true if course is not in a family" do
+    course = create :course
+    assert course.stable?
+  end
+
+  test "stable?: true if course in family has is_stable set" do
+    course = create :course, family_name: 'csd', is_stable: true
+    assert course.stable?
+  end
+
+  test "stable?: defaults to false if course in family does not have is_stable set" do
+    course = create :course, family_name: 'csd'
+    refute course.stable?
   end
 
   class UpdateScriptsTests < ActiveSupport::TestCase
@@ -142,9 +166,10 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
+                  :family_name, :version_year,
                   :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
-                  :has_verified_resources, :versions], summary.keys
+                  :has_verified_resources, :versions, :show_assign_button], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
@@ -165,6 +190,20 @@ class CourseTest < ActiveSupport::TestCase
     # make sure we dont have stage info
     assert_nil summary[:scripts][0][:stages]
     assert_nil summary[:scripts][0]['stageDescriptions']
+  end
+
+  test 'summarize_version' do
+    create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+    csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+    csp_2019 = create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+
+    summary = csp_2018.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
+
+    summary = csp_2019.summarize_versions
+    assert_equal ['csp-2019', 'csp-2018', 'csp-2017'], summary.map {|h| h[:name]}
+    assert_equal [false, true, true], summary.map {|h| h[:is_stable]}
   end
 
   class SelectCourseScriptTests < ActiveSupport::TestCase
@@ -262,7 +301,116 @@ class CourseTest < ActiveSupport::TestCase
     end
   end
 
-  class OtherVersionProgressTests < ActiveSupport::TestCase
+  class RedirectCourseUrl < ActiveSupport::TestCase
+    setup do
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
+    end
+
+    test 'returns nil for nil user' do
+      assert_nil @csp_2017.redirect_to_course_url(nil)
+    end
+
+    test 'returns nil for teacher' do
+      teacher = create :teacher
+      assert_nil @csp_2017.redirect_to_course_url(teacher)
+    end
+
+    test 'returns nil for student assigned to this course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      section = create :section, course: @csp_2017
+      student = create :student
+      section.students << student
+      assert_nil @csp_2017.redirect_to_course_url(student)
+    end
+
+    test 'returns nil for student not assigned to any course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      student = create :student
+      assert_nil @csp_2017.redirect_to_course_url(student)
+    end
+
+    test 'returns link to latest assigned course for student assigned to a course in this family' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      section = create :section, course: csp_2018
+      student = create :student
+      section.students << student
+      assert_equal csp_2018.link, @csp_2017.redirect_to_course_url(student)
+    end
+
+    test 'returns nil if latest assigned course is an older version than the current course' do
+      Course.any_instance.stubs(:can_view_version?).returns(true)
+      csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018')
+      section = create :section, course: @csp_2017
+      student = create :student
+      section.students << student
+      assert_nil csp_2018.redirect_to_course_url(student)
+    end
+  end
+
+  class CanViewVersion < ActiveSupport::TestCase
+    setup do
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp1_2017 = create(:script, name: 'csp1-2017')
+      create :course_script, course: @csp_2017, script: @csp1_2017, position: 1
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019')
+      @student = create :student
+    end
+
+    test 'teacher can always view version' do
+      assert @csp_2017.can_view_version?(create(:teacher))
+    end
+
+    test 'nil user can only view latest version in course family' do
+      assert @csp_2018.can_view_version?(nil)
+      refute @csp_2017.can_view_version?(nil)
+    end
+
+    test 'student can view version if it is the latest version in course family' do
+      assert @csp_2018.can_view_version?(@student)
+      refute @csp_2017.can_view_version?(@student)
+    end
+
+    test 'student can view version if it is assigned to them' do
+      create :follower, section: create(:section, course: @csp_2018), student_user: @student
+      create :follower, section: create(:section, course: @csp_2017), student_user: @student
+
+      assert @csp_2018.can_view_version?(@student)
+      assert @csp_2017.can_view_version?(@student)
+    end
+
+    test 'student can view version if they have progress in it' do
+      create :user_script, user: @student, script: @csp1_2017
+      assert @csp_2017.can_view_version?(@student)
+    end
+  end
+
+  class LatestVersionTests < ActiveSupport::TestCase
+    setup do
+      @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017', is_stable: true)
+      @csp_2018 = create(:course, name: 'csp-2018', family_name: 'csp', version_year: '2018', is_stable: true)
+      create(:course, name: 'csp-2019', family_name: 'csp', version_year: '2019', is_stable: false)
+      @student = create :student
+    end
+
+    test 'latest_stable_version returns nil if course family does not exist' do
+      assert_nil Course.latest_stable_version('fake-family')
+    end
+
+    test 'latest_stable_version returns latest course version' do
+      latest_version = Course.latest_stable_version('csp')
+      assert_equal @csp_2018, latest_version
+    end
+
+    test 'latest_assigned_version returns latest version in family assigned to student' do
+      create :follower, section: create(:section, course: @csp_2017), student_user: @student
+      latest_assigned_version = Course.latest_assigned_version('csp', @student)
+      assert_equal @csp_2017, latest_assigned_version
+    end
+  end
+
+  class ProgressTests < ActiveSupport::TestCase
     setup do
       @csp_2017 = create(:course, name: 'csp-2017', family_name: 'csp', version_year: '2017')
       @csp1_2017 = create(:script, name: 'csp1-2017')
@@ -287,6 +435,18 @@ class CourseTest < ActiveSupport::TestCase
       assert_equal 2, @csp_2017.default_scripts.count
       assert_equal 2, @csp_2018.default_scripts.count
       assert_equal 1, @csd.default_scripts.count
+    end
+
+    test 'student with no progress has no progress' do
+      refute @csp_2017.has_progress?(@student)
+      refute @csp_2018.has_progress?(@student)
+    end
+
+    test 'student with progress in course has progress' do
+      create :user_script, user: @student, script: @csp1_2017
+
+      assert @csp_2017.has_progress?(@student)
+      refute @csp_2018.has_progress?(@student)
     end
 
     test 'student with no progress does not have older version progress' do

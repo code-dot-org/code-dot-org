@@ -4,4 +4,7 @@
 %script{type: "text/javascript", src: "/js/sifter.min.js"}
 %script{type: "text/javascript", src: "/js/microplugin.min.js"}
 %script{type: "text/javascript", src: "/js/selectize.min.js"}
-%script{src: minifiable_asset_path("js/hourofcode.com/views/theme_common_head_after.js")}
+-# webpack-runtime.js must appear exactly once on any page containing webpack entries
+%script{src: webpack_asset_path('js/webpack-runtime.js')}
+%script{src: webpack_asset_path('js/vendors.js')}
+%script{src: webpack_asset_path("js/hourofcode.com/views/theme_common_head_after.js")}

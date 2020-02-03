@@ -9,6 +9,7 @@ class SessionsController < Devise::SessionsController
     session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
     @hide_sign_in_option = true
+    @is_english = request.language == 'en'
     if params[:providerNotLinked]
       if params[:useClever]
         # The provider was not linked, and we need to tell the user to sign in specifically through Clever
@@ -21,24 +22,6 @@ class SessionsController < Devise::SessionsController
       end
     end
     super
-  end
-
-  # GET /resource/clever_takeover
-  def clever_takeover
-    sign_out_but_preserve_takeover_state
-    redirect_to action: :new
-  end
-
-  def clever_modal_dismissed
-    clear_takeover_session_variables
-    render status: 200, nothing: true
-  end
-
-  # POST /resource/sign_in
-  def create
-    super do |user|
-      check_and_apply_oauth_takeover(user)
-    end
   end
 
   # DELETE /resource/sign_out
@@ -60,6 +43,14 @@ class SessionsController < Devise::SessionsController
         redirect_to redirect_path
       end
     end
+  end
+
+  # GET /reset_session
+  def reset
+    client_state.reset
+    sign_out if current_user
+    reset_session
+    render layout: false
   end
 
   private

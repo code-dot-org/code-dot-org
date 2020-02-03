@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "User input\r\n\r\nvar x = prompt(“Enter number”)\r\nif( 3 < x){\r\n console.log(“Bigger”)\r\n}\r\n",
+    "long_instructions": "User input\r\n\r\nvar x = prompt(“Enter number”)\r\nif( 3 < x){\r\n console.log(“Bigger”)\r\n}\r\n",
     "start_blocks": "var x = prompt(“Enter number”)\r\nif( 3 < x){\r\n console.log(“Bigger”)\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -1,5 +1,5 @@
 ---
-from: 'Tanya Parker (Code.org) <tanya_parker@code.org>'
+from: 'Code.org Volunteers <volunteers@code.org>'
 subject: Volunteer Submission Received
 ---
 <% hostname = CDO.canonical_hostname('hourofcode.com') %>
@@ -13,8 +13,8 @@ If you need to update your information or want to unsubscribe from teacher reque
 
 Thanks again for your support,
 
-Tanya Parker<br/>
-Volunteer Coordinator, Code.org
+Alice Steinglass<br/>
+President, Code.org
 
 <hr/>
 

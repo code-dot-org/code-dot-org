@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use both of your new functions to draw this picture. To make this easier you use a loop with a \"counter\" parameter. ",
+    "short_instructions": "Use both of your new functions to draw this picture. To make this easier you use a loop with a \"counter\" parameter. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".8",

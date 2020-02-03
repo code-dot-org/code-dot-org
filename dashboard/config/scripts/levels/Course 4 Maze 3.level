@@ -11,7 +11,7 @@
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "instructions": "Program the angry bird to get to the pig. ",
+    "short_instructions": "Program the angry bird to get to the pig. ",
     "ideal": "9",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

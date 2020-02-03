@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Variables and Random Drawing\r\n\r\nVariables can be used to **store a randomly generated value** that you want to use many times in your program.\r\n\r\n# Do This\r\n\r\n* Assign size a **random number between 1 and 200**.\r\n* **Run the program multiple times**\r\n* **Discuss with a neighbor:** Can you explain why the program always drawing a square?",
+    "long_instructions": "# Variables and Random Drawing\r\n\r\nVariables can be used to **store a randomly generated value** that you want to use many times in your program.\r\n\r\n# Do This\r\n\r\n* Assign size a **random number between 1 and 200**.\r\n* **Run the program multiple times**\r\n* **Discuss with a neighbor:** Can you explain why the program always drawing a square?",
     "start_blocks": "var size;\r\n//Assign 'size' a random number between 1 and 200\r\nrect(200,200,size,size);\r\n//Run the program multiple times",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -40,7 +40,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Change the value \"size\" initialized to make a larger square.",
+    "short_instructions": "Change the value \"size\" initialized to make a larger square.",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

@@ -37,14 +37,14 @@
     "block_moving_into_walls": "false",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Use  blocks like event handlers and actions to make your player move according to the arrows on your keyboard.  \r\n\r\nGet the player to the targets to complete this puzzle.",
+    "long_instructions": "Use  blocks like event handlers and actions to make your player move according to the arrows on your keyboard.  \r\n\r\nGet the player to the targets to complete this puzzle.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
       "downButton",
       "upButton"
     ],
-    "instructions": "Use event handlers and actions to make your hero move.",
+    "short_instructions": "Use event handlers and actions to make your hero move.",
     "instructions_important": "true",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.\",\"hint_id\":\"courseE_playLab_scaffold1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ec0ca9f14716fdefffaaa435df54309/courseE_playLab_scaffold2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You should have four `when arrow` event blocks, with a direction to move underneath each.\",\"hint_id\":\"courseE_playLab_scaffold1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9d55feb1f2bf0ba4f97129fe304984df/courseE_playLab_scaffold2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"When you are done, you should be able to move your hero with the arrow keys!\",\"hint_id\":\"courseE_playLab_scaffold1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b607432de7ed3792e707e27f7af48d34/courseE_playLab_scaffold2.mp3\"}]",
     "hide_share_and_remix": "false",

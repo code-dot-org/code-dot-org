@@ -1,58 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: Ďakujeme Vám, že organizujete udalosť Hodina kódu!
 ---
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Ďakujeme Vám, že organizujete udalosť Hodina Kódu!
 
-Ako poďakovanie za pomoc pri možnosti naštartovania výuky informatiky pre študentov by sme Vám radi ponúkli zadarmo sadu profesionálnych plagátov s rôznymi vzormi pre Vašu triedu. Použite kód **FREEPOSTERS** počas objednávania. (Poznámka: Plagáty sú dostupné len do vypredania zásob a musíte uhradiť poštovné. Tieto plagáty sa zasielajú zo Spojených Štátov Amerických a poštovné na Slovensko môže byť vysoké. V prípade, že nemáte dostatočné prostriedky, môžete si vytlačiť [PDF súbory](https://code.org/inspire) pre Vašu triedu.)  
-<br /> [<button>Získajte plagáty</button>](https://store.code.org/products/code-org-posters-set-of-12) Použite kód FREEPOSTERS
+<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<% if @country == 'us' %> <% end %>
-
-<br /> **Hodina Kódu je počas <%= campaign_date('full') %> a my Vám budeme priebežne prinášať nové návody a iné zaujímavé aktuality. Viete však, čo môžete dovtedy spraviť?**
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. Šírte slovo vo Vašej škole a komunite
 
-Práve ste sa zapojili do hnutia Hodina Kódu. Povedzte o tom svojim priateľom **#HourOfCode #HodinaKodu**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Povzbuďte ostatných k účasti [našimi vzorovými e-mailmi.](%= resolve_url('/promote/resources#sample-emails') %) Kontaktujte Vášho riaditeľa a povzbuďte každú triedu k účasti na aktivite. Naverbujte lokálnu skupinu - skautský klub, cirkevné spoločenstvo, univerzity, odbory alebo kamarátov. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Pozvite miestneho politika alebo zákonodarcu na návštevu Vašej školy počas Hodiny Kódu. Môže to podporiť vyučovanie informatiky vo Vašom okolí.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Nemusíte byť v škole, aby ste sa naučili nové zručnosti. Invite a local politician or policy maker to visit your school for the Hour of Code. Môže to podporiť vyučovanie informatiky vo vašom okolí.
 
-Na Vašej udalosti využite [plagáty, bannery, nálepky, či videá](%= resolve_url('/promote/resources') %).
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. Nájdite si dobrovoľníka vo Vašom okolí, ktorý Vám pomôže s organizáciou udalosti
 
-[Pozrite si našu mapu s dobrovoľníkmi](%= codeorg_url('/volunteer/local') %) a nájdite si dobrovoľníka, ktorý vie navštíviť Vašu triedu alebo sa pripojiť prostredníctvom videa a tak inšpirovať Vašich študentov.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Naplánujte si Vašu Hodinu Kódu
 
-Vyberte si [ aktivitu Hodiny Kódu](https://hourofcode.com/learn) pre Vašu triedu a [ prečítajte si tento návod](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+
+### 4. Stock up on swag
+
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Za hranice Hodiny Kódu
 
-<% if @country == 'us' %> Hodina Kódu je len začiatkom. Či už ste správca, učiteľ, alebo ambasádor, máme [ profesionálne nástroje, osnovy a zdroje, ktoré Vám pomôžu priniesť hodiny informatiky na Vašu školu alebo rozšíriť ich ponuku.](https://code.org/yourschool) Ak už informatiku vyučujete, môžete použiť tieto zdroje počas Týždňa výučby informatiky pre získanie podpory zo strany správnych orgánov, rodičov a komunity.
+{{ go_beyond_hoc }}
 
-Na výber máte z veľkého počtu možností. Väčšina organizácií ponúkajúca návody Hodiny Kódu má k dispozícií aj osnovy na profesionálny rozvoj. Ak nájdete Hodinu, ktorá sa Vám páči, spýtajte sa, ako môžete pokračovať ďalej. Pre uľahčenie začiatku sme pre Vás zvýraznili niekoľko [poskytovateľov osnov, ktorí pomôžu Vám alebo Vaším študentom pokračovať ďalej v aktivitách, ktoré začali počas Hodiny.](https://hourofcode.com/beyond)
-
-<% else %> Hodina Kódu je len začiatkom. Väčšina organizácií ponúkajúca návody Hodiny Kódu má k dispozícií aj osnovy na profesionálny rozvoj. Pre uľahčenie začiatku sme pre Vás zvýraznili niekoľko [poskytovateľov osnov, ktorí pomôžu Vám alebo Vaším študentom pokračovať ďalej v aktivitách, ktoré začali počas Hodiny.](https://hourofcode.com/beyond)
-
-Code.org ponúka pre Vás alebo Vašu školu [úvodné hodiny informatiky](https://code.org/educate/curriculum/cs-fundamentals-international) preložené do viac ako 25 jazykov a to úplne zadarmo, bez akýchkoľvek nákladov. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

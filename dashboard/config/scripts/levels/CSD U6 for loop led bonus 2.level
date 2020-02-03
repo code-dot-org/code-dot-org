@@ -112,7 +112,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Challenge: Color Patterns\r\n\r\nExtend the program by adding more buttons that create different patterns of light.\r\n\r\n# Do This\r\n\r\nAdd your new buttons in Design Mode and create event handlers to respond to your buttons and change the LED colors.\r\n\r\n_Hint: As you design your patterns, consider whether a function with parameters could help simplify your program._",
+    "long_instructions": "# Challenge: Color Patterns\r\n\r\nExtend the program by adding more buttons that create different patterns of light.\r\n\r\n# Do This\r\n\r\nAdd your new buttons in Design Mode and create event handlers to respond to your buttons and change the LED colors.\r\n\r\n_Hint: As you design your patterns, consider whether a function with parameters could help simplify your program._",
     "project_template_level_name": "CSD U6 for loop led template",
     "palette_category_at_start": "functions",
     "display_name": "Challenge: Color Patterns",

@@ -3,9 +3,17 @@ nl:
   data:
     course:
       name:
+        csp-2017:
+          assignment_family_title: Basisprincipes uit computerkunde
+          title: Basisprincipes uit computerkunde
+          version_title: "'17-'18"
         csd-2017:
           assignment_family_title: Informatiekunde ontdekkingen
+          version_title: "'17-'18"
         allthethingscourse:
           title: alledingencursus
         csd-2018:
           assignment_family_title: Informatiekunde ontdekkingen
+        csp-2018:
+          assignment_family_title: Basisprincipes uit computerkunde
+          title: Basisprincipes uit computerkunde

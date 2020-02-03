@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers) %>
-layout: wide
-nav: how_to_nav
+title: Anleitung für freiwillige "Hour of Code"-Teinehmer
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Anleitung für Ehrenamtliche
 
@@ -23,31 +22,31 @@ Lesen Sie, was andere Ehrenamtliche berichten:
 
 ### Volunteers and speakers in tech:
 
-Do you have a connection to CS or tech? Wenn Sie in der Software-Entwicklung arbeiten, oder in einer Firma der Tech-Branche, egal ob als Ingenieur oder in einer anderen Funktion, oder wenn Sie auch nur Informatik-/Programmier-Kurse besucht haben: Sie können helfen, Schüler für das Fach zu begeistern! Viele Schüler haben noch nie jemanden getroffen, der in der Tech-Branche arbeitet und unsere Lehrer lieben es, eine Verbindung zwischen ihrer Klasse und einem Profi oder Studenten herstellen zu können.
+Haben Sie etwas mit der Software- oder Tech-Branche zu tun? Wenn Sie in der Software-Entwicklung arbeiten, oder in einer Firma der Tech-Branche, egal ob als Ingenieur oder in einer anderen Funktion, oder wenn Sie auch nur Informatik-/Programmier-Kurse besucht haben: Sie können helfen, Schüler für das Fach zu begeistern! Viele Schüler haben noch nie jemanden getroffen, der in der Tech-Branche arbeitet und unsere Lehrer lieben es, eine Verbindung zwischen ihrer Klasse und einem Profi oder Studenten herstellen zu können.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Sie können in einer Schulklasse als Gastredner auftreten oder die Lehrern bei der Durchführung einer Hour of Code-Veranstaltung unterstützen. Besuchen Sie eine Schule in Ihrer Nähe und begeistern Sie die Kinder dafür, Informatik zu lernen. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Melden Sie sich noch heute als Freiwilliger!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Jeder, der leidenschaftlich daran glaubt, dass man seine Möglichkeiten vermehren sollte:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Helfen Sie in einer Klasse in Ihrer Nähe aus oder organisieren Sie eine Veranstaltung nach der Schule! Sie brauchen keine Erfahrung im Programmieren, um eine "Hour of Code"-Veranstaltung durchzuführen. Und: alleine das Angebot, mitzumachen und auszuhelfen, reicht häufig aus, um den Lehrer Ihres Kindes, einen Freund oder einen Verein zu überzeugen, eine Hour of Code auszuprobieren.
+  Glauben Sie daran, dass das Erlernen der Informatik Türen neuer Möglichkeiten für die Schüler öffnen kann? Helfen Sie in einer Klasse in Ihrer Nähe aus oder organisieren Sie eine Veranstaltung nach der Schule! Sie brauchen keine Erfahrung im Programmieren, um eine "Hour of Code"-Veranstaltung durchzuführen. Und: alleine das Angebot, mitzumachen und auszuhelfen, reicht häufig aus, um den Lehrer Ihres Kindes, einen Freund oder einen Verein zu überzeugen, eine Hour of Code auszuprobieren.
 </p>
 
 <h3>
-  How do you get started?
+  Wie können Sie gleich loslegen?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +55,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Erzählen Sie Ihren Freunden und Kollegen von der Hour of Code. Bitten Sie sie, sich als <a href="https://code.org/volunteer">Freiwillige zu registrieren</a>, denn Tausende von Lehrern suchen nach Helfern. Bitten Sie auch ihren Arbeitgeber, sich zu engagieren. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +64,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %">Suchen Sie sich eines unserer Videos aus</a>. Das können Sie zu Begin als Einführung zeigen, um die Schüler für die Hour of Code zu begeistern.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Schauen Sie sich unser <a href="/files/hoc-volunteer-toolkit.pdf">"Hour of Code"-Toolkit für Ehrenamtliche</a> an, das eine Übersicht, einen Zeitplan, sowie Vorbereitungs- und Reklamematerial enthält. Das ist alles, was Sie brauchen, um für Ihre erste "Hour of Code"-Erfahrung vorbereitet zu sein!
   </li>
   <li>
-    Wenn Sie während Ihrer Veranstaltung einen "Hour of Code"-Kurs durchführen wollen, nehmen Sie sich mindestens 30 Minuten Zeit, um einen <a href="%= resolve_url('/learn') %">"Hour of Code"-Kurs</a> auszuprobieren.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Wenn Sie eine Schule besuchen wollen, füllen Sie alle notwendigen Formulare aus.
@@ -95,11 +94,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Wenn Sie eine "Hour of Code"-Veranstaltung durchführen, nutzen Sie folgenden Zeitplan, der Sie durch den Tag führt. Vorher melden Sie sich bei der Schule an und begrüßen den Lehrer. Bestätigen Sie den vereinbarten Zeitplan und besprechen Sie alle Gesprächsthemen.
 </p>
 
 <h3>
-  Sample agenda:
+  Beispiel für einen Ablaufplan:
 </h3>
 
 <table>
@@ -119,7 +118,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %">Zeigen Sie ein motivierendes Video.</a>
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -189,7 +188,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Nach der Veranstaltung:
         </h3>
         <ul>
           <li>
@@ -226,23 +225,23 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           FAQ für ehrenamtliche "Hour of Code"-Helfer
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Ich bin bisher noch nicht von einem Lehrer kontaktiert worden. Wie kann ich trotzdem mithelfen?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Suchen Sie nach einer Schule in der Nähe, rufen Sie den Direktor/Lehrer/das Sekretariat an und fragen Sie, wie Sie helfen können.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Wie lange dauert ein Klassenbesuch?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Ein persönlicher Besuch dauert in der Regel 60-90 Minuten, ein virtueller Besuch in der Regel 20-30 Minuten.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Für welche Altersklasse ist die Hour of Code geeignet?
         </h3>
         <p>
           Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

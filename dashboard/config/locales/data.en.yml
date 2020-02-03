@@ -40,6 +40,7 @@ en:
         Custom: Artist
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Bronze
@@ -83,7 +84,7 @@ en:
         turtle_1_3: Make a square using only 3 blocks.
         turtle_1_4: 'Draw a triangle whose sides are all in different colors, using the "random color" option that picks a different color each time. Hint: you''ll have to figure out how far to turn by clicking on the number in the turn block.'
         turtle_1_5: Now, for practice, draw a triangle and then a square to draw an envelope.
-        turtle_1_6: 'Can you figure out how draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
+        turtle_1_6: 'Can you figure out how to draw this triangle and square? Hint: Do the triangle first, then figure out how much to turn before drawing the square.'
         turtle_1_7: Ok, let's make it a bit harder - see if you can draw these green glasses. The squares are 100 pixels on each side, and they're 50 pixels apart. Don't forget to draw in green!
         turtle_1_8: Ok, try to figure out what happens if you run this code (or press "Run" to try it). Then, repeat it enough times to complete the drawing. The colors will be different every time.
         turtle_1_9: Can you figure out what number to replace the question marks with to draw a circle?
@@ -540,6 +541,56 @@ en:
         CDEF_Video_SpritesInAction: Sprites in Action
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites in Action
         CSF_StarWars_ProjectIntro: Intro to Star Wars Project
+        mc_2018_intro: 'Minecraft: Voyage Aquatic Introduction'
+        MC_2018_loops: 'Minecraft: Voyage Aquatic Repeat Until'
+        mc_2018_conditionals: 'Minecraft: Voyage Aquatic Conditionals'
+        mc_2018_closing: 'Minecraft: Voyage Aquatic Congratulations'
+        hoc_dance_warmup: Dance Party - Warm Up
+        hoc_dance_events: Dance Party - Events
+        hoc_dance_properties: Dance Party - Properties
+        hoc_dance_congrats: Dance Party - Party On!
+        c_and_c_great_to_create: It's Great to Create and Play Fair
+        c_and_c_digital_sharing: Digital Sharing
+        teaching_csf_how_it_works: 'Teaching CS Fundamentals: How the Course Works'
+        elem_pd_2: Elementary School Computer Science - PD video 2/2
+        what_is_cs: What is computer science?
+        repeat_block: Using the Repeat Block
+        lesson_planning: Lesson Planning
+        opd_closing: 'Teaching CS Fundamentals: Closing & Next Steps'
+        why_unplugged_lessons: Getting "unplugged"
+        writing_first_program: Writing your first computer program
+        conditionals_with_cards: Unplugged Lesson in Action - Conditionals with Cards
+        songwriting_with_functions: Unplugged Lesson in Action - Songwriting with Functions
+        what_is_an_event: What is an event?
+        teaching_cs_pair_programming: 'Teaching CS Fundamentals: Pair Programming'
+        teaching_problem_solving: 'Teaching CS Fundamentals: Teaching Problem Solving'
+        csd_applab_designmode: 'CS Discoveries: App Lab - Design Mode'
+        csd_pair_programming: Pair Programming
+        csd_gamelab_functions: Calling and Defining Functions
+        csd_applab_parameters: Functions with Parameters
+        csd_applab_loops: Loops in App Lab
+        csd_problem_solving_process: The Problem Solving Process
+        CSF_Going_Places_Safely: My Online Neighborhood
+        CSF_SpriteLab_Intro_v2: Introducing Sprite Lab
+        CSF_Spritelab_MakeSprite_v2: How to Make a Sprite
+        CSF_SpriteLab_SpritesInAction_v2: Sprites in Action
+        csd_debugging: Debugging
+        csd_applab_designmode_short: App Lab Design Mode
+        csp-pd-welcome: Welcome to the Family!
+        CSF-Teaching-Problem-Solving: CSF Teaching Problem Solving
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video - Data block
+        u7-libraries-explanation: 'App Lab: Make Your Own Blocks - How to Use Libraries'
+        how-to-k5-workshops: 'Code.org''s CS Fundamentals: Kid Tested, Teacher Approved'
+        why-should-teach-unplugged-activities: 'FAQ: Why should I teach "unplugged" activities?'
+        cs-principles-intro-to-objects: 'CS Principles: Intro to Objects'
+        oceans_machine_learning: Machine Learning
+        oceans_training_data: Training Data
+        oceans_societal_implications: Societal Implications
+        hoc_dance_congrats_2019: Dance Party 2019 - Party On!
+        hoc_dance_warmup_2019: Dance Party 2019 - Warm Up
+        hoc_dance_events_2019: Dance Party 2019 - Events
+        hoc_dance_measures_2019: Dance Party 2019 - Measures
+        hoc_dance_properties_2019: Dance Party 2019 - Properties
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

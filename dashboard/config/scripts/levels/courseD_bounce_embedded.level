@@ -16,7 +16,7 @@
     "min_workspace_height": "750",
     "goal": "{}",
     "success_condition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
-    "instructions": "Write Instructions Here",
+    "short_instructions": "Write Instructions Here",
     "maze": "[[1,1,2,2,2,2,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,16,0,0,0,0,1]]",
     "embed": "true",
     "instructions_important": "false",

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Help the artist draw a line 7 times to make a garden wall.",
+    "short_instructions": "Help the artist draw a line 7 times to make a garden wall.",
     "x": "200",
     "y": "50",
     "start_direction": "180",

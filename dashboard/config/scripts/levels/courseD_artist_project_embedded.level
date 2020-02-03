@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "true",
-    "instructions": "Here's what you will soon be making!",
+    "short_instructions": "Here's what you will soon be making!",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -35,7 +35,7 @@
     "disable_sharing": "false",
     "authored_hints": "[]",
     "disable_procedure_autopopulate": "false",
-    "markdown_instructions": "Here's what you will soon be making!",
+    "long_instructions": "Here's what you will soon be making!",
     "contained_level_names": null
   },
   "published": true,

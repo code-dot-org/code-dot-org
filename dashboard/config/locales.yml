@@ -98,8 +98,8 @@
   native: "Español (España)"
 
 "es-MX":
-  english: "Spanish (Mexico)"
-  native: "Español (México)"
+  english: "Spanish (Latin America)"
+  native: "Español (Latinoamérica)"
 
 "et": "et-EE"
 "et-EE":
@@ -168,7 +168,6 @@
 "hi-IN":
   english: "Hindi"
   native: "हिन्दी"
-  debug: true
   webfonts: false
 
 "hr": "hr-HR"
@@ -365,7 +364,6 @@
 "sk-SK":
   english: "Slovak"
   native: "Slovenčina"
-  debug: true
 
 "sl": "sl-SI"
 "sl-SI":

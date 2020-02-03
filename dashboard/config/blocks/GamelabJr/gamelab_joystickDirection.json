@@ -1,9 +1,0 @@
-{
-  "category": "",
-  "config": {
-    "func": "joystickDirection",
-    "name": "joystickDirection",
-    "blockText": "joystick direction",
-    "returnType": "Location"
-  }
-}

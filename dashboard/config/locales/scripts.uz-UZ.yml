@@ -307,6 +307,8 @@ uz:
               name: Internet
             Relay Programming:
               name: Estafetali dasturlash
+            Graph Paper Programming:
+              name: Katakchali varaqda dasturlash
         coursed-2018:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -329,3 +331,83 @@ uz:
           stages:
             Spelling Bee:
               name: Bilimdon Ari
+        coursef-2019:
+          stages:
+            The Artist:
+              name: Rassom
+            Internet:
+              name: Internet
+        coursed-2019:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: Katakchali varaqda dasturlash
+            Relay Programming:
+              name: Estafetali dasturlash
+        express-2019:
+          stages:
+            Relay Programming:
+              name: Estafetali dasturlash
+        andrea-test:
+          stages:
+            'null':
+              name: nol
+        pre-express-2019:
+          stages:
+            Spelling Bee:
+              name: Bilimdon Ari
+        csd2-2019:
+          stages:
+            Lists:
+              name: Ro‘yxatlar
+        csd3-2019:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+        csp1-2019:
+          stages:
+            The Internet:
+              name: Internet
+        express-2018-vn:
+          stages:
+            Graph Paper Programming:
+              name: Katakchali varaqda dasturlash
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Ro‘yxatlar
+        csd3-pilot:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Sikllar
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar
+            Variables:
+              name: O‘zgaruvchilar
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Shart buyruqlari

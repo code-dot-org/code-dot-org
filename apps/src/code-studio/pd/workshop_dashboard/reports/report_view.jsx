@@ -3,7 +3,8 @@
  * Route: /reports
  * Contains query fields (from, to, queryBy, course, report) and generates a report based on the response.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import _ from 'lodash';
 import moment from 'moment';
 import WorkshopSummaryReport from './workshop_summary_report';
@@ -26,7 +27,7 @@ import {
 } from './report_constants';
 
 const REPORT_VALUES = ['Teacher Attendance', 'Workshop Summary'];
-const API_DATE_FORMAT = "YYYY-MM-DD";
+const API_DATE_FORMAT = 'YYYY-MM-DD';
 
 export default class ReportView extends React.Component {
   static contextTypes = {
@@ -41,11 +42,22 @@ export default class ReportView extends React.Component {
     super(props);
     // Get url query parameters, if present and valid
     const urlParams = this.props.location.query;
-    const start = urlParams.start ? moment(urlParams.start, API_DATE_FORMAT) : null;
+    const start = urlParams.start
+      ? moment(urlParams.start, API_DATE_FORMAT)
+      : null;
     const end = urlParams.end ? moment(urlParams.end, API_DATE_FORMAT) : null;
-    const queryBy = urlParams.queryBy && QUERY_BY_VALUES.includes(urlParams.queryBy) ? urlParams.queryBy : null;
-    const course = urlParams.course && COURSE_VALUES.includes(urlParams.course) ? urlParams.course : null;
-    const report = urlParams.report && REPORT_VALUES.includes(urlParams.report) ? urlParams.report : null;
+    const queryBy =
+      urlParams.queryBy && QUERY_BY_VALUES.includes(urlParams.queryBy)
+        ? urlParams.queryBy
+        : null;
+    const course =
+      urlParams.course && COURSE_VALUES.includes(urlParams.course)
+        ? urlParams.course
+        : null;
+    const report =
+      urlParams.report && REPORT_VALUES.includes(urlParams.report)
+        ? urlParams.report
+        : null;
 
     // Default to the last week, if no start and end are specified
     this.state = {
@@ -61,7 +73,7 @@ export default class ReportView extends React.Component {
     this.updateLocationAndSetState();
   }
 
-  handleStartDateChange = (date) => {
+  handleStartDateChange = date => {
     let newState = {startDate: date};
     if (date.isAfter(this.state.endDate)) {
       newState.endDate = date;
@@ -69,7 +81,7 @@ export default class ReportView extends React.Component {
     this.updateLocationAndSetState(newState);
   };
 
-  handleEndDateChange = (date) => {
+  handleEndDateChange = date => {
     let newState = {endDate: date};
     if (date.isBefore(this.state.startDate)) {
       newState.startDate = date;
@@ -77,29 +89,37 @@ export default class ReportView extends React.Component {
     this.updateLocationAndSetState(newState);
   };
 
-  handleQueryByChange = (e) => {
+  handleQueryByChange = e => {
     this.updateLocationAndSetState({queryBy: e.target.value});
   };
 
-  handleCourseChange = (e) => {
+  handleCourseChange = e => {
     this.updateLocationAndSetState({course: e.target.value});
   };
 
-  handleReportChange = (e) => {
+  handleReportChange = e => {
     this.updateLocationAndSetState({report: e.target.value});
   };
 
   // Updates the URL with the new query params so it can be shared,
   // and sets state (which will perform the query).
   updateLocationAndSetState(newState = {}) {
-    const startDate = (newState.startDate || this.state.startDate).format(API_DATE_FORMAT);
-    const endDate = (newState.endDate || this.state.endDate).format(API_DATE_FORMAT);
+    const startDate = (newState.startDate || this.state.startDate).format(
+      API_DATE_FORMAT
+    );
+    const endDate = (newState.endDate || this.state.endDate).format(
+      API_DATE_FORMAT
+    );
     const queryBy = newState.queryBy || this.state.queryBy;
-    const course = newState.hasOwnProperty('course') ? newState.course : this.state.course;
+    const course = newState.hasOwnProperty('course')
+      ? newState.course
+      : this.state.course;
     const report = newState.report || this.state.report;
 
-    const course_param = course ? `&course=${course}` : "";
-    const url = `${this.props.location.pathname}?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
+    const course_param = course ? `&course=${course}` : '';
+    const url = `${
+      this.props.location.pathname
+    }?start=${startDate}&end=${endDate}&queryBy=${queryBy}${course_param}&report=${report}`;
     this.context.router.replace(url);
 
     if (!_.isEmpty(newState)) {
@@ -118,7 +138,8 @@ export default class ReportView extends React.Component {
           course={course}
         />
       );
-    } else { // Teacher Attendance
+    } else {
+      // Teacher Attendance
       return (
         <TeacherAttendanceReport
           startDate={startDate.format(API_DATE_FORMAT)}
@@ -166,7 +187,11 @@ export default class ReportView extends React.Component {
                 value={this.state.queryBy}
                 onChange={this.handleQueryByChange}
               >
-                {QUERY_BY_OPTIONS.map((o, i) => <option key={i} value={o.value}>{o.option}</option>)}
+                {QUERY_BY_OPTIONS.map((o, i) => (
+                  <option key={i} value={o.value}>
+                    {o.option}
+                  </option>
+                ))}
               </FormControl>
             </FormGroup>
           </Col>
@@ -175,10 +200,14 @@ export default class ReportView extends React.Component {
               <ControlLabel>Course</ControlLabel>
               <FormControl
                 componentClass="select"
-                value={this.state.course || ""}
+                value={this.state.course || ''}
                 onChange={this.handleCourseChange}
               >
-                {COURSE_OPTIONS.map((o, i) => <option key={i} value={o.value}>{o.option}</option>)}
+                {COURSE_OPTIONS.map((o, i) => (
+                  <option key={i} value={o.value}>
+                    {o.option}
+                  </option>
+                ))}
               </FormControl>
             </FormGroup>
           </Col>
@@ -190,15 +219,17 @@ export default class ReportView extends React.Component {
                 value={this.state.report}
                 onChange={this.handleReportChange}
               >
-                {REPORT_VALUES.map((v, i) => <option key={i} value={v}>{v}</option>)}
+                {REPORT_VALUES.map((v, i) => (
+                  <option key={i} value={v}>
+                    {v}
+                  </option>
+                ))}
               </FormControl>
             </FormGroup>
           </Col>
         </Row>
         <Row>
-          <Col sm={12}>
-            {this.renderReport()}
-          </Col>
+          <Col sm={12}>{this.renderReport()}</Col>
         </Row>
       </Grid>
     );

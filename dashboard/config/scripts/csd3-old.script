@@ -3,13 +3,13 @@ hideable_stages true
 student_detail_progress_view true
 
 stage 'Drawing in Game Lab'
-named_level 'CSD-U3-SFLP Simple Drawing'
-named_level 'CSD: Drawing in Game Lab 1'
+level 'CSD-U3-SFLP Simple Drawing', named: true
+level 'CSD: Drawing in Game Lab 1', named: true
 level 'U3 - Simple Drawing - Rectangle'
 level 'U3 - Simple Drawing - Rectangle Width and Height'
 level 'U3 - Simple Drawing - X and Y values'
 level 'U3 - Simple Drawing - Order of Blocks'
-named_level 'CSD: Drawing in Game Lab 2'
+level 'CSD: Drawing in Game Lab 2', named: true
 level 'U3 - Simple Drawing - Fill'
 level 'U3 - Simple Drawing - Oval'
 level 'U3 - Simple Drawing - Simple Shape Drawing'
@@ -21,20 +21,20 @@ level 'U3 - Simple Drawing - Road Rects and Color'
 level 'U3 - Simple Drawing - Road Ellipse'
 level 'U3 - Simple Drawing - regular polygon'
 level 'U3 - Simple Drawing - text'
-named_level 'U3 - Simple Drawing - Plan Personal Drawing'
+level 'U3 - Simple Drawing - Plan Personal Drawing', named: true
 level 'U3 - Simple Drawing - Personal Drawing'
 
 stage 'Draw Loop and Randomization'
-named_level 'CSD-U3-SFLP Draw Loop'
+level 'CSD-U3-SFLP Draw Loop', named: true
 level 'CSD U3 Random Intro'
 level 'CSD U3 Random Choice'
 level 'CSD U3 Random Min Max'
 level 'CSD U3 Random Width Height'
 level 'CSD U3 Random Color'
-named_level 'CSD U3 Draw Loop Stop'
+level 'CSD U3 Draw Loop Stop', named: true
 level 'CSD U3 Draw Loop Discuss'
 level 'CSD U3 Draw Loop Experiment'
-named_level 'CSD: Introduction to the Draw Loop'
+level 'CSD: Introduction to the Draw Loop', named: true
 level 'CSD U3 Background Discuss'
 level 'CSD U3 Background Experiment'
 level 'CSD U3 Random Animation'
@@ -45,16 +45,16 @@ level 'CSD U3 Simple Drawing - Animation 2'
 level 'CSD U3 Simple Drawing - Personal Animation'
 
 stage 'Variables Unplugged'
-named_level 'CSD U3 Variables2 SFLP'
+level 'CSD U3 Variables2 SFLP', named: true
 
 stage 'Variables and Animation'
-named_level 'CSD-U3-SFLP Variables'
-named_level 'CSD Variables Video 1'
+level 'CSD-U3-SFLP Variables', named: true
+level 'CSD Variables Video 1', named: true
 level 'CSD U3 Variables make a square'
 level 'CSD U3 Variables make a big square'
 level 'CSD U3 Variables naming rules'
 level 'CSD U3 Variables random assignment'
-named_level 'CSD U3 Variables STOP misconceptions prediction'
+level 'CSD U3 Variables STOP misconceptions prediction', named: true
 level 'U3 Variables misconceptions try it'
 level 'CSD U3 Counters explaining counters'
 level 'CSD U3 Counters counter square movement'
@@ -63,13 +63,13 @@ level 'CSD U3 Counters counter colors'
 level 'CSD U3 Counters counters expressions'
 level 'CSD U3 Counters watchers'
 level 'CSD U3 Counters counters sunset'
-named_level 'CSD U3 Counters match outputs'
-named_level 'Challenge: Sunset with Counters'
+level 'CSD U3 Counters match outputs', named: true
+level 'Challenge: Sunset with Counters', named: true
 
 stage 'Sprites and Properties'
-named_level 'CSD-U3-SFLP Sprites and Mod'
+level 'CSD-U3-SFLP Sprites and Mod', named: true
 level 'CSD U3 Sprites motivation'
-named_level 'CSD: Sprites in Game Lab'
+level 'CSD: Sprites in Game Lab', named: true
 level 'CSD U3 Sprites intro sprites'
 level 'CSD U3 Sprites setting properties'
 level 'CSD U3 Sprites debug dot notation'
@@ -77,9 +77,9 @@ level 'CSD U3 Sprites shapeColor'
 level 'CSD U3 Sprites width height'
 level 'CSD U3 Sprites sprites vs rects'
 level 'CSD U3 Sprites make your own sprite'
-named_level 'CSD U3 Sprites STOP sprites and variables'
+level 'CSD U3 Sprites STOP sprites and variables', named: true
 level 'CSD U3 Sprites createSprite params'
-named_level 'CSD: Animating Sprite Movement'
+level 'CSD: Animating Sprite Movement', named: true
 level 'CSD U3 Sprites animating with sprites'
 level 'CSD U3 Sprites debug watchers'
 level 'CSD U3 Sprites debug background'
@@ -89,8 +89,8 @@ level 'CSD U3 Sprites race random'
 level 'CSD U3 Sprites race finish'
 
 stage 'Sprites and Images'
-named_level 'CSD U3 SFLP Sprites and Images'
-named_level 'CSD: Animation Tab'
+level 'CSD U3 SFLP Sprites and Images', named: true
+level 'CSD: Animation Tab', named: true
 level 'CSD U3 - images - first sprite with image'
 level 'CSD U3 - images - changing scene'
 level 'CSD U3 - images - race images'
@@ -103,7 +103,7 @@ level 'U3 - Sprites and Mod - Rand Around Mouse'
 level 'CSD U3 - images - setAnimation'
 level 'CSD U3 - images - scale'
 level 'CSD U3 - images - kiteFlying'
-named_level 'CSD U3 - images - pick your final work'
+level 'CSD U3 - images - pick your final work', named: true
 level 'U3 - image - wheel free play'
 level 'CSD U3 - images - fish free play'
 level 'U3 - images - gears free play'
@@ -111,19 +111,19 @@ level 'U3 - images - bee free play'
 level 'CSD U3 - images - kite free play'
 
 stage 'Booleans and Conditionals'
-named_level 'CSD U3 - Booleans - 1'
+level 'CSD U3 - Booleans - 1', named: true
 
 stage 'Conditionals and Keyboard Input'
-named_level 'CSD U3 SFLP Conditionals'
+level 'CSD U3 SFLP Conditionals', named: true
 level 'CSD U3 Boolean Predict'
-named_level 'CSD U3 - Booleans Video'
+level 'CSD U3 - Booleans Video', named: true
 level 'CSD U3 Boolean Modify'
 level 'CSD U3 - conditionals - Matching'
 level 'CSD U3 - conditionals - transition'
 level 'CSD U3 - conditionals - transition 2'
 level 'CSD U3 - conditionals - first conditional'
 level 'CSD U3 - conditionals - first conditional 2'
-named_level 'CSD U3 -conditionals - stop booleans'
+level 'CSD U3 -conditionals - stop booleans', named: true
 level 'CSD U3 Keypress Boolean'
 level 'CSD U3 UP_ARROW'
 level 'CSD U3 - images - fish with arrows'
@@ -132,8 +132,8 @@ level 'CSD U3 Direction Arrows'
 level 'CSD U3 Direction Animations'
 
 stage 'Complex Conditionals'
-named_level 'CSD U3 - complex conditionals - SFLP'
-named_level 'CSD U3 - Conditionals Video'
+level 'CSD U3 - complex conditionals - SFLP', named: true
+level 'CSD U3 - Conditionals Video', named: true
 level 'CSD U3 Else'
 level 'CSD U3 If Else'
 level 'CSD U3 Keypress Watchers'
@@ -141,7 +141,7 @@ level 'CSD U3 Keypress Matching'
 level 'CSD U3 - complex - mouse down'
 level 'CSD U3 - complex - key up and down'
 level 'CSD U3 - complex - mouse move'
-named_level 'CSD U3 Compound Nested Stop'
+level 'CSD U3 Compound Nested Stop', named: true
 level 'CSD U3 Compound Nested Challenge'
 level 'CSD U3 - complex - nested conditional'
 level 'CSD U3 - complex - compound conditionals'
@@ -149,8 +149,8 @@ level 'CSD U3 Conditional Predict'
 level 'CSD U3 Conditional Project'
 
 stage 'Project: Interactive Card'
-named_level 'CSD U3 SFLP Card Project'
-named_level 'CSD U3 Interactive Card Exemplar'
+level 'CSD U3 SFLP Card Project', named: true
+level 'CSD U3 Interactive Card Exemplar', named: true
 level 'CSD U3 Interactive Card Background'
 level 'CSD U3 Interactive Card Sprites'
 level 'CSD U3 Interactive Card User Input'
@@ -158,8 +158,8 @@ level 'CSD U3 Interactive Card Other Conditionals'
 level 'CSD U3 Interactive Card Final'
 
 stage 'Velocity'
-named_level 'CSD U3 SFLP Velocity'
-named_level 'CSD: Sprite Velocity'
+level 'CSD U3 SFLP Velocity', named: true
+level 'CSD: Sprite Velocity', named: true
 level 'CSD U3 abstraction velocityX'
 level 'CSD U3 abstraction velocityY'
 level 'CSD U3 abstraction rotation'
@@ -172,7 +172,7 @@ level 'CSD U3 abstraction tumbleweed'
 level 'CSD U3 abstraction looping'
 
 stage 'Collision Detection'
-named_level 'CSD U3 Collision Detection'
+level 'CSD U3 Collision Detection', named: true
 level 'CSD U3 collisions car intro'
 level 'CSD U3 collisions build isTouching'
 level 'CSD U3 collisions isTouching intro'
@@ -184,7 +184,7 @@ level 'CSD U3 collisions scoreboard'
 level 'CSD U3 collisions sidescroll2'
 
 stage 'Complex Sprite Movement'
-named_level 'CSD U3 complex sprite movement SFLP'
+level 'CSD U3 complex sprite movement SFLP', named: true
 level 'CSD U3 Complex Movement counter prediction gamelab'
 level 'CSD U3 abstraction accelerateX'
 level 'CSD U3 abstraction accelerateY'
@@ -199,7 +199,7 @@ level 'CSD U3 abstraction reset coin'
 level 'CSD U3 abstraction make it your own'
 
 stage 'Collisions'
-named_level 'CSD U3 Collisions SFLP'
+level 'CSD U3 Collisions SFLP', named: true
 level 'CSD U3 collisions predict set velocity code'
 level 'CSD U3 collisions displace x'
 level 'CSD U3 collisions displace y'
@@ -217,7 +217,7 @@ level 'CSD U3 collisions flyman change colliders'
 level 'CSD U3 collisions flyman make it your own'
 
 stage 'Functions'
-named_level 'CSD U3 Functions SFLP'
+level 'CSD U3 Functions SFLP', named: true
 level 'CSD U3 Functions Call Function'
 level 'CSD U3 Functions Order Functions'
 level 'CSD U3 Functions Prediction Order of Create'
@@ -228,12 +228,12 @@ level 'CSD U3 Functions Create Function'
 level 'CSD U3 Functions Write Reset'
 level 'CSD U3 Functions Add IsTouching'
 level 'CSD U3 Functions Add Change Background'
-named_level 'CSD U3 Functions Introduction'
+level 'CSD U3 Functions Introduction', named: true
 
 stage 'The Game Design Process'
-named_level 'CSD U3 Defender SFLP'
-named_level 'CSD U3 AnimationsMulti Play Defender'
-named_level 'CSD U3 AnimationsMulti STOP project guide'
+level 'CSD U3 Defender SFLP', named: true
+level 'CSD U3 AnimationsMulti Play Defender', named: true
+level 'CSD U3 AnimationsMulti STOP project guide', named: true
 level 'CSD U3 AnimationsMulti introducing multiframe'
 level 'CSD U3 AnimationsMulti slow down'
 level 'CSD U3 AnimationsMulti mirror animation'
@@ -250,8 +250,8 @@ level 'CSD U3 AnimationsMulti defender touch water'
 level 'CSD U3 AnimationsMulti defender make it your own'
 
 stage 'Using the Game Design Process'
-named_level 'CSD U3 Using the Game Design Process SLFP'
-named_level 'CSD U3 platform sample1'
+level 'CSD U3 Using the Game Design Process SLFP', named: true
+level 'CSD U3 platform sample1', named: true
 level 'CSD U3 platform intro'
 level 'CSD U3 platform background1'
 level 'CSD U3 platform variable1'
@@ -272,8 +272,8 @@ level 'CSD U3 platform sample3'
 level 'CSD U3 platform challenge'
 
 stage 'Project: Design a Game'
-named_level 'CSD U3 Project Build a Game SFLP'
-named_level 'CSD U3 game intro'
+level 'CSD U3 Project Build a Game SFLP', named: true
+level 'CSD U3 game intro', named: true
 level 'CSD U3 game variables'
 level 'CSD U3 game backgrounds'
 level 'CSD U3 game display boards'

@@ -1,12 +1,13 @@
-import React, {PropTypes} from 'react';
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import React from 'react';
+import i18n from '@cdo/locale';
 /* globals google */
 
 /**
  * A search box that loads a Google Location Search control.
  *
  * Note: Google location search requires the following line to be present in the haml where this component is used:
- * %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry&v=3.7"}
+ * %script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=true&libraries=places,geometry"}
  */
 export default class GoogleSchoolLocationSearchField extends React.Component {
   static propTypes = {
@@ -18,7 +19,7 @@ export default class GoogleSchoolLocationSearchField extends React.Component {
     isControlledInput: PropTypes.bool,
     value: PropTypes.string,
     onChange: PropTypes.func,
-    style: PropTypes.object,
+    style: PropTypes.object
   };
 
   value() {
@@ -45,14 +46,16 @@ export default class GoogleSchoolLocationSearchField extends React.Component {
   }
 
   render() {
-    const conditionalProps = this.props.isControlledInput ? {
-      value: this.props.value,
-      onChange: this.props.onChange,
-    } : {};
+    const conditionalProps = this.props.isControlledInput
+      ? {
+          value: this.props.value,
+          onChange: this.props.onChange
+        }
+      : {};
 
     return (
       <input
-        ref={el => this.searchBoxRef = el}
+        ref={el => (this.searchBoxRef = el)}
         type="text"
         name={this.props.name}
         placeholder={i18n.schoolLocationSearchPlaceholder()}

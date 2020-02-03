@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "How can we count from 1 to 50? Edit the \"for\" block.",
+    "short_instructions": "How can we count from 1 to 50? Edit the \"for\" block.",
     "x": "200",
     "y": "350",
     "start_direction": "0",

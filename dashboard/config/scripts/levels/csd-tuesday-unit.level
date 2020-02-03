@@ -12,7 +12,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Tuesday Unit Reflection Part 1\r\n\r\n## Unit 1 Unplugged\r\n\r\nHow would you respond to a teacher who asks why the first unit does not use computers?"
+    "long_instructions": "# Tuesday Unit Reflection Part 1\r\n\r\n## Unit 1 Unplugged\r\n\r\nHow would you respond to a teacher who asks why the first unit does not use computers?"
   },
   "published": true,
   "notes": "",

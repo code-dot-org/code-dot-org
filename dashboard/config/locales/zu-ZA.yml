@@ -1,9 +1,15 @@
 ---
 zu:
+  errors:
+    messages:
+      not_saved: 'Please correct the following errors:'
   cancel: Hoxisa
   continue: Qhubeka
   signup_form:
     email_preference_no: Cha
+  nav:
+    user:
+      infinity: Akugcini noma utalagu
   dialog:
     ok: Kulungile
     startover_title: Ingabe uqinisekile ufuna ukuqala phansi?
@@ -11,9 +17,8 @@ zu:
     startover_cancel: Hoxisa
   terms_interstitial:
     print: Khiphela ephepheni
-  project:
-    delete_no: Cha
-    cancel: Hoxisa
+  flex_category:
+    csp_lists: Umbhalo olandelanayo
   pd:
     form_entries:
       subjects:

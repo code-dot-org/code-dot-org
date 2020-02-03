@@ -3005,86 +3005,229 @@ fr:
           le lien à vos amis ou utilisez-le pour jouer sur votre téléphone. Amusez-vous
           bien ! Je suis impatient de tester votre version de Minecraft.
     applab_intro_welcome:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
-      6: 
-      7: 
-      8: 
+      1:
+        text: Je m'appelle Mei'lani. Je suis stagiaire chez code.org et je suis aussi
+          étudiante en informatique. J'aime l'informatique parce que c'est vraiment
+          créatif. Je parviens à résoudre les problèmes. Je peux tout faire fonctionner
+          comme je le veux. Mais je peux aussi être la conceptrice. Je peux être l'artiste
+          et tout choisir du côté créatif.
+      2:
+        text: Créer tes propres applications est facile avec le labo des applis !
+          Que tu sois novice en programmation ou que tu aies une certaine expérience,
+          le labo des applis est un excellent outil pour créer de nouvelles applications
+          et les partager avec tes amis.
+      3:
+        text: Ceci est le labo des applis. Sur le côté gauche, il y a ton application.
+          Sur le côté droit, le code qui la fera fonctionner. Tu construis ton programme
+          en faisant glisser des blocs depuis la boîte à outils. Pour commencer, tu
+          auras juste un bloc appelé « setProperty ».
+      4:
+        text: Le bloc « setProperty » modifie l'apparence des éléments sur votre écran.
+          Comme les boutons, les labels ou même l'écran lui-même. Tu dois d’abord
+          décider de l’élément que tu souhaites modifier. Si tu survoles un élément
+          de ton application, tu peux voir le nom ou identifiant ici. Ensuite, sélectionne
+          cet identifiant dans le premier menu déroulant.
+      5:
+        text: Les éléments ont de nombreuses propriétés que tu peux modifier, telles
+          que la couleur du texte, la couleur de fond ou la taille de la police. Tu
+          peux voir la liste complète et choisir la propriété que tu souhaites modifier
+          dans la deuxième liste déroulante.
+      6:
+        text: Le dernier menu déroulant est celui dans lequel tu écris la valeur que
+          tu souhaites utiliser. Le bloc te fera une suggestion. Mais tu peux toujours
+          saisir toi-même des couleurs ou des chiffres différents.
+      7:
+        text: 'Une fois que tu as terminé, le bloc se lit un peu comme une phrase
+          : « Mettre la couleur d''arrière-plan du bouton 1 en vert ». Clique sur
+          « Exécuter » pour voir les modifications que tu construis dans le code.
+          Si tu réinitialises, tu peux faire glisser davantage de blocs pour modifier
+          d''autres éléments de ton application. Comme le texte!'
+      8:
+        text: Pour ce tutoriel, nous allons travailler en mode bloc, mais le labo
+          des applis supporte aussi le texte.
       9:
-        text: Dans tous les cas vous allez programmer en Javascript, le langage le
-          plus utilisé sur internet. Chaque niveau a un objectif, instructions et
-          une image afin de vous aider dans votre création.
+        text: Dans tous les cas, tu vas programmer en Javascript, le langage le plus
+          utilisé sur internet. Chaque niveau a un objectif, des instructions et une
+          image afin de t’aider dans ta création.
       10:
         image: notes/applab_intro_welcome_10.png
-        text: Si vous êtes bloqué, cliquez sur cette image pour voir une explication
-          complète du niveau. Essayez d'abord de le faire tout seul.
+        text: Si tu es bloqué, clique sur cette image pour voir une explication complète
+          du niveau. Essaie d'abord de le faire tout seul.
       11:
         image: notes/applab_intro_welcome_11.png
-        text: Quand vous avez finit votre objectif pour ce niveau cliquez sur "Finir"
-          pour avancer. C'est tout ! Appuyez sur le bouton orange "continuer" pour
-          allez au niveau suivant et commencez votre aventure avec App Lab !
+        text: Quand tu as fini ton objectif pour ce niveau, clique sur « Terminer
+          » pour avancer. C'est tout ! Appuie sur le bouton orange « Continuer » pour
+          aller au niveau suivant et commencer ton aventure avec le labo des applis
+          !
     applab_intro_events:
       1:
         image: notes/applab_intro_events_1.png
+        text: Les applications sont vraiment chouettes parce que c'est un peu comme
+          créer sa propre entreprise, c'est-à-dire que tu dois tout concevoir à partir
+          de rien, tu dois tout gérer, et tu es le propriétaire de cet élément que
+          tu viens de créer avec du code.
       2:
         image: notes/applab_intro_events_2.png
+        text: Maintenant que tu peux changer l'apparence de ton application, rendons-la
+          interactive en répondant aux événements ! Les événements sont des actions
+          de l'utilisateur telles que cliquer sur un bouton, faire défiler un menu
+          ou survoler une image. Les applications interactives ont besoin de moyens
+          pour réagir aux événements, comme de jouer un son lorsque je clique sur
+          ce bouton. Pour ce faire, dans le labo des applis, tu dois utiliser un nouveau
+          bloc appelé « onEvent ».
       3:
         image: notes/applab_intro_events_3.png
+        text: Ce programme met l'écran en bleu. Je veux que l’écran devienne vert
+          lorsque je clique sur ce bouton. Je vais d'abord devoir faire glisser un
+          bloc « onEvent ». En survolant, je sais que l'ID du bouton est « bigButton
+          ». Je le sélectionnerai donc dans le premier menu déroulant.
       4:
         image: notes/applab_intro_events_4.png
+        text: Ensuite, je choisis le type d'événement. Tu peux choisir parmi de nombreuses
+          options, mais pour le moment, je le laisse en bon vieux clic.
       5:
         image: notes/applab_intro_events_5.png
+        text: 'Enfin, je vais ajouter du code dans le « onEvent » qui modifiera la
+          couleur d''arrière-plan de l''écran. Tu peux lire ce bloc comme une phrase
+          : « Si tu cliques sur le bouton, exécute tout ce code. »'
       6:
         image: notes/applab_intro_events_6.png
+        text: Essayons maintenant. Les blocs en-dehors d’un « onEvent » s’exécutent
+          tout d’abord donc l’écran commence en bleu.
       7:
         image: notes/applab_intro_events_7.png
+        text: Et quand j’appuie sur le gros bouton, le code dans mon « onEvent » s’exécute
+          et mon écran devient vert.
       8:
         image: notes/applab_intro_events_8.png
+        text: Si tu veux modifier plus de choses après cet événement, comme le texte
+          sur l’écran, ajoute simplement plus de code dans « onEvent »
       9:
         image: notes/applab_intro_events_9.png
+        text: Pour que ton programme réponde à plus d’événements, ajoute plus de blocs
+          « onEvent ». Assure-toi simplement de ne pas les mettre les uns dans les
+          autres. Il est maintenant temps d'essayer toi-même. Amuse-toi bien !
     applab_intro_sounds:
       1:
         image: notes/applab_intro_sounds_1.png
+        text: Tu vas maintenant découvrir comment ajouter des images et des sons à
+          ton application. Commençons par vérifier les options de son.
       2:
         image: notes/applab_intro_sounds_2.png
+        text: Dans la boîte à outils, tu vas trouver un nouveau bloc appelé « playSound
+          ». Fais-le glisser dans l’espace de travail. Tu peux choisir un son à jouer
+          en cliquant sur le menu déroulant puis sur « Choisir ».
       3:
         image: notes/applab_intro_sounds_3.png
+        text: À partir de là, tu peux soit télécharger un fichier son depuis ton ordinateur,
+          soit rechercher un son dans la bibliothèque de sons. La bibliothèque de
+          sons a beaucoup de catégories différentes comme les instruments, la musique
+          de fond ou les bruits d’animaux.
       4:
         image: notes/applab_intro_sounds_4.png
+        text: Une fois que tu as le son que tu veux, clique sur « Choisir ». Lorsque
+          ce bloc s’exécute, le son que tu as choisi est joué.
       5:
         image: notes/applab_intro_sounds_5.png
+        text: Pour ajouter des images à tes éléments, tu peux simplement utiliser
+          le bloc « setProperty ». Sélectionne la propriété de l'image dans le deuxième
+          menu déroulant
       6:
         image: notes/applab_intro_sounds_6.png
+        text: Puis sélectionnez « Choisir » dans le troisième menu déroulant.
       7:
         image: notes/applab_intro_sounds_7.png
+        text: À partir de là, tu peux télécharger une image depuis ton ordinateur
+          ou parcourir une immense bibliothèque d’icônes.
       8:
         image: notes/applab_intro_sounds_8.png
+        text: De retour en mode code, tu peux utiliser le bloc « setProperty » pour
+          changer la couleur de ton icône. Une fois que tu as sélectionné quelle image
+          utiliser, clique sur « Exécuter » pour voir à quoi elle ressemble.
       9:
         image: notes/applab_intro_sounds_9.png
+        text: C'est tout ! Tu peux maintenant commencer à ajouter des images et des
+          sons pour rendre tes applications encore plus amusantes et dynamiques.
     applab_intro_designmode:
       1:
         image: notes/applab_intro_designmode_1.png
+        text: Pour créer tes propres applications, tu devras commencer à concevoir
+          des écrans et des éléments à partir de rien. Avec le labo des applis, cela
+          est facile à faire avec le mode création.
       2:
         image: notes/applab_intro_designmode_2.png
+        text: Utilise l’interrupteur en haut de ton appli pour passer en mode création.
       3:
         image: notes/applab_intro_designmode_3.png
+        text: Tu peux ajouter de nouveaux éléments en les faisant glisser sur l'écran.
+          Tu peux les déplacer à différents endroits et modifier leur taille en faisant
+          glisser le coin inférieur droit.
       4:
         image: notes/applab_intro_designmode_4.png
+        text: Pour modifier les propriétés d'un élément, utilisez les contrôles à
+          droite. Par exemple, il est très facile de changer le texte, la couleur
+          et la taille de la police de ce bouton.
       5:
         image: notes/applab_intro_designmode_5.png
-      6: 
-      7: 
-      8: 
-      9: 
-      10: 
+        text: Lorsque tu ajoutes un nouvel élément à ton écran, il reçoit un identifiant
+          générique tel que « button1 ». C'est une bonne idée de changer l'ID de ce
+          bouton en quelque chose de plus significatif, comme « boutonDroite » pour
+          que tu saches lequel c'est quand tu vas dans le programme.
+      6:
+        text: Si tu ajoutes un élément à ton application par erreur, fais-le simplement
+          glisser en-dehors ou appuie sur le bouton de suppression.
+      7:
+        text: Tu peux ajouter de nouveaux écrans à ton application en y faisant glisser
+          un élément écran
+      8:
+        text: Dans le menu déroulant en haut, tu peux rapidement basculer entre les
+          écrans que tu crées.
+      9:
+        text: Dans ton application, tu auras besoin d'un moyen de basculer entre tous
+          ces écrans. Le bloc « setScreen » a donc été ajouté à la boîte à outils.
+          Utilisez « setScreen » dans le bloc « onEvent » pour changer d’écran en
+          un clic.
+      10:
+        text: Dans les prochains niveaux, tu travailleras sur un seul projet. Tout
+          d'abord, tu vas ajouter un bouton, tu vas ajouter un nouvel écran et, enfin,
+          tu vas écrire du code pour que le bouton bascule vers le nouvel écran.
+    applab_intro_share:
+      1:
+        text: Maintenant que tu as appris quelques notions de base sur le labo des
+          applis, telles que l'ajout de boutons, de sons, d'images, de texte et de
+          nouveaux écrans, tu peux créer toutes sortes d'applications.
+      2:
+        text: Au niveau suivant, tu trouveras l'application que tu viens de construire.
+          Avec un peu de créativité, tu peux transformer cela en un test de personnalité
+          pour tes amis, une carte de vœux que tu pourras partager avec ta famille
+          ou un jeu dont tu es le héros. Toutes ces applications ne sont qu'une combinaison
+          des compétences que tu as déjà acquises, et je parie que tu peux en imaginer
+          encore plus.
+      3:
+        text: Une fois que tu as terminé avec ton application, tu peux facilement
+          l'envoyer sur ton téléphone pour voir à quoi elle ressemble. Clique simplement
+          sur « Partager » et entre ton numéro de téléphone ici.
+      4:
+        text: Tu recevras un message qui te permettra d'ouvrir ton application instantanément.
+      5:
+        text: Tu peux également partager un lien vers ton application sur les médias
+          sociaux ou la publier sur la galerie publique de code.org afin que d'autres
+          personnes puissent y jouer et la partager.
+      6:
+        text: Tu viens de gratter la surface de ce que le labo des applis peut faire.
+          La version complète du labo des applis offre des interactions utilisateur
+          plus avancées, de nouveaux éléments d'écran et même une base de données
+          intégrée te permettant de créer rapidement des applications complètes. Tu
+          trouveras l'outil complet sur « code.org/applab » et de nombreuses idées
+          si tu veux continuer.
+      7:
+        text: Merci d'être venu. Maintenant, construis et partage ta première application,
+          et continue à créer des applications avec le labo des applis !
     mc_2017_agent_intro:
       1:
-        text: 'Stacy: Stampy, Lizzy, Preston - merci de venir avec moi. Ce que je
-          veux vous montrer est juste au dessus de ce plateau. Je pense que vous allez
-          adorer!'
+        text: 'Stacy : Stampy, Lizzy, Preston - merci d’être avec moi. Ce que je veux
+          vous montrer est juste au dessus de ce plateau. Je pense que vous allez
+          adorer !'
       2:
         text: Attendez une minute - il y a un trou sur la voie! (Aaaahhhhh)
       3:
@@ -3277,32 +3420,136 @@ fr:
     csd_concept_how_computers_work:
       1:
         image: notes/csd_concept_how_computers_work_1.png
+        text: 'Partout où vous regardez, les ordinateurs changent le monde. Que ce
+          soit sur nos bureaux, dans nos maisons, nos poches ou n’importe où ailleurs.
+          Mais alors que la plupart d’entre nous utilisons quotidiennement cette technologie
+          révolutionnaire, nous ne demandons pas souvent : « Comment fonctionnent
+          les ordinateurs ? » Dans cette série, vous allez apprendre comment les ordinateurs
+          fonctionnent réellement, à commencer par ce qui fait de l''ordinateur un
+          ordinateur. Ensuite, vous verrez comment l''information est représentée
+          à l''intérieur de l''ordinateur à l''aide de minuscules signaux électriques
+          qui s''allument et s''éteignent à une vitesse ahurissante.'
       2:
         image: notes/csd_concept_how_computers_work_2.png
+        text: Ensuite, vous apprendrez comment les ordinateurs utilisent des circuits
+          pour tout faire, des simples mathématiques à la simulation de mondes virtuels
+          entiers. Vous allez ensuite effectuer un zoom arrière et examiner les différentes
+          parties d’un ordinateur qui saisissent, produisent et stockent toutes ces
+          informations. Enfin, vous examinerez ce qu'est le code et comment le logiciel
+          contrôle le matériel. Ainsi, que vous soyez simplement curieux de connaître
+          les appareils que vous utilisez tous les jours ou que vous vouliez concevoir
+          les innovations du futur, la première étape consiste à apprendre le fonctionnement
+          des ordinateurs.
     csd_concept_computer:
       1:
         image: notes/csd_concept_computer_1.png
+        text: Je m’appelle May-Li Khoe et je suis une designer et une inventrice.
+          Certaines des choses que j'ai conçues ont été utilisées par Apple, et maintenant
+          je conçois des produits que les enfants peuvent utiliser pour qu'ils puissent
+          travailler plus facilement à l'école. Mes autres emplois incluent le DJ
+          et la danse.
       2:
         image: notes/csd_concept_computer_2.png
+        text: Les ordinateurs sont partout ! Ils sont dans les poches, dans les voitures,
+          autour des poignets. Ils pourraient être dans ton sac à dos. Mais qu’est-ce
+          qui fait de l’ordinateur un ordinateur, au juste ? Et comment ça marche
+          ?
       3:
         image: notes/csd_concept_computer_3.png
+        text: Salut, je suis Nat ! J’étais un des designers originaux de la Xbox.
+          Je travaille avec des ordinateurs depuis que j’ai environ sept ans et maintenant
+          je travaille sur la réalité virtuelle. En tant qu’humains, nous avons toujours
+          créé des outils pour résoudre des problèmes. Des outils comme une brouette,
+          un marteau, une presse à imprimer ou une semi-remorque.
       4:
         image: notes/csd_concept_computer_4.png
+        text: Toutes ces inventions nous ont aidés avec le travail manuel. Au fil
+          du temps, les gens ont commencé à se demander si une machine pourrait être
+          conçue et construite pour nous aider dans notre travail de réflexion, comme
+          résoudre des équations ou suivre les étoiles dans le ciel. Plutôt que de
+          déplacer ou de manipuler des objets physiques tels que la terre et la pierre,
+          ces machines devraient être conçues pour manipuler des informations. En
+          explorant comment concevoir une machine à penser, les pionniers de l'informatique
+          ont réalisé qu'elle devait effectuer quatre tâches différentes.
       5:
         image: notes/csd_concept_computer_5.png
+        text: Il faudrait qu’on puisse y entrer des informations, qu’elle les stocke,
+          les traite, puis qu’elle donne les résultats. Ça peut sembler simple, mais
+          ces quatre choses sont communes à tous les ordinateurs. C'est ce qui fait
+          d'un ordinateur un ordinateur.
       6:
         image: notes/csd_concept_computer_6.png
+        text: Les ordinateurs étaient à l'origine des calculatrices basiques, ce qui
+          était déjà vraiment génial à l'époque, et ne faisaient que manipuler des
+          chiffres. Mais maintenant, nous pouvons les utiliser pour parler les uns
+          aux autres, pour jouer à des jeux, contrôler des robots et faire les choses
+          les plus folles qu’on pourrait imaginer. Les ordinateurs modernes ne ressemblent
+          en rien à ces vieilles machines maladroites, mais ils font toujours les
+          mêmes choses.
       7:
         image: notes/csd_concept_computer_7.png
-      8: 
-      9: 
-      10: 
+        text: Premièrement, nous allons parler d’entrée. On peut dire aux ordinateurs
+          quoi faire avec le clavier, quoi faire avec la souris, le microphone, la
+          caméra. Toutes ces différentes entrées fournissent une information informatique,
+          qui est ensuite stockée en mémoire.
+      8:
+        text: Le processeur d'un ordinateur prend des informations depuis la mémoire.
+          Il les manipule ou les modifie à l'aide d'un algorithme, qui n'est qu'une
+          série de commandes. Et puis il renvoie les informations traitées pour être
+          à nouveau stockées dans la mémoire. Cela continue jusqu'à ce que les informations
+          traitées soient prêtes à sortir.
+      9:
+        text: La manière dont un ordinateur transmet les informations dépend de ce
+          que l'ordinateur est conçu pour faire. Un écran d'ordinateur peut afficher
+          du texte, des photos, des vidéos ou des jeux interactifs, même de la réalité
+          virtuelle ! La sortie d'un ordinateur peut même inclure des signaux pour
+          contrôler un robot.
+      10:
+        text: Et qui sait à quoi vont ressembler les ordinateurs de demain ? J'espère
+          que tu pourras aider à décider de ce à quoi tu veux que les ordinateurs
+          de demain ressemblent. Mais sur tous les ordinateurs, quels que soient les
+          types de technologies qu’ils utilisent, ils font toujours les mêmes choses.
+          Ils prennent des informations, ils les stockent sous forme de données, ils
+          les traitent, puis ils affichent les résultats.
+    csd_concept_binary_data:
+      1:
+        text: Salut ! Je m'appelle Limor Fried et je suis ingénieur chez Adafruit
+          Industries. C’est ici que je fais de l’ingénierie et du design et que je
+          crée des circuits pour la mode, la musique et la technologie.
+      2:
+        text: Je m’appelle Federico Gomez Suarez et je suis un développeur de logiciels
+          avec Microsoft Hack for Good. Et je me penche sur l’utilisation de la technologie
+          pour nous aider à résoudre certains des grands problèmes sociaux de notre
+          époque.
+      3:
+        text: Tu as peut-être entendu dire que les ordinateurs fonctionnent avec des
+          uns et des zéros. Mais à l'heure actuelle, presque personne ne traite directement
+          ces uns et ces zéros. Pourtant, les uns et les zéros jouent un rôle important
+          dans le fonctionnement interne des ordinateurs.
+      4:
+        text: À l'intérieur d'un ordinateur se trouvent des fils électriques et des
+          circuits contenant toutes les informations contenues dans un ordinateur.
+          Comment stocker ou représenter les informations en utilisant l'électricité
+          ?
+      5:
+        text: Eh bien, si tu as un seul fil traversé par de l’électricité, le signal
+          peut être activé ou désactivé. Ce n'est pas beaucoup de choix, mais c'est
+          un début très important. Avec un fil, nous pouvons représenter un oui ou
+          un non, un vrai ou un faux, un un ou zéro ou n'importe quoi d'autre avec
+          seulement deux options. Cet état d'activation / désactivation d'un seul
+          fil s'appelle un bit, et il s'agit de la plus petite information qu'un ordinateur
+          puisse stocker.
+      6:
+        text: 'Si tu utilises plus de fils, tu obtiens plus de bits : plus de uns
+          et de zéros. Avec plus de bits, tu peux représenter des informations plus
+          complexes. Mais pour comprendre cela, nous devons en savoir plus sur ce
+          qu’on appelle le système binaire.'
+      7:
+        text: 'Dans le système décimal, nous avons dix chiffres de zéro à neuf, et
+          c''est ainsi que nous avons tous appris à compter. Dans le système binaire,
+          nous n''avons que deux chiffres : zéro et un. Avec ces deux chiffres, on
+          peut compter jusqu''à n''importe quel nombre.'
     csd_concept_circuits_logic:
-      1: 
-      2: 
-      3: 
-      4: 
-      5: 
       6:
         image: notes/csd_concept_circuits_logic_6.png
       7:
@@ -3449,3 +3696,349 @@ fr:
           Mais ce qui rend l'ordinateur intelligent ou utile, c'est vous. Quand vous
           apprenez à coder, vous allez devoir définir le problème que vous voulez
           résoudre, et écrire le logiciel pour que cette idée devienne une réalité.
+    hoc_dance_warmup:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Échauffement'
+      2:
+        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
+          et créateur d'iLuminate.
+      3:
+        text: L'informatique est liée à la créativité, de plein de manières différentes,
+          de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
+          vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je
+          fais avec des costumes au lumière. On peut faire tellement de choses, une
+          fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
+          infinies.
+      4:
+        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
+          en programmant votre propre soirée dansante ! Nous avons sélectionné de
+          la musique branchée et une équipe de grands danseurs avec lesquels vous
+          pourrez jouer.
+      5:
+        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
+          modifier leurs mouvements de danse, les faire répondre à la musique et les
+          rendre interactifs.
+      6:
+        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
+          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+      7:
+        text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
+          disponibles dans cet espace au fur et à mesure des cours.
+      8:
+        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
+          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
+          votre programme.
+      9:
+        text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
+          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+      10:
+        text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
+          d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
+          de configuration orange. Ce danseur là est un chat et il s'appelle "my_first_dancer".
+          Vous pouvez changer le nom en cliquant ici.
+      11:
+        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
+          jeu, avec ça.
+      12:
+        text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
+          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
+          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
+          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
+          apparaissent dans l'espace de lecture et la musique démarre.
+      13:
+        text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
+          vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
+          compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va
+          ?
+    hoc_dance_events:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: |-
+          Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler la
+          technologie, car elle contrôle littéralement nos vies.
+      3:
+        text: Pour générer différents mouvements de danse au bon moment avec la musique,
+          vous pouvez utiliser les Évènements. Un événement demande à votre programme
+          d’écouter quelque chose, puis d’y réagir tout de suite.
+      4:
+        text: À titre d’exemple, certains événements consistent en un clic de souris,
+          un bouton fléché ou appuyer sur l'écran. L'événement vous utilisez écoutera
+          en changement en la chanson. Le changement incitera votre danseur à faire
+          une nouvelle danse.
+      5:
+        text: Les danseurs professionnels font leur chorégraphie en comptant les temps
+          de la chanson.
+      6:
+        text: En musique, une mesure fait référence à un certain nombre de temps.
+          En général, dans les chansons, une mesure dure 4 temps.
+      7:
+        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
+          vert. Ce bloc Évènement dit « après 4 mesures ».
+      8:
+        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
+          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
+          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
+          chanson, avant de commencer sa danse.
+      9:
+        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+      10:
+        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
+          Et juste au bon moment, le danseur commencera.
+    hoc_dance_properties:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
+          une Amazon Future Ingénieure.
+      3:
+        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
+          critique, et après des heures de travail, on a quelque chose de vraiment
+          cool et gratifiant.
+      4:
+        text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
+          vous avez programmés pour différents types de mouvements de danse. Mais
+          comment fonctionnent ces mouvements ?
+      5:
+        text: Chaque mouvement de danse est constitué d’une série d’images appelées
+          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
+          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
+          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
+          bouge. C’est là le secret derrière chaque animation.
+      6:
+        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
+          aussi ses propriétés qui décrivent des choses comme la position du danseur
+          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
+          vous utiliserez le bloc Définir.
+      7:
+        text: |-
+          Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme. Choisissez ensuite le danseur que vous
+          voulez modifier et tapez la taille que vous voulez qu’ils aient à l’écran.
+      8:
+        text: |-
+          La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduira
+          la taille des danseurs. Plus le danseur est petit, plus il semble éloigné.
+      9:
+        text: À l'aide du bloc Définir, vous pouvez également modifier les dimensions,
+          la rotation, la position et la couleur d'un danseur. En jouant avec ces
+          propriétés, vous pouvez faire plein de modifications, et les relier à différentes
+          parties de la chanson.
+      10:
+        text: N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur
+          déjà existant. Veillez à ce que votre bloc Définir soit après celui Créer
+          un nouveau danseur. N'hésitez pas à faire des expériences, à être créatif
+          et à vous amuser.
+    hoc_dance_congrats:
+      1:
+        text: 'Heure de Code | Soirée Dansante : C’est la fête !'
+      2:
+        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
+          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
+          avec votre propre design à partager avec vos amis.
+      3:
+        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
+          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
+          le bloc Disposition pour organiser les danseurs de différentes façons à
+          l'écran.
+      4:
+        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
+          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
+          ?
+      5:
+        text: Ou bien une chorégraphie avec vos amis ?
+      6:
+        text: Ou encore autre chose qui regrouperait tout ?
+      7:
+        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
+          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
+          !
+    MC_2018_loops:
+      2:
+        text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
+          utilisiez le même ensemble de commandes à plusieurs reprises dans certains
+          des derniers casse-tête. Ça a dû être un peu fatiguant. N’avez-vous jamais
+          souhaité pouvoir faire encore et encore quelque chose comme, vous savez,
+          laver la vaisselle ou vous brosser les dents sans vous fatiguer ou vous
+          ennuyer ? Ce serait bien.
+    mc_2018_closing:
+      2:
+        text: 'Poulpe : Félicitations !'
+    hoc_dance_warmup_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Échauffement'
+      2:
+        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
+          et créateur d'iLuminate.
+      3:
+        text: L'informatique est liée à la créativité, de plein de manières différentes,
+          de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
+          vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je
+          fais avec des costumes au lumière. On peut faire tellement de choses, une
+          fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
+          infinies.
+      4:
+        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
+          en programmant votre propre soirée dansante ! Nous avons sélectionné de
+          la musique branchée et une équipe de grands danseurs avec lesquels vous
+          pourrez jouer.
+      5:
+        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
+          modifier leurs mouvements de danse, les faire répondre à la musique et les
+          rendre interactifs.
+      6:
+        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
+          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+      7:
+        text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
+          disponibles dans cet espace, au fur et à mesure des cours.
+      8:
+        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
+          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
+          votre programme.
+      9:
+        text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
+          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+      10:
+        text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
+          d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
+          de configuration orange. Ce danseur là est un chat.
+      11:
+        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
+          jeu, avec ça.
+      12:
+        text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
+          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
+          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
+          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
+          apparaissent dans l'espace de lecture et la musique démarre.
+      13:
+        text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
+          vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
+          compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?
+    hoc_dance_events_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org.
+          J’ai contribué à l’élaboration de Dance Party !
+      3:
+        text: Pour générer différents mouvements de danse au bon moment avec la musique,
+          vous pouvez utiliser les Évènements. Un événement demande à votre programme
+          d’écouter quelque chose, puis d’y réagir tout de suite.
+      4:
+        text: 'Quelques exemples d''évènements sont: l''écoute des clics de souris,
+          l’activation d’une touche fléchée du clavier ou un tapotement de l''écran.'
+      5:
+        text: Là vous allez programmer un danseur pour faire un mouvement lorsque
+          vous appuyez sur les boutons fléchés de votre écran, ou sur les touches
+          de votre clavier.
+      6:
+        text: Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et
+          le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche
+          du haut, le code associé au bloc de flèche « quand en haut » s’exécute.
+          Quelle danse allez-vous choisir ?
+      7:
+        text: Veillez à ce que le type de danseur que vous choisissez corresponde
+          bien à l'un des danseurs que vous avez créés dans le bloc de configuration,
+          sinon il ne se passera rien.
+      8:
+        text: Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour
+          que vos danseurs effectuent des mouvements différents avec chaque touche.
+          Essayez-le et avec les quelques lignes de code, vous pourrez créer votre
+          propre danse interactive !
+    hoc_dance_measures_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Temps'
+      2:
+        text: |-
+          Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler la
+          technologie, car elle contrôle littéralement nos vies.
+      3:
+        text: L’événement que nous allons utiliser maintenant va écouter les variations
+          dans le morceau. Cette variation incitera votre danseur à faire une nouvelle
+          danse.
+      4:
+        text: |-
+          Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson. En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4
+          temps.
+      5:
+        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
+          vert. Ce bloc Évènement dit « après 4 mesures ».
+      6:
+        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
+          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
+          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
+          chanson, avant de commencer sa danse.
+      7:
+        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+      8:
+        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
+          Et juste au bon moment, le danseur commencera.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
+          une Amazon Future Ingénieure.
+      3:
+        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
+          critique, et après des heures de travail, on a quelque chose de vraiment
+          cool et gratifiant.
+      4:
+        text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
+          vous avez programmés pour différents types de mouvements de danse. Mais
+          comment fonctionnent ces mouvements ?
+      5:
+        text: Chaque mouvement de danse est constitué d’une série d’images appelées
+          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
+          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
+          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
+          bouge. C’est là le secret derrière chaque animation.
+      6:
+        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
+          aussi ses propriétés qui décrivent des choses comme la position du danseur
+          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
+          vous utiliserez le bloc Définir.
+      7:
+        text: Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir.
+          Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser
+          le bloc Définir dans votre programme.
+      8:
+        text: Choisissez ensuite le danseur que vous voulez modifier et tapez la taille
+          que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous
+          choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus
+          le danseur est petit, plus il semble éloigné.
+      9:
+        text: À l'aide du bloc Définir, vous pouvez également modifier les dimensions,
+          la rotation, la position et la couleur d'un danseur. En jouant avec ces
+          propriétés, vous pouvez faire plein de modifications, et les relier à différentes
+          parties de la chanson.
+      10:
+        text: |-
+          N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celui
+          Créer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatif
+          et à vous amuser !
+    hoc_dance_congrats_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : C’est la fête !'
+      2:
+        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
+          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
+          avec votre propre design à partager avec vos amis.
+      3:
+        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
+          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
+          le bloc Disposition pour organiser les danseurs de différentes façons à
+          l'écran.
+      4:
+        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
+          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
+          ?
+      5:
+        text: Ou bien une chorégraphie avec vos amis ?
+      6:
+        text: Ou encore autre chose qui regrouperait tout ?
+      7:
+        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
+          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
+          !

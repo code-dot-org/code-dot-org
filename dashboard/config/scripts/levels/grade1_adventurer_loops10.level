@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help me get all of the gold from this cave.",
+    "short_instructions": "Help me get all of the gold from this cave.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll need three `repeat` loops to solve this puzzle.\",\"hint_id\":\"grade1_adventurer_loops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ef0d1c5b37caeb858e552760cb84cdef/grade1_adventurer_loops10.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",

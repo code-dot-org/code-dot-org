@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw lines up, over, and down to complete the castle!",
+    "short_instructions": "Draw lines up, over, and down to complete the castle!",
     "x": "225",
     "y": "100",
     "start_direction": "90",

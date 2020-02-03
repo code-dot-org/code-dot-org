@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "The following link is a resource that shows some of the history behind discovery learning: ",
+    "long_instructions": "The following link is a resource that shows some of the history behind discovery learning: ",
     "link_title": "UNC School of Education - Discovery learning definition and history",
     "url": "http://www.learnnc.org/lp/pages/5352"
   },

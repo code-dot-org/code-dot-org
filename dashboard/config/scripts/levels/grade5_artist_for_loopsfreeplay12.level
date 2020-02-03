@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
+    "short_instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\r\n\r\n<img src=\"https://images.code.org/7910db8adf2ec7e4c5fdad0101c68368-image-1475911466143.24.03.png\" width=\"400px\"/>",
+    "long_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\r\n\r\n<img src=\"https://images.code.org/7910db8adf2ec7e4c5fdad0101c68368-image-1475911466143.24.03.png\" width=\"400px\"/>",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

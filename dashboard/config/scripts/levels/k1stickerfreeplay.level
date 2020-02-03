@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
+    "short_instructions": "The artist saw something funny in the distance.  Draw what you think he saw.",
     "x": "200",
     "y": "200",
     "start_direction": "90",

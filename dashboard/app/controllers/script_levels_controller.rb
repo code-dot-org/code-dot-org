@@ -7,6 +7,7 @@ class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
   include ScriptConstants
+  include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
   # publicly cacheable.  Used if the DCDO.public_proxy_max_age is not defined.
@@ -18,6 +19,7 @@ class ScriptLevelsController < ApplicationController
   DEFAULT_PUBLIC_CLIENT_MAX_AGE = DEFAULT_PUBLIC_PROXY_MAX_AGE * 2
 
   before_action :disable_session_for_cached_pages
+  before_action :set_redirect_override, only: [:show]
 
   def disable_session_for_cached_pages
     if ScriptLevelsController.cachable_request?(request)
@@ -27,9 +29,9 @@ class ScriptLevelsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def self.cachable_request?(request)
-    script_id = request.params[:script_id]
-    script = Script.get_from_cache(script_id) if script_id
-    script && ScriptConfig.allows_public_caching_for_script(script.name)
+    script = ScriptLevelsController.get_script(request)
+    script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
   end
 
   def reset
@@ -47,6 +49,7 @@ class ScriptLevelsController < ApplicationController
     else
       client_state.reset
       reset_session
+      destroy_storage_id_cookie
 
       @redirect_path = redirect_path
       render 'levels/reset_and_redirect', formats: [:html], layout: false
@@ -55,13 +58,14 @@ class ScriptLevelsController < ApplicationController
 
   def next
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id])
+    @script = ScriptLevelsController.get_script(request)
+
     if @script.redirect_to?
       redirect_to "/s/#{@script.redirect_to}/next"
       return
     end
     configure_caching(@script)
-    if @script.finish_url && current_user.try(:completed?, @script)
+    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
     end
@@ -70,10 +74,11 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
+  use_database_pool show: :persistent
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = Script.get_from_cache(params[:script_id], version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -101,11 +106,24 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # In the case of the puzzle_page, send it through to be included in the
+    # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
     if @script_level.long_assessment?
       extra_params[:puzzle_page] = params[:puzzle_page] ? params[:puzzle_page] : 1
+    end
+    extra_params[:sublevel_position] = params[:sublevel_position] if @script_level.bubble_choice?
+
+    can_view_version = @script_level&.script&.can_view_version?(current_user, locale: locale)
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script_level&.script)
+    if can_view_version
+      # If user is allowed to see level but is assigned to a newer version of the level's script,
+      # we will show a dialog for the user to choose whether they want to go to the newer version.
+      @redirect_script_url = @script_level&.script&.redirect_to_script_url(current_user, locale: request.locale)
+    elsif !override_redirect && redirect_script = redirect_script(@script_level&.script, request.locale)
+      # Redirect user to the proper script overview page if we think they ended up on the wrong level.
+      redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
     end
 
     if request.path != (canonical_path = build_script_level_path(@script_level, extra_params))
@@ -162,17 +180,37 @@ class ScriptLevelsController < ApplicationController
   def stage_extras
     authorize! :read, ScriptLevel
 
-    if current_user&.teacher? && !current_user&.sections&.all?(&:stage_extras)
-      flash[:info] = I18n.t(:stage_extras_teacher_message).html_safe
+    if current_user&.teacher?
+      if params[:section_id]
+        @section = current_user.sections.find_by(id: params[:section_id])
+        @user = @section&.students&.find_by(id: params[:user_id])
+      # If we have no url param and only one section make sure that is the section we are using
+      elsif current_user.sections.length == 1
+        @section = current_user.sections[0]
+        @user = @section&.students&.find_by(id: params[:user_id])
+      end
+      # This errs on the side of showing the warning by only if the script we are in
+      # is the assigned script for the section
+      @show_stage_extras_warning = !@section&.stage_extras && @section&.script&.name == params[:script_id]
     end
+
+    # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
+    # A 404 (or 410) tells search engine crawlers to stop requesting these URLs.
+    return head :not_found if ScriptConstants::FAMILY_NAMES.include?(params[:script_id])
+
+    @script = Script.get_from_cache(params[:script_id])
+    @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
 
     if params[:id]
       @script_level = Script.cache_find_script_level params[:id]
       @level = @script_level.level
-      @script = Script.get_from_cache(params[:script_id])
-      @stage = @script.stage_by_relative_position(params[:stage_position].to_i)
-      @game = @level.game
+    elsif params[:level_name]
+      @level = Level.find_by_name params[:level_name]
+      @script_level = @level.script_levels.find_by_script_id(@script.id) if @level
+    end
 
+    if @level
+      @game = @level.game
       present_level
       return
     end
@@ -180,10 +218,12 @@ class ScriptLevelsController < ApplicationController
     @stage = Script.get_from_cache(params[:script_id]).stage_by_relative_position(params[:stage_position].to_i)
     @script = @stage.script
     @stage_extras = {
+      next_stage_number: @stage.next_level_number_for_stage_extras(current_user),
       stage_number: @stage.relative_position,
       next_level_path: @stage.next_level_path_for_stage_extras(current_user),
       bonus_levels: @script.get_bonus_script_levels(@stage),
     }.camelize_keys
+    @bonus_level_ids = @stage.script_levels.where(bonus: true).map(&:level_ids).flatten
 
     render 'scripts/stage_extras'
   end
@@ -206,6 +246,16 @@ class ScriptLevelsController < ApplicationController
     render json: stage.summary_for_lesson_plans
   end
 
+  def self.get_script(request)
+    script_id = request.params[:script_id]
+    script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_from_cache(script_id)
+
+    raise ActiveRecord::RecordNotFound unless script
+    script
+  end
+
   private
 
   # Configure http caching for the given script. Caching is disabled unless the
@@ -217,7 +267,8 @@ class ScriptLevelsController < ApplicationController
   # described here:
   # https://console.aws.amazon.com/support/home?region=us-east-1#/case/?caseId=1540449361&displayId=1540449361&language=en
   def configure_caching(script)
-    if script && ScriptConfig.allows_public_caching_for_script(script.name)
+    if script && ScriptConfig.allows_public_caching_for_script(script.name) &&
+      !ScriptConfig.uncached_script_level_path?(request.path)
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
@@ -232,7 +283,7 @@ class ScriptLevelsController < ApplicationController
 
   def user_or_session_level
     if current_user
-      current_user.next_unpassed_progression_level(@script).try(:or_next_progression_level)
+      current_user.next_unpassed_visible_progression_level(@script)
     else
       find_next_level_for_session(@script)
     end
@@ -269,7 +320,11 @@ class ScriptLevelsController < ApplicationController
       readonly_view_options
     elsif @user && current_user && @user != current_user
       # load other user's solution for teachers viewing their students' solution
-      @user_level = @user.user_level_for(@script_level, @level)
+      @user_level = UserLevel.find_by(
+        user: @user,
+        script: @script_level.script,
+        level: @level
+      )
       level_source = @user_level.try(:level_source)
       readonly_view_options
     elsif current_user
@@ -277,7 +332,11 @@ class ScriptLevelsController < ApplicationController
       @last_activity = current_user.last_attempt(@level, @script)
       level_source = @last_activity.try(:level_source)
 
-      user_level = current_user.user_level_for(@script_level, @level)
+      user_level = UserLevel.find_by(
+        user: current_user,
+        script: @script_level.script,
+        level: @level
+      )
       if user_level && user_level.submitted?
         level_view_options(
           @level.id,
@@ -322,6 +381,12 @@ class ScriptLevelsController < ApplicationController
   end
 
   def select_level
+    # If a BubbleChoice level's sublevel has been requested, return it.
+    if @script_level.bubble_choice? && params[:sublevel_position]
+      sublevel = @script_level.level.sublevel_at(params[:sublevel_position].to_i - 1)
+      return sublevel if sublevel
+    end
+
     # If there's only one level in this scriptlevel, use that
     return @script_level.levels[0] if @script_level.levels.length == 1
 
@@ -400,6 +465,11 @@ class ScriptLevelsController < ApplicationController
     )
     readonly_view_options if @level.channel_backed? && params[:version]
 
+    # Add video generation URL for only the last level of Dance
+    # If we eventually want to add video generation for other levels or level
+    # types, this is the condition that should be extended.
+    replay_video_view_options(get_channel_for(@level, current_user)) if @level.channel_backed? && @level.is_a?(Dancelab)
+
     @@fallback_responses ||= {}
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(script_level: @script_level, level: @level, solved?: true),
@@ -411,5 +481,25 @@ class ScriptLevelsController < ApplicationController
   # Don't try to generate the CSRF token for forms on this page because it's cached.
   def protect_against_forgery?
     return false
+  end
+
+  def set_redirect_override
+    if params[:script_id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:script_id])
+    end
+  end
+
+  def redirect_script(script, locale)
+    return nil unless script
+
+    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
+    # none are assigned.
+    redirect_script = Script.latest_assigned_version(script.family_name, current_user)
+    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
+
+    # Do not redirect if we are already on the correct script.
+    return nil if redirect_script == script
+
+    redirect_script
   end
 end

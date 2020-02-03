@@ -8,7 +8,7 @@
     "video_key": "Unplug11",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions": "Prepare to build a project within some given parameters."
+    "short_instructions": "Prepare to build a project within some given parameters."
   },
   "published": true,
   "notes": "Eventually, a new video will need to be created to explain the design process for this project.",

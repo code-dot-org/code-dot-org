@@ -17,10 +17,22 @@ def create_storage_id_cookie
   storage_id
 end
 
+def destroy_storage_id_cookie
+  response.delete_cookie(
+    storage_id_cookie_name,
+    {
+      domain: ".#{request.shared_cookie_domain}",
+      path: '/',
+    }
+  )
+end
+
 def storage_decrypt(encrypted)
-  decrypter = OpenSSL::Cipher.new 'AES-128-CBC'
-  decrypter.decrypt
-  decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  $storage_id_decrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |decrypter|
+    decrypter.decrypt
+    decrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  end
+  (decrypter = $storage_id_decrypter).reset
   plain = decrypter.update(encrypted)
   plain << decrypter.final
 end
@@ -40,10 +52,10 @@ def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   # pad to a multiple of 4 characters to make a valid base64 string.
   encrypted += '=' * ((4 - encrypted.length % 4) % 4)
-  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
+  storage_id, storage_app_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).split(':').map(&:to_i)
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  [storage_id, channel_id]
+  raise ArgumentError, "`storage_app_id` must be an integer > 0" unless storage_app_id > 0
+  [storage_id, storage_app_id]
 end
 
 def valid_encrypted_channel_id(encrypted)
@@ -56,9 +68,11 @@ def valid_encrypted_channel_id(encrypted)
 end
 
 def storage_encrypt(plain)
-  encrypter = OpenSSL::Cipher.new('AES-128-CBC')
-  encrypter.encrypt
-  encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  $storage_id_encrypter ||= OpenSSL::Cipher.new('AES-128-CBC').tap do |encrypter|
+    encrypter.encrypt
+    encrypter.pkcs5_keyivgen(CDO.channels_api_secret, '8 octets')
+  end
+  (encrypter = $storage_id_encrypter).reset
   encrypted = encrypter.update(plain.to_s)
   encrypted << encrypter.final
 end
@@ -69,17 +83,15 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def storage_encrypt_channel_id(storage_id, channel_id)
+def storage_encrypt_channel_id(storage_id, storage_app_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  channel_id = channel_id.to_i
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{channel_id}")).tr('=', '')
+  storage_app_id = storage_app_id.to_i
+  raise ArgumentError, "`storage_app_id` must be an integer > 0" unless storage_app_id > 0
+  Base64.urlsafe_encode64(storage_encrypt("#{storage_id}:#{storage_app_id}")).tr('=', '')
 end
 
-def storage_id(endpoint)
-  return nil if endpoint == 'shared'
-  raise ArgumentError, "Unknown endpoint: `#{endpoint}`" unless endpoint == 'user'
+def get_storage_id
   @user_storage_id ||= storage_id_for_current_user || storage_id_from_cookie || create_storage_id_cookie
 end
 
@@ -147,6 +159,7 @@ def storage_id_from_cookie
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
+  return nil unless user_storage_ids_table.where(id: storage_id, user_id: nil).first
   storage_id
 end
 
@@ -156,7 +169,7 @@ end
 
 def owns_channel?(encrypted_channel_id)
   owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-  owner_storage_id == storage_id('user')
+  owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
 end

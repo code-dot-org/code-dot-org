@@ -5,10 +5,12 @@ import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import ChromeSerialPort from 'chrome-serialport';
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
+import experiments from '@cdo/apps/util/experiments';
 import Firmata from 'firmata';
 import {
   createCircuitPlaygroundComponents,
-  destroyCircuitPlaygroundComponents,
+  cleanupCircuitPlaygroundComponents,
+  enableCircuitPlaygroundComponents,
   componentConstructors
 } from './PlaygroundComponents';
 import {
@@ -17,17 +19,31 @@ import {
   SONG_ASCENDING,
   SONG_CONCLUSION,
   CP_COMMAND,
-  J5_CONSTANTS,
+  J5_CONSTANTS
 } from './PlaygroundConstants';
-import Button from './Button';
 import Led from './Led';
-import {isNodeSerialAvailable} from './portScanning';
+import {
+  isNodeSerialAvailable,
+  ADAFRUIT_VID,
+  CIRCUIT_PLAYGROUND_EXPRESS_PID,
+  CIRCUIT_PLAYGROUND_PID
+} from './portScanning';
+import {PlaygroundButton} from './Button';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
 
 /** @const {number} serial port transfer rate */
 const SERIAL_BAUD = 57600;
+
+/** Maps the Circuit Playground Express pins to Circuit Playground Classic*/
+const pinMapping = {A0: 12, A1: 6, A2: 9, A3: 10, A4: 3, A5: 2, A6: 0, A7: 1};
+
+export const BOARD_TYPE = {
+  CLASSIC: 'classic',
+  EXPRESS: 'express',
+  OTHER: 'other'
+};
 
 /**
  * Controller interface for an Adafruit Circuit Playground board using
@@ -36,11 +52,11 @@ const SERIAL_BAUD = 57600;
  * @implements MakerBoard
  */
 export default class CircuitPlaygroundBoard extends EventEmitter {
-  constructor(portName) {
+  constructor(port) {
     super();
 
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
-    this.portName_ = portName;
+    this.port_ = port;
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
@@ -53,6 +69,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {Array} List of dynamically-created component controllers. */
     this.dynamicComponents_ = [];
+
+    /** @private {string} a board identifier, e.g. "classic" */
+    this.boardType_ = BOARD_TYPE.OTHER;
   }
 
   /**
@@ -61,9 +80,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connect() {
     return Promise.resolve()
-        .then(() => this.connectToFirmware())
-        .then(() => this.initializeComponents())
-        .then(() => this.initializeEventForwarding());
+      .then(() => this.connectToFirmware())
+      .then(() => this.initializeComponents())
+      .then(() => this.initializeEventForwarding());
   }
 
   /**
@@ -74,17 +93,66 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   connectToFirmware() {
     return new Promise((resolve, reject) => {
-      const serialPort = CircuitPlaygroundBoard.openSerialPort(this.portName_);
-      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(serialPort);
+      const name = this.port_ ? this.port_.comName : undefined;
+      const serialPort = CircuitPlaygroundBoard.openSerialPort(name);
+      const playground = CircuitPlaygroundBoard.makePlaygroundTransport(
+        serialPort
+      );
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
         this.fiveBoard_ = board;
+        this.fiveBoard_.samplingInterval(100);
+        this.boardType_ = this.detectBoardType();
+        if (experiments.isEnabled('detect-board')) {
+          this.detectFirmwareVersion(playground);
+        }
         resolve();
       });
       board.on('error', reject);
       playground.on('error', reject);
     });
+  }
+
+  /**
+   * Helper to detect the firmware (major and minor) version of the given playground
+   * @param playground
+   */
+  detectFirmwareVersion(playground) {
+    playground.queryFirmware(() => {
+      console.log(
+        playground.firmware.version.major +
+          '.' +
+          playground.firmware.version.minor
+      );
+    });
+  }
+
+  /**
+   * Detects the type of board plugged into the serial port
+   */
+  detectBoardType() {
+    const vendorId =
+      this.port_ && this.port_.vendorId
+        ? parseInt(this.port_.vendorId, 16)
+        : null;
+    const productId =
+      this.port_ && this.port_.productId
+        ? parseInt(this.port_.productId, 16)
+        : null;
+    let boardType = BOARD_TYPE.OTHER;
+    if (vendorId === ADAFRUIT_VID && productId === CIRCUIT_PLAYGROUND_PID) {
+      boardType = BOARD_TYPE.CLASSIC;
+    } else if (
+      vendorId === ADAFRUIT_VID &&
+      productId === CIRCUIT_PLAYGROUND_EXPRESS_PID
+    ) {
+      boardType = BOARD_TYPE.EXPRESS;
+      if (this.fiveBoard_) {
+        this.fiveBoard_.isExpressBoard = true;
+      }
+    }
+    return boardType;
   }
 
   /**
@@ -96,16 +164,19 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeComponents() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize components: Not connected to board firmware.');
+      throw new Error(
+        'Cannot initialize components: Not connected to board firmware.'
+      );
     }
-
-    return createCircuitPlaygroundComponents(this.fiveBoard_).then(components => {
-      this.prewiredComponents_ = {
-        board: this.fiveBoard_,
-        ...components,
-        ...J5_CONSTANTS
-      };
-    });
+    return createCircuitPlaygroundComponents(this.fiveBoard_).then(
+      components => {
+        this.prewiredComponents_ = {
+          board: this.fiveBoard_,
+          ...components,
+          ...J5_CONSTANTS
+        };
+      }
+    );
   }
 
   /**
@@ -116,10 +187,21 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   initializeEventForwarding() {
     if (!this.fiveBoard_) {
-      throw new Error('Cannot initialize event forwarding: Not connected to board firmware.');
+      throw new Error(
+        'Cannot initialize event forwarding: Not connected to board firmware.'
+      );
     }
 
     this.fiveBoard_.on('disconnect', () => this.emit('disconnect'));
+  }
+
+  /**
+   * Enable existing board components
+   */
+  enableComponents() {
+    if (this.prewiredComponents_) {
+      enableCircuitPlaygroundComponents(this.prewiredComponents_);
+    }
   }
 
   /**
@@ -140,7 +222,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     this.dynamicComponents_.length = 0;
 
     if (this.prewiredComponents_) {
-      destroyCircuitPlaygroundComponents(this.prewiredComponents_);
+      cleanupCircuitPlaygroundComponents(
+        this.prewiredComponents_,
+        true /* shouldDestroyComponents */
+      );
     }
     this.prewiredComponents_ = null;
 
@@ -157,7 +242,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     }
     delete Playground.hasRegisteredSysexResponse;
 
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
       setTimeout(() => {
@@ -182,13 +267,22 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   installOnInterpreter(jsInterpreter) {
     Object.keys(componentConstructors).forEach(key => {
-      jsInterpreter.addCustomMarshalObject({instance: componentConstructors[key]});
+      jsInterpreter.addCustomMarshalObject({
+        instance: componentConstructors[key]
+      });
       jsInterpreter.createGlobalProperty(key, componentConstructors[key]);
     });
 
     Object.keys(this.prewiredComponents_).forEach(key => {
       jsInterpreter.createGlobalProperty(key, this.prewiredComponents_[key]);
     });
+  }
+
+  reset() {
+    cleanupCircuitPlaygroundComponents(
+      this.prewiredComponents_,
+      false /* shouldDestroyComponents */
+    );
   }
 
   /**
@@ -209,7 +303,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     function forEachLedInSequence(func, delay) {
       return new Promise(resolve => {
         colorLeds.forEach((led, i) => {
-          setTimeout(() => func(led), delay * (i+1));
+          setTimeout(() => func(led), delay * (i + 1));
         });
         setTimeout(resolve, delay * colorLeds.length);
       });
@@ -219,43 +313,49 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       {notes: SONG_CHARGE, tempo: 104},
       {notes: SONG_LEVEL_COMPLETE, tempo: 80},
       {notes: SONG_ASCENDING, tempo: 180},
-      {notes: SONG_CONCLUSION, tempo: 130},
+      {notes: SONG_CONCLUSION, tempo: 130}
     ]);
 
     return Promise.resolve()
-        .then(() => buzzer.play(song.notes, song.tempo))
-        .then(() => forEachLedInSequence(led => led.color('green'), 80))
-        .then(() => forEachLedInSequence(led => led.off(), 80));
+      .then(() => buzzer.play(song.notes, song.tempo))
+      .then(() => forEachLedInSequence(led => led.color('green'), 80))
+      .then(() => forEachLedInSequence(led => led.off(), 80));
+  }
+
+  mappedPin(pin) {
+    return pinMapping.hasOwnProperty(pin) ? pinMapping[pin] : pin;
   }
 
   pinMode(pin, modeConstant) {
-    this.fiveBoard_.pinMode(pin, modeConstant);
+    this.fiveBoard_.pinMode(this.mappedPin(pin), modeConstant);
   }
 
   digitalWrite(pin, value) {
-    this.fiveBoard_.digitalWrite(pin, value);
+    this.fiveBoard_.digitalWrite(this.mappedPin(pin), value);
   }
 
   digitalRead(pin, callback) {
-    this.fiveBoard_.digitalRead(pin, callback);
+    this.fiveBoard_.digitalRead(this.mappedPin(pin), callback);
   }
 
   analogWrite(pin, value) {
-    this.fiveBoard_.analogWrite(pin, value);
+    this.fiveBoard_.analogWrite(this.mappedPin(pin), value);
   }
 
   analogRead(pin, callback) {
-    this.fiveBoard_.analogRead(pin, callback);
+    this.fiveBoard_.analogRead(this.mappedPin(pin), callback);
   }
 
   createLed(pin) {
+    pin = this.mappedPin(pin);
     const newLed = new Led({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newLed);
     return newLed;
   }
 
   createButton(pin) {
-    const newButton = new Button({board: this.fiveBoard_, pin});
+    pin = this.mappedPin(pin);
+    const newButton = new PlaygroundButton({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
@@ -281,12 +381,50 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     //
     // Code.org connector app case: ChromeSerialPort bridges through the Chrome
     // app, implements SerialPort 3's interface.
-    const SerialPortType = isNodeSerialAvailable() ?
-      SerialPort : ChromeSerialPort.SerialPort;
+    const SerialPortType = isNodeSerialAvailable()
+      ? SerialPort
+      : ChromeSerialPort.SerialPort;
 
-    return new SerialPortType(portName, {
+    const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
+
+    if (isNodeSerialAvailable()) {
+      const queue = [];
+      let sendPending = false;
+      const oldWrite = port.write;
+
+      const trySend = buffer => {
+        if (buffer) {
+          queue.push(buffer);
+        }
+
+        if (sendPending || queue.length === 0) {
+          // Exhausted pending send buffer.
+          return;
+        }
+
+        if (queue.length > 512) {
+          throw new Error(
+            'Send queue is full! More than 512 pending messages.'
+          );
+        }
+
+        const toSend = queue.shift();
+        sendPending = true;
+        oldWrite.call(port, toSend, 'binary', function() {
+          sendPending = false;
+
+          if (queue.length !== 0) {
+            trySend();
+          }
+        });
+      };
+
+      port.write = (...args) => trySend(...args);
+    }
+
+    return port;
   }
 
   /**
@@ -295,16 +433,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Playground}
    */
   static makePlaygroundTransport(serialPort) {
-    const playground = new Playground({ port: serialPort });
+    const playground = new Playground({port: serialPort});
     // Circuit Playground Firmata does not seem to proactively report its
     // version, meaning we were hitting the default 5000ms timeout waiting
     // for this on every connection attempt.
     // Here we explicitly request a version as soon as the serialport is open
     // to speed up the connection process.
-    playground.on("open", function () {
+    playground.on('open', function() {
       // Requesting the version requires both of these calls. ¯\_(ツ)_/¯
-      playground.reportVersion(function () {});
-      playground.queryFirmware(function () {});
+      playground.reportVersion(function() {});
+      playground.queryFirmware(function() {});
     });
     return playground;
   }

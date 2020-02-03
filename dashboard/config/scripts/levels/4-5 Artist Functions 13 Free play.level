@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Here are some functions to draw planets, stars, rockets, and robots. Use them any way you like to make pictures that you can share with your friends.",
+    "short_instructions": "Here are some functions to draw planets, stars, rockets, and robots. Use them any way you like to make pictures that you can share with your friends.",
     "x": "200",
     "y": "300",
     "start_direction": "0",

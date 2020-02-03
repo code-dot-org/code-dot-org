@@ -11,6 +11,7 @@ require 'vcr'
 require_relative '../../deployment'
 require 'cdo/db'
 require 'cdo/aws/s3'
+require_relative './capture_queries'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
 
@@ -76,7 +77,8 @@ module SetupTest
     # not compatible with our unit tests which use VCR to stub out network
     # requests to url paths which must be consistent across test runs.
     # Therefore, remove the commit-specific part of this path only in unit tests.
-    CDO.stubs(:sources_s3_directory).returns('sources_test')
+    CDO.stubs(sources_s3_directory: 'sources_test')
+    CDO.stubs(newrelic_logging: true)
 
     VCR.use_cassette(cassette_name, record: record_mode) do
       PEGASUS_DB.transaction(rollback: :always) do

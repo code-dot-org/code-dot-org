@@ -22,19 +22,50 @@ mt:
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
+      Dancelab_jumpTo:
         options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": bl-addoċċ
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': bl-addoċċ
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
+      Dancelab_makeNewDanceSprite:
+        options:
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": bl-addoċċ
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': bl-addoċċ
       Dancelab_randomColor:
         text: kulur bl-addoċċ
       Dancelab_setDanceSpeed:
@@ -45,22 +76,29 @@ mt:
             '4': very fast
             '0.5': slow
             '0.25': very slow
-      gamelab_debugSprite:
+      Dancelab_setDanceSpeedEach:
         options:
-          VAL:
-            'true': veru/minnu
-            'false': falz
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": bl-addoċċ
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
       gamelab_randColor:
         text: kulur bl-addoċċ
       gamelab_randomColor:
         text: kulur bl-addoċċ
-      gamelab_setPosition:
-        options:
-          POSITION:
-            '"random"': bl-addoċċ
-      Vanilla_randomColor:
+      Mikelab_randomColor:
         text: kulur bl-addoċċ
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'

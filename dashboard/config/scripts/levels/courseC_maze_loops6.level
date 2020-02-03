@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,1,1,3,0,0,0],[0,0,1,4,4,0,0,0],[0,0,1,4,4,2,0,0],[0,0,1,1,1,1,0,0],[0,0,0,4,0,4,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
+    "short_instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pattern is hard to see, try coding it all out first and see what repeats over and over before you put the loops in.\",\"hint_id\":\"courseC_maze_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa8c6df62c10fd0c84a8cc9a58692e71/courseC_maze_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To put lots of blocks inside a `repeat` loop, just drag a loop out into the workspace, then drag all of the blocks from the starting program inside of it.  \\n\\nConnect it all back to the `when run` block and you're good to go!\",\"hint_id\":\"courseC_maze_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e8757e2e6d8010905633101f14343b19/courseC_maze_loops6.mp3\"}]",
-    "markdown_instructions": "*\"This pig is ruffling my feathers!\"*\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
+    "long_instructions": "*\"This pig is ruffling my feathers!\"*\r\n\r\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

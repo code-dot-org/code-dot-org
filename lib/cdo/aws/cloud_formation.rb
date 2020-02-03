@@ -32,7 +32,7 @@ module AWS
     STACK_NAME_INVALID_REGEX = /[^[:alnum:]-]/
 
     SSH_KEY_NAME = 'server_access_key'.freeze
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-c8580bdf' # ubuntu/images/hvm-ssd/ubuntu-trusty-14.04-amd64-server-*
+    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
     INSTANCE_TYPE = rack_env?(:production) ? 'm4.10xlarge' : 't2.2xlarge'
     SSH_IP = '0.0.0.0/0'.freeze
     S3_BUCKET = 'cdo-dist'.freeze
@@ -106,13 +106,14 @@ module AWS
         CDO.log.info template if ENV['VERBOSE']
         template_info = string_or_url(template)
         CDO.log.info cfn.validate_template(template_info).description
-        params = parameters(template).reject {|x| x[:parameter_value].nil?}
+        options = stack_options(template)
+        params = options[:parameters].reject {|x| x[:parameter_value].nil?}
         CDO.log.info "Parameters:\n#{params.map {|p| "#{p[:parameter_key]}: #{p[:parameter_value]}"}.join("\n")}" unless params.empty?
 
         if stack_exists?
           CDO.log.info "Listing changes to existing stack `#{stack_name}`:"
           change_set_id = cfn.create_change_set(
-            stack_options(template).merge(
+            options.merge(
               change_set_name: "#{stack_name}-#{Digest::MD5.hexdigest(template)}"
             )
           ).id
@@ -162,44 +163,58 @@ module AWS
       def parameters(template)
         params = YAML.load(template)['Parameters']
         return [] unless params
-        params.keys.map do |key|
+        params.map do |key, properties|
           value = CDO[key.underscore] || ENV[key.underscore.upcase]
+          param = {parameter_key: key}
           if value
-            {
-              parameter_key: key,
-              parameter_value: value
-            }
-          elsif stack_exists?
-            {
-              parameter_key: key,
-              use_previous_value: true
-            }
+            param[:parameter_value] = value
+          elsif stack_exists? && @@stack.parameters.any? {|p| p.parameter_key == key}
+            param[:use_previous_value] = true
+          elsif properties['Default']
+            next # use default param
           else
-            nil
+            # Required parameter value not found in environment, existing stack or default.
+            # Ask for input directly.
+            require 'highline'
+            param[:parameter_value] = HighLine.new.ask("Enter value for Parameter #{key}:", String)
           end
+          param
         end.compact
       end
 
-      def stack_options(template)
+      def base_options
+        # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
+        # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
+        role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
+        account = Aws::STS::Client.new.get_caller_identity.account
         {
           stack_name: stack_name,
-          parameters: parameters(template),
-          tags: [
-            {
+          role_arn: "arn:aws:iam::#{account}:role/admin/#{role_name}"
+        }
+      end
+
+      def stack_options(template)
+        base_options.merge(
+          {
+            parameters: parameters(template),
+            tags: [],
+          }
+        ).merge(string_or_url(template)).tap do |options|
+          options[:capabilities] = %w[
+            CAPABILITY_IAM
+            CAPABILITY_NAMED_IAM
+          ]
+          if TEMPLATE == 'cloud_formation_stack.yml.erb'
+            options[:tags].push(
               key: 'environment',
               value: rack_env
-            },
-            {
+            )
+          end
+          if rack_env?(:adhoc)
+            options[:tags].push(
               key: 'owner',
               value: Aws::STS::Client.new.get_caller_identity.arn
-            }
-          ],
-        }.merge(string_or_url(template)).tap do |options|
-          if %w[IAM lambda].include? stack_name
-            options[:capabilities] = %w[
-              CAPABILITY_IAM
-              CAPABILITY_NAMED_IAM
-            ]
+            )
           end
         end
       end
@@ -216,12 +231,8 @@ module AWS
           options[:stack_policy_body] = stack_policy
           options[:stack_policy_during_update_body] = stack_policy if action == :update
         end
-        if action == :create
-          options[:on_failure] = 'DO_NOTHING'
-          if daemon
-            options[:role_arn] = "arn:aws:iam::#{Aws::STS::Client.new.get_caller_identity.account}:role/CloudFormationRole"
-          end
-        end
+        options[:on_failure] = 'DO_NOTHING' if action == :create
+
         begin
           updated_stack_id = cfn.method("#{action}_stack").call(options).stack_id
         rescue Aws::CloudFormation::Errors::ValidationError => e
@@ -356,7 +367,7 @@ module AWS
         if stack_exists?
           CDO.log.info "Shutting down #{stack_name}..."
           start_time = Time.now
-          cfn.delete_stack(stack_name: stack_name)
+          cfn.delete_stack(base_options)
           wait_for_stack(:delete, start_time)
         else
           CDO.log.warn "Stack #{stack_name} does not exist."
@@ -375,12 +386,12 @@ module AWS
 
       # Only way to determine whether a given stack exists using the Ruby API.
       def stack_exists?
-        @@stack_exists ||= begin
-            !!cfn.describe_stacks(stack_name: stack_name)
-          rescue Aws::CloudFormation::Errors::ValidationError => e
-            raise e unless e.message == "Stack with id #{stack_name} does not exist"
-            false
-          end
+        !!@@stack ||= begin
+          cfn.describe_stacks(stack_name: stack_name).stacks.first
+        rescue Aws::CloudFormation::Errors::ValidationError => e
+          raise e unless e.message == "Stack with id #{stack_name} does not exist"
+          false
+        end
       end
 
       def update_certs
@@ -544,31 +555,43 @@ module AWS
         erb_eval(str, filename).to_json
       end
 
-      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
-      def js_zip(files)
+      # Zip a Lambda package of files and upload to S3.
+      def lambda_zip(*files, key_prefix: 'lambda')
         hash = nil
         code_zip = Dir.chdir(aws_dir('cloudformation')) do
-          RakeUtils.npm_install '--production'
           # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+          globs = files.map do |file|
+            file += '/**/*' if File.directory?(file)
+            file
+          end
           hash = Digest::MD5.hexdigest(
-            Dir[*files, 'node_modules/**/*'].
+            Dir[*globs].
               select(&File.method(:file?)).
               sort.
               map(&Digest::MD5.method(:file)).
               join
           )
-          `zip -qr - #{files.join(' ')} node_modules`
+          `zip -qr - #{files.join(' ')}`
         end
-        key = "lambdajs-#{hash}.zip"
+        key = "#{key_prefix}-#{hash}.zip"
         object_exists = Aws::S3::Client.new.head_object(bucket: S3_BUCKET, key: key) rescue nil
         unless object_exists
           CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
-          AWS::S3.upload_to_bucket(S3_BUCKET, key, code_zip, no_random: true)
+          Aws::S3::Client.new(http_read_timeout: 30).
+              put_object({bucket: S3_BUCKET, key: key, body: code_zip})
         end
         {
           S3Bucket: S3_BUCKET,
           S3Key: key
         }.to_json
+      end
+
+      # Zip an array of JS files (along with the `node_modules` folder), and upload to S3.
+      def js_zip(files)
+        Dir.chdir(aws_dir('cloudformation')) do
+          RakeUtils.npm_install '--production'
+        end
+        lambda_zip(*files, 'node_modules', key_prefix: 'lambdajs')
       end
 
       # Helper function to call a Lambda-function-based AWS::CloudFormation::CustomResource.
@@ -599,6 +622,18 @@ module AWS
           local_binding.local_variable_set(key, value)
         end
         ERB.new(str, nil, '-').tap {|erb| erb.filename = filename}.result(local_binding)
+      end
+
+      # Generate boilerplate Trust Policy for an AWS Service Role.
+      def service_role(service)
+        document = {
+          Statement: [
+            Effect: 'Allow',
+            Action: 'sts:AssumeRole',
+            Principal: {Service: ["#{service}.amazonaws.com"]}
+          ]
+        }
+        "AssumeRolePolicyDocument: #{document.to_json}"
       end
     end
   end

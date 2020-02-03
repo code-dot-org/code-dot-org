@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_14_CSP_6_3_1'
+right 'I only'
+wrong 'II only'
+wrong 'I and II'
+wrong 'Neither I nor II '
+markdown <<MARKDOWN
+Which of the following are true statements about digital certificates in Web browsers?
+
+I. Digital certificates are used to verify the ownership of encrypted keys used in secured communication. 
+II. Digital certificates are used to verify the connection to a Web site is fault tolerant. 
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.3.1** and Essential Knowledge statements: **6.3.1M, 6.3.1H, 6.3.1L**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

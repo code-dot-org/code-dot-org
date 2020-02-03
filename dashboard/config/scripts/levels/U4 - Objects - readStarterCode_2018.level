@@ -8,7 +8,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Getting Started\r\nYou've learned a little bit about objects, and now you're going to practice using them in an app.\r\n\r\nYou've been provided some starter code and the UI elements needed to make this app. Your primary focus will be on integrating what you've learned about objects to create the functionality you saw in the Contacts App.\r\n\r\n# Do This:\r\n\r\n**Starter code** is provided, including the UI elements of your app and useful code for creating some of the familiar functionality we've designed in previous projects.\r\n\r\n* **Run the progam** to see what it does right now. (Answer: **Not much** - you'll be adding the rest of the functionality.)\r\n* **Look through the starter code** to understand what you already have available.\r\n* **Go into Design Mode** as well and look at the different UI elements and their IDs. \r\n\t* **Notice that there are 2 screens** with descriptive IDs already given.\r\n* Once you're comfortable with the starter code, move on to the next exercise.",
+    "long_instructions": "# Getting Started\r\nYou've learned a little bit about objects, and now you're going to practice using them in an app.\r\n\r\nYou've been provided some starter code and the UI elements needed to make this app. Your primary focus will be on integrating what you've learned about objects to create the functionality you saw in the Contacts App.\r\n\r\n# Do This:\r\n\r\n**Starter code** is provided, including the UI elements of your app and useful code for creating some of the familiar functionality we've designed in previous projects.\r\n\r\n* **Run the progam** to see what it does right now. (Answer: **Not much** - you'll be adding the rest of the functionality.)\r\n* **Look through the starter code** to understand what you already have available.\r\n* **Go into Design Mode** as well and look at the different UI elements and their IDs. \r\n\t* **Notice that there are 2 screens** with descriptive IDs already given.\r\n* Once you're comfortable with the starter code, move on to the next exercise.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -39,7 +39,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Familiarize yourself with the starter code and UI elements provided. (Click to see full instructions)",
+    "short_instructions": "Familiarize yourself with the starter code and UI elements provided. (Click to see full instructions)",
     "parent_level_id": 4070,
     "name_suffix": "_2018",
     "contained_level_names": null

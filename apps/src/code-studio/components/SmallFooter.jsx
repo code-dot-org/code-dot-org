@@ -1,8 +1,11 @@
 /* eslint-disable react/no-danger */
-
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import cookies from 'js-cookie';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
 import debounce from 'lodash/debounce';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -10,21 +13,6 @@ const MenuState = {
   EXPANDED: 'EXPANDED',
   COPYRIGHT: 'COPYRIGHT'
 };
-
-class EncodedParagraph extends React.Component {
-  static propTypes = {
-    text: PropTypes.string,
-  };
-  render() {
-    return (
-      <p
-        dangerouslySetInnerHTML={{
-          __html: decodeURIComponent(this.props.text)
-        }}
-      />
-    );
-  }
-}
 
 export default class SmallFooter extends React.Component {
   static propTypes = {
@@ -58,7 +46,8 @@ export default class SmallFooter extends React.Component {
     className: PropTypes.string,
     fontSize: PropTypes.number,
     rowHeight: PropTypes.number,
-    fullWidth: PropTypes.bool
+    fullWidth: PropTypes.bool,
+    channel: PropTypes.string
   };
 
   state = {
@@ -69,7 +58,10 @@ export default class SmallFooter extends React.Component {
 
   componentDidMount() {
     this.captureBaseElementDimensions();
-    window.addEventListener('resize', debounce(this.captureBaseElementDimensions, 100));
+    window.addEventListener(
+      'resize',
+      debounce(this.captureBaseElementDimensions, 100)
+    );
   }
 
   captureBaseElementDimensions = () => {
@@ -82,23 +74,29 @@ export default class SmallFooter extends React.Component {
 
   minimizeOnClickAnywhere(event) {
     // The first time we click anywhere, hide any open children
-    $(document.body).one('click', function (event) {
-      // menu copyright has its own click handler
-      if (event.target === this.refs.menuCopyright) {
-        return;
-      }
+    $(document.body).one(
+      'click',
+      function(event) {
+        // menu copyright has its own click handler
+        if (event.target === this.refs.menuCopyright) {
+          return;
+        }
 
-      this.setState({
-        menuState: MenuState.MINIMIZING,
-        moreOffset: 0
-      });
+        this.setState({
+          menuState: MenuState.MINIMIZING,
+          moreOffset: 0
+        });
 
-      // Create a window during which we can't show again, so that clicking
-      // on copyright doesnt immediately hide/reshow
-      setTimeout(function () {
-        this.setState({ menuState: MenuState.MINIMIZED });
-      }.bind(this), 200);
-    }.bind(this));
+        // Create a window during which we can't show again, so that clicking
+        // on copyright doesnt immediately hide/reshow
+        setTimeout(
+          function() {
+            this.setState({menuState: MenuState.MINIMIZED});
+          }.bind(this),
+          200
+        );
+      }.bind(this)
+    );
   }
 
   clickBase = () => {
@@ -121,7 +119,7 @@ export default class SmallFooter extends React.Component {
     this.clickBaseMenu();
   };
 
-  clickBaseCopyright = (e) => {
+  clickBaseCopyright = e => {
     e.preventDefault();
 
     if (this.state.menuState === MenuState.MINIMIZING) {
@@ -129,16 +127,16 @@ export default class SmallFooter extends React.Component {
     }
 
     if (this.state.menuState === MenuState.COPYRIGHT) {
-      this.setState({ menuState: MenuState.MINIMIZED });
+      this.setState({menuState: MenuState.MINIMIZED});
       return;
     }
 
-    this.setState({ menuState: MenuState.COPYRIGHT });
+    this.setState({menuState: MenuState.COPYRIGHT});
     this.minimizeOnClickAnywhere();
   };
 
-  clickMenuCopyright = (event) => {
-    this.setState({ menuState: MenuState.COPYRIGHT });
+  clickMenuCopyright = event => {
+    this.setState({menuState: MenuState.COPYRIGHT});
     this.minimizeOnClickAnywhere();
   };
 
@@ -148,16 +146,15 @@ export default class SmallFooter extends React.Component {
     }
 
     if (this.state.menuState === MenuState.EXPANDED) {
-      this.setState({ menuState: MenuState.MINIMIZED });
+      this.setState({menuState: MenuState.MINIMIZED});
       return;
     }
 
-    this.setState({ menuState: MenuState.EXPANDED });
+    this.setState({menuState: MenuState.EXPANDED});
     this.minimizeOnClickAnywhere();
   };
 
   render() {
-
     const styles = {
       smallFooter: {
         fontSize: this.props.fontSize
@@ -174,10 +171,11 @@ export default class SmallFooter extends React.Component {
         boxSizing: 'border-box'
       },
       privacy: {
-        color: '#0094ca',
+        color: '#0094ca'
       },
       copyright: {
-        display: this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
+        display:
+          this.state.menuState === MenuState.COPYRIGHT ? 'block' : 'none',
         position: 'absolute',
         bottom: 0,
         left: 0,
@@ -193,7 +191,7 @@ export default class SmallFooter extends React.Component {
         marginBottom: this.state.baseHeight
       },
       moreMenu: {
-        display: this.state.menuState === MenuState.EXPANDED ? 'block': 'none',
+        display: this.state.menuState === MenuState.EXPANDED ? 'block' : 'none',
         bottom: this.state.baseHeight,
         width: this.state.baseWidth
       },
@@ -201,13 +199,16 @@ export default class SmallFooter extends React.Component {
         height: this.props.rowHeight,
         // account for padding (3px on top and bottom) and bottom border (1px)
         // on bottom border on child anchor element
-        lineHeight: this.props.rowHeight ?
-          (this.props.rowHeight - 6 - 1) + 'px' : undefined
+        lineHeight: this.props.rowHeight
+          ? this.props.rowHeight - 6 - 1 + 'px'
+          : undefined
       }
     };
 
-    const caretIcon = this.state.menuState === MenuState.EXPANDED ?
-      'fa fa-caret-down' : 'fa fa-caret-up';
+    const caretIcon =
+      this.state.menuState === MenuState.EXPANDED
+        ? 'fa fa-caret-down'
+        : 'fa fa-caret-up';
 
     const combinedBaseStyle = {
       ...styles.base,
@@ -217,7 +218,12 @@ export default class SmallFooter extends React.Component {
 
     return (
       <div className={this.props.className} style={styles.smallFooter}>
-        <div className="small-footer-base" ref="base" style={combinedBaseStyle} onClick={this.clickBase}>
+        <div
+          className="small-footer-base"
+          ref="base"
+          style={combinedBaseStyle}
+          onClick={this.clickBase}
+        >
           <div
             dangerouslySetInnerHTML={{
               __html: decodeURIComponent(this.props.i18nDropdown)
@@ -232,18 +238,34 @@ export default class SmallFooter extends React.Component {
               onClick={this.clickBaseMenu}
             >
               {this.props.baseMoreMenuString + ' '}
-              <i className={caretIcon}/>
+              <i className={caretIcon} />
             </a>
           </small>
         </div>
         <div id="copyright-flyout" style={styles.copyright}>
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
-            <EncodedParagraph text={this.props.copyrightStrings.thank_you}/>
+            <SafeMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.thank_you
+              )}
+            />
             <p>{this.props.copyrightStrings.help_from_html}</p>
-            <EncodedParagraph text={this.props.copyrightStrings.art_from_html}/>
-            <EncodedParagraph text={this.props.copyrightStrings.code_from_html}/>
+            <SafeMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.art_from_html
+              )}
+            />
+            <SafeMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.code_from_html
+              )}
+            />
             <p>{this.props.copyrightStrings.powered_by_aws}</p>
-            <EncodedParagraph text={this.props.copyrightStrings.trademark}/>
+            <SafeMarkdown
+              markdown={decodeURIComponent(
+                this.props.copyrightStrings.trademark
+              )}
+            />
           </div>
         </div>
         {this.renderMoreMenu(styles)}
@@ -288,20 +310,36 @@ export default class SmallFooter extends React.Component {
   }
 
   renderMoreMenu(styles) {
-    const menuItemElements = this.props.menuItems.map(function (item, index) {
-      return (
-        <li key={index} style={styles.listItem}>
-        <a
-          href={item.link}
-          ref={item.copyright ? "menuCopyright" : undefined}
-          target={item.newWindow ? "_blank" : "_parent"}
-          onClick={item.copyright ? this.clickMenuCopyright : undefined}
-        >
-          {item.text}
-        </a>
-        </li>
-      );
-    }.bind(this));
+    const userAlreadyReportedAbuse =
+      cookies.get('reported_abuse') &&
+      _.includes(JSON.parse(cookies.get('reported_abuse')), this.props.channel);
+
+    if (userAlreadyReportedAbuse) {
+      _.remove(this.props.menuItems, function(menuItem) {
+        return menuItem.key === 'report-abuse';
+      });
+    }
+
+    const menuItemElements = this.props.menuItems.map(
+      function(item, index) {
+        return (
+          <li
+            key={index}
+            style={styles.listItem}
+            className={`ui-test-${item.key}`}
+          >
+            <a
+              href={item.link}
+              ref={item.copyright ? 'menuCopyright' : undefined}
+              target={item.newWindow ? '_blank' : '_parent'}
+              onClick={item.copyright ? this.clickMenuCopyright : undefined}
+            >
+              {item.text}
+            </a>
+          </li>
+        );
+      }.bind(this)
+    );
     return (
       <ul id="more-menu" style={styles.moreMenu}>
         {menuItemElements}

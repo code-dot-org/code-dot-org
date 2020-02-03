@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Functions let you define new blocks! We've moved the blocks to draw a square into a function called \"draw a square\". Can you use the \"draw a square\" function to create the glasses? The squares are 75 pixels apart.",
+    "short_instructions": "Functions let you define new blocks! We've moved the blocks to draw a square into a function called \"draw a square\". Can you use the \"draw a square\" function to create the glasses? The squares are 75 pixels apart.",
     "x": "30",
     "y": "225",
     "start_direction": "90",

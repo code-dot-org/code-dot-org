@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,1,1,0,0],[0,0,0,1,1,0,0,0],[0,0,2,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get me to the pig! Using the `repeat` loop will make it much easier.",
+    "short_instructions": "Get me to the pig! Using the `repeat` loop will make it much easier.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,7 +26,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Get me to the pig!   \r\nUsing the `repeat` loop will make it much easier."
+    "long_instructions": "Get me to the pig!   \r\nUsing the `repeat` loop will make it much easier."
   },
   "published": false,
   "level_concept_difficulty": {

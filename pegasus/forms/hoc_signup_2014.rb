@@ -1,4 +1,4 @@
-require 'honeybadger'
+require 'honeybadger/ruby'
 require_relative '../helpers/hourofcode_helpers'
 
 class HocSignup2014 < Form

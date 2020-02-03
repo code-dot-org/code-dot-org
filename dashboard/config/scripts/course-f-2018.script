@@ -26,7 +26,7 @@ level 'courseC_maze_debugging4_2018'
 level 'courseC_maze_debugging5_2018'
 level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
-assessment 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging8_predict1_2018', assessment: true
 level 'courseC_maze_debugging9_2018'
 
 stage 'Programming in Artist', flex_category: 'csf_f_1'
@@ -39,7 +39,7 @@ level 'courseC_artist_prog5_2018'
 level 'courseC_artist_prog6_2018'
 level 'courseC_artist_prog7_2018', challenge: true
 level 'courseC_artist_prog8_2018'
-assessment 'courseC_artist_prog6_predict1_2018'
+level 'courseC_artist_prog6_predict1_2018', assessment: true
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
@@ -72,7 +72,7 @@ level 'courseD_maze_nestedLoops6_2018'
 level 'courseD_bee_nestedLoops7_2018', challenge: true
 level 'courseD_bee_nestedLoops8_2018'
 level 'courseD_bee_nestedLoops9_2018'
-assessment 'courseD_bee_nestedLoops9_predict2_2018'
+level 'courseD_bee_nestedLoops9_predict2_2018', assessment: true
 
 stage 'Nested Loops with Frozen', flex_category: 'csf_f_1'
 level 'courseD_artist_project1_2018'
@@ -163,7 +163,7 @@ stage 'Variables in Play Lab', flex_category: 'csf_f_2'
 level 'courseF_playlab_variables1a_2018'
 level 'courseF_playlab_variables2b_2018'
 level 'courseF_playlab_variables3b_josh_2018'
-assessment 'courseF_playlab_variables4c_predictive1_2018'
+level 'courseF_playlab_variables4c_predictive1_2018', assessment: true
 level 'courseF_playlab_variables4b_2018'
 level 'courseF_playlab_variables5c_2018'
 level 'courseF_playlab_variables6c_2018'
@@ -203,7 +203,7 @@ level 'courseF_artist_for6_2018'
 level 'courseF_artist_for7_2018'
 level 'courseF_artist_for8_2018'
 level 'courseF_artist_for9_2018'
-assessment 'courseF_artist_for10_predict1_2018'
+level 'courseF_artist_for10_predict1_2018', assessment: true
 level 'courseF_artist_for10_2018'
 bonus 'courseF_artist_for_challenge1_2018'
 bonus 'courseF_artist_for_challenge2_2018'
@@ -261,27 +261,27 @@ level 'courseF_bee_fwp5_2018'
 level 'courseF_bee_fwp6_2018'
 level 'courseF_bee_fwp7_2018', challenge: true
 level 'courseF_bee_fwp8_2018'
-assessment 'courseF_bee_fwp9_predict1_2018'
+level 'courseF_bee_fwp9_predict1_2018', assessment: true
 bonus 'courseF_bee_fwp_challenge1_2018'
 bonus 'courseF_bee_fwp_challenge2_2018'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
-named_level 'courseF_video_csMatters_2018'
-named_level 'InspirationalArtwork_2018'
-named_level 'FoodFight_2018'
-named_level 'Guess The Number_2018'
-named_level 'Choose Your Own Adventure_2018'
+level 'courseF_video_csMatters_2018', named: true
+level 'InspirationalArtwork_2018', named: true
+level 'FoodFight_2018', named: true
+level 'Guess The Number_2018', named: true
+level 'Choose Your Own Adventure_2018', named: true
 
 stage 'The Design Process', flex_category: 'end_of_course_project'
-named_level 'Begin planning your project_2018'
+level 'Begin planning your project_2018', named: true
 
 stage 'Build Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project_2018'
-named_level 'Course F: Play Lab Project_2018'
+level 'Course F: Artist Project_2018', named: true
+level 'Course F: Play Lab Project_2018', named: true
 
 stage 'Revise Your Project', flex_category: 'end_of_course_project'
-named_level 'Course F: Artist Project - Revise_2018'
-named_level 'Course F: Play Lab Project - Revise_2018'
+level 'Course F: Artist Project - Revise_2018', named: true
+level 'Course F: Play Lab Project - Revise_2018', named: true
 
 stage 'Present Your Project', flex_category: 'end_of_course_project'
-named_level 'Prepare for your presentation_2018'
+level 'Prepare for your presentation_2018', named: true

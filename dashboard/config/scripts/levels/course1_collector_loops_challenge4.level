@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?",
+    "short_instructions": "Let's get the treasure! Help me across each row then come back to start the next row. Can you find a pattern?",
     "instructions_important": "false",
     "step_speed": "2",
     "hide_share_and_remix": "false",

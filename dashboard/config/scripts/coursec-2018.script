@@ -6,10 +6,11 @@ has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csf-18/coursec/{LESSON}'
 project_widget_visible true
 project_widget_types ["playlab", "artist"]
-script_announcements [{"notice"=>"Our 2018 CS Fundamentals Curriculum Guide is Live", "details"=>"Click \"Learn More\" to download the PDF, including unplugged lesson plans for Courses A-F.", "link"=>"https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf", "type"=>"bullhorn"}]
 family_name 'coursec'
 version_year '2018'
 is_stable true
+supported_locales ["it-IT", "sk-SK"]
+curriculum_umbrella 'CSF'
 
 stage 'Building a Foundation'
 level 'BuildingAFoundation_2018'
@@ -24,7 +25,7 @@ level 'courseC_maze_programming5_2018'
 level 'courseC_maze_programming6_2018'
 level 'courseC_maze_programming7_2018', challenge: true
 level 'courseC_maze_programming8_2018'
-assessment 'courseC_maze_programming8_predict1_2018'
+level 'courseC_maze_programming8_predict1_2018'
 level 'courseC_maze_programming9_2018'
 bonus 'courseC_maze_programming_challenge1_2018'
 bonus 'courseC_maze_programming_challenge2_2018'
@@ -38,7 +39,7 @@ level 'courseC_maze_debugging4_2018'
 level 'courseC_maze_debugging5_2018'
 level 'courseC_maze_debugging6_2018'
 level 'courseC_maze_debugging7_2018', challenge: true
-assessment 'courseC_maze_debugging8_predict1_2018'
+level 'courseC_maze_debugging8_predict1_2018'
 level 'courseC_maze_debugging9_2018'
 bonus 'courseC_maze_debugging_challenge1_2018'
 bonus 'courseC_maze_debugging_challenge2_2018'
@@ -58,7 +59,7 @@ level 'courseC_collector_prog7_2018', challenge: true
 level 'courseC_collector_prog8_2018'
 level 'courseC_collector_prog9_2018'
 level 'grade2_collector_A_2018'
-assessment 'grade2_collector_A_predict1_2018'
+level 'grade2_collector_A_predict1_2018'
 level 'grade2_collector_10_2018'
 bonus 'courseC_collector_prog_challenge1_2018'
 bonus 'courseC_collector_prog_challenge2_2018'
@@ -73,7 +74,7 @@ level 'courseC_artist_prog5_2018'
 level 'courseC_artist_prog6_2018'
 level 'courseC_artist_prog7_2018', challenge: true
 level 'courseC_artist_prog8_2018'
-assessment 'courseC_artist_prog6_predict1_2018'
+level 'courseC_artist_prog6_predict1_2018'
 bonus 'courseC_artist_prog_challenge1_2018'
 bonus 'courseC_artist_prog_challenge2a_2018'
 
@@ -93,7 +94,7 @@ level 'courseC_starWars_loops7_2018'
 level 'courseC_starWars_loops8_2018', challenge: true
 level 'courseC_starWars_loops9_2018'
 level 'courseC_starWars_loops10_2018'
-assessment 'courseC_starWars_loops10_predict2_2018'
+level 'courseC_starWars_loops10_predict2_2018'
 level 'courseC_starWars_loops11_2018'
 bonus 'courseC_maze_loops_challenge1a_2018'
 bonus 'courseC_collector_loops_challenge2_2018'
@@ -125,7 +126,7 @@ level 'courseC_harvester_loops8_2018', challenge: true
 level 'courseC_harvester_loops9_2018'
 level 'courseC_harvester_loops10_2018'
 level 'courseC_harvester_loops11_2018'
-assessment 'courseC_harvester_loops11_predict1_2018'
+level 'courseC_harvester_loops11_predict1_2018'
 bonus 'courseC_harvester_loops_challenge1a_2018'
 bonus 'courseC_harvester_loops_challenge2_2018'
 

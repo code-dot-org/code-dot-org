@@ -51,7 +51,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Turn that LED Off\r\n\r\nJust as you can turn your red LED on using `led.on()`, you can turn it back off again with `led.off()`. You'll need to add a second button with an event handler that calls `led.off()`.\r\n\r\n# Do this\r\n\r\nAdd a second button and use its \"click\" event to turn off the LED\r\n\r\n* Drag out a new button in Design Mode and give it a good ID\r\n* Insert an event handler for your newly created button\r\n* Drag an `led.off()` command into your new event handler\r\n\r\nNow you should have two buttons, one that turns the LED on, and another that turns it off.\r\n\r\n_Challenge: Can you come up with other ways to turn on and off the LED? Could you do it with a single button?_",
+    "long_instructions": "# Turn that LED Off\r\n\r\nJust as you can turn your red LED on using `led.on()`, you can turn it back off again with `led.off()`. You'll need to add a second button with an event handler that calls `led.off()`.\r\n\r\n# Do this\r\n\r\nAdd a second button and use its \"click\" event to turn off the LED\r\n\r\n* Drag out a new button in Design Mode and give it a good ID\r\n* Insert an event handler for your newly created button\r\n* Drag an `led.off()` command into your new event handler\r\n\r\nNow you should have two buttons, one that turns the LED on, and another that turns it off.\r\n\r\n_Challenge: Can you come up with other ways to turn on and off the LED? Could you do it with a single button?_",
     "project_template_level_name": "CSDU6 LED basics template",
     "contained_level_names": null
   },

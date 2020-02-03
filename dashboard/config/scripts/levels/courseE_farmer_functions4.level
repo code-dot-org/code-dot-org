@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Great!  Now you have code that will work to get pumpkins from any size path.\r\n\r\nLet's drag that code into a function so we can use it in lots of ways...but first use it to solve this puzzle again.",
+    "short_instructions": "Great!  Now you have code that will work to get pumpkins from any size path.\r\n\r\nLet's drag that code into a function so we can use it in lots of ways...but first use it to solve this puzzle again.",
     "instructions_important": "false",
     "ideal": "9",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Drag all of the code out of your `repeat` loop and into the `go get pumpkins` function.\",\"hint_id\":\"courseE_farmer_functions4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c7a8ed04476c03b594d4c5e0fb0c6434/courseE_farmer_functions4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to put the block that calls the `go get pumpkins` functions inside your loop before you run your code.\",\"hint_id\":\"courseE_farmer_functions4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/77fcf08ab9684dd59399bb423894ffbc/courseE_farmer_functions4.mp3\"}]",

@@ -1,7 +1,7 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import i18n from '@cdo/locale';
 import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
 import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
@@ -52,7 +52,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/s/artist">
-            <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
+            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );
@@ -61,7 +61,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/p/artist">
-            <i className="fa fa-pencil-square-o"/> {i18n.makeMyOwn()}
+            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );
@@ -87,17 +87,19 @@ describe('WireframeButtons', () => {
       );
     }
 
-    ['applab', 'gamelab', 'makerlab'].forEach((appType) => {
+    ['applab', 'gamelab', 'makerlab'].forEach(appType => {
       it(`appears for ${appType}`, () => {
         wrapper = mountForAppType(appType);
         expect(wrapper).to.containMatchingElement(VIEW_CODE_BUTTON_TEMPLATE);
       });
     });
 
-    ['artist', 'playlab', 'weblab'].forEach((appType) => {
+    ['artist', 'playlab', 'weblab'].forEach(appType => {
       it(`does not appear for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).not.to.containMatchingElement(VIEW_CODE_BUTTON_TEMPLATE);
+        expect(wrapper).not.to.containMatchingElement(
+          VIEW_CODE_BUTTON_TEMPLATE
+        );
       });
     });
   });

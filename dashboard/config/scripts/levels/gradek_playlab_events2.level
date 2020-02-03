@@ -35,7 +35,7 @@
     "coordinate_grid_background": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "instructions": "Edit the code so that when the second bird is clicked, your program plays a sound!",
+    "short_instructions": "Edit the code so that when the second bird is clicked, your program plays a sound!",
     "first_sprite_index": "0",
     "contained_level_names": null
   },

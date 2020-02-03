@@ -3,20 +3,20 @@
  * places in our apps. The parent component is a PaneHeader that can be toggled
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
-
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import styleConstants from '../styleConstants';
-import color from "../util/color";
+import color from '../util/color';
 
 const styles = {
   paneSection: {
     textAlign: 'center',
     whiteSpace: 'nowrap',
     overflowX: 'hidden',
-    height: styleConstants["workspace-headers-height"],
-    lineHeight: styleConstants["workspace-headers-height"] + 'px',
+    height: styleConstants['workspace-headers-height'],
+    lineHeight: styleConstants['workspace-headers-height'] + 'px'
   },
   headerButton: {
     cursor: 'pointer',
@@ -88,25 +88,25 @@ class PaneHeader extends React.Component {
   static propTypes = {
     hasFocus: PropTypes.bool.isRequired,
     style: PropTypes.object,
-    teacherOnly: PropTypes.bool
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool
   };
 
   render() {
-    let {hasFocus, teacherOnly, style, ...props} = this.props;
+    let {hasFocus, teacherOnly, style, isMinecraft, ...props} = this.props;
 
     // TODO: AnimationTab should likely use components from PaneHeader, at
     // which point purpleHeader style should move in here.
     const composedStyle = {
-        ...style,
-        ...commonStyles.purpleHeader,
-        ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
-        ...(teacherOnly && commonStyles.teacherBlueHeader),
-        ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused)
+      ...style,
+      ...commonStyles.purpleHeader,
+      ...(!hasFocus && commonStyles.purpleHeaderUnfocused),
+      ...(teacherOnly && commonStyles.teacherBlueHeader),
+      ...(teacherOnly && !hasFocus && commonStyles.teacherHeaderUnfocused),
+      ...(isMinecraft && commonStyles.minecraftHeader)
     };
 
-    return (
-      <div {...props} style={composedStyle}/>
-    );
+    return <div {...props} style={composedStyle} />;
   }
 }
 
@@ -114,39 +114,41 @@ class PaneHeader extends React.Component {
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-export const PaneSection = Radium(class extends React.Component {
-  static propTypes = {
-    style: PropTypes.object,
-  };
+export const PaneSection = Radium(
+  class extends React.Component {
+    static propTypes = {
+      style: PropTypes.object
+    };
 
-  render() {
-    return (
-      <div
-        {...this.props}
-        ref={root => this.root = root}
-        style={{...styles.paneSection, ...this.props.style}}
-      />
-    );
+    render() {
+      return (
+        <div
+          {...this.props}
+          ref={root => (this.root = root)}
+          style={{...styles.paneSection, ...this.props.style}}
+        />
+      );
+    }
   }
-});
+);
 
 /**
  * A button within or PaneHeader, whose styles change whether or not the pane
  * has focus
  */
-export const PaneButton = Radium(function (props) {
+export const PaneButton = Radium(function(props) {
   const divStyle = {
     ...styles.headerButton,
-    ...(props.isRtl !== !!props.leftJustified) && styles.headerButtonRtl,
-    ...props.isMinecraft && styles.headerButtonMinecraft,
-    ...props.isPressed && styles.headerButtonPressed,
-    ...!props.headerHasFocus && styles.headerButtonUnfocused,
+    ...(props.isRtl !== !!props.leftJustified && styles.headerButtonRtl),
+    ...(props.isMinecraft && styles.headerButtonMinecraft),
+    ...(props.isPressed && styles.headerButtonPressed),
+    ...(!props.headerHasFocus && styles.headerButtonUnfocused),
     ...props.style
   };
 
   let iconStyle = {
     ...styles.headerButtonIcon,
-    ...props.isRtl && styles.headerButtonIconRtl,
+    ...(props.isRtl && styles.headerButtonIconRtl)
   };
 
   const label = props.isPressed ? props.pressedLabel : props.label;
@@ -156,14 +158,10 @@ export const PaneButton = Radium(function (props) {
   }
 
   return (
-    <div
-      id={props.id}
-      style={divStyle}
-      onClick={props.onClick}
-    >
+    <div id={props.id} style={divStyle} onClick={props.onClick}>
       <span style={styles.headerButtonSpan}>
         {props.hiddenImage}
-        <i className={props.iconClass} style={iconStyle}/>
+        <i className={props.iconClass} style={iconStyle} />
         <span style={styles.noPadding}>{label}</span>
       </span>
     </div>
@@ -181,7 +179,7 @@ PaneButton.propTypes = {
   hiddenImage: PropTypes.element,
   isMinecraft: PropTypes.bool,
   id: PropTypes.string,
-  style: PropTypes.object,
+  style: PropTypes.object
 };
 
 export default Radium(PaneHeader);

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Use what you learned in the last puzzle to create this hexagon using the \"sides\" variable.\r\n\r\nSee how you could change just one value to draw a triangle,  square, pentagon, or octagon?",
+    "short_instructions": "Use what you learned in the last puzzle to create this hexagon using the \"sides\" variable.\r\n\r\nSee how you could change just one value to draw a triangle,  square, pentagon, or octagon?",
     "x": "125",
     "y": "325",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Use what you learned in the last puzzle to create this hexagon using the `sides` variable.\r\n\r\nSee how you could change just one value to draw a triangle,  square, pentagon, or octagon?",
+    "long_instructions": "Use what you learned in the last puzzle to create this hexagon using the `sides` variable.\r\n\r\nSee how you could change just one value to draw a triangle,  square, pentagon, or octagon?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import color from '@cdo/apps/util/color';
 
 /**
@@ -7,7 +8,7 @@ import color from '@cdo/apps/util/color';
 export default class Header extends React.Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
-    hideBorder: PropTypes.bool,
+    hideBorder: PropTypes.bool
   };
 
   render() {
@@ -15,14 +16,10 @@ export default class Header extends React.Component {
       ...style,
       ...(this.props.hideBorder && {
         borderBottomWidth: 0,
-        paddingBottom: 5,
-      }),
+        paddingBottom: 5
+      })
     };
-    return (
-      <h1 style={computedStyle}>
-        {this.props.text}
-      </h1>
-    );
+    return <h1 style={computedStyle}>{this.props.text}</h1>;
   }
 }
 
@@ -42,5 +39,5 @@ const style = {
   paddingLeft: 0,
   paddingRight: 0,
   marginBottom: 10,
-  marginTop: 10,
+  marginTop: 10
 };

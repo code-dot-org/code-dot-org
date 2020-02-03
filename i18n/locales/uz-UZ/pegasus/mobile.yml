@@ -68,6 +68,19 @@
   view_unit: "Mavzuni ko'rish"
   make_app: "Dastur yaratish"
   congrats_guest_speaker_title: "Sinfingiz uchun mehmon ma'ruzachi topish"
+  third_party_gradelevel_kto8: "K-8 sinflar"
+  third_party_gradelevel_kto2: "K-2 sinflar"
+  third_party_gradelevel_2to8: "2-8-sinflar"
+  third_party_gradelevel_4to12: "4-12-sinflar"
+  third_party_gradelevel_5to12: "5-12-sinflar"
+  third_party_gradelevel_6plus: "6+ sinflar"
+  third_party_gradelevel_8plus: "8+ sinflar"
+  third_party_platform_all: 'Platforma: Veb, iPad va Android'
+  third_party_platform_mobile: 'Platforma: iPad va Android'
+  third_party_platform_web: 'Platforma: Veb'
+  third_party_price_varies: 'Narx: har xil'
+  third_party_price_free: 'Narx: bepul'
+  third_party_price_299: 'Narx: 2,99$/yuklab olish'
   enter_valid_age: "Iltimos, yoshingzni to‘g‘ri ko‘rsating"
   enter_valid_email: "Iltimos, pochtangizni to‘g‘ri ko‘rsating"
   get_a_certificate_message: "Biz sizga sertifikat bilan birga qanday <a href='/learn/beyond'>ko‘proq o‘rganish</a> yo‘lini jo‘natamiz"
@@ -234,7 +247,6 @@
   homepage_slot_text_link_stats: "Statistika bilan tanishing"
   homepage_slot_text_link_buy: "Bizga qo‘shiling"
   homepage_slot_text_link_donate: "Xayriya qiling"
-  homepage_header_codestudio: "Dasturlash studiyasi talabalarining ijodi"
   homepage_header_donors: "Code.org yordam berganlarga o‘z minnatdorchiligini bildiradi"
   homepage_donors_seall: "Barchasini ko‘ring"
   homepage_donors_donate: "Xayriya qiling"
@@ -384,8 +396,9 @@
   dashboard_navigation_section: 'Bo‘lim: %{section_name}'
   dashboard_navigation_student: 'O‘quvchi: %{student_name}'
   dashboard_sections_new_section: "Yangi bo‘lim"
-  dashboard_sections_name: "Bo‘lim nomi"
-  dashboard_students_name: "Ismi"
+  dashboard_sections_name: 'Bo‘lim nomi'
+  dashboard_sections_close: "Yopish"
+  dashboard_students_name: 'Ismi'
   dashboard_students_completed_levels: "O‘tilgan bosqichlar"
   dashboard_students_total_lines: "Kod satrlari"
   dashboard_students_secret_word_title: "Sirli so'z"
@@ -405,8 +418,6 @@
   next: "Keyingi"
   blockly_name: "Blokli"
   iceage_name: "Muzlik davri"
-  math_category_name: "Matematik"
-  hoc_category_name: "Dasturlash soati"
   applab_name: "Ilova labaratoriyasi"
   lightbot_gradelevel: "Barcha yoshdagilar uchun"
   thinkersmith_gradelevel: "Barcha yoshdagilar uchun"
@@ -444,3 +455,13 @@
   flappy_shortcode: "qanot qoqmoq"
   header_courses: "Kurslar"
   header_educate_hoc: "Dasturlash soati"
+  applab_tile_start_tutorial: "Boshlash"
+  hoc_overview_start_tutorial: "Boshlash"
+  hoc2018_creativity_create: "Yaratmoq"
+  hoc2018_mc_start: "Boshlash"
+  hoc2018_mc_video_title_inspire_girl: "Qizlarni ruhlantiring"
+  hoc2018_mc_homepage_join_us: "Bizga qo'shiling"
+  hoc2018_mc_homepage_try_it: "Sinab ko‘ring"
+  hoc2018_dance_party_button: "Boshlash"
+  hoc2018_dance_teacher_resources_tile1_button: "Dars rejasi"
+  hoc2018_dance_amazon_about_future_engineer_button: "Ko‘proq bilish"

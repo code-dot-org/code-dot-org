@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[1,1,0,0,0,0,0,0],[1,1,1,1,1,1,1,1],[1,1,1,1,1,1,1,1],[1,1,2,1,1,1,3,1],[1,1,1,1,1,1,1,1],[1,1,0,0,0,1,1,1],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Get the acorn!",
+    "short_instructions": "Get the acorn!",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "true",

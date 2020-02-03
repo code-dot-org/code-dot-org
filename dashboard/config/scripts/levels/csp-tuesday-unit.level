@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Tuesday Unit Reflection Part 1\r\n\r\n## Lesson 4\r\n\r\nHow would you respond to a teacher who says ‘what’s the point’ of lesson 4?\r\n",
+    "long_instructions": "# Tuesday Unit Reflection Part 1\r\n\r\n## Lesson 4\r\n\r\nHow would you respond to a teacher who says ‘what’s the point’ of lesson 4?\r\n",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

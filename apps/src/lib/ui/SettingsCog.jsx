@@ -1,5 +1,7 @@
 /** @file Settings menu cog icon */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';
@@ -8,8 +10,10 @@ import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import * as makerToolkitRedux from '../kits/maker/redux';
 import PopUpMenu from './PopUpMenu';
-import ConfirmEnableMakerDialog from "./ConfirmEnableMakerDialog";
+import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import {getStore} from '../../redux';
+import experiments from '@cdo/apps/util/experiments';
 
 const style = {
   iconContainer: {
@@ -20,13 +24,13 @@ const style = {
     cursor: 'pointer',
     color: color.lighter_purple,
     ':hover': {
-      color: color.white,
+      color: color.white
     }
   },
   assetsIcon: {
     fontSize: 18,
-    verticalAlign: 'middle',
-  },
+    verticalAlign: 'middle'
+  }
 };
 
 class SettingsCog extends Component {
@@ -40,7 +44,7 @@ class SettingsCog extends Component {
   static propTypes = {
     isRunning: PropTypes.bool,
     runModeIndicators: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
+    showMakerToggle: PropTypes.bool
   };
 
   // This ugly two-flag state is a workaround for an event-handling bug in
@@ -52,6 +56,7 @@ class SettingsCog extends Component {
     open: false,
     canOpen: true,
     confirmingEnableMaker: false,
+    managingLibraries: false
   };
 
   open = () => this.setState({open: true, canOpen: false});
@@ -66,6 +71,11 @@ class SettingsCog extends Component {
   manageAssets = () => {
     this.close();
     assets.showAssetManager();
+  };
+
+  manageLibraries = () => {
+    this.close();
+    this.setState({managingLibraries: true});
   };
 
   toggleMakerToolkit = () => {
@@ -87,6 +97,7 @@ class SettingsCog extends Component {
 
   showConfirmation = () => this.setState({confirmingEnableMaker: true});
   hideConfirmation = () => this.setState({confirmingEnableMaker: false});
+  closeLibraryManager = () => this.setState({managingLibraries: false});
 
   setTargetPoint(icon) {
     if (!icon) {
@@ -97,8 +108,14 @@ class SettingsCog extends Component {
     const offsetSoItLooksRight = {top: -6, left: -1};
     this.targetPoint = {
       top: rect.bottom + offsetSoItLooksRight.top,
-      left: rect.left + (rect.width / 2) + offsetSoItLooksRight.left,
+      left: rect.left + rect.width / 2 + offsetSoItLooksRight.left
     };
+  }
+
+  areLibrariesEnabled() {
+    let experimentOn = experiments.isEnabled(experiments.STUDENT_LIBRARIES);
+    let pageConstants = getStore().getState().pageConstants;
+    return experimentOn || (pageConstants && pageConstants.librariesEnabled);
   }
 
   render() {
@@ -111,10 +128,7 @@ class SettingsCog extends Component {
     }
 
     return (
-      <span
-        style={rootStyle}
-        ref={icon => this.setTargetPoint(icon)}
-      >
+      <span style={rootStyle} ref={icon => this.setTargetPoint(icon)}>
         <FontAwesome
           className="settings-cog"
           icon="cog"
@@ -129,15 +143,22 @@ class SettingsCog extends Component {
           beforeClose={this.beforeClose}
           showTail={true}
         >
-          <ManageAssets onClick={this.manageAssets}/>
-          {this.props.showMakerToggle &&
-            <ToggleMaker onClick={this.toggleMakerToolkit}/>
-          }
+          <ManageAssets onClick={this.manageAssets} />
+          {this.areLibrariesEnabled() && (
+            <ManageLibraries onClick={this.manageLibraries} />
+          )}
+          {this.props.showMakerToggle && (
+            <ToggleMaker onClick={this.toggleMakerToolkit} />
+          )}
         </PopUpMenu>
         <ConfirmEnableMakerDialog
           isOpen={this.state.confirmingEnableMaker}
           handleConfirm={this.confirmEnableMaker}
           handleCancel={this.hideConfirmation}
+        />
+        <LibraryManagerDialog
+          isOpen={this.state.managingLibraries}
+          onClose={this.closeLibraryManager}
         />
       </span>
     );
@@ -146,17 +167,17 @@ class SettingsCog extends Component {
 export default Radium(SettingsCog);
 
 export function ManageAssets(props) {
-  return (
-    <PopUpMenu.Item {...props}>
-      {msg.manageAssets()}
-    </PopUpMenu.Item>
-  );
+  return <PopUpMenu.Item {...props}>{msg.manageAssets()}</PopUpMenu.Item>;
 }
 ManageAssets.propTypes = {
   onClick: PropTypes.func,
   first: PropTypes.bool,
-  last: PropTypes.bool,
+  last: PropTypes.bool
 };
+
+export function ManageLibraries(props) {
+  return <PopUpMenu.Item {...props}>{msg.manageLibraries()}</PopUpMenu.Item>;
+}
 
 export function ToggleMaker(props) {
   const reduxState = getStore().getState();
@@ -165,7 +186,9 @@ export function ToggleMaker(props) {
   }
   return (
     <PopUpMenu.Item {...props}>
-      {makerToolkitRedux.isEnabled(reduxState) ? msg.disableMaker() : msg.enableMaker()}
+      {makerToolkitRedux.isEnabled(reduxState)
+        ? msg.disableMaker()
+        : msg.enableMaker()}
     </PopUpMenu.Item>
   );
 }

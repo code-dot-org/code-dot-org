@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Add Some Functionality\r\n\r\nUsing the list you brainstormed with your team, add a single piece of new functionality to your app.\r\n\r\n# Do This\r\n\r\nBefore adding anything new to a working app, it's always a good idea to make a backup. Click the \"Remix\" button in the header, give your remix a good name, and then come back here.\r\n\r\nFor each piece of functionality you incorporate:\r\n\r\n* Make a remix of your app at it's current state\r\n* Return here to work on your app\r\n* Add a comment to the top of your program describing the functionality you are trying to add\r\n* Work on your app until it works. Try to stay focused on only the single piece of functionality you've chosen\r\n* When done, pick a new idea and start the process over\r\n",
+    "long_instructions": "# Add Some Functionality\r\n\r\nUsing the list you brainstormed with your team, add a single piece of new functionality to your app.\r\n\r\n# Do This\r\n\r\nBefore adding anything new to a working app, it's always a good idea to make a backup. Click the \"Remix\" button in the header, give your remix a good name, and then come back here.\r\n\r\nFor each piece of functionality you incorporate:\r\n\r\n* Make a remix of your app at it's current state\r\n* Return here to work on your app\r\n* Add a comment to the top of your program describing the functionality you are trying to add\r\n* Work on your app until it works. Try to stay focused on only the single piece of functionality you've chosen\r\n* When done, pick a new idea and start the process over\r\n",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

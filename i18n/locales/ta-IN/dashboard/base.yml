@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 ta:
   errors:
     messages:
@@ -27,8 +39,7 @@ ta:
   submit: சமர்ப்பிக்க
   next_page: அடுத்த பக்கம்
   cancel: "ரத்து செய்"
-  add_teacher_form:
-    submit: 'ஆசிரியரை சேர்'
+  or: "அல்லது"
   add_hint_form:
     placeholder: 'உங்கள் குறிப்பை இங்கே உள்ளிடவும்'
     submit: 'உதவிக்குறிப்பு சேர்'
@@ -84,50 +95,84 @@ ta:
     destroy: 'அழிக்கவும்'
   nav:
     header:
+      finished_hoc: "நான் முடித்துவிட்டேன்!"
+      course_catalog: "பாடத்திட்ட கேட்டலாக்"
+      project_gallery: "திட்டப்பணிகள்"
+      help_support: "உதவி மற்றும் ஆதரவு"
+      report_bug: "ஒரு பிரச்னையை தெரிவிக்கவும்"
       educate_hoc: "நிரல்வரி நேரம்"
-    create_button:
-      create: 'உருவாக்கு'
+      about: "பற்றி"
     user:
       label: 'வணக்கம் %{username}'
       settings: 'எனது கணக்கு'
       logout: 'வெளியேறு'
       signin: 'உள்நுழை'
+      signup: 'ஒரு அக்கவுண்டை உருவாக்குங்கள்'
+      create: 'உருவாக்கு'
+      infinity: 'முடிவிலி'
     popup:
       close: 'மூடு'
   teacher:
     panel:
       student: 'மாணவர்'
+  user:
+    update_email: "புதுப்பிக்கவும்"
   user_level:
     completed: 'நிறைவடைந்தது'
     tried: 'முயற்சிக்கப்பட்டது'
   home:
     classroom: உங்கள் வகுப்பறை
     trynow: 'இப்பொழுது முயற்சிக்கவும்'
-    announcement_try_now_button: "இப்பொழுது முயற்சிக்கவும்"
   user_type:
     student: 'மாணவர்'
+  footer:
+    copyright: 'காப்புரிமை'
+    more: 'அதிகம்'
+    translate: 'எங்களது உள்ளடகத்தை மொழிமாற்றம் செய்ய தன்னார்வலர்'
+    tos: 'சேவையின் விதிமுறைகள்'
+    privacy: 'தனியுரிமை கொள்கை'
+    report_abuse: 'தவறான பயன்பாட்டை தெரிவிக்கவும்'
+  reference_area:
+    title: 'உதவி தேவையா?'
+    subtitle: 'இந்த வீடியோக்கள் மற்றும் உதவிக்குறிப்புகளை பார்க்கவும்'
+  video:
+    tab: 'வீடியோ.'
+  gallery:
+    report_abuse: "தவறான பயன்பாட்டை தெரிவிக்கவும்"
+  landing:
+    help_support: "உதவி மற்றும் ஆதரவு"
   dialog:
     ok: "சரி"
     startover_title: "உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?"
     startover_ok: "மீண்டும் துவங்கு"
     startover_cancel: "ரத்து செய்"
   terms_interstitial:
+    tos: "சேவையின் விதிமுறைகள்"
+    privacy: "தனியுரிமை கொள்கை"
     print: "அச்சிடு"
   race_interstitial:
     races:
       other: "வேறு"
     submit: "சமர்ப்பிக்க"
+    decline: "மூடவும்"
   project:
-    share: "பகிர்"
+    projects: "திட்டப்பணிகள்"
+    project_gallery: "திட்டப்பணிகள்"
     name: "பெயர்"
-    delete_yes: 'ஆம்'
-    delete_no: 'இல்லை'
     saved: "சேமித்தது"
-    cancel: 'ரத்து செய்'
     abuse:
       report_abuse_form:
         abuse_type:
           other: 'வேறு'
+  flex_category:
+    csf_loops: 'சுழற்சிகள்'
+    csf_events: 'நிகழ்வுகள்'
+    csf_functions: 'செயல்பாடுகள்'
+    csf_variables: 'மாறிலிகள்'
+    csp_variables: 'மாறிலிகள்'
+    csp_functions: 'செயல்பாடுகள்'
+    csp_lists: 'பட்டியல்கள்'
+    csp_loops: 'சுழற்சிகள்'
   pd:
     form_labels:
       email: 'மின்னஞ்சல்'

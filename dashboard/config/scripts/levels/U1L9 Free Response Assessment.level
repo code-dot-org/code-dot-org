@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Real-World Numbers ",
-    "markdown_instructions": "Choose one of the topics you most enjoyed learning about today. Describe what new information you learned and how it relates to the way we create and use number systems.\n",
+    "long_instructions": "Choose one of the topics you most enjoyed learning about today. Describe what new information you learned and how it relates to the way we create and use number systems.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

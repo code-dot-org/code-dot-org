@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
-import color from "../../util/color";
+import React from 'react';
+import color from '../../util/color';
 import commonStyles from '../../commonStyles';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 
 const styles = {
@@ -30,7 +31,7 @@ class DeleteElementButton extends React.Component {
     confirming: false
   };
 
-  handleDeleteInternal = (event) => {
+  handleDeleteInternal = event => {
     if (this.props.shouldConfirm) {
       this.setState({confirming: true});
     } else {
@@ -40,7 +41,7 @@ class DeleteElementButton extends React.Component {
 
   finishDelete = () => this.props.handleDelete();
 
-  abortDelete = (event) => this.setState({confirming: false});
+  abortDelete = event => this.setState({confirming: false});
 
   render() {
     if (this.state.confirming) {
@@ -48,12 +49,14 @@ class DeleteElementButton extends React.Component {
         <div style={[styles.right, styles.confirming]}>
           Delete?
           <button
+            type="button"
             style={[commonStyles.button, styles.red]}
             onClick={this.finishDelete}
           >
             Yes
           </button>
           <button
+            type="button"
             style={commonStyles.button}
             onClick={this.abortDelete}
           >
@@ -65,6 +68,7 @@ class DeleteElementButton extends React.Component {
     return (
       <div>
         <button
+          type="button"
           style={[commonStyles.button, styles.red, styles.right]}
           onClick={this.handleDeleteInternal}
         >

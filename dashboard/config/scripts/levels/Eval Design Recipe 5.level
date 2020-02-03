@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Using the Design Recipe, write a function striped-flag that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "short_instructions": "Using the Design Recipe, write a function striped-flag that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "min_workspace_height": "1500",
@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
-    "markdown_instructions": "Write a function `striped-flag` that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
+    "long_instructions": "Write a function `striped-flag` that takes two colors and produces a flag that is 250 pixels wide, 150 pixels tall, with three even horizontal stripes of given colors, in the order color2, color1, color2.",
     "disable_examples": "false",
     "examples_required": "true"
   }

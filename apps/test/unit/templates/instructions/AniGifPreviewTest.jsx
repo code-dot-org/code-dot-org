@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
 
 describe('ImagePreview', () => {
@@ -18,7 +18,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <div
@@ -47,7 +47,7 @@ describe('ImagePreview', () => {
         id="ani-gif-preview-wrapper"
         style={{
           display: 'inline-block',
-          position: 'relative',
+          position: 'relative'
         }}
       >
         <div

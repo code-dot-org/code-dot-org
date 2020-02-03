@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "false",
-    "instructions": "Now, help the actors move as they count.  \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat will move and count by multiplying by 2 (counter * 2)  each time. Penguin will move and count to the power of 2 (counter ^ 2) each time.  Who will reach their flag first?",
+    "short_instructions": "Now, help the actors move as they count.  \r\n\r\nDog should move and count by adding 2 (counter + 2) each time.  Cat will move and count by multiplying by 2 (counter * 2)  each time. Penguin will move and count to the power of 2 (counter ^ 2) each time.  Who will reach their flag first?",
     "ideal": "9",
     "embed": "false",
     "contract_highlight": "false",
@@ -34,7 +34,7 @@
     "disable_examples": "false",
     "disable_sharing": "false",
     "timeout_after_when_run": "false",
-    "markdown_instructions": "Now, help the actors move as they count.  \r\n\r\nDog should move and count by adding 2 (`counter + 2`) each time.  Cat will move and count by multiplying by 2 (`counter *2`)  each time. Penguin will move and count to the power of 2 (`counter ^ 2`) each time.  Who will reach their flag first?",
+    "long_instructions": "Now, help the actors move as they count.  \r\n\r\nDog should move and count by adding 2 (`counter + 2`) each time.  Cat will move and count by multiplying by 2 (`counter *2`)  each time. Penguin will move and count to the power of 2 (`counter ^ 2`) each time.  Who will reach their flag first?",
     "step_speed": "2",
     "maze_data": null
   }

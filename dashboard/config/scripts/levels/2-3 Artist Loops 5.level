@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Now let's make a small change to the loop and see how different our picture becomes.",
+    "short_instructions": "Now let's make a small change to the loop and see how different our picture becomes.",
     "x": "100",
     "y": "150",
     "start_direction": "0",

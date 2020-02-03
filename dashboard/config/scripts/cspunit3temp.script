@@ -22,7 +22,7 @@ level 'U3 - Loops - plus and minus = operator'
 level 'U3 - Loops - minus = operator'
 level 'U3 - Loops - 14'
 level 'U3 - Loops - 15'
-assessment 'U3L28 Free Response Wrap Up'
+level 'U3L28 Free Response Wrap Up', assessment: true
 
 stage 'Loops and Simulations'
 level 'U3L29 Student Lesson Introduction'
@@ -78,7 +78,7 @@ level 'U3 - Keys - Buttons and Keys'
 level 'U3 - Keys - Functions'
 level 'U3 - Keys - Add Image URLs'
 level 'U3 - Keys - Final Image Scroller'
-assessment 'U3- Keys - Code Refactoring Exit Ticket'
+level 'U3- Keys - Code Refactoring Exit Ticket', assessment: true
 
 stage 'Processing Arrays'
 level 'U3L32 Student Lesson Introduction'
@@ -125,7 +125,7 @@ level 'U3 - Canvas - movementFunction'
 level 'U3 - Canvas - movementFunction fix Orig'
 level 'U3 - Canvas - sprayPaint'
 level 'U3 - Canvas - sketch'
-assessment 'U3L33 Free Response Getting Started'
+level 'U3L33 Free Response Getting Started', assessment: true
 
 stage 'Practice PT: Create'
 level 'U3L34 Student Lesson Introduction'

@@ -3,7 +3,8 @@
  * Used in LevelBuilder, and relies on some apps code for validation.
  * Supports both Bee and Farmer skins.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 
@@ -30,7 +31,7 @@ class CellJSON extends React.Component {
     node.select();
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.props.onChange(JSON.parse(event.target.value));
   };
 
@@ -38,7 +39,12 @@ class CellJSON extends React.Component {
     return (
       <label>
         Cell JSON (for copy/pasting):
-        <input type="text" value={JSON.stringify(this.props.serialization)} ref="serializedInput" onChange={this.handleChange}/>
+        <input
+          type="text"
+          value={JSON.stringify(this.props.serialization)}
+          ref="serializedInput"
+          onChange={this.handleChange}
+        />
       </label>
     );
   }
@@ -147,7 +153,7 @@ export default class GridEditor extends React.Component {
       });
     });
 
-    const serializedData = cells.map((row) => row.map(cell => cell.serialize()));
+    const serializedData = cells.map(row => row.map(cell => cell.serialize()));
 
     this.props.onUpdate(serializedData);
     this.setState({
@@ -158,7 +164,7 @@ export default class GridEditor extends React.Component {
   /**
    * When a given cell is modified, update the grid
    */
-  handleCellChange = (newSerializedCellData) => {
+  handleCellChange = newSerializedCellData => {
     const row = this.state.selectedRow;
     const col = this.state.selectedCol;
 
@@ -179,7 +185,7 @@ export default class GridEditor extends React.Component {
   /**
    * Store the given cells on our "clipboard"
    */
-  setCopiedCells = (cells) => {
+  setCopiedCells = cells => {
     this.setState({
       copiedCells: cells
     });
@@ -196,12 +202,30 @@ export default class GridEditor extends React.Component {
     if (cells[row] && cells[row][col]) {
       const cell = cells[row][col];
       const EditorClass = this.getEditorClass();
-      cellEditor = <EditorClass cell={cell} row={row} col={col} onUpdate={this.handleCellChange} />;
-      selectedCellJson = <CellJSON serialization={cell.serialize()} onChange={this.handleCellChange} />;
+      cellEditor = (
+        <EditorClass
+          cell={cell}
+          row={row}
+          col={col}
+          onUpdate={this.handleCellChange}
+        />
+      );
+      selectedCellJson = (
+        <CellJSON
+          serialization={cell.serialize()}
+          onChange={this.handleCellChange}
+        />
+      );
       if (this.state.copiedCells) {
-        pasteButton = (<button type="button" onClick={this.pasteCopiedCells}>
-            {"Paste Selected " + this.state.copiedCells.length + "x" + this.state.copiedCells[0].length + " Cells"}
-          </button>);
+        pasteButton = (
+          <button type="button" onClick={this.pasteCopiedCells}>
+            {'Paste Selected ' +
+              this.state.copiedCells.length +
+              'x' +
+              this.state.copiedCells[0].length +
+              ' Cells'}
+          </button>
+        );
       }
     }
 

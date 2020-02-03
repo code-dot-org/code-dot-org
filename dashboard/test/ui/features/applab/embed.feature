@@ -1,4 +1,5 @@
-@dashboard_db_access
+# Brad (2018-11-14) Skip on IE due to blocked pop-ups and possible "new document" issues
+@no_ie
 @as_student
 @no_mobile
 Feature: App Lab Embed
@@ -6,6 +7,7 @@ Feature: App Lab Embed
   Background:
     Given I start a new Applab project
     And I wait for the page to fully load
+
 
   Scenario: App Lab Embed
     Given I ensure droplet is in text mode
@@ -23,9 +25,8 @@ Feature: App Lab Embed
     Then I wait until element "a.more-link" is visible
     And I click selector "a.more-link"
     Then I wait until element "a:contains('How it Works (View Code)')" is visible
-    And I click selector "a:contains('How it Works (View Code)')"
+    And I click selector "a:contains('How it Works (View Code)')" to load a new tab
 
-    And I go to the newly opened tab
     And I wait for the page to fully load
     And I wait to see Applab code mode
 

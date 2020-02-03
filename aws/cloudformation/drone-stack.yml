@@ -1,0 +1,349 @@
+# Manual steps not captured by this template:
+# - Creating all Secrets Manager secrets before running this template. See: https://docs.drone.io/installation/github/multi-machine/
+# - After successful stack creation, the Github OAuth app Homepage URL / Authorization callback URL must be updated to point to the new ELB.
+#   Alternatively, a route 53 A record alias can be created for the ELB, and the OAuth app URLs can be pointed to that.
+
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'AWS CloudFormation template for running Drone.io on ECS. Recreates these steps: https://docs.drone.io/installation/github/multi-machine/'
+Parameters:
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VpcId
+  SubnetIds:
+    Type: List<AWS::EC2::Subnet::Id>
+    Description: Comma separated list of existing VPC Subnet Ids where ECS instances will run
+  NumWorkers:
+    Type: Number
+    Description: Initial number of drone workers (also the number of concurrent builds which can run)
+    Default: 10
+  ECSAMI:
+    Description: AMI ID
+    Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>
+    Default: /aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id
+Resources:
+# ELB resources:
+# ELB / Target Group / Listener / ELB Security Group
+
+  ElbSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ELB Allowed Ports
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+      Tags:
+        -
+          Key: Name
+          Value: !Sub "ECS ${AWS::StackName} - ALB SecurityGroup"
+
+  DroneMasterTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub "TargetGroup-${AWS::StackName}"
+      VpcId: !Ref VpcId
+      Port: 80
+      Protocol: HTTP
+      Tags:
+        -
+          Key: Name
+          Value: !Sub "ECS ${AWS::StackName} - TargetGroup"
+
+  DroneMasterELB:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub "ELB-${AWS::StackName}"
+      SecurityGroups:
+        - !Ref ElbSecurityGroup
+      Subnets: !Ref SubnetIds
+      Tags:
+        -
+          Key: Name
+          Value: !Sub "ECS ${AWS::StackName} - ELB"
+
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref DroneMasterELB
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DroneMasterTargetGroup
+
+  ACMCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: '*.cdn-code.org'
+      ValidationMethod: DNS
+
+  HttpsLoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref DroneMasterELB
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificate
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DroneMasterTargetGroup
+
+# Drone Master resources:
+# Security Group / EC2 Launch Template / EC2 Autoscaling Group
+# ECS cluster / ECS service / ECS task definition
+
+  DroneMasterEcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ECS Allowed Ports
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        -
+          IpProtocol: tcp
+          FromPort: 1
+          ToPort: 65535
+          SourceSecurityGroupId: !Ref ElbSecurityGroup
+        -
+          IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+  DroneMasterECSCluster:
+    Type: AWS::ECS::Cluster
+
+  DroneMasterLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateName: !Sub "DroneMasterLaunchTemplate-${AWS::StackName}"
+      LaunchTemplateData: 
+        IamInstanceProfile: 
+          Name: ecsInstanceRole
+        KeyName: !Sub "winter-dev-${AWS::Region}"
+        SecurityGroupIds: 
+          - !Ref DroneMasterEcsSecurityGroup
+        ImageId: !Ref ECSAMI
+        InstanceType: t3.medium
+        Monitoring:
+          Enabled: true
+        UserData: 
+          Fn::Base64:
+            !Sub 
+              - "#!/bin/bash\necho ECS_CLUSTER=${EcsClusterName} >> /etc/ecs/ecs.config;echo ECS_BACKEND_HOST= >> /etc/ecs/ecs.config;"
+              - {EcsClusterName: !Ref DroneMasterECSCluster}
+ 
+  DroneMasterEcsInstanceAsg:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      VPCZoneIdentifier: !Ref SubnetIds
+      LaunchTemplate:
+        LaunchTemplateId: !Ref DroneMasterLaunchTemplate
+        Version: !GetAtt DroneMasterLaunchTemplate.LatestVersionNumber
+      MinSize: 1
+      MaxSize: 1
+      DesiredCapacity: 1
+
+  DroneMasterCloudwatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "DroneMaster-${AWS::StackName}"
+      RetentionInDays: 14
+
+  DroneMasterTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "${AWS::StackName}-drone-master"
+      RequiresCompatibilities:
+        - EC2
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
+      Volumes:
+        -
+          Name: db-data
+          Host:
+            SourcePath: /var/lib/drone
+      ContainerDefinitions:
+        - 
+          Name: drone-master
+          Essential: true
+          Image: drone/drone:1.0.0-rc.5
+          MemoryReservation: 1024
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref DroneMasterCloudwatchLogsGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ecs
+          PortMappings:
+            - 
+              ContainerPort: 80
+            -
+              ContainerPort: 443
+          MountPoints:
+            -
+              ContainerPath: /data
+              SourceVolume: db-data
+          Environment:
+            -
+              Name: DRONE_GITHUB_SERVER 
+              Value: https://github.com
+            -
+              Name: DRONE_SERVER_HOST 
+              Value: drone.cdn-code.org
+            -
+              Name: DRONE_SERVER_PROTO
+              Value: http
+            -
+              Name: DRONE_TLS_AUTOCERT
+              Value: true
+            # ECS secrets manager integration not supported by Cloudformation yet: https://github.com/aws/containers-roadmap/issues/97
+            # Instead, we must use "dynamic references": https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html
+            -
+              Name: DRONE_GITHUB_CLIENT_ID
+              Value: '{{resolve:secretsmanager:drone/master:SecretString:GITHUB_CLIENT_ID}}'
+            -
+              Name: DRONE_GITHUB_CLIENT_SECRET
+              Value: '{{resolve:secretsmanager:drone/master:SecretString:GITHUB_CLIENT_SECRET}}'
+            -
+              Name: DRONE_RPC_SECRET
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
+            # Needed to create first admin user: https://docs.drone.io/administration/user/admins/
+            -
+              Name: DRONE_USER_CREATE
+              Value: username:uponthesun,admin:true
+
+  DroneMasterEcsService:
+    Type: AWS::ECS::Service
+    DependsOn: LoadBalancerListener
+    Properties:
+      Cluster: !Ref DroneMasterECSCluster
+      LaunchType: EC2
+      DesiredCount: 1
+      LoadBalancers:
+      - ContainerName: drone-master
+        ContainerPort: 80
+        TargetGroupArn: !Ref DroneMasterTargetGroup
+      TaskDefinition: !Ref DroneMasterTaskDefinition
+
+# Drone Worker resources:
+# Security Group / EC2 Launch Template / Autoscaling Group
+# ECS Cluster / ECS Service / ECS Task Definition
+# EC2 Scheduled Scaling Actions / ECS Scheduled Scaling Actions
+
+  DroneWorkerEcsSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: ECS Allowed Ports
+      VpcId: !Ref VpcId
+
+  DroneWorkerECSCluster:
+    Type: AWS::ECS::Cluster
+
+  DroneWorkerLaunchTemplate:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateName: !Sub "DroneWorkerLaunchTemplate-${AWS::StackName}"
+      LaunchTemplateData: 
+        BlockDeviceMappings: 
+          - 
+            DeviceName: /dev/xvda
+            Ebs:
+              VolumeSize: 50
+              VolumeType: gp2
+        IamInstanceProfile: 
+          Name: DroneWorker
+        KeyName: !Sub "winter-dev-${AWS::Region}"
+        SecurityGroupIds: 
+          - !Ref DroneWorkerEcsSecurityGroup
+        ImageId: ami-0c4b05c0409735671
+        InstanceType: m5.xlarge
+        Monitoring:
+          Enabled: true
+        UserData: 
+          Fn::Base64:
+            !Sub 
+              - "#!/bin/bash\necho ECS_CLUSTER=${EcsClusterName} >> /etc/ecs/ecs.config;echo ECS_BACKEND_HOST= >> /etc/ecs/ecs.config;"
+              - {EcsClusterName: !Ref DroneWorkerECSCluster}
+
+  DroneWorkerEcsInstanceAsg:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      VPCZoneIdentifier: !Ref SubnetIds
+      LaunchTemplate:
+        LaunchTemplateId: !Ref DroneWorkerLaunchTemplate
+        Version: !GetAtt DroneWorkerLaunchTemplate.LatestVersionNumber
+      MinSize: !Ref NumWorkers
+      MaxSize: !Ref NumWorkers
+      DesiredCapacity: !Ref NumWorkers
+
+  DroneWorkerCloudwatchLogsGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "DroneWorker-${AWS::StackName}"
+      RetentionInDays: 14
+
+  DroneWorkerTaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Family: !Sub "${AWS::StackName}-drone-worker"
+      RequiresCompatibilities:
+        - EC2
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/DroneEcsTaskExecutionRole"
+      Volumes:
+        -
+          Name: docker-socket
+          Host:
+            SourcePath: /var/run/docker.sock
+      ContainerDefinitions:
+        - 
+          Name: drone-worker
+          Essential: true
+          Image: drone/agent:1.0.0-rc.5
+          MemoryReservation: 512
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: !Ref DroneWorkerCloudwatchLogsGroup
+              awslogs-region: !Ref AWS::Region
+              awslogs-stream-prefix: ecs
+          MountPoints:
+            -
+              ContainerPath: /var/run/docker.sock
+              SourceVolume: docker-socket
+          Environment:
+            -
+              Name: DRONE_RPC_SERVER 
+              Value: 
+                !Sub 
+                  - "http://${ElbDnsName}"
+                  - {ElbDnsName: !GetAtt DroneMasterELB.DNSName}
+            # Number of concurrent builds allowed on one Drone agent
+            -
+              Name: DRONE_RUNNER_CAPACITY
+              Value: 1
+            # ECS secrets manager integration not supported by Cloudformation yet: https://github.com/aws/containers-roadmap/issues/97
+            # Instead, we must use "dynamic references": https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/dynamic-references.html
+            -
+              Name: DRONE_RPC_SECRET
+              Value: '{{resolve:secretsmanager:drone/shared:SecretString:DRONE_RPC_SECRET}}'
+
+  DroneWorkerEcsService:
+    Type: AWS::ECS::Service
+    DependsOn: LoadBalancerListener
+    Properties:
+      Cluster: !Ref DroneWorkerECSCluster
+      LaunchType: EC2
+      DesiredCount: !Ref NumWorkers
+      TaskDefinition: !Ref DroneWorkerTaskDefinition
+      DeploymentConfiguration:
+        MaximumPercent: 100
+        MinimumHealthyPercent: 0
+      PlacementConstraints:
+        - 
+          Type: distinctInstance

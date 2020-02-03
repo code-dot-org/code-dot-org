@@ -16,7 +16,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Sound Board\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use board events, the buttons, switch, and the buzzer, try making a program that turns your board into a sound board when you press the buttons or flip the switch. Play around with the duration and frequencies of the sounds, and listen to how it turns out.",
+    "long_instructions": "# Challenge: Sound Board\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use board events, the buttons, switch, and the buzzer, try making a program that turns your board into a sound board when you press the buttons or flip the switch. Play around with the duration and frequencies of the sounds, and listen to how it turns out.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

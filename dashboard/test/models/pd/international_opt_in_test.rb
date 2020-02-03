@@ -15,6 +15,7 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
     subjects: ['ICT'],
     resources: ['Kodable'],
     robotics: ['LEGO Education'],
+    date: '2019-02-18',
     workshopOrganizer: 'Workshop Organizer',
     workshopFacilitator: 'Workshop Facilitator',
     workshopCourse: 'Workshop Course',
@@ -34,5 +35,24 @@ class Pd::InternationalOptInTest < ActiveSupport::TestCase
     assert build(:pd_international_opt_in, form_data: FORM_DATA.to_json, user_id: teacher.id).valid?
 
     refute build(:pd_international_opt_in, form_data: FORM_DATA.to_json).valid?
+  end
+
+  test 'Requires workshop date' do
+    teacher = create :teacher
+
+    missing_date = build :pd_international_opt_in,
+      user_id: teacher.id,
+      form_data: FORM_DATA.merge({date: nil}).to_json
+    refute missing_date.valid?
+
+    malformed_date = build :pd_international_opt_in,
+      user_id: teacher.id,
+      form_data: FORM_DATA.merge({date: 'malformed-date'}).to_json
+    refute malformed_date.valid?
+
+    valid_date = build :pd_international_opt_in,
+      user_id: teacher.id, form_data:
+        FORM_DATA.merge({date: '2019-02-18'}).to_json
+    assert valid_date.valid?
   end
 end

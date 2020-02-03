@@ -1,7 +1,7 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import _ from 'lodash';
-import { Galleries } from './projectConstants';
+import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
@@ -15,15 +15,16 @@ const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 const SET_PERSONAL_PROJECTS_LIST = 'projects/SET_PERSONAL_PROJECTS_LIST';
 
-const UNPUBLISH_REQUEST  = 'projects/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS  = 'projects/UNPUBLISH_SUCCESS';
-const UNPUBLISH_FAILURE  = 'projects/UNPUBLISH_FAILURE';
+const UNPUBLISH_REQUEST = 'projects/UNPUBLISH_REQUEST';
+const UNPUBLISH_SUCCESS = 'projects/UNPUBLISH_SUCCESS';
+const UNPUBLISH_FAILURE = 'projects/UNPUBLISH_FAILURE';
 
 const START_RENAMING_PROJECT = 'projects/START_RENAMING_PROJECT';
 const UPDATE_PROJECT_NAME = 'projects/UPDATE_PROJECT_NAME';
 const CANCEL_RENAMING_PROJECT = 'projects/CANCEL_RENAMING_PROJECT';
 const SAVE_SUCCESS = 'projects/SAVE_SUCCESS';
 const SAVE_FAILURE = 'project/SAVE_FAILURE';
+const UNSET_NAME_FAILURE = 'project/UNSET_NAME_FAILURE';
 
 // Action creators
 
@@ -33,7 +34,7 @@ const SAVE_FAILURE = 'project/SAVE_FAILURE';
  * @returns {{type: string, projectType: string}}
  */
 export function selectGallery(projectType = Galleries.PUBLIC) {
-  return { type: TOGGLE_GALLERY, projectType };
+  return {type: TOGGLE_GALLERY, projectType};
 }
 
 /**
@@ -73,8 +74,7 @@ export function setPersonalProjectsList(personalProjectsList) {
 }
 
 export function publishSuccess(lastPublishedAt, lastPublishedProjectData) {
-  return {type: PUBLISH_SUCCESS, lastPublishedAt,
-  lastPublishedProjectData};
+  return {type: PUBLISH_SUCCESS, lastPublishedAt, lastPublishedProjectData};
 }
 
 export function unpublishSuccess(projectId) {
@@ -101,8 +101,12 @@ export function saveSuccess(projectId, lastUpdatedAt) {
   return {type: SAVE_SUCCESS, projectId, lastUpdatedAt};
 }
 
-export function saveFailure(projectId) {
-  return {type: SAVE_FAILURE, projectId};
+export function saveFailure(projectId, projectNameFailure) {
+  return {type: SAVE_FAILURE, projectId, projectNameFailure};
+}
+
+export function unsetNameFailure(projectId) {
+  return {type: UNSET_NAME_FAILURE, projectId};
 }
 
 // Reducers
@@ -121,9 +125,11 @@ function selectedGallery(state = initialSelectedGalleryState, action) {
 // A map from project type to array of projects
 const initialProjectListState = {
   applab: [],
+  spritelab: [],
   gamelab: [],
   playlab: [],
   artist: [],
+  dance: []
 };
 
 function projectLists(state = initialProjectListState, action) {
@@ -136,7 +142,7 @@ function projectLists(state = initialProjectListState, action) {
       const {projects, projectType} = action;
       return {
         ...state,
-        [projectType]: _.unionBy(state[projectType], projects, 'channel'),
+        [projectType]: _.unionBy(state[projectType], projects, 'channel')
       };
     }
     case PREPEND_PROJECTS: {
@@ -144,7 +150,7 @@ function projectLists(state = initialProjectListState, action) {
       const {projects, projectType} = action;
       return {
         ...state,
-        [projectType]: _.unionBy(projects, state[projectType], 'channel'),
+        [projectType]: _.unionBy(projects, state[projectType], 'channel')
       };
     }
     default:
@@ -155,13 +161,15 @@ function projectLists(state = initialProjectListState, action) {
 // Whether there are more projects of each type on the server which are
 // older than the ones we have on the client.
 const initialHasOlderProjects = {
+  dance: true,
   applab: true,
+  spritelab: true,
   gamelab: true,
   playlab: true,
   artist: true,
   minecraft: true,
   events: true,
-  k1: true,
+  k1: true
 };
 
 function hasOlderProjects(state = initialHasOlderProjects, action) {
@@ -169,7 +177,7 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
     case SET_HAS_OLDER_PROJECTS:
       return {
         ...state,
-        [action.projectType]: action.hasOlderProjects,
+        [action.projectType]: action.hasOlderProjects
       };
     default:
       return state;
@@ -183,17 +191,19 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
     case SET_PERSONAL_PROJECTS_LIST:
       return {
         ...state,
-        projects: action.personalProjectsList,
+        projects: action.personalProjectsList
       };
     case PUBLISH_SUCCESS:
       var publishedChannel = action.lastPublishedProjectData.channel;
 
-      var publishedProjectIndex = state.projects.findIndex(project => project.channel === publishedChannel);
+      var publishedProjectIndex = state.projects.findIndex(
+        project => project.channel === publishedChannel
+      );
 
       var updatedProjects = [...state.projects];
       updatedProjects[publishedProjectIndex] = {
         ...updatedProjects[publishedProjectIndex],
-        publishedAt: action.lastPublishedAt,
+        publishedAt: action.lastPublishedAt
       };
 
       return {
@@ -203,17 +213,19 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
     case UNPUBLISH_REQUEST:
       return {
         ...state,
-        isUnpublishPending: true,
+        isUnpublishPending: true
       };
     case UNPUBLISH_SUCCESS:
       var unpublishedChannel = action.projectId;
 
-      var unpublishedProjectIndex = state.projects.findIndex(project => project.channel === unpublishedChannel);
+      var unpublishedProjectIndex = state.projects.findIndex(
+        project => project.channel === unpublishedChannel
+      );
 
       var newProjects = [...state.projects];
       newProjects[unpublishedProjectIndex] = {
         ...newProjects[unpublishedProjectIndex],
-        publishedAt: null,
+        publishedAt: null
       };
 
       return {
@@ -223,24 +235,28 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
     case UNPUBLISH_FAILURE:
       return {
         ...state,
-        isUnpublishPending: false,
+        isUnpublishPending: false
       };
     case DELETE_SUCCESS:
       var deletedChannel = action.projectId;
 
-      var deletedProjectIndex = state.projects.findIndex(project => project.channel === deletedChannel);
+      var deletedProjectIndex = state.projects.findIndex(
+        project => project.channel === deletedChannel
+      );
 
       var projects = [...state.projects];
       projects.splice(deletedProjectIndex, 1);
 
       return {
         ...state,
-        projects: projects,
+        projects: projects
       };
     case START_RENAMING_PROJECT:
       var projectToRename = action.projectId;
 
-      var projectToRenameIndex = state.projects.findIndex(project => project.channel === projectToRename);
+      var projectToRenameIndex = state.projects.findIndex(
+        project => project.channel === projectToRename
+      );
 
       var updatedEditing = [...state.projects];
 
@@ -252,12 +268,14 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: updatedEditing,
+        projects: updatedEditing
       };
     case UPDATE_PROJECT_NAME:
       var projectBeingRenamed = action.projectId;
 
-      var projectBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectBeingRenamed);
+      var projectBeingRenamedIndex = state.projects.findIndex(
+        project => project.channel === projectBeingRenamed
+      );
 
       var projectsWithRename = [...state.projects];
 
@@ -268,32 +286,35 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: projectsWithRename,
+        projects: projectsWithRename
       };
     case CANCEL_RENAMING_PROJECT:
       var projectNoLongerBeingRenamed = action.projectId;
 
-      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(project => project.channel === projectNoLongerBeingRenamed);
+      var projectNoLongerBeingRenamedIndex = state.projects.findIndex(
+        project => project.channel === projectNoLongerBeingRenamed
+      );
 
       var updatedNotEditing = [...state.projects];
 
       updatedNotEditing[projectNoLongerBeingRenamedIndex] = {
         ...updatedNotEditing[projectNoLongerBeingRenamedIndex],
-        isEditing: false,
+        isEditing: false
       };
-    return {
-      ...state,
-      projects: updatedNotEditing,
-    };
+      return {
+        ...state,
+        projects: updatedNotEditing
+      };
     case SAVE_SUCCESS:
       var recentlySavedProjectId = action.projectId;
 
-      var recentlySavedProjectIndex = state.projects.findIndex(project => project.channel === recentlySavedProjectId);
+      var recentlySavedProjectIndex = state.projects.findIndex(
+        project => project.channel === recentlySavedProjectId
+      );
 
       var savedProjects = [...state.projects];
 
-      var recentlySavedProject =
-        savedProjects[recentlySavedProjectIndex];
+      var recentlySavedProject = savedProjects[recentlySavedProjectIndex];
 
       savedProjects[recentlySavedProjectIndex] = {
         ...recentlySavedProject,
@@ -305,26 +326,54 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
 
       return {
         ...state,
-        projects: savedProjects,
+        projects: savedProjects
       };
     case SAVE_FAILURE:
       var saveAttemptProjectId = action.projectId;
 
-      var saveAttemptProjectIndex = state.projects.findIndex(project => project.channel === saveAttemptProjectId);
+      var saveAttemptProjectIndex = state.projects.findIndex(
+        project => project.channel === saveAttemptProjectId
+      );
 
       var unsavedProjects = [...state.projects];
 
-      var saveAttemptProject =
-        unsavedProjects[saveAttemptProjectIndex];
+      var saveAttemptProject = unsavedProjects[saveAttemptProjectIndex];
 
       unsavedProjects[saveAttemptProjectIndex] = {
         ...saveAttemptProject,
         isSaving: false,
-        isEditing: false,
+        isEditing: false
       };
+
+      if (action.projectNameFailure) {
+        unsavedProjects[saveAttemptProjectIndex].projectNameFailure =
+          action.projectNameFailure;
+        unsavedProjects[saveAttemptProjectIndex].isEditing = true;
+      }
+
       return {
         ...state,
-        projects: unsavedProjects,
+        projects: unsavedProjects
+      };
+    case UNSET_NAME_FAILURE:
+      var nameFailureProjectId = action.projectId;
+
+      var nameFailureProjectIndex = state.projects.findIndex(
+        project => project.channel === nameFailureProjectId
+      );
+
+      var nameFailureProjects = [...state.projects];
+
+      var nameFailureProject = nameFailureProjects[nameFailureProjectIndex];
+
+      nameFailureProjects[nameFailureProjectIndex] = {
+        ...nameFailureProject,
+        projectNameFailure: undefined
+      };
+
+      return {
+        ...state,
+        projects: nameFailureProjects
       };
     default:
       return state;
@@ -344,12 +393,14 @@ const fetchProjectToUpdate = (projectId, onComplete) => {
     url: `/v3/channels/${projectId}`,
     method: 'GET',
     type: 'json',
-    contentType: 'application/json;charset=UTF-8',
-  }).done((data) => {
-    onComplete(null, data);
-  }).fail((jqXhr, status) => {
-    onComplete(status, jqXhr.responseJSON);
-  });
+    contentType: 'application/json;charset=UTF-8'
+  })
+    .done(data => {
+      onComplete(null, data);
+    })
+    .fail((jqXhr, status) => {
+      onComplete(status, jqXhr.responseJSON);
+    });
 };
 
 export function unpublishProject(projectId) {
@@ -362,7 +413,7 @@ export function unpublishProject(projectId) {
         () => {
           dispatch({
             type: UNPUBLISH_SUCCESS,
-            projectId: projectId,
+            projectId: projectId
           });
           resolve();
         },
@@ -376,26 +427,27 @@ export function unpublishProject(projectId) {
   };
 }
 
-const updateProjectNameOnServer = (project) => {
-  return (dispatch) => {
+const updateProjectNameOnServer = project => {
+  return dispatch => {
     $.ajax({
       url: `/v3/channels/${project.id}`,
       method: 'POST',
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(project)
-    }).done((data) => {
-      dispatch(saveSuccess(project.id, data.updatedAt));
-    }).fail((jqXhr, status) => {
-      dispatch(saveFailure(project.id));
-    });
+    })
+      .done(data => {
+        dispatch(saveSuccess(project.id, data.updatedAt));
+      })
+      .fail((jqXhr, status) => {
+        dispatch(saveFailure(project.id, jqXhr.responseJSON.nameFailure));
+      });
   };
 };
 
 export const saveProjectName = (projectId, updatedName) => {
-  return (dispatch) => {
-    fetchProjectToUpdate(projectId,
-    (error, data) => {
+  return dispatch => {
+    fetchProjectToUpdate(projectId, (error, data) => {
       if (error) {
         console.error(error);
       } else {

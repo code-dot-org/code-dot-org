@@ -18,7 +18,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/624964d54e36fe248f91f08563a57c4b-image-1506620778039.gif\" style=\"float:right;height:150px\">\r\n\r\n**Goal:** The right button makes both buttons `\"green\"`\r\n\r\n**How:** Add a second `onEvent()` below the first. Set the `\"id\"` to `\"rightButton\"`. Inside it add code that changes both buttons' `\"background-color\"`\r\n\r\n**Show Me:** ![expandable](https://images.code.org/5cd0c24b0f7f855daa2225a4b6a08087-image-1505932139152.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/624964d54e36fe248f91f08563a57c4b-image-1506620778039.gif\" style=\"float:right;height:150px\">\r\n\r\n**Goal:** The right button makes both buttons `\"green\"`\r\n\r\n**How:** Add a second `onEvent()` below the first. Set the `\"id\"` to `\"rightButton\"`. Inside it add code that changes both buttons' `\"background-color\"`\r\n\r\n**Show Me:** ![expandable](https://images.code.org/5cd0c24b0f7f855daa2225a4b6a08087-image-1505932139152.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

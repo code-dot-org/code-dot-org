@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "The Need for DNS: Getting Started",
-    "markdown_instructions": "On the Internet, computers can only communicate with each other through IP addresses. Typically, you will know the name (or URL) of a computer you wish to talk to, but not its IP address. \n\nList two impacts that would result if you HAD TO KNOW IP addresses to get to websites?\n",
+    "long_instructions": "On the Internet, computers can only communicate with each other through IP addresses. Typically, you will know the name (or URL) of a computer you wish to talk to, but not its IP address. \n\nList two impacts that would result if you HAD TO KNOW IP addresses to get to websites?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

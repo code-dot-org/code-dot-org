@@ -428,6 +428,10 @@ lv:
         text: Šajā puzlē mūsu mērķis ir palīdzēt burvim visu laiku no labās puses
           uz kreiso kontrolēt karalistes robežas. Iemācies kā atkārtot komandas, tā
           ietaupīsi daudz laika, kad veidosi savu spēli.
+    C1_artist_intro:
+      2:
+        text: Tie ir lēkšanas bloki. Kad tos lieto, mākslinieks kustās, bet nezīmē,
+          tāpēc izmanto tos, lai lēktu uz nākamo pelēko līniju.
     C2_playlab_createstory:
       1:
         text: Līdz šim tu veidoji animācijas vai stāstus, kas dara vienu un to pašu
@@ -444,3 +448,7 @@ lv:
       2:
         text: Ir pieejams "kad bultiņa" bloks un "pārvietot tēlu" bloks. Savienojot
           šos blokus varēsi pārvietot tēlu ar klaviatūras bultiņām.
+    hoc_dance_events_2019:
+      4:
+        text: 'Daži notikumi piemēri: gaidīt peles klikšķi, klavietūras bultiņas piespiešanu
+          vai pieskārienu ekrānam.'

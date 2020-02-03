@@ -1,14 +1,18 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ToggleGroup from '../ToggleGroup';
-import color from "@cdo/apps/util/color";
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import { connect } from 'react-redux';
+import color from '@cdo/apps/util/color';
+import {connect} from 'react-redux';
 import {setCurrentView, ViewType} from './sectionProgressRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   toggleButton: {
-    padding: '3px 10px'
+    padding: '3px 20px',
+    height: 34,
+    margin: 'auto auto 10px auto'
   }
 };
 
@@ -18,84 +22,82 @@ const styles = {
  */
 class SectionProgressToggle extends React.Component {
   static propTypes = {
+    showStandardsToggle: PropTypes.bool,
+    // Redux provided
     currentView: PropTypes.string.isRequired,
     setCurrentView: PropTypes.func.isRequired,
+    sectionId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
-  state = {
-    selectedToggle: this.props.currentView,
-  };
-
-  componentWillReceiveProps(nextProps) {
-    // currentView can be set externally, and the component will
-    // still need to update when that happens.
-    if (this.state.selectedToggle !== nextProps.currentView) {
-      this.setState({selectedToggle: nextProps.currentView});
-    }
-  }
-
-  onChange = () => {
-    // Display the toggle based on the internal state so that it is
-    // more immediately responsive. Once setting internal state is
-    // complete, then update the redux currentView.
-    // Timeouts forces a render of the local state before dispatching
-    // the action.
-    if (this.state.selectedToggle === ViewType.SUMMARY) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'react',
-          event: 'progress-detailed'
-        }
-      );
-      this.setState({selectedToggle: ViewType.DETAIL}, () => {
-        setTimeout(() => {
-          this.props.setCurrentView(ViewType.DETAIL);
-        }, 0);
-      });
-    } else {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher-dashboard',
-          study_group: 'react',
-          event: 'progress-summary'
-        }
-      );
-      this.setState({selectedToggle: ViewType.SUMMARY}, () => {
-        setTimeout(() => {
-          this.props.setCurrentView(ViewType.SUMMARY);
-        }, 0);
-      });
-    }
+  onChange = selectedToggle => {
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'view_change_toggle',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          old_view: this.props.currentView,
+          new_view: selectedToggle,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
+    this.props.setCurrentView(selectedToggle);
   };
 
   render() {
-    const { selectedToggle } = this.state;
-
+    const {currentView, showStandardsToggle} = this.props;
     return (
       <ToggleGroup
-        selected={selectedToggle}
+        selected={currentView}
         activeColor={color.teal}
         onChange={this.onChange}
       >
-        <button value={ViewType.SUMMARY} style={styles.toggleButton}>
-          <FontAwesome icon="search-minus"/>
+        <button
+          type="button"
+          value={ViewType.SUMMARY}
+          style={styles.toggleButton}
+        >
+          <div>{i18n.lessons()}</div>
         </button>
-        <button id={"uitest-toggle-detail-view"} value={ViewType.DETAIL} style={styles.toggleButton}>
-          <FontAwesome icon="search-plus"/>
+        <button
+          type="button"
+          id={'uitest-toggle-detail-view'}
+          value={ViewType.DETAIL}
+          style={styles.toggleButton}
+        >
+          <div>{i18n.levels()}</div>
         </button>
+        {experiments.isEnabled(experiments.STANDARDS_REPORT) &&
+          showStandardsToggle && (
+            <button
+              type="button"
+              value={ViewType.STANDARDS}
+              style={styles.toggleButton}
+              id="uitest-standards-toggle"
+            >
+              <div>{i18n.standards()}</div>
+            </button>
+          )}
       </ToggleGroup>
     );
-
   }
 }
 
 export const UnconnectedSectionProgressToggle = SectionProgressToggle;
 
-export default connect(state => ({
-  currentView: state.sectionProgress.currentView,
-}), dispatch => ({
-  setCurrentView(viewType) {
-    dispatch(setCurrentView(viewType));
-  },
-}))(SectionProgressToggle);
+export default connect(
+  state => ({
+    currentView: state.sectionProgress.currentView,
+    sectionId: state.sectionData.section.id,
+    scriptId: state.scriptSelection.scriptId
+  }),
+  dispatch => ({
+    setCurrentView(viewType) {
+      dispatch(setCurrentView(viewType));
+    }
+  })
+)(SectionProgressToggle);

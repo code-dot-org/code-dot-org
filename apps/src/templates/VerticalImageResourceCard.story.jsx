@@ -2,10 +2,11 @@ import React from 'react';
 import VerticalImageResourceCard from './VerticalImageResourceCard';
 
 const exampleCard = {
-  title: "CS Fundamentals Express",
-  description: "All the core concepts from the elementary school curriculum, but at an accelerated pace designed for older students.",
-  buttonText: "Start the course",
-  link: "/s/express",
+  title: 'CS Fundamentals Express',
+  description:
+    'All the core concepts from the elementary school curriculum, but at an accelerated pace designed for older students.',
+  buttonText: 'Start the course',
+  link: '/s/express'
 };
 
 export default storybook => {

@@ -30,7 +30,7 @@
     "submittable": "true",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Improve your animation\r\n\r\nMake your animation even better by changing more sprite properties, or by adding even more sprites!",
+    "long_instructions": "# Improve your animation\r\n\r\nMake your animation even better by changing more sprite properties, or by adding even more sprites!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

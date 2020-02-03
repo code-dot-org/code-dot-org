@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). Next, repeat the code enough times to complete the drawing!",
+    "short_instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). Next, repeat the code enough times to complete the drawing!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "ideal": "7",
     "embed": "false",
-    "markdown_instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). \r\n\r\nNext, repeat the code enough times to complete the drawing!",
+    "long_instructions": "Try to figure out what happens if you run this code (or just press \"Run\" and try it). \r\n\r\nNext, repeat the code enough times to complete the drawing!",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

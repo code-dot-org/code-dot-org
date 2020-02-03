@@ -45,7 +45,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Turn on that LED\r\n\r\nThe red LED on your board is represented in code by an object called `led`. Similar to the sprite objects in Game Lab, you can use _dot notation_ to control the LED. Try using the command `led.on()` to make your red LED light up when the program is run.\r\n\r\n# Do this\r\n\r\n* Drag out the `led.on()` block and place it underneath the comment\r\n* Run the program\r\n* Bask in the warm red glow of your LED!",
+    "long_instructions": "# Turn on that LED\r\n\r\nThe red LED on your board is represented in code by an object called `led`. Similar to the sprite objects in Game Lab, you can use _dot notation_ to control the LED. Try using the command `led.on()` to make your red LED light up when the program is run.\r\n\r\n# Do this\r\n\r\n* Drag out the `led.on()` block and place it underneath the comment\r\n* Run the program\r\n* Bask in the warm red glow of your LED!",
     "project_template_level_name": "CSDU6 LED basics template",
     "contained_level_names": null
   },

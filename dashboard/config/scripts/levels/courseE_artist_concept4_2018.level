@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "slider_speed": "1",
-    "instructions": "Recreate this drawing.",
+    "short_instructions": "Recreate this drawing.",
     "disable_param_editing": "true",
     "embed": "false",
     "disable_variable_editing": "false",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Recreate this drawing. \r\n\r\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
+    "long_instructions": "Recreate this drawing. \r\n\r\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -40,12 +40,16 @@
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-17 20:52:42 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"ideal\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:55:29 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:57:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 22:12:22 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_loops": 3,
+    "functions": 5
   }
 }]]></config>
   <blocks>

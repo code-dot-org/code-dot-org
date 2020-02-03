@@ -12,7 +12,7 @@ const MakerState = Immutable.Record({
   enabled: false,
   connectionState: DISCONNECTED,
   connectionError: null,
-  usingFakeBoardNextTime: false,
+  usingFakeBoardNextTime: false
 });
 
 // Selectors
@@ -90,17 +90,17 @@ export function reducer(state = new MakerState(), action) {
   } else if (action.type === REPORT_CONNECTED) {
     return state.merge({
       connectionState: CONNECTED,
-      usingFakeBoardNextTime: false,
+      usingFakeBoardNextTime: false
     });
   } else if (action.type === REPORT_CONNECTION_ERROR) {
     return state.merge({
       connectionState: CONNECTION_ERROR,
-      connectionError: action.error,
+      connectionError: action.error
     });
   } else if (action.type === DISCONNECT) {
     return state.merge({
       connectionState: DISCONNECTED,
-      connectionError: null,
+      connectionError: null
     });
   } else if (action.type === USE_FAKE_BOARD_ON_NEXT_RUN) {
     return state.set('usingFakeBoardNextTime', true);

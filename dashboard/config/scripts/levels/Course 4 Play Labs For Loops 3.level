@@ -18,7 +18,7 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "instructions": "If we count by larger numbers, we count even higher in the same amount of time. Try making Pirate Pegleg count from 10 up to 1000, adding 10 at a time.",
+    "short_instructions": "If we count by larger numbers, we count even higher in the same amount of time. Try making Pirate Pegleg count from 10 up to 1000, adding 10 at a time.",
     "ideal": "9",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",

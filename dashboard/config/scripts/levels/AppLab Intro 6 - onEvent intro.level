@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/d793e711e9e2ea74f68cebf228fcb360-image-1506618780451.gif\" style=\"float:right;height:150px\">\r\n\r\n**Goal:** The screen turns `\"green\"` when you click the button\r\n\r\n**How:** Add code inside the `\"onEvent\"` that sets the screen's `\"background-color\"` to `\"green\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/bbb452fdee5c546894a4f2025024ace3-image-1505882181893.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/d793e711e9e2ea74f68cebf228fcb360-image-1506618780451.gif\" style=\"float:right;height:150px\">\r\n\r\n**Goal:** The screen turns `\"green\"` when you click the button\r\n\r\n**How:** Add code inside the `\"onEvent\"` that sets the screen's `\"background-color\"` to `\"green\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/bbb452fdee5c546894a4f2025024ace3-image-1505882181893.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

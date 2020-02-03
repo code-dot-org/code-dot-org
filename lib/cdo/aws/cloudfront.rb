@@ -11,7 +11,9 @@ module AWS
     ALLOWED_METHODS = %w(HEAD DELETE POST GET OPTIONS PUT PATCH).freeze
     CACHED_METHODS = %w(HEAD GET OPTIONS).freeze
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
-    ERROR_CODES = [400, 403, 404, 405, 414, 500, 501, 502, 503, 504].freeze
+    CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
+    SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
+    ERROR_CACHE_TTL = 60
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
       Access-Control-Request-Headers
@@ -80,7 +82,7 @@ module AWS
       CLOUDFRONT_ALIAS_CACHE
     end
 
-    def self.invalidate_caches
+    def self.invalidate_caches(wait: false)
       require 'aws-sdk-cloudfront'
       puts 'Creating CloudFront cache invalidations...'
       cloudfront = Aws::CloudFront::Client.new(
@@ -91,6 +93,7 @@ module AWS
       invalidations = CONFIG.keys.map do |app|
         hostname = CDO.method("#{app}_hostname").call
         id = get_distribution_id(cloudfront, hostname)
+        next unless id
         invalidation = cloudfront.create_invalidation(
           {
             distribution_id: id,
@@ -105,13 +108,16 @@ module AWS
         ).invalidation.id
         [app, id, invalidation]
       end
-      puts 'Invalidations created.'
-      invalidations.map do |app, id, invalidation|
-        cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
-          waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
-          waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+      invalidations.compact!
+      puts "Invalidations created: #{invalidations.count}"
+      if wait
+        invalidations.map do |app, id, invalidation|
+          cloudfront.wait_until(:invalidation_completed, distribution_id: id, id: invalidation) do |waiter|
+            waiter.max_attempts = 120 # wait up to 40 minutes for invalidations
+            waiter.before_wait {|_| puts "Waiting for #{app} cache invalidation.."}
+          end
+          puts "#{app} cache invalidated!"
         end
-        puts "#{app} cache invalidated!"
       end
     end
 
@@ -134,12 +140,28 @@ module AWS
         Aliases: aliases,
         CacheBehaviors: behaviors,
         Comment: '',
-        CustomErrorResponses: ERROR_CODES.map do |error|
-          {
-            ErrorCachingMinTTL: 0,
-            ErrorCode: error,
-          }
-        end,
+        CustomErrorResponses:
+          CLIENT_ERROR_CODES.map do |error|
+            {
+              ErrorCachingMinTTL: 0,
+              ErrorCode: error,
+            }
+          end +
+          SERVER_ERROR_CODES.map do |error|
+            {
+              ErrorCachingMinTTL: ERROR_CACHE_TTL,
+              ErrorCode: error,
+              ResponseCode: error,
+              ResponsePagePath: '/assets/error-pages/site-down.html'
+            }.tap do |error_response_hash|
+              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+              unless CDO.custom_error_response
+                error_response_hash[:ErrorCachingMinTTL] = 0
+                error_response_hash.delete(:ResponseCode)
+                error_response_hash.delete(:ResponsePagePath)
+              end
+            end
+          end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
         Enabled: true,
@@ -164,6 +186,14 @@ module AWS
             OriginPath: "/#{CDO.assets_bucket_prefix}",
             S3OriginConfig: {
               OriginAccessIdentity: ''
+            },
+          },
+          {
+            Id: 'cdo-restricted',
+            DomainName: "cdo-restricted.s3.amazonaws.com",
+            OriginPath: '',
+            S3OriginConfig: {
+              OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
             },
           },
         ],
@@ -197,7 +227,7 @@ module AWS
 
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior(behavior_config, path=nil)
-      s3 = behavior_config[:proxy] == 'cdo-assets'
+      s3 = ['cdo-assets', 'cdo-restricted'].include? behavior_config[:proxy]
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
@@ -226,11 +256,45 @@ module AWS
         MinTTL: 0,
         SmoothStreaming: false,
         TargetOriginId: (s3 ? behavior_config[:proxy] : 'cdo'),
-        TrustedSigners: [],
+        TrustedSigners: behavior_config[:trusted_signer] ? ['self'] : [],
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
         behavior[:PathPattern] = path if path
       end
+    end
+
+    # Generate cookies granting access to the resource until the expiration_date.
+    # @param [String] resource Url with scheme optionally ending with '/*'.
+    #   See docs for the Resource field in a Custom Policy at
+    #   https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-setting-signed-cookie-custom-policy.html
+    # @param [Time] expiration_date Time at which the permission granted by
+    #   these cookies will expire.
+    # @return [Hash<String>] Cookie key/value pairs.
+    def self.signed_cookies(resource, expiration_date)
+      raise 'missing CDO.cloudfront_key_pair_id' unless CDO.cloudfront_key_pair_id
+      raise 'missing CDO.cloudfront_private_key' unless CDO.cloudfront_private_key
+
+      signer = Aws::CloudFront::CookieSigner.new(
+        key_pair_id: CDO.cloudfront_key_pair_id,
+        private_key: CDO.cloudfront_private_key
+      )
+
+      policy = {
+        "Statement" => [
+          {
+            "Resource" => resource,
+            "Condition" => {
+              "DateLessThan" => {"AWS:EpochTime" => expiration_date.tv_sec}
+            }
+          }
+        ]
+      }.to_json
+
+      # Generate signed cookies representing a custom policy.
+      signer.signed_cookie(
+        resource,
+        policy: policy
+      )
     end
   end
 end

@@ -12,7 +12,7 @@
     "player_start_position": "[1, 4]",
     "available_blocks": "[\"cobblestone\"]",
     "verification_function": "function (verificationAPI) {\r\n      // there are at least 3 logOak blocks on the board\r\n      return verificationAPI.countOfTypeOnMap(\"oreIron\") == 0 && verificationAPI.countOfTypeOnMap(\"oreCoal\") == 0;\r\n}",
-    "instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
+    "short_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,7 +48,7 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
+    "long_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
     "name_suffix": "_2018",
     "contained_level_names": null
   },

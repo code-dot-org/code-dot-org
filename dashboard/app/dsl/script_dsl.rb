@@ -14,7 +14,6 @@ class ScriptDSL < BaseDSL
     @hidden = true
     @login_required = false
     @hideable_stages = false
-    @exclude_csf_column_in_legend = false
     @student_detail_progress_view = false
     @teacher_resources = []
     @stage_extras_available = false
@@ -30,6 +29,10 @@ class ScriptDSL < BaseDSL
     @version_year = nil
     @is_stable = nil
     @supported_locales = []
+    @pilot_experiment = nil
+    @editor_experiment = nil
+    @project_sharing = nil
+    @curriculum_umbrella = nil
   end
 
   integer :id
@@ -39,13 +42,13 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :hideable_stages
-  boolean :exclude_csf_column_in_legend
   boolean :student_detail_progress_view
   boolean :stage_extras_available
   boolean :project_widget_visible
   boolean :has_verified_resources
   boolean :has_lesson_plan
   boolean :is_stable
+  boolean :project_sharing
 
   string :wrapup_video
   string :script_announcements
@@ -53,6 +56,9 @@ class ScriptDSL < BaseDSL
   string :family_name
   string :version_year
   string :curriculum_path
+  string :pilot_experiment
+  string :editor_experiment
+  string :curriculum_umbrella
 
   def teacher_resources(resources)
     @teacher_resources = resources
@@ -64,6 +70,10 @@ class ScriptDSL < BaseDSL
 
   def supported_locales(locales)
     @supported_locales = locales
+  end
+
+  def pilot_experiment(experiment)
+    @pilot_experiment = experiment
   end
 
   def stage(name, properties = {})
@@ -92,7 +102,6 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_stages: @hideable_stages,
-      exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete,
@@ -108,7 +117,11 @@ class ScriptDSL < BaseDSL
       family_name: @family_name,
       version_year: @version_year,
       is_stable: @is_stable,
-      supported_locales: @supported_locales
+      supported_locales: @supported_locales,
+      pilot_experiment: @pilot_experiment,
+      editor_experiment: @editor_experiment,
+      project_sharing: @project_sharing,
+      curriculum_umbrella: @curriculum_umbrella
     }
   end
 
@@ -123,11 +136,17 @@ class ScriptDSL < BaseDSL
   string :skin
   string :video_key_for_next_level
 
+  # If someone forgets we moved away from assessment as level type and puts
+  # assessment as level type it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the assessment: true syntax
   def assessment(name, properties = {})
     properties[:assessment] = true
     level(name, properties)
   end
 
+  # If someone forgets we moved away from named_level and puts
+  # named_level it will just nicely convert allow us to not fail but
+  # it will convert it for the future to use the named: true syntax
   def named_level(name, properties = {})
     properties[:named_level] = true
     level(name, properties)
@@ -141,9 +160,18 @@ class ScriptDSL < BaseDSL
   def level(name, properties = {})
     active = properties.delete(:active)
     progression = properties.delete(:progression)
-    target = properties.delete(:target)
     challenge = properties.delete(:challenge)
     experiments = properties.delete(:experiments)
+    named = properties.delete(:named)
+    assessment = properties.delete(:assessment)
+
+    if named
+      properties[:named_level] = true
+    end
+
+    if assessment
+      properties[:assessment] = true
+    end
 
     level = {
       name: name,
@@ -191,10 +219,9 @@ class ScriptDSL < BaseDSL
         levels: [level]
       }
 
-      if progression || target || challenge
+      if progression || challenge
         script_level[:properties] = {}
         script_level[:properties][:progression] = progression if progression
-        script_level[:properties][:target] = true if target
         script_level[:properties][:challenge] = true if challenge
       end
 
@@ -215,13 +242,14 @@ class ScriptDSL < BaseDSL
     @stage_extras_disabled = true
   end
 
-  def i18n_strings
+  # @override
+  def i18n_hash
     i18n_strings = {}
     @stages.each do |stage|
       i18n_strings[stage[:stage]] = {'name' => stage[:stage]}
     end
 
-    {'name' => {@name => {'stages' => i18n_strings}}}
+    {@name => {'stages' => i18n_strings}}
   end
 
   def self.parse_file(filename, name = nil)
@@ -251,7 +279,6 @@ class ScriptDSL < BaseDSL
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
-    s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
     s << "teacher_resources #{script.teacher_resources}" if script.teacher_resources
@@ -267,6 +294,10 @@ class ScriptDSL < BaseDSL
     s << "version_year '#{script.version_year}'" if script.version_year
     s << 'is_stable true' if script.is_stable
     s << "supported_locales #{script.supported_locales}" if script.supported_locales
+    s << "pilot_experiment '#{script.pilot_experiment}'" if script.pilot_experiment
+    s << "editor_experiment '#{script.editor_experiment}'" if script.editor_experiment
+    s << 'project_sharing true' if script.project_sharing
+    s << "curriculum_umbrella '#{script.curriculum_umbrella}'" if script.curriculum_umbrella
 
     s << '' unless s.empty?
     s << serialize_stages(script)
@@ -276,14 +307,12 @@ class ScriptDSL < BaseDSL
   def self.serialize_stages(script)
     s = []
     script.stages.each do |stage|
-      t = "stage '#{stage.name}'"
+      t = "stage '#{escape(stage.name)}'"
       t += ', lockable: true' if stage.lockable
-      t += ", flex_category: '#{stage.flex_category}'" if stage.flex_category
+      t += ", flex_category: '#{escape(stage.flex_category)}'" if stage.flex_category
       s << t
       stage.script_levels.each do |sl|
         type = 'level'
-        type = 'assessment' if sl.assessment
-        type = 'named_level' if sl.named_level
         type = 'bonus' if sl.bonus
 
         if sl.levels.count > 1
@@ -295,15 +324,16 @@ class ScriptDSL < BaseDSL
                 type,
                 sl.active?(level),
                 sl.progression,
-                sl.target,
+                sl.named_level?,
                 sl.challenge,
+                sl.assessment,
                 sl.experiments(level)
               ).map {|l| l.indent(2)}
             )
           end
           s << 'endvariants'
         else
-          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.target, sl.challenge))
+          s.concat(serialize_level(sl.level, type, nil, sl.progression, sl.named_level?, sl.challenge, sl.assessment))
         end
       end
       s << 'no_extras' if stage.stage_extras_disabled
@@ -317,8 +347,9 @@ class ScriptDSL < BaseDSL
     type,
     active = nil,
     progression = nil,
-    target = nil,
+    named = nil,
     challenge = nil,
+    assessment = nil,
     experiments = []
   )
     s = []
@@ -332,14 +363,19 @@ class ScriptDSL < BaseDSL
 
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
-    l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
+    l = "#{type} '#{escape(level.key)}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
     l += ", experiments: #{experiments.to_json}" if experiments.any?
-    l += ", progression: '#{progression}'" if progression
-    l += ', target: true' if target
+    l += ", progression: '#{escape(progression)}'" if progression
+    l += ', named: true' if named
+    l += ', assessment: true' if assessment
     l += ', challenge: true' if challenge
     s << l
     s
+  end
+
+  def self.escape(str)
+    str.gsub("'") {"\\'"}
   end
 end

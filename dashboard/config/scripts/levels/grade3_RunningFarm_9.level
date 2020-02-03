@@ -26,9 +26,9 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Add Weeds element. Weeds start out in random spots in the field and spread more and more rapidly as time goes on.. This puzzle is the culminating game-like puzzle. Students should have the event blocks (up, down, left, right, spacebar) available in the toolbox to use if they want. The entire field should be planted randomly with mostly wheat, potatoes, and a few weeds.",
+    "short_instructions": "Add Weeds element. Weeds start out in random spots in the field and spread more and more rapidly as time goes on.. This puzzle is the culminating game-like puzzle. Students should have the event blocks (up, down, left, right, spacebar) available in the toolbox to use if they want. The entire field should be planted randomly with mostly wheat, potatoes, and a few weeds.",
     "step_speed": "2",
-    "markdown_instructions": "Can you help me one last time? I want to collect as many crops as I can before the weeds take over this field. How many do you think we can get?",
+    "long_instructions": "Can you help me one last time? I want to collect as many crops as I can before the weeds take over this field. How many do you think we can get?",
     "contained_level_names": null
   },
   "published": true,

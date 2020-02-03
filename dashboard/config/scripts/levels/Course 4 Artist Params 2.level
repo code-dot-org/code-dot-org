@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "That triangle function would be a whole lot more useful if it could draw triangles of different sizes. I've added a parameter for line length, but it doesn't do anything yet. Can you update the function so it uses the \"length\" parameter when it draws each side? The triangle sizes are 150 pixels, 75 pixels and 25 pixels.",
+    "short_instructions": "That triangle function would be a whole lot more useful if it could draw triangles of different sizes. I've added a parameter for line length, but it doesn't do anything yet. Can you update the function so it uses the \"length\" parameter when it draws each side? The triangle sizes are 150 pixels, 75 pixels and 25 pixels.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",

@@ -18,7 +18,7 @@
     "slider_speed": ".7",
     "ideal": "13",
     "use_modal_function_editor": "false",
-    "instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
+    "short_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
     "use_contract_editor": "false",
     "embed": "false",
     "contract_highlight": "false",
@@ -40,12 +40,18 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-08-25 16:07:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-03-01 00:17:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"project_template_level_name\",\"contained_level_names\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "for_loops": 1,
+    "variables": 1
   }
 }]]></config>
   <blocks>

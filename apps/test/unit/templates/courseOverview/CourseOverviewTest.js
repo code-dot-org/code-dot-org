@@ -1,8 +1,8 @@
-import { assert, expect } from '../../../util/configuredChai';
+import {assert, expect} from '../../../util/deprecatedChai';
 import React from 'react';
-import { shallow } from 'enzyme';
-import CourseOverview from '@cdo/apps/templates/courseOverview/CourseOverview';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {shallow} from 'enzyme';
+import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import * as utils from '@cdo/apps/utils';
 import sinon from 'sinon';
 
@@ -17,51 +17,45 @@ const defaultProps = {
   teacherResources: [],
   isTeacher: true,
   viewAs: ViewType.Teacher,
-  scripts: [{
-    course_id: 30,
-    id: 112,
-    title: 'CSP Unit 1',
-    name: 'csp1',
-    description: 'desc'
-  }, {
-    course_id: 30,
-    id: 113,
-    title: 'CSP Unit 2',
-    name: 'csp2',
-    description: 'desc'
-  }],
+  scripts: [
+    {
+      course_id: 30,
+      id: 112,
+      title: 'CSP Unit 1',
+      name: 'csp1',
+      description: 'desc'
+    },
+    {
+      course_id: 30,
+      id: 113,
+      title: 'CSP Unit 2',
+      name: 'csp2',
+      description: 'desc'
+    }
+  ],
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
   versions: [],
+  sectionsForDropdown: []
 };
 
 describe('CourseOverview', () => {
   it('renders a top row for teachers', () => {
     const wrapper = shallow(
-      <CourseOverview
-        {...defaultProps}
-        isTeacher={true}
-      />
+      <CourseOverview {...defaultProps} isTeacher={true} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
   });
 
   it('renders no top row for students', () => {
     const wrapper = shallow(
-      <CourseOverview
-        {...defaultProps}
-        isTeacher={false}
-      />
+      <CourseOverview {...defaultProps} isTeacher={false} />
     );
     assert.equal(wrapper.find('CourseOverviewTopRow').length, 0);
   });
 
   it('renders a CourseScript for each script', () => {
-    const wrapper = shallow(
-      <CourseOverview
-        {...defaultProps}
-      />
-    );
+    const wrapper = shallow(<CourseOverview {...defaultProps} />);
     assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
   });
 
@@ -69,44 +63,31 @@ describe('CourseOverview', () => {
     const propsToShow = {
       ...defaultProps,
       isVerifiedTeacher: false,
-      hasVerifiedResources: true,
+      hasVerifiedResources: true
     };
 
     it('is shown to unverified teachers if course has verified resources', () => {
-      const wrapper = shallow(
-        <CourseOverview
-          {...propsToShow}
-        />
-      );
+      const wrapper = shallow(<CourseOverview {...propsToShow} />);
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
     });
 
     it('is not shown if teacher is verified', () => {
       const wrapper = shallow(
-        <CourseOverview
-          {...propsToShow}
-          isVerifiedTeacher={true}
-        />
+        <CourseOverview {...propsToShow} isVerifiedTeacher={true} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
 
     it('is not shown if course does not have verified resources', () => {
       const wrapper = shallow(
-        <CourseOverview
-          {...propsToShow}
-          hasVerifiedResources={false}
-        />
+        <CourseOverview {...propsToShow} hasVerifiedResources={false} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
 
     it('is not shown while viewing as student', () => {
       const wrapper = shallow(
-        <CourseOverview
-          {...propsToShow}
-          viewAs={ViewType.Student}
-        />
+        <CourseOverview {...propsToShow} viewAs={ViewType.Student} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
@@ -121,10 +102,24 @@ describe('CourseOverview', () => {
       utils.navigateToHref.restore();
     });
 
-    it('appears when two versions are present', () => {
+    it('appears when two versions are present and viewable', () => {
       const versions = [
-        {name: 'csp', version_year: '2017'},
-        {name: 'csp-2018', version_year: '2018'},
+        {
+          name: 'csp-2017',
+          year: '2017',
+          title: '2017',
+          canViewVersion: true,
+          isStable: true,
+          locales: []
+        },
+        {
+          name: 'csp-2018',
+          year: '2018',
+          title: '2018',
+          canViewVersion: true,
+          isStable: true,
+          locales: []
+        }
       ];
       const wrapper = shallow(
         <CourseOverview
@@ -133,19 +128,34 @@ describe('CourseOverview', () => {
           isTeacher={true}
         />
       );
-      // Enzyme makes it intentionally difficult to test the actual html/dom
-      // contents that gets rendered, so just test that the dropdown exists.
-      // https://github.com/airbnb/enzyme/issues/634
-      const select = wrapper.find('select#version-selector');
-      expect(select.length).to.equal(1);
-      expect(utils.navigateToHref).not.to.have.been.called;
-      select.simulate('change', {target: {value: 'csp-2018'}});
-      expect(utils.navigateToHref).to.have.been.calledOnce;
+
+      const versionSelector = wrapper.find('AssignmentVersionSelector');
+      expect(versionSelector.length).to.equal(1);
+      const renderedVersions = versionSelector.props().versions;
+      assert.equal(2, renderedVersions.length);
+      const csp2018 = renderedVersions.find(v => v.name === 'csp-2018');
+      assert.equal(true, csp2018.isRecommended);
+      assert.equal(true, csp2018.isSelected);
     });
 
-    it('does not appear when only one version is present', () => {
+    it('does not appear when only one version is viewable', () => {
       const versions = [
-        {name: 'csp', version_year: '2017'},
+        {
+          name: 'csp-2017',
+          year: '2017',
+          title: '2017',
+          canViewVersion: false,
+          isStable: true,
+          locales: []
+        },
+        {
+          name: 'csp-2018',
+          year: '2018',
+          title: '2018',
+          canViewVersion: true,
+          isStable: true,
+          locales: []
+        }
       ];
       const wrapper = shallow(
         <CourseOverview
@@ -154,19 +164,14 @@ describe('CourseOverview', () => {
           isTeacher={true}
         />
       );
-      expect(wrapper.find('select#version-selector').length).to.equal(0);
-      expect(utils.navigateToHref).not.to.have.been.called;
+      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
     });
 
     it('does not appear when no versions are present', () => {
       const wrapper = shallow(
-        <CourseOverview
-          {...defaultProps}
-          isTeacher={true}
-        />
+        <CourseOverview {...defaultProps} isTeacher={true} />
       );
-      expect(wrapper.find('select#version-selector').length).to.equal(0);
-      expect(utils.navigateToHref).not.to.have.been.called;
+      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
     });
   });
 });

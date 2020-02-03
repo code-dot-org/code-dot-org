@@ -6,7 +6,7 @@
   "user_id": 20,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?",
+    "short_instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?",
     "x": "150",
     "y": "100",
     "is_k1": "false",
@@ -16,7 +16,7 @@
     "start_direction": "90",
     "ideal": "12",
     "embed": "false",
-    "markdown_instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?\r\n\r\n",
+    "long_instructions": "Can you draw this hexagon with 100 pixel sides and 60 degree turns?\r\n\r\n",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

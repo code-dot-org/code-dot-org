@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
 
 const workshopShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -13,8 +13,8 @@ const workshopShape = PropTypes.shape({
   capacity: PropTypes.number.isRequired,
   facilitators: PropTypes.array.isRequired,
   organizer: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired
+    name: PropTypes.string,
+    email: PropTypes.string
   }).isRequired,
   enrollment_code: PropTypes.string
 });
@@ -29,6 +29,7 @@ const enrollmentShape = PropTypes.shape({
   grades_teaching: PropTypes.string,
   user_id: PropTypes.number,
   attended: PropTypes.bool.isRequired,
+  scholarship_status: PropTypes.string,
   pre_workshop_survey: PropTypes.shape({
     unit: PropTypes.string,
     lesson: PropTypes.string,

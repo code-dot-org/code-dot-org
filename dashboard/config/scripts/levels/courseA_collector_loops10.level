@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help Laurel get all of the treasure along this path.",
+    "short_instructions": "Help Laurel get all of the treasure along this path.",
     "authored_hints": "[]",
     "ideal": "10",
     "instructions_important": "false",

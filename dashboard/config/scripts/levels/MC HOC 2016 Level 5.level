@@ -35,7 +35,7 @@
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
-    "instructions": "These cows are lost! Lead them to the grass with the `move a step toward` block in a `forever do` loop.",
+    "short_instructions": "These cows are lost! Lead them to the grass with the `move a step toward` block in a `forever do` loop.",
     "level_verification_timeout": "60000",
     "timeout_verification_function": "function (verificationAPI) {\r\n  // Fail if we hit the end of the timeout.\r\n  return false;\r\n}",
     "failure_message_override": "Try using 'Forever Do' with 'Move a Step Toward the Player'.",

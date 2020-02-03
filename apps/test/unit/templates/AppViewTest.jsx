@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {UnconnectedAppView as AppView} from '@cdo/apps/templates/AppView';
 
 describe('AppView', () => {
@@ -9,7 +9,7 @@ describe('AppView', () => {
     isResponsive: false,
     pinWorkspaceToBottom: false,
     visualizationColumn: null,
-    onMount: () => {},
+    onMount: () => {}
   };
 
   it('sets no classes on the visualization column in default configuration', () => {
@@ -22,8 +22,12 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find("#visualizationColumn")).not.to.have.className('responsive');
-    expect(wrapper.find("#visualizationColumn")).not.to.have.className('pin_bottom');
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
+      'responsive'
+    );
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
+      'pin_bottom'
+    );
   });
 
   it('sets `responsive` class on visualization column when `isResponsive` is set', () => {
@@ -36,8 +40,12 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find("#visualizationColumn")).to.have.className('responsive');
-    expect(wrapper.find("#visualizationColumn")).not.to.have.className('pin_bottom');
+    expect(wrapper.find('#visualizationColumn')).to.have.className(
+      'responsive'
+    );
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
+      'pin_bottom'
+    );
   });
 
   it('sets `pin_bottom` class on visualization column when `pinWorkspaceToBottom` is set', () => {
@@ -50,7 +58,11 @@ describe('AppView', () => {
       />
     );
     expect(wrapper).not.to.be.null;
-    expect(wrapper.find("#visualizationColumn")).not.to.have.className('responsive');
-    expect(wrapper.find("#visualizationColumn")).to.have.className('pin_bottom');
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
+      'responsive'
+    );
+    expect(wrapper.find('#visualizationColumn')).to.have.className(
+      'pin_bottom'
+    );
   });
 });

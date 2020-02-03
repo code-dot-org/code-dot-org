@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "What happens when the paths to the pumpkins are all different lengths?   \r\n\r\nGet them all with as few blocks as possible.",
+    "short_instructions": "What happens when the paths to the pumpkins are all different lengths?   \r\n\r\nGet them all with as few blocks as possible.",
     "instructions_important": "false",
     "ideal": "6",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `while path ahead` loop to get you where you need to be.\",\"hint_id\":\"courseE_farmer_functions3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/20023141f96ef32c6d60f5af0dad2f0e/courseE_farmer_functions3.mp3\"}]",

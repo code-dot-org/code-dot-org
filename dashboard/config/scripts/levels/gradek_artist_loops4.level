@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a line seven steps long. This will become our horizon.",
+    "short_instructions": "Draw a line seven steps long. This will become our horizon.",
     "x": "25",
     "y": "200",
     "start_direction": "90",
@@ -32,7 +32,7 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using what you've learned about repeat blocks to complete this puzzle!\",\"hint_id\":\"artistLoopsK3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2ebddc54609f8a57d507960c0d1f6621/gradek_artist_loops4.mp3\"}]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line seven steps long. This will become our horizon.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
+    "long_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nDraw a line seven steps long. This will become our horizon.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/c00b930eb5fb13ae946847adc51c9bd3-image-1467935631246.gif\" width=\"300\"/>\r\n",
     "ideal": "3",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",

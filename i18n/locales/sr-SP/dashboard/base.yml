@@ -1,3 +1,15 @@
+#Files in the config/locales directory are used for internationalization
+#and are automatically loaded by Rails. If you want to use locales other
+#than English, add the necessary files in this directory.
+#To use the locales, use `I18n.t`:
+#I18n.t 'hello'
+#In views, this is aliased to just `t`:
+#<%= t('hello') %>
+#To use a different locale, set it with `I18n.locale`:
+#I18n.locale = :es
+#This would use the information in config/locales/es.yml.
+#To learn more, please read the Rails Internationalization guide
+#available at http://guides.rubyonrails.org/i18n.html.
 sr:
   errors:
     messages:
@@ -23,6 +35,7 @@ sr:
         edit_header: 'Уреди детаље налога'
         error:
           future: не може бити у будућности
+  beta: "пробна верзија"
   hello: "Здраво свете"
   welcome_back: "Добродошао назад, %{name}"
   see_your_learning_plan: "Погледај твој план учења"
@@ -32,12 +45,10 @@ sr:
   next_page: Следећа страница
   cancel: "Откажи"
   okay: "У реду"
-  add_teacher_form:
+  or: "или"
+  join_section:
     code:
-      label: 'Додај наставника:'
       placeholder: "Шифра секције(ABCDEF)"
-      instructions: "Молим вас унесите шифру коју вам је професор доделио. Шифра се састоји од 6 слова као \"ABCDEF\"."
-    submit: 'Додај наставника'
   add_hint_form:
     placeholder: 'Молимо унесите ваш савет овде'
     submit: 'Додај савет'
@@ -53,7 +64,6 @@ sr:
   of: "од"
   more: "ВИШЕ"
   less: "МАЊЕ"
-  beta: "пробна верзија"
   try_hoc: "Испробајте Hour of Code. Кликните овде >> "
   try_k8intro: "Пробај наш К-8 курс Увод у рачунарство (15-25 часова)"
   k8intro: "К-8 курс Увод у рачунарство (15-25 часова)"
@@ -65,14 +75,13 @@ sr:
   auth:
     sign_in_with: 'Пријавите се помоћу %{provider}'
     signed_in: 'Пријављени сте!'
-    signed_out: 'Одјавили сте се са <a href="%{url}">Code.org</a>.'
-    sign_out_of: 'Користили сте %{provider} да би се пријавили. <a href="%{url}">Кликните овде</a> да би се одјавили са %{provider}.'
     already_signedup: 'Већ сте направили налог?'
     notyet_signedup: "Нисте се придружили?"
     google_oauth2: 'Гугл налог'
     twitter: 'Twitter'
     facebook: 'Facebook'
     windowslive: 'Мајкрософт налог'
+    microsoft_v2_auth: 'Мајкрософт налог'
     forgot_password: 'Заборавили сте лозинку?'
     need_confirmation: "Нисте примили инструкције за потврду?"
     need_unlock: "Нисте примили инструкције за откључавање?"
@@ -80,6 +89,7 @@ sr:
     student_count: '%{count} ученика се већ пријавило.'
     teacher_count: '%{count} наставника се већ пријавило.'
     overview: 'Креирај свој налог да можеш да пратиш свој напредак или управљаш својим разредом.<a href="/">Можеш претраживати разне нивое и задатке</a> без креираног налога, али мораш бити пријављен да би сачувао свој напредак и пројекте.'
+    overview_markdown: 'Креирај свој налог да можеш да пратиш свој напредак или управљаш својим разредом.[Можеш претраживати разне нивое и задатке](/) без креираног налога, али мораш бити пријављен да би сачувао свој напредак и пројекте.'
     hoc_already_signed_up_heading: 'Почни без пријаве на свој налог'
     teacher_educator_guide: 'Погледај водич за едукатора'
     title: "Креирај свој налог за Code.org"
@@ -104,6 +114,7 @@ sr:
     user_type_student: "студент"
     field_is_required: "је обавезан"
     accept_terms: "Морате се сложити да бисте креирали свој налог"
+    email_preference_privacy: "(Погледајте нашу политику приватности)"
     email_preference_yes: "Да"
     email_preference_no: "не"
   school_info:
@@ -139,11 +150,11 @@ sr:
     subject: 'Придружи се мом предавању (на Code.org)'
     body: |
       Кликни линк испод како би се пријавио за туторијале на Code.org (ја ћу ти бити "учителј"):
-      
+
       %{link}
-      
+
       Туторијали су забавни, визуелни, и уче основе програмиранја користећи једноставне примјере у облику игрица. Научите програмирати од Bill Gatesа, Mark Zuckerbergа, Angry Birds, и Plants vs. Zombies! :-)
-      
+
       %{name}
   section:
     type:
@@ -185,16 +196,7 @@ sr:
     header:
       finished_hoc: "Завршио сам свој Сат програмирања"
       sign_in_to_save: 'Пријави се да сачуваш напредак'
-      free_play:
-        playlab: 'Направи апликацију'
-        artist: 'Нацртај нешто'
-        applab: 'Направи апликацију'
       educate_hoc: "Час кода"
-    create_button:
-      create: 'Креирај'
-      artist: 'Уметник'
-      playlab: 'Играоница'
-      flappy: 'Флапи'
     user:
       classroom: 'Почетна страница за учитеље'
       district_dashboard: 'Регионална огласна табла'
@@ -204,6 +206,13 @@ sr:
       logout: 'Одјави се'
       signin: 'Пријави се'
       already_registered: 'Већ си регистрован?'
+      create: 'Креирај'
+      artist: 'Уметник'
+      flappy: 'Флапи'
+      frozen: 'Залеђено краљевство'
+      iceage: 'Ледено доба'
+      infinity: 'Бесконачно'
+      playlab: 'Играоница'
     popup:
       progress_for_user: "Напредак %{name}"
       progress: 'Напредак'
@@ -248,14 +257,12 @@ sr:
     delete_text: "Обришите ваш налог кликом на доње дугме."
     delete_text_teacher_note: "Напомена: брисање вашег налога неће резултирати брисањем налога ваших ученика."
     delete_confirm: 'Да ли сте сигурни да желите да обришете свој налог?'
+    update_email: "Ажурирај"
   user_level:
     completed: 'Готово'
     tried: 'Покушао'
   home:
     title: "Мој напредак"
-    description: 'У Студију за кодирање се налазе сви курсеви које је креирао Code.org'
-    lines_of_code: "%{lines_count} ЛИНИЈЕ КОДА КОЈЕ СУ НАПИСАЛИ УЧЕНИЦИ"
-    lines_of_code_linebreak: "%{lines_count} ЛИНИЈЕ КОДА<br/>КОЈЕ ЈЕ НАПИСАЛО %{students_count} МИЛИОН УЧЕНИКА"
     all_courses: "Преглед Курса 1, 2 и 3"
     lesson_plans: "План лекција"
     signin_message: "Већ имаш свој налог? %{link}"
@@ -285,18 +292,10 @@ sr:
     test_videos_help: 'Тестирајте наш нови video player у вашој школи'
     try_beta_courses: 'Ново! Пробајте наше бета курсеве за ученике разредне наставе'
     use_as_teacher: 'Користите овај сајт као наставник'
-    heading_hoc2014: "<h2>Сат програмирања за</h2><h1>За све узрасте</h1>"
-    heading_elementary: "<h2>20-сатни курсеви за</h2><h1>Основе компјутерске науке (за све узрасте)</h1>"
-    heading_apps: "<h2>Забава за</h2><h1>Све</h1>"
-    heading_tools: "<h2>Да ли си спреман за следећи корак?</h2><h1>JavaScript алати за средњу школу</h1>"
-    heading_legacy: "<h2>Наш убрзани курс за</h2><h1>За све узрасте</h1>"
     your_gallery: Галерија
     no_primary_course: "Испробајте Code Studio курс"
     choose_next_course: "Испробајте Code Studio курс одабиром једног испод"
     print_certificate: "Одштампајте сертификат"
-    announcement_title: "Објаве"
-    announcement_learn_more_button: "Сазнајте више"
-    announcement_try_now_button: "Испробај сада"
   share:
     title: "Научите о Code Studio-ју"
     description: "Свако може да научи компјутерску науку. Да направи игрице, апликације и уметност помоћу кодирања."
@@ -389,23 +388,30 @@ sr:
     races:
       other: "Други"
     submit: "Пошаљи"
+    decline: "Затвори"
   project:
-    save: "Сачувај"
-    delete: "Обриши"
-    share: "Подели"
-    more: "Више"
     name: "Име"
-    really_delete: 'Желите ли да избришете?'
-    delete_yes: 'Да'
-    delete_no: 'не'
     saved: "Сачувано у галерији!"
-    cancel: 'Откажи'
     abuse:
       report_abuse_form:
         abuse_type:
           other: 'Други'
   flex_category:
     required: 'Преглед'
+    csf_digcit: 'Дигитално држављанство'
+    csf_jigsaw: 'Слагалица'
+    csf_loops: 'Петље'
+    csf_events: 'Догађаји'
+    csf_conditionals: 'Кондиционали'
+    csf_functions: 'Функције'
+    csf_variables: 'Променљиве'
+    csf_for_loops: 'Бројачке петље'
+    csf_internet: 'Интернет'
+    csp_variables: 'Променљиве'
+    csp_conditionals: 'Кондиционали'
+    csp_functions: 'Функције'
+    csp_lists: 'Листе'
+    csp_loops: 'Петље'
   pd:
     form_labels:
       email: 'Електронска пошта'

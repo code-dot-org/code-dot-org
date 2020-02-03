@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Digital Assistant: Getting Started",
-    "markdown_instructions": "Record the first step in the Think-Pair-Share activity here. \n\nThink of three ways to use strings within your chatbot to make it respond more ‘intelligently’ or expand its ‘personality.’\n\nRecord your ideas here and then share with another classmate.\n",
+    "long_instructions": "Record the first step in the Think-Pair-Share activity here. \n\nThink of three ways to use strings within your chatbot to make it respond more ‘intelligently’ or expand its ‘personality.’\n\nRecord your ideas here and then share with another classmate.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

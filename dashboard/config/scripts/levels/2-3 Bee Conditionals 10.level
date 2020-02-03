@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Purple flowers may have either 1 or 0 nectar. Be careful not to collect nectar from a purple flower if it doesn't have any.\r\n",
+    "short_instructions": "Purple flowers may have either 1 or 0 nectar. Be careful not to collect nectar from a purple flower if it doesn't have any.\r\n",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "3",

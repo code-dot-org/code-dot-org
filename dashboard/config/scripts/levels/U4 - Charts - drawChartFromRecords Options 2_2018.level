@@ -36,8 +36,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Look through the drawChartFromRecords API and choose some more options to customize. (Click to see full instructions)",
-    "markdown_instructions": "There are still **several other chart properties that you can manipulate** using the `options` parameter of `drawChartFromRecords`. You can use these properties to change the colors in your chart, hide the legend, and much more! **Remember, when customizing your chart, it’s less about making a pretty chart and more about manipulating your data so that it’s easier for others to read and understand.**\r\n\r\n# Do This:\r\n\r\n* **Open the API** for the `drawChartFromRecords` block.\r\n* Read through and **pick some of the other interesting options properties to customize** for your chart.",
+    "short_instructions": "Look through the drawChartFromRecords API and choose some more options to customize. (Click to see full instructions)",
+    "long_instructions": "There are still **several other chart properties that you can manipulate** using the `options` parameter of `drawChartFromRecords`. You can use these properties to change the colors in your chart, hide the legend, and much more! **Remember, when customizing your chart, it’s less about making a pretty chart and more about manipulating your data so that it’s easier for others to read and understand.**\r\n\r\n# Do This:\r\n\r\n* **Open the API** for the `drawChartFromRecords` block by hovering over the block and clicking \"See examples\"\r\n* Read through and **pick some of the other interesting options properties to customize** for your chart.",
     "project_template_level_name": "U4 - Charts - Line Chart Template_2018",
     "parent_level_id": 4130,
     "name_suffix": "_2018",
@@ -50,11 +50,15 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-05-08 19:51:58 +0000\",\"changed\":[\"notes\",\"published\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-05-08 19:51:58 +0000\",\"changed\":[\"notes\",\"published\",\"contained_level_names\"],\"changed_by_id\":18,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2019-03-07 23:58:15 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-03-07 23:58:47 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

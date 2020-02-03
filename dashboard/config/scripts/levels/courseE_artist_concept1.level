@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Recreate this image. ",
+    "short_instructions": "Recreate this image. ",
     "x": "75",
     "y": "150",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "13",
     "slider_speed": "0.7",
     "embed": "false",
-    "markdown_instructions": "Recreate this image. \r\n\r\n- The hexagons have sides of 50 pixels\r\n- The hexagons are 100 pixels apart\r\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.",
+    "long_instructions": "Recreate this image. \r\n\r\n- The hexagons have sides of 50 pixels\r\n- The hexagons are 100 pixels apart\r\n- The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

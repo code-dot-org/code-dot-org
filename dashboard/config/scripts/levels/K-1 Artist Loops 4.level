@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Could a loop help us draw the top of this castle?",
+    "short_instructions": "Could a loop help us draw the top of this castle?",
     "x": "75",
     "y": "150",
     "start_direction": "90",

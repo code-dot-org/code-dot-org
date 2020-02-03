@@ -99,3 +99,29 @@ en-GB:
           stages:
             Lists:
               name: Lists
+        andrea-test:
+          stages:
+            'null':
+              name: 'null'
+        csd2-2019:
+          stages:
+            Lists:
+              name: Lists
+        csd3-2019:
+          stages:
+            Variables:
+              name: Variables
+        csd2-pilot:
+          stages:
+            Lists:
+              name: Lists
+        csd3-pilot:
+          stages:
+            Variables:
+              name: Variables
+        k5-onlinepd-2019:
+          stages:
+            Loops:
+              name: Loops
+            Variables:
+              name: Variables

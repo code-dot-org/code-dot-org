@@ -11,7 +11,11 @@
 
     -# twitter boilerplate
     = tag 'meta', name: 'twitter:site', content: '@codeorg'
-    = tag 'meta', name: 'twitter:card', content: 'photo'
+
+    - if @level.game.app == Game::DANCE
+      = tag 'meta', name: 'twitter:card', content: 'summary'
+    - else
+      = tag 'meta', name: 'twitter:card', content: 'photo'
 
     - if @level.game.app == Game::ARTIST
       - meta_image_width = 500

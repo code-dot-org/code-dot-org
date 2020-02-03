@@ -30,8 +30,8 @@
     "discard_background": "false",
     "disable_sharing": "false",
     "start_direction": "90",
-    "instructions": "If you can draw one window, you can draw three! Try using your choice of a nested loop or a function here. Don't forget the jump block!",
-    "markdown_instructions": "You just created a nested loop! Let's repeat all of these commands with **another** `repeat` block to draw windows on this house. Don't forget to `jump`!",
+    "short_instructions": "If you can draw one window, you can draw three! Try using your choice of a nested loop or a function here. Don't forget the jump block!",
+    "long_instructions": "You just created a nested loop! Let's repeat all of these commands with **another** `repeat` block to draw windows on this house. Don't forget to `jump`!",
     "contained_level_names": null
   },
   "published": true,

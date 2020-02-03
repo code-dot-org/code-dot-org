@@ -5,6 +5,8 @@ title: AP CS Principles Score Sharing Agreement
 # Full Permission Release Letter
 For reference only – no need to sign or send in
 
+[<button>Download letter as PDF</button>](/files/full-permission-release-letter.pdf)
+
 <br>
 [Date]
 

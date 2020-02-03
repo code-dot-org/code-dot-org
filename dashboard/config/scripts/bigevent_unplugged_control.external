@@ -1,0 +1,11 @@
+name 'BigEvent-Unplugged_control'
+editor_experiment 'broward'
+video_key 'C1_bigevent_unplugged'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# The Big Event
+
+In computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.
+MARKDOWN

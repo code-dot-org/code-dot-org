@@ -2,18 +2,29 @@ ru:
   data:
     block_categories:
       Actions: Действия
-      Loops: Циклы
-      Functions: функции
+      Advanced: Расширенный
+      Behaviors: Режимы работы
+      Brushes: Кисти
       Color: Цвет
-      Math: Математика
-      Logic: Логика
-      Variables: переменные
+      Comment: Комментарий
+      Comments: Комментарии
       Conditionals: Условные команды
+      Dancers: Танцоры
+      Default: По умолчанию
       Events: События
-      Text: Текст
+      Functions: функции
+      'Functions ': 'Функции '
+      Game/Score: Игра/Счет
+      Games/Score: Игры/Счет
+      Groups: Группы
       Input: Ввод
-      Start: Начать
-      Booleans: Логические выражения
-      test: тест
-      Name: Имя
-      Function: Функция
+      Locations: Места
+      Logic: Логика
+      Loops: Циклы
+      Math: Математика
+      Numbers: Числа
+      Properties: Свойства
+      Text: Текст
+      Variables: переменные
+      'Variables ': 'Переменные '
+      World: Мир

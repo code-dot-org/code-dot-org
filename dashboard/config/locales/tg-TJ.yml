@@ -13,8 +13,6 @@ tg:
         edit_header: Таҳрир кардани тафсилоти ҳисоб
   hello: Салом ҷаҳон
   submit: Пешниҳод кардан
-  add_teacher_form:
-    submit: Илова кардани муаллим
   stage: Давра
   puzzle: Муаммо
   trophies: Ҷомҳо
@@ -77,7 +75,6 @@ tg:
   nav:
     header:
       sign_in_to_save: Барои захира кардани муваффақият, ворид шавед
-      courses: Дарсҳо
       project_gallery: Лоиҳаҳо
       educate_hoc: Соати рамз
       stats: Омор
@@ -86,6 +83,7 @@ tg:
       settings: Ҳисоби ман
       logout: Хориҷ шудан
       signin: Ворид шудан
+      create: Сохтан
     popup:
       progress: Муваффақияти шумо
       lines: 'Хатҳои умумии рамз: %{lines}'
@@ -99,11 +97,10 @@ tg:
       student: Донишҷӯ
   user:
     new_password_hint: "(агар нахоҳед, ки онро тағйир диҳед, холӣ монед)"
+    update_email: Навсозӣ кардан
   home:
     online: онлайн
     view_course: Намоиш додани дарс
-    announcement_title: Эълонҳо
-    announcement_learn_more_button: Маълумоти бештар
   gender:
     male: Мард
     female: Зан
@@ -127,17 +124,13 @@ tg:
     projects: Лоиҳаҳо
     create: Эҷод кардани лоиҳа
     new: Эҷод кардани нав
-    rename: Иваз кардани ном
     exit: Бозгашт ба дарс
-    my_projects: Лоиҳаи ман
     project_gallery: Лоиҳаҳо
     share_title: Лоиҳаи худро мубодила кунед
     share_copy_link: 'Нусхабардории пайванд:'
-    close: Пӯшидан
     name: Ном
     updated: Навсозӣ шуд
     project_type: Навъи лоиҳа
-    really_delete: Нест мекунед?
     abuse:
       report_abuse_form:
         abuse_type:

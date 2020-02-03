@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Scene Design Part 2: Code",
-    "markdown_instructions": "What issues have arisen during this collaborative project? \n\nHow were they resolved?\n",
+    "long_instructions": "What issues have arisen during this collaborative project? \n\nHow were they resolved?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

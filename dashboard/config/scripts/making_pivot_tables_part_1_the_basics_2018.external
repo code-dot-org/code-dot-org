@@ -56,7 +56,7 @@ The menu on the right side of the pivot table lets you choose what you want the 
     * **The Computation:** We're interested in the average rating for each movie, so for *Values* we choose *rating*, Summarize by: *AVERAGE*. 
 
 <hr>
-  
+
 ## Let's Change the Value - Summarize by: COUNT
 Change *summarize by* from AVERAGE to COUNT. Now, instead of computing the average rating, this will **count the number of ratings for each movie**. 
 

@@ -1,58 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: '¡Gracias por registrarte como anfitrión de la Hora del Código!'
 ---
-<% facebook = {:u=>"http://#{request.host}/es"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HoraDeCódigo' %>
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora del Código!
 
-Como agradecimiento por ayudar a que los estudiantes puedan comenzar a aprender informática, nos gustaría darle un conjunto gratuito de carteles impresos profesionalmente con diversos modelos para su clase. Utilice el código de oferta **FREEPOSTERS** al finalizar la compra. (Nota: esta última sólo está disponible mientras siga disponible el material y usted necesitará cubrir los gastos de envío. Dado que estos carteles se envían desde los Estados Unidos, los costos de envío pueden ser bastante altos si se envían a Canadá e internacionalmente. Entendemos que esto puede no estar dentro de su presupuesto, y le recomendamos que imprima los [archivos PDF](https://code.org/inspire) para su clase.)  
-<br /> [<button>Obtener carteles</button>](https://store.code.org/products/code-org-posters-set-of-12) Utilice el código de oferta FREEPOSTERS
+<br /> **La Hora del Código se celebra durante {{ campaign_date/full }}. Te notificaremos acerca de nuevos tutoriales y otras actualizaciones emocionantes a medida que estén disponibles. Mientras tanto, ¿qué puedes hacer?**
 
-<% if @country == 'us' %> ¡Gracias a la generosidad de Ozobot, Dexter Industries, littleBits y Wonder Workshop, más de 100 clases serán seleccionadas para recibir robots o circuitos para su clase! Para poder recibir un conjunto, asegúrese de completar la encuesta enviada desde Code.org después de la Hora del Código. Code.org seleccionará las clases ganadoras. Mientras tanto, revisa algunas de las actividades de robótica y circuitos. Tenga en cuenta que esto solo está disponible para las escuelas de EE. UU. <% end %>
-
-<br /> **La Hora del código se celebra durante <%= campaign_date('full')%>. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
+Como un agradecimiento especial a los organizadores de la Hora del Código, tenemos una nueva serie de carteles con Malala, Stephen Curry, Shakira y otros, que ya puedes pedir con [50% de descuento en Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). Este año, cada serie incluye 6 carteles y 126 etiquetas autoadhesivas de "Yo participé en la Hora del Código". Gracias al descuento, te costarán menos de lo que nos sale producirlos. Los materiales son limitados. Pide tus carteles cuanto antes. Si no estás en los Estados Unidos, puedes [descargar e imprimir todos los carteles]({{ promote/promote_posters_url }}).
 
 ## 1. Corre la voz en tu escuela y comunidad
 
-Se acaba de unir al movimiento de la Hora del Código. ¡Díselo a tus amigos con **#HoraDelCódigo**!
+Te acabas de unir al movimiento de la Hora del Código. ¡Cuéntale a tus amigos con el hashtag **#HoraDelCódigo**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Anime a otros a participar [con nuestros correos electrónicos de muestra.](%= resolve_url('/promote/resources#sample-emails') %) Póngase en contacto con su director y desafíe a cada aula de su escuela para que se registren. Reclute un grupo local - club de scouts, iglesia, universidad, grupo de veteranos, sindicato o incluso algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invite a un político local o autoridad a visitar su escuela durante la Hora del Código. Puede ayudar a dar apoyo a las Ciencias de la Computación en su zona más allá de la Hora del Código.
+{{ social_media_hoc }} <br /> Aprovecha [nuestros ejemplos de correos electrónicos]({{ promote/sample_emails }}) para invitar a otras personas a participar. Ponte en contacto con tu director y desafía a cada clase de tu escuela a que se inscriba. Convoca a un grupo local clubes de niñas y niños exploradores, iglesias, universidades, grupos de veteranos, sindicatos o, incluso, algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invita a un político local o autoridad a visitar tu escuela durante la Hora del Código. Puede ayudarte a apoyar las ciencias de la computación en tu zona durante más que una hora.
 
-Utilice estos [carteles, pancartas, etiquetas adhesivas, vídeos y más](%= resolve_url('/promote/resources') %) para su propio evento.
+Utiliza estos [carteles, pancartas, etiquetas adhesivas, videos y demás recursos]({{ promote/resources }}) en tu propio evento.
 
-## 2. Encuentre un voluntario local para ayudarte con tu evento.
+## 2. Encuentra un voluntario local que te ayude con tu evento
 
-[Busque en nuestro mapa de voluntarios](%= codeorg_url('/volunteer/local') %) para que los voluntarios puedan visitar su clase o chatear por video de forma remota para inspirar a sus estudiantes sobre la amplitud de posibilidades de la informática.
+[Busca en nuestro mapa de voluntarios]({{ urls/volunteer_local }}) a alguien que pueda visitar tu clase o hablar por video a distancia para inspirar a tus estudiantes sobre la gran cantidad de posibilidades que brindan las ciencias de la computación.
 
-## 3. Planifique su Hora del Código
+## 3. Planifica tu Hora del Código
 
-Elija una [actividad de la Hora del Código](https://hourofcode.com/learn) para su clase y [revisa esta guía práctica](%= resolve_url('/how-to') %).
+Elige una [actividad de la Hora del Código](https://hourofcode.com/learn) para tu aula y [consulta esta guía práctica]({{ urls/how_to_guide }}).
 
-# Vaya más allá de una Hora de Código
+### 4. Compra algunos obsequios
 
-<% if @country == 'us' %> Una Hora de Código es sólo el comienzo. Sea administrador, maestro o abogado, tenemos [desarrollo profesional, plan de estudios y recursos para ayudarte a llevar clases de informática a tu escuela o ampliar tus ofertas.](https://code.org/yourschool) Si ya enseñas informática, usa estos recursos durante la semana de educación en informatica para reunir el apoyo de tu administración, padres y comunidad.
+Pide materiales en la [tienda Amazon](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220) de Code.org para ayudar a los estudiantes a interesarse en tu evento. [Haz tu pedido de carteles](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (y obtén un 50% de descuento), kits de la Hora del Código, etiquetas autoadhesivas y más. No pierdas tiempo. Las cantidades son limitadas.
 
-Tienes muchas opciones para adaptarte a tu escuela. La mayoría de las organizaciones que ofrecen tutoriales de la Hora de Código también tienen plan de estudios y desarrollo profesional disponible. Si encuentras una lección que le gusta, pregúnta para ir más allá. Para ayudarlo a comenzar, hemos resaltado un número de [proveedores de planes de estudios que lo ayudarán a usted o a sus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
+# Ve más allá de una Hora de Código
 
-<% else %> Una Hora de Código es sólo el comienzo. La mayoría de las organizaciones que ofrecen clases de Hora del Código también tienen planes de estudios disponibles para ir más allá. Para ayudarlo a comenzar, hemos resaltado un número de [proveedores de planes de estudios que lo ayudarán a usted o a sus alumnos a ir más allá de una hora.](https://hourofcode.com/beyond)
+{{ go_beyond_hoc }}
 
-Code.org también ofrece cursos completos de [introducción a la informática](https://code.org/educate/curriculum/cs-fundamentals-international) traducidos a más de 25 idiomas sin ningún coste para usted o su escuela. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

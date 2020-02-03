@@ -41,7 +41,15 @@ export function pinMode(opts) {
  */
 export function digitalWrite(opts) {
   apiValidateType(opts, 'digitalWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'digitalWrite', 'value', opts.value, 'number', 0, 1);
+  apiValidateTypeAndRange(
+    opts,
+    'digitalWrite',
+    'value',
+    opts.value,
+    'number',
+    0,
+    1
+  );
 
   board.digitalWrite(opts.pin, opts.value);
 }
@@ -61,7 +69,15 @@ export function digitalRead(opts) {
  */
 export function analogWrite(opts) {
   apiValidateType(opts, 'analogWrite', 'pin', opts.pin, 'pinid');
-  apiValidateTypeAndRange(opts, 'analogWrite', 'value', opts.value, 'number', 0, 255);
+  apiValidateTypeAndRange(
+    opts,
+    'analogWrite',
+    'value',
+    opts.value,
+    'number',
+    0,
+    255
+  );
 
   board.analogWrite(opts.pin, opts.value);
 }

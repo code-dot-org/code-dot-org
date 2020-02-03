@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import * as constants from '../constants';
 import * as utils from '../../utils';
+import themeValues from '../themeValues';
 
 // Taken from http://stackoverflow.com/a/3627747/2506748
 export function rgb2hex(rgb) {
@@ -12,9 +13,9 @@ export function rgb2hex(rgb) {
     return rgb;
   }
   function hex(x) {
-    return ("0" + parseInt(x).toString(16)).slice(-2);
+    return ('0' + parseInt(x).toString(16)).slice(-2);
   }
-  return "#" + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
+  return '#' + hex(parsed[1]) + hex(parsed[2]) + hex(parsed[3]);
 }
 
 /**
@@ -54,7 +55,13 @@ export function setId(element, value, prefix) {
  */
 function checkId(element, prefix) {
   if (element.id.substr(0, prefix.length) !== prefix) {
-    throw new Error('element.id "' + element.id + '" does not start with prefix "' + prefix + '".');
+    throw new Error(
+      'element.id "' +
+        element.id +
+        '" does not start with prefix "' +
+        prefix +
+        '".'
+    );
   }
 }
 
@@ -146,7 +153,10 @@ export function isIdAvailable(newId, options) {
 
   // Don't allow elements with the "design_" prefix, unless
   // options.allowDesignPrefix is specified.
-  if (!options.allowDesignPrefix && newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0) {
+  if (
+    !options.allowDesignPrefix &&
+    newId.indexOf(constants.DESIGN_ELEMENT_ID_PREFIX) === 0
+  ) {
     return false;
   }
 
@@ -179,4 +189,103 @@ export function getScreens() {
 
 export function getDefaultScreenId() {
   return getId(getScreens()[0]);
+}
+
+/**
+ * Sets the default font family style on an element if it is
+ * not already specified.
+ * @param {DOMElement} element The element to modify.
+ */
+export function setDefaultFontFamilyStyle(element) {
+  if (element.style.fontFamily === '') {
+    element.style.fontFamily = constants.fontFamilyStyles[0];
+  }
+}
+
+/**
+ * Sets the default border styles on a new element.
+ * @param {DOMElement} element The element to modify.
+ * @param {Object.<string, boolean>} options Optional map of options
+ *     indicating how the styles should be applied.
+ * @param {string} options.textInput treat the element as a text
+ *     input or text area, which has a gray default border. Default: false
+ * @param {string} options.forceDefaults: always set default
+ *     styles, even if current styles already exist. Default: false
+ */
+export function setDefaultBorderStyles(element, options = {}) {
+  const {textInput, forceDefaults} = options;
+  element.style.borderStyle = 'solid';
+  if (forceDefaults || element.style.borderWidth === '') {
+    element.style.borderWidth = textInput ? '1px' : '0px';
+  }
+  if (forceDefaults || element.style.borderColor === '') {
+    // Backfill borderColor property to match "classic" values:
+    // rgb(153, 153, 153) for textInput, #000000 for everything else
+    element.style.borderColor = textInput
+      ? themeValues.textInput.borderColor.classic
+      : themeValues.dropdown.borderColor.classic;
+  }
+  if (forceDefaults || element.style.borderRadius === '') {
+    element.style.borderRadius = '0px';
+  }
+}
+
+/**
+ * Parse a padding string and return the total horizontal padding and
+ * total vertical padding.
+ * @param {string} cssPaddingString value from element.style.padding
+ */
+export function calculatePadding(cssPaddingString) {
+  // Extract up to 4 numbers, ignoring the 'px' that may be included
+
+  // NOTE: if other measurement values (e.g. 'em') make it into the padding string,
+  // we will treat them as 'px' values
+
+  // Ideally, we could use getComputedStyle(), but we need to work with
+  // detached DOM nodes, which doesn't work on Chrome and Safari
+
+  const paddingValues = (cssPaddingString || '')
+    .split(/\s+/)
+    .map(part => parseInt(part, 10));
+  for (
+    var validPaddingValues = 0;
+    validPaddingValues < paddingValues.length;
+    validPaddingValues++
+  ) {
+    if (isNaN(paddingValues[validPaddingValues])) {
+      break;
+    }
+  }
+
+  // The meaning of the numeric values depends on the number that are supplied.
+  // 1 value: Apply to all four sides
+  // 2 values: vertical | horizontal
+  // 3 values: top | horizontal | bottom
+  // 4 values: top | right | bottom | left
+  // See https://developer.mozilla.org/en-US/docs/Web/CSS/padding#Syntax
+  let horizontalPadding, verticalPadding;
+  switch (validPaddingValues) {
+    case 1:
+      horizontalPadding = verticalPadding = 2 * paddingValues[0];
+      break;
+    case 2:
+      verticalPadding = 2 * paddingValues[0];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 3:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = 2 * paddingValues[1];
+      break;
+    case 4:
+      verticalPadding = paddingValues[0] + paddingValues[2];
+      horizontalPadding = paddingValues[1] + paddingValues[3];
+      break;
+    default:
+      horizontalPadding = verticalPadding = 0;
+      break;
+  }
+  return {
+    horizontalPadding,
+    verticalPadding
+  };
 }

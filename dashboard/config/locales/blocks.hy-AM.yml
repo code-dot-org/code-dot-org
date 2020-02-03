@@ -6,207 +6,36 @@ hy:
         options:
           UNIT:
             '"seconds"': վայրկյան
-      Dancelab_changeMove:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
-      Dancelab_changeMoveEach:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
       Dancelab_changeMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
       Dancelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_changePropEachBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_doMoveEachLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
       Dancelab_doMoveLR:
         options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': Rest
-            '2': Clown
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
-      Dancelab_doMoveOnce:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': Rest
-            '1': Clap High
-            '2': Clown
-            '3': Dab
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': Next
-            '"prev"': Previous
       Dancelab_everySeconds:
         options:
           UNIT:
@@ -215,18 +44,94 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
-      Dancelab_mappingProp:
+            '"height"': բարձրություն
+      Dancelab_getTime:
         options:
-          PROPERTY:
-            '"scale"': չափ
-      Dancelab_mirrorSprite:
+          UNIT:
+            '"seconds"': վայրկյան
+      Dancelab_ifTime:
         options:
-          DIRECTION:
-            '"right"': ճիշտ
-            '"left"': ձախ
+          UNIT:
+            '"seconds"': վայրկյան
+      Dancelab_jumpTo:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": կամայական
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"diamond"': ադամանդ
+            '"random"': կամայական
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': այլմոլորակային
+            '"CAT"': կատու
+            '"DOG"': շուն
+            '"DUCK"': բադ
+            '"ROBOT"': ռոբոտ
+            '"UNICORN"': միաեղջույր
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": կամայական
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"diamond"': ադամանդ
+            '"random"': կամայական
       Dancelab_randomColor:
         text: կամայական գույն
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -238,51 +143,81 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
-      Dancelab_spritesWhere:
+            '"height"': բարձրություն
+      Dancelab_setPropEach:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_startMapping:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_startMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+            '"height"': բարձրություն
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"diamond"': ադամանդ
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
             '"up"': մինչեւ
-            '"down"': ներքեւ
             '"left"': ձախ
+            '"down"': ներքեւ
             '"right"': ճիշտ
             '"space"': տարածություն
-      Dancelab_whileKey:
+            '"x"': x
+      gamelab_changePropBy:
         options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_checkTouching:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
+      gamelab_getProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
           KEY:
             '"up"': մինչեւ
             '"down"': ներքեւ
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
-      gamelab_changePropBy:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': ճիշտ
-            'false': կեղծ
-      gamelab_getProp:
-        options:
-          PROPERTY:
-            '"scale"': չափ
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": կամայական
+            '"x"': x
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -292,10 +227,15 @@ hy:
         text: կամայական գույն
       gamelab_randomColor:
         text: կամայական գույն
-      gamelab_setPosition:
+      gamelab_setBackgroundImage:
         options:
-          POSITION:
-            '"random"': կամայական
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': քարանձավ
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': անապատ
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': ծիածան
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Ստորջրյա
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': Ձմեռ
       gamelab_setProp:
         options:
           PROPERTY:
@@ -305,14 +245,11 @@ hy:
           PROPERTY:
             '"scale"': չափ
             '"height"': բարձրություն
-      gamelab_spritesWhere:
+      gamelab_spriteClicked:
         options:
-          PROPERTY:
-            '"scale"': չափ
-      gamelab_spritesWhereGenerator:
-        options:
-          PROPERTY:
-            '"scale"': չափ
+          CONDITION:
+            '"when"': երբ
+            '"while"': ժամանակ
       gamelab_turn:
         options:
           DIRECTION:
@@ -326,13 +263,6 @@ hy:
             '"left"': ձախ
             '"right"': ճիշտ
             '"space"': տարածություն
-      gamelab_whenPressedAndReleased:
-        options:
-          DIR:
-            "'up'": մինչեւ
-            "'down'": ներքեւ
-            "'left'": ձախ
-            "'right'": ճիշտ
       gamelab_whileKey:
         options:
           KEY:
@@ -345,16 +275,117 @@ hy:
         options:
           PROPERTY:
             '"scale"': չափ
+      Mikelab_createNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': չափ
+      Mikelab_groupChangePropBy:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupCreateNewSprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+      Mikelab_groupGetProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_groupSetProp:
+        options:
+          PROPERTY:
+            '"scale"': չափ
+      Mikelab_randomColor:
+        text: կամայական գույն
+      Mikelab_repeatUntilComplete:
+        text: կրկնել հավերժ
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': քաղաք
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': չափ
-      Vanilla_randomColor:
-        text: կամայական գույն
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': ճիշտ
+            '"left"': ձախ
+      Mikelab_sprite:
+        options:
+          LOCATION:
+            "{x: 100, y: 200}": ձախ
+            "{x: 300, y: 200}": ճիշտ
+      Mikelab_whenKeyPressed:
+        options:
+          KEY:
+            '"up"': մինչեւ arrow
+            '"down"': ներքեւ arrow
+            '"left"': ձախ arrow
+            '"right"': ճիշտ arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': մինչեւ arrow
+            '"down"': ներքեւ arrow
+            '"left"': ձախ arrow
+            '"right"': ճիշտ arrow
+            '"w"': W
+            '"s"': S
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': մինչեւ arrow
+            '"down"': ներքեւ arrow
+            '"left"': ձախ arrow
+            '"right"': ճիշտ arrow
+      RyanLab_moveForward:
+        text: առաջ ընթանալ
+      RyanLab_turnLeft:
+        text: դիմել է մնացել
+      RyanLab_turnRight:
+        text: աջ շրջադարձ
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_showHideSprite:
+        options:
+          OPTION:
+            '"show"': ցուցադրում
+            '"hide"': թաքցնել
+      binary_move:
+        options:
+          DIR:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+      binary_whenKey:
+        options:
+          KEY:
+            '"up"': մինչեւ
+            '"down"': ներքեւ
+            '"left"': ձախ
+            '"right"': ճիշտ
+            '"space"': տարածություն
       craft_ifPath:
         options:
           DIR:
@@ -364,6 +395,10 @@ hy:
           TYPE:
             "'sand'": ավազ
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": ավազ
       craft_moveForward:
         text: առաջ ընթանալ
       craft_placeTorch:

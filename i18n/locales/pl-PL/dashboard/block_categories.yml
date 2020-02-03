@@ -2,18 +2,28 @@ pl:
   data:
     block_categories:
       Actions: Działania
-      Loops: Pętle
-      Functions: Funkcje
+      Advanced: Zaawansowane
+      Behaviors: Zachowanie
+      Brushes: Pędzle
       Color: Kolor
-      Math: Matematyka
-      Logic: Logika
-      Variables: Zmienne
-      Conditionals: Warunkowe
+      Comment: Komentarz
+      Comments: Komentarze
+      Conditionals: Zdania z warunkami
+      Dancers: Tancerze
+      Default: Domyślne
       Events: Zdarzenia
+      Functions: Funkcje
+      'Functions ': 'Funkcje '
+      Game/Score: Gra/Punkty
+      Games/Score: Gry/Punkty
+      Groups: Grupy
+      Locations: Położenie
+      Logic: Logika
+      Loops: Pętle
+      Math: Matematyka
+      Numbers: Liczby
+      Properties: Właściwości
       Text: Tekst
-      Start: Start
-      Booleans: Wartości logiczne
-      test: test
-      Foo: Foo
-      Name: Imię/Nazwisko
-      Function: Funkcja
+      Variables: Zmienne
+      'Variables ': 'Zmienne '
+      World: Świat

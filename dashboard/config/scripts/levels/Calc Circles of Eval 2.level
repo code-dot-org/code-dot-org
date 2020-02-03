@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Use a Multiplication Block to complete this code.",
+    "short_instructions": "Use a Multiplication Block to complete this code.",
     "embed": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -21,7 +21,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "Use a Multiplication Block to complete this code.",
+    "long_instructions": "Use a Multiplication Block to complete this code.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "disable_examples": "false"

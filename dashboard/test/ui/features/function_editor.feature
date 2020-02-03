@@ -29,7 +29,7 @@ Scenario: Opening the function editor and hitting the ESC key should close the e
 Scenario: Opening / closing the function editor, shouldn't be able to connect to invisible child blocks
   When I press SVG selector ".blocklyIconGroup:contains(edit)"
   And I wait to see "#modalEditorClose"
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose > .blocklyText" element
 
   And "invisible repeat loop within function" refers to block "63"
   And I open the blockly category with ID "1"

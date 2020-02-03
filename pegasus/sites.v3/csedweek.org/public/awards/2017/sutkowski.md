@@ -15,7 +15,7 @@ theme: responsive
 Heather Sutkowski is passionate about advocating for computer science and promoting it starting in elementary school. She has been a teacher for 13 years and currently teaches K-6 Computer Science at the CREC Montessori Magnet School in Hartford, CT.
 
 <figure style="margin:10px">
-  <img src="/images/awards/heather_sutkowski_students.jpg" style="display:block;margin:0 auto" width=450 alt="Students at CREC Montessori Magnet School" />
+  <img src="/images/awards/fit-450/heather_sutkowski_students.jpg" style="display:block;margin:0 auto" width=450 alt="Students at CREC Montessori Magnet School" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students at CREC Montessori Magnet School
   </figcaption>
@@ -26,7 +26,7 @@ Through presentations to her school's PTA, district colleagues, superintendents,
 But it doesn’t stop there. She volunteers at local conferences to promote the Hour of Code, presents professional learning sessions, and also facilitates Code.org CS Fundamentals workshops. She's an active member of the Connecticut Computer Science Teachers Association and most recently has been working with its members to launch the "S4CT Summit" in spring 2018. As part of her advocacy work, she volunteers on the Connecticut State Department of Education's Computer Science Advisory Group and is part of a workgroup that advises on computer science standards adoption, certification, and training opportunities.
 
 <figure style="margin:10px">
-  <img src="/images/awards/heather_sutkowski.png" style="display:block;margin:0 auto" width=250 alt="Heather Sutkowski" />
+  <img src="/images/awards/fit-250/heather_sutkowski.png" style="display:block;margin:0 auto" width=250 alt="Heather Sutkowski" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Heather Sutkowski</figcaption>
 </figure>
 

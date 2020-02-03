@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "This is Sarah's test of making a netsim level"
+    "short_instructions": "This is Sarah's test of making a netsim level"
   }
 }]]></config>
   <blocks/>

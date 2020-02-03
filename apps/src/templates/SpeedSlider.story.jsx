@@ -20,5 +20,5 @@ class StorybookHarness extends React.Component {
 export default storybook => {
   return storybook
     .storiesOf('SpeedSlider', module)
-    .add('Default', () => <StorybookHarness/>);
+    .add('Default', () => <StorybookHarness />);
 };

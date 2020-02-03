@@ -1,3 +1,5 @@
+script_announcements [{"notice"=>"foo", "details"=>"bar", "link"=>"", "type"=>"information"}]
+
 stage 'Stage1'
 level 'Level 1'
 level 'Level 2'

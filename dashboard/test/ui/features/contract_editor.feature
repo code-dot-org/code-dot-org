@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 @eyes
 Feature: Opening the contract editor
@@ -74,15 +73,14 @@ Scenario: Changing Parameter names
   And "add-block" refers to block "41"
   And "i" refers to block "34"
   And "j" refers to block "35"
-  And "do-something" refers to block "62"
+  And "do-something" refers to block "60"
   And "evaluate" refers to block "10"
 
   When I open my eyes to test "changing contract parameters"
   Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/11?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose > .blocklyText" element
   And I resize top instructions to "100" pixels tall
 
   When I open the topmost blockly category "Functions"
@@ -102,7 +100,7 @@ Scenario: Changing Parameter names
   And I press keys "radius" for element "#domain-area input"
   And I see no difference for "changed one variable"
 
-  Then I press "modalEditorClose"
+  Then I press the first "#modalEditorClose > .blocklyText" element
   And I open the topmost blockly category "Functions"
   And I drag block "do-something" to block "evaluate" plus offset 0, 100
   And I see no difference for "two blocks have same name params"
@@ -110,6 +108,6 @@ Scenario: Changing Parameter names
   Then I open the topmost blockly category "Functions"
   And I press the edit button on a function call named "something"
   And I press keys "2" for element "#domain-area input"
-  And I press "modalEditorClose"
+  And I press the first "#modalEditorClose > .blocklyText" element
   And I see no difference for "only one function's radius param changed"
   And I close my eyes

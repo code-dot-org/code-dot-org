@@ -1,4 +1,5 @@
 require 'cdo/firehose'
+require 'cdo/honeybadger'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -7,20 +8,53 @@ class RegistrationsController < Devise::RegistrationsController
     :migrate_to_multi_auth, :demigrate_from_multi_auth
   ]
   skip_before_action :verify_authenticity_token, only: [:set_age]
-  skip_before_action :clear_sign_up_session_vars, only: [:new, :create]
+  skip_before_action :clear_sign_up_session_vars, only: [:new, :begin_sign_up, :cancel, :create]
 
+  #
+  # GET /users/sign_up
+  #
   def new
+    # Used by old signup form
     session[:user_return_to] ||= params[:user_return_to]
-    @already_hoc_registered = params[:already_hoc_registered]
+    # Used by new signup form
+    store_location_for(:user, params[:user_return_to]) if params[:user_return_to]
 
-    SignUpTracking.begin_sign_up_tracking(session)
-    FirehoseClient.instance.put_record(
-      study: 'account-sign-up',
-      event: 'load-sign-up-page',
-      data_string: session[:sign_up_uid]
-    )
+    if PartialRegistration.in_progress?(session)
+      user_params = params[:user] || {}
+      @user = User.new_with_session(user_params, session)
+    else
+      @already_hoc_registered = params[:already_hoc_registered]
+      SignUpTracking.begin_sign_up_tracking(session, split_test: true)
+      super
+    end
+  end
 
-    super
+  #
+  # POST /users/begin_sign_up
+  #
+  # Submit step 1 of the signup process for creating an email/password account.
+  #
+  def begin_sign_up
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+    SignUpTracking.log_begin_sign_up(@user, session)
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+      redirect_to new_user_registration_path
+    else
+      render 'new' # Re-render form to display validation errors
+    end
+  end
+
+  #
+  # GET /users/cancel
+  #
+  # Cancels the in-progress partial user registration and redirects to sign-up page.
+  #
+  def cancel
+    PartialRegistration.cancel(session)
+    redirect_to new_user_registration_path
   end
 
   #
@@ -50,14 +84,16 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # GET /users/finish_sign_up
+  # POST /users
   #
-  def finish_sign_up
-    @user = User.new
-  end
-
   def create
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
+      if retries > 0
+        Honeybadger.notify(
+          error_class: 'User creation required multiple attempts',
+          error_message: "retry ##{retries} failed with exception: #{exception}"
+        )
+      end
       super
     end
 
@@ -95,9 +131,11 @@ class RegistrationsController < Devise::RegistrationsController
     end
     dependent_students = current_user.dependent_students
     destroy_users(current_user, dependent_students)
-    TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now if current_user.teacher?
+    if current_user.teacher? && current_user.email.present?
+      TeacherMailer.delete_teacher_email(current_user, dependent_students).deliver_now
+    end
     Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name)
-    return head :no_content
+    head :no_content
   end
 
   def sign_up_params
@@ -118,6 +156,10 @@ class RegistrationsController < Devise::RegistrationsController
         params[:data_transfer_agreement_at] = DateTime.now
       end
     end
+  end
+
+  def begin_sign_up_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
   # Set age for the current user if empty - skips CSRF verification because this can be called
@@ -154,30 +196,7 @@ class RegistrationsController < Devise::RegistrationsController
   def set_email
     return head(:bad_request) if params[:user].nil?
 
-    successfully_updated =
-      if current_user.migrated?
-        if forbidden_change?(current_user, params)
-          false
-        elsif needs_password?(current_user, params)
-          if current_user.valid_password?(params[:user][:current_password])
-            current_user.update_primary_contact_info(user: set_email_params)
-          else
-            current_user.errors.add :current_password
-            false
-          end
-        else
-          current_user.update_primary_contact_info(user: set_email_params)
-        end
-      else
-        if forbidden_change?(current_user, params)
-          false
-        elsif needs_password?(current_user, params)
-          current_user.update_with_password(set_email_params)
-        else
-          params[:user].delete(:current_password)
-          current_user.update_without_password(set_email_params)
-        end
-      end
+    successfully_updated = update_user_email
 
     if successfully_updated
       head :no_content
@@ -247,7 +266,31 @@ class RegistrationsController < Devise::RegistrationsController
       notice: I18n.t('auth.demigration_success')
   end
 
+  def existing_account
+    params.require([:email, :provider])
+    render 'existing_account'
+  end
+
   private
+
+  def update_user_email
+    return false if forbidden_change?(current_user, params)
+
+    if current_user.migrated?
+      if needs_password?(current_user, params) && !current_user.valid_password?(params[:user][:current_password])
+        current_user.errors.add :current_password
+        return false
+      end
+      current_user.update_primary_contact_info(new_email: set_email_params.delete(:email), new_hashed_email: set_email_params.delete(:hashed_email))
+    end
+
+    if needs_password?(current_user, params)
+      current_user.update_with_password(set_email_params)
+    else
+      params[:user].delete(:current_password)
+      current_user.update_without_password(set_email_params)
+    end
+  end
 
   def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
     user = current_user
@@ -387,7 +430,7 @@ class RegistrationsController < Devise::RegistrationsController
   def log_account_deletion_to_firehose(current_user, dependent_users)
     # Log event for user initiating account deletion.
     FirehoseClient.instance.put_record(
-      study: 'user-soft-delete-audit',
+      study: 'user-soft-delete-audit-v2',
       event: 'initiated-account-deletion',
       user_id: current_user.id,
       data_json: {
@@ -400,7 +443,7 @@ class RegistrationsController < Devise::RegistrationsController
     # This should only happen for teachers.
     dependent_users.each do |user|
       FirehoseClient.instance.put_record(
-        study: 'user-soft-delete-audit',
+        study: 'user-soft-delete-audit-v2',
         event: 'dependent-account-deletion',
         user_id: user[:id],
         data_json: {

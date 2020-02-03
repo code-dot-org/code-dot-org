@@ -44,7 +44,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Turning all the Color LEDs On\r\n\r\nNow that you know how to use a _for loop_ to process all of the elements in an array, you can turn on all of the Color LEDs much more easily than before.\r\n\r\n# Do This\r\n\r\nWe're going to start an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.\r\n\r\n* Add an event handler for \"button_on\"\r\n* Place a _for loop_ in your event handler that repeats until it reaches in the end of the array `colorLeds`\r\n* Inside the for loop, call `colorLeds[i].on()` to turn on the current color LED",
+    "long_instructions": "# Turning all the Color LEDs On\r\n\r\nNow that you know how to use a _for loop_ to process all of the elements in an array, you can turn on all of the Color LEDs much more easily than before.\r\n\r\n# Do This\r\n\r\nWe're going to start an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.\r\n\r\n* Add an event handler for \"button_on\"\r\n* Place a _for loop_ in your event handler that repeats until it reaches in the end of the array `colorLeds`\r\n* Inside the for loop, call `colorLeds[i].on()` to turn on the current color LED",
     "project_template_level_name": "CSD U6 for loop led template",
     "encrypted_examples": "LXKPeJRDLrHiH0OVZAdj/7ixTiUUi5Yz4XLPKl03NJauLjfxMRpmc0lhU2io\nWnSz6JjzEzA7PI2cEKL6HQV50Q==\n",
     "contained_level_names": null

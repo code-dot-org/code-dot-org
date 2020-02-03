@@ -1,9 +1,8 @@
 ---
-title: <%= hoc_s(:title_how_to_volunteers) %>
-layout: wide
-nav: how_to_nav
+title: Korleis halde ein Kodetime - for frivillige
 ---
-<%= view :signup_button %>
+
+{{ signup_button }}
 
 # Rettleing for frivillige
 
@@ -21,33 +20,33 @@ Sjekk ut nokre utsegn frå tidlegare frivillige:
 
 ## Alle kan bli frivillige
 
-### Volunteers and speakers in tech:
+### Frivillige og talarar i tech-industrien:
 
-Do you have a connection to CS or tech? Hvis du arbeider i teknologibransjen, i eit tech-selskap i kva som helst rolle (ikkje-teknolog eller ingeniør), eller du har tatt informatikk-kurs, kan du hjelpe til og inspirere elevane! Mange elevar har aldri møtt nokon som jobbar i teknologi-industrien og lærarar likar å kunne kople klasserommet opp mot fagfolk og studentar.
+Jobber du med CS eller i tech-bransjen? Hvis du arbeider i teknologibransjen, i eit tech-selskap i kva som helst rolle (ikkje-teknolog eller ingeniør), eller du har tatt informatikk-kurs, kan du hjelpe til og inspirere elevane! Mange elevar har aldri møtt nokon som jobbar i teknologi-industrien og lærarar likar å kunne kople klasserommet opp mot fagfolk og studentar.
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br /> <br />
+Du kan bli ein gjestetalar i eit klasserom eller hjelpe læraren med å ha aktiviteten. Besøk eit lokalt klasserom for å inspirere elevar til å fortsatt lære seg datavitskap. <br /> <br />
 
-<a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br /> <br /></p> 
+<a href="https://code.org/volunteer"><button>Registrer deg i dag og bli ein tech-frivillig!</button> <br /> <br /></p> 
 
 <h3>
-  Anyone passionate about expanding opportunity:
+  Er du lidenskapleg opptatt av å utvide moglegheitsrommet:
 </h3>
 
 <p>
-  Do you believe that learning computer science can open doors of opportunity for students? Hjelp til i eit klasserom i lokalmiljøet eller organisér noko etter skulen! Du treng ikkje å ha bakgrunn i informatikk for å vere vert for ein Kodetime. Og det å berre tilby å hjelpe til er ofte nok til å overtyde læraren, ein ven eller ein klubb om å prøve det ein time.
+  Trur du at å lære datavitskap kan opne opp moglegheiter for elevar? Hjelp til i eit klasserom i lokalmiljøet eller organisér noko etter skulen! Du treng ikkje å ha bakgrunn i datavitskap for å vere vert for ein Kodetime. Og det å berre tilby å hjelpe til er ofte nok til å overtyde læraren, ein ven eller ein klubb om å prøve det ein time.
 </p>
 
 <h3>
-  How do you get started?
+  Korleis kjem du i gang?
 </h3>
 
 <ol>
   <li>
-    <a href="%= resolve_url('/promote/resources#help-schools') %">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+    <a href="{{ promote/help_schools }}">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
   </li>
   
   <li>
-    Offer to host an Hour of Code event after school at a local school. <a href="%= resolve_url('/how-to') %">Use this How-To Guide</a> to help you plan.
+    Offer to host an Hour of Code event after school at a local school. <a href="{{ urls/how_to_guide }}">Use this How-To Guide</a> to help you plan.
   </li>
 </ol>
 
@@ -56,7 +55,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="%= resolve_url('/promote/resources#sample-email') %">Send this email</a> to your manager or the CEO to get everyone on board.
+  Fortell venner og kollegaer om Kodetimen. Tusenvis av lærarar ser etter frivillige, så spør dei om å <a href="https://code.org/volunteer">registrere seg som frivillig</a>. Spør arbeidsgjevar om å involvere seg. <a href="{{ promote/sample_emails }}">Send this email</a> to your manager or the CEO to get everyone on board.
 </p>
 
 <h2>
@@ -65,13 +64,13 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 
 <ul>
   <li>
-    <a href="%= resolve_url('/promote/resources#videos') %"> Velg ein video</a> du kan vise til klassen for å gi fokus og som gjer dei klare til Kodetimen.
+    <a href="{{ promote/videos }}">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
   </li>
   <li>
     Sjekk ut <a href="/files/hoc-volunteer-toolkit.pdf"> verktøykassa til Kodetimen</a>. Den inneheld ei oversikt, tidslinje, førebuings- og marknadsføringsmateriale. Alt du treng for å bli klar til å bidra som frivillig!
   </li>
   <li>
-    Dersom du skal gjennomgå ei oppgåve under økta, bruk 30 minutter til å prøve minst ei <a href="%= resolve_url('/learn') %">oppgåve frå Kodetimen</a>.
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="{{ urls/learn }}">Hour of Code tutorial</a>.
   </li>
   <li>
     Dersom du skal vitje ein skule, gjer deg ferdig med eventuelle bakgrunnssjekkar eller naudsamt papirarbeid.
@@ -95,11 +94,11 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
 </h2>
 
 <p>
-  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+  Når du har ein Kodetime, følg malen under som hjelpeguide for dagen. Før det, sørg for at du registrerer deg på skulen og helser på læraren den dagen arrangementet skjer. Stadfest at de er einige om planen for dagen og diskuter nokre samtalepunkter.
 </p>
 
 <h3>
-  Sample agenda:
+  Mal for dagen:
 </h3>
 
 <table>
@@ -119,7 +118,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
     </td>
     
     <td>
-      <a href="%= resolve_url('promote/resources#videos') %"> Vis ein inspirerande video</a>.
+      <a href="{{ promote/videos }}">Show an inspirational video</a>.
     </td>
   </tr>
   
@@ -189,7 +188,7 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
         </tr></tbody> </table> 
         
         <h3>
-          After the Event:
+          Etter arrangementet:
         </h3>
         <ul>
           <li>
@@ -226,23 +225,23 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. V
           Spørsmål og svar for frivillige til Kodetimen
         </h2>
         <h3>
-          I haven't been contacted by a teacher yet. How can I still volunteer?
+          Eg har ikkje blitt kontakta av ein lærar enda. Korleis kan eg framleis vere frivillig?
         </h3>
         <p>
-          Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+          Prøv å søk opp lokale skular og ring rektøur/lærar/kontoret og spør om korleis du kan hjelpe.
         </p>
         <h3>
-          How long do classroom visits last for?
+          Kor lenge varer besøket i klasserommet?
         </h3>
         <p>
-          An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+          Eit besøk i klasserommet varer vanlegvis i 60-90 minutter medan eit virtuelt klasserombesøk varar som regel 20-30 minutter.
         </p>
         <h3>
-          What age group is the Hour of Code activity appropriate for?
+          Kva aldersgrupper er Kodetimen passande for?
         </h3>
         <p>
-          Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+          Code.org og våre partnarar designer alle Kodetimen-aktivitetane til å engasjere alle skuletrinn, jenter og guttar, frå alle bakgrunnar. Alle, sjølv vaksne kan ha det gøy med å leike seg!
         </p>
         <p>
-          <%= view :signup_button %>
+          {{ signup_button }}
         </p>

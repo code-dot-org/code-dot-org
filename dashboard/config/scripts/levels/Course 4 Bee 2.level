@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "Use the \"if/else\" block to check each object to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise, make one honey!",
+    "short_instructions": "Use the \"if/else\" block to check each object to see if it's a flower or a honeycomb . If it's a flower, collect one nectar...otherwise, make one honey!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,7 +28,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "examples_required": "false",
-    "markdown_instructions": "Use the `if/else` block to check each object to see if it's a flower or a honeycomb. \r\n\r\nIf it's a flower, collect one nectar...otherwise, make one honey!",
+    "long_instructions": "Use the `if/else` block to check each object to see if it's a flower or a honeycomb. \r\n\r\nIf it's a flower, collect one nectar...otherwise, make one honey!",
     "video_key": "C4_conditionals",
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "false",

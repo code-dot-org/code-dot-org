@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -37,6 +37,7 @@ class Level < ActiveRecord::Base
   before_destroy :remove_empty_script_levels
 
   validates_length_of :name, within: 1..70
+  validate :reject_illegal_chars
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
 
   after_save :write_custom_level_file
@@ -53,8 +54,6 @@ class Level < ActiveRecord::Base
     video_key
     embed
     callout_json
-    instructions
-    markdown_instructions
     authored_hints
     instructions_important
     display_name
@@ -63,19 +62,19 @@ class Level < ActiveRecord::Base
     name_suffix
     parent_level_id
     hint_prompt_attempts_threshold
+    short_instructions
+    long_instructions
+    rubric_key_concept
+    rubric_performance_level_1
+    rubric_performance_level_2
+    rubric_performance_level_3
+    rubric_performance_level_4
+    mini_rubric
+    encrypted
+    editor_experiment
+    teacher_markdown
+    bubble_choice_description
   )
-
-  # Temporary aliases while we transition between naming schemes.
-  # TODO: elijah: migrate the data to these new field names and remove these
-  define_method('short_instructions') {read_attribute('properties')['instructions']}
-  define_method('short_instructions=') {|value| read_attribute('properties')['instructions'] = value}
-  define_method('short_instructions?') {!!JSONValue.value(read_attribute('properties')['instructions'])}
-  define_method('long_instructions') {read_attribute('properties')['markdown_instructions']}
-  define_method('long_instructions=') {|value| read_attribute('properties')['markdown_instructions'] = value}
-  define_method('long_instructions?') {!!JSONValue.value(read_attribute('properties')['markdown_instructions'])}
-  def self.permitted_params
-    super.concat(['short_instructions', 'long_instructions'])
-  end
 
   # Fix STI routing http://stackoverflow.com/a/9463495
   def self.model_name
@@ -94,14 +93,6 @@ class Level < ActiveRecord::Base
   def assign_attributes(new_attributes)
     attributes = new_attributes.stringify_keys
 
-    # TODO: elijah: migrate the data to these new field names and remove these
-    if attributes.key?('short_instructions')
-      attributes['instructions'] = attributes.delete('short_instructions')
-    end
-    if attributes.key?('long_instructions')
-      attributes['markdown_instructions'] = attributes.delete('long_instructions')
-    end
-
     concept_difficulty_attributes = attributes.delete('level_concept_difficulty')
     if concept_difficulty_attributes
       assign_nested_attributes_for_one_to_one_association(
@@ -113,12 +104,12 @@ class Level < ActiveRecord::Base
   end
 
   def related_videos
-    ([game.intro_video, specified_autoplay_video] + concepts.map(&:video)).compact.uniq
+    ([game.intro_video, specified_autoplay_video] + concepts.map(&:related_video)).compact.uniq
   end
 
   def specified_autoplay_video
     @@specified_autoplay_video ||= {}
-    @@specified_autoplay_video[video_key] ||= Video.find_by_key(video_key) unless video_key.nil?
+    @@specified_autoplay_video[video_key + ":" + I18n.locale.to_s] ||= Video.current_locale.find_by_key(video_key) unless video_key.nil?
   end
 
   def self.key_list
@@ -205,7 +196,7 @@ class Level < ActiveRecord::Base
     if custom?
       unless callout_json.blank?
         return JSON.parse(callout_json).map do |callout_definition|
-          i18n_key = "data.callouts.#{name}_callout.#{callout_definition['localization_key']}"
+          i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = should_localize? &&
             I18n.t(i18n_key, default: nil) ||
             callout_definition['callout_text']
@@ -229,7 +220,22 @@ class Level < ActiveRecord::Base
   # Input: xml level file definition
   # Output: Hash of level properties
   def load_level_xml(xml_node)
-    JSON.parse(xml_node.xpath('//../config').first.text)
+    hash = JSON.parse(xml_node.xpath('//../config').first.text)
+    begin
+      encrypted_properties = hash.delete('encrypted_properties')
+      encrypted_notes = hash.delete('encrypted_notes')
+      if encrypted_properties
+        hash['properties'] =  Encryption.decrypt_object(encrypted_properties)
+      end
+      if encrypted_notes
+        hash['notes'] = Encryption.decrypt_object(encrypted_notes)
+      end
+    rescue Encryption::KeyMissingError
+      # developers and adhoc environments must be able to seed levels without properties_encryption_key
+      raise unless rack_env?(:development) || rack_env?(:adhoc)
+      puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
+    end
+    hash
   end
 
   def self.write_custom_levels
@@ -262,8 +268,12 @@ class Level < ActiveRecord::Base
       xml.send(type) do
         xml.config do
           hash = serializable_hash(include: :level_concept_difficulty).deep_dup
-          config_attributes = filter_level_attributes(hash)
-          xml.cdata(JSON.pretty_generate(config_attributes.as_json))
+          hash = filter_level_attributes(hash)
+          if encrypted?
+            hash['encrypted_properties'] = Encryption.encrypt_object(hash.delete('properties'))
+            hash['encrypted_notes'] = Encryption.encrypt_object(hash.delete('notes'))
+          end
+          xml.cdata(JSON.pretty_generate(hash.as_json))
         end
       end
     end
@@ -311,6 +321,7 @@ class Level < ActiveRecord::Base
     'EvaluationMulti', # unknown
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
+    'Fish', # no ideal solution
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
     'Flappy', # no ideal solution
@@ -321,6 +332,7 @@ class Level < ActiveRecord::Base
     'Map', # no user submitted content
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
+    'BubbleChoice', # dsl defined, covered in dsl
     'NetSim', # widget
     'Odometer', # widget
     'Pixelation', # widget
@@ -389,7 +401,8 @@ class Level < ActiveRecord::Base
   def channel_backed?
     return false if try(:is_project_level)
     free_response_upload = is_a?(FreeResponse) && allow_user_uploads
-    project_template_level || free_response_upload || game.channel_backed?
+    dance_party_free_play = is_a?(Dancelab) && try(:free_play?)
+    project_template_level || free_response_upload || game.channel_backed? || dance_party_free_play
   end
 
   def key
@@ -410,6 +423,14 @@ class Level < ActiveRecord::Base
 
   def strip_name
     self.name = name.to_s.strip unless name.nil?
+  end
+
+  def reject_illegal_chars
+    if name&.match /[^A-Za-z0-9 !"&'()+,\-.:=?_|]/
+      msg = "\"#{name}\" may only contain letters, numbers, spaces, "\
+      "and the following characters: !\"&'()+,\-.:=?_|"
+      errors.add(:name, msg)
+    end
   end
 
   def log_changes(user=nil)
@@ -472,6 +493,11 @@ class Level < ActiveRecord::Base
     false
   end
 
+  # Currently only Web Lab, Game Lab and App Lab levels can have teacher feedback
+  def can_have_feedback?
+    ["Applab", "Gamelab", "Weblab"].include?(type)
+  end
+
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels
@@ -494,7 +520,8 @@ class Level < ActiveRecord::Base
   def summary_for_lesson_plans
     summary = summarize
 
-    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference).each do |key|
+    %w(title questions answers short_instructions long_instructions markdown teacher_markdown pages reference
+       rubric_key_concept rubric_performance_level_1 rubric_performance_level_2 rubric_performance_level_3 rubric_performance_level_4 mini_rubric).each do |key|
       value = properties[key] || try(key)
       summary[key] = value if value
     end
@@ -536,11 +563,14 @@ class Level < ActiveRecord::Base
   # Create a copy of this level named new_name, and store the id of the original
   # level in parent_level_id.
   # @param [String] new_name
+  # @param [String] editor_experiment
   # @raise [ActiveRecord::RecordInvalid] if the new name already is taken.
-  def clone_with_name(new_name)
+  def clone_with_name(new_name, editor_experiment: nil)
     level = dup
     # specify :published to make should_write_custom_level_file? return true
-    level.update!(name: new_name, parent_level_id: id, published: true)
+    level_params = {name: new_name, parent_level_id: id, published: true}
+    level_params[:editor_experiment] = editor_experiment if editor_experiment
+    level.update!(level_params)
     level
   end
 
@@ -556,24 +586,28 @@ class Level < ActiveRecord::Base
   # @param [String] new_suffix The suffix to append to the name of the original
   #   level when choosing a name for the new level, replacing any existing
   #   name_suffix if one exists.
-  def clone_with_suffix(new_suffix)
+  # @param [String] editor_experiment Optional value to set the
+  #   editor_experiment property to on the newly-created level.
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
     # Make sure we don't go over the 70 character limit.
-    new_name = "#{base_name[0..64]}#{new_suffix}"
+    max_index = 70 - new_suffix.length - 1
+    new_name = "#{base_name[0..max_index]}#{new_suffix}"
 
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = clone_with_name(new_name)
+    level = clone_with_name(new_name, editor_experiment: editor_experiment)
 
     update_params = {name_suffix: new_suffix}
+    update_params[:editor_experiment] = editor_experiment if editor_experiment
 
     if project_template_level
-      new_template_level = project_template_level.clone_with_suffix(new_suffix)
+      new_template_level = project_template_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
       update_params[:project_template_level_name] = new_template_level.name
     end
 
     unless contained_levels.empty?
       update_params[:contained_level_names] = contained_levels.map do |contained_level|
-        contained_level.clone_with_suffix(new_suffix).name
+        contained_level.clone_with_suffix(new_suffix, editor_experiment: editor_experiment).name
       end
     end
 

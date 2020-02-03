@@ -6,7 +6,7 @@
   "user_id": 42,
   "properties": {
     "skin": "netsim",
-    "instructions": "Now use the Internet Simulator to send the battleship moves. For setup, join a Room with your group, and add ships to your paper board for each opponent. When playing, all communication must be done through the tool, so no talking, but have fun!\r\n",
+    "short_instructions": "Now use the Internet Simulator to send the battleship moves. For setup, join a Room with your group, and add ships to your paper board for each opponent. When playing, all communication must be done through the tool, so no talking, but have fun!\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

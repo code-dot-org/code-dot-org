@@ -43,8 +43,8 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Get Pegleg to the flags to solve this puzzle.",
-    "markdown_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp Pegleg gather the flags to solve this puzzle.",
+    "short_instructions": "Get Pegleg to the flags to solve this puzzle.",
+    "long_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nHelp Pegleg gather the flags to solve this puzzle.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this challenge, attach the `move actor 1 up` block to the `when up arrow` event, then do the same for every other direction.\",\"hint_id\":\"courseD_playLab_cond1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2b6a359a9e13414bd11eab24f3de6393/courseD_playLab_cond1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down menus on the `when arrow` and `move actor` blocks to change which direction they go.\",\"hint_id\":\"courseD_playLab_cond1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbcb4e184cc689d6fd007c3294fc8eda/courseD_playLab_cond1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to move Pegleg to both of the flags once you click \\\"Run\\\"!\",\"hint_id\":\"courseD_playLab_cond1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/16c73ee919f9c78d4591dd9f73f17d81/courseD_playLab_cond1.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate_2018",
     "hide_share_and_remix": "false",
@@ -53,11 +53,16 @@
     "background": "soccer",
     "parent_level_id": 7986,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-12 16:48:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 21:24:03 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 02:03:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 18:47:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-13 17:07:11 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-13 17:07:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-14 00:10:26 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-14 00:11:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 02:20:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-12 16:48:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 21:24:03 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 02:03:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-24 18:47:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-13 17:07:11 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-13 17:07:51 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-14 00:10:26 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-09-14 00:11:18 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-01 02:20:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

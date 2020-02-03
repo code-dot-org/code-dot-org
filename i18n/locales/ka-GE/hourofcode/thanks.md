@@ -1,58 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
 ---
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # მადლობა კოდის ერთი საათის ორგანიზატორად დარეგისტრირებისთვის!
 
-მადლობის ნიშნად იმისთვის, რომ დაეხმარეთ მოსწალვეებისთვის კომპიუტერული მეცნიერებების სწავლის დაწყებაში, გვინდა, უფასოდ გადმოგცეთ პროფესიონალურად დაბეჭდილი პოსტერები, რომლებზეც გამოსახულია სხვადასხვა მისაბაძი მაგალითები თქვენი კლასისთვის. გადახდისას გამოიყენეთ შემოთავაზების კოდი **FREEPOSTERS**. (შენიშვნა: ეს შემოთავაზება ძალაშია მარაგის ამოწურვამდე და თქვენ მოგიწევთ ტრანსპორტირების საფასურის გადახდა. რადგანაც პოსტერები ამერიკის შეერთებული შტატებიდან მოდის, გადაზიდვის ღირებულება შეიძლება საკმაოდ მაღალი იყოს, თუ კანადაში ან სხვა ქვეყნებში გააგზავნით. ჩვენთვის გასაგებია, რომ ეს თანხა შეიძლება თქვენს ბიუჯეტში არ იყოს, ამიტომ, მოგიწოდებთ, ამობეჭდოთ [PDF ფაილები](https://code.org/inspire) თქვენი საკლასო ოთახისთვის.)  
-<br /> [<button>მიიღეთ პოსტერები</button> ](https://store.code.org/products/code-org-posters-set-of-12)გამოიყენეთ შემოთავაზების კოდი FREEPOSTERS
+<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<% if @country == 'us' %> ჩვენ ვუმადლით Ozobot-ის, Dexter Industries, littleBits-ისა და Wonder Workshop-ის ხელგაშლილობას. მათი მხარდაჭერით 100-ზე მეტი კლასი მიიღებს რობოტებს და კომპიუტერულ სქემებს მათი კლასებისთვის! იმისათვის, რომ კომპლექტის მიღების საშუალება მიიღოთ, კოდის ერთი საათის შემდეგ არ დაგავიწყდეთ Code.org-ისგან მოსული გამოკითხვის შევსება. Code.org აირჩევს გამარჯვებულ კლასებს. ამასობაში, გადახედეთ ჩვენს რობოტიკის და კომპიუტერული სქემების აქტივობებს. გთხოვთ, გაითვალისწინოთ, რომ ეს ვრცელდება მხოლოდ აშშ-ს სკოლებზე. <% end %>
-
-<br /> **კოდის ერთი საათის მიმდინარეობის დროა <%= campaign_date('full') %>. ჩვენ კავშირზე ვიქნებით ახალი ტუტორიალებითა და სხვა ამაღელვებელი სიახლეებით. მანამდე კი, რისი გაკეთება შეგიძლიათ ახლა?**
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. გაავრცელეთ ხმა თქვენ ირგვლივ
 
-თქვენ შემოუერთდით კოდის ერთი საათის მოძრაობას. მოუყევით თქვენს მეგობრებს: **#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> წაახალისეთ სხვები, მიიღონ მონაწილეობა, [ამ წერილის შაბლონის გაგზავნით.](%= resolve_url('/promote/resources#sample-emails') %) დაუკავშირდით თქვენს დირექტორს და გამოიწვიეთ თქვენი სკოლის ყველა კლასი, დარეგისტრირდეს. ჩართეთ ადგილობრივი ჯგუფი - ბიჭების/გოგოების სკაუტების კლუბი, ეკლესია, უნივერსიტეტი, ვეტერანთა ან სამუშაო გაერთიანება ან თქვენი მეგობრებიც კი. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. მოიწვიეთ ადგილობრივი პოლიტიკოსი და მთავრობის წარმომადგენელი თქვენს სკოლაში კოდის ერთ საათზე დასასწრებად. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. ახალი უნარების ასათვისებლად არ არის აუცილებელი სკოლაში იყოთ. Invite a local politician or policy maker to visit your school for the Hour of Code. ასე კომპიუტერული მეცნიერების განვითარება თქვენს სივრცეში ერთი საათის მიღმაც გაგრძელდება.
 
-გამოიყენეთ ეს [პოსტერები, ბანერები, სტიკერები, ვიდეობი და სხვა](%= resolve_url('/promote/resources') %) თქვენი ღონისძიებისთვის.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. მოძებნეთ ადგილობრივი მოხალისე, რომელიც თქვენი ღონისძიების ჩატარებაში დაგეხმარებათ.
 
-[Search our volunteer map](%= codeorg_url('/volunteer/local') %) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. დაგეგმეთ თქვენი კოდის ერთი საათი
 
-აირჩიეთ [კოდის ერთი საათის აქტივობა](https://hourofcode.com/learn) თქვენი კლასისთვის და [გადახედეთ ამ სახელმძღვანელოს](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+
+### 4. Stock up on swag
+
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # იმოგზაურეთ კოდის ერთი საათის მიღმა
 
-<% if @country == 'us' %> კოდის ერთი საათი მხოლოდ დასაწყისია. ადმინისტრატორი ხართ, მასწავლებელი თუ დამცველი, ჩვენ გვაქვს [პროფესიული განვითარების გეგმა, კურიკულუმი და რესურსები, რითიც დაგეხმარებით, კომპიუტერული მეცნიერებების გაკვეთილები მიიტანოთ თქვენს სკოლაში ან გააფართოვოთ თქვენი შეთავაზებები.](https://code.org/yourschool) თუ უკვე ასწავლით კომპიუტერულ მეცნიერებებს, გამოიყენეთ ეს რესურსები კომპიუტერული მეცნიერების საგანმანათელბლო კვირის განმავლობაში, რათა მოიპოვოთ თქვენი ადმინისტრაციის, მშობლებისა და საზოგადოების მხარდაჭერა.
+{{ go_beyond_hoc }}
 
-თქვენი სკოლის ჩართვის ბევრი გზა არსებობს. ორგანიზაციათა უმეტესობას, რომლებიც კოდის ერთი საათის ტუტორიალებს გთავაზობენ, აქვთ კურიკულუმი და პროფესიული განვითარების გეგმა. თუ შეგხვდებათ გაკვეთლი, რომელიც მოგეწონებათ, ითხოვეთ გაგრძელება. დაწყებაში რომ დაგეხმაროთ, მოვნიშნეთ რამდენიმე [კურიკულუმის მომწოდებელი, რომელიც დაგეხმარებათ თქვენ ან თქვენს მოსწავლეებს, გასცდეთ ერთ საათს.](https://hourofcode.com/beyond)
-
-<% else %> კოდის ერთი საათი მხოლოდ დასაწყისია. იმ ორგანიზაციათა უმეტესობას, რომლებიც კოდის ერთ საათს ატარებენ, აქვთ გეგმა, რომელიც სწავლის გაგრძელების საშუალებას მოგცემთ. დაწყებაში რომ დაგეხმაროთ, მოვნიშნეთ რამდენიმე [კურიკულუმის მომწოდებელი, რომელიც დაგეხმარებათ თქვენ ან თქვენს მოსწავლეებს, გასცდეთ ერთ საათს.](https://hourofcode.com/beyond)
-
-Code.org ასევე გთავაზობთ სრულ [შესავალ კურსს კომპიუტერულ მეცნიერებებში](https://code.org/educate/curriculum/cs-fundamentals-international), რომელიც თარგმნილია 25 ენაზე და არის სრულიად უფასო თქვენთვის და თქვენი სკოლისთვის. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

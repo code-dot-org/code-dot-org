@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "purpleNectarHidden",
     "fast_get_nectar_animation": "true",
-    "instructions": "Have we met before? I'm the farmer! Please help me remove this pile of dirt and fill this hole.",
+    "short_instructions": "Have we met before? I'm the farmer! Please help me remove this pile of dirt and fill this hole.",
     "nectar_goal": "15",
     "honey_goal": "10",
     "contained_level_names": null

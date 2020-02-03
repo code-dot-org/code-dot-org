@@ -1,8 +1,11 @@
 import React from 'react';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import {COLUMNS, COLUMNS_WITHOUT_THUMBNAILS} from '@cdo/apps/templates/projects/ProjectsList';
+import {
+  COLUMNS,
+  COLUMNS_WITHOUT_THUMBNAILS
+} from '@cdo/apps/templates/projects/ProjectsList';
 import {mount} from 'enzyme';
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/reconfiguredChai';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 
@@ -35,53 +38,10 @@ const STUB_PROJECTS_DATA = [
     studentName: 'Alice',
     type: 'applab',
     updatedAt: '2016-10-29T11:00:00-00:00'
-  },
+  }
 ];
 
 const STUDIO_URL_PREFIX = '//foo-studio.code.org';
-
-/**
- * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
- * @param {string} projectName Expected project name
- * @param {string} studentName Expected student name
- * @param {string} appType Expected app type (App Lab, Game Lab, etc)
- * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
- *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
- *   The desired date format which we will show in all browsers is MM/DD/YYYY.
- */
-function assertRowContents(rowElement, thumbnailUrl, projectName, studentName, appType, lastEdited) {
-  assertRowThumbnail(rowElement, thumbnailUrl);
-  expect(rowElement.childNodes[COLUMNS.PROJECT_NAME].innerText).to.equal(projectName);
-  expect(rowElement.childNodes[COLUMNS.STUDENT_NAME].innerText).to.equal(studentName);
-  expect(rowElement.childNodes[COLUMNS.APP_TYPE].innerText).to.equal(appType);
-  // Temporarily comment out this line to make tests pass locally in Chrome
-  expect(rowElement.childNodes[COLUMNS.LAST_EDITED].innerText).to.equal(lastEdited);
-}
-
-function assertRowThumbnail(rowElement, thumbnailUrl) {
-  const td = rowElement.childNodes[COLUMNS.THUMBNAIL];
-  const img = td.querySelector('img');
-  const src = img && img.getAttribute('src');
-  expect(src).to.equal(thumbnailUrl);
-}
-
-/**
- * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
- * @param {string} projectName Expected project name
- * @param {string} studentName Expected student name
- * @param {string} appType Expected app type (App Lab, Game Lab, etc)
- * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
- *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
- *   The desired date format which we will show in all browsers is MM/DD/YYYY.
- */
-function assertRowContentsWithoutThumbnail(rowElement, projectName, studentName, appType, lastEdited) {
-  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.PROJECT_NAME].innerText).to.equal(projectName);
-  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.STUDENT_NAME].innerText).to.equal(studentName);
-  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.APP_TYPE].innerText).to.equal(appType);
-  // Temporarily comment out this line to make tests pass locally in Chrome
-  expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.LAST_EDITED].innerText).to.equal(lastEdited);
-}
-
 
 describe('SectionProjectsList', () => {
   let root;
@@ -109,11 +69,6 @@ describe('SectionProjectsList', () => {
         expect(date.getUTCHours()).to.equal(11);
       }
     });
-
-    it('is compatible with the time zone of the test browser', () => {
-      const date = new Date(STUB_PROJECTS_DATA[0].updatedAt);
-      expect(date.toLocaleDateString()).to.equal('December 29, 2016');
-    });
   });
 
   it('hide thumbnail column when showProjectThumbnails is disabled', () => {
@@ -128,203 +83,685 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
 
-    assertRowContentsWithoutThumbnail(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContentsWithoutThumbnail(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContentsWithoutThumbnail(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContentsWithoutThumbnail(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContentsWithoutThumbnail(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContentsWithoutThumbnail(
+      getNode(rows, 0),
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContentsWithoutThumbnail(
+      getNode(rows, 1),
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContentsWithoutThumbnail(
+      getNode(rows, 2),
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContentsWithoutThumbnail(
+      getNode(rows, 3),
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContentsWithoutThumbnail(
+      getNode(rows, 4),
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
   });
 
-    it('initially shows all projects, most recently edited first', () => {
+  it('initially shows all projects, most recently edited first', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
 
     const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
-    expect(lastEditedHeader.node.innerText).to.contain('Last Edited');
+    expect(getNode(lastEditedHeader).innerText).to.contain('Last Edited');
 
     // Show least recently edited first
     lastEditedHeader.simulate('click');
 
     rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
   });
 
   it('can be sorted by project name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.PROJECT_NAME);
-    expect(projectNameHeader.node.innerText).to.contain('Project Name');
+    expect(getNode(projectNameHeader).innerText).to.contain('Project Name');
 
     // Sort in ascending order by project name
     projectNameHeader.simulate('click');
 
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
 
     // Sort in descending order by project name
     projectNameHeader.simulate('click');
 
     rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
   });
 
   it('can be sorted by student name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.STUDENT_NAME);
-    expect(projectNameHeader.node.innerText).to.contain('Student Name');
+    expect(getNode(projectNameHeader).innerText).to.contain('Student Name');
 
     // Sort in ascending order by student name
     projectNameHeader.simulate('click');
 
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
 
     // Sort in descending order by student name
     projectNameHeader.simulate('click');
 
     rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
   });
 
   it('can be sorted by app type', () => {
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(appTypeHeader.node.innerText).to.contain('Type');
+    expect(getNode(appTypeHeader).innerText).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
 
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
 
     // Sort in descending order by student name
     appTypeHeader.simulate('click');
 
     rows = root.find('tr');
     expect(rows).to.have.length(5);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 4),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
   });
 
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
-    expect(options.nodes[0].innerText).to.equal('All students');
-    expect(options.nodes[1].innerText).to.equal('Alice');
-    expect(options.nodes[2].innerText).to.equal('Bob');
-    expect(options.nodes[3].innerText).to.equal('Charlie');
+    expect(getNode(options, 0).innerText).to.equal('All students');
+    expect(getNode(options, 1).innerText).to.equal('Alice');
+    expect(getNode(options, 2).innerText).to.equal('Bob');
+    expect(getNode(options, 3).innerText).to.equal('Charlie');
 
     const select = root.find('select');
-    expect(select.nodes[0].value).to.equal('_all_students');
+    expect(getNode(select).value).to.equal('_all_students');
   });
 
   it('filters projects when a student is selected from the dropdown', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(select.nodes[0].value).to.equal('Alice');
+    expect(getNode(select).value).to.equal('Alice');
 
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
   });
 
   it('can filter by student and then sort by app type', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Alice'}});
-    expect(select.nodes[0].value).to.equal('Alice');
+    expect(getNode(select).value).to.equal('Alice');
 
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(appTypeHeader.node.innerText).to.contain('Type');
+    expect(getNode(appTypeHeader).innerText).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
 
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
   });
 
   it('shows all students projects if the current students projects all disappear', () => {
     const select = root.find('select');
     select.simulate('change', {target: {value: 'Charlie'}});
-    expect(select.nodes[0].value).to.equal('Charlie');
+    expect(getNode(select).value).to.equal('Charlie');
 
     let rows = root.find('tr');
     expect(rows).to.have.length(2);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      CAT_IMAGE_URL,
+      'Cats and Kittens',
+      'Charlie',
+      'Web Lab',
+      'November 30, 2016'
+    );
 
     // Remove Charlie's project from the list
     const newProjectsData = Array.from(STUB_PROJECTS_DATA);
-    const charlieProjectIndex = newProjectsData.findIndex(project => (
-      project.studentName === 'Charlie'
-    ));
+    const charlieProjectIndex = newProjectsData.findIndex(
+      project => project.studentName === 'Charlie'
+    );
     newProjectsData.splice(charlieProjectIndex, 1);
     root.setProps({projectsData: newProjectsData});
 
     // We should now see all students projects, except Charlie's
     rows = root.find('tr');
-    expect(select.nodes[0].value).to.equal('_all_students');
+    expect(getNode(select).value).to.equal('_all_students');
     expect(rows).to.have.length(4);
-    assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(
+      getNode(rows, 0),
+      null,
+      'Project Name',
+      'Student Name',
+      'Type',
+      'Last Edited'
+    );
+    assertRowContents(
+      getNode(rows, 1),
+      null,
+      'Dominoes',
+      'Bob',
+      'Game Lab',
+      'January 1, 2017'
+    );
+    assertRowContents(
+      getNode(rows, 2),
+      null,
+      'Antelope Freeway',
+      'Alice',
+      'Web Lab',
+      'December 29, 2016'
+    );
+    assertRowContents(
+      getNode(rows, 3),
+      null,
+      'A1 Locksmith',
+      'Alice',
+      'App Lab',
+      'October 29, 2016'
+    );
 
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
     expect(options).to.have.length(3);
-    expect(options.nodes[0].innerText).to.equal('All students');
-    expect(options.nodes[1].innerText).to.equal('Alice');
-    expect(options.nodes[2].innerText).to.equal('Bob');
+    expect(getNode(options, 0).innerText).to.equal('All students');
+    expect(getNode(options, 1).innerText).to.equal('Alice');
+    expect(getNode(options, 2).innerText).to.equal('Bob');
   });
 
   describe('getStudentNames', () => {
     it('shows students in alphabetical order and without duplicates', () => {
-      expect(SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)).to.deep.equal(
-        ['Alice', 'Bob', 'Charlie']);
+      expect(
+        SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)
+      ).to.deep.equal(['Alice', 'Bob', 'Charlie']);
     });
   });
+
+  /**
+   * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
+   * @param {string} projectName Expected project name
+   * @param {string} studentName Expected student name
+   * @param {string} appType Expected app type (App Lab, Game Lab, etc)
+   * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
+   *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
+   *   The desired date format which we will show in all browsers is MM/DD/YYYY.
+   */
+  function assertRowContents(
+    rowElement,
+    thumbnailUrl,
+    projectName,
+    studentName,
+    appType,
+    lastEdited
+  ) {
+    assertRowThumbnail(rowElement, thumbnailUrl);
+    assertRowContentsWithoutThumbnail(
+      rowElement,
+      projectName,
+      studentName,
+      appType,
+      lastEdited,
+      COLUMNS
+    );
+  }
+
+  /**
+   * @param {HTMLTableRowElement} rowElement HTML row element in the projects list table
+   * @param {string} projectName Expected project name
+   * @param {string} studentName Expected student name
+   * @param {string} appType Expected app type (App Lab, Game Lab, etc)
+   * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
+   *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
+   *   The desired date format which we will show in all browsers is MM/DD/YYYY.
+   * @param {object} [columnMap] Optional custom column map to use when comparing expected
+   *   and actual values.
+   */
+  function assertRowContentsWithoutThumbnail(
+    rowElement,
+    projectName,
+    studentName,
+    appType,
+    lastEdited,
+    columnMap = COLUMNS_WITHOUT_THUMBNAILS
+  ) {
+    const projectNameActual =
+      rowElement.childNodes[columnMap.PROJECT_NAME].innerText;
+    const studentNameActual =
+      rowElement.childNodes[columnMap.STUDENT_NAME].innerText;
+    const appTypeActual = rowElement.childNodes[columnMap.APP_TYPE].innerText;
+    const lastEditedActual =
+      rowElement.childNodes[columnMap.LAST_EDITED].innerText;
+
+    expect(projectNameActual).to.equal(projectName);
+    expect(studentNameActual).to.equal(studentName);
+    expect(appTypeActual).to.equal(appType);
+    assertDatesMatch(lastEdited, lastEditedActual);
+  }
+
+  function assertDatesMatch(expected, actual) {
+    if (isNaN(Date.parse(expected))) {
+      // If we're checking against non-date text (a header) just do an equality check
+      expect(actual).to.equal(expected);
+    } else {
+      // Otherwise convert our 'expected' value to a locale string, so tests are not
+      // browser-implementation-dependent
+      expect(actual).to.equal(new Date(expected).toLocaleDateString());
+    }
+  }
+
+  function assertRowThumbnail(rowElement, thumbnailUrl) {
+    const td = rowElement.childNodes[COLUMNS.THUMBNAIL];
+    const img = td.querySelector('img');
+    const src = img && img.getAttribute('src');
+    expect(src).to.equal(thumbnailUrl);
+  }
+
+  /**
+   * Get a particular DOM node out of a react wrapper in a way that's
+   * both compatible with Enzyme 2.x and 3.x.
+   */
+  function getNode(wrapper, index = 0) {
+    return wrapper.at(index).getDOMNode();
+  }
 });

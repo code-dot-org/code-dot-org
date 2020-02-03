@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "ideal": "9",
-    "markdown_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
+    "long_instructions": "Take a good look at this puzzle.  Can you figure out the pattern?",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can you use nested `if` and `if/else` statements to move along the path?\",\"hint_id\":\"courseE_farmer_functions9b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/81bff3e1c1ad5655a9a7410060f33e2b/courseE_farmer_functions9b.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use `repeat until pumpkin` to move through all of the paths.\",\"hint_id\":\"courseE_farmer_functions9b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c1218060a7cd96ab7bdaf2cd10416840/courseE_farmer_functions9b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move through the paths as if they are squares getting larger after each loop.\",\"hint_id\":\"courseE_farmer_functions9b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80a52cebe5504ec4c86c097d37cd295e/courseE_farmer_functions9b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
@@ -36,7 +36,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "instructions": "Can you figure out the pattern that you need to solve this puzzle?",
+    "short_instructions": "Can you figure out the pattern that you need to solve this puzzle?",
     "name_suffix": "_2018",
     "contained_level_names": null
   },

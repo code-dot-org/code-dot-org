@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "*\"Help me get these three tents set up!\"*",
+    "short_instructions": "*\"Help me get these three tents set up!\"*",
     "x": "150",
     "y": "300",
     "start_direction": "90",
@@ -35,7 +35,7 @@
     "ideal": "11",
     "instructions_important": "false",
     "images": "[\r\n      {\"filename\": \"https://images.code.org/80022fe8213c0fa4413ce0e8ec60da3c-image-1512154174110.png\", \"position\": [0, 0]}\r\n]",
-    "markdown_instructions": "*\"Help me get the camp site ready!\"*\r\n\r\nUse the blocks in the toolbox to draw these three tents.",
+    "long_instructions": "*\"Help me get the camp site ready!\"*\r\n\r\nUse the blocks in the toolbox to draw these three tents.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

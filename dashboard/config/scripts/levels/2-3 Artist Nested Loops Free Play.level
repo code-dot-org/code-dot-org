@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Free play, draw something cool with nested loops.",
+    "short_instructions": "Free play, draw something cool with nested loops.",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "use_contract_editor": "false",
     "disable_sharing": "false",
     "impressive": "false",
-    "markdown_instructions": "Free play, draw something cool with nested loops.",
+    "long_instructions": "Free play, draw something cool with nested loops.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

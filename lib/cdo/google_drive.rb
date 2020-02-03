@@ -37,7 +37,11 @@ module Google
 
     def initialize(params={})
       $log.debug 'Establishing Google Drive session'
-      @session = GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
+      @session = if params[:service_account_key]
+                   GoogleDrive::Session.from_service_account_key params[:service_account_key]
+                 else
+                   GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
+                 end
     end
 
     def file(path)
@@ -76,6 +80,41 @@ module Google
 
       $log.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
       file.title = target_name
+    end
+
+    def add_sheet_to_spreadsheet(data, spreadsheet_path, sheet_name)
+      target_name = ::File.basename(spreadsheet_path)
+      target_folder = ::File.dirname(spreadsheet_path)
+      folder = self.folder(target_folder)
+      spreadsheet = @session.spreadsheet_by_title(spreadsheet_path)
+      unless spreadsheet
+        spreadsheet = @session.create_spreadsheet(target_name)
+        folder.add(spreadsheet)
+      end
+      worksheet = spreadsheet.worksheet_by_title(sheet_name)
+      worksheet ||= spreadsheet.add_worksheet(sheet_name, 500)
+      worksheet.delete_rows(1, worksheet.num_rows)
+      worksheet.update_cells(1, 1, data)
+      worksheet.save
+    end
+
+    # Update a sheet (tab) in an _existing_ Google Sheets document, completely overwriting
+    # its contents, and creating it if needed.
+    #
+    # @param [Array.<Array>] data The rows to write into the document
+    # @param [String] document_key The identifier for the google sheet to be updated, as found
+    #   in its share URL.
+    #   e.g. "f0SdU35KaAv3LE7IYhHkFCb0Y6fZTGgk1GIa1LtO8uYx"
+    # @param [String] sheet_name The full name of the sheet/tab within the document to be
+    #   created/updated.
+    def update_sheet(data, document_key, sheet_name)
+      document = @session.spreadsheet_by_key(document_key)
+      raise "Could not find document #{document_key}" unless document
+      worksheet = document.worksheet_by_title(sheet_name)
+      worksheet ||= document.add_worksheet(sheet_name, 500)
+      worksheet.delete_rows(1, worksheet.num_rows)
+      worksheet.update_cells(1, 1, data)
+      worksheet.save
     end
 
     private

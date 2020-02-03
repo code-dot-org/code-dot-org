@@ -1,58 +1,35 @@
 ---
-title: <%= hoc_s(:title_signup_thanks) %>
-layout: wide
-nav: how_to_nav
-social:
-  "og:title": "<%= hoc_s(:meta_tag_og_title) %>"
-  "og:description": "<%= hoc_s(:meta_tag_og_description) %>"
-  "og:image": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
-  "og:image:width": 1440
-  "og:image:height": 900
-  "og:url": "http://<%=request.host%>"
-  "twitter:card": player
-  "twitter:site": "@codeorg"
-  "twitter:url": "http://<%=request.host%>"
-  "twitter:title": "<%= hoc_s(:meta_tag_twitter_title) %>"
-  "twitter:description": "<%= hoc_s(:meta_tag_twitter_description) %>"
-  "twitter:image:src": "http://<%=request.host%>/images/hourofcode-2015-video-thumbnail.png"
+title: Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 ---
-<% facebook = {:u=>"http://#{request.host}/us"}
-
-twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text).gsub(/%{random_donor}/, get_random_donor_twitter)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode' %>
 
 # Terima kasih karena telah mendaftar sebagai penyelengara Hour of Code!
 
-Sebagai bentuk terima kasih atas bantuan Anda yang memungkinkan para siswa mulai belajar ilmu komputer, kami ingin memberi Anda sebuah paket poster cetak profesional yang menampilkan beragam teladan untuk kelas Anda. Gunakan kode penawaran **FREEPOSTERS** saat checkout. (Catatan: Penawaran ini hanya tersedia selama masih ada dan anda menanggung ongkos kirim. Karena poster ini dikirim dari Amerika, ongkos kirim bisa mahal jika dikirim ke Kanada dan internasional. Kami memahami bahwa ini mungkin tidak dalam anggaran anda, dan kami mendoorong anda untuk mencetak [PDF files](https://code.org/inspire) untuk kelas anda.)  
-<br /> [<button>Dapatkan Poster</button>](https://store.code.org/products/code-org-posters-set-of-12) Gunakan kode penawaran FREEPOSTERS
+<br /> **The Hour of Code runs during {{ campaign_date/full }} and we'll be in touch about new tutorials and other exciting updates as they come out. In the meantime, what can you do now?**
 
-<% if @country == 'us' %> Terima Kasih untuk kemurahan hati Ozobot, Dexter Industries, littleBits, dan Wonder Workshop, lebih dari 100 kelas akan dipilih untuk menerima robot atau sirkuit untuk kelas mereka! Untuk dapat memenuhi syarat untuk menerima satu set, pastikan untuk mengisi survei yang dikirim dari Code.org Hour of Code. Code.org akan memilih kelas yang menang. Sementara itu, periksa beberapa aktivitas robotika dan sirkuit. Harap dicatat bahwa ini hanya terbuka untuk sekolah di Amerika Serikat. <% end %>
-
-<br /> **Jam Kode berjalan selama <%= campaign_date('full') %> dan kami akan menghubungi tutorial baru dan pembaruan menarik lainnya saat mereka keluar. Sementara itu, apa yang bisa kamu lakukan sekarang?**
+As a special thank you to Hour of Code organizers, we have a new poster set featuring Malala, Stephen Curry, Shakira and more available to order at a [50% discount from Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). This year, each set comes with 6 posters and 126 "I did the Hour of Code" stickers. With the discount you'll get them for less than our cost to make them. Supplies are limited, so order your posters soon. If you're not in the United States, you can [download and print all posters]({{ promote/promote_posters_url }}).
 
 ## 1. Sebarkan informasi ini di sekolah dan komunitas Anda
 
-Anda baru saja bergabung dengan gerakan Hour of Code. Beritahu teman Anda dengan**#HourOfCode**!
+You just joined the Hour of Code movement. Tell your friends with **#HourOfCode**!
 
-<%= view :share_buttons, facebook:facebook, twitter:twitter %> <br /> Ajak orang lain berpartisipasi [dengan email contoh kami.](%= resolve_url('/promote/resources#sample-emails') %) Hubungi kepala sekolahmu dan tantang setiap kelas di sekolahmu untuk mendaftar. Ajak kelompok masyarakat — Pramuka, kelompok keagamaan, universitas, pensiunan, serikat pekerja atau bahkan teman - teman. Anda tidak harus sekolah untuk belajar keterampilan baru. Undang politisi atau pembuat kebijakan untuk mengunjungi sekolah Anda untuk Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
+{{ social_media_hoc }} <br /> Encourage others to participate [with our sample emails.]({{ promote/sample_emails }}) Contact your principal and challenge every classroom at your school to sign up. Recruit a local group — boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Anda tidak harus bersekolah untuk belajar keterampilan baru. Invite a local politician or policy maker to visit your school for the Hour of Code. Ini dapat membantu membangun dukungan bagi ilmu komputer di daerah Anda di luar dari sesi satu Hour of Code.
 
-Gunakan [ poster, spanduk, stiker, video, dan lainnya ](%= resolve_url('/promote/resources') %) untuk acara Anda sendiri.
+Use these [posters, banners, stickers, videos and more]({{ promote/resources }}) for your own event.
 
 ## 2. Temukan relawan lokal untuk membantu kegiatan Anda.
 
-[Cari peta relawan kami](%= resolve_url('https://code. org/volunteer/local') %) untuk sukarelawan yang dapat mengunjungi kelas atau melakukan video chat untuk menginspirasi siswa Anda tentang kemungkinan yang bermacam - macam dengan ilmu komputer.
+[Search our volunteer map]({{ urls/volunteer_local }}) for volunteers who can visit your classroom or video chat remotely to inspire your students about the breadth of possibilities with computer science.
 
 ## 3. Rencanakan Hour of Code Anda
 
-Pilih sebuah [Aktifitas Hour of Code](https://hourofcode.com/learn) untuk kelas Anda dan[Tinjau Panduan ini](%= resolve_url('/how-to') %).
+Choose an [Hour of Code activity](https://hourofcode.com/learn) for your classroom and [review this how-to guide]({{ urls/how_to_guide }}).
+
+### 4. Stock up on swag
+
+Order materials to help get students excited about your event by heading to the Code.org [Amazon store](https://www.amazon.com/stores/page/8557B2A6-EBF2-4C9F-95C5-C3256FBA0220). [Order posters](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ) (and get an extra 50% off), Hour of Code kits, stickers, and more! But hurry, supplies are limited.
 
 # Setelah Houf of Code
 
-<% if @country == 'us' %> Hour of Code hanyalah permulaan. Apakah anda administrator, guru, advocate, kami memiliki [pengembangan profesional, kurikulum dan sumber untuk membantu anda memperkenalkan kelas ilmu komputer ke sekolah anda.](https://code.org/yourschool) Jika Anda telah mengajar ilmu komputer, gunakan sumber berikut selama CS Education Week untuk mengumpulkan dukungan dari administration, orang tua, dan komunitas.
+{{ go_beyond_hoc }}
 
-Kamu memiliki banyak pilihan yang tepat untuk sekolahmu. Sebagian besar organisasi yang menawarkan tutorial Hour of Code juga memiliki kurikulum dan pengembangan profesional yang tersedia. Jika Anda menemukan pelajaran yang Anda sukai, silahkan bertanya lebih lanjut. Untuk membantu Anda memulai, kami telah menyoroti sejumlah [penyedia kurikulum yang akan membantu Anda atau siswa Anda melampaui satu jam.](https://hourofcode.com/beyond)
-
-<% else %> Hour of Code hanyalah permulaan. Sebagian besar organisasi yang menawarkan pelajaran Hour of Code juga memiliki kurikulum lanjutan. Untuk membantu Anda memulai, kami telah menyoroti sejumlah [penyedia kurikulum yang akan membantu Anda atau siswa Anda melampaui satu jam.](https://hourofcode.com/beyond)
-
-Code.org juga menawarkan [ Pengantar Ilmu Komputer ](https://code.org/educate/curriculum/cs-fundamentals-international) yang diterjemahkan ke lebih dari 25 bahasa tanpa biaya kepada Anda atau sekolah Anda. <% end %>
-
-<%= view 'popup_window.js' %>
+{{ popup_window.js }}

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish the picture by using a jump block!",
+    "short_instructions": "Finish the picture by using a jump block!",
     "x": "50",
     "y": "200",
     "start_direction": "90",

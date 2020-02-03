@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "Use as few blocks as possible to complete this puzzle!  \r\n\r\nMove me to the pile and remove all the dirt, then move to the hole and fill it completely.",
+    "short_instructions": "Use as few blocks as possible to complete this puzzle!  \r\n\r\nMove me to the pile and remove all the dirt, then move to the hole and fill it completely.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,7 +28,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Use as few blocks as possible to complete this puzzle!  \r\n\r\nMove me to the pile and remove all the dirt, then move to the hole and fill it completely.",
+    "long_instructions": "Use as few blocks as possible to complete this puzzle!  \r\n\r\nMove me to the pile and remove all the dirt, then move to the hole and fill it completely.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",

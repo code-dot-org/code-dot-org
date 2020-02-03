@@ -1,0 +1,5 @@
+.field
+  =f.label 'Custom helper library code'
+  %p
+    This code will be injected between the official helper library and the student's code
+  ~ f.text_area :custom_helper_library, placeholder: 'Add some arbitrary javascript', rows: 4, value: @level.custom_helper_library

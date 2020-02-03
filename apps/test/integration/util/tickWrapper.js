@@ -41,9 +41,12 @@ module.exports.reset = function reset() {
  * @param {function} fn - Function to call on given tick
  */
 module.exports.runOnAppTick = function runOnAppTick(app, tick, fn) {
-  insert(app, takeActionConditionally(fn, function () {
-    return app.tickCount === tick;
-  }));
+  insert(
+    app,
+    takeActionConditionally(fn, function() {
+      return app.tickCount === tick;
+    })
+  );
 };
 
 /**
@@ -55,10 +58,10 @@ module.exports.runOnAppTick = function runOnAppTick(app, tick, fn) {
  * @returns the promise
  */
 module.exports.tickAppUntil = function tickAppUntil(app, predicate) {
-  return new Promise(function (resolve) {
+  return new Promise(function(resolve) {
     // Create an action that will resolve our promise the first time it's hit
     var tookAction = false;
-    var action = function () {
+    var action = function() {
       if (tookAction) {
         return;
       }
@@ -85,8 +88,8 @@ function wrapOnTick(app) {
   originalApp = app;
   originalOnTick = app.onTick;
 
-  app.onTick = _.wrap(app.onTick, function () {
-    preTickFunctions.forEach(function (beforeTick) {
+  app.onTick = _.wrap(app.onTick, function() {
+    preTickFunctions.forEach(function(beforeTick) {
       beforeTick();
     });
 
@@ -101,7 +104,7 @@ function wrapOnTick(app) {
  *   to true
  */
 function takeActionConditionally(action, condition) {
-  return function () {
+  return function() {
     if (condition()) {
       action();
     }

@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\" style=\"float:right; max-width: 150px; margin: 10px;\">\r\n\r\n# Randomization\r\n\r\nMoving on the first click is fine, but this smiley would be even cooler if it moved somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber` block to do just that.\r\n\r\n# Do This\r\n\r\nInstead of setting the \"x\" and \"y\" properties to a specific number, use the `randomNumber` block to pick a new random \"x\" and \"y\" each time the smiley is clicked.\r\n\r\n_Tip: The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random numbers will ensure that the smiley is always visible on screen?_",
+    "long_instructions": "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\" style=\"float:right; max-width: 150px; margin: 10px;\">\r\n\r\n# Randomization\r\n\r\nMoving on the first click is fine, but this smiley would be even cooler if it moved somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber` block to do just that.\r\n\r\n# Do This\r\n\r\nInstead of setting the \"x\" and \"y\" properties to a specific number, use the `randomNumber` block to pick a new random \"x\" and \"y\" each time the smiley is clicked.\r\n\r\n_Tip: The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random numbers will ensure that the smiley is always visible on screen?_",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

@@ -10,7 +10,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.1'
+gem 'rails', '~> 5.0.7.2'
 gem 'rails-controller-testing'
 
 # Add CacheFile backend module.
@@ -28,9 +28,12 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 2.0'
 
-gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
+# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
+# breaks some firebase URIs. See
+# https://github.com/code-dot-org/code-dot-org/pull/31614
+gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
-gem 'mysql2', '~> 0.3.13'
+gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
 # Ref: https://github.com/bdurand/seamless_database_pool/pull/39
 gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cdo'
@@ -47,8 +50,8 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 gem 'xxhash'
 
+gem 'aws-google' # use Google Accounts for AWS access
 gem 'google-api-client', '~> 0.23'
-gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
@@ -60,6 +63,8 @@ gem 'rack-mini-profiler'
 
 group :development do
   gem 'annotate'
+  gem 'pry'
+  gem 'rb-readline'
   gem 'ruby-progressbar', require: false
   gem 'web-console'
 end
@@ -82,6 +87,7 @@ group :development, :test do
   #gem 'debugger' unless ENV['RM_INFO']
 
   gem 'active_record_query_trace'
+  gem 'benchmark-ips'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman'
@@ -92,7 +98,6 @@ group :development, :test do
   gem 'webmock', require: false
 
   gem 'codecov', require: false
-  gem 'fake_sqs'
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'simplecov', '~> 0.9', require: false
@@ -100,18 +105,18 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
-  gem 'chromedriver-helper', '~> 0.0.7'
   gem 'cucumber'
-  gem 'eyes_selenium', '3.14.2'
+  gem 'eyes_selenium'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec'
-  gem 'selenium-webdriver', '3.8.0'
+  gem 'selenium-webdriver'
   gem 'spring'
   gem 'spring-commands-testunit'
+  gem 'webdrivers', '~> 3.0'
 
   # For pegasus PDF generation / merging testing.
   gem 'parallel_tests'
@@ -135,6 +140,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
 gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
 gem 'chronic', '~> 0.10.2'
@@ -167,7 +173,7 @@ gem 'ims-lti', github: 'wjordan/ims-lti', ref: 'oauth_051'
 # Ref: https://github.com/Clever/omniauth-clever/pull/7
 gem 'omniauth-clever', '~> 1.2.1', github: 'Clever/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
-gem 'omniauth-google-oauth2', '~> 0.3.1'
+gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
 # Ref: https://github.com/joel/omniauth-windowslive/pull/16
 # Ref: https://github.com/joel/omniauth-windowslive/pull/17
@@ -182,7 +188,7 @@ gem 'haml', github: 'wjordan/haml', ref: 'cdo'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '~> 1.8.2'
+gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
@@ -195,7 +201,7 @@ gem 'redcarpet', '~> 3.3.4'
 # Ref: https://github.com/alexreisner/geocoder/pull/1085 (pending new RubyGems release)
 gem 'geocoder', github: 'wjordan/geocoder', ref: 'rack-request-fix'
 
-gem 'mini_magick'
+gem 'mini_magick', ">=4.9.4"
 gem 'rmagick'
 
 gem 'acts_as_list'
@@ -240,10 +246,11 @@ gem 'aws-sdk-core', '~> 3'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
 gem 'aws-sdk-firehose', '~> 1.6'
-gem 'aws-sdk-rds', '~> 1'
+gem 'aws-sdk-glue', '~> 1'
+gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
-gem 'aws-sdk-sqs', '~> 1'
+gem 'aws-sdk-secretsmanager', '~> 1'
 
 # Lint tools
 group :development, :staging do
@@ -270,7 +277,11 @@ gem 'net-scp'
 gem 'net-ssh'
 gem 'oj'
 
-gem 'rest-client', '~> 2.0'
+gem 'rest-client', '~> 2.0.1'
+
+# A rest-client dependency
+# This is the latest version that's installing successfully
+gem 'unf_ext', '0.0.7.2'
 
 # Generate SSL certificates.
 gem 'acmesmith', '~> 0'
@@ -327,7 +338,11 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
+gem 'active_record_union'
 gem 'activerecord-import'
+gem 'scenic'
+gem 'scenic-mysql_adapter'
+
 gem 'colorize'
 
 gem 'gnista', github: 'wjordan/gnista', ref: 'embed', submodules: true

@@ -32,8 +32,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
   attributes :id, :organizer, :location_name, :location_address, :course,
     :subject, :capacity, :notes, :state, :facilitators,
     :enrolled_teacher_count, :sessions, :account_required_for_attendance?,
-    :enrollment_code, :on_map, :funded, :funding_type, :ready_to_close?,
-    :date_and_location_name, :regional_partner_name, :regional_partner_id
+    :enrollment_code, :attended, :on_map, :funded, :funding_type, :ready_to_close?,
+    :date_and_location_name, :regional_partner_name, :regional_partner_id,
+    :scholarship_workshop?, :can_delete, :created_at
 
   def sessions
     object.sessions.map do |session|
@@ -43,6 +44,9 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
 
   def organizer
     {id: object.organizer.id, name: object.organizer.name, email: object.organizer.email}
+  rescue
+    # Fallback value if workshop organizer, who is a user, no longer exists
+    {id: nil, name: nil, email: nil}
   end
 
   def facilitators
@@ -59,7 +63,15 @@ class Api::V1::Pd::WorkshopSerializer < ActiveModel::Serializer
     @scope.try(:[], :enrollment_code)
   end
 
+  def attended
+    object.enrollments.find_by(code: @scope.try(:[], :enrollment_code))&.attendances&.any?
+  end
+
   def regional_partner_name
     object.regional_partner.try(:name)
+  end
+
+  def can_delete
+    @scope.try(:[], :current_user) && object.can_user_delete?(@scope[:current_user])
   end
 end

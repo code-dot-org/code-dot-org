@@ -34,6 +34,17 @@ class Pd::Workshop < ActiveRecord::Base
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
+  belongs_to :organizer, class_name: 'User'
+  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
+
+  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  accepts_nested_attributes_for :sessions, allow_destroy: true
+
+  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  belongs_to :regional_partner
+
+  has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
+
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}
   validates_length_of :notes, maximum: 65535
@@ -46,15 +57,6 @@ class Pd::Workshop < ActiveRecord::Base
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
-
-  belongs_to :organizer, class_name: 'User'
-  has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
-
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  accepts_nested_attributes_for :sessions, allow_destroy: true
-
-  has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
-  belongs_to :regional_partner
 
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
@@ -249,12 +251,20 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_URLS_MAP[course]
   end
 
+  def course_key
+    COURSE_KEY_MAP[course]
+  end
+
   def friendly_name
     start_time = sessions.empty? ? '' : sessions.first.start.strftime('%m/%d/%y')
     course_subject = subject ? "#{course} #{subject}" : course
 
     # Limit the friendly name to 255 chars
     "#{course_subject} workshop on #{start_time} at #{location_name} in #{friendly_location}"[0...255]
+  end
+
+  def friendly_subject
+    subject ? "#{subject} Workshop" : nil
   end
 
   # E.g. "March 1-3, 2017" or "March 30 - April 2, 2017"
@@ -298,6 +308,26 @@ class Pd::Workshop < ActiveRecord::Base
     return unless ended_at.nil?
     self.ended_at = Time.zone.now
     save!
+
+    # We want to send exit surveys now, but that needs to be done on the
+    # production-daemon machine, so we'll let the process_pd_workshop_emails
+    # cron job call the process_ends function below on that machine.
+  end
+
+  # This is called by the process_pd_workshop_emails cron job which is run
+  # on the production-daemon machine, and will send exit surveys to workshops
+  # that have been ended in the last two days when they haven't already had
+  # that done.
+  # The emails must be sent from production-daemon because they contain attachments.
+  # See https://github.com/code-dot-org/code-dot-org/blob/96b890d6e6f77de23bc5d4469df69b900e3fbeb7/lib/cdo/poste.rb#L217
+  # for details.
+  def self.process_ends
+    end_on_or_after(Time.now - 2.days).each do |workshop|
+      if !workshop.processed_at || workshop.processed_at < workshop.ended_at
+        workshop.send_exit_surveys
+        workshop.update!(processed_at: Time.zone.now)
+      end
+    end
   end
 
   def state
@@ -309,6 +339,19 @@ class Pd::Workshop < ActiveRecord::Base
   def year
     return nil if sessions.empty?
     sessions.order(:start).first.start.strftime('%Y')
+  end
+
+  # Returns the school year the summer workshop is preparing for, in
+  # the form "2019-2020", like application_year on Pd Applications.
+  # The school year runs 6/1-5/31.
+  # @see Pd::Application::ActiveApplicationModels::APPLICATION_YEARS
+  def school_year
+    return nil if sessions.empty?
+
+    workshop_year = year
+    sessions.order(:start).first.start.month >= 6 ?
+      "#{workshop_year}-#{workshop_year.to_i + 1}" :
+      "#{workshop_year.to_i - 1}-#{workshop_year}"
   end
 
   # Suppress 3 and 10-day reminders for certain workshops
@@ -332,6 +375,7 @@ class Pd::Workshop < ActiveRecord::Base
       rescue => e
         errors << "teacher enrollment #{enrollment.id} - #{e.message}"
       end
+
       workshop.facilitators.each do |facilitator|
         next if facilitator == workshop.organizer
         begin
@@ -340,6 +384,7 @@ class Pd::Workshop < ActiveRecord::Base
           errors << "facilitator #{facilitator.id} - #{e.message}"
         end
       end
+
       begin
         Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
       rescue => e
@@ -361,19 +406,37 @@ class Pd::Workshop < ActiveRecord::Base
     raise "Failed to send reminders: #{errors.join(', ')}" unless errors.empty?
   end
 
+  # Send follow up email to teachers that attended CSF Intro workshops which ended exactly X days ago
+  def self.send_follow_up_after_days(days)
+    # Collect errors, but do not stop batch. Rethrow all errors below.
+    errors = []
+
+    scheduled_end_in_days(-days).each do |workshop|
+      next unless workshop.course == COURSE_CSF && workshop.subject == SUBJECT_CSF_101
+      attended_teachers = workshop.attending_teachers
+
+      workshop.enrollments.each do |enrollment|
+        next unless attended_teachers.include?(enrollment.user)
+
+        email = Pd::WorkshopMailer.teacher_follow_up(enrollment)
+        email.deliver_now
+      rescue => e
+        errors << "teacher enrollment #{enrollment.id} - #{e.message}"
+        Honeybadger.notify(e,
+          error_message: 'Failed to send follow up email to teacher',
+          context: {pd_enrollment_id: enrollment.id}
+        )
+      end
+    end
+
+    raise "Failed to send follow up: #{errors.join(', ')}" unless errors.empty?
+  end
+
   def self.send_automated_emails
     send_reminder_for_upcoming_in_days(3)
     send_reminder_for_upcoming_in_days(10)
     send_reminder_to_close
-  end
-
-  def self.process_ended_workshop_async(id)
-    workshop = Pd::Workshop.find(id)
-    raise "Unexpected workshop state #{workshop.state}." unless workshop.state == STATE_ENDED
-
-    workshop.send_exit_surveys
-
-    workshop.update!(processed_at: Time.zone.now)
+    send_follow_up_after_days(30)
   end
 
   # Updates enrollments with resolved users.
@@ -383,7 +446,13 @@ class Pd::Workshop < ActiveRecord::Base
     end
   end
 
+  # Called at the very end of the async close-workshop workflow, to actually send exit
+  # surveys to attended teachers.  Note that logic here is more-or-less independent
+  # from other logic deciding whether a workshop should have exit surveys.
   def send_exit_surveys
+    # FiT workshops should not send exit surveys
+    return if SUBJECT_FIT == subject || COURSE_FACILITATOR == course
+
     resolve_enrolled_users
 
     # Send the emails
@@ -531,6 +600,14 @@ class Pd::Workshop < ActiveRecord::Base
     ].include?(subject)
   end
 
+  def csf?
+    course == COURSE_CSF
+  end
+
+  def csf_201?
+    course == COURSE_CSF && subject == SUBJECT_CSF_201
+  end
+
   def funded_csf?
     course == COURSE_CSF && funded
   end
@@ -579,6 +656,11 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.last.try {|session| session.attendances.any?}
   end
 
+  # whether we will show the scholarship dropdown
+  def scholarship_workshop?
+    csf? || local_summer?
+  end
+
   def pre_survey?
     PRE_SURVEY_BY_COURSE.key? course
   end
@@ -610,5 +692,36 @@ class Pd::Workshop < ActiveRecord::Base
       end
       [unit_name, lesson_names]
     end
+  end
+
+  # Users who could be re-assigned to be the organizer of this workshop
+  # @return [ActiveRecord::Relation]
+  def potential_organizers
+    user_queries = []
+
+    # workshop admins can become the organizer of any workshop
+    organizer_roles = [UserPermission::WORKSHOP_ADMIN]
+
+    if regional_partner_id
+      # if there is a regional partner, only that partner's PMs can become the organizer
+      user_queries << regional_partner_program_managers
+    else
+      # otherwise, any PM can become the organizer
+      organizer_roles << UserPermission::PROGRAM_MANAGER
+    end
+
+    user_queries << User.joins(:permissions).merge(UserPermission.where(permission: organizer_roles))
+
+    # any CSF facilitator can become the organizer of a CSF workshop
+    if course == Pd::Workshop::COURSE_CSF
+      user_queries << User.joins(:courses_as_facilitator).merge(Pd::CourseFacilitator.where(course: Pd::Workshop::COURSE_CSF))
+    end
+
+    # Combine multiple queries into single result set.
+    user_queries.inject(:union)
+  end
+
+  def can_user_delete?(user)
+    state != STATE_ENDED && Ability.new(user).can?(:destroy, self)
   end
 end

@@ -1,60 +1,59 @@
 ---
-title: <%= hoc_s(:title_how_to_parents) %>
-layout: wide
-nav: how_to_nav
+title: Útmutató szülőknek
 ---
-<%= view :signup_button %>
 
-# How to do an Hour of Code with your child
+{{ signup_button }}
 
-### Complete an Hour of Code at home or volunteer to bring it to your child’s classroom!
+# A "Hour of Code" esemény gyerekekkel - útmutató
+
+### Csinálj egy "Hour of Code" eseményt otthon vagy önkéntesként menj el a gyereked iskolájába!
 
 * * *
 
 ## 1) Nézd meg ezt az útmutató videót <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## 2) Choose a tutorial
+## 2) Válassz bemutatót
 
-We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
+Számos vicces, egy órás gyakorlatot kínálunk minden korosztály számára, melyeket partnereink készítettek. [Próbáld ki őket!]({{ urls/learn }})
 
-**All Hour of Code tutorials are self-guided - allowing your child to work at their own pace and skill level**
+**Az "Hour of Code" esemény anyagai önállóan is elvégezhetőek, ezáltal a gyerekek saját ritmusukban haladhatnak.**
 
-[![](/images/fit-700/tutorials.png)](%= resolve_url('/learn') %)
+[![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
 ## 3) A szükséges technológiai eszközök ellenőrzése
 
-The best Hour of Code experience will be with Internet-connected computers. But you **don’t** need a computer. There are many activities that are "unplugged" and can be done without any technology at all. Test tutorials on your computer or device. Make sure they work properly on browsers with sound and video.
+A legjobb "Hour of Code" élményt internetkapcsolattal rendelkező számítógépekkel lehet elérni. De **nincs** feltétlenül szükség számítógépre. Nagyon sok tevékenységet a technológia jelenléte nélkül is elvégezhetünk, ezek az úgynevezett "unplugged" tevékenységek. Teszteld le a bemutatókat a számítógépeden vagy más eszközödön. Győződj meg arról, hogy megfelelően működnek a böngészőben, a videókkal és hangokkal egyetemben.
 
-**Want to learn alongside your child?** Try [pair programming.](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) Computer science is social and collaborative.
+**Együtt tanulna a gyerekével?** Próbálja ki a [páros programozást](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning). A technika lehetővé teszi az együttműködést.
 
-## 4) Start your Hour of Code with an inspiring video
+## 4) Indítsd a "Hour of Code" eseményedet egy inspiráló videóval
 
-Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
+Indítsa el a "Hour of Code" eseményt azáltal, hogyinspirálja a résztvevőket, valamint megvitatja, hogy a számítógépes tudomány milyen hatással van életünk minden részére.
 
 **Mutass egy inspiráló videót az alábbiak közül:**
 
-- The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh (there are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions).
-- The [Hour of Code Worldwide video](https://www.youtube.com/watch?v=KsOIlDT145A).
-- [President Obama calling on all students to learn computer science](https://www.youtube.com/watch?v=6XvmhE1J9PY).
-- Find more inspirational [resources](%= codeorg_url('/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
+- Az eredeti Code.org bemutatóvideó Bill Gates, Mark Zuckerberg és az NBA sztár Chris Bosh szereplésével. (Elérhető [1 perces](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 perces](https://www.youtube.com/watch?v=nKIu9yen5nc) és [9 perces](https://www.youtube.com/watch?v=dU1xS07N-FA) verzióban).
+- A ["Hour of Code" a nagyvilágban videó](https://www.youtube.com/watch?v=KsOIlDT145A).
+- Obama elnök felhívja minden diák figyelmét [ebben a videóban](https://www.youtube.com/watch?v=6XvmhE1J9PY) az informatika fontosságára.
+- Kattints ide még több inspiráló [anyagért]({{ urls/inspire }}) és [videóért](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Nem gond, ha teljesen új vagy az informatika világában. Itt van néhány ötlet, hogy hogyan hozd létre a saját "Hour of Code" rendezvényedet:
 
-- Explain ways technology impacts our lives, with examples both boys and girls will care about (Talk about saving lives, helping people, connecting people, etc.).
-- Sorolj fel olyan dolgokat a midennapi életből amely program alapján működik!
-- See tips for getting girls interested in computer science [here](%= codeorg_url('/girls') %).
+- Magyarázd el, hogyan hat az életünkre a technológia, olyan példákkal, amelyek a fiúk és a lányok számára is érdekesek (beszélj életmentésről, emberek segítéséről, az emberek közötti kapcsolatok ápolásáról stb...).
+- Sorolj fel olyan dolgokat a midennapi életből amely programkód alapján működik.
+- [Itt]({{ urls/girls }}) találhatsz tippeket, hogy lányokat is inspirálj a számítástechnikára.
 
-Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx) for best practices from experienced educators.
+Szeretnél még több ötletet? [Nézd meg mintatantervünket](/files/AfterschoolEducatorLessonPlanOutline.docx), mely a legjobb gyakolatokat tartalmazza egyenesen szakértőinktől.
 
 ## 5) Kódolj!
 
 <img src="/images/fit-700/tutorial-short-link.png" />
 
-When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
+Ha már kiválasztottad azt a gyakorlatot, amelyiket csinálni szeretnél mentsd el gyorsan a könyvjelzők közé.
 
-**When your child come across difficulties**
+**Ha a gyerek nehézségekbe ütközik**
 
-It’s okay to respond:
+Természetes reakciók lehetnek:
 
 - "Nem tudom. Találjunk együtt megoldást!"
 - "A technika nem mindig úgy működik, mint ahogy azt mi elképzeljük."
@@ -62,17 +61,17 @@ It’s okay to respond:
 
 ## 6) Ünnepelj
 
-[Print certificates](%= codeorg_url('/certificates') %) for your child (and yourself!).
+Nyomtasd ki a [részvételi igazolást]({{ urls/certificates }}) a gyermekednek (és magadnak is!).
 
-Oszd meg a "Kódolás Órája"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
+Oszd meg a "Hour of Code"-hoz kapcsolódó fotóidat, videóidat a közösségi hálón. Használd a #HourOfCode és a @codeorg tageket, így mi is ki tudjuk emelni az eredményeidet!
 
-Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) if you still have questions.
+Olvasd át a ["Hour of Code" GYIK](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) részét, ha még mindig kérdésed van.
 
-## Mi jön a "Kódolás Órája" után?
+## Mi jön a "Hour of Code" esemény után?
 
-The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
+A "Hour of Code" esemény csak egy újabb lépés előre, melynek célja, hogy megismerd jobban a technológiát, valamint azt, hogy hogyan kell szoftvereket készíteni:
 
-- Encourage your child to continue [to learn online](%= codeorg_url('/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- Biztasd gyermeked arra, hogy folytassa a [ tanulást online]({{ urls/learn_beyond }}).
+- Segíts [népszerűsíteni]({{ urls/promote }}) a számítástechnika oktatást gyermeked iskolájában.
 
-<%= view :signup_button %>
+{{ signup_button }}

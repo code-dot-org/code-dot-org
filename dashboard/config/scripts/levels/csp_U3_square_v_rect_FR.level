@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 13,
   "properties": {
-    "markdown_instructions": "<img src=\"https://images.code.org/2f9b8b6a1c42b7c6c881f89867352907-image-1506460228029.png\" style=\"float: right\">\r\n\r\nIn this lesson you wrote code to make the turtle draw squares. Briefly describe how the code for drawing a rectangle would be different than drawing a square.  (Example rectangle at right)",
+    "long_instructions": "<img src=\"https://images.code.org/2f9b8b6a1c42b7c6c881f89867352907-image-1506460228029.png\" style=\"float: right\">\r\n\r\nIn this lesson you wrote code to make the turtle draw squares. Briefly describe how the code for drawing a rectangle would be different than drawing a square.  (Example rectangle at right)",
     "instructions_important": "false",
     "placeholder": "Enter your response here",
     "allow_user_uploads": "false",

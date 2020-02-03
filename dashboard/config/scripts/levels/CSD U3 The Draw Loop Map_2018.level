@@ -7,11 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "The Draw Loop",
-    "reference": "/docs/csd/draw_loop/index.html",
+    "reference": "/docs/concepts/game-lab/the-draw-loop/index.html",
     "parent_level_id": 8942,
     "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-20 00:07:11 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

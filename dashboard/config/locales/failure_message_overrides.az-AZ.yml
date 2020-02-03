@@ -37,6 +37,8 @@ az:
       Kiki_StarWars_Test_5_failure_message_override: Oyun bitdi!
       Kiki_StarWars_Test_5_Example_failure_message_override: Oyun bitdi!
       WhileAdventure_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      courseC19_playLab_EOC3_failure_message_override: Sen oyununa və proqramına hərəkət
+        etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
       courseE_playLab_scaffold3_failure_message_override: Sen oyununa və proqramına
         hərəkət etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
       courseE_playLab_scaffold3_2018_failure_message_override: Sen oyununa və proqramına

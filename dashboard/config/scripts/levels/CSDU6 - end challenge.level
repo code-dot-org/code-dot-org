@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Board Events and Outputs\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use board events, the led, and the buzzer, try to create an app that uses all three.",
+    "long_instructions": "# Challenge: Board Events and Outputs\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use board events, the led, and the buzzer, try to create an app that uses all three.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

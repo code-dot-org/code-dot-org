@@ -23,6 +23,7 @@ az:
         edit_header: Hesab Detallarına düzəliş edin
         error:
           future: gələcəkdə ola bilməz
+  beta: beta versiya
   hello: Salam, dünya
   welcome_back: Bir daha xoş gəldiniz, %{name}
   your_professional_learning_plan: Sizin peşəkar öyrənmə planınız
@@ -34,12 +35,7 @@ az:
   next_resource: Növbəti resurs
   cancel: İmtina et
   okay: Oldu
-  add_teacher_form:
-    code:
-      label: 'Müəllim əlavə edin:'
-      instructions: Xahiş edirik, sizin müəlliminiz tərəfindən sizin ilə paylaşılmış
-        kodu daxil edin. ABCDEF kimi 6 hərfli koddur.
-    submit: Müəllim əlavə edin
+  or: və ya
   add_hint_form:
     placeholder: Xahiş olunur ip-ucunu bura daxil edesiniz
     submit: Məsləhət əlavə et
@@ -53,7 +49,6 @@ az:
   of: "/"
   more: DAHA ÇOX
   less: DAHA AZ
-  beta: beta versiya
   try_hoc: Kod Saatında özünüzü sınayın, buraya klikləyin >> 
   try_k8intro: Bizim K-8 İnformatikaya Giriş kursunu (15-25 saat) sınaqdan keçirin
   k8intro: K-8 yaş qrupu (12-13 yaşlılar) üçün İnformatikaya giriş kursu (15-25 saat)
@@ -71,6 +66,7 @@ az:
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft Hesabı
+    microsoft_v2_auth: Microsoft Hesabı
     forgot_password: Parolunuzu unutmusunuz?
     need_confirmation: Təsdiq göstərişlərini almamisiniz?
     need_unlock: Kilidaçma göstərişlərini almamisiniz?
@@ -183,10 +179,6 @@ az:
     header:
       finished_hoc: Kod Saatımı bitirdim
       sign_in_to_save: Nəticələri itirməmək üçün daxil olun
-      free_play:
-        artist: Nə isə çəkin
-      home: Ev səhifəsi
-      courses: marşrutlar
       project_gallery: Layihə qalereyası
       sections: Bölmələr
       teacher_community: Müəllim icması
@@ -228,6 +220,20 @@ az:
       already_registered: Artıq qeydiyyatdan keçmisiniz?
       team: Komanda
       driver: Sürücü
+      create: Düzəlt
+      algebra_game: Cəbr
+      applab: Proqram Labı
+      artist: Rəssam
+      bounce: Tullan
+      calc: Hesablama
+      eval: Qiymət
+      flappy: Flappy
+      frozen: Buzlu ürək
+      iceage: Buz dövrü
+      infinity: Sonsuzluq
+      minecraft_designer: Minecraft
+      playlab: Oyun labı
+      starwars: Star Wars
     popup:
       progress_for_user: "%{name} adlı şagirdin nəticələri"
       progress: Sizin nəticələriniz
@@ -259,16 +265,12 @@ az:
     email_resend_confirm: Təsdiqləmə təlimatlarını yenidən göndər
     new_password_hint: "(dəyişmək istəmirsinizsə, boş buraxın)"
     current_password_hint: "(dəyişikliklərinizi təsdiq etmək üçün cari parolunuz lazımdır)"
+    update_email: Yenilə
   user_level:
     completed: Tamamlandı
     tried: Yoxlanıldı
   home:
     title: Mənim nəticələrim
-    description: Kod Studiyası "Code.org" tərəfindən hazırlanmış onlayn kursların
-      məskənidir
-    lines_of_code: ŞAGİRDLƏR %{lines_count} SƏTİR KOD YAZIB
-    lines_of_code_linebreak: "%{students_count} MİLYON ŞAGİRD<br/>%{lines_count} SƏTİR
-      KOD YAZIB"
     all_courses: Kurs 1, 2 və 3-ün icmalı
     lesson_plans: Dərs planları
     signin_message: Artıq qeydiyyatdan keçmisiniz? %{link}
@@ -296,20 +298,9 @@ az:
       əsas anlayışlarını təqdim edir. Kurs K-8 yaş qrupunda (12-13 yaşlılar) olan
       siniflərdə istifadə olunmaq üçün hazırlanıb, lakin öyrənmək hər yaşda əyləncəlidir.
     use_as_teacher: Saytı müəllim olaraq istifadə edin
-    heading_hoc2014: "<h2>Kod Saatı</h2><h1>Bütün yaşlar üçün</h1>"
-    heading_elementary: "<h2>20 saatlıq kurslar</h2><h1>Başlayanlar (bütün yaşlar)
-      üçün</h1>"
-    heading_apps: "<h2>Əyləncə üçün</h2><h1>Hərkəs</h1>"
-    heading_tools: "<h2>Növbəti addım üçün hazırsan?</h2><h1> Universitet üçün JavaScript
-      alətləri</h1>"
-    heading_legacy: "<h2>Bizim ümumi kursumuz</h2><h1>Bütün yaşlar üçün</h1>"
     your_gallery: Qalereya
     no_primary_course: Code Studiosu kursunu yoxla
     print_certificate: Sertifikatı çap edin
-    announcement_title: Elanlar
-    announcement_learn_more_button: Daha ətraflı
-    announcement_try_now_button: Elə indi sınaqdan keçirin
-    announcement_petition_button: Adınızı əlavə edin
   gender:
     male: Kişi
     female: Qadın
@@ -358,6 +349,7 @@ az:
       title: Proqram Labı
       audience: 13+ yaş
     hoc:
+      title: Ənənəvi labirint
       body: İnformatikanın əsaslarını öyrənməyə cəhd edin. Milyonlarla insan artıq
         bu fürsətdən istifadə edib.
     flappy:
@@ -390,6 +382,8 @@ az:
       body: Proqramlaşdırma ilə Maynkraft dünyasını kəşf edin
     minecraft2016:
       title: Minecraft
+    aquatic:
+      title: Minecraft
     hero:
       title: Minecraft
     unplugged:
@@ -414,6 +408,8 @@ az:
     support_url: "//support.code.org"
     documentation: Təlimat və sənədlər
     tutorials: Dərsliklər
+  free_response:
+    placeholder: Cavabınızı buraya daxil edin
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
@@ -479,24 +475,12 @@ az:
     projects: Layihə qalereyası
     create_a_project: 'Yeni bir layihə düzəlt:'
     new: Yenisini düzəlt
-    rename: Adını dəyiş
-    save: Yadda saxla
-    delete: Sil
-    my_projects: Mənim layihələrim
     project_gallery: Layihə qalereyası
-    share: Bölüşün
     embed: Yerləşdir
-    close: Bağla
-    more: Daha çox
     name: Ad
     updated: Yeniləndi
-    really_delete: Sil?
-    delete_yes: Bəli
-    delete_no: Xeyr
     saved: Qalereyada yadda saxlandı!
-    cancel: İmtina et
     view_all: Layihələrimi göstər
-    remix: Remix
     abuse:
       go_to_code_studio: Kod Studiyasına keçin
       report_abuse_form:
@@ -511,6 +495,19 @@ az:
     required: Yekun
     content: Məzmun
     practice: Öyrədici proqramlar
+    csf_jigsaw: Mozaika
+    csf_loops: dövrlər
+    csf_events: Hadisələr
+    csf_binary: İkilik
+    csf_conditionals: Şərti ifadələr
+    csf_functions: funksiyalar
+    csf_variables: dəyişənlər
+    csf_internet: İnternet
+    csp_variables: dəyişənlər
+    csp_conditionals: Şərti ifadələr
+    csp_functions: funksiyalar
+    csp_lists: Siyahılar
+    csp_loops: dövrlər
   hoc_download:
     title: Kod saatı yükləmələr
     capsule_title: Internetiniz varmı?
@@ -546,6 +543,8 @@ az:
       email_opt_in:
         opt_in_yes: Bəli
         opt_in_no: Xeyr
+    international_opt_in:
+      title: Məşğələdə iştirak
   cookie_banner:
     accept: Razıyam
   gdpr_dialog:

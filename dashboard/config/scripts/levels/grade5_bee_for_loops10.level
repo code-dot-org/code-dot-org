@@ -9,7 +9,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,0,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,1,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,15,0,0,0,0,0],[0,0,0,12,0,0,0,0],[0,0,0,0,9,0,0,0],[0,0,0,0,0,6,0,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
+    "short_instructions": "What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "12",
@@ -33,7 +33,7 @@
     "never_autoplay_video": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
-    "markdown_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \r\n\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
+    "long_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \r\n\r\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"How much less is 12 than 15?  \\nHow much less is 9 than 12?\\n\\nDo you see a pattern?\",\"hint_id\":\"grade5_bee_for_loops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/76c3d43f1af200d376a3940fcc8dded2/grade5_bee_for_loops10.mp3\"}]",
     "contained_level_names": null
   },

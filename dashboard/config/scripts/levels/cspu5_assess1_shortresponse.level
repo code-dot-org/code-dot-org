@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "**Short Response:** \r\n\r\nTwo students, Kaleb and Hunter, are arguing in class about an App Lab project. Kaleb states, “Huh, a button and an image are basically the same thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r\n\tExplain what Kaleb may have meant by that statement.",
+    "long_instructions": "**Short Response:** \r\n\r\nTwo students, Kaleb and Hunter, are arguing in class about an App Lab project. Kaleb states, “Huh, a button and an image are basically the same thing!”.  Hunter replies, “That doesn’t make any sense at all!”.\r\n\tExplain what Kaleb may have meant by that statement.",
     "instructions_important": "false"
   },
   "published": true,

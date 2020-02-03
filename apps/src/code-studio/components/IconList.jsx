@@ -1,6 +1,7 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import IconListEntry from './IconListEntry';
-import { aliases } from './icons';
+import {aliases} from './icons';
 import i18n from '@cdo/locale';
 
 /**
@@ -15,9 +16,9 @@ export default class IconList extends React.Component {
   getMatches(query) {
     const results = {};
 
-    Object.keys(aliases).forEach(function (alias) {
+    Object.keys(aliases).forEach(function(alias) {
       if (query.test(alias)) {
-        aliases[alias].forEach(function (match) {
+        aliases[alias].forEach(function(match) {
           results[match] = alias;
         });
       }

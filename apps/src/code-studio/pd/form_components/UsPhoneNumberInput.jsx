@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import FieldGroup from './FieldGroup';
 
 const PHONE_NUMBER_REGEX = /(\()?(\(?\d{1,3})?(\) ?)?(\d{1,3})?(-| )?(\d{1,4})?/;
@@ -6,10 +7,8 @@ const PHONE_NUMBER_REGEX = /(\()?(\(?\d{1,3})?(\) ?)?(\d{1,3})?(-| )?(\d{1,4})?/
 export default class UsPhoneNumberInput extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
-    label: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element
-    ]).isRequired,
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
+      .isRequired,
     value: PropTypes.string,
     validationState: PropTypes.string,
     errorMessage: PropTypes.string,
@@ -46,7 +45,7 @@ export default class UsPhoneNumberInput extends React.Component {
    */
   static coercePhoneNumber(value) {
     const match = PHONE_NUMBER_REGEX.exec(value);
-    let phoneNumber = "";
+    let phoneNumber = '';
     if (match) {
       if (match[1] && !match[2]) {
         // opening (
@@ -64,7 +63,7 @@ export default class UsPhoneNumberInput extends React.Component {
             if (match[4].length === 3) {
               if (match[5] && !match[6]) {
                 // Optional -, "(123) 456-"
-                phoneNumber += "-";
+                phoneNumber += '-';
               } else if (match[6]) {
                 // Last 4 digits, "(123) 456-7890"
                 phoneNumber += `-${match[6]}`;
@@ -84,17 +83,22 @@ export default class UsPhoneNumberInput extends React.Component {
    * @returns {string} - all digits from the supplied string
    */
   static toJustNumbers(value) {
-    return typeof value === "string" ? value.replace(/[^\d]/g, '') : "";
+    return typeof value === 'string' ? value.replace(/[^\d]/g, '') : '';
   }
 
-  handleChange = (change) => {
-    const phoneNumber = UsPhoneNumberInput.coercePhoneNumber(change[this.props.name]);
+  handleChange = change => {
+    const phoneNumber = UsPhoneNumberInput.coercePhoneNumber(
+      change[this.props.name]
+    );
     this.setState({
       value: phoneNumber
     });
 
     const phoneNumberDigits = UsPhoneNumberInput.toJustNumbers(phoneNumber);
-    if (this.props.onChange && phoneNumberDigits !== UsPhoneNumberInput.toJustNumbers(this.props.value)) {
+    if (
+      this.props.onChange &&
+      phoneNumberDigits !== UsPhoneNumberInput.toJustNumbers(this.props.value)
+    ) {
       this.props.onChange({
         [this.props.name]: phoneNumberDigits
       });
@@ -109,7 +113,8 @@ export default class UsPhoneNumberInput extends React.Component {
       errorMessage,
       required,
       // pull value and onChange so they don't get included in ...props
-      value, onChange, // eslint-disable-line no-unused-vars
+      value, // eslint-disable-line no-unused-vars
+      onChange, // eslint-disable-line no-unused-vars
       ...props
     } = this.props;
 

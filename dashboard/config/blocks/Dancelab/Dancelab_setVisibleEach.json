@@ -12,20 +12,52 @@
             "sprites"
           ],
           [
-            "Aliens",
-            "\"alien\""
+            "aliens",
+            "\"ALIEN\""
           ],
           [
-            "MrWiggles",
-            "\"mrwiggles\""
+            "bears",
+            "\"BEAR\""
           ],
           [
-            "Pizzas",
-            "\"pizza\""
+            "cats",
+            "\"CAT\""
           ],
           [
-            "Unicorns",
-            "\"unicorn\""
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
@@ -42,7 +74,6 @@
           ]
         ]
       }
-    ],
-    "methodCall": true
+    ]
   }
 }

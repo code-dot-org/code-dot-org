@@ -1,10 +1,5 @@
 {
-  "continue": "",
-  "nextLevel": "",
-  "no": "",
-  "numBlocksNeeded": "",
-  "reinfFeedbackMsg": "",
-  "share": "",
-  "shareGame": "",
-  "yes": ""
+  "continue": "కొనసాగు",
+  "no": "లేదు",
+  "yes": "అవును"
 }

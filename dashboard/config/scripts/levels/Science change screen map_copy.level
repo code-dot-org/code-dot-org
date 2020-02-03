@@ -1,0 +1,21 @@
+<Map>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2019-09-30T16:49:35.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Changing Screens",
+    "reference": "/docs/concepts/app-lab/changing-screens/index.html",
+    "parent_level_id": 16351,
+    "name_suffix": "_copy",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-09-06 16:37:26 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-09-06 16:41:08 +0000\",\"changed\":[\"display_name\",\"teacher_markdown\",\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-20 00:17:18 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2019-08-20 08:31:33 +0000\",\"changed\":[\"name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-30 16:56:34 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Map>

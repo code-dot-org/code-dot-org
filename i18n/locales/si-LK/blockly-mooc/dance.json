@@ -1,0 +1,22 @@
+{
+  "danceFeedbackNeedNewDancer": "",
+  "danceFeedbackNoDancers": "",
+  "danceFeedbackNoBackground": "",
+  "danceFeedbackTooManyDancers": "",
+  "danceFeedbackUseSetSize": "",
+  "danceFeedbackUseSetTint": "",
+  "danceFeedbackUseStartMapping": "",
+  "danceFeedbackStartNewMove": "",
+  "danceFeedbackNeedDifferentDance": "",
+  "danceFeedbackNeedEveryTwoMeasures": "",
+  "danceFeedbackNeedMakeANewDancer": "",
+  "danceFeedbackKeyEvent": "",
+  "danceFeedbackDidntPress": "",
+  "danceFeedbackPressedKey": "",
+  "danceFeedbackNeedTwoDancers": "",
+  "danceFeedbackOnlyOneDancerMoved": "",
+  "danceFeedbackNeedLead": "",
+  "danceFeedbackNeedBackup": "",
+  "danceFeedbackSetSize": "",
+  "measure": ""
+}

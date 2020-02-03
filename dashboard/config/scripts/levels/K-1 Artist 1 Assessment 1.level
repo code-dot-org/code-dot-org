@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw a short line up and a long one to the right!",
+    "short_instructions": "Draw a short line up and a long one to the right!",
     "x": 150,
     "y": 250,
     "start_direction": 0,

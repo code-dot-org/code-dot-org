@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
+    "short_instructions": "In this version of the simulator, you will connect to a Router instead of directly to another student. Enter an address in the \"To\" box to send a message to another student.",
     "show_clients_in_lobby": "false",
     "show_routers_in_lobby": "true",
     "show_add_router_button": "true",

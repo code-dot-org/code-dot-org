@@ -1,2 +1,7 @@
 ---
-da: 
+da:
+  data:
+    course:
+      name:
+        csp-2017:
+          title: Datalogi principperne ('17-'18)

@@ -2,13 +2,52 @@
 zh-CN:
   data:
     blocks:
-      Dancelab_addBehavior:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+      Dancelab_alternateMoves:
+        text: "{GROUP} 每 {N} 小节交替动作 {MOVE1} 和 {MOVE2}"
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          MOVE1:
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
+          MOVE2:
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
       Dancelab_atTimestamp:
-        text: 在 {TIMESTAMP} {UNIT}
+        text: 在 {TIMESTAMP} {UNIT} 后
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_changeColorBy:
         text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
@@ -17,256 +56,188 @@ zh-CN:
             '"hue"': 色调
             '"saturation"': 饱和度
             '"brightness"': 亮度
-      Dancelab_changeMove:
-        text: 将 {SPRITE} 舞蹈改到 {MOVE}
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      Dancelab_changeMoveEach:
-        text: 将 {GROUP} 舞蹈改为 {MOVE}
-        options:
-          GROUP:
-            sprites: 所有
-            '"unicorn"': 独角兽
-            '"mrwiggles"': MrWiggles
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
       Dancelab_changeMoveEachLR:
+        text: 在 {GROUP} 中，进行 循环查找 {MOVE} {DIR}
         options:
           GROUP:
             sprites: 所有
-            '"unicorn"': 独角兽
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
           MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
+            '"next"': "（下一步）"
+            '"prev"': "（前一步）"
             '"rand"': 随机
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
           DIR:
             '1': "→"
             "-1": "←"
       Dancelab_changeMoveLR:
+        text: "{SPRITE} 一直重复 {MOVE} {DIR}"
         options:
           MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
+            '"next"': "（下一步）"
+            '"prev"': "（前一步）"
             '"rand"': 随机
+            MOVES.Roll: 身体转动
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Thriller: 僵尸
+            MOVES.Rest: 没有
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_changeMoveRight:
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
       Dancelab_changePropBy:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
             '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-      Dancelab_clickedOn:
-        text: 当 {SPRITE} 被点击时
-      Dancelab_comment:
-        text: '注释: {COMMENT}'
-      Dancelab_distance:
-        text: "{LOCATION1} 和 {LOCATION2} 的距离"
-      Dancelab_doMoveEachLR:
+            '"x"': 水平位置
+            '"y"': 垂直位置
+      Dancelab_changePropEachBy:
+        text: 将 {GROUP} {PROPERTY} 改为 {VAL}
         options:
           GROUP:
             sprites: 所有
-            '"unicorn"': 独角兽
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+      Dancelab_doMoveEachLR:
+        text: 在 {GROUP} 中，进行 {MOVE} {DIR} 一次
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
           MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
+            MOVES.XBend: 弯曲
+            MOVES.Roll: 身体转动
+            MOVES.XClapSide: 拍手
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.XFever: 迪斯科
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.XHeadHips: 头部 + 臀部
+            MOVES.XHop: 跳
+            MOVES.XHighKick: 踢
+            MOVES.XKnee: 膝盖
+            MOVES.XKneel: 跪
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: 达到
+            MOVES.XSlide: 滑动
+            MOVES.Kick: 踢腿
+            MOVES.XArmsUp: 拉伸
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveFast:
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
       Dancelab_doMoveLR:
+        text: "{SPRITE} 重复 {MOVE} {DIR} 一次"
         options:
           MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
             '"rand"': 随机
+            MOVES.XBend: 弯曲
+            MOVES.Roll: 身体转动
+            MOVES.XClapSide: 拍手
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Dab: 轻拍
+            MOVES.XFever: 迪斯科
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Clown: 江南
+            MOVES.XHeadHips: 头部 + 臀部
+            MOVES.XHop: 跳
+            MOVES.XHighKick: 踢
+            MOVES.XKnee: 膝盖
+            MOVES.XKneel: 跪
+            MOVES.XOle: Ole
+            MOVES.XArmsSide: 达到
+            MOVES.XSlide: 滑动
+            MOVES.Kick: 踢腿
+            MOVES.XArmsUp: 拉伸
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
           DIR:
             '1': "→"
             "-1": "←"
-      Dancelab_doMoveLongDrop:
-        options:
-          MOVE:
-            '0': 休息
-            '2': 丝线
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      Dancelab_doMoveOnce:
-        text: "{SPRITE} 移动 {MOVE} 一次"
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
-      Dancelab_doMoveSnap:
-        options:
-          MOVE:
-            '0': 休息
-            '1': 分解
-            '2': 丝线
-            '3': 新鲜
-            '4': Double Jam
-            '5': Drop
-            '6': Floss
-            '7': Fresh
-            '8': Roll
-            '9': This or That
-            '10': Kick
-            '11': Thiller
-            '"next"': 下一项
-            '"prev"': 前一项
-            '"rand"': 随机
       Dancelab_eval:
-        text: 执行一些随意的代码 {CODE}
+        text: 执行 {CODE}
+      Dancelab_everyMeasuresRange:
+        text: "{START} 后重复 {N} 小节"
       Dancelab_everySeconds:
-        text: '每次 {N} {UNIT} '
+        text: 每 {N} {UNIT} 重复一次
         options:
           UNIT:
-            '"measures"': 衡量
+            '"measures"': 节拍
             '"seconds"': " 秒"
       Dancelab_everySecondsRange:
-        text: 每个 {N} {UNIT} 要从 {START} 到 {STOP}
+        text: 每个 {N} {UNIT} 从 {START} 到 {STOP}
         options:
           UNIT:
-            measures: 衡量
+            measures: 节拍
             seconds: 秒
       Dancelab_everyVerseChorus:
         text: '每个 {UNIT} '
@@ -274,169 +245,354 @@ zh-CN:
           UNIT:
             '"verse"': 诗歌
             '"chorus"': 合唱
-      Dancelab_frameRate:
-        text: 设置帧率为 {RATE}
       Dancelab_getEnergy:
-        text: 获得 {RANGE} 的能量
+        text: 获得 {RANGE}
         options:
           RANGE:
-            '"low"': 低
-            '"mid"': 中
-            '"high"': 高
+            '"low"': 低音
+            '"mid"': 中音音量
+            '"high"': 高音音量
       Dancelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
             '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
+            '"x"': 水平位置
+            '"y"': 垂直位置
             '"tint"': 色调
       Dancelab_getTime:
-        text: "{UNIT} 消失"
+        text: "{UNIT} 当前时间"
         options:
           UNIT:
-            '"measures"': 衡量
-            '"seconds"': 秒
-      Dancelab_helloWorld:
-        text: 你好，世界
-      Dancelab_isTouching:
-        text: "{THIS} 正在触碰 {TARGET}"
+            '"measures"': 节拍
+            '"seconds"': " 秒"
+      Dancelab_ifDanceIs:
+        text: |-
+          如果 {SPRITE} 正在 {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 江南
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Roll: 身体转动
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
+      Dancelab_ifTime:
+        text: |-
+          如果 {UNIT} 是 {OP} {N}
+          {DO1} {DO2}
+        options:
+          UNIT:
+            '"measures"': 节拍
+            '"seconds"': " 秒"
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
-      Dancelab_layoutSprites:
-        text: 输出 {GROUP} 精灵为 {FORMAT}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Dancelab_jumpToEach:
+        text: 让 {GROUP} 跳到 {LOCATION}
         options:
           GROUP:
             sprites: 所有
-            '"unicorn"': 独角兽
-            '"mrwiggles"': MrWiggles
-          FORMAT:
-            '"grid"': 网格
-            '"row"': 行
-            '"column"': 列
-      Dancelab_locationCenter:
-        text: 中央
-      Dancelab_locationPointer:
-        text: 点的位置
-      Dancelab_location_picker:
-        text: "{LOCATION}"
-      Dancelab_log:
-        text: 日志消息 {MESSAGE}
-      Dancelab_makeNewDanceSprite:
-        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": 随机
+      Dancelab_layoutSprites:
+        text: 布局 {GROUP} 作为 {FORMAT}
         options:
-          COSTUME:
-            '"unicorn"': 独角兽
-            '"mrwiggles"': MrWiggles
-      Dancelab_makeNewDanceSpriteRight:
-        options:
-          COSTUME:
-            '"unicorn"': 独角兽
-            '"mrwiggles"': MrWiggles
-      Dancelab_makeNewDanceSpriteSync:
-        text: |-
-          测试同步
-          在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} 精灵
-        options:
-          COSTUME:
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-      Dancelab_makeNewDanceSpriteTest:
-        options:
-          COSTUME:
-            '"unicorn"': 独角兽
-            '"mrwiggles"': MrWiggles
-      Dancelab_makeNewGroupSprite:
-        text: 在 {LOCATION} 创建一个叫做 {NAME} 的新 {COSTUME} {GROUP} 跳舞者
-        options:
-          COSTUME:
-            '"circle"': 圆形
-            '"wiggles"': 扭动
           GROUP:
-            lead_dancers: 领导
-            backup_dancers: 备份
-      Dancelab_mapper:
-        text: 从 {RANGE} 到 {DOMAIN} 映射 map {VALUE}
-      Dancelab_mappingProp:
-        text: "{PROPERTY} 位于 {RANGE}"
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          FORMAT:
+            '"border"': 边框
+            '"inner"': 正方形内部
+            '"diamond"': 钻石
+            '"circle"': 圆
+            '"grid"': 网格
+            '"top"': 最上排
+            '"row"': 行
+            '"bottom"': 最底排
+            '"left"': 左列
+            '"column"': 列
+            '"right"': 右列
+            '"x"': 十字交叉
+            '"plus"': 添加
+            '"random"': 随机
+      Dancelab_makeAnonymousDanceSprite:
+        text: 在 {LOCATION} 创建一个新的 {COSTUME}
         options:
-          PROPERTY:
-            '"scale"': 大小
-            '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
-            '"tint"': 色调
-          RANGE:
-            '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      Dancelab_mirrorSprite:
-        text: "{SPRITE} 面向 {DIRECTION}"
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Dancelab_makeNewDanceSprite:
+        text: |-
+          新建 {COSTUME}
+          命名为 {NAME}，位置位于 {LOCATION}
         options:
-          DIRECTION:
-            '"right"': 向右
-            '"left"': 向左
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Dancelab_makeNewDanceSpriteGroup:
+        text: 在 {LAYOUT} 新建 {N} {COSTUME}
+        options:
+          N:
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          COSTUME:
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          LAYOUT:
+            '"border"': 边框
+            '"inner"': 正方形内部
+            '"diamond"': 钻石
+            '"circle"': 圆
+            '"grid"': 网格
+            '"top"': 最上排
+            '"row"': 行
+            '"bottom"': 最底排
+            '"left"': 左列
+            '"column"': 列
+            '"right"': 右列
+            '"x"': 十字交叉
+            '"plus"': 添加
+            '"random"': 随机
       Dancelab_mixColors:
         text: 混合 {COLOR1} 和 {COLOR2}
-      Dancelab_moveDown:
-        text: "{THIS} 向下移动"
-      Dancelab_moveForward:
-        text: 向前移动 {SPRITE} {DISTANCE} 像素
-      Dancelab_moveLeft:
-        text: "{THIS} 向左移动"
-      Dancelab_moveRight:
-        text: "{THIS} 向右移动"
-      Dancelab_moveUp:
-        text: "{THIS} 向上移动"
       Dancelab_nMeasures:
-        text: "{N} 测量"
+        text: "{N} 个节拍"
       Dancelab_onPointerDown:
         text: 当指针按下时
       Dancelab_onPointerDrag:
         text: 当指针拖动时
       Dancelab_onPointerUp:
         text: 当指针向上时
-      Dancelab_pointInDirection:
-        text: 指向 {SPRITE} {DIRECTION}
-        options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
-      Dancelab_pointToward:
-        text: 将 {SPRITE} 朝向 {LOCATION}
       Dancelab_randomColor:
         text: 随机颜色
-      Dancelab_randomLocation:
-        text: 随机位置
-      Dancelab_range:
-        text: "{RANGE} ... {DOMAIN}"
-      Dancelab_removeAllBehaviors:
-        text: "{SPRITE} 停止所有事情"
-      Dancelab_removeBehavior:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
-      Dancelab_secondsInMeasure:
-        text: 一次测量中的秒数
       Dancelab_setBackground:
         text: 设置背景颜色为 {COLOR}
       Dancelab_setBackgroundEffect:
-        text: 设置背景效果为 {EFFECT}
+        text: 设置背景效果 {EFFECT}
         options:
           EFFECT:
             '"none"': 没有
-            '"disco"': 迪斯科
-            '"rainbow"': 彩虹
+            '"circles"': 隧道
+            '"color_cycle"': 颜色
             '"diamonds"': 菱形
-            "['disco', 'rainbow', 'diamonds'][randomNumber(0,2)]": 随机
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
+            '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 气泡
+            '"rainbow"': 彩虹
+            '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"galaxy"': 空间
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 方形
+            '"stars"': 星星
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
+            '"default"': 光
+            '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
+      Dancelab_setBackgroundEffectWithPalette:
+        text: |-
+          设置背景效果
+          {PALETTE} {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"circles"': 隧道
+            '"quads"': 角度
+            '"color_cycle"': 颜色
+            '"diamonds"': 菱形
+            '"disco_ball"': 迪斯科球
+            '"fireworks"': 烟火
+            '"flowers"': 花朵
+            '"growing_stars"': 变大的星星
+            '"swirl"': 催眠
+            '"kaleidoscope"': 万花筒
+            '"lasers"': 激光舞池
+            '"splatter"': 油漆飞溅
+            '"rainbow"': 彩虹
+            '"ripples_random"': 随机波纹
+            '"ripples"': 波纹
+            '"snowflakes"': 雪
+            '"text"': 歌曲标题
+            '"squiggles"': 花体
+            '"galaxy"': 空间
+            '"sparkles"': 火花
+            '"spiral"': 螺旋
+            '"disco"': 方形
+            '"stars"': 星星
+            '"music_wave"': 波浪
+          PALETTE:
+            '"rave"': 黑白
+            '"cool"': 蓝色
+            '"electronic"': 电音
+            '"iceCream"': 冰淇淋
+            '"default"': 光
+            '"neon"': 霓虹
+            '"tropical"': 热带
+            '"vintage"': 复古
+            '"warm"': 红色
       Dancelab_setDanceSpeed:
         text: 将 {SPRITE} 跳舞速度改为 {SPEED}
         options:
+          SPEED:
+            '1': 正常
+            '2': 快
+            '4': 非常快
+            '0.5': 慢
+            '0.25': 非常慢
+      Dancelab_setDanceSpeedEach:
+        text: 将 {GROUP} 跳舞速度改为 {SPEED}
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
           SPEED:
             '1': 正常
             '2': 快
@@ -448,150 +604,378 @@ zh-CN:
         options:
           EFFECT:
             '"none"': 没有
-            "['strobe', 'rain', 'raining_tacos'][randomNumber(0,2)]": 随机
-      Dancelab_setFreq:
-        text: 设置频率为 {FREQ}
+            '"bubbles"': 气泡
+            '"confetti"': 彩纸屑
+            '"hearts_red"': 心
+            '"music_notes"': 音符
+            '"pineapples"': 菠萝
+            '"pizzas"': 比萨
+            '"smiling_poop"': 便便
+            '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
+            '"smile_face"': 微笑
+            '"spotlight"': 聚光灯
+            '"color_lights"': 舞台灯光
+            '"raining_tacos"': 玉米卷
+      Dancelab_setForegroundEffectExtended:
+        text: 设置前景效果为 {EFFECT}
+        options:
+          EFFECT:
+            '"none"': 没有
+            '"rand"': 随机
+            '"bubbles"': 气泡
+            '"hearts_colorful"': 五彩心
+            '"confetti"': 彩纸屑
+            '"emojis"': 表情符号
+            '"hearts_red"': 心
+            '"music_notes"': 音符
+            '"paint_drip"': 油漆液滴
+            '"pineapples"': 菠萝
+            '"pizzas"': 比萨
+            '"smiling_poop"': 便便
+            '"rain"': 下雨
+            '"floating_rainbows"': 彩虹
+            '"smile_face"': 微笑
+            '"spotlight"': 聚光灯
+            '"color_lights"': 舞台灯光
+            '"exploding_stars"': 星爆
+            '"raining_tacos"': 玉米卷
       Dancelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
             '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"tint"': 色调
-            '"dance_speed"': 跳舞速度
-      Dancelab_setVisibleEach:
-        text: 设置 {THIS} 为 {VISIBILITY}
+            '"x"': 水平位置
+            '"y"': 垂直位置
+      Dancelab_setPropEach:
+        text: 设置 {GROUP} {PROPERTY} 为 {VAL}
         options:
-          THIS:
+          GROUP:
             sprites: 所有
-            '"alien"': 外星人
-            '"mrwiggles"': MrWiggles
-            '"pizza"': 比萨
-            '"unicorn"': 独角兽
-          VISIBILITY:
-            'true': 可见
-            'false': 隐藏
-      Dancelab_setup:
-        text: 设置
-      Dancelab_spritesWhere:
-        text: 精灵的 {PROPERTY} {OP} {VALUE}
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"tint"': 色调
+      Dancelab_setPropRandom:
+        text: 随机 {SPRITE} {PROPERTY}
         options:
           PROPERTY:
             '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-            '"costume"': 服装
-            '"direction"': 移动方向
-            '"rotation"': 旋转或方向
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
             '"tint"': 色调
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
+      Dancelab_setPropRandomEach:
+        text: 随机 {GROUP} {PROPERTY}
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"tint"': 色调
+      Dancelab_setTint:
+        text: 设置 {SPRITE} 色调为 {VAL}
+      Dancelab_setTintEach:
+        text: 设置 {THIS} 色调为 {VAL}
+        options:
+          THIS:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+      Dancelab_setTintEachInline:
+        text: 设置 {THIS} 色调为 {VAL}
+        options:
+          THIS:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+      Dancelab_setTintInline:
+        text: 设置 {SPRITE} 色调为 {VAL}
+      Dancelab_setVisible:
+        text: 设置 {SPRITE} 可见度为 {VISIBILITY}
+        options:
+          VISIBILITY:
+            'true': 可见
+            'false': 隐藏
+      Dancelab_setVisibleEach:
+        text: 设置 {THIS} 可见度为 {VISIBILITY}
+        options:
+          THIS:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          VISIBILITY:
+            'true': 可见
+            'false': 隐藏
       Dancelab_startMapping:
         text: "{SPRITE} 开始 {PROPERTY} 为 {RANGE}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
             '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
-            '"direction"': 移动方向
+            '"x"': 水平位置
+            '"y"': 垂直位置
             '"tint"': 色调
           RANGE:
             '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      Dancelab_startOscillator:
-        text: 开始振动器
-      Dancelab_startSong:
-        text: 开始歌曲
-      Dancelab_startVisualizer:
-        text: 开始可见
+            '"mid"': 中音音量
+            '"treble"': 高音音量
+      Dancelab_startMappingEach:
+        text: "{GROUP} 开始 {PROPERTY} 跟随 {RANGE}"
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
       Dancelab_stopMapping:
         text: "{SPRITE} 停止 {PROPERTY} 为 {RANGE}"
         options:
           PROPERTY:
             '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
             '"rotation"': 旋转
-            '"x"': x位置
-            '"y"': y位置
+            '"x"': 水平位置
+            '"y"': 垂直位置
             '"direction"': 移动方向
             '"tint"': 色调
-            '"dance_speed"': 跳舞速度
           RANGE:
             '"bass"': 低音
-            '"mid"': 中
-            '"treble"': 高音
-      Dancelab_stopOscillator:
-        text: 停止振动器
+            '"mid"': 中音音量
+            '"treble"': 高音音量
+      Dancelab_stopMappingEach:
+        text: "{GROUP} 停止 {PROPERTY} 跟随 {RANGE}"
+        options:
+          GROUP:
+            sprites: 所有
+            '"ALIEN"': 外星人
+            '"BEAR"': 熊
+            '"CAT"': 猫
+            '"DOG"': 狗
+            '"DUCK"': 鸭子
+            '"FROG"': 青蛙
+            '"MOOSE"': 驼鹿
+            '"PINEAPPLE"': 菠萝
+            '"ROBOT"': 机器人
+            '"SHARK"': 鲨鱼
+            '"SLOTH"': 树懒
+            '"UNICORN"': 独角兽
+          PROPERTY:
+            '"scale"': 大小
+            '"width"': 宽度
+            '"height"': 高度
+            '"rotation"': 旋转
+            '"x"': 水平位置
+            '"y"': 垂直位置
+            '"direction"': 移动方向
+            '"tint"': 色调
+          RANGE:
+            '"bass"': 低音
+            '"mid"': 中音音量
+            '"treble"': 高音音量
+      Dancelab_translateStrings:
+        text: 翻译 {STRING}
+        options:
+          STRING:
+            '"music_wave"': 波浪
+            '"ripples"': 波纹
+            '"ripples_random"': 随机波纹
+            '"quads"': 角度
+            '"flowers"': 花朵
+            '"popsicles"': 冰棒
+            '"squiggles"': 花体
+            '"growing_stars"': 变大的星星
+            '"emojis"': 表情符号
+            '"hearts_colorful"': 心
+            '"paint_drio"': 油漆液滴
+            '"exploding_stars"': 星爆
+            '"row_top"': 最上排
+            '"row_bottom"': 最底排
+            '"column_left"': 左列
+            '"column_right"': 右列
+            '"diamond"': 钻石
+            '"mural"': 壁画
+            '"safari"': 游猎
+            '"network"': 网络
+            '"highway"': 高速公路
+            '"stream"': 流
+            '"tile"': 平铺
+            '"shadow"': 阴影
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         text: 当 {KEY} 按下时
         options:
           KEY:
             '"up"': 向上
-            '"down"': 向下
             '"left"': 向左
+            '"down"': 向下
             '"right"': 向右
             '"space"': 空间
+            '"enter"': 回车
             '"a"': a
-            '"w"': w
-            '"s"': s
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
+            '"0"': '0'
+            '"1"': '1'
+            '"2"': '2'
+            '"3"': '3'
+            '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
+            '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         text: 当 {RANGE} 达到最高
         options:
           RANGE:
             '0': 低音
-            '1': 中
-            '2': 高音
+            '1': 中音音量
+            '2': 高音音量
       Dancelab_whenSetup:
+        text: 设置
+      Dancelab_whenSetup2:
         text: 设置
       Dancelab_whenSetupSong:
         options:
           SONG:
-            '"peas"': 黑眼豆豆合唱团 - I Got a Feeling
-      Dancelab_whenTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
-      Dancelab_whileKey:
-        text: 当 {KEY} 按下时
-        options:
-          KEY:
-            '"up"': 向上
-            '"down"': 向下
-            '"left"': 向左
-            '"right"': 向右
-            '"space"': 空间
-            '"a"': a
-            '"w"': w
-            '"s"': s
-            '"d"': d
-      Dancelab_whileTouching:
-        text: 当 {SPRITE1} 碰到 {SPRITE2}
-      gamelab_add:
-        text: 将 {SPRITE} 加入组 {THIS}
+            '"peas"': 黑眼豆豆合唱团 - 我有一种感觉
       gamelab_addBehaviorSimple:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
-      gamelab_bounceOff:
-        text: "{SPRITE} 弹离 {TARGET}"
-      gamelab_bounceOffEdges:
-        text: "{SPRITE} 弹离边缘"
-      gamelab_changeColor:
-        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
-        options:
-          METHOD:
-            '"tint"': 色调
-            '"tone"': 语气
-            '"shade"': 色度
-      gamelab_changeColorBy:
-        text: 将 {COLOR} {METHOD} 改动 {AMOUNT}
-        options:
-          METHOD:
-            '"hue"': 色调
-            '"saturation"': 饱和度
-            '"brightness"': 亮度
+        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
+      gamelab_allSpritesWithAnimation:
+        text: "{ANIMATION}"
       gamelab_changePropBy:
         text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
         options:
@@ -601,40 +985,26 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
+      gamelab_checkTouching:
+        text: "{CONDITION} {SPRITE1} 碰到 {SPRITE2}"
+        options:
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_clickedOn:
         text: 当 {SPRITE} 被点击时
+      gamelab_clickedSpritePointer:
+        text: 点击 {SPRITE}
       gamelab_comment:
-        text: '注释: {COMMENT}'
-      gamelab_console.log:
-        text: 日志消息 {MESSAGE}
+        text: 注释： {COMMENT}
       gamelab_createNewSprite:
-        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
-      gamelab_debugSprite:
-        text: 调试 {SPRITE} {VAL}
-        options:
-          VAL:
-            'true': 真
-            'false': 错
+        text: "制作一个新的精灵图 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
       gamelab_destroy:
         text: 移除 {THIS}
-      gamelab_displace:
-        text: "{THIS} 阻止了 {SPRITE} 移动"
-      gamelab_distance:
-        text: 从 {LOCATION1} 到 {LOCATION2} 的距离
+      gamelab_draggable:
+        text: 可拖拽
       gamelab_edgesDisplace:
-        text: 边缘阻止了 {SPRITE} 移动
-      gamelab_enableDebug:
-        text: 启用调试
-      gamelab_firstTouched:
-        text: 首先碰到的精灵
-      gamelab_getAnim:
-        options:
-          COSTUME:
-            '"costume"': 服装
-      gamelab_getDirection:
-        text: "{SPRITE} 移动方向"
-      gamelab_getFrameDelay:
-        text: "{THIS} 帧延迟"
+        text: 边缘模块阻止了 {SPRITE} 移动
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -645,103 +1015,88 @@ zh-CN:
             '"y"': y位置
             '"direction"': 移动方向
             '"tint"': 色调
-      gamelab_groupLength:
-        text: "{THIS} 中的精灵数量"
-      gamelab_hasBehavior:
-        text: "{SPRITE} 当前在 {BEHAVIOR}"
+      gamelab_getThisSprite:
+        text: "{CHOICE} 精灵图"
+        options:
+          CHOICE:
+            '"this"': 这
+            '"other"': 其他
       gamelab_hideTitleScreen:
         text: 隐藏标题屏幕
-      gamelab_hsbColor:
-        text: |-
-          HSB 颜色
-          H{HUE}S{SATURATION}B{BRIGHTNESS}
-      gamelab_isTouching:
-        text: "{THIS} 正在触碰 {TARGET}"
       gamelab_isTouchingEdges:
         text: "{SPRITE} 正在触碰边缘"
-      gamelab_joystickDirection:
-        text: 游戏杆方向
       gamelab_jumpTo:
         text: "{SPRITE} 跳到 {LOCATION}"
-      gamelab_keyDown:
-        text: 键被按下 {KEY}
-      gamelab_locationAdd:
-        text: "{LOC1} {OPERATOR} {LOC2}"
+      gamelab_keyPressed:
+        text: "{CONDITION} {KEY} 被按下"
         options:
-          OPERATOR:
-            "'plus'": "\\+"
-            "'minus'": "\\-"
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"b"': b
+            '"c"': c
+            '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"i"': i
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
+            '"n"': n
+            '"o"': o
+            '"p"': p
+            '"q"': q
+            '"r"': r
+            '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
+            '"w"': w
+            '"x"': x
+            '"y"': y
+            '"z"': z
       gamelab_locationAt:
         text: '位置 x: {X} y: {Y}'
-      gamelab_locationConstant:
-        text: "{DIR}"
-        options:
-          DIR:
-            "'north'": 北
-            "'south'": 南
-            "'east'": 东
-            "'west'": 西
-      gamelab_locationDelta:
-        text: "{LOCATION} 的 {DIR} {DISTANCE} 像素"
-        options:
-          DIR:
-            "'north'": 北
-            "'south'": 南
-            "'east'": 东
-            "'west'": 西
-            "'random'": 随机
-      gamelab_locationEast:
-        text: 东
       gamelab_locationMouse:
         text: 鼠标位置
-      gamelab_locationNorth:
-        text: 北
       gamelab_locationOf:
         text: "{SPRITE} 的位置"
-      gamelab_locationSouth:
-        text: 南
-      gamelab_locationWest:
-        text: 西
       gamelab_location_picker:
         text: "{LOCATION}"
-      gamelab_location_variable_get:
-        text: "{VAR} 的位置"
-      gamelab_location_variable_set:
-        text: 设置 {VAR} 的位置到 {VAL}
-      gamelab_makeNewGroup:
-        text: 创建新组
+      gamelab_makeNewSpriteAnon:
+        text: 在 {LOCATION} 处, 创建一个新的 {ANIMATION_NAME} 精灵图
       gamelab_mirrorSprite:
         text: "{SPRITE} 面向 {DIRECTION}"
         options:
           DIRECTION:
             '"right"': 向右
             '"left"': 向左
-      gamelab_mixColors:
-        text: 混合 {COLOR1} 和 {COLOR2}
-      gamelab_mouseDown:
-        text: 鼠标已按下
       gamelab_mouseLocation:
         text: 鼠标位置
-      gamelab_moveDown:
-        text: "{THIS} 向下移动"
       gamelab_moveForward:
         text: 向前移动 {SPRITE} {DISTANCE} 像素
       gamelab_moveInDirection:
-        text: 移动 {SPRITE} {DISTANCE} 像素 {DIRECTION}
+        text: 移动 {SPRITE} {DISTANCE} 像素，方向 {DIRECTION}
         options:
           DIRECTION:
             '"North"': 北
             '"East"': 东
             '"South"': 南
             '"West"': 西
-      gamelab_moveLeft:
-        text: "{THIS} 向左移动"
-      gamelab_moveRight:
-        text: "{THIS} 向右移动"
       gamelab_moveToward:
         text: 朝 {TARGET} 移动 {SPRITE} 距离 {DISTANCE}
-      gamelab_moveUp:
-        text: "{THIS} 向上移动"
+      gamelab_playSound:
+        text: 播放音效{SOUND}
       gamelab_pointInDirection:
         text: 指向 {SPRITE} {DIRECTION}
         options:
@@ -750,8 +1105,8 @@ zh-CN:
             '"East"': 东
             '"South"': 南
             '"West"': 西
-      gamelab_pointToward:
-        text: 将 {SPRITE} 朝向 {LOCATION}
+      gamelab_printText:
+        text: 打印 {TEXT}
       gamelab_randColor:
         text: 随机颜色
       gamelab_randomColor:
@@ -761,33 +1116,29 @@ zh-CN:
       gamelab_removeAllBehaviors:
         text: "{SPRITE} 停止所有事情"
       gamelab_removeBehaviorSimple:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
       gamelab_removeTint:
         text: 从 {THIS} 删除颜色
-      gamelab_secondTouched:
-        text: 第二次碰到精灵
       gamelab_setAnimation:
         text: 将 {THIS} 的服装改为 {ANIMATION}
       gamelab_setBackground:
         text: 设置背景颜色为 {COLOR}
-      gamelab_setDirection:
-        text: 设置 {SPRITE} 移动方向为 {DIRECTION}
-      gamelab_setFrameDelay:
-        text: 设置 {THIS} 帧延迟 {VAL}
-      gamelab_setPosition:
-        text: 将 {THIS} 移动到 {POSITION} 位置
+      gamelab_setBackgroundImage:
+        text: 设置背景为 {IMG}
         options:
-          POSITION:
-            "{x: 50, y: 50}": 左上
-            "{x: 200, y: 50}": 顶部居中
-            "{x: 350, y: 50}": 右上
-            "{x: 50, y: 200}": 中上
-            "{x: 200, y: 200}": 中央
-            "{x: 350, y: 200}": 中间右方
-            "{x: 50, y: 350}": 左下
-            "{x: 200, y: 350}": 底部居中
-            "{x: 350, y: 350}": 右下
-            '"random"': 随机
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': 洞穴
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': 院子
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': 沙漠
+            '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': 银河系
+            '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': 网格
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': 彩虹
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': 科幻
+            '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': 星球
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': 水底
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': 冬天
+            undefined: 没有
       gamelab_setProp:
         text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
         options:
@@ -797,7 +1148,6 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-            '"tint"': 色调
       gamelab_setSizes:
         text: 设置 {SPRITE} {PROPERTY} 为 {N}%
         options:
@@ -807,54 +1157,21 @@ zh-CN:
             '"height"': 高度
       gamelab_setTint:
         text: 将 {THIS} 的颜色改为 {COLOR}
-      gamelab_setup:
-        text: 设置
+      gamelab_setupSim:
+        text: |-
+          setup simulation with
+          {SPRITE1N}{SPRITE1COSTUME}速度{SPRITE1SPEED}
+          {SPRITE2N}{SPRITE2COSTUME}速度{SPRITE2SPEED}
+          收集
+          {SPRITE3N}{SPRITE3COSTUME}
       gamelab_showTitleScreen:
         text: 显示标题屏幕 {BREAK} 标题 {TITLE} 文本 {SUBTITLE}
-      gamelab_spriteCostume:
-        text: "{COSTUME}"
-      gamelab_spriteDirection:
-        text: "{DIRECTION}"
+      gamelab_spriteClicked:
+        text: "{CONDITION} {SPRITE} 被点击"
         options:
-          DIRECTION:
-            '"North"': 北
-            '"East"': 东
-            '"South"': 南
-            '"West"': 西
-      gamelab_spritesWhere:
-        text: 精灵的 {PROPERTY} 为 {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-            '"costume"': 服装
-            '"direction"': 移动方向
-            '"rotation"': 旋转或方向
-            '"tint"': 色调
-      gamelab_spritesWhereFirst:
-        text: 第一个 {VALUE}
-      gamelab_spritesWhereGenerator:
-        text: 精灵的 {PROPERTY} {OP} {VALUE}
-        options:
-          PROPERTY:
-            '"scale"': 大小
-            '"x"': x位置
-            '"y"': y位置
-            '"costume"': 服装
-            '"direction"': 移动方向
-            '"rotation"': 旋转或方向
-            '"tint"': 色调
-          OP:
-            '"="': "="
-            '">"': ">"
-            '"<"': "\\<"
-      gamelab_spritesWhereLast:
-        text: 最后一个 {VALUE}
-      gamelab_spritesWhereRandom:
-        text: 在组 {VALUE} 中随机
-      gamelab_thisBeginsBehaviorSimple:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+          CONDITION:
+            '"when"': 当
+            '"while"': 当
       gamelab_turn:
         text: "{SPRITE} 转 {DIRECTION} {N} 度"
         options:
@@ -863,8 +1180,6 @@ zh-CN:
             '"left"': 向左
       gamelab_whenDownArrow:
         text: 当下方向键按下时
-      gamelab_whenJoystick:
-        text: 当使用游戏杆时
       gamelab_whenKey:
         text: 当 {KEY} 按下时
         options:
@@ -880,34 +1195,14 @@ zh-CN:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 当按左方向键时
-      gamelab_whenMouseClicked:
-        text: 当鼠标点击时
-      gamelab_whenPressedAndReleased:
-        text: "当 {DIR} 按下\n{STATEMENT1} 当释放 \n{STATEMENT2}"
-        options:
-          DIR:
-            "'up'": 向上
-            "'down'": 向下
-            "'left'": 向左
-            "'right'": 向右
       gamelab_whenRightArrow:
         text: 当按右方向键时
-      gamelab_whenStartAndStopTouching:
-        text: |-
-          当 {SPRITE1} 开始碰到 {SPRITE2} {STATEMENT1} 当它们不再接触
-          {STATEMENT2}
       gamelab_whenTouching:
         text: 当 {SPRITE1} 碰到 {SPRITE2}
-      gamelab_whenTouchingAny:
-        text: 当 {SPRITE} 碰到任何 {GROUP}
-      gamelab_whenTrue:
-        text: 当 {CONDITION} 为真时
       gamelab_whenUpArrow:
         text: 当上方向键按下时
       gamelab_whileDownArrow:
         text: 当下方向键按下时
-      gamelab_whileJoystick:
-        text: 当使用游戏杆时
       gamelab_whileKey:
         text: 当 {KEY} 按下时
         options:
@@ -934,9 +1229,20 @@ zh-CN:
       gamelab_yLocationOf:
         text: "{SPRITE} 的y坐标"
       Mikelab_addBehaviorSimple:
-        text: 精灵 {SPRITE} 开始 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 开始 {BEHAVIOR}
+      Mikelab_addTrainingData:
+        text: 添加培训数据： {NAME},{LOCATION}
+        options:
+          NAME:
+            "{x: 201, y: 100}": 对象
+            "{x: 200, y: 100}": 鱼
+          LOCATION:
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": 鱼
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": 不是鱼
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 我的标签
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的标签
       Mikelab_changePropBy:
-        text: 将 {SPRITE} {PROPERTY} 改为 {VAL}
+        text: 将 {PROPERTY} {SPRITE} 改为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
@@ -944,14 +1250,24 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-      Mikelab_clickedOn:
-        text: 当 {SPRITE} 被点击时
       Mikelab_createNewSprite:
-        text: "制作一个新的精灵 \n 叫做 {NAME} \n 服装为 {COSTUME} \n 位于 {LOCATION}"
-      Mikelab_getAnim:
+        text: "制作一个新的精灵图 \n 叫做 {COSTUME} \n 服装为 {NAME} \n 位于 {LOCATION}"
         options:
-          COSTUME:
-            '"costume"': 服装
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Mikelab_eval:
+        text: 执行 {CODE}
+      Mikelab_getNext:
+        text: 获取下一个对象
       Mikelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -961,19 +1277,175 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-            '"tint"': 色调
+      Mikelab_groupChangeAnim:
+        text: 将 {SELECT} {COSTUME} 改为 {COSTUME2}
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupChangePropBy:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupCreateNewSprite:
+        text: 在 {LOCATION} 创建一个新的 {COSTUME}
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Mikelab_groupDestroy:
+        text: 删除 {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupDisplace:
+        text: 所有 {COSTUME} 阻挡 {COSTUME2} 移动
+      Mikelab_groupEdgesDisplace:
+        text: 边缘模块阻止了 {COSTUME} 移动
+      Mikelab_groupGetProp:
+        text: "{SELECT} {COSTUME} 的 {PROPERTY}"
+        options:
+          SELECT:
+            '"average"': 平均
+            '"this"': 这
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupRemoveAllBehaviors:
+        text: 停止 {SELECT} {COSTUME} 行为
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupRemoveBehaviorSimple:
+        text: "{SELECT} {COSTUME} 停止 {BEHAVIOR}"
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupRemoveTint:
+        text: 从 {SELECT} {COSTUME} 去掉颜色
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupSetProp:
+        text: 更改 {SELECT}{COSTUME} 的 {PROPERTY} 为{VAL}
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+          PROPERTY:
+            '"scale"': 大小
+            '"rotation"': 旋转
+            '"x"': x位置
+            '"y"': y位置
+            '"direction"': 移动方向
+      Mikelab_groupSetTint:
+        text: 更改 {SELECT} {COSTUME} 的颜色为 {COLOR}
+        options:
+          SELECT:
+            '"all"': 所有
+            '"this"': 这
+      Mikelab_groupWhenClickedOn:
+        text: 当点击 {COSTUME} 时
+      Mikelab_groupWhenXTouchesY:
+        text: 当{COSTUME} 碰到 {COSTUME2}
+      Mikelab_groupWhileClicked:
+        text: 点击 {COSTUME} 时
+      Mikelab_groupWhileTouchingAny:
+        text: |-
+          {COSTUME} 碰触到 {COSTUME2}
+          {STATEMENT}
       Mikelab_hasBehavior:
         text: "{SPRITE} 当前在 {BEHAVIOR}"
-      Mikelab_isAnim:
+      Mikelab_hideFish:
+        text: 删除 {TRASH}
         options:
-          COSTUME:
-            '"costume"': 服装
+          TRASH:
+            object: 对象
+            fish: 鱼
+      Mikelab_ifDanceIs:
+        text: |-
+          如果 {SPRITE} 正在 {DANCE}
+          {DO1} {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 用力鼓掌
+            MOVES.Clown: 江南
+            MOVES.Dab: 轻拍
+            MOVES.DoubleJam: 两倍下降
+            MOVES.Drop: 丢掉
+            MOVES.Floss: 丝线
+            MOVES.Fresh: 双手画圈
+            MOVES.Roll: 身体转动
+            MOVES.Kick: 踢腿
+            MOVES.ThisOrThat: 交替摆臂
+            MOVES.Rest: 没有
+      Mikelab_ifLabel:
+        text: |-
+          如果 {DANCE}
+          那么 {DO1} 否则 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 我的标签
+      Mikelab_ifRecognizeLabel:
+        text: |-
+          如果对象为 {DANCE}
+          那么 {DO1} 否则 {DO2}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 我的标签
+      Mikelab_ifRecognizeLabelOnly:
+        text: |-
+          如果对象为 {DANCE}
+          那么 {DO1}
+        options:
+          DANCE:
+            MOVES.ClapHigh: 鱼
+            MOVES.Clown: 不是我的标签
+      Mikelab_locationAt:
+        text: '位置 x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_randomColor:
+        text: 随机颜色
       Mikelab_removeBehaviorSimple:
-        text: 精灵 {SPRITE} 停止 {BEHAVIOR}
+        text: 精灵图 {SPRITE} 停止 {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: 一直重复
+      Mikelab_sendBad:
+        text: 向左移动对象
+      Mikelab_sendGood:
+        text: 向右移动对象
+      Mikelab_setBG:
+        options:
+          BG:
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': 城市
       Mikelab_setProp:
-        text: 设置 {SPRITE} {PROPERTY} 为 {VAL}
+        text: 设置 {PROPERTY} {SPRITE} 为 {VAL}
         options:
           PROPERTY:
             '"scale"': 大小
@@ -981,20 +1453,93 @@ zh-CN:
             '"x"': x位置
             '"y"': y位置
             '"direction"': 移动方向
-            '"tint"': 色调
+      Mikelab_setTint:
+        text: 将 {SPRITE} 的颜色改为 {COLOR}
+      Mikelab_showScoreboard:
+        options:
+          CORNER:
+            '"right"': 向右
+            '"left"': 向左
+      Mikelab_showText:
+        options:
+          PREPOSITION:
+            '"above"': above
+            '"below"': below
+      Mikelab_sprite:
+        text: 在 {LOCATION} 创建一个新 {COSTUME} 精灵图
+        options:
+          LOCATION:
+            "{x: 200, y: 100}": 顶部
+            "{x: 200, y: 300}": 底部
+            "{x: 100, y: 200}": 向左
+            "{x: 300, y: 200}": 向右
+            "{x: 200, y: 200}": 中央
+            "{x: 100, y: 100}": 左上
+            "{x: 300, y: 100}": 右上
+            "{x: 100, y: 300}": 左下
+            "{x: 300, y: 300}": 右下
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": 随机
+      Mikelab_whenClickedOn:
+        text: 当 {SPRITE} 被点击时
+      Mikelab_whenKeyPressed:
+        text: 当 {KEY} 按下时
+        options:
+          KEY:
+            '"up"': 上方向键
+            '"down"': 下方向键
+            '"left"': 左方向键
+            '"right"': 右方向键
+            '"w"': 西
+            '"a"': A
+            '"s"': 南
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"up"': 上方向键
+            '"down"': 下方向键
+            '"left"': 左方向键
+            '"right"': 右方向键
+            '"w"': 西
+            '"a"': A
+            '"s"': 南
+            '"d"': D
+      Mikelab_whenMouseClicked:
+        text: 当鼠标点击时
       Mikelab_whenTouchesAny:
-        text: 当{TARGET} 触及任何精灵时
-      Mikelab_whenTouchingAny:
-        text: 当 {SPRITE} 碰到任何 {GROUP}
+        text: 当{SPRITE} 触及任何精灵图时
+      Mikelab_whenYesNoClicked:
+        text: 当点击 {KEY} 时
+        options:
+          KEY:
+            '"yes"': 是
+            '"no"': 不
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': 上方向键
+            '"down"': 下方向键
+            '"left"': 左方向键
+            '"right"': 右方向键
       Mikelab_whileTouchingAny:
         text: |-
-          当{TARGET} 碰到任何精灵
+          当{SPRITE} 碰到任何精灵图
           {STATEMENT}
-      Vanilla_randomColor:
-        text: 随机颜色
+      Mikelab_xLocationOf:
+        text: "{SPRITE} 的x轴坐标"
+      Mikelab_yLocationOf:
+        text: "{SPRITE} 的y坐标"
+      RyanLab_moveForward:
+        text: 向前移动
+      RyanLab_turnLeft:
+        text: 向左转
+      RyanLab_turnRight:
+        text: 向右转
+      SpriteLab2Beta_spriteSay:
+        text: 精灵图 {SPRITE} 说{TEXT} 持续{SECONDS} 秒
       Vector_createSpriteWith:
         text: |-
-          创建精灵
+          创建精灵图
           执行 {STATEMENT}
       Vector_log:
         text: 日志消息 {MESSAGE}
@@ -1017,18 +1562,175 @@ zh-CN:
         options:
           PROPERTY:
             "'shapeColor'": 颜色
+      aalab_addBehaviorForDuration:
+        text: aalab 精灵图 {SPRITE} 开始 {BEHAVIOR} 经历 {SECONDS} 秒
+      aalab_addBehaviorUntilBoolean:
+        text: 精灵图{SPRITE} 开始{BEHAVIOR} 直到{CONDITION}
+      aalab_createNewSpriteAnonReturn2:
+        text: 新精灵图在位置 {LOCATION}，名为 {SPRITE_NAME}，并穿着 {ANIMATION_NAME}
+      aalab_goToScene:
+        text: 前往场景 {SCENE}
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_prompt:
+        text: 提问 {MESSAGE}
+      aalab_scene:
+        text: 场景 {SCENE}
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_setupStory:
+        text: 设置故事
+      aalab_showHideSprite:
+        text: "{OPTION}{SPRITE}"
+        options:
+          OPTION:
+            '"show"': 显示
+            '"hide"': 隐藏
+      binary_drawBin:
+        text: 绘制二进制 {BIN}
+      binary_drawBinScreen:
+        text: |-
+          绘制屏幕
+          {B1}
+          {B2}
+          {B3}
+          {B4}
+          {B5}
+          {B6}
+          {B7}
+          {B8}
+      binary_drawDec:
+        text: 绘制十进制 {DEC}
+      binary_drawPixelHere:
+        text: 设置像素 {VAL}
+        options:
+          VAL:
+            '0': 关闭
+            '1': 开启
+            '"toggle"': 切换
+      binary_drawString:
+        text: 绘制字符串 {STR}
+      binary_goTo:
+        text: 跳到 {LOC}
+      binary_goToHome:
+        text: 跳到左上角
+      binary_gridSize:
+        text: 设置网格尺寸大小 {SIZE}
+      binary_move:
+        text: 移动 {DIR}
+        options:
+          DIR:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+      binary_whenKey:
+        text: 当 {KEY} 按下时
+        options:
+          KEY:
+            '"up"': 向上
+            '"down"': 向下
+            '"left"': 向左
+            '"right"': 向右
+            '"space"': 空间
+            '"a"': a
+            '"w"': w
+            '"s"': s
+            '"d"': d
       craft_ifPath:
+        text: |-
+          如果路径 {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": 前面
+            "'right'": 向右转
+            "'left'": 向左转
       craft_ifStandingOn:
+        text: |-
+          站在{TYPE}
+          {STATEMENT}
+        options:
+          TYPE:
+            "'blueCoralBlock'": 蓝色珊瑚
+            "'redCoralBlock'": 红色珊瑚
+            "'sand'": 沙子
+            "'wool_blue'": 深水
+            "'planksOak'": 橡木板
+            "'seaLantern'": 海晶灯
+      craft_ifStandingOnLimit:
+        text: |-
+          站在{TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": 沙子
-            "'planksOak'": 橡木板
+            "'darkPrismarine'": 暗海晶石
+            "'seaLantern'": 海晶灯
       craft_log:
         text: 日志消息 {MESSAGE}
       craft_moveForward:
         text: 向前移动
+      craft_placeBlock:
+        text: 放下{blockType}
+        options:
+          blockType:
+            '"strippedOak"': 去皮橡木
+            '"strippedDarkOak"': 去皮深色橡木
+            '"stoneBricks"': 石砖
+            '"mossyStoneBricks"': 苔石砖
+            '"crackedStoneBricks"': 裂石砖
+            '"decorativeStoneBricks"': 装饰性石砖
+            '"blueCoralBlock"': 管珊瑚块
+            '"pinkCoralBlock"': 脑纹珊瑚块
+            '"magentaCoralBlock"': 气泡珊瑚块
+            '"redCoralBlock"': 火珊瑚块
+            '"yellowCoralBlock"': 鹿角珊瑚块
+            '"blueDeadCoralBlock"': 失活的管珊瑚块
+            '"pinkDeadCoralBlock"': 失活的脑纹珊瑚块
+            '"magentaDeadCoralBlock"': 失活的气泡珊瑚块
+            '"readDeadCoralBlock"': 失活的火珊瑚块
+            '"yellowDeadCoralBlock"': 失活的鹿角珊瑚块
+            '"prismarine"': 海晶石
+            '"darkPrismarine"': 暗海晶石
+            '"seaLantern"': 海晶灯
+            '"packedIce"': 霜冰
+            '"blueIce"': 蓝冰
+            '"blackConcrete"': 黑色混凝土
+            '"seaGrass"': 海草
+            '"kelp"': 海带
+            '"polishedGranite"': 磨制花岗岩
+      craft_placePrismarine:
+        text: 放置海晶石
       craft_placeTorch:
         text: 放下火把
+      craft_repeatUntilConduit:
+        text: |-
+          重复，直至潮涌核心完成
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          重复，直至目标达成
+          {STATEMENT}
+      craft_spawnEntity:
+        text: 生成{ENTITY}
+        options:
+          ENTITY:
+            '"cod"': 鳕鱼
+            '"dolphin"': 海豚
+            '"salmon"': 鲑鱼
+            '"seaTurtle"': 海龟
+            '"squid"': 鱿鱼
+            '"tropicalFish"': 热带鱼
+      craft_turn:
+        text: 转向{DIR}
+        options:
+          DIR:
+            right: 右 ↻
+            left: 左 ↺

@@ -11,7 +11,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "(Optional): Please explain why you would/would not recommend this computer science course to another student."
+    "long_instructions": "(Optional): Please explain why you would/would not recommend this computer science course to another student."
   },
   "published": true,
   "notes": "",

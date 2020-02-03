@@ -74,6 +74,7 @@ lv-LV:
   congratulations: Apsveicu!
   congratulations_on_completing_hoc: Apsveicam tevi ar "Programmēšanas stundas" pabeigšanu
   get_a_certificate_of_achievement: Iegūsti sasniegumus apliecinošu sertefikātu
+  third_party_organization: Organizācija
   third_party_curriculum: Mācību programmas
   enter_valid_age: Lūdzu norādiet derīgu vecumu
   enter_valid_email: Lūdzu, ievadi derīgu e-pasta adresi
@@ -265,7 +266,6 @@ lv-LV:
   homepage_slot_text_link_stats: Skatīt statistiku
   homepage_slot_text_link_buy: Iesaisties
   homepage_slot_text_link_donate: Ziedo
-  homepage_header_codestudio: Skolēnu darbi kodēšanas studijā
   homepage_header_donors: Code.org izsaka pateicību atbalstītājiem
   homepage_donors_seall: Skatīt visus
   homepage_donors_donate: Ziedot
@@ -458,6 +458,7 @@ lv-LV:
   dashboard_sections_print_secrets: Tad jūs varat izdrukāt lapiņas, kas satur informāciju
     par kontiem, kas individuāli tiek izdalīti taviem skolēniem.
   dashboard_sections_switch_section: 'Pārslēgt sadaļu:'
+  dashboard_sections_close: Aizvērt
   dashboard_students_add_multiple: 'Ieraksti vai iekopē savu skolēnu vārdus, vienu
     katrā rindā:'
   dashboard_students_new_section: Tu izveidoji jaunu sadaļu! Tagad pievieno skolēnus,
@@ -613,9 +614,8 @@ lv-LV:
   course2_name: Kurss 2
   course3_name: Kurss 3
   course4_name: 4. kurss
-  math_category_name: Matemātika
-  hoc_category_name: Programmēšanas stunda
   applab_name: Aplikāciju laborotorija
+  applab_gradelevel: Vecums 13+
   codeorg_gradelevel: Vecums no 4-104
   codeintl_gradelevel: Vecums no 4-104
   khan_gradelevel: Pamatskola +
@@ -667,6 +667,7 @@ lv-LV:
   coursee_gradelevel: Vecumā no 8-12
   coursee-2017_gradelevel: Vecumā no 8-12
   coursee-2018_gradelevel: Vecumā no 8-12
+  coursee-2019_gradelevel: Vecumā no 8-12
   accelerated_gradelevel: Vecumā no 10 gadiem (pēc 3. kursa)
   codeorg_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
   codeintl_platformtext: Moderni pārlūki, viedtālruņi, planšetdatori
@@ -1174,8 +1175,25 @@ lv-LV:
     zināšanas matemātikā un dabaszinībās.
   flappy_shortcode: vicināt
   header_courses: Kursi
+  header_course_catalog: Kursu katalogs
   header_educate_hoc: Programmēšanas stunda
+  header_about_us: Par mums
+  header_about_partners: Partneri
+  header_documentation: Dokumentācija
   user_header_label: Sveiki, %{username}
+  user_header_team: Komanda
   user_header_settings: Mans konts
   user_header_logout: Izrakstīties
   user_header_signin: Pierakstīties
+  user_header_playlab: Spēles laboratorija
+  user_header_flappy: Flapijs
+  applab_tile_start_tutorial: Sākt
+  hoc_overview_start_tutorial: Sākt
+  hoc2018_creativity_create: Izveidot
+  hoc2018_mc_start: Sākt
+  hoc2018_mc_educators_box2_button: Lejuplādēt
+  hoc2018_mc_homepage_try_it: Izmēģini
+  hoc2018_dance_party_button: Sākt
+  hoc2018_dance_teacher_resources_tile1_button: Nodarbību plāns
+  hoc2018_dance_teacher_resources_tile2_button: Atvienota aktivitāte
+  hoc2018_dance_amazon_about_future_engineer_button: Uzzini vairāk

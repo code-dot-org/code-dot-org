@@ -1,5 +1,5 @@
+require 'cdo/aws/cloudfront'
 require 'google/apis/classroom_v1'
-require 'honeybadger'
 
 class ApiController < ApplicationController
   layout false
@@ -20,7 +20,7 @@ class ApiController < ApplicationController
     return head :forbidden unless current_user
 
     uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v1.1/teachers/#{uid}/sections") do |response|
+    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -41,7 +41,7 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
-    query_clever_service("v1.1/sections/#{course_id}/students") do |students|
+    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -75,6 +75,7 @@ class ApiController < ApplicationController
   end
 
   def google_classrooms
+    return head :forbidden unless current_user
     query_google_classroom_service do |service|
       response = service.list_courses(teacher_id: 'me')
       render json: response.to_h
@@ -82,6 +83,7 @@ class ApiController < ApplicationController
   end
 
   def import_google_classroom
+    return head :forbidden unless current_user
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
 
@@ -142,6 +144,8 @@ class ApiController < ApplicationController
     render json: {}
   end
 
+  use_database_pool lockable_state: :persistent
+
   # For a given user, gets the lockable state for each student in each of their sections
   def lockable_state
     unless current_user
@@ -165,6 +169,8 @@ class ApiController < ApplicationController
 
     render json: data
   end
+
+  use_database_pool section_progress: :persistent
 
   def section_progress
     section = load_section
@@ -240,6 +246,8 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  use_database_pool section_level_progress: :persistent
+
   # This API returns data similar to user_progress, but aggregated for all users
   # in the section. It also only returns the "levels" portion
   # If not specified, the API will default to a page size of 50, providing the first page
@@ -301,6 +309,8 @@ class ApiController < ApplicationController
     end
   end
 
+  use_database_pool student_progress: :persistent
+
   def student_progress
     student = load_student(params.require(:student_id))
     section = load_section
@@ -327,21 +337,32 @@ class ApiController < ApplicationController
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize
+    summary = script.summarize(true, nil, true)
     summary[:path] = overview_path
     render json: summary
   end
+
+  def script_standards
+    script = Script.get_from_cache(params[:script])
+    standards = script.standards
+    render json: standards
+  end
+
+  use_database_pool user_progress: :persistent
 
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
       script = Script.get_from_cache(params[:script])
-      user = params[:user_id] ? User.find(params[:user_id]) : current_user
-      render json: summarize_user_progress(script, user)
+      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
+      teacher_viewing_student = current_user.students.include?(user)
+      render json: summarize_user_progress(script, user).merge({teacherViewingStudent: teacher_viewing_student})
     else
       render json: {}
     end
   end
+
+  use_database_pool user_progress_for_stage: :persistent
 
   # Return the JSON details of the users progress on a particular script
   # level and marks the user as having started that level. (Because of the
@@ -360,7 +381,12 @@ class ApiController < ApplicationController
       user_level = current_user.last_attempt(level, script)
       level_source = user_level.try(:level_source).try(:data)
 
-      response[:progress] = current_user.user_progress_by_stage(stage)
+      response[:progress] = current_user.
+        user_levels.
+        by_stage(stage).
+        pluck(:level_id, :best_result).
+        to_h
+
       if user_level
         response[:lastAttempt] = {
           timestamp: user_level.updated_at.to_datetime.to_milliseconds,
@@ -420,6 +446,38 @@ class ApiController < ApplicationController
     end.flatten
 
     render json: data
+  end
+
+  # GET /dashboardapi/sign_cookies
+  def sign_cookies
+    # length of time the browser can privately cache this request for cookies
+    expires_in 1.hour
+
+    # length of time these cookies are considered valid by cloudfront
+    expiration_date = Time.now + 4.hours
+    resource = CDO.studio_url('/restricted/*', CDO.default_scheme)
+
+    cloudfront_cookies = AWS::CloudFront.signed_cookies(resource, expiration_date)
+
+    cloudfront_cookies.each do |k, v|
+      cookies[k] = v
+    end
+
+    head :ok
+  end
+
+  # PUT /api/firehose_unreachable
+  def firehose_unreachable
+    original_data = params.require(:original_data)
+    event = original_data['event']
+    project_id = original_data['project_id'] || nil
+    FirehoseClient.instance.put_record(
+      study: 'firehose-error-unreachable',
+      event: event,
+      project_id: project_id,
+      data_string: params.require(:error_text),
+      data_json: original_data.to_json
+    )
   end
 
   private

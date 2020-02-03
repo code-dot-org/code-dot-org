@@ -1,31 +1,31 @@
 login_required true
 
 stage 'all assessment items as standalone assessment levels'
-assessment 'csp_U3_square_v_rect_FR'
-assessment 'csp_U3_plan_code_FR'
-assessment 'csp_U3_turtle_subgoal_q1_mc'
-assessment 'csp_U3_turtle_subgoal_q2_mc'
-assessment 'csp_U3_turtle_subgoal_q3_mc'
-assessment 'csp_U3_subgoal_q4_mc'
-assessment 'subgoals_U3_turtle_prediction_FR'
-assessment 'subgoals_u3_top_down_FR'
+level 'csp_U3_square_v_rect_FR', assessment: true
+level 'csp_U3_plan_code_FR', assessment: true
+level 'csp_U3_turtle_subgoal_q1_mc', assessment: true
+level 'csp_U3_turtle_subgoal_q2_mc', assessment: true
+level 'csp_U3_turtle_subgoal_q3_mc', assessment: true
+level 'csp_U3_subgoal_q4_mc', assessment: true
+level 'subgoals_U3_turtle_prediction_FR', assessment: true
+level 'subgoals_u3_top_down_FR', assessment: true
 
 stage 'submittable if last assessment item'
 level 'U3L03 Three Steps', progression: 'Some app lab progression'
 level 'U3L03 draw diamond', progression: 'Some app lab progression'
-assessment 'csp_U3_turtle_subgoal_q1_mc', progression: 'Check for understanding'
-assessment 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check for understanding'
+level 'csp_U3_turtle_subgoal_q1_mc', progression: 'Check for understanding', assessment: true
+level 'csp3_U3_turtle_subgoal_mc_levelgroup', progression: 'Check for understanding', assessment: true
 
 stage 'dummy'
-assessment 'subgoals_assessement_levelgroup_test2', progression: 'Check for understanding (diff between 3 and 4)'
+level 'subgoals_assessement_levelgroup_test2', progression: 'Check for understanding (diff between 3 and 4)', assessment: true
 
 stage 'assessment sandwiched between app lab levels'
 level 'U3L03 Draw a T using turnAround', progression: 'Some app lab progression'
-assessment 'csp_U3_square_v_rect_FR', progression: 'Some app lab progression'
+level 'csp_U3_square_v_rect_FR', progression: 'Some app lab progression', assessment: true
 level 'U3L03 define turnRight and draw a rectangle', progression: 'Some app lab progression'
 
 stage 'all assessment items clustered in levelgroup as a single "test"'
-assessment 'subgoal_assessments_levelgroup_test'
+level 'subgoal_assessments_levelgroup_test', assessment: true
 
 stage 'CSP 3 updates staging ground'
 level 'SG CSP Abstraction in Programming 2', progression: 'Lesson 5.6 - (new) Abstraction in Programming'

@@ -36,7 +36,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "markdown_instructions": "We can import data\r\n\r\nGiven a csv file, have students import it and then go look at in the data viewer",
+    "long_instructions": "We can import data\r\n\r\nGiven a csv file, have students import it and then go look at in the data viewer",
     "code_functions": {
       "console.log": null
     }

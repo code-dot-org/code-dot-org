@@ -1,6 +1,5 @@
 @dashboard_db_access
 @eyes
-
 Feature: Workshop Dashboard
 
 Scenario: New workshop: CSF intro
@@ -44,7 +43,7 @@ Scenario: New workshop: CSD units 2-3 with 2 facilitators
   And I press keys "Seattle, WA" for element "input#location_address"
   And I press keys "25" for element "input#capacity"
   And I select the "CS Discoveries" option in dropdown "course"
-  And I select the "1-day Academic Year, Units 1 and 2" option in dropdown "subject"
+  And I select the "Workshop 1: Unit 3" option in dropdown "subject"
 
   And I wait until element "label:contains('Workshop Type Options')" is visible
   And I select the "Yes, it is funded." option in dropdown "funded"

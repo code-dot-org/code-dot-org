@@ -21,15 +21,15 @@ uz:
         edit_header: Foydalanuvchi ma'lumotlarini tahrir qilish
         error:
           future: yaqin orada bo`la olmaydi
+  beta: beta
   hello: Salom Dunyo
   welcome_back: Qayta tashrifingiz bilan, %{name}
   submit: Taqdim qilmoq
   cancel: Bekor qilish
-  add_teacher_form:
+  or: yoki
+  join_section:
     code:
-      label: 'O`qituvchi qo`shing:'
       placeholder: Bo`lim kodi
-    submit: O`qituchi qo`shish
   add_hint_form:
     placeholder: Iltimos, ko`makchi so`zni shu yerga kiriting
     submit: Ko`makchi so`z qo`shing
@@ -42,7 +42,6 @@ uz:
   of: ni
   more: Ko`p
   less: Oz
-  beta: beta
   already_started: 'Allaqachon boshlaganmisiz? Bu yerda davom eting >> '
   demos: 'Admin: Barcha demonstratsiyalar'
   continue: Davom etish
@@ -51,12 +50,10 @@ uz:
   auth:
     sign_in_with: "%{provider} orqali kirish"
     signed_in: Kirgansiz!
-    signed_out: Siz <a href="%{url}">saytidan</a> chiqdingiz.
-    sign_out_of: Siz saytga kirish uchun %{provider} dan foydalandingiz. %{provider}
-      dan chiqish uchun <a href="%{url}">bu yerni</a> bosing.
     twitter: Twitter
     facebook: Facebook
     windowslive: Microsoft akkaunti
+    microsoft_v2_auth: Microsoft akkaunti
     forgot_password: Parolni unutdingizmi?
     need_confirmation: Tasdiqlash haqidagi ko'rsatmalarni olmadingizmi?
   signup_form:
@@ -82,17 +79,18 @@ uz:
     confirm: Aminmisiz?
   nav:
     header:
-      courses: Kurslar
       educate_hoc: Dasturlash soati
     user:
       classroom: O‘qituvchining bosh sahifasi
+      create: Yaratmoq
+      applab: Ilova labaratoriyasi
+      bounce: Sakrash
+      iceage: Muzlik davri
   teacher:
     panel:
       student: O‘quvchi
   home:
     trynow: Hoziroq sinang
-    announcement_learn_more_button: Ko‘proq bilish
-    announcement_try_now_button: Hoziroq sinang
   gender:
     none: Javob bermaslikni ma’qul ko‘raman
   user_type:
@@ -123,6 +121,8 @@ uz:
       title: Shart buyruqlari
   gallery:
     report_abuse: Nosozlik haqida xabar berish
+  free_response:
+    placeholder: Javobingizni bu yerga yozing
   multi:
     wrong_title: Noto‘g‘ri javob
     wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!
@@ -156,17 +156,24 @@ uz:
     races:
       other: Boshqa
     submit: Taqdim qilmoq
+    decline: Yopish
   project:
-    save: Saqlash
-    delete: O'chirish
-    more: Yana
     name: Ismi
-    really_delete: O'chirasizmi?
-    cancel: Bekor qilish
     abuse:
       report_abuse_form:
         abuse_type:
           other: Boshqa
+  flex_category:
+    csf_jigsaw: Topishmoq
+    csf_loops: Sikllar
+    csf_conditionals: Shart buyruqlari
+    csf_functions: Funksiyalar
+    csf_variables: O‘zgaruvchilar
+    csp_variables: O‘zgaruvchilar
+    csp_conditionals: Shart buyruqlari
+    csp_functions: Funksiyalar
+    csp_lists: Ro‘yxatlar
+    csp_loops: Sikllar
   pd:
     form_labels:
       email: Elektron pochta

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
+    "short_instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
     "x": "100",
     "y": "300",
     "start_direction": "90",
@@ -23,7 +23,7 @@
     "embed": "false",
     "callout_json": "[\r\n  {\"localization_key\":\"place_variable\",\"callout_text\":\"Drag your variable inside this block\",\"element_id\":\"#place_variable_qtip > .blocklyPath\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":60,\"y\":-10},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
+    "long_instructions": "Here's a loop that draws a square, but something's missing. Can you fix it so that it uses the variable \"length\" to figure out how long each side should be? ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

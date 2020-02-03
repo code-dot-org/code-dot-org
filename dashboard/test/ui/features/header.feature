@@ -1,4 +1,5 @@
 @no_mobile
+@single_session
 Feature: Header navigation bar
 
 Scenario: Signed out user in English should see 6 header links
@@ -19,8 +20,7 @@ Scenario: Signed out user in English should see 6 header links
   And element "#header-en-projects" contains text "Projects"
 
 Scenario: Student in English should see 2 header links
-  Given I create a student named "Sally Student"
-  Then check that I am on "http://studio.code.org/home"
+  Given I create a student named "Sally Student" and go home
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Course Catalog"
@@ -28,8 +28,7 @@ Scenario: Student in English should see 2 header links
   And element "#header-student-projects" contains text "Projects"
 
 Scenario: Teacher in English should see 5 header links
-  Given I create a teacher named "Tessa Teacher"
-  Then check that I am on "http://studio.code.org/home"
+  Given I create a teacher named "Tessa Teacher" and go home
   And I wait to see ".headerlinks"
   And I see "#header-teacher-home"
   And element "#header-teacher-home" contains text "My Dashboard"
@@ -40,7 +39,7 @@ Scenario: Teacher in English should see 5 header links
   And I see "#header-teacher-professional-learning"
   And element "#header-teacher-professional-learning" contains text "Professional Learning"
 
-Scenario: Signed out user in Spanish should see 2 header links
+Scenario: Signed out user in Spanish should see 3 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
@@ -50,10 +49,11 @@ Scenario: Signed out user in Spanish should see 2 header links
   And element "#header-non-en-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-non-en-projects"
   And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
-Scenario: Student in Spanish should see 2 header links
-  Given I create a student named "Estrella Estudiante"
-  Then check that I am on "http://studio.code.org/home"
+Scenario: Student in Spanish should see 3 header links
+  Given I create a student named "Eva Estudiante"
   Given I am on "http://studio.code.org/courses/lang/es"
   Then check that I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
@@ -61,10 +61,11 @@ Scenario: Student in Spanish should see 2 header links
   And element "#header-student-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-student-projects"
   And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"
 
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
-  Then check that I am on "http://studio.code.org/home"
   Given I am on "http://studio.code.org/home/lang/es"
   Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
@@ -74,5 +75,5 @@ Scenario: Teacher in Spanish should see 5 header links
   And element "#header-teacher-courses" has "es" text from key "nav.header.course_catalog"
   And I see "#header-teacher-projects"
   And element "#header-teacher-projects" has "es" text from key "nav.header.project_gallery"
-  And I see "#header-teacher-professional-learning"
-  And element "#header-teacher-professional-learning" has "es" text from key "nav.header.professional_learning"
+  And I see "#header-non-en-about"
+  And element "#header-non-en-about" has "es" text from key "nav.header.about"

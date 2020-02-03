@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 /**
  * A simple component for centering content within a dialog.
@@ -10,7 +11,7 @@ const PadAndCenter = ({children}) => (
       flexFlow: 'row',
       justifyContent: 'center',
       marginTop: 20,
-      marginBottom: 20,
+      marginBottom: 20
     }}
   >
     {children}

@@ -1,5 +1,5 @@
 {
-  "continue": "",
+  "continue": "सुरू ठेवा",
   "doCode": "",
   "elseCode": "",
   "endGame": "",
@@ -17,7 +17,7 @@
   "incrementPlayerScore": "",
   "incrementPlayerScoreTooltip": "",
   "nextLevel": "",
-  "no": "",
+  "no": "नाही",
   "numBlocksNeeded": "",
   "playSoundRandom": "",
   "playSoundBounce": "",
@@ -129,5 +129,5 @@
   "whenEnterObstacleTooltip": "",
   "whenRunButtonClick": "",
   "whenRunButtonClickTooltip": "",
-  "yes": ""
+  "yes": "होय"
 }

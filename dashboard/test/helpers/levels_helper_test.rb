@@ -45,48 +45,60 @@ class LevelsHelperTest < ActionView::TestCase
   test "non-custom level displays localized instruction after locale switch" do
     default_locale = 'en-US'
     new_locale = 'es-ES'
-    @level.instructions = nil
+    @level.short_instructions = nil
     @level.user_id = nil
     @level.level_num = '2_2'
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: default_locale), options[:level]['shortInstructions']
 
     reset_view_options
 
     I18n.locale = new_locale
     options = blockly_options
-    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['instructions']
+    assert_equal I18n.t('data.level.instructions.maze_2_2', locale: new_locale), options[:level]['shortInstructions']
   end
 
   test "custom level displays english instruction" do
     default_locale = 'en-US'
-    @level = Level.find_by_name 'frozen line'
+    @level.short_instructions = "English instructions"
 
     I18n.locale = default_locale
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    refute_nil options[:level]['shortInstructions']
+    assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
   test "custom level displays localized instruction if exists" do
+    @level.short_instructions = "English instructions"
     new_locale = 'es-ES'
+    new_instructions = "Spanish instructions"
 
     I18n.locale = new_locale
-    @level = Level.find_by_name 'frozen line'
+    custom_i18n = {
+      "data" => {
+        "short_instructions" => {
+          @level.name => new_instructions
+        }
+      }
+    }
+    I18n.backend.store_translations new_locale, custom_i18n
+    assert_equal new_instructions, I18n.t("data.short_instructions.#{@level.name}", locale: new_locale)
+
     options = blockly_options
-    assert_equal I18n.t("data.instructions.#{@level.name}_instruction", locale: new_locale), options[:level]['instructions']
+    assert_equal new_instructions, options[:level]['shortInstructions']
 
     reset_view_options
 
-    @level.name = 'this_level_doesnt_exist'
+    @level.update(name: 'this_level_doesnt_exist')
     options = blockly_options
-    assert_equal @level.instructions, options[:level]['instructions']
+    assert_equal @level.short_instructions, options[:level]['shortInstructions']
   end
 
   test "get video choices" do
     choices_cached = video_key_choices
-    assert_equal(choices_cached.count, Video.count)
+    assert_equal(choices_cached.count, Video.where(locale: 'en-US').count)
     Video.all.each {|video| assert_includes(choices_cached, video.key)}
   end
 
@@ -418,7 +430,7 @@ class LevelsHelperTest < ActionView::TestCase
     # (position 4) Lockable 3
     # (position 5) Non-Lockable 2
 
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'Lockable1',
         lockable: true;
       assessment 'LockableAssessment1';
@@ -482,8 +494,33 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal '/s/test_script/stage/2/puzzle/1/page/1', build_script_level_path(stage.script_levels[0], {puzzle_page: '1'})
   end
 
+  test 'build_script_level_path uses names for bonus levels to support cross-environment links' do
+    input_dsl = <<~DSL
+      stage 'Test bonus level links'
+      level 'Level1'
+      level 'BonusLevel1', bonus: true
+    DSL
+
+    create :level, name: 'Level1'
+    create :level, name: 'BonusLevel1'
+
+    script_data, _ = ScriptDSL.parse(input_dsl, 'test_bonus_level_links')
+
+    script = Script.add_script(
+      {name: 'test_bonus_level_links'},
+      script_data[:stages]
+    )
+
+    bonus_script_level = script.stages.first.script_levels[1]
+    uri = URI(build_script_level_path(bonus_script_level, {}))
+    assert_equal '/s/test_bonus_level_links/stage/1/extras', uri.path
+
+    query_params = CGI.parse(uri.query)
+    assert_equal bonus_script_level.level.name, query_params['level_name'].first
+  end
+
   test 'build_script_level_path handles bonus levels with or without solutions' do
-    input_dsl = <<-DSL.gsub(/^\s+/, '')
+    input_dsl = <<~DSL
       stage 'My cool stage'
       level 'Level1'
       level 'Level2'
@@ -509,13 +546,14 @@ class LevelsHelperTest < ActionView::TestCase
     uri = URI(build_script_level_path(sl, {}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
+    assert_nil query_params['solution'].first
 
     sl = stage.script_levels[3]
     uri = URI(build_script_level_path(sl, {solution: true}))
     query_params = CGI.parse(uri.query)
     assert_equal '/s/my_cool_script/stage/1/extras', uri.path
-    assert_equal sl.id.to_s, query_params['id'].first
+    assert_equal sl.level.name, query_params['level_name'].first
     assert_equal 'true', query_params['solution'].first
   end
 
@@ -607,31 +645,109 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'block options are localized' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
+    toolbox_translated_name = "Azioni"
     @level.toolbox_blocks = toolbox
 
     start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    start_translated_name = "dettagli"
     @level.start_blocks = start
 
     I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "function_names" => {
+          @level.name => {
+            "Actions" => toolbox_translated_name,
+            "details" => start_translated_name
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
+    new_start = start.sub("details", start_translated_name)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, start
+
     options = blockly_options
-    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
-    new_start = start.sub("details", I18n.t("data.function_names.details"))
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
   end
 
   test 'block options are localized in project-backed levels' do
     toolbox = "<xml><category name=\"Actions\"/></xml>"
+    toolbox_translated_name = "Azioni"
     start = "<xml><block type=\"procedures_defnoreturn\"><title name=\"NAME\">details</title></block></xml>"
+    start_translated_name = "dettagli"
 
     project_level = create :maze, toolbox_blocks: toolbox, start_blocks: start
     @level.project_template_level_name = project_level.name
 
     I18n.locale = :'it-IT'
+    custom_i18n = {
+      "data" => {
+        "function_names" => {
+          @level.name => {
+            "Actions" => toolbox_translated_name,
+            "details" => start_translated_name
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, custom_i18n
+
+    new_toolbox = toolbox.sub("Actions", toolbox_translated_name)
+    new_start = start.sub("details", start_translated_name)
+    refute_equal new_toolbox, toolbox
+    refute_equal new_start, toolbox
+
     options = blockly_options
-    new_toolbox = toolbox.sub("Actions", I18n.t("data.block_categories.Actions"))
-    new_start = start.sub("details", I18n.t("data.function_names.details"))
     assert_equal new_toolbox, options[:level]["toolbox"]
     assert_equal new_start, options[:level]["startBlocks"]
+  end
+
+  test 'render_multi_or_match_content can retrieve plain text' do
+    @level = create :multi, name: "test render_multi_or_match_content plain text"
+    assert_equal render_multi_or_match_content("test"), "test"
+  end
+
+  test 'render_multi_or_match_content can generate images' do
+    assert_equal render_multi_or_match_content("example.png"), "<img src=\"example.png\"></img>"
+  end
+
+  test 'render_multi_or_match_content can generate embedded blockly' do
+    create :level,
+      name: "embedded blockly test",
+      start_blocks: "<xml><block type='embedded_block' /></xml>"
+
+    #request.env['cdo-locale'] is used to generate the js_locale, but isn't
+    #correctly set up in this test context, so we have to mock it.
+    mock_request = mock
+    mock_request.stubs(:env).returns({"cdo.locale" => I18n.default_locale})
+    stubs(:request).returns(mock_request)
+
+    assert_equal render_multi_or_match_content("embedded blockly test.start_blocks"),
+      "<xml><xml><block type=\"embedded_block\"/></xml></xml>"\
+      "<div id=\"codeWorkspace\" style=\"display: none\"></div>"\
+      "<style>.blocklySvg { background: none; }</style>"\
+      "<script src=\"/assets/js/blockly.js\"></script>"\
+      "<script src=\"/assets/js/en_us/blockly_locale.js\"></script>"\
+      "<script src=\"/assets/js/common.js\"></script>"\
+      "<script src=\"/assets/js/en_us/maze_locale.js\"></script>"\
+      "<script src=\"/assets/js/maze.js\" data-appoptions=\"{&quot;readonly&quot;:true,&quot;embedded&quot;:true,&quot;locale&quot;:&quot;en_us&quot;,&quot;baseUrl&quot;:&quot;/blockly/&quot;,&quot;blocks&quot;:&quot;\\u003cxml\\u003e\\u003c/xml\\u003e&quot;,&quot;dialog&quot;:{},&quot;nonGlobal&quot;:true}\"></script>"\
+      "<script src=\"/assets/js/embedBlocks.js\"></script>"
+
+    unstub(:request)
+  end
+
+  test 'render_multi_or_match_content can generate iframes' do
+    test_level = create :level,
+      name: "embedded iframe test"
+
+    assert_equal render_multi_or_match_content("embedded iframe test.level"),
+      "<div class=\"aspect-ratio\">"\
+      "<iframe src=\"/levels/#{test_level.id}/embed_level\" width=\"100%\" scrolling=\"no\" seamless=\"seamless\" style=\"border: none;\"></iframe>"\
+      "</div>"
   end
 end

@@ -9,7 +9,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "bee",
-    "instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible.",
+    "short_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -31,7 +31,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "markdown_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible.",
+    "long_instructions": "Those flowers look tasty!\r\n\r\nCollect nectar from each of the flowers using the fewest blocks possible.",
     "contained_level_names": null
   },
   "published": true,

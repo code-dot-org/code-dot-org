@@ -3,15 +3,25 @@ uz:
   data:
     block_categories:
       Actions: Harakatlar
-      Loops: Sikllar
-      Functions: Funksiyalar
+      Advanced: Rivojlangan
+      Behaviors: Hatti-harakatlar
+      Brushes: Cho'tka
       Color: Rang
-      Math: Matematik
-      Logic: Mantiq
-      Variables: O‘zgaruvchilar
+      Comment: Izoh
+      Comments: Izohlar
       Conditionals: Shart buyruqlari
+      Dancers: Raqqoslar
+      Functions: Funksiyalar
+      'Functions ': 'Vazifalar '
+      Game/Score: O'yin/Hisob
+      Games/Score: O'yin/Hisob
+      Groups: Guruhlar
+      Locations: Manzil
+      Logic: Mantiq
+      Loops: Sikllar
+      Math: Matematik
+      Numbers: Raqamlar
       Text: Matn
-      Start: Boshlash
-      test: test
-      Name: Ismi
-      Function: Funksiya
+      Variables: O‘zgaruvchilar
+      'Variables ': 'O''zgaruvchilar '
+      World: Dunyo

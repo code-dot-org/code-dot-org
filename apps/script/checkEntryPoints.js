@@ -42,99 +42,103 @@ const chalk = require('chalk');
 const child_process = require('child_process');
 
 const SILENCED = [
+  // app types loaded conditionally from _apps_dependencies.html.haml
   'applab',
-  'applab-api',
-  'blockly',
   'bounce',
-  'brambleHost',
   'calc',
-  'code-studio',
   'craft',
-  'districtDropdown',
-  'embedBlocks',
-  'embedVideo',
-  'essential',
+  'dance',
   'eval',
+  'fish',
   'flappy',
   'gamelab',
   'jigsaw',
-  'levelbuilder',
-  'levelbuilder_applab',
-  'levelbuilder_craft',
-  'levelbuilder_edit_script',
-  'levelbuilder_gamelab',
-  'levelbuilder_studio',
-  'levelbuilder_pixelation',
-  'levels/contract_match',
-  'levels/external',
-  'levels/multi',
-  'levels/textMatch',
-  'levels/widget',
   'maze',
   'netsim',
-  'plc',
-  'publicKeyCryptography',
-  'raceInterstitial',
-  'schoolInfo',
-  'schoolInfoInterstitial',
-  'scratch',
-  'scriptOverview',
-  'signup',
   'studio',
   'turtle',
-  'tutorialExplorer',
+  'scratch',
   'weblab',
-  'learn/index',
+  'spritelab',
+
+  // referenced from exported projects
+  'applab-api',
+  'gamelab-api',
+
+  // referenced by embedded multi/match levels
+  'embedBlocks',
+  'embedVideo',
+
+  // referenced from dashboard/public
+  'publicKeyCryptography',
+
+  // shared code referenced from application.html.haml. These should go
+  // away once we configure webpack to manage chunks dynamically.
+  'essential',
+  'code-studio',
+
+  // referenced by multiple sites
+  'tutorialExplorer',
   'cookieBanner',
-  'dance',
-  'regionalPartnerSearch',
+  'regionalPartnerMiniContact',
+  'donorTeacherBanner',
+
+  // other entry points
+  'blockly',
+  'brambleHost',
+  'levelbuilder'
 ];
 const SITES_CONFIG = {
-  'studio': {
+  studio: {
     entryPrefix: '',
     templateRoot: '../dashboard/app/views',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
+    templateExtensions: ['erb', 'haml']
   },
   'code.org': {
     entryPrefix: 'code.org/',
     templateRoot: '../pegasus/sites.v3/code.org',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
+    templateExtensions: ['erb', 'haml']
   },
   'hourofcode.com': {
     entryPrefix: 'hourofcode.com/',
     templateRoot: '../pegasus/sites.v3/hourofcode.com',
     templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
-  },
+    templateExtensions: ['erb', 'haml']
+  }
 };
 
 const ENTRY_POINT_FILE_PATH_PATTERN = /^\.\/src\/sites\/([\w.]+)\/pages\/(.*)\.jsx?$/;
 
-
 function findTemplatesForSite(siteConfig) {
-  const findArgs = siteConfig.templateExtensions.map(ext => `-name '*.${ext}'`).join(' -o ');
-  return new Promise(resolve => child_process.exec(
-    `find ${siteConfig.templateRoot} ${findArgs}`,
-    (err, stdout, stderr) => {
-      const templatesToSearch = stdout.split('\n').filter(f=>f);
-      resolve(templatesToSearch);
-    }
-  ));
+  const findArgs = siteConfig.templateExtensions
+    .map(ext => `-name '*.${ext}'`)
+    .join(' -o ');
+  return new Promise(resolve =>
+    child_process.exec(
+      `find ${siteConfig.templateRoot} ${findArgs}`,
+      (err, stdout, stderr) => {
+        const templatesToSearch = stdout.split('\n').filter(f => f);
+        resolve(templatesToSearch);
+      }
+    )
+  );
 }
 
 function searchFilesForString(filesToSearch, searchString) {
-  return new Promise(resolve => child_process.exec(
-    `grep "${searchString}" "${filesToSearch.join('" "')}"`,
-    (err, stdout, stderr) => {
-      let filesWithString = stdout
-        .split('\n')
-        .filter(line => line)
-        .map(line => line.split(':')[0]);
-      resolve(filesWithString);
-    }
-  ));
+  return new Promise(resolve =>
+    child_process.exec(
+      `grep "${searchString}" "${filesToSearch.join('" "')}"`,
+      (err, stdout, stderr) => {
+        let filesWithString = stdout
+          .split('\n')
+          .filter(line => line)
+          .map(line => line.split(':')[0]);
+        resolve(filesWithString);
+      }
+    )
+  );
 }
 
 /**
@@ -164,15 +168,21 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
   if (site) {
     const siteConfig = SITES_CONFIG[site];
     return findTemplatesForSite(siteConfig)
-      .then(templatesToSearch => searchFilesForString(templatesToSearch, `js/${entryKey}.js`))
+      .then(templatesToSearch =>
+        searchFilesForString(templatesToSearch, `js/${entryKey}.js`)
+      )
       .then(templates => {
         // Grab the set of all valid entry keys (e.g. name of the template minus extension)
         // Also convert the template paths to relative paths for easier display.
         const possibleValidEntryKeys = new Set();
         const matchedTemplatePaths = [];
         templates.forEach(templatePath => {
-          const relativePath = templatePath.replace(siteConfig.templateRoot, '').slice(1);
-          possibleValidEntryKeys.add(siteConfig.entryPrefix + relativePath.split('.')[0]);
+          const relativePath = templatePath
+            .replace(siteConfig.templateRoot, '')
+            .slice(1);
+          possibleValidEntryKeys.add(
+            siteConfig.entryPrefix + relativePath.split('.')[0]
+          );
           matchedTemplatePaths.push(relativePath);
         });
 
@@ -184,13 +194,15 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
             // entry point don't match (bad)
             errors.push(
               `Entry point names should match the name of the file they are used in.\n` +
-              `This entry point should be renamed to ${chalk.underline(keyShouldBe)}!`
+                `This entry point should be renamed to ${chalk.underline(
+                  keyShouldBe
+                )}!`
             );
           }
         } else {
           errors.push(
             `Entry points should only be used by one template ` +
-            `but this one is used by ${possibleValidEntryKeys.size}!`
+              `but this one is used by ${possibleValidEntryKeys.size}!`
           );
         }
         if (entryPointPatternMatch) {
@@ -199,9 +211,11 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
           if (siteConfig.entryPrefix + entryPointPatternMatch[2] !== entryKey) {
             errors.push(
               `Entry points should have the same name as the file they point to!\n` +
-              `This entry point should be renamed to ` +
-              chalk.underline(siteConfig.entryPrefix + entryPointPatternMatch[2]) +
-              `!`
+                `This entry point should be renamed to ` +
+                chalk.underline(
+                  siteConfig.entryPrefix + entryPointPatternMatch[2]
+                ) +
+                `!`
             );
             errors.push();
           }
@@ -218,9 +232,11 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
           log = logError;
         }
         log(
-          errors.length === 0 ? chalk.green(`✓ ${entryKey}`) :
-          isEntryPointSilenced ? chalk.yellow(`⚠ ${entryKey}`) :
-          chalk.red(`✘ ${entryKey}`),
+          errors.length === 0
+            ? chalk.green(`✓ ${entryKey}`)
+            : isEntryPointSilenced
+            ? chalk.yellow(`⚠ ${entryKey}`)
+            : chalk.red(`✘ ${entryKey}`),
           '➜',
           entryPointPath
         );
@@ -234,18 +250,28 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
         } else {
           stats.passed++;
         }
-        errors.forEach(
-          error => log(errorColor(`  ✘ ${error.split('\n').join('\n    ')}`))
+        errors.forEach(error =>
+          log(errorColor(`  ✘ ${error.split('\n').join('\n    ')}`))
         );
 
         // spit out the list of templates that refer to this entry point
         if (errors.length > 0 && matchedTemplatePaths.length > 0) {
-          log(chalk.yellow(
-            `  this entry point is referenced by the following templates:`
-          ));
-          log(`    ${siteConfig.templateRoot}/`+chalk.blue(matchedTemplatePaths[0]));
+          log(
+            chalk.yellow(
+              `  this entry point is referenced by the following templates:`
+            )
+          );
+          log(
+            `    ${siteConfig.templateRoot}/` +
+              chalk.blue(matchedTemplatePaths[0])
+          );
           matchedTemplatePaths.slice(1).forEach(templatePath => {
-            log('    ', chalk.blue(' '.repeat(siteConfig.templateRoot.length) + templatePath));
+            log(
+              '    ',
+              chalk.blue(
+                ' '.repeat(siteConfig.templateRoot.length) + templatePath
+              )
+            );
           });
         }
       });
@@ -262,15 +288,15 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
     log = logError;
   }
   log(
-    isEntryPointSilenced ? chalk.yellow(`⚠ ${entryKey}`) :
-    chalk.red(`✘ ${entryKey}`),
+    isEntryPointSilenced
+      ? chalk.yellow(`⚠ ${entryKey}`)
+      : chalk.red(`✘ ${entryKey}`),
     '➜',
     entryPointPath
   );
   log(errorColor(`  ✘ Entry points should be in a sites directory`));
   return new Promise(resolve => resolve());
 }
-
 
 /**
  * Checks all the entry points for the given webpack config.
@@ -283,17 +309,17 @@ function checkEntryPoint(entryKey, entryPointPath, stats, options) {
  *   a promise that resolves to a statsu object containing the number of
  *   entry points that passed/failed or were silenced.
  */
-module.exports = function (webpackConfig, options={verbose: false}) {
+module.exports = function(webpackConfig, options = {verbose: false}) {
   const stats = {
     failed: 0,
     silenced: 0,
-    passed: 0,
+    passed: 0
   };
 
-  const entryPromises = Object
-    .keys(webpackConfig.entry)
-    .map(entryKey => checkEntryPoint(entryKey, webpackConfig.entry[entryKey][2], stats, options));
-    // The 2 index above is because the entry array has 3 elements:
-    // [babel-polyfill, whatwg-fetch, JS entry point]
+  const entryPromises = Object.keys(webpackConfig.entry).map(entryKey =>
+    checkEntryPoint(entryKey, webpackConfig.entry[entryKey][2], stats, options)
+  );
+  // The 2 index above is because the entry array has 3 elements:
+  // [babel-polyfill, whatwg-fetch, JS entry point]
   return Promise.all(entryPromises).then(() => stats);
 };

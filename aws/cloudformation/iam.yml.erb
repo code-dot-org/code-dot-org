@@ -1,196 +1,187 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  IAM layer including roles and access permissions for Code.org infrastructure.
-  Note: Admin permissions are required to manage this stack.
+  IAM layer including global/shared roles and access permissions for Code.org infrastructure.
+  Note: Admin permissions are required to manage some admin-only resources in this stack.
+Parameters:
+  GoogleDeveloperIDs:
+    Type: AWS::SSM::Parameter::Value<List<String>>
+    Default: /IAM/GoogleDeveloperIDs
 Resources:
-  FrontendRole:
+  # Admin Service Role for managing all resources in CloudFormation stacks.
+  # Only admins can update stacks using this service role.
+  CloudFormationAdmin:
     Type: AWS::IAM::Role
     Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: /
-      Policies:
-      - PolicyName: instance
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action: ['s3:GetObject']
-            Resource: 'arn:aws:s3:::cdo-dist/*'
-          - Effect: Allow
-            Action:
-            - 'cloudformation:SignalResource'
-            - 'cloudformation:DescribeStackResources'
-            - 'autoscaling:CompleteLifecycleAction'
-            - 'ec2:DescribeImages'
-            - 'ec2:DescribeTags'
-            - 'logs:Create*'
-            - 'logs:PutLogEvents'
-            - 'logs:PutRetentionPolicy'
-            - 'cloudwatch:PutMetricData'
-            Resource: '*'
-      - PolicyName: ServiceAccess
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 's3:*'
-            - 'dynamodb:*'
-            - 'sqs:*'
-            Resource: '*'
-  StandaloneFrontendRole:
+      RoleName: CloudFormationAdmin
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/AdministratorAccess']
+  # Shared CloudFormation Service Role used by all stacks.
+  CloudFormationService:
     Type: AWS::IAM::Role
     Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: '/'
+      RoleName: CloudFormationService
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
       Policies:
-      - PolicyName: instance
-        PolicyDocument:
-          Statement:
+        # Grant permissions for managing specific non-admin AWS::IAM resources.
+        - PolicyName: RolePermissionsBoundary
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::ManagedPolicy
+                  - iam:CreatePolicy
+                  - iam:CreatePolicyVersion
+                  - iam:DeletePolicy
+                  - iam:DeletePolicyVersion
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::InstanceProfile
+                  - iam:CreateInstanceProfile
+                  - iam:AddRoleToInstanceProfile
+                  - iam:RemoveRoleFromInstanceProfile
+                  - iam:DeleteInstanceProfile
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:DeleteRole
+                  - iam:UpdateAssumeRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  # AWS::IAM::Role
+                  - iam:CreateRole
+                  - iam:PutRolePermissionsBoundary
+                  # Managed policies attached to a Role
+                  - iam:AttachRolePolicy
+                  - iam:DetachRolePolicy
+                  # Inline policies embedded in a Role
+                  - iam:PutRolePolicy
+                  - iam:DeleteRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                # Require DevPermissions boundary on all Roles, e.g.:
+                # PermissionsBoundary: !ImportValue IAM-DevPermissions
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref DevPermissions
+        # Permissions for managing AWS::SecretsManager::Secret resources.
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
+      ManagedPolicyArns: [!Ref DevPermissions]
+  # Shared 'Developer' permissions.
+  # Used as default permissions for all developer Roles,
+  # and as a required permissions boundary for CloudFormation-managed resources.
+  DevPermissions:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: DevPermissions
+      Path: /admin/
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
           - Effect: Allow
-            Action: ['s3:GetObject']
-            Resource: 'arn:aws:s3:::*'
-          - Effect: Allow
+            NotAction:
+              - iam:*
+              - organizations:*
+              - secretsmanager:*
+            Resource: '*'
+          - Sid: IAMReadOnlyAccess
+            Effect: Allow
             Action:
-            - "s3:PutObject"
-            - "s3:PutObjectAcl"
-            Resource:
-            - "arn:aws:s3:::cdo-dist/adhoc/*"
-            - "arn:aws:s3:::cdo-build-logs/adhoc-*"
-          - Effect: Allow
-            Action:
-            - 'cloudformation:SignalResource'
-            - 'cloudformation:DescribeStackResources'
-            - 'autoscaling:CompleteLifecycleAction'
-            - 'ec2:DescribeImages'
-            - 'logs:Create*'
-            - 'logs:PutLogEvents'
-            - 'logs:PutRetentionPolicy'
-            - 'cloudwatch:PutMetricData'
+              - iam:GenerateCredentialReport
+              - iam:GenerateServiceLastAccessedDetails
+              - iam:Get*
+              - iam:List*
+              - iam:SimulateCustomPolicy
+              - iam:SimulatePrincipalPolicy
             Resource: '*'
           - Effect: Allow
+            Action: iam:PassRole
+            Resource: '*'
+          # Require CloudFormation Service Role on all stack operations.
+          - Effect: Deny
             Action:
-            - 'dynamodb:*'
-            Resource:
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
-  StandaloneRole:
+              - cloudformation:CreateStack
+              - cloudformation:UpdateStack
+              - cloudformation:DeleteStack
+              - cloudformation:CreateChangeSet
+            Resource: '*'
+            Condition:
+              StringNotEquals:
+                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+            # Read-only access to current secrets.
+          - Effect: Allow
+            Action: secretsmanager:GetSecretValue
+            Resource: '*'
+            Condition:
+              StringEquals:
+                secretsmanager:VersionStage: AWSCURRENT
+  Developer:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: Developer
+      Path: /admin/
       AssumeRolePolicyDocument:
+        Version: 2012-10-17
         Statement:
         - Effect: Allow
-          Principal: {Service: [ec2.amazonaws.com]}
-          Action: ['sts:AssumeRole']
-      Path: /
+          Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
+          Action: sts:AssumeRoleWithSAML
+          Condition:
+            StringEquals:
+              SAML:aud: https://signin.aws.amazon.com/saml
+        - Effect: Allow
+          Principal: {Federated: accounts.google.com}
+          Action: sts:AssumeRoleWithWebIdentity
+          Condition:
+            StringEquals:
+              accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
+            ForAnyValue:StringEquals:
+              accounts.google.com:sub: !Ref GoogleDeveloperIDs
+        - Effect: Allow
+          Principal: {Service: ec2.amazonaws.com}
+          Action: sts:AssumeRole
       Policies:
-      - PolicyName: instance
+      # Only allow developers to create/update stacks in specific environments.
+      - PolicyName: ProtectedStacks
+        PolicyDocument:
+          Statement:
+          - Effect: Deny
+            Action:
+            - cloudformation:CreateStack
+            - cloudformation:UpdateStack
+            - cloudformation:DeleteStack
+            - cloudformation:ExecuteChangeSet
+            Resource: '*'
+            Condition:
+              ForAnyValue:StringNotEquals:
+                aws:ResourceTag/environment: [adhoc, development]
+              ForAnyValue:StringEquals:
+                aws:TagKeys: environment
+      # Don't allow developers to view/delete secrets in non-development environments.
+      - PolicyName: SecretsAccess
         PolicyDocument:
           Statement:
           - Effect: Allow
-            Action: ['s3:GetObject']
-            Resource: 'arn:aws:s3:::*'
-          - Effect: Allow
-            Action:
-            - "cloudformation:*"
-            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/adhoc-*"
-          - Effect: Allow
-            Action:
-            - "cloudformation:ValidateTemplate"
-            - "autoscaling:CompleteLifecycleAction"
-            - "ec2:DescribeImages"
-            - "logs:Create*"
-            - "logs:PutLogEvents"
-            - "logs:PutRetentionPolicy"
-            - "cloudwatch:PutMetricData"
-            - "acm:ListCertificates"
-            Resource: "*"
-          - Effect: Allow
-            Action: ["dynamodb:*"]
-            Resource:
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_tables"
-            - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/adhoc_properties"
-          - Effect: Allow
-            Action:
-            - "s3:PutObject"
-            - "s3:PutObjectAcl"
-            - "s3:PutObjectVersionAcl"
-            Resource:
-            - "arn:aws:s3:::cdo-dist/adhoc/*"
-            - "arn:aws:s3:::cdo-build-logs/*"
-            - "arn:aws:s3:::<%=TEMP_BUCKET%>/*"
-  DaemonRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [ec2.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: /
-      Policies:
-      - PolicyName: Daemon
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            NotAction: ['iam:*', 'organizations:*']
+            Action: secretsmanager:*
             Resource: '*'
-          - Effect: Allow
+          - Effect: Deny
             Action:
-            - 'iam:GetServerCertificate'
-            Resource: '*'
-  FrontendInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref FrontendRole]
-  StandaloneInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: /
-      Roles: [!Ref StandaloneRole]
-  StandaloneFrontendInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref StandaloneFrontendRole]
-  ProductionInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref DaemonRole]
-  StagingInstanceProfile:
-    Type: AWS::IAM::InstanceProfile
-    Properties:
-      Path: '/'
-      Roles: [!Ref DaemonRole]
-  LifecycleHookRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service: [autoscaling.amazonaws.com]
-          Action: ['sts:AssumeRole']
-      Path: '/'
-      Policies:
-      - PolicyName: root
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action: ['sns:Publish']
-            Resource: '*'
+            - secretsmanager:GetSecretValue
+            - secretsmanager:DeleteSecret
+            NotResource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/*"
+      ManagedPolicyArns: [!Ref DevPermissions]
+  # Used by FirehoseMicroservice Lambda function.
+  # TODO move to Data stack
   FirehoseLambdaRole:
     Type: AWS::IAM::Role
     Properties:
@@ -214,73 +205,65 @@ Resources:
             - !Sub "arn:aws:firehose:${AWS::Region}:${AWS::AccountId}:deliverystream/analysis-events"
       ManagedPolicyArns:
       - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-  CloudFormationRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: CloudFormationRole
-      AssumeRolePolicyDocument:
-        Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [cloudformation.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: passRole
-        PolicyDocument:
-          Statement:
-          - Effect: Allow
-            Action:
-            - 'iam:PassRole'
-            Resource: '*'
-      ManagedPolicyArns:
-      - "arn:aws:iam::aws:policy/PowerUserAccess"
-  GlueRole:
+  # Percona Monitoring and Management RDS access role.
+  # See: https://www.percona.com/doc/percona-monitoring-and-management/amazon-rds.html#creating-a-policy
+  # TODO: Move to Data stack
+  PMMRole:
     Type: AWS::IAM::Role
     Properties:
       AssumeRolePolicyDocument:
         Statement:
-          - Action: ['sts:AssumeRole']
-            Effect: Allow
-            Principal: {Service: [glue.amazonaws.com]}
-      Path: /
-      Policies:
-      - PolicyName: ELBLogsRolePolicy
-        PolicyDocument:
-          Statement:
           - Effect: Allow
-            Action:
-            - 's3:GetObject'
-            - 's3:PutObject'
-            Resource:
-            - !Sub 'arn:aws:s3:::cdo-logs/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/*'
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Policies:
+        - PolicyName: PMMRolePolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Sid: Stmt1508404837000
+                Effect: Allow
+                Action:
+                  - 'rds:DescribeDBInstances'
+                  - 'cloudwatch:GetMetricStatistics'
+                  - 'cloudwatch:ListMetrics'
+                Resource: '*'
+              - Sid: Stmt1508410723001
+                Effect: Allow
+                Action:
+                  - 'logs:DescribeLogStreams'
+                  - 'logs:GetLogEvents'
+                  - 'logs:FilterLogEvents'
+                Resource:
+                  - "arn:aws:logs:*:*:log-group:RDSOSMetrics:*"
+  # TODO: Move to Data stack
+  PMMInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      InstanceProfileName: Percona-Monitoring-Management
+      Path: '/'
+      Roles: [!Ref PMMRole]
+  # Global managed-policy named role used by ECS.
+  # Ref: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_execution_IAM_role.html
+  EcsTaskExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: ecsTaskExecutionRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: 'sts:AssumeRole'
+            Effect: Allow
+            Principal: {Service: ecs-tasks.amazonaws.com}
+      Path: /
       ManagedPolicyArns:
-      - 'arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole'
+        - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
 Outputs:
-  FrontendInstanceProfile:
-    Description: Frontend Instance Profile
-    Value: !Ref FrontendInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-FrontendInstanceProfile"}
-  StandaloneFrontendInstanceProfile:
-    Description: Standalone Frontend Instance Profile
-    Value: !Ref StandaloneFrontendInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StandaloneFrontendInstanceProfile"}
-  StandaloneInstanceProfile:
-    Description: Standalone Instance Profile
-    Value: !Ref StandaloneInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StandaloneInstanceProfile"}
-  StagingInstanceProfile:
-    Description: Staging Instance Profile
-    Value: !Ref StagingInstanceProfile
-    Export: {Name: !Sub "${AWS::StackName}-StagingInstanceProfile"}
-  LifecycleHookRoleARN:
-    Description: Auto Scaling Lifecycle Hook Role
-    Value: !GetAtt LifecycleHookRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-LifecycleHookRoleARN"}
+  DevPermissions:
+    Description: Developer Permissions
+    Value: !Ref DevPermissions
+    Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}
   FirehoseLambdaRoleARN:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-FirehoseLambdaRoleARN"}
-  GlueRoleARN:
-    Description: Glue Role ARN
-    Value: !GetAtt GlueRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-GlueRoleARN"}

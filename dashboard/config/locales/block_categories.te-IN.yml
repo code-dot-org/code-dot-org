@@ -1,2 +1,5 @@
 ---
-te: 
+te:
+  data:
+    block_categories:
+      Events: ఈవెంట్లు

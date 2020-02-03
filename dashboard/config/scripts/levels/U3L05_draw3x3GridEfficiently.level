@@ -37,7 +37,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "free_play": "true",
-    "instructions": "Draw a 3x3 grid above and to the right of the turtle. Try to do so with the fewest number of commands possible. NOTE: This is a very challenging problem.  You may need to play with it for a while and tweak it.  You might also consider using pencil and paper to sketch your ideas.",
+    "short_instructions": "Draw a 3x3 grid above and to the right of the turtle. Try to do so with the fewest number of commands possible. NOTE: This is a very challenging problem.  You may need to play with it for a while and tweak it.  You might also consider using pencil and paper to sketch your ideas.",
     "callout_json": "[]",
     "ani_gif_url": "/script_assets/k_1_images/instruction_gifs/csp/U3L02-3by3grid.png"
   }

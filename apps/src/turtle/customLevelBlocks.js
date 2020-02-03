@@ -4,25 +4,24 @@
 
 var msg = require('./locale');
 
+exports.install = function(blockly, generator, gensym) {
+  installDrawASquare(blockly, generator, gensym);
+  installCreateACircle(blockly, generator, gensym);
+  installCreateASnowflakeBranch(blockly, generator, gensym);
+  installDrawATriangle(blockly, generator, gensym);
+  installDrawAHouse(blockly, generator, gensym);
+  installDrawAFlower(blockly, generator, gensym);
+  installDrawASnowflake(blockly, generator, gensym);
+  installDrawAHexagon(blockly, generator, gensym);
+  installDrawAStar(blockly, generator, gensym);
+  installDrawARobot(blockly, generator, gensym);
+  installDrawARocket(blockly, generator, gensym);
+  installDrawAPlanet(blockly, generator, gensym);
+  installDrawARhombus(blockly, generator, gensym);
+  installDrawUpperWave(blockly, generator, gensym);
+  installDrawLowerWave(blockly, generator, gensym);
 
-exports.install = function (blockly, generator, gensym) {
- installDrawASquare(blockly, generator, gensym);
- installCreateACircle(blockly, generator, gensym);
- installCreateASnowflakeBranch(blockly, generator, gensym);
- installDrawATriangle(blockly, generator, gensym);
- installDrawAHouse(blockly, generator, gensym);
- installDrawAFlower(blockly, generator, gensym);
- installDrawASnowflake(blockly, generator, gensym);
- installDrawAHexagon(blockly, generator, gensym);
- installDrawAStar(blockly, generator, gensym);
- installDrawARobot(blockly, generator, gensym);
- installDrawARocket(blockly, generator, gensym);
- installDrawAPlanet(blockly, generator, gensym);
- installDrawARhombus(blockly, generator, gensym);
- installDrawUpperWave(blockly, generator, gensym);
- installDrawLowerWave(blockly, generator, gensym);
-
- installCreateASnowflakeDropdown(blockly, generator, gensym);
+  installCreateASnowflakeDropdown(blockly, generator, gensym);
 };
 
 var LENGTH_PARAM = msg.lengthParameter();
@@ -32,11 +31,19 @@ function createACircleCode(size, gensym, indent) {
   indent = indent || '';
   return [
     indent + '// create_a_circle',
-    indent + 'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 36; ' +
-    indent +       loopVar + '++) {',
+    indent +
+      'for (var ' +
+      loopVar +
+      ' = 0; ' +
+      loopVar +
+      ' < 36; ' +
+      indent +
+      loopVar +
+      '++) {',
     indent + '  Turtle.moveForward(' + size + ');',
     indent + '  Turtle.turnRight(10);',
-    indent + '}\n'].join('\n');
+    indent + '}\n'
+  ].join('\n');
 }
 
 /**
@@ -49,16 +56,16 @@ function createACircleCode(size, gensym, indent) {
  */
 function makeBlockInitializer(title, parameter) {
   return {
-    init: function () {
-      this.setHSV(94, 0.84, 0.60);
+    init: function() {
+      this.setHSV(94, 0.84, 0.6);
 
       this.appendDummyInput().appendTitle(title);
 
       if (parameter !== undefined) {
         this.appendValueInput('VALUE')
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .setCheck(Blockly.BlockValueType.NUMBER)
-            .appendTitle(parameter + ':');
+          .setAlign(Blockly.ALIGN_RIGHT)
+          .setCheck(Blockly.BlockValueType.NUMBER)
+          .appendTitle(parameter + ':');
       }
 
       this.setPreviousStatement(true);
@@ -76,20 +83,26 @@ function installDrawASquare(blockly, generator, gensym) {
   // without being shown in the workspace.
   var title = msg.drawASquare();
 
-  blockly.Blocks.draw_a_square_custom = makeBlockInitializer(title, LENGTH_PARAM);
+  blockly.Blocks.draw_a_square_custom = makeBlockInitializer(
+    title,
+    LENGTH_PARAM
+  );
 
-  generator.draw_a_square_custom = function () {
+  generator.draw_a_square_custom = function() {
     // Generate JavaScript for drawing a square.
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     return [
-        '// draw_a_square',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' +
-              loopVar + '++) {',
-        '  Turtle.moveForward(' + value_length + ');',
-        '  Turtle.turnRight(90);',
-        '}\n'].join('\n');
+      '// draw_a_square',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' + loopVar + '++) {',
+      '  Turtle.moveForward(' + value_length + ');',
+      '  Turtle.turnRight(90);',
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -98,7 +111,6 @@ function installDrawASquare(blockly, generator, gensym) {
  * first defaults to size 10, second provides a size param
  */
 function installCreateACircle(blockly, generator, gensym) {
-
   var title = msg.createACircle();
   var param = msg.sizeParameter();
 
@@ -106,11 +118,11 @@ function installCreateACircle(blockly, generator, gensym) {
 
   blockly.Blocks.create_a_circle_size = makeBlockInitializer(title, param);
 
-  generator.create_a_circle = function () {
+  generator.create_a_circle = function() {
     return createACircleCode(10, gensym);
   };
 
-  generator.create_a_circle_size = function () {
+  generator.create_a_circle_size = function() {
     var size = generator.valueToCode(this, 'VALUE', generator.ORDER_ATOMIC);
     return createACircleCode(size, gensym);
   };
@@ -120,12 +132,11 @@ function installCreateACircle(blockly, generator, gensym) {
  * create_a_snowflower
  */
 function installCreateASnowflakeBranch(blockly, generator, gensym) {
-
   var title = msg.createASnowflakeBranch();
 
   blockly.Blocks.create_a_snowflake_branch = makeBlockInitializer(title);
 
-  generator.create_a_snowflake_branch = function () {
+  generator.create_a_snowflake_branch = function() {
     var loopVar = gensym('count');
     var loopVar2 = gensym('count');
     return [
@@ -133,7 +144,13 @@ function installCreateASnowflakeBranch(blockly, generator, gensym) {
       'Turtle.jumpForward(90);',
       'Turtle.turnLeft(45);',
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
-      '  for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      '  for (var ' +
+        loopVar2 +
+        ' = 0; ' +
+        loopVar2 +
+        ' < 3; ' +
+        loopVar2 +
+        '++) {',
       '    Turtle.moveForward(30);',
       '    Turtle.moveBackward(30);',
       '    Turtle.turnRight(45);',
@@ -142,32 +159,34 @@ function installCreateASnowflakeBranch(blockly, generator, gensym) {
       '  Turtle.moveBackward(30);',
       '  Turtle.turnLeft(45);',
       '}',
-      'Turtle.turnRight(45);\n'].join('\n');
+      'Turtle.turnRight(45);\n'
+    ].join('\n');
   };
 }
-
 
 /**
  * Draw a rhombus function call block
  */
 function installDrawARhombus(blockly, generator, gensym) {
-
   var title = msg.drawARhombus();
 
   blockly.Blocks.draw_a_rhombus = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_rhombus = function () {
+  generator.draw_a_rhombus = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     return [
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 2; ' +
-            loopVar + '++) {',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 2; ' + loopVar + '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(60);',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(120);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -175,22 +194,24 @@ function installDrawARhombus(blockly, generator, gensym) {
  * Draw a triangle function call block
  */
 function installDrawATriangle(blockly, generator, gensym) {
-
   var title = msg.drawATriangle();
 
   blockly.Blocks.draw_a_triangle = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_triangle = function () {
+  generator.draw_a_triangle = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     return [
-        '// draw_a_triangle',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' +
-              loopVar + '++) {',
-        '  Turtle.moveForward(' + value_length + ');',
-        '  Turtle.turnLeft(120);',
-        '}\n'].join('\n');
+      '// draw_a_triangle',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 3; ' + loopVar + '++) {',
+      '  Turtle.moveForward(' + value_length + ');',
+      '  Turtle.turnLeft(120);',
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -198,22 +219,24 @@ function installDrawATriangle(blockly, generator, gensym) {
  * Draw a triangle function call block
  */
 function installDrawAHexagon(blockly, generator, gensym) {
-
   var title = msg.drawAHexagon();
 
   blockly.Blocks.draw_a_hexagon = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_hexagon = function () {
+  generator.draw_a_hexagon = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     return [
-        '// draw_a_triangle',
-        'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 6; ' +
-              loopVar + '++) {',
-        '  Turtle.moveForward(' + value_length + ');',
-        '  Turtle.turnLeft(60);',
-        '}\n'].join('\n');
+      '// draw_a_triangle',
+      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 6; ' + loopVar + '++) {',
+      '  Turtle.moveForward(' + value_length + ');',
+      '  Turtle.turnLeft(60);',
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -221,14 +244,16 @@ function installDrawAHexagon(blockly, generator, gensym) {
  * Draw a house function call block
  */
 function installDrawAHouse(blockly, generator, gensym) {
-
   var title = msg.drawAHouse();
 
   blockly.Blocks.draw_a_house = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_house = function () {
+  generator.draw_a_house = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     return [
       'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 4; ' + loopVar + '++) {',
@@ -244,7 +269,8 @@ function installDrawAHouse(blockly, generator, gensym) {
       '}',
       'Turtle.turnRight(90);',
       'Turtle.moveForward(' + value_length + ');',
-      'Turtle.turnLeft(90);\n'].join('\n');
+      'Turtle.turnLeft(90);\n'
+    ].join('\n');
   };
 }
 
@@ -252,14 +278,16 @@ function installDrawAHouse(blockly, generator, gensym) {
  * Draw a flower function call block
  */
 function installDrawAFlower(blockly, generator, gensym) {
-
   var title = msg.drawAFlower();
 
   blockly.Blocks.draw_a_flower = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_flower = function () {
+  generator.draw_a_flower = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
 
     var color_random = generator.colour_random()[0];
@@ -267,7 +295,13 @@ function installDrawAFlower(blockly, generator, gensym) {
       'Turtle.penColour("#228b22");',
       'Turtle.moveForward(' + value_length + ');',
       'Turtle.turnLeft(18);',
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+      'for (var ' +
+        loopVar +
+        ' = 0; ' +
+        loopVar +
+        ' < 10; ' +
+        loopVar +
+        '++) {',
       '  Turtle.penColour(' + color_random + ');',
       '  Turtle.turnLeft(36);',
       '  Turtle.moveForward(' + value_length + ' / 2);',
@@ -275,7 +309,8 @@ function installDrawAFlower(blockly, generator, gensym) {
       '}',
       'Turtle.turnRight(198);',
       'Turtle.jumpForward(' + value_length + ');',
-      'Turtle.turnRight(180);\n'].join('\n');
+      'Turtle.turnRight(180);\n'
+    ].join('\n');
   };
 }
 
@@ -283,12 +318,11 @@ function installDrawAFlower(blockly, generator, gensym) {
  * Draw a snowflake function call block
  */
 function installDrawASnowflake(blockly, generator, gensym) {
-
   var title = msg.drawASnowflake();
 
   blockly.Blocks.draw_a_snowflake = makeBlockInitializer(title);
 
-  generator.draw_a_snowflake = function () {
+  generator.draw_a_snowflake = function() {
     var loopVar = gensym('count');
 
     return [
@@ -303,7 +337,8 @@ function installDrawASnowflake(blockly, generator, gensym) {
       '  Turtle.turnRight(90);',
       '  Turtle.moveForward(30);',
       '  Turtle.turnRight(45);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -311,14 +346,16 @@ function installDrawASnowflake(blockly, generator, gensym) {
  * Draw a star function call block
  */
 function installDrawAStar(blockly, generator, gensym) {
-
   var title = msg.drawAStar();
 
   blockly.Blocks.draw_a_star = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_star = function () {
+  generator.draw_a_star = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
 
     return [
@@ -327,7 +364,8 @@ function installDrawAStar(blockly, generator, gensym) {
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(144);',
       '}',
-      'Turtle.turnLeft(18);\n'].join('\n');
+      'Turtle.turnLeft(18);\n'
+    ].join('\n');
   };
 }
 
@@ -335,12 +373,11 @@ function installDrawAStar(blockly, generator, gensym) {
  * Draw a robot function call block
  */
 function installDrawARobot(blockly, generator, gensym) {
-
   var title = msg.drawARobot();
 
   blockly.Blocks.draw_a_robot = makeBlockInitializer(title);
 
-  generator.draw_a_robot = function () {
+  generator.draw_a_robot = function() {
     var loopVar = gensym('count');
 
     return [
@@ -373,23 +410,25 @@ function installDrawARobot(blockly, generator, gensym) {
       'Turtle.turnRight(90);',
       'Turtle.moveForward(40);',
       'Turtle.turnLeft(90);',
-      'Turtle.moveForward(50);\n'].join('\n');
+      'Turtle.moveForward(50);\n'
+    ].join('\n');
   };
 }
-
 
 /**
  * Draw a robot function call block
  */
 function installDrawARocket(blockly, generator, gensym) {
-
   var title = msg.drawARocket();
 
   blockly.Blocks.draw_a_rocket = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_rocket = function () {
+  generator.draw_a_rocket = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
     var loopVar2 = gensym('count');
 
@@ -412,10 +451,17 @@ function installDrawARocket(blockly, generator, gensym) {
       'Turtle.turnRight(90);',
       'Turtle.moveForward(' + value_length + ');',
       'Turtle.turnRight(90);',
-      'for (var ' + loopVar2 + ' = 0; ' + loopVar2 + ' < 3; ' + loopVar2 + '++) {',
+      'for (var ' +
+        loopVar2 +
+        ' = 0; ' +
+        loopVar2 +
+        ' < 3; ' +
+        loopVar2 +
+        '++) {',
       '  Turtle.moveForward(20);',
       '  Turtle.turnLeft(120);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -423,24 +469,32 @@ function installDrawARocket(blockly, generator, gensym) {
  * Draw a planet function call block
  */
 function installDrawAPlanet(blockly, generator, gensym) {
-
   var title = msg.drawAPlanet();
 
   blockly.Blocks.draw_a_planet = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_a_planet = function () {
+  generator.draw_a_planet = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
-
 
     return [
       'Turtle.penColour("#808080");',
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 360; ' + loopVar + '++) {',
+      'for (var ' +
+        loopVar +
+        ' = 0; ' +
+        loopVar +
+        ' < 360; ' +
+        loopVar +
+        '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.moveBackward(' + value_length + ');',
       '  Turtle.turnRight(1);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -448,22 +502,31 @@ function installDrawAPlanet(blockly, generator, gensym) {
  * Draw upper wave function call block
  */
 function installDrawUpperWave(blockly, generator, gensym) {
-
   var title = msg.drawUpperWave();
 
   blockly.Blocks.draw_upper_wave = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_upper_wave = function () {
+  generator.draw_upper_wave = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
 
     return [
       'Turtle.penColour("#0000cd");',
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+      'for (var ' +
+        loopVar +
+        ' = 0; ' +
+        loopVar +
+        ' < 10; ' +
+        loopVar +
+        '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnRight(18);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -471,22 +534,31 @@ function installDrawUpperWave(blockly, generator, gensym) {
  * Draw lower wave function call block
  */
 function installDrawLowerWave(blockly, generator, gensym) {
-
   var title = msg.drawLowerWave();
 
   blockly.Blocks.draw_lower_wave = makeBlockInitializer(title, LENGTH_PARAM);
 
-  generator.draw_lower_wave = function () {
+  generator.draw_lower_wave = function() {
     var value_length = generator.valueToCode(
-        this, 'VALUE', generator.ORDER_ATOMIC);
+      this,
+      'VALUE',
+      generator.ORDER_ATOMIC
+    );
     var loopVar = gensym('count');
 
     return [
       'Turtle.penColour("#0000cd");',
-      'for (var ' + loopVar + ' = 0; ' + loopVar + ' < 10; ' + loopVar + '++) {',
+      'for (var ' +
+        loopVar +
+        ' = 0; ' +
+        loopVar +
+        ' < 10; ' +
+        loopVar +
+        '++) {',
       '  Turtle.moveForward(' + value_length + ');',
       '  Turtle.turnLeft(18);',
-      '}\n'].join('\n');
+      '}\n'
+    ].join('\n');
   };
 }
 
@@ -501,12 +573,11 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     [msg.createSnowflakeRandom(), 'random']
   ];
 
-
   blockly.Blocks.create_snowflake_dropdown = {
     // We use custom initialization (instead of makeBlockInitializer) here
     // because each initialization needs a new instance of the FieldDropdown.
-    init: function () {
-      this.setHSV(94, 0.84, 0.60);
+    init: function() {
+      this.setHSV(94, 0.84, 0.6);
 
       var title = new blockly.FieldDropdown(snowflakes);
       this.appendDummyInput().appendTitle(title, 'TYPE');
@@ -517,7 +588,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     }
   };
 
-  generator.create_snowflake_dropdown = function () {
+  generator.create_snowflake_dropdown = function() {
     var type = this.getTitleValue('TYPE');
     return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };

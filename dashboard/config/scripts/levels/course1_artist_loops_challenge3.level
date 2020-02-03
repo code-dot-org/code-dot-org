@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "\"Can you help me make two bird houses?\"",
+    "short_instructions": "\"Can you help me make two bird houses?\"",
     "x": "75",
     "y": "250",
     "start_direction": "90",
@@ -35,7 +35,7 @@
     "ideal": "11",
     "instructions_important": "false",
     "images": "[\r\n    {\"filename\": \"https://images.code.org/e7b45bd48f227fea808354638e1bb5e8-image-1492450353024.png\", \"position\": [87, 170]},\r\n  {\"filename\": \"https://images.code.org/e7b45bd48f227fea808354638e1bb5e8-image-1492450353024.png\", \"position\": [237, 170]}\r\n]\r\n\r\n",
-    "markdown_instructions": "**Tweet!**\r\n\r\n*\"Can you help me make two bird houses?\"*",
+    "long_instructions": "**Tweet!**\r\n\r\n*\"Can you help me make two bird houses?\"*",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",

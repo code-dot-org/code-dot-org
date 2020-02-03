@@ -206,7 +206,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# RGB Slider\r\n\r\nOver the next couple levels you are going to learn about using sliders to get user input. You will be creating this slider which controls the color of a button. You will return to this project in later lessons to control lights!",
+    "long_instructions": "# RGB Slider\r\n\r\nOver the next couple levels you are going to learn about using sliders to get user input. You will be creating this slider which controls the color of a button. You will return to this project in later lessons to control lights!",
     "contained_level_names": null
   },
   "published": true,

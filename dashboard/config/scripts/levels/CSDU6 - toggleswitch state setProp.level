@@ -28,7 +28,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# State and the Toggle Switch\r\n\r\nThis program tells you whether the toggle switch is opened or closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen` is `true` if the switch is opened and `false` if the switch is closed.\r\n\r\n# Do this\r\n* Complete the if-statement with the `toggleSwitch.isOpen` property.\r\n* Run the program and press the left button, then flip the toggle switch and press the button again.",
+    "long_instructions": "# State and the Toggle Switch\r\n\r\nThis program tells you whether the toggle switch is opened or closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen` is `true` if the switch is opened and `false` if the switch is closed.\r\n\r\n# Do this\r\n* Complete the if-statement with the `toggleSwitch.isOpen` property.\r\n* Run the program and press the left button, then flip the toggle switch and press the button again.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

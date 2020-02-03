@@ -1,11 +1,11 @@
-- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLSdiF0n7c5Skxb1Vlp_AuLOiu9p13wrOhzCx0FcLmHwXPsStKA/viewform?usp=pp_url&entry.796977513&entry.999252886&entry.692842963=__other_option__&entry.692842963.other_option_response=#{current_user.id}"
+- survey_url = "https://docs.google.com/forms/d/e/1FAIpQLScg0PJasQW-uJ3TVR9dIgseGs_xnOHOWLeWJq7bYfIkgjIunA/viewform?usp=pp_url&entry.1305684097=#{current_user.id}"
 
 #diversity_survey
   #surveythanks{style: "display: none; "}
     Thank you for telling us about your students!
     %br/
     %br/
-    We're making changes to improve Code Studio. We'd love your feedback on how we can make it work best for your classroom.
+    We're continuing to make improvements to our student and teacher tools.  We'd love your feedback on how we can make them work best for your classroom.
     %br/
     %br/
     %a{href: survey_url, target: "_blank"}
@@ -52,7 +52,7 @@
               %input{id: "radio_#{index}", type: "radio", name: "survey[diversity_farm]", value: index}
               %label{for: "radio_#{index}"}= text
 
-      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2018}
+      %input{type: "hidden", name: "survey[kind]", value: SurveyResult::DIVERSITY_2019}
 
       #submit
         %button.btn-primary#submitSurvey{type: "submit"} Submit

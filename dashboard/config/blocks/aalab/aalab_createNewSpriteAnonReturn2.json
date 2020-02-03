@@ -1,0 +1,28 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "createNewSpriteAnonReturn2",
+    "inline": false,
+    "blockText": "new sprite named{SPRITE_NAME} with costume{ANIMATION_NAME} at location{LOCATION}",
+    "returnType": "Sprite",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "ANIMATION_NAME",
+        "type": "Sprite"
+      },
+      {
+        "name": "SPRITE_NAME",
+        "type": "String"
+      },
+      {
+        "name": "LOCATION",
+        "type": "Location"
+      }
+    ]
+  }
+}

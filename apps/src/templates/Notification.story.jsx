@@ -3,39 +3,43 @@ import Notification from './Notification';
 import {action} from '@storybook/addon-actions';
 
 const information = {
-  notice: "Did you know Clark Kent grew up in Kansas?",
-  details: "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
-  dismissible: true,
+  notice: 'Did you know Clark Kent grew up in Kansas?',
+  details:
+    "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
+  dismissible: true
 };
 
 const success = {
-  notice: "Wonder Woman Saved the Day",
-  details: "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
-  dismissible: true,
+  notice: 'Wonder Woman Saved the Day',
+  details:
+    "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
+  dismissible: true
 };
 
 const failure = {
-  notice: "Lex Luther Attacked Metropolis",
-  details: "If you're in the Metropolis area, get to saftey as quickly as possible",
-  dismissible: false,
+  notice: 'Lex Luther Attacked Metropolis',
+  details:
+    "If you're in the Metropolis area, get to saftey as quickly as possible",
+  dismissible: false
 };
 
 const warning = {
-  notice: "Batman is on Vacation in the Bahamas",
-  details: "Now is probably not the best time to be in Gotham City. Watch your back.",
-  dismissible: true,
+  notice: 'Batman is on Vacation in the Bahamas',
+  details:
+    'Now is probably not the best time to be in Gotham City. Watch your back.',
+  dismissible: true
 };
 
 const findCourse = {
-  notice: "Find a course",
-  details: "Try new courses to add them to your homepage.",
-  dismissible: false,
+  notice: 'Find a course',
+  details: 'Try new courses to add them to your homepage.',
+  dismissible: false
 };
 
 const announcement = {
-  notice: "Here is some news",
-  details: "Here are the details of the news.",
-  dismissible: false,
+  notice: 'Here is some news',
+  details: 'Here are the details of the news.',
+  dismissible: false
 };
 
 export default storybook => {
@@ -46,12 +50,7 @@ export default storybook => {
       {
         name: 'Information - no button',
         description: `Notification box that displays information`,
-        story: () => (
-          <Notification
-            type="information"
-            {...information}
-          />
-        )
+        story: () => <Notification type="information" {...information} />
       },
       {
         name: 'Information - call to action button',
@@ -60,7 +59,7 @@ export default storybook => {
           <Notification
             type="information"
             {...information}
-            buttonText= "Call to Action"
+            buttonText="Call to Action"
             buttonLink="to a new page"
             dismissible={false}
           />
@@ -73,7 +72,7 @@ export default storybook => {
           <Notification
             type="information"
             {...information}
-            buttonText= "Call to Action"
+            buttonText="Call to Action"
             buttonLink="to a new page"
             dismissible={true}
           />
@@ -83,11 +82,7 @@ export default storybook => {
         name: 'Information - no button - nondefaultwidth',
         description: `Notification box that displays information`,
         story: () => (
-          <Notification
-            type="information"
-            {...information}
-            width={1100}
-          />
+          <Notification type="information" {...information} width={1100} />
         )
       },
       {
@@ -97,7 +92,12 @@ export default storybook => {
           <Notification
             type="information"
             {...information}
-            details={information.details + information.details + information.details + information.details}
+            details={
+              information.details +
+              information.details +
+              information.details +
+              information.details
+            }
           />
         )
       },
@@ -116,38 +116,23 @@ export default storybook => {
               dismissible={false}
               width="100%"
             />
-        </div>
+          </div>
         )
       },
       {
         name: 'Success',
         description: `Notification box that displays when there is a success`,
-        story: () => (
-          <Notification
-            type="success"
-            {...success}
-          />
-        )
+        story: () => <Notification type="success" {...success} />
       },
       {
         name: 'Failure',
         description: `Notification box that displays when there is a failure`,
-        story: () => (
-          <Notification
-            type="failure"
-            {...failure}
-          />
-        )
+        story: () => <Notification type="failure" {...failure} />
       },
       {
         name: 'Warning',
         description: `Notification box that displays when there is a warning`,
-        story: () => (
-          <Notification
-            type="warning"
-            {...warning}
-          />
-        )
+        story: () => <Notification type="warning" {...warning} />
       },
       {
         name: 'Find a Course',
@@ -162,7 +147,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Announcement',
+        name: 'Announcement - with button',
         description: `Notification box that displays when there is an announcement`,
         story: () => (
           <Notification
@@ -176,6 +161,11 @@ export default storybook => {
         )
       },
       {
+        name: 'Announcement - no button',
+        description: `Notification box that displays when there is an announcement but with no button to learn more because no link`,
+        story: () => <Notification type="bullhorn" {...announcement} />
+      },
+      {
         name: 'Two buttons and a link',
         description: `Notification box that contains two buttons and a link`,
         story: () => (
@@ -186,20 +176,20 @@ export default storybook => {
             detailsLink="/"
             buttons={[
               {
-                text: "Learn more",
-                link: "/more",
+                text: 'Learn more',
+                link: '/more',
                 newWindow: true,
                 onClick: action('onClickPopupMore')
               },
               {
-                text: "Learn less",
-                link: "/less",
+                text: 'Learn less',
+                link: '/less',
                 newWindow: true,
                 onClick: action('onClickPopupLess')
               }
             ]}
           />
         )
-      },
+      }
     ]);
 };

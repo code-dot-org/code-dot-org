@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Want to see what happens when we repeat that shape over and over again using a loop?",
+    "short_instructions": "Want to see what happens when we repeat that shape over and over again using a loop?",
     "x": "200",
     "y": "200",
     "start_direction": "0",

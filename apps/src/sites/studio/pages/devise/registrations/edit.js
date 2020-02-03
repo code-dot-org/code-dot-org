@@ -23,16 +23,18 @@ const {
   isCleverStudent,
   dependedUponForLogin,
   dependentStudents,
-  studentCount,
+  studentCount
 } = scriptData;
 
 $(document).ready(() => {
-  const migrateMultiAuthMountPoint = document.getElementById('migrate-multi-auth');
+  const migrateMultiAuthMountPoint = document.getElementById(
+    'migrate-multi-auth'
+  );
   if (migrateMultiAuthMountPoint) {
     const store = getStore();
     ReactDOM.render(
       <Provider store={store}>
-        <MigrateToMultiAuth/>
+        <MigrateToMultiAuth />
       </Provider>,
       migrateMultiAuthMountPoint
     );
@@ -45,7 +47,7 @@ $(document).ready(() => {
     userAge,
     userType,
     isPasswordRequired,
-    emailChangedCallback: onEmailChanged,
+    emailChangedCallback: onEmailChanged
   });
 
   new ChangeUserTypeController($('#change-user-type-modal-form'), userType);
@@ -55,14 +57,16 @@ $(document).ready(() => {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
-  const manageLinkedAccountsMountPoint = document.getElementById('manage-linked-accounts');
+  const manageLinkedAccountsMountPoint = document.getElementById(
+    'manage-linked-accounts'
+  );
   if (manageLinkedAccountsMountPoint) {
     new ManageLinkedAccountsController(
       manageLinkedAccountsMountPoint,
       authenticationOptions,
       isPasswordRequired,
       isGoogleClassroomStudent,
-      isCleverStudent,
+      isCleverStudent
     );
   }
 
@@ -92,7 +96,7 @@ function onEmailChanged(newEmail, newHashedEmail) {
 }
 
 function initializeCreatePersonalAccountControls() {
-  $( "#edit_user_create_personal_account" ).on("submit", function (e) {
+  $('#edit_user_create_personal_account').on('submit', function(e) {
     if ($('#create_personal_user_email').length) {
       window.dashboard.hashEmail({
         email_selector: '#create_personal_user_email',

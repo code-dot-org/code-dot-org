@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -25,24 +25,24 @@
 
 class LevelGroup < DSLDefined
   def dsl_default
-    <<ruby
-name 'unique level name here'
-title 'title of the assessment here'
-submittable 'true'
-anonymous 'false'
+    <<~ruby
+      name 'unique level name here'
+      title 'title of the assessment here'
+      submittable 'true'
+      anonymous 'false'
 
-page
-level 'level1'
-level 'level2'
+      page
+      level 'level1'
+      level 'level2'
 
-page
-level 'level 3'
-level 'level 4'
-ruby
+      page
+      level 'level 3'
+      level 'level 4'
+    ruby
   end
 
   def icon
-    'fa-check-square-o'
+    'fa fa-list-ul'
   end
 
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
@@ -103,11 +103,11 @@ ruby
 
   # Perform a deep copy of this level by cloning all of its sublevels
   # using the same suffix, and write them to the new level definition file.
-  def clone_with_suffix(new_suffix)
+  def clone_with_suffix(new_suffix, editor_experiment: nil)
     new_name = "#{base_name}#{new_suffix}"
     return Level.find_by_name(new_name) if Level.find_by_name(new_name)
 
-    level = super(new_suffix)
+    level = super(new_suffix, editor_experiment: editor_experiment)
     level.clone_sublevels_with_suffix(new_suffix)
     level.rewrite_dsl_file(LevelGroupDSL.serialize(level))
     level
@@ -120,8 +120,8 @@ ruby
 
     if new_properties['texts']
       new_properties['texts'].map! do |text|
-        Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
-        text['level_name'] << new_suffix
+        new_level = Level.find_by_name(text['level_name']).clone_with_suffix(new_suffix)
+        text['level_name'] = new_level.name
         text
       end
     end
@@ -129,8 +129,8 @@ ruby
     if new_properties['pages']
       new_properties['pages'].map! do |page|
         page['levels'].map! do |level_name|
-          Level.find_by_name(level_name).clone_with_suffix(new_suffix)
-          level_name << new_suffix
+          new_level = Level.find_by_name(level_name).clone_with_suffix(new_suffix)
+          new_level.name
         end
         page
       end
@@ -162,14 +162,17 @@ ruby
     # Go through each sublevel
     script_level.level.levels.map do |sublevel|
       question_text = sublevel.properties.try(:[], "questions").try(:[], 0).try(:[], "text") ||
-                      sublevel.properties.try(:[], "long_instructions") ||
-                      sublevel.properties.try(:[], "markdown_instructions")
+                      sublevel.properties.try(:[], "long_instructions")
 
       # Go through each student, and make sure to shuffle their results for additional
       # anonymity.
       results = section.students.map do |student|
         # Skip student if they haven't submitted for this LevelGroup.
-        user_level = student.user_level_for(script_level, script_level.level)
+        user_level = UserLevel.find_by(
+          user: student,
+          script: script_level.script,
+          level: script_level.level
+        )
         next unless user_level.try(:submitted)
 
         get_sublevel_result(sublevel, student.last_attempt(sublevel).try(:level_source).try(:data))

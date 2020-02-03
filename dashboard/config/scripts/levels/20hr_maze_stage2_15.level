@@ -7,7 +7,7 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,1,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,1,4],[0,0,0,0,0,1,0,0],[0,3,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together.",
+    "short_instructions": "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

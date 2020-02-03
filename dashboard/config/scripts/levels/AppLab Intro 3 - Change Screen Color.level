@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Set the screen's `\"background-color\"` to `\"red\"`. Click the picture to see how. \r\n\r\n![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif) ",
+    "long_instructions": "Set the screen's `\"background-color\"` to `\"red\"`. Click the picture to see how. \r\n\r\n![expandable](https://images.code.org/8b1d99aa6bd6274e05b1844fab7e8b2a-image-1505870100643.gif) ",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

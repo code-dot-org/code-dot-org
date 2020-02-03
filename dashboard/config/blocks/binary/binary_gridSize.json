@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "gridSize",
+    "blockText": "set grid size {SIZE}",
+    "args": [
+      {
+        "name": "SIZE",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

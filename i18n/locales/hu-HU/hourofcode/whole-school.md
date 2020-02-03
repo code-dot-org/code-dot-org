@@ -1,0 +1,9 @@
+---
+title: Teljes Iskolás Részvétel
+---
+
+{{ signup_button }}
+
+# Szervezd meg, hogy az egész iskolád a részese lehessen
+
+Ide kattintva találhatsz részleteket arról, ha be akarod vonni egész iskoládat a Kódolás órája programba.

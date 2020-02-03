@@ -11,7 +11,7 @@ module Pd
         TextQuestion,
         SelectQuestion,
         ScaleQuestion,
-        MatrixQuestion
+        MatrixQuestion,
       ].freeze
 
       # @param [Integer] form_id
@@ -114,10 +114,9 @@ module Pd
       # @param replacement_text_by_name [Hash] mapping of question name to replacement text where applicable
       def parse_jotform_question(jotform_question, replacement_text_by_name)
         type = get_type(jotform_question)
-        sanitized_question_data = jotform_question.merge(
-          'type' => type,
-          'text' => replacement_text_by_name[jotform_question['name']] || jotform_question['text']
-        )
+        text = replacement_text_by_name[jotform_question['name']] || jotform_question['text']
+        text = jotform_question['name'] if text.empty?
+        sanitized_question_data = jotform_question.merge('type' => type, 'text' => text)
 
         klass = self.class.get_question_class_for type
         klass.from_jotform_question(sanitized_question_data)
@@ -163,14 +162,21 @@ module Pd
         }
       end
 
-      # Strip leading and trailing whitespace from each answer
+      # Strip leading and trailing whitespace from each answer.
+      # For each datetime hash, turn it into a "mm/dd/yyyy" string.
+      # For each non-datetime hash, also remove "\\" pairs from each string as
+      # well, which are appearing in strings such as "I\\'m a teacher."
       def strip_answer(answer)
         if answer.is_a? String
           answer.strip
         elsif answer.is_a? Array
           answer.map(&:strip)
         elsif answer.is_a? Hash
-          answer.transform_values(&:strip)
+          if ["month", "day", "year"].all? {|k| answer.key?(k)}
+            answer = answer.values_at("month", "day", "year").join("/")
+          else
+            answer.transform_values {|value| value.strip.delete("\\")}
+          end
         end
       end
     end

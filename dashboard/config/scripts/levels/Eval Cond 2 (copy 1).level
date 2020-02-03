@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "This condition returns a different shape based on the value of the \"sides\" variable - change the value of \"sides\" so that the conditional returns a triangle.",
+    "short_instructions": "This condition returns a different shape based on the value of the \"sides\" variable - change the value of \"sides\" so that the conditional returns a triangle.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

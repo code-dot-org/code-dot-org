@@ -13,7 +13,7 @@
     "player_start_position": "[2, 6]",
     "player_start_direction": "1",
     "verification_function": "function (verificationAPI) {\r\n      // temporarily let them be in front of, or in the door\r\n      return verificationAPI.isPlayerAt([4, 1]) || verificationAPI.isPlayerAt([4, 2]) || verificationAPI.isPlayerAt([4, 0]) || verificationAPI.isPlayerAt([5, 0]);\r\n}",
-    "instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
+    "short_instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

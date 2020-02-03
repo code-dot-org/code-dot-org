@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,1,1,1,4,1,0],[0,1,1,4,1,1,1,0],[0,4,1,0,4,4,1,4],[0,0,1,4,3,1,1,1],[0,1,1,4,1,1,1,0],[0,1,1,1,1,1,4,0],[0,4,4,0,1,4,0,0]]",
     "skin": "birds",
-    "instructions": "The pig is hiding, and the goal is to find it. ",
+    "short_instructions": "The pig is hiding, and the goal is to find it. ",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",
@@ -26,7 +26,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are many ways to get to the pig. Use your finger to find a path and then program it!\",\"hint_id\":\"courseC_maze_programming_challenge1_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f0ec7ecc923254e4ff032e974292862/courseC_maze_programming_challenge1.mp3\"}]",
-    "markdown_instructions": "The bird needs your help! The pig is hiding, and the goal is to find it. ",
+    "long_instructions": "The bird needs your help! The pig is hiding, and the goal is to find it. ",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

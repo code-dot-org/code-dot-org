@@ -1,16 +1,30 @@
-import { unicode } from '@cdo/apps/code-studio/components/icons';
+import {unicode} from '@cdo/apps/code-studio/components/icons';
+import {getStore} from '@cdo/apps/redux';
 
 // For proxying non-https assets
-var MEDIA_PROXY = '//' + location.host + '/media?u=';
+const MEDIA_PROXY = '//' + location.host + '/media?u=';
 
 // starts with http or https
-var ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
+const ABSOLUTE_REGEXP = new RegExp('^https?://', 'i');
+
+// absolute URL to curriculum.code.org (which doesn't require media proxy)
+const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
+  '^https://curriculum.code.org/',
+  'i'
+);
+
+export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
 
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 
 export const SOUND_PREFIX = 'sound://';
 export const SOUND_PREFIX_REGEX = new RegExp('^sound://');
+
+// Starter assets are currently only used for image assets, but may be extended
+// in the future, where we will want to change this prefix.
+export const STARTER_ASSET_PREFIX = 'image://';
+export const STARTER_ASSET_PREFIX_REGEX = new RegExp('^image://');
 
 const DEFAULT_ASSET_PATH_PREFIX = '/v3/assets/';
 export const DEFAULT_SOUND_PATH_PREFIX = '/api/v1/sound-library/';
@@ -41,6 +55,12 @@ export function fixPath(filename) {
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
   if (ABSOLUTE_REGEXP.test(filename) && window.location.protocol !== 'file:') {
+    if (ABSOLUTE_CDO_CURRICULUM_REGEXP.test(filename)) {
+      // We know that files served from this location will respond with the
+      // access-control-allow-origin: * header, meaning no CORS issue & no need
+      // for the media proxy.
+      return filename;
+    }
     // We want to be able to handle the case where our filename contains a
     // space, i.e. "www.example.com/images/foo bar.png", even though this is a
     // technically invalid URL. encodeURIComponent will replace space with %20
@@ -59,6 +79,14 @@ export function fixPath(filename) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
 
+  if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
+    const state = getStore().getState();
+    return filename.replace(
+      STARTER_ASSET_PREFIX,
+      starterAssetPathPrefix(state.level.name)
+    );
+  }
+
   if (filename.indexOf('/') !== -1 || !channelId) {
     return filename;
   }
@@ -67,6 +95,15 @@ export function fixPath(filename) {
   // catch any characters which could break urls such as # or ?, without
   // modifying extended ascii or unicode characters.
   return assetPathPrefix + channelId + '/' + encodeURIComponent(filename);
+}
+
+/**
+ * Get path prefix for starter assets, given a level name.
+ * @param levelName {string}
+ * @return {string}
+ */
+function starterAssetPathPrefix(levelName) {
+  return `/level_starter_assets/${levelName}/`;
 }
 
 /**

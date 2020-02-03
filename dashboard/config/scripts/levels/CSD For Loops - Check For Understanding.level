@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Check In\r\n\r\nIn the box below explain the 3 different parts of the for loop. Why is each important?\r\n",
+    "long_instructions": "# Check In\r\n\r\nIn the box below explain the 3 different parts of the for loop. Why is each important?\r\n",
     "instructions_important": "false",
     "display_name": "Check for Understanding",
     "submittable": "false",

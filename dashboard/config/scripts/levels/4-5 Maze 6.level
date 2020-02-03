@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,3,0,2,0,0],[0,0,0,1,0,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,1,4,1,0,0],[0,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Get me to the sunflower using the fewest number of blocks possible!",
+    "short_instructions": "Get me to the sunflower using the fewest number of blocks possible!",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "false",

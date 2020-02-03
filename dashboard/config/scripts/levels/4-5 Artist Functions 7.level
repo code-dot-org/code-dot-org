@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the \"draw a house\" function to draw houses that are 100 pixels and 50 pixels. The two houses are separated by 50 pixels.",
+    "short_instructions": "Use the \"draw a house\" function to draw houses that are 100 pixels and 50 pixels. The two houses are separated by 50 pixels.",
     "x": "100",
     "y": "300",
     "start_direction": "90",

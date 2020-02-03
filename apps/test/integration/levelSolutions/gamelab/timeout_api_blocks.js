@@ -2,8 +2,8 @@ import {gamelabLevelDefinition} from '../../gamelabLevelDefinition';
 import {testAsyncProgramGameLab} from '../../util/levelTestHelpers';
 
 module.exports = {
-  app: "gamelab",
-  skinId: "gamelab",
+  app: 'gamelab',
+  skinId: 'gamelab',
   levelDefinition: gamelabLevelDefinition,
   tests: [
     // These exercise the timeout API blocks
@@ -13,7 +13,6 @@ module.exports = {
         setTimeout(function() {
           console.log('done');
         }, 5);
-        
         var key = setTimeout(function() {
           console.log('do not expect this');
         }, 4);
@@ -25,7 +24,7 @@ module.exports = {
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
-        assert.equal(debugOutput, 'done');
+        assert.equal(debugOutput, '"done"');
       }
     ),
 
@@ -45,7 +44,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
@@ -72,7 +71,7 @@ module.exports = {
       `,
       function isProgramDone() {
         const debugOutput = document.getElementById('debug-output').textContent;
-        return debugOutput.split('\n').length >= 3;
+        return debugOutput.split('""').length >= 3;
       },
       function validateResult(assert) {
         const debugOutput = document.getElementById('debug-output').textContent;
@@ -81,6 +80,6 @@ module.exports = {
         assert.include(debugOutput, 'timedLoop 2');
         assert.notInclude(debugOutput, 'do not expect this');
       }
-    ),
+    )
   ]
 };

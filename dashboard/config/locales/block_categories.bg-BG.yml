@@ -3,17 +3,26 @@ bg:
   data:
     block_categories:
       Actions: Действия
-      Loops: Повторения
-      Functions: Функции
+      Advanced: Разширено
+      Behaviors: Поведения
+      Brushes: Четки
       Color: Цвят
-      Math: Математика
-      Logic: Логика
-      Variables: Променливи
+      Comment: Коментар
+      Comments: Коментари
       Conditionals: Условия
+      Dancers: Танцьори
+      Default: По подразбиране
       Events: Събития
+      Functions: Функции
+      'Functions ': 'Функции '
+      Game/Score: Игра/резултат
+      Games/Score: Игри/резултат
+      Groups: Групи
+      Locations: Места
+      Logic: Логика
+      Loops: Повторения
+      Math: Математика
+      Numbers: Числа
       Text: Текст
-      Start: Старт
-      Booleans: Booleans
-      test: тест
-      Name: Име
-      Function: Функция
+      Variables: Променливи
+      'Variables ': 'Променливи '

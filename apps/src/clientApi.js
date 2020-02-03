@@ -15,21 +15,20 @@ function apiPath(endpoint, channelId, path) {
 
 function ajaxInternal(method, path, success, error, data) {
   var xhr = new XMLHttpRequest();
-  xhr.addEventListener('load', function () {
+  xhr.addEventListener('load', function() {
     if (xhr.status >= 400) {
       error && error(xhr);
       return;
     }
     success(xhr);
   });
-  xhr.addEventListener('error', function () {
+  xhr.addEventListener('error', function() {
     error && error(xhr);
   });
 
   xhr.open(method, path, true);
   xhr.send(data);
 }
-
 
 class CollectionsApi {
   constructor(collectionType) {
@@ -42,34 +41,34 @@ class CollectionsApi {
     return boundApi;
   }
 
+  getProjectId() {
+    return this.projectId || project().getCurrentId();
+  }
+
   // NOTE: path parameter as supplied should not be URI encoded, as it will be
   // URI encoded in this function...
   basePath(path) {
     var encodedPath;
     if (path) {
       // encode all characters except forward slashes
-      encodedPath = encodeURIComponent(path).replace(/%2F/g,"/");
+      encodedPath = encodeURIComponent(path).replace(/%2F/g, '/');
     }
-    return apiPath(
-      this.collectionType,
-      this.projectId || project().getCurrentId(),
-      encodedPath
-    );
+    return apiPath(this.collectionType, this.getProjectId(), encodedPath);
   }
 
   ajax(method, file, success, error, data) {
-    error = error || function () {};
-    if (!window.dashboard && !this.projectId) {
-      error({status: "No dashboard"});
+    error = error || function() {};
+    if (!window.dashboard && !this.getProjectId()) {
+      error({status: 'No dashboard'});
       return;
     }
     return ajaxInternal(method, this.basePath(file), success, error, data);
   }
 
   getFile(file, version, success, error, data) {
-    error = error || function () {};
-    if (!window.dashboard && !this.projectId) {
-      error({status: "No dashboard"});
+    error = error || function() {};
+    if (!window.dashboard && !this.getProjectId()) {
+      error({status: 'No dashboard'});
       return;
     }
     let url = this.basePath(file);
@@ -88,9 +87,11 @@ class CollectionsApi {
    */
   restorePreviousFileVersion(file, versionId, success, error) {
     var path = this.basePath(`${file}/restore`);
-    path += '?' + queryString.stringify({
-      version: versionId
-    });
+    path +=
+      '?' +
+      queryString.stringify({
+        version: versionId
+      });
     return ajaxInternal('PUT', path, success, error);
   }
 
@@ -119,14 +120,13 @@ class CollectionsApi {
 
 class AssetsApi extends CollectionsApi {
   copyAssets(sourceProjectId, assetFilenames, success, error) {
-    var path = apiPath(
-      'copy-assets',
-      this.projectId || project().getCurrentId()
-    );
-    path += '?' + queryString.stringify({
-      src_channel: sourceProjectId,
-      src_files: JSON.stringify(assetFilenames)
-    });
+    var path = apiPath('copy-assets', this.getProjectId());
+    path +=
+      '?' +
+      queryString.stringify({
+        src_channel: sourceProjectId,
+        src_files: JSON.stringify(assetFilenames)
+      });
     return ajaxInternal('POST', path, success, error);
   }
 
@@ -177,7 +177,10 @@ class AssetsApi extends CollectionsApi {
    * @param version {string} Ignored for this API, but matches other getFiles()
    */
   getFiles(success, error, version) {
-    return ajaxInternal('GET', this.basePath(''), xhr => {
+    return ajaxInternal(
+      'GET',
+      this.basePath(''),
+      xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);
@@ -191,7 +194,8 @@ class AssetsApi extends CollectionsApi {
           success({files: parsedResponse}, xhr);
         }
       },
-      error);
+      error
+    );
   }
 
   /*
@@ -215,10 +219,7 @@ class FilesApi extends CollectionsApi {
    * @param error {Function} callback when failed (includes xhr parameter)
    */
   getVersionHistory(success, error) {
-    var path = apiPath(
-      'files-version',
-      this.projectId || project().getCurrentId()
-    );
+    var path = apiPath('files-version', this.getProjectId());
     return ajaxInternal('GET', path, success, error);
   }
 
@@ -229,13 +230,12 @@ class FilesApi extends CollectionsApi {
    * @param error {Function} callback when failed (includes xhr parameter)
    */
   restorePreviousVersion(versionId, success, error) {
-    var path = apiPath(
-      'files-version',
-      this.projectId || project().getCurrentId()
-    );
-    path += '?' + queryString.stringify({
-      version: versionId
-    });
+    var path = apiPath('files-version', this.getProjectId());
+    path +=
+      '?' +
+      queryString.stringify({
+        version: versionId
+      });
     return ajaxInternal('PUT', path, success, error);
   }
 
@@ -249,14 +249,18 @@ class FilesApi extends CollectionsApi {
       params['files-version'] = project().filesVersionId;
     }
     path += '?' + queryString.stringify(params);
-    return ajaxInternal('PUT', path, xhr => {
+    return ajaxInternal(
+      'PUT',
+      path,
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
           success(xhr, project().filesVersionId);
         }
       },
-      error);
+      error
+    );
   }
 
   /*
@@ -289,14 +293,18 @@ class FilesApi extends CollectionsApi {
   }
 
   _deleteFileInternal(filename, success, error) {
-    return ajaxInternal('DELETE', this.basePathWithFilesVersion(filename), xhr => {
+    return ajaxInternal(
+      'DELETE',
+      this.basePathWithFilesVersion(filename),
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
           success(xhr, project().filesVersionId);
         }
       },
-      error);
+      error
+    );
   }
 
   /*
@@ -312,7 +320,10 @@ class FilesApi extends CollectionsApi {
   }
 
   _putFileInternal(filename, fileData, success, error) {
-    return ajaxInternal('PUT', this.basePathWithFilesVersion(filename), xhr => {
+    return ajaxInternal(
+      'PUT',
+      this.basePathWithFilesVersion(filename),
+      xhr => {
         var response = JSON.parse(xhr.response);
         project().filesVersionId = response.filesVersionId;
         if (success) {
@@ -320,7 +331,8 @@ class FilesApi extends CollectionsApi {
         }
       },
       error,
-      fileData);
+      fileData
+    );
   }
 
   /*
@@ -337,7 +349,7 @@ class FilesApi extends CollectionsApi {
   }
 
   /*
-   * Delete all files in project (always creates a new version)
+   * Delete all files in project
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
    */
@@ -345,14 +357,7 @@ class FilesApi extends CollectionsApi {
     // Note: just reset the _beforeFirstWriteHook, but don't call it
     // since we're deleting everything:
     this._beforeFirstWriteHook = null;
-    return ajaxInternal('DELETE', this.basePath('*'), xhr => {
-        var response = JSON.parse(xhr.response);
-        project().filesVersionId = response.filesVersionId;
-        if (success) {
-          success(xhr, project().filesVersionId);
-        }
-      },
-      error);
+    return ajaxInternal('DELETE', this.basePath('*'), success, error);
   }
 
   /*
@@ -396,7 +401,10 @@ class FilesApi extends CollectionsApi {
     if (version) {
       path = path + `?version=${version}`;
     }
-    return ajaxInternal('GET', path, xhr => {
+    return ajaxInternal(
+      'GET',
+      path,
+      xhr => {
         var parsedResponse;
         try {
           parsedResponse = JSON.parse(xhr.responseText);
@@ -410,13 +418,59 @@ class FilesApi extends CollectionsApi {
           success(parsedResponse, xhr);
         }
       },
-      error);
+      error
+    );
   }
 }
+
+class StarterAssetsApi {
+  getStarterAssets(levelName, onSuccess, onFailure) {
+    return ajaxInternal(
+      'GET',
+      this.withLevelName(levelName).basePath(''),
+      onSuccess,
+      onFailure
+    );
+  }
+
+  withLevelName(levelName) {
+    var boundApi = new this.constructor();
+    boundApi.levelName = levelName;
+    return boundApi;
+  }
+
+  basePath(path) {
+    if (!this || !this.levelName) {
+      const error =
+        'You must bind the API and set levelName before creating a base path.';
+      throw new Error(error);
+    }
+
+    return `/level_starter_assets/${this.levelName}/${path}`;
+  }
+
+  getUploadUrl() {
+    return this.basePath('');
+  }
+
+  wrapUploadDoneCallback(callback) {
+    return callback;
+  }
+
+  wrapUploadStartCallback(callback) {
+    return callback;
+  }
+
+  deleteFile(filename, success, error) {
+    return ajaxInternal('DELETE', this.basePath(filename), success, error);
+  }
+}
+
 module.exports = {
   animations: new CollectionsApi('animations'),
   assets: new AssetsApi('assets'),
+  starterAssets: new StarterAssetsApi(),
   files: new FilesApi('files'),
   sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels'),
+  channels: new CollectionsApi('channels')
 };

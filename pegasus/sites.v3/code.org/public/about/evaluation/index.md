@@ -13,6 +13,7 @@ Code.org partners with [Outlier Research & Evaluation at the University of Chica
 
 ## Available reports
 
+- [Estimating the Causal Effect of Code.org Teacher Training Program on Advanced Placement Outcomes 2018 (PDF) ](http://www.westcoastanalytics.com/uploads/6/9/6/7/69675515/wca_code_final_report_2018.pdf)
 - [Associations Between the Race and Gender of Computer Science Principles Teachers and Classroom Diversity 2018 (PDF)](/files/associations-teacher-student-demographics-in-csp.pdf)
 - [Measuring student proficiency: 2015-16 ](/about/evaluation/proficiency2016)
 - [Hour of Code impact study 2016 (PDF)](/files/HourOfCodeImpactStudy_Jan2017.pdf)

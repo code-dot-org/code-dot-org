@@ -1,8 +1,8 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
-import { TestResults } from './constants';
+import {TestResults} from './constants';
 import * as callouts from '@cdo/apps/code-studio/callouts';
-import { getStore } from './redux';
-import { setAwaitingContainedResponse } from './redux/runState';
+import {getStore} from './redux';
+import {setAwaitingContainedResponse} from './redux/runState';
 import locale from '@cdo/locale';
 import $ from 'jquery';
 
@@ -55,7 +55,11 @@ export function getValidatedResult() {
  * @param {function} onAttempt - Callback provided to studioApp for when we submit
  *   contained level
  */
-export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttempt}) {
+export function postContainedLevelAttempt({
+  hasContainedLevels,
+  attempts,
+  onAttempt
+}) {
   if (!hasContainedLevels || attempts !== 1) {
     return;
   }
@@ -63,6 +67,11 @@ export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttem
   // Track the fact that we're currently submitting
   postState = PostState.Started;
 
+  /**
+   * Get report info for our contained level. *Note:* If we are currently editing blocks,
+   * some of the report info will be overwritten in onAttempt() in order to allow levelbuilders
+   * to update blocks (rather than submit the contained level).
+   */
   const reportInfo = getContainedLevelResultInfo();
   onAttempt({
     ...reportInfo,
@@ -85,7 +94,9 @@ export function postContainedLevelAttempt({hasContainedLevels, attempts, onAttem
  */
 export function runAfterPostContainedLevel(fn) {
   if (postState === PostState.None) {
-    throw new Error('Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt');
+    throw new Error(
+      'Shouldnt call runAfterPostContainedLevel before postContainedLevelAttempt'
+    );
   }
   if (postState === PostState.Finished) {
     fn();
@@ -114,21 +125,23 @@ export function initializeContainedLevel() {
     };
     $('#runButtonWrapper').bind('click', disabledRunButtonHandler);
 
-    callouts.addCallouts([{
-      id: 'disabledRunButtonCallout',
-      element_id: '#runButton',
-      localized_text: locale.containedLevelRunDisabledTooltip(),
-      qtip_config: {
-        codeStudio: {
-          canReappear: true,
+    callouts.addCallouts([
+      {
+        id: 'disabledRunButtonCallout',
+        element_id: '#runButton',
+        localized_text: locale.containedLevelRunDisabledTooltip(),
+        qtip_config: {
+          codeStudio: {
+            canReappear: true
+          },
+          position: {
+            my: 'top left',
+            at: 'bottom center'
+          }
         },
-        position: {
-          my: 'top left',
-          at: 'bottom center',
-        },
-      },
-      on: 'attemptedRunButtonClick',
-    }]);
+        on: 'attemptedRunButtonClick'
+      }
+    ]);
     store.dispatch(setAwaitingContainedResponse(true));
 
     codeStudioLevels.registerAnswerChangedFn(() => {

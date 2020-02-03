@@ -1,3 +1,4 @@
+---
 en-GB:
   data:
     blocks:
@@ -12,6 +13,10 @@ en-GB:
             '1': "→"
             "-1": "←"
       Dancelab_changePropBy:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_changePropEachBy:
         options:
           PROPERTY:
             '"height"': height
@@ -33,9 +38,61 @@ en-GB:
         options:
           LOCATION:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_jumpToEach:
+        options:
+          LOCATION:
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": random
+      Dancelab_layoutSprites:
+        options:
+          FORMAT:
+            '"random"': random
+      Dancelab_makeAnonymousDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSprite:
+        options:
+          COSTUME:
+            '"ALIEN"': alien
+          LOCATION:
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": random
+      Dancelab_makeNewDanceSpriteGroup:
+        options:
+          'N':
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+            '11': '11'
+            '12': '12'
+            '13': '13'
+            '14': '14'
+            '15': '15'
+            '16': '16'
+            '17': '17'
+            '18': '18'
+            '19': '19'
+            '20': '20'
+          LAYOUT:
+            '"random"': random
       Dancelab_randomColor:
         text: random colour
       Dancelab_setDanceSpeed:
+        options:
+          SPEED:
+            '1': normal
+            '2': fast
+            '4': very fast
+            '0.5': slow
+            '0.25': very slow
+      Dancelab_setDanceSpeedEach:
         options:
           SPEED:
             '1': normal
@@ -47,7 +104,23 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_setPropEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropRandom:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_setPropRandomEach:
+        options:
+          PROPERTY:
+            '"height"': height
       Dancelab_startMapping:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_startMappingEach:
         options:
           PROPERTY:
             '"height"': height
@@ -55,35 +128,54 @@ en-GB:
         options:
           PROPERTY:
             '"height"': height
+      Dancelab_stopMappingEach:
+        options:
+          PROPERTY:
+            '"height"': height
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
             '"space"': space
-      Dancelab_whileKey:
+            '"x"': x
+      gamelab_checkTouching:
         options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
+      gamelab_keyPressed:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
           KEY:
             '"space"': space
-      gamelab_debugSprite:
-        options:
-          VAL:
-            'true': 'true'
-            'false': 'false'
-      gamelab_locationDelta:
-        options:
-          DIR:
-            "'random'": random
+            '"x"': x
       gamelab_randColor:
         text: random colour
       gamelab_randomColor:
         text: random colour
-      gamelab_setPosition:
+      gamelab_setBackgroundImage:
         options:
-          POSITION:
-            '"random"': random
+          IMG:
+            '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': cave
+            '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': city
+            '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': desert
+            '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': rainbow
+            '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': underwater
+            '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': winter
       gamelab_setSizes:
         options:
           PROPERTY:
             '"height"': height
+      gamelab_spriteClicked:
+        options:
+          CONDITION:
+            '"when"': when
+            '"while"': while
       gamelab_whenKey:
         options:
           KEY:
@@ -102,12 +194,38 @@ en-GB:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
+      RyanLab_moveForward:
+        text: move forward
+      RyanLab_turnLeft:
+        text: turn left
+      RyanLab_turnRight:
+        text: turn right
+      aalab_goToScene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      aalab_scene:
+        options:
+          SCENE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+      binary_whenKey:
+        options:
+          KEY:
+            '"space"': space
       craft_ifPath:
         options:
           DIR:
@@ -117,7 +235,15 @@ en-GB:
           TYPE:
             "'sand'": sand
             "'planksOak'": oak planks
+      craft_ifStandingOnLimit:
+        options:
+          TYPE:
+            "'sand'": sand
       craft_moveForward:
         text: move forward
+      craft_placeBlock:
+        options:
+          blockType:
+            '"readDeadCoralBlock"': read dead coral block
       craft_placeTorch:
         text: place torch

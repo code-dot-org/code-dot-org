@@ -28,8 +28,8 @@ export function scaledDropPoint(draggedElement) {
   const xScale = boundingRect.width / div.offsetWidth;
   const yScale = boundingRect.height / div.offsetHeight;
 
-  let left = (draggedOffset.left - $(div).offset().left) / xScale;
-  let top = (draggedOffset.top - $(div).offset().top) / yScale;
+  let left = Math.round((draggedOffset.left - $(div).offset().left) / xScale);
+  let top = Math.round((draggedOffset.top - $(div).offset().top) / yScale);
 
   // snap top-left corner to nearest location in the grid
   left = snapToGridSize(left);
@@ -53,8 +53,10 @@ export function isMouseEventInBounds(mouseEvent, container) {
   const clientRect = container[0].getBoundingClientRect();
 
   return (
-    clientX > clientRect.left && clientX < clientRect.right &&
-    clientY > clientRect.top && clientY < clientRect.bottom
+    clientX > clientRect.left &&
+    clientX < clientRect.right &&
+    clientY > clientRect.top &&
+    clientY < clientRect.bottom
   );
 }
 
@@ -96,7 +98,17 @@ export function draggedElementDropPoint() {
  */
 export function snapToGridSize(coordinate) {
   const halfGrid = GRID_SIZE / 2;
-  return coordinate - ((coordinate + halfGrid) % GRID_SIZE - halfGrid);
+  return coordinate - (((coordinate + halfGrid) % GRID_SIZE) - halfGrid);
+}
+
+/**
+ * Given a dimension (width or height), returns a dimension of at least
+ * that size that aligns to the given grid size.
+ * @param {number} dimension
+ * @returns {number}
+ */
+export function growToGridSize(dimension) {
+  return Math.ceil(dimension / GRID_SIZE) * GRID_SIZE;
 }
 
 export {isPointInBounds};

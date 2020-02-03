@@ -7,11 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Debugging with Watchers",
-    "reference": "/docs/csd/gamelab_watchers/index.html",
+    "reference": "/docs/concepts/game-lab/debugging-with-watchers/index.html",
     "parent_level_id": 8860,
     "name_suffix": "_2018"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-12-20 00:09:03 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

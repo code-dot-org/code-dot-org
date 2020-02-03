@@ -14,9 +14,9 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore > 0;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        var insideObstacle = false;\r\n\t        Flappy.obstacles.forEach(function (obstacle) {\r\n\t          if (!obstacle.hitAvatar && obstacle.containsAvatar()) {\r\n\t            insideObstacle = true;\r\n\t          }\r\n\t        });\r\n\t        return insideObstacle && Flappy.playerScore === 0;\r\n\t      }",
-    "instructions": "Add a block to the `when pass an obstacle` event, then press \"Run\" to score a point by flying Flappy through the first set of pipes.",
+    "short_instructions": "Add a block to the `when pass an obstacle` event, then press \"Run\" to score a point by flying Flappy through the first set of pipes.",
     "embed": "false",
-    "markdown_instructions": "We've added a scoreboard to count points when Flappy passes obstacles.  \r\n\r\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes.",
+    "long_instructions": "We've added a scoreboard to count points when Flappy passes obstacles.  \r\n\r\nAdd a block to the `when pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy through the first set of pipes.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use the `score a point` block to pass this level.\",\"hint_id\":\"courseC_flappy_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78901d9992e8d0a18f5c1dd3ab71bcd3/courseC_flappy_events5.mp3\"}]",
     "instructions_important": "false",
     "is_k1": "false",
@@ -42,11 +42,16 @@
     "project_template_level_name": "courseC_flappy_events_template_2018",
     "parent_level_id": 9519,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-27 20:02:45 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:06:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:40:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:00:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:03:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-27 20:02:45 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 20:06:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:40:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"markdown_instructions\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 22:59:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:00:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:03:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

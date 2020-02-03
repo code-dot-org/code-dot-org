@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Conditional Basics Question 4",
-    "markdown_instructions": "How do you know if a program needs a conditional statement?\n",
+    "long_instructions": "How do you know if a program needs a conditional statement?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

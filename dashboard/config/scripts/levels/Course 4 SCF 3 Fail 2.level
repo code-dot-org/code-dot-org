@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Can you figure out how to...",
+    "short_instructions": "Can you figure out how to...",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -30,7 +30,7 @@
     "coordinate_grid_background": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Functions Super Challenge #1:** \r\n\r\n",
+    "long_instructions": "**Functions Super Challenge #1:** \r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

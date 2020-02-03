@@ -5,7 +5,6 @@ Background:
   Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/6?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
 
 Scenario: Submit passing and perfect solutions
   Given I wait until element "#uitest-challenge-title" is visible
@@ -26,4 +25,4 @@ Scenario: Submit passing and perfect solutions
 Scenario: Press the skip button
   Given I press "challengePrimaryButton"
   When I press "skipButton"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/1"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/7"

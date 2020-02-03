@@ -1,12 +1,13 @@
 /** @file App Lab-specific Tooltip Overlay */
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
-import { getId } from './designElements/elementUtils';
-import { draggedElementDropPoint } from './gridUtils';
-import { connect } from 'react-redux';
-import { ApplabInterfaceMode } from './constants';
-import { ellipsify } from '../utils';
+import {getId} from './designElements/elementUtils';
+import {draggedElementDropPoint} from './gridUtils';
+import {connect} from 'react-redux';
+import {ApplabInterfaceMode} from './constants';
+import {ellipsify} from '../utils';
 
 const ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
@@ -33,7 +34,7 @@ export class AppLabTooltipOverlay extends React.Component {
     document.removeEventListener('mousemove', this.onMouseMove);
   }
 
-  onMouseMove = (event) => {
+  onMouseMove = event => {
     this.setState({
       hoveredControlId: this.getHoveredControlId(event.target)
     });
@@ -48,7 +49,10 @@ export class AppLabTooltipOverlay extends React.Component {
    */
   getHoveredControlId(controlElement) {
     // Check that the element is a child of a 'withCrosshair' div...
-    if (!controlElement || $(controlElement).parents('div.withCrosshair').length === 0) {
+    if (
+      !controlElement ||
+      $(controlElement).parents('div.withCrosshair').length === 0
+    ) {
       return null;
     }
 
@@ -73,9 +77,8 @@ export class AppLabTooltipOverlay extends React.Component {
    * @returns {string}
    * @private
    */
-  getElementIdText = () => (
-    "id: " + ellipsify(this.state.hoveredControlId, ELEMENT_ID_TEXT_MAX_CHAR)
-  );
+  getElementIdText = () =>
+    'id: ' + ellipsify(this.state.hoveredControlId, ELEMENT_ID_TEXT_MAX_CHAR);
 
   render() {
     const dragPoint = draggedElementDropPoint();
@@ -110,8 +113,10 @@ export default connect(state => ({
  * @static
  */
 function isResizeHandle(element) {
-  return $(element).parents('div.screen').length > 0 &&
-      $(element).hasClass('ui-resizable-handle');
+  return (
+    $(element).parents('div.screen').length > 0 &&
+    $(element).hasClass('ui-resizable-handle')
+  );
 }
 
 /**
@@ -122,7 +127,9 @@ function isResizeHandle(element) {
  * @static
  */
 function getAssociatedControl(resizeHandleElement) {
-  const siblingControl = $(resizeHandleElement).siblings().not('.ui-resizable-handle');
+  const siblingControl = $(resizeHandleElement)
+    .siblings()
+    .not('.ui-resizable-handle');
 
   if (siblingControl.length > 0 && siblingControl[0].id) {
     return siblingControl[0];

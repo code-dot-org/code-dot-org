@@ -15,7 +15,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Getting Started - Try this app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice using AppLab by building this one about a visit to a pet shop. To get started, click \"Run\" and then navigate to the \"Dogs\" screen. Once you've made it there click \"Finish\" to move on.",
+    "long_instructions": "# Getting Started - Try this app\r\n\r\nBefore you build your own Choose Your Own Adventure app, practice using AppLab by building this one about a visit to a pet shop. To get started, click \"Run\" and then navigate to the \"Dogs\" screen. Once you've made it there click \"Finish\" to move on.",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"dogButton\", \"click\", function() {\r\n  setScreen(\"dogScreen\");\r\n});",

@@ -26,7 +26,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** The right button plays a duck sound\r\n\r\n**How:** The `playSound()` block plays sounds. Add an `onEvent()` for the right button and use the `playSound()` block inside it.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/30e35a2c35ac309545d90af9330ba76d-image-1505939876315.gif)",
+    "long_instructions": "**Goal:** The right button plays a duck sound\r\n\r\n**How:** The `playSound()` block plays sounds. Add an `onEvent()` for the right button and use the `playSound()` block inside it.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/30e35a2c35ac309545d90af9330ba76d-image-1505939876315.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

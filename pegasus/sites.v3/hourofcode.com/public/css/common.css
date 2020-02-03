@@ -7,6 +7,10 @@
   line-height: 14px;
 }
 
+.center-text {
+  text-align: center;
+}
+
 .course-carousel {
   opacity: 0.4;
 }
@@ -582,15 +586,6 @@
 
 .wideletternames {
   margin-left:5%;
-}
-
-/* Custom Headers */
-.counter-title {
-  text-align: center;
-}
-
-.counter-title a {
-  color: #00adbc;
 }
 
 #signup-closed {

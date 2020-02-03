@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:05:04.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -62,8 +58,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Use constrain in this simple app to keep the turtle from driving off the screen.  (Click to see full instructions)",
-    "markdown_instructions": "# Use a Function that Returns a Value in an App\r\n\r\nWe create functions to **contain blocks of code that will be used multiple times within our program**. The same is true with functions that return values. Let's see an example of how we might use one of the functions we've written.\r\n\r\nThis exercise comes with starter code that creates a **simple turtle driver app**. The x and y location of the turtle are stored in the variables `xloc` and `yloc`. An event handler is used to update these values when the **arrow keys are pressed**, and then a separate `updateTurtle` function is called to draw the turtle on the screen.\r\n\r\nCurrently the turtle can drive off the screen. If we are clever about how we use our `constrain` function, however, we can prevent this from happening.\r\n\r\n# Do This:\r\n\r\n* **Starter code** is provided which allows the turtle to move. Additionally a **working version of `constrain`** is provided.\r\n* **Call the `constrain` function twice** within the `updateTurtle` function to prevent the turtle from going outside the screen.\r\n\t* One call to the function for `xloc` and one time for `yloc`.\r\n    * Recall the screen is **320 by 450 pixels**.\r\n* **Run your app** and confirm the turtle cannot leave the screen.\r\n\r\n![](https://images.code.org/f2e24abdf2d4008dfdc4f2ba9e23ff2c-image-1447958362880.gif)",
+    "short_instructions": "Use constrain in this simple app to keep the turtle from driving off the screen.  (Click to see full instructions)",
+    "long_instructions": "# Use a Function that Returns a Value in an App\r\n\r\nWe create functions to **contain blocks of code that will be used multiple times within our program**. The same is true with functions that return values. Let's see an example of how we might use one of the functions we've written.\r\n\r\nThis exercise comes with starter code that creates a **simple turtle driver app**. The x and y location of the turtle are stored in the variables `xloc` and `yloc`. An event handler is used to update these values when the **arrow keys are pressed**, and then a separate `updateTurtle` function is called to draw the turtle on the screen.\r\n\r\nCurrently the turtle can drive off the screen. If we are clever about how we use our `constrain` function, however, we can prevent this from happening.\r\n\r\n# Do This:\r\n\r\n* **Starter code** is provided which allows the turtle to move. Additionally a **working version of `constrain`** is provided.\r\n* **Call the `constrain` function twice** within the `updateTurtle` function to prevent the turtle from going outside the screen.\r\n\t* One call to the function for `xloc` and one time for `yloc`.\r\n    * Recall the screen is **320 by 450 pixels**.\r\n* **Run your app** and confirm the turtle cannot leave the screen.\r\n\r\n![](https://images.code.org/f2e24abdf2d4008dfdc4f2ba9e23ff2c-image-1447958362880.gif)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -97,8 +93,13 @@
     "encrypted_examples": "RUYQLBHIE8ubUXQlOINwHeHSWC9Vc+37OhKYO0NXxQmWEkphqr7FoE/+oQXE\ntKcy\n",
     "parent_level_id": 6942,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "show_debug_watch": "true",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:05:04.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "published": true
 }]]></config>
   <blocks/>

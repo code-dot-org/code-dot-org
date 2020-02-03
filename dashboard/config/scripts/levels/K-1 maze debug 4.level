@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,2,0,0,0],[0,0,3,1,4,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Run through these blocks and fix them! I think I might be going in the wrong direction.",
+    "short_instructions": "Run through these blocks and fix them! I think I might be going in the wrong direction.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",

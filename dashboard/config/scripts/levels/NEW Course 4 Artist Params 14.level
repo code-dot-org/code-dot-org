@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit \"draw a spiral edge\" to use \"length\" and \"sides\" parameters, then recreate these shapes.",
+    "short_instructions": "Edit \"draw a spiral edge\" to use \"length\" and \"sides\" parameters, then recreate these shapes.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": "1",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Edit `draw a spiral edge` to use `length` and `sides` parameters, then recreate these shapes.\r\n\r\n- The smallest side length of the square is 5 pixels.\r\n- The smallest side length of the triangle is 10 pixels.\r\n- The smallest side length of the hexagon is 2 pixels.\r\n- All increase to 100 pixels.  ",
+    "long_instructions": "Edit `draw a spiral edge` to use `length` and `sides` parameters, then recreate these shapes.\r\n\r\n- The smallest side length of the square is 5 pixels.\r\n- The smallest side length of the triangle is 10 pixels.\r\n- The smallest side length of the hexagon is 2 pixels.\r\n- All increase to 100 pixels.  ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

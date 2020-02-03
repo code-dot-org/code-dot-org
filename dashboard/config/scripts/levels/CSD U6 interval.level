@@ -25,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Predict Level",
+    "long_instructions": "Predict Level",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onBoardEvent(buttonL, \"press\", function(event) {\r\n  var interval = getProperty(\"interval\", \"value\");\r\n  led.blink(interval);\r\n});\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  led.off();\r\n});\r\n\r\n",

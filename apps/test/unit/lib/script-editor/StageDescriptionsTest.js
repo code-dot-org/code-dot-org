@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { assert } from '../../../util/configuredChai';
+import {shallow, mount} from 'enzyme';
+import {assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import StageDescriptions from '@cdo/apps/lib/script-editor/StageDescriptions';
 
@@ -23,7 +23,7 @@ describe('StageDescriptions', () => {
   beforeEach(() => {
     xhr = sinon.useFakeXMLHttpRequest();
     requests = [];
-    xhr.onCreate = function (xhr) {
+    xhr.onCreate = function(xhr) {
       requests.push(xhr);
     };
   });
@@ -37,7 +37,10 @@ describe('StageDescriptions', () => {
     );
     assert.equal(wrapper.state('collapsed'), true);
     assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(wrapper.childAt(1).childAt(0).type(), 'button');
+
+    const button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Expand');
   });
 
   it('uncollapses on click', () => {
@@ -50,11 +53,26 @@ describe('StageDescriptions', () => {
     wrapper.find('button').simulate('click');
     assert.equal(wrapper.state('collapsed'), false);
 
-    // button replaced by a div
-    assert.equal(wrapper.childAt(1).children().length, 1);
-    assert.equal(wrapper.childAt(1).childAt(0).type(), 'div');
+    let button = wrapper.childAt(1).childAt(0);
+    assert.equal(button.type(), 'button');
+    assert.include(button.text(), 'Collapse');
 
-    assert.equal(wrapper.find('button').text(), 'Import from Curriculum Builder');
+    // button followed by a div
+    assert.equal(wrapper.childAt(1).children().length, 2);
+    const descriptions = wrapper.childAt(1).childAt(1);
+    assert.equal(descriptions.type(), 'div');
+
+    assert.equal(
+      descriptions.find('button').text(),
+      'Import from Curriculum Builder'
+    );
+
+    // collapses after subsequent button click
+    button.simulate('click');
+    assert.equal(wrapper.state('collapsed'), true);
+    button = wrapper.childAt(1).childAt(0);
+    assert.include(button.text(), 'Expand');
+    assert.equal(wrapper.childAt(1).children().length, 1);
   });
 
   it('updates button while importing', () => {
@@ -64,14 +82,20 @@ describe('StageDescriptions', () => {
         currentDescriptions={currentDescriptions}
       />
     );
-    wrapper.setState({ collapsed: false });
-    assert.equal(wrapper.find('button').text(), 'Import from Curriculum Builder');
+    wrapper.setState({collapsed: false});
+    let descriptions = wrapper.childAt(1).childAt(1);
+
+    assert.equal(
+      descriptions.find('button').text(),
+      'Import from Curriculum Builder'
+    );
 
     // now click import button
-    wrapper.find('button').simulate('click');
+    descriptions.find('button').simulate('click');
 
+    descriptions = wrapper.childAt(1).childAt(1);
     assert.equal(wrapper.state('buttonText'), 'Querying server...');
-    assert.equal(wrapper.find('button').text(), 'Querying server...');
+    assert.equal(descriptions.find('button').text(), 'Querying server...');
   });
 
   it('extracts importedDescriptions/mismatchedStages from response', () => {
@@ -81,46 +105,68 @@ describe('StageDescriptions', () => {
         currentDescriptions={currentDescriptions}
       />
     );
-    wrapper.setState({ collapsed: false });
+    wrapper.setState({collapsed: false});
     // now click import button
-    wrapper.find('button').simulate('click');
+    const importButton = wrapper.find('button').at(1);
+    assert.equal(importButton.text(), 'Import from Curriculum Builder');
+    importButton.simulate('click');
 
     assert.equal(requests.length, 1);
-    assert.equal(requests[0].url, "https://curriculum.code.org/metadata/myscript.json");
+    assert.equal(
+      requests[0].url,
+      'https://curriculum.code.org/metadata/myscript.json'
+    );
 
-    requests[0].respond(200, { "Content-Type": "application/json" }, JSON.stringify({
-      lessons: [
-        {
-          title: currentDescriptions[0].name + "_new",
-          student_desc: currentDescriptions[0].descriptionStudent + " plus edits",
-          teacher_desc: currentDescriptions[0].descriptionTeacher + " plus edits",
-        },
-        {
-          title: currentDescriptions[1].name,
-          student_desc: currentDescriptions[0].descriptionStudent,
-          teacher_desc: currentDescriptions[0].descriptionTeacher,
-        }
-      ]
-    }));
+    requests[0].respond(
+      200,
+      {'Content-Type': 'application/json'},
+      JSON.stringify({
+        lessons: [
+          {
+            title: currentDescriptions[0].name + '_new',
+            student_desc:
+              currentDescriptions[0].descriptionStudent + ' plus edits',
+            teacher_desc:
+              currentDescriptions[0].descriptionTeacher + ' plus edits'
+          },
+          {
+            title: currentDescriptions[1].name,
+            student_desc: currentDescriptions[0].descriptionStudent,
+            teacher_desc: currentDescriptions[0].descriptionTeacher
+          }
+        ]
+      })
+    );
+    wrapper.update();
 
     assert.equal(wrapper.state('buttonText'), 'Imported');
     assert.deepEqual(wrapper.state('mismatchedStages'), ['The Internet_new']);
     const imported = wrapper.state('importedDescriptions');
     assert.equal(imported.length, 2);
-    assert.deepEqual({
-      name: 'The Internet_new',
-      descriptionStudent: currentDescriptions[0].descriptionStudent + " plus edits",
-      descriptionTeacher: currentDescriptions[0].descriptionTeacher + " plus edits",
-    }, imported[0]);
+    assert.deepEqual(
+      {
+        name: 'The Internet_new',
+        descriptionStudent:
+          currentDescriptions[0].descriptionStudent + ' plus edits',
+        descriptionTeacher:
+          currentDescriptions[0].descriptionTeacher + ' plus edits'
+      },
+      imported[0]
+    );
     assert.deepEqual(currentDescriptions[1], imported[1]);
 
-    assert.deepEqual(wrapper.find('input').prop('defaultValue'), JSON.stringify([
-      {
-        name: currentDescriptions[0].name,
-        descriptionStudent: currentDescriptions[0].descriptionStudent + " plus edits",
-        descriptionTeacher: currentDescriptions[0].descriptionTeacher + " plus edits",
-      },
-      currentDescriptions[1]
-    ]));
+    assert.deepEqual(
+      wrapper.find('input').prop('defaultValue'),
+      JSON.stringify([
+        {
+          name: currentDescriptions[0].name,
+          descriptionStudent:
+            currentDescriptions[0].descriptionStudent + ' plus edits',
+          descriptionTeacher:
+            currentDescriptions[0].descriptionTeacher + ' plus edits'
+        },
+        currentDescriptions[1]
+      ])
+    );
   });
 });

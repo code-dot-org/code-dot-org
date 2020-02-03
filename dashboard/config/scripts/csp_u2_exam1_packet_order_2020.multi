@@ -1,0 +1,17 @@
+name 'csp-u2-exam1-packet-order_2020'
+height 'auto'
+
+question 'Emilee is watching an online video. The video is being sent to her laptop by a server over the Internet which splits the video into packets and sends them in the order they appear in the video. Which of the following is true about how the packets will arrive at her computer?'
+
+wrong 'The packets will always be received in the order that they were sent'
+wrong 'Either every packet will reach her computer or none of them will.'
+wrong 'Packets that arrive out of order will be sent back to the server.'
+right 'The packets may arrive out of order'
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

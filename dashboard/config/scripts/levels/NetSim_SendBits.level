@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "netsim",
-    "instructions": "Connect to another student.  You can now set your wire to \"0\" or \"1\".  Send a message to your partner!",
+    "short_instructions": "Connect to another student.  You can now set your wire to \"0\" or \"1\".  Send a message to your partner!",
     "show_clients_in_lobby": "true",
     "show_routers_in_lobby": "false",
     "show_add_router_button": "false",

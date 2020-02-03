@@ -40,8 +40,9 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "لكل عنصر";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "لكل عنصر في قائمة ما، عين المتغير '%1' إلى هذا العنصر، ومن ثم نفذ بعض الأوامر.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "https://code.google.com/p/blockly/wiki/Loops#count_with";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "من %1 إلى %2 بمعدل %3";
-Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "العد بـ";
+Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "لأجل";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "اجعل المتغير %1 يأخذ القيم من رقم البداية إلى رقم النهاية وبالعد مستخدماً الفترات المحددة، وطبق أوامر المربعات البرمجية المحددة.";
 Blockly.Msg.CONTROLS_IF_ELSEIF_TOOLTIP = "إضافة شرط إلى المربع البرمجي \"إذا كان\".";
 Blockly.Msg.CONTROLS_IF_ELSE_TOOLTIP = "أضف شرط \"نهاية، اجمع\" إلى المربع البرمجي \"إذا كان\".";
@@ -57,7 +58,7 @@ Blockly.Msg.CONTROLS_IF_TOOLTIP_4 = "إذا كانت القيمة الأولى �
 Blockly.Msg.CONTROLS_REPEAT_HELPURL = "http://en.wikipedia.org/wiki/For_loop";
 Blockly.Msg.CONTROLS_REPEAT_INPUT_DO = "نفّذ";
 Blockly.Msg.CONTROLS_REPEAT_TITLE = "التكرار %1 مرات";
-Blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT = "تكرار";
+Blockly.Msg.CONTROLS_REPEAT_TITLE_REPEAT = "كرر";
 Blockly.Msg.CONTROLS_REPEAT_TITLE_TIMES = "مرات";
 Blockly.Msg.CONTROLS_REPEAT_TOOLTIP = "تنفيذ بعض الأوامر عدة مرات.";
 Blockly.Msg.CONTROLS_WHILEUNTIL_HELPURL = "http://code.google.com/p/blockly/wiki/Repeat";
@@ -311,8 +312,10 @@ Blockly.Msg.PROCEDURES_IFRETURN_WARNING = "تحذير: يُمكن استخدام
 Blockly.Msg.PROCEDURES_MUTATORARG_TITLE = "اسم الإدخال:";
 Blockly.Msg.PROCEDURES_MUTATORCONTAINER_TITLE = "المدخلات";
 Blockly.Msg.REMOVE_COMMENT = "إزالة التعليق";
+Blockly.Msg.RENAME_ALL = "Rename all %1";
 Blockly.Msg.RENAME_PARAMETER = "إعادة تسمية العامل...";
 Blockly.Msg.RENAME_PARAMETER_TITLE = "إعادة تسمية كافة العوامل '%1' إلى:";
+Blockly.Msg.RENAME_THIS = "Rename this %1";
 Blockly.Msg.RENAME_VARIABLE = "إعادة تسمية المتغير...";
 Blockly.Msg.RENAME_VARIABLE_TITLE = "إعادة تسمية كافة المتغيرات '%1' إلى:";
 Blockly.Msg.TEXT_APPEND_APPENDTEXT = "إلحاق النص";
@@ -377,6 +380,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "ازالة الفراغات من الجا
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "ازالة الفراغات من الجانب الأيمن";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "إرجاع نسخة من النص مع الفراغات المحذوفة من أحد أو كلا أطرافه.";
 Blockly.Msg.UNUSED_CODE = "الكود غير مستخدم";
+Blockly.Msg.VARIABLE = "variable";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "عنصر";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "إنشاء 'تعيين %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";

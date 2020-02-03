@@ -186,7 +186,6 @@ en-GB:
     prizes for every educator.
   blockly_name: Blockly
   course1_name: Course 1
-  math_category_name: Mathematics
   lightbot_gradelevel: All ages
   thinkersmith_gradelevel: All ages
   lightbotintl_gradelevel: All ages
@@ -208,3 +207,5 @@ en-GB:
     drag it. How about a colour, or an image? Tapping will bring up visual editors
     that let you choose exactly what you want.
   flappy_shortcode: flap
+  hoc2018_creativity_create: Create
+  hoc2018_mc_homepage_try_it: Try it

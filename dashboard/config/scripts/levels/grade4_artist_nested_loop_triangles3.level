@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360",
+    "short_instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360",
+    "long_instructions": "Can you draw a hexagon by looping the triangle code?\r\nHint: 6 × ? = 360",
     "examples_required": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Don't forget to make a turn after your inner loop.\\n\\nYou'll be looping 6 triangles over 360 degrees.\\n\\n**6 x ? = 360**\",\r\n  \"hint_id\": \"4-5_Nested_Loops_6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "never_autoplay_video": "true",

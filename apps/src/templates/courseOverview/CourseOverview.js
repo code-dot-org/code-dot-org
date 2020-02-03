@@ -1,21 +1,38 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import $ from 'jquery';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {connect} from 'react-redux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import CourseScript from './CourseScript';
-import LabeledSectionSelector from '@cdo/apps/code-studio/components/progress/LabeledSectionSelector';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import { resourceShape } from './resourceType';
+import {resourceShape} from './resourceType';
 import styleConstants from '@cdo/apps/styleConstants';
 import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 import * as utils from '../../utils';
-import { queryParams } from '../../code-studio/utils';
+import {queryParams} from '../../code-studio/utils';
 import i18n from '@cdo/locale';
-import Notification, { NotificationType } from '@cdo/apps/templates/Notification';
+import {
+  onDismissRedirectDialog,
+  dismissedRedirectDialog,
+  onDismissRedirectWarning,
+  dismissedRedirectWarning
+} from '@cdo/apps/util/dismissVersionRedirect';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import color from '@cdo/apps/util/color';
+import {
+  assignmentVersionShape,
+  sectionForDropdownShape
+} from '@cdo/apps/templates/teacherDashboard/shapes';
+import AssignmentVersionSelector, {
+  setRecommendedAndSelectedVersions
+} from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import StudentFeedbackNotification from '@cdo/apps/templates/feedback/StudentFeedbackNotification';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   main: {
-    width: styleConstants['content-width'],
+    width: styleConstants['content-width']
   },
   description: {
     marginBottom: 20
@@ -23,26 +40,26 @@ const styles = {
   titleWrapper: {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'flex-end',
+    alignItems: 'flex-end'
   },
   title: {
-    display: 'inline-block',
+    display: 'inline-block'
   },
   versionWrapper: {
     display: 'flex',
-    alignItems: 'baseline',
+    alignItems: 'baseline'
   },
   versionLabel: {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 15,
-    color: color.charcoal,
+    color: color.charcoal
   },
   versionDropdown: {
-    marginBottom: 13,
-  },
+    marginBottom: 13
+  }
 };
 
-export default class CourseOverview extends Component {
+class CourseOverview extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
@@ -50,29 +67,41 @@ export default class CourseOverview extends Component {
     id: PropTypes.number.isRequired,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
-    sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })).isRequired,
+    sectionsInfo: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+      })
+    ).isRequired,
     teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired,
     isVerifiedTeacher: PropTypes.bool.isRequired,
     hasVerifiedResources: PropTypes.bool.isRequired,
-    versions: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      version_year: PropTypes.string.isRequired
-    })).isRequired,
+    versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     showVersionWarning: PropTypes.bool,
+    showRedirectWarning: PropTypes.bool,
+    redirectToCourseUrl: PropTypes.string,
+    showAssignButton: PropTypes.bool,
+    userId: PropTypes.number,
+    // Redux
+    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired
   };
 
-  onChangeVersion = event => {
-    const courseName = event.target.value;
-    if (courseName !== this.props.name) {
+  constructor(props) {
+    super(props);
+    const showRedirectDialog =
+      props.redirectToCourseUrl && props.redirectToCourseUrl.length > 0;
+    this.state = {showRedirectDialog};
+  }
+
+  onChangeVersion = versionYear => {
+    const course = this.props.versions.find(v => v.year === versionYear);
+    if (course && course.name.length > 0 && course.name !== this.props.name) {
       const sectionId = queryParams('section_id');
       const queryString = sectionId ? `?section_id=${sectionId}` : '';
-      utils.navigateToHref(`/courses/${courseName}${queryString}`);
+      utils.navigateToHref(`/courses/${course.name}${queryString}`);
     }
   };
 
@@ -92,7 +121,14 @@ export default class CourseOverview extends Component {
       url: `/api/v1/user_scripts/${firstScriptId}`,
       type: 'json',
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify({version_warning_dismissed: true}),
+      data: JSON.stringify({version_warning_dismissed: true})
+    });
+  };
+
+  onCloseRedirectDialog = () => {
+    onDismissRedirectDialog(this.props.name);
+    this.setState({
+      showRedirectDialog: false
     });
   };
 
@@ -105,6 +141,7 @@ export default class CourseOverview extends Component {
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
+      sectionsForDropdown,
       teacherResources,
       isTeacher,
       viewAs,
@@ -113,6 +150,10 @@ export default class CourseOverview extends Component {
       hasVerifiedResources,
       versions,
       showVersionWarning,
+      showRedirectWarning,
+      redirectToCourseUrl,
+      showAssignButton,
+      userId
     } = this.props;
 
     // We currently set .container.main to have a width of 940 at a pretty high
@@ -121,14 +162,48 @@ export default class CourseOverview extends Component {
     // properly. It can be removed if/when we fix .container.main
     const mainStyle = {
       ...styles.main,
-      marginLeft: ($(".container.main").width() - styleConstants['content-width']) / 2,
+      marginLeft:
+        ($('.container.main').width() - styleConstants['content-width']) / 2
     };
-    const showNotification = viewAs === ViewType.Teacher && isTeacher &&
-      !isVerifiedTeacher && hasVerifiedResources;
+    const showNotification =
+      viewAs === ViewType.Teacher &&
+      isTeacher &&
+      !isVerifiedTeacher &&
+      hasVerifiedResources;
+
+    // Only display viewable versions in course version dropdown.
+    const filteredVersions = versions.filter(version => version.canViewVersion);
+    const selectedVersion = filteredVersions.find(
+      v => v.name === this.props.name
+    );
+    setRecommendedAndSelectedVersions(
+      filteredVersions,
+      null, // Ignore locale for courses.
+      selectedVersion && selectedVersion.year
+    );
 
     return (
       <div style={mainStyle}>
-        {showVersionWarning &&
+        {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
+          <RedirectDialog
+            isOpen={this.state.showRedirectDialog}
+            details={i18n.assignedToNewerVersion()}
+            handleClose={this.onCloseRedirectDialog}
+            redirectUrl={redirectToCourseUrl}
+            redirectButtonText={i18n.goToAssignedVersion()}
+          />
+        )}
+        {userId && <StudentFeedbackNotification studentId={userId} />}
+        {showRedirectWarning && !dismissedRedirectWarning(name) && (
+          <Notification
+            type={NotificationType.warning}
+            notice=""
+            details={i18n.redirectCourseVersionWarningDetails()}
+            dismissible={true}
+            onDismiss={() => onDismissRedirectWarning(name)}
+          />
+        )}
+        {showVersionWarning && (
           <Notification
             type={NotificationType.warning}
             notice={i18n.wrongCourseVersionWarningNotice()}
@@ -136,42 +211,35 @@ export default class CourseOverview extends Component {
             dismissible={true}
             onDismiss={this.onDismissVersionWarning}
           />
-        }
+        )}
         <div style={styles.titleWrapper}>
           <h1 style={styles.title}>{assignmentFamilyTitle}</h1>
-          {versions.length > 1 &&
-            <span style={styles.versionWrapper}>
-              <span style={styles.versionLabel}>{i18n.courseOverviewVersionLabel()}</span>&nbsp;
-              <select
-                onChange={this.onChangeVersion}
-                value={name}
-                style={styles.versionDropdown}
-                id="version-selector"
-              >
-                {versions.map(version => (
-                  <option key={version.name} value={version.name}>
-                    {version.version_title}
-                  </option>
-                ))}
-              </select>
-            </span>
-          }
+          {filteredVersions.length > 1 && (
+            <AssignmentVersionSelector
+              onChangeVersion={this.onChangeVersion}
+              versions={filteredVersions}
+              rightJustifiedPopupMenu={true}
+            />
+          )}
         </div>
         <div style={styles.description}>
-          {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
+          {viewAs === ViewType.Student
+            ? descriptionStudent
+            : descriptionTeacher}
         </div>
-        {showNotification && <VerifiedResourcesNotification/>}
-        {isTeacher &&
+        {showNotification && <VerifiedResourcesNotification />}
+        {isTeacher && (
           <div>
-            <LabeledSectionSelector/>
             <CourseOverviewTopRow
               sectionsInfo={sectionsInfo}
+              sectionsForDropdown={sectionsForDropdown}
               id={id}
               title={title}
               resources={teacherResources}
+              showAssignButton={showAssignButton}
             />
           </div>
-        }
+        )}
         {scripts.map((script, index) => (
           <CourseScript
             key={index}
@@ -179,9 +247,22 @@ export default class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             description={script.description}
+            assignedSectionId={script.assigned_section_id}
+            courseId={id}
+            showAssignButton={showAssignButton}
           />
         ))}
       </div>
     );
   }
 }
+
+export const UnconnectedCourseOverview = CourseOverview;
+export default connect((state, ownProps) => ({
+  sectionsForDropdown: sectionsForDropdown(
+    state.teacherSections,
+    null,
+    ownProps.id,
+    true
+  )
+}))(CourseOverview);

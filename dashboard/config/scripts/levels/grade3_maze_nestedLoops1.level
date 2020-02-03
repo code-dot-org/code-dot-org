@@ -6,7 +6,7 @@
   "user_id": 5,
   "properties": {
     "skin": "birds",
-    "instructions": "Can you get me to the pig using 5 of the same kind of blocks?",
+    "short_instructions": "Can you get me to the pig using 5 of the same kind of blocks?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

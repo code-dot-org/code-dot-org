@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_12_CSP_4_1_1'
+wrong '`Is anyone there?`'
+right '`Better late than never.`'
+wrong '`Hello. Is anyone there?`'
+wrong '`Hello. Better late than never.`'
+markdown <<MARKDOWN
+Consider the code segment below. 
+<br><img src="https://curriculum.code.org/media/uploads/csp/c1ed99b57bb3fea817238ff5ae87153e" width="300"><br>
+If the variables `onTime` and `absent` both have the value `false`, what is displayed as a result of running the code segment?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **4.1.1** and Essential Knowledge statements: **4.1.1C, 4.1.1A**
+<hr>
+ (A) 
+
+<hr>
+ (B) 
+
+<hr>
+ (C) 
+
+<hr>
+ (D) 
+
+MARKDOWN

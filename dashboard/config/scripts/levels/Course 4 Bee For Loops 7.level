@@ -18,7 +18,7 @@
     "flower_type": "redWithNectar",
     "nectar_goal": "3",
     "ideal": "12",
-    "instructions": "Use your for loop \"counter\" variable to control how far to move horizontally.",
+    "short_instructions": "Use your for loop \"counter\" variable to control how far to move horizontally.",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false"
   }

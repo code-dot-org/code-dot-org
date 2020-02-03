@@ -1,15 +1,20 @@
-import { assert } from '../../../util/configuredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import Immutable from 'immutable';
-import { fakeLesson, fakeLevels } from '@cdo/apps/templates/progress/progressTestHelpers';
-import { LevelKind, LevelStatus } from '@cdo/apps/util/sharedConstants';
+import {
+  fakeLesson,
+  fakeLevels
+} from '@cdo/apps/templates/progress/progressTestHelpers';
+import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {
   lessonIsVisible,
   lessonIsLockedForAllStudents,
   getIconForLevel,
   stageLocked,
   summarizeProgressInStage,
+  isLevelAssessment,
+  stageIsAllAssessment
 } from '@cdo/apps/templates/progress/progressHelpers';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {
@@ -19,29 +24,41 @@ describe('progressHelpers', () => {
 
     const state = {
       teacherSections: {
-        selectedSectionId: '11',
+        selectedSectionId: '11'
       },
       hiddenStage: Immutable.fromJS({
         stagesBySection: {
-          '11': { '3': true }
+          '11': {'3': true}
         }
       })
     };
 
     it('returns false for hidden lessons while viewing as student', () => {
-      assert.strictEqual(lessonIsVisible(hiddenLesson, state, ViewType.Student), false);
+      assert.strictEqual(
+        lessonIsVisible(hiddenLesson, state, ViewType.Student),
+        false
+      );
     });
 
     it('returns true for hidden lessons while viewing as a teacher', () => {
-      assert.strictEqual(lessonIsVisible(hiddenLesson, state, ViewType.Teacher), true);
+      assert.strictEqual(
+        lessonIsVisible(hiddenLesson, state, ViewType.Teacher),
+        true
+      );
     });
 
     it('returns true for non-hidden lessons while viewing as a student', () => {
-      assert.strictEqual(lessonIsVisible(visibleLesson, state, ViewType.Student), true);
+      assert.strictEqual(
+        lessonIsVisible(visibleLesson, state, ViewType.Student),
+        true
+      );
     });
 
     it('returns true for non-hidden lessons while viewing as a teacher', () => {
-      assert.strictEqual(lessonIsVisible(visibleLesson, state, ViewType.Teacher), true);
+      assert.strictEqual(
+        lessonIsVisible(visibleLesson, state, ViewType.Teacher),
+        true
+      );
     });
 
     it('returns false for a lockable stage when not authorized', () => {
@@ -51,7 +68,10 @@ describe('progressHelpers', () => {
           lockableAuthorized: false
         }
       };
-      assert.strictEqual(lessonIsVisible(lockableLesson, localState, ViewType.Teacher), false);
+      assert.strictEqual(
+        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
+        false
+      );
     });
 
     it('returns true for a lockable stage when authorized', () => {
@@ -61,7 +81,10 @@ describe('progressHelpers', () => {
           lockableAuthorized: true
         }
       };
-      assert.strictEqual(lessonIsVisible(lockableLesson, localState, ViewType.Teacher), true);
+      assert.strictEqual(
+        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
+        true
+      );
     });
   });
 
@@ -76,39 +99,57 @@ describe('progressHelpers', () => {
       stageLock: {
         stagesBySectionId: {
           11: {
-            [lockedStageId]: [{
-              locked: true,
-              name: 'student1'
-            }, {
-              locked: true,
-              name: 'student2'
-            }],
-            [unlockedStageId]: [{
-              locked: true,
-              name: 'student1'
-            }, {
-              locked: false,
-              name: 'student2'
-            }],
-          },
+            [lockedStageId]: [
+              {
+                locked: true,
+                name: 'student1'
+              },
+              {
+                locked: true,
+                name: 'student2'
+              }
+            ],
+            [unlockedStageId]: [
+              {
+                locked: true,
+                name: 'student1'
+              },
+              {
+                locked: false,
+                name: 'student2'
+              }
+            ]
+          }
         }
       }
     });
 
     it('returns false when we have no selected section', () => {
       const state = stateForSelectedSection(null);
-      assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), false);
-      assert.strictEqual(lessonIsLockedForAllStudents(unlockedStageId, state), false);
+      assert.strictEqual(
+        lessonIsLockedForAllStudents(lockedStageId, state),
+        false
+      );
+      assert.strictEqual(
+        lessonIsLockedForAllStudents(unlockedStageId, state),
+        false
+      );
     });
 
     it('returns false when the selected section has an unlocked student', () => {
       const state = stateForSelectedSection(11);
-      assert.strictEqual(lessonIsLockedForAllStudents(unlockedStageId, state), false);
+      assert.strictEqual(
+        lessonIsLockedForAllStudents(unlockedStageId, state),
+        false
+      );
     });
 
     it('returns true when the selected section has no unlocked students', () => {
       const state = stateForSelectedSection(11);
-      assert.strictEqual(lessonIsLockedForAllStudents(lockedStageId, state), true);
+      assert.strictEqual(
+        lessonIsLockedForAllStudents(lockedStageId, state),
+        true
+      );
     });
   });
 
@@ -133,7 +174,10 @@ describe('progressHelpers', () => {
         const levels = baseLevels.map(level => ({
           ...level,
           // lock assessment levels/pages
-          status: level.kind === LevelKind.assessment ? LevelStatus.locked : level.status
+          status:
+            level.kind === LevelKind.assessment
+              ? LevelStatus.locked
+              : level.status
         }));
         assert.strictEqual(true, stageLocked(levels));
       });
@@ -141,6 +185,22 @@ describe('progressHelpers', () => {
       it('returns false when level group is not locked', () => {
         assert.strictEqual(false, stageLocked(baseLevels));
       });
+    });
+  });
+
+  describe('isLevelAssessment', () => {
+    it('returns true if level kind is assessment', () => {
+      const level = {
+        kind: LevelKind.assessment
+      };
+      assert.equal(isLevelAssessment(level), true);
+    });
+
+    it('returns false if level kind is something other than assessment', () => {
+      const level = {
+        kind: LevelKind.puzzle
+      };
+      assert.equal(isLevelAssessment(level), false);
     });
   });
 
@@ -162,8 +222,13 @@ describe('progressHelpers', () => {
       assert.equal(getIconForLevel(level1), 'scissors');
     });
 
+    it('uses flag-checkered icon if bonus level', () => {
+      const level = {bonus: true};
+      assert.equal(getIconForLevel(level), 'flag-checkered');
+    });
+
     it('throws if icon is invalid', () => {
-      assert.throws(function () {
+      assert.throws(function() {
         const level = {
           icon: 'asdf'
         };
@@ -172,7 +237,24 @@ describe('progressHelpers', () => {
     });
   });
 
-  describe('summarizeProgressInState', () => {
+  describe('stageIsAllAssessment', () => {
+    it('returns true if all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.assessment;
+      levels[1].kind = LevelKind.assessment;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), true);
+    });
+    it('returns false if not all the levels are of kind assessment', () => {
+      const levels = fakeLevels(3);
+      levels[0].kind = LevelKind.unplugged;
+      levels[1].kind = LevelKind.puzzle;
+      levels[2].kind = LevelKind.assessment;
+      assert.equal(stageIsAllAssessment(levels), false);
+    });
+  });
+
+  describe('summarizeProgressInStage', () => {
     it('summarizes all untried levels', () => {
       const levels = fakeLevels(3);
       const summarizedStage = summarizeProgressInStage(levels);
@@ -182,14 +264,16 @@ describe('progressHelpers', () => {
     });
 
     it('summarizes all completed levels', () => {
-      const levels = fakeLevels(4).map(level => ({
-        ...level,
-        status: LevelStatus.perfect
-      }));
+      const levels = fakeLevels(3);
+      levels[0].status = LevelStatus.perfect;
+      levels[1].status = LevelStatus.submitted;
+      levels[2].status = LevelStatus.readonly;
+
       const summarizedStage = summarizeProgressInStage(levels);
-      assert.equal(summarizedStage.total, 4);
+      assert.equal(summarizedStage.total, 3);
       assert.equal(summarizedStage.incomplete, 0);
-      assert.equal(summarizedStage.completed, 4);
+      assert.equal(summarizedStage.completed, 3);
+      assert.equal(summarizedStage.attempted, 0);
     });
 
     it('summarizes all attempted levels', () => {
@@ -219,6 +303,19 @@ describe('progressHelpers', () => {
       assert.equal(summarizedStage.completed, 3);
       assert.equal(summarizedStage.imperfect, 1);
       assert.equal(summarizedStage.attempted, 1);
+    });
+
+    it('does not summarize bonus levels', () => {
+      const levels = fakeLevels(1);
+      levels[0].status = LevelStatus.submitted;
+      levels[0].bonus = true;
+
+      const summarizedStage = summarizeProgressInStage(levels);
+      assert.equal(summarizedStage.total, 0);
+      assert.equal(summarizedStage.incomplete, 0);
+      assert.equal(summarizedStage.completed, 0);
+      assert.equal(summarizedStage.imperfect, 0);
+      assert.equal(summarizedStage.attempted, 0);
     });
   });
 });

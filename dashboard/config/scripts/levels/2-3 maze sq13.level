@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,3,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Dear person. Me zombie. Must... get... to sunflower. Create loop with \"repeat until\" block.",
+    "short_instructions": "Dear person. Me zombie. Must... get... to sunflower. Create loop with \"repeat until\" block.",
     "start_direction": "1",
     "step_mode": 1
   }

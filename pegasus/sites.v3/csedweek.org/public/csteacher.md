@@ -11,7 +11,7 @@ NOTE: Computer science can be celebrated throughout the year, not just in Decemb
 
 ### 1) Host an event
 
-- Don't limit yourself to student-guided coding games. Check out [teacher-guided lesson plans](https://code.org/educate/teacher-led) for the Hour of Code, and explore [all tutorials](https://code.org/learn) to find more advanced challenges!
+- Don't limit yourself to student-guided coding games. Check out [teacher-guided lesson plans](https://csedweek.org/learn?activity_type=lesson-plan) for the Hour of Code, and explore [all tutorials](/learn) to find more advanced challenges!
 - Recruit your entire school to participate in the Hour of Code using [these handouts and sample emails](https://hourofcode.com/promote/resources). Or [organize a school assembly](https://hourofcode.com/how-to/events) to introduce and promote the Hour of Code.
 - Help computer science students organize an Hour of Code with other classrooms &mdash; spread Hour of Code through a whole school!
 - Hang our [celebrity posters](https://hourofcode.com/promote/resources#posters) on your classroom's walls.

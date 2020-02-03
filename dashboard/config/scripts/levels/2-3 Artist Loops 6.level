@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Add one more move and another turn inside the loop and see how your design changes.",
+    "short_instructions": "Add one more move and another turn inside the loop and see how your design changes.",
     "x": "130",
     "y": "130",
     "start_direction": "0",

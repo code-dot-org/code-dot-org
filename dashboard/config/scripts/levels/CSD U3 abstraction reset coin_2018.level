@@ -64,7 +64,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Reset Coin\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen.\r\n\r\n# Do This\r\n\r\n* Place an `if` block inside of your draw loop.\r\n* Use the `sprite.isTouching()` block as the condition to detect when the character touches the coin.\r\n* Inside the `if` block write code that sets the coin's X and Y position to random numbers between 0 and 400.\r\n\t* *Hint: You've already written this code elsewhere in your program.*\r\n\r\nTest your code before moving on. When your player touches the coin, it should move somewhere else on the screen.",
+    "long_instructions": "# Reset Coin\r\n\r\nWhen your character touches the coin you should reset it somewhere on the screen.\r\n\r\n# Do This\r\n\r\n* Place an `if` block inside of your draw loop.\r\n* Use the `sprite.isTouching()` block as the condition to detect when the character touches the coin.\r\n* Inside the `if` block write code that sets the coin's X and Y position to random numbers between 0 and 400.\r\n\t* *Hint: You've already written this code elsewhere in your program.*\r\n\r\nTest your code before moving on. When your player touches the coin, it should move somewhere else on the screen.",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
     "start_in_animation_tab": "false",
