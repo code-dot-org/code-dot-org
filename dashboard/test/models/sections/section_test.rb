@@ -588,7 +588,7 @@ class SectionTest < ActiveSupport::TestCase
         script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
 
       progress_levels.each do |level|
-        create :user_level, level: level, user: student, script: script
+        create :user_level, level: level, user: student, script: script, best_result: ActivityConstants::MINIMUM_PASS_RESULT
       end
     end
 
@@ -646,17 +646,40 @@ class SectionTest < ActiveSupport::TestCase
 
     test 'returns true if enough students have completed the lesson to consider it completed by class' do
       section = create :section
-      10.times do
+      9.times do
         follower = create :follower, section: section
         # Though we have 7 levels of progress in each script, only 4 of those are
         # for programming levels
-        simulate_student_progress(@csd2, follower.student_user, 4, 0)
-        simulate_student_progress(@csd3, follower.student_user, 4, 0)
+        simulate_student_progress(@csd2, follower.student_user, 5, 2)
       end
-      # 10th student has no progress
+      1.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+      end
       create :follower, section: section
 
-      assert_equal true, section.has_sufficient_lesson_progress_for_completion?(@csd2)
+      assert_equal true, section.has_sufficient_lesson_progress_for_completion?(@csd2, 1)
+    end
+
+    test 'returns false if not enough students have completed the lesson to consider it completed by class' do
+      section = create :section
+      5.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 2)
+      end
+      5.times do
+        follower = create :follower, section: section
+        # Though we have 7 levels of progress in each script, only 4 of those are
+        # for programming levels
+        simulate_student_progress(@csd2, follower.student_user, 5, 0)
+      end
+      create :follower, section: section
+
+      assert_equal false, section.has_sufficient_lesson_progress_for_completion?(@csd2, 1)
     end
   end
 end
