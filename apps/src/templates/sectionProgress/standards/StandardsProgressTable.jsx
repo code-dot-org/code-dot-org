@@ -5,10 +5,7 @@ import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 import StandardDescriptionCell from './StandardDescriptionCell';
 import {connect} from 'react-redux';
-import {
-  getLessonsCompletedByStandardForScript,
-  getStandardsCoveredForScript
-} from './sectionStandardsProgressRedux';
+import {getLessonsCompletedByStandardForScript} from './sectionStandardsProgressRedux';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,
@@ -65,7 +62,7 @@ class StandardsProgressTable extends Component {
   getColumns = () => {
     let dataColumns = [
       {
-        property: 'category',
+        property: 'concept',
         header: {
           label: i18n.standardConcept(),
           props: {
@@ -86,7 +83,7 @@ class StandardsProgressTable extends Component {
         }
       },
       {
-        property: 'number',
+        property: 'organization_id',
         header: {
           label: i18n.standardIdentifier(),
           props: {
@@ -168,8 +165,8 @@ class StandardsProgressTable extends Component {
 
   render() {
     const columns = this.getColumns();
-
-    const rowData = this.props.standards.map((standard, index) => {
+    const standards = this.props.standards || [];
+    const rowData = standards.map((standard, index) => {
       return {
         ...standard,
         numCompleted: this.getNumCompleted(standard, index),
@@ -193,6 +190,6 @@ class StandardsProgressTable extends Component {
 export const UnconnectedStandardsProgressTable = StandardsProgressTable;
 
 export default connect(state => ({
-  standards: getStandardsCoveredForScript(),
-  lessonsCompletedByStandard: getLessonsCompletedByStandardForScript()
+  lessonsCompletedByStandard: getLessonsCompletedByStandardForScript(),
+  standards: state.sectionStandardsProgress.standardsData
 }))(StandardsProgressTable);
