@@ -11,6 +11,7 @@ with completed as
   from analysis.csp_csd_completed_teachers cc
   join dashboard_production_pii.users u on u.id = cc.user_id
 ), 
+
 started as
 (
   select 
@@ -22,6 +23,42 @@ started as
   from analysis.csp_csd_started_teachers cc
   join dashboard_production_pii.users u on u.id = cc.user_id
 ),
+
+-- the following five subqueries through "all_trained_taught_combos" were added to ensure there is a distinct line for the year a teacher is trained if they go on to teach, but only after the year they were trained
+trained as 
+(select studio_person_id, school_year as school_year_trained, course, school_id, regional_partner_id, scholarship
+from analysis.csp_csd_teachers_trained), 
+
+taught as 
+(select studio_person_id, school_year as school_year_taught, course
+from started),
+
+trained_and_taught as
+(select trained.studio_person_id,  school_year_trained,  school_year_taught
+from trained 
+join taught 
+  on trained.studio_person_id = taught.studio_person_id
+  and school_year_trained <= school_year_taught
+  ),
+
+taught_only_after_year_trained as
+(select studio_person_id, school_year_trained, course, school_id, regional_partner_id, scholarship
+from trained
+where studio_person_id in (select studio_person_id from trained_and_taught where studio_person_id is not null)
+and studio_person_id not in (select studio_person_id from trained_and_taught where school_year_trained = school_year_taught and studio_person_id is not null)),
+
+all_trained_taught_combos as (
+select  distinct trained.studio_person_id,  school_year_trained,  school_year_taught, trained.course, school_id, regional_partner_id, scholarship
+from trained 
+left join taught 
+  on trained.studio_person_id = taught.studio_person_id
+  and trained.school_year_trained <= taught.school_year_taught
+
+union all 
+
+select  studio_person_id,  school_year_trained,  NULL as school_year_taught, course, school_id, regional_partner_id, scholarship
+from taught_only_after_year_trained ), 
+
 names as
 (
   select 
@@ -78,7 +115,7 @@ SELECT distinct
        e.emails as email,
        d.course, -- pd_course
        scholarship,
-       d.school_year as school_year_trained,
+       d.school_year_trained,
        coalesce(sa_csp.school_year, sa_csd.school_year) as school_year_taught,
        CASE WHEN rp.name is null THEN 'No Partner' ELSE rp.name END as regional_partner_name,
        rp.id as regional_partner_id,
@@ -119,19 +156,19 @@ SELECT distinct
        sa_csd.students as students_csd,
        sa_csd.students_started as students_started_csd,
        sa_csd.students_completed as students_completed_csd,
-       sa_csp.sections + sa_csd.sections as sections,
-       sa_csp.students + sa_csd.students as students,
-       sa_csp.students_started + sa_csd.students_started as students_started,
-       sa_csp.students_completed + sa_csd.students_completed as students_completed,
-       sa_csp.students_female + sa_csd.students_female as students_female,
-       sa_csp.students_gender + sa_csd.students_gender as students_gender,
-       sa_csp.students_urm + sa_csd.students_urm as students_urm,
-       sa_csp.students_black + sa_csd.students_black as students_black,
-       sa_csp.students_hispanic + sa_csd.students_hispanic as students_hispanic,
-       sa_csp.students_native + sa_csd.students_native as students_native,
-       sa_csp.students_hawaiian + sa_csd.students_hawaiian as students_hawaiian,
-       sa_csp.students_race + sa_csd.students_race as students_race
-FROM analysis.csp_csd_teachers_trained d
+       coalesce(sa_csp.sections, 0) + coalesce(sa_csd.sections, 0) as sections,
+       coalesce(sa_csp.students, 0) + coalesce(sa_csd.students, 0) as students,
+       coalesce(sa_csp.students_started, 0) + coalesce(sa_csd.students_started, 0) as students_started,
+       coalesce(sa_csp.students_completed, 0) + coalesce(sa_csd.students_completed, 0) as students_completed,
+       coalesce(sa_csp.students_female, 0) + coalesce(sa_csd.students_female, 0) as students_female,
+       coalesce(sa_csp.students_gender, 0) + coalesce(sa_csd.students_gender, 0) as students_gender,
+       coalesce(sa_csp.students_urm, 0) + coalesce(sa_csd.students_urm, 0) as students_urm,
+       coalesce(sa_csp.students_black, 0) + coalesce(sa_csd.students_black, 0) as students_black,
+       coalesce(sa_csp.students_hispanic, 0) + coalesce(sa_csd.students_hispanic, 0) as students_hispanic,
+       coalesce(sa_csp.students_native, 0) + coalesce(sa_csd.students_native, 0) as students_native,
+       coalesce(sa_csp.students_hawaiian, 0) + coalesce(sa_csd.students_hawaiian, 0) as students_hawaiian,
+       coalesce(sa_csp.students_race, 0) + coalesce(sa_csd.students_race, 0) as students_race
+FROM all_trained_taught_combos d
 LEFT JOIN names n
       ON d.studio_person_id = n.studio_person_id
 LEFT JOIN emails e
@@ -143,35 +180,35 @@ LEFT JOIN analysis.school_stats ss_summer_pd
 LEFT JOIN analysis.quarterly_workshop_attendance_view qwa 
       ON qwa.studio_person_id = d.studio_person_id
       AND qwa.course = d.course 
-      AND qwa.school_year = d.school_year
+      AND qwa.school_year = d.school_year_trained
 --pii tables (regional partner names, person names, emails, locations)
 LEFT JOIN dashboard_production_pii.regional_partners rp  
       ON d.regional_partner_id = rp.id 
 -- analysis tables
 LEFT JOIN analysis.student_activity_csp_csd_view sa_csp 
       ON sa_csp.studio_person_id = d.studio_person_id 
-      AND sa_csp.school_year >= d.school_year 
+      AND sa_csp.school_year = d.school_year_taught
       AND sa_csp.course_name_short = 'csp'
 LEFT JOIN analysis.student_activity_csp_csd_view sa_csd 
       ON sa_csd.studio_person_id = d.studio_person_id 
-      AND sa_csd.school_year >= d.school_year 
+      AND sa_csd.school_year = d.school_year_taught 
       AND sa_csd.course_name_short = 'csd'
 LEFT JOIN started s
       ON s.studio_person_id = d.studio_person_id
       AND s.course = d.course
-      AND s.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
+      AND s.school_year = d.school_year_taught
 LEFT JOIN completed c
       ON c.studio_person_id = d.studio_person_id
       AND c.course = d.course   
       AND c.school_year  = s.school_year  
 LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp_csp 
       ON tmp_csp.studio_person_id = d.studio_person_id
-      AND tmp_csp.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
+      AND tmp_csp.school_year = d.school_year_taught
       AND tmp_csp.course_name_short = 'csp'
 LEFT JOIN analysis.teacher_most_progress_csp_csd_view tmp_csd 
       ON tmp_csd.studio_person_id = d.studio_person_id
-      AND tmp_csd.school_year = coalesce(sa_csp.school_year, sa_csd.school_year)
+      AND tmp_csd.school_year =  d.school_year_taught
       AND tmp_csd.course_name_short = 'csd'
-with no schema binding
+with no schema binding;
 
 GRANT SELECT ON analysis_pii.regional_partner_stats_csp_csd_view TO reader_pii;
