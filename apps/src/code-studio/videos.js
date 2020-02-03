@@ -192,13 +192,16 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var download = $('<a/>')
     .append($('<img src="/shared/images/download_button.png"/>'))
     .addClass('download-video')
-    .css('float', 'inherit')
+    .css('float', 'left')
     .attr('href', options.download)
     .click(function() {
       // track download in Google Analytics
       trackEvent('downloadvideo', 'startdownloadvideo', options.key);
       return true;
     });
+  if (document.dir === 'rtl') {
+    download.css('float', 'right');
+  }
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
