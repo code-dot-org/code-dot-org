@@ -1,68 +1,115 @@
 # Utility methods for generating certificate images.
 # Note: requires pegasus_dir to be in scope.
 
+require 'honeybadger/ruby'
 require 'rmagick'
 require_relative '../script_constants'
 
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_certificate_image2(image_path, name, params={})
-  name = name.to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
-  name = ' ' if name.empty?
-
+  # Load the certificate template
   background = Magick::Image.read(image_path).first
+  font = "Times bold"
+  color = "#575757"
+  pointsize = 68
+  x_offset = params[:x] || 0
+  y_offset = params[:y] || 0
+  apply_text(background, name, pointsize, font, color, x_offset, y_offset)
+  background
+end
 
-  y = params[:y] || 0
-  x = params[:x] || 0
-  width = params[:width] || background.columns
-  height = params[:height] || background.rows
+# applies the given text to the given image object.
+def apply_text(image, text, pointsize, font, color, x_offset, y_offset)
+  # If there is no text, don't try to render it.
+  return if text.nil? || text.strip.empty?
 
-  draw = Magick::Draw.new
-  draw.annotate(background, width, height, x, y, name) do
-    draw.gravity = Magick::CenterGravity
-    self.pointsize = 90
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
+  text = escape_image_magick_string(text)
+
+  # Limit the text length to prevent attacks where students send names hundreds
+  # of characters long and our system wastes memory trying to render a huge
+  # image.
+  text = text[0, 50] if text.size > 50
+
+  begin
+    # The text will be put into an image with a transparent background.  This
+    # uses 'pango', the OS's text layout engine, in order to dynamically select
+    # the correct font. This is important for handling non-latin languages.
+    text_overlay = Magick::Image.read("pango:#{text}") do
+      # pango:markup is set to false in order to easily prevent pango markup
+      # injection from user input.
+      define('pango', 'markup', false)
+      self.background_color = 'none'
+      self.pointsize = pointsize
+      self.font = font
+      self.fill = color
+    end.first
+  rescue Magick::ImageMagickError => exception
+    # We want to know what kinds of text we are failing to render.
+    Honeybadger.notify(
+      exception,
+      context: {
+        text: text,
+      }
+    )
+    # We can't render the text, so return without applying a transformation.
+    return
   end
 
-  background
+  return unless text_overlay
+  text_overlay.trim!
+
+  # Combine the text image on top of the certificate template image
+  image.composite!(text_overlay, Magick::CenterGravity, x_offset, y_offset, Magick::OverCompositeOp)
+
+  # Free the memory in order to avoid memory leaks (images are stored in /tmp
+  # until destroyed)
+  text_overlay.destroy!
 end
 
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_workshop_certificate_image(image_path, fields)
   background = Magick::Image.read(image_path).first
-  draw = Magick::Draw.new
 
   fields.each do |field|
-    string = field[:string].to_s.force_8859_to_utf8.gsub(/@/, '\@').strip
+    string = field[:string].to_s
     next if string.empty?
 
     y = field[:y] || 0
     x = field[:x] || 0
-    width = field[:width] || background.columns
-    height = field[:height] || background.rows
+    pointsize = field[:pointsize] || 70
 
-    draw.annotate(background, width, height, x, y, string) do
-      draw.gravity = Magick::CenterGravity
-      self.pointsize = field[:pointsize] || 90
-      self.font_family = 'Times'
-      self.font_weight = Magick::BoldWeight
-      self.stroke = 'none'
-      self.fill = 'rgb(87,87,87)'
-    end
+    apply_text(background, string, pointsize, 'Times bold', 'rgb(87,87,87)', x, y)
   end
 
   background
 end
 
+# Prepare the given string for using in Image Magick.
+def escape_image_magick_string(string)
+  string = string.dup.force_8859_to_utf8
+  # Escape special Image Magick symbols \, @, %, and \n
+  # Note we are using the gsub block replacement in order to avoid having to do
+  # extra '\' escaping. Otherwise we would have to write '\\\\\\' to insert two
+  # backslashes into the string. Using the block replacement results in normal
+  # string behavior: '\\\\' results in a string with two backslashes. See the
+  # String.gsub docs for more details.  This is for the sake of readable code.
+  # literal \ replaced with literal \\
+  string = string.gsub(/\\/) {'\\\\'}
+  # @ at the front of the string replaced with literal \@
+  string = string.gsub(/^@/) {'\\@'}
+  # % replaced with literal \%
+  string = string.gsub(/%/) {'\\%'}
+  # new-line character replaced with literal \\n
+  string = string.gsub(/\n/) {'\\\\n'}
+  string.strip
+end
+
 # This method returns a newly-allocated Magick::Image object.
 # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
 def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=nil)
-  name = name.force_8859_to_utf8.gsub(/@/, '\@')
-  name = ' ' if name.empty?
+  name = ' ' if name.nil? || name.empty?
 
   course ||= ScriptConstants::HOC_NAME
 
@@ -77,27 +124,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
     course_title ||= fallback_course_title_for(course)
 
     image = Magick::Image.read(path).first
-
-    # student name
-    name_vertical_offset = 445
-    Magick::Draw.new.annotate(image, 0, 0, 0, name_vertical_offset, name) do
-      self.gravity = Magick::NorthGravity
-      self.pointsize = 96
-      self.font_family = 'Helvetica'
-      self.font_weight = Magick::BoldWeight
-      self.stroke = 'none'
-      self.fill = 'rgb(118,101,160)' # purple
-    end
-
-    course_vertical_offset = 610
-    Magick::Draw.new.annotate(image, 0, 0, 0, course_vertical_offset, course_title) do
-      self.gravity = Magick::NorthGravity
-      self.pointsize = 60
-      self.font_family = 'Helvetica'
-      self.font_weight = Magick::BoldWeight
-      self.stroke = 'none'
-      self.fill = 'rgb(29, 173, 186)' # teal
-    end
+    apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -141)
+    apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 11)
   end
 
   unless sponsor
@@ -106,14 +134,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
     sponsor = donor[:name_s]
   end
 
-  Magick::Draw.new.annotate(image, 0, 0, 0, 160, "#{sponsor} made the generous gift to sponsor your learning.") do
-    self.gravity = Magick::SouthGravity
-    self.pointsize = 24
-    self.font_family = 'Times'
-    self.font_weight = Magick::BoldWeight
-    self.stroke = 'none'
-    self.fill = 'rgb(87,87,87)'
-  end
+  sponsor_message = I18n.t('certificate.sponsor_message', sponsor_name: sponsor)
+  apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447)
   image
 end
 
@@ -156,6 +178,10 @@ def certificate_template_for(course)
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
+    elsif course == 'mee'
+      'MC_Hour_Of_Code_Certificate_mee.png'
+    elsif course == ScriptConstants::OCEANS_NAME
+      'oceans_hoc_certificate.png'
     else
       'hour_of_code_certificate.jpg'
     end

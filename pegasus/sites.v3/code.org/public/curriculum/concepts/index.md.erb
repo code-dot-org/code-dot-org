@@ -25,40 +25,7 @@ video_player: true
   </div>
 </div>
 
-<%
-def youtube_embed(youtube_url)
-  if youtube_url[/youtu\.be\/([^\?]*)/]
-    youtube_id = $1
-  else
-    # Regex from # http://stackoverflow.com/questions/3452546/javascript-regex-how-to-get-youtube-video-id-from-url/4811367#4811367
-    youtube_url[/^.*((v\/)|(embed\/)|(watch\?))\??v?=?([^\&\?]*).*/]
-    youtube_id = $5
-  end
-
-  %Q{<iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/#{ youtube_id }" frameborder="0" allowfullscreen></iframe>}
-end
-
-# => <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/jJrzIdDUfT4" frameborder="0" allowfullscreen></iframe>
-
-
-
-
-
-
-
-
-concept = 'Algorithms'
-# lessons = DB[:cdo_concepts_csf].where(mainConcept_s:concept)
-lessons = DB[:cdo_concepts_csf]
-words = DB[:cdo_concepts_csf]
-counts = Hash.new 0
-	words.each do |mainConcept_s|
-  	counts[mainConcept_s] += 1
-end
-%>
-
 [content]
-
 
 <!-- Use this only if we have extra info to share
 <table>
@@ -102,7 +69,7 @@ Each of these activities can either be used alone or with other computer science
     </tr>
   </thead>
 
-   <% lessons.each_with_index do |lesson, index|
+   <% DB[:cdo_concepts_csf].each_with_index do |lesson, index|
     	# Get the course number formatted well
 
      theCourse = lesson[:courseLesson_s]
@@ -146,13 +113,6 @@ Each of these activities can either be used alone or with other computer science
     </tr>
     <% end %>
 </table>
-
-
-
-
-
-
-
 
 [/content]
 

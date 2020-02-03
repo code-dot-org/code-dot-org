@@ -48,7 +48,22 @@
   overflow: auto;
   overflow-y: scroll;
 }
-#terms-modal .terms-checkbox,
+#terms-modal label.terms {
+  font-size: inherit;
+  line-height: inherit;
+}
+#terms-modal .terms-text {
+  overflow: hidden;
+}
+/* FND-893 - Stop using markdown in <Label>s*/
+#terms-modal .terms-text p {
+  display: inline;
+  margin: 0;
+}
+#terms-modal .terms-checkbox {
+  margin: 0 5px 0 0;
+  float: left;
+}
 #race-modal .race-checkbox {
   margin: 0 5px 0 0;
 }

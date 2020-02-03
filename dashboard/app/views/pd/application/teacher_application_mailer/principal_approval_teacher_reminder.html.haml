@@ -22,9 +22,15 @@
     %li You hope to teach the course in the 2019-20 school year
 
 %p
-  Please direct all questions or concerns to:
-  %div{style: 'padding-left: 2em'}
-    = render partial: 'partner_signature'
+  For more information about
+  = link_to('Code.org', 'https://code.org') + "'s"
+  professional development programs, please visit
+  = link_to('https://code.org/educate', 'https://code.org/educate')
+  and refer to this
+  = link_to('brochure', 'https://code.org/files/programs/codeorg-program-brochure.pdf')
+  that highlights how to bring computer science to your school.
+  Please send any additional questions to your regional partner below.
+  Thank you very much for your support of computer science for all!
 
 %p
-  For more information about Code.org’s professional development programs, please visit http://code.org/educate. Thank you very much! We look forward to reviewing your application!
+  = render partial: 'partner_signature'

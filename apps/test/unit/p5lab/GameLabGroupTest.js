@@ -1,6 +1,6 @@
 /** @file Tests for P5GroupWrapper, our extension of p5.play Group */
 import {spy} from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
 import {sandboxDocumentBody} from '../../util/testUtils';
 

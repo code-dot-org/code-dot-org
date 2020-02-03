@@ -3,34 +3,17 @@ import React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
 import ChoiceResponses from '../../components/survey_results/choice_responses';
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
-import FacilitatorAveragesTable from '../../components/survey_results/facilitator_averages_table';
 import TextResponses from '../../components/survey_results/text_responses';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 
 export default class Results extends React.Component {
   static propTypes = {
     questions: PropTypes.object.isRequired,
     thisWorkshop: PropTypes.object.isRequired,
     sessions: PropTypes.arrayOf(PropTypes.string).isRequired,
-    courseName: PropTypes.string.isRequired,
-    facilitators: PropTypes.object,
-    facilitatorAverages: PropTypes.object,
-    facilitatorResponseCounts: PropTypes.object,
+    courseName: PropTypes.string,
     workshopRollups: PropTypes.object,
     facilitatorRollups: PropTypes.object
-  };
-
-  static defaultProps = {
-    facilitators: {},
-    facilitatorAverages: {},
-    facilitatorResponseCounts: {},
-    workshopRollups: {},
-    facilitatorRollups: {}
-  };
-
-  state = {
-    facilitatorIds: Object.keys(this.props.facilitators)
   };
 
   /**
@@ -122,29 +105,6 @@ export default class Results extends React.Component {
     ));
   }
 
-  renderFacilitatorAverages() {
-    return Object.keys(this.props.facilitators).map((facilitator_id, i) => (
-      <Tab
-        eventKey={this.props.sessions.length + i + 1}
-        key={i}
-        title={this.props.facilitators[facilitator_id]}
-      >
-        <FacilitatorAveragesTable
-          facilitatorAverages={
-            this.props.facilitatorAverages[
-              this.props.facilitators[facilitator_id]
-            ]
-          }
-          facilitatorId={parseInt(facilitator_id, 10)}
-          facilitatorName={this.props.facilitators[facilitator_id]}
-          questions={this.props.facilitatorAverages['questions']}
-          courseName={this.props.courseName}
-          facilitatorResponseCounts={this.props.facilitatorResponseCounts}
-        />
-      </Tab>
-    ));
-  }
-
   renderSurveyRollups() {
     let tabs = [];
     let key = 0;
@@ -158,6 +118,7 @@ export default class Results extends React.Component {
           title="Workshop Rollups"
         >
           <SurveyRollupTable
+            courseName={this.props.courseName}
             rollups={this.props.workshopRollups.rollups}
             questions={this.props.workshopRollups.questions}
             facilitators={this.props.workshopRollups.facilitators}
@@ -175,6 +136,7 @@ export default class Results extends React.Component {
           title="Facilitator Rollups"
         >
           <SurveyRollupTable
+            courseName={this.props.courseName}
             rollups={this.props.facilitatorRollups.rollups}
             questions={this.props.facilitatorRollups.questions}
             facilitators={this.props.facilitatorRollups.facilitators}
@@ -190,9 +152,7 @@ export default class Results extends React.Component {
     return (
       <Tabs id="SurveyTab">
         {this.renderAllSessionsResults()}
-        {experiments.isEnabled(experiments.ROLLUP_SURVEY_REPORT)
-          ? this.renderSurveyRollups()
-          : this.renderFacilitatorAverages()}
+        {this.renderSurveyRollups()}
       </Tabs>
     );
   }

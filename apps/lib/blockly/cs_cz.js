@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "pro každou položku";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Pro každou položku v seznamu nastavte do proměnné '%1' danou položku a proveďte nějaké operace.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "od %1 do %2 po %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "počítat s";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Nechá proměnnou %1 nabývat hodnot od počátečního do koncového čísla po daném přírůstku a provádí s ní příslušné bloky.";

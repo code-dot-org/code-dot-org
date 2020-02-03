@@ -1,7 +1,5 @@
 ---
 title: Eventi i Orës së Kodimit, Metoda
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

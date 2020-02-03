@@ -2,7 +2,7 @@
   # Renders a dashboard-account sign-in/user button inline into Pegasus pages.
 
   # Use a single 'user_type' cookie to render the button details.
-  cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+  cookie_key = environment_specific_cookie_name '_user_type'
   user_type = request.cookies[cookie_key]
   user_type = "student" if user_type == "student_y"
 

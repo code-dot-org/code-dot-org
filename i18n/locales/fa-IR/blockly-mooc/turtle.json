@@ -47,6 +47,7 @@
   "jumpBackward": "پرش به عقب به اندازه",
   "jumpForward": "پرش به جلو به اندازه",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "هنرمند را حرکت می دهد بدون اینکه اثری جا بذارد.",
   "jumpEastTooltip": "هنرمند را به شرق ببر بدون این که اثری باقی بگذاری.",

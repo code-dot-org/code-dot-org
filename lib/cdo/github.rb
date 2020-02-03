@@ -47,11 +47,12 @@ module GitHub
   # @param base [String] The base branch of the requested pull request.
   # @param head [String] The head branch of the requested pull request.
   # @param title [String] The title of the requested pull request.
+  # @param body [String] The body for the pull request (optional). Supports GFM.
   # @raise [Exception] From calling Octokit.create_pull_request.
   # @return [nil | Integer] The PR number of the newly created DTT if successful
-  def self.create_pull_request(base:, head:, title:)
+  def self.create_pull_request(base:, head:, title:, body: nil)
     configure_octokit
-    response = Octokit.create_pull_request(REPO, base, head, title)
+    response = Octokit.create_pull_request(REPO, base, head, title, body)
 
     response['number']
   end

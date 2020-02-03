@@ -702,25 +702,206 @@ pl:
       2:
         text: "Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą iLuminate."
       3:
+        text: "Informatyka odnosi się więc do kreatywności na wiele sposobów. Naprawdę niezmierzonych. Mam na myśli, że kiedy już będziesz potrafił pisać oprogramowanie, będziesz mógł umieszczać pomysły we wszystkim. Robię to z niewielkim wyposażeniem. Ale gdy będziesz dysponował narzędziami do pisania oprogramowania, będziesz mógł wiele zrobić, a możliwości są naprawdę nieograniczone."
       4:
+        text: "W ciągu następnej godziny zaczniesz informatykę, programując własną potańcówkę! Zebraliśmy trochę przebojów i zespół świetnych tancerzy, z którymi możesz się pobawić."
       5:
+        text: "Będziesz używać bloków kodu, aby wybierać różnych tancerzy, zmieniać ich ruchy taneczne, zmuszać ich do reagowania na muzykę i uczynić ich interaktywnymi."
       6:
+        text: "Zobaczysz, że ekran jest podzielony na trzy główne części. Po lewej stronie jest miejsce do zabawy. Tutaj pojawią się Twoi tancerze."
       7:
+        text: "Ten środkowy obszar to przybornik. Nowe bloki kodu będą dostępne w tym miejscu podczas lekcji."
       8:
+        text: "Przestrzeń po prawej to obszar roboczy. Możesz tam przeciągać bloki z przybornika i budować własny program."
       9:
+        text: "Instrukcje dla każdego poziomu znajdą się tutaj u góry ekranu. Jeśli potrzebujesz podpowiedzi, po prostu kliknij żarówkę."
       10:
+        text: "Na początek stwórzmy nowego tancerza używając czerwonego blok. Najpierw przeciągnij go z przybornika i w obszarze roboczym podłącz pod pomarańczowy blok \"układ\". Ten tancerz jest kotem i nazywa się „mój_pierwszy_tancerz”. Możesz zmienić jego nazwę na dowolną, klikając tutaj."
       11:
+        text: "Możesz również zmienić miejsce, w którym pojawia się tancerz w obszarze gry za pomocą tego."
       12:
+        text: "Nad miejscem do zabawy znajduje się menu do wybierania muzyki. Do wyboru jest mnóstwo piosenek, więc znajdź swoje ulubione. Pod miejscem do zabawy znajduje się przycisk Uruchom. Gdy go naciśniesz, zobaczysz tancerzy z Twojego programu pojawiających się w miejscu do zabawy i grać będzie muzyka."
       13:
+        text: "Spróbuj sam! A jeśli czujesz, że utknąłeś, nie ma sprawy! Po prostu wstań i poruszaj się, a zanim się zorientujesz, stworzysz własną potańcówkę. A zatem, co stworzysz?"
     hoc_dance_events:
       1:
         text: "Godzina Kodowania | Potańcówka: Zdarzenia"
       2:
+        text: "Jestem Aloe Blacc. Jestem piosenkarzem, kompozytorem i artystą estradowym. Myślę, że ważne jest, by uczyć się informatyki, ponieważ jest to przyszłość, i myślę, że ludzie powinni mieć kontrolę nad technologią, która dosłownie kontroluje ich życie."
       3:
+        text: "Aby różne ruchy taneczne odbywały się w odpowiednim czasie z muzyką, możesz użyć czegoś, co nazywa się zdarzeniami. Zdarzenie mówi Twojemu programowi, aby nasłuchiwał, co się dzieje, a następnie natychmiast zareagował."
       4:
+        text: "Niektóre przykłady zdarzeń nasłuchują kliknięcia myszy, przycisku strzałki lub dotknięcia ekranu. Zdarzenie, które teraz użyjemy, będzie nasłuchiwać zmian w utworze. Ta zmiana spowoduje, że tancerz wykona nowy taniec."
       5:
+        text: "Zawodowi tancerze ćwiczą choreografię, licząc uderzenia piosenki."
       6:
+        text: "W muzyce, takt odnosi się do pewnej liczby uderzeń. W najpopularniejszych piosenkach takt ma długość czterech uderzeń."
       7:
+        text: "Aby uwolnić tancerzy, potrzebujesz zielonego bloku zdarzenia. Ten blok zdarzeń oznacza „po 4 taktach”."
       8:
+        text: "Jeśli wyciągniesz fioletowy blok „rób bez końca”, możesz wybrać taniec dla swojego tancerza. Ponieważ znajduje się pod blokiem zdarzenia „po 4 taktach”, Twój tancerz będzie czekał przez cztery takty piosenki przed rozpoczęciem tańca."
       9:
+        text: "Obserwuj licznik taktów w górnej części obszaru wyświetlania."
       10:
+        text: "Poszukaj i wysłuchaj zdarzenia, które uwolni kod taneczny. I na zawołanie nasz tancerz zaczyna biec."
+    hoc_dance_properties:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Właściwości"
+      2:
+        text: "Nazywam się Maria Jestem studentką na University of Washington i inżynierem Amazon Future."
+      3:
+        text: "Uwielbiam informatykę, ponieważ łączy rozwiązywanie problemów i krytyczne myślenie, a po włożeniu godzin pracy możesz uzyskać coś naprawdę fajnego i satysfakcjonującego."
+      4:
+        text: "Do tej pory miałeś okazję bawić się różnymi rodzajami tancerzy i zaprogramowałeś ich do wykonywania różnych rodzajów ruchów tanecznych. Ale jak te ruchy naprawdę działają?"
+      5:
+        text: "Każdy ruch taneczny składa się z serii obrazów zwanych klatkami. Każda klatka różni się nieco od poprzedniej. Po uruchomieniu programu komputer wyświetla jedną klatkę po drugiej. Są pokazywane tak szybko, by wyglądało, że tancerz się porusza. To jest sekret wszelkiej animacji."
+      6:
+        text: "Możesz nie tylko zmieniać ruchy swojego tancerza, ale także zmieniać jego właściwości. Właściwości opisują takie rzeczy, jak pozycja tancerza na ekranie, jego rozmiar i kolor."
+      7:
+        text: "Aby zmienić właściwości tancerza, użyjesz bloku ustawień. Użyjmy tego bloku, aby nasi tancerze wyglądali na mniejszych. Najpierw przeciągnij blok ustawień do swojego programu. Następnie wybierz tancerza, którego chcesz zmienić, i wpisz rozmiar, który pojawi się na ekranie."
+      8:
+        text: "Pełny rozmiar to 100. Jeśli wybierzesz mniejszą liczbę, tancerz będzie mniejszy. Im mniejszy jest tancerz, tym bardziej wygląda jakby był dalej. To świetny sposób na tworzenie tancerzy w tle."
+      9:
+        text: "Za pomocą bloku ustawień możesz także zmieniać wymiary, obrót, pozycję i kolor tancerza. Korzystając z tych właściwości, możesz dokonywać wszelkiego rodzaju zmian i łączyć je z różnymi częściami piosenki."
+      10:
+        text: "Pamiętaj, że możesz tylko ustawić właściwości tancerza, który już istnieje. Upewnij się, że blok ustawień pojawia się po bloku „Utwórz nowego tancerza”. Nie krępuj się eksperymentować, bądź kreatywny i baw się dobrze."
+    hoc_dance_congrats:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Rozgrzewka!"
+      2:
+        text: "Gratulacje! Właśnie nauczyłeś się podstaw informatyki. Teraz możesz użyć tych bloków, aby stworzyć potańcówkę według własnego projektu i podzielić się nią z przyjaciółmi."
+      3:
+        text: "Jeśli spojrzysz na przybornik, znajdziesz całkiem nowe bloki, których wcześniej nie widziałeś. Na przykład możesz użyć bloku układu, aby rozmieszczać tancerzy na różne sposoby na ekranie."
+      4:
+        text: "Rozejrzyj się i spróbuj eksperymentować z nowymi blokami i funkcjami. Czy stworzysz starannie opracowany choreograficznie taniec do swojej ulubionej piosenki?"
+      5:
+        text: "A może potańczyć ze znajomymi?"
+      6:
+        text: "A może coś jeszcze?"
+      7:
+        text: "Na końcu samouczka możesz udostępnić link do swojego dzieła znajomym. Rozwiń swoją wyobraźnię i baw się dobrze!"
+    hoc_dance_warmup_2019:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Rozgrzewka"
+      2:
+        text: "Cześć! Nazywam się Miral Kotb i jestem tancerzem, programistą i twórcą iLuminate."
+      3:
+        text: "Informatyka jest związana z kreatywnością na wiele sposobów. Naprawdę niezmierzone. Mam na myśli, że kiedy już będziesz umieć programować, możesz wprowadzać pomysły do czegokolwiek. Robię to z niewielkim wyposażeniem. Gdy masz odpowiednie narzędzia do pisania oprogramowania, możesz wiele zrobić, a możliwości są naprawdę nieograniczone."
+      4:
+        text: "W ciągu następnej godziny zaczniesz informatykę, programując własną potańcówkę! Zebraliśmy trochę przebojów i zespół świetnych tancerzy, z którymi możesz się pobawić."
+      5:
+        image: 'notes/hoc_dance_warmup_2019_5.png'
+        text: "Będziesz używać bloków kodu, aby wybierać różnych tancerzy, zmieniać ich ruchy taneczne, zmuszać ich do reagowania na muzykę i uczynić ich interaktywnymi."
+      6:
+        image: 'notes/hoc_dance_warmup_2019_6.png'
+        text: "Zobaczysz, że ekran jest podzielony na trzy główne części. Po lewej stronie jest miejsce do zabawy. Tutaj pojawią się Twoi tancerze."
+      7:
+        image: 'notes/hoc_dance_warmup_2019_7.png'
+        text: "Ten środkowy obszar to przybornik. Nowe bloki kodu będą dostępne w tym miejscu podczas lekcji."
+      8:
+        image: 'notes/hoc_dance_warmup_2019_8.png'
+        text: "Przestrzeń po prawej to obszar roboczy. Możesz tam przeciągać bloki z przybornika i budować własny program."
+      9:
+        image: 'notes/hoc_dance_warmup_2019_9.png'
+        text: "Instrukcje dla każdego poziomu znajdą się tutaj u góry ekranu. Jeśli potrzebujesz podpowiedzi, po prostu kliknij żarówkę."
+      10:
+        image: 'notes/hoc_dance_warmup_2019_10.png'
+        text: "Na początek stwórzmy nowego tancerza z użyciem tego czerwonego bloku. Najpierw przeciągnij go z przybornika i podłącz pod pomarańczowy blok „układ\". Ten tancerz jest kotem."
+      11:
+        image: 'notes/hoc_dance_warmup_2019_11.png'
+        text: "Możesz również zmienić miejsce, w którym pojawia się tancerz w obszarze gry za pomocą tego."
+      12:
+        image: 'notes/hoc_dance_warmup_2019_12.png'
+        text: "Nad miejscem do zabawy znajduje się menu do wybierania muzyki. Do wyboru jest mnóstwo piosenek, więc znajdź swoje ulubione. Pod miejscem do zabawy znajduje się przycisk Uruchom. Gdy go naciśniesz, zobaczysz tancerzy z Twojego programu pojawiających się w miejscu do zabawy i grać będzie muzyka."
+      13:
+        text: "Spróbuj sam! A jeśli czujesz, że utknąłeś, nie ma sprawy! Po prostu wstań i poruszaj się, a zanim się zorientujesz, stworzysz własną potańcówkę. A zatem, co stworzysz?"
+    hoc_dance_events_2019:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Zdarzenia"
+      2:
+        image: 'notes/hoc_dance_events_2019_2.png'
+        text: "Nazywam się Erin i jestem programistą w Code.org. Pomagałem stworzyć Potańcówkę."
+      3:
+        image: 'notes/hoc_dance_events_2019_3.png'
+        text: "Aby różne ruchy taneczne odbywały się w odpowiednim czasie z muzyką, możesz użyć czegoś, co nazywa się zdarzeniami. Zdarzenie mówi Twojemu programowi, aby nasłuchiwał, co się dzieje, a następnie natychmiast zareagował."
+      4:
+        image: 'notes/hoc_dance_events_2019_4.png'
+        text: "Przykładowe zdarzenia oczekują na: kliknięcie myszy, naciśnięcie przycisku strzałki lub dotknięcie ekranu."
+      5:
+        image: 'notes/hoc_dance_events_2019_5.png'
+        text: "W tym miejscu zaprogramujemy tancerza do wykonania ruchu po naciśnięciu przycisków strzałek na ekranie lub klawiszy na klawiaturze."
+      6:
+        image: 'notes/hoc_dance_events_2019_6.png'
+        text: "Możemy użyć bloku zdarzenia „kiedy strzałka w górę” i przyłączyć do niego blok „zrób raz”. Gdy ktoś naciśnie klawisz strzałki w górę, uruchamiany zostaje kod dołączony do bloku „kiedy strzałka w górę”. Który ruch taneczny wybierzesz?"
+      7:
+        image: 'notes/hoc_dance_events_2019_7.png'
+        text: "Upewnij się, że wybrany typ tancerza pasuje do jednego z tancerzy utworzonych wewnątrz bloku „układ”, w przeciwnym razie nic się nie wydarzy."
+      8:
+        image: 'notes/hoc_dance_events_2019_8.png'
+        text: "W końcu możesz utworzyć więcej takich zdarzeń, aby tancerze wykonywali różne ruchy z każdym klawiszem. Spróbuj, a za pomocą kilku wierszy kodu możesz stworzyć własny interaktywny taniec."
+    hoc_dance_measures_2019:
+      1:
+        image: 'notes/hoc_dance_measures_2019_1.png'
+        text: "Godzina Kodowania | Potańcówka: Takty"
+      2:
+        image: 'notes/hoc_dance_measures_2019_2.png'
+        text: "Jestem Aloe Blacc. Jestem piosenkarzem, kompozytorem i artystą estradowym. Myślę, że ważne jest, by uczyć się informatyki, ponieważ jest to przyszłość, i myślę, że ludzie powinni mieć kontrolę nad technologią, która dosłownie kontroluje ich życie."
+      3:
+        image: 'notes/hoc_dance_measures_2019_3.png'
+        text: "Zdarzenie, którego będziemy teraz używać, będzie nasłuchiwać zmian w utworze. Ta zmiana spowoduje, że tancerz wykona nowy taniec."
+      4:
+        image: 'notes/hoc_dance_measures_2019_4.png'
+        text: "Zawodowi tancerze ćwiczą choreografię, licząc uderzenia piosenki. W muzyce takt odnosi się do określonej liczby uderzeń. W najpopularniejszych utworach, takt ma długość czterech uderzeń."
+      5:
+        image: 'notes/hoc_dance_measures_2019_5.png'
+        text: "Aby uwolnić tancerzy, potrzebujesz zielonego bloku zdarzenia. Ten blok zdarzeń oznacza „po 4 taktach”."
+      6:
+        image: 'notes/hoc_dance_measures_2019_6.png'
+        text: "Jeśli wyciągniesz fioletowy blok „rób bez końca”, możesz wybrać taniec dla swojego tancerza. Ponieważ znajduje się pod blokiem zdarzenia „po 4 taktach”, Twój tancerz będzie czekał przez cztery takty piosenki przed rozpoczęciem tańca."
+      7:
+        image: 'notes/hoc_dance_measures_2019_7.png'
+        text: "Obserwuj licznik taktów w górnej części obszaru wyświetlania."
+      8:
+        image: 'notes/hoc_dance_measures_2019_8.png'
+        text: "Poszukaj i wysłuchaj zdarzenia, które uwolni kod taneczny. I na zawołanie nasz tancerz zaczyna biec."
+    hoc_dance_properties_2019:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Właściwości"
+      2:
+        text: "Nazywam się Maria Jestem studentką na University of Washington i inżynierem Amazon Future."
+      3:
+        text: "Uwielbiam informatykę, ponieważ łączy rozwiązywanie problemów i krytyczne myślenie, a po włożeniu godzin pracy możesz uzyskać coś naprawdę fajnego i satysfakcjonującego."
+      4:
+        text: "Do tej pory miałeś okazję bawić się różnymi rodzajami tancerzy i zaprogramowałeś ich do wykonywania różnych rodzajów ruchów tanecznych. Ale jak te ruchy naprawdę działają?"
+      5:
+        text: "Każdy ruch taneczny składa się z serii obrazów zwanych klatkami. Każda klatka różni się nieco od poprzedniej. Po uruchomieniu programu komputer wyświetla jedną klatkę po drugiej. Są pokazywane tak szybko, by wyglądało, że tancerz się porusza. To jest sekret wszelkiej animacji."
+      6:
+        text: "Możesz nie tylko zmieniać ruchy swojego tancerza, ale także zmieniać jego właściwości. Właściwości opisują takie rzeczy, jak pozycja tancerza na ekranie, jego rozmiar i kolor."
+      7:
+        image: 'notes/hoc_dance_properties_2019_7.png'
+        text: "Aby zmienić właściwości tancerza, użyjesz bloku ustawień. Użyjmy go do tego, aby tancerze wyglądali na mniejszych. Najpierw przeciągnij blok ustawień do swojego programu."
+      8:
+        image: 'notes/hoc_dance_properties_2019_8.png'
+        text: "Następnie wybierz tancerza, którego chcesz zmienić, i wpisz jego rozmiar, a jakim pojawi się na ekranie. Pełny rozmiar to 100. Jeśli wybierzesz mniejszą liczbę, tancerz będzie mniejszy. Im mniejszy jest tancerz, tym wygląda na bardziej oddalonego."
+      9:
+        image: 'notes/hoc_dance_properties_2019_9.png'
+        text: "Za pomocą bloku ustawień możesz także zmieniać wymiary, obrót, pozycję i kolor tancerza. Korzystając z tych właściwości, możesz dokonywać wszelkiego rodzaju zmian i łączyć je z różnymi częściami piosenki."
+      10:
+        image: 'notes/hoc_dance_properties_2019_10.png'
+        text: "Pamiętaj, że możesz tylko ustawić właściwości tancerza, który już istnieje. Upewnij się, że blok ustawień pojawia się po bloku „Utwórz nowego tancerza”. Nie krępuj się eksperymentować, bądź kreatywny i baw się dobrze!"
+    hoc_dance_congrats_2019:
+      1:
+        text: "Godzina Kodowania | Potańcówka: Rozgrzewka!"
+      2:
+        text: "Gratulacje! Właśnie nauczyłeś się podstaw informatyki. Teraz możesz użyć tych bloków, aby stworzyć potańcówkę według własnego projektu i podzielić się nią z przyjaciółmi."
+      3:
+        text: "Jeśli spojrzysz na przybornik, znajdziesz całkiem nowe bloki, których wcześniej nie widziałeś. Na przykład możesz użyć bloku układu, aby rozmieszczać tancerzy na różne sposoby na ekranie."
+      4:
+        text: "Rozejrzyj się i spróbuj eksperymentować z nowymi blokami i funkcjami. Czy stworzysz starannie opracowany choreograficznie taniec do swojej ulubionej piosenki?"
+      5:
+        text: "A może potańczyć ze znajomymi?"
+      6:
+        text: "A może coś jeszcze?"
+      7:
+        image: 'notes/hoc_dance_congrats_7.png'
+        text: "Na końcu samouczka możesz udostępnić link do swojego dzieła znajomym. Rozwiń swoją wyobraźnię i baw się dobrze!"

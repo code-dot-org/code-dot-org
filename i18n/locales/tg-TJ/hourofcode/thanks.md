@@ -1,10 +1,5 @@
 ---
 title: Ташаккур барои обунашавӣ бо мақсади ташкилкунии Соати рамз!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Ташаккур барои обунашавӣ бо мақсади ташкилкунии Соати рамз!

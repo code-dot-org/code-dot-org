@@ -1,7 +1,5 @@
 ---
 title: آخری کوڈ پوسٹ پوسٹس
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

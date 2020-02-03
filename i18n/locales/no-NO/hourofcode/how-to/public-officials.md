@@ -1,7 +1,5 @@
 ---
 title: How-to guide for offentlige tjenestemenn
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

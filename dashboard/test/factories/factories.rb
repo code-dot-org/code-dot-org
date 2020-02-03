@@ -67,7 +67,9 @@ FactoryGirl.define do
       user_type User::TYPE_TEACHER
       birthday Date.new(1980, 3, 14)
       factory :admin do
-        admin true
+        google_sso_provider
+        password nil
+        after(:create) {|user| user.update(admin: true)}
       end
       trait :with_school_info do
         school_info
@@ -151,25 +153,7 @@ FactoryGirl.define do
         ops_first_name 'District'
         ops_last_name 'Person'
       end
-      # Creates a teacher optionally enrolled in a workshop,
-      # or marked attended on either all (true) or a specified list of workshop sessions.
-      factory :pd_workshop_participant do
-        transient do
-          workshop nil
-          enrolled true
-          attended false
-        end
-        after(:create) do |teacher, evaluator|
-          raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          if evaluator.attended
-            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
-            attended_sessions.each do |session|
-              create :pd_attendance, session: session, teacher: teacher
-            end
-          end
-        end
-      end
+
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -355,7 +339,7 @@ FactoryGirl.define do
           email: user.email,
           hashed_email: user.hashed_email,
           credential_type: AuthenticationOption::GOOGLE,
-          authentication_id: 'abcd123',
+          authentication_id: "abcd#{user.id}",
           data: {
             oauth_token: 'some-google-token',
             oauth_refresh_token: 'some-google-refresh-token',
@@ -1053,6 +1037,14 @@ FactoryGirl.define do
       grade_07_offered true
       grade_08_offered true
     end
+
+    # Schools eligible for circuit playground discount codes
+    # are schools where over 50% of students are eligible
+    # for free and reduced meals.
+    trait :is_maker_high_needs_school do
+      frl_eligible_total 51
+      students_total 100
+    end
   end
 
   # Default school to public school. More specific factories below
@@ -1078,6 +1070,12 @@ FactoryGirl.define do
     trait :is_k8_school do
       after(:create) do |school|
         build :school_stats_by_year, :is_k8_school, school: school
+      end
+    end
+
+    trait :is_maker_high_needs_school do
+      after(:create) do |school|
+        create :school_stats_by_year, :is_maker_high_needs_school, school: school
       end
     end
   end
@@ -1214,4 +1212,11 @@ FactoryGirl.define do
     association :level
     association :script_level
   end
+
+  factory :validated_user_level do
+    time_spent 10
+    user_level_id 1
+  end
+
+  factory :donor_school
 end

@@ -1,6 +1,5 @@
 ---
 title: 학교 전체 참여
-layout: wide
 ---
 
 {{ signup_button }}

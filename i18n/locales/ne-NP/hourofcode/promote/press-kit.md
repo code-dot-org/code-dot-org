@@ -1,7 +1,5 @@
 ---
 title: किटलाई थिच्नुहोस्
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

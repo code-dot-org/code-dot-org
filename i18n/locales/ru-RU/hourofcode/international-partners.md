@@ -1,6 +1,5 @@
 ---
 title: Связаться с международными партнерами
-layout: wide
 ---
 
 <style>
@@ -30,7 +29,7 @@ www.program.ar                                                 |
 | Argentina                             | Nuc Ba Academia                                                   |                                    | http://academia.nucba.com.ar                                                                  |
 | Australia                             | Google                                                            | Marie Efstathiou                   | https://www.google.com/edu/cs                                                                 |
 | Australia                             | Grok Learning                                                     | Jane Abrams                        | https://groklearning.com                                                                      |
-| Brazil                                | Programaê! - Fundaçao Lemann                                      |                                    | http://programae.org.br/horadocodigo                                                          |
+| Brazil                                | Programaê! - Fundação Telefônica Vivo                             |                                    | http://programae.org.br/horadocodigo                                                          |
 | Cameroon                              | Big IT Company Ltd                                                |                                    |                                                                                               |
 | Canada                                | Brilliant Labs Inc.                                               |                                    | https://www.brilliantlabs.ca                                                                  |
 | Canada                                | Hatch Canada                                                      |                                    | www.hatchcanada.com                                                                           |
@@ -40,8 +39,8 @@ www.program.ar                                                 |
 hello@kidsandcode.org                                                  |
 | Canada                                | Kids Code Jeunesse                                                | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
-| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+| Canada                                | Nova Scotia Department of Education & Early Childhood Development | Nick Baskwill                      | http://ednet.ns.ca   
+nicholas.baskwill@novascotia.ca                                         |
 | Canada                                | Partners In Research Canada                                       | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Canada                                | Sault Ste. Marie innovation Centre                                |                                    | https://ssmic.com/                                                                            |

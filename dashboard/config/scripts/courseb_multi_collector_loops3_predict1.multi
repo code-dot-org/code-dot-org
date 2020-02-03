@@ -1,5 +1,5 @@
 name 'courseB_multi_collector_loops3_predict1'
-question 'Look at the code below.  What do you think will happen when you click "Run"?'
+question 'Look at the code below. What do you think will happen when you click "Run"?'
 wrong 'Laurel won\'t move at all.', feedback: 'Incorrect. The program uses a `repeat` loop to get Laurel to move forward three times.'
 right 'Laurel will move forward and get treasure three times in a row.', feedback: 'Correct!'
 wrong 'Laurel will move forward and get all of the treasure.', feedback: 'Incorrect. The `repeat` loop only instructs Laurel to move forward and get treasure three times.'

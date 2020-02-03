@@ -148,6 +148,7 @@
   thanks_for_submitting: "Ďakujeme za odoslanie!"
   if_you_enjoyed: "Ak sa ti hodina páčila, opýtaj sa priateľov či to chcú skúsiť tiež! Chceme, aby sa celý svet mohol učiť."
   personalize_certificate: "Prispôsob si svoj certifikát"
+  print_certificates: "Vytlačiť certifikáty"
   share_achievement: "Zdieľaj svoj úspech"
   beyond_hour_message: "Pokračujte s našimi <a href='http://studio.code.org'>ďalšími kurzami</a> alebo si prezrite možnosti ako pokračovať vo <a href='/learn/beyond'>výučbe po prvej hodine</a>."
   leaderboards_for_hoc: "Rebríčky pre Hour of Code."

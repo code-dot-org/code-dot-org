@@ -47,6 +47,7 @@
   "jumpBackward": "後ろに ジャンプする",
   "jumpForward": "前に ジャンプする",
   "jumpToOverDown": "ジャンプ %1 、 %2",
+  "jumpToPosition": "",
   "jumpByDirection": "ジャンプ %1 に %2 ピクセル",
   "jumpTooltip": "何も書かずにアーティストを移動",
   "jumpEastTooltip": "何も書かずにアーティストを画面の右側に動かします。",

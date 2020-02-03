@@ -1,0 +1,29 @@
+uk:
+  data:
+    block_categories:
+      Actions: Дії
+      Advanced: Розширені
+      Behaviors: Поведінки
+      Brushes: Кисті
+      Color: Колір
+      Comment: Коментар
+      Comments: Коментарі
+      Conditionals: Умови
+      Dancers: Виконавці
+      Default: Типова
+      Events: Події
+      Functions: функції
+      'Functions ': 'Функції '
+      Game/Score: Гра / рахунок
+      Games/Score: Ігри / рахунок
+      Groups: Групи
+      Locations: Розташування
+      Logic: Логіка
+      Loops: Цикли
+      Math: Математика
+      Numbers: Числа
+      Properties: Властивості
+      Text: Текст
+      Variables: змінні
+      'Variables ': 'Змінні '
+      World: Світ

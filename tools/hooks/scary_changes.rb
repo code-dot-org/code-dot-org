@@ -21,6 +21,7 @@ class ScaryChangeDetector
           @deleted << filename
         end
       end
+      @changed_lines = `git diff --cached --unified=0`
     end
     @all = @added + @deleted + @modified
   end
@@ -36,6 +37,19 @@ class ScaryChangeDetector
     puts "There will be a deploy glitch that affects any students with progress in the scripts " \
       "that contain this level. To avoid this you can deploy this model code before deploying " \
       "the code that adds it to scripts."
+  end
+
+  def detect_new_table_or_new_column
+    changes = @all.grep(/^dashboard\/db\/migrate\//)
+    return if changes.empty? || !(@changed_lines.include?("add_column") || !@changed_lines.include?("create_table"))
+
+    puts red <<-EOS
+
+        Looks like you are creating a table or adding a column in this migration:
+        #{changes.join("\n")}
+        Do you have all the indexes needed for this change?
+
+    EOS
   end
 
   def detect_missing_yarn_lock
@@ -96,6 +110,7 @@ class ScaryChangeDetector
 
   def detect_scary_changes
     detect_new_models
+    detect_new_table_or_new_column
     detect_missing_yarn_lock
     detect_special_files
     detect_dropbox_conflicts

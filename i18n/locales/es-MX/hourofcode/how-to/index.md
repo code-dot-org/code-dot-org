@@ -1,7 +1,5 @@
 ---
-title: Guía de instrucciones
-layout: wide
-nav: how_to_nav
+title: Guía práctica
 ---
 
 {{ signup_button }}

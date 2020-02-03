@@ -40,6 +40,7 @@ ru:
         Custom: Художник
         CustomStudio: Лаборатория игр
         Gamelab: Лаборатория игр
+        Spritelab: Лаборатория Спрайтов
     trophy:
       name:
         Bronze: Бронзовый
@@ -475,14 +476,22 @@ ru:
         csd_gamelab_booleans: Логические выражения
         csd_gamelab_conditional_statements: Условные операторы
         csd_gamelab_if_else: Операторы Если/Иначе
+        CSF_SpriteLabIntro_CDEF: Это лаборатория спрайтов
         CSF_StarWars_ProjectIntro: Введение в проект Звездные войны
         mc_2018_intro: 'Майнкрафт: Водное путешествие. Введение'
         MC_2018_loops: 'Майнкрафт: Водное путешествие. Повторять пока'
         mc_2018_conditionals: 'Майнкрафт: Водное путешествие. Условия'
         mc_2018_closing: 'Майнкрафт: Водное путешествие. Поздравления'
         hoc_dance_warmup: Танцевальная вечеринка - разминка
+        hoc_dance_congrats: Танцевальная вечеринка – вечеринка началась!
+        writing_first_program: Напишите вашу первую программу!
         csd_pair_programming: Программирование в парах
         csd_applab_parameters: Процедуры с параметрами
+        hoc_dance_congrats_2019: Танцевальная вечеринка 2019 г. – вечеринка началась!
+        hoc_dance_warmup_2019: Танцевальная вечеринка 2019 г. – подготовка
+        hoc_dance_events_2019: Танцевальная вечеринка 2019 г. – события
+        hoc_dance_measures_2019: Танцевальная вечеринка 2019 г. – такты
+        hoc_dance_properties_2019: Танцевальная вечеринка 2019 г. – свойства
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

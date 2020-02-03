@@ -9,8 +9,9 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   # and after each Hour of Code.
   UNSUBSCRIBE_HOC = "untilhoc".freeze
   UNSUBSCRIBE_FOREVER = "forever".freeze
-  DEFAULT_DISTANCE = 24 # kilometers
-  DEFAULT_NUM_VOLUNTEERS = 10
+  DEFAULT_DISTANCE_MILES = 20
+  DEFAULT_DISTANCE_KM = 32
+  DEFAULT_NUM_VOLUNTEERS = 50
 
   def self.normalize(data)
     result = {}
@@ -127,7 +128,8 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
       ).
       exclude(
         Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
-      )
+      ).
+      order(Sequel.desc(:id))
 
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently
@@ -139,7 +141,7 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
     end
 
     coordinates = params['coordinates']
-    distance = params['distance'] || DEFAULT_DISTANCE
+    distance = params['distance'] || DEFAULT_DISTANCE_KM
     rows = params['num_volunteers'] || DEFAULT_NUM_VOLUNTEERS
 
     unless params['location_flexibility_ss'].nil_or_empty?

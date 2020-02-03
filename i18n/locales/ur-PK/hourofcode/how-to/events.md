@@ -1,7 +1,5 @@
 ---
 title: آور-آف-کوڈ ایونٹ ھاؤ-ٹو
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,5 @@
 ---
 title: Fais passer le mot
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

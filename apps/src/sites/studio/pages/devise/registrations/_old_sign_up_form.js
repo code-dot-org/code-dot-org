@@ -92,6 +92,24 @@ window.SignupManager = function(options) {
       url = '/';
     }
 
+    // record successful form submission with Optimizely for the old vs new
+    // signup page A/B test.
+    //
+    // Note that it's not clear whether or not this effort will be canceled by
+    // the page redirection on the next line. The article at
+    // https://help.optimizely.com/Build_Campaigns_and_Experiments/Custom_events_in_Optimizely_X
+    // implies that custom events are intended for situations exactly like
+    // this, which implies that it won't be. But the developer documentation at
+    // https://developers.optimizely.com/x/solutions/javascript/reference/index.html#function_setevent
+    // make no mention whatsoever of such a feature if it exists.
+    //
+    // TODO elijah: remove this logic once the A/B test has been completed
+    window['optimizely'] = window['optimizely'] || [];
+    window['optimizely'].push({
+      type: 'event',
+      eventName: 'oldSignupFormSubmission'
+    });
+
     window.location.href = url;
   };
 

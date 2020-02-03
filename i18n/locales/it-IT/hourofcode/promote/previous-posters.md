@@ -1,14 +1,12 @@
 ---
-title: Ultima Ora del Codice
-layout: wide
-nav: promote_nav
+title: Poster degli anni precedenti
 ---
 
 {{ signup_button }}
 
-# Ultima Ora del Codice
+# Poster degli anni precedenti
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### Trova i nostri poster degli anni precedenti da stampare e da portare nella tua classe! Cerchi i poster più recenti? [Clicca qui]({{ promote/promote_posters_url }}).
 
 * * *
 

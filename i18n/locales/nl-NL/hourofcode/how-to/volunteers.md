@@ -1,7 +1,5 @@
 ---
 title: Handleiding voor 'Hour of Code'-vrijwilligers
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

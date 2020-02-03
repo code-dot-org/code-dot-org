@@ -408,6 +408,8 @@ az:
     support_url: "//support.code.org"
     documentation: Təlimat və sənədlər
     tutorials: Dərsliklər
+  free_response:
+    placeholder: Cavabınızı buraya daxil edin
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!
@@ -541,6 +543,8 @@ az:
       email_opt_in:
         opt_in_yes: Bəli
         opt_in_no: Xeyr
+    international_opt_in:
+      title: Məşğələdə iştirak
   cookie_banner:
     accept: Razıyam
   gdpr_dialog:

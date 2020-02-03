@@ -1,7 +1,5 @@
 ---
 title: Инструкции по организации мероприятия Часа Кода
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

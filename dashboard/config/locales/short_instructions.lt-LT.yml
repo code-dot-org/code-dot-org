@@ -77,6 +77,7 @@ lt-LT:
         judesius kas 2 taktus.
       Crack Random Substitution: Instrukcijos
       Crack a Caesar Cipher: Instrukcijos
+      Dance_2019_05: O dabar liepk šokėjui pradėti naują judesį po 6 taktų!
       Dance_Party_02: Padaryk taip, kad briedis pradėtų naują judesį po 4 taktų!
       Dance_Party_03: O dabar liepk šokėjui pradėti naują judesį po 6 taktų!
       Dance_Party_05: Panaudok kitą naują blokelį, kad šokėjas keistų savo judesius
@@ -399,14 +400,3 @@ lt-LT:
       frozen square snowflake: Pamėginkime sukurti snaigę. Reikės nupiešti 10 kvadratų,
         o pasisukti po 36 laipsnius nupiešus kiekvieną kvadratą.
       k-1 maze 1: Padėk man žingsniuoti į vakarus, kad pasiekčiau kiaulę.
-      scrat 16: Gilė! Gilė! Gilė! Panaudok blokelį „jei“, kad galėčiau ją pasiekti.
-        Pamėgink panaudoti kuo mažiau blokelių.
-      scrat 17: Pamėginkime dar kartą – užduotis labai panaši, bet reikia stengtis
-        neatsitrenkti į sieną!
-      scrat 18: Blokelis „jei-kitu atveju“ tikrina sąlygą, o po to atlieka vieną ARBA
-        kitą veiksmą. Padėk man pasiekti gilę, panaudodamas šį blokelį.
-      scrat 19: Dar viena užduotis su „Jei-priešingu atveju“ blokeliu. Ar sugebėsi
-        ją atlikti iš pirmo karto?
-      scrat 20: Ar gali pridėti tik 3 blokelius, kad galėčiau pereiti per šį labirintą?
-        Jei užduotį išspręsi teisingai, aš galėsiu eiti vingiuotu keliu, kad ir koks
-        ilgas jis bebūtų. Paskubėk, arba ledas ištirps!

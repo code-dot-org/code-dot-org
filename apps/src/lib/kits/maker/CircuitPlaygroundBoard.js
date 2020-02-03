@@ -21,7 +21,6 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
-import Button from './Button';
 import Led from './Led';
 import {
   isNodeSerialAvailable,
@@ -29,6 +28,7 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_PID,
   CIRCUIT_PLAYGROUND_PID
 } from './portScanning';
+import {PlaygroundButton} from './Button';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -355,7 +355,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   createButton(pin) {
     pin = this.mappedPin(pin);
-    const newButton = new Button({board: this.fiveBoard_, pin});
+    const newButton = new PlaygroundButton({board: this.fiveBoard_, pin});
     this.dynamicComponents_.push(newButton);
     return newButton;
   }
@@ -385,9 +385,46 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       ? SerialPort
       : ChromeSerialPort.SerialPort;
 
-    return new SerialPortType(portName, {
+    const port = new SerialPortType(portName, {
       baudRate: SERIAL_BAUD
     });
+
+    if (isNodeSerialAvailable()) {
+      const queue = [];
+      let sendPending = false;
+      const oldWrite = port.write;
+
+      const trySend = buffer => {
+        if (buffer) {
+          queue.push(buffer);
+        }
+
+        if (sendPending || queue.length === 0) {
+          // Exhausted pending send buffer.
+          return;
+        }
+
+        if (queue.length > 512) {
+          throw new Error(
+            'Send queue is full! More than 512 pending messages.'
+          );
+        }
+
+        const toSend = queue.shift();
+        sendPending = true;
+        oldWrite.call(port, toSend, 'binary', function() {
+          sendPending = false;
+
+          if (queue.length !== 0) {
+            trySend();
+          }
+        });
+      };
+
+      port.write = (...args) => trySend(...args);
+    }
+
+    return port;
   }
 
   /**

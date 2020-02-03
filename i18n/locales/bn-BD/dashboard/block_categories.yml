@@ -1,0 +1,13 @@
+bn:
+  data:
+    block_categories:
+      Actions: ক্রিয়া
+      Color: রং
+      Conditionals: শর্তযুক্ত
+      Events: ঘটনাবলী
+      Functions: ফাংশনগুলি
+      Logic: যুক্তি
+      Loops: চক্র
+      Math: গণিত
+      Text: পাঠ
+      Variables: চলকগুলো

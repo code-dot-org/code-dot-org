@@ -39,6 +39,7 @@ zh-TW:
         Custom: 藝術家
         CustomStudio: Play Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: 銅牌
@@ -299,7 +300,7 @@ zh-TW:
         C1_moveitmoveit_unplugged: 移動它，移動它
         C1_bigevent_unplugged: 大事件
         C1_getting_loopy: 學習迴圈
-        C1_pair_programming: 小組編程
+        C1_pair_programming: 結對編程
         C1_maze_intro_sequencing: 迷宮 - 序列（Sequencing）
         C1_maze_debugging: 迷宮 - 除錯（Debugging）
         C1_bee_level_intro: 蜜蜂關卡 - 簡介
@@ -374,6 +375,7 @@ zh-TW:
         CSF_EF_cs_matters: 計算機科學很重要
         CSF_maze_intro_k1_blocks: Code Studio 介紹
         CSF_maze_intro_text_blocks: Code Studio 介紹
+        CSF_my_robotic_friends: 我的機器人朋友
         CSF_Super_Digital_Citizen: 超級數位公民
         CSF_stevie_big_project: Stevie 和 Big Project
         CSF_unspotted_bugs: 沒被發現的蟲蟲
@@ -484,12 +486,22 @@ zh-TW:
         hoc_dance_events: 舞蹈派對 - 事件（Evnets）
         hoc_dance_properties: 舞蹈派對 - 屬性（Properties）
         hoc_dance_congrats: 舞蹈派對 - 還不快動起來！
+        elem_pd_2: 小學的計算機科學 - PD 影片 2/2
+        what_is_cs: 計算機科學是什麼？
         lesson_planning: 教學計畫
-        csd_pair_programming: 小組編程
+        teaching_cs_pair_programming: 教授 CS 基礎知識：結對編程（Pair Programming）
+        csd_pair_programming: 結對編程
         csd_applab_parameters: 函式帶參數
         csd_problem_solving_process: 問題解決流程
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
+        oceans_machine_learning: 機器學習
+        oceans_training_data: 訓練數據
+        hoc_dance_congrats_2019: 舞蹈派對 2019 - 開跳！
+        hoc_dance_warmup_2019: 舞蹈派對 2019 - 熱身！
+        hoc_dance_events_2019: 舞蹈派對 2019 - 事件
+        hoc_dance_measures_2019: 舞蹈派對 2019 - 小節
+        hoc_dance_properties_2019: 舞蹈派對 2019 - 屬性
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方

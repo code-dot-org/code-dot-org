@@ -1,6 +1,7 @@
 import React from 'react';
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
 import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
+import {COURSE_CSF} from '../../workshopConstants';
 
 const facilitator_rollups = {
   facilitators: {
@@ -165,6 +166,7 @@ export default storybook => {
         name: 'Facilitator Rollup Table',
         story: () => (
           <SurveyRollupTable
+            courseName="CS Principles"
             rollups={facilitator_rollups.rollups}
             questions={facilitator_rollups.questions}
             facilitators={facilitator_rollups.facilitators}
@@ -175,6 +177,7 @@ export default storybook => {
         name: 'Workshop Rollup Table',
         story: () => (
           <SurveyRollupTable
+            courseName={COURSE_CSF}
             rollups={workshop_rollups.rollups}
             questions={workshop_rollups.questions}
             facilitators={workshop_rollups.facilitators}

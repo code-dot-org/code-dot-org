@@ -47,6 +47,7 @@
   "jumpBackward": "скочи назад за",
   "jumpForward": "скочи напред за",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Помера уметника тако да не оставља трагове.",
   "jumpEastTooltip": "Померите уметника источно тако да не оставите никакав траг.",

@@ -1,3 +1,26 @@
 {
-  "shareGame": "Comparte tu juego:"
+  "errorLoadingAnimation": "Parece ser que tenemos problemas para cargar tu animación \"{animationName}\". Asegúrate de tener una buena conexión a Internet e intenta recargar la página. Si este problema persiste, es posible que la animación se haya interrumpido. En ese caso, puedes continuar eliminando la animación.",
+  "reinfFeedbackMsg": "¡Has finalizado! Haz clic en \"Continuar\" para ir al siguiente nivel.",
+  "shareGame": "Comparte tu juego:",
+  "spritelabFeedbackCreateFishWithBehavior": "Tienes que hacer al menos un sprite de pez y darle un comportamiento.",
+  "spritelabFeedbackMoveFishLeftRight": "Tu sprite de pez necesita moverse a la izquierda o a la derecha. Intenta cambiar su comportamiento.",
+  "spritelabFeedbackChangeBackgroundColor": "Necesitas cambiar el fondo a algo que no sea blanco.",
+  "spritelabFeedbackCreateTwoSprites": "Necesitas crear exactamente dos sprites.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Tus dos sprites necesitan trajes diferentes.",
+  "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "Necesitas crear dos sprites con trajes diferentes para que cada uno tenga un comportamiento.",
+  "spritelabFeedbackClickSprite": "Asegúrate de hacer clic en tu sprite después de pulsar \"Ejecutar\".",
+  "spritelabFeedbackUseSpinningBehavior": "Tu sprite tiene que empezar a girar. Intenta cambiar su comportamiento.",
+  "spritelabFeedbackPinkAlienBehavior": "Tu sprite de alienígena rosa no se inició con un comportamiento.",
+  "spritelabFeedbackCreateThreeAliens": "Necesitas crear un alien azul, un alien rosa y un alien amarillo.",
+  "spritelabFeedbackAliensNotInLine": "Tus tres sprites de alien deben estar colocados en una línea horizontal (dentro de los 50 píxeles).",
+  "spritelabFeedbackYellowAlienBehavior": "El alienígena amarillo no inició su comportamiento.",
+  "spritelabFeedbackNoAlienColor": "Al menos uno de tus aliens no cambió de color.",
+  "spritelabFeedbackNeedAlienStopBehavior": "Tus sprites de alien necesitan detener todos sus comportamientos.",
+  "spritelabFeedbackBlueAlienBehavior": "Tu alien azul necesita iniciar un nuevo comportamiento.",
+  "spritelabFeedbackUseCostume": "Necesitas usar al menos un traje.",
+  "spritelabFeedbackThreeSpritesWithCostumes": "Necesitas crear tres sprites con diferentes trajes.",
+  "spritelabFeedbackMoveUpNotDown": "Tu sprite necesita moverse hacia arriba (norte) en lugar de hacia abajo (sur).",
+  "spritelabFeedbackRobotFasterThanRover": "El robot llegó al lado derecho de la pantalla antes que el vehículo.",
+  "spritelabFeedbackDifferentStarRotation": "Los Sprites con ambos trajes de estrellas necesitan rotar la misma cantidad de grados.",
+  "spritelabFeedbackAstronautMoveToCorner": "El sprite de astronauta necesita moverse a una de las cuatro esquinas."
 }

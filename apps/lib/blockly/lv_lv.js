@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "katru elementu";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Katram elementam sarakstā piešķir mainīgā '%1' vērtību, tad veic kādas darbības.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "no %1 līdz %2 pa %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "priekš";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Piešķirt mainīgajam %1 vērtības no sākuma skaitļa līdz beigu skaitlim, turpinot ar noteikto intervālu un izpildot norādītos blokus.";

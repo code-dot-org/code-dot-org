@@ -17,12 +17,14 @@ describe('project.js', () => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
     sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showProjectHeader');
     sinon.stub(header, 'showMinimalProjectHeader');
     sinon.stub(header, 'updateTimestamp');
   });
 
   afterEach(() => {
     utils.reload.restore();
+    header.showProjectHeader.restore();
     header.showMinimalProjectHeader.restore();
     header.updateTimestamp.restore();
     restoreAppOptions();
@@ -475,6 +477,104 @@ describe('project.js', () => {
     });
   });
 
+  describe('setLibraryName()', () => {
+    it('updates the current library name', () => {
+      let oldName = 'initialLibrary';
+      let newName = 'newLibraryName';
+      setData({libraryName: oldName});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
+      project.setLibraryName(newName);
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no name is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      project.setLibraryName();
+      expect(project.getCurrentLibraryName()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
+  describe('setLibraryDescription()', () => {
+    it('updates the current library description', () => {
+      let oldDescription = 'description';
+      let newDescription = 'My library does something cool';
+      setData({libraryDescription: oldDescription});
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
+      project.setLibraryDescription(newDescription);
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
+
+      setData({});
+      project.updateChannels_.restore();
+    });
+
+    it('does nothing if no description is passed', () => {
+      sinon.stub(project, 'updateChannels_');
+
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      project.setLibraryDescription();
+      expect(project.getCurrentLibraryDescription()).to.be.undefined;
+      expect(project.updateChannels_).to.have.not.been.called;
+
+      project.updateChannels_.restore();
+    });
+  });
+
+  describe('setProjectLibraries()', () => {
+    beforeEach(() => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
+          callback();
+        });
+    });
+
+    afterEach(() => {
+      project.saveSourceAndHtml_.restore();
+    });
+
+    it('performs a save with the new library list', () => {
+      let library = ['test'];
+      sourceHandler.getLibrariesList.returns(undefined);
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+      });
+    });
+
+    it('performs a save with no libraries if an empty array is passed', () => {
+      let library = ['test'];
+      let result = [];
+      project.init(sourceHandler);
+      return project.setProjectLibraries(library).then(() => {
+        expect(
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
+        return project.setProjectLibraries(result).then(() => {
+          expect(
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
+        });
+      });
+    });
+  });
+
   describe('toggleMakerEnabled()', () => {
     beforeEach(() => {
       sinon
@@ -557,6 +657,99 @@ describe('project.js', () => {
       expect(server.requests[1].url).to.match(/main.json/);
       expect(server.requests[1].url).not.to.match(/currentVersion=/);
       expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
+    });
+  });
+
+  describe('load', () => {
+    let server;
+
+    beforeEach(() => {
+      window.appOptions.channel = 'mychannel';
+      sinon.stub(utils, 'currentLocation').returns({
+        pathname: '/projects/artist/mychannel',
+        search: ''
+      });
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      server = sinon.createFakeServer({autoRespond: true});
+      project.init(sourceHandler);
+    });
+
+    afterEach(() => {
+      server.restore();
+      project.getStandaloneApp.restore();
+      utils.currentLocation.restore();
+    });
+
+    describe('standalone project', () => {
+      beforeEach(() => {
+        sinon.stub(utils, 'navigateToHref');
+      });
+
+      afterEach(() => {
+        utils.navigateToHref.restore();
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(() => {
+          expect(utils.navigateToHref).not.to.have.been.called;
+          done();
+        });
+      });
+
+      it('redirects to new project when channel not found', done => {
+        project.load().catch(() => {
+          expect(utils.navigateToHref).to.have.been.calledOnce;
+          expect(utils.navigateToHref.firstCall.args[0]).to.equal(
+            '/projects/artist'
+          );
+          done();
+        });
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().catch(() => done());
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().catch(() => done());
+      });
+    });
+
+    describe('project-backed level', () => {
+      beforeEach(() => {
+        // This was stubbed at the top level in this file, so unstub it here
+        window.appOptions.level.isProjectLevel = false;
+      });
+
+      it('succeeds when ajax requests succeed', done => {
+        stubGetChannels(server);
+        stubGetMainJson(server);
+        project.load().then(() => done());
+      });
+
+      it('fails when channels request fails', done => {
+        stubGetChannelsWithError(server);
+        project.load().catch(() => done());
+      });
+
+      it('fails when sources request fails', done => {
+        stubGetChannels(server);
+        stubGetMainJsonWithError(server);
+        project.load().catch(() => done());
+      });
+    });
+
+    describe('no channel', () => {
+      it('always succeeds', done => {
+        window.appOptions.level.isProjectLevel = false;
+        window.appOptions.channel = null;
+        project.load().then(done);
+      });
     });
   });
 
@@ -723,6 +916,34 @@ function restoreAppOptions() {
   restoreOnWindow('appOptions');
 }
 
+function stubGetChannelsWithError(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.error();
+  });
+}
+
+function stubGetChannels(server) {
+  server.respondWith('GET', /\/v3\/channels\/.*/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        createdAt: '2018-10-22T21:59:43.000-07:00',
+        updatedAt: '2018-10-22T21:59:45.000-07:00',
+        isOwner: true,
+        publishedAt: null,
+        level: '/projects/artist',
+        migratedToS3: true,
+        name: 'artist project',
+        id: 'kmz3weHzTpZTbRWrHRzMJA',
+        projectType: 'artist'
+      })
+    );
+  });
+}
+
 function stubPostChannels(server) {
   server.respondWith('POST', /\/v3\/channels/, xhr => {
     xhr.respond(
@@ -743,6 +964,30 @@ function stubPostChannels(server) {
       })
     );
   });
+}
+
+function stubGetMainJson(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr => {
+    xhr.respond(
+      200,
+      {
+        'Content-Type': 'application/json'
+      },
+      JSON.stringify({
+        filename: 'main.json',
+        category: 'json',
+        size: 0,
+        versionId: 12345,
+        timestamp: Date.now()
+      })
+    );
+  });
+}
+
+function stubGetMainJsonWithError(server) {
+  server.respondWith('GET', /\/v3\/sources\/.*\/main\.json/, xhr =>
+    xhr.error()
+  );
 }
 
 function stubPutMainJson(server) {
@@ -777,6 +1022,8 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve())
+    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    setInitialLibrariesList: sinon.stub(),
+    getLibrariesList: sinon.stub()
   };
 }

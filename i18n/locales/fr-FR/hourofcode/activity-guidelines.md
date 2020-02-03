@@ -1,6 +1,5 @@
 ---
 title: Tutoriel
-layout: wide
 ---
 
 <style>

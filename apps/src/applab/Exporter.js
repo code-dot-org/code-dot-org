@@ -23,8 +23,9 @@ import exportExpoSplashPng from '../templates/export/expo/splash.png';
 import logToCloud from '../logToCloud';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import project from '@cdo/apps/code-studio/initApp/project';
+import experiments from '../util/experiments';
+import {EXPO_SDK_VERSION} from '../util/exporterConstants';
 import {
-  EXPO_SDK_VERSION,
   extractSoundAssets,
   createPackageFilesFromZip,
   createPackageFilesFromExpoFiles,
@@ -47,7 +48,6 @@ const APP_OPTIONS_WHITELIST = {
   baseUrl: true,
   app: true,
   droplet: true,
-  pretty: true,
   level: {
     skin: true,
     editCode: true,
@@ -539,6 +539,13 @@ export default {
     });
     const {shareWarningInfo = {}} = getAppOptions();
     const {hasDataAPIs} = shareWarningInfo;
+    if (
+      hasDataAPIs &&
+      hasDataAPIs() &&
+      !experiments.isEnabled('exportExpoWithData')
+    ) {
+      throw new Error('hasDataAPIs not supported');
+    }
     const appJs = exportExpoAppEjs({
       appHeight: applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT,
       appWidth: applabConstants.APP_WIDTH,

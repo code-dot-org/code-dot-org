@@ -517,6 +517,9 @@ sk-SK:
       Dance Party Freeplay_2019: A teraz si vytvorte vlastnú mimozemšťanskú diskotéku!
       Dance Party Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Dance_2019_05: Teraz donúť tanečníka začať nový krok po 6 taktoch!
+      Dance_2019_10: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
+        zdieľať s kamarátmi.
       Dance_Party_01: Pretiahni blok `vytvor` na pracovnú plochu a napoj ho do vnútra
         bloku `nastavenie`.
       Dance_Party_02: Donúť soba začať nový krok po 4 taktoch!
@@ -540,11 +543,18 @@ sk-SK:
       Dance_Party_12: Roztoč to na parkete! Vytvor svoj vlastný tanec, ktorý môžeš
         zdieľať s kamarátmi.
       Dance_Party_extras_battle: Tanečné skupiny (klikni na "Viac" pre detail)
+      Dance_Party_extras_battle_2019: Tanečné skupiny (klikni na "Viac" pre detail)
       Dance_Party_extras_every_beat: Štvrťové noty (klikni na "Viac" pre detail)
+      Dance_Party_extras_every_beat_2019: Štvrťové noty (klikni na "Viac" pre detail)
       Dance_Party_extras_layout: Všetci do formácie! (klikni "Viac" pre detail)
+      Dance_Party_extras_layout_2019: Všetci do formácie! (klikni "Viac" pre detail)
       Dance_Party_extras_on_beat: Basy, Stredy a Výšky (Klikni na "Viac" pre detail)
+      Dance_Party_extras_on_beat_2019: Basy, Stredy a Výšky (Klikni na "Viac" pre
+        detail)
       Dance_Party_extras_speed: Zrýchli, spomaľ (klikni na "Viac" pre detail)
+      Dance_Party_extras_speed_2019: Zrýchli, spomaľ (klikni na "Viac" pre detail)
       Dance_Party_extras_visible: Kam zmizli? (klikni na "Viac" pre detail)
+      Dance_Party_extras_visible_2019: Kam zmizli? (klikni na "Viac" pre detail)
       Fish Tank 2-validated: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 2-validated_2019: Zmeňte Pracháča (kôpku slamy) na rybu.
       Fish Tank 3-validated: Zmeň správanie ryby tak, že bude plávať okolo akvária.
@@ -580,6 +590,10 @@ sk-SK:
         každú zo 4 postáv. Po každom hode počkaj 1 sekundu.
       Infinity_touch_score: Pridaj Anne bod vždy, keď sa dotkne vločky. Potom klikni
         na "Spustiť" a posuň Annu ku každej snehovej vločke.
+      InspirationalArtwork: Ak ťa tento obrázok inšpiruje, tak skús spraviť niečo
+        podobné. Inak, vytvor niečo vlastné.
+      InspirationalArtwork_2018: Ak ťa tento obrázok inšpiruje, tak skús spraviť niečo
+        podobné. Inak, vytvor niečo vlastné.
       K-1 Artist Loops 1: Nakreslite túto čiaru posunutím sa na Východ 4 krát.
       K-1 Artist Loops 2: A teraz nakresli tú istú čiaru použitím cyklu.
       K-1 Artist Loops 3: Viete zopakovať tieto bloky v slučke pre nakreslenie 6 čiar?
@@ -604,9 +618,9 @@ sk-SK:
         a nauč ich robiť čokoľvek. Zabav sa!
       MC HOC 2016 Level 2-2: Kurča je zmrazené. Umiestni bloky 'posuň sa' a 'otoč
         sa' do časti 'pri vytvorení', aby sa pohlo.
-      MC HOC 2016 Level 3: 'Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách
-        kurčatá kráčajú stále. Použi cyklus ''nekonečne vykonaj'', aby si udržal kurčatá
-        v pohybe.  '
+      MC HOC 2016 Level 3: Skvelé, kurča sa pohlo! Ale potom sa zastavilo. V hrách
+        kurčatá kráčajú stále. Použi cyklus 'nekonečne vykonaj', aby si udržal kurčatá
+        v pohybe.
       MC HOC 2016 Level 4: Teraz sa ale všetky kurčatá hýbu rovnako a vyzerá to čudne.
         Hry používajú náhodné pohyby, aby vyzerali reálne. Nauč kurčatá vykonať pohyb
         'otoč sa náhodne'.
@@ -749,6 +763,18 @@ sk-SK:
       Underground Mining Coal_2019: Najcennejšie zdroje nájdeš v podzemí, ale môže
         sa tam stmievať. Polož tam aspoň 2 fakle a vyťaž aspoň 2 kusy uhlia.
       Virtual Pet 1 Predict: 'Čo si myslíte, že sa stane, keď kliknete na mimozemšťana?  '
+      Virtual Pet 2: Vytvor takú **udalosť**, že keď sa Geraldine dotkne mláky, tak
+        sa jej farba zmení na hnedú.
+      Virtual Pet 3: Pridaj na obrazovku nový mydlový sprite. Dokážeš to spraviť tak,
+        že keď sa žirafa a mydlo dotknú, tak sa žirafa vráti naspäť k svojej normálnej
+        farbe?
+      Virtual Pet 4: Pridaj správanie k tvojmu mydlu, aby bolo pretiahnuteľné, a potom
+        ho pretiahni ponad žirafu, aby si ju vyčistil!
+      Virtual Pet 5: Pridaj takú akciu ku každej udalosti, keď sa žirafa dotkne iného
+        sprite, že sa žirafa zmenší o 5.
+      Virtual Pet 6: Pridaj jablko, ktoré vráti žirafu do pôvodnej veľkosti, keď sa
+        dotknú.
+      Virtual Pet Freeplay: 'Voľná hra: Čo viac dokážeš spraviť so svojou žirafou? '
       bounce_10_basketball: Teraz máme na ihrisku kôš! Použi bloky "pridaj bod" a
         "pridaj bod súperovi" pod blok "keď je lopta v bránke" a "keď lopta netrafí
         ruku". Skús získať čo najviac bodov predtým, ako tvoj súper získa 2 body.
@@ -795,6 +821,17 @@ sk-SK:
       course1_maze_seq_challenge1: '"Nájdi cestu a priveď ma k tomu nezbednému prasiatku.
         Vyhni sa TNT, lebo bude lietať perie!"'
       course2_collector_loops_challenge2: Pozbieraj všetky drahokamy!
+      course2_harvester_loops_challenge1: Pozbieraj všetku kukuricu.
+      course2_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      course2_maze_loops_challenge1: 'Scrat chce teraz vyskúšať slučky, aby našiel
+        žaluď! '
+      course2_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
+        jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      course4_artist_binary_challenge1: V tejto úlohe môžeš použiť každú binárnu hodnotu
+        (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
+      course4_artist_binary_challenge2: Si dosť vytrvalý na to, aby si vrátil logo
+        do pôvodnej podoby?
       course4_artist_fwp_challenge1: Skús spustiť tento program a spraviť v ňom zmeny
         a pozri, čo sa stane. Vedel by si povedať ako funguje? (Alebo ho celý vymaž
         a nahraď niečim úplne iným)
@@ -1392,6 +1429,12 @@ sk-SK:
       courseC_collector_prog9: _"Pozbierajme všetky drahokamy!"_
       courseC_collector_prog9_2018: _"Pozbierajme všetky drahokamy!"_
       courseC_collector_prog9_2019: _"Pozbierajme všetky drahokamy!"_
+      courseC_collector_prog_challenge1: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
+      courseC_collector_prog_challenge1_2018: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
+      courseC_collector_prog_challenge1_2019: Pozri sa pozorne! Vieš pozbierať všetkých
+        **10** drahokamov?
       courseC_collector_prog_challenge2: Pozbieraj aspoň **10** drahokamov, aby si
         dokončil túto výzvu!
       courseC_collector_prog_challenge2_2018: Pozbieraj aspoň **10** drahokamov, aby
@@ -1493,6 +1536,15 @@ sk-SK:
       courseC_harvester_loops9: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2018: Pozbieraj všetky kukurice a tekvice.
       courseC_harvester_loops9_2019: Pozbieraj všetky kukurice a tekvice.
+      courseC_harvester_loops_challenge1a: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge1a_2018: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge1a_2019: Pozbieraj všetku kukuricu.
+      courseC_harvester_loops_challenge2: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2018: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
+      courseC_harvester_loops_challenge2_2019: Pozbieraj všetok šalát. Vyhni sa stromom
+        a poliam!
       courseC_maze_debugging1: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2018: Uprav kód tak, aby sa Scrat dostal k žaluďu.
       courseC_maze_debugging1_2019: Uprav kód tak, aby sa Scrat dostal k žaluďu.
@@ -1541,6 +1593,12 @@ sk-SK:
         že použiješ iba 4 príkazy `otoč sa`.
       courseC_maze_debugging_challenge2_2019: Pomôž Scratovi dostať sa k žaluďu tak,
         že použiješ iba 4 príkazy `otoč sa`.
+      courseC_maze_loops_challenge1a: 'Scrat chce teraz vyskúšať slučky, aby našiel
+        žaluď! '
+      courseC_maze_loops_challenge1a_2018: 'Scrat chce teraz vyskúšať slučky, aby
+        našiel žaluď! '
+      courseC_maze_loops_challenge1a_2019: 'Scrat chce teraz vyskúšať slučky, aby
+        našiel žaluď! '
       courseC_maze_programming1: V tejto úlohe pospájaj všetky bloky, klikni na tlačítko
         "Spustiť" a sleduj, čo sa stane!
       courseC_maze_programming1_2018: V tejto úlohe pospájaj všetky bloky, klikni
@@ -1553,6 +1611,12 @@ sk-SK:
         ešte jeden blok `posuň sa dopredu` a pripoj ho ku kódu.
       courseC_maze_programming2_2019: Na dokončenie kódu vytiahni z panela nástrojov
         ešte jeden blok `posuň sa dopredu` a pripoj ho ku kódu.
+      courseC_maze_programming3: Na pracovnej ploche je jeden blok navyše, ktorý spôsobí,
+        že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
+      courseC_maze_programming3_2018: Na pracovnej ploche je jeden blok navyše, ktorý
+        spôsobí, že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
+      courseC_maze_programming3_2019: Na pracovnej ploche je jeden blok navyše, ktorý
+        spôsobí, že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
       courseC_maze_programming4: Vyhni sa TNT, lebo bude lietať perie!
       courseC_maze_programming4_2018: Vyhni sa TNT, lebo bude lietať perie!
       courseC_maze_programming4_2019: Vyhni sa TNT, lebo bude lietať perie!
@@ -1592,6 +1656,12 @@ sk-SK:
         ho. '
       courseC_maze_programming_challenge1_2019: 'Prasiatko sa schováva a cieľ je nájsť
         ho. '
+      courseC_maze_programming_challenge2: Niekedy existuje viac spôsobov ako vyriešiť
+        jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      courseC_maze_programming_challenge2_2018: Niekedy existuje viac spôsobov ako
+        vyriešiť jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
+      courseC_maze_programming_challenge2_2019: Niekedy existuje viac spôsobov ako
+        vyriešiť jeden problém. Niekedy je rýchlešie ísť dozadu ako ísť dopredu!
       courseC_starWars_loops1: BB-8 pozbiera všetok šrot na ceste, po ktorej prejde.
         Použi 5 rovnakých blokov, vďaka ktorým BB-8 pozbiera všetok šrot z hracej
         plochy.
@@ -1739,6 +1809,14 @@ sk-SK:
         Tu máš plátno na kreslenie s väčším rozlíšením - 16 pixelov na 16 pixelov!
 
         Popusti uzdu svojej kreativite s bitmi a nakresli čo len chceš!
+      courseD_artist_binary_challenge1_2018: V tejto úlohe môžeš použiť každú binárnu
+        hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
+      courseD_artist_binary_challenge1_2019: V tejto úlohe môžeš použiť každú binárnu
+        hodnotu (0 or 1) iba raz. Na dokončenie kresby skús použiť vnorený cyklus.
+      courseD_artist_binary_challenge2_2018: Si dosť vytrvalý na to, aby si vrátil
+        logo do pôvodnej podoby?
+      courseD_artist_binary_challenge2_2019: Si dosť vytrvalý na to, aby si vrátil
+        logo do pôvodnej podoby?
       courseD_artist_nestedLoops1: "Na začiatok nakresli trojuholník. \n(Každá strana
         je dlhá 100 pixelov a každý vonkajší uhol sa budeš musieť otočiť o 120 stupňov.)"
       courseD_artist_nestedLoops10: Vezmi štvorce z predchádzajúcej úlohy, ale teraz
@@ -1956,6 +2034,16 @@ sk-SK:
       courseD_bee_nestedLoops9_predict2: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2018: Vyrob všetok med.
       courseD_bee_nestedLoops9_predict2_2019: Vyrob všetok med.
+      courseD_bounce_events10s_2018: 'Pre vytvorenie hry, pridaj blok `body` k udalosti
+        `keď je lopta v bránke` a blok `súperove body` k udalosti `keď lopta netrafí
+        ruku`. '
+      courseD_bounce_events10s_2019: 'Pre vytvorenie hry, pridaj blok `body` k udalosti
+        `keď je lopta v bránke` a blok `súperove body` k udalosti `keď lopta netrafí
+        ruku`. '
+      courseD_bounce_events11s_2018: 'Pridaj blok `vhoď novú loptu` všade tam, kde
+        je v hre potrebná nová lopta. '
+      courseD_bounce_events11s_2019: 'Pridaj blok `vhoď novú loptu` všade tam, kde
+        je v hre potrebná nová lopta. '
       courseD_bounce_events12s_2018: A teraz si vytvor tvoju vlastnú hru! Môžeš zmeniť
         jej vzhľad aj vymyslieť vlastné pravidlá. Keď skončíš, klikni na "Dokončiť",
         nech si ju môžu vyskúšať aj kamaráti na svojich mobiloch.
@@ -1970,6 +2058,14 @@ sk-SK:
         aby sa ruka mohla dostať ku obom košom.
       courseD_bounce_events2s_2019: Teraz pripoj blok ku udalosti `keď šípka vpravo`,
         aby sa ruka mohla dostať ku obom košom.
+      courseD_bounce_events5s_2018: Pridaj blok k udalosti `keď lopta zasiahne ruku`,
+        aby lopta trafila do koša.
+      courseD_bounce_events5s_2019: Pridaj blok k udalosti `keď lopta zasiahne ruku`,
+        aby lopta trafila do koša.
+      courseD_bounce_events6s_2018: Na vyriešenie tejto úlohy, pridaj kód, aby lopta
+        odskočila, keď narazí do steny.
+      courseD_bounce_events6s_2019: Na vyriešenie tejto úlohy, pridaj kód, aby lopta
+        odskočila, keď narazí do steny.
       courseD_bounce_events7s_2018: Pridaj bloky so zvukom, aby zašuchotala sieťka,
         keď lopta trafí kôš, a aby zapískala píštalka, keď lopta netrafí ruku. Odrážaj
         loptu, kým nezasiahne svoj cieľ.
@@ -2183,6 +2279,10 @@ sk-SK:
       courseD_maze_ramp2_2019: Aby sa vták dostal až k prasaťu, z panela nástrojov
         presuň ešte jeden blok `posuň sa dopredu` a pripoj ho k ostatným blokom napojených
         na blok `pri spustení`.
+      courseD_maze_ramp3: Na pracovnej ploche je jeden blok navyše, ktorý spôsobí,
+        že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
+      courseD_maze_ramp3_2018: Na pracovnej ploche je jeden blok navyše, ktorý spôsobí,
+        že vták narazí. Vyhoď ho tak, že ho presunieš späť do panela nástrojov.
       courseD_maze_ramp3_2019: Zahoď nadbytočný blok "posuň sa dopredu".
       courseD_maze_ramp4: Vyhni sa TNT, lebo bude lietať perie!
       courseD_maze_ramp4_2018: Vyhni sa TNT, lebo bude lietať perie!
@@ -2640,13 +2740,3 @@ sk-SK:
       ramp_artist_loops9: Nakresli štvorec.
       ramp_artist_loops9_2018: Nakresli štvorec.
       ramp_artist_loops9_2019: Nakresli štvorec.
-      scrat 16: Žaluď! Žaluď! Žaluď! Použi blok "ak" a dostaň ma k nemu použitím čo
-        najmenšieho počtu blokov.
-      scrat 17: Dobre, precvičme si to ešte raz - toto nie je to veľmi odlišné, len
-        pozor na stenu!
-      scrat 18: Blok "ak-inak" skontroluje podmienku a potom vykoná buď jednu vec
-        ALEBO druhú. Skús využiť tento nový blok, aby si ma dostal k žaluďu.
-      scrat 19: Ďalšie precvičenie bloku "ak-inak". Zvládneš to na prvý pokus?
-      scrat 20: Dokážeš pridať len 3 bloky a vyriešiť zložitejšie bludisko? Ak to
-        urobíš správne, môžem prejsť všetky krivé cesty bez ohľadu na ich dĺžku. Ponáhľaj
-        sa! Ľad sa už topí!

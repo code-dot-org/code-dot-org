@@ -2,12 +2,18 @@
 lv:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
       Dancelab_atTimestamp:
         options:
           UNIT:
             '"seconds"': sekundes
       Dancelab_changeMoveEachLR:
         options:
+          GROUP:
+            '"UNICORN"': Vienradži
           DIR:
             '1': "→"
             "-1": "←"
@@ -21,8 +27,17 @@ lv:
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      Dancelab_changePropEachBy:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
       Dancelab_doMoveEachLR:
         options:
+          GROUP:
+            '"UNICORN"': Vienradži
           DIR:
             '1': "→"
             "-1": "←"
@@ -54,8 +69,18 @@ lv:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": nejaušs
+      Dancelab_jumpToEach:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
+          LOCATION:
+            "{x: 100, y: 200}": pa kreisi
+            "{x: 300, y: 200}": pa labi
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": nejaušs
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"UNICORN"': Vienradži
           FORMAT:
             '"row"': rinda
             '"column"': kolonna
@@ -64,13 +89,13 @@ lv:
         options:
           COSTUME:
             '"BEAR"': Lācis
-            '"CAT"': Kaķis
-            '"DUCK"': Pīle
+            '"CAT"': kaķis
+            '"DOG"': suns
+            '"DUCK"': pīle
             '"FROG"': Varde
             '"PINEAPPLE"': Ananāss
-            '"ROBOT"': Robots
+            '"ROBOT"': robots
             '"SHARK"': Haizivs
-            '"UNICORN"': Vienradzis
           LOCATION:
             "{x: 100, y: 200}": pa kreisi
             "{x: 300, y: 200}": pa labi
@@ -80,6 +105,7 @@ lv:
           COSTUME:
             '"BEAR"': Lācis
             '"CAT"': Kaķis
+            '"DOG"': suns
             '"DUCK"': Pīle
             '"FROG"': Varde
             '"PINEAPPLE"': Ananāss
@@ -142,6 +168,8 @@ lv:
             '0.25': very slow
       Dancelab_setDanceSpeedEach:
         options:
+          GROUP:
+            '"UNICORN"': Vienradži
           SPEED:
             '1': normal
             '2': fast
@@ -155,6 +183,8 @@ lv:
             '"height"': augstums
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -163,8 +193,34 @@ lv:
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      Dancelab_setPropRandomEach:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"UNICORN"': Vienradži
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"UNICORN"': Vienradži
+      Dancelab_setVisibleEach:
+        options:
+          THIS:
+            '"UNICORN"': Vienradži
       Dancelab_startMapping:
         options:
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
+      Dancelab_startMappingEach:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
@@ -173,6 +229,17 @@ lv:
           PROPERTY:
             '"scale"': izmērs
             '"height"': augstums
+      Dancelab_stopMappingEach:
+        options:
+          GROUP:
+            '"UNICORN"': Vienradži
+          PROPERTY:
+            '"scale"': izmērs
+            '"height"': augstums
+      Dancelab_translateStrings:
+        options:
+          STRING:
+            '"x"': x
       Dancelab_whenKey:
         options:
           KEY:
@@ -300,6 +367,8 @@ lv:
             '"scale"': izmērs
       Mikelab_randomColor:
         text: nejauša krāsa
+      Mikelab_repeatUntilComplete:
+        text: mūžīgi atkārtot
       Mikelab_setBG:
         options:
           BG:

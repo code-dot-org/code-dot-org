@@ -1,6 +1,5 @@
 ---
-title: Contacta socios internacionales
-layout: wide
+title: Contacta a socios internacionales
 ---
 
 <style>
@@ -11,7 +10,7 @@ layout: wide
 
 {{ signup_button }}
 
-# Contacta socios internacionales
+# Contacta a socios internacionales
 
 Code.org trabaja con organizaciones de todo el mundo para que la Hora del Código sea un movimiento verdaderamente internacional. ¿Sabías que, en 2017, el 60% de las actividades de la Hora del Código ocurrieron fuera de los EE. UU.?
 
@@ -41,7 +40,7 @@ hello@kidsandcode.org                                                  |
 | Canadá                                    | Kids Code Jeunesse                                                     | Bry LeBlanc                        | http://kidscodejeunesse.org   
 contact@kidscodejeunesse.org                                   |
 | Canadá                                    | Departamento de Educación de Nova Scotia & Early Childhood Development | Peter Oldreive                     | http://ednet.ns.ca   
-Peter.Oldreive@novascotia.ca                                            |
+nicholas.baskwill@novascotia.ca                                         |
 | Canadá                                    | Partners In Research Canada                                            | Stacey Joyce                       | www.pirweb.org/en   
 sjoyce@pirweb.org                                                        |
 | Canadá                                    | Sault Ste. Marie innovation Centre                                     |                                    | https://ssmic.com/                                                                            |

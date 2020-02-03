@@ -1,7 +1,5 @@
 ---
 title: 地域向けのイベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

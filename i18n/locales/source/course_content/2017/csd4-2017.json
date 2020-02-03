@@ -1,7 +1,7 @@
 {
   "https://studio.code.org/s/csd4-2017/stage/1/puzzle/1": {
     "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n"
+      "markdown": "# Overview\n\nIn this lesson you'll learn how empathy for a user's needs is a critical component of the design process. Then you'll investigate a set of products and consider and critique how well they meet a variety of needs.\n\n## Vocabulary\n\n* **Critique** - To critically evaluate in a detailed and constructive manner.\n* **Empathy** - In design, paying attention to a user's feelings and needs when designing a product.\n* **User** - Someone who uses an object, including software and hardware.\n\n## Resources\n\n* [Determine the User](https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/export?format=pdf) - Activity Guide\n* [Problem Solving Process with Empathy](https://staging.code.org/curriculum/docs/csd/PSPE.png) - Image\n"
     }
   },
   "https://studio.code.org/s/csd4-2017/stage/2/puzzle/1": {
@@ -32,6 +32,11 @@
   "https://studio.code.org/s/csd4-2017/stage/7/puzzle/1": {
     "dsls": {
       "markdown": "# Overview\n\nBased on the interview you conducted in the last lesson, design an app that could help your classmate overcome some obstacle to learning something new.\n\n\n## Resources\n\n* [Paper Prototype Rubric](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - Rubric\n* [Project - Paper Prototype](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - Activity Guide\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/7/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
     }
   },
   "https://studio.code.org/s/csd4-2017/stage/8/puzzle/1": {
@@ -108,7 +113,7 @@
   },
   "https://studio.code.org/s/csd4-2017/stage/13/puzzle/1": {
     "dsls": {
-      "markdown": "# Overview\n\nBuilding on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\n\n## Introduced Code\n\n* [onEvent](//docs.code.org/applab/onEvent/)\n* [setScreen](//docs.code.org/applab/setScreen/)\n\n"
+      "markdown": "# Overview\n\nBuilding on the screens that the class designed in the previous lesson, teams combine screens into a single app. Simple code can then be added to make button clicks change to the appropriate screen.\n\n## Introduced Code\n\n* [onEvent](//studio.code.org/docs/applab/onEvent/)\n* [setScreen](//studio.code.org/docs/applab/setScreen/)\n\n"
     }
   },
   "https://studio.code.org/s/csd4-2017/stage/13/puzzle/2": {
@@ -169,6 +174,16 @@
   "https://studio.code.org/s/csd4-2017/stage/16/puzzle/1": {
     "dsls": {
       "markdown": "# Overview\n\nEach team prepares a presentation to \"pitch\" the app they've developed. This is the time to share struggles, triumphs, and plans for the future.\n\n\n## Resources\n\n* [App Presentation Template](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - Slide Deck\n* [App Presentation](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - Exemplar\n* [App Presentation](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - Rubric\n"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/stage/16/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd4-2017/lockable/1/puzzle/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* make improvements to the course\n* understand your experience\n* tell us what topics you want to learn more about in the future\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey!!!</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n"
     }
   }
 }

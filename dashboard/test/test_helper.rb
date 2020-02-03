@@ -42,6 +42,8 @@ Rails.application.reload_routes! if defined?(Rails) && defined?(Rails.applicatio
 require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
+CDO.stubs(override_pegasus: nil)
+CDO.stubs(override_dashboard: nil)
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
 Dashboard::Application.config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
@@ -86,7 +88,11 @@ class ActiveSupport::TestCase
     DCDO.clear
 
     Rails.application.config.stubs(:levelbuilder_mode).returns false
-    CDO.stubs(:pretty_js).returns(true)
+
+    # Ensure that AssetHelper#webpack_asset_path does not raise an exception
+    # when called from unit tests. See comments on that method for details.
+    CDO.stubs(:optimize_webpack_assets).returns(false)
+    CDO.stubs(:use_my_apps).returns(true)
   end
 
   teardown do

@@ -3,235 +3,245 @@ pl-PL:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Test wielokrotnego wyboru
-        questions:
-        - text: Wybierz algorytm pasujący do obrazka.
         answers:
         - text: Rozpocznij od kwadratu <br/> Umieść trójkąt powyżej kwadratu <br/>
             Umieścić trójkąt poniżej kwadratu
-        - correct: true
+        - text: Zacznij od kwadratu<br/>Umieść trójkąt na prawo od kwadratu<br/>Umieść
+            równoległobok pot kwadratem<br/>Umieść trójkąt na prawo od równoległoboku
+          correct: true
         - text: Zacznij od kwadratu<br/>Umieść równoległobok nad kwadratem<br/>Umieść
             trójkąt na prawo od równoległoboku
         - text: Zacznij od kwadratu<br/>Umieść trójkąt pod kwadratem<br/>Umieść równoległobok
             na prawo od trójkąta
-      2-3 Algorithms Multi 2:
-        title: Test wielokrotnego wyboru
-        content1: Zacznij od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść
-          kolejny trójkąt pod kwadratem
         questions:
-        - text: Który z obrazków <em>nie</em> pasuje do podanego algorytmu?
+        - text: Wybierz algorytm pasujący do obrazka.
+        title: Test wielokrotnego wyboru
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        content1: Zacznij od trójkąta<br/>Umieść kwadrat pod trójkątem <br/>Umieść
+          kolejny trójkąt pod kwadratem
+        questions:
+        - text: Który z obrazków <em>nie</em> pasuje do podanego algorytmu?
+        title: Test wielokrotnego wyboru
       2-3 Big Event Match 1:
-        title: Dopasowanie
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - {}
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Dopasuj kombinację przycisków do ruchów tańca.
         questions:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - {}
-        - {}
-        - {}
-        - {}
+        title: Dopasowanie
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Dopasowanie
         content2: Użyj klawisza, aby połączyć każdy kod z jego literą
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Dopasowanie
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Test wielokrotnego wyboru
         questions:
         - text: Który zestaw kart został ułożony zgodnie z zasadami gry?
+        title: Test wielokrotnego wyboru
+      2-3 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
         - correct: true
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Test wielokrotnego wyboru
+        - {}
+        - {}
         questions:
         - text: Jak możesz uprościć ten ciąg działań za pomocą pętli?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Test wielokrotnego wyboru
       2-3 Graph Paper Match 1:
-        title: Dopasowanie
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Dopasuj siatkę do programu.
         questions:
         - {}
         - {}
         - {}
+        title: Dopasowanie
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Test wielokrotnego wyboru
         questions:
         - text: Za pomocą którego programu został utworzony ten obrazek?
-        answers:
-        - {}
-        - correct: true
-        - {}
+        title: Test wielokrotnego wyboru
       2-3 Maze Match 2:
-        title: 'Labirynt: Dopasowanie'
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Dopasuj łamigłówki do bloków
-        pre_title: Instrukcje
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 'Labirynt: Dopasowanie'
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: Który zestaw bloków zaprowadzi nie do świnki?
         title: 'Labirynt: Test wielokrotnego wyboru'
-        questions:
-        - {}
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: Test wielokrotnego wyboru
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
-      2-3 Relay Programming Multi 2:
+        questions:
+        - text: Który program **nie** tworzy tego obrazka?
         title: Test wielokrotnego wyboru
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Które połączenie obrazka i sekwencji strzałek nie zawiera błędu?
-        answers:
-        - {}
-        - {}
-        - correct: true
+        title: Test wielokrotnego wyboru
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Co potrzebowałbyś naprawić, aby ukończyć ten okrąg?
+        title: 'Artysta, debugowanie: Test wielokrotnego wyboru 1'
       2-3 artist functions multi 1:
-        title: 'Artysta, funkcje: Test wielokrotnego wyboru 1'
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Wybierz odpowiednie bloki, aby narysować ten obrazek przy użyciu dostępnych
             funkcji
-        answers:
-        - correct: true
-        - {}
-        - {}
+        title: 'Artysta, funkcje: Test wielokrotnego wyboru 1'
       2-3 artist loops match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Dopasuj pętlę do kształtu
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Artysta Dopasowanie Pętli 1
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 'Artysta, pętle: Test wielokrotnego wyboru'
         questions:
         - text: Który kształt jest tworzony przez tę pętlę?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
-        - correct: true
         - {}
-      2-3 artist loops multi 2:
-        title: 'Artysta, pętle: Test wielokrotnego wyboru'
+        - correct: true
         questions:
         - text: Który kształt można utworzyć za pomocą tego programu?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
-        - correct: true
-      2-3 artist match 1:
-        title: 'Artysta: Dopasowywanie'
+        - {}
         content1: Dopasuj do kształtów bloki, które je tworzą.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 'Artysta: Dopasowywanie'
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Które z poniższych porównań jest prawdziwe?
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru 1'
+      2-3 bee conditionals multi 3:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      2-3 bee conditionals multi 3:
+        - {}
         questions:
         - text: Wybierz najlepsze bloki.
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru 2'
+      2-3 bee loops multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: 'Pszczółka, pętle: Test wielokrotnego wyboru 1'
+        - {}
         questions:
         - text: Którymi blokami zbierzesz cały nektar?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: 'Pszczółka, pętle: Test wielokrotnego wyboru 1'
       2-3 maze match 1:
-        title: 'Labirynt: Dopasowanie 1'
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Dopasuj łamigłówki do bloków
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 'Labirynt: Dopasowanie 1'
       2-3 maze multi 1:
-        title: 'Labirynt: Test wielokrotnego wyboru 1'
-        questions:
-        - text: Który zestaw bloków jest prawidłową odpowiedzią?
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Który zestaw bloków jest prawidłową odpowiedzią?
+        title: 'Labirynt: Test wielokrotnego wyboru 1'
       4-5 Algorithms Match 1:
-        title: Dopasowanie
+        answers:
+        - text: "<h4>Ustaw wynik Gracz 1 na 0</h4>"
+        - text: "<h4>Gracz 1 rzuca kostką</h4>"
+        - text: "<h4>Dodaj wynik Gracza 1 do całkowitego wyniku</h4>"
+        - text: "<h4>Porównaj wyniki graczy, aby zobaczyć, kto wygrywa</h4>"
         content1: Ustaw w kolejności kroki w grze w kości (Dice Race), w jakiej powinny
           wystąpić w algorytmie.
         questions:
@@ -239,23 +249,23 @@ pl-PL:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Ustaw wynik Gracz 1 na 0</h4>"
-        - text: "<h4>Gracz 1 rzuca kostką</h4>"
-        - text: "<h4>Dodaj wynik Gracza 1 do całkowitego wyniku</h4>"
-        - text: "<h4>Porównaj wyniki graczy, aby zobaczyć, kto wygrywa</h4>"
+        title: Dopasowanie
       4-5 Algorithms Multi 1:
-        title: Test wielokrotnego wyboru
-        questions:
-        - text: Dla którego z tych elementów najtrudniej jest napisać algorytm?
         answers:
         - text: Szczotkowanie zębów
         - text: Pieczenie ciasteczek
         - text: Zakupy spożywcze z listą
         - text: Banan
           correct: true
+        questions:
+        - text: Dla którego z tych elementów najtrudniej jest napisać algorytm?
+        title: Test wielokrotnego wyboru
       4-5 Computational Thinking Match 1:
-        title: Dopasowanie
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Każdy z tych pojazdów został rozłożony na mniejsze części. Dopasuj
           każdy pojazd do listy rozłożonych elementów.
         questions:
@@ -263,73 +273,68 @@ pl-PL:
         - text: "<h3>Koła/z boku: 2 <br/> Windows/z boku: 1</h3>"
         - text: "<h3>Koła/z boku: 2 <br/> Windows/z boku: 6</h3>"
         - text: "<h3>Koła/z boku: 3 <br/> Windows/z boku: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Dopasowanie
       4-5 Computational Thinking Multi 1:
-        title: Test wielokrotnego wyboru
-        questions:
-        - text: Seattle jest dużym miastem.<br/>Eugene jest średnim miastem<br/>Hillview
-            jest małym miastem.
         answers:
         - text: Seattle _____ _____ _____.
         - text: _____ jest  _____ miastem.
           correct: true
         - text: _____ jest _____ _____.
         - text: Eugene jest  _____ miastem.
-      4-5 Crowdsourcing Multi 1:
-        title: Test wielokrotnego wyboru
+        content1: Tutaj są trzy zdania. Który z poniższych szablonów pasuje do każdego
+          ze nich?
         questions:
-        - text: Który z tych obrazków najlepiej przedstawia crowdsourcing?
+        - text: Seattle jest dużym miastem.<br/>Eugene jest średnim miastem<br/>Hillview
+            jest małym miastem.
+        title: Test wielokrotnego wyboru
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - correct: true
-      4-5 Crowdsourcing Multi 2:
-        title: Test wielokrotnego wyboru
         questions:
-        - text: Która z tych czynności jest najlepszym przykładem crowdsourcing?
+        - text: Który z tych obrazków najlepiej przedstawia crowdsourcing?
+        title: Test wielokrotnego wyboru
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Sprzątanie pokoju
           correct: true
         - text: Jedzenie deseru
         - text: Szczotkowanie włosów
         - text: Mycie twarzy
-      4-5 Digital Footprint Multi 1:
-        title: Test wielokrotnego wyboru
         questions:
-        - text: Którą z poniższych informacji możesz udostępnić w internecie?
+        - text: Która z tych czynności jest najlepszym przykładem crowdsourcing?
+        title: Test wielokrotnego wyboru
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Data Twoich urodzin
         - text: Twoja ulubiona potrawa
           correct: true
         - text: Twój adres
         - text: Numer karty kredytowej Twoich rodziców
-      4-5 Internet Multi 1:
+        questions:
+        - text: Którą z poniższych informacji możesz udostępnić w internecie?
         title: Test wielokrotnego wyboru
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Logując się na stronę code.org, na który adres IP najprawdopodobniej
             przeniesie Cię DNS?
+        title: Test wielokrotnego wyboru
+      4-5 Internet Multi 2:
         answers:
         - {}
-        - {}
-        - {}
         - correct: true
-      4-5 Internet Multi 2:
-        title: Test wielokrotnego wyboru
+        - {}
+        - {}
         questions:
         - text: Jeśli DNS zabrał Cię na stronę o adresie IP 100.42.50.110, to jak
             nazywa ta strona?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: Test wielokrotnego wyboru
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou Lou, przeskocz do mojej Lou,
         - text: Lou, Lou, przeskocz do mojej Lou, <br/> Lou, Lou, przeskocz do mojej
@@ -338,8 +343,15 @@ pl-PL:
           correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: Test wielokrotnego wyboru
       4-5 Suncatchers Match 1:
-        title: Dopasowanie
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Połącz każdy program do słowa, które tworzy, stosując dostarczoną
           grupę umiejętności.
         questions:
@@ -347,124 +359,141 @@ pl-PL:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Dopasowanie
       4-5 Suncatchers Multi 1:
-        title: Test wielokrotnego wyboru
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: Który z programów poniżej <em>nie</em> tworzy tej samej sekwencji,
             co Program 1?
+        title: Test wielokrotnego wyboru
+      4-5 artist loops multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      4-5 artist loops multi 1:
-        title: 'Artysta, pętle: Test wielokrotnego wyboru'
+        - {}
         questions:
         - text: Które bloki utworzą ten wzorek?
+        title: 'Artysta, pętle: Test wielokrotnego wyboru'
+      4-5 artist multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 artist multi 1:
-        title: 'Artysta: Test wielokrotnego wyboru'
         questions:
         - text: Które bloki narysują prostokąt o obwodzie 100?
+        title: 'Artysta: Test wielokrotnego wyboru'
+      4-5 artist multi 2:
         answers:
+        - {}
         - {}
         - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: 'Artysta: Test wielokrotnego wyboru'
         questions:
         - text: Który z rysunków jest symetryczny?
+        title: 'Artysta: Test wielokrotnego wyboru'
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - correct: true
         - {}
-      4-5 bee conditionals multi 1:
-        title: 'Pszczółka, warunki: Test wielokrotnego wyboru'
         questions:
         - text: Wybierz najlepsze bloki.
+        title: 'Pszczółka, warunki: Test wielokrotnego wyboru'
+      4-5 bee debug multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      4-5 bee debug multi 1:
-        title: 'Pszczółka, debagowanie: Test wielokrotnego wyboru'
+        - {}
         questions:
         - text: Która wersja funkcji jest poprawna?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: 'Pszczółka, debagowanie: Test wielokrotnego wyboru'
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Które bloki rozwiązują tę łamigłówkę?
         title: 'Pszczółka, pętle: Test wielokrotnego wyboru'
-        questions:
-        - text: Które bloki rozwiązują tę łamigłówkę?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Które bloki rozwiązują tę łamigłówkę?
         title: 'Labirynt, warunki: Test wielokrotnego wyboru'
-        questions:
-        - text: Które bloki rozwiązują tę łamigłówkę?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: 'Labirynt: Dopasowanie'
-        content1: Dopasuj łamigłówki do bloków
-        pre_title: Instrukcje
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
-      4-5 maze multi 1:
-        title: 'Labirynt: Test wielokrotnego wyboru'
+        content1: Dopasuj łamigłówki do bloków
         questions:
-        - text: Które bloki rozwiązują tę łamigłówkę?
+        - {}
+        - {}
+        - {}
+        title: 'Labirynt: Dopasowanie'
+      4-5 maze multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      Begin planning your project:
-        title: tytuł
+        questions:
+        - text: Które bloki rozwiązują tę łamigłówkę?
+        title: 'Labirynt: Test wielokrotnego wyboru'
       CSD Header Size MC:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
       CSD Header Size MC_2018:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
       CSD Header Size MC_2018_2019:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
       CSD U1 Lesson 5 Overview:
         markdown: |
           #Podsumowanie
@@ -509,22 +538,6 @@ pl-PL:
           * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
-      CSD U2 Design Project:
-        title: tytuł
-      CSD U2 Design Project_2018:
-        title: tytuł
-      CSD U2 Design Project_2018_2019:
-        title: tytuł
-      CSD U2 L2 Overview:
-        title: tytuł
-      CSD U2 L3 Overview:
-        title: tytuł
-      CSD U2 L4 Overview:
-        title: tytuł
-      CSD U2 L5 Overview:
-        title: tytuł
-      CSD U2 L6 Overview:
-        title: tytuł
       CSD U2 Top Websites:
         markdown: |
           # Ranking najczęściej odwiedzanych stron w Stanach Zjednoczonych
@@ -537,130 +550,160 @@ pl-PL:
           4. Amazon.com - sklep internetowy z ogromną gamą produktów
           4. Yahoo.com - wyszukiwarka stron internetowych, serwer poczty email, źródło informacji
           5. Wikipedia.org - darmowa encyklopedia z treściami generowanymi przez użytkowników
-      CSD U2 expand project:
-        title: tytuł
-      CSD U2 expand project_2018:
-        title: tytuł
-      CSD U2 expand project_2018_2019:
-        title: tytuł
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Dopasuj listę do kodu, który ją tworzy.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Szybkie sprawdzenie list
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Dopasuj listę do kodu, który ją tworzy.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Szybkie sprawdzenie list
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
+        content1: Dopasuj listę do kodu, który ją tworzy.
+        questions:
+        - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
+            PM.png
+        - text: https://images.code.org/d9af5a34631dee994f99750f48f52b66-image-1493336218042.50.24
+            PM.png
+        - text: https://images.code.org/63b9f044db7dfa10d0486920e982f217-image-1493336218039.32.08
+            PM.png
+        - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
+            PM.png
+        - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
+            AM.png
+        title: Szybkie sprawdzenie list
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: tytuł
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: tytuł
       CSD U3 Boolean MC_2018:
-        title: tytuł
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: tytuł
       CSD U3 Boolean MC_2018_2019:
-        title: tytuł
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: tytuł
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -680,168 +723,311 @@ pl-PL:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      CSD U3 combining rep:
-        title: tytuł
-      CSD U3 combining rep_2018:
-        title: tytuł
-      CSD U3 combining rep_2018_2019:
-        title: tytuł
-      CSD U3 drawSprites placement match:
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U3 drawSprites placement match:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: tytuł
-      CSD U5 Encryption 1_2018:
-        title: tytuł
-      CSD U5 Encryption 1_2018_2019:
-        title: tytuł
-      CSD U5 L13 SFLP Interpreting Data:
-        title: tytuł
-      CSD U5 data visualization:
-        title: tytuł
-      CSD U5 data visualization_2018:
-        title: tytuł
-      CSD U5 data visualization_2018_2019:
-        title: tytuł
-      CSD U5 student record:
-        title: tytuł
-      CSD U5 student record_2018:
-        title: tytuł
-      CSD U5 student record_2018_2019:
-        title: tytuł
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
         - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      Dance_Party_extras_intro:
+        markdown: |
+          # Nie przestawaj tańczyć!
+
+          W części 2 stworzysz swój własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego przedstawionych jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych układów tanecznych.
+
+          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Twórzmy formację
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Gdzie oni poszli?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Grupy taneczne
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Ćwierćnuty
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Bas, średni i wysoki ton
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Przyspiesz, zwolnij
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # Nie przestawaj tańczyć!
+
+          W części 2 stworzysz własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych imprez tanecznych.
+
+          Możesz przechodzić te poziomy _w dowolnej kolejności_. Przejdź, aby zobaczyć, jak coś zostało zrobione na poprzednim poziomie, lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć swój czas na powiększenie go, utworzyć swój własny.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
+
+          <div class="clearfix"></div>
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          Tam i z powrotem
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          Więcej przycisków
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          Twórzmy formację
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          Gdzie oni poszli?
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          Zespoły taneczne
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          Ćwierćnuty
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          Bas, średni i wysoki ton
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          Przyspiesz, zwolnij
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
       DigitalFootprint-Unplugged:
         markdown: |
           # Twój cyfrowy ślad
@@ -852,219 +1038,239 @@ pl-PL:
           # Poznając pętle
 
           Ta lekcja przedstawia sposób programowania za pomocą pętli używanych w tańcu.
-      Internet Simulator Setup 2:
-        title: tytuł
       K-1 Artist 1 Multi 1:
-        title: Test wielokrotnego wyboru
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Które bloki rozwiązują tę łamigłówkę?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Test wielokrotnego wyboru
+      K-1 Artist 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Które bloki narysują ten kwadrat?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Test wielokrotnego wyboru
       K-1 Artist 2 Match 2:
-        title: Dopasowanie
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Dopasuj kształty podobnego typu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: Test wielokrotnego wyboru
-        questions:
-        - text: Ile razem jest nektarów?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: Test wielokrotnego wyboru
-        questions:
-        - text: Ile razem jest nektarów?
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-      K-1 Bee Loops Match 1:
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Dopasowanie
+      K-1 Bee 1 Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
+        questions:
+        - text: Ile razem jest nektarów?
+        title: Test wielokrotnego wyboru
+      K-1 Bee 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
+        questions:
+        - text: Ile razem jest nektarów?
+        title: Test wielokrotnego wyboru
+      K-1 Bee Loops Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Dopasuj bloki
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Dopasowanie
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Dopasuj kombinację przycisków do ruchów tańca.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        title: Dopasowanie
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Test wielokrotnego wyboru
+        - correct: true
         questions:
         - text: Które ze zwierząt ma cyfrowy ślad, który powoduje, że jest ono <strong>najbardziej
             zagrożone</strong>?
-        answers:
-        - {}
-        - {}
-        - correct: true
-      K-1 Getting Loopy Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Jak możesz uprościć ten ciąg działań za pomocą pętli?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Happy Maps Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Happy Maps Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/left.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Która strzałka doprowadzi Flurba do skarbu?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Keep it Private Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
         - text: Jakimi informacjami <strong>nie</strong> powinniście dzielić się w
             sieci?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Który blok powinien być na końcu?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Maze Loops Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Które blok "powtórz" (repeat) jest taki sam?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Loops Multi 2:
         title: Test wielokrotnego wyboru
+      K-1 Maze Loops Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Wybierz właściwy blok "powtórz" (repeat).
-        answers:
-        - {}
-        - {}
-        - correct: true
+        title: Test wielokrotnego wyboru
       K-1 Maze Match 1:
-        title: Dopasowanie
-        content2: Dopasuj łamigłówki i bloki
-        pre_title: Instrukcje
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        content2: Dopasuj łamigłówki i bloki
+        questions:
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Dopasowanie
       K-1 Maze Multiple Choice 2:
-        title: Labirynt
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Która odpowiedź jest poprawna?
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        title: Labirynt
       K-1 Move It Multi 1:
-        title: Test wielokrotnego wyboru
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Który algorytm doprowadzi Flurba do kwiatów?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Plant a Seed Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
         - text: Który krok powinien być na początku tego algorytmu?
-        answers:
-        - {}
-        - {}
-        - correct: true
-      K-1 Plant a Seed Multi 2:
         title: Test wielokrotnego wyboru
+      K-1 Plant a Seed Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: Który krok powinien uzupełnić lukę w algorytmie?
-        answers:
-        - {}
-        - correct: true
-        - {}
-      K-1 Word Search Multi 1:
         title: Test wielokrotnego wyboru
+      K-1 Word Search Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: Które bloki utworzą słowo "MOVE"?
-        answers:
-        - {}
-        - correct: true
-        - {}
-      K-1 Word Search Multi 3:
         title: Test wielokrotnego wyboru
-        questions:
-        - text: Które ze słów zostanie utworzone?
+      K-1 Word Search Multi 3:
         answers:
         - text: SET
         - text: SQUARE
           correct: true
         - text: SOUTH
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
+        questions:
+        - text: Które ze słów zostanie utworzone?
+        title: Test wielokrotnego wyboru
       MoveItMoveIt-Unplugged:
         markdown: |
           # Pzenieś go, przenieś go
 
           Użyj mapy i wydawaj polecenia, aby osiągnąć cel.
-      Multi-Screen Apps:
-        title: tytuł
-      New Challenge Introduction:
-        title: tytuł
-      OPD-K5 Stage3aGo:
-        title: tytuł
-      Prepare for your presentation:
-        title: tytuł
       Unit 1 Lesson 2 Overview:
         markdown: |
           # Podsumowanie
@@ -1087,640 +1293,638 @@ pl-PL:
 
           * [What is a Computer - Activity Guide](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Nieprawidłowe
+        questions:
+        - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Nieprawidłowe
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - {}
-      courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nie wiem
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nie wiem
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nie wiem
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict2:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: B
         - text: R
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: B
         - text: R
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: B
         - text: R
           correct: true
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
         - text: B
         - text: B
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: B
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: B
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
         - text: Pszczółka zbierze cały nektar.
           correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
         - {}
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
+            klikniesz "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
         - {}
+        questions:
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
+            klikniesz "Uruchom"?
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
-            klikniesz "Uruchom"?
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
         - {}
-      courseD_multi_collector_debugging10_predict1:
         questions:
-        - {}
+        - text: Spójrz uważnie na kod poniżej. Ile miodu zbierze pszczółka, kiedy
+            klikniesz "Uruchom"?
+      courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
-      courseF_bee_variables_8a_2018:
         questions:
         - {}
+      courseF_bee_variables_8a_2018:
         answers:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
         - text: Pszczółka zbierze cały nektar.
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka zbierze tylko 2 nektary.
           correct: true
         - text: Pszczółka zbierze cały nektar.
         - {}
-      courseF_multi_artist_for10_predict1:
         questions:
         - {}
+      courseF_multi_artist_for10_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
             oprócz jednego.
           correct: true
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - text: Pszczółka poleci do przodu i zbierze cały nektar ze wszystkich kwiatów
@@ -1728,45 +1932,47 @@ pl-PL:
           correct: true
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
         - {}
-      courseF_multi_bee_fwp9_predict1:
         questions:
         - {}
+      courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       csd-pre-survey-2017-levelgroup:
         markdown: "#Podsumowanie\nKlasa pracuje w grupach, projektując łódki z folii
@@ -1777,26 +1983,26 @@ pl-PL:
           - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}

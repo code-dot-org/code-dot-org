@@ -1,7 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
-layout: wide
-nav: promote_nav
+title: Hour of Code sajtóanyagok testületi tagok számára
 ---
 
 {{ signup_button }}

@@ -1,8 +1,8 @@
 /** @file Tests for our johnny-five Led wrapper */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import makeStubBoard from './makeStubBoard';
+import {makeStubBoard} from './makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/Led';
 
 describe('Led', function() {

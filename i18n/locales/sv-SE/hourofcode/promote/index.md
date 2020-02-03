@@ -1,7 +1,5 @@
 ---
 title: Sprid ordet
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}
@@ -28,6 +26,6 @@ Tell your friends about the **#HourOfCode**!
 
 ## 5. Be dina lokala politiker stötta Hour of Code
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i din kommun efter Hour of Code.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i ditt område efter Hour of Code.
 
 {{ signup_button }}

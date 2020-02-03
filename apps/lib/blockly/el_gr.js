@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "για κάθε αντικείμενο";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "Για κάθε αντικείμενο στη λίστα, όρισε τη μεταβλητή '%1' στο αντικείμενο και μετά εκτέλεσε μερικές εντολές.";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "Blockly";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "από %1 έως %2 με βήμα %3";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "για";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "Όρισε τη μεταβλητή %1 να πάρει τις τιμές από την αρχική έως και την τελική, σύμφωνα με το βήμα που καθορίζεται και εκτέλεσε τα καθορισμένα μπλοκ.";

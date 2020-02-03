@@ -1,7 +1,5 @@
 ---
 title: Siaran Akhbar Mengenai Hour of Code untuk Pegawai-pegawai yang Terlantik
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -40,6 +40,7 @@ Blockly.Msg.CONTROLS_FOREACH_INPUT_INLIST_TAIL = "";
 Blockly.Msg.CONTROLS_FOREACH_INPUT_ITEM = "";
 Blockly.Msg.CONTROLS_FOREACH_TOOLTIP = "";
 Blockly.Msg.CONTROLS_FOR_HELPURL = "";
+Blockly.Msg.CONTROLS_FOR_INPUT_COUNTER = "for %1 from %2 to %3 count by %4";
 Blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY = "";
 Blockly.Msg.CONTROLS_FOR_INPUT_WITH = "";
 Blockly.Msg.CONTROLS_FOR_TOOLTIP = "";

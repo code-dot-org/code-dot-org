@@ -1,10 +1,5 @@
 ---
 title: Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!
-layout: wide
-nav: how_to_nav
-social:
-  "twitter:card": player
-  "twitter:site": "@codeorg"
 ---
 
 # Кодтау Сағатының иесі ретінде тіркелгеніңізге рахмет!

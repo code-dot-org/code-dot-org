@@ -53,12 +53,13 @@ export const ApplicationStatuses = {
   teacher: {
     unreviewed: 'Unreviewed',
     pending: 'Pending',
-    waitlisted: 'Waitlisted',
-    declined: 'Declined',
+    waitlisted: 'Waitlisted (auto-email)',
+    declined: 'Declined (auto-email)',
     accepted_not_notified: 'Accepted - Not notified',
     accepted_notified_by_partner: 'Accepted - Notified by partner',
-    accepted_no_cost_registration: 'Accepted - No cost registration',
-    registration_sent: 'Registration Sent',
+    accepted_no_cost_registration:
+      'Accepted - No cost registration (auto-email)',
+    registration_sent: 'Registration Sent (auto-email)',
     paid: 'Paid',
     withdrawn: 'Withdrawn'
   },

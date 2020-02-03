@@ -1,6 +1,5 @@
 ---
 title: 活動のガイドライン
-layout: wide
 ---
 
 <style>

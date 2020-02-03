@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### আগামীর সাথে যোগ দিন এবং নতুন একদল ছাত্রকে কে কম্পিউটার বিজ্ঞানের প্রথম এক ঘন্টার সাথে পরিচয় করিয়ে দিন নিম্নোক্ত ধাপগুলির মাধ্যমে-. আওয়ার অফ কোড খুব সহজেই শিখা ও চালানো যায় - এমনকি নতুনরাও পারে! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
----
+* * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -81,6 +81,6 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 
 ## What comes after the Hour of Code?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}

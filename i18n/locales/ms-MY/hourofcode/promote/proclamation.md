@@ -1,7 +1,5 @@
 ---
 title: Sampel Resolusi Menyokong Minggu Pendidikan Sains Komputer dan Acara Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

@@ -1,7 +1,7 @@
 @no_mobile
 Feature: Manage Assets
 
-  @no_ie @no_safari
+  @no_ie @no_safari @no_firefox
   Scenario: The manage assets dialog contains the option to record audio on Chrome and Firefox.
     Given I am a student
     And I start a new Game Lab project

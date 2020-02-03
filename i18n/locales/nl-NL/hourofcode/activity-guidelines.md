@@ -1,6 +1,5 @@
 ---
 title: Richtlijnen voor de tutorials
-layout: wide
 ---
 
 <style>

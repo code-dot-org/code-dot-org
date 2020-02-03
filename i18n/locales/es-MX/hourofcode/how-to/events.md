@@ -1,7 +1,5 @@
 ---
 title: Cómo organizar un evento de la Hora del Código
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -15,7 +13,7 @@ nav: how_to_nav
 ## 1. Prepárate para tu evento
 
 - Elige el lugar, la fecha y la hora.
-- Envía [una carta](https://hourofcode.com/promote/resources#sample-emails) para invitar al alcalde, a un congresista, al gobernador o a una persona de negocios influyente a que hablen. ¿Un funcionario electo estará presente durante tu Hora de Código? Consulta nuestro [kit de herramientas prácticas]({{ localized_files/elected_official }}) para obtener más información.
+- Envía [una carta](https://hourofcode.com/promote/resources#sample-emails) para invitar al alcalde, a un congresista, al gobernador o a una persona de negocios influyente a que hablen. Consulta nuestro [kit de herramientas prácticas]({{ localized_files/elected_official }}) para obtener más información en caso de un funcionario electo esté presente durante tu Hora de Código.
 - Invita a los medios y a la prensa, como estaciones de radio o televisión locales, periódicos, o bloggers de educación o tecnología. Consulta nuestro [kit de prensa]({{ promote/press_kit_url }}) para obtener ayuda.
 
 ## 2. Durante tu evento

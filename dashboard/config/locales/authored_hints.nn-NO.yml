@@ -758,6 +758,110 @@ nn-NO:
       CourseE_HOC 2018 Level_9b:
         voyage_aquatic_9a: Ser du dei røde og blå korall-blokkene? Bruk dei som guide
           for å snu til høgre og venstre gjennom revet.
+      Dance_2019_01:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Sørg for at det er ein dansar på skjermen.
+
+          _Denne øvinga endar etter 4 taktar._
+        challenges: "**Valfrie utfordringar**\n\n-   Velg å spele ein annan song \n-
+          \  Flytt dansaren din til ein ny stad.\n-   Lag fleir enn ein dansar."
+      Dance_2019_02:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Dansaren må gjere eit dansetrinn.
+          -   Du må trykke ein piltast.
+
+          _Denne øvinga sluttar etter 4 taktar_
+        challenges: |-
+          **Valfri utfordring**
+
+          Bruk meir enn ei <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>-blokk.
+      Dance_2019_03:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Begge dansarane må gjere eit dansetrinn.
+          -   Du må trykke på piltastane.
+
+          _Denne oppgåva sluttar etter 6 taktar._
+        challenges: |-
+          **Valfri utfordring**
+
+          -   Få ein dansar til å flytte på seg med venstre og høgre piltast.
+      Dance_2019_04:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Dansaren må bytte til ein ny dans etter 4 taktar.
+
+          _Denne øvingar endar etter 7 taktar._
+      Dance_2019_05:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+
+          _Denne øvinga ender etter 11 taktar._
+        challenges: |-
+          **Valfri utfordring**
+
+          -   Endre bakgrunn kvar gong dansarane bytter dansetrinn.
+      Dance_2019_06:
+        validation: |-
+          **Korleis gjer eg denne øvinga?**
+
+          -   Lag ein hoveddansar og ei gruppe bakgrunnsdansarar i løpet av dei første 4 taktene i sangen.
+
+          _Denne øvinga sluttar etter 7 taktar._
+        challenges: |-
+          **Valfri utfordring**
+
+          -   Lag fleire grupper med bakgrunnsdansarar.
+      Dance_2019_07:
+        validation: |-
+          **Korleis gjer eg denne øvinga?**
+
+          -   Endre storleiken på minst ein dansar.
+
+          _Denne øvinga sluttar etter 6 taktar._
+        challenges: |-
+          **Valfri utfordring**
+
+          -   Eksperimenter ved å endre andre eigenskapar som breidde eller rotasjon.
+      Dance_2019_08:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Skift farge på minst ein dansar.
+
+          _Denne øvinga ender etter 6 taktar._
+        tint_hint: La du merke til at dansarane dine ikkje endrar til akkurat den
+          fargen du valgte? Det er fordi **fargar** miksar fargen du vel med fargen
+          på dansaren.
+      Dance_2019_09:
+        validation: |-
+          **Korleis gjer eg denne øvinga?**
+
+          -   Berre press på Ferdig-knappen!
+        repeat_every_ideas: |-
+          **Treng du nokre idear?**
+
+          -   Gjenta endring av storleiken til ein dansar for å få dansaren til å vokse.
+          -   Gjenta endring av rotasjonen til ein dansar for å få han til å spinne rundt.
+
+          _Du kan også bruke negative tall for å skape ei motsatt effekt!_
+        next_previous: |-
+          **Valfri utfordring**
+
+          -   Du kan også bruke denne nye hending-blokka for å komme gjennom ei liste med dansetrunn ved å sette dansetrinn til '(Tilfeldig)', '(Neste)' eller '(Førre)'.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
       Dance_Party_01:
         validation: |-
           **Korleis klarer eg denne øvinga?**
@@ -766,10 +870,9 @@ nn-NO:
 
           _Denne øvinga endar etter 4 taktar._
         challenges: |-
-          **Ekstrautfordringer**
+          **Ekstrautfordringar**
 
           -   Vel ein annan song.
-          -   Vel ein dansar som ser ut som ein elg!
           -   Gi dansaren nytt navn.
       Dance_Party_02:
         validation: |-
@@ -777,32 +880,39 @@ nn-NO:
 
           -   Dansaren må bytte til ein ny dans etter 4 taktar.
 
-          _Denne øvingar endar etter 8 taktar._
+          _Denne øvinga endar etter 7 taktar._
       Dance_Party_03:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
-          -   Etter 6 takter må dansaren din danse ein annan dans enn etter 4 takter.
+          -   Etter 6 takter må dansaren din danse ein annan dans enn etter 4 taktar.
 
-          _Denne øvinga ender etter 12 taktar._
+          _Denne øvinga ender etter 11 taktar._
       Dance_Party_04:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Du må skifte bakgrunnseffekt ein gong i den sjuende takten i songen.
 
-          _Denne øvinga ender etter 10 taktar._
+          _Denne øvinga ender etter 9 taktar._
         challenges: |-
           **Ekstrautfordring**
 
-          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"taktar"</title></block></xml>.
+          Endre bakgrunnseffekten på ulike tidspunkt i songen ved å koble til den nye blokka under <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>-hendingar.
+      Dance_Party_05:
+        validation: |-
+          **Korleis klarer eg denne øvinga?**
+
+          -   Dansaren din må gjennom minst 4 ulike dansetrinn før nivået er ferdig.
+
+          _Dette nivået ender etter 12 taktar._
       Dance_Party_06:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Du må ha minst to dansarar.
 
-          _Denne øvinga ender etter 6 taktar._
+          _Denne øvinga ender etter 5 taktar._
         challenges: |-
           **Ekstrautfordring**
 
@@ -814,7 +924,7 @@ nn-NO:
 
           -   To av dansarane må ha ei anna storleik enn 100.
 
-          _Denne øvinga ender etter 6 taktar._
+          _Denne øvinga ender etter 5 taktar._
         challenges: |-
           **Ekstrautfordring**
 
@@ -825,35 +935,37 @@ nn-NO:
 
           -   Skift farge på minst ein dansar.
 
-          _Denne øvinga ender etter 8 taktar._
+          _Denne øvinga ender etter 7 taktar._
       Dance_Party_10:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Du må endre eigenskapane til to eller flere dansarar.
 
-          _Denne øvinga ender etter 8 taktar._
+          _Denne øvinga ender etter 7 taktar._
       Dance_Party_11:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Berre vêr kreativ!
 
-          _Denne øvinga ender etter 8 taktar._
+          _Denne øvinga ender etter 7 taktar._
       Dance_Party_11_5:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Berre vêr kreativ!
 
-          _Denne øvinga ender etter 8 taktar._
+          _Denne øvinga ender etter 7 taktar._
       Dance_Party_11b:
         validation: |-
           **Korleis klarer eg denne øvinga?**
 
           -   Bruk ‘når venstrepila blir trykka ned’-blokka til å få roboten til å gjere ein bestemt dans når du trykkar på venstrepila.
 
-          _Denne øvinga ender etter 8 taktar._
+          _Denne øvinga ender etter 7 taktar._
+      Dance_Party_extras_alternate_2019:
+        alternate: Endringsblokka er i "Dansarar"-kategorien.
       Function intro Ryan:
         Function_intro_Ryan_b: Hvis du kaller funksjonene riktig, er dette veien du
           vil reise...
@@ -1095,6 +1207,20 @@ nn-NO:
           tallene i hver løkke.
         courseA_collector_loops_challenge1_b: Du trenger ikke å bruke løkke hvis du
           bare skal gjøre noe én gang.
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: Om du har problemer med å få fuglen til å bevege seg,
+          sjekk at blokkene er koblet sammen med "når den kjører" blokken[0]
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: Dette programmet mangler en blokk. Klarer du å finne
+          ut hvilken?
+        courseA_maze_seq2_b: Prøv å kjøre koden først for å se hvor fuglen ender opp.
+          Hvor skal du videre?
       courseA_maze_seq_challenge1:
         courseA_maze_seq_challenge1_a: Det er to løsninger til dette puslespillet.
       courseA_maze_seq_challenge1_2018:

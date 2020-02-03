@@ -28,6 +28,6 @@ If your student uses other accommodations in technology classes, you may use tho
 
 The [Code.org tutorials](https://studio.code.org/) are all designed to be used with or without sound. All the videos have captions. Some students can also benefit from headphones set to a higher volume.
 
-## Learn more
+## Daha ətraflı
 
 To learn more about computer science education and special needs students, we recommend this [online book]({{ supporting-special-needs-students/book }}).

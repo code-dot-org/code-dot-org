@@ -1,7 +1,5 @@
 ---
 title: 컴퓨터과학 교육주간(Computer Science Education Week) 과 Hour of Code 를 지원하기 위한 예시 결의문
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

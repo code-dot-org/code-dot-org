@@ -19,6 +19,7 @@ import PublishDialog from '../../templates/projects/publishDialog/PublishDialog'
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -141,9 +142,6 @@ function checkImageReachability(imageUrl, callback) {
  */
 class ShareAllowedDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     allowExportExpo: PropTypes.bool.isRequired,
     exportApp: PropTypes.func,
     icon: PropTypes.string,
@@ -254,6 +252,8 @@ class ShareAllowedDialog extends React.Component {
       modalClass += ' no-modal-icon';
     }
 
+    const isDroplet =
+      this.props.appType === 'applab' || this.props.appType === 'gamelab';
     const artistTwitterHandle =
       SongTitlesToArtistTwitterHandle[this.props.selectedSong];
 
@@ -283,9 +283,7 @@ class ShareAllowedDialog extends React.Component {
       ? twitterShareUrlDance
       : twitterShareUrlDefault;
 
-    const showShareWarning =
-      !this.props.canShareSocial &&
-      (this.props.appType === 'applab' || this.props.appType === 'gamelab');
+    const showShareWarning = !this.props.canShareSocial && isDroplet;
     let embedOptions;
     if (this.props.appType === 'applab') {
       embedOptions = {
@@ -336,14 +334,14 @@ class ShareAllowedDialog extends React.Component {
                 className={modalClass}
                 style={{position: 'relative'}}
               >
-                <p className="dialog-title">
-                  {this.props.i18n.t('project.share_title')}
-                </p>
+                <p className="dialog-title">{i18n.shareTitle()}</p>
                 {this.props.isAbusive && (
                   <AbuseError
                     i18n={{
-                      tos: this.props.i18n.t('project.abuse.tos'),
-                      contact_us: this.props.i18n.t('project.abuse.contact_us')
+                      tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                      contact_us: i18n.contactUs({
+                        url: 'https://code.org/contact'
+                      })
                     }}
                     className="alert-error"
                     style={styles.abuseStyle}
@@ -351,18 +349,14 @@ class ShareAllowedDialog extends React.Component {
                   />
                 )}
                 {showShareWarning && (
-                  <p style={styles.shareWarning}>
-                    {this.props.i18n.t('project.share_u13_warning')}
-                  </p>
+                  <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
                 )}
                 <div style={{clear: 'both'}}>
                   <div style={styles.thumbnail}>
                     <img style={styles.thumbnailImg} src={thumbnailUrl} />
                   </div>
                   <div>
-                    <p style={{fontSize: 20}}>
-                      {this.props.i18n.t('project.share_copy_link')}
-                    </p>
+                    <p style={{fontSize: 20}}>{i18n.shareCopyLink()}</p>
                     <input
                       type="text"
                       id="sharing-input"
@@ -479,11 +473,9 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 <div style={{clear: 'both', marginTop: 40}}>
-                  {(this.props.appType === 'applab' ||
-                    this.props.appType === 'gamelab') && (
+                  {isDroplet && (
                     <AdvancedShareOptions
                       allowExportExpo={this.props.allowExportExpo}
-                      i18n={this.props.i18n}
                       shareUrl={this.props.shareUrl}
                       exportApp={this.props.exportApp}
                       expanded={this.state.showAdvancedOptions}
@@ -498,6 +490,7 @@ class ShareAllowedDialog extends React.Component {
           )}
         </BaseDialog>
         <PublishDialog />
+        <LibraryCreationDialog channelId={this.props.channelId} />
       </div>
     );
   }

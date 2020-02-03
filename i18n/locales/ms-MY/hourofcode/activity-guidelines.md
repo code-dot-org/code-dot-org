@@ -1,6 +1,5 @@
 ---
 title: Garis Panduan Aktiviti
-layout: wide
 ---
 
 <style>

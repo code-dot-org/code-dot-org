@@ -147,6 +147,7 @@
   thanks_for_submitting: "Go raibh maith agat!"
   if_you_enjoyed: "Má bhain tú taitneamh as, iarr ar chairde triail a bhaint as freisin! Ba mhaith linn an saol ar fad a mhúineadh."
   personalize_certificate: "Cuir d'ainm ar do theastas"
+  print_certificates: "Priontáil teastais"
   share_achievement: "Comhroinn a bhfuil déanta agat"
   beyond_hour_message: "Lean ort leis <a href='http://studio.code.org'>na cúrsaí eile atá againn</a>, nó <a href='/learn/beyond'>Foghlaim thar Uair an Chloig</a>."
   leaderboards_for_hoc: "An Uair Chódála: Barr an Tábla"
@@ -916,7 +917,6 @@
   coursef-draft_name: Cúrsa F
   coursef_name: "Cúrsa F"
   accelerated_name: "Cúrsa Luathaithe"
-  express_name: "Luaschúrsa"
   20-hour_name: Cúrsa Luathaithe
   algebra_name: "Ríomheolaíocht san Ailgéabar"
   AlgebraA_name: "Ríomheolaíocht san Ailgéabar, Cúrsa A"

@@ -1,0 +1,31 @@
+es-MX:
+  data:
+    block_categories:
+      Actions: Acciones
+      Advanced: Avanzado
+      Behaviors: Comportamientos
+      Brushes: Pinceles
+      Color: Color
+      Comment: Comentario
+      Comments: Comentarios
+      Conditionals: Condicionales
+      Dancers: Bailarines
+      Default: Incumplimiento
+      Events: Eventos
+      Functions: Funciones
+      'Functions ': 'Funciones '
+      Game/Score: Juego/Puntaje
+      Games/Score: Juegos/Puntaje
+      Groups: Grupos
+      Input: Entrada
+      Locations: Ubicaciones
+      Logic: Lógica
+      Loops: Bucles
+      Math: Matemáticas
+      Numbers: Números
+      Properties: Propiedades
+      Sprites: Sprites
+      Text: Texto
+      Variables: Variables
+      'Variables ': 'Variables '
+      World: Mundo

@@ -1,7 +1,5 @@
 ---
 title: Hoe-doen-we-dat gids voor ouders
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

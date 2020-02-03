@@ -403,6 +403,10 @@ de:
           Programmen wieder und wieder verwendet werden können. In dieser Lektion
           lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen
           zu Funktionen so nützlich ist.  '
+      swipeRightPassThrough:
+        title: Sitzung der Szenarien für die Personalbeschaffung
+      swipeRightPassThrough-test123:
+        title: Sitzung der Szenarien für die Personalbeschaffung
       courseB_unplugged_MRF_2018:
         title: Meine Roboterfreunde
         desc: Lerne zu programmieren, indem du Code für deine Freunde schreibst!
@@ -477,6 +481,11 @@ de:
         title: Bewegung, Bewegung
       courseB_unplugged_CnC_2018:
         title: Es ist großartig etwas zu erschaffen und fair zu spielen
+        desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen
+          der Informatik verliehen wurde, soll den Schülern helfen, den kreativen
+          Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht
+          die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen
+          Arbeit fair umzugehen.
       RelayProgramming_2018:
         title: Relais-Programmierung
         desc: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und
@@ -563,6 +572,11 @@ de:
           Internet stellt, und erläutern mögliche Konsequenzen.
       courseB_unplugged_CnC_2019:
         title: Es ist großartig etwas zu erschaffen und fair zu spielen
+        desc: Diese Lektion, die vom Team von Copyright and Creativity an die Grundlagen
+          der Informatik verliehen wurde, soll den Schülern helfen, den kreativen
+          Prozess des Teilens und der Inspiration zu verstehen.  Damit einher geht
+          die Förderung des kreativen Ausdrucks und die Notwendigkeit, mit der kreativen
+          Arbeit fair umzugehen.
       GraphingData_2019:
         desc: In dieser Lektion sammeln die Schüler Daten aus einem Play Lab-Projekt
           oder einem realen Szenario. Diese werden verwenden um Vorhersagen zu treffen.

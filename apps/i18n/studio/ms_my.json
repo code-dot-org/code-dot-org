@@ -130,6 +130,7 @@
   "speed": "kelajuan",
   "turnLeft": "belok kiri",
   "turnRight": "belok kanan",
+  "waitSeconds": "saat",
   "whenDown": "apabila panah bawah",
   "whenDownTooltip": "Jalankan tugasan di bawah apabila kekunci panah bawah ditekan.",
   "whenLeft": "apabila panah kiri",

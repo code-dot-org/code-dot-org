@@ -1,7 +1,5 @@
 ---
 title: Bilgisayar Bilimleri Haftası ve Kodlama Saati Kararname Örneği
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

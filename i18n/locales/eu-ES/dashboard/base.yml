@@ -434,6 +434,8 @@ eu:
   landing:
     report_bug: "Akatsa jakinarazi"
     support: "Lortu laguntza"
+  free_response:
+    placeholder: "Idatzi hemen zure erantzuna"
   multi:
     wrong_title: "Erantzun okerra"
     wrong_body: "Erantzuna ez da zuzena. Saiatu berriro!"
@@ -492,6 +494,7 @@ eu:
     submit: "Bidali"
     decline: "Itxi"
   zendesk_too_young_message: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. <a href="http://support.code.org">support.code.org</a> webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'
+  zendesk_too_young_message_markdown: 'Barka, erabiltzaile gaztetxoak ezin dira konektatu jarraitzaileen lekura. [support.code.org](http://support.code.org) webgunean nabigatu dezakezu konektatu gabe edo zure guraso zein irakasleari esan gurekin harremanetan jartzeko.'
   progress:
     not_started: hasi gabe
     in_progress: bidean

@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
 const TEST_GROUP_NAME = 'Mansfield Park';

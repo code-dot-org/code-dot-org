@@ -77,7 +77,7 @@ Scenario: Basic teacher application submission
   And I press the first "button#next" element
 
   # Section 5
-  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and submission"
+  Then I wait until element "h3" contains text "Section 5: Additional Demographic Information and Submission"
   And I press "input[name='genderIdentity']:first" using jQuery
   And I press the first "input[name='race']" element
   And I press the first "input[name='howHeard']" element
@@ -119,7 +119,6 @@ Scenario: Basic teacher application submission
   Then I press the first "input[name='committedToMasterSchedule']" element
   Then I press the first "input[name='replaceCourse']" element
   Then I press the first "input[name='replaceWhichCourseCsd']" element
-  And I press the first "input[name='csdWhichUnits']" element
 
   Then I press the first "input[name='committedToDiversity']" element
   Then I press the first "#understandFee" element

@@ -1,7 +1,5 @@
 ---
-title: Guía de instrucciones para funcionarios públicos
-layout: wide
-nav: how_to_nav
+title: Guía práctica para funcionarios públicos
 ---
 
 {{ signup_button }}

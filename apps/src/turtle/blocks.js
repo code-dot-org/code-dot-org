@@ -41,16 +41,16 @@ const TURN_DIRECTION_VALUES = [
 ];
 
 const POSITION_VALUES = [
-  [commonMsg.positionRandom(), RANDOM_VALUE],
-  [commonMsg.positionTopLeft(), Position.TOPLEFT.toString()],
-  [commonMsg.positionTopCenter(), Position.TOPCENTER.toString()],
-  [commonMsg.positionTopRight(), Position.TOPRIGHT.toString()],
-  [commonMsg.positionMiddleLeft(), Position.MIDDLELEFT.toString()],
-  [commonMsg.positionMiddleCenter(), Position.MIDDLECENTER.toString()],
-  [commonMsg.positionMiddleRight(), Position.MIDDLERIGHT.toString()],
-  [commonMsg.positionBottomLeft(), Position.BOTTOMLEFT.toString()],
-  [commonMsg.positionBottomCenter(), Position.BOTTOMCENTER.toString()],
-  [commonMsg.positionBottomRight(), Position.BOTTOMRIGHT.toString()]
+  [commonMsg.random(), RANDOM_VALUE],
+  [commonMsg.topLeft(), Position.TOPLEFT.toString()],
+  [commonMsg.topCenter(), Position.TOPCENTER.toString()],
+  [commonMsg.topRight(), Position.TOPRIGHT.toString()],
+  [commonMsg.middleLeft(), Position.MIDDLELEFT.toString()],
+  [commonMsg.middleCenter(), Position.MIDDLECENTER.toString()],
+  [commonMsg.middleRight(), Position.MIDDLERIGHT.toString()],
+  [commonMsg.bottomLeft(), Position.BOTTOMLEFT.toString()],
+  [commonMsg.bottomCenter(), Position.BOTTOMCENTER.toString()],
+  [commonMsg.bottomRight(), Position.BOTTOMRIGHT.toString()]
 ];
 
 const JUMP_BY_DIRECTION_VALUES = [
@@ -660,14 +660,11 @@ exports.install = function(blockly, blockInstallOptions) {
     helpUrl: blockly.Msg.CONTROLS_FOR_HELPURL,
     init: function() {
       this.setHSV(322, 0.9, 0.95);
+      this.appendDummyInput()
+        .appendTitle(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
+        .appendTitle(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.interpolateMsg(
-        blockly.Msg.CONTROLS_FOR_INPUT_COUNTER,
-        () => {
-          this.appendDummyInput().appendTitle(
-            new blockly.FieldLabel(msg.loopVariable()),
-            'VAR'
-          );
-        },
+        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
         ['TO', 'Number', blockly.ALIGN_RIGHT],
         ['BY', 'Number', blockly.ALIGN_RIGHT],
@@ -1120,8 +1117,13 @@ exports.install = function(blockly, blockInstallOptions) {
       var dropdown = new blockly.FieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
       this.setHSV(184, 1.0, 0.74);
-      this.appendDummyInput().appendTitle(msg.jump());
-      this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+      this.interpolateMsg(
+        msg.jumpToPosition(),
+        () => {
+          this.appendDummyInput().appendTitle(dropdown, 'VALUE');
+        },
+        blockly.ALIGN_RIGHT
+      );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
       this.setNextStatement(true);

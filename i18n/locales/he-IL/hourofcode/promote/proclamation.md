@@ -1,7 +1,5 @@
 ---
 title: דוגמה לנוסח החלטה בנושאה שבוע חינוך ושעת תכנות
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

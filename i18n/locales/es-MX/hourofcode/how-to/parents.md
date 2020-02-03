@@ -1,7 +1,5 @@
 ---
-title: Guía para padres de familia
-layout: wide
-nav: how_to_nav
+title: Guía práctica para padres
 ---
 
 {{ signup_button }}

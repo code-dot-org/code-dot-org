@@ -3,60 +3,30 @@ es-MX:
   data:
     block_categories:
       Actions: Acciones
-      Loops: Bucles
-      Functions: Funciones
-      Color: Color
-      Brushes: Pinceles
-      Math: Matemáticas
-      Logic: Lógica
-      Variables: Variables
-      Number: Número
-      String: Hilo
-      Image: Imagen
-      Boolean: Booleano
-      Conditionals: Condicionales
-      Events: Eventos
-      Games/Score: Juegos/Puntaje
-      Comments: Comentarios
-      Category: Categoría
-      Prebuilt: Previamente Construído
-      Text: Texto
-      Picker: Rocolector/a
-      Comment: Comentario
-      World: Mundo
-      Sprites: Sprites
-      Behaviors: Comportamientos
-      'Variables ': 'Variables '
-      Default: Incumplimiento
-      Locations: Ubicaciones
-      Bunny Game: Juego del conejo
-      everythingelse: detodolodemás
-      Location: Ubicación
-      numbers: números
-      Numbers: Números
-      Input: Entrada
-      Dancers: Bailarines
-      Groups: Grupos
       Advanced: Avanzado
-      Start: Comenzar
-      Music: Música
-      Dancing: Baile
-      Sprite: Sprite
-      Brush: Pincel
-      Make Sprite: Hacer un Sprite
-      Movement: Movimiento
-      Booleans: Valores booleanos
-      Functional: Funcional
-      While Events: Eventos mientra
-      Sprite Properties: Propiedades de Sprite
-      Predefined: Predefinido
-      test: prueba
-      test2: prueba2
-      Use These Blocks: Utilize estos bloques
-      Do Not Use: No usar
-      Foo: Foo
-      Name: Nombre
-      NEW BLOCKS: BLOQUES NUEVOS
+      Behaviors: Comportamientos
+      Brushes: Pinceles
+      Color: Color
+      Comment: Comentario
+      Comments: Comentarios
+      Conditionals: Condicionales
+      Dancers: Bailarines
+      Default: Incumplimiento
+      Events: Eventos
+      Functions: Funciones
       'Functions ': 'Funciones '
       Game/Score: Juego/Puntaje
-      Function: Función
+      Games/Score: Juegos/Puntaje
+      Groups: Grupos
+      Input: Entrada
+      Locations: Ubicaciones
+      Logic: Lógica
+      Loops: Bucles
+      Math: Matemáticas
+      Numbers: Números
+      Properties: Propiedades
+      Sprites: Sprites
+      Text: Texto
+      Variables: Variables
+      'Variables ': 'Variables '
+      World: Mundo

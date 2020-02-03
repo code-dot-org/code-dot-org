@@ -1,7 +1,5 @@
 ---
 title: Jak na události Hodiny kódu
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

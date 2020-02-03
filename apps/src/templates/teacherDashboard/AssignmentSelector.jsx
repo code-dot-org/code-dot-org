@@ -70,7 +70,8 @@ export default class AssignmentSelector extends Component {
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    locale: PropTypes.string
+    locale: PropTypes.string,
+    isNewSection: PropTypes.bool
   };
 
   /**
@@ -217,7 +218,18 @@ export default class AssignmentSelector extends Component {
       selectedAssignmentFamily,
       selectedVersionYear
     );
-    const selectedSecondaryId = noAssignment;
+    const primary = this.props.assignments[selectedPrimaryId];
+    // If the user is setting up a new section and selects a course as the
+    // primary assignment, default the secondary assignment to the first
+    // script in the course.
+    const defaultSecondaryId =
+      this.props.isNewSection && primary && primary.scriptAssignIds
+        ? primary.scriptAssignIds[0]
+        : noAssignment;
+
+    const selectedSecondaryId = this.props.isNewSection
+      ? defaultSecondaryId
+      : noAssignment;
 
     this.setState(
       {
@@ -328,7 +340,6 @@ export default class AssignmentSelector extends Component {
               style={dropdownStyle}
               disabled={disabled}
             >
-              <option value={noAssignment} />
               {secondaryOptions.map(
                 scriptAssignId =>
                   assignments[scriptAssignId] && (
@@ -337,6 +348,7 @@ export default class AssignmentSelector extends Component {
                     </option>
                   )
               )}
+              <option value={noAssignment} />
             </select>
           </div>
         )}

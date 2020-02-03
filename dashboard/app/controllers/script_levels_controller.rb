@@ -65,7 +65,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
     configure_caching(@script)
-    if @script.finish_url && current_user.try(:completed?, @script)
+    if @script.finish_url && Policies::ScriptActivity.completed?(current_user, @script)
       redirect_to @script.finish_url
       return
     end
@@ -74,10 +74,11 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
+  use_database_pool show: :persistent
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
-    @script = ScriptLevelsController.get_script(request, version_year: DEFAULT_VERSION_YEAR)
+    @script = ScriptLevelsController.get_script(request)
 
     # Redirect to the same script level within @script.redirect_to.
     # There are too many variations of the script level path to use
@@ -188,7 +189,9 @@ class ScriptLevelsController < ApplicationController
         @section = current_user.sections[0]
         @user = @section&.students&.find_by(id: params[:user_id])
       end
-      @show_stage_extras_warning = !@section&.stage_extras
+      # This errs on the side of showing the warning by only if the script we are in
+      # is the assigned script for the section
+      @show_stage_extras_warning = !@section&.stage_extras && @section&.script&.name == params[:script_id]
     end
 
     # Explicitly return 404 here so that we don't get a 5xx in get_from_cache.
@@ -243,11 +246,11 @@ class ScriptLevelsController < ApplicationController
     render json: stage.summary_for_lesson_plans
   end
 
-  def self.get_script(request, version_year: nil)
+  def self.get_script(request)
     script_id = request.params[:script_id]
     script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
       Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
-      Script.get_from_cache(script_id, version_year: version_year)
+      Script.get_from_cache(script_id)
 
     raise ActiveRecord::RecordNotFound unless script
     script

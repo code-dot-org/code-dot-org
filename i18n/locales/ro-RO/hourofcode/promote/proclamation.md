@@ -1,7 +1,5 @@
 ---
 title: Model de rezolutie prin care se sustine Tehnologia computerelor si programarea si evenimentul Hour of Code
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

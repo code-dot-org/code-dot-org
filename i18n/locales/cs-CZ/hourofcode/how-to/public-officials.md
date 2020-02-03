@@ -1,7 +1,5 @@
 ---
 title: Návod jak na to pro úředníky veřejné správy
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

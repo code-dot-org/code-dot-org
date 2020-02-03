@@ -1,0 +1,85 @@
+#!/usr/bin/env ruby
+
+# This script fetches spotify data from api.spotify and uploads to the shared firebase channel.
+require_relative '../../../deployment'
+require 'cdo/only_one'
+require 'net/http'
+require 'csv'
+require 'ostruct'
+require_relative '../../../shared/middleware/helpers/firebase_helper'
+
+TOP_200_US_URL = 'https://spotifycharts.com/regional/us/daily/latest/download'
+TOP_200_WORLD_URL = 'https://spotifycharts.com/regional/global/daily/latest/download'
+VIRAL_50_US_URL = 'https://spotifycharts.com/viral/us/daily/latest/download'
+VIRAL_50_WORLD_URL = 'https://spotifycharts.com/viral/global/daily/latest/download'
+
+def get_top200_data(url)
+  records = {}
+  columns = ['id', 'Track Name', 'Artist', 'Position', 'Streams', 'URL']
+  response = Net::HTTP.get_response(URI(url))
+  return unless response.code == '200'
+  id = 1
+  response.body.force_encoding('utf-8')
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift # first line just contains a note
+  lines.shift # second line is column names
+  lines.each do |line|
+    record = OpenStruct.new
+    record.id = id
+    record.Position = line[0].to_i
+    record['Track Name'] = line[1]
+    record.Artist = line[2]
+    record.Streams = line[3].to_i
+    record.URL = line[4]
+
+    records[id] = record.to_h.to_json
+    id += 1
+  end
+  return records, columns
+end
+
+def get_viral50_data(url)
+  records = {}
+  columns = ['id', 'Track Name', 'Artist', 'Position', 'URL']
+  response = Net::HTTP.get_response(URI(url))
+  return unless response.code == '200'
+  id = 1
+  response.body.force_encoding('utf-8')
+  csv = CSV.new(response.body)
+  lines = csv.read
+  lines.shift # first line is column names
+  lines.each do |line|
+    record = OpenStruct.new
+    record.id = id
+    record.Position = line[0].to_i
+    record['Track Name'] = line[1]
+    record.Artist = line[2]
+    record.URL = line[3]
+
+    records[id] = record.to_h.to_json
+    id += 1
+  end
+  return records, columns
+end
+
+def main
+  fb = FirebaseHelper.new('shared')
+  records, columns = get_top200_data(TOP_200_US_URL)
+  fb.delete_shared_table('Top%20200%20USA')
+  fb.upload_shared_table('Top%20200%20USA', records, columns)
+
+  records, columns = get_top200_data(TOP_200_WORLD_URL)
+  fb.delete_shared_table('Top%20200%20Worldwide')
+  fb.upload_shared_table('Top%20200%20Worldwide', records, columns)
+
+  records, columns = get_viral50_data(VIRAL_50_US_URL)
+  fb.delete_shared_table('Viral%2050%20USA')
+  fb.upload_shared_table('Viral%2050%20USA', records, columns)
+
+  records, columns = get_viral50_data(VIRAL_50_WORLD_URL)
+  fb.delete_shared_table('Viral%2050%20Worldwide')
+  fb.upload_shared_table('Viral%2050%20Worldwide', records, columns)
+end
+
+main if only_one_running?(__FILE__)

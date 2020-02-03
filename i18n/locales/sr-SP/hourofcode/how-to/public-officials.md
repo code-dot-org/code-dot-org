@@ -1,7 +1,5 @@
 ---
 title: Како-да за јавне личности
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

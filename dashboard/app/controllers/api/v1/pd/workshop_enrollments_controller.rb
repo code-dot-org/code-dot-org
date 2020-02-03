@@ -126,7 +126,9 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       csf_courses_planned: params[:csf_courses_planned],
       csf_has_physical_curriculum_guide: params[:csf_has_physical_curriculum_guide],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing]
+      replace_existing: params[:replace_existing],
+      csf_intro_intent: params[:csf_intro_intent],
+      csf_intro_other_factors: params[:csf_intro_other_factors]
     }
   end
 

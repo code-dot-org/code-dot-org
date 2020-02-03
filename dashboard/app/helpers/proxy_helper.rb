@@ -5,8 +5,6 @@ SSL_HOSTNAME_MISMATCH_REGEX = /does not match the server certificate/
 
 # Helper which fetches the specified URL, optionally caching and following redirects.
 module ProxyHelper
-  DASHBOARD_IP_ADDRESS = IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
-
   def render_proxied_url(
     location,
     allowed_content_types:,
@@ -27,7 +25,11 @@ module ProxyHelper
     url = URI.parse(location)
 
     raise URI::InvalidURIError.new if url.host.nil? || url.port.nil?
-    unless allowed_hostname?(url, allowed_hostname_suffixes) && allowed_ip_address?(url.host)
+    unless allowed_ip_address?(url.host)
+      render_error_response 400, "Target IP address is restricted"
+      return
+    end
+    unless allowed_hostname?(url, allowed_hostname_suffixes)
       render_error_response 400, "Hostname '#{url.host}' is not in the list of allowed hostnames. " \
           "The list of allowed hostname suffixes is: #{allowed_hostname_suffixes.join(', ')}. " \
           "If you wish to access a URL which is not currently allowed, please email support@code.org."
@@ -80,9 +82,10 @@ module ProxyHelper
     render_error_response 400, "Invalid URI #{location}"
   rescue SocketError, Net::OpenTimeout, Net::ReadTimeout, Errno::ECONNRESET, Errno::ECONNREFUSED, Errno::ENETUNREACH => e
     render_error_response 400, "Network error #{e.class} #{e.message}"
-  rescue OpenSSL::SSL::SSLError => e
-    raise e unless e.message =~ SSL_HOSTNAME_MISMATCH_REGEX
-    render_error_response 400, "Remote host SSL certificate error #{e.message}"
+  rescue OpenSSL::SSL::SSLError
+    render_error_response 400, "Remote host SSL certificate error"
+  rescue EOFError
+    render_error_response 400, "Remote host closed the connection before sending all data"
   end
 
   # Unlike render_proxied_url, this does not attempt to render the URL, but instead
@@ -130,9 +133,8 @@ module ProxyHelper
     return 400, "Network error #{e.class} #{e.message}"
   end
 
-  # Wrap constant in a method so it can be stubbed in a test.
   def dashboard_ip_address
-    DASHBOARD_IP_ADDRESS
+    @@dashboard_ip_address ||= IPAddr.new(IPSocket.getaddress(CDO.dashboard_hostname))
   end
   module_function :dashboard_ip_address
 

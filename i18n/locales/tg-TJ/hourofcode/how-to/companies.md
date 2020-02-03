@@ -1,7 +1,5 @@
 ---
 title: Тарзи ташкил кардани Соати рамз - Барои ширкатҳо
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

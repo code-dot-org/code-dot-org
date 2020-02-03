@@ -17,12 +17,9 @@ import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import * as utils from '../utils';
 import * as dropletConfig from './dropletConfig';
+import {getDatasetInfo} from '../storage/dataBrowser/dataUtils';
 import {initFirebaseStorage} from '../storage/firebaseStorage';
-import {
-  getColumnsRef,
-  onColumnNames,
-  addMissingColumns
-} from '../storage/firebaseMetadata';
+import {getColumnsRef, onColumnsChange} from '../storage/firebaseMetadata';
 import {getProjectDatabase, getSharedDatabase} from '../storage/firebaseUtils';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import designMode from './designMode';
@@ -75,7 +72,6 @@ import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import experiments from '../util/experiments';
 import header from '../code-studio/header';
 import {TestResults, ResultType} from '../constants';
-import i18n from '../code-studio/i18n';
 import {
   expoGenerateApk,
   expoCheckApkBuild,
@@ -189,7 +185,7 @@ Applab.makeFooterMenuItems = function(isIframeEmbed) {
   const footerMenuItems = [
     window.location.search.indexOf('nosource') < 0 && {
       key: 'how-it-works',
-      text: i18n.t('footer.how_it_works'),
+      text: commonMsg.howItWorks(),
       link: project.getProjectUrl('/view'),
       newWindow: true
     },
@@ -424,9 +420,11 @@ Applab.init = function(config) {
   }
 
   if (config.level.editBlocks) {
+    config.level.lastAttempt = '';
     header.showLevelBuilderSaveButton(() => ({
       start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml()
+      start_html: Applab.getHtml(),
+      start_libraries: JSON.stringify(project.getProjectLibraries())
     }));
   }
   Applab.channelId = config.channel;
@@ -551,16 +549,17 @@ Applab.init = function(config) {
   };
 
   config.afterClearPuzzle = function() {
+    let startLibraries;
+    if (config.level.startLibraries) {
+      startLibraries = JSON.parse(config.level.startLibraries);
+    }
+    project.sourceHandler.setInitialLibrariesList(startLibraries);
     designMode.resetIds();
     Applab.setLevelHtml(config.level.startHtml || '');
-    let promise = Applab.storage.populateTable(level.dataTables, true); // overwrite = true
-    promise.catch(outputError);
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      true,
-      () => {},
-      outputError
-    ); // overwrite = true
+    Applab.storage.clearAllData(
+      () => console.log('success'),
+      err => console.log(err)
+    );
     studioApp().resetButtonClick();
   };
 
@@ -601,18 +600,9 @@ Applab.init = function(config) {
   // Print any json parsing errors to the applab debug console and the browser debug
   // console. If a json parse error is thrown before the applab debug console
   // initializes, the error will be printed only to the browser debug console.
-  let dataLoadedPromise = Promise.resolve();
-  if (level.dataTables) {
-    dataLoadedPromise = Applab.storage.populateTable(level.dataTables, false); // overwrite = false
-    dataLoadedPromise.catch(outputError);
-  }
-  if (level.dataProperties) {
-    Applab.storage.populateKeyValue(
-      level.dataProperties,
-      false,
-      () => {},
-      outputError
-    ); // overwrite = false
+  let isDataTabLoaded = Promise.resolve();
+  if (level.dataTables || level.dataProperties || level.dataLibraryTables) {
+    isDataTabLoaded = initDataTab(level);
   }
 
   Applab.handleVersionHistory = studioApp().getVersionHistoryHandler(config);
@@ -681,6 +671,7 @@ Applab.init = function(config) {
     isProjectLevel: !!config.level.isProjectLevel,
     isSubmittable: !!config.level.submittable,
     isSubmitted: !!config.level.submitted,
+    librariesEnabled: !!config.level.librariesEnabled,
     showDebugButtons: showDebugButtons,
     showDebugConsole: showDebugConsole,
     showDebugSlider: showDebugConsole,
@@ -721,7 +712,7 @@ Applab.init = function(config) {
     });
   }
 
-  loadLibraryBlocks(config);
+  studioApp().loadLibraryBlocks(config);
 
   // Set the custom set of blocks (may have had maker blocks merged in) so
   // we can later pass the custom set to the interpreter.
@@ -767,7 +758,7 @@ Applab.init = function(config) {
     })
     .then(() => {
       if (getStore().getState().pageConstants.widgetMode) {
-        dataLoadedPromise.then(() => {
+        isDataTabLoaded.then(() => {
           Applab.runButtonClick();
         });
       }
@@ -779,28 +770,38 @@ Applab.init = function(config) {
   return loader;
 };
 
-function loadLibraryBlocks(config) {
-  if (!level.libraries) {
-    return;
+async function initDataTab(levelOptions) {
+  if (levelOptions.dataTables) {
+    Applab.storage.populateTable(levelOptions.dataTables).catch(outputError);
   }
-
-  level.libraryCode = '';
-  level.libraries.forEach(library => {
-    config.dropletConfig.additionalPredefValues.push(library.name);
-    level.libraryCode += library.source;
-    // TODO: add category management for libraries (blocked on spec)
-    // config.dropletConfig.categories['libraryName'] = {
-    //   id: 'libraryName',
-    //   color: 'colorName',
-    //   rgb: 'colorHexCode',
-    //   blocks: []
-    // };
-
-    library.dropletConfig.forEach(dropletConfig => {
-      config.dropletConfig.blocks.push(dropletConfig);
-      level.codeFunctions[dropletConfig.func] = null;
-    });
-  });
+  if (levelOptions.dataProperties) {
+    Applab.storage.populateKeyValue(
+      levelOptions.dataProperties,
+      () => {},
+      outputError
+    );
+  }
+  if (levelOptions.dataLibraryTables) {
+    let channelExists = await Applab.storage.channelExists();
+    if (!channelExists) {
+      const tables = levelOptions.dataLibraryTables.split(',');
+      tables.forEach(table => {
+        if (getDatasetInfo(table).current) {
+          Applab.storage.addCurrentTableToProject(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        } else {
+          Applab.storage.copyStaticTable(
+            table,
+            () => console.log('success'),
+            outputError
+          );
+        }
+      });
+    }
+  }
 }
 
 function changedToDataMode(state, lastState) {
@@ -1339,7 +1340,7 @@ function onInterfaceModeChange(mode) {
 }
 
 function onDataPreview(tableName) {
-  onColumnNames(getSharedDatabase(), tableName, columnNames => {
+  onColumnsChange(getSharedDatabase(), tableName, columnNames => {
     getStore().dispatch(updateTableColumns(tableName, columnNames));
   });
 
@@ -1387,10 +1388,7 @@ function onDataViewChange(view, oldTableName, newTableName) {
       } else {
         storageRef = projectStorageRef.child(`tables/${newTableName}/records`);
       }
-      if (newTableType === tableType.PROJECT) {
-        addMissingColumns(newTableName);
-      }
-      onColumnNames(
+      onColumnsChange(
         newTableType === tableType.PROJECT
           ? getProjectDatabase()
           : getSharedDatabase(),
@@ -1494,6 +1492,8 @@ Applab.onPuzzleComplete = function(submit) {
     Applab.message = results.message;
   } else if (!submit) {
     Applab.testResults = TestResults.FREE_PLAY;
+  } else {
+    Applab.testResults = TestResults.SUBMITTED_RESULT;
   }
 
   // If we're failing due to failOnLintErrors, replace the previous test result

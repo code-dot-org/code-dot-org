@@ -1,5 +1,13 @@
 name 'csp-post-survey-intro-2019'
 
 markdown <<MARKDOWN
-# This survey is still under development
+# CS Principles Post-Course Survey
+
+**Your input and feedback is important to us!** We use it to:
+
+* understand your experience
+* make improvements to the course
+
+Thanks for taking the time to help make CS Principles even better!
+
 MARKDOWN

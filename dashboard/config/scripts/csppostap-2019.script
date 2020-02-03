@@ -1,11 +1,11 @@
 hidden false
 login_required true
 hideable_stages true
-exclude_csf_column_in_legend true
 student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/csp-19/post-ap/{LESSON}'
+script_announcements [{"notice"=>"No Lesson Plans in Chapter 2", "details"=>"Please note there are no lesson plans for Chapter 2 of this unit.", "link"=>"", "type"=>"information", "visibility"=>"Teacher-only"}]
 family_name 'csppostap'
 version_year '2019'
 is_stable true
@@ -54,7 +54,7 @@ stage 'Project - Tell a Data Story', flex_category: 'csp_postap_1'
 level 'CSP U2L15 SFLP_2019', named: true
 
 stage 'Creating Javascript Objects', flex_category: 'csp_postap_2'
-level 'U4L02 Student Lesson Introduction_2018_2019'
+level 'U4L02 Student Lesson Introduction Video_2018_2019'
 level 'U4 - Objects - eventParameter_2019'
 level 'U4 - Objects - dotNotation_2019'
 level 'U4 - Objects - createDotNotation_2019'

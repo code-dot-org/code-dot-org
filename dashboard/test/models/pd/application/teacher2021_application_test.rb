@@ -306,12 +306,12 @@ module Pd::Application
       csv_header_csd = CSV.parse(Teacher2021Application.csv_header('csd'))[0]
       assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 98, csv_header_csd.length
+      assert_equal 95, csv_header_csd.length
 
       csv_header_csp = CSV.parse(Teacher2021Application.csv_header('csp'))[0]
       refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2020-21 school year?"
       assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2020-21 school year?"
-      assert_equal 100, csv_header_csp.length
+      assert_equal 97, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -453,26 +453,6 @@ module Pd::Application
       assert_equal %w(cspWhichGrades cspHowOffer), application.errors.messages[:form_data]
     end
 
-    test 'queue_email skips principal_approval_completed_partner with no partner email address' do
-      application = build :pd_teacher2021_application
-      application.expects(:formatted_partner_contact_email).returns(nil)
-      CDO.log.expects(:info).with("Skipping principal_approval_completed_partner for application id #{application.id}")
-
-      assert_does_not_create Email do
-        application.queue_email :principal_approval_completed_partner
-      end
-    end
-
-    test 'queue_email queues up principal_approval_completed_partner with a partner email address' do
-      application = build :pd_teacher2021_application
-      application.expects(:formatted_partner_contact_email).returns('partner@ex.net')
-      CDO.log.expects(:info).never
-
-      assert_creates Email do
-        application.queue_email :principal_approval_completed_partner
-      end
-    end
-
     test 'should_send_decision_email?' do
       application = build :pd_teacher2021_application, status: :pending
 
@@ -534,24 +514,17 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csd_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
+            principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
-            principal_approval: YES,
-            principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
-          },
-          bonus_points_scores: {
-            race: 2,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -584,25 +557,17 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
+            principal_approval: YES,
             principal_schedule_confirmed: YES,
           },
           meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES,
-            principal_approval: YES,
-            principal_schedule_confirmed: YES,
-            principal_diversity_recruitment: YES,
             free_lunch_percent: YES,
             underrepresented_minority_percent: YES,
-          },
-          bonus_points_scores: {
-            csp_how_offer: 2,
-            race: 2,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -628,20 +593,13 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: YES,
             csp_which_grades: YES,
             plan_to_teach: YES,
             committed: YES,
+            previous_yearlong_cdo_pd: YES,
             replace_existing: YES,
           },
-          meets_scholarship_criteria_scores: {
-            plan_to_teach: YES,
-            previous_yearlong_cdo_pd: YES
-          },
-          bonus_points_scores: {
-            csp_how_offer: 2,
-            race: 2
-          },
+          meets_scholarship_criteria_scores: {},
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
@@ -673,22 +631,16 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csd_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
+            principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
-            principal_approval: NO,
-            principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-          },
-          bonus_points_scores: {
-            race: 0,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
@@ -721,39 +673,23 @@ module Pd::Application
       assert_equal(
         {
           meets_minimum_criteria_scores: {
-            regional_partner_name: NO,
             csp_which_grades: NO,
             committed: NO,
+            previous_yearlong_cdo_pd: NO,
             replace_existing: NO,
+            principal_approval: NO,
             principal_schedule_confirmed: NO,
           },
           meets_scholarship_criteria_scores: {
-            previous_yearlong_cdo_pd: NO,
-            principal_approval: NO,
-            principal_schedule_confirmed: NO,
-            principal_diversity_recruitment: NO,
             free_lunch_percent: NO,
             underrepresented_minority_percent: NO,
-          },
-          bonus_points_scores: {
-            csp_how_offer: 0,
-            race: 0,
           },
         }.deep_stringify_keys,
         JSON.parse(application.response_scores)
       )
     end
 
-    test 'autoscore is idempotent' do
-      application = create :pd_teacher2021_application, regional_partner: nil
-      application.update(response_scores: {regional_partner_name: YES}.to_json)
-
-      application.auto_score!
-
-      assert_equal YES, JSON.parse(application.response_scores)['regional_partner_name']
-    end
-
-    test 'principal responses override teacher responses for scoring' do
+    test 'autoscore principal responses override teacher responses' do
       options = Pd::Application::Teacher2021Application.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
@@ -780,7 +716,66 @@ module Pd::Application
         application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
     end
 
-    test 'nil results when applicable' do
+    test 'autoscore principal responses for replace_existing question' do
+      principal_options = Pd::Application::PrincipalApproval2021Application.options
+
+      test_cases = [
+        # If the answer for replace_course is 'Yes', the application does not meet requirement
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].first},
+          meet_requirement: NO
+        },
+        {
+          principal_answers: {
+            replace_course: principal_options[:replace_course].first,
+            replace_which_course_csp: principal_options[:replace_which_course_csp].first
+          },
+          meet_requirement: NO
+        },
+        # If the answer for replace_course is 'No...', the application meets requirement
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].second},
+          meet_requirement: YES
+        },
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].third},
+          meet_requirement: YES
+        },
+        # If the answer for replace_course is 'I don't know...', the verdict is inconclusive
+        {
+          principal_answers: {replace_course: principal_options[:replace_course].last},
+          meet_requirement: nil
+        }
+      ]
+
+      # Creates a teacher application with an inconclusive replace_existing answer.
+      # The principal's responses will override teacher's responses anyway.
+      application = build :pd_teacher2021_application,
+        form_data_hash: (
+          build :pd_teacher2021_application_hash, replace_existing: TEXT_FIELDS[:i_dont_know_explain]
+        )
+      application.auto_score!
+      assert_nil application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
+
+      # For each test case, creates an principal approval application and re-scores the
+      # teacher application.
+      test_cases.each_with_index do |test_case, index|
+        principal_approval = build :pd_principal_approval2021_application,
+          teacher_application: application,
+          form_data_hash: (
+            build :pd_principal_approval2021_application_hash_common, test_case[:principal_answers]
+          )
+
+        # Updates the application with principal's responses and run auto_score! again
+        application.on_successful_principal_approval_create(principal_approval)
+
+        assert_equal test_case[:meet_requirement],
+          application.response_scores_hash[:meets_minimum_criteria_scores][:replace_existing],
+          "Test case index #{index} failed"
+      end
+    end
+
+    test 'autoscore nil results when applicable' do
       options = Pd::Application::Teacher2021Application.options
       principal_options = Pd::Application::PrincipalApproval2021Application.options
 
@@ -800,7 +795,6 @@ module Pd::Application
 
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:principal_schedule_confirmed]
       assert_nil response_scores_hash[:meets_minimum_criteria_scores][:replace_existing]
-      assert_nil response_scores_hash[:meets_scholarship_criteria_scores][:principal_schedule_confirmed]
     end
 
     test 'principal_approval_state' do
@@ -869,6 +863,29 @@ module Pd::Application
       statuses.each do |status|
         application.status = status
         assert application.valid?
+      end
+    end
+
+    test 'meets_scholarship_criteria' do
+      application = create :pd_teacher2021_application
+      test_cases = [
+        {underrepresented_minority_percent: YES, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: nil, verdict: YES},
+        {underrepresented_minority_percent: YES, free_lunch_percent: NO, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: nil, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: nil, free_lunch_percent: NO, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: YES, verdict: YES},
+        {underrepresented_minority_percent: NO, free_lunch_percent: nil, verdict: REVIEWING_INCOMPLETE},
+        {underrepresented_minority_percent: NO, free_lunch_percent: NO, verdict: NO}
+      ]
+
+      test_cases.each do |test_case|
+        input = test_case.slice(:underrepresented_minority_percent, :free_lunch_percent)
+        application.update(response_scores: {meets_scholarship_criteria_scores: input}.to_json)
+
+        output = application.meets_scholarship_criteria
+        assert_equal test_case[:verdict], output, "Wrong result for case #{input}"
       end
     end
 

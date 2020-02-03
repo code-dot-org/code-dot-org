@@ -306,6 +306,22 @@ cs-CZ:
         kliknutí dělat různé taneční pohyby.  '
       Dance Party Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
       Dance Party Predict_2019: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      Dance_2019_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
+        ho dovnitř bloku `nastavení`.
+      Dance_2019_02: Blok `při stisknutí nahoru` ti umožňuje spustit kód, když dojde
+        ke stisknutí šipky nahoru. Zajisti, aby tanečník tlesknul, nebo vyzkoušej
+        jiný pohyb!
+      Dance_2019_03: 'Je čas na souboj tanečníků! Naprogramuj každého tanečníka, aby
+        předváděl pohyby, když mačkáš různé klávesy. Vyber pro každého tanečníka svůj
+        oblíbený pohyb, nebo je nastav na „(Náhodný)“, aby předvedli něco zcela nečekaného! '
+      Dance_2019_04: Zajisti, aby tanečník začal po čtvrtém taktu s novým pohybem.
+      Dance_2019_05: Nyní přiměj tanečníka začít po 6 taktech nový pohyb!
+      Dance_2019_06: Vytvoř skupinu doprovodných tanečníků kolem hlavního tanečníka
+        uprostřed.
+      Dance_2019_07: Změň velikost skupiny doprovodných tanečníků.
+      Dance_2019_08: Zkus změnit odstín jednoho z tanečníků (nebo celé skupiny)!
+      Dance_2019_09: Buď s těmito novými bloky kreativní!
+      Dance_2019_10: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
       Dance_Party_01: Do pracovního prostoru přetáhni blok `vytvořit nový` a připoj
         ho dovnitř bloku `nastavení`.
       Dance_Party_02: Přiměj losa začít po 4 taktech nový pohyb!
@@ -326,6 +342,30 @@ cs-CZ:
       Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo, a
         "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      Dance_Party_extras_alternate_2019: Sem a tam! (Pro podrobnosti klikni na „Více“)
+      Dance_Party_extras_battle: Taneční posádky (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_battle_2019: Taneční posádky (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_every_beat: Quarter Notes (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_every_beat_2019: Quarter Notes (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_layout: Pojďme se dostat do formace! (Podrobnosti klikněte
+        na „Více“)
+      Dance_Party_extras_layout_2019: Pojďme se dostat do formace! (Podrobnosti klikněte
+        na „Více“)
+      Dance_Party_extras_mixed_2019: Více tlačítek (Pro podrobnosti klikni na „Více“)
+      Dance_Party_extras_on_beat: Bass, střední a výšek (podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_on_beat_2019: Bass, střední a výšek (podrobnosti klikněte
+        na tlačítko „Více“)
+      Dance_Party_extras_speed: Urychlit to nahoru, zpomalit to (Podrobnosti klikněte
+        na tlačítko „Více“)
+      Dance_Party_extras_speed_2019: Urychlit to nahoru, zpomalit to (Podrobnosti
+        klikněte na tlačítko „Více“)
+      Dance_Party_extras_visible: Kam šli? (Podrobnosti klikněte na „Více“)
+      Dance_Party_extras_visible_2019: Kam šli? (Podrobnosti klikněte na „Více“)
       Find the Wizard: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       FoodFight: Toto je příklad hry jakou můžete vytvořit v play lab.
       Function intro Ryan: Použijte dvakrát funkci „postavit most“ a udělejte cestu
@@ -405,7 +445,7 @@ cs-CZ:
         med
       K-1 Bee 4: Získej tři nektary a pak udělej dva medy!
       K-1 Bee 5: Získej tři nektary a pak udělej tři medy!
-      K-1 Bee 6: Získej tři nektary a pak udělej dva medy!
+      K-1 Bee 6: Získej dva nektary a pak udělej dva medy!
       K-1 Bee 7: Získej tři nektary a pak udělej dva medy!
       K-1 Bee 9: Získej tři nektary a pak udělej dva medy!
       K-1 Bee Loops 1: Dostaň tento nektar, abys udělal med!
@@ -419,8 +459,8 @@ cs-CZ:
       K-1 Bee Puzzle 12: Získej tři nektary a pak udělej dva medy
       K-1 Maze 10: 'Jdi kolem TNT, abys mne dostal k prasátku! '
       K-1 Maze 2: Posun mne na východ, abys mne dostal k prasátku!
-      K-1 Maze 3: Posuň mne na jih, aby mne dostal k prasátku!
-      K-1 Maze 4: Přesuň mne na jih, abys mne dostal k prasátku!
+      K-1 Maze 3: Přesuň mne na jih, abys mne dostal k prasátku!
+      K-1 Maze 4: Přesuň mne na sever, abys mne dostal k prasátku!
       K-1 Maze 5: Posun mne na východ, abys mne dostal k prasátku!
       K-1 Maze 6: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
       K-1 Maze 7: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
@@ -522,10 +562,10 @@ cs-CZ:
         potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Chop Trees_2019: Potřebujeme postavit dům před západem slunce. Na
         dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
-      Overworld Free Play 20x20: Blahopřejeme! Dokončil jsi všechny naše hádanky!
-        Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
-      Overworld Free Play 20x20_2019: Blahopřejeme! Dokončil jsi všechny naše hádanky!
-        Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
+      Overworld Free Play 20x20: Blahopřejeme! Všechny úlohy splněny! Teď těž, buduj
+        a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
+      Overworld Free Play 20x20_2019: Blahopřejeme! Všechny úlohy splněny! Teď těž,
+        buduj a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
       Overworld House Frame Chosen: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld House Frame Chosen_2019: Postav zbytek tvého domu z jakéhokoliv materiálu,
@@ -880,9 +920,8 @@ cs-CZ:
         Teď se podíváme, jestli zvládneme vytvořit dvě čáry,
         které svírají úhel 90 stupňů. Budeš potřebovat blok "otoč"
         i blok "posuň".
-      frozen snowflake branch: |-
-        Zkus použít blok "vytvoř rameno vločky"
-        k vytvoření tří ramen, což začíná vypadat jako vločka.
+      frozen snowflake branch: Zkus použít blok "vytvoř rameno vločky" k vytvoření
+        tří ramen, což začne vypadat jako vločka.
       frozen snowflake full: Teď to zopakujme osmkrát k vytvoření krásné sněhové vločky!
       frozen snowflower: |-
         Složité sněhové vzory mohou být vytvořeny z
@@ -910,16 +949,3 @@ cs-CZ:
       grade5_artist_binary9: "Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \\\r
         \\\r je vidět, co se stane, když začneme být kreativní s bity?"
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
-      scrat 16: |-
-        Žalud! Žalud! Žalud! Použij blok "Když", aby mě tam dostal
-        s pomocí co nejnižšího počtu bloků.
-      scrat 17: |-
-        Dobrá, pro jistotu to uděláme znovu - toto se moc
-        neliší, ale pozor na stěny!
-      scrat 18: "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc
-        NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
-      scrat 19: Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
-      scrat 20: |-
-        Zvládneš přidat jen 3 bloky, abys mi pomohl vyřešit složitější
-        bludiště? Když to uděláš správně, dokážu projít libovolně klikatou cestu
-        bez ohledu na délku. Rychle! Led už taje!

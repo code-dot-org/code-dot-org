@@ -1,7 +1,5 @@
 ---
 title: Guía de instrucciones
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -49,7 +47,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 - Explica algunas formas en las que la tecnología hace impacto en nuestras vidas, con ejemplos que les interesen tanto a niños como a niñas (hable acerca de las tecnologías que salvan vidas, que ayudan apersonas, que las conecta, etc.).
 - Como clase, liste cosas que usan programación en la vida cotidiana.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- Vea consejos para que la chicas se interesen ciencia de la computación [aquí]({{ urls/girls }}).
 
 ## 6. ¡A Programar!
 
@@ -84,7 +82,7 @@ Proporcione auriculares para su clase, o pida a los estudiantes que traign los s
 
 [/col-33]
 
-- [Print certificates]({{ urls/certificates }}) for your students.
+- [Imprimir certificados]({{ urls/certificates }}) para tus estudiantes.
 - [Print "I did an Hour of Code!"]({{ urls/promote_stickers }}) stickers for your students.
 - [Pida camisetas personalizadas](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) para su escuela.
 - Comparta fotos y vídeos del evento de la Hora del Código en las redes sociales. ¡Utilice #HourOfCode y @codeorg para que también podamos resaltar su éxito!

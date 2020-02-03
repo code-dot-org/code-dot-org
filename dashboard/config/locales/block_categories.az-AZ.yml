@@ -3,23 +3,15 @@ az:
   data:
     block_categories:
       Actions: Əmrlər
-      Loops: dövrlər
-      Functions: funksiyalar
       Color: Rəng
-      Math: Riyaziyyat
-      Logic: Məntiq
-      Variables: dəyişənlər
-      Number: Ədəd
-      Image: Şəkil
+      Comment: Şərh
       Conditionals: Şərti ifadələr
       Events: Hadisələr
-      Text: mətn
-      Comment: Şərh
-      World: Dünya
-      Location: Yer
+      Functions: funksiyalar
+      Logic: Məntiq
+      Loops: dövrlər
+      Math: Riyaziyyat
       Numbers: Ədədlər
-      Start: Başlayın
-      Brush: Fırça
-      test: yoxla
-      Name: Ad
-      Function: Funksiya
+      Text: mətn
+      Variables: dəyişənlər
+      World: Dünya

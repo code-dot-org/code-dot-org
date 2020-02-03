@@ -216,16 +216,6 @@ export class DetailViewContents extends React.Component {
   }
 
   getOriginalState() {
-    // Principal Implementation is only scoreable in csd applications. It was the one
-    // exception to the whole thing and not worth reimplimenting the consts file
-    const bonusPoints =
-      this.props.applicationData.course === 'csd'
-        ? this.scoreableQuestions['bonusPoints']
-        : _.filter(
-            this.scoreableQuestions['bonusPoints'],
-            x => x !== 'principal_implementation'
-          );
-
     return {
       editing: false,
       status: this.props.applicationData.status,
@@ -252,7 +242,7 @@ export class DetailViewContents extends React.Component {
       pd_workshop_id: this.props.applicationData.pd_workshop_id,
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
-      bonus_point_questions: bonusPoints,
+      bonus_point_questions: this.scoreableQuestions['bonusPoints'],
       cantSaveStatusReason: ''
     };
   }
@@ -1031,8 +1021,8 @@ export class DetailViewContents extends React.Component {
   renderDetailViewTableLayout = () => {
     const sectionsToRemove =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? ['section5AdditionalDemographicInformation', 'section6Submission']
-        : ['section6Submission'];
+        ? ['additionalDemographicInformation']
+        : ['submission'];
 
     return (
       <div>
@@ -1250,7 +1240,7 @@ export class DetailViewContents extends React.Component {
             <td style={styles.answerColumn}>
               {this.renderRegionalPartnerAnswer()}
             </td>
-            {this.renderScoringSection('regionalPartnerName')}
+            <td style={styles.scoringColumn} />
           </tr>
           {this.props.applicationData.application_type ===
             ApplicationTypes.teacher && (

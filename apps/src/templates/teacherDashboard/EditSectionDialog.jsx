@@ -30,6 +30,7 @@ class EditSectionDialog extends Component {
           <EditSectionForm
             title={i18n.editSectionDetails()}
             locale={this.props.locale}
+            isNewSection={false}
           />
         </PadAndCenter>
       </BaseDialog>

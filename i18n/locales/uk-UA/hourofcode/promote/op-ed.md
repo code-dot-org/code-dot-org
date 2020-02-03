@@ -1,7 +1,5 @@
 ---
 title: Зразок заяви у підтримку тижня інформатики та Години коду
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

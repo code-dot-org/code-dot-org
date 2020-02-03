@@ -1,7 +1,5 @@
 ---
 title: Sådan afholder man Hour of Code - Virksomheder
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

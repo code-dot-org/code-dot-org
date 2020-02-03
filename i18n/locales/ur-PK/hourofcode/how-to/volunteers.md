@@ -1,7 +1,5 @@
 ---
 title: گھنٹے کے کوڈ رضاکاروں کے لئے نکات گائیڈ
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

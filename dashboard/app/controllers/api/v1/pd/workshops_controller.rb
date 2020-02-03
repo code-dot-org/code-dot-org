@@ -39,6 +39,7 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     enrollments = ::Pd::Enrollment.for_user(current_user).all.reject do |enrollment|
       enrollment.workshop&.future_or_current_teachercon_or_fit?
     end
+
     workshops = enrollments.map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
@@ -192,9 +193,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     render json: @workshop, serializer: Api::V1::Pd::WorkshopSummarySerializer
   end
 
+  use_database_pool potential_organizers: :persistent
+
   # Users who could be re-assigned to be the organizer of this workshop
   def potential_organizers
-    render json: @workshop.potential_organizers
+    render json: @workshop.potential_organizers.pluck(:name, :id).map {|name, id| {label: name, value: id}}
   end
 
   private

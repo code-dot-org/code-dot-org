@@ -1,7 +1,5 @@
 ---
 title: Shëmbuj Zgjidhjesh në Mbështetje të Javës së Arsmimit në Shkencat Kompjuterike dhe të Orës së Kodimit
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

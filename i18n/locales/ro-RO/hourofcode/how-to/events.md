@@ -1,7 +1,5 @@
 ---
 title: Cum sa organizezi un eveniment Hour of Code
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

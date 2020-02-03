@@ -1,6 +1,5 @@
 ---
 title: Участие всей школы
-layout: wide
 ---
 
 {{ signup_button }}

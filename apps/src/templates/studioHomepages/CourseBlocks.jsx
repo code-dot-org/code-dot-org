@@ -26,28 +26,28 @@ export class CourseBlocksCsf extends Component {
 
 class CourseBlocksCsfModern extends Component {
   componentDidMount() {
-    $('#coursea-2017')
+    $('#coursea')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
       .show();
-    $('#courseb-2017')
+    $('#courseb')
       .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
       .show();
-    $('#coursec-2017')
+    $('#coursec')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
       .show();
-    $('#coursed-2017')
+    $('#coursed')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
       .show();
-    $('#coursee-2017')
+    $('#coursee')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
       .show();
-    $('#coursef-2017')
+    $('#coursef')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
       .show();
-    $('#pre-express-2017')
+    $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
-    $('#express-2017')
+    $('#express')
       .appendTo(ReactDOM.findDOMNode(this.refs.express))
       .show();
   }
@@ -92,7 +92,7 @@ class CourseBlocksCsfModern extends Component {
           notice={i18n.courseBlocksLegacyNotificationHeading()}
           details={i18n.courseBlocksLegacyNotificationBody()}
           detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-          detailsLink="https://docs.google.com/document/d/1MVDfbEzr0o9DqaOYmOOYpsQPTfXUFvCx4Xs9uixrdBE/edit?usp=sharing"
+          detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
           detailsLinkNewWindow={true}
           dismissible={false}
           buttons={[
@@ -169,8 +169,8 @@ export class CourseBlocksHoc extends Component {
 
   componentDidMount() {
     const tiles = this.props.isInternational
-      ? ['#dance', '#aquatic', '#frozen', '#hourofcode']
-      : ['#dance', '#aquatic', '#applab-intro', '#flappy'];
+      ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
+      : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
 
     tiles.forEach((tile, index) => {
       $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
@@ -179,11 +179,11 @@ export class CourseBlocksHoc extends Component {
 
   render() {
     return (
-      <div className="row">
-        <ProtectedStatefulDiv ref="0" />
-        <ProtectedStatefulDiv ref="1" />
-        <ProtectedStatefulDiv ref="2" />
-        <ProtectedStatefulDiv ref="3" />
+      <div className="tutorial-row">
+        <ProtectedStatefulDiv className="tutorial-block" ref="0" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="1" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="2" />
+        <ProtectedStatefulDiv className="tutorial-block" ref="3" />
       </div>
     );
   }

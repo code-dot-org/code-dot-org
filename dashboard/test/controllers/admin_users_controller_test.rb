@@ -46,7 +46,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test "should assume_identity by username" do
     sign_in @admin
 
-    post :assume_identity, params: {user_id: @not_admin.username}
+    post :assume_identity, params: {user_id: "  " + @not_admin.username + "  "}
     assert_redirected_to '/'
 
     assert_signed_in_as @not_admin

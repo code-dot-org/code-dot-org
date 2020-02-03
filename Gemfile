@@ -28,7 +28,10 @@ gem 'sprockets-rails'
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
 gem 'responders', '~> 2.0'
 
-gem 'sinatra', '~> 2.0.0.beta2', require: 'sinatra/base'
+# Pinning sinatra to 2.0.2, since '~> 2.0.2' actually lands us on 2.0.5, which
+# breaks some firebase URIs. See
+# https://github.com/code-dot-org/code-dot-org/pull/31614
+gem 'sinatra', '2.0.2', require: 'sinatra/base'
 
 gem 'mysql2', '>= 0.4.1'
 # Ref: https://github.com/bdurand/seamless_database_pool/issues/38
@@ -243,6 +246,7 @@ gem 'aws-sdk-core', '~> 3'
 gem 'aws-sdk-dynamodb', '~> 1'
 gem 'aws-sdk-ec2', '~> 1'
 gem 'aws-sdk-firehose', '~> 1.6'
+gem 'aws-sdk-glue', '~> 1'
 gem 'aws-sdk-rds', '>= 1.38.1'
 gem 'aws-sdk-route53', '~> 1'
 gem 'aws-sdk-s3', '~> 1'
@@ -334,6 +338,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
+gem 'active_record_union'
 gem 'activerecord-import'
 gem 'scenic'
 gem 'scenic-mysql_adapter'

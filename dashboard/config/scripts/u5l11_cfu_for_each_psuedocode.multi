@@ -1,0 +1,22 @@
+name 'U5L11 CFU For Each Psuedocode'
+title 'AP Pseudocode: Loops'
+description ''
+right '`[82, 0, 0, 97, 91]`'
+wrong '`[5, 0, 0, 5, 5]`'
+wrong '`[0, 37, 50, 0, 0]`'
+wrong '`[77, 37, 50, 92, 86]`'
+
+
+markdown <<MARKDOWN
+## AP Reference Sheet 
+
+The AP Reference Sheet shows how traversal questions will be represented on the exam. Read through these sections of the Reference Sheet and answer the question below.
+
+![](https://images.code.org/d80af7f9371d2ddc35736d9d9b369d94-image-1572024785426.png)
+
+## Practice Question
+
+What is stored in `studentScores` after running the program code?
+
+![](https://images.code.org/7230ff7b6b25659600501141472cf036-image-1572026118949.png)
+MARKDOWN

@@ -324,11 +324,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -349,6 +344,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -421,11 +421,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -446,6 +441,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -480,11 +480,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "We have set the variable \"length\" to 50.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with 50 pixel sides.",
@@ -505,6 +500,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The `length` variable is set to 50 and is being used in the `move forward by` block, so the artist will draw a triangle with 50 pixel sides."
+            }
+          ],
+          "questions": [
+            {
+              "text": "We have set the variable \"length\" to 50. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -708,11 +708,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Read the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and collect all of the nectar from every flower. ",
@@ -733,6 +728,12 @@
               "text": "I don't know. ",
               "correct": false,
               "feedback": "The `for` loop will let the bee collect the right amount of nectar, but it is only set to reach 4 flowers."
+            }
+          ],
+          "markdown": "Ah!  The use of `for` loops makes this puzzle a lot easier!\n\n\n",
+          "questions": [
+            {
+              "text": "Read the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -913,11 +914,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a straight line that increases in thickness from one side of the play space to the other.",
@@ -938,6 +934,12 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Incorrect. Each time through the `for` loop, the artist draws a longer line that is also thicker."
+            }
+          ],
+          "markdown": "We used the counter from our `for` loop to change the width of the brush on this drawing.  \n\n\n",
+          "questions": [
+            {
+              "text": "What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -987,11 +989,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
-            }
-          ],
           "answers": [
             {
               "text": "The sprite will spin",
@@ -1012,6 +1009,11 @@
               "text": "The sprite will change colors.",
               "correct": false,
               "feedback": "Incorrect"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Click the \"edit\" button to see how the `mystery behavior` works. Study the code inside, then make a prediction."
             }
           ]
         }
@@ -1053,11 +1055,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
-            }
-          ],
           "answers": [
             {
               "text": "Left then down",
@@ -1078,6 +1075,11 @@
               "text": "Down, then left",
               "correct": false,
               "feedback": "Incorrect"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Make a prediction. Which way will the satellite move towards the galaxy?"
             }
           ]
         }
@@ -1162,9 +1164,8 @@
   },
   "https://studio.code.org/s/coursef-2019/stage/20/puzzle/1": {
     "dsls": {
-      "title": "Test Markdown Textbook Page",
       "content1": "Test Markdown Textbook Page",
-      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Bunny Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/gXM_YU_qL_QWo1o5Wkam96oiFrYY5VUp27m2xKlp7EQ/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/QeROTy1pNyjNPC-ZZdBN1mcpkmTEMUc2FYwXX0SOFAY/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
+      "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
   "https://studio.code.org/s/coursef-2019/stage/20/puzzle/2": {

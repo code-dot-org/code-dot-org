@@ -1,7 +1,5 @@
 ---
 title: Hur hålla i en Kodtimme - företag
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}
@@ -83,7 +81,7 @@ Sparka igång din Hour of Code genom inspirerande deltagare och diskutera hur da
 **When participants come across difficulties it's okay to respond:**
 
 - "Jag vet inte. Låt oss lista ut detta tillsammans."
-- "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
+- "Att lära sig programmera är som att lära sig ett nytt språk: du skriver inte flytande på en gång."
 
 **Vad gör man om en elev blir färdig tidigare?**
 

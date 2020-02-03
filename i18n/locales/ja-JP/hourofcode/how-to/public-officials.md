@@ -1,7 +1,5 @@
 ---
 title: 公的関係者のためのイベント開催ガイド
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

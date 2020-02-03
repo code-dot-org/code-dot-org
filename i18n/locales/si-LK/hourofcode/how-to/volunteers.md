@@ -1,7 +1,5 @@
 ---
 title: Hour of Code ස්වෙච්ඡා සේවකයින් සඳහා උපදෙස්
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

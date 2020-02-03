@@ -7,9 +7,9 @@ module Pd
     ].freeze
 
     SCHOLARSHIP_DROPDOWN_OPTIONS = [
-      {value: NO, label: "No"},
+      {value: NO, label: "No, paid teacher"},
       {value: YES_CDO, label: "Yes, Code.org scholarship"},
-      {value: YES_OTHER, label: "Yes, other scholarship"}
+      {value: YES_OTHER, label: "Yes, other funding (non code.org)"}
     ]
   end
 end

@@ -1,7 +1,5 @@
 ---
 title: Une Heure de Code Guide d'utilisation pour les mairies, régions et départements
-layout: wide
-nav: how_to_nav
 ---
 
 {{ signup_button }}

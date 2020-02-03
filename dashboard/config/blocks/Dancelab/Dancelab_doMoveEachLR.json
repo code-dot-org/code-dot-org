@@ -17,47 +17,51 @@
             "sprites"
           ],
           [
-            "all aliens",
+            "aliens",
             "\"ALIEN\""
           ],
           [
-            "all bears",
+            "bears",
             "\"BEAR\""
           ],
           [
-            "all cats",
+            "cats",
             "\"CAT\""
           ],
           [
-            "all dogs",
+            "dogs",
             "\"DOG\""
           ],
           [
-            "all ducks",
+            "ducks",
             "\"DUCK\""
           ],
           [
-            "all frogs",
+            "frogs",
             "\"FROG\""
           ],
           [
-            "all moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "all pineapples",
+            "pineapples",
             "\"PINEAPPLE\""
           ],
           [
-            "all robots",
+            "robots",
             "\"ROBOT\""
           ],
           [
-            "all sharks",
+            "sharks",
             "\"SHARK\""
           ],
           [
-            "all unicorns",
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
             "\"UNICORN\""
           ]
         ]

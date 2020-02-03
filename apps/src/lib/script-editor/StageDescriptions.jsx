@@ -63,9 +63,9 @@ export default class StageDescriptions extends React.Component {
     mismatchedStages: []
   };
 
-  expand = () => {
+  toggleExpanded = () => {
     this.setState({
-      collapsed: false
+      collapsed: !this.state.collapsed
     });
   };
 
@@ -138,11 +138,9 @@ export default class StageDescriptions extends React.Component {
       <div>
         <h4>Stage Descriptions</h4>
         <div style={styles.main}>
-          {this.state.collapsed && (
-            <button type="button" className="btn" onClick={this.expand}>
-              Click to Expand
-            </button>
-          )}
+          <button type="button" className="btn" onClick={this.toggleExpanded}>
+            {this.state.collapsed ? 'Click to Expand' : 'Click to Collapse'}
+          </button>
           {!this.state.collapsed && (
             <div>
               {currentDescriptions.map((stage, index) => {

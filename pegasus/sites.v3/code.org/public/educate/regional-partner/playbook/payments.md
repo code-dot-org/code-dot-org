@@ -16,21 +16,9 @@ ________________
 - [Community Events](#community)
 - [CS Fairs](#csfair)
 - [Local Summer Workshop Community Building Event](#LSW)
-- [Teacher Recruitment Fund](#recruitment)
 
 ________________
 
-## Announcements
-
-**March 8 -**
-
-Instructions for requesting reimbursement towards the [Teacher Recruitment Fund](https://code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) is now available. Jump to the [Teacher Recruitment Fund](#recruitment) section below.
-
-
-
-**March 1 -**
-
-All invoices should be submitted by completing the form and attaching the required documentation at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
 
 Please note that invoices submitted to invoices@code.org on or after March 1 will be redirected to the new submission form. Invoices submitted more than 30 days after the event or workshop date will not be paid per our existing policy.
 
@@ -201,12 +189,3 @@ Need an example of an official invoice? Visit [this site](http://www.wikihow.com
 [**Back to the top**](#top)
 ________________
 
-<a id="recruitment"></a>
-
-## Teacher Recruitment Fund
-
-To receive reimbursement for expenses incurred towards your Recruitment Fund, complete the form and attach recripts for [allowable expenses](https://staging.code.org/educate/regional-partner/playbook/teacher-recruitment#recruitment) at [bit.ly/codeinvoices](http://bit.ly/codeinvoices).
-
-Required information for reimbursement will include date, amount, invoice, receipts, a brief explanation of how the expenses supported recruitment in your region, and your best estimate of the number of teachers reached.
-
-[**Back to the top**](#top)

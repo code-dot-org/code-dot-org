@@ -1,4 +1,4 @@
-import {assert} from '../util/configuredChai';
+import {assert} from '../util/deprecatedChai';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 var testUtils = require('./../util/testUtils');
 

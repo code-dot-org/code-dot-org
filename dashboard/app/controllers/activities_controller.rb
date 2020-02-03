@@ -1,5 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
+require 'cdo/firehose'
 
 class ActivitiesController < ApplicationController
   include LevelsHelper
@@ -14,6 +15,8 @@ class ActivitiesController < ApplicationController
 
   MIN_LINES_OF_CODE = 0
   MAX_LINES_OF_CODE = 1000
+
+  use_database_pool milestone: :persistent
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
@@ -50,9 +53,9 @@ class ActivitiesController < ApplicationController
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
+        rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_filtering_error
           # If WebPurify or Geocoder fail, the program will be allowed, and we
-          # retain the share_checking_error to log it alongside the level_source
+          # retain the share_filtering_error to log it alongside the level_source
           # ID below.
         end
       end
@@ -62,11 +65,15 @@ class ActivitiesController < ApplicationController
           @level,
           params[:program].strip_utf8mb4
         )
-        if share_checking_error
-          slog(
-            tag: 'share_checking_error',
-            error: "#{share_checking_error.class.name}: #{share_checking_error}",
-            level_source_id: @level_source.id
+        if share_filtering_error
+          FirehoseClient.instance.put_record(
+            study: 'share_filtering',
+            study_group: 'v0',
+            event: 'share_filtering_error',
+            data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
+            data_json: {
+              level_source_id: @level_source.id
+            }.to_json
           )
         end
       end
@@ -94,7 +101,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    @level_source_image = find_or_create_level_source_image(params[:image], @level_source.try(:id))
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source)
 
     @new_level_completed = false
     if current_user

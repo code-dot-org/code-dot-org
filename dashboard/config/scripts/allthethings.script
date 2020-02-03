@@ -12,6 +12,7 @@ level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
 level 'courseC_maze_programming3', challenge: true
+level 'allthethings-anigif-instructions'
 
 stage 'Artist'
 level 'K-1 Artist1 1'
@@ -270,3 +271,8 @@ level 'PS predictive Applab level test'
 level 'contained_applab_choose2'
 level 'contained_csf_multi2'
 level 'contained_csf_free_response'
+level 'Test GameLab Submittable Free Response'
+level 'Video - The Future of Big Data'
+
+stage 'ML Fish'
+level 'allthethings HOC ML Fish 1'

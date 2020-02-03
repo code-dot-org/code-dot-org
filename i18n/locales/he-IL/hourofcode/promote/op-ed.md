@@ -1,7 +1,5 @@
 ---
 title: דוגמה למשאב לתמיכה בשבוע החינוך ושעת תכנות
-layout: wide
-nav: promote_nav
 ---
 
 {{ signup_button }}

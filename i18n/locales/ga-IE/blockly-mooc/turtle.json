@@ -47,6 +47,7 @@
   "jumpBackward": "léim ar gcúl",
   "jumpForward": "léim ar aghaidh",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "Aistríonn seo an t-ealaíontóir gan lorg a fhágáil.",
   "jumpEastTooltip": "Aistríonn seo an t-ealaíontóir soir gan lorg a fhágáil.",

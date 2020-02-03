@@ -1,9 +1,11 @@
 /* global dashboard */
+/* global appOptions */
 
 import {SVG_NS} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from './locationPickerModule';
 import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
+import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../animationListModule';
 import {changeInterfaceMode} from '../actions';
 import {Goal, show} from '../AnimationPicker/animationPickerModule';
@@ -88,7 +90,7 @@ const customInputTypes = {
       currentInputRow.appendTitle(button, inputConfig.name);
     },
     generateCode(block, arg) {
-      return block.getTitleValue(arg.name);
+      return `(${block.getTitleValue(arg.name)})`;
     }
   },
   locationVariableDropdown: {
@@ -225,11 +227,7 @@ const customInputTypes = {
       };
       block.superSetTitleValue = block.setTitleValue;
       block.setTitleValue = function(newValue, name) {
-        if (
-          inputConfig.assignment &&
-          name === inputConfig.name &&
-          block.blockSpace.isFlyout
-        ) {
+        if (name === inputConfig.name && block.blockSpace.isFlyout) {
           newValue = Blockly.Variables.generateUniqueName(newValue);
         }
         block.superSetTitleValue(newValue, name);
@@ -381,7 +379,20 @@ export default {
           .appendTitle(fieldLabel, 'VAR')
           .appendTitle(Blockly.Msg.VARIABLES_GET_TAIL);
 
-        if (Blockly.useModalFunctionEditor) {
+        let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+
+        // If there is a toolbox with no categories and the level allows editing
+        // blocks, disallow editing the behavior, because renaming the behavior
+        // can break things.
+        if (
+          appOptions.level.toolbox &&
+          !appOptions.readonlyWorkspace &&
+          !Blockly.hasCategories
+        ) {
+          allowBehaviorEditing = false;
+        }
+
+        if (allowBehaviorEditing) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
           Blockly.bindEvent_(
             editLabel.fieldGroup_,
@@ -510,17 +521,19 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-      initialize(flyout, cursor) {
-        if (behaviorEditor && !behaviorEditor.isOpen()) {
-          flyout.addButtonToFlyout_(
-            cursor,
-            'Create a Behavior',
-            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-          );
-        }
-      },
-      addDefaultVar: false
-    });
+    if (blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE) {
+      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+        initialize(flyout, cursor) {
+          if (behaviorEditor && !behaviorEditor.isOpen()) {
+            flyout.addButtonToFlyout_(
+              cursor,
+              i18n.createBlocklyBehavior(),
+              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+            );
+          }
+        },
+        addDefaultVar: false
+      });
+    }
   }
 };

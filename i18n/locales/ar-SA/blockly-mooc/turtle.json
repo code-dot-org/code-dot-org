@@ -47,6 +47,7 @@
   "jumpBackward": "القفز إلى الخلف بمقدار",
   "jumpForward": "القفز إلى الأمام بمقدار",
   "jumpToOverDown": "",
+  "jumpToPosition": "",
   "jumpByDirection": "",
   "jumpTooltip": "تحريك الفنان دون ترك أي علامات.",
   "jumpEastTooltip": "تحريك الفنان تجاه الشرق دون ترك أي علامات.",

@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import _ from 'lodash';
 
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 import Studio from '@cdo/apps/studio/studio';
 import Item from '@cdo/apps/studio/Item';

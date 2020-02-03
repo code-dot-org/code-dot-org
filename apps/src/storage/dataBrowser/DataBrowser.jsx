@@ -5,8 +5,7 @@ import color from '../../util/color';
 import msg from '@cdo/locale';
 import AddTableListRow from './AddTableListRow';
 import EditTableListRow from './EditTableListRow';
-import EditKeyRow from './EditKeyRow';
-import AddKeyRow from './AddKeyRow';
+import KVPairs from './KVPairs';
 import * as dataStyles from './dataStyles';
 import {connect} from 'react-redux';
 import {changeView, showWarning} from '../redux/data';
@@ -203,25 +202,7 @@ class DataBrowser extends React.Component {
                 : styles.inactiveBody
             }
           >
-            <table>
-              <tbody>
-                <tr>
-                  <th style={dataStyles.headerCell}>Key</th>
-                  <th style={dataStyles.headerCell}>Value</th>
-                  <th style={dataStyles.headerCell}>Actions</th>
-                </tr>
-
-                <AddKeyRow onShowWarning={this.props.onShowWarning} />
-
-                {Object.keys(this.props.keyValueData).map(key => (
-                  <EditKeyRow
-                    key={key}
-                    keyName={key}
-                    value={JSON.parse(this.props.keyValueData[key])}
-                  />
-                ))}
-              </tbody>
-            </table>
+            <KVPairs />
           </div>
         </div>
       </div>

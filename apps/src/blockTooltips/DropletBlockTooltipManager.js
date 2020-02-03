@@ -150,7 +150,8 @@ DropletBlockTooltipManager.prototype.getTooltipHTML = function(functionName) {
     functionShortDescription: tooltipInfo.description,
     parameters: tooltipInfo.parameterInfos,
     signatureOverride: tooltipInfo.signatureOverride,
-    showExamplesLink: this.showExamplesLink
+    showExamplesLink: this.showExamplesLink,
+    customExamplesLink: tooltipInfo.customExamplesLink
   });
 };
 

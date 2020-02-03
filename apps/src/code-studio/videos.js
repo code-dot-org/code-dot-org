@@ -5,9 +5,10 @@ import trackEvent from '../util/trackEvent';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-var videojs = require('video.js');
+import videojs from 'video.js';
 var testImageAccess = require('./url_test');
 var clientState = require('./clientState');
+import i18n from '@cdo/locale';
 
 var videos = (module.exports = {});
 
@@ -15,11 +16,23 @@ videos.createVideoWithFallback = function(
   parentElement,
   options,
   width,
-  height
+  height,
+  fullWidth,
+  roundedCorners
 ) {
   upgradeInsecureOptions(options);
   var video = createVideo(options);
-  video.width(width).height(height);
+  if (fullWidth) {
+    video.addClass('video-player-full-width');
+    parentElement.addClass('video-content-full-width');
+    width = '100%';
+    height = '100%';
+  } else {
+    video.width(width).height(height);
+  }
+  if (roundedCorners) {
+    video.addClass('video-player-rounded-corners');
+  }
   if (parentElement) {
     parentElement.append(video);
   }
@@ -52,13 +65,19 @@ function onYouTubeIframeAPIReady() {
 }
 
 function createVideo(options) {
-  return $('<iframe id="video"/>')
+  const videoDiv = $('<iframe id="video"/>')
     .addClass('video-player')
     .attr({
       src: options.src,
       allowfullscreen: 'true',
       scrolling: 'no'
     });
+
+  const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
+    videoDiv
+  );
+
+  return videoTabContainerDiv;
 }
 
 /**
@@ -190,8 +209,14 @@ videos.showVideoDialog = function(options, forceShowVideo) {
   var nav = $div.find('.ui-tabs-nav');
   nav.append(download);
 
+  // Even though some React code will mount to this div and clear its
+  // contents, include the same link string as the React code will use, so that
+  // our calculations for the modal dimensions will account for its presence.
   var fallbackPlayerLinkDiv = $(
-    '<div id="fallback-player-caption-dialog-link"/>'
+    '<div id="fallback-player-caption-dialog-link">' +
+      '<a style="opacity: 0; pointer-events: none">' +
+      i18n.fallbackVideoClosedCaptioningLink() +
+      '</a></div>'
   ).css({
     'padding-right': '40px',
     'padding-top': '9px',
@@ -319,9 +344,13 @@ videos.onYouTubeBlocked = function(youTubeBlockedCallback, videoInfo) {
 };
 
 function youTubeAvailabilityEndpointURL(noCookie) {
-  if (window.document.URL.toString().indexOf('force_youtube_fallback') >= 0) {
+  const url = window.document.URL.toString();
+  if (url.indexOf('force_youtube_fallback') >= 0) {
     return 'https://unreachable-test-subdomain.example.com/favicon.ico';
+  } else if (url.indexOf('force_youtube_player') >= 0) {
+    return 'https://code.org/images/favicon.ico';
   }
+
   if (noCookie) {
     return 'https://www.youtube-nocookie.com/favicon.ico';
   } else {
@@ -332,17 +361,34 @@ function youTubeAvailabilityEndpointURL(noCookie) {
 // Precondition: $('#video') must exist on the DOM before this function is called.
 function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
+
+  // If we have want the video player to be at 100% width & 100% height, then
+  // let's assume we are attaching to a container that is relative, and we want
+  // to expand to its edges.  This is currently implemented by a standalone
+  // video.
+  let containerDivStyle;
+  let extraVideoStyle = '';
+  let dimensions = '';
+  if (playerWidth === '100%' && playerHeight === '100%') {
+    containerDivStyle =
+      'position: absolute; top: 0; bottom: 0; left: 0; right: 0';
+    extraVideoStyle = 'vjs-fill';
+  } else {
+    containerDivStyle = '';
+    dimensions = 'width="' + playerWidth + '" height="' + playerHeight + '" ';
+  }
+
   var playerCode =
-    '<div><video id="' +
+    '<div style="' +
+    containerDivStyle +
+    '"><video id="' +
     fallbackPlayerID +
     '" ' +
-    'width="' +
-    playerWidth +
-    '" height="' +
-    playerHeight +
-    '" ' +
+    dimensions +
     (videoInfo.autoplay ? 'autoplay ' : '') +
-    'class="video-js vjs-default-skin vjs-big-play-centered" ' +
+    'class="video-js vjs-default-skin vjs-big-play-centered ' +
+    extraVideoStyle +
+    '" ' +
     'controls preload="auto" ' +
     'poster="' +
     videoInfo.thumbnail +
@@ -352,26 +398,29 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     '" type="video/mp4"/>' +
     '</video></div>';
 
-  // Swap current #video with new code
-  $('#video').replaceWith(playerCode);
+  $('#videoTabContainer').empty();
+  $('#videoTabContainer').append(playerCode);
 
-  videojs.options.flash.swf = '/blockly/video-js/video-js.swf';
-  videojs.options.techOrder = ['flash', 'html5'];
+  var videoPlayer = videojs(
+    fallbackPlayerID,
+    {nativeControlsForTouch: true},
+    function() {
+      var $fallbackPlayer = $('#' + fallbackPlayerID);
 
-  var videoPlayer = videojs(fallbackPlayerID, {}, function() {
-    var $fallbackPlayer = $('#' + fallbackPlayerID);
-    var showingErrorMessage = $fallbackPlayer.find('p').length > 0;
-    if (showingErrorMessage) {
-      $fallbackPlayer.addClass('fallback-video-player-failed');
-      if (hasNotesTab()) {
-        openNotesTab();
-      }
+      // Handle a video.js player error.
+      this.on('error', function(e) {
+        $fallbackPlayer.addClass('fallback-video-player-failed');
+        if (hasNotesTab()) {
+          openNotesTab();
+        }
+      });
+
+      // Properly dispose of video.js player instance when hidden.
+      $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
+        videoPlayer.dispose();
+      });
     }
-    // Properly dispose of video.js player instance when hidden
-    $fallbackPlayer.parents('.modal').one('hidden.bs.modal', function() {
-      videoPlayer.dispose();
-    });
-  });
+  );
 
   videoPlayer.on('ended', onVideoEnded);
 
@@ -390,7 +439,7 @@ function openNotesTab() {
 }
 
 function openVideoTab() {
-  var notesTabIndex = $('.dash_modal_body a[href="#video"]')
+  var notesTabIndex = $('.dash_modal_body a[href="#videoTabContainer"]')
     .parent()
     .index();
   $('.ui-tabs').tabs('option', 'active', notesTabIndex);

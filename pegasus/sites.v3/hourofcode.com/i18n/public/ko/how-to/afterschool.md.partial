@@ -10,7 +10,7 @@ nav: how_to_nav
 
 ### 이 운동에 참여하신 다음에는, 첫번째 컴퓨터 과학 시간에 이 철차대로 해보세요. Hour of Code는 초보자에게도 사용하기 쉽습니다! If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
----
+* * *
 
 ## 1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
@@ -81,6 +81,6 @@ Hour of Code를 경험하기 위한 최고의 선택은 인터넷이 연결된 �
 
 ## Hour of Code 이후에는 어떤 것들이 있나요?
 
-The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](%= codeorg_url('/learn/beyond') %)!
+The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to [learn more online](/beyond)!
 
 {{ signup_button }}
