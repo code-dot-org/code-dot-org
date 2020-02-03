@@ -25,7 +25,7 @@ var PubSubService = exports;
  * @param {!PubSubConfig} pubSubConfig
  * @returns {PubSubService}
  */
-PubSubService.create = function (pubSubConfig) {
+PubSubService.create = function(pubSubConfig) {
   if (pubSubConfig.usePusher) {
     return new PubSubService.PusherService(pubSubConfig.pusherApplicationKey);
   }
@@ -51,14 +51,14 @@ PubSubService.create = function (pubSubConfig) {
  * @constructor
  * @implements PubSubService
  */
-PubSubService.NullService = function () { };
+PubSubService.NullService = function() {};
 
 /**
  * Subscribe to events on a particular channel.
  * @param {string} channelID
  * @returns {PubSubChannel}
  */
-PubSubService.NullService.prototype.subscribe = function (channelID) {
+PubSubService.NullService.prototype.subscribe = function(channelID) {
   return new PubSubChannel.NullChannel();
 };
 
@@ -66,12 +66,12 @@ PubSubService.NullService.prototype.subscribe = function (channelID) {
  * Unsubscribe from events on a particular channel.
  * @param {string} channelID
  */
-PubSubService.NullService.prototype.unsubscribe = function (channelID) { };
+PubSubService.NullService.prototype.unsubscribe = function(channelID) {};
 
 /**
  * Disconnect from the PubSub service entirely.
  */
-PubSubService.NullService.prototype.disconnect = function () { };
+PubSubService.NullService.prototype.disconnect = function() {};
 
 /**
  * Wrapped Pusher.com API.
@@ -79,13 +79,13 @@ PubSubService.NullService.prototype.disconnect = function () { };
  * @constructor
  * @implements PubSubService
  */
-PubSubService.PusherService = function (applicationKey) {
+PubSubService.PusherService = function(applicationKey) {
   /**
    * Instance of actual Pusher JavaScript API.
    * @type {Pusher}
    * @private
    */
-  this.api_ = new Pusher(applicationKey, { encrypted: true });
+  this.api_ = new Pusher(applicationKey, {encrypted: true});
 };
 
 /**
@@ -93,7 +93,7 @@ PubSubService.PusherService = function (applicationKey) {
  * @param {string} channelID
  * @returns {PubSubChannel}
  */
-PubSubService.PusherService.prototype.subscribe = function (channelID) {
+PubSubService.PusherService.prototype.subscribe = function(channelID) {
   return new PubSubChannel.PusherChannel(this.api_.subscribe(channelID));
 };
 
@@ -101,7 +101,7 @@ PubSubService.PusherService.prototype.subscribe = function (channelID) {
  * Unsubscribe from events on a particular channel.
  * @param {string} channelID
  */
-PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
+PubSubService.PusherService.prototype.unsubscribe = function(channelID) {
   this.api_.unsubscribe(channelID);
 };
 
@@ -109,7 +109,7 @@ PubSubService.PusherService.prototype.unsubscribe = function (channelID) {
  * Disconnect from the Pusher service entirely.
  * It's invalid to take any further action on this object after disconnecting.
  */
-PubSubService.PusherService.prototype.disconnect = function () {
+PubSubService.PusherService.prototype.disconnect = function() {
   this.api_.disconnect();
   this.api_ = null;
 };

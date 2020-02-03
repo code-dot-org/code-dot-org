@@ -12,7 +12,7 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "# Thursday Pedagogy Reflection Part 1\r\n\r\n## Differentiating Instruction\r\n\r\nWhat strategies have you learned about for differentiating instruction to meet diverse learning needs of students in CS Discoveries? List at least two ideas. "
+    "long_instructions": "# Thursday Pedagogy Reflection Part 1\r\n\r\n## Differentiating Instruction\r\n\r\nWhat strategies have you learned about for differentiating instruction to meet diverse learning needs of students in CS Discoveries? List at least two ideas. "
   },
   "published": true,
   "notes": "",

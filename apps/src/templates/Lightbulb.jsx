@@ -1,5 +1,6 @@
-import React, {PropTypes} from 'react';
-import color from "../util/color";
+import PropTypes from 'prop-types';
+import React from 'react';
+import color from '../util/color';
 
 const styles = {
   count: {
@@ -8,7 +9,7 @@ const styles = {
     fill: color.white,
     stroke: color.black,
     strokeWidth: '30px',
-    fontFamily: 'Verdana, Geneva, sans-serif',
+    fontFamily: 'Verdana, Geneva, sans-serif'
   }
 };
 
@@ -19,7 +20,7 @@ export default class Lightbulb extends React.Component {
     lit: PropTypes.bool,
     size: PropTypes.number,
     style: PropTypes.object,
-    isMinecraft: PropTypes.bool,
+    isMinecraft: PropTypes.bool
   };
 
   static defaultProps = {
@@ -34,38 +35,45 @@ export default class Lightbulb extends React.Component {
     let bulbDisplay;
 
     if (this.props.isMinecraft) {
-      const href = this.props.lit ?
-        "iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA" +
-        "IGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACzSURBVHjalJExDsIw" +
-        "DEW/GzbYG4m5A505BzuH6cQpEGdg6TlYWLp0rpSOiHZrZIaGCsfNwJcsR8mT/fVDkGJokToAYNdV" +
-        "yO1ZkqZcuEyA+RHgFsgOc3EL9s2ykQT4K3Oau68BKkCmxAYp+VpdZfhDCh7GSfS1WITvYZyw2waH" +
-        "wS8A+k4mu7+g7x/RqEJEF4tdV/H7dWf2DcefpNK43gjAM5SUgq21yTQU7JxLwmvGOfX+GQDlKDxF" +
-        "gn7+bgAAAABJRU5ErkJggg==" :
-        "iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI" +
-        "WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsRFQUQP8g1cwAAAKpJREFUKM+VkbENxCAMRR+nK1JH" +
-        "AmWCZIVMkWHZAyktmSCioKbzVRfBGYr7jRF+sj8fQytBy6gDIN579n1vSOfcw71qcF1Xcs5Ya7HW" +
-        "knMmpfRsNDVYa9s2AGKMzPOMc443A8UY1d2LP6TgUkpTe7E0vkspTNME8PgFzHeyOY6D67qaSTXY" +
-        "syXeeznPU1JK8vtJKo0QAiGE7gMVvCzLMA0F3/c9hHvGZdT/APfyQc3umPvfAAAAAElFTkSuQmCC";
+      const href = this.props.lit
+        ? 'iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA' +
+          'IGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACzSURBVHjalJExDsIw' +
+          'DEW/GzbYG4m5A505BzuH6cQpEGdg6TlYWLp0rpSOiHZrZIaGCsfNwJcsR8mT/fVDkGJokToAYNdV' +
+          'yO1ZkqZcuEyA+RHgFsgOc3EL9s2ykQT4K3Oau68BKkCmxAYp+VpdZfhDCh7GSfS1WITvYZyw2waH' +
+          'wS8A+k4mu7+g7x/RqEJEF4tdV/H7dWf2DcefpNK43gjAM5SUgq21yTQU7JxLwmvGOfX+GQDlKDxF' +
+          'gn7+bgAAAABJRU5ErkJggg=='
+        : 'iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAABmJLR0QA/wD/AP+gvaeTAAAACXBI' +
+          'WXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsRFQUQP8g1cwAAAKpJREFUKM+VkbENxCAMRR+nK1JH' +
+          'AmWCZIVMkWHZAyktmSCioKbzVRfBGYr7jRF+sj8fQytBy6gDIN579n1vSOfcw71qcF1Xcs5Ya7HW' +
+          'knMmpfRsNDVYa9s2AGKMzPOMc443A8UY1d2LP6TgUkpTe7E0vkspTNME8PgFzHeyOY6D67qaSTXY' +
+          'syXeeznPU1JK8vtJKo0QAiGE7gMVvCzLMA0F3/c9hHvGZdT/APfyQc3umPvfAAAAAElFTkSuQmCC';
 
       bulbDisplay = (
-        <g className={this.props.shouldAnimate ? "animate-hint" : ""}>
+        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
           <image
             width="450"
             height="450"
             x="80"
             y="140"
             className="pixelated"
-            xlinkHref={"data:image/png;base64," + href}
+            xlinkHref={'data:image/png;base64,' + href}
           />
         </g>
       );
     } else {
-      const lines = this.props.lit ? [
-        <g key="line-0">
-          <line fill="#EFB834" x1="473.582" y1="208.1" x2="560.578" y2="159.16"/>
-          <path
-            fill="#EFB834"
-            d="M473.141,207.315c0,0,1.225-1.003,3.396-2.711c1.08-0.864,2.402-1.894,3.925-3.063
+      const lines = this.props.lit
+        ? [
+            <g key="line-0">
+              <line
+                fill="#EFB834"
+                x1="473.582"
+                y1="208.1"
+                x2="560.578"
+                y2="159.16"
+              />
+              <path
+                fill="#EFB834"
+                d="M473.141,207.315c0,0,1.225-1.003,3.396-2.711c1.08-0.864,2.402-1.894,3.925-3.063
             c1.525-1.167,3.227-2.514,5.117-3.927c1.887-1.418,3.931-2.954,6.092-4.578c2.158-1.632,4.462-3.3,6.831-5.055
             c2.386-1.723,4.843-3.519,7.372-5.285c2.515-1.791,5.104-3.552,7.677-5.341c2.578-1.778,5.065-3.721,7.503-5.648
             c1.228-0.948,2.436-1.907,3.665-2.792c1.231-0.881,2.478-1.695,3.736-2.442c2.527-1.472,5.12-2.629,7.656-3.587
@@ -76,13 +84,19 @@ export default class Lightbulb extends React.Component {
             c-2.865,1.27-5.713,2.568-8.55,3.788c-2.823,1.245-5.633,2.412-8.345,3.556c-2.729,1.113-5.352,2.217-7.867,3.213
             c-2.511,1.004-4.885,1.953-7.076,2.83c-2.189,0.881-4.224,1.637-6.013,2.334c-1.79,0.695-3.357,1.29-4.656,1.764
             c-2.587,0.968-4.08,1.494-4.08,1.494L473.141,207.315z"
-          />
-        </g>,
-        <g key="line-1">
-          <line fill="#EFB834" x1="492.348" y1="410.008" x2="589.509" y2="432.883"/>
-          <path
-            fill="#EFB834"
-            d="M492.555,409.132c0,0,1.581,0.091,4.335,0.303c1.38,0.095,3.05,0.232,4.962,0.403
+              />
+            </g>,
+            <g key="line-1">
+              <line
+                fill="#EFB834"
+                x1="492.348"
+                y1="410.008"
+                x2="589.509"
+                y2="432.883"
+              />
+              <path
+                fill="#EFB834"
+                d="M492.555,409.132c0,0,1.581,0.091,4.335,0.303c1.38,0.095,3.05,0.232,4.962,0.403
             c1.912,0.173,4.077,0.334,6.424,0.574c2.348,0.234,4.892,0.487,7.583,0.755c2.693,0.259,5.519,0.592,8.45,0.904
             c2.923,0.347,5.947,0.688,9.004,1.101c3.064,0.384,6.161,0.841,9.266,1.266c3.102,0.437,6.247,0.691,9.346,0.922
             c1.546,0.133,3.084,0.246,4.588,0.426c1.502,0.185,2.972,0.43,4.403,0.732c2.857,0.628,5.548,1.531,8.064,2.543
@@ -93,13 +107,19 @@ export default class Lightbulb extends React.Component {
             c-2.968-1.004-5.944-1.977-8.857-3c-2.92-0.995-5.779-2.038-8.549-3.032c-2.762-1.029-5.44-1.992-7.965-2.961
             c-2.528-0.961-4.918-1.869-7.124-2.708c-2.207-0.833-4.217-1.655-6.005-2.353c-1.788-0.7-3.344-1.323-4.621-1.854
             c-2.559-1.039-4.015-1.663-4.015-1.663L492.555,409.132z"
-          />
-        </g>,
-        <g key="line-2">
-          <line fill="#EFB834" x1="502.559" y1="301.7" x2="602.37" y2="300.685"/>
-          <path
-            fill="#EFB834"
-            d="M502.55,300.8c0,0,1.557-0.289,4.282-0.742c1.362-0.237,3.017-0.504,4.915-0.795
+              />
+            </g>,
+            <g key="line-2">
+              <line
+                fill="#EFB834"
+                x1="502.559"
+                y1="301.7"
+                x2="602.37"
+                y2="300.685"
+              />
+              <path
+                fill="#EFB834"
+                d="M502.55,300.8c0,0,1.557-0.289,4.282-0.742c1.362-0.237,3.017-0.504,4.915-0.795
             c1.898-0.289,4.039-0.65,6.375-0.979c2.336-0.334,4.867-0.697,7.544-1.08c2.677-0.392,5.5-0.744,8.421-1.142
             c2.921-0.362,5.939-0.753,9.006-1.084c3.067-0.359,6.183-0.656,9.3-0.985c3.116-0.317,6.23-0.823,9.296-1.339
             c1.533-0.24,3.053-0.499,4.556-0.683c1.503-0.18,2.989-0.293,4.45-0.342c2.924-0.073,5.753,0.16,8.438,0.542
@@ -110,13 +130,19 @@ export default class Lightbulb extends React.Component {
             c-3.122-0.266-6.244-0.499-9.318-0.796c-3.073-0.268-6.099-0.598-9.026-0.9c-2.928-0.338-5.758-0.634-8.442-0.971
             c-2.684-0.329-5.222-0.639-7.564-0.926c-2.342-0.281-4.49-0.599-6.394-0.849c-1.903-0.253-3.563-0.486-4.93-0.695
             c-2.734-0.397-4.296-0.655-4.296-0.655L502.55,300.8z"
-          />
-        </g>,
-        <g key="line-3">
-          <line fill="#EFB834" x1="135.661" y1="212.764" x2="48.665" y2="163.824"/>
-          <path
-            fill="#EFB834"
-            d="M135.22,213.548c0,0-1.493-0.526-4.08-1.494c-1.299-0.474-2.866-1.069-4.656-1.764
+              />
+            </g>,
+            <g key="line-3">
+              <line
+                fill="#EFB834"
+                x1="135.661"
+                y1="212.764"
+                x2="48.665"
+                y2="163.824"
+              />
+              <path
+                fill="#EFB834"
+                d="M135.22,213.548c0,0-1.493-0.526-4.08-1.494c-1.299-0.474-2.866-1.069-4.656-1.764
             c-1.789-0.697-3.824-1.453-6.013-2.334c-2.191-0.876-4.565-1.826-7.076-2.83c-2.515-0.996-5.138-2.1-7.867-3.213
             c-2.712-1.144-5.522-2.312-8.345-3.556c-2.837-1.22-5.686-2.518-8.55-3.788c-2.859-1.28-5.81-2.397-8.723-3.48
             c-1.448-0.557-2.895-1.092-4.289-1.683c-1.392-0.594-2.736-1.238-4.027-1.925c-2.57-1.396-4.905-3.01-7.041-4.681
@@ -127,13 +153,19 @@ export default class Lightbulb extends React.Component {
             c2.573,1.789,5.161,3.549,7.677,5.341c2.529,1.766,4.986,3.562,7.372,5.285c2.368,1.755,4.673,3.423,6.831,5.055
             c2.162,1.625,4.206,3.16,6.092,4.578c1.889,1.413,3.592,2.76,5.117,3.927c1.523,1.169,2.845,2.199,3.925,3.063
             c2.17,1.708,3.396,2.711,3.396,2.711L135.22,213.548z"
-          />
-        </g>,
-        <g key="line-4">
-          <line fill="#EFB834" x1="120.895" y1="411.672" x2="23.734" y2="434.547"/>
-          <path
-            fill="#EFB834"
-            d="M121.101,412.548c0,0-1.456,0.623-4.015,1.663c-1.277,0.53-2.833,1.153-4.621,1.854
+              />
+            </g>,
+            <g key="line-4">
+              <line
+                fill="#EFB834"
+                x1="120.895"
+                y1="411.672"
+                x2="23.734"
+                y2="434.547"
+              />
+              <path
+                fill="#EFB834"
+                d="M121.101,412.548c0,0-1.456,0.623-4.015,1.663c-1.277,0.53-2.833,1.153-4.621,1.854
             c-1.788,0.698-3.798,1.52-6.005,2.353c-2.206,0.838-4.596,1.747-7.124,2.708c-2.526,0.969-5.203,1.932-7.965,2.961
             c-2.77,0.993-5.629,2.037-8.549,3.032c-2.914,1.023-5.889,1.996-8.857,3c-2.971,0.993-5.899,2.169-8.776,3.344
             c-1.443,0.57-2.87,1.156-4.296,1.665c-1.427,0.505-2.852,0.941-4.267,1.309c-2.836,0.713-5.648,1.105-8.351,1.321
@@ -144,13 +176,19 @@ export default class Lightbulb extends React.Component {
             c3.104-0.425,6.201-0.882,9.265-1.266c3.057-0.412,6.081-0.754,9.004-1.101c2.931-0.312,5.757-0.644,8.45-0.904
             c2.691-0.268,5.235-0.521,7.583-0.755c2.347-0.239,4.512-0.4,6.424-0.574c1.913-0.171,3.583-0.308,4.962-0.403
             c2.754-0.212,4.335-0.303,4.335-0.303L121.101,412.548z"
-          />
-        </g>,
-        <g key="line-5">
-          <line fill="#EFB834" x1="112.684" y1="306.364" x2="12.873" y2="305.349"/>
-          <path
-            fill="#EFB834"
-            d="M112.675,307.264c0,0-1.562,0.257-4.296,0.655c-1.367,0.21-3.026,0.443-4.93,0.695
+              />
+            </g>,
+            <g key="line-5">
+              <line
+                fill="#EFB834"
+                x1="112.684"
+                y1="306.364"
+                x2="12.873"
+                y2="305.349"
+              />
+              <path
+                fill="#EFB834"
+                d="M112.675,307.264c0,0-1.562,0.257-4.296,0.655c-1.367,0.21-3.026,0.443-4.93,0.695
             c-1.904,0.25-4.051,0.568-6.394,0.849c-2.343,0.287-4.88,0.598-7.564,0.926c-2.684,0.337-5.514,0.633-8.442,0.971
             c-2.928,0.302-5.953,0.632-9.026,0.9c-3.074,0.297-6.195,0.53-9.318,0.796c-3.122,0.254-6.246,0.696-9.321,1.149
             c-1.537,0.209-3.063,0.437-4.569,0.59c-1.506,0.149-2.994,0.232-4.456,0.251c-2.925,0.014-5.749-0.277-8.425-0.713
@@ -161,21 +199,23 @@ export default class Lightbulb extends React.Component {
             c3.116,0.329,6.232,0.626,9.299,0.985c3.067,0.33,6.085,0.722,9.006,1.084c2.92,0.398,5.744,0.75,8.421,1.142
             c2.677,0.383,5.208,0.745,7.544,1.08c2.336,0.329,4.477,0.69,6.375,0.979c1.898,0.291,3.552,0.558,4.915,0.795
             c2.725,0.453,4.282,0.742,4.282,0.742L112.675,307.264z"
-          />
-        </g>
-      ] : [];
+              />
+            </g>
+          ]
+        : [];
 
-      bulbDisplay = (<g className={this.props.shouldAnimate ? "animate-hint" : ""}>
-        <path
-          fill={this.props.lit ? "#EFB834" : "#C9C9C9"}
-          d="M453.775,353.156c0,24.012-57.189,128.942-61.414,132.265c-12.384,9.741-48.514,15.318-82.869,16.518
+      bulbDisplay = (
+        <g className={this.props.shouldAnimate ? 'animate-hint' : ''}>
+          <path
+            fill={this.props.lit ? '#EFB834' : '#C9C9C9'}
+            d="M453.775,353.156c0,24.012-57.189,128.942-61.414,132.265c-12.384,9.741-48.514,15.318-82.869,16.518
           c-8.362,0.292-16.619,0.325-24.403,0.096c-20.716-0.611-38.081-3.079-45.155-7.464c-6.896-4.274-74.477-119.24-74.477-141.415
           c0-89.195,64.542-161.502,144.159-161.502S453.775,263.961,453.775,353.156z"
-        />
-        <g transform="matrix(1,0,0,-1,379.66102,1293.0169)">
-          <path
-            fill="#5D5D5D"
-            d="M7.357,980.857c0-2.96-1.081-5.521-3.244-7.684
+          />
+          <g transform="matrix(1,0,0,-1,379.66102,1293.0169)">
+            <path
+              fill="#5D5D5D"
+              d="M7.357,980.857c0-2.96-1.081-5.521-3.244-7.684
             s-4.724-3.244-7.684-3.244s-5.521,1.081-7.684,3.244s-3.244,4.724-3.244,7.684c0,10.473-6.147,18.556-18.442,24.248
             c-12.295,5.692-24.362,8.538-36.201,8.538c-2.96,0-5.521,1.081-7.684,3.244s-3.244,4.724-3.244,7.684
             c0,2.96,1.081,5.521,3.244,7.684s4.724,3.244,7.684,3.244c11.384,0,22.711-1.821,33.981-5.464s21.174-9.79,29.712-18.442
@@ -196,19 +236,24 @@ export default class Lightbulb extends React.Component {
             C-232.275,915.058-244,945.567-244,980.857c0,22.54,5.066,43.544,15.198,63.01c10.132,19.467,23.451,35.632,39.958,48.496
             c16.507,12.864,35.176,22.995,56.009,30.395s42.064,11.099,63.693,11.099s42.86-3.7,63.693-11.099s39.502-17.531,56.009-30.395
             c16.507-12.864,29.826-29.029,39.958-48.496C100.648,1024.401,105.714,1003.397,105.714,980.857z"
-          />
+            />
+          </g>
+          {lines}
         </g>
-        {lines}
-      </g>);
+      );
     }
 
     let countDisplay;
     if (this.props.lit && this.props.count) {
       // If there are more than nine hints, simply display "9+"
-      const countText = (this.props.count > 9) ? "9+" : this.props.count;
-      countDisplay = (<g>
-        <text id="hintCount" x="400" y="700" style={styles.count} >{countText}</text>
-      </g>);
+      const countText = this.props.count > 9 ? '9+' : this.props.count;
+      countDisplay = (
+        <g>
+          <text id="hintCount" x="400" y="700" style={styles.count}>
+            {countText}
+          </text>
+        </g>
+      );
     }
 
     return (

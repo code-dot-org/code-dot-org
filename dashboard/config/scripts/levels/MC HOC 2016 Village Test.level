@@ -37,7 +37,7 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "use_player": "true",
-    "instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to chase and attack the zombies!",
+    "short_instructions": "Oh no! Zombies have trapped you inside! Code the Iron Golem to chase and attack the zombies!",
     "failure_message_override": "You need to make the Iron Golem chase and attack the zombies to win.",
     "level_verification_timeout": "0",
     "use_score": "false",

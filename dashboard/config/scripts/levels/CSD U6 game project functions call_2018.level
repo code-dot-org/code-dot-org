@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Calling your Functions\r\n\r\nWith your functions defined, you can can call them wherever you need. Go through your event handlers, or anywhere else in your program that your function should be used, and add calls to the function you created.",
+    "long_instructions": "# Calling your Functions\r\n\r\nWith your functions defined, you can can call them wherever you need. Go through your event handlers, or anywhere else in your program that your function should be used, and add calls to the function you created.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

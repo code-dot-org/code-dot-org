@@ -7,11 +7,11 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
-      # Only rebuild if apps contents have changed since last build.
+      # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
-      if !RakeUtils.git_staged_changes?(apps_dir) &&
+      if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
         File.exist?(commit_hash) &&
-        File.read(commit_hash) == RakeUtils.git_folder_hash(apps_dir)
+        File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -24,9 +24,9 @@ namespace :build do
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
       ChatClient.log 'Building <b>apps</b>...'
-      npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
+      npm_target = CDO.optimize_webpack_assets ? 'build:dist' : 'build'
       RakeUtils.system "npm run #{npm_target}"
-      File.write(commit_hash, RakeUtils.git_folder_hash(apps_dir))
+      File.write(commit_hash, calculate_apps_commit_hash)
     end
   end
 
@@ -95,9 +95,13 @@ namespace :build do
         end
       end
 
-      # Skip asset precompile in development where `config.assets.digest = false`.
-      # Also skip on Circle CI where we will precompile assets later, right before UI tests.
-      unless rack_env?(:development) || ENV['CIRCLECI']
+      # Skip asset precompile in development.
+      if CDO.optimize_rails_assets
+        # If we did not optimize webpack assets, then rails asset precompilation
+        # will add digests to the names of webpack assets, after which webpack
+        # will be unable to find them.
+        raise "do not optimize rails assets without optimized webpack assets" unless CDO.optimize_webpack_assets
+
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
@@ -133,21 +137,30 @@ namespace :build do
     end
   end
 
-  task :restart_process_queues do
-    ChatClient.log 'Restarting <b>process_queues</b>...'
-    RakeUtils.restart_service 'process_queues'
-  end
-
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
-  tasks << :restart_process_queues if CDO.process_queues
   task all: tasks
 end
 
 desc 'Builds everything.'
 task :build do
   ChatClient.wrap('build') {Rake::Task['build:all'].invoke}
+end
+
+# List of paths that, if changed, should trigger an apps build.
+# This contains the apps source itself and any other dependency that affects the apps build,
+# e.g. shared constants (which generate js apps code during apps/script/generateSharedConstants)
+def apps_build_trigger_paths
+  [
+    apps_dir,
+    shared_constants_file,
+    shared_constants_dir
+  ]
+end
+
+def calculate_apps_commit_hash
+  RakeUtils.git_folder_hash(*apps_build_trigger_paths)
 end

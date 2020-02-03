@@ -7,12 +7,14 @@
   "properties": {
     "instructions_important": "false",
     "display_name": "Designing Screens with Code",
-    "reference": "/docs/csd/set_property/index.html",
+    "reference": "/docs/concepts/app-lab/designing-screens-with-code/index.html",
     "parent_level_id": 10120,
     "name_suffix": "_2018"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-10-26 16:07:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 16:10:48 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-10-26 16:07:32 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-10-26 16:10:48 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-12-19 19:52:10 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Map>

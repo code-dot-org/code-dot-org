@@ -1,0 +1,3 @@
+function clickedSpritePointer() {
+  return thisSprite;
+}

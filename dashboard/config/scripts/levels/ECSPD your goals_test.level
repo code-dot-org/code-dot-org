@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Documenting Your Goals",
-    "markdown_instructions": "__Optional: What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\r\n",
+    "long_instructions": "__Optional: What are your goals for your ECS class?__ *These goals will change over time, and we'll revisit this your response as we go through the course so we can check in on how we're progressing towards those goals.*\r\n",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 1769,

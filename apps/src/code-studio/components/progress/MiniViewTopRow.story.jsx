@@ -15,29 +15,28 @@ const initialState = {
   }
 };
 
-export default storybook => storybook
-  .storiesOf('MiniViewTopRow', module)
-  .withReduxStore({progress}, initialState)
-  .addStoryTable([
-    {
-      name: 'basic',
-      story: () => (
-        <div style={{width: 635, position: 'relative'}}>
-          <MiniViewTopRow
-            scriptName="course1"
-            linesOfCodeText="Total lines of code: 120"
-          />
-        </div>
-      )
-    },
-    {
-      name: 'no lines of text',
-      story: () => (
-        <div style={{width: 635, position: 'relative'}}>
-          <MiniViewTopRow
-            scriptName="course1"
-          />
-        </div>
-      )
-    }
-  ]);
+export default storybook =>
+  storybook
+    .storiesOf('MiniViewTopRow', module)
+    .withReduxStore({progress}, initialState)
+    .addStoryTable([
+      {
+        name: 'basic',
+        story: () => (
+          <div style={{width: 635, position: 'relative'}}>
+            <MiniViewTopRow
+              scriptName="course1"
+              linesOfCodeText="Total lines of code: 120"
+            />
+          </div>
+        )
+      },
+      {
+        name: 'no lines of text',
+        story: () => (
+          <div style={{width: 635, position: 'relative'}}>
+            <MiniViewTopRow scriptName="course1" />
+          </div>
+        )
+      }
+    ]);

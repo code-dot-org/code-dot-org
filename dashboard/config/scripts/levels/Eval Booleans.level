@@ -8,7 +8,7 @@
     "skin": "eval",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Booleans allow us to compare different values, returning \"true\" if the are equal, or \"false\" if they are not. What do you think this code will evaluate to?",
+    "short_instructions": "Booleans allow us to compare different values, returning \"true\" if the are equal, or \"false\" if they are not. What do you think this code will evaluate to?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

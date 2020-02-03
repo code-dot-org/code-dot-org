@@ -1,5 +1,4 @@
 @no_mobile
-@dashboard_db_access
 @as_student
 Feature: App Lab Scenarios
 

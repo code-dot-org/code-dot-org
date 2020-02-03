@@ -1,7 +1,4 @@
-import {
-  Direction,
-  KeyCodes,
-} from '../constants';
+import {Direction, KeyCodes} from '../constants';
 import CustomGameLogic from './customGameLogic';
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits
 
@@ -10,7 +7,7 @@ import '@cdo/apps/utils'; // Provides Function.prototype.inherits
  * @constructor
  * @implements CustomGameLogic
  */
-var SamBatLogic = function (studio) {
+var SamBatLogic = function(studio) {
   CustomGameLogic.apply(this, arguments);
   this.samIndex = 0;
   this.sam = null;
@@ -19,13 +16,15 @@ var SamBatLogic = function (studio) {
 };
 SamBatLogic.inherits(CustomGameLogic);
 
-SamBatLogic.prototype.onTick = function () {
+SamBatLogic.prototype.onTick = function() {
   this.sam = this.studio_.sprite[this.samIndex];
 
   // Move Sam with arrow keys
   for (var key in KeyCodes) {
-    if (this.studio_.keyState[KeyCodes[key]] &&
-        this.studio_.keyState[KeyCodes[key]] === "keydown") {
+    if (
+      this.studio_.keyState[KeyCodes[key]] &&
+      this.studio_.keyState[KeyCodes[key]] === 'keydown'
+    ) {
       switch (KeyCodes[key]) {
         case KeyCodes.LEFT:
           this.updateSam_(Direction.WEST);
@@ -74,7 +73,7 @@ SamBatLogic.prototype.onTick = function () {
  * Before moving, check if Sam would still be onscreen?
  * If move would take Sam offscreen, set dir to None
  */
-SamBatLogic.prototype.updateSam_ = function (dir) {
+SamBatLogic.prototype.updateSam_ = function(dir) {
   var centerX = this.sam.x + this.sam.width / 2;
   //invert Y
   var centerY = this.studio_.MAZE_HEIGHT - (this.sam.y + this.sam.height / 2);
@@ -114,7 +113,7 @@ SamBatLogic.prototype.updateSam_ = function (dir) {
  * @param {number} y Current y location of Sam (optional)
  * @returns {boolean} True if coordinate is onscreen?
  */
-SamBatLogic.prototype.onscreen = function (x, y) {
+SamBatLogic.prototype.onscreen = function(x, y) {
   return this.resolveCachedBlock_('VALUE')(x, y);
 };
 

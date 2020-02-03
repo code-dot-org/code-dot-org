@@ -9,17 +9,17 @@ And(/^I confirm correct visibility of view more links$/) do
   hidden_view_more_links = dcdo_flag.nil? ? true : dcdo_flag
   if hidden_view_more_links
     steps %Q{
-      And the project gallery contains 5 view more links
-      And element ".ui-project-app-type-area:eq(1)" contains text "App Lab"
+      And the project gallery contains 7 view more links
+      And element ".ui-project-app-type-area:eq(2)" contains text "App Lab"
+      And element ".ui-project-app-type-area:eq(2)" does not contain text "View more"
+      And element ".ui-project-app-type-area:eq(1)" contains text "Game Lab"
       And element ".ui-project-app-type-area:eq(1)" does not contain text "View more"
-      And element ".ui-project-app-type-area:eq(0)" contains text "Game Lab"
-      And element ".ui-project-app-type-area:eq(0)" does not contain text "View more"
     }
   else
     steps %Q{
-      And the project gallery contains 7 view more links
-      And element ".ui-project-app-type-area:eq(1)" contains text "View more App Lab projects"
-      And element ".ui-project-app-type-area:eq(0)" contains text "View more Game Lab projects"
+      And the project gallery contains 9 view more links
+      And element ".ui-project-app-type-area:eq(2)" contains text "View more App Lab projects"
+      And element ".ui-project-app-type-area:eq(1)" contains text "View more Game Lab projects"
     }
   end
 end
@@ -36,10 +36,15 @@ Then(/^I remove featured projects from the gallery$/) do
   FeaturedProject.delete_all
 end
 
-Then(/^I make a playlab project named "([^"]*)"$/) do |name|
+Then(/^I scroll the Play Lab gallery section into view$/) do
+  wait_short_until {@browser.execute_script('return $(".ui-playlab").length') > 0}
+  @browser.execute_script('$(".ui-playlab")[0].scrollIntoView(true)')
+end
+
+Then(/^I make a "([^"]*)" project named "([^"]*)"$/) do |project_type, name|
   steps %Q{
-    Then I am on "http://studio.code.org/projects/playlab/new"
-    And I get redirected to "/projects/playlab/([^\/]*?)/edit" via "dashboard"
+    Then I am on "http://studio.code.org/projects/#{project_type}/new"
+    And I get redirected to "/projects/#{project_type}/([^\/]*?)/edit" via "dashboard"
     And I wait for the page to fully load
     And element "#runButton" is visible
     And element ".project_updated_at" eventually contains text "Saved"
@@ -47,10 +52,23 @@ Then(/^I make a playlab project named "([^"]*)"$/) do |name|
     And I type "#{name}" into "input.project_name"
     And I click selector ".project_save"
     And I wait until element ".project_edit" is visible
-    Then I should see title "#{name} - Play Lab"
     And I press "#runButton" using jQuery
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
+  }
+end
+
+Then(/^I report abuse on the project$/) do
+  steps %Q{
+    Then I switch tabs
+    Then I wait until current URL contains "report_abuse"
+    And I wait until element "#uitest-email" is visible
+    And I type "abuse_reporter@school.edu" into "#uitest-email"
+    And I select the "Other" option in dropdown "uitest-abuse-type"
+    And I type "I just don't like it." into "#uitest-abuse-detail"
+    Then I click selector "#uitest-submit-report-abuse" once I see it
+    Then I wait until current URL contains "support.code.org"
+    Then I switch tabs
   }
 end
 

@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:27.000Z",
-  "level_num": "custom",
-  "user_id": 42,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -136,8 +132,8 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "Add lives to the clicker game that decrement by 1 when the background image is clicked (Click to see full instructions)",
-    "markdown_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and decrements by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, decrement the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
+    "short_instructions": "Add lives to the clicker game that decrement by 1 when the background image is clicked (Click to see full instructions)",
+    "long_instructions": "# Tracking Lives\r\n\r\nIn the game, the number of lives starts at 3 and decrements by 1 every time the background image is clicked. Add this functionality to your game!\r\n\r\n# Do This:\r\n- __Add your variable to keep track of lives.__\r\n- __Add a click handler for the background image.__ _ID: \"background\"_\r\n- __When the background is clicked, decrement the number of lives by 1.__\r\n\r\n<img src=\"https://images.code.org/79f1352aebb2e40c302d1900aacd31f4-image-1446138180044.gif\" style=\"width:200px;\">",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -170,8 +166,13 @@
     "encrypted_examples": "EmG2/AkqkFRV9fvCazwDJfM/xsJC8hqKZObPTp8J9bUVViC21WfXDU6IAbqi\nMRnw\n",
     "parent_level_id": 6785,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "show_debug_watch": "true",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:27.000Z",
+  "level_num": "custom",
+  "user_id": 42,
   "published": true
 }]]></config>
   <blocks/>

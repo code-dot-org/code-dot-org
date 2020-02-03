@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Can you add to this code so that it uses the \"age\" variable to calculate age in hours?",
+    "short_instructions": "Can you add to this code so that it uses the \"age\" variable to calculate age in hours?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

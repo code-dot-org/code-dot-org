@@ -1,4 +1,4 @@
-import {expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/deprecatedChai';
 import dropdown from '@cdo/apps/applab/designElements/dropdown';
 import library from '@cdo/apps/applab/designElements/library';
 
@@ -14,12 +14,16 @@ function getValue(e) {
   return dropdown.readProperty(e, 'value');
 }
 
-describe('Applab designElements/dropdown component', function () {
-
+describe('Applab designElements/dropdown component', function() {
   let e;
 
   beforeEach(() => {
-    e = library.createElement(library.ElementType.DROPDOWN, 50 /* left */, 40 /* top */, true /* withoutId */);
+    e = library.createElement(
+      library.ElementType.DROPDOWN,
+      50 /* left */,
+      40 /* top */,
+      true /* withoutId */
+    );
   });
 
   it('setting index changes value', () => {

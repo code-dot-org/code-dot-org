@@ -1,0 +1,86 @@
+.resources {
+  margin-top: 45px;
+}
+
+.resource-card {
+  height: 300px;
+  width: 468px;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+.resource-gif {
+  position: absolute;
+  width: 234px;
+  float: left;
+}
+
+.resource-text-box {
+  width: 234px;
+  height: 300px;
+  background-color: #00adbc;
+  position: absolute;
+  padding: 20px;
+  margin-left: 234px;
+}
+
+.resource-title {
+  font-size: 20px;
+  color: white;
+  font-family: 'Gotham 7r', sans-serif;
+  margin-bottom: 20px;
+}
+
+.resource-description {
+  font-size: 14px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.gray-button {
+  background-color: #e7e8ea;
+  border-color: #e7e8ea;
+  color: #5b6770;
+}
+
+#teacher-resources .col-50:nth-child(2) {
+  padding-left: 10px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  .col-50 {
+    padding-left: 10px;
+  }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 470px) {
+  .resource-card {
+    height: 468px;
+    width: 300px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resource-gif {
+    width: 100%
+  }
+
+  .resource-gif img {
+    margin-top: -50px;
+    width: 100%
+  }
+
+  .resource-text-box {
+    width: 300px;
+    height: 234px;
+    margin-left: 0px;
+    margin-top: 234px;
+  }
+}

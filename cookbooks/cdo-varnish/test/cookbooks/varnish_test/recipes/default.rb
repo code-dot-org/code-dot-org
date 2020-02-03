@@ -1,9 +1,9 @@
 include_recipe 'cdo-varnish'
-apt_package 'openjdk-7-jre-headless'
+apt_package 'openjdk-11-jdk-headless'
 
 require 'etc'
-user = Etc.getlogin
-home = Etc.getpwnam(user).dir
+user = Etc.getpwuid.name
+home = Etc.getpwuid.dir
 
 remote_file "#{home}/mock.jar" do
   source 'http://repo1.maven.org/maven2/com/github/tomakehurst/wiremock/1.57/wiremock-1.57-standalone.jar'

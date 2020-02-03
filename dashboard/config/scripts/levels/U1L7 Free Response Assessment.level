@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Assessment: Binary Numbers",
-    "markdown_instructions": "In 100 words or less describe how place value is used in the binary number system. How is it similar or different from the way place value is used in the base 10 number system.\n",
+    "long_instructions": "In 100 words or less describe how place value is used in the binary number system. How is it similar or different from the way place value is used in the base 10 number system.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 42,
   "properties": {
-    "markdown_instructions": "This is the question at hand....",
+    "long_instructions": "This is the question at hand....",
     "submittable": "false",
     "encrypted_solution": "Ti2Wp4sd/ImGLK+swkhqXby0PWgM/k3xCX1JI4s22TTgFjSplD90Vj0Y5Y5j\nXjlB\n",
     "allow_user_uploads": "false",

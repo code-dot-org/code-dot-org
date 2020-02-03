@@ -174,7 +174,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Event Handlers\r\n\r\nSet up an event handler for each of the elements you plan to use for input. Don't worry yet about getting the them fully functional, but you might use `console.log()` statements to help with testing.",
+    "long_instructions": "# Event Handlers\r\n\r\nSet up an event handler for each of the elements you plan to use for input. Don't worry yet about getting the them fully functional, but you might use `console.log()` statements to help with testing.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

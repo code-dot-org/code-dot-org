@@ -12,7 +12,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Assiging a Variable\r\n\r\nVariables **store a single piece of information that can change throughout your program**. The `=` command gives a variable a new value.\r\n\r\nYou read the command `size = 10;` as \"size gets the value 10\". You can also say \"size gets 10\".\r\n\r\n# Do This\r\n\r\n**Use the `=` command** to assign a value to the variable `numberOfDogs`",
+    "long_instructions": "# Assiging a Variable\r\n\r\nVariables **store a single piece of information that can change throughout your program**. The `=` command gives a variable a new value.\r\n\r\nYou read the command `size = 10;` as \"size gets the value 10\". You can also say \"size gets 10\".\r\n\r\n# Do This\r\n\r\n**Use the `=` command** to assign a value to the variable `numberOfDogs`",
     "start_blocks": "var numberOfCats;\r\nvar numberOfDogs;\r\nnumberOfCats = 10;\r\n//Assign a value to numberOfDogs",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -36,7 +36,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Predict: What will get displayed in the console?",
+    "short_instructions": "Predict: What will get displayed in the console?",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

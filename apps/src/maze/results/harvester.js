@@ -1,7 +1,7 @@
 import GathererHandler from './gatherer';
 
 import mazeMsg from '../locale';
-import { HarvesterTerminationValue, TestResults } from '../../constants.js';
+import {HarvesterTerminationValue, TestResults} from '../../constants.js';
 
 export default class HarvesterHandler extends GathererHandler {
   constructor(maze, config) {
@@ -10,11 +10,15 @@ export default class HarvesterHandler extends GathererHandler {
     // Initialize subtype-specific event listeners
 
     this.maze_.subtype.on('wrongCrop', () => {
-      this.executionInfo.terminateWithValue(HarvesterTerminationValue.WRONG_CROP);
+      this.executionInfo.terminateWithValue(
+        HarvesterTerminationValue.WRONG_CROP
+      );
     });
 
     this.maze_.subtype.on('emptyCrop', () => {
-      this.executionInfo.terminateWithValue(HarvesterTerminationValue.EMPTY_CROP);
+      this.executionInfo.terminateWithValue(
+        HarvesterTerminationValue.EMPTY_CROP
+      );
     });
   }
 
@@ -32,7 +36,9 @@ export default class HarvesterHandler extends GathererHandler {
     const executionInfo = this.executionInfo;
 
     if (!this.collectedEverything()) {
-      executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);
+      executionInfo.terminateWithValue(
+        HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING
+      );
     }
   }
 
@@ -51,7 +57,10 @@ export default class HarvesterHandler extends GathererHandler {
         // Values over TOO_MANY_BLOCKS_FAIL are not true failures, but indicate
         // a suboptimal solution, so in those cases we want to return our
         // app specific fail. Same goes for BLOCK_LIMIT_FAIL.
-        if (testResults >= TestResults.TOO_MANY_BLOCKS_FAIL || testResults === TestResults.BLOCK_LIMIT_FAIL) {
+        if (
+          testResults >= TestResults.TOO_MANY_BLOCKS_FAIL ||
+          testResults === TestResults.BLOCK_LIMIT_FAIL
+        ) {
           testResults = TestResults.APP_SPECIFIC_FAIL;
         }
         return testResults;

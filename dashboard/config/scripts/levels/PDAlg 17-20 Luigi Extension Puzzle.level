@@ -23,10 +23,10 @@
     "coordinate_grid_background": "false",
     "project_template_level_name": "Luigi's Pizza",
     "callout_json": "[]",
-    "instructions": "Without modifying your existing \"cost\" function, create a new \"coupon\" function that takes a pizza topping and coupon code and returns the cost of a pizza with that topping. If the coupon code is correct (you get to decide what it is), apply a 30% discount to the pizza.",
+    "short_instructions": "Without modifying your existing \"cost\" function, create a new \"coupon\" function that takes a pizza topping and coupon code and returns the cost of a pizza with that topping. If the coupon code is correct (you get to decide what it is), apply a 30% discount to the pizza.",
     "min_workspace_height": "2000",
     "disable_examples": "false",
-    "markdown_instructions": "Without modifying your existing `cost` function, create a new `coupon` function that takes a pizza topping and coupon code and returns the cost of a pizza with that topping. If the coupon code is correct (you get to decide what it is), apply a 30% discount to the pizza.",
+    "long_instructions": "Without modifying your existing `cost` function, create a new `coupon` function that takes a pizza topping and coupon code and returns the cost of a pizza with that topping. If the coupon code is correct (you get to decide what it is), apply a 30% discount to the pizza.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

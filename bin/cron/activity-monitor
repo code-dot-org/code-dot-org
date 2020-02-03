@@ -149,6 +149,7 @@ class Monitor
 
   def fetch
     CDO.log.info 'Fetching...'
+    require 'cdo/slog'
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     Retryable.retryable(tries: 3, on: OpenURI::HTTPError) do
       reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)

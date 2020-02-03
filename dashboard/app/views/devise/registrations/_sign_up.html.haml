@@ -1,0 +1,26 @@
+- SignUpTracking.log_load_sign_up session
+
+#signup
+  .row
+    .span9
+      -# FND-893 - Stop using markdown inside headers
+      %h1= t('signup_form.title')
+      - if @already_hoc_registered
+        = t('signup_form.hoc_already_signed_up_content_post_hoc_markdown', studio_url: CDO.studio_url('/'), markdown: true).html_safe
+      - else
+        = t('signup_form.overview_markdown', markdown: true).html_safe
+        = t('auth.already_signedup')
+        = link_to t('nav.user.signin'), new_session_path(resource_name)
+
+  -# Render both old and new signup forms to the page, with the new form
+  -# hidden. This setup will then be used by optimizely to situationally
+  -# switch which form is displayed.
+  .old_form
+    = render 'old_sign_up_form'
+  .new_form{style: "display: none"}
+    = render 'new_sign_up_form'
+
+%div{style: "clear:both"}
+%br/
+%br/
+%br/

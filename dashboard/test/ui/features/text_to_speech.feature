@@ -37,20 +37,40 @@ Scenario: Listen to TTS Audio in CSF
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 1st inline audio element
 
-Scenario: Listen to TTS Audio in CSD
+Scenario: Listen to TTS Audio in CSF contained level
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
   And I wait for the page to fully load
-  
+
+  # note: we expect audio for csf instructions
+  Then I wait until element ".inline-audio" is visible
+  Then I see 1 of jquery selector .inline-audio
+  #Checks that inline audio does not disappear (indication of error)
+  And I listen to the 0th inline audio element
+
+Scenario: Listen to TTS Audio in CSD
+  Given I am a student
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2"
+  And I wait for the page to fully load
+
   # note: we expect audio for csd instructions
   Then I wait until element ".inline-audio" is visible
   Then I see 1 of jquery selector .inline-audio
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
-Scenario: Listen to TTS Audio in CSP
+Scenario: Listen to TTS Audio in CSP and CSP contained level
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2"
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/4"
+  And I wait for the page to fully load
+
+  # note: we expect audio for csp instructions
+  Then I wait until element ".inline-audio" is visible
+  Then I see 1 of jquery selector .inline-audio
+  #Checks that inline audio does not disappear (indication of error)
+  And I listen to the 0th inline audio element
+
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/3"
   And I wait for the page to fully load
 
   # note: we expect audio for csp instructions

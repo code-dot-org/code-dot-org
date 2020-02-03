@@ -46,9 +46,9 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "##Here's a game for you to play! \r\nTo win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\r\n\r\nOnce you are done, you will learn how to make this game!",
+    "long_instructions": "##Here's a game for you to play! \r\nTo win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\r\n\r\nOnce you are done, you will learn how to make this game!",
     "disable_procedure_autopopulate": "false",
-    "instructions": "Here's a game for you to play! To win, use your arrow keys to get the penguin to run into the octopus.\r\n\r\nOnce you are done, you will learn how to make this game!",
+    "short_instructions": "Here's a game for you to play! To win, use your arrow keys to get the penguin to run into the octopus.\r\n\r\nOnce you are done, you will learn how to make this game!",
     "top_level_procedure_autopopulate": "false",
     "remove_items_when_actor_collides": "false",
     "contained_level_names": null

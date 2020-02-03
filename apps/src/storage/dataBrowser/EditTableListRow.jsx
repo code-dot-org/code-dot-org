@@ -1,15 +1,17 @@
 import ConfirmDeleteButton from './ConfirmDeleteButton';
-import { DataView } from '../constants';
+import {DataView} from '../constants';
 import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import * as dataStyles from './dataStyles';
 
 class EditTableListRow extends React.Component {
   static propTypes = {
     onViewChange: PropTypes.func.isRequired,
-    tableName: PropTypes.string.isRequired
+    tableName: PropTypes.string.isRequired,
+    tableType: PropTypes.string
   };
 
   handleEdit = () => {
@@ -17,14 +19,14 @@ class EditTableListRow extends React.Component {
   };
 
   handleDelete = () => {
-    FirebaseStorage.deleteTable(this.props.tableName);
+    FirebaseStorage.deleteTable(this.props.tableName, this.props.tableType);
   };
 
   render() {
     return (
       <tr style={dataStyles.row}>
         <td style={dataStyles.cell}>
-          <EditLink name={this.props.tableName} onClick={this.handleEdit}/>
+          <EditLink name={this.props.tableName} onClick={this.handleEdit} />
         </td>
         <td style={dataStyles.cell}>
           <ConfirmDeleteButton

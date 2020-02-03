@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Can you draw 3 squares 20 pixels apart from one another? Hint: each square is 100 pixels in size",
+    "short_instructions": "Can you draw 3 squares 20 pixels apart from one another? Hint: each square is 100 pixels in size",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

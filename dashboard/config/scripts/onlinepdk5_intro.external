@@ -4,7 +4,7 @@ skip_dialog true
 markdown <<MARKDOWN
 ## Welcome!
 
-<img align="left" src="//code.org/images/edquote1.png" height="910" width="400" hspace="20">
+<img style="float:left; margin:0 20px" src="//code.org/images/edquote1.png" height="910" width="400">
 
 As an educator, you know how important it is for your students to learn the basics of computer science. But how do you start teaching kids to code if you have no coding background yourself?
 

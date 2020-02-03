@@ -217,6 +217,7 @@ sq-AL:
   if_you_enjoyed: Ne qofte se u perlqeu te mesuarit, pyesni miqte ta provojne gjithashtu!
     Ne duam qe e gjithe bota te mesoje.
   personalize_certificate: Personalizoni certifikatën tuaj
+  print_certificates: Shtyp Certifikatat
   share_achievement: Shpërndaj arritjet tuaja
   beyond_hour_message: Vazhdo me <a href='http://studio.code.org'>kurse të tjera</a>,
     ose shiko më shumë mundësi tek <a href='/learn/beyond'>Mëso Përtej Një Ore</a>.
@@ -423,7 +424,6 @@ sq-AL:
   homepage_slot_text_link_buy: Përfshihu
   homepage_slot_text_link_donate: Bëj një donacion
   homepage_slot_text_link_shop: Këmisha, kapele dhe më shumë
-  homepage_header_codestudio: Krijimet e studentëve në Code Studio
   homepage_header_donors: Code.org falenderon të gjithë mbështetësit
   homepage_donors_seall: Shiko të gjitha
   homepage_donors_donate: Dhuro
@@ -925,8 +925,6 @@ sq-AL:
   classicmaze_name: Labirint Klasik
   iceage_name: Epoka e Akullnajave
   minecraft_name: Minecraft
-  math_category_name: Matematikë
-  hoc_category_name: Ora e Kodimit
   applab_name: Laboratori i Aplikacioneve
   basketball_name: Realizo një lojë basketbolli
   sports_name: Krijo lojën tënde sportive
@@ -986,6 +984,8 @@ sq-AL:
   coursee-2017_gradelevel: Moshat 8-12
   coursed-2018_gradelevel: Klasat 8+
   coursee-2018_gradelevel: Moshat 8-12
+  coursed-2019_gradelevel: Klasat 8+
+  coursee-2019_gradelevel: Moshat 8-12
   accelerated_gradelevel: Moshat 10-18
   codeorg_platformtext: Browserat e kohës, smartphones, tableta
   codeintl_platformtext: Browserat e kohës, smartphones, tableta
@@ -1551,11 +1551,51 @@ sq-AL:
     versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
     një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
     mundet që të mos funksionojë.
+  compatibility_unsupported_browser_markdown: Shfletuesi juaj nuk suportohet. Ju lutem
+    përmirësoni versionin e shfletuesit në <a href='%{supported_browsers_url}', target='_blank'>
+    një nga shfletuesit që suportohen</a>. Ju mund të provoni ta shikoni faqen, por
+    mundet që të mos funksionojë.
   flappy_shortcode: përplas flatrat
   header_courses: Kurset
   header_project_gallery: Projekte
   header_educate_hoc: Ora e Kodimit
   user_header_label: Përshëndetje %{username}
+  user_header_team: Skuadra
   user_header_settings: Llogaria ime
   user_header_logout: Dil
   user_header_signin: Futu
+  user_header_playlab: Play Lab
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy
+  applab_tile_start_tutorial: Fillo
+  aquatic_name: 'Minecraft: Udhëtimi ujor'
+  account_sign_up_email_opt_in: A mund t'ju dërgojmë email-e mbi përditësimin e kurseve
+    tona, mundësitë lokale apo të rejat e shkencave kompjuterike? (afërsisht një herë
+    në muaj)
+  account_sign_up_child_accept_terms: Konfirmoj se kam lejen e prindit ose të kujdestarit
+    ligjor për të përdorur shërbimet e Code.org.
+  hoc_overview_start_tutorial: Fillo
+  hoc2018_creativity_create: Krijo
+  hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
+  hoc2018_mc_details: Shumë gjuhë | Browserët modern dhe tabletat | Klasat 2+
+  hoc2018_mc_designer_title: Dizenjuesi i Minecraft
+  hoc2018_mc_designer_description: Kafshët e programit dhe krijesa të tjera Minecraft
+    në versionin tuaj të Minecraft.
+  hoc2018_mc_adventurer_title: Aventurieri Minecraft
+  hoc2018_mc_adventurer_description: Përdorni kodin për të marrë Alex apo Steve në
+    një aventurë.
+  hoc2018_mc_start: Fillo
+  hoc2018_mc_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
+  hoc2018_mc_videos_more: Më shumë <a href='%{inspiring_videos_playlist}'>video inspiruese</a>duke
+    shfaqur modele dhe të famshëm
+  hoc2018_mc_careers_more: Më shumë <a href='%{careers_url}' target='_blank'>video
+    inspiruese</a>duke shfaqur profesionist në fushat teknologjike
+  hoc2018_mc_video_1min: 1 minutë
+  hoc2018_mc_video_title_sports: Nxit vetveten. Çdokush mund të mësoj.
+  hoc2018_mc_video_title_inspire_girl: Frymëzo një vajzë
+  hoc2018_mc_homepage_join_us: Na u bashko!
+  hoc2018_mc_homepage_try_it: Provoje
+  hoc2018_dance_party_button: Fillo
+  hoc2018_dance_teacher_resources_tile1_button: Plani Mësimor
+  hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
+  hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë

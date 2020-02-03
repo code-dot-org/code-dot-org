@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_49_CSP_2_1_1'
+right 'I and II'
+wrong 'I and III'
+wrong 'II and III'
+wrong 'I, II, and III'
+markdown <<MARKDOWN
+Which of the following are equivalent?
+
+I.     11110 (base 2)
+II.    1E (base 16)
+III.   24 (base 10)
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1A**
+<hr>
+ (A) This is correct because 11110 in binary converts to decimal 30 and so does 1E in hexadecimal.
+
+<hr>
+ (B) This is not correct because 11110 in binary converts to decimal 30.
+
+<hr>
+ (C) This is not correct because 1E in hexadecimal converts to decimal 30.
+
+<hr>
+ (D) This is not correct because 1E in hexadecimal and 11110 in binary convert to decimal 30.
+
+MARKDOWN

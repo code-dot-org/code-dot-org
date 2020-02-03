@@ -1,92 +1,69 @@
 name 'OPD-K5 CS Tips'
 skip_dialog true
 markdown <<MARKDOWN
-# Getting Started > CS Fundamentals Tips & Tricks
+# Getting Started > Navigating this Online Course
 
-If you've made it this far, congratulations! You've already begun using CS Fundamentals successfully. As you complete this course, you'll familiarize yourself with everything Code Studio has to offer.
+If you've made it this far, congratulations! As you complete this course, you'll familiarize yourself with everything CS Fundamentals has to offer.
 
-By now, you probably feel comfortable getting around CS Fundamentals, but if you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course.
+If you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course.
 
 ---
 
 ## Stages
 
-The main PD page is broken up into several __stages__, which each represent a different topic or idea
+The main professional development page is pictured below. This page is broken up into several __stages__, which each represent a different topic or idea.
 
-<h4><details>
-<summary style="color:#ffa400;">click here to see more about stages</summary>
-<br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
-<br>
-<img src ="/script_assets/pd/pd_stage_overview.gif" />
-</details></h4>
+<img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
 
 <br/>
-***
 <br/>
 
 ## Puzzles
 
-Each stage is made up of levels that we call __puzzles__, which hold individual videos, readings, or questions. Puzzles are indicated as circles with numbers, and are visible: 
-- on the main PD page
-- on the header in any other puzzle on the same stage
-- from the header drop-down in any puzzle
-<br/>
-The colors of the puzzle circle will change based on your progress. 
-<br/>
-<br/>
-In this PD you'll see the following types of circles:
+Each stage is made up of levels that we call __puzzles__, which hold individual videos, readings, or questions. Puzzles are indicated as circles with numbers. The colors of the puzzle circle will change based on your progress. In this professional development you'll see the following types of circles:
 <br/>
 
-![/script_assets/pd/stage_states.png](/script_assets/pd/stage_states.png)
-
-
-<h4><details>
-<summary style="color:#ffa400;">click here to see more about puzzles</summary>
-<br>
-
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
-<br>
-<img src ="/script_assets/pd/pd_level_overview.gif" />
-</details></h4>
+<img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
 
 <br/>
-***
 <br/>
 
 ## Accessing Puzzles
 
-Click "continue" or "submit" at the bottom of each puzzle to progress to the next one. Or, at any point, you can jump to a new puzzle by clicking on that number in the header.
+Puzzles are visible:
+<p>-On the main professional development page</p>
+<p>-On the header in any other puzzle on the same stage</p>
+<p>-From the header drop-down in any puzzle</p>
 
 <h4><details>
-<summary style="color:#ffa400;">click here to see more about accessing puzzles</summary>
+<summary style="color:#ffa400;">Click here to see more about accessing puzzles</summary>
 <br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="/script_assets/pd/pd-level-click.gif" />
+<img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
 </details></h4>
 
 <br/>
-***
-<br/>
 
-## Resizing Text Boxes
+## Moving Between Puzzles
 
-__Resizing text boxes__ can be done by clicking and dragging the bottom-right corner of the box. 
+Click "Continue" or "Next Resource" after each puzzle to progress to the next one. Or, at any point, you can jump to a new puzzle by clicking on that number in the header.
 
 <h4><details>
-<summary style="color:#ffa400;">click here to see more about resizing text boxes</summary>
+<summary style="color:#ffa400;">Click here to see more about moving between puzzles</summary>
 <br>
-<div><em>once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
 <br>
-<img src ="/script_assets/pd/pd-resizing-box.gif" />
+<img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
 </details></h4>
 
 <br/>
-* * *
 <br/>
 
-> That's all there is to it! Feel free to come back to this level any time if you need a refresher on how CS Fundamentals works.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+> That's all there is to it! Feel free to come back to this level any time if you need a refresher on how this platform works.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
 MARKDOWN

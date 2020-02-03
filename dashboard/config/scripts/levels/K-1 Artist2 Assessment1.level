@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "artist",
-    "instructions": "Assessment: Draw a square next to the other square.",
+    "short_instructions": "Assessment: Draw a square next to the other square.",
     "x": "180",
     "y": "180",
     "is_k1": "true",

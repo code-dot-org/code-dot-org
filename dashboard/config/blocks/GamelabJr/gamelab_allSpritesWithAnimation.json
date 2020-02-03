@@ -1,0 +1,21 @@
+{
+  "category": "Sprites",
+  "config": {
+    "name": "allSpritesWithAnimation",
+    "expression": "{costume: VALUE}",
+    "inline": false,
+    "blockText": "{ANIMATION}",
+    "returnType": "Sprite",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "args": [
+      {
+        "name": "ANIMATION",
+        "customInput": "costumePicker"
+      }
+    ]
+  }
+}

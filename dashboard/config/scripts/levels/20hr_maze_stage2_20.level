@@ -7,7 +7,7 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[1,1,1,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,1,1,1,1,1,1],[1,0,1,0,0,0,0,0],[1,0,1,0,1,1,1,1],[1,0,1,0,3,0,0,1],[1,0,1,0,0,0,0,1],[2,0,1,1,1,1,1,1]]",
-    "instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.",
+    "short_instructions": "Can you add just 3 blocks to help me solve a more complex maze? If you do it right, I can walk any curvy path no matter the length.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

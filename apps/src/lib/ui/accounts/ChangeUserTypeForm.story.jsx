@@ -5,20 +5,19 @@ import {action} from '@storybook/addon-actions';
 const DEFAULT_PROPS = {
   values: {
     currentEmail: '',
-    emailOptIn: '',
+    emailOptIn: ''
   },
   validationErrors: {
     currentEmail: undefined,
-    emailOptIn: undefined,
+    emailOptIn: undefined
   },
   disabled: false,
   onChange: action('onChange'),
   onSubmit: action('onSubmit')
 };
 
-export default storybook => storybook
-  .storiesOf('ChangeUserTypeForm', module)
-  .addStoryTable([
+export default storybook =>
+  storybook.storiesOf('ChangeUserTypeForm', module).addStoryTable([
     {
       name: 'convert student to teacher account',
       story: () => (
@@ -26,7 +25,7 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'batman@bat.cave',
-            emailOptIn: 'yes',
+            emailOptIn: 'yes'
           }}
         />
       )
@@ -38,11 +37,11 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'robin@bat.cave',
-            emailOptIn: 'no',
+            emailOptIn: 'no'
           }}
           validationErrors={{
-            currentEmail: "Robin, get out of here!",
-            emailOptIn: 'No email for you.',
+            currentEmail: 'Robin, get out of here!',
+            emailOptIn: 'No email for you.'
           }}
         />
       )
@@ -54,11 +53,10 @@ export default storybook => storybook
           {...DEFAULT_PROPS}
           values={{
             currentEmail: 'currently-saving@bat.cave',
-            emailOptIn: 'yes',
+            emailOptIn: 'yes'
           }}
           disabled={true}
         />
       )
     }
   ]);
-

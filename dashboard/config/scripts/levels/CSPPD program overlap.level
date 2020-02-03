@@ -7,7 +7,7 @@
   "properties": {
     "title": "Relationship between Curriculum and PD",
     "height": "100",
-    "markdown_instructions": "#### Now that you've read more about the CSP program, what relationship do you see between the curriculum and Professional Development? What aspects of the two pieces of the program seem most important or interesting to you?\n",
+    "long_instructions": "#### Now that you've read more about the CSP program, what relationship do you see between the curriculum and Professional Development? What aspects of the two pieces of the program seem most important or interesting to you?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

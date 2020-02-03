@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "pvz",
-    "instructions": "Try this puzzle that uses conditionals and loops together. Use the \"if\" block to decide when to turn. Hint: you only need one more block to complete this puzzle. ",
+    "short_instructions": "Try this puzzle that uses conditionals and loops together. Use the \"if\" block to decide when to turn. Hint: you only need one more block to complete this puzzle. ",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

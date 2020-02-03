@@ -1,0 +1,25 @@
+name 'AP_practice_Qs_rqb_52_CSP_2_1_1'
+right '1101 1010'
+wrong '1110 1101'
+wrong '10 1111'
+wrong '1100 1110'
+markdown <<MARKDOWN
+Which of the following is the BINARY equivalent to the decimal number 218?
+
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.1** and Essential Knowledge statements: **2.1.1D**
+<hr>
+ (A) This is CORRECT because converting this binary number to decimal gives 218.
+
+<hr>
+ (B) Eliminate this choice because decimal 218 is an even number, and this binary number is odd (looking only at the right-most digit tells us this).
+
+<hr>
+ (C) Eliminate this choice because decimal 218 is an even number, and this binary number is odd (looking only at the right-most digit tells us this).
+
+<hr>
+ (D) This is incorrect because converting this binary number to decimal gives 206.
+
+MARKDOWN

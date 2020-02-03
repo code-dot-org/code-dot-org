@@ -29,7 +29,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Variable Arithmetic\r\n\r\nYou can use the values stored in a variable to perform **addition, subtraction, multiplication, and division**. Let's have a look at some common misconceptions.\r\n\r\n# Do This\r\n\r\n* Read the program provided\r\n* **Predict:** what will displayed when you run the program? Why? **Explain your reasoning to a neighbor**.\r\n* Run the program. Were you surpised by what happened? **Compare notes with a neighbor**.",
+    "long_instructions": "# Variable Arithmetic\r\n\r\nYou can use the values stored in a variable to perform **addition, subtraction, multiplication, and division**. Let's have a look at some common misconceptions.\r\n\r\n# Do This\r\n\r\n* Read the program provided\r\n* **Predict:** what will displayed when you run the program? Why? **Explain your reasoning to a neighbor**.\r\n* Run the program. Were you surpised by what happened? **Compare notes with a neighbor**.",
     "start_blocks": "//Predict: What will be displayed in the console.\r\nvar size = 10;\r\nsize + 1;\r\nconsole.log(size);",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -53,7 +53,7 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "instructions": "Change the value \"size\" initialized to make a larger square.",
+    "short_instructions": "Change the value \"size\" initialized to make a larger square.",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

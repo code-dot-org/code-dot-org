@@ -1,0 +1,14 @@
+{
+  "category": "",
+  "config": {
+    "func": "drawDec",
+    "blockText": "draw decimal {DEC}",
+    "args": [
+      {
+        "name": "DEC",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

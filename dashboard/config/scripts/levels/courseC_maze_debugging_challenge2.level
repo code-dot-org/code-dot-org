@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,3,1,1,1,1,0,0],[0,1,1,1,0,1,1,0],[0,0,1,1,1,0,1,0],[0,1,0,1,1,1,1,0],[0,1,1,0,1,1,1,0],[0,1,1,1,0,1,2,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Help Scrat reach the acorn with only four `turn` commands.",
+    "short_instructions": "Help Scrat reach the acorn with only four `turn` commands.",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -26,7 +26,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are getting stuck, try debugging the code.  Where does it go wrong?\",\"hint_id\":\"courseC_maze_debugging_challenge2_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a6b0afa269ccb1152a5b89ed3669b242/courseC_maze_debugging_challenge2.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!\\n\\n![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)\",\"hint_id\":\"courseC_maze_debugging_challenge2_c\",\"hint_type\":\"general\",\"hint_path\":\"[[6,6],[5,6],[5,4],[3,4],[3,1],[1,1]]\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cf7a6cb2c9e3dd28eeb61c0932b5d88b/courseC_maze_debugging_challenge2.mp3\"}]",
-    "markdown_instructions": "If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.",
+    "long_instructions": "If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

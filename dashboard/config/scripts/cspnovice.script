@@ -3,26 +3,26 @@ login_required true
 student_detail_progress_view true
 
 stage 'Welcome', flex_category: 'required'
-named_level 'welcome-csp-novice'
+level 'welcome-csp-novice', named: true
 
 stage 'Tuesday'
 level 'csp-tuesday-unit', progression: 'Unit Reflection'
 level 'csp-tuesday-unit2', progression: 'Unit Reflection'
-named_level 'csp-tuesday-pedagogy'
-named_level 'csp-tuesday-facilitation'
+level 'csp-tuesday-pedagogy', named: true
+level 'csp-tuesday-facilitation', named: true
 
 stage 'Wednesday'
 level 'csp-wednesday-unit', progression: 'Unit Reflection'
 level 'csp-wednesday-unit2', progression: 'Unit Reflection'
-named_level 'csp-wednesday-pedagogy'
-named_level 'csp-wednesday-facilitation'
+level 'csp-wednesday-pedagogy', named: true
+level 'csp-wednesday-facilitation', named: true
 
 stage 'Thursday'
 level 'csp-thursday-unit', progression: 'Unit Reflection'
 level 'csp-thursday-unit2', progression: 'Unit Reflection'
 level 'csp-thursday-pedagogy', progression: 'Pedagogy Reflection'
 level 'csp-thursday-pedagogy2', progression: 'Pedagogy Reflection'
-named_level 'csp-thursday-facilitation'
+level 'csp-thursday-facilitation', named: true
 
 stage 'Wrap Up'
-named_level 'csp-novice-congrats'
+level 'csp-novice-congrats', named: true

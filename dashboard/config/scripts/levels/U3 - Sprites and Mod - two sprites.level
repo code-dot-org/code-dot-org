@@ -38,8 +38,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Do This",
-    "markdown_instructions": "# Two Sprites\r\n\r\ntwo rects - make one move on the left side of the screen and one on the right side of the screen\r\n\r\n",
+    "short_instructions": "Do This",
+    "long_instructions": "# Two Sprites\r\n\r\ntwo rects - make one move on the left side of the screen and one on the right side of the screen\r\n\r\n",
     "start_blocks": "var sprite1 = createSprite(200, 200, 30, 30);\r\n\r\nframeRate(20);\r\n\r\nfunction draw() {\r\n\r\n}",
     "show_debug_watch": "true",
     "contained_level_names": null

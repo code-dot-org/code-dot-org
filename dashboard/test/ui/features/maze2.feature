@@ -5,7 +5,6 @@ Feature: Complete a simple maze level
     Given I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/11?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
     Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
 
   # This builds an uncommon program to avoid getting a crowdsourced hint.
@@ -22,7 +21,7 @@ Feature: Complete a simple maze level
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".uitest-topInstructions-inline-feedback" has text "Not quite. You have to use a block you aren’t using yet."
+    And element ".uitest-topInstructions-inline-feedback" has escaped text "Not quite. You have to use a block you aren’t using yet."
 
   Scenario: Submit a program with an empty repeat
     Then element "#runButton" is visible
@@ -33,7 +32,7 @@ Feature: Complete a simple maze level
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
     And element "#resetButton" is visible
-    And element ".uitest-topInstructions-inline-feedback" has text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
+    And element ".uitest-topInstructions-inline-feedback" has escaped text "The \"Repeat\" or \"If\" block needs to have other blocks inside it to work. Make sure the inner block fits properly inside the containing block."
     And I press "resetButton"
     Then element "#runButton" is visible
     And element "#resetButton" is hidden

@@ -15,9 +15,11 @@ level 'csd-post-survey-2017-q9_2018'
 
 page
 text 'csp-pre-survey-2017 preamble 2 cs in general'
+level 'csd-post-survey-2019-I like cs'
 level 'csd-post-survey-2017-q11_2018'
 level 'csd-post-survey-2017-q13_2018'
 level 'csd-post-survey-2017-q14_2018'
+level 'csd-post-survey-2019-able to learn cs'
 level 'csd-post-survey-2017-q16_2018'
 level 'csd-post-survey-2017-q17_2018'
 level 'csd-post-survey-2017-q18_2018'
@@ -25,11 +27,14 @@ level 'csd-post-survey-2017-q28_2018'
 
 page
 text 'csp-pre-survey-2017 preamble 3 this class'
-level 'csd-post-survey-2017-q22_2018'
+level 'csd-post-survey-2019-I like cs class'
+level 'csd-post-survey-2019-comfort in cs class'
 level 'csd-post-survey-2017-q23_2018'
 level 'csd-post-survey-2017-q24_2018'
+level 'csd-post-survey-2017-q22_2018'
 level 'csd-post-survey-2017-q26_2018'
 level 'csd-post-survey-2017-q29_2018'
+level 'csd-post-survey-2019-I want more cs'
 level 'csd-post-survey-2017-q30_2018'
 
 page

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Are you getting the hang of how to use function blocks? Let's modify this square so that it is 200 pixels in size. Hint: click on \"edit\" to change the size of the \"draw a square\" function editor. Remember to click on \"save and close\" to get out of the function editor. ",
+    "short_instructions": "Are you getting the hang of how to use function blocks? Let's modify this square so that it is 200 pixels in size. Hint: click on \"edit\" to change the size of the \"draw a square\" function editor. Remember to click on \"save and close\" to get out of the function editor. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

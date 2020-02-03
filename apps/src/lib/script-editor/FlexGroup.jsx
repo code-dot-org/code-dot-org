@@ -1,12 +1,14 @@
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import {connect} from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
-import { borderRadius, ControlTypes } from './constants';
+import {borderRadius, ControlTypes} from './constants';
 import OrderControls from './OrderControls';
 import StageCard from './StageCard';
-import { NEW_LEVEL_ID, addStage, addGroup } from './editorRedux';
-import { LevelKind } from '@cdo/apps/util/sharedConstants';
+import {NEW_LEVEL_ID, addStage, addGroup} from './editorRedux';
+import FlexCategorySelector from './FlexCategorySelector';
 
 const styles = {
   groupHeader: {
@@ -39,39 +41,74 @@ const styles = {
     border: '1px solid #ccc',
     boxShadow: 'none',
     margin: '0 10px 10px 10px'
+  },
+  flexCategorySelector: {
+    height: 30,
+    marginBottom: 30
   }
 };
 
-const FlexGroup = React.createClass({
-  propTypes: {
+// Replace ' with \'
+const escape = str => str.replace(/'/, "\\'");
+
+class FlexGroup extends Component {
+  static propTypes = {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,
     stages: PropTypes.array.isRequired,
-    levelKeyList: PropTypes.array.isRequired
-  },
+    levelKeyList: PropTypes.object.isRequired,
+    flexCategoryMap: PropTypes.object.isRequired
+  };
 
-  handleAddGroup() {
-    this.props.addGroup(prompt('Enter new stage name'), prompt('Enter new group name'));
-  },
+  state = {
+    addingFlexCategory: false,
+    // Which stage a level is currently being dragged to.
+    targetStagePos: null
+  };
 
-  handleAddStage(position) {
-    this.props.addStage(position, prompt('Enter new stage name'));
-  },
+  handleAddFlexCategory = () => {
+    this.setState({
+      addingFlexCategory: true
+    });
+  };
+
+  createFlexCategory = newFlexCategory => {
+    this.hideFlexCategorySelector();
+    const newStageName = prompt('Enter new stage name');
+    if (newStageName) {
+      this.props.addGroup(newStageName, newFlexCategory);
+    }
+  };
+
+  hideFlexCategorySelector = () => {
+    this.setState({addingFlexCategory: false});
+  };
+
+  handleAddStage = position => {
+    const newStageName = prompt('Enter new stage name');
+    if (newStageName) {
+      this.props.addStage(position, newStageName);
+    }
+  };
+
+  setTargetStage = targetStagePos => {
+    this.setState({targetStagePos});
+  };
 
   /**
    * Generate the ScriptDSL format.
    * @param stages
    * @return {string}
    */
-  serializeStages(stages) {
+  serializeStages = stages => {
     let s = [];
     stages.forEach(stage => {
-      let t = `stage '${stage.name}'`;
+      let t = `stage '${escape(stage.name)}'`;
       if (stage.lockable) {
         t += ', lockable: true';
       }
       if (stage.flex_category) {
-        t += `, flex_category: '${stage.flex_category}'`;
+        t += `, flex_category: '${escape(stage.flex_category)}'`;
       }
       s.push(t);
       stage.levels.forEach(level => {
@@ -88,7 +125,7 @@ const FlexGroup = React.createClass({
       s.push('');
     });
     return s.join('\n');
-  },
+  };
 
   serializeLevel(id, level, active) {
     if (id === NEW_LEVEL_ID) {
@@ -99,64 +136,84 @@ const FlexGroup = React.createClass({
     const key = this.props.levelKeyList[id];
     if (/^blockly:/.test(key)) {
       if (level.skin) {
-        s.push(`skin '${level.skin}'`);
+        s.push(`skin '${escape(level.skin)}'`);
       }
       if (level.videoKey) {
-        s.push(`video_key_for_next_level '${level.videoKey}'`);
+        s.push(`video_key_for_next_level '${escape(level.videoKey)}'`);
       }
       if (level.concepts) {
+        // concepts is a comma-separated list of single-quoted strings, so do
+        // not escape its single quotes.
         s.push(`concepts ${level.concepts}`);
       }
       if (level.conceptDifficulty) {
-        s.push(`level_concept_difficulty '${level.conceptDifficulty}'`);
+        s.push(`level_concept_difficulty '${escape(level.conceptDifficulty)}'`);
       }
     }
-    let l = `${this.normalizeLevelKind(level.kind)} '${key.replace(/'/, "\\'")}'`;
+    let l = `level '${escape(key)}'`;
     if (active === false) {
       l += ', active: false';
     }
     if (level.progression) {
-      l += `, progression: '${level.progression}'`;
+      l += `, progression: '${escape(level.progression)}'`;
+    }
+    if (level.named) {
+      l += `, named: true`;
+    }
+    if (level.assessment) {
+      l += `, assessment: true`;
+    }
+    if (level.challenge) {
+      l += `, challenge: true`;
     }
     s.push(l);
     return s;
-  },
+  }
 
-  /**
-   * Levels with kind "puzzle" and "unplugged" are special cases of "level", for
-   * the purpose of the ScriptDSL.
-   * @param kind
-   * @return {string}
-   */
-  normalizeLevelKind(kind) {
-    return (!kind || kind === LevelKind.puzzle || kind === LevelKind.unplugged) ? LevelKind.level : kind;
-  },
+  // To be populated with the bounding client rect of each StageCard element.
+  stageMetrics = {};
 
   render() {
-    const groups = _.groupBy(this.props.stages, stage => (stage.flex_category || 'Default'));
-    let count = 0;
+    const groups = _.groupBy(
+      this.props.stages,
+      stage => stage.flex_category || ''
+    );
     let afterStage = 1;
+    const {flexCategoryMap} = this.props;
 
     return (
       <div>
-        {_.map(groups, (stages, group) =>
+        {_.keys(groups).map(group => (
           <div key={group}>
             <div style={styles.groupHeader}>
-              Group {++count}: {group}
+              Flex Category: {group || '(none)'}: "
+              {flexCategoryMap[group] || 'Content'}"
               <OrderControls
                 type={ControlTypes.Group}
                 position={afterStage}
                 total={Object.keys(groups).length}
+                name={group || '(none)'}
               />
             </div>
             <div style={styles.groupBody}>
-              {stages.map((stage, index) => {
+              {groups[group].map((stage, index) => {
                 afterStage++;
                 return (
                   <StageCard
                     key={`stage-${index}`}
                     stagesCount={this.props.stages.length}
                     stage={stage}
+                    ref={stageCard => {
+                      if (stageCard) {
+                        const metrics = ReactDOM.findDOMNode(
+                          stageCard
+                        ).getBoundingClientRect();
+                        this.stageMetrics[stage.position] = metrics;
+                      }
+                    }}
+                    stageMetrics={this.stageMetrics}
+                    setTargetStage={this.setTargetStage}
+                    targetStagePos={this.state.targetStagePos}
                   />
                 );
               })}
@@ -171,16 +228,28 @@ const FlexGroup = React.createClass({
               </button>
             </div>
           </div>
+        ))}
+        {!this.state.addingFlexCategory && (
+          <button
+            onMouseDown={this.handleAddFlexCategory}
+            className="btn"
+            style={styles.addGroup}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Add Flex Category
+          </button>
         )}
-        <button
-          onMouseDown={this.handleAddGroup}
-          className="btn"
-          style={styles.addGroup}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Group
-        </button>
+        {this.state.addingFlexCategory && (
+          <div style={styles.flexCategorySelector}>
+            <FlexCategorySelector
+              labelText="New Flex Category"
+              confirmButtonText="Create"
+              onConfirm={this.createFlexCategory}
+              onCancel={this.hideFlexCategorySelector}
+            />
+          </div>
+        )}
         <input
           type="hidden"
           name="script_text"
@@ -189,16 +258,20 @@ const FlexGroup = React.createClass({
       </div>
     );
   }
-});
+}
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList,
-  stages: state.stages
-}), dispatch => ({
-  addGroup(stageName, groupName) {
-    dispatch(addGroup(stageName, groupName));
-  },
-  addStage(position, stageName) {
-    dispatch(addStage(position, stageName));
-  }
-}))(FlexGroup);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList,
+    stages: state.stages,
+    flexCategoryMap: state.flexCategoryMap
+  }),
+  dispatch => ({
+    addGroup(stageName, groupName) {
+      dispatch(addGroup(stageName, groupName));
+    },
+    addStage(position, stageName) {
+      dispatch(addStage(position, stageName));
+    }
+  })
+)(FlexGroup);

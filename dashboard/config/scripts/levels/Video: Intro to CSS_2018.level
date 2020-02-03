@@ -10,9 +10,13 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 8709,
-    "name_suffix": "_2018"
+    "name_suffix": "_2018",
+    "display_name": "Video: Intro to CSS"
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-01-10 20:29:48 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </StandaloneVideo>

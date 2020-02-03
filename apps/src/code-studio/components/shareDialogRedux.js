@@ -1,15 +1,15 @@
-import {
-  channels as channelsApi,
-} from '../../clientApi';
+import {channels as channelsApi} from '../../clientApi';
 
 // Action types
 
 const SHOW_SHARE_DIALOG = 'shareDialog/SHOW_SHARE_DIALOG';
 const HIDE_SHARE_DIALOG = 'shareDialog/HIDE_SHARE_DIALOG';
-const SET_GET_NEXT_FRAME = 'shareDialog/SET_GET_NEXT_FRAME';
-const UNPUBLISH_REQUEST  = 'shareDialog/UNPUBLISH_REQUEST';
-const UNPUBLISH_SUCCESS  = 'shareDialog/UNPUBLISH_SUCCESS';
-const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
+const UNPUBLISH_REQUEST = 'shareDialog/UNPUBLISH_REQUEST';
+const UNPUBLISH_SUCCESS = 'shareDialog/UNPUBLISH_SUCCESS';
+const UNPUBLISH_FAILURE = 'shareDialog/UNPUBLISH_FAILURE';
+const SAVE_REPLAY_LOG = 'shareDialog/SAVE_REPLAY_LOG';
+const SHOW_LIBRARY_CREATION_DIALOG = 'shareDialog/SHOW_LIBRARY_CREATION_DIALOG';
+const HIDE_LIBRARY_CREATION_DIALOG = 'shareDialog/HIDE_LIBRARY_CREATION_DIALOG';
 
 // Reducer
 
@@ -17,6 +17,7 @@ const initialState = {
   isOpen: false,
   isUnpublishPending: false,
   didUnpublish: false,
+  libraryDialogIsOpen: false
 };
 
 export default function reducer(state = initialState, action) {
@@ -25,33 +26,46 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         ...initialState,
-        isOpen: true,
+        isOpen: true
       };
     case HIDE_SHARE_DIALOG:
       return {
         ...state,
-        ...initialState,
+        isUnpublishPending: false,
+        didUnpublish: false,
+        isOpen: false
       };
     case UNPUBLISH_REQUEST:
       return {
         ...state,
-        isUnpublishPending: true,
+        isUnpublishPending: true
       };
     case UNPUBLISH_SUCCESS:
       return {
         ...state,
-        ...initialState,
-        didUnpublish: true,
+        isOpen: false,
+        isUnpublishPending: false,
+        didUnpublish: true
       };
     case UNPUBLISH_FAILURE:
       return {
         ...state,
-        isUnpublishPending: false,
+        isUnpublishPending: false
       };
-    case SET_GET_NEXT_FRAME:
+    case SAVE_REPLAY_LOG:
       return {
         ...state,
-        getNextFrame: action.func,
+        replayLog: action.replayLog
+      };
+    case SHOW_LIBRARY_CREATION_DIALOG:
+      return {
+        ...state,
+        libraryDialogIsOpen: true
+      };
+    case HIDE_LIBRARY_CREATION_DIALOG:
+      return {
+        ...state,
+        libraryDialogIsOpen: false
       };
     default:
       return state;
@@ -89,6 +103,14 @@ export function unpublishProject(projectId) {
   };
 }
 
-export function setGetNextFrame(func) {
-  return {type: SET_GET_NEXT_FRAME, func};
+export function saveReplayLog(replayLog) {
+  return {type: SAVE_REPLAY_LOG, replayLog};
+}
+
+export function showLibraryCreationDialog() {
+  return {type: SHOW_LIBRARY_CREATION_DIALOG};
+}
+
+export function hideLibraryCreationDialog() {
+  return {type: HIDE_LIBRARY_CREATION_DIALOG};
 }

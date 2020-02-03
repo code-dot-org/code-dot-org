@@ -13,7 +13,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
     "free_play": "false",
-    "instructions": "Convert this statement to <some_shape> of evaluation."
+    "short_instructions": "Convert this statement to <some_shape> of evaluation."
   }
 }]]></config>
   <blocks>

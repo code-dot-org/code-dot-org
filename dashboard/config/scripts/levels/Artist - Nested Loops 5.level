@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Loop the given code to create a windmill.",
+    "short_instructions": "Loop the given code to create a windmill.",
     "is_k1": "false",
     "skip_instructions_popup": "true",
     "x": "200",

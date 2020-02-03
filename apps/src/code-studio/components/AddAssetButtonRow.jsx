@@ -1,14 +1,15 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import AssetUploader from './AssetUploader';
-import Button from "../../templates/Button";
+import Button from '../../templates/Button';
 import i18n from '@cdo/locale';
+import {isIE11} from '@cdo/apps/util/browser-detector';
 
 export const assetButtonStyles = {
   button: {
     paddingLeft: 10,
     paddingRight: 10,
     marginTop: 5,
-    borderRadius: 4,
     fontSize: 'large',
     fontWeight: 'lighter',
     marginRight: 10
@@ -47,7 +48,7 @@ export default class AddAssetButtonRow extends React.Component {
   static propTypes = {
     uploadsEnabled: PropTypes.bool.isRequired,
     allowedExtensions: PropTypes.string,
-    useFilesApi: PropTypes.bool,
+    api: PropTypes.object,
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,
     onUploadError: PropTypes.func.isRequired,
@@ -58,22 +59,27 @@ export default class AddAssetButtonRow extends React.Component {
   };
 
   render() {
+    let shouldShowRecordButton = !this.props.hideAudioRecording;
+    if (isIE11()) {
+      shouldShowRecordButton = false;
+    }
     return (
       <div style={assetButtonStyles.buttonRow}>
         <AssetUploader
           uploadsEnabled={this.props.uploadsEnabled}
           allowedExtensions={this.props.allowedExtensions}
-          useFilesApi={this.props.useFilesApi}
+          api={this.props.api}
           onUploadStart={this.props.onUploadStart}
           onUploadDone={this.props.onUploadDone}
           onUploadError={this.props.onUploadError}
         />
-        {!this.props.hideAudioRecording &&
-          <RecordButton onSelectRecord={this.props.onSelectRecord} disabled={this.props.recordDisabled}/>
-        }
-        <span id="manage-asset-status">
-          {this.props.statusMessage}
-        </span>
+        {shouldShowRecordButton && (
+          <RecordButton
+            onSelectRecord={this.props.onSelectRecord}
+            disabled={!this.props.uploadsEnabled || this.props.recordDisabled}
+          />
+        )}
+        <span id="manage-asset-status">{this.props.statusMessage}</span>
       </div>
     );
   }

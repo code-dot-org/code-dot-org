@@ -1,36 +1,46 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import * as rowStyle from './rowStyle';
 
 export default class EnumPropertyRow extends React.Component {
   static propTypes = {
     initialValue: PropTypes.string.isRequired,
+    displayOptions: PropTypes.arrayOf(PropTypes.string),
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     handleChange: PropTypes.func.isRequired,
-    desc: PropTypes.node,
+    desc: PropTypes.node
   };
 
   state = {
     selectedValue: this.props.initialValue
   };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.props.handleChange(event.target.value);
     this.setState({selectedValue: event.target.value});
   };
 
   render() {
-    let options = this.props.options.map(function (option, index) {
-        return <option key={index} value={option}>{option}</option>;
+    const {options, displayOptions = [], desc} = this.props;
+    const {selectedValue} = this.state;
+
+    const renderedOptions = options.map(function(option, index) {
+      return (
+        <option key={index} value={option}>
+          {displayOptions[index] || option}
+        </option>
+      );
     });
     return (
       <div style={rowStyle.container}>
-        <div style={rowStyle.description}>{this.props.desc}</div>
+        <div style={rowStyle.description}>{desc}</div>
         <select
           className="form-control"
-          value={this.state.selectedValue}
+          style={rowStyle.enumInput}
+          value={selectedValue}
           onChange={this.handleChange}
         >
-          {options}
+          {renderedOptions}
         </select>
       </div>
     );

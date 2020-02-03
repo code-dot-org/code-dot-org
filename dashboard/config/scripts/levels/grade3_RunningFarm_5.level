@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "This field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?",
+    "short_instructions": "This field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?",
     "step_speed": "2",
     "ideal": "12",
-    "markdown_instructions": "*\"What a bountiful crop!\"*\r\n\r\nThis field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?",
+    "long_instructions": "*\"What a bountiful crop!\"*\r\n\r\nThis field has clusters of corn, lettuce, and pumpkins all growing together.  Can you collect them all?",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to check for each type of crop that the farmer can pick.  Try using two `if/else` statements and one  `if` block.\",\"hint_id\":\"grade3_RunningFarm_5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/91754a2f9480ffe315f5fd36ef91238c/grade3_RunningFarm_5.mp3\"}]",
     "contained_level_names": null

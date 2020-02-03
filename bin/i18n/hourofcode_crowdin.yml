@@ -19,24 +19,8 @@ files: [
     "translation": "/%language%/hourofcode/%original_file_name%",
     "update_option": "update_as_unapproved"
   }, {
-    "source": "/how-to/*.md",
-    "translation": "/%language%/hourofcode/how-to/%original_file_name%",
+    "source": "/**/*.md",
+    "translation": "/%language%/hourofcode/**/%file_name%.md",
     "update_option": "update_as_unapproved"
-  }, {
-    "source": "/promote/*.md",
-    "translation": "/%language%/hourofcode/promote/%original_file_name%",
-    "update_option": "update_as_unapproved"
-  }, {
-    "source": "/*.md",
-    "translation": "/%language%/hourofcode/%original_file_name%",
-    "update_option": "update_as_unapproved",
-    "ignore": [
-      "/whole-school.md",
-      "/activity-guidelines.md",
-      "/advisory-committee.md",
-      "/review-committee.md",
-      "/international-partners.md",
-      "/supporting-special-needs-students.md"
-    ]
   }
 ]

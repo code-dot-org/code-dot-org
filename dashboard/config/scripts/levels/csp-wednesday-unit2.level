@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Wednesday Unit Reflection Part 2\r\n\r\n## Explaining Internet Simulator\r\n\r\nHow would you explain the Internet Simulator to a new teacher who is interested in using it?\r\n\r\n* In what ways is Internet Simulator an educational rather than professional tool? \r\n* What teaching philosophy seems most effective with the Internet Simulator? \r\n",
+    "long_instructions": "# Wednesday Unit Reflection Part 2\r\n\r\n## Explaining Internet Simulator\r\n\r\nHow would you explain the Internet Simulator to a new teacher who is interested in using it?\r\n\r\n* In what ways is Internet Simulator an educational rather than professional tool? \r\n* What teaching philosophy seems most effective with the Internet Simulator? \r\n",
     "instructions_important": "false",
     "display_name": "Unit Reflection",
     "allow_user_uploads": "false",

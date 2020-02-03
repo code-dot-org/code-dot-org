@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Programming Efficiency Question 4",
-    "markdown_instructions": "How can functions be used to make code more efficient in effort, space, or time?\n",
+    "long_instructions": "How can functions be used to make code more efficient in effort, space, or time?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,13 +1,10 @@
 import React from 'react';
-import { assert, expect } from 'chai';
-import { shallow } from 'enzyme';
+import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import StudentSections from '@cdo/apps/templates/studioHomepages/StudentSections';
-import { courses, topCourse, joinedSections } from './homepagesTestData';
-import { combineReducers, createStore } from 'redux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {courses, topCourse, joinedSections} from './homepagesTestData';
 
 describe('StudentHomepage', () => {
   it('shows a non-extended Header Banner that says My Dashboard', () => {
@@ -17,12 +14,12 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
+        studentId={123}
       />
     );
     const headerBanner = wrapper.find(HeaderBanner);
     assert.deepEqual(headerBanner.props(), {
-      headingText: "My Dashboard",
+      headingText: 'My Dashboard',
       short: true
     });
   });
@@ -34,7 +31,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
+        studentId={123}
       />
     );
     expect(wrapper.find('ProtectedStatefulDiv').exists()).to.be.true;
@@ -47,7 +44,8 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
+        studentId={123}
+        hasFeedback={false}
       />
     );
     const recentCourses = wrapper.find('RecentCourses');
@@ -55,6 +53,7 @@ describe('StudentHomepage', () => {
       courses: courses,
       topCourse: topCourse,
       isTeacher: false,
+      hasFeedback: false
     });
   });
 
@@ -65,7 +64,7 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
+        studentId={123}
       />
     );
     expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
@@ -78,44 +77,12 @@ describe('StudentHomepage', () => {
         topCourse={topCourse}
         sections={joinedSections}
         codeOrgUrlPrefix="http://localhost:3000/"
-        canLeave={false}
+        studentId={123}
       />
     );
     const studentSections = wrapper.find(StudentSections);
     assert.deepEqual(studentSections.props(), {
-      initialSections: joinedSections,
-      canLeave: false
+      initialSections: joinedSections
     });
-  });
-
-  it('shows section codes correctly', () => {
-    const store = createStore(combineReducers({isRtl}));
-    const wrapper = shallow(
-        <StudentHomepage
-          courses={courses}
-          topCourse={topCourse}
-          sections={joinedSections}
-          codeOrgUrlPrefix="http://localhost:3000/"
-          canLeave={false}
-        />
-    ).find(StudentSections).dive().find(SectionsAsStudentTable).dive({context: {store}}).dive();
-    expect(wrapper).to.containMatchingElement(
-        <td>ClassOneCode</td>
-    );
-    expect(wrapper).to.containMatchingElement(
-        <td>ClassTwoCode</td>
-    );
-    expect(wrapper).to.containMatchingElement(
-      <td>Google Classroom</td>
-    );
-    expect(wrapper).to.not.containMatchingElement(
-        <td>DoNotShowThis</td>
-    );
-    expect(wrapper).to.containMatchingElement(
-        <td>Clever</td>
-    );
-    expect(wrapper).to.not.containMatchingElement(
-        <td>OrThisEither</td>
-    );
   });
 });

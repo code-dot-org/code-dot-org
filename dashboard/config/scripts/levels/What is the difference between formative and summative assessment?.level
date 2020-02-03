@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 37,
   "properties": {
-    "markdown_instructions": "The following link is a resource that provides definitions and examples of formative and summative assessments:",
+    "long_instructions": "The following link is a resource that provides definitions and examples of formative and summative assessments:",
     "link_title": "What is the difference between formative and summative assessment?",
     "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html"
   },

@@ -1,5 +1,16 @@
-import React, {Component, PropTypes} from 'react';
-import color from "../../util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '../../util/color';
+
+const craftStyles = {
+  text: {
+    color: color.white
+  },
+  highlighted: {
+    borderBottom: '2px solid ' + color.white,
+    color: color.white
+  }
+};
 
 const styles = {
   tab: {
@@ -7,8 +18,16 @@ const styles = {
     paddingLeft: 10,
     paddingRight: 10,
     paddingBottom: 6,
-    fontWeight: "bold",
-    cursor: "pointer",
+    fontWeight: 'bold',
+    cursor: 'pointer'
+  },
+  tabRtl: {
+    marginLeft: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingBottom: 6,
+    fontWeight: 'bold',
+    cursor: 'pointer'
   },
   text: {
     color: color.charcoal
@@ -17,13 +36,13 @@ const styles = {
     color: color.lightest_cyan
   },
   highlighted: {
-    borderBottom: "2px solid " + color.default_text,
-    color: color.default_text,
+    borderBottom: '2px solid ' + color.default_text,
+    color: color.default_text
   },
   teacherHighlighted: {
-    borderBottom: "2px solid " + color.lightest_cyan,
-    color: color.white,
-  },
+    borderBottom: '2px solid ' + color.lightest_cyan,
+    color: color.white
+  }
 };
 
 export default class InstructionsTab extends Component {
@@ -33,17 +52,26 @@ export default class InstructionsTab extends Component {
     onClick: PropTypes.func.isRequired,
     style: PropTypes.object,
     text: PropTypes.string.isRequired,
-    teacherOnly: PropTypes.bool
+    teacherOnly: PropTypes.bool,
+    isMinecraft: PropTypes.bool,
+    isRtl: PropTypes.bool
   };
 
   render() {
     const combinedStyle = {
-      ...styles.tab,
+      ...(this.props.isRtl ? styles.tabRtl : styles.tab),
       ...this.props.style,
-      ...(this.props.selected ?
-        (this.props.teacherOnly ? styles.teacherHighlighted : styles.highlighted) :
-        (this.props.teacherOnly ? styles.teacherText : styles.text)
-      )
+      ...(this.props.selected
+        ? this.props.teacherOnly
+          ? styles.teacherHighlighted
+          : this.props.isMinecraft
+          ? craftStyles.highlighted
+          : styles.highlighted
+        : this.props.teacherOnly
+        ? styles.teacherText
+        : this.props.isMinecraft
+        ? craftStyles.text
+        : styles.text)
     };
     return (
       <a

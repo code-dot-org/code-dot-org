@@ -35,6 +35,7 @@ module Cdo
         mock_started = $?.exitstatus == 0
       end
       `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/'}, response: {status: 200}}.to_json}'`
+      `curl -s -X POST #{LOCALHOST}:#{DASHBOARD_PORT}/__admin/mappings/new -d '#{{request: {method: 'GET', url: '/health_check'}, response: {status: 200}}.to_json}'`
       `sleep 1` until system("curl -sf #{LOCALHOST}:#{VARNISH_PORT}/health_check.dashboard")
       puts 'setup finished'
       [pid, ngrok_pid]
@@ -250,7 +251,7 @@ module HttpCacheTest
       end
 
       it 'Handles Accept-Language behaviors' do
-        skip 'Not implemented in Rack yet' unless environment == 'integration'
+        skip 'Not implemented in Rack yet' unless environment.to_s == 'integration'
         # URL contains whitelisted 'Accept-Language' header
         url = build_url 's/starwars/stage/1/puzzle'
         text_en = 'Hello World!'
@@ -487,6 +488,31 @@ module HttpCacheTest
           assert_equal 'bytes 0-99999/100000', range && range.chomp
         end
       end
+
+      it 'Strips cookies from the penultimate dance level' do
+        assert strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/12'
+        assert strips_session_specific_cookies_from_request? '/s/dance-2019/stage/1/puzzle/9'
+      end
+
+      it 'Does not strip cookies from the last dance level' do
+        refute strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/13'
+        refute strips_session_specific_cookies_from_request? '/s/dance-2019/stage/1/puzzle/10'
+      end
+
+      it 'Strips cookies from an aquatic level' do
+        assert strips_session_specific_cookies_from_request? '/s/aquatic/stage/1/puzzle/5'
+      end
+
+      # rubocop:disable Lint/NestedMethodDefinition
+      def strips_session_specific_cookies_from_request?(url)
+        cookie = 'hour_of_code' # this is a session-specific cookie
+        text_cookie = 'Hello Cookie!'
+        mock_response url, text_cookie, {'Cookie' => "#{cookie}=cookie_value;"}, {'Set-Cookie' => "#{cookie}=cookie_value2; path=/"}
+
+        response = proxy_request url, {}, {cookie => 'cookie_value'}
+        text_cookie != last_line(response)
+      end
+      # rubocop:enable Lint/NestedMethodDefinition
     end
   end
 end

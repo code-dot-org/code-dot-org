@@ -1,0 +1,17 @@
+module.exports = {
+  resolver: {
+    assetExts: [
+      "html",
+      "css",
+      "j",
+      "jpg",
+      "jpeg",
+      "png",
+      "gif",
+      "mp3",
+      "woff2",
+      "ttf",
+      "txt"
+    ]
+  }
+}

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the functions from the previous puzzles to draw this pattern.",
+    "short_instructions": "Use the functions from the previous puzzles to draw this pattern.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "disable_sharing": "false",
     "ideal": "30",
-    "markdown_instructions": "Use the functions from the previous puzzles to draw this pattern.",
+    "long_instructions": "Use the functions from the previous puzzles to draw this pattern.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

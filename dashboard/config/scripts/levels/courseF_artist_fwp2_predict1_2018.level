@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Edit the function to accept a parameter called `length`.",
+    "short_instructions": "Edit the function to accept a parameter called `length`.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -21,7 +21,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".5",
-    "markdown_instructions": "Edit the function to accept a parameter called `length`.  \r\n\r\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
+    "long_instructions": "Edit the function to accept a parameter called `length`.  \r\n\r\nThe sides of each square should be 25 pixels larger than the last.  The first square has 25 pixel sides. Replace the '???' with the correct values to draw the picture.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

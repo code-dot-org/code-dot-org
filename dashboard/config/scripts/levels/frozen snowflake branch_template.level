@@ -6,7 +6,7 @@
   "user_id": 4,
   "properties": {
     "skin": "elsa",
-    "instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.",
+    "short_instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "callout_json": "[]",
     "disable_sharing": "false",
     "permitted_errors": "0",
-    "markdown_instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
+    "long_instructions": "Try using the new `create a snowflake branch` function to create three legs of a snowflake.  \r\n\r\nMake sure to turn **45 degrees** between each branch.",
     "never_autoplay_video": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",

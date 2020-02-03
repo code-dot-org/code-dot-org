@@ -1,19 +1,21 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import msg from '@cdo/locale';
+import i18n from '@cdo/locale';
 import commonStyles from '../commonStyles';
-import color from "../util/color";
+import color from '../util/color';
 import * as utils from '@cdo/apps/utils';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
 import {singleton as studioApp} from '../StudioApp';
 import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import {queryParams} from '../code-studio/utils';
 
 const styles = {
   headerIcon: {
@@ -22,16 +24,25 @@ const styles = {
   chevron: {
     fontSize: 18,
     ':hover': {
-      color: color.white,
-    },
+      color: color.white
+    }
   },
   runningIcon: {
     color: color.dark_charcoal
   },
+  studentNotStartedWarning: {
+    zIndex: 99,
+    backgroundColor: color.lightest_red,
+    height: 20,
+    padding: 5,
+    opacity: 0.9,
+    position: 'relative'
+  }
 };
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
+    studentHasNotStartedLevel: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -43,7 +54,7 @@ class CodeWorkspace extends React.Component {
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
-    showMakerToggle: PropTypes.bool,
+    showMakerToggle: PropTypes.bool
   };
 
   shouldComponentUpdate(nextProps) {
@@ -51,26 +62,30 @@ class CodeWorkspace extends React.Component {
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
     // change the DOM structure.
-    Object.keys(nextProps).forEach(function (key) {
-      // isRunning and style only affect style, and can be updated
-      if (key === 'isRunning' || key === 'style') {
-        return;
-      }
+    Object.keys(nextProps).forEach(
+      function(key) {
+        // isRunning and style only affect style, and can be updated
+        if (key === 'isRunning' || key === 'style') {
+          return;
+        }
 
-      if (nextProps[key] !== this.props[key]) {
-        throw new Error('Attempting to change key ' + key + ' in CodeWorkspace');
-      }
-    }.bind(this));
+        if (nextProps[key] !== this.props[key]) {
+          throw new Error(
+            'Attempting to change key ' + key + ' in CodeWorkspace'
+          );
+        }
+      }.bind(this)
+    );
 
     return true;
   }
 
-  onDebuggerSlide = (debuggerHeight) => {
+  onDebuggerSlide = debuggerHeight => {
     const textbox = this.codeTextbox.getRoot();
     if (textbox.style.bottom) {
       $(textbox).animate(
         {bottom: debuggerHeight},
-        {step: utils.fireResizeEvent}
+        {done: utils.fireResizeEvent}
       );
     } else {
       // if we haven't initialized the height of the code textbox,
@@ -93,7 +108,7 @@ class CodeWorkspace extends React.Component {
       runModeIndicators,
       readonlyWorkspace,
       withSettingsCog,
-      showMakerToggle,
+      showMakerToggle
     } = this.props;
     const showSettingsCog = withSettingsCog && !readonlyWorkspace;
     const textStyle = showSettingsCog ? {paddingLeft: '2em'} : undefined;
@@ -102,20 +117,19 @@ class CodeWorkspace extends React.Component {
       runModeIndicators && isRunning && styles.runningIcon
     ];
 
-    const settingsCog = showSettingsCog &&
-        <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}}/>;
+    const settingsCog = showSettingsCog && (
+      <SettingsCog {...{isRunning, runModeIndicators, showMakerToggle}} />
+    );
+
     return [
-      <PaneSection
-        id="toolbox-header"
-        key="toolbox-header"
-      >
+      <PaneSection id="toolbox-header" key="toolbox-header">
         <i
           id="hide-toolbox-icon"
           style={[commonStyles.hidden, chevronStyle]}
           className="fa fa-chevron-circle-right"
         />
         <span style={textStyle}>
-          {editCode ? msg.toolboxHeaderDroplet() : msg.toolboxHeader()}
+          {editCode ? i18n.toolboxHeaderDroplet() : i18n.toolboxHeader()}
         </span>
         {settingsCog}
       </PaneSection>,
@@ -130,18 +144,16 @@ class CodeWorkspace extends React.Component {
             style={chevronStyle}
             className="fa fa-chevron-circle-right"
           />
-          <span>
-            {msg.showToolbox()}
-          </span>
+          <span>{i18n.showToolbox()}</span>
         </span>
         {settingsCog}
       </PaneSection>
     ];
   }
 
-  onToggleShowCode = (usingBlocks) => {
+  onToggleShowCode = usingBlocks => {
     this.blockCounterEl.style.display =
-        (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
+      usingBlocks && studioApp().enableShowBlockCount ? 'inline-block' : 'none';
   };
 
   render() {
@@ -151,6 +163,9 @@ class CodeWorkspace extends React.Component {
     // is enabled, remove focus while running.
     const hasFocus = !(props.runModeIndicators && props.isRunning);
     const isRtl = this.props.isRtl;
+
+    //TODO: When CSF example solutions are no longer rendered with solution=true in url remove this
+    const inCsfExampleSolution = queryParams('solution') === 'true';
 
     return (
       <span id="codeWorkspaceWrapper" style={props.style}>
@@ -168,44 +183,57 @@ class CodeWorkspace extends React.Component {
               isMinecraft={props.isMinecraft}
               onToggle={this.onToggleShowCode}
             />
-            {!props.readonlyWorkspace &&
+            {!props.readonlyWorkspace && (
               <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
                 iconClass="fa fa-undo"
-                label={msg.clearPuzzle()}
+                label={i18n.clearPuzzle()}
                 isRtl={isRtl}
                 isMinecraft={props.isMinecraft}
-              />}
+              />
+            )}
             <PaneButton
               id="versions-header"
               headerHasFocus={hasFocus}
               iconClass="fa fa-clock-o"
-              label={msg.showVersionsHeader()}
+              label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
             />
             <PaneSection id="workspace-header">
-              {props.showProjectTemplateWorkspaceIcon && <ProjectTemplateWorkspaceIcon/>}
+              {props.showProjectTemplateWorkspaceIcon && (
+                <ProjectTemplateWorkspaceIcon />
+              )}
               <span id="workspace-header-span">
-                {props.readonlyWorkspace ? msg.readonlyWorkspaceHeader() : msg.workspaceHeaderShort()}
+                {props.readonlyWorkspace
+                  ? i18n.readonlyWorkspaceHeader()
+                  : i18n.workspaceHeaderShort()}
               </span>
-              <div id="blockCounter" ref={el => this.blockCounterEl = el}>
-                <ProtectedStatefulDiv id="blockUsed" className="block-counter-default"/>
+              <div id="blockCounter" ref={el => (this.blockCounterEl = el)}>
+                <ProtectedStatefulDiv
+                  id="blockUsed"
+                  className="block-counter-default"
+                />
                 <span> / </span>
-                <span id="idealBlockNumber"/>
-                <span>{" " + msg.blocks()}</span>
+                <span id="idealBlockNumber" />
+                <span>{' ' + i18n.blocks()}</span>
               </div>
             </PaneSection>
           </div>
         </PaneHeader>
-        {props.editCode &&
-         <ProtectedStatefulDiv
-           ref={codeTextbox => this.codeTextbox = codeTextbox}
-           id="codeTextbox"
-           className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
-         />
-        }
+        {props.editCode && (
+          <ProtectedStatefulDiv
+            ref={codeTextbox => (this.codeTextbox = codeTextbox)}
+            id="codeTextbox"
+            className={this.props.pinWorkspaceToBottom ? 'pin_bottom' : ''}
+          />
+        )}
+        {this.props.studentHasNotStartedLevel && !inCsfExampleSolution && (
+          <div style={styles.studentNotStartedWarning}>
+            {i18n.levelNotStartedWarning()}
+          </div>
+        )}
         {props.showDebugger && (
           <JsDebugger
             onSlideShut={this.onDebuggerSlide}
@@ -217,15 +245,20 @@ class CodeWorkspace extends React.Component {
   }
 }
 
-module.exports = connect(state => ({
+export const UnconnectedCodeWorkspace = Radium(CodeWorkspace);
+export default connect(state => ({
+  studentHasNotStartedLevel: state.pageConstants.isNotStartedLevel,
   editCode: state.pageConstants.isDroplet,
   isRtl: state.isRtl,
   readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isRunning: !!state.runState.isRunning,
-  showDebugger: !!(state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole),
+  showDebugger: !!(
+    state.pageConstants.showDebugButtons || state.pageConstants.showDebugConsole
+  ),
   pinWorkspaceToBottom: state.pageConstants.pinWorkspaceToBottom,
-  showProjectTemplateWorkspaceIcon: !!state.pageConstants.showProjectTemplateWorkspaceIcon,
+  showProjectTemplateWorkspaceIcon: !!state.pageConstants
+    .showProjectTemplateWorkspaceIcon,
   isMinecraft: !!state.pageConstants.isMinecraft,
   runModeIndicators: shouldUseRunModeIndicators(state),
-  showMakerToggle: !!state.pageConstants.showMakerToggle,
+  showMakerToggle: !!state.pageConstants.showMakerToggle
 }))(Radium(CodeWorkspace));

@@ -7,7 +7,6 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I drag block "1" to block "5"
   And I press "runButton"
   Then I wait to see ".modal"
@@ -18,6 +17,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
+  And I wait for 2 seconds
   And I verify progress for stage 1 level 1 is "perfect"
   # Course overview in a different script shouldn't show progress
   Then I am on "http://studio.code.org/s/20-hour/stage/2/puzzle/2?noautoplay=true"
@@ -39,7 +39,6 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
@@ -47,6 +46,7 @@ Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as att
   When element "#runButton" is visible
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
+  And I wait for 2 seconds
   And I verify progress for stage 1 level 1 is "attempted"
 
 @no_mobile
@@ -67,7 +67,6 @@ Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, s
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"

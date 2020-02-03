@@ -31,6 +31,7 @@ class Stage < ActiveRecord::Base
   has_many :script_levels, -> {order('position ASC')}, inverse_of: :stage
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :stage, dependent: :destroy
   belongs_to :script, inverse_of: :stages
+  has_and_belongs_to_many :standards
 
   serialized_attrs %w(
     stage_extras_disabled
@@ -118,13 +119,14 @@ class Stage < ActiveRecord::Base
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
 
-  def summarize
-    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}") do
+  def summarize(include_bonus_levels = false)
+    stage_summary = Rails.cache.fetch("#{cache_key}/stage_summary/#{I18n.locale}/#{include_bonus_levels}") do
+      cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
+
       stage_data = {
         script_id: script.id,
         script_name: script.name,
         script_stages: script.stages.to_a.size,
-        freeplay_links: script.freeplay_links,
         id: id,
         position: absolute_position,
         relative_position: relative_position,
@@ -132,7 +134,7 @@ class Stage < ActiveRecord::Base
         title: localized_title,
         flex_category: localized_category,
         lockable: !!lockable,
-        levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
+        levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }
@@ -172,6 +174,14 @@ class Stage < ActiveRecord::Base
     stage_summary.freeze
   end
 
+  def summarize_for_edit
+    summary = summarize.dup
+    # Do not let script name override stage name when there is only one stage
+    summary[:name] = I18n.t("data.script.name.#{script.name}.stages.#{name}.name")
+    summary[:flex_category] = flex_category
+    summary.freeze
+  end
+
   # Provides a JSON summary of a particular stage, that is consumed by tools used to
   # build lesson plans
   def summary_for_lesson_plans
@@ -185,6 +195,7 @@ class Stage < ActiveRecord::Base
           position: script_level.position,
           named_level: script_level.named_level?,
           bonus_level: !!script_level.bonus,
+          assessment: script_level.assessment,
           progression: script_level.progression,
           path: script_level.path,
         }
@@ -240,9 +251,20 @@ class Stage < ActiveRecord::Base
     script_levels.reverse.find(&:valid_progression_level?)
   end
 
-  def next_level_path_for_stage_extras(user)
+  def next_level_for_stage_extras(user)
     level_to_follow = script_levels.last.next_level
     level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
-    level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+    level_to_follow
+  end
+
+  def next_level_path_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ?
+      build_script_level_path(next_level) : script_completion_redirect(script)
+  end
+
+  def next_level_number_for_stage_extras(user)
+    next_level = next_level_for_stage_extras(user)
+    next_level ? next_level.stage.relative_position : nil
   end
 end

@@ -14,6 +14,12 @@
 #  index_pd_reg_part_prog_reg_on_user_id_and_teachercon  (user_id,teachercon)
 #
 
+#
+# DEPRECATED MODEL
+# This model only exists as a historical record of registrations at past TeacherCon events,
+# (which we will no longer hold going forward).  Associated routes and views have been removed.
+# Archival and removal of this model is tracked in https://codedotorg.atlassian.net/browse/PLC-341
+#
 class Pd::RegionalPartnerProgramRegistration < ActiveRecord::Base
   include Pd::ProgramRegistrationForm
 

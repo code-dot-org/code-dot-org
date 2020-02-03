@@ -20,7 +20,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "slider_speed": ".7",
-    "instructions": "Awesome job on the last puzzle, let's try it again this time let's make this cool design with with 60 pixel hexagon's."
+    "short_instructions": "Awesome job on the last puzzle, let's try it again this time let's make this cool design with with 60 pixel hexagon's."
   }
 }]]></config>
   <blocks>

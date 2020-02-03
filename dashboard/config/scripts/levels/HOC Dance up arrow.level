@@ -34,7 +34,7 @@
     "pause_animations_by_default": "false",
     "hide_custom_blocks": "true",
     "use_default_sprites": "false",
-    "markdown_instructions": "It's time to take control! Use the `when up pressed` and the new \"do move once\" block to make the cat do a dance move once whenever you press the up arrow.",
+    "long_instructions": "It's time to take control! Use the `when up pressed` and the new \"do move once\" block to make the cat do a dance move once whenever you press the up arrow.",
     "parent_level_id": 14507,
     "validation_code": "/*if(World.frameCount == 1){\r\n  validationProps.status = 3;\r\n  validationProps.events = [{type: keyWentDown, param: \"up\",\r\n                             pre: function(e){}, \r\n                             post:function(e){\r\n                               if(dancer2.animation.looping){\r\n                                 validationProps.didMoveOnce = true;\r\n                               }\r\n                               if(){\r\n                               }\r\n                             }\r\n                            }];\r\n} */",
     "block_pool": "Dancelab",

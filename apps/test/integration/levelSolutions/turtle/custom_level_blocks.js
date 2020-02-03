@@ -3,17 +3,17 @@ import {TestResults} from '@cdo/apps/constants';
 var blockUtils = require('@cdo/apps/block_utils.js');
 
 module.exports = {
-  app: "turtle",
+  app: 'turtle',
   skinId: 'elsa',
 
   tests: [
     {
-      description: "fractal snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'fractal snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('fractal');
           })
         };
@@ -22,16 +22,18 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'fractal' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {
+        TYPE: 'fractal'
+      })
     },
 
     {
-      description: "flower snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'flower snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('flower');
           })
         };
@@ -40,16 +42,16 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'flower' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'flower'})
     },
 
     {
-      description: "spiral snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'spiral snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('spiral');
           })
         };
@@ -58,16 +60,16 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'spiral' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'spiral'})
     },
 
     {
-      description: "line snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'line snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('line');
           })
         };
@@ -76,16 +78,16 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'line' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'line'})
     },
 
     {
-      description: "parallelogram snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'parallelogram snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('parallelogram');
           })
         };
@@ -94,16 +96,18 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'parallelogram' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {
+        TYPE: 'parallelogram'
+      })
     },
 
     {
-      description: "square snowflake",
-      delayLoadLevelDefinition: function () {
+      description: 'square snowflake',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           instant: true,
-          answer: testUtils.generateArtistAnswer(function (api) {
+          answer: testUtils.generateArtistAnswer(function(api) {
             api.drawSnowflake('square');
           })
         };
@@ -112,14 +116,14 @@ module.exports = {
         result: true,
         testResult: TestResults.ALL_PASS
       },
-      xml: blockUtils.blockOfType('create_snowflake_dropdown', { TYPE: 'square' })
+      xml: blockUtils.blockOfType('create_snowflake_dropdown', {TYPE: 'square'})
     },
 
     {
       // Freeplay level that just uses a bunch of our blocks to get us some
       // better code coverage
-      description: "other blocks",
-      delayLoadLevelDefinition: function () {
+      description: 'other blocks',
+      delayLoadLevelDefinition: function() {
         return {
           permittedErrors: 0,
           sliderSpeed: 1,
@@ -131,9 +135,11 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
-      runBeforeClick: function () {
+      runBeforeClick: function() {
         // This is a free-play level: click Finish when drawing is done.
-        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
+        addEventListener('artistDrawingComplete', () =>
+          $('#finishButton').click()
+        );
       },
       xml: blockUtils.blocksFromList([
         'when_run',
@@ -142,7 +148,7 @@ module.exports = {
         'draw_a_robot'
       ])
 
-       // NOTE: there a bunch of other custom blocks that are still untested
+      // NOTE: there a bunch of other custom blocks that are still untested
     }
   ]
 };

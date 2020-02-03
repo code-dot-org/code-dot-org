@@ -164,7 +164,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Make it Your Own\r\n\r\nNow that we've created a simple game, take some time to explore the environment on your own and add to your game. You'll notice that there are a bunch of new blocks available to you in the toolbox - take a look around and try some out!",
+    "long_instructions": "# Make it Your Own\r\n\r\nNow that we've created a simple game, take some time to explore the environment on your own and add to your game. You'll notice that there are a bunch of new blocks available to you in the toolbox - take a look around and try some out!",
     "instructions_important": "false",
     "start_blocks": "// Create a player sprite\r\nvar player = createSprite(200, 200);\r\nplayer.setAnimation(\"bunny2_1\");\r\nplayer.scale = 0.5;\r\n\r\n// Create a target sprite with an animation\r\nvar target = createSprite(100, 100);\r\ntarget.setAnimation(\"coffee_1\");\r\ntarget.scale = 0.5;\r\n\r\nfunction draw() {\r\n  background('white');\r\n  \r\n  // Move when the arrow keys are pressed\r\n  if(keyDown(\"right\")) {\r\n  \tplayer.x = player.x + 2;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    player.x = player.x - 2;\r\n  }\r\n  if(keyDown(\"down\")) {\r\n  \tplayer.y = player.y + 2;\r\n  }\r\n  if (keyDown(\"up\")) {\r\n    player.y = player.y - 2;\r\n  }\r\n  \r\n  // If the player is touching the target,\r\n  // make the target do something\r\n  if (player.isTouching(target)) {\r\n    target.x = randomNumber(0, 400);\r\n    target.y = randomNumber(0, 400);\r\n  }\r\n  \r\n  drawSprites();\r\n}\r\n",
     "is_k1": "false",

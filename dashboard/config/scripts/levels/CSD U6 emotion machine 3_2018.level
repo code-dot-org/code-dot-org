@@ -183,7 +183,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Setting Text\r\n\r\nYour happy and sad buttons should be almost completely functional now. The only thing they still need to do is change the text at the bottom of the screen.\r\n\r\n# Do This\r\n\r\nMake each of the event handlers change the text of \"feeling\" to the appropriate emotion (either \"happy\" or \"sad\")",
+    "long_instructions": "# Setting Text\r\n\r\nYour happy and sad buttons should be almost completely functional now. The only thing they still need to do is change the text at the bottom of the screen.\r\n\r\n# Do This\r\n\r\nMake each of the event handlers change the text of \"feeling\" to the appropriate emotion (either \"happy\" or \"sad\")",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

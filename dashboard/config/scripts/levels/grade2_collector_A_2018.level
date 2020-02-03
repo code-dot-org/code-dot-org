@@ -26,8 +26,8 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help Laurel collect all of the treasure.",
-    "markdown_instructions": "Help Laurel collect all of the treasure.",
+    "short_instructions": "Help Laurel collect all of the treasure.",
+    "long_instructions": "Help Laurel collect all of the treasure.",
     "callout_json": "[]",
     "ideal": "8",
     "instructions_important": "false",
@@ -39,11 +39,16 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 7730,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:32:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-11 22:24:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:32:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-09-11 22:24:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

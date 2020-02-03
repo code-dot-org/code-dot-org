@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "slider_speed": ".7",
     "free_play": "false",
-    "instructions": "**Challenge:** Can you figure out how to make a picture like this?",
+    "short_instructions": "**Challenge:** Can you figure out how to make a picture like this?",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -33,7 +33,7 @@
     "instructions_important": "false",
     "discard_background": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides",
+    "long_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have 50 pixel sides",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "contained_level_names": [

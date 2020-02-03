@@ -1,0 +1,9 @@
+- videos = []
+- videos << { id: 'creativity_is',  code: 'VYqHGIR7a_k', text: I18n.t(:hoc2018_dance_video_title_what_is_creativity),  duration: I18n.t(:video_1min), download: "//videos.code.org/social/creativity-is.mp4"}
+
+- videos.each do |video|
+  .col-50{style: "float:left; padding:10px"}
+    - url = "https://www.youtube.com/watch?v=#{video[:code]}"
+    - facebook = {u: url}
+    - twitter = {url: url, related: 'codeorg', text: "#{video[:text]} (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
+    =view :display_video_thumbnail, id: video[:id], video_code: video[:code], caption: "#{video[:text]} (#{video[:duration]})", play_button: 'center', facebook: facebook, twitter: twitter, download_path: video[:download]

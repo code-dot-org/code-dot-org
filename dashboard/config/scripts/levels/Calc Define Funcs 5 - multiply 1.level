@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Oh no! We lost our multiply block! We'll have to create a function to multiply for us. To start off, write a function \"f\" that takes a parameter \"x\" and returns x*5. Test your function using f(3).",
+    "short_instructions": "Oh no! We lost our multiply block! We'll have to create a function to multiply for us. To start off, write a function \"f\" that takes a parameter \"x\" and returns x*5. Test your function using f(3).",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

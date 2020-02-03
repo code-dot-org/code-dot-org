@@ -1,32 +1,93 @@
 ---
 title: Hour of Code Teacher Resources
-nav: hoc_teacher_resources_nav
 theme: responsive
+social:
+  twitter:card: photo
+  twitter:site: "@codeorg"
+  og:image:width: '1200'
+  og:image:height: '630'
 ---
+:ruby
+  @header["social"]["twitter:url"] = 'https://' + request.host + '/hourofcode/overview'
+  @header["social"]["twitter:title"] = hoc_s(:hour_of_code)
+  @header["social"]["twitter:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["twitter:image:src"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
+  @header["social"]["og:title"] = hoc_s(:hour_of_code)
+  @header["social"]["og:description"] = hoc_s(:social_hoc2018_global_movement)
+  @header["social"]["og:image"] = 'https://' + request.host + '/images/social-media/code-2018-creativity.png'
+
 %link{href: "/css/student.css", rel: "stylesheet"}
 %link{href: "/css/tools.css", rel: "stylesheet"}
 %link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
 %script{type: "text/javascript", src: "/js/hoc-overview.js"}
 
-%h1 Hour of Code for all ages
+%h1= I18n.t(:hoc_overview_title)
 
-The
-%a{href:"https://hourofcode.com"} Hour of Code
-is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 200+ one-hour tutorials, available in over 45 languages. Teachers, to view lesson plans and additional teacher resources please select your desired Hour of Code tutorial from the side menu to the left.
+= I18n.t(:hoc_overview_subtitle)
 
-#resources.responsive-body
+- if request.language == 'en'
+  %br/
+  %br/
+  = view :professional_learning_apply_banner, use_sign_up_text: true
+  %br/
+  .tile-container-responsive{style: "margin-top: 20px;"}
+    .col-50
+      .tutorial-tile
+        %a{href: "/dance"}
+          %img.tutorial-tile-img{src: "/images/dance_party_2019.gif"}
+        .tutorial-info
+          %span
+            %h3.tutorial-info-h= I18n.t(:hoc_overview_dance_title)
+            .smalltext= I18n.t(:hoc_overview_dance_2019_subtitle)
+          %span
+            %a{href: "/dance"}
+              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            .tutorial-info-guide
+              %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+                = I18n.t(:hoc_overview_view_teacher_guide)
+
+    .col-50
+      .tutorial-tile
+        %a{href: "/oceans"}
+          %img.tutorial-tile-img{src: "/images/fill-485x235/oceans/oceans-overview.png"}
+        .tutorial-info
+          %span
+            %h3.tutorial-info-h=hoc_s(:hoc_overview_oceans_tutorial_header)
+            .smalltext=hoc_s(:hoc_overview_oceans_tutorial_desc)
+          %span
+            %a{href: "/oceans"}
+              %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+            .tutorial-info-guide
+              %a{href: "https://curriculum.code.org/hoc/plugged/9/"}
+                = I18n.t(:hoc_overview_view_teacher_guide)
+
+- else
+  .full-resource-block{style: "margin-top: 20px; margin-bottom: 20px;"}
+    %a{href: "/dance"}
+      %img.full-resource-image{src: "/images/dance_party_2019.gif"}
+    .tutorial-info{style: "padding: 30px;"}
+      %span
+        %h2.resource-title= I18n.t(:hoc_overview_dance_title)
+        = I18n.t(:hoc_overview_dance_2019_subtitle)
+      %span
+        %a{href: "/dance"}
+          %button.tutorial-info-start.tutorial-gray= I18n.t(:go)
+        .tutorial-info-guide
+          %a{href: "https://curriculum.code.org/hoc/plugged/8/"}
+            = I18n.t(:hoc_overview_view_teacher_guide)
+
+.tile-container-responsive
   = view :top_hoc_tutorials
 .clear
 
-%br
-%br
-.hoc-tiles-container
-
 .full-resource-block
-  %img.side-image.left.col-50-student{src: "/images/hoc_overview.png"}
-  .side-description-area.right.col-50-student
-    .description
-      %h2.resource-title More Activities from Partners
-      The Hour of Code website has over 100 computer science activities for all ages and experience levels, developed by Code.org and partners.
-    %a{href: "/learn"}
-      %button.orange-button{style: "margin-bottom: 20px;"} Go
+  %img.full-resource-image{src: "/images/csforgood-logo.png"}
+  .activities-info
+    %span
+      %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
+      = I18n.t(:hoc_overview_partner_activities_body)
+    %span
+      %a{href: "https://hourofcode.com/learn"}
+        %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
+
+.hoc-tiles-container

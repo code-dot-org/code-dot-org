@@ -9,9 +9,7 @@ export default storybook => {
       {
         name: 'course blocks - international grade bands',
         description: `This is a set of course blocks listing international grade bands`,
-        story: () => (
-          <CourseBlocksInternationalGradeBands/>
-        )
-      },
+        story: () => <CourseBlocksInternationalGradeBands />
+      }
     ]);
 };

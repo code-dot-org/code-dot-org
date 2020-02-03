@@ -10,6 +10,7 @@
 # abuse and potentially add other abuse prevention measures.
 
 require 'set'
+require 'cdo/shared_constants'
 
 class XhrProxyController < ApplicationController
   include ProxyHelper
@@ -29,6 +30,9 @@ class XhrProxyController < ApplicationController
     apex.oracle.com
     api.coinmarketcap.com
     api.data.gov
+    api.datamuse.com
+    api.energidataservice.dk
+    api.exchangeratesapi.io
     api.football-data.org
     api.foursquare.com
     api.nasa.gov
@@ -37,6 +41,7 @@ class XhrProxyController < ApplicationController
     api.pegelalarm.at
     api.randomuser.me
     api.rebrandly.com
+    api.spacexdata.com
     api.spotify.com
     api.themoviedb.org
     api.thingspeak.com
@@ -45,33 +50,45 @@ class XhrProxyController < ApplicationController
     bible-api.com
     code.org
     compete.hsctf.com
+    data.austintexas.gov
     data.cityofchicago.org
     data.gv.at
     data.nasa.gov
+    developers.zomato.com
+    donordrive.com
     dweet.io
     enclout.com
     githubusercontent.com
     googleapis.com
     hamlin.myschoolapp.com
     herokuapp.com
+    hubblesite.org
+    images-api.nasa.gov
     isenseproject.org
     lakeside-cs.org
+    opentdb.com
+    pokeapi.co
+    qrng.anu.edu.au
     quandl.com
-    query.yahooapis.com
+    quizlet.com
     rejseplanen.dk
+    maker.ifttt.com
     noaa.gov
-    nuevaschool.ngrok.io
-    nuevaschool2.ngrok.io
-    nuevaschool3.ngrok.io
     numbersapi.com
+    random.org
+    restcountries.eu
     rhcloud.com
     runescape.com
+    samples.openweathermap.org
     sheets.googleapis.com
     spreadsheets.google.com
+    stats.minecraftservers.org
     swapi.co
     transitchicago.com
     translate.yandex.net
+    vpic.nhtsa.dot.gov
     wikipedia.org
+    words.bighugelabs.com
   ).freeze
 
   # How long the content is allowed to be cached
@@ -83,6 +100,12 @@ class XhrProxyController < ApplicationController
   def get
     channel_id = params[:c]
     url = params[:u]
+
+    headers = {}
+    ALLOWED_WEB_REQUEST_HEADERS.each do |header|
+      headers[header] = request.headers[header]
+    end
+    headers.compact!
 
     begin
       owner_storage_id, _ = storage_decrypt_channel_id(channel_id)
@@ -104,7 +127,8 @@ class XhrProxyController < ApplicationController
       allowed_content_types: ALLOWED_CONTENT_TYPES,
       allowed_hostname_suffixes: ALLOWED_HOSTNAME_SUFFIXES,
       expiry_time: EXPIRY_TIME,
-      infer_content_type: false
+      infer_content_type: false,
+      headers: headers,
     )
   end
 end

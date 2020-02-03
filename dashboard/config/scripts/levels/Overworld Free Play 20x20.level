@@ -35,12 +35,16 @@
     "if_block_options": "[\"water\", \"lava\", \"\"]",
     "player_start_direction": "0",
     "special_level_type": "freeplay",
-    "instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
-    "video_key": "mc_congrats_no_share"
+    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "video_key": "mc_congrats_no_share",
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-10-19 14:39:30 -0700\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"verification_function\",\"available_blocks\",\"if_block_options\",\"contained_level_names\"],\"changed_by_id\":1483,\"changed_by_email\":\"elijah+levelbuilder@gmail.com\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
-    "debugging": 1,
     "repeat_loops": 1,
     "conditionals": 1
   }

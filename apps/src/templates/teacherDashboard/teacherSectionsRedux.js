@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
-import { OAuthSectionTypes } from './shapes';
+import {OAuthSectionTypes} from './shapes';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -14,7 +15,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'courseId',
   'scriptId',
   'grade',
-  'hidden',
+  'hidden'
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -26,13 +27,13 @@ export const NO_SECTION = '';
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
-  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms'
 };
 
 /** @const {Object} Map oauth section type to relative import URL. */
 const importUrlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom'
 };
 
 //
@@ -40,8 +41,10 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
-const SET_STAGE_EXTRAS_SCRIPT_IDS = 'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
+const SET_STAGE_EXTRAS_SCRIPT_IDS =
+  'teacherDashboard/SET_STAGE_EXTRAS_SCRIPT_IDS';
 const SET_STUDENT_SECTION = 'teacherDashboard/SET_STUDENT_SECTION';
+const SET_PAGE_TYPE = 'teacherDashboard/SET_PAGE_TYPE';
 /** Sets teacher's current authentication providers */
 const SET_AUTH_PROVIDERS = 'teacherDashboard/SET_AUTH_PROVIDERS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
@@ -69,9 +72,11 @@ const SET_ROSTER_PROVIDER = 'teacherSections/SET_ROSTER_PROVIDER';
 /** Opens the third-party roster UI */
 const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 /** Reports available rosters have been loaded */
-const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
+const IMPORT_ROSTER_FLOW_LIST_LOADED =
+  'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
 /** Reports loading available rosters has failed */
-const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
+const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED =
+  'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
 /** Closes the third-party roster UI, purging available rosters */
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 /** Reports request to import a roster has started */
@@ -86,16 +91,25 @@ export const __testInterface__ = {
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
   PENDING_NEW_SECTION_ID,
-  USER_EDITABLE_SECTION_PROPS,
+  USER_EDITABLE_SECTION_PROPS
 };
 
 //
 // Action Creators
 //
-export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
-export const setStageExtrasScriptIds = ids => ({ type: SET_STAGE_EXTRAS_SCRIPT_IDS, ids });
-export const setAuthProviders = providers => ({ type: SET_AUTH_PROVIDERS, providers });
-export const setRosterProvider = rosterProvider => ({ type: SET_ROSTER_PROVIDER, rosterProvider });
+export const setValidGrades = grades => ({type: SET_VALID_GRADES, grades});
+export const setStageExtrasScriptIds = ids => ({
+  type: SET_STAGE_EXTRAS_SCRIPT_IDS,
+  ids
+});
+export const setAuthProviders = providers => ({
+  type: SET_AUTH_PROVIDERS,
+  providers
+});
+export const setRosterProvider = rosterProvider => ({
+  type: SET_ROSTER_PROVIDER,
+  rosterProvider
+});
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
@@ -106,14 +120,25 @@ export const setStudentsForCurrentSection = (sectionId, studentInfo) => ({
   sectionId: sectionId,
   students: studentInfo
 });
+export const setPageType = pageType => ({type: SET_PAGE_TYPE, pageType});
+
+// pageType describes the current route the user is on. Used only for logging.
+// Enum of allowed values:
+export const pageTypes = {
+  level: 'level',
+  scriptOverview: 'script_overview',
+  courseOverview: 'course_overview',
+  stageExtras: 'stage_extras',
+  homepage: 'homepage'
+};
 
 /**
  * Set the list of sections to display.
  * @param sections
  */
-export const setSections = (sections) => ({ type: SET_SECTIONS, sections });
-export const selectSection = sectionId => ({ type: SELECT_SECTION, sectionId });
-export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
+export const setSections = sections => ({type: SET_SECTIONS, sections});
+export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
+export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
 
 /**
  * Changes the hidden state of a given section, persisting these changes to the
@@ -129,9 +154,44 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
 };
 
 /**
+ * Assigns a course to a given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ * @param {number} courseId
+ * @param {number} scriptId
+ */
+export const assignToSection = (sectionId, courseId, scriptId, pageType) => {
+  return (dispatch, getState) => {
+    dispatch(beginEditingSection(sectionId, true));
+    dispatch(
+      editSectionProperties({
+        courseId: courseId,
+        scriptId: scriptId
+      })
+    );
+    return dispatch(finishEditingSection(pageType));
+  };
+};
+
+/**
+ * Removes assignments from the given section, persisting these changes to
+ * the server
+ * @param {number} sectionId
+ */
+export const unassignSection = sectionId => (dispatch, getState) => {
+  dispatch(beginEditingSection(sectionId, true));
+  dispatch(editSectionProperties({courseId: '', scriptId: ''}));
+  return dispatch(finishEditingSection());
+};
+
+/**
  * Opens the UI for adding a new section.
  */
-export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTION_BEGIN, courseId, scriptId});
+export const beginEditingNewSection = (courseId, scriptId) => ({
+  type: EDIT_SECTION_BEGIN,
+  courseId,
+  scriptId
+});
 
 /**
  * Opens the UI for editing the specified section.
@@ -139,7 +199,7 @@ export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTI
  * @param {bool} [silent] - Optional param for when we want to begin editing the
  *   section without launching our dialog
  */
-export const beginEditingSection = (sectionId, silent=false) => ({
+export const beginEditingSection = (sectionId, silent = false) => ({
   type: EDIT_SECTION_BEGIN,
   sectionId,
   silent
@@ -150,12 +210,15 @@ export const beginEditingSection = (sectionId, silent=false) => ({
  * @param {object} props - set of section properties of update.
  * @throws if not currently editing, or if trying to set an invalid prop.
  */
-export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, props });
+export const editSectionProperties = props => ({
+  type: EDIT_SECTION_PROPERTIES,
+  props
+});
 
 /**
  * Close the UI for adding/editing a section, abandoning changes.
  */
-export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
+export const cancelEditingSection = () => ({type: EDIT_SECTION_CANCEL});
 
 /**
  * Submit staged section changes to the server.
@@ -166,25 +229,29 @@ export const finishEditingSection = () => (dispatch, getState) => {
   const state = getState().teacherSections;
   const section = state.sectionBeingEdited;
 
-  const dataUrl = isAddingSection(state) ? '/dashboardapi/sections' : `/dashboardapi/sections/${section.id}`;
+  const dataUrl = isAddingSection(state)
+    ? '/dashboardapi/sections'
+    : `/dashboardapi/sections/${section.id}`;
   const httpMethod = isAddingSection(state) ? 'POST' : 'PATCH';
   return new Promise((resolve, reject) => {
     $.ajax({
       url: dataUrl,
       method: httpMethod,
       contentType: 'application/json;charset=UTF-8',
-      data: JSON.stringify(serverSectionFromSection(section)),
-    }).done(result => {
-      dispatch({
-        type: EDIT_SECTION_SUCCESS,
-        sectionId: section.id,
-        serverSection: result,
+      data: JSON.stringify(serverSectionFromSection(section))
+    })
+      .done(result => {
+        dispatch({
+          type: EDIT_SECTION_SUCCESS,
+          sectionId: section.id,
+          serverSection: result
+        });
+        resolve();
+      })
+      .fail((jqXhr, status) => {
+        dispatch({type: EDIT_SECTION_FAILURE});
+        reject(status);
       });
-      resolve();
-    }).fail((jqXhr, status) => {
-      dispatch({type: EDIT_SECTION_FAILURE});
-      reject(status);
-    });
   });
 };
 
@@ -200,7 +267,7 @@ export const editSectionLoginType = (sectionId, loginType) => dispatch => {
   return dispatch(finishEditingSection());
 };
 
-export const asyncLoadSectionData = (id) => (dispatch) => {
+export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   // If section id is provided, load students for the current section.
   dispatch({type: ASYNC_LOAD_BEGIN});
@@ -220,9 +287,11 @@ export const asyncLoadSectionData = (id) => (dispatch) => {
       if (id) {
         dispatch(setStudentsForCurrentSection(id, students));
       }
-    }).catch(err => {
+    })
+    .catch(err => {
       console.error(err.message);
-    }).then(() => {
+    })
+    .then(() => {
       dispatch({type: ASYNC_LOAD_END});
     });
 };
@@ -231,12 +300,16 @@ function fetchJSON(url, params) {
   return new Promise((resolve, reject) => {
     $.getJSON(url, params)
       .done(resolve)
-      .fail(jqxhr => reject(new Error(`
+      .fail(jqxhr =>
+        reject(
+          new Error(`
         url: ${url}
         status: ${jqxhr.status}
         statusText: ${jqxhr.statusText}
         responseText: ${jqxhr.responseText}
-      `)));
+      `)
+        )
+      );
   });
 }
 
@@ -249,7 +322,9 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).rosterProvider;
   if (!provider) {
-    return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
+    return Promise.reject(
+      new Error('Unable to begin import roster flow without a provider')
+    );
   }
 
   if (isRosterDialogOpen(state)) {
@@ -267,7 +342,9 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
         resolve();
       })
       .fail(result => {
-        const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
+        const message = result.responseJSON
+          ? result.responseJSON.error
+          : 'Unknown error.';
         dispatch({
           type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
           status: result.status,
@@ -290,20 +367,25 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  * @param {string} courseName
  * @return {function():Promise}
  */
-export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
+export const importOrUpdateRoster = (courseId, courseName) => (
+  dispatch,
+  getState
+) => {
   const state = getState();
   const provider = getRoot(state).rosterProvider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, { courseId, courseName })
-    .then(newSection => sectionId = newSection.id)
+  return fetchJSON(importSectionUrl, {courseId, courseName})
+    .then(newSection => (sectionId = newSection.id))
     .then(() => dispatch(asyncLoadSectionData()))
-    .then(() => dispatch({
-      type: IMPORT_ROSTER_SUCCESS,
-      sectionId
-    }));
+    .then(() =>
+      dispatch({
+        type: IMPORT_ROSTER_SUCCESS,
+        sectionId
+      })
+    );
 };
 
 /**
@@ -347,6 +429,8 @@ const initialState = {
   classrooms: null,
   // Error that occurred while loading oauth classrooms
   loadError: null,
+  // The page where the action is occurring
+  pageType: ''
 };
 
 /**
@@ -372,19 +456,25 @@ function newSectionData(id, courseId, scriptId, loginType) {
     courseId: courseId || null,
     scriptId: scriptId || null,
     hidden: false,
+    isAssigned: undefined
   };
 }
 
 const defaultVersionYear = '2017';
+const defaultStageExtras = false;
 
 // Fields to copy from the assignmentInfo when creating an assignmentFamily.
 export const assignmentFamilyFields = [
-  'category_priority', 'category', 'position', 'assignment_family_title', 'assignment_family_name'
+  'category_priority',
+  'category',
+  'position',
+  'assignment_family_title',
+  'assignment_family_name'
 ];
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
 // (i.e., Google auth is 'google_oauth2' but the section type is 'google_classroom').
-export const mapProviderToSectionType = (provider) => {
+export const mapProviderToSectionType = provider => {
   switch (provider) {
     case 'google_oauth2':
       return OAuthSectionTypes.google_classroom;
@@ -393,18 +483,20 @@ export const mapProviderToSectionType = (provider) => {
   }
 };
 
-export default function teacherSections(state=initialState, action) {
+export default function teacherSections(state = initialState, action) {
   if (action.type === SET_AUTH_PROVIDERS) {
     return {
       ...state,
-      providers: action.providers.map(provider => mapProviderToSectionType(provider))
+      providers: action.providers.map(provider =>
+        mapProviderToSectionType(provider)
+      )
     };
   }
 
   if (action.type === SET_STAGE_EXTRAS_SCRIPT_IDS) {
     return {
       ...state,
-      stageExtrasScriptIds: action.ids,
+      stageExtrasScriptIds: action.ids
     };
   }
 
@@ -412,6 +504,13 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       validGrades: action.grades
+    };
+  }
+
+  if (action.type === SET_PAGE_TYPE) {
+    return {
+      ...state,
+      pageType: action.pageType
     };
   }
 
@@ -426,7 +525,8 @@ export default function teacherSections(state=initialState, action) {
     action.validCourses.forEach(course => {
       const assignId = assignmentId(course.id, null);
       const scriptAssignIds = (course.script_ids || []).map(scriptId =>
-        assignmentId(null, scriptId));
+        assignmentId(null, scriptId)
+      );
       validAssignments[assignId] = {
         ..._.omit(course, 'script_ids'),
         courseId: course.id,
@@ -451,8 +551,10 @@ export default function teacherSections(state=initialState, action) {
 
       // Put each script in its own assignment family with the default version
       // year, unless those values were provided by the server.
-      const assignmentFamilyName = script.assignment_family_name || script.script_name;
-      const assignmentFamilyTitle = script.assignment_family_title || script.name;
+      const assignmentFamilyName =
+        script.assignment_family_name || script.script_name;
+      const assignmentFamilyTitle =
+        script.assignment_family_title || script.name;
       const versionYear = script.version_year || defaultVersionYear;
       const versionTitle = script.version_title || defaultVersionYear;
 
@@ -486,13 +588,14 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       validAssignments,
-      assignmentFamilies,
+      assignmentFamilies
     };
   }
 
   if (action.type === SET_STUDENT_SECTION) {
     const students = action.students.map(student =>
-      studentFromServerStudent(student, action.sectionId));
+      studentFromServerStudent(student, action.sectionId)
+    );
     return {
       ...state,
       selectedStudents: students
@@ -501,7 +604,8 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
-      sectionFromServerSection(section));
+      sectionFromServerSection(section)
+    );
 
     let selectedSectionId = state.selectedSectionId;
     // If we have only one section, autoselect it
@@ -511,7 +615,7 @@ export default function teacherSections(state=initialState, action) {
 
     sections.forEach(section => {
       // SET_SECTIONS is called in two different contexts. On some pages it is called
-      // in a way that only provides name/id per section, in other places (homepage)
+      // in a way that only provides name/id per section, in other places (homepage, script overview)
       // it provides more detailed information. There are currently no pages where
       // it should be called in both manners, but we want to make sure that if it
       // were it will throw an error rather than destroy data.
@@ -519,7 +623,9 @@ export default function teacherSections(state=initialState, action) {
       if (prevSection) {
         Object.keys(section).forEach(key => {
           if (section[key] === undefined && prevSection[key] !== undefined) {
-            throw new Error('SET_SECTIONS called multiple times in a way that would remove data');
+            throw new Error(
+              'SET_SECTIONS called multiple times in a way that would remove data'
+            );
           }
         });
       }
@@ -529,7 +635,9 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionsAreLoaded: true,
       selectedSectionId,
-      sectionIds:_.uniq(state.sectionIds.concat(sections.map(section => section.id))),
+      sectionIds: _.uniq(
+        state.sectionIds.concat(sections.map(section => section.id))
+      ),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
@@ -539,7 +647,10 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     let sectionId = action.sectionId;
-    if (sectionId !== NO_SECTION && !state.sectionIds.includes(parseInt(sectionId, 10))) {
+    if (
+      sectionId !== NO_SECTION &&
+      !state.sectionIds.includes(parseInt(sectionId, 10))
+    ) {
       sectionId = NO_SECTION;
     }
     return {
@@ -562,7 +673,7 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === TOGGLE_SECTION_HIDDEN) {
-    const { sectionId } = action;
+    const {sectionId} = action;
     const section = state.sections[sectionId];
     if (!section) {
       throw new Error('section does not exist');
@@ -574,29 +685,36 @@ export default function teacherSections(state=initialState, action) {
         ...state.sections,
         [sectionId]: {
           ...state.sections[sectionId],
-          hidden: !state.sections[sectionId].hidden,
+          hidden: !state.sections[sectionId].hidden
         }
       }
     };
   }
 
   if (action.type === EDIT_SECTION_BEGIN) {
-    const initialSectionData = action.sectionId ?
-      {...state.sections[action.sectionId]} :
-      newSectionData(PENDING_NEW_SECTION_ID, action.courseId, action.scriptId, undefined);
+    const initialSectionData = action.sectionId
+      ? {...state.sections[action.sectionId]}
+      : newSectionData(
+          PENDING_NEW_SECTION_ID,
+          action.courseId,
+          action.scriptId,
+          undefined
+        );
     return {
       ...state,
+      initialCourseId: initialSectionData.courseId,
+      initialScriptId: initialSectionData.scriptId,
       sectionBeingEdited: initialSectionData,
       showSectionEditDialog: !action.silent
     };
   }
 
   if (action.type === EDIT_SECTION_PROPERTIES) {
-    const stageExtraSettings = {};
-
     if (!state.sectionBeingEdited) {
-      throw new Error('Cannot edit section properties; no section is'
-        + ' currently being edited.');
+      throw new Error(
+        'Cannot edit section properties; no section is' +
+          ' currently being edited.'
+      );
     }
 
     for (const key in action.props) {
@@ -605,10 +723,14 @@ export default function teacherSections(state=initialState, action) {
       }
     }
 
-    // Selecting Course 1-4 or A-F should auto-enable Stage Extras.
+    const stageExtraSettings = {};
     if (action.props.scriptId) {
-      const script = state.validAssignments[assignmentId(null, action.props.scriptId)];
-      stageExtraSettings.stageExtras = !!(script && /course[1-4a-f]/.test(script.script_name));
+      const script =
+        state.validAssignments[assignmentId(null, action.props.scriptId)];
+      if (script) {
+        stageExtraSettings.stageExtras =
+          script.stage_extras_available || defaultStageExtras;
+      }
     }
 
     return {
@@ -616,7 +738,7 @@ export default function teacherSections(state=initialState, action) {
       sectionBeingEdited: {
         ...state.sectionBeingEdited,
         ...stageExtraSettings,
-        ...action.props,
+        ...action.props
       }
     };
   }
@@ -624,19 +746,18 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === EDIT_SECTION_CANCEL) {
     return {
       ...state,
-      sectionBeingEdited: null,
+      sectionBeingEdited: null
     };
   }
 
   if (action.type === EDIT_SECTION_REQUEST) {
     return {
       ...state,
-      saveInProgress: true,
+      saveInProgress: true
     };
   }
 
   if (action.type === EDIT_SECTION_SUCCESS) {
-
     const section = sectionFromServerSection(action.serverSection);
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
@@ -644,13 +765,36 @@ export default function teacherSections(state=initialState, action) {
     let newSectionIds = state.sectionIds;
     if (newSection) {
       if (state.sectionIds.includes(oldSectionId)) {
-        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
+        newSectionIds = state.sectionIds.map(id =>
+          id === oldSectionId ? section.id : id
+        );
       } else {
-        newSectionIds = [
-          section.id,
-          ...state.sectionIds,
-        ];
+        newSectionIds = [section.id, ...state.sectionIds];
       }
+    }
+
+    let assignmentData = {
+      section_id: section.id,
+      section_creation_timestamp: section.createdAt,
+      page_name: state.pageType
+    };
+    if (section.scriptId !== state.initialScriptId) {
+      assignmentData.script_id = section.scriptId;
+    }
+    if (section.courseId !== state.initialCourseId) {
+      assignmentData.course_id = section.courseId;
+    }
+    if (
+      // If either of these is not undefined, then assignment changed and should be logged
+      !(typeof assignmentData.script_id === 'undefined') ||
+      !(typeof assignmentData.course_id === 'undefined')
+    ) {
+      firehoseClient.putRecord({
+        study: 'assignment',
+        study_group: 'v1',
+        event: newSection ? 'create_section' : 'edit_section_details',
+        data_json: JSON.stringify(assignmentData)
+      });
     }
 
     // When updating a persisted section, oldSectionId will be identical to
@@ -670,39 +814,40 @@ export default function teacherSections(state=initialState, action) {
         }
       },
       sectionBeingEdited: null,
-      saveInProgress: false,
+      saveInProgress: false
     };
   }
 
   if (action.type === EDIT_SECTION_FAILURE) {
     return {
       ...state,
-      saveInProgress: false,
+      saveInProgress: false
     };
   }
 
   if (action.type === ASYNC_LOAD_BEGIN) {
     return {
       ...state,
-      asyncLoadComplete: false,
+      asyncLoadComplete: false
     };
   }
 
   if (action.type === ASYNC_LOAD_END) {
     return {
       ...state,
-      asyncLoadComplete: true,
+      asyncLoadComplete: true
     };
   }
 
   if (action.type === SET_ROSTER_PROVIDER) {
-    if (!OAuthSectionTypes[action.rosterProvider]) {
-      throw new Error(`SET_ROSTER_PROVIDER called with invalid provider type '${action.rosterProvider}'`);
+    // No-op if this action is called with a non-OAuth section type,
+    // since this action is triggered on every section load.
+    if (OAuthSectionTypes[action.rosterProvider]) {
+      return {
+        ...state,
+        rosterProvider: action.rosterProvider
+      };
     }
-    return {
-      ...state,
-      rosterProvider: action.rosterProvider,
-    };
   }
 
   //
@@ -713,14 +858,14 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       isRosterDialogOpen: true,
-      classrooms: null,
+      classrooms: null
     };
   }
 
   if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
     return {
       ...state,
-      classrooms: action.classrooms.slice(),
+      classrooms: action.classrooms.slice()
     };
   }
 
@@ -729,7 +874,7 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       loadError: {
         status: action.status,
-        message: action.message,
+        message: action.message
       }
     };
   }
@@ -739,14 +884,14 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       isRosterDialogOpen: false,
       rosterProvider: null,
-      classrooms: null,
+      classrooms: null
     };
   }
 
   if (action.type === IMPORT_ROSTER_REQUEST) {
     return {
       ...state,
-      classrooms: null,
+      classrooms: null
     };
   }
 
@@ -758,7 +903,7 @@ export default function teacherSections(state=initialState, action) {
         ...state.sections[action.sectionId],
         // explicitly unhide section after importing
         hidden: false
-      },
+      }
     };
   }
 
@@ -805,7 +950,7 @@ export function isSaveInProgress(state) {
 }
 
 export function assignedScriptName(state) {
-  const { sectionBeingEdited, validAssignments } = getRoot(state);
+  const {sectionBeingEdited, validAssignments} = getRoot(state);
   if (!sectionBeingEdited) {
     return '';
   }
@@ -814,13 +959,18 @@ export function assignedScriptName(state) {
   return assignment ? assignment.name : '';
 }
 
+export function getVisibleSections(state) {
+  const allSections = Object.values(getRoot(state).sections);
+  return (allSections || []).filter(s => !s.hidden);
+}
+
 /**
  * Gets the data needed by Reacttabular to show a sortable table
  * @param {object} state - Full store state
  * @param {number[]} sectionIds - List of section ids we want row data for
  */
 export function getSectionRows(state, sectionIds) {
-  const { sections, validAssignments } = getRoot(state);
+  const {sections, validAssignments} = getRoot(state);
   return sectionIds.map(id => ({
     ..._.pick(sections[id], [
       'id',
@@ -830,10 +980,10 @@ export function getSectionRows(state, sectionIds) {
       'code',
       'grade',
       'providerManaged',
-      'hidden',
+      'hidden'
     ]),
     assignmentNames: assignmentNames(validAssignments, sections[id]),
-    assignmentPaths: assignmentPaths(validAssignments, sections[id]),
+    assignmentPaths: assignmentPaths(validAssignments, sections[id])
   }));
 }
 
@@ -844,6 +994,7 @@ export function getSectionRows(state, sectionIds) {
 export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
+  createdAt: serverSection.createdAt,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
   providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
@@ -853,8 +1004,11 @@ export const sectionFromServerSection = serverSection => ({
   studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null,
+  scriptId: serverSection.script
+    ? serverSection.script.id
+    : serverSection.script_id || null,
   hidden: serverSection.hidden,
+  isAssigned: serverSection.isAssigned
 });
 
 /**
@@ -883,7 +1037,7 @@ export function serverSectionFromSection(section) {
     pairing_allowed: section.pairingAllowed,
     sharing_disabled: section.sharingDisabled,
     course_id: section.courseId,
-    script: (section.scriptId ? {id: section.scriptId} : undefined),
+    script: section.scriptId ? {id: section.scriptId} : undefined
   };
 }
 
@@ -912,7 +1066,7 @@ export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   // we might not have an assignment object if we have a section that was somehow
   // assigned to a hidden script (and we dont have permissions to see hidden scripts)
-  return assignments.map(assignment => assignment ? assignment.name : '');
+  return assignments.map(assignment => (assignment ? assignment.name : ''));
 };
 
 /**
@@ -921,7 +1075,7 @@ export const assignmentNames = (validAssignments, section) => {
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment ? assignment.path : '');
+  return assignments.map(assignment => (assignment ? assignment.path : ''));
 };
 
 /**
@@ -929,7 +1083,8 @@ export const assignmentPaths = (validAssignments, section) => {
  * @param state
  * @param id
  */
-export const stageExtrasAvailable = (state, id) => state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
+export const stageExtrasAvailable = (state, id) =>
+  state.teacherSections.stageExtrasScriptIds.indexOf(id) > -1;
 
 /**
  * Ask whether the user is currently adding a new section using
@@ -944,8 +1099,10 @@ export function isAddingSection(state) {
  * Edit Section dialog.
  */
 export function isEditingSection(state) {
-  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
-    state.showSectionEditDialog;
+  return (
+    !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0) &&
+    state.showSectionEditDialog
+  );
 }
 
 /**
@@ -963,6 +1120,25 @@ export function sectionsNameAndId(state) {
   return state.sectionIds.map(id => ({
     id: parseInt(id, 10),
     name: state.sections[id].name
+  }));
+}
+
+export function sectionsForDropdown(
+  state,
+  scriptId,
+  courseId,
+  onCourseOverview
+) {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.sections[id].name,
+    scriptId: state.sections[id].scriptId,
+    courseId: state.sections[id].courseId,
+    isAssigned:
+      (scriptId !== null && state.sections[id].scriptId === scriptId) ||
+      (courseId !== null &&
+        state.sections[id].courseId === courseId &&
+        onCourseOverview)
   }));
 }
 

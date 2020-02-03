@@ -283,6 +283,7 @@ Devise.setup do |config|
 
   config.omniauth :google_oauth2, CDO.dashboard_google_key, CDO.dashboard_google_secret, {
     include_granted_scopes: true,
+    prompt: 'consent',
     setup: lambda do |env|
       # If requesting additional scopes, always re-confirm with the user so we get a new refresh token.
       if env['omniauth.strategy'].authorize_params['scope'] != 'email profile'
@@ -341,7 +342,7 @@ Devise.setup do |config|
     manager.failure_app = CustomDeviseFailure
   end
 
-  require 'cookie_helpers'
+  require 'cdo/cookie_helpers'
   Warden::Manager.after_set_user do |user, auth|
     user_type =
       if user.teacher?
@@ -351,15 +352,21 @@ Devise.setup do |config|
       else
         "student"
       end
+    # Students younger than 13 shouldn't see App Lab and Game Lab unless they
+    # are in a teacher's section for privacy reasons.
+    limit_project_types = user.under_13? && !user.sections_as_student.any?
+    auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: user.get_active_experiment_names.to_json, domain: :all}
   end
 
   Warden::Manager.before_logout do |_, auth|
+    auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_user_type")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
     auth.cookies[environment_specific_cookie_name("_shortName")] = {value: "", expires: Time.at(0), domain: :all}
     auth.cookies[environment_specific_cookie_name("_experiments")] = {value: "", expires: Time.at(0), domain: :all}
+    auth.cookies[environment_specific_cookie_name("_assumed_identity")] = {value: "", expires: Time.at(0), domain: :all, httponly: true}
   end
 
   # ==> Mountable engine configurations

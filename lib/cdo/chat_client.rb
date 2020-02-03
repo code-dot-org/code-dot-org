@@ -12,7 +12,7 @@ class ChatClient
   @@logger = nil
 
   def self.log(message, options={})
-    if CircleUtils.circle?
+    if ENV['CI']
       CDO.log.info("[#{CDO.slack_log_room}] #{message}")
     else
       message(CDO.slack_log_room, message, options)

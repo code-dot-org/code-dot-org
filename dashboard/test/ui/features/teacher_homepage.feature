@@ -1,22 +1,22 @@
-@dashboard_db_access
-@pegasus_db_access
 @as_teacher
 @no_mobile
 Feature: Using the teacher homepage sections feature
 
   Scenario: Loading the teacher homepage with new sections
     # Create my first section (via the SetUpSections component)
-    When I see the section set up box
-    And I create a new section
+    When I create a new section and go home
     Then the section table should have 1 row
 
+    And I wait until element "a:contains(Untitled Section)" is visible
+    And the href of selector "a:contains(Untitled Section)" contains "/teacher_dashboard/sections/"
+
     # Create my second section (via the button in OwnedSections)
-    When I create a new section
+    When I create a new section and go home
     Then the section table should have 2 rows
 
   Scenario: Loading teacher homepage with course experiment enabled
+    Given I am on "http://studio.code.org/home"
     Given I enable the "subgoals-group-a" course experiment
-    And I wait for the pegasus and dashboard experiment caches to expire
     And I reload the page
     And I wait to see ".uitest-newsection"
     And check that the URL contains "/home"
@@ -25,9 +25,10 @@ Feature: Using the teacher homepage sections feature
     And the section table row at index 0 has secondary assignment path "/s/csp3-a"
 
   Scenario: Navigate to course and unit pages
+    Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
-    And I create a new section
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
+    And I create a new section and go home
     Then the section table should have 2 rows
 
     # save the older section id, from the last row of the table
@@ -46,6 +47,7 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     And the href of selector ".uitest-script-next-banner" contains the section id
+    And I wait for 3 seconds
     And the href of selector ".uitest-ProgressPill:first" contains the section id
     And the href of selector ".uitest-ProgressBubble:first" contains the section id
     And the href of selector "a:contains(Computer Science Principles)" contains the section id
@@ -88,7 +90,8 @@ Feature: Using the teacher homepage sections feature
     And element ".uitest-sectionselect" has value ""
 
   Scenario: Assign hidden unit to section
-    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet"
+    Given I am on "http://studio.code.org/home"
+    And I create a new section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"
     Then the section table should have 1 rows
     And I save the section id from row 0 of the section table
 
@@ -97,8 +100,8 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     # Hide a unit from the section
-    When I hide unit "CSP Unit 2 - Digital Information"
-    And unit "CSP Unit 2 - Digital Information" is marked as not visible
+    When I hide unit "CSP Unit 2 - Digital Information ('17-'18)"
+    And unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as not visible
 
     # Verify hidden unit warning banner appears
     When I am on "http://studio.code.org/s/csp2-2017"
@@ -107,22 +110,29 @@ Feature: Using the teacher homepage sections feature
 
     # Try to assign the unit
     Given I am on "http://studio.code.org/home"
-    And I click selector ".ui-test-section-dropdown"
-    And I click selector ".edit-section-details-link"
+    And I click selector ".ui-test-section-dropdown" once I see it
+    And I click selector ".edit-section-details-link" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 2 - Digital Information" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 2 - Digital Information ('17-'18)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
     Then I wait to see a dialog containing text "unit is currently hidden"
 
     # Confirm the assignment
-    When I click selector "#confirm-assign"
+    When I press "confirm-assign"
     And I wait for the dialog to close
     And the section table row at index 0 has secondary assignment path "/s/csp2-2017"
 
     # Verify the unit was unhidden
     When I am on "http://studio.code.org/courses/csp-2017"
     And I wait until element ".uitest-CourseScript" is visible
-    Then unit "CSP Unit 2 - Digital Information" is marked as visible
+    Then unit "CSP Unit 2 - Digital Information ('17-'18)" is marked as visible
+
+  Scenario: Assign a Course assigns first Unit in Course by default
+    Given I am on "http://studio.code.org/home"
+    When I see the section set up box
+    And I create a new section with course "Computer Science Principles", version "'17-'18"
+    Then the section table should have 1 rows
+    And the section table row at index 0 has secondary assignment path "/s/csp1-2017"
 
   Scenario: Assign a CSF course with multiple versions
     Given I am on "http://studio.code.org/home"
@@ -135,7 +145,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".edit-section-details-link"
     And I wait until element "#assignment-version-year" is visible
     And element "#assignment-version-year" has value "2017"
-    And I click selector "#assignment-version-year"
+    And I press "assignment-version-year"
     And I click selector ".assignment-version-title:contains(2018)" once I see it
     And I press the first ".uitest-saveButton" element
     And I wait for the dialog to close
@@ -145,7 +155,7 @@ Feature: Using the teacher homepage sections feature
   Scenario: Navigate to course pages with course versions enabled
     Given I am on "http://studio.code.org/home"
     When I see the section set up box
-    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet"
+    And I create a new section with course "Computer Science Principles", version "'18-'19" and unit "CSP Unit 1 - The Internet ('18-'19)"
     Then the section table should have 1 rows
 
     # save the older section id, from the last row of the table
@@ -159,16 +169,18 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
     And check that the URL contains "/courses/csp-2018"
 
-    When I select the "'17-'18" option in dropdown "version-selector" to load a new page
+    And element "#uitest-version-selector" is visible
+    And I click selector "#assignment-version-year" once I see it
+    And I wait until element ".assignment-version-title" is visible
+    When I click selector ".assignment-version-title:contains('17-'18)" to load a new page
     And I wait to see ".uitest-CourseScript"
     Then the url contains the section id
-    And check that the URL contains "/courses/csp-2017"
 
     And the href of selector ".uitest-CourseScript:contains(CSP Unit 2) .uitest-go-to-unit-button" contains the section id
 
   Scenario: Loading the print certificates page for a section
     Given I create a teacher-associated student named "Sally"
-    And I sign in as "Teacher_Sally"
+    And I sign in as "Teacher_Sally" and go home
     And I click selector ".ui-test-section-dropdown" once I see it
 
     And I click selector ".uitest-certs-link" once I see it

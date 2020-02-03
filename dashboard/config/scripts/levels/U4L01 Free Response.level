@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Free Response: Short description here",
-    "markdown_instructions": "This is the free response question text.\n",
+    "long_instructions": "This is the free response question text.\n",
     "skip_dialog": true,
     "skip_sound": true
   },

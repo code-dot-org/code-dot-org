@@ -1,9 +1,5 @@
 <Applab>
   <config><![CDATA[{
-  "game_id": 41,
-  "created_at": "2018-05-04T23:01:23.000Z",
-  "level_num": "custom",
-  "user_id": 13,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -21,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "instructions": "See if you can figure out why the code is no longer working. (Click to see full instructions)",
+    "short_instructions": "See if you can figure out why the code is no longer working. (Click to see full instructions)",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -39,7 +35,7 @@
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "true",
     "start_blocks": "var count = 0;\r\nsetText(\"countDisplayLabel\", count);\r\nonEvent(\"upButton\", \"click\", function() {\r\n  var count = count + 1;\r\n  setText(\"countDisplayLabel\", count);\r\n});\r\nonEvent(\"downButton\", \"click\", function() {\r\n  setText(\"countDisplayLabel\", \"Down\");\r\n});",
-    "markdown_instructions": "# Debugging Problem!\r\n\r\n**Uh oh!** The code here is subtly different from the one in the previous example and **now there is a problem**.\r\n\r\n# Do This:\r\n\r\n* **Run the app** and try it to see the problem. \r\n* **See the error.**\r\n  * Note that **NaN** stands for \"Not a Number\" - why would it say this?\r\n* **Note the difference** between this broken version and the previous one that worked.\r\n* **Fix the problem** so that it works as before.",
+    "long_instructions": "# Debugging Problem!\r\n\r\n**Uh oh!** The code here is subtly different from the one in the previous example and **now there is a problem**.\r\n\r\n# Do This:\r\n\r\n* **Run the app** and try it to see the problem. \r\n* **See the error.**\r\n  * Note that **NaN** stands for \"Not a Number\" - why would it say this?\r\n* **Note the difference** between this broken version and the previous one that worked.\r\n* **Fix the problem** so that it works as before.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "droplet_tooltips_disabled": "false",
@@ -57,8 +53,13 @@
     "encrypted_examples": "rPQfxIRZzM29C6P3Fskg769NqHOJouXuL5QjAwde2G6FPGfeaHGbTkDfrK8G\nzmwW\n",
     "parent_level_id": 6777,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "show_debug_watch": "true",
+    "preload_asset_list": null
   },
+  "game_id": 41,
+  "created_at": "2018-05-04T23:01:23.000Z",
+  "level_num": "custom",
+  "user_id": 13,
   "published": true
 }]]></config>
   <blocks/>

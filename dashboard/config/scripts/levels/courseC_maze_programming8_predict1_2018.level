@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,4,1,1,1,0,0],[0,0,1,1,4,3,0,0],[0,0,4,1,4,1,0,0],[0,0,4,1,4,1,0,0],[0,0,0,1,2,1,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "*\"Keep calm and help me find the bad pig.\"*",
+    "short_instructions": "*\"Keep calm and help me find the bad pig.\"*",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "false",
@@ -27,7 +27,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "authored_hints": "[]",
-    "markdown_instructions": "*\"Keep calm and help me find the bad pig.\"*",
+    "long_instructions": "*\"Keep calm and help me find the bad pig.\"*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

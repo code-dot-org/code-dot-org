@@ -1,0 +1,23 @@
+name 'AP_practice_Qs_rqb_108_CSP_5_1_3'
+wrong 'Abstraction'
+right 'Collaboration'
+wrong 'Object Oriented Programming'
+wrong 'Top down design'
+markdown <<MARKDOWN
+What can make it easier to find and correct errors when debugging a computer program?
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **5.1.3** and Essential Knowledge statements: **5.1.3D**
+<hr>
+ (A) This is incorrect. Abstraction is a concept of hiding the details and letting programmers use previously developed methods and data structures without worrying about how they are implemented.
+
+<hr>
+ (B) This is correct. Collaboration helps in finding and correcting errors since it gives a chance for collaborators to discuss. If one person in the team develops a method and is having problems with it, another team member can look at it with fresh eyes.
+
+<hr>
+ (C) This is incorrect. Object Oriented Programming is a programming paradigm. It could be just as hard to find and correct errors in an Object Oriented program as it would be in any other type of programming.
+
+<hr>
+ (D) This is incorrect. The top down design approach  is used when brainstorming and designing a solution to a problem. It should be done before one starts the actual programming.
+
+MARKDOWN

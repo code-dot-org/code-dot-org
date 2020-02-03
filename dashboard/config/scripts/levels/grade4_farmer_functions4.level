@@ -26,7 +26,7 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Swap out your repeat loops for more versatile while loops.",
+    "short_instructions": "Swap out your repeat loops for more versatile while loops.",
     "contained_level_names": null
   },
   "published": true,

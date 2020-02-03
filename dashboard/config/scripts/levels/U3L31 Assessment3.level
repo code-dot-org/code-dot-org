@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Photo Album: Question 3",
-    "markdown_instructions": "What was the most significant feedback another student provided to your project that helped you review, revise, and improve your program? (100 words max)\n",
+    "long_instructions": "What was the most significant feedback another student provided to your project that helped you review, revise, and improve your program? (100 words max)\n",
     "skip_dialog": true,
     "skip_sound": true
   },

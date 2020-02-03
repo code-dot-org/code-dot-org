@@ -1,7 +1,7 @@
-import { fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
-import { ViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import { isStageHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
+import {fullyLockedStageMapping} from '@cdo/apps/code-studio/stageLockRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {isStageHiddenForSection} from '@cdo/apps/code-studio/hiddenStageRedux';
+import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -26,7 +26,11 @@ export function lessonIsVisible(lesson, state, viewAs) {
   const hiddenStageState = state.hiddenStage;
   const sectionId = state.teacherSections.selectedSectionId;
 
-  const isHidden = isStageHiddenForSection(hiddenStageState, sectionId, lesson.id);
+  const isHidden = isStageHiddenForSection(
+    hiddenStageState,
+    sectionId,
+    lesson.id
+  );
   return !isHidden || viewAs === ViewType.Teacher;
 }
 
@@ -60,15 +64,20 @@ export function stageLocked(levels) {
   // Given this, we should be able to look at the last level in our collection
   // to determine whether the LG (and thus the stage) should be considered locked.
   const level = levels[levels.length - 1];
-  return level.status === LevelStatus.locked ||
-    (level.kind === 'assessment' && level.status === 'submitted');
+  return (
+    level.status === LevelStatus.locked ||
+    (level.kind === 'assessment' && level.status === 'submitted')
+  );
 }
 
 /**
  * @returns A friendly name for the icon name (that can be passed to FontAwesome)
  *   for the given level.
  */
-export function getIconForLevel(level) {
+export function getIconForLevel(level, inProgressView = false) {
+  if (inProgressView && isLevelAssessment(level)) {
+    return 'check-circle';
+  }
   if (level.icon) {
     // Eventually I'd like to have dashboard return an icon type. For now, I'm just
     // going to treat the css class it sends as a type, and map it to an icon name.
@@ -83,8 +92,28 @@ export function getIconForLevel(level) {
     return 'scissors';
   }
 
+  if (level.bonus) {
+    return 'flag-checkered';
+  }
+
   // default to desktop
   return 'desktop';
+}
+
+/**
+ * @returns Whether a level is an assessment level.
+ */
+export function isLevelAssessment(level) {
+  return level.kind === 'assessment';
+}
+
+/**
+ * Checks if a whole stage is assessment levels
+ * @param {[]} levels An array of levels
+ * @returns {bool} If all the levels in a stage are assessment levels
+ */
+export function stageIsAllAssessment(levels) {
+  return levels.every(level => level.kind === LevelKind.assessment);
 }
 
 /**
@@ -95,20 +124,25 @@ export function getIconForLevel(level) {
  * following buckets: total, completed, imperfect, incomplete, attempted.
  */
 export function summarizeProgressInStage(levelsWithStatus) {
+  // Filter any bonus levels as they do not count toward progress.
+  levelsWithStatus = levelsWithStatus.filter(level => !level.bonus);
+
   // Get counts of statuses
   let statusCounts = {
     total: levelsWithStatus.length,
     completed: 0,
     imperfect: 0,
     incomplete: 0,
-    attempted: 0,
+    attempted: 0
   };
-  for (let i = 0; i <levelsWithStatus.length; i++) {
+  for (let i = 0; i < levelsWithStatus.length; i++) {
     const status = levelsWithStatus[i].status;
     switch (status) {
       case LevelStatus.perfect:
       case LevelStatus.submitted:
       case LevelStatus.free_play_complete:
+      case LevelStatus.completed_assessment:
+      case LevelStatus.readonly:
         statusCounts.completed = statusCounts.completed + 1;
         break;
       case LevelStatus.not_tried:
@@ -125,7 +159,6 @@ export function summarizeProgressInStage(levelsWithStatus) {
       default:
         statusCounts.incomplete = statusCounts.incomplete + 1;
     }
-
   }
   return statusCounts;
 }
@@ -134,15 +167,16 @@ export function summarizeProgressInStage(levelsWithStatus) {
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This filters to the parts our views care about.
  */
-export const processedLevel = (level) => {
+export const processedLevel = level => {
   return {
     url: level.url,
     name: level.name,
     progression: level.progression,
     kind: level.kind,
     icon: level.icon,
-    isUnplugged: level.kind === LevelKind.unplugged,
+    isUnplugged: level.display_as_unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
     isConceptLevel: level.is_concept_level,
+    bonus: level.bonus
   };
 };

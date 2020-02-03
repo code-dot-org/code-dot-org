@@ -25,7 +25,7 @@
     "sprites_hidden_to_start": "false",
     "use_contract_editor": "true",
     "coordinate_grid_background": "true",
-    "instructions": "Help Sam stay on the screen so that you can always see at least a little piece of him. Using the arrow keys, see how far Sam can go to the left while still staying onscreen. You’ll find that Sam is onscreen as long as his x-coordinate is greater than -50. Then, fill in the code to make Sam stay on the screen.",
+    "short_instructions": "Help Sam stay on the screen so that you can always see at least a little piece of him. Using the arrow keys, see how far Sam can go to the left while still staying onscreen. You’ll find that Sam is onscreen as long as his x-coordinate is greater than -50. Then, fill in the code to make Sam stay on the screen.",
     "first_sprite_index": "1"
   }
 }]]></config>

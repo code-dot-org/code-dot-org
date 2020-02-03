@@ -11,11 +11,13 @@ import * as dropletConfig from './dropletConfig';
 import MakerError, {
   ConnectionCanceledError,
   UnsupportedBrowserError,
-  wrapKnownMakerErrors,
+  wrapKnownMakerErrors
 } from './MakerError';
 import {findPortWithViableDevice} from './portScanning';
 import * as redux from './redux';
 import {isChrome, gtChrome33, isCodeOrgBrowser} from './util/browserChecks';
+import MicroBitBoard from './MicroBitBoard';
+import experiments from '@cdo/apps/util/experiments';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, MakerError};
@@ -31,7 +33,9 @@ let currentBoard = null;
  */
 export function enable() {
   if (!redux.isAvailable(getStore().getState())) {
-    throw new MakerError('Maker cannot be enabled: Its reducer was not registered.');
+    throw new MakerError(
+      'Maker cannot be enabled: Its reducer was not registered.'
+    );
   }
   getStore().dispatch(redux.enable());
 }
@@ -52,13 +56,20 @@ export function enable() {
  */
 export function connect({interpreter, onDisconnect}) {
   if (!redux.isEnabled(getStore().getState())) {
-    return Promise.reject(new Error('Attempted to connect to a maker board, ' +
-        'but Maker Toolkit is not enabled.'));
+    return Promise.reject(
+      new Error(
+        'Attempted to connect to a maker board, ' +
+          'but Maker Toolkit is not enabled.'
+      )
+    );
   }
 
   if (currentBoard) {
-    return Promise.reject(new Error('Attempted to connect Maker Toolkit when ' +
-        'an existing board is already connected.'));
+    commands.injectBoardController(currentBoard);
+    currentBoard.installOnInterpreter(interpreter);
+    // When the board is reset, the components are disabled. Re-enable now.
+    currentBoard.enableComponents();
+    return Promise.resolve();
   }
 
   const store = getStore();
@@ -66,40 +77,64 @@ export function connect({interpreter, onDisconnect}) {
   dispatch(redux.startConnecting());
 
   return confirmSupportedBrowser()
-      .then(getBoard)
-      .then(board => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        currentBoard = board;
-        return currentBoard.connect();
-      })
-      .then(() => {
-        if (!isConnecting()) {
-          // Must've called reset() - exit the promise chain.
-          return Promise.reject(new ConnectionCanceledError());
-        }
-        commands.injectBoardController(currentBoard);
-        currentBoard.installOnInterpreter(interpreter);
-        if (typeof onDisconnect === 'function') {
-          currentBoard.once('disconnect', onDisconnect);
-        }
-        dispatch(redux.reportConnected());
-        trackEvent('Maker', 'ConnectionSuccess');
-      })
-      .catch(error => {
-        if (error instanceof ConnectionCanceledError) {
-          // This was intentional, and we don't need an error screen.
-          return Promise.reject(error);
-        } else {
-          // Something went wrong, so show the error screen.
-          error = wrapKnownMakerErrors(error);
-          dispatch(redux.reportConnectionError(error));
-          trackEvent('Maker', 'ConnectionError');
-          return Promise.reject(error);
-        }
-      });
+    .then(getBoard)
+    .then(board => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      currentBoard = board;
+      return currentBoard.connect();
+    })
+    .then(() => {
+      if (!isConnecting()) {
+        // Must've called reset() - exit the promise chain.
+        return Promise.reject(new ConnectionCanceledError());
+      }
+      commands.injectBoardController(currentBoard);
+      currentBoard.installOnInterpreter(interpreter);
+      if (typeof onDisconnect === 'function') {
+        currentBoard.once('disconnect', () => {
+          onDisconnect();
+          disconnect();
+        });
+      }
+      dispatch(redux.reportConnected());
+      trackEvent('Maker', 'ConnectionSuccess');
+    })
+    .catch(error => {
+      if (error instanceof ConnectionCanceledError) {
+        // This was intentional, and we don't need an error screen.
+        return Promise.reject(error);
+      } else {
+        // Something went wrong, so show the error screen.
+        error = wrapKnownMakerErrors(error);
+        dispatch(redux.reportConnectionError(error));
+        trackEvent('Maker', 'ConnectionError');
+        return Promise.reject(error);
+      }
+    });
+}
+
+/**
+ * Called when the board disconnects
+ * Throw away reference to the currentBoard, so that next time we run
+ * we make a new board.
+ */
+function disconnect() {
+  if (!redux.isEnabled(getStore().getState())) {
+    return;
+  }
+
+  const setDisconnected = () => {
+    currentBoard = null;
+    getStore().dispatch(redux.disconnect);
+  };
+  if (currentBoard) {
+    currentBoard.destroy().then(setDisconnected);
+  } else {
+    setDisconnected();
+  }
 }
 
 /**
@@ -123,8 +158,14 @@ function getBoard() {
   if (shouldRunWithFakeBoard()) {
     return Promise.resolve(new FakeBoard());
   } else {
-    return findPortWithViableDevice()
-        .then(port => new CircuitPlaygroundBoard(port));
+    if (experiments.isEnabled(experiments.BETT_DEMO)) {
+      //TODO - break out the applicable parts of findPortWithViableDevice
+      return findPortWithViableDevice().then(() => new MicroBitBoard());
+    } else {
+      return findPortWithViableDevice().then(
+        port => new CircuitPlaygroundBoard(port)
+      );
+    }
   }
 }
 
@@ -138,22 +179,10 @@ function shouldRunWithFakeBoard() {
 
 /**
  * Called when execution of the student app ends.
- * Resets the board state, disconnects and destroys the current board controller,
- * and puts maker UI back in a default state.
+ * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
-  if (!redux.isEnabled(getStore().getState())) {
-    return;
-  }
-
-  const setDisconnected = () => {
-    currentBoard = null;
-    getStore().dispatch(redux.disconnect());
-  };
-
   if (currentBoard) {
-    currentBoard.destroy().then(setDisconnected);
-  } else {
-    setDisconnected();
+    currentBoard.reset();
   }
 }

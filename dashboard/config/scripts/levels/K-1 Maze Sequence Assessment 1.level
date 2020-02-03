@@ -6,7 +6,7 @@
   "user_id": 3,
   "properties": {
     "skin": "birds",
-    "instructions": "Let's see what you've learned!\r\nMove one way, then another to get me to the pig.",
+    "short_instructions": "Let's see what you've learned!\r\nMove one way, then another to get me to the pig.",
     "step_mode": "0",
     "is_k1": "true",
     "skip_instructions_popup": "false",

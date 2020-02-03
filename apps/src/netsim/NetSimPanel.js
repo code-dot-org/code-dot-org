@@ -26,7 +26,7 @@ var ArgumentUtils = require('./ArgumentUtils');
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
  * @constructor
  */
-var NetSimPanel = module.exports = function (rootDiv, options) {
+var NetSimPanel = (module.exports = function(rootDiv, options) {
   /**
    * Unique instance ID for this panel, in case we have several
    * of them on a page.
@@ -75,7 +75,7 @@ var NetSimPanel = module.exports = function (rootDiv, options) {
 
   // Initial render
   this.render();
-};
+});
 
 /**
  * Static counter used to generate/uniquely identify different instances
@@ -87,13 +87,15 @@ NetSimPanel.uniqueIDCounter = 0;
 /**
  * Rebuild the panel contents inside of the rootDiv
  */
-NetSimPanel.prototype.render = function () {
-  var newMarkup = $(markup({
-    instanceID: this.instanceID_,
-    className: this.className_,
-    panelTitle: this.panelTitle_,
-    userToggleable: this.userToggleable_
-  }));
+NetSimPanel.prototype.render = function() {
+  var newMarkup = $(
+    markup({
+      instanceID: this.instanceID_,
+      className: this.className_,
+      panelTitle: this.panelTitle_,
+      userToggleable: this.userToggleable_
+    })
+  );
   this.rootDiv_.html(newMarkup);
 
   if (this.userToggleable_) {
@@ -105,7 +107,7 @@ NetSimPanel.prototype.render = function () {
 /**
  * @returns {jQuery} a handle on the root element for this panel
  */
-NetSimPanel.prototype.getRoot = function () {
+NetSimPanel.prototype.getRoot = function() {
   return this.rootDiv_;
 };
 
@@ -113,7 +115,7 @@ NetSimPanel.prototype.getRoot = function () {
  * Set panel title.
  * @param {string} newTitle - Localized panel title.
  */
-NetSimPanel.prototype.setPanelTitle = function (newTitle) {
+NetSimPanel.prototype.setPanelTitle = function(newTitle) {
   this.panelTitle_ = newTitle;
   this.rootDiv_.find('.title-text').text(newTitle);
 };
@@ -122,26 +124,28 @@ NetSimPanel.prototype.setPanelTitle = function (newTitle) {
  * Toggle whether this panel is minimized.
  * @private
  */
-NetSimPanel.prototype.onMinimizerClick_ = function () {
+NetSimPanel.prototype.onMinimizerClick_ = function() {
   this.setMinimized(!this.isMinimized_);
 };
 
 /**
  * @param {boolean} becomeMinimized
  */
-NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
+NetSimPanel.prototype.setMinimized = function(becomeMinimized) {
   var panelDiv = this.rootDiv_.find('.netsim-panel');
   var minimizer = panelDiv.find('.minimizer');
   if (becomeMinimized) {
     panelDiv.addClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-plus-square')
-        .removeClass('fa-minus-square');
+    minimizer
+      .find('.fa')
+      .addClass('fa-plus-square')
+      .removeClass('fa-minus-square');
   } else {
     panelDiv.removeClass('minimized');
-    minimizer.find('.fa')
-        .addClass('fa-minus-square')
-        .removeClass('fa-plus-square');
+    minimizer
+      .find('.fa')
+      .addClass('fa-minus-square')
+      .removeClass('fa-plus-square');
   }
   this.isMinimized_ = becomeMinimized;
 };
@@ -150,7 +154,7 @@ NetSimPanel.prototype.setMinimized = function (becomeMinimized) {
  * Whether this panel is currently minimized (showing only its header) or not.
  * @returns {boolean}
  */
-NetSimPanel.prototype.isMinimized = function () {
+NetSimPanel.prototype.isMinimized = function() {
   return this.isMinimized_;
 };
 
@@ -163,22 +167,23 @@ NetSimPanel.prototype.isMinimized = function () {
  * @param {string[]} [options.classes] - default [], additional classes on the
  *        button element.
  */
-NetSimPanel.prototype.addButton = function (buttonText, pressCallback, options) {
+NetSimPanel.prototype.addButton = function(buttonText, pressCallback, options) {
   options = ArgumentUtils.extendOptionsObject(options || {});
 
   var button = $('<span>')
-      .addClass('netsim-button')
-      .html(buttonText)
-      .click(pressCallback);
+    .addClass('netsim-button')
+    .html(buttonText)
+    .click(pressCallback);
 
   if (options.get('secondary', ArgumentUtils.isBoolean, true)) {
     button.addClass('netsim-button-secondary');
   }
 
-  options.get('classes', ArgumentUtils.isArrayOfStrings(), [])
-      .forEach(function (className) {
-        button.addClass(className);
-      });
+  options
+    .get('classes', ArgumentUtils.isArrayOfStrings(), [])
+    .forEach(function(className) {
+      button.addClass(className);
+    });
 
   button.appendTo(this.rootDiv_.find('.panel-controls'));
 };
@@ -186,6 +191,6 @@ NetSimPanel.prototype.addButton = function (buttonText, pressCallback, options) 
 /**
  * @returns {jQuery} the body Div of the panel, for panel content.
  */
-NetSimPanel.prototype.getBody = function () {
+NetSimPanel.prototype.getBody = function() {
   return this.rootDiv_.find('.panel-body');
 };

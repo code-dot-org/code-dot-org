@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Routers and Addresses: Wrap Up",
-    "markdown_instructions": "How do you think the routers are physically connected? Does it matter to you? Why or why not?\n",
+    "long_instructions": "How do you think the routers are physically connected? Does it matter to you? Why or why not?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

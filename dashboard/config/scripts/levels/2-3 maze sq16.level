@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,2,0,0,0,0,0,0],[0,1,1,0,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,3,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Ok, this is similar, but slightly different. Can you do it in only five blocks?",
+    "short_instructions": "Ok, this is similar, but slightly different. Can you do it in only five blocks?",
     "start_direction": "1",
     "step_mode": 1
   }

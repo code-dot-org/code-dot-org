@@ -1,37 +1,28 @@
 name 'U3L03 - multiselect - properties of functions'
-encrypted '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
-'
+editor_experiment ''
+title 'Choose Two: True Statements about Functions'
+type 'multi2'
+question 'Choose the two (2) statements that are true about functions'
+
+right 'Meaningful function names help *people* better understand programs.'
+wrong 'Meaningful function names help *computers* better understand programs.'
+wrong 'Functions in programming are useful mathematical tools for doing complex computations.'
+right 'Functions in programming are named groupings of programming instructions.'
+teacher_markdown <<MARKDOWN
+**Correct answers:**
+
+* Meaningful function names help *people* better understand programs.
+	* Explanation: When a person is reading your program, it will be easier for them to understand what your program does (or is supposed to do) if your functions have clear and descriptive names.
+* Functions in programming are a named grouping of programming instructions.
+
+**Incorrect answers:**
+
+* Meaningful function names help *computers* better understand programs.
+	* Explanation: It doesn't matter to your computer what names your functions have, as long as you're consistent. Meaningful function names are strictly to make your code more understandable for humans.
+* Functions in programming are useful mathematical tools for doing complex computations.
+	* Explanation: Functions don't necessarily have to do *complex* computations. Functions can be any set of actions you want the computer to perform.
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

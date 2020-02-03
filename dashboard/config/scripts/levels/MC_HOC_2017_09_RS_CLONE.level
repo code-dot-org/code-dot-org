@@ -47,7 +47,7 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,8]",
-    "markdown_instructions": "Fix this function to fill in the holes, then step on the pressure plate to clear a path to the torch.",
+    "long_instructions": "Fix this function to fill in the holes, then step on the pressure plate to clear a path to the torch.",
     "place_block_options": "[\"bedrock\", \"bricks\", \"clay\" , \"cobblestone\", \"dirt\", \"dirtCoarse\", \"stone\"]",
     "level_verification_timeout": "0",
     "contained_level_names": null

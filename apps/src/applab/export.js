@@ -5,7 +5,8 @@ import * as dontMarshalApi from './dontMarshalApi';
 import {dropletGlobalConfigBlocks} from '../dropletUtils';
 
 export function getExportedGlobals() {
-  const globals = Object.assign({},
+  const globals = Object.assign(
+    {},
     audioExecutors,
     timeoutExecutors,
     dontMarshalApi,

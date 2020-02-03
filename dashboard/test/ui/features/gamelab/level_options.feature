@@ -1,4 +1,3 @@
-@dashboard_db_access
 @as_student
 Feature: Game Lab Level Options
 
@@ -25,4 +24,4 @@ Scenario: Initial animations are usable with no animation tab
 Scenario: Initial animations show up in the animation tab
   Given I am on the 2nd Game Lab test level
   When I switch to the animation tab
-  Then I see 3 animations in the animation column
+  Then I see 2 animations in the animation column

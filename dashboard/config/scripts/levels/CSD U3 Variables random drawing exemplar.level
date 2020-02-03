@@ -161,7 +161,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "# Exemplar: Random Drawing\r\n\r\nTo practice using **variables with the draw loop** you will be building your own **randomized art project**. Check out the exemplar to see one possible outcome. Then move on to get started building your own.",
+    "long_instructions": "# Exemplar: Random Drawing\r\n\r\nTo practice using **variables with the draw loop** you will be building your own **randomized art project**. Check out the exemplar to see one possible outcome. Then move on to get started building your own.",
     "start_blocks": "noStroke()\r\n\r\nvar x1, y1;\r\nvar red, green, blue, opacity;\r\nvar size1, size2;\r\n\r\nfunction draw(){\r\n  x1 = randomNumber(0,400);\r\n  y1 = randomNumber(0,400);\r\n  red = randomNumber(0,255);\r\n  green = randomNumber(0,255);\r\n  blue = randomNumber(0,255);\r\n  opacity = randomNumber(0,100);\r\n  size1 = randomNumber(1,100);\r\n  size2 = randomNumber(1,50);\r\n\r\n  \r\n  fill(x1, y1, size1, opacity);\r\n  stroke(0, 0, 0, opacity);\r\n  rect(x1, y1, size1, size2);\r\n  rect(x1, y1, size2, size1);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -185,7 +185,7 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "true",
-    "instructions": "Check out this example randomized drawing.",
+    "short_instructions": "Check out this example randomized drawing.",
     "show_debug_watch": "true",
     "contained_level_names": null
   },

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This house needs a roof! Draw the triangle.  Hint: all three sides are the same length.",
+    "short_instructions": "This house needs a roof! Draw the triangle.  Hint: all three sides are the same length.",
     "x": "150",
     "y": "200",
     "start_direction": "90",
@@ -15,7 +15,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This house needs a roof! Draw the triangle.  \r\n\r\nHint: all three sides are the same length.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>",
+    "long_instructions": "This house needs a roof! Draw the triangle.  \r\n\r\nHint: all three sides are the same length.\r\n\r\n<img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\" width=\"300\"/>",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

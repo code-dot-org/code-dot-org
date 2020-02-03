@@ -9,7 +9,7 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "markdown_instructions": "The video below is from lesson 4, and introduces App Lab and the Turtle. "
+    "long_instructions": "The video below is from lesson 4, and introduces App Lab and the Turtle. "
   },
   "published": true,
   "notes": "",

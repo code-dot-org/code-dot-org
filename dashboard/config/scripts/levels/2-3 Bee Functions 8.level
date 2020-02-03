@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Create your own function that gets 7 nectar, moves forward, and makes 7 honey. Use the function to collect nectar at each flower and make honey at each honeycomb.",
+    "short_instructions": "Create your own function that gets 7 nectar, moves forward, and makes 7 honey. Use the function to collect nectar at each flower and make honey at each honeycomb.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

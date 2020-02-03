@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Use the `draw a square` function to draw this pattern.",
+    "short_instructions": "Use the `draw a square` function to draw this pattern.",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -22,7 +22,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "ideal": "13",
-    "markdown_instructions": "Use the `draw a square` function to draw this pattern. ",
+    "long_instructions": "Use the `draw a square` function to draw this pattern. ",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

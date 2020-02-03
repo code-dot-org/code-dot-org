@@ -4,7 +4,6 @@ Background:
   Given I am on "http://studio.code.org/s/20-hour/stage/19/puzzle/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   Then I set slider speed to medium
@@ -28,7 +27,6 @@ Scenario: Toolbox in artist category view is reenabled after finished running a 
   Given I am on "http://studio.code.org/s/20-hour/stage/11/puzzle/5?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   Then I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   And I press ":4.label"

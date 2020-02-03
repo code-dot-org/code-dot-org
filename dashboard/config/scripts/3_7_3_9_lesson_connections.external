@@ -10,7 +10,7 @@ markdown <<MARKDOWN
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
 
-<a href = “https://curriculum.code.org/csp/unit3/7/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/7/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/05d325eae5adc4dc5616b5fd33601b40-image-1479789620061.png" style="float:right; margin-left:30px; width:200px">
 As students create more and more complicated turtle art drawings, they will begin to want more ‘tools’ or functions to use to create those designs. To introduce them to the functions that exist within the Turtle library, this lesson teaches students to read the `App Lab API`.   An API is a reference guide which catalogs and explains the functionality of a programming language. If a programmer develops the practice of referencing an API, she can make full use of the functionality of a language without undergoing the tedium of memorizing every detail. In this lesson, students will need to read through the API in order to find and understand new commands for moving the turtle, selecting colors, and drawing different-sized dots and lines on the screen. Students should not necessarily understand every command in the drawing API in detail, but they should be familiar with referencing the API as a standard part of the process of writing a program. This will also be the first time students are given access to drawing functions that take parameters (e.g., moveForward(40) vs. moveForward()).
@@ -26,7 +26,7 @@ As students create more and more complicated turtle art drawings, they will begi
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
 
-<a href = “https://curriculum.code.org/csp/unit3/8/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/8/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/66a82fca7fb77324a74e790fbe934ad3-image-1479789620060.png" style="float:right; margin-left:30px; width:200px">
 In the previous lesson, students were introduced to the idea that functions can take parameters.  They were able to see how those parameters influence how a function runs through a series of puzzles.  Here, students practice using and creating their own functions with parameters. This lesson again returns to the Big Idea of Abstraction as students learn that writing functions with parameters can generalize solutions to problems even further. Especially in situations where students feel like they are about to duplicate some code with only a few changes to some numbers, that is a good time to write a function that accepts parameters. 
@@ -45,7 +45,7 @@ In the second half of the lesson, students practice their understanding of funct
 **Lesson Type:** Turtle Programming | Pair Problem Solving
 
 
-<a href = “https://curriculum.code.org/csp/unit3/9/” target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"/></a>
+<a href = "https://curriculum.code.org/csp/unit3/9/" target=_blank> Lesson Plan Link <i class="fa fa-external-link-square"></i></a>
 
 <img src="https://images.code.org/6580d8916687d176c6c60f3182860127-image-1479789620058.png" style="float:right; margin-left:30px; width:200px">
 In this lesson students learn to use random values and looping to create variation in their drawings and quickly duplicate objects they wish to appear in their digital scenes many times. Loops are a relatively straightforward idea in programming - you use them when you want a certain chunk of code to run repeatedly - but it takes a little practice to get good at controlling loops and recognizing how and where in your programs to use them. The for loop in JavaScript (and many other programming languages) is designed to be used for both simple and sophisticated programming tasks, thus it has a lot of syntax to it that will be explained in the future. In this lesson, the block-based form of the for loop exposed to students is a `repeat loop` - it only requires they change a number that dictates how many times the loop repeats.

@@ -1,9 +1,9 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import color from "../util/color";
-import * as applabConstants from './constants';
+import color from '../util/color';
 import ScreenSelector, {styles as ScreenSelectorStyles} from './ScreenSelector';
-import { RunButton, ResetButton } from '../templates/GameButtons';
+import {RunButton, ResetButton} from '../templates/GameButtons';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
 import FontAwesome from '../templates/FontAwesome';
 
@@ -14,21 +14,18 @@ const styles = {
   phoneFrame: {
     display: 'block',
     height: FRAME_HEIGHT,
-    backgroundColor: color.lighter_gray,
+    backgroundColor: color.lighter_gray
   },
   phoneFrameDark: {
     backgroundColor: color.charcoal
   },
   phoneFrameTop: {
     borderTopLeftRadius: RADIUS,
-    borderTopRightRadius: RADIUS,
+    borderTopRightRadius: RADIUS
   },
   phoneFrameBottom: {
     borderBottomLeftRadius: RADIUS,
-    borderBottomRightRadius: RADIUS,
-  },
-  nonResponsive: {
-    maxWidth: applabConstants.APP_WIDTH,
+    borderBottomRightRadius: RADIUS
   },
   screenSelector: {
     marginLeft: 'auto',
@@ -58,7 +55,6 @@ const styles = {
   }
 };
 
-
 class PhoneFrame extends React.Component {
   static propTypes = {
     isDark: PropTypes.bool.isRequired,
@@ -66,11 +62,17 @@ class PhoneFrame extends React.Component {
     showSelector: PropTypes.bool.isRequired,
     isPaused: PropTypes.bool.isRequired,
     onScreenCreate: PropTypes.func.isRequired,
-    children: PropTypes.node,
+    children: PropTypes.node
   };
 
   render() {
-    const { isDark, screenIds, showSelector, isPaused, onScreenCreate } = this.props;
+    const {
+      isDark,
+      screenIds,
+      showSelector,
+      isPaused,
+      onScreenCreate
+    } = this.props;
     return (
       <span id="phoneFrame">
         <div id="phoneFrameWrapper">
@@ -81,20 +83,20 @@ class PhoneFrame extends React.Component {
               isDark && styles.phoneFrameDark
             ]}
           >
-            {showSelector &&
-            <div style={styles.screenSelector}>
-              <ScreenSelector
-                screenIds={screenIds}
-                onCreate={onScreenCreate}
-              />
+            {showSelector && (
+              <div style={styles.screenSelector}>
+                <ScreenSelector
+                  screenIds={screenIds}
+                  onCreate={onScreenCreate}
+                />
               </div>
-            }
-            {isPaused &&
-            <div style={[styles.centeredInFrame, styles.paused]}>
-              <FontAwesome icon="pause" style={styles.pauseIcon}/>
-              PAUSED
-            </div>
-            }
+            )}
+            {isPaused && (
+              <div style={[styles.centeredInFrame, styles.paused]}>
+                <FontAwesome icon="pause" style={styles.pauseIcon} />
+                PAUSED
+              </div>
+            )}
           </div>
           {this.props.children}
           <div
@@ -105,8 +107,8 @@ class PhoneFrame extends React.Component {
             ]}
           >
             <div style={styles.centeredInFrame}>
-              <RunButton hidden={false} style={styles.buttonMinWidth}/>
-              <ResetButton style={styles.buttonMinWidth}/>
+              <RunButton hidden={false} style={styles.buttonMinWidth} />
+              <ResetButton style={styles.buttonMinWidth} />
             </div>
           </div>
         </div>

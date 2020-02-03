@@ -1,5 +1,5 @@
-import {PropTypes} from 'react';
-import i18n from "@cdo/locale";
+import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 
 export const projectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -9,9 +9,8 @@ export const projectDataPropType = PropTypes.shape({
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
-  publishedToPublic: PropTypes.bool.isRequired,
+  publishedToPublic: PropTypes.bool.isRequired
 });
-
 
 export const personalProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -19,7 +18,8 @@ export const personalProjectDataPropType = PropTypes.shape({
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
   updatedAt: PropTypes.string.isRequired,
-  isPublished: PropTypes.bool
+  isPublished: PropTypes.bool,
+  projectNameFailure: PropTypes.string
 });
 
 export const featuredProjectDataPropType = PropTypes.shape({
@@ -29,17 +29,17 @@ export const featuredProjectDataPropType = PropTypes.shape({
   publishedAt: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   featuredAt: PropTypes.string.isRequired,
-  unfeaturedAt: PropTypes.string,
+  unfeaturedAt: PropTypes.string
 });
 
 export const projectPropType = PropTypes.shape({
   projectData: projectDataPropType.isRequired,
-  currentGallery: PropTypes.string.isRequired,
+  currentGallery: PropTypes.string.isRequired
 });
 
 export const Galleries = {
   PUBLIC: 'PUBLIC',
-  PRIVATE: 'PRIVATE',
+  PRIVATE: 'PRIVATE'
 };
 
 export const featuredProjectTableTypes = {
@@ -65,6 +65,7 @@ export const PROJECT_TYPE_MAP = {
   minecraft_adventurer: i18n.projectTypeMinecraft(),
   minecraft_designer: i18n.projectTypeMinecraft(),
   minecraft_hero: i18n.projectTypeMinecraft(),
+  minecraft_aquatic: i18n.projectTypeMinecraft(),
   gamelab: i18n.projectTypeGamelab(),
   playlab: i18n.projectTypePlaylab(),
   weblab: i18n.projectTypeWeblab(),
@@ -78,6 +79,8 @@ export const PROJECT_TYPE_MAP = {
   playlab_k1: i18n.projectTypePlaylabPreReader(),
   eval: i18n.projectTypeEval(),
   calc: i18n.projectTypeCalc(),
+  dance: i18n.projectTypeDance(),
+  spritelab: i18n.projectTypeSpriteLab()
 };
 
 export const FEATURED_PROJECT_TYPE_MAP = {
@@ -92,6 +95,7 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   minecraft_adventurer: i18n.projectTypeMinecraft(),
   minecraft_designer: i18n.projectTypeMinecraft(),
   minecraft_hero: i18n.projectTypeMinecraft(),
+  minecraft_aquatic: i18n.projectTypeMinecraft(),
   bounce: i18n.projectTypeEvents(),
   flappy: i18n.projectTypeEvents(),
   starwars: i18n.projectTypeEvents(),
@@ -100,21 +104,23 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   basketball: i18n.projectTypeEvents(),
   artist_k1: i18n.projectTypeK1(),
   playlab_k1: i18n.projectTypeK1(),
+  dance: i18n.projectTypeDance(),
+  spritelab: i18n.projectTypeSpriteLab()
 };
 
 // The project table uses the channels API to populate the personal projects
 // and the data needs to be filtered and mapped before displaying.
-export const convertChannelsToProjectData = function (projects) {
+export const convertChannelsToProjectData = function(projects) {
   // Get the ones that aren't hidden, and have a type and id.
-  let projectLists = projects.filter(project => !project.hidden && project.id && project.projectType);
-  return projectLists.map(project => (
-    {
-      name: project.name,
-      channel: project.id,
-      thumbnailUrl: project.thumbnailUrl,
-      type: project.projectType,
-      isPublished: project.publishedAt !== null,
-      updatedAt: project.updatedAt
-    }
-  ));
+  let projectLists = projects.filter(
+    project => !project.hidden && project.id && project.projectType
+  );
+  return projectLists.map(project => ({
+    name: project.name,
+    channel: project.id,
+    thumbnailUrl: project.thumbnailUrl,
+    type: project.projectType,
+    isPublished: project.publishedAt !== null,
+    updatedAt: project.updatedAt
+  }));
 };

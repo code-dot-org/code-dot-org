@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Help Laurel get all of the treasure from this cave.",
+    "short_instructions": "Help Laurel get all of the treasure from this cave.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you can't figure out where to put the `repeat` loops, write out the code step-by-step and look for a pattern.\",\"hint_id\":\"courseB_collector_loops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7af8d740769e2cb1246b43c6aa1daf15/courseB_collector_loops10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try writing the moves down on a piece of paper and looking for a pattern.\",\"hint_id\":\"courseB_collector_loops10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2f27169dc96166ee4f33e85be5940d6c/courseB_collector_loops10.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",
@@ -37,11 +37,16 @@
     "disable_procedure_autopopulate": "false",
     "parent_level_id": 5959,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-29 16:36:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:46:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-09 00:48:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-06-29 16:36:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:46:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-09-09 00:48:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 4
+  }
 }]]></config>
   <blocks>
     <start_blocks>

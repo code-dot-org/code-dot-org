@@ -13,7 +13,7 @@ theme: responsive
 The San Francisco Unified School District (SFUSD) is the highest performing large, urban school district in the state of California, educating over 57,000 students every year. 
 
 <figure style="margin:10px">
-  <img src="/images/awards/sfusd_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students from SFUSD" />
+  <img src="/images/awards/fit-600/sfusd_students.jpg" style="display:block;margin:0 auto" width="600" alt="Students from SFUSD" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">
     Students from SFUSD
   </figcaption>
@@ -26,7 +26,7 @@ Thanks to equitable participation in the elementary and middle grades, growth am
 SFUSD has developed a comprehensive pre-K to grade 12 computer science curriculum pathway. The district has committed to providing engaging, rigorous, and relevant computer science instruction to all students each year in pre-kindergarten through 8th grade, and to offer a menu of classes at all high schools. SFUSD is working hard to actualize this commitment quickly while maintaining focus on equity and quality.
 
 <figure style="margin:10px">
-  <img src="/images/awards/sfusd_rep_bryan_twarek.jpg" style="display:block;margin:0 auto" width=300 alt="Bryan Twarek" />
+  <img src="/images/awards/fit-300/sfusd_rep_bryan_twarek.jpg" style="display:block;margin:0 auto" width=300 alt="Bryan Twarek" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Bryan Twarek</figcaption>
 </figure>
 

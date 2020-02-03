@@ -6,7 +6,7 @@
   "user_id": 7,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the short dashed lines!",
+    "short_instructions": "Draw the short dashed lines!",
     "x": 300,
     "y": 300,
     "is_k1": true

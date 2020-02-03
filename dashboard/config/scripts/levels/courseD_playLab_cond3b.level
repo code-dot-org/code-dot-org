@@ -43,8 +43,8 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "1) Make the dragon change between random emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon, he gets 2 points if the dragon is happy and 1 otherwise.",
-    "markdown_instructions": "Use a `repeat forever` loop to make the dragon (actor 2) move up and down forever! Add a `wait for 1 second` block in between the `move up` and `move down` blocks for the dragon.",
+    "short_instructions": "1) Make the dragon change between random emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon, he gets 2 points if the dragon is happy and 1 otherwise.",
+    "long_instructions": "Use a `repeat forever` loop to make the dragon (actor 2) move up and down forever! Add a `wait for 1 second` block in between the `move up` and `move down` blocks for the dragon.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add blocks to your `repeat forever` loop to make the dragon continue to move up and down\",\"hint_id\":\"courseD_playLab_cond3b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a7714e82d5fc3819c8891309fbeafd1/courseD_playLab_cond3b.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",

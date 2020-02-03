@@ -24,7 +24,7 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "This pig is ruffling my feathers. Help me to find him!",
+    "short_instructions": "This pig is ruffling my feathers. Help me to find him!",
     "contained_level_names": null
   },
   "published": true,

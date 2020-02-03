@@ -36,8 +36,8 @@
     "submittable": "false",
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
-    "instructions": "Look through the drawChartFromRecords API and choose some more options to customize. (Click to see full instructions)",
-    "markdown_instructions": "There are still **several other chart properties that you can manipulate** using the `options` parameter of `drawChartFromRecords`. You can use these properties to change the colors in your chart, hide the legend, and much more! **Remember, when customizing your chart, it’s less about making a pretty chart and more about manipulating your data so that it’s easier for others to read and understand.**\r\n\r\n# Do This:\r\n\r\n* **Open the API** for the `drawChartFromRecords` block.\r\n* Read through and **pick some of the other interesting options properties to customize** for your chart.",
+    "short_instructions": "Look through the drawChartFromRecords API and choose some more options to customize. (Click to see full instructions)",
+    "long_instructions": "There are still **several other chart properties that you can manipulate** using the `options` parameter of `drawChartFromRecords`. You can use these properties to change the colors in your chart, hide the legend, and much more! **Remember, when customizing your chart, it’s less about making a pretty chart and more about manipulating your data so that it’s easier for others to read and understand.**\r\n\r\n# Do This:\r\n\r\n* **Open the API** for the `drawChartFromRecords` block.\r\n* Read through and **pick some of the other interesting options properties to customize** for your chart.",
     "project_template_level_name": "U4 - Charts - Line Chart Template"
   }
 }]]></config>

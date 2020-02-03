@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "Adding a variable\r\n\r\nvar x = 8;\r\nif( 3 < x){\r\n console.log(“Is this working?”)\r\n}\r\n\r\nits the same thing with a variable just the x stands for the 5!\r\n",
+    "long_instructions": "Adding a variable\r\n\r\nvar x = 8;\r\nif( 3 < x){\r\n console.log(“Is this working?”)\r\n}\r\n\r\nits the same thing with a variable just the x stands for the 5!\r\n",
     "start_blocks": "var x = 8;\r\nif( 3 < x){\r\n console.log(“Is this working?”)\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

@@ -75,11 +75,11 @@ function removeBehavior(sprite, behavior) {
   sprite.behaviors.splice(index, 1);
 }
 
-function removeAllBehaviors(sprite) {
+/*function removeAllBehaviors(sprite) {
   if (sprite) {
     sprite.behaviors = [];
   }
-}
+}*/
 
 function Behavior(func, extraArgs) {
   if (!extraArgs) {
@@ -468,12 +468,13 @@ function draw() {
   }
 
   drawSprites();
-if (scoreboard) {
+  /*if (scoreboard) {
   	fill(scoreColor);
     rect(scoreX,scoreY,100,25);
     fill(scoreTextColor);
     text(scoreLabel + ":   " + score, scoreX+5, scoreY+15);
-}
+  }*/
+  
   if (show_score) {
     fill("black");
     textAlign(CENTER);

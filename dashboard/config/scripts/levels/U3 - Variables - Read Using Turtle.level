@@ -153,8 +153,8 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "true",
-    "markdown_instructions": "# Multiple Ways to Read\r\n\r\nReading the value of a variable doesnt just have to be console.log\r\nBring back turtle\r\n\r\n# Do This\r\nxPosition\r\nyPosition\r\nmoveTo for Turtle\r\n",
-    "instructions": "Create a second set of variables for x and y position. Move turtle to that new location. (Click to see full instructions)"
+    "long_instructions": "# Multiple Ways to Read\r\n\r\nReading the value of a variable doesnt just have to be console.log\r\nBring back turtle\r\n\r\n# Do This\r\nxPosition\r\nyPosition\r\nmoveTo for Turtle\r\n",
+    "short_instructions": "Create a second set of variables for x and y position. Move turtle to that new location. (Click to see full instructions)"
   }
 }]]></config>
   <blocks/>

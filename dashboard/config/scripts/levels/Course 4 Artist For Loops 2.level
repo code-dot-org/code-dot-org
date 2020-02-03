@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look at the code before you hit \"Run\".",
+    "short_instructions": "I've put the code for drawing a triangle inside a for loop that counts from 50 to 100 by 10.  NOTE: Make sure you look at the code before you hit \"Run\".",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10. \r\n\r\n<br/>\r\n<strong>NOTE:</strong> Make sure you look at the code *before* you hit \"Run\".",
+    "long_instructions": "I've put the code for drawing a triangle inside a `for loop` that counts from 50 to 100 by 10.\r\n\r\n**NOTE:** Make sure you look at the code *before* you hit \"Run\".",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -34,10 +34,19 @@
     "video_key": "C4_for_loops_no_bee",
     "never_autoplay_video": "false",
     "hint_prompt_attempts_threshold": 2,
-    "contained_level_names": null
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "discard_background": "false",
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-09-28 22:35:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2019-02-18 19:05:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"long_instructions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "repeat_loops": 1,

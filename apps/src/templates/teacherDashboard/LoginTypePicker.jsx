@@ -4,15 +4,17 @@
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
-import Button from "../Button";
-import {OAuthSectionTypes} from "./shapes";
+import Button from '../Button';
+import {OAuthSectionTypes} from './shapes';
 
 /**
  * UI for selecting the login type of a class section:
@@ -27,10 +29,10 @@ class LoginTypePicker extends Component {
     handleCancel: PropTypes.func.isRequired,
     disabled: PropTypes.bool,
     // Provided by Redux
-    providers: PropTypes.arrayOf(PropTypes.string),
+    providers: PropTypes.arrayOf(PropTypes.string)
   };
 
-  openImportDialog = (provider) => {
+  openImportDialog = provider => {
     this.props.setRosterProvider(provider);
     this.props.handleCancel(); // close this dialog
     this.props.handleImportOpen(); // open the roster dialog
@@ -43,69 +45,48 @@ class LoginTypePicker extends Component {
       setLoginType,
       handleImportOpen,
       handleCancel,
-      disabled,
+      disabled
     } = this.props;
-    const withGoogle = providers && providers.includes(OAuthSectionTypes.google_classroom);
-    const withMicrosoft = providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
-    const withClever = providers && providers.includes(OAuthSectionTypes.clever);
-    const anyImportOptions = (withGoogle || withMicrosoft || withClever) &&
-      (typeof handleImportOpen === 'function');
+    const withGoogle =
+      providers && providers.includes(OAuthSectionTypes.google_classroom);
+    const withMicrosoft =
+      providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
+    const withClever =
+      providers && providers.includes(OAuthSectionTypes.clever);
+    const anyImportOptions =
+      (withGoogle || withMicrosoft || withClever) &&
+      typeof handleImportOpen === 'function';
 
     return (
       <div>
-        <Heading1>
-          {title}
-        </Heading1>
-        <Heading2>
-          {i18n.addStudentsToSectionInstructions()}
-        </Heading2>
+        <Heading1>{title}</Heading1>
+        <Heading2>{i18n.addStudentsToSectionInstructions()}</Heading2>
         {anyImportOptions && (
-          <Heading3>
-            {i18n.addStudentsManageMyOwn()}
-          </Heading3>
+          <Heading3>{i18n.addStudentsManageMyOwn()}</Heading3>
         )}
         <CardContainer>
-          <PictureLoginCard
-            onClick={setLoginType}
-            disabled={disabled}
-          />
-          <WordLoginCard
-            onClick={setLoginType}
-            disabled={disabled}
-          />
-          <EmailLoginCard
-            onClick={setLoginType}
-            disabled={disabled}
-          />
+          <PictureLoginCard onClick={setLoginType} />
+          <WordLoginCard onClick={setLoginType} />
+          <EmailLoginCard onClick={setLoginType} />
         </CardContainer>
         <div>
-          <b>{i18n.note()}</b>{" " + i18n.emailAddressPolicy() + " "}
-          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">{i18n.moreInfo()}</a>
+          <b>{i18n.note()}</b>
+          {' ' + i18n.emailAddressPolicy() + ' '}
+          <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
+            {i18n.moreInfo()}
+          </a>
         </div>
         {anyImportOptions && (
           <div>
-            <Heading3>
-              {i18n.addStudentsSyncThirdParty()}
-            </Heading3>
+            <Heading3>{i18n.addStudentsSyncThirdParty()}</Heading3>
             <CardContainer>
-              {withGoogle &&
-                <GoogleClassroomCard
-                  onClick={this.openImportDialog}
-                  disabled={disabled}
-                />
-              }
-              {withMicrosoft &&
-                <MicrosoftClassroomCard
-                  onClick={this.openImportDialog}
-                  disabled={disabled}
-                />
-              }
-              {withClever &&
-                <CleverCard
-                  onClick={this.openImportDialog}
-                  disabled={disabled}
-                />
-              }
+              {withGoogle && (
+                <GoogleClassroomCard onClick={this.openImportDialog} />
+              )}
+              {withMicrosoft && (
+                <MicrosoftClassroomCard onClick={this.openImportDialog} />
+              )}
+              {withClever && <CleverCard onClick={this.openImportDialog} />}
             </CardContainer>
           </div>
         )}
@@ -124,80 +105,68 @@ class LoginTypePicker extends Component {
 }
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
-  providers: state.teacherSections.providers,
+  providers: state.teacherSections.providers
 }))(LoginTypePicker);
 
-const PictureLoginCard = (props) => (
+const PictureLoginCard = props => (
   <LoginTypeCard
     className="uitest-pictureLogin"
     title={i18n.loginTypePicture()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
-    buttonText={i18n.loginTypePictureButton()}
     onClick={() => props.onClick('picture')}
-    disabled={props.disabled}
   />
 );
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
-const WordLoginCard = (props) => (
+const WordLoginCard = props => (
   <LoginTypeCard
     className="uitest-wordLogin"
     title={i18n.loginTypeWord()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
-    buttonText={i18n.loginTypeWordButton()}
     onClick={() => props.onClick('word')}
-    disabled={props.disabled}
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
-const EmailLoginCard = (props) => (
+const EmailLoginCard = props => (
   <LoginTypeCard
     className="uitest-emailLogin"
     title={i18n.loginTypePersonal()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
-    buttonText={i18n.loginTypeEmailButton()}
     onClick={() => props.onClick('email')}
-    disabled={props.disabled}
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 
-const GoogleClassroomCard = (props) => (
+const GoogleClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
-    buttonText={i18n.loginTypeGoogleClassroomButton()}
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
-    disabled={props.disabled}
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 
-const MicrosoftClassroomCard = (props) => (
+const MicrosoftClassroomCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
-    buttonText={i18n.loginTypeMicrosoftClassroomButton()}
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
-    disabled={props.disabled}
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 
-const CleverCard = (props) => (
+const CleverCard = props => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
-    buttonText={i18n.loginTypeCleverButton()}
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
-    disabled={props.disabled}
   />
 );
 CleverCard.propTypes = PictureLoginCard.propTypes;

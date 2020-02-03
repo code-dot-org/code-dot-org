@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Multiple Representations",
-    "markdown_instructions": "\"The binary pattern `01000001` represents the number 65.\"\r\n\r\nWrite a brief response explaining whether you believe this statement is always true. Explain your reasoning.",
+    "long_instructions": "\"The binary pattern `01000001` represents the number 65.\"\r\n\r\nWrite a brief response explaining whether you believe this statement is always true. Explain your reasoning.",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 1933,

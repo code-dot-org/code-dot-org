@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';
@@ -8,27 +8,24 @@ import i18n from '@cdo/tutorialExplorer/locale';
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',
-  code: 'tutorial-1',
+  code: 'tutorial-1'
 };
 
 const TUTORIAL_2 = {
   name: 'Tutorial 2',
-  code: 'tutorial-2',
+  code: 'tutorial-2'
 };
 
 const DEFAULT_PROPS = {
   tutorials: [],
-  filters: {},
   localeEnglish: true,
   disabledTutorials: [],
-  grade: "all"
+  grade: 'all'
 };
 
 describe('TutorialSet', () => {
   it('renders empty set of tutorials', () => {
-    const wrapper = shallow(
-      <TutorialSet {...DEFAULT_PROPS}/>
-    );
+    const wrapper = shallow(<TutorialSet {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
       <div>
@@ -41,19 +38,14 @@ describe('TutorialSet', () => {
           changeTutorial={instance.changeTutorial}
           grade="all"
         />
-        <div>
-          {i18n.tutorialSetNoTutorials()}
-        </div>
+        <div>{i18n.tutorialSetNoTutorials()}</div>
       </div>
     );
   });
 
   it('renders non-empty set of tutorials', () => {
     const wrapper = shallow(
-      <TutorialSet
-        {...DEFAULT_PROPS}
-        tutorials={[TUTORIAL_1, TUTORIAL_2]}
-      />
+      <TutorialSet {...DEFAULT_PROPS} tutorials={[TUTORIAL_1, TUTORIAL_2]} />
     );
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
@@ -69,15 +61,23 @@ describe('TutorialSet', () => {
         />
         <Tutorial
           item={TUTORIAL_1}
-          filters={{}}
           key={TUTORIAL_1.code}
-          tutorialClicked={wrapper.find(Tutorial).at(0).props().tutorialClicked}
+          tutorialClicked={
+            wrapper
+              .find(Tutorial)
+              .at(0)
+              .props().tutorialClicked
+          }
         />
         <Tutorial
           item={TUTORIAL_2}
-          filters={{}}
           key={TUTORIAL_2.code}
-          tutorialClicked={wrapper.find(Tutorial).at(1).props().tutorialClicked}
+          tutorialClicked={
+            wrapper
+              .find(Tutorial)
+              .at(1)
+              .props().tutorialClicked
+          }
         />
       </div>
     );
@@ -85,14 +85,15 @@ describe('TutorialSet', () => {
 
   it('shows tutorial details when tutorial is clicked', () => {
     const wrapper = shallow(
-      <TutorialSet
-        {...DEFAULT_PROPS}
-        tutorials={[TUTORIAL_1, TUTORIAL_2]}
-      />
+      <TutorialSet {...DEFAULT_PROPS} tutorials={[TUTORIAL_1, TUTORIAL_2]} />
     );
 
     // Call the click callback directly.
-    wrapper.find(Tutorial).at(0).props().tutorialClicked();
+    wrapper
+      .find(Tutorial)
+      .at(0)
+      .props()
+      .tutorialClicked();
 
     const instance = wrapper.instance();
     expect(wrapper).to.containMatchingElement(
@@ -110,10 +111,7 @@ describe('TutorialSet', () => {
 
   it('closes tutorial details', () => {
     const wrapper = shallow(
-      <TutorialSet
-        {...DEFAULT_PROPS}
-        tutorials={[TUTORIAL_1, TUTORIAL_2]}
-      />
+      <TutorialSet {...DEFAULT_PROPS} tutorials={[TUTORIAL_1, TUTORIAL_2]} />
     );
 
     // First get into an open details state
@@ -148,10 +146,7 @@ describe('TutorialSet', () => {
 
   it('can advance through tutorials', () => {
     const wrapper = shallow(
-      <TutorialSet
-        {...DEFAULT_PROPS}
-        tutorials={[TUTORIAL_1, TUTORIAL_2]}
-      />
+      <TutorialSet {...DEFAULT_PROPS} tutorials={[TUTORIAL_1, TUTORIAL_2]} />
     );
 
     // First get into an open details state
@@ -166,7 +161,6 @@ describe('TutorialSet', () => {
         disabledTutorial={false}
         changeTutorial={instance.changeTutorial}
         grade="all"
-
       />
     );
 

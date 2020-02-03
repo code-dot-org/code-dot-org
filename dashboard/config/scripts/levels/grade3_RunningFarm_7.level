@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
+    "short_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "step_speed": "2",
     "ideal": "12",
-    "markdown_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
+    "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Notice that the easiest path to get to all of the crops is still a spiral.\\n\\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)\",\"hint_id\":\"grade3_RunningFarm_7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c30119fa47990853f073f462af8c30d2/grade3_RunningFarm_7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using `when path ahead` to keep the farmer moving the right number of steps.\",\"hint_id\":\"grade3_RunningFarm_7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/26d125550bcdf81acc2baf2276e29183/grade3_RunningFarm_7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use nested `if` statements and `while there is` loops to check each space for corn and lettuce, then pick only a single pumpkin at the end. \",\"hint_id\":\"grade3_RunningFarm_7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f46e40f9bda9415829a64fe310e396b/grade3_RunningFarm_7.mp3\"}]",
     "contained_level_names": null

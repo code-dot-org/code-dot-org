@@ -7,7 +7,7 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":2},{\"tileType\":1,\"value\":1,\"range\":3},{\"tileType\":1,\"value\":5,\"range\":5},{\"tileType\":1,\"value\":3,\"range\":6},{\"tileType\":1,\"value\":5,\"range\":5},{\"tileType\":1,\"value\":1,\"range\":5},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Help me remove all of this dirt. ",
+    "short_instructions": "Help me remove all of this dirt. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -40,12 +40,16 @@
     "show_type_hints": "false",
     "include_shared_functions": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2018-06-01 01:38:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-26 18:42:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5,
+    "repeat_until_while": 1
   }
 }]]></config>
   <blocks>

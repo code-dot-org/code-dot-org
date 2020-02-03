@@ -53,7 +53,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "markdown_instructions": "# Connecting Rooms\r\n\r\nLets make it so the user can go between the rooms. There is an arrow button in each room which will be used to move between rooms. To make buttons react to your click you will need an event handler for each button.\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for each of the arrow buttons\r\n* Inside each `onEvent` block use the `setScreen` command to say which screen to switch to",
+    "long_instructions": "# Connecting Rooms\r\n\r\nLets make it so the user can go between the rooms. There is an arrow button in each room which will be used to move between rooms. To make buttons react to your click you will need an event handler for each button.\r\n\r\n# Do This\r\n\r\n* Add an `onEvent` block for each of the arrow buttons\r\n* Inside each `onEvent` block use the `setScreen` command to say which screen to switch to",
     "contained_level_names": null
   },
   "published": true,

@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png\" style=\"height:150px\">\r\n</div>\r\n\r\n**Goal:** Make the buttons `\"red\"` and `\"blue\"`\r\n\r\n**How:** Hover over the buttons with your mouse to read its `\"id\"`. Then set the `\"background-color\"` of each block\r\n\r\n**Show Me:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/a35a27104ec33f192971be1cd8d28a6a-image-1506617895943.57.33 AM.png\" style=\"height:150px\">\r\n</div>\r\n\r\n**Goal:** Make the buttons `\"red\"` and `\"blue\"`\r\n\r\n**How:** Hover over the buttons with your mouse to read its `\"id\"`. Then set the `\"background-color\"` of each block\r\n\r\n**Show Me:** ![expandable](https://images.code.org/d6418be215384e89872a72c2bd6d4a8a-image-1505875864576.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

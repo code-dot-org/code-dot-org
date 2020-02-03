@@ -25,7 +25,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "## You Try It\r\n\r\n**Recreate the museum price example from the video.**\r\n\r\n* We've setup everything for you **except the boolean expression in the *if* statement is incomplete**\r\n\r\n**Modify the boolean expression** (it just says `age < 21` right now) to use combinations of `&&` and `||` to reflect the following condition:\r\n\r\n* IF *It's Tuesday or Thursday or the age is between 12 and 21* they get a discount\r\n* ELSE they pay full price\r\n\r\n**TIP:** switching to text mode might make this easier to compose.",
+    "long_instructions": "## You Try It\r\n\r\n**Recreate the museum price example from the video.**\r\n\r\n* We've setup everything for you **except the boolean expression in the *if* statement is incomplete**\r\n\r\n**Modify the boolean expression** (it just says `age < 21` right now) to use combinations of `&&` and `||` to reflect the following condition:\r\n\r\n* IF *It's Tuesday or Thursday or the age is between 12 and 21* they get a discount\r\n* ELSE they pay full price\r\n\r\n**TIP:** switching to text mode might make this easier to compose.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

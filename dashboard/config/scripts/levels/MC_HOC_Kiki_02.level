@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Meet the Agent",
-    "instructions": "Get The Agent to the pressure plate.",
-    "markdown_instructions": "Someone needs to be on the pressure plate before the side door will open.  Help the Agent get to the plate so the player can leave the house.",
+    "short_instructions": "Get The Agent to the pressure plate.",
+    "long_instructions": "Someone needs to be on the pressure plate before the side door will open.  Help the Agent get to the plate so the player can leave the house.",
     "contained_level_names": null
   },
   "published": true,

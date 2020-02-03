@@ -10,8 +10,8 @@ import '@cdo/apps/../style/publicKeyCryptography/publicKeyCryptography.scss';
 export default storybook => {
   storybook
     .storiesOf('Public Key Cryptography Widget', module)
-    .add('Characters view', () => <PublicKeyCryptographyWidget/>)
-    .add(`Alice's Instructions`, () => <AliceInstructions/>)
-    .add(`Eve's Instructions`, () => <EveInstructions/>)
-    .add(`Bob's Instructions`, () => <BobInstructions/>);
+    .add('Characters view', () => <PublicKeyCryptographyWidget />)
+    .add(`Alice's Instructions`, () => <AliceInstructions />)
+    .add(`Eve's Instructions`, () => <EveInstructions />)
+    .add(`Bob's Instructions`, () => <BobInstructions />);
 };

@@ -12,9 +12,9 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.obstacles[0].hitAvatar && Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        // todo - would be nice if we could distinguish feedback for\r\n\t        // flew through pipe vs. didnt hook up endGame block\r\n\t        var obstacleEnd = Flappy.obstacles[0].x + Flappy.OBSTACLE_WIDTH;\r\n\t        return obstacleEnd < Flappy.avatarX;\r\n\t      }",
-    "instructions": "Attach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "short_instructions": "Attach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
     "embed": "false",
-    "markdown_instructions": "Flappy will fly right through obstacles unless you write code to make him crash. \r\n\r\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
+    "long_instructions": "Flappy will fly right through obstacles unless you write code to make him crash. \r\n\r\nAttach a block to the `when hit an obstacle` event so that the game ends when Flappy crashes into the first set of pipes.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `end game` block to `when hit an obstacle` to solve this puzzle.\",\"hint_id\":\"courseC_flappy_events4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/208e4ef529ed9c9f7db7a5cebfccd9cc/courseC_flappy_events4.mp3\"}]",
     "instructions_important": "false",
     "is_k1": "false",
@@ -41,11 +41,16 @@
     "shareable": "false",
     "parent_level_id": 9518,
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-27 19:24:14 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:02:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-27 19:24:14 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"success_condition\",\"failure_condition\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:43:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:02:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
 }]]></config>
   <blocks>
     <start_blocks>

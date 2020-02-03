@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw the last row of stars on this flag by looping the provided blocks. The stars are 50 pixels apart, but remember that the stars themselves are 30 pixels wide.",
+    "short_instructions": "Draw the last row of stars on this flag by looping the provided blocks. The stars are 50 pixels apart, but remember that the stars themselves are 30 pixels wide.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "0",

@@ -3,17 +3,17 @@ has_lesson_plan true
 
 stage 'The Need For Programming Languages'
 level 'U3L01 Student Lesson Introduction'
-assessment 'U3L01 Assessment1'
-assessment 'U3L01 Assessment3'
+level 'U3L01 Assessment1', assessment: true
+level 'U3L01 Assessment3', assessment: true
 
 stage 'Using Simple Commands'
 level 'U3L02 Student Lesson Introduction'
 level 'U3L2 Using Simple Commands'
 level 'U3L2_TurtleSquare_right'
 level 'U3L2_Turtle3by3Grid'
-assessment 'U3L02 Assessment'
-assessment 'U3L02 Free Response Getting Started'
-assessment 'U3L02 Free Response Wrap Up'
+level 'U3L02 Assessment', assessment: true
+level 'U3L02 Free Response Getting Started', assessment: true
+level 'U3L02 Free Response Wrap Up', assessment: true
 
 stage 'Creating Functions'
 level 'U3L03 Student Lesson Introduction'
@@ -24,17 +24,17 @@ level 'U3L03 - draw rect function'
 level 'U3L03 - draw step'
 level 'U3L03 Three Steps'
 level 'U3L03 draw diamond'
-assessment 'U3L03 - multiselect - properties of functions'
-assessment 'U3L03 Assessment'
-assessment 'U3L03 Free Response Wrap Up'
+level 'U3L03 - multiselect - properties of functions', assessment: true
+level 'U3L03 Assessment', assessment: true
+level 'U3L03 Free Response Wrap Up', assessment: true
 
 stage 'Functions and Top-Down Design'
 level 'u3L04 Student Lesson Introduction'
 level 'U3L04 - snowflake'
 level 'U3L04 - 3 by 3 with functions'
-assessment 'U3L04 Assessment1'
-assessment 'U3L04 Assessment2'
-assessment 'U3L04 Free Response Wrap Up'
+level 'U3L04 Assessment1', assessment: true
+level 'U3L04 Assessment2', assessment: true
+level 'U3L04 Free Response Wrap Up', assessment: true
 
 stage 'APIs and Function Parameters'
 level 'U3L06 Student Lesson Introduction'
@@ -47,9 +47,9 @@ level 'U3L06 Challenge 6 squiggles'
 level 'U3L06 Challenge 5 overlapping circles'
 level 'U3L06 Challenge 7 smiley face'
 level 'U3L06 Challenge 8 make your own'
-assessment 'U3L06 Assessment2'
-assessment 'U3L06-API-multichoice'
-assessment 'U3L06 Assessment'
+level 'U3L06 Assessment2', assessment: true
+level 'U3L06-API-multichoice', assessment: true
+level 'U3L06 Assessment', assessment: true
 
 stage 'Creating functions with Parameters'
 level 'U3L08 Student Lesson Introduction'
@@ -64,8 +64,8 @@ level 'U3L08 - fish'
 level 'U3L08 - multiParamFish'
 level 'U3L08 - randomInput'
 level 'U3L08 - freePlay'
-assessment 'U3L08 Assessment1'
-assessment 'U3L08 Assessment2'
+level 'U3L08 Assessment1', assessment: true
+level 'U3L08 Assessment2', assessment: true
 
 stage 'Looping and Random Numbers'
 level 'U3L07 Student Lesson Introduction'
@@ -81,8 +81,8 @@ level 'U3L07 - seaGrass'
 level 'U3L07 - allSeaGrass'
 level 'U3L07 - sunBeams'
 level 'U3L07 - Free Play Loops and Random'
-assessment 'U3L07 - MC remove line of code loops'
-assessment 'U3L07 Free Response Reflection'
+level 'U3L07 - MC remove line of code loops', assessment: true
+level 'U3L07 Free Response Reflection', assessment: true
 
 stage 'Practice PT - Design a Digital Scene'
 level 'U3L09 Student Lesson Introduction'
@@ -103,10 +103,10 @@ level 'U3L13 - Debugging 1'
 level 'U3L13 - Debugging 2'
 level 'U3L13 - Debugging 3'
 level 'U3L13 - Turtle Driver Project'
-assessment 'U3L13 debugging Multi'
-assessment 'U3L13 Free Response Reflection'
-assessment 'U3L14 - MC order of button and onEvent'
-assessment 'U3L14 - MC Duplicate Ids'
+level 'U3L13 debugging Multi', assessment: true
+level 'U3L13 Free Response Reflection', assessment: true
+level 'U3L14 - MC order of button and onEvent', assessment: true
+level 'U3L14 - MC Duplicate Ids', assessment: true
 
 stage 'Beyond Buttons Toward Apps'
 level 'U3L16 Student Lesson Introduction'
@@ -114,7 +114,7 @@ level 'U3L16 - singleSetPosition'
 level 'U3L16 - introSetPosition'
 level 'U3L16 - setPosition to move button'
 level 'U3L16 - newEventTypes'
-assessment 'U3L14 - Matching Events to Description'
+level 'U3L14 - Matching Events to Description', assessment: true
 level 'U3L16 - text labels'
 level 'U3L16 - use images'
 level 'U3L16 - chooseImages'
@@ -161,7 +161,7 @@ level 'U3L14 - moving memory challenge4'
 level 'U3L14 - moving memory challenge5'
 level 'U3L14 - moving memory challenge6'
 level 'U3L19 - variable reassignment challenge pt2'
-assessment 'U3L14 - MC variable reassignment'
+level 'U3L14 - MC variable reassignment', assessment: true
 
 stage 'Using Variables in Apps'
 level 'U3L15 Student Lesson Intro - new'
@@ -201,22 +201,22 @@ level 'U3L16 Mad Lib setText'
 level 'U3L16 Mad Lib getText'
 level 'U3L16 Mad Lib toUpper'
 level 'U3L16 Mad Lib Clear Input'
-assessment 'U3L25 Free Response 3'
+level 'U3L25 Free Response 3', assessment: true
 
 stage 'Introduction to Digital Assistants'
 level 'U3L23 Student Lesson Introduction'
-assessment 'U3L23 Free Response Getting Started'
+level 'U3L23 Free Response Getting Started', assessment: true
 level 'U3 Digital Assistant Target'
 level 'U3L16 - challenge say hi app'
 level 'U3 Digital Assistant Design'
 level 'U3 Digital Assistant Set Text'
-assessment 'U3L23 Free Response Wrap Up'
+level 'U3L23 Free Response Wrap Up', assessment: true
 
 stage 'Understanding Program Flow and Logic'
 level 'U3L20 Student Lesson Introduction'
 level 'U3 - Conditionals - Boolean Expressions and Operators'
 level 'U3L18 comparison operators'
-assessment 'U3L18 Matching'
+level 'U3L18 Matching', assessment: true
 level 'U3 - Conditionals - Translating Flowcharts - If Statement'
 level 'U3 - High Low - If'
 level 'U3 - High Low - Dropdown'
@@ -319,8 +319,8 @@ level 'U3 - Arrays - favThings Prev'
 level 'U3 - Arrays - favThings addItem'
 level 'U3 - Arrays - favThings bounds'
 level 'U3 - Arrays - favThings keepPlaying'
-assessment 'U3 - Arrays - Wrap Up 1'
-assessment 'U3 - Arrays - Wrap Up 2'
+level 'U3 - Arrays - Wrap Up 1', assessment: true
+level 'U3 - Arrays - Wrap Up 2', assessment: true
 
 stage 'Image Scroller with Key Events'
 level 'U3L31 Student Lesson Introduction'
@@ -333,7 +333,7 @@ level 'U3 - Keys - Buttons and Keys'
 level 'U3 - Keys - Functions'
 level 'U3 - Keys - Add Image URLs'
 level 'U3 - Keys - Final Image Scroller'
-assessment 'U3- Keys - Code Refactoring Exit Ticket'
+level 'U3- Keys - Code Refactoring Exit Ticket', assessment: true
 
 stage 'Processing Arrays'
 level 'U3L32 Student Lesson Introduction'

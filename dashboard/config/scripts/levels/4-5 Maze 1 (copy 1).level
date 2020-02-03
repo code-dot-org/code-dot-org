@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,3,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Dear person. Me zombie. Must... get... to sunflower.",
+    "short_instructions": "Dear person. Me zombie. Must... get... to sunflower.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

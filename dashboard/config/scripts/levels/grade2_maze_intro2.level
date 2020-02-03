@@ -26,8 +26,8 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "Welcome to Code Studio! Here you will learn to use blocks to build programs. Press `Run` to run a program now!",
-    "markdown_instructions": "Welcome to Code Studio! Here you will learn to use blocks to build programs. Press `Ok`, then find the `Run` button to run your first program.",
+    "short_instructions": "Welcome to Code Studio! Here you will learn to use blocks to build programs. Press `Run` to run a program now!",
+    "long_instructions": "Welcome to Code Studio! Here you will learn to use blocks to build programs. Press `Ok`, then find the `Run` button to run your first program.",
     "contained_level_names": null
   },
   "published": true,

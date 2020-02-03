@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[3,0,0,0,0,0,0,0],[1,1,1,0,0,0,0,0],[0,0,1,1,1,0,0,0],[0,0,0,0,1,1,2,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "scrat",
-    "instructions": "Help Scrat get to the acorn!",
+    "short_instructions": "Help Scrat get to the acorn!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",
@@ -33,7 +33,7 @@
     "parent_level_id": 12172,
     "name_suffix": "_2018",
     "top_level_procedure_autopopulate": "false",
-    "markdown_instructions": "Help Scrat get to the acorn!",
+    "long_instructions": "Help Scrat get to the acorn!",
     "ideal": "9",
     "show_type_hints": "false",
     "contained_level_names": null

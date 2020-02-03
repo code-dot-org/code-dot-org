@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Tuesday Pedagogy Reflection\r\n\r\n## Classroom Practices\r\n\r\nName two <a href=\"https://docs.google.com/document/d/1trq3FeCBaq2G-CFugZP4ElkJapAqAtoBfl4zf7DbW48/edit#heading=h.f8m5xr9s44e2\"> pedagogical approaches</a> you saw modeled in the 5 TLOs you’ve seen in the past couple of days? \r\n\r\n* When were they successful?\r\n* What were characteristics of situations where was their room for improvement?",
+    "long_instructions": "# Tuesday Pedagogy Reflection\r\n\r\n## Classroom Practices\r\n\r\nName two <a href=\"https://docs.google.com/document/d/1trq3FeCBaq2G-CFugZP4ElkJapAqAtoBfl4zf7DbW48/edit#heading=h.f8m5xr9s44e2\"> pedagogical approaches</a> you saw modeled in the 5 TLOs you’ve seen in the past couple of days? \r\n\r\n* When were they successful?\r\n* What were characteristics of situations where was their room for improvement?",
     "instructions_important": "false",
     "display_name": "Pedagogy Reflection",
     "allow_user_uploads": "false",

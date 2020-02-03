@@ -17,7 +17,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen green. \r\n\r\n**How:** Drag in a `setProperty()` block. Use the dropdowns to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\".\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)",
+    "long_instructions": "<div style=\"float:right\">\r\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54 AM.png\" style=\"height:150px\"> \r\n</div>\r\n\r\n**Goal:** Make the screen green. \r\n\r\n**How:** Drag in a `setProperty()` block. Use the dropdowns to set the screen's `\"background-color\"` to `\"green\"`. Then hit \"Run\".\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)",
     "instructions_important": "true",
     "submittable": "false",
     "is_k1": "false",

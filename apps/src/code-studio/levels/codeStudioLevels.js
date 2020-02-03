@@ -25,7 +25,7 @@ function basicGetResult() {
  * Previously this was just injected into the global namespace, making it
  * difficult to track. This makes both the registration and the usage more explicit.
  */
-export function registerGetResult(getResultFunction=basicGetResult) {
+export function registerGetResult(getResultFunction = basicGetResult) {
   if (registeredGetResult) {
     console.error('already have a getResult function');
     return;
@@ -64,7 +64,7 @@ function objectHasFieldOfType(obj, field, type) {
   if (!obj[field]) {
     throw new Error(`Expected object to have field of ${field}`);
   }
-  if (typeof(obj[field]) !== type) {
+  if (typeof obj[field] !== type) {
     throw new Error(`Expected object['${field}'] to have type of ${type}`);
   }
 }
@@ -107,7 +107,9 @@ export function getLevelIds() {
 export function lockContainedLevelAnswers() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
-    throw new Error(`Expected exactly one contained level. Got ${levelIds.length}`);
+    throw new Error(
+      `Expected exactly one contained level. Got ${levelIds.length}`
+    );
   }
   getLevel(levelIds[0]).lockAnswers();
 }
@@ -115,7 +117,9 @@ export function lockContainedLevelAnswers() {
 export function getContainedLevelId() {
   const levelIds = getLevelIds();
   if (levelIds.length !== 1) {
-    throw new Error(`Expected exactly one contained level. Got ${levelIds.length}`);
+    throw new Error(
+      `Expected exactly one contained level. Got ${levelIds.length}`
+    );
   }
   return levelIds[0];
 }

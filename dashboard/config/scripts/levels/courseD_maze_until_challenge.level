@@ -7,8 +7,8 @@
   "properties": {
     "skin": "pvz",
     "maze": "[[0,0,0,0,0,0,4,0],[2,1,1,1,1,1,1,0],[4,0,0,0,0,0,1,0],[0,1,1,1,1,1,1,4],[4,1,0,0,0,4,0,0],[0,1,4,1,1,1,0,0],[0,1,1,1,0,1,0,0],[0,0,0,0,3,1,4,0]]",
-    "instructions": "No hints, just challenge. Get the zombie to the sunflower.",
-    "markdown_instructions": "No hints, just challenge. Get the zombie to the sunflower.\r\nMarkdown instructions",
+    "short_instructions": "No hints, just challenge. Get the zombie to the sunflower.",
+    "long_instructions": "No hints, just challenge. Get the zombie to the sunflower.\r\nMarkdown instructions",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

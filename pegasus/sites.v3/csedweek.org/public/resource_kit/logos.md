@@ -4,7 +4,7 @@ nav: resource_kit_nav
 ---
 # Logos
 
-Feel free to use these logos in promoting the Hour of Code. 
+Feel free to use these logos in promoting the Hour of Code.
 (Click to open full-size versions.)
 <br />
 <br />

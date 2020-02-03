@@ -1,2 +1,2 @@
 stage 'Commutative Assessment A'
-assessment 'CSP Cumulative Assess A'
+level 'CSP Cumulative Assess A', assessment: true

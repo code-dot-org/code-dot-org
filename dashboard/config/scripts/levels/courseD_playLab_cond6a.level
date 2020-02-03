@@ -43,8 +43,8 @@
       "downButton",
       "upButton"
     ],
-    "markdown_instructions": "We don't want the pirate to stay in the \"safe zone\" too long!  \r\n\r\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line.",
-    "instructions": "If the pirate (actor 1) is in the safe zone, wait one second, then deduct a point as long as he stays beneath the octopus line.",
+    "long_instructions": "We don't want the pirate to stay in the \"safe zone\" too long!  \r\n\r\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line.",
+    "short_instructions": "If the pirate (actor 1) is in the safe zone, wait one second, then deduct a point as long as he stays beneath the octopus line.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.\",\"hint_id\":\"courseD_playLab_cond6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb18494aee7b0fe5386f20c4a73fe993/courseD_playLab_cond6a.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
     "hide_share_and_remix": "false",

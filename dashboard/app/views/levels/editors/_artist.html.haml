@@ -1,12 +1,15 @@
 .field
+  - level_type = ['anna', 'elsa'].include?(@level.skin) ? 'frozen' : 'artist'
+  = render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: level_type}
+.field
   = f.label :slider_speed, 'Slider speed (artist only)'
   %p Number from 0.0 to 1.0 for how fast artist runs. If not set, default is 1.0
   = f.number_field :slider_speed, :step => 0.1
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :impressive, description: "Impressive"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :impressive, description: "Impressive"}
   %p Impressive levels can be shared and are automatically saved to the private gallery
 .field
-  = render partial: 'levels/editors/checkboxes', locals: {f: f, field_name: :discard_background, description: "Discard Background"}
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :discard_background, description: "Discard Background"}
   %p If a level has a background image, don't display that image as feedback or include it in the image saved to the private gallery
 .field
   = f.label :start_direction, 'Start Direction (in degrees)'
@@ -30,8 +33,8 @@
     ], selected: @level.auto_run)
   = selector
 .field
-  = link_to 'Edit Predraw Blocks', level_edit_blocks_path(@level, :predraw_blocks) unless @level.new_record?
-  = render partial: 'levels/editors/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
+  = link_to 'Edit Predraw Blocks', edit_blocks_level_path(@level, :predraw_blocks) unless @level.new_record?
+  = render partial: 'levels/editors/fields/collapsible_block_editor', locals: {f: f, xml_id: 'predraw'}
   :javascript
     levelbuilder.initializeCodeMirror('level_predraw_blocks', '#{@level.uses_droplet? ? 'javascript' : 'xml'}');
 .field
@@ -49,4 +52,4 @@
     %p Paste or drag images into this field to upload them, similar to adding images to Long Instructions.
   = f.text_area :images, placeholder: 'Images', rows: 4, value: @level.properties['images']
   :javascript
-    levelbuilder.initializeCodeMirror('level_images', 'javascript', null, true);
+    levelbuilder.initializeCodeMirror('level_images', 'javascript', {attachments: true});

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "What happens to the design when we make our final step forward half as long?",
+    "short_instructions": "What happens to the design when we make our final step forward half as long?",
     "x": 180,
     "y": 170,
     "start_direction": 90

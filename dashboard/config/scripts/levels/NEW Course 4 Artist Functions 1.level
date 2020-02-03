@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you draw a square that is 100 pixels in length, using a repeat loop?",
+    "short_instructions": "Can you draw a square that is 100 pixels in length, using a repeat loop?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "false",
@@ -22,7 +22,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you draw a square that is 100 pixels in length, using a repeat loop?\r\n\r\n",
+    "long_instructions": "Can you draw a square that is 100 pixels in length, using a repeat loop?\r\n\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

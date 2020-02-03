@@ -6,7 +6,7 @@
   "user_id": 13,
   "properties": {
     "skin": "bee",
-    "instructions": "The purple flower has a different amount of nectar each time you run the puzzle. \r\n\r\nFix the blocks to get all of the nectar from the flower each time.",
+    "short_instructions": "The purple flower has a different amount of nectar each time you run the puzzle. \r\n\r\nFix the blocks to get all of the nectar from the flower each time.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -16,7 +16,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "ideal": "6",
-    "markdown_instructions": "The purple flower has a different amount of nectar each time you run the puzzle. \r\n\r\nFix the blocks to get all of the nectar from the flower each time.",
+    "long_instructions": "The purple flower has a different amount of nectar each time you run the puzzle. \r\n\r\nFix the blocks to get all of the nectar from the flower each time.",
     "never_autoplay_video": "false",
     "step_speed": "1",
     "disable_param_editing": "true",

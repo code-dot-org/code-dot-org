@@ -20,7 +20,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge: Make it Your Own\r\n\r\nUse this program to experiment some more with getting and setting properties. Some ideas you might try include:\r\n\r\n* Add a button that returns the motorcycle to the center of the screen\r\n* Add buttons that move the motorcycle in two directions at once (eg up and right)\r\n* Use a dropdown with color names to change the motorcycle's color\r\n* Use a text input to control how much the motorcycle moves when you click the button",
+    "long_instructions": "# Challenge: Make it Your Own\r\n\r\nUse this program to experiment some more with getting and setting properties. Some ideas you might try include:\r\n\r\n* Add a button that returns the motorcycle to the center of the screen\r\n* Add buttons that move the motorcycle in two directions at once (eg up and right)\r\n* Use a dropdown with color names to change the motorcycle's color\r\n* Use a text input to control how much the motorcycle moves when you click the button",
     "instructions_important": "false",
     "submittable": "true",
     "is_k1": "false",

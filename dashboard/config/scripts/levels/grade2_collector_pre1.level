@@ -26,8 +26,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see if you can help Laurel collect some gold.",
-    "markdown_instructions": "*\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\"*  \r\n\r\nPlay around with the blocks to see if you can help Laurel collect some gold.",
+    "short_instructions": "\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\" \r\n\r\nPlay around with the blocks to see if you can help Laurel collect some gold.",
+    "long_instructions": "*\"Hi, I'm Laurel. Today I'm searching for treasure at the dog park!\"*  \r\n\r\nPlay around with the blocks to see if you can help Laurel collect some gold.",
     "contained_level_names": null
   },
   "published": true,

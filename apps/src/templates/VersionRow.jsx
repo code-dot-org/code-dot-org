@@ -1,6 +1,8 @@
-import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import msg from '@cdo/locale';
+
+import {UnlocalizedTimeAgo} from './TimeAgo';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
@@ -12,10 +14,6 @@ export default class VersionRow extends React.Component {
     isLatest: PropTypes.bool,
     onChoose: PropTypes.func
   };
-
-  componentDidMount() {
-    $('.versionTimestamp').timeago();
-  }
 
   getLastModifiedTimestamp() {
     const timestamp = this.props.lastModified;
@@ -30,9 +28,10 @@ export default class VersionRow extends React.Component {
     if (this.props.isLatest) {
       button = (
         <button
+          type="button"
           className="btn-default"
           disabled="disabled"
-          style={{cursor: "default"}}
+          style={{cursor: 'default'}}
         >
           {msg.currentVersion()}
         </button>
@@ -41,14 +40,20 @@ export default class VersionRow extends React.Component {
       button = [
         <a
           key={0}
-          href={location.origin + location.pathname + '?version=' + this.props.versionId}
+          href={
+            location.origin +
+            location.pathname +
+            '?version=' +
+            this.props.versionId
+          }
           target="_blank"
         >
-          <button className="version-preview">
-            <i className="fa fa-eye"/>
+          <button type="button" className="version-preview">
+            <i className="fa fa-eye" />
           </button>
         </a>,
         <button
+          type="button"
           key={1}
           className="btn-info"
           onClick={this.props.onChoose}
@@ -62,7 +67,7 @@ export default class VersionRow extends React.Component {
       <tr className="versionRow">
         <td>
           <p>
-            Saved <time className="versionTimestamp" dateTime={this.props.lastModified.toISOString()}>{this.getLastModifiedTimestamp()}</time>
+            Saved <UnlocalizedTimeAgo dateString={this.props.lastModified} />
           </p>
           {this.getLastModifiedTimestamp()}
         </td>

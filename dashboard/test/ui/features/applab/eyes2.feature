@@ -1,5 +1,4 @@
 @eyes
-@dashboard_db_access
 @as_student
 Feature: App Lab Eyes - Part 2
 
@@ -36,6 +35,13 @@ Scenario: Applab embedded level
   And I see no difference for "embedded level"
   Then I close my eyes
 
+Scenario: Applab widget mode
+  When I open my eyes to test "Applab widget mode"
+  And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/22"
+  And I wait until element "#start_over_button" is visible
+  And I see no difference for "widget mode level"
+  Then I close my eyes
+
 Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
   And I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/9"
@@ -45,7 +51,7 @@ Scenario: Applab Instructions in Top Pane
   And I see no difference for "top instructions collapsed"
   Then I click selector ".fa-chevron-circle-down"
   And I see no difference for "top instructions uncollapsed"
-  Then I click selector "#hide-toolbox-icon"
+  Then I press "hide-toolbox-icon"
   And I see no difference for "toolbox collapsed"
 
   When I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/10"

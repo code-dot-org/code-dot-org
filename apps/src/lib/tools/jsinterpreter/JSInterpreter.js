@@ -5,14 +5,17 @@ import acorn from '@code-dot-org/js-interpreter/acorn';
 import {getStore} from '../../../redux';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 import CustomMarshaler from './CustomMarshaler';
+import {generateAST} from '@code-dot-org/js-interpreter';
 
-import { setIsDebuggerPaused } from '../../../redux/runState';
+import {setIsDebuggerPaused} from '../../../redux/runState';
+
+const MAX_CALL_STACK_SIZE = 10000;
 
 const StepType = {
-  RUN:  0,
-  IN:   1,
+  RUN: 0,
+  IN: 1,
   OVER: 2,
-  OUT:  3,
+  OUT: 3
 };
 
 /**
@@ -37,9 +40,7 @@ function safeStepInterpreter(jsi) {
   }
 }
 
-
 export default class JSInterpreter {
-
   static StepType = StepType;
 
   /**
@@ -63,15 +64,19 @@ export default class JSInterpreter {
     customMarshalGlobalProperties,
     customMarshalBlockedProperties,
     customMarshalObjectList,
-    logExecution,
+    logExecution
   }) {
     this.studioApp = studioApp;
-    this.shouldRunAtMaxSpeed = shouldRunAtMaxSpeed || function () { return true; };
+    this.shouldRunAtMaxSpeed =
+      shouldRunAtMaxSpeed ||
+      function() {
+        return true;
+      };
     this.maxInterpreterStepsPerTick = maxInterpreterStepsPerTick || 10000;
     this.customMarshaler = new CustomMarshaler({
       globalProperties: customMarshalGlobalProperties,
       blockedProperties: customMarshalBlockedProperties,
-      objectList: customMarshalObjectList,
+      objectList: customMarshalObjectList
     });
 
     // Publicly-exposed events that anyone with access to the JSInterpreter can
@@ -80,10 +85,7 @@ export default class JSInterpreter {
     /** @type {ObservableEventDEPRECATED} */
     this.onNextStepChanged = new ObservableEventDEPRECATED();
     this._runStateUpdater = this.onNextStepChanged.register(() => {
-      getStore().dispatch(setIsDebuggerPaused(
-        this.paused,
-        this.nextStep
-      ));
+      getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
     });
 
     /** @type {ObservableEventDEPRECATED} */
@@ -131,13 +133,17 @@ export default class JSInterpreter {
    * @param {Function} [options.initGlobals] when supplied, this function will
    *        be called during interpreter initialization so that additional globals
    *        can be added with calls to createGlobalProperty()
+   * @param {number} [options.userCodeStartOffset] - offset in the code string where
+   *        the user's created code begins. Allows other code to be injected before
+   *        the user's program without disrupting line number calculations for
+   *        debugging (default 0)
    */
   parse(options) {
-    this.calculateCodeInfo(options.code);
+    this.calculateCodeInfo(options);
 
     if (!this.studioApp.hideSource && this.studioApp.editor) {
       const session = this.studioApp.editor.aceEditor.getSession();
-      this.isBreakpointRow = (row) => codegen.isAceBreakpointRow(session, row);
+      this.isBreakpointRow = row => codegen.isAceBreakpointRow(session, row);
     } else {
       this.isBreakpointRow = () => false;
     }
@@ -146,11 +152,12 @@ export default class JSInterpreter {
       this.eventQueue = [];
       // Append our mini-runtime after the user's code. This will spin and process
       // callback functions:
-      options.code += '\n;while(true){var __jsCB=getCallback();' +
-                      'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
+      options.code +=
+        '\n;while(true){var __jsCB=getCallback();' +
+        'if(__jsCB){setCallbackRetVal(__jsCB.fn.apply(null,__jsCB.arguments || null));}}';
 
-      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = (intFunc) => {
-        return (...args) => {
+      CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction = intFunc => {
+        let retFunc = (...args) => {
           if (this.initialized()) {
             this.eventQueue.push({
               fn: intFunc,
@@ -171,6 +178,10 @@ export default class JSInterpreter {
             }
           }
         };
+        if (intFunc && intFunc.node && intFunc.node.id) {
+          retFunc.funcName = intFunc.node.id.name;
+        }
+        return retFunc;
       };
     }
 
@@ -191,7 +202,8 @@ export default class JSInterpreter {
             options.blocks,
             options.blockFilter,
             scope,
-            options.globalFunctions);
+            options.globalFunctions
+          );
 
           if (options.initGlobals) {
             options.initGlobals();
@@ -216,7 +228,7 @@ export default class JSInterpreter {
             'setCallbackRetVal',
             interpreter.createNativeFunction(
               interpreter.makeNativeMemberFunction({
-                nativeFunc: this.nativeSetCallbackRetVal,
+                nativeFunc: this.nativeSetCallbackRetVal
               })
             )
           );
@@ -226,6 +238,10 @@ export default class JSInterpreter {
       // can be injected before the user code is processed (thus allowing user
       // code to override globals of the same names)
 
+      // Append the libraries first so line numbers are maintained:
+      if (!!options.libraryCode && typeof options.libraryCode === 'string') {
+        this.interpreter.appendCode(options.libraryCode);
+      }
       // Now append the user code:
       this.interpreter.appendCode(options.code);
       // And repopulate scope since appendCode() doesn't do this automatically:
@@ -234,19 +250,109 @@ export default class JSInterpreter {
       this.executionError = err;
       this.handleError();
     }
+  }
 
+  /**
+   * Builds a list of objects that contain all metadata about any functions in
+   * the given code string. Each object in the returned list has the following
+   * properties:
+   * functionName - the name of the function
+   * parameters - the names of the parameters passed into the function
+   * comment - the comment describing the function. This could be in a JSDoc,
+   * multiline, singleline, or multiple singlelines format.
+   *
+   * @param {string} code - The code to be parsed for functions
+   * @return {array} functionsAndMetadata - all functions from the input 'code'
+   *         along with their relevant metadata
+   */
+  static getFunctionsAndMetadata(code) {
+    // Private helper functions
+    function getPrecedingComment(allComments, startingLocation) {
+      return allComments.find(comment => {
+        return comment.endLocation === startingLocation - 1;
+      });
+    }
+
+    function trimWhitespaceFromLineEndings(code) {
+      return code
+        .split('\n')
+        .map(line => {
+          // The regex /\s+$/gm detects whitespace at the end of a line
+          return line.replace(/\s+$/gm, '');
+        })
+        .join('\n');
+    }
+
+    let functionsAndMetadata = [];
+    let allComments = [];
+    let parserOptions = {
+      // Tell the AST parser to push comments into our allComments array
+      onComment: (isBlockComment, text, startLocation, endLocation) => {
+        allComments.push({isBlockComment, text, startLocation, endLocation});
+      }
+    };
+
+    // trim whitespace to ensure we correctly detect comments
+    code = trimWhitespaceFromLineEndings(code);
+    let ast = generateAST(code, parserOptions);
+    let codeFunctions = ast.body.filter(node => {
+      return node.type === 'FunctionDeclaration';
+    });
+
+    codeFunctions.forEach(codeFunction => {
+      let fullComment = '';
+      let comment = getPrecedingComment(allComments, codeFunction.start);
+      if (comment && comment.isBlockComment) {
+        fullComment = comment.text;
+        if (fullComment[0] === '*') {
+          // For a JSDoc style comment, acorn doesn't strip the * that starts
+          // each line, so we do that here.
+          fullComment = fullComment
+            .substr(1)
+            .split('\n * ')
+            .join('\n');
+        }
+      } else {
+        while (comment) {
+          // Find all adjacent singleline comments preceding the function
+          fullComment = comment.text.trim() + '\n' + fullComment;
+          comment = getPrecedingComment(allComments, comment.startLocation);
+        }
+      }
+      fullComment = fullComment.trim();
+
+      let params = codeFunction.params.map(param => {
+        return param.name;
+      });
+
+      functionsAndMetadata.push({
+        functionName: codeFunction.id.name,
+        parameters: params,
+        comment: fullComment
+      });
+    });
+
+    return functionsAndMetadata;
   }
 
   /**
    * Init `this.codeInfo` with cumulative length info (used to locate breakpoints).
-   * @param code
+   * @param {!Object} options
+   * @param {!string} options.code - Code to be executed by the interpreter.
+   * @param {number} [options.userCodeStartOffset] - offset in the code string where
+   *        the user's created code begins. Allows other code to be injected before
+   *        the user's program without disrupting line number calculations for
+   *        debugging (default 0)
    */
-  calculateCodeInfo(code) {
+  calculateCodeInfo(options) {
+    const {code, userCodeStartOffset = 0} = options;
     this.codeInfo = {};
     this.codeInfo.code = code;
-    this.codeInfo.userCodeStartOffset = 0;
-    this.codeInfo.userCodeLength = code.length;
-    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(code);
+    this.codeInfo.userCodeStartOffset = userCodeStartOffset;
+    this.codeInfo.userCodeLength = code.length - userCodeStartOffset;
+    this.codeInfo.cumulativeLength = codegen.calculateCumulativeLength(
+      code.slice(userCodeStartOffset)
+    );
   }
 
   /**
@@ -276,13 +382,13 @@ export default class JSInterpreter {
   nativeGetCallback = () => {
     this.startedHandlingEvents = true;
     const retVal = this.eventQueue.shift();
-    if (typeof retVal === "undefined") {
+    if (typeof retVal === 'undefined') {
       this.yield();
     }
     return retVal;
   };
 
-  nativeSetCallbackRetVal = (retVal) => {
+  nativeSetCallbackRetVal = retVal => {
     if (this.eventQueue.length === 0) {
       // If nothing else is in the event queue, then store this return value
       // away so it can be returned in the native event handler
@@ -302,13 +408,18 @@ export default class JSInterpreter {
     // TODO (cpirich): Check to see if the DOM event object was modified
     // (preventDefault(), stopPropagation(), returnValue) and provide a similar
     // warning since these won't work as expected unless running atMaxSpeed
-    if (!this.runUntilCallbackReturn &&
-                                     typeof this.lastCallbackRetVal !== 'undefined') {
-      this.onExecutionWarning.notifyObservers("Function passed to onEvent() " +
-                                              "has taken too long - the return value was ignored.");
+    if (
+      !this.runUntilCallbackReturn &&
+      typeof this.lastCallbackRetVal !== 'undefined'
+    ) {
+      this.onExecutionWarning.notifyObservers(
+        'Function passed to onEvent() ' +
+          'has taken too long - the return value was ignored.'
+      );
       if (!this.shouldRunAtMaxSpeed()) {
-        this.onExecutionWarning.notifyObservers("  (try moving the speed " +
-                                                "slider to its maximum value)");
+        this.onExecutionWarning.notifyObservers(
+          '  (try moving the speed ' + 'slider to its maximum value)'
+        );
       }
     }
   };
@@ -397,11 +508,12 @@ export default class JSInterpreter {
       return true;
     }
     const topStackFrame = this.interpreter.peekStackFrame();
-    return this.executionError ||
-           !topStackFrame ||
-           (topStackFrame.node.type === 'Program' && topStackFrame.done);
+    return (
+      this.executionError ||
+      !topStackFrame ||
+      (topStackFrame.node.type === 'Program' && topStackFrame.done)
+    );
   }
-
 
   /**
    * Execute the interpreter
@@ -411,7 +523,9 @@ export default class JSInterpreter {
    */
   executeInterpreter(firstStep, runUntilCallbackReturn) {
     if (this.isExecuting) {
-      console.error('Attempt to call executeInterpreter while already executing ignored');
+      console.error(
+        'Attempt to call executeInterpreter while already executing ignored'
+      );
       return;
     }
     this.isExecuting = true;
@@ -422,9 +536,8 @@ export default class JSInterpreter {
     this.yieldExecution = false;
     this.seenReturnFromCallbackDuringExecution = false;
 
-    const atInitialBreakpoint = this.paused &&
-                                this.nextStep === StepType.IN &&
-                                firstStep;
+    const atInitialBreakpoint =
+      this.paused && this.nextStep === StepType.IN && firstStep;
     let atMaxSpeed = false;
 
     if (this.paused) {
@@ -438,7 +551,10 @@ export default class JSInterpreter {
           // If we haven't yet set stepOutToStackDepth, work backwards through the
           // history of callExpressionSeenAtDepth until we find the one we want to
           // step out to - and store that in stepOutToStackDepth:
-          if (this.interpreter && typeof this.stepOutToStackDepth === 'undefined') {
+          if (
+            this.interpreter &&
+            typeof this.stepOutToStackDepth === 'undefined'
+          ) {
             this.stepOutToStackDepth = 0;
             for (let i = this.maxValidCallExpressionDepth; i > 0; i--) {
               if (this.callExpressionSeenAtDepth[i]) {
@@ -460,9 +576,11 @@ export default class JSInterpreter {
     // In each tick, we will step the interpreter multiple times in a tight
     // loop as long as we are interpreting code that the user can't see
     // (function aliases at the beginning, getCallback event loop at the end)
-    for (let stepsThisTick = 0;
-      (stepsThisTick < this.maxInterpreterStepsPerTick) || unwindingAfterStep;
-      stepsThisTick++) {
+    for (
+      let stepsThisTick = 0;
+      stepsThisTick < this.maxInterpreterStepsPerTick || unwindingAfterStep;
+      stepsThisTick++
+    ) {
       // Check this every time because the speed is allowed to change...
       atMaxSpeed = this.shouldRunAtMaxSpeed();
       // NOTE:
@@ -474,7 +592,9 @@ export default class JSInterpreter {
       // (3) Otherwise call a function that also highlights the code.
       let selectCodeFunc;
       if (this.studioApp.hideSource && atMaxSpeed) {
-        selectCodeFunc = function () { return -1; };
+        selectCodeFunc = function() {
+          return -1;
+        };
       } else if (this.studioApp.hideSource || atMaxSpeed) {
         selectCodeFunc = this.getUserCodeLine;
       } else {
@@ -482,11 +602,13 @@ export default class JSInterpreter {
       }
       const currentScope = this.interpreter.getScope();
 
-      if ((reachedBreak && !unwindingAfterStep) ||
-          (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
-          this.yieldExecution ||
-          this.interpreter.paused_ ||
-          (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)) {
+      if (
+        (reachedBreak && !unwindingAfterStep) ||
+        (doneUserLine && !unwindingAfterStep && !atMaxSpeed) ||
+        this.yieldExecution ||
+        this.interpreter.paused_ ||
+        (runUntilCallbackReturn && this.seenReturnFromCallbackDuringExecution)
+      ) {
         // stop stepping the interpreter and wait until the next tick once we:
         // (1) reached a breakpoint and are done unwinding OR
         // (2) completed a line of user code and are are done unwinding
@@ -499,7 +621,7 @@ export default class JSInterpreter {
         break;
       }
       userCodeRow = selectCodeFunc.call(this);
-      inUserCode = (-1 !== userCodeRow);
+      inUserCode = -1 !== userCodeRow;
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
       //  (2) should never happen while unwinding
@@ -508,10 +630,14 @@ export default class JSInterpreter {
       //   (a) atInitialBreakpoint OR
       //   (b) isAceBreakpointRow() AND not still at the same line number where
       //       we have already stopped from the last step/breakpoint
-      if (inUserCode && !unwindingAfterStep && !this.atInterstitialNode &&
-          (atInitialBreakpoint ||
-           (this.isBreakpointRow(userCodeRow) &&
-            !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))) {
+      if (
+        inUserCode &&
+        !unwindingAfterStep &&
+        !this.atInterstitialNode &&
+        (atInitialBreakpoint ||
+          (this.isBreakpointRow(userCodeRow) &&
+            !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)))
+      ) {
         // Yes, arrived at a new breakpoint:
         if (this.paused) {
           // Overwrite the nextStep value. (If we hit a breakpoint during a step
@@ -526,12 +652,17 @@ export default class JSInterpreter {
 
         // Mark reachedBreak to stop stepping, and start unwinding if needed:
         reachedBreak = true;
-        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+        unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(
+          this.interpreter
+        );
         continue;
       }
       // If we've moved past the place of the last breakpoint hit without being
       // deeper in the stack, we will discard the stoppedAtBreakpoint properties:
-      if (inUserCode && !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)) {
+      if (
+        inUserCode &&
+        !this.findStoppedAtBreakpointRow(currentScope, userCodeRow)
+      ) {
         this.removeStoppedAtBreakpointRowForScope(currentScope);
       }
       // If we're unwinding, continue to update the stoppedAtBreakpoint properties
@@ -543,8 +674,12 @@ export default class JSInterpreter {
         this.logStep_();
       }
       this.executionError = safeStepInterpreter(this);
+      if (this.interpreter.getStackDepth() > MAX_CALL_STACK_SIZE) {
+        this.executionError = new Error('Maximum call stack size exceeded.');
+      }
       if (!this.executionError && this.interpreter.getStackDepth()) {
-        const state = this.interpreter.peekStackFrame(), nodeType = state.node.type;
+        const state = this.interpreter.peekStackFrame(),
+          nodeType = state.node.type;
 
         // Determine whether we are done executing a line of user code. This is detected by checking
         // that one of the following conditions are true:
@@ -557,23 +692,28 @@ export default class JSInterpreter {
         //      actually takes place.
         this.atInterstitialNode = INTERSTITIAL_NODES.hasOwnProperty(nodeType);
         if (inUserCode && !doneUserLine) {
-          doneUserLine = (
+          doneUserLine =
             this.atInterstitialNode ||
             state.done_ ||
-            (state.node.type === 'UpdateExpression' && state.doneLeft_)
-          );
+            (state.node.type === 'UpdateExpression' && state.doneLeft_);
         }
 
         const stackDepth = this.interpreter.getStackDepth();
         // Remember the stack depths of call expressions (so we can implement 'step out')
 
         // Truncate any history of call expressions seen deeper than our current stack position:
-        for (let depth = stackDepth + 1; depth <= this.maxValidCallExpressionDepth; depth++) {
+        for (
+          let depth = stackDepth + 1;
+          depth <= this.maxValidCallExpressionDepth;
+          depth++
+        ) {
           this.callExpressionSeenAtDepth[depth] = false;
         }
         this.maxValidCallExpressionDepth = stackDepth;
 
-        const inUserCallExpression = inUserCode && this.interpreter.peekStackFrame().node.type === "CallExpression";
+        const inUserCallExpression =
+          inUserCode &&
+          this.interpreter.peekStackFrame().node.type === 'CallExpression';
         if (inUserCallExpression) {
           // Store that we've seen a call expression at this depth in callExpressionSeenAtDepth:
           this.callExpressionSeenAtDepth[stackDepth] = true;
@@ -588,10 +728,12 @@ export default class JSInterpreter {
           }
 
           // For the step in case, we want to stop the interpreter as soon as we enter the callee:
-          if (!doneUserLine &&
-              inUserCode &&
-              this.nextStep === StepType.IN &&
-              stackDepth > this.firstCallStackDepthThisStep) {
+          if (
+            !doneUserLine &&
+            inUserCode &&
+            this.nextStep === StepType.IN &&
+            stackDepth > this.firstCallStackDepthThisStep
+          ) {
             reachedBreak = true;
           }
           // After the interpreter says a node is "done" (meaning it is time to stop), we will
@@ -600,11 +742,13 @@ export default class JSInterpreter {
           if (doneUserLine || reachedBreak) {
             const wasUnwinding = unwindingAfterStep;
             // step() additional times if we know it to be safe to get us to the next statement:
-            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(this.interpreter);
+            unwindingAfterStep = codegen.isNextStepSafeWhileUnwinding(
+              this.interpreter
+            );
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
               userCodeRow = selectCodeFunc.call(this);
-              inUserCode = (-1 !== userCodeRow);
+              inUserCode = -1 !== userCodeRow;
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
@@ -613,12 +757,16 @@ export default class JSInterpreter {
           }
 
           if ((reachedBreak || doneUserLine) && !unwindingAfterStep) {
-            if (this.nextStep === StepType.OUT &&
-                stackDepth > this.stepOutToStackDepth) {
+            if (
+              this.nextStep === StepType.OUT &&
+              stackDepth > this.stepOutToStackDepth
+            ) {
               // trying to step out, but we didn't get out yet... continue on.
-            } else if (this.nextStep === StepType.OVER &&
-                       typeof this.firstCallStackDepthThisStep !== 'undefined' &&
-                       stackDepth > this.firstCallStackDepthThisStep) {
+            } else if (
+              this.nextStep === StepType.OVER &&
+              typeof this.firstCallStackDepthThisStep !== 'undefined' &&
+              stackDepth > this.firstCallStackDepthThisStep
+            ) {
               // trying to step over, and we're in deeper inside a function call... continue next onTick
             } else {
               // Our step operation is complete, set reachedBreak to ensure the
@@ -629,7 +777,10 @@ export default class JSInterpreter {
               this.onNextStepChanged.notifyObservers();
               if (inUserCode) {
                 // Store some properties about where we stopped:
-                this.replaceStoppedAtBreakpointRowForScope(this.interpreter.getScope(), userCodeRow);
+                this.replaceStoppedAtBreakpointRowForScope(
+                  this.interpreter.getScope(),
+                  userCodeRow
+                );
               }
               delete this.stepOutToStackDepth;
               delete this.firstCallStackDepthThisStep;
@@ -639,7 +790,7 @@ export default class JSInterpreter {
         }
       } else {
         if (this.executionError) {
-          this.handleError(inUserCode ? (userCodeRow + 1) : undefined);
+          this.handleError(inUserCode ? userCodeRow + 1 : undefined);
         }
         this.isExecuting = false;
         return;
@@ -683,25 +834,27 @@ export default class JSInterpreter {
   static getMemberExpressionName_(node) {
     let objectString;
     switch (node.object.type) {
-      case "MemberExpression":
+      case 'MemberExpression':
         objectString = this.getMemberExpressionName_(node.object);
         break;
-      case "Identifier":
+      case 'Identifier':
         objectString = node.object.name;
         break;
       default:
-        throw "Unexpected MemberExpression node object type: " + node.object.type;
+        throw 'Unexpected MemberExpression node object type: ' +
+          node.object.type;
     }
     let propString;
     switch (node.property.type) {
-      case "Identifier":
-        propString = "." + node.property.name;
+      case 'Identifier':
+        propString = '.' + node.property.name;
         break;
-      case "Literal":
-        propString = "[" + node.property.value + "]";
+      case 'Literal':
+        propString = '[' + node.property.value + ']';
         break;
       default:
-        throw "Unexpected MemberExpression node property type: " + node.object.type;
+        throw 'Unexpected MemberExpression node property type: ' +
+          node.object.type;
     }
     return objectString + propString;
   }
@@ -723,32 +876,39 @@ export default class JSInterpreter {
     // Log call and new expressions just before we step into a function (after the
     // last argument has been processed). (NOTE: as a result, a single stateful
     // async function call may appear multiple times in the log)
-    if ((node.type === "CallExpression" || node.type === "NewExpression") &&
-        state.doneCallee_ &&
-        !state.doneExec_ &&
-        !node.arguments[state.n_ || 0]) {
+    if (
+      (node.type === 'CallExpression' || node.type === 'NewExpression') &&
+      state.doneCallee_ &&
+      !state.doneExec_ &&
+      !node.arguments[state.n_ || 0]
+    ) {
       switch (node.callee.type) {
-        case "Identifier":
-          this.executionLog.push(node.callee.name + ':' + node.arguments.length);
+        case 'Identifier':
+          this.executionLog.push(
+            node.callee.name + ':' + node.arguments.length
+          );
           break;
-        case "MemberExpression":
-          this.executionLog.push(JSInterpreter.getMemberExpressionName_(node.callee) +
-                                 ':' + node.arguments.length);
+        case 'MemberExpression':
+          this.executionLog.push(
+            JSInterpreter.getMemberExpressionName_(node.callee) +
+              ':' +
+              node.arguments.length
+          );
           break;
         default:
-          throw "Unexpected callee node property type: " + node.object.type;
+          throw 'Unexpected callee node property type: ' + node.object.type;
       }
-    } else if (node.type === "ForStatement") {
+    } else if (node.type === 'ForStatement') {
       const mode = state.mode_ || 0;
       switch (mode) {
         case codegen.ForStatementMode.INIT:
-          this.executionLog.push("[forInit]");
+          this.executionLog.push('[forInit]');
           break;
         case codegen.ForStatementMode.TEST:
-          this.executionLog.push("[forTest]");
+          this.executionLog.push('[forTest]');
           break;
         case codegen.ForStatementMode.UPDATE:
-          this.executionLog.push("[forUpdate]");
+          this.executionLog.push('[forUpdate]');
           break;
       }
     }
@@ -771,18 +931,22 @@ export default class JSInterpreter {
       codegen.selectEditorRowColError(
         this.studioApp.editor,
         lineNumber - 1,
-        this.executionError.loc.column);
+        this.executionError.loc.column
+      );
     }
 
     // Select code that just executed:
-    this.selectCurrentCode("ace_error");
+    this.selectCurrentCode('ace_error');
     // Grab line number if we don't have one already:
     if (!lineNumber) {
       lineNumber = 1 + this.getNearestUserCodeLine();
     }
 
     var msg = String(this.executionError);
-    if (this.executionError instanceof ReferenceError && this.executionError.message) {
+    if (
+      this.executionError instanceof ReferenceError &&
+      this.executionError.message
+    ) {
       const re = /(.*) is not defined/;
       const execResult = re.exec(this.executionError.message);
       if (execResult && execResult[1]) {
@@ -790,7 +954,8 @@ export default class JSInterpreter {
         if (varName === '__') {
           msg = 'It looks like you left one of the parameters empty.';
         } else {
-          msg = `Oops, we can’t figure out what ${varName} is - perhaps you ` +
+          msg =
+            `Oops, we can’t figure out what ${varName} is - perhaps you ` +
             `meant the string “${varName}” with quotes? If this is meant to be a ` +
             `variable, make sure you declared a variable: var ${varName}`;
         }
@@ -820,12 +985,14 @@ export default class JSInterpreter {
     if (this.studioApp.hideSource || !this.studioApp.editCode) {
       return -1;
     }
-    return codegen.selectCurrentCode(this.interpreter,
-                                     this.codeInfo.cumulativeLength,
-                                     this.codeInfo.userCodeStartOffset,
-                                     this.codeInfo.userCodeLength,
-                                     this.studioApp.editor,
-                                     highlightClass);
+    return codegen.selectCurrentCode(
+      this.interpreter,
+      this.codeInfo.cumulativeLength,
+      this.codeInfo.userCodeStartOffset,
+      this.codeInfo.userCodeLength,
+      this.studioApp.editor,
+      highlightClass
+    );
   }
 
   /**
@@ -846,10 +1013,12 @@ export default class JSInterpreter {
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
       if (start >= 0 && start < this.codeInfo.userCodeLength) {
-        userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
-                                         0,
-                                         this.codeInfo.cumulativeLength.length,
-                                         start);
+        userCodeRow = codegen.aceFindRow(
+          this.codeInfo.cumulativeLength,
+          0,
+          this.codeInfo.cumulativeLength.length,
+          start
+        );
       }
     }
     return userCodeRow;
@@ -874,10 +1043,12 @@ export default class JSInterpreter {
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
       if (start >= 0 && start < this.codeInfo.userCodeLength) {
-        userCodeRow = codegen.aceFindRow(this.codeInfo.cumulativeLength,
-                                         0,
-                                         this.codeInfo.cumulativeLength.length,
-                                         start);
+        userCodeRow = codegen.aceFindRow(
+          this.codeInfo.cumulativeLength,
+          0,
+          this.codeInfo.cumulativeLength.length,
+          start
+        );
         break;
       }
     }
@@ -897,7 +1068,6 @@ export default class JSInterpreter {
    * @param {Object} parent (Optional) parent for the native value.
    */
   createGlobalProperty(name, value, parent) {
-
     let interpreterVal;
     if (typeof value === 'function') {
       const wrapper = this.interpreter.makeNativeMemberFunction({
@@ -947,7 +1117,7 @@ export default class JSInterpreter {
     } else if (node.type === 'Identifier') {
       return this.getValueFromScope(node.name);
     } else {
-      throw new Error("Invalid");
+      throw new Error('Invalid');
     }
   }
 
@@ -961,8 +1131,10 @@ export default class JSInterpreter {
     if (expression.property.type === 'Identifier') {
       return this.interpreter.getValue([object, expression.property.name]);
     } else if (expression.property.type === 'Literal') {
-      return this.interpreter.getValue(
-        [object, this.interpreter.createPrimitive(expression.property.value)]);
+      return this.interpreter.getValue([
+        object,
+        this.interpreter.createPrimitive(expression.property.value)
+      ]);
     }
   }
 
@@ -973,11 +1145,13 @@ export default class JSInterpreter {
     let value;
     try {
       const ast = acorn.parse(watchExpression);
-      if (ast.type === 'Program' &&
-          ast.body[0].type === 'ExpressionStatement') {
+      if (
+        ast.type === 'Program' &&
+        ast.body[0].type === 'ExpressionStatement'
+      ) {
         value = this.getWatchValueFromNode_(ast.body[0].expression);
       } else {
-        throw new Error("Invalid");
+        throw new Error('Invalid');
       }
     } catch (err) {
       if (err instanceof Error) {
@@ -1005,14 +1179,16 @@ export default class JSInterpreter {
    * in the interpreter's global scope. Built-in global functions are excluded.
    */
   getGlobalFunctionNames() {
-    const builtInExclusionList = ["eval", "getCallback", "setCallbackRetVal"];
+    const builtInExclusionList = ['eval', 'getCallback', 'setCallbackRetVal'];
 
     const names = [];
     for (const objName in this.globalScope.properties) {
       const object = this.globalScope.properties[objName];
-      if (object.type === 'function' &&
-          !object.nativeFunc &&
-          builtInExclusionList.indexOf(objName) === -1) {
+      if (
+        object.type === 'function' &&
+        !object.nativeFunc &&
+        builtInExclusionList.indexOf(objName) === -1
+      ) {
         names.push(objName);
       }
     }
@@ -1034,7 +1210,10 @@ export default class JSInterpreter {
         if (scope !== this.globalScope) {
           names.push(objName);
         }
-        const localScope = this.interpreter.createScope(object.node.body, object.parentScope);
+        const localScope = this.interpreter.createScope(
+          object.node.body,
+          object.parentScope
+        );
         const localNames = this.getLocalFunctionNames(localScope);
         names = names.concat(localNames);
       }
@@ -1059,24 +1238,37 @@ export default class JSInterpreter {
    */
   evalInCurrentScope(expression) {
     const currentScope = this.interpreter.getScope();
-    const evalInterpreter = new CustomMarshalingInterpreter(expression, this.customMarshaler);
+    const evalInterpreter = new CustomMarshalingInterpreter(
+      expression,
+      this.customMarshaler
+    );
     // Set scope to the current scope of the running program
     // NOTE: we are being a little tricky here (we are re-running
     // part of the Interpreter constructor with a different interpreter's
     // scope)
     evalInterpreter.global = this.interpreter.global;
     evalInterpreter.populateScope_(evalInterpreter.ast, currentScope);
-    evalInterpreter.setStack([{
-      node: evalInterpreter.ast,
-      scope: currentScope,
-      thisExpression: currentScope
-    }]);
+    evalInterpreter.setStack([
+      {
+        node: evalInterpreter.ast,
+        scope: currentScope,
+        thisExpression: currentScope
+      }
+    ]);
     // Copy these properties directly into the evalInterpreter so the .isa()
     // method behaves as expected
-    ['ARRAY', 'BOOLEAN', 'DATE', 'FUNCTION', 'NUMBER', 'OBJECT', 'STRING',
-     'UNDEFINED'].forEach(function (prop) {
-       evalInterpreter[prop] = this.interpreter[prop];
-     }, this);
+    [
+      'ARRAY',
+      'BOOLEAN',
+      'DATE',
+      'FUNCTION',
+      'NUMBER',
+      'OBJECT',
+      'STRING',
+      'UNDEFINED'
+    ].forEach(function(prop) {
+      evalInterpreter[prop] = this.interpreter[prop];
+    }, this);
 
     // run() may throw if there's a problem in the expression
     try {
@@ -1096,37 +1288,24 @@ export default class JSInterpreter {
       this.paused = true;
       this.nextStep = StepType.RUN;
     }
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
+    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepOver() {
     this.paused = true;
     this.nextStep = StepType.OVER;
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
+    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepIn() {
     this.paused = true;
     this.nextStep = StepType.IN;
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
+    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 
   handleStepOut() {
     this.paused = true;
     this.nextStep = StepType.OUT;
-    getStore().dispatch(setIsDebuggerPaused(
-      this.paused,
-      this.nextStep
-    ));
+    getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
-
 }

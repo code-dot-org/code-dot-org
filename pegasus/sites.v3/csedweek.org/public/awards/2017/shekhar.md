@@ -15,7 +15,7 @@ theme: responsive
 Shreya's interest in STEM started early and was further inspired when she took advanced computer courses and did projects involving Arduino and App-Inventor. As founder of her programming club, CodeCats, mentor for GirlsWhoCode, and teacher at MathandCoding.org, Shreya has inspired young minds to learn programming skills in Java, Python, and algorithm development.
 
 <figure style="margin:10px">
-  <img src="/images/awards/shreya_shekhar.png" style="display:block;margin:0 auto" width=400 alt="Shreya Shekhar" />
+  <img src="/images/awards/fit-400/shreya_shekhar.png" style="display:block;margin:0 auto" width=400 alt="Shreya Shekhar" />
   <figcaption style="text-align:center;font-style:italic;font-size:12px">Shreya Shekhar</figcaption>
 </figure>
 

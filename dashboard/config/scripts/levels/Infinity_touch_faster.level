@@ -11,7 +11,7 @@
     "failure_condition": "function () {\r\n}",
     "maze": "[[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
-    "instructions": "Touch even more snowflakes!",
+    "short_instructions": "Touch even more snowflakes!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

@@ -35,9 +35,6 @@ class PeerReviewTest < ActiveSupport::TestCase
 
   setup do
     @script.reload
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: @user.id, plc_learning_module: @learning_module).returns(true)
-
     PeerReviewMailer.stubs(:review_completed_receipt).returns(stub(:deliver_now))
   end
 
@@ -47,14 +44,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     end
 
     assert_equal Set[nil, 'escalated'], PeerReview.where(submitter: @user, level: @level).map(&:status).to_set
-  end
-
-  test 'submitting a peer reviewed level when I am not enrolled in the module should not create PeerReview objects' do
-    Plc::EnrollmentModuleAssignment.stubs(:exists?).returns(false)
-
-    assert_no_difference('PeerReview.count') do
-      track_progress @level_source.id
-    end
   end
 
   test 'submitting a non peer reviewable level should not create Peer Review objects' do
@@ -75,10 +64,38 @@ class PeerReviewTest < ActiveSupport::TestCase
     # Assign one review
     PeerReview.last.update! reviewer: create(:user)
 
+    # Submit a new answer
     updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
 
+    # Two new reviews were created
     track_progress updated_level_source.id
     assert_equal 3, PeerReview.count - original_count
+  end
+
+  test 'resubmitting a previously-accepted submission should not create new PeerReview objects' do
+    # Original submission
+    track_progress @level_source.id, @user
+    assert_equal 2, PeerReview.where(submitter: @user).count
+
+    # Instructor accepts submission
+    PeerReview.find_by(submitter: @user, status: 'escalated').
+      update status: 'accepted', reviewer: @instructor, from_instructor: true
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
+
+    # Unsubmit the level
+    user_level = UserLevel.find_by(user: @user, level: @level, script: @script)
+    user_level.update(submitted: false)
+
+    # The unassigned review was destroyed on unsubmit
+    assert_equal 1, PeerReview.where(submitter: @user).count
+
+    # Submit a new answer
+    updated_level_source = create :level_source, data: 'UPDATED: My submitted answer'
+    track_progress updated_level_source.id, @user
+
+    # No new reviews were created
+    assert_equal 1, PeerReview.where(submitter: @user).count
+    assert PeerReview.find_by(submitter: @user, reviewer: @instructor).accepted?
   end
 
   test 'instructor review should mark as accepted' do
@@ -216,10 +233,6 @@ class PeerReviewTest < ActiveSupport::TestCase
     submitter_1 = create :teacher
     submitter_2 = create :teacher
     submitter_3 = create :teacher
-
-    [submitter_1, submitter_2, submitter_3].each do |submitter|
-      Plc::EnrollmentModuleAssignment.stubs(:exists?).with(user_id: submitter.id, plc_learning_module: @learning_module).returns(true)
-    end
 
     level_source_1 = create(:level_source, data: 'Some answer')
     level_source_2 = create(:level_source, data: 'Other answer')
@@ -386,12 +399,14 @@ class PeerReviewTest < ActiveSupport::TestCase
     base_expected = {
       submitter: @user.name,
       course_name: @plc_course.name,
-      unit_name: @learning_module.name,
+      unit_name: @plc_course_unit.name,
     }
 
+    level_1_pr_1 = PeerReview.find_by(level: level_1, status: nil)
+    level_1_pr_2 = PeerReview.find_by(level: level_1, status: 'escalated')
     expected_level_1_ids = [
-      [PeerReview.find_by(level: level_1, status: nil).id, nil],
-      [PeerReview.find_by(level: level_1, status: 'escalated').id, 'escalated']
+      [level_1_pr_1.id, nil, level_1_pr_1.updated_at],
+      [level_1_pr_2.id, 'escalated', level_1_pr_2.updated_at]
     ]
 
     assert_equal base_expected.merge(
@@ -399,38 +414,36 @@ class PeerReviewTest < ActiveSupport::TestCase
         level_name: level_1.name,
         review_ids: expected_level_1_ids,
         status: 'escalated',
-        accepted_reviews: 0,
-        rejected_reviews: 0,
         escalated_review_id: PeerReview.find_by(level: level_1, status: 'escalated').id
       }
     ), PeerReview.get_submission_summary_for_user_level(ul1, @script).except(:submission_date)
 
+    level_2_pr_1 = PeerReview.find_by(level: level_2, status: nil)
+    level_2_pr_2 = PeerReview.find_by(level: level_2, status: 'accepted')
     expected_level_2_ids = [
-      [PeerReview.find_by(level: level_2, status: nil).id, nil],
-      [PeerReview.find_by(level: level_2, status: 'accepted').id, 'accepted']
+      [level_2_pr_1.id, nil, level_2_pr_1.updated_at],
+      [level_2_pr_2.id, 'accepted', level_2_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
         level_name: level_2.name,
         review_ids: expected_level_2_ids,
         status: 'accepted',
-        accepted_reviews: 1,
-        rejected_reviews: 0,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul2, @script).except(:submission_date)
 
+    level_3_pr_1 = PeerReview.find_by(level: level_3, status: nil)
+    level_3_pr_2 = PeerReview.find_by(level: level_3, status: 'rejected')
     expected_level_3_ids = [
-      [PeerReview.find_by(level: level_3, status: nil).id, nil],
-      [PeerReview.find_by(level: level_3, status: 'rejected').id, 'rejected']
+      [level_3_pr_1.id, nil, level_3_pr_1.updated_at],
+      [level_3_pr_2.id, 'rejected', level_3_pr_2.updated_at]
     ]
     assert_equal base_expected.merge(
       {
         level_name: level_3.name,
         review_ids: expected_level_3_ids,
         status: 'rejected',
-        accepted_reviews: 0,
-        rejected_reviews: 1,
         escalated_review_id: nil
       }
     ), PeerReview.get_submission_summary_for_user_level(ul3, @script).except(:submission_date)
@@ -475,11 +488,29 @@ class PeerReviewTest < ActiveSupport::TestCase
     peer_review.update!(audit_trail: 'unrelated change')
   end
 
+  test 'create_for_submission rolls back if there is an error' do
+    track_progress @level_source.id
+
+    original_peer_reviews = PeerReview.where(level_id: @level.id)
+    assert_equal 2, original_peer_reviews.count
+    PeerReview.stubs(:create!).raises(Exception, "Some error")
+
+    # We don't try to create new peer reviews if nothing changed, so make a
+    # new level source to simulate a new submission.
+    new_level_source = create :level_source, level: @level
+    assert_raises(Exception) do
+      track_progress new_level_source.id
+    end
+
+    assert original_peer_reviews == PeerReview.where(level_id: @level.id)
+    refute PeerReview.where(level_source_id: new_level_source.id).exists?
+  end
+
   private
 
   def track_progress(level_source_id, user = @user, script_level = @script_level)
     # this is what creates the peer review objects
-    User.track_level_progress_sync(
+    User.track_level_progress(
       user_id: user.id,
       level_id: script_level.level_id,
       script_id: script_level.script_id,

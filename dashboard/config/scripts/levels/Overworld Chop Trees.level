@@ -13,7 +13,7 @@
     "player_start_position": "[3, 7]",
     "player_start_direction": "1",
     "verification_function": "function (verificationAPI) {\r\n      return verificationAPI.getInventoryAmount(\"planksBirch\") === 1 &&\r\n        verificationAPI.getInventoryAmount(\"planksSpruce\") === 1 &&\r\n      verificationAPI.getInventoryAmount(\"planksOak\") === 1;\r\n    }\r\n",
-    "instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
+    "short_instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,13 +48,15 @@
     "level_verification_timeout": "0",
     "use_player": "false",
     "hint_prompt_attempts_threshold": 5,
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-18 03:38:55 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-25 23:05:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 20:09:32 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
   "level_concept_difficulty": {
-    "sequencing": 2
+    "sequencing": 3,
+    "debugging": 4
   }
 }]]></config>
   <blocks>

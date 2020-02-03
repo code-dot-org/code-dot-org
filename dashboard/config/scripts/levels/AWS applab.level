@@ -13,7 +13,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Do this stuff now\r\n\r\n* step one\r\n* step two",
+    "long_instructions": "# Do this stuff now\r\n\r\n* step one\r\n* step two",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "// Here's some stuff\r\nvar i = 10;\r\nconsole.log(i);",

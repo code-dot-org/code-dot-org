@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "farmer",
-    "instructions": "Wow, now there are two deep holes! Can you write a program that fills them both until the ground is even?",
+    "short_instructions": "Wow, now there are two deep holes! Can you write a program that fills them both until the ground is even?",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

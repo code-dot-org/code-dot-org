@@ -1,5 +1,6 @@
 import onClickOutside from 'react-onclickoutside';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const PANEL_MIN_WIDTH = 163;
 
@@ -23,54 +24,56 @@ const styles = {
   selectedStyle: {
     backgroundColor: '#cad6fa',
     color: 'black'
-  },
+  }
 };
 
-export default onClickOutside(class AutocompleteSelector extends React.Component {
-  static propTypes = {
-    currentIndex: PropTypes.number.isRequired,
-    options: PropTypes.arrayOf(PropTypes.string).isRequired,
-    onOptionClicked: PropTypes.func.isRequired,
-    onOptionHovered: PropTypes.func.isRequired,
-    onClickOutside: PropTypes.func.isRequired
-  };
+export default onClickOutside(
+  class AutocompleteSelector extends React.Component {
+    static propTypes = {
+      currentIndex: PropTypes.number.isRequired,
+      options: PropTypes.arrayOf(PropTypes.string).isRequired,
+      onOptionClicked: PropTypes.func.isRequired,
+      onOptionHovered: PropTypes.func.isRequired,
+      onClickOutside: PropTypes.func.isRequired
+    };
 
-  // Called by react-onclickoutside wrapper.
-  handleClickOutside() {
-    this.props.onClickOutside();
+    // Called by react-onclickoutside wrapper.
+    handleClickOutside() {
+      this.props.onClickOutside();
+    }
+
+    render() {
+      // If we ever want to highlight range of matches:
+      // http://stackoverflow.com/a/2295681
+
+      return (
+        <div
+          id="autocomplete-panel"
+          className="autocomplete-panel"
+          style={styles.autocompletePanel}
+        >
+          {this.props.options.map((option, index) => {
+            const isSelected = index === this.props.currentIndex;
+            return (
+              <div
+                key={option}
+                className="autocomplete-option"
+                onClick={e => {
+                  this.props.onOptionClicked(option);
+                  e.preventDefault();
+                }}
+                onMouseOver={() => this.props.onOptionHovered(index)}
+                style={{
+                  ...styles.autocompleteOption,
+                  ...(isSelected ? styles.selectedStyle : {})
+                }}
+              >
+                {option}
+              </div>
+            );
+          })}
+        </div>
+      );
+    }
   }
-
-  render() {
-    // If we ever want to highlight range of matches:
-    // http://stackoverflow.com/a/2295681
-
-    return (
-      <div
-        id="autocomplete-panel"
-        className="autocomplete-panel"
-        style={styles.autocompletePanel}
-      >
-        {this.props.options.map((option, index) => {
-          const isSelected = index === this.props.currentIndex;
-          return (
-          <div
-            key={option}
-            className="autocomplete-option"
-            onClick={(e) => {
-              this.props.onOptionClicked(option);
-              e.preventDefault();
-            }}
-            onMouseOver={() => this.props.onOptionHovered(index)}
-            style={{
-              ...styles.autocompleteOption,
-              ...isSelected ? styles.selectedStyle : {}
-            }}
-          >
-            {option}
-          </div>
-          );
-        })}
-      </div>
-    );
-  }
-});
+);

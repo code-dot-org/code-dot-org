@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "See what happens when you repeat the code from the last puzzle 30 times instead of only 3!  Feel free to make your lines any color or pattern for some extra zest.",
+    "short_instructions": "See what happens when you repeat the code from the last puzzle 30 times instead of only 3!  Feel free to make your lines any color or pattern for some extra zest.",
     "x": "125",
     "y": "260",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Time to make some art!  \r\n\r\nSee what happens when you repeat the code from the last puzzle **30** times instead of only 3!\r\n\r\nFeel free to make your lines any color or pattern for some extra zest.",
+    "long_instructions": "Time to make some art!  \r\n\r\nSee what happens when you repeat the code from the last puzzle **30** times instead of only 3!\r\n\r\nFeel free to make your lines any color or pattern for some extra zest.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",

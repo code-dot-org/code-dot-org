@@ -1,0 +1,105 @@
+<Karel>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2018-04-23T23:09:13.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "harvester",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":3,\"range\":6,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":3,\"range\":3,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":3,\"range\":6,\"possibleFeatures\":[3],\"startsHidden\":true},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "instructions_important": "true",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "start_direction": "1",
+    "step_mode": "1",
+    "flower_type": "redWithNectar",
+    "fast_get_nectar_animation": "false",
+    "instructions": "Pick all of the lettuce (only while there is some to pick.)",
+    "ideal": "7",
+    "step_speed": "2",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Feel free to go back to the last puzzle if you need a reminder of how to pick produce only **while** there is produce to pick.\",\"hint_id\":\"courseE_farmer_ramp12a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5528b2d6b0fb27398f6c0dbfd23a0381/courseE_farmer_predict1.mp3\"}]",
+    "markdown_instructions": "Help the farmer walk the path to find all of the lettuce\r\n\r\nIn this puzzle, lettuce is growing at the end of every path.  If there is a path in front of her, the farmer can keep moving forward.  Otherwise, she needs to pick all of the lettuce, then turn to stay on the path. \r\n\r\n\r\n\r\n",
+    "shape_shift": "false",
+    "contained_level_names": [
+      "courseE_multi_farmer_predict1_2018"
+    ],
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 8806,
+    "name_suffix": "_2018"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:01:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:02:40 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:03:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:11:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions\",\"markdown_instructions\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:19:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:20:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 19:21:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:32:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">15</title>
+              <statement name="DO">
+                <block type="maze_ifElse">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_moveForward"/>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="harvester_whileHasCrop">
+                      <title name="LOC">Lettuce</title>
+                      <statement name="DO">
+                        <block type="harvester_lettuce"/>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnLeft</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+        </block>
+        <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+        </block>
+        <block type="harvester_ifHasCropElse" limit="1">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_whileHasCrop" limit="2">
+          <title name="LOC">Corn</title>
+        </block>
+        <block type="harvester_whileHasCrop" limit="2">
+          <title name="LOC">Lettuce</title>
+        </block>
+        <block type="harvester_corn" limit="1"/>
+        <block type="harvester_lettuce" limit="1"/>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Karel>

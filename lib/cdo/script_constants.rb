@@ -12,7 +12,7 @@ module ScriptConstants
 
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
   MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
-  HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
+  HOC_TEACHER_DASHBOARD_NAME = 'Classic Maze'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
@@ -22,8 +22,10 @@ module ScriptConstants
     full_course: [
       CSP_2017 = 'csp-2017'.freeze,
       CSP_2018 = 'csp-2018'.freeze,
+      CSP_2019 = 'csp-2019'.freeze,
       CSD_2017 = 'csd-2017'.freeze,
       CSD_2018 = 'csd-2018'.freeze,
+      CSD_2019 = 'csd-2019'.freeze,
     ],
     csf: [
       COURSEA_NAME = 'coursea-2017'.freeze,
@@ -45,12 +47,26 @@ module ScriptConstants
       EXPRESS_2018_NAME = 'express-2018'.freeze,
       PRE_READER_EXPRESS_2018_NAME = 'pre-express-2018'.freeze,
     ],
+    csf_2019: [
+      COURSEA_2019_NAME = 'coursea-2019'.freeze,
+      COURSEB_2019_NAME = 'courseb-2019'.freeze,
+      COURSEC_2019_NAME = 'coursec-2019'.freeze,
+      COURSED_2019_NAME = 'coursed-2019'.freeze,
+      COURSEE_2019_NAME = 'coursee-2019'.freeze,
+      COURSEF_2019_NAME = 'coursef-2019'.freeze,
+      EXPRESS_2019_NAME = 'express-2019'.freeze,
+      PRE_READER_EXPRESS_2019_NAME = 'pre-express-2019'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
-      # you must also update the Data_HocTutorials gsheet so the end of script API works
+      # you must also update the cdo-tutorials gsheet so the end of script API works
 
       nil,
+      DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
+      DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
+      OCEANS_NAME = 'oceans'.freeze,
+      MINECRAFT_AQUATIC_NAME = 'aquatic'.freeze,
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
@@ -70,6 +86,8 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
+      DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
+      DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -94,6 +112,19 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
+    csd_pilot: [
+      CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
+      CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
+      CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
+    ],
+    csd_2019: [
+      CSD1_2019_NAME = 'csd1-2019'.freeze,
+      CSD2_2019_NAME = 'csd2-2019'.freeze,
+      CSD3_2019_NAME = 'csd3-2019'.freeze,
+      CSD4_2019_NAME = 'csd4-2019'.freeze,
+      CSD5_2019_NAME = 'csd5-2019'.freeze,
+      CSD6_2019_NAME = 'csd6-2019'.freeze,
+    ],
     csd_2018: [
       CSD1_2018_NAME = 'csd1-2018'.freeze,
       CSD2_2018_NAME = 'csd2-2018'.freeze,
@@ -101,6 +132,7 @@ module ScriptConstants
       CSD4_2018_NAME = 'csd4-2018'.freeze,
       CSD5_2018_NAME = 'csd5-2018'.freeze,
       CSD6_2018_NAME = 'csd6-2018'.freeze,
+      CSD_POST_SURVEY_2018_NAME = 'csd-post-survey-2018'.freeze,
     ],
     csd: [
       CSD1_NAME = 'csd1-2017'.freeze,
@@ -109,6 +141,17 @@ module ScriptConstants
       CSD4_NAME = 'csd4-2017'.freeze,
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
+    ],
+    csp_2019: [
+      CSP1_2019_NAME = 'csp1-2019'.freeze,
+      CSP2_2019_NAME = 'csp2-2019'.freeze,
+      CSP3_2019_NAME = 'csp3-2019'.freeze,
+      CSP4_2019_NAME = 'csp4-2019'.freeze,
+      CSP5_2019_NAME = 'csp5-2019'.freeze,
+      CSP_CREATE_2019_NAME = 'csp-create-2019'.freeze,
+      CSP_POSTAP_2019_NAME = 'csppostap-2019'.freeze,
+      CSP_POST_SURVEY_2019_NAME = 'csp-post-survey-2019'.freeze,
+      CSP_EXPLORE_2019_NAME = 'csp-explore-2019'.freeze,
     ],
     csp_2018: [
       CSP1_2018_NAME = 'csp1-2018'.freeze,
@@ -119,6 +162,7 @@ module ScriptConstants
       CSP5_2018_NAME = 'csp5-2018'.freeze,
       CSP_CREATE_2018_NAME = 'csp-create-2018'.freeze,
       CSP_POSTAP_2018_NAME = 'csppostap-2018'.freeze,
+      CSP_POST_SURVEY_2018_NAME = 'csp-post-survey-2018'.freeze,
     ],
     csp: [
       CSP_UNIT1_NAME = 'cspunit1'.freeze,
@@ -153,13 +197,61 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
+      MINECRAFT_AQUATIC_NAME
     ],
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
 
+  ADDITIONAL_I18N_SCRIPTS = [
+    APPLAB_1HOUR = 'applab-1hour'.freeze,
+    APPLAB_2HOUR = 'applab-2hour'.freeze,
+    CSD_POST_SURVEY = 'csd-post-survey'.freeze,
+    DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
+    FESBINARY = 'fesbinary'.freeze,
+    FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
+    GAMELAB = 'gamelab'.freeze,
+    K1HOC_2017 = 'k1hoc2017'.freeze,
+    K5_ONLINE_PD = 'K5-OnlinePD'.freeze,
+    NETSIM = 'netsim'.freeze,
+    ODOMETER = 'odometer'.freeze,
+    PIXELATION = 'pixelation'.freeze,
+    VIGENERE = 'vigenere'.freeze
+  ]
+
   DEFAULT_VERSION_YEAR = '2017'
+
+  # A whitelist of all family names for scripts.
+  FAMILY_NAMES = [
+    # CSF
+    COURSEA = 'coursea'.freeze,
+    COURSEB = 'courseb'.freeze,
+    COURSEC = 'coursec'.freeze,
+    COURSED = 'coursed'.freeze,
+    COURSEE = 'coursee'.freeze,
+    COURSEF = 'coursef'.freeze,
+    EXPRESS = 'express'.freeze,
+    PREEXPRESS = 'pre-express'.freeze,
+
+    # CSP
+    CSP1 = 'csp1'.freeze,
+    CSP2 = 'csp2'.freeze,
+    CSP3 = 'csp3'.freeze,
+    CSP4 = 'csp4'.freeze,
+    CSP5 = 'csp5'.freeze,
+    CSP_POSTAP = 'csppostap'.freeze,
+    CSP_CREATE = 'csp-create'.freeze,
+    CSP_EXPLORE = 'csp-explore'.freeze,
+
+    # CSD
+    CSD1 = "csd1".freeze,
+    CSD2 = "csd2".freeze,
+    CSD3 = "csd3".freeze,
+    CSD4 = "csd4".freeze,
+    CSD5 = "csd5".freeze,
+    CSD6 = "csd6".freeze
+  ].freeze
 
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
@@ -203,9 +295,9 @@ module ScriptConstants
   # Sections can be assigned to both courses and scripts. We want to make sure
   # we give teacher dashboard the same information for both sets of assignables.
   # We also expect to be in a mixed world for a time where this info is asked for
-  # both by dashboard and pegasus, and we want to keep that in sycn. We accomplish
+  # both by dashboard and pegasus, and we want to keep that in sync. We accomplish
   # most of that through this shared method, leaving it to dashboard/pegasus
-  # to take care of translating name/cateogry (with the unfortunate affect that
+  # to take care of translating name/cateogry (with the unfortunate effect that
   # we could have two different translations).
   # @param course_or_script [Course|Script] A row object from either our courses
   #   or scripts dashboard db tables.
@@ -230,6 +322,21 @@ module ScriptConstants
     script == ACCELERATED_NAME ||
       ScriptConstants.script_in_category?(:csf_international, script) ||
       ScriptConstants.script_in_category?(:csf, script) ||
-      ScriptConstants.script_in_category?(:csf_2018, script)
+      ScriptConstants.script_in_category?(:csf_2018, script) ||
+      ScriptConstants.script_in_category?(:csf_2019, script)
+  end
+
+  def self.i18n?(script)
+    ScriptConstants.script_in_category?(:csf_international, script) ||
+      ScriptConstants.script_in_category?(:csf, script) ||
+      ScriptConstants.script_in_category?(:csf_2018, script) ||
+      ScriptConstants.script_in_category?(:csf_2019, script) ||
+      ScriptConstants.script_in_category?(:csd, script) ||
+      ScriptConstants.script_in_category?(:csd_2018, script) ||
+      ScriptConstants.script_in_category?(:csd_2019, script) ||
+      ScriptConstants.script_in_category?(:twenty_hour, script) ||
+      ScriptConstants.script_in_category?(:hoc, script) ||
+      JIGSAW_NAME == script ||
+      ADDITIONAL_I18N_SCRIPTS.include?(script)
   end
 end

@@ -1,6 +1,7 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 import OwnedSectionsTable from './OwnedSectionsTable';
@@ -10,15 +11,14 @@ import {
   hiddenSectionIds,
   beginEditingNewSection,
   beginEditingSection,
-  beginImportRosterFlow,
+  beginImportRosterFlow
 } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import styleConstants from '@cdo/apps/styleConstants';
-import AddSectionDialog from "./AddSectionDialog";
-import EditSectionDialog from "./EditSectionDialog";
+import AddSectionDialog from './AddSectionDialog';
+import EditSectionDialog from './EditSectionDialog';
 import SetUpSections from '../studioHomepages/SetUpSections';
-import Notification from '../Notification';
 
 const styles = {
   button: {
@@ -29,7 +29,7 @@ const styles = {
     width: styleConstants['content-width'],
     textAlign: 'right',
     paddingTop: 10,
-    paddingBottom: 10,
+    paddingBottom: 10
   },
   hiddenSectionLabel: {
     fontSize: 14,
@@ -41,6 +41,7 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     queryStringOpen: PropTypes.string,
+    locale: PropTypes.string,
 
     // redux provided
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -48,7 +49,7 @@ class OwnedSections extends React.Component {
     asyncLoadComplete: PropTypes.bool.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
-    beginImportRosterFlow: PropTypes.func.isRequired,
+    beginImportRosterFlow: PropTypes.func.isRequired
   };
 
   state = {
@@ -56,10 +57,7 @@ class OwnedSections extends React.Component {
   };
 
   componentDidMount() {
-    const {
-      queryStringOpen,
-      beginImportRosterFlow,
-    } = this.props;
+    const {queryStringOpen, beginImportRosterFlow} = this.props;
 
     if (queryStringOpen === 'rosterDialog') {
       beginImportRosterFlow();
@@ -81,8 +79,9 @@ class OwnedSections extends React.Component {
       hiddenSectionIds,
       asyncLoadComplete,
       beginEditingSection,
+      locale
     } = this.props;
-    const { viewHidden } = this.state;
+    const {viewHidden} = this.state;
 
     if (!asyncLoadComplete) {
       return null;
@@ -93,39 +92,31 @@ class OwnedSections extends React.Component {
 
     return (
       <div className="uitest-owned-sections">
-        {!hasSections &&
-          <SetUpSections/>
-        }
+        <SetUpSections hasSections={hasSections} />
         {hasSections && (
           <div>
-            <Notification
-              type="course"
-              notice={i18n.newSectionAdd()}
-              details={i18n.createNewClassroom()}
-              dismissible={false}
-              buttonText={i18n.newSectionCreate()}
-              newWindow={true}
-              onButtonClick={this.beginEditingNewSection}
-              buttonClassName="uitest-newsection"
-            />
-            {visibleSectionIds.length > 0 &&
+            {visibleSectionIds.length > 0 && (
               <OwnedSectionsTable
                 sectionIds={visibleSectionIds}
                 onEdit={beginEditingSection}
               />
-            }
+            )}
             <div style={styles.buttonContainer}>
               {hiddenSectionIds.length > 0 && (
                 <Button
                   className="ui-test-show-hide"
                   onClick={this.toggleViewHidden}
-                  icon={viewHidden ? "caret-up" : "caret-down"}
-                  text={viewHidden ? i18n.hideArchivedSections() : i18n.viewArchivedSections()}
+                  icon={viewHidden ? 'caret-up' : 'caret-down'}
+                  text={
+                    viewHidden
+                      ? i18n.hideArchivedSections()
+                      : i18n.viewArchivedSections()
+                  }
                   color={Button.ButtonColor.gray}
                 />
               )}
             </div>
-            {viewHidden && hiddenSectionIds.length > 0 &&
+            {viewHidden && hiddenSectionIds.length > 0 && (
               <div>
                 <div style={styles.hiddenSectionLabel}>
                   {i18n.archivedSections()}
@@ -135,24 +126,27 @@ class OwnedSections extends React.Component {
                   onEdit={beginEditingSection}
                 />
               </div>
-            }
+            )}
           </div>
         )}
-        <RosterDialog/>
-        <AddSectionDialog/>
-        <EditSectionDialog/>
+        <RosterDialog />
+        <AddSectionDialog locale={locale} />
+        <EditSectionDialog locale={locale} />
       </div>
     );
   }
 }
 export const UnconnectedOwnedSections = OwnedSections;
 
-export default connect(state => ({
-  sectionIds: state.teacherSections.sectionIds,
-  hiddenSectionIds: hiddenSectionIds(state),
-  asyncLoadComplete: state.teacherSections.asyncLoadComplete,
-}), {
-  beginEditingNewSection,
-  beginEditingSection,
-  beginImportRosterFlow,
-})(OwnedSections);
+export default connect(
+  state => ({
+    sectionIds: state.teacherSections.sectionIds,
+    hiddenSectionIds: hiddenSectionIds(state),
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete
+  }),
+  {
+    beginEditingNewSection,
+    beginEditingSection,
+    beginImportRosterFlow
+  }
+)(OwnedSections);

@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Display the Winner\r\n\r\nThe winning screen doesn't actually know _who_ won the game. Let's fix that now.\r\n\r\n# Do This\r\n\r\nBefore each call to `setScreen`, add a `setProperty` block to change the \"text\" property of \"winner\" to display the actual winner.",
+    "long_instructions": "# Display the Winner\r\n\r\nThe winning screen doesn't actually know _who_ won the game. Let's fix that now.\r\n\r\n# Do This\r\n\r\nBefore each call to `setScreen`, add a `setProperty` block to change the \"text\" property of \"winner\" to display the actual winner.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

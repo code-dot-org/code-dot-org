@@ -34,8 +34,8 @@
     "edit_code": true,
     "encrypted_examples": "nKVY+rMEqpUAnAqH4mLeqlzT0GtwEQo7G83G6BObn1RcXG+0+vTvDLKrWtl9\ngXlR\n",
     "embed": "false",
-    "instructions": "Define a function called drawTriangle() that accepts two parameters to set the size and width of the triangle. (Click to see full instructions)",
-    "markdown_instructions": "# Defining Functions with Multiple Parameters\r\n\r\nNow it's your turn to define a function that accepts multiple parameters. Just like in the previous example make sure you **separate your parameters with commas** and give them **descriptive and meaningful** names.\r\n\r\n# Do This:\r\n* **Drag out ** the function block, and **name** your function `drawTriangle`. \r\n* **Define `drawTriangle` to have two parameters ** within the parentheses making sure to give them **descriptive and meaningful** names separated by commas. \r\n* The example below uses *size* and *width* for parameter names but you can use whatever you like.\r\n\r\n![](https://images.code.org/b1f5eead2ccb60e5ae607feff590bd3c-image-1442850344677.gif)\r\n\r\n*  Then **write ** the code inside `function drawTriangle(size, width)` that will make it work as described.\r\n* Test it out!  **Run ** the code and experiment to create an image similar to the one below.\r\n\r\n![](https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38 PM.png)\r\n\r\n",
+    "short_instructions": "Define a function called drawTriangle() that accepts two parameters to set the size and width of the triangle. (Click to see full instructions)",
+    "long_instructions": "# Defining Functions with Multiple Parameters\r\n\r\nNow it's your turn to define a function that accepts multiple parameters. Just like in the previous example make sure you **separate your parameters with commas** and give them **descriptive and meaningful** names.\r\n\r\n# Do This:\r\n* **Drag out** the function block, and **name** your function `drawTriangle`. \r\n* **Define `drawTriangle` to have two parameters** within the parentheses making sure to give them **descriptive and meaningful** names separated by commas. \r\n* The example below uses *size* and *width* for parameter names but you can use whatever you like.\r\n\r\n![](https://images.code.org/b1f5eead2ccb60e5ae607feff590bd3c-image-1442850344677.gif)\r\n\r\n*  Then **write** the code inside `function drawTriangle(size, width)` that will make it work as described.\r\n* Test it out!  **Run** the code and experiment to create an image similar to the one below.\r\n\r\n![](https://images.code.org/a389c07c259c8877989b6920328a4c78-image-1442529590755.39.38 PM.png)",
     "start_blocks": "penUp();\r\nmoveTo(200,200);\r\ndrawTriangle(150,5);\r\nmoveTo(300,400);\r\ndrawTriangle(200,10);\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -53,8 +53,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "app_width": "320",
-    "app_height": "480",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -120,11 +118,12 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "teacher_markdown": "**Potential stop/recap point**\r\n\r\nYou might consider having students work up to this level and then stopping to review it as a whole class.\r\n\r\nThis task is challenging and represents the crux of the whole parameters \"thing\". It's worth the time to get this level right and to explain the terminology and what's happening.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 20:59:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 20:59:07 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2018-09-28 06:38:10 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":803,\"changed_by_email\":\"nkiru.onwuneme@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

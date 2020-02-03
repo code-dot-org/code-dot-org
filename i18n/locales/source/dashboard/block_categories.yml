@@ -3,55 +3,30 @@ en:
   data:
     block_categories:
       Actions: Actions
-      Loops: Loops
-      Functions: Functions
-      Color: Color
-      Brushes: Brushes
-      Math: Math
-      Logic: Logic
-      Variables: Variables
-      Number: Number
-      String: String
-      Image: Image
-      Boolean: Boolean
-      Conditionals: Conditionals
-      Events: Events
-      Games/Score: Games/Score
-      Comments: Comments
-      Category: Category
-      Prebuilt: Prebuilt
-      Text: Text
-      Picker: Picker
-      Comment: Comment
-      'Variables ': 'Variables '
-      everythingelse: everythingelse
-      numbers: numbers
-      Numbers: Numbers
-      Input: Input
-      Default: Default
-      World: World
-      Sprites: Sprites
-      Behaviors: Behaviors
       Advanced: Advanced
-      Start: Start
-      Locations: Locations
-      Music: Music
-      Dancing: Dancing
-      Sprite: Sprite
-      Brush: Brush
+      Behaviors: Behaviors
+      Brushes: Brushes
+      Color: Color
+      Comment: Comment
+      Comments: Comments
+      Conditionals: Conditionals
       Dancers: Dancers
-      Groups: Groups
-      Make Sprite: Make Sprite
-      Movement: Movement
-      Booleans: Booleans
-      Functional: Functional
-      Sprite Properties: Sprite Properties
-      Predefined: Predefined
-      test: test
-      test2: test2
-      Foo: Foo
-      Name: Name
-      NEW BLOCKS: NEW BLOCKS
+      Default: Default
+      Events: Events
+      Functions: Functions
       'Functions ': 'Functions '
       Game/Score: Game/Score
-      Function: Function
+      Games/Score: Games/Score
+      Groups: Groups
+      Input: Input
+      Locations: Locations
+      Logic: Logic
+      Loops: Loops
+      Math: Math
+      Numbers: Numbers
+      Properties: Properties
+      Sprites: Sprites
+      Text: Text
+      Variables: Variables
+      'Variables ': 'Variables '
+      World: World

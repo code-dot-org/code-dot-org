@@ -54,7 +54,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Try out Design Mode to keep making changes to your This or That App. There's also some new blocks in your toolbox! You'll learn more about these in later lessons.\r\n\r\n**How:** Click into \"Design\" to quickly edit how your app looks or add screen elements yourself. Experiment with some of the new blocks in the toolbox.",
+    "long_instructions": "**Goal:** Try out Design Mode to keep making changes to your This or That App. There's also some new blocks in your toolbox! You'll learn more about these in later lessons.\r\n\r\n**How:** Click into \"Design\" to quickly edit how your app looks or add screen elements yourself. Experiment with some of the new blocks in the toolbox.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

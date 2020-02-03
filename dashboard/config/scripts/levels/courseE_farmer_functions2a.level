@@ -26,10 +26,10 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
+    "short_instructions": "We're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
     "instructions_important": "true",
     "ideal": "11",
-    "markdown_instructions": "*\"I feel so functional!\"*\r\n\r\nWe're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
+    "long_instructions": "*\"I feel so functional!\"*\r\n\r\nWe're going to check lots of squares for crops in the next few puzzles.  Let's move everything into a function to make it easier.",
     "authored_hints": "[]",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_farmer_functions2a_2\",\r\n  \"callout_text\": \"This code might not look exactly like what you wrote, but it will get the job done!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "contained_level_names": null

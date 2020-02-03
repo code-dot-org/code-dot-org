@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Finish this tag by drawing a rectangle around the outside.\r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "short_instructions": "Finish this tag by drawing a rectangle around the outside.\r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
     "x": "100",
     "y": "150",
     "start_direction": "90",
@@ -15,7 +15,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\r\n\r\nFinish this tag by drawing a rectangle around the outside.  \r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
+    "long_instructions": "*\"Maybe we should make a tag for each of our pets in case they get lost!\"*\r\n\r\nFinish this tag by drawing a rectangle around the outside.  \r\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -43,12 +43,15 @@
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-07 17:46:54 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 17:59:30 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-23 15:52:23 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-06-25 20:35:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>

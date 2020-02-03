@@ -2,15 +2,7 @@ name 'unique level name here'
 title 'title'
 description 'description here'
 question 'Question'
-wrong 'wrong answer'
-right 'right answer'
-
-markdown <<MARKDOWN
-Two students have developed a protocol in which they send 4-bit messages to each other. They decide to modify their protocol to start sending 8-bit messages instead. Which of the following best describes the difference between using 8-bit numbers instead of 4-bit numbers for their protocol?
-
-a. 2 (2<sup>1</sup>) times as many values can be represented with each message
-b. 4 (2<sup>2</sup>)times as many values can be represented with each message
-c. 8 times as many values can be represented  with each message
-d. 16 times as many values can be represented  with each message
-
-MARKDOWN
+right 'right answer1'
+right 'right answer2'
+wrong 'incorrect!'
+wrong 'incorrect 2!'

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Answering the Question\r\n\r\nNow that this screen is asking the question you want it to ask, you'll want to make it respond to the answer buttons.\r\n\r\n# Do This\r\n\r\nInstead of using the buttons to change screens as we did in earlier quiz apps, each one of the answer buttons should change the title to say either \"Correct\" or \"Incorrect.\" For each of the answer buttons:\r\n\r\n* Add an event handler to watch the button's ID\r\n* In the event handler, set the title text to either \"Correct\" or Incorrect\"\r\n\r\n_Challenge: Create a couple more question screens just like this on and make the \"Next Question\" button navigate between them._",
+    "long_instructions": "# Answering the Question\r\n\r\nNow that this screen is asking the question you want it to ask, you'll want to make it respond to the answer buttons.\r\n\r\n# Do This\r\n\r\nInstead of using the buttons to change screens as we did in earlier quiz apps, each one of the answer buttons should change the title to say either \"Correct\" or \"Incorrect.\" For each of the answer buttons:\r\n\r\n* Add an event handler to watch the button's ID\r\n* In the event handler, set the title text to either \"Correct\" or Incorrect\"\r\n\r\n_Challenge: Create a couple more question screens just like this on and make the \"Next Question\" button navigate between them._",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

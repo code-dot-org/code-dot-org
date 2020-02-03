@@ -1,7 +1,16 @@
 %h3
-  How to cancel your registration
+  - if @workshop.course == Pd::Workshop::COURSE_CSF
+    Did something come up? If you can’t make it, let us know
+  - else
+    If you can't make it, let us know
 
 %p
-  If you are unable to attend the workshop, please
-  = link_to 'cancel your registration', @cancel_url, target: "_blank"
-  in advance so the facilitator can plan accordingly.
+  - if @workshop.course == Pd::Workshop::COURSE_CSF
+    Thanks to Code.org's generous sponsors and Regional Partner support, elementary professional learning workshops are partially, or fully, funded in many regions.
+    If for any reason, you can’t make it, please click this link to
+    = link_to 'cancel your registration', @cancel_url, target: "_blank"
+    so we can continue to offer this workshop and open up your spot to other interested educators.
+  - else
+    I know things come up and you may need to cancel. Please click this link to
+    = link_to 'cancel your registration', @cancel_url, target: "_blank"
+    if you aren't going to be able to make it. Workshop materials and food are ordered based on enrollment numbers.

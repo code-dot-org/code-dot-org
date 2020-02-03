@@ -15,7 +15,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "We've added a new parameter \"y\" to the \"on-screen?\" function. Update the function so that it checks that \"safe-left?\" AND \"safe-right?\" AND \"safe-up?\" are all true. When you've fixed the function, try going out of the yard from the left, right, and top sides.",
+    "short_instructions": "We've added a new parameter \"y\" to the \"on-screen?\" function. Update the function so that it checks that \"safe-left?\" AND \"safe-right?\" AND \"safe-up?\" are all true. When you've fixed the function, try going out of the yard from the left, right, and top sides.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

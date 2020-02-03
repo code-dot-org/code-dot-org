@@ -12,6 +12,7 @@ level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
 level 'courseC_maze_programming3', challenge: true
+level 'allthethings-anigif-instructions'
 
 stage 'Artist'
 level 'K-1 Artist1 1'
@@ -46,6 +47,7 @@ level 'blockly:Studio:c2_1'
 level 'Course 4 Play Labs For Loops 1'
 level 'Course 4 Play Lab Params 2'
 level 'allthethings-playlab-project-backed'
+level 'Allthethings Encrypted Play Lab Level'
 
 stage 'Farmer'
 level '4-5 While Loops 4'
@@ -62,6 +64,7 @@ stage 'Multi'
 level 'K-1 Happy Maps Multi 1'
 level 'Multi Horizontal Scroll Test'
 level 'Submittable Multi'
+level 'test questionless single multi'
 
 stage 'Multi2'
 level 'Choose 2 Test'
@@ -128,6 +131,7 @@ level 'Applab AllTheThings ResourcesTab MapReference'
 level 'Applab AllTheThings ResourcesTab ReferenceLinks'
 level 'Applab AllTheThings ResourcesTab AllResources'
 level 'AllTheThings Applab DesignModeDefault'
+level 'Applab allthethings Widget Mode'
 
 stage 'Gamelab'
 level 'Gamelab AllTheThings With No Animation Tab'
@@ -148,7 +152,7 @@ level 'Resizing Test'
 
 stage 'Multi page assessment'
 level 'K-1 Maze 11'
-assessment 'Test longassessment levelgroup split new'
+level 'Test longassessment levelgroup split new', assessment: true
 
 stage 'Star wars'
 skin 'hoc2015'
@@ -165,13 +169,13 @@ level 'MC Agent Freeplay'
 level 'Craft Aquatic - allthethings'
 
 stage 'Rich long assessment'
-assessment 'PS U3 Assessment1 new'
+level 'PS U3 Assessment1 new', assessment: true
 
 stage 'Free Response'
 level 'Sample Free Response'
 
 stage 'Sample PLC Assessment'
-assessment 'Sample CSP Assessment'
+level 'Sample CSP Assessment', assessment: true
 
 stage 'Swapped Levels'
 variants
@@ -216,10 +220,10 @@ variants
 endvariants
 
 stage 'Anonymous student survey'
-assessment 'Test anonymous student survey'
+level 'Test anonymous student survey', assessment: true
 
 stage 'Anonymous student survey 2', lockable: true
-assessment 'CSP pre-assessment survey'
+level 'CSP pre-assessment survey', assessment: true
 
 stage 'Public Key Cryptography'
 level 'AllTheThings Modulo Clock'
@@ -229,7 +233,7 @@ stage 'Web Lab'
 level 'Web Lab 1'
 
 stage 'Single page assessment'
-assessment 'Test longassessment levelgroup new'
+level 'Test longassessment levelgroup new', assessment: true
 
 stage 'Standalone video'
 level 'AllTheThings_StandaloneVideo'
@@ -243,3 +247,32 @@ level 'allthethings_fish_tank'
 
 stage 'Dance Lab'
 level 'allthethings HOC Dance 1'
+level 'allthethings HOC Dance 10 Measures'
+
+stage 'Mini Rubric'
+level 'allthethings-mini-rubric', assessment: true
+level 'allthethings-mini-rubric-weblab', assessment: true
+level 'allthethings-mini-rubric-gamelab', assessment: true
+
+stage 'Pluralsight Test', lockable: true
+level 'Pluralsight LevelGroup Test', assessment: true
+
+stage 'Externals Optionally Displayed as Unplugged'
+level 'allthethings_external_displayed_as_unplugged'
+level 'allthethings_external_not_displayed_as_unplugged'
+
+stage 'Bubble Choice'
+level 'allthethings_bubble_choice'
+
+stage 'Contained Levels'
+level 'contained_single_multi'
+level 'Test GameLab Predictive'
+level 'PS predictive Applab level test'
+level 'contained_applab_choose2'
+level 'contained_csf_multi2'
+level 'contained_csf_free_response'
+level 'Test GameLab Submittable Free Response'
+level 'Video - The Future of Big Data'
+
+stage 'ML Fish'
+level 'allthethings HOC ML Fish 1'

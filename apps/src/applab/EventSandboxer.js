@@ -44,7 +44,7 @@ export default function EventSandboxer() {
  * can accurately transform mouse coordinates into app space.
  * @param {HTMLElement} element
  */
-EventSandboxer.prototype.setTransformFromElement = function (element) {
+EventSandboxer.prototype.setTransformFromElement = function(element) {
   // Capture div scale
   this.xScale_ = element.getBoundingClientRect().width / element.offsetWidth;
   this.yScale_ = element.getBoundingClientRect().height / element.offsetHeight;
@@ -68,38 +68,54 @@ EventSandboxer.prototype.setTransformFromElement = function (element) {
  * @returns {Object} new event-like object
  * @throws {TypeError} if event is null or not an object
  */
-EventSandboxer.prototype.sandboxEvent = function (event) {
+EventSandboxer.prototype.sandboxEvent = function(event) {
   if (event === null || typeof event !== 'object') {
-    throw new TypeError('Failed to sandbox event: Expected an event object, but got ' + event);
+    throw new TypeError(
+      'Failed to sandbox event: Expected an event object, but got ' + event
+    );
   }
 
   var newEvent = {};
   // Pass these properties through to applabEvent:
-  ['altKey', 'button', 'charCode', 'ctrlKey', 'keyCode', 'keyIdentifier',
-    'keyLocation', 'location', 'metaKey', 'offsetX',
-    'offsetY', 'repeat', 'shiftKey', 'type', 'which'].forEach(
-      function (prop) {
-        if (typeof event[prop] !== 'undefined') {
-          newEvent[prop] = event[prop];
-        }
-      });
+  [
+    'altKey',
+    'button',
+    'charCode',
+    'ctrlKey',
+    'keyCode',
+    'keyIdentifier',
+    'keyLocation',
+    'location',
+    'metaKey',
+    'offsetX',
+    'offsetY',
+    'repeat',
+    'shiftKey',
+    'type',
+    'which'
+  ].forEach(function(prop) {
+    if (typeof event[prop] !== 'undefined') {
+      newEvent[prop] = event[prop];
+    }
+  });
   // Convert x coordinates and then pass through to applabEvent:
-  ['clientX', 'pageX', 'x'].forEach(
-      function (prop) {
-        if (typeof event[prop] !== 'undefined') {
-          newEvent[prop] = (event[prop] - this.xOffset_) / this.xScale_;
-        }
-      }, this);
+  ['clientX', 'pageX', 'x'].forEach(function(prop) {
+    if (typeof event[prop] !== 'undefined') {
+      newEvent[prop] = (event[prop] - this.xOffset_) / this.xScale_;
+    }
+  }, this);
   // Convert y coordinates and then pass through to applabEvent:
-  ['clientY', 'pageY', 'y'].forEach(
-      function (prop) {
-        if (typeof event[prop] !== 'undefined') {
-          newEvent[prop] = (event[prop] - this.yOffset_) / this.yScale_;
-        }
-      }, this);
+  ['clientY', 'pageY', 'y'].forEach(function(prop) {
+    if (typeof event[prop] !== 'undefined') {
+      newEvent[prop] = (event[prop] - this.yOffset_) / this.yScale_;
+    }
+  }, this);
   // Set movementX and movementY, computing it from clientX and clientY if necessary.
   // The element must have an element id for this to work.
-  if (typeof event.movementX !== 'undefined' && typeof event.movementY !== 'undefined') {
+  if (
+    typeof event.movementX !== 'undefined' &&
+    typeof event.movementY !== 'undefined'
+  ) {
     // The browser supports movementX and movementY natively.
     newEvent.movementX = event.movementX;
     newEvent.movementY = event.movementY;
@@ -121,27 +137,34 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
     }
   }
   // Replace DOM elements with IDs and then add them to applabEvent:
-  ['fromElement', 'srcElement', 'currentTarget', 'relatedTarget', 'target',
-    'toElement'].forEach(
-      function (prop) {
-        if (event[prop]) {
-          newEvent[prop + "Id"] = event[prop].id;
-        }
-      });
+  [
+    'fromElement',
+    'srcElement',
+    'currentTarget',
+    'relatedTarget',
+    'target',
+    'toElement'
+  ].forEach(function(prop) {
+    if (event[prop]) {
+      newEvent[prop + 'Id'] = event[prop].id;
+    }
+  });
 
   // Pull selectionStart and selectionEnd from the target element, if available,
   // and expose them on the sandboxed event object. (Safari will throw if we
   // we ask for these properties on elements that aren't a TEXTAREA or these
   // 5 INPUT types)
-  if (event.target &&
-      ((event.target.tagName === 'INPUT' &&
-       (event.target.type === 'text' ||
+  if (
+    event.target &&
+    ((event.target.tagName === 'INPUT' &&
+      (event.target.type === 'text' ||
         event.target.type === 'search' ||
         event.target.type === 'password' ||
         event.target.type === 'url' ||
         event.target.type === 'tel')) ||
-      event.target.tagName === 'TEXTAREA')) {
-    ['selectionStart', 'selectionEnd'].forEach((eventTargetPropName) => {
+      event.target.tagName === 'TEXTAREA')
+  ) {
+    ['selectionStart', 'selectionEnd'].forEach(eventTargetPropName => {
       if (event.target[eventTargetPropName] !== undefined) {
         newEvent[eventTargetPropName] = event.target[eventTargetPropName];
       }
@@ -150,7 +173,7 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
 
   // Attempt to polyfill DOM element ID properties
   // Of our six DOM properties, only three are standard.
-  var fillProperty = function (to, from) {
+  var fillProperty = function(to, from) {
     if (newEvent[from] !== undefined && newEvent[to] === undefined) {
       newEvent[to] = newEvent[from];
     }
@@ -165,10 +188,16 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
   // fromElement: https://msdn.microsoft.com/en-us/library/ms533773(v=vs.85).aspx
   // toElement: https://msdn.microsoft.com/en-us/library/ms534684(v=vs.85).aspx
   // mapping: https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/relatedTarget
-  if (['focusin', 'mouseenter', 'mouseover', 'dragenter'].indexOf(event.type) !== -1) {
+  if (
+    ['focusin', 'mouseenter', 'mouseover', 'dragenter'].indexOf(event.type) !==
+    -1
+  ) {
     fillProperty('toElementId', 'targetId');
     fillProperty('fromElementId', 'relatedTargetId');
-  } else if (['focusout', 'mouseleave', 'mouseout', 'dragexit'].indexOf(event.type) !== -1) {
+  } else if (
+    ['focusout', 'mouseleave', 'mouseout', 'dragexit'].indexOf(event.type) !==
+    -1
+  ) {
     fillProperty('toElementId', 'relatedTargetId');
     fillProperty('fromElementId', 'targetId');
   }
@@ -178,7 +207,9 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
   // keyup/down has no charCode and can be translated with the keyEvent[] map
   // keypress can use charCode
   //
-  var keyProp = event.charCode ? String.fromCharCode(event.charCode) : keyEvent[event.keyCode];
+  var keyProp = event.charCode
+    ? String.fromCharCode(event.charCode)
+    : keyEvent[event.keyCode];
   if (typeof keyProp !== 'undefined') {
     newEvent.key = keyProp;
   }
@@ -191,9 +222,12 @@ EventSandboxer.prototype.sandboxEvent = function (event) {
  * element (typically mouseout)
  * @param {Event} event
  */
-EventSandboxer.prototype.clearLastMouseMoveEvent = function (event) {
+EventSandboxer.prototype.clearLastMouseMoveEvent = function(event) {
   var elementId = event.currentTarget && event.currentTarget.id;
-  if (elementId && (typeof this.lastMouseMoveEventMap_[elementId] !== 'undefined')) {
+  if (
+    elementId &&
+    typeof this.lastMouseMoveEventMap_[elementId] !== 'undefined'
+  ) {
     delete this.lastMouseMoveEventMap_[elementId];
   }
 };

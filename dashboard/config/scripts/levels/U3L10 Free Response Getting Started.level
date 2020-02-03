@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Scene Design Part 2: Code",
-    "markdown_instructions": "* What is your personal goal for this project? \n\n* How will your personal goal impact the larger collaborative project?\n\n\n",
+    "long_instructions": "* What is your personal goal for this project? \n\n* How will your personal goal impact the larger collaborative project?\n\n\n",
     "skip_dialog": true,
     "skip_sound": true
   },

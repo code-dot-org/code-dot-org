@@ -1,7 +1,8 @@
 /**
  * Workshop Details section of the workshop enrollment form
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {WorkshopPropType} from './enrollmentConstants';
 
 const styles = {
@@ -34,10 +35,7 @@ export default class WorkshopDetails extends React.Component {
   sessionDates() {
     return (
       <div className="row">
-        <div
-          className="span2"
-          style={styles.label}
-        >
+        <div className="span2" style={styles.label}>
           <strong>
             {this.props.session_dates.length === 1 ? 'Date:' : 'Dates:'}
           </strong>
@@ -46,7 +44,7 @@ export default class WorkshopDetails extends React.Component {
           {this.props.session_dates.map(date => (
             <div key={date}>
               {date}
-              <br/>
+              <br />
             </div>
           ))}
         </div>
@@ -57,15 +55,12 @@ export default class WorkshopDetails extends React.Component {
   location() {
     return (
       <div className="row">
-        <div
-          className="span2"
-          style={styles.label}
-        >
+        <div className="span2" style={styles.label}>
           <strong>Location:</strong>
         </div>
         <div className="span2">
           {this.props.workshop.location_name}
-          <br/>
+          <br />
           {this.props.workshop.location_address}
         </div>
       </div>
@@ -75,15 +70,12 @@ export default class WorkshopDetails extends React.Component {
   courseAndSubject() {
     return (
       <div className="row">
-        <div
-          className="span2"
-          style={styles.label}
-        >
+        <div className="span2" style={styles.label}>
           <strong>Course:</strong>
         </div>
         <div className="span2">
           {this.workshopCourse()}
-          <br/>
+          <br />
           {this.props.workshop.subject}
         </div>
       </div>
@@ -94,10 +86,7 @@ export default class WorkshopDetails extends React.Component {
     if (this.props.workshop.regional_partner) {
       return (
         <div className="row">
-          <div
-            className="span2"
-            style={styles.label}
-          >
+          <div className="span2" style={styles.label}>
             <strong>RegionalPartner:</strong>
           </div>
           <div className="span2">
@@ -112,30 +101,18 @@ export default class WorkshopDetails extends React.Component {
     return (
       <div>
         <div className="row">
-          <div
-            className="span2"
-            style={styles.label}
-          >
+          <div className="span2" style={styles.label}>
             <strong>Organizer Name:</strong>
           </div>
-          <div className="span2">
-            {this.props.workshop.organizer.name}
-          </div>
+          <div className="span2">{this.props.workshop.organizer.name}</div>
         </div>
         <div className="row">
-          <div
-            className="span2"
-            style={styles.label}
-          >
+          <div className="span2" style={styles.label}>
             <strong>Organizer Email:</strong>
           </div>
-          <div className="span2">
-            {this.props.workshop.organizer.email}
-          </div>
+          <div className="span2">{this.props.workshop.organizer.email}</div>
           <div className="span6">
-            <p style={styles.notes}>
-              {this.props.workshop.notes}
-            </p>
+            <p style={styles.notes}>{this.props.workshop.notes}</p>
           </div>
         </div>
       </div>

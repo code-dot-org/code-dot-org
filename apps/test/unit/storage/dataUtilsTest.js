@@ -1,5 +1,105 @@
-import { expect } from '../../util/configuredChai';
-import { castValue, displayableValue, editableValue, isNumber, isBoolean, toBoolean } from '@cdo/apps/storage/dataBrowser/dataUtils';
+import {expect} from '../../util/deprecatedChai';
+import {
+  isBlank,
+  ignoreMissingValues,
+  castValue,
+  displayableValue,
+  editableValue,
+  isNumber,
+  isBoolean,
+  toBoolean
+} from '@cdo/apps/storage/dataBrowser/dataUtils';
+
+describe('isBlank', () => {
+  it('counts null, undefined, and empty string as blank', () => {
+    expect(isBlank(null)).to.be.true;
+    expect(isBlank(undefined)).to.be.true;
+    expect(isBlank('')).to.be.true;
+  });
+
+  it('counts other falsy values as not blank', () => {
+    expect(isBlank(0)).to.be.false;
+    expect(isBlank(false)).to.be.false;
+    expect(isBlank(-1)).to.be.false;
+    expect(isBlank(' ')).to.be.false;
+  });
+});
+
+describe('ignoreMissingValues', () => {
+  const records = [
+    {category1: 'red', category2: 1, category3: 10},
+    {category1: 'blue', category2: 1, category3: 20},
+    {category1: 'red', category2: 3, category3: 10},
+    {category1: undefined, category2: 4, category3: 10},
+    {category1: 'red', category2: null, category3: 10},
+    {category1: 'blue', category2: 1, category3: null},
+    {category1: '', category2: 3, category3: 10},
+    {category1: '', category2: null, category3: undefined}
+  ];
+  it('returns [] if there are no records', () => {
+    expect(ignoreMissingValues([], [])).to.deep.equal([]);
+    expect(ignoreMissingValues(undefined, undefined)).to.deep.equal([]);
+  });
+  it('returns all records if there are no columns to filter by', () => {
+    expect(ignoreMissingValues(records, [])).to.deep.equal(records);
+    expect(ignoreMissingValues(records, undefined)).to.deep.equal(records);
+  });
+  it('filters out records missing value for one column', () => {
+    expect(ignoreMissingValues(records, ['category1'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: 'red', category2: null, category3: 10},
+      {category1: 'blue', category2: 1, category3: null}
+    ]);
+
+    expect(ignoreMissingValues(records, ['category2'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: 'blue', category2: 1, category3: null},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+
+    expect(ignoreMissingValues(records, ['category3'])).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: 'red', category2: null, category3: 10},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+  });
+
+  it('filters out records missing a value for any provided column', () => {
+    expect(
+      ignoreMissingValues(records, ['category1', 'category2'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: 'blue', category2: 1, category3: null}
+    ]);
+    expect(
+      ignoreMissingValues(records, ['category2', 'category3'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10},
+      {category1: undefined, category2: 4, category3: 10},
+      {category1: '', category2: 3, category3: 10}
+    ]);
+
+    expect(
+      ignoreMissingValues(records, ['category1', 'category2', 'category3'])
+    ).to.deep.equal([
+      {category1: 'red', category2: 1, category3: 10},
+      {category1: 'blue', category2: 1, category3: 20},
+      {category1: 'red', category2: 3, category3: 10}
+    ]);
+  });
+});
 
 describe('isNumber', () => {
   it('detects valid numerical values', () => {
@@ -80,16 +180,18 @@ describe('castValue', () => {
   });
 
   it('parses arrays', () => {
-    expect(castValue('[1,2,3]')).to.deep.equal([1,2,3]);
+    expect(castValue('[1,2,3]')).to.deep.equal([1, 2, 3]);
   });
 
   it('parses objects', () => {
-    expect(castValue('{"a":1}')).to.deep.equal({a:1});
+    expect(castValue('{"a":1}')).to.deep.equal({a: 1});
   });
 
   it('parses nested arrays and objects', () => {
-    expect(castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')).to.deep.equal({
-      a: [2, "3", {d: "true"}],
+    expect(
+      castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')
+    ).to.deep.equal({
+      a: [2, '3', {d: 'true'}],
       x: {y: false}
     });
   });
@@ -99,7 +201,6 @@ describe('castValue', () => {
     expect(castValue('undefined')).to.equal('undefined');
     expect(castValue('"foo')).to.equal('"foo');
     expect(castValue('""foo""')).to.equal('""foo""');
-
   });
 });
 
@@ -117,8 +218,8 @@ describe('editableValue', () => {
     expect(editableValue('foo')).to.equal('foo');
   });
   it('stringifies objects and arrays', () => {
-    expect(editableValue({a:1})).to.equal('{"a":1}');
-    expect(editableValue([1,2])).to.equal('[1,2]');
+    expect(editableValue({a: 1})).to.equal('{"a":1}');
+    expect(editableValue([1, 2])).to.equal('[1,2]');
   });
 });
 
@@ -151,7 +252,7 @@ describe('what we show based on what the user enters', () => {
       expect(displayableValue(castValue('1'))).to.equal('1');
       expect(displayableValue(castValue('true'))).to.equal('true');
     });
-    it ('shows quotes around other string values', () => {
+    it('shows quotes around other string values', () => {
       expect(displayableValue(castValue('foo'))).to.equal('"foo"');
     });
   });
@@ -166,19 +267,23 @@ describe('what we show based on what the user enters', () => {
     });
     it('preserves properly quoted and escaped quotes', () => {
       expect(displayableValue(castValue('"\\"foo"'))).to.equal('"\\"foo"');
-      expect(displayableValue(castValue('"\\"foo\\""'))).to.equal('"\\"foo\\""');
+      expect(displayableValue(castValue('"\\"foo\\""'))).to.equal(
+        '"\\"foo\\""'
+      );
     });
   });
 
   describe('when the user enters unmatching quotes', () => {
-    it ('adds quotes around and escapes mismatched quotes', () => {
+    it('adds quotes around and escapes mismatched quotes', () => {
       // double-backslashes here will appear as single backslashes in the ui
       expect(displayableValue(castValue('"foo'))).to.equal('"\\"foo"');
       expect(displayableValue(castValue('"1'))).to.equal('"\\"1"');
     });
-    it ('adds quotes around and escapes multiple sets of quotes', () => {
+    it('adds quotes around and escapes multiple sets of quotes', () => {
       // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('""foo""'))).to.equal('"\\"\\"foo\\"\\""');
+      expect(displayableValue(castValue('""foo""'))).to.equal(
+        '"\\"\\"foo\\"\\""'
+      );
     });
   });
 

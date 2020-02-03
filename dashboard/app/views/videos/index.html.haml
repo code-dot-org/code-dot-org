@@ -5,6 +5,7 @@
       %th Thumbnail
       %th Title
       %th Key
+      %th Locale
       %th YouTube code
       %th Download link
       %th
@@ -15,6 +16,7 @@
           %img{src: video.thumbnail_path}
         %td= data_t('video.name', video.key)
         %td= video.key
+        %td= video.locale
         %td= video.youtube_code
         %td= link_to('Download', video.download)
         - if can? :update, video

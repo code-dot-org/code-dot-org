@@ -27,11 +27,11 @@ Piezo.inherits(five.Piezo);
  * @param {number} [tempo] in beats per minute
  * @override
  */
-Piezo.prototype.play = function (notes, tempo = 120) {
+Piezo.prototype.play = function(notes, tempo = 120) {
   five.Piezo.prototype.play.call(this, {
     song: notes.map(n => {
       if (typeof n === 'string') {
-        return [n, 1/4];
+        return [n, 1 / 4];
       }
       return n;
     }),
@@ -55,7 +55,7 @@ Piezo.prototype.playSong = Piezo.prototype.play;
  * methods do.
  * @override
  */
-Piezo.prototype.stop = function () {
+Piezo.prototype.stop = function() {
   five.Piezo.prototype.stop.call(this);
   five.Piezo.prototype.off.call(this);
 };

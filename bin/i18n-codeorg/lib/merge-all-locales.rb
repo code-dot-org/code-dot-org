@@ -1,5 +1,6 @@
 #!/usr/bin/ruby
 
+require 'fileutils'
 require 'yaml'
 require 'json'
 

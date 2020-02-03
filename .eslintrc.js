@@ -3,29 +3,26 @@
 // or overridden for a particular subset of the project.  See
 // other .eslintrc.js files for those rules.
 module.exports = {
-  "plugins": [
-    "react",
-    "mocha",
-    "babel",
-  ],
-  "extends": [
+  plugins: ["react", "mocha", "babel"],
+  extends: [
+    "plugin:prettier/recommended",
     "eslint:recommended",
     "plugin:react/recommended"
   ],
-  "env": {
-    "browser": true,
-    "node": true,
-    "mocha": true,
+  env: {
+    browser: true,
+    node: true,
+    mocha: true
   },
-  "rules": {
+  rules: {
     "array-bracket-spacing": ["error", "never"],
     "babel/semi": "error", // autofixable
-    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    "brace-style": ["error", "1tbs", { allowSingleLine: true }],
     "comma-dangle": "off",
-    "curly": "error",
+    curly: "error",
     "dot-location": ["error", "property"],
     "eol-last": "error",
-    "eqeqeq": "error",
+    eqeqeq: "error",
     "jsx-quotes": "error", // autofixable
     "keyword-spacing": "error",
     "mocha/no-exclusive-tests": "error",
@@ -40,23 +37,32 @@ module.exports = {
     "no-new-object": "error",
     "no-trailing-spaces": "error",
     "no-undef": "error",
-    "no-unused-vars": ['error', {"args": 'none'}],
+    "no-unused-vars": ["error", { args: "none" }],
+    "no-useless-escape": "off",
     "no-with": "error",
     "object-curly-spacing": "off",
+    "react/button-has-type": "error",
     "react/display-name": "off",
     "react/jsx-closing-bracket-location": "error", // autofixable
     "react/jsx-curly-spacing": "error", // autofixable
     "react/jsx-first-prop-new-line": ["error", "multiline"],
     "react/jsx-indent-props": ["error", 2], // autofixable
-    "react/no-render-return-value": "off", // TODO: turn this on
+    "react/jsx-key": "off",
+    "react/jsx-no-target-blank": "off",
+    "react/jsx-wrap-multilines": "error", // autofixable
+    "react/no-find-dom-node": "off",
+    "react/no-render-return-value": "off",
+    "react/no-string-refs": "off",
+    "react/no-unescaped-entities": "off",
     "react/self-closing-comp": "error",
-    "react/wrap-multilines": "error", // autofixable
-    "semi": "off", // enforced by babel/semi
+    "react/no-danger" : "error",
+    semi: "off", // enforced by babel/semi
     "space-before-blocks": "error",
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "named": "never"
-    }],
-    "strict": "error",
+    strict: "error"
+  },
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
 };

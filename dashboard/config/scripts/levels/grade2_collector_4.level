@@ -26,8 +26,8 @@
     "step_mode": "0",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
-    "markdown_instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
+    "short_instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
+    "long_instructions": "Sequence matters! The blocks you need are already in the workspace, but not connected.  Order these blocks to solve the puzzle.",
     "instructions_important": "false",
     "min_collected": "1",
     "contained_level_names": null

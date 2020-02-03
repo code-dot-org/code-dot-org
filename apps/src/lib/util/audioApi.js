@@ -1,13 +1,7 @@
 /** @file Droplet-friendly command defintions for audio commands. */
-import {getStore} from '../../redux';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
-import {
-  apiValidateType,
-  OPTIONAL
-} from './javascriptMode';
+import {apiValidateType, OPTIONAL} from './javascriptMode';
 import Sounds from '../../Sounds';
-/* global dashboard */
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both
@@ -24,7 +18,6 @@ export function injectExecuteCmd(fn) {
  * Must be mixed in to the app's command list (see applab/commands.js)
  */
 export const commands = {
-
   /**
    * Start playing a sound.
    * @param {string} opts.url The sound to play.
@@ -34,14 +27,36 @@ export const commands = {
    * _@param {boolean} [opts.allowMultiple] If false (default) this call will
    *        stop other instances of the same sound from playing.  If true,
    *        multiple instances of the sound may be played simultaneously.
+   * _@param {function} [opts.callback] Called back when the sound starts playing
+   *        with an argument of true. If the sound fails to play, called back
+   *        with an argument of false.
+   * _@param {function} [opts.onEnded] Called back when the sound stops playing
    */
   playSound(opts) {
     apiValidateType(opts, 'playSound', 'url', opts.url, 'string');
     apiValidateType(opts, 'playSound', 'loop', opts.loop, 'boolean', OPTIONAL);
+    apiValidateType(
+      opts,
+      'playSound',
+      'callback',
+      opts.callback,
+      'function',
+      OPTIONAL
+    );
+    apiValidateType(
+      opts,
+      'playSound',
+      'onEnded',
+      opts.onEnded,
+      'function',
+      OPTIONAL
+    );
 
     const url = assetPrefix.fixPath(opts.url);
     if (Sounds.getSingleton().isPlayingURL(url)) {
-      return;
+      if (opts.callback) {
+        opts.callback(false);
+      }
     }
 
     // TODO: Re-enable forceHTML5 after Varnish 4.1 upgrade.
@@ -73,7 +88,9 @@ export const commands = {
       volume: 1.0,
       loop: !!opts.loop,
       forceHTML5: forceHTML5,
-      allowHTML5Mobile: true
+      allowHTML5Mobile: true,
+      callback: opts.callback,
+      onEnded: opts.onEnded
     });
   },
 
@@ -92,7 +109,7 @@ export const commands = {
     } else {
       Sounds.getSingleton().stopAllAudio();
     }
-  },
+  }
 };
 
 /**
@@ -100,44 +117,8 @@ export const commands = {
  * arguments converted to an options object.
  */
 export const executors = {
-  playSound: (url, loop = false) => executeCmd(null, 'playSound', {url, loop}),
-  stopSound: (url) => executeCmd(null, 'stopSound', {url})
+  playSound: (url, loop = false, callback) =>
+    executeCmd(null, 'playSound', {url, loop, callback}),
+  stopSound: url => executeCmd(null, 'stopSound', {url})
 };
 // Note to self - can we use _.zipObject to map argumentNames to arguments here?
-
-/**
- * Droplet palette configuration entries, ready to drop in to their respective
- * toolkits.
- */
-export const dropletConfig = {
-  playSound: {
-    func: 'playSound',
-    parent: executors,
-    paramButtons: { minArgs: 1, maxArgs: 2 },
-    paletteParams: ['url', 'loop'],
-    params: ['"sound://default.mp3"', 'false'],
-    dropdown: {
-      0: () => getAssetDropdown('audio'),
-      1: ["true", "false"]
-    },
-    assetTooltip: { 0: chooseAsset.bind(null, 'audio') }
-  },
-  stopSound: {
-    func: 'stopSound',
-    parent: executors,
-    paramButtons: { minArgs: 0, maxArgs: 1 },
-    paletteParams: ['url'],
-    params: ['"sound://default.mp3"'],
-    dropdown: {
-      0: () => getAssetDropdown('audio')
-    },
-    assetTooltip: { 0: chooseAsset.bind(null, 'audio') }
-  },
-};
-
-// Flip the argument order so we can bind `typeFilter`.
-function chooseAsset(typeFilter, callback) {
-  dashboard.assets.showAssetManager(callback, typeFilter, null, {
-    showUnderageWarning: !getStore().getState().pageConstants.is13Plus
-  });
-}

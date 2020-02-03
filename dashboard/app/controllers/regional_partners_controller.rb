@@ -58,10 +58,16 @@ class RegionalPartnersController < ApplicationController
       %w(teacher facilitator).each do |role|
         %w(open close).each do |state|
           key = "apps_#{state}_date_#{course}_#{role}".to_sym
-          update_params[key] == Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
+
+          # Do a date validation.  An exception will result if invalid.
+          Date.parse(regional_partner_params[key]) if regional_partner_params[key].presence
         end
       end
     end
+
+    # Do a date validation.  An exception will result if invalid.
+    Date.parse(regional_partner_params[:apps_priority_deadline_date]) if regional_partner_params[:apps_priority_deadline_date].presence
+
     if @regional_partner.update(update_params)
       flash[:notice] = "Regional Partner updated successfully"
       redirect_to @regional_partner
@@ -121,6 +127,7 @@ class RegionalPartnersController < ApplicationController
       apps_close_date_csd_facilitator
       apps_close_date_csp_teacher
       apps_close_date_csp_facilitator
+      apps_priority_deadline_date
       applications_principal_approval
       applications_decision_emails
       link_to_partner_application

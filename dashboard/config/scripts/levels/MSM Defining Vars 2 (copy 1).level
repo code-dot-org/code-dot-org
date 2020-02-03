@@ -14,7 +14,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "free_play": "false",
-    "instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called \"my-shape\" and put the code for a 50 pixel solid green triangle inside."
+    "short_instructions": "If we wanted to make fifty green triangles, it would be a pain to repeat that block of code 50 times. Let's create a variable called \"my-shape\" and put the code for a 50 pixel solid green triangle inside."
   }
 }]]></config>
   <blocks>

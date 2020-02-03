@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist_zombie",
-    "instructions": "Hello. Me zombie artist. Me love drawing! Help me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels shorter than the square length.",
+    "short_instructions": "Hello. Me zombie artist. Me love drawing! Help me draw the square glasses.  Hint:  the bridge between the glasses is 25 pixels shorter than the square length.",
     "x": "30",
     "y": "225",
     "start_direction": "90",

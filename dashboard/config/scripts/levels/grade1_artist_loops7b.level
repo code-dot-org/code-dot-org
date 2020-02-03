@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Time to head home. Can you fix this ladder to help the artist get down?",
+    "short_instructions": "Time to head home. Can you fix this ladder to help the artist get down?",
     "x": "75",
     "y": "75",
     "start_direction": "180",

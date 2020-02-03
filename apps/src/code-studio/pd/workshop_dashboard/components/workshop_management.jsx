@@ -1,16 +1,16 @@
 /**
  * Workshop management buttons (view, edit, delete).
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap';
-import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import ConfirmationDialog from '../../components/confirmation_dialog';
 import {
-  PermissionPropType,
-  Organizer,
-  ProgramManager
-} from '../permission';
+  WorkshopTypes,
+  SubjectNames
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import ConfirmationDialog from '../../components/confirmation_dialog';
+import {PermissionPropType, Organizer, ProgramManager} from '../permission';
 
 export class WorkshopManagement extends React.Component {
   static contextTypes = {
@@ -39,39 +39,53 @@ export class WorkshopManagement extends React.Component {
 
     if (props.showSurveyUrl) {
       let surveyBaseUrl;
-
-      if (
-          (
-            [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(props.subject)
-            && new Date(this.props.date).getFullYear() >= 2018
-          ) ||
-          (
-            ['CS Discoveries', 'CS Principles'].includes(props.course)
-            && props.subject !== 'Code.org Facilitator Weekend'
-            && new Date(this.props.date) >= new Date('2018-08-01')
-          )
-      ) {
-        surveyBaseUrl = "local_summer_workshop_daily_survey_results";
+      if (this.use_daily_survey_route()) {
+        surveyBaseUrl = 'daily_survey_results';
       } else if (props.subject === WorkshopTypes.local_summer) {
-        surveyBaseUrl = "local_summer_workshop_survey_results";
+        surveyBaseUrl = 'local_summer_workshop_survey_results';
       } else {
-        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager) ? "organizer_survey_results" : "survey_results";
+        surveyBaseUrl = props.permission.hasAny(Organizer, ProgramManager)
+          ? 'organizer_survey_results'
+          : 'survey_results';
       }
 
       this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
     }
   }
 
+  use_daily_survey_route = () => {
+    let workshop_date = new Date(this.props.date);
+
+    let new_local_summer_and_teachercon =
+      workshop_date.getFullYear() >= 2018 &&
+      [WorkshopTypes.local_summer, WorkshopTypes.teachercon].includes(
+        this.props.subject
+      );
+
+    let new_facilitator_weekend =
+      workshop_date >= new Date('2018-08-01') &&
+      ['CS Discoveries', 'CS Principles'].includes(this.props.course) &&
+      this.props.subject !== SubjectNames.SUBJECT_FIT;
+
+    let new_csf_201 =
+      workshop_date >= new Date('2019-05-20') &&
+      this.props.subject === SubjectNames.SUBJECT_CSF_201;
+
+    return (
+      new_local_summer_and_teachercon || new_facilitator_weekend || new_csf_201
+    );
+  };
+
   state = {
     showDeleteConfirmation: false
   };
 
-  handleViewClick = (event) => {
+  handleViewClick = event => {
     event.preventDefault();
     this.context.router.push(this.props.viewUrl);
   };
 
-  handleEditClick = (event) => {
+  handleEditClick = event => {
     event.preventDefault();
     this.context.router.push(this.props.editUrl);
   };
@@ -89,7 +103,7 @@ export class WorkshopManagement extends React.Component {
     this.props.onDelete(this.props.workshopId);
   };
 
-  handleSurveyClick = (event) => {
+  handleSurveyClick = event => {
     event.preventDefault();
     this.context.router.push(this.surveyUrl);
   };
@@ -151,6 +165,10 @@ export class WorkshopManagement extends React.Component {
   }
 
   render() {
+    const confirmationBodyText =
+      "Are you sure you want to delete this workshop? Once deleted it can't be recovered. " +
+      'Participants will not be notified. Please reach out to them directly before deleting.';
+
     return (
       <div>
         {this.renderViewButton()}
@@ -162,7 +180,7 @@ export class WorkshopManagement extends React.Component {
           onOk={this.handleDeleteConfirmed}
           onCancel={this.handleDeleteCanceled}
           headerText="Delete Workshop"
-          bodyText="Are you sure you want to delete this workshop? Once deleted it can't be recovered."
+          bodyText={confirmationBodyText}
         />
       </div>
     );

@@ -142,6 +142,22 @@ class Census::CensusSummaryTest < ActiveSupport::TestCase
     assert Census::CensusSummary.submission_teaches_cs?(submission, is_high_school: nil, is_k8_school: nil)
   end
 
+  test "School with different AP school codes in different years functions correctly" do
+    school = create :census_school
+    create :ap_school_code,
+      :with_ap_cs_offering,
+      school: school,
+      school_code: '000001',
+      school_year: 2016
+    create :ap_school_code,
+      :with_ap_cs_offering,
+      school: school,
+      school_code: '000002',
+      school_year: 2017
+    validate_summary(school, 2016, "YES")
+    validate_summary(school, 2017, "YES")
+  end
+
   test "Override outweighs all other data sources" do
     school_year = 2020
     school = create :census_school,

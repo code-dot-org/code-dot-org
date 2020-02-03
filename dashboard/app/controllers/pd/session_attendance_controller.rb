@@ -28,7 +28,7 @@ class Pd::SessionAttendanceController < ApplicationController
 
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: current_user
     attendance.update! marked_by_user: nil, enrollment: enrollment
-    render_confirmation
+    render :attendance_recorded
   end
 
   # POST pd/attend/:session_code
@@ -50,7 +50,7 @@ class Pd::SessionAttendanceController < ApplicationController
     if current_user.student?
       if User.hash_email(enrollment.email) == current_user.hashed_email
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.update!(user_type: User::TYPE_TEACHER, email: enrollment.email)
+        current_user.upgrade_to_teacher(enrollment.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to action: 'upgrade_account'
@@ -58,7 +58,7 @@ class Pd::SessionAttendanceController < ApplicationController
       end
     end
 
-    render_confirmation
+    render :attendance_recorded
   end
 
   # GET /pd/attend/:session_code/upgrade
@@ -75,7 +75,7 @@ class Pd::SessionAttendanceController < ApplicationController
       return
     end
 
-    current_user.update!(user_type: User::TYPE_TEACHER, email: @email)
+    current_user.upgrade_to_teacher(@email)
     redirect_to action: :attend
   end
 
@@ -86,14 +86,6 @@ class Pd::SessionAttendanceController < ApplicationController
 
     flash[:notice] = "You can't attend this workshop because you organized it. "\
       "If your attendees go to the link #{attend_url} they will see a success message here."
-
-    redirect_to CDO.studio_url('/', CDO.default_scheme)
-  end
-
-  def render_confirmation
-    flash[:notice] = 'Thank you for attending Code.org professional development. '\
-      "We’ve recorded that you were here on #{@session.formatted_date}. "\
-      'If your workshop is multiple days, you will mark yourself as attended each day of the workshop'
 
     redirect_to CDO.studio_url('/', CDO.default_scheme)
   end

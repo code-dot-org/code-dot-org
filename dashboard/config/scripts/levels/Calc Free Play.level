@@ -8,7 +8,7 @@
     "skin": "calc",
     "use_contract_editor": "true",
     "embed": "false",
-    "instructions": "Free Play: Write functions and algorithms of your own design!",
+    "short_instructions": "Free Play: Write functions and algorithms of your own design!",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "scrollbars": "false",

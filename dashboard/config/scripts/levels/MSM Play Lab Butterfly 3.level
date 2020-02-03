@@ -21,7 +21,7 @@
     "allow_sprites_outside_playspace": "true",
     "sprites_hidden_to_start": "false",
     "coordinate_grid_background": "true",
-    "instructions": "Now, combine your work to make Sam stay on both sides of the screen.",
+    "short_instructions": "Now, combine your work to make Sam stay on both sides of the screen.",
     "first_sprite_index": "1"
   }
 }]]></config>

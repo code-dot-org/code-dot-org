@@ -5,8 +5,8 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "instructions": "This pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
-    "markdown_instructions": "# Pixelation: AllTheThings 5\r\nThis pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
+    "short_instructions": "This pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
+    "long_instructions": "# Pixelation: AllTheThings 5\r\nThis pixelation level demonstrates the use of the \"Hide sliders\" option.  Notice that the width and height sliders are not available, and the width and height fields are not editable.",
     "version": "1",
     "hex": "true",
     "data": "FF0000 00AAAA",

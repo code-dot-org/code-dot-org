@@ -49,7 +49,7 @@
     "video_key": "csp_internetsimulator_2",
     "show_log_browser_button": "false",
     "connected_routers": "false",
-    "instructions": "Default instructions"
+    "short_instructions": "Default instructions"
   }
 }]]></config>
   <blocks/>

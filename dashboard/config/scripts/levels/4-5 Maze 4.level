@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,1,4,0,0,0],[0,0,0,1,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,4,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "pvz",
-    "instructions": "Use the \"repeat\" block to solve the puzzle quickly...",
+    "short_instructions": "Use the \"repeat\" block to solve the puzzle quickly...",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

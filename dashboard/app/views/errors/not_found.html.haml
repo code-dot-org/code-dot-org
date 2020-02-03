@@ -1,0 +1,12 @@
+.not-found-page
+  .error-parent
+    .error-child
+      %img{src: '/shared/images/sad-bee-avatar.png', alt: I18n.t(:page_not_found_title)}
+      %br
+      .error-message
+        %h1= I18n.t(:page_not_found_header)
+        = I18n.t(:page_not_found_description)
+        %br
+        %br
+        %a{href: '/'}
+          %button= I18n.t(:page_not_found_button)

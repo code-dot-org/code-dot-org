@@ -1,12 +1,14 @@
 /* eslint-disable react/no-danger */
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import i18n from "@cdo/locale";
-import DialogFooter from "@cdo/apps/templates/teacherDashboard/DialogFooter";
-import {getCurrentQuestion} from "./sectionAssessmentsRedux";
-import UnsafeRenderedMarkdown from '@cdo/apps/templates/UnsafeRenderedMarkdown';
+import i18n from '@cdo/locale';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {getCurrentQuestion} from './sectionAssessmentsRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const styles = {
   dialog: {
@@ -23,7 +25,7 @@ class FreeResponseDetailsDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     closeDialog: PropTypes.func.isRequired,
-    questionAndAnswers: PropTypes.object,
+    questionAndAnswers: PropTypes.object
   };
 
   render() {
@@ -37,12 +39,8 @@ class FreeResponseDetailsDialog extends Component {
         handleClose={this.props.closeDialog}
       >
         <h2>{i18n.questionText()}</h2>
-        <div
-          style={styles.instructions}
-        >
-          <UnsafeRenderedMarkdown
-            markdown={this.props.questionAndAnswers.question}
-          />
+        <div style={styles.instructions}>
+          <SafeMarkdown markdown={this.props.questionAndAnswers.question} />
         </div>
         <DialogFooter>
           <Button
@@ -59,5 +57,5 @@ class FreeResponseDetailsDialog extends Component {
 export const UnconnectedFreeResponseDetailsDialog = FreeResponseDetailsDialog;
 
 export default connect(state => ({
-  questionAndAnswers: getCurrentQuestion(state),
+  questionAndAnswers: getCurrentQuestion(state)
 }))(FreeResponseDetailsDialog);

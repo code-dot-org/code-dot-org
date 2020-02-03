@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "markdown_instructions": "# Brand Book\r\n\r\nCheck out the example of a brand book\r\n\r\n",
+    "long_instructions": "# Brand Book\r\n\r\nCheck out the example of a brand book\r\n\r\n",
     "link_title": "Nike Brand Book",
     "url": "https://issuu.com/logobr/docs/brandbook_nikefootball"
   },

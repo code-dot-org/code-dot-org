@@ -25,6 +25,11 @@ class Course < ApplicationRecord
 
   scope :with_associated_models, -> {includes([:plc_course, :default_course_scripts])}
 
+  FAMILY_NAMES = [
+    CSD = 'csd'.freeze,
+    CSP = 'csp'.freeze
+  ].freeze
+
   def skip_name_format_validation
     !!plc_course
   end
@@ -37,6 +42,7 @@ class Course < ApplicationRecord
     has_verified_resources
     family_name
     version_year
+    is_stable
   )
 
   def to_param
@@ -53,6 +59,14 @@ class Course < ApplicationRecord
 
   def localized_version_title
     I18n.t("data.course.name.#{name}.version_title", default: version_year)
+  end
+
+  # Any course with a plc_course or no family_name is considered stable.
+  # All other courses must specify an is_stable boolean property.
+  def stable?
+    return true if plc_course || !family_name
+
+    is_stable || false
   end
 
   def self.file_path(name)
@@ -174,7 +188,7 @@ class Course < ApplicationRecord
       CourseScript.where(course: self, script: script).destroy_all
     end
     # Reload model so that default_course_scripts is up to date
-    reload
+    transaction {reload}
   end
 
   # Get the assignable info for this course, then update translations
@@ -188,8 +202,7 @@ class Course < ApplicationRecord
     info[:assignment_family_title] = localized_assignment_family_title
     info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
-    # For now, all course versions visible in the UI are stable.
-    info[:is_stable] = true
+    info[:is_stable] = stable?
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
@@ -242,23 +255,39 @@ class Course < ApplicationRecord
     valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
+  # @param user [User]
+  # @returns [Boolean] Whether the user can assign this course.
+  # Users should only be able to assign one of their valid courses.
+  def assignable?(user)
+    if user&.teacher?
+      Course.valid_course_id?(id)
+    end
+  end
+
   def summarize(user = nil)
     {
       name: name,
       id: id,
       title: localized_title,
       assignment_family_title: localized_assignment_family_title,
+      family_name: family_name,
+      version_year: version_year,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
       description_teacher: I18n.t("data.course.name.#{name}.description_teacher", default: ''),
       scripts: scripts_for_user(user).map do |script|
         include_stages = false
-        script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
+        script.summarize(include_stages, user).merge!(script.summarize_i18n(include_stages))
       end,
       teacher_resources: teacher_resources,
       has_verified_resources: has_verified_resources?,
-      versions: summarize_versions
+      versions: summarize_versions(user),
+      show_assign_button: assignable?(user)
     }
+  end
+
+  def link
+    Rails.application.routes.url_helpers.course_path(self)
   end
 
   def summarize_short
@@ -266,19 +295,27 @@ class Course < ApplicationRecord
       name: name,
       title: I18n.t("data.course.name.#{name}.title", default: ''),
       description: I18n.t("data.course.name.#{name}.description_short", default: ''),
-      link: Rails.application.routes.url_helpers.course_path(self),
+      link: link,
     }
   end
 
   # Returns an array of objects showing the name and version year for all courses
   # sharing the family_name of this course, including this one.
-  def summarize_versions
+  def summarize_versions(user = nil)
     return [] unless family_name
-    Course.
+    versions = Course.
       where("properties -> '$.family_name' = ?", family_name).
-      map {|c| {name: c.name, version_year: c.version_year, version_title: c.localized_version_title}}.
-      sort_by {|info| info[:version_year]}.
-      reverse
+      map do |c|
+        {
+          name: c.name,
+          version_year: c.version_year,
+          version_title: c.localized_version_title,
+          can_view_version: c.can_view_version?(user),
+          is_stable: c.stable?
+        }
+      end
+
+    versions.sort_by {|info| info[:version_year]}.reverse
   end
 
   # If a user has no experiments enabled, return the default set of scripts.
@@ -343,6 +380,82 @@ class Course < ApplicationRecord
     end
 
     default_course_script
+  end
+
+  # @param user [User]
+  # @return [String] URL to the course the user should be redirected to.
+  def redirect_to_course_url(user)
+    # Only redirect students.
+    return nil unless user && user.student?
+    # No redirect unless user is allowed to view this course version, they are not assigned to the course,
+    # and it is versioned.
+    return nil unless can_view_version?(user) && !user.assigned_course?(self) && version_year
+
+    # Redirect user to the latest assigned course in this course family,
+    # if one exists and it is newer than the current course.
+    latest_assigned_version = Course.latest_assigned_version(family_name, user)
+    latest_assigned_version_year = latest_assigned_version&.version_year
+    return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
+    latest_assigned_version.link
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user can view the course.
+  def can_view_version?(user = nil)
+    latest_course_version = Course.latest_stable_version(family_name)
+    is_latest = latest_course_version == self
+
+    # All users can see the latest course version.
+    return true if is_latest
+
+    # Restrictions only apply to students and logged out users.
+    return false if user.nil?
+    return true unless user.student?
+
+    # A student can view the course version if they are assigned to it or they have progress in it.
+    user.section_courses.include?(self) || has_progress?(user)
+  end
+
+  # @param family_name [String] The family name for a course family.
+  # @return [Course] Returns the latest stable version in a course family.
+  def self.latest_stable_version(family_name)
+    return nil unless family_name.present?
+
+    Course.
+      # select only courses in the same course family.
+      where("properties -> '$.family_name' = ?", family_name).
+      # select only stable courses.
+      where("properties -> '$.is_stable'").
+      # order by version year.
+      order("properties -> '$.version_year' DESC")&.
+      first
+  end
+
+  # @param family_name [String] The family name for a course family.
+  # @param user [User]
+  # @return [Course] Returns the latest version in a course family that the user is assigned to.
+  def self.latest_assigned_version(family_name, user)
+    return nil unless family_name && user
+    assigned_course_ids = user.section_courses.pluck(:id)
+
+    Course.
+      # select only courses assigned to this user.
+      where(id: assigned_course_ids).
+      # select only courses in the same course family.
+      where("properties -> '$.family_name' = ?", family_name).
+      # order by version year.
+      order("properties -> '$.version_year' DESC")&.
+      first
+  end
+
+  # @param user [User]
+  # @return [Boolean] Whether the user has progress in this course.
+  def has_progress?(user)
+    return nil unless user
+    user_script_ids = user.user_scripts.pluck(:script_id)
+    course_scripts_with_progress = default_course_scripts.where('course_scripts.script_id' => user_script_ids)
+
+    course_scripts_with_progress.count > 0
   end
 
   # @param user [User]
@@ -429,5 +542,11 @@ class Course < ApplicationRecord
       # Populate cache on miss.
       course_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
+  end
+
+  # Returns an array of version year strings, starting with 2017 and ending 1 year
+  # from the current year.
+  def self.get_version_year_options
+    (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
   end
 end

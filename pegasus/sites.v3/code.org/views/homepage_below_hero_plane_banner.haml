@@ -1,0 +1,24 @@
+- if Homepage.show_professional_learning_banner(request)
+  = inline_css 'homepage_below_hero_plane_banner.css'
+
+  .homepage-professional-learning-banner
+    %a.linktag#pl-2019{href: "/educate/professional-learning"}
+      .nonphone.col-80.tablet-feature
+        .left.col-80.animateSlideInFromLeft
+          .banner
+            %img{src: "/images/homepage/professional-learning-2018-banner.png"}
+            .text
+              Sign up for Professional Learning! Applications are
+              %br/
+              now open for Middle and High School teachers.
+        .right.col-20
+          %button
+            Join us
+      .phone.phone-feature
+        .text
+          Sign up for Professional Learning! Applications are
+          now open for Middle and High School teachers.
+        %button
+          Join us
+
+    .clear

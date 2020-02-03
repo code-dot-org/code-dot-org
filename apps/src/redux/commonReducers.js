@@ -19,5 +19,5 @@ module.exports = {
   instructions,
   instructionsDialog,
   watchedExpressions,
-  feedback,
+  feedback
 };

@@ -1,0 +1,30 @@
+name 'contained_Choose_2_Test'
+editor_experiment ''
+title ''
+type 'multi2'
+layout 'tight'
+question 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+right 'Line 2'
+right 'Line 3'
+wrong 'Line 4'
+wrong 'Line 5'
+markdown <<MARKDOWN
+This question uses a robot in a grid of squares. The robot is represented as a triangle, which is initially facing toward the right side of the grid. The robot is moved according to the following instructions.
+
+
+| Instruction       | Explanation |
+|--------------------|--------|
+|`Move Forward` | The robot moves one square forward in the direction it is facing |
+|`Rotate right` | The robot rotates in place 90 degrees clockwise (i.e., makes an in-place right turn). |
+|`Rotate left` | The robot rotates in place 90 degrees counter-clockwise (i.e., makes an in-place left turn). |
+|`REPEAT n TIMES` | The block of instructions contained between the braces {} is repeated n times. |
+
+  
+  
+Consider the following incorrect program, which is intended to move the robot around the perimeter of the grid below, as indicated by the arrows.
+
+![](https://images.code.org/4d3177070d1585fc6ad3f9091dd53d76-image-1579897739915.png)
+
+![](/script_assets/csp/instruction_gifs/U3L02-rightSquare.png)
+
+MARKDOWN

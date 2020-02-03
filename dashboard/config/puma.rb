@@ -7,7 +7,7 @@ if CDO.dashboard_sock
 else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
-workers CDO.dashboard_workers unless CDO.dashboard_workers.to_i < 2
+workers CDO.dashboard_workers
 threads 1, 5
 
 drain_on_shutdown
@@ -20,19 +20,15 @@ preload_app!
 stdout_redirect dashboard_dir('log', 'puma_stdout.log'), dashboard_dir('log', 'puma_stderr.log'), true
 directory deploy_dir('dashboard')
 
+require 'cdo/app_server_hooks'
 before_fork do
-  PEGASUS_DB.disconnect
-  DASHBOARD_DB.disconnect
   ActiveRecord::Base.connection_pool.disconnect!
-  Cdo::AppServerMetrics.instance&.spawn_reporting_task if defined?(Cdo::AppServerMetrics)
+  Cdo::AppServerHooks.before_fork
 end
 
 on_worker_boot do |_index|
+  Cdo::AppServerHooks.after_fork(host: CDO.dashboard_hostname)
   ActiveRecord::Base.establish_connection
-  require 'dynamic_config/gatekeeper'
-  require 'dynamic_config/dcdo'
-  Gatekeeper.after_fork
-  DCDO.after_fork
 end
 
 require 'gctools/oobgc'

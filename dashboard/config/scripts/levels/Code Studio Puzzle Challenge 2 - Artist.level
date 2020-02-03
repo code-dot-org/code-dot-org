@@ -7,7 +7,7 @@
   "properties": {
     "skin": "artist",
     "embed": "false",
-    "instructions": "Now add a turn and another line. The lines are 200 pixels long.",
+    "short_instructions": "Now add a turn and another line. The lines are 200 pixels long.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

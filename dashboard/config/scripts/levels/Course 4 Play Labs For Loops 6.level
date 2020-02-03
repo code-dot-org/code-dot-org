@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  return Studio.sayComplete > 10;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
     "failure_condition": "function () {\r\n}",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "You may recall that a prime number is any whole number that is only divisible by itself and 1. Use the \"is_prime\" function to speak out only the prime numbers from 1 to 100.",
+    "short_instructions": "You may recall that a prime number is any whole number that is only divisible by itself and 1. Use the \"is_prime\" function to speak out only the prime numbers from 1 to 100.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "ideal": "11",

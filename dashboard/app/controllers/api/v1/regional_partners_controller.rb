@@ -1,5 +1,10 @@
+require 'cdo/firehose'
+
 class Api::V1::RegionalPartnersController < ApplicationController
-  before_action :authenticate_user!, except: :find
+  before_action :authenticate_user!, except: [:find, :show]
+
+  include Pd::SharedWorkshopConstants
+  include Pd::Application::ActiveApplicationModels
 
   # GET /api/v1/regional_partners
   def index
@@ -10,50 +15,63 @@ class Api::V1::RegionalPartnersController < ApplicationController
 
   # GET /api/v1/regional_partners/capacity?role=:role&regional_partner_value=:regional_partner
   def capacity
-    role = params[:role]
-    regional_partner_value = current_user.workshop_admin? ? params[:regional_partner_value] : current_user.regional_partners.first.try(:id)
+    regional_partner_value = current_user.workshop_admin? ?
+      params[:regional_partner_value] :
+      current_user.regional_partners.first.try(:id)
 
-    render json: {capacity: get_partner_cohort_capacity(regional_partner_value, role)}
+    render json: {capacity: get_partner_cohort_capacity(regional_partner_value, params[:role])}
+  end
+
+  # GET /api/v1/regional_partners/enrolled?role=:role&regional_partner_value=:regional_partner
+  def enrolled
+    regional_partner_id =
+      if current_user.workshop_admin?
+        # 'none', 'all', nil will become 0
+        params[:regional_partner_value].to_i
+      else
+        current_user.regional_partners.first.try(:id)
+      end
+
+    render json: {enrolled: get_partner_enrollment_count(regional_partner_id, params[:role])}
+  end
+
+  # GET /api/v1/regional_partners/show/:id
+  def show
+    partner_id = params[:partner_id]
+    partner = RegionalPartner.find_by_id(partner_id)
+
+    if partner
+      render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+    else
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+    end
   end
 
   # GET /api/v1/regional_partners/find
   def find
     zip_code = params[:zip_code]
-    state = nil
 
-    # Try to find the matching partner using the ZIP code.
-    partner = RegionalPartner.find_by_region(zip_code, nil)
+    partner, state = RegionalPartner.find_by_zip(zip_code)
 
-    # Otherwise, get the state for the ZIP code and try to find the matching partner using that.
-    unless partner
-      begin
-        Geocoder.with_errors do
-          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
-          # See https://github.com/alexreisner/geocoder#error-handling
-          Retryable.retryable(on: StandardError) do
-            state = Geocoder.search(zip_code)&.first&.state_code
-          end
-        end
-      rescue StandardError => e
-        # Log geocoding errors to honeybadger but don't fail
-        Honeybadger.notify(e,
-          error_message: 'Error geocoding regional partner workshop zip_code',
-          context: {
-            zip_code: zip_code
-          }
-        )
-      end
-
-      if state
-        partner = RegionalPartner.find_by_region(nil, state)
-      end
-    end
+    result = nil
 
     if partner
       render json: partner, serializer: Api::V1::Pd::RegionalPartnerSerializer
+      result = 'partner-found'
+    elsif state
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_partner]}
+      result = 'no-partner'
     else
-      render_404
+      render json: {error: WORKSHOP_SEARCH_ERRORS[:no_state]}
+      result = 'no-state'
     end
+
+    FirehoseClient.instance.put_record(
+      study: 'regional-partner-search-log',
+      event: result,
+      data_string: zip_code,
+      source_page_id: params[:source_page_id]
+    )
   end
 
   private
@@ -67,11 +85,47 @@ class Api::V1::RegionalPartnersController < ApplicationController
       partner_id = regional_partner_value ? regional_partner_value : current_user.regional_partners.first
       regional_partner = RegionalPartner.find_by(id: partner_id)
       if role == 'csd_teachers'
-        return regional_partner.cohort_capacity_csd
+        return regional_partner&.cohort_capacity_csd
       elsif role == 'csp_teachers'
-        return regional_partner.cohort_capacity_csp
+        return regional_partner&.cohort_capacity_csp
       end
     end
     nil
+  end
+
+  # Get the regional partner's number of enrollments to current-year role-specific workshops.
+  #
+  # @param regional_partner_id [Integer]
+  # @param role [String] a string contains workshop course and subject type, e.g. 'csp_teachers'
+  # @return [Integer, nil] nil if regional_partner_id is invalid, otherwise returns a count
+  # @see Api::V1::Pd::ApplicationsController:ROLES
+  #
+  def get_partner_enrollment_count(regional_partner_id, role)
+    partner = RegionalPartner.find_by_id(regional_partner_id)
+    return unless partner
+
+    workshops = partner.pd_workshops
+    workshops_by_role =
+      case role.to_sym
+      when :csf_facilitators
+        workshops.where(course: COURSE_CSF, subject: SUBJECT_CSF_FIT)
+      when :csd_facilitators
+        workshops.where(course: COURSE_CSD, subject: SUBJECT_CSD_FIT)
+      when :csp_facilitators
+        workshops.where(course: COURSE_CSP, subject: SUBJECT_CSP_FIT)
+      when :csd_teachers
+        workshops.where(course: COURSE_CSD).where.not(subject: SUBJECT_CSD_FIT)
+      when :csp_teachers
+        workshops.where(course: COURSE_CSP).where.not(subject: SUBJECT_CSP_FIT)
+      else
+        # Should never get here. This value will cause an exception on the next calculation,
+        # which expects an ActiveRecord::Relation.
+        nil
+      end
+
+    workshop_current_year_ids =
+      workshops_by_role.select {|ws| ws.school_year == APPLICATION_CURRENT_YEAR}.pluck(:id)
+
+    Pd::Enrollment.where(pd_workshop_id: [workshop_current_year_ids]).count
   end
 end

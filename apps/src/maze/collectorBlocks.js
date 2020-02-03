@@ -2,7 +2,7 @@ var msg = require('./locale');
 var codegen = require('../lib/tools/jsinterpreter/codegen');
 var blockUtils = require('../block_utils');
 
-exports.install = function (blockly, blockInstallOptions) {
+exports.install = function(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -34,20 +34,20 @@ exports.install = function (blockly, blockInstallOptions) {
   // Block for 'if' conditional if there is a collectible
   blockly.Blocks.collector_ifCollectible = {
     helpUrl: '',
-    init: function () {
+    init: function() {
       this.setHSV(196, 1.0, 0.79);
-      this.appendDummyInput()
-          .appendTitle(msg.ifCode() + ' ' + msg.collectiblePresent());
+      this.appendDummyInput().appendTitle(
+        msg.ifCode() + ' ' + msg.collectiblePresent()
+      );
       this.setInputsInline(true);
-      this.appendStatementInput('DO')
-          .appendTitle(msg.doCode());
+      this.appendStatementInput('DO').appendTitle(msg.doCode());
       this.setTooltip(msg.ifTooltip());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
   };
 
-  generator.collector_ifCollectible = function () {
+  generator.collector_ifCollectible = function() {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     var code = `if (${argument}) {\n${branch}}\n`;
@@ -57,19 +57,19 @@ exports.install = function (blockly, blockInstallOptions) {
   // Block for 'while' conditional if there is a collectible
   blockly.Blocks.collector_whileCollectible = {
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
-    init: function () {
-      this.setHSV(322, 0.90, 0.95);
-      this.appendDummyInput()
-          .appendTitle(msg.whileMsg() + ' ' + msg.collectiblePresent());
-      this.appendStatementInput('DO')
-          .appendTitle(msg.doCode());
+    init: function() {
+      this.setHSV(322, 0.9, 0.95);
+      this.appendDummyInput().appendTitle(
+        msg.whileMsg() + ' ' + msg.collectiblePresent()
+      );
+      this.appendStatementInput('DO').appendTitle(msg.doCode());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whileTooltip());
     }
   };
 
-  generator.collector_whileCollectible = function () {
+  generator.collector_whileCollectible = function() {
     var argument = `Maze.pilePresent('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
     branch = codegen.loopTrap() + branch;

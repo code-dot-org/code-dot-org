@@ -1,8 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {tableLayoutStyles} from "../tables/tableConstants";
-import i18n from "@cdo/locale";
+import {tableLayoutStyles} from '../tables/tableConstants';
+import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   inputBox: {
@@ -10,7 +13,7 @@ const styles = {
   },
   details: {
     fontSize: 12
-  },
+  }
 };
 
 class ManageStudentNameCell extends Component {
@@ -22,36 +25,53 @@ class ManageStudentNameCell extends Component {
     email: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
+    scriptName: PropTypes.string
   };
 
-  onChangeName = (e) => {
+  onChangeName = e => {
     this.props.editStudent(this.props.id, {name: e.target.value});
   };
 
   render() {
-    const {id, sectionId, name, username, email, editedValue} = this.props;
+    const {
+      id,
+      sectionId,
+      name,
+      username,
+      email,
+      editedValue,
+      scriptName
+    } = this.props;
+    const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
+
     return (
       <div>
-        {!this.props.isEditing &&
+        {!this.props.isEditing && (
           <div>
-            <a
-              style={tableLayoutStyles.link}
-              href={`/teacher-dashboard#/sections/${sectionId}/student/${id}`}
-              target="_blank"
-            >
-              {name}
-            </a>
-            {username &&
-              <div style={styles.details}>{i18n.usernameLabel() + username}</div>
-            }
-            {email &&
+            {studentUrl && (
+              <a
+                style={tableLayoutStyles.link}
+                href={studentUrl}
+                target="_blank"
+              >
+                {name}
+              </a>
+            )}
+            {!studentUrl && <span>{name}</span>}
+            {username && (
+              <div style={styles.details}>
+                {i18n.usernameLabel() + username}
+              </div>
+            )}
+            {email && (
               <div style={styles.details}>{i18n.emailLabel() + email}</div>
-            }
+            )}
           </div>
-        }
-        {this.props.isEditing &&
+        )}
+        {this.props.isEditing && (
           <div>
             <input
               required
@@ -61,14 +81,19 @@ class ManageStudentNameCell extends Component {
               placeholder={i18n.nameRequired()}
             />
           </div>
-        }
+        )}
       </div>
-      );
+    );
   }
 }
 
-export default connect(state => ({}), dispatch => ({
-  editStudent(id, studentInfo) {
-    dispatch(editStudent(id, studentInfo));
-  },
-}))(ManageStudentNameCell);
+export default connect(
+  state => ({
+    scriptName: getSelectedScriptName(state)
+  }),
+  dispatch => ({
+    editStudent(id, studentInfo) {
+      dispatch(editStudent(id, studentInfo));
+    }
+  })
+)(ManageStudentNameCell);

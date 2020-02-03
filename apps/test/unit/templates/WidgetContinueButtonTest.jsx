@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
 import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
 
@@ -15,7 +15,7 @@ describe('WidgetContinueButton', () => {
   });
 
   it('calls processResults when clicked', () => {
-    const wrapper = shallow(<WidgetContinueButton/>);
+    const wrapper = shallow(<WidgetContinueButton />);
     expect(dialogHelper.processResults).not.to.have.been.called;
     expect(wrapper).to.have.state('submitting', false);
 
@@ -28,7 +28,7 @@ describe('WidgetContinueButton', () => {
   });
 
   it('resets state if processResults will not redirect', () => {
-    const wrapper = shallow(<WidgetContinueButton/>);
+    const wrapper = shallow(<WidgetContinueButton />);
     expect(wrapper).to.have.state('submitting', false);
 
     wrapper.simulate('click');

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Help me complete the house for this cat.",
+    "short_instructions": "Help me complete the house for this cat.",
     "x": "150",
     "y": "250",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "free_play": "false",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "Help me complete the house for this cat.",
+    "long_instructions": "Help me complete the house for this cat.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

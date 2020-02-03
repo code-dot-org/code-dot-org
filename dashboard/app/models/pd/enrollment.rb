@@ -32,16 +32,16 @@ require 'cdo/safe_names'
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
   include Rails.application.routes.url_helpers
-  include Pd::SharedWorkshopConstants
+  include Pd::WorkshopConstants
   include Pd::WorkshopSurveyConstants
   include SerializedProperties
+  include Pd::Application::ActiveApplicationModels
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
   belongs_to :school_info
   belongs_to :user
-  has_one :workshop_material_order, class_name: 'Pd::WorkshopMaterialOrder', foreign_key: :pd_enrollment_id
   has_one :pre_workshop_survey, class_name: 'Pd::PreWorkshopSurvey', foreign_key: :pd_enrollment_id
   has_many :attendances, class_name: 'Pd::Attendance', foreign_key: :pd_enrollment_id
   auto_strip_attributes :first_name, :last_name
@@ -64,13 +64,28 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
+  after_create :set_default_scholarship_info
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
 
   serialized_attrs %w(
     role
     grades_teaching
+    attended_csf_intro_workshop
+    csf_course_experience
+    csf_courses_planned
+    csf_has_physical_curriculum_guide
+    previous_courses
+    replace_existing
+    csf_intro_intent
+    csf_intro_other_factors
   )
+
+  def set_default_scholarship_info
+    if user && workshop.csf? && workshop.school_year
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, COURSE_KEY_MAP[workshop.course], Pd::ScholarshipInfoConstants::YES_CDO)
+    end
+  end
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -102,8 +117,16 @@ class Pd::Enrollment < ActiveRecord::Base
   scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
   scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
 
-  # Any enrollment with attendance, for an ended workshop, has a survey
-  scope :with_surveys, -> {for_ended_workshops.attended}
+  # Any enrollment with attendance, for an ended workshop, has a survey.
+  # Except for FiT workshops - no exit surveys for them!
+  # This scope is used in ProfessionalLearningLandingController to direct the teacher
+  #   to their latest pending survey.
+  scope :with_surveys, (lambda do
+    for_ended_workshops.
+      attended.
+      where.not(pd_workshops: {course: COURSE_FACILITATOR}).
+      where('pd_workshops.subject != ? or pd_workshops.subject is null', [SUBJECT_FIT])
+  end)
 
   def has_user?
     user_id
@@ -176,13 +199,15 @@ class Pd::Enrollment < ActiveRecord::Base
       pd_new_workshop_survey_url(code, protocol: CDO.default_scheme)
     elsif [Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSD].include?(workshop.course) && workshop.workshop_starting_date > Date.new(2018, 8, 1)
       CDO.studio_url "/pd/workshop_survey/day/#{workshop.sessions.size}?enrollmentCode=#{code}", CDO.default_scheme
+    elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
+      CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", CDO.default_scheme
     end
   end
 
   def should_send_exit_survey?
-    !workshop.fit_weekend? && workshop.subject != SUBJECT_CSF_201
+    !workshop.fit_weekend?
   end
 
   def send_exit_survey
@@ -247,6 +272,34 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def school_district_name
     school_info.try :effective_school_district_name
+  end
+
+  def update_scholarship_status(status)
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.update_or_create(user, workshop.school_year, workshop.course_key, status)
+    end
+  end
+
+  def scholarship_status
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.scholarship_status
+    end
+  end
+
+  def friendly_scholarship_status
+    if workshop.scholarship_workshop?
+      Pd::ScholarshipInfo.
+        find_by(user: user, application_year: workshop.school_year, course: workshop.course_key)&.
+        friendly_status_name
+    end
+  end
+
+  # Returns true if this enrollment is for a novice or apprentice facilitator (accepted this year)
+  # attending a local summer workshop as a participant to observe the facilitation techniques
+  def newly_accepted_facilitator?
+    workshop.local_summer? &&
+      workshop.school_year == APPLICATION_CURRENT_YEAR &&
+      FACILITATOR_APPLICATION_CLASS.where(user_id: user_id).first&.status == 'accepted'
   end
 
   # Removes the name and email information stored within this Pd::Enrollment.

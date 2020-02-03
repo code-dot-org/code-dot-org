@@ -56,7 +56,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Keep building out the Animal Sound board. Then make sure to \"Share\" it.\r\n\r\n**How:** Add new buttons for more animals. Or make the soundboard for a totally different topic entirely!",
+    "long_instructions": "**Goal:** Keep building out the Animal Sound board. Then make sure to \"Share\" it.\r\n\r\n**How:** Add new buttons for more animals. Or make the soundboard for a totally different topic entirely!",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

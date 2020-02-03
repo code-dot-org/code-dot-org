@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \r\n(Note: The width of each hat is 50 pixels.)",
+    "short_instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \r\n(Note: The width of each hat is 50 pixels.)",
     "x": "175",
     "y": "250",
     "start_direction": "90",
@@ -29,7 +29,7 @@
     "examples_collapse": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "markdown_instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \r\n\r\n*(Note: The width of each hat is 50 pixels.)*",
+    "long_instructions": "The red hat is 100 pixels tall. Finish drawing a black hat that is 70 pixels shorter. \r\n\r\n*(Note: The width of each hat is 50 pixels.)*",
     "examples_required": "false",
     "disable_examples": "false",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"What is 100-70?  Based on the story problem, that's how tall the hat needs to be!\",\r\n  \"hint_id\": \"2-3_Artist_3new_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"The artist doesn't seem to be pointing in the correct direction. Can you make them turn first before drawing the line?\",\r\n  \"hint_id\": \"2-3_Artist_3new_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",

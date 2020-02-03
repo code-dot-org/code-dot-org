@@ -18,14 +18,14 @@
     =link_to 'Build a Dance Lab Level', new_level_path(type: 'Dancelab')
     %ul
       %li
-        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path}.
+        Hour of Code 2018. Edit #{link_to 'library', edit_library_path(id: 'DanceLab')}, #{link_to 'blocks', blocks_path(pool: 'Dancelab')}.
   %li= link_to 'Build a Minecraft Level', new_level_path(type: 'Craft')
   %li= link_to 'Build a Star Wars Grid Level', new_level_path(type: 'StarWarsGrid')
 
 %h2 Content
 %ul
   %li= link_to 'Build a Standalone Video Level', new_level_path(type: 'StandaloneVideo')
-  %li= link_to 'Build an Unplugged Level', new_level_path(type: 'Unplugged')
+  %li= link_to 'Build an Unplugged Level (deprecated)', new_level_path(type: 'Unplugged')
 
 %h2 DSL-Defined
 %ul
@@ -39,6 +39,7 @@
   %li= link_to 'Build a CurriculumReference Level', new_level_path(type: 'CurriculumReference')
   %li= link_to 'Build a Map Level', new_level_path(type: 'Map')
   %li= link_to 'Build a LevelGroup Level', new_level_path(type: 'LevelGroup')
+  %li= link_to 'Build a BubbleChoice Level', new_level_path(type: 'BubbleChoice')
 
 %h2 Advanced Apps
 %p These level types are not localized (en_us only!)
@@ -68,7 +69,7 @@
     = link_to t('crud.show'), level_path(level)
     = link_to t('crud.edit'), edit_level_path(level)
     = link_to t('crud.delete'), level_path(level, redirect: new_level_path), method: :delete
-    = link_to 'Clone', level_clone_path(level), method: :post
+    = link_to 'Clone', clone_level_path(level), method: :post
 
 %h2 All levels
 %ul

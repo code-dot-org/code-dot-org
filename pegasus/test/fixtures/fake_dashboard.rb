@@ -247,6 +247,13 @@ module FakeDashboard
   end
   ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaTableFilter
 
+  # Patch Mysql2Adapter to stub create_view when loading the schema.
+  module SchemaViewFilter
+    def create_view(name, options)
+    end
+  end
+  ActiveRecord::ConnectionAdapters::Mysql2Adapter.prepend SchemaViewFilter
+
   # Patch Mysql2Adapter to create temporary tables instead of persistent ones.
   module TempTableFilter
     def create_table(name, options)
@@ -305,6 +312,8 @@ module FakeDashboard
     # Reuse the same connection in Sequel to share access to the temporary tables.
     connection = ActiveRecord::Base.connection.instance_variable_get(:@connection)
     connection.query_options[:as] = :hash
+    # Don't auto-close the connection, because the created temporary table is session-local.
+    connection.automatic_close = false
     @@fake_db = Sequel.mysql2(test: false)
     @@fake_db.pool.available_connections.replace([connection])
 

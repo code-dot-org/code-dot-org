@@ -16,6 +16,7 @@ var ALLOWED_KEYS = new Set([
   'isResponsive',
   'isIframeEmbed',
   'isReadOnlyWorkspace',
+  'isNotStartedLevel',
   'isShareView',
   'isProjectLevel',
   'isSubmittable',
@@ -53,6 +54,7 @@ var ALLOWED_KEYS = new Set([
   'is13Plus',
   'isSignedIn',
   'userId',
+  'verifiedTeacher',
   'isK1',
   'textToSpeechEnabled',
   'documentationUrl',
@@ -60,20 +62,32 @@ var ALLOWED_KEYS = new Set([
   'nextLevelUrl',
   'showProjectTemplateWorkspaceIcon',
   'serverLevelId',
+  'serverScriptLevelId',
+  'exportApp',
+  'expoGenerateApk',
+  'expoCheckApkBuild',
+  'expoCancelApkBuild',
+  'allowExportExpo',
+  'widgetMode',
+  'librariesEnabled'
 ]);
 
 const initialState = {
-  assetUrl() {
-  }
+  assetUrl() {}
 };
 
 export default function reducer(state = initialState, action) {
   if (action.type === SET_PAGE_CONSTANTS) {
-    Object.keys(action.props).forEach(function (key) {
+    Object.keys(action.props).forEach(function(key) {
       if (!ALLOWED_KEYS.has(key)) {
-        throw new Error(`Property "${key}" may not be set using the ${action.type} action.`);
+        throw new Error(
+          `Property "${key}" may not be set using the ${action.type} action.`
+        );
       }
-      if (state[key] !== initialState[key] && state[key] !== action.props[key]) {
+      if (
+        state[key] !== initialState[key] &&
+        state[key] !== action.props[key]
+      ) {
         throw new Error(`Can't change value of key "${key}".`);
       }
     });

@@ -26,7 +26,8 @@ el-GR:
   learn_now: Μάθε τώρα
   petition_message: Κάθε μαθητής σε κάθε σχολείο θα πρέπει να έχει την ευκαιρία να
     μάθει την επιστήμη των υπολογιστών
-  petition_sign_message: Είμαι
+  petition_sign_message: 'Αν συμφωνείτε, συμπληρώστε τα στοιχεία σας και γίνετε μέλος
+    της λίστας αλληλογραφίας μας όπως # άλλοι.'
   petition_sign_message_support: 'Αν μας υποστηρίζετε, υπογράψτε με το όνομά σας.
     Ενωθείτε μαζί με # άλλους.'
   petition_join_others: 'Ενωθείτε μαζί με # άλλους'
@@ -40,6 +41,7 @@ el-GR:
     τα βασικά της επιστήμης της πληροφορικής και έννοιες προγραμματισμού στο ακόλουθο
     μάθημα.
   og_title: Κάθε παιδί δικαιούται μία ευκαιρία
+  og_title_soon: Η Ώρα του Κώδικα έρχεται
   og_title_here: Η Ώρα του Κώδικα είναι εδώ!
   og_description: Κάθε μαθητής σε κάθε σχολείο αξίζει μια ευκαιρία να μελετήσει την
     Πληροφορική. Αλλάζει τα πάντα.
@@ -335,6 +337,8 @@ el-GR:
   studiobar_title_nolink: Εξερευνήστε το Code Studio
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
+  studiobar_dance_title: Πάρτι Χορού
+  studiobar_dance_body: Δημιουργήστε και κοινοποιήστε τα δικά σας Dance Party
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικας
@@ -359,13 +363,16 @@ el-GR:
     ώρα του κώδικα&rdquo; Malala, νικητής του Νόμπελ ειρήνης"
   homepage_hero_text_susan: "&ldquo;Αν μπορείτε να αλλάξετε την τεχνολογία, μπορείτε
     να αλλάξετε τον κόσμο. &rdquo;Susan, Διευθύνων Σύμβουλος του YouTube"
-  homepage_hero_text_fistbump: " Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
-    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα"
+  homepage_hero_text_fistbump: Μην παίζετε απλά με το τηλέφωνό σας, προγραμματίστε
+    το. &rdquo; Πρόεδρος Μπαράκ Ομπάμα
   homepage_hero_text_sheryl: "&ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και
     των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την Πληροφορική.&rdquo;
     Sheryl, COO του Facebook"
   homepage_hero_text_satya: "&ldquo;Η Πληροφορική μπορεί να ξεκλειδώσει τις καλύτερες
     ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Η επιστήμη της Πληροφορικής ενδυναμώνει τους μαθητές να δημιουργήσουν τον κόσμο του αύριο.&rdquo;
+    Satya, Διευθύνων Σύμβουλος της Microsoft
   homepage_hero_text_bosh: "&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
     την πορεία της ζωής σας.&rdquo; Κρις Μπος"
   homepage_hero_text_student1: "&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
@@ -386,6 +393,8 @@ el-GR:
   homepage_hero_text_stat_loc: "#loc γραμμές κώδικα γραμμένες από μαθητές"
   homepage_hero_text_stat_students: "#student_count λογαριασμοί μαθητών στο Code Studio"
   homepage_hero_text_stat_served: 'Η Ώρα του Κώδικα: #served εξυπηρετήθηκαν'
+  homepage_hero_hoc_is_coming: Η Ώρα του Κώδικα έρχεται
+  homepage_hero_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ
   homepage_slot_text_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_frozen: Ταινία Frozen με την Άννα και την Έλσα
   homepage_slot_text_teacher: πίνακας Δασκάλου
@@ -407,6 +416,7 @@ el-GR:
   homepage_action_text_signpetition: 'Υπογράψτε την συλλογή υπογραφών
 
 '
+  homepage_action_text_wincelebritychat: Κερδίστε μια συνομιλία με μία διασημότητα
   homepage_signpetition_dropdown: Υπογράψτε την δική μας συλλογή υπογραφών &#x25BE;
   homepage_diversity_pledge: Ακολούθησε τη δέσμευση για πολυμορφία
   homepage_banner_text_prizes: 'Η Ώρα του Κώδικα πλησιάζει πάλι, 7-13 Δεκεμβρίου. '
@@ -426,6 +436,7 @@ el-GR:
   homepage_slot_text_title_hoc: Η Ώρα του Κώδικα
   homepage_slot_text_blurb_hoc: Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα
   homepage_slot_text_link_hoc: Δοκίμασε την Ώρα του Κώδικα
+  homepage_slot_text_link_about_hoc: Σχετικά με την Ώρα του Κώδικα
   homepage_slot_text_link_host: Φιλοξενήστε μια ώρα του κώδικα
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα
@@ -449,7 +460,9 @@ el-GR:
   homepage_slot_text_link_buy: Εμπλακείτε
   homepage_slot_text_link_donate: Κάντε μια δωρεά
   homepage_slot_text_link_shop: Μπλουζάκια, καπέλα, & περισσότερα
-  homepage_header_codestudio: Studio Κώδικα δημιουργίες σπουδαστών
+  homepage_slot_text_link_administrators: Φέρτε το CS στο σχολείο σας
+  homepage_gallery_header: Πάνω από %{project_count} εκατομμύρια έργα Code.org έχουν
+    δημιουργηθεί
   homepage_header_donors: Το Code.org ευχαριστεί τους υποστηρικτές του
   homepage_donors_seall: Εμφάνιση όλων
   homepage_donors_donate: Κάντε μια δωρεά
@@ -527,11 +540,15 @@ el-GR:
   mc_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
   mc_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets | Ηλικίες
     6+
+  minecraft_agent: Ταξίδι του Ήρωα του Minecraft
   minecraft_designer: Σχεδιαστής Minecraft
   minecraft_adventurer: Ζήστε μια περιπέτεια στο Minecraft
   minecraft_tutorials: Μαθήματα Minecraft από την Ώρα του Κώδικα
   minecraft_specs: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets |
     Ηλικίες 2+
+  minecraft_start_tutorial: Ξεκινήστε οδηγείες
+  minecraft_agent_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
   minecraft_agent_button: Έναρξη
   minecraft_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
     στην δικιά σου έκδοση του Minecraft.
@@ -543,6 +560,21 @@ el-GR:
   minecraft_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
     Minecraft.
   minecraft_subtitle: Η Ώρα του Κώδικα με το Minecraft
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>Εγγραφείτε</a>
+    για την ελεύθερη ώρα Κωδικόυ Minecraft εργαστηρίο, σε καταστήματα της Microsoft
+    σε Αυστραλία, Καναδά, Πουέρτο Ρίκο ή τις ΗΠΑ. Μάθετε πώς η κωδικοποίηση είναι
+    για όλους και συνδυάζει τη δημιουργικότητα, την επίλυση προβλημάτων και τόνους
+    διασκέδασης."
+  minecraft_continue_learning: 'Πληροφορική για όλους: Πέρα από μια ώρα κωδικού στο
+    Κατάστημα της Microsoft'
+  minecraft_continue_learning_description: Δεν απαιτείται εμπειρία πληροφορικής! Βοηθήστε
+    να εξασφαλίσουμε οτι όλη η νεολαία μπορεί να μάθει την πολύτιμη δεξιότητα μέσω
+    της εκπαίδευσης στην Πληροφορική. Ελάτε στο Κατάστημα της Microsoft να συμμετάσχετε
+    σε μια ελεύθερη σειρά τριών, μονόωρων εργαστηρίων, όπου θα ζήσετε κωδικοποίηση
+    σε ένα διασκεδαστικό και χωρίς άγχος περιβάλλον, να εξοικειωθείτε με τις έννοιες
+    κλειδιά στην επιστήμη υπολογιστωών, και ετοιμαστείτε να οδηγήσετε μια ώρα κωδικοποίησης
+    στην τάξη σας ή την Κοινότητά σας. Το έχετε! <a href='%{minecraft_continue_learning_url}',
+    target='_blank'>Εγγραφείτε σήμερα</a>.
   sports_page_title: Τα Αθλήματα της Ώρας του Κώδικα
   sports_og_title: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
   sports_og_description: Πρωταθλητές και Ολυμπιονίκες σας συνιστούμε να δοκιμάσετε
@@ -583,12 +615,14 @@ el-GR:
   sports_athlete_Harrison: Χάρισον Μπάρνς, Χρυσός Ολυμπιονίκης και Πρωταθλητής ΝΒΑ,
     Dallas Mavericks
   watch_inspirational_videos: Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο
+  video_title_cs_is_everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
   video_title_inspire_girl: Εμπνεύστε ένα κορίτσι
   video_title_cs_intro: Εισαγωγή Πληροφορικής
   video_title_schools_dont_teach: Τι δεν διδάσκουν στα περισσότερα σχολεία
   video_title_obama: Ο Πρόεδρος Ομπάμα για την Πληροφορική
   video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί να Μάθει
   video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  video_title_steph_curry: Η Ώρα του Κώδικα με τον Steph Curry
   video_title_draymond_green: Η Ώρα του Κώδικα με τον Ντρέιμοντ Γκριν
   video_title_russell_okung: Η Ώρα του Κώδικα με τον Ράσελ Όκουνγκ
   video_title_real_madrid: Η Ώρα του Κώδικα με την Ρεάλ Μαδρίτης
@@ -1122,11 +1156,6 @@ el-GR:
   course3_name: Μάθημα 3
   course4_name: Μάθημα 4
   accelerated_name: Επιταχυνόμενη πορεία μάθησης
-  cspunit3_name: Αρχές CS - Ενότητα 3
-  cspassessment_name: Πλήρης εξέταση - 50 ερωτήσεις
-  cspexam1-mWU7ilDYM9_name: Εξέταση Μέρος 1 -25 ερωτήσεις
-  cspexam2-AKwgAh1ac5_name: Εξέταση Μέρος 2 -25 ερωτήσεις
-  cspunit3_gradelevel: Τάξεις Γ΄ Γυμνασίου - Γ΄ Λυκείου
   20-hour_name: Επιταχυνόμενη πορεία μάθησης
   algebra_name: Επιστήμη Υπολογιστών στην Αλγεβρα
   AlgebraA_name: Επιστήμη Υπολογιστών στην Αλγεβρα - Μάθημα Α
@@ -1136,15 +1165,8 @@ el-GR:
   minecraft_name: Minecraft
   starwarsblocks_name: Πόλεμος τον Άστρων (μπλοκ)
   hoc-encryption_name: Απλή Κρυπτογράφηση
-  math_category_name: Μαθηματικά
-  hoc_category_name: Η Ώρα του Κώδικα
-  csf_category_name: Βασικές αρχές της Επιστήμης των Υπολογιστών
-  csf_international_category_name: Διεθνείς Βασικές Αρχές Επιστήμης Υπολογιστών
-  csf2_draft_category_name: 'Υπό ανάπτυξη: Μαθήματα A - F'
-  csp_category_name: Αρχές της Επιστήμης των Υπολογιστών ' 15-'16
-  csp17_category_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
-  cspexams_category_name: Τεστ στις Βασικές Αρχές της Επιστήμης των Υπολογιστών
-  applab_name: Εργαστήριο εφαρμογών
+  text-compression_name: Συμπίεση κειμένου
+  applab_name: App Lab
   gamelab_name: Game Lab
   basketball_name: Φτιάξτε ένα παιχνίδι μπάσκετ
   applab_gradelevel: Ηλικίες 13+
@@ -1221,6 +1243,11 @@ el-GR:
   coursed-2018_gradelevel: Τάξεις Β' Γυμνασίου +
   coursee-2018_gradelevel: Τάξεις Γ' Γυμνασίου +
   coursef-2018_gradelevel: Τάξεις Α' Λυκείου +
+  coursea-2019_gradelevel: Τάξεις Ε' Δημοτικού +
+  coursec-2019_gradelevel: Τάξεις Α' Γυμνασίου +
+  coursed-2019_gradelevel: Τάξεις Β' Γυμνασίου +
+  coursee-2019_gradelevel: Τάξεις Γ' Γυμνασίου +
+  coursef-2019_gradelevel: Τάξεις Α' Λυκείου +
   accelerated_gradelevel: Ηλικίες 10+ (μετά το Μάθημα 3)
   codeorg_platformtext: Σύγχρονα προγράμματα περιήγησης, smartphones, ταμπλέτες
   codeintl_platformtext: Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet
@@ -1908,11 +1935,161 @@ el-GR:
   compatibility_hide_this_warning: Απόκρυψη αυτής της προειδοποίησης
   flappy_shortcode: Φτερούγισε
   header_courses: Τες
+  header_course_catalog: Κατάλογος Μαθημάτων
   header_project_gallery: Έργα
+  header_sections: Ενότητες
+  header_educate_elementary: Δημοτικό σχολείο
+  header_educate_middle: Γυμνάσιο
+  header_educate_high: Λύκειο
   header_educate_hoc: Η Ώρα του Κώδικα
+  header_educate_beyond: Πέρα από το Code.org
+  header_about_us: Σχετικά με εμάς
+  header_about_donors: Δωρητές
+  header_about_partners: Συνεργάτες
+  header_about_evaluation: Αξιολογήσεις
+  header_about_jobs: Θέσεις εργασίας
+  header_about_contact: Επικοινωνία
+  header_about_faqs: Συχνές ερωτήσεις
+  header_learn: Εκμάθηση
+  header_teach: Διδασκαλία
+  header_about: Σχετικά
+  header_teacher_community: Κοινότητα δασκάλων
   header_help_support: 'Βοήθεια και υποστήριξη '
-  csp_name: Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17
+  header_report_bug: Αναφορά σφάλματος
+  header_tutorials: Οδηγοί εκμάθησης
+  header_documentation: Τεκμηρίωση
   user_header_label: Γεια σου %{username}
+  user_header_team: Ομάδα
   user_header_settings: Ο λογαριασμός μου
   user_header_logout: Αποσύνδεση
   user_header_signin: Σύνδεση
+  user_header_create: 'Δημιούργησε '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Καλλιτέχνης '
+  user_header_gamelab: Game Lab
+  user_header_playlab: Εργαστήριο Παιχνιδιού
+  user_header_dance: Πάρτι Χορού
+  user_header_spritelab: Sprite Lab
+  user_header_minecraft: Minecraft
+  user_header_flappy: Πουλάκι
+  user_header_view_all: Όλα τα έργα...
+  applab_tile_title: Εισαγωγή στο App Lab (Ηλικίες 13+)
+  applab_tile_subtitle: Δημιουργήστε τη δική σας εφαρμογή σε Javascript με τη χρήση
+    προγραμματισμού βασισμένου σε μπλοκ. Εναλλακτικά, αναβαθμίστε τις δεξιότητές σας
+    μαθαίνοντας προγραμματισμό βασισμένο σε κείμενο. (Αγγλικά μόνο)
+  applab_tile_start_tutorial: Έναρξη
+  applab_tile_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  aquatic_name: 'Minecraft: Υδάτινο Ταξίδι'
+  hoc_overview_dance_title: Πάρτι Χορού
+  hoc_overview_dance_subtitle: Γράψτε κώδικα για ένα Πάρτι Χορού και μοιραστείτε το
+    με τους φίλους σας. Συμμετέχουν οι Katy Perry, Madonna, J. Balvin, Sia, Keith
+    Urban, Ciara, και πολλοί άλλοι!
+  hoc_overview_dance_2019_subtitle: Κωδικοποιήστε ένα χορευτικό πάρτι (Dance Party)
+    για να το κοινοποιήσετε στους φίλους σας. Με τους Katy Perry, Shawn Mendes, Panic!
+    At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, και 34 ακόμη!
+  hoc_overview_title: Δραστηριότητες για την Ώρα του Κώδικα από το Code.org
+  hoc_overview_subtitle: Η <a href="https://hourofcode.com">Ώρα του Κώδικα</a> είναι
+    ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε πάνω από 180
+    χώρες. Οποιοσδήποτε, οπουδήποτε μπορεί να οργανώσει μια εκδήλωση για την Ώρα του
+    Κώδικα ή να δοκιμάσει πάνω από 200 ωριαίους οδηγούς εκμάθησης, διαθέσιμοι σε πάνω
+    από 45 γλώσσες.
+  hoc_overview_partner_activities_title: Περισσότερες δραστηριότητες από συνεργάτες
+  hoc_overview_partner_activities_body: Η ιστοσελίδα Ώρα του Κώδικα έχει πάνω από
+    100 δραστηριότητες της επιστήμης των υπολογιστών για όλες τις ηλικίες και τα επίπεδα
+    εμπειρίας, και αναπτύχθηκε από το Code.org και συνεργάτες του.
+  hoc_overview_partner_activities_link: Προβολή Δραστηριοτήτων
+  hoc_overview_start_tutorial: Έναρξη
+  hoc_overview_view_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_creativity_create: Δημιουργία
+  hoc2018_creativity_what_will_you_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_page_title: Μαθήματα Minecraft από την Ώρα του Κώδικα
+  hoc2018_mc_details: Πολλές γλώσσες | Σύγχρονα προγράμματα περιήγησης και tablets
+    | Ηλικίες 2+
+  hoc2018_mc_aquatic_title: 'Minecraft: Υδάτινο Ταξίδι'
+  hoc2018_mc_aquatic_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα,
+    με μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_hero_title: Ταξίδι του Ήρωα του Minecraft
+  hoc2018_mc_hero_description: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με
+    μια ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_designer_title: Σχεδιαστής Minecraft
+  hoc2018_mc_designer_description: Προγραμμάτισε ζώα και άλλα πλάσματα του Minecraft
+    στην δικιά σου έκδοση του Minecraft.
+  hoc2018_mc_adventurer_title: Ζήστε μια περιπέτεια στο Minecraft
+  hoc2018_mc_adventurer_description: Χρησιμοποιήστε κώδικα για να οδηγήσετε τον Alex
+    ή τον Steve σε μια περιπέτεια.
+  hoc2018_mc_start: Έναρξη
+  hoc2018_mc_no_internet: Δεν έχετε Internet;
+  hoc2018_mc_download_adventurer: Κατεβάστε την offline έκδοση της Περιπέτειας στο
+    Minecraft.
+  hoc2018_mc_educators: Για Εκπαιδευτικούς
+  hoc2018_mc_educators_box1_title: Γράψτε Κώδικα με Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: η Εκπαιδευτική Έκδοση προσφέρει ένα
+    εγκεκριμένο πρόγραμμα σπουδών, κατάρτιση και προγραμματισμό σε Minecraft.'
+  hoc2018_mc_educators_box1_button: Ξεκινήστε
+  hoc2018_mc_educators_box2_title: Κατεβάστε τον Οδηγό Προετοιμασίας
+  hoc2018_mc_educators_box2_desc: Αυτό το κιτ εργαλείων θα σας βοηθήσει να φιλοξενήσετε
+    μια Ώρα του Κώδικα και να εμπλέξετε τους μαθητές σας στην επιστήμη των υπολογιστών.
+  hoc2018_mc_educators_box2_button: Λήψη
+  hoc2018_mc_educators_box3_title: Παρακολουθήστε ένα δωρεάν σεμινάριο για φοιτητές
+  hoc2018_mc_educators_box3_button: Βρείτε ένα σεμινάριο
+  hoc2018_mc_watch_videos: Πριν ξεκινήσετε, δείτε ένα από αυτά τα βίντεο
+  hoc2018_mc_videos_more: Περισσότερα <a href='%{inspiring_videos_playlist}'> εμπνευσμένα
+    βίντεο</a> από ανθρώπους που αποτελούν πρότυπα και από διασημότητες
+  hoc2018_mc_careers_more: Περισσότερα <a href='%{careers_url}' target='_blank'> εμπνευσμένα
+    βίντεο</a> από επαγγελματίες σε τομείς της τεχνολογίας
+  hoc2018_mc_video_1min: 1 λεπτό
+  hoc2018_mc_video_2min: 2 λεπτά
+  hoc2018_mc_video_5min: 5 λεπτά
+  hoc2018_mc_video_title_steph_curry: Η Ώρα του Κώδικα με τον Steph Curry
+  hoc2018_mc_video_title_sports: Προσπαθήστε. Οποιοσδήποτε μπορεί να μάθει.
+  hoc2018_mc_video_title_cs_is_everything: H Επιστήμη των Υπολογιστών αλλάζει τα Πάντα
+  hoc2018_mc_video_title_inspire_girl: Εμπνεύστε ένα κορίτσι
+  hoc2018_mc_video_title_cs_intro: Εισαγωγή Πληροφορικής
+  hoc2018_mc_video_title_schools_dont_teach: Τι δεν διδάσκουν στα περισσότερα σχολεία
+  hoc2018_mc_video_title_obama: Ο Πρόεδρος Ομπάμα για την Πληροφορική
+  hoc2018_mc_video_title_hoc_is_here: Η Ώρα του Κώδικα είναι εδώ - Οποιοσδήποτε Μπορεί
+    να Μάθει
+  hoc2018_mc_video_title_anybody_can_learn: Οποιοσδήποτε Μπορεί να Μάθει
+  hoc2018_mc_homepage_hoc_coming: Η Ώρα του Κώδικα πλησιάζει...
+  hoc2018_mc_homepage_what_create: Τι θα δημιουργήσετε;
+  hoc2018_mc_homepage_join_us: Ελάτε μαζί μας
+  hoc2018_mc_homepage_try_it: Δοκιμάστε το
+  hoc2018_mc_back_journey: Το Minecraft επιστρέφει για την Ώρα του Κώδικα, με μια
+    ολοκαίνουργια δραστηριότητα! Ταξίδι στο Minecraft με κώδικα.
+  hoc2018_mc_teacher_guide: Προβολή Οδηγού Εκπαιδευτικού
+  hoc2018_mc_short_description_shorter: Χρησιμοποιήστε τη δημιουργικότητά σας και
+    τις δεξιότητες επίλυσης προβλημάτων, για να εξερευνήσετε και να χτίσετε υποβρύχιους
+    κόσμους με κώδικα.
+  hoc2018_dance_party_main_heading: Πάρτι Χορού
+  hoc2018_dance_party_subheading: Βοηθήστε να μεταφράσουμε το Πάρτι Χορού
+  hoc2018_dance_create_your_own_dance_title: Δημιουργήστε και μοιραστείτε το δικό
+    σας Πάρτι Χορού
+  hoc2018_dance_party_box_title: Πάρτι Χορού
+  hoc2018_dance_party_box_description: Δημιουργήστε ένα δικό σας Πάρτι Χορού για να
+    το μοιραστείτε με τους φίλους σας!
+  hoc2018_dance_party_button: Έναρξη
+  hoc2018_dance_keep_on_dancing_box_title: Συνεχίστε να Χορεύετε
+  hoc2018_dance_keep_on_dancing_description: Πηγαίνετε πέρα από την πρώτη ώρα με εκτενείς
+    ιδέες για πρότζεκτ.
+  hoc2018_dance_keep_on_dancing_button: Έναρξη δεύτερου μέρους
+  hoc2018_dance_teacher_resources_title: Πηγές για εκπαιδευτικούς
+  hoc2018_dance_teacher_resources_tile1_description: Σχέδια μαθήματος, πιστοποιητικά
+    και φίλτρα μουσικής.
+  hoc2018_dance_teacher_resources_tile1_button: Σχέδιο μαθήματος
+  hoc2018_dance_teacher_resources_tile2_title: Πάρτι Χορού χωρίς καλώδια
+  hoc2018_dance_teacher_resources_tile2_description: 'Δεν απαιτούνται υπολογιστές!  Μάθετε
+    έννοιες προγραμματισμού για να χορογραφήσετε μαζί ένα πάρτι χορού. '
+  hoc2018_dance_teacher_resources_tile2_button: Αποσυνδεδεμένη Δραστηριότητα
+  hoc2018_dance_featured_student_creations_title: Προτεινόμενες Δημιουργίες Μαθητών
+  hoc2018_dance_videos_section_heading: Εμπνευστείτε
+  hoc2018_dance_video_title_what_is_creativity: Τι είναι Δημιουργικότητα;
+  hoc2018_dance_view_creativity_video_playlist: Τι είναι Δημιουργικότητα; Προβολή
+    ολόκληρης της σειράς (5 λεπτά)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: Σε συνεργασία με
+  hoc2018_dance_amazon_about_future_engineer_button: Μάθετε περισσότερα
+  hoc2018_dance_amazon_future_engineer_footer: "* Οι καλλιτέχνες των οποίων η μουσική
+    χρησιμοποιείται σε αυτό τον οδηγό εκμάθησης δεν προωθούν την Amazon ως μέρος της
+    άδειας χρήσης της μουσικής τους στο Code.org.\n\n"
+  hoc2018_dance_measure: Μέτρα
+  hoc2018_dance_measure_colon: 'Μέτρα:'
+  hoc2018_mc_with_microsoft: Σε συνεργασία με

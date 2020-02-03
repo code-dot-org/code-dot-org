@@ -1,5 +1,5 @@
-import color from "../../util/color";
-import styleConstants from "../../styleConstants";
+import color from '../../util/color';
+import styleConstants from '../../styleConstants';
 
 // Constants for React tables
 
@@ -16,7 +16,7 @@ export const tableLayoutStyles = {
     border: '1px solid',
     borderColor: color.border_light_gray,
     padding: 10,
-    fontSize: 14,
+    fontSize: 14
   },
   headerCell: {
     backgroundColor: color.table_header,
@@ -29,7 +29,7 @@ export const tableLayoutStyles = {
     borderRightWidth: 1,
     paddingTop: 20,
     paddingBottom: 20,
-    color: color.charcoal,
+    color: color.charcoal
   },
   link: {
     color: color.teal,
@@ -38,8 +38,8 @@ export const tableLayoutStyles = {
     textDecoration: 'none'
   },
   unsortableHeader: {
-    paddingLeft: 25,
-  },
+    paddingLeft: 25
+  }
 };
 
 // Settings for WrappedSortable

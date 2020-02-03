@@ -25,7 +25,7 @@
 var ArtistAPI = require('./api');
 var api = new ArtistAPI();
 
-var setRandomVisibleColour = function () {
+var setRandomVisibleColour = function() {
   var num = Math.floor(Math.random() * Math.pow(2, 24));
   // Make sure at least one component is below 0x80 and the rest
   // below 0xA0, to prevent too light of colours.
@@ -34,7 +34,7 @@ var setRandomVisibleColour = function () {
   api.penColour(colour);
 };
 
-var drawSquare = function (length, random_colour) {
+var drawSquare = function(length, random_colour) {
   for (var count = 0; count < 4; count++) {
     if (random_colour) {
       setRandomVisibleColour();
@@ -44,7 +44,7 @@ var drawSquare = function (length, random_colour) {
   }
 };
 
-var drawTriangle = function (length, random_colour) {
+var drawTriangle = function(length, random_colour) {
   for (var count = 0; count < 3; count++) {
     if (random_colour) {
       setRandomVisibleColour();
@@ -54,7 +54,7 @@ var drawTriangle = function (length, random_colour) {
   }
 };
 
-var drawSnowman = function (height) {
+var drawSnowman = function(height) {
   api.turnLeft(90);
   var distances = [height * 0.5, height * 0.3, height * 0.2];
   for (var i = 0; i < 6; i++) {
@@ -70,7 +70,7 @@ var drawSnowman = function (height) {
   api.turnLeft(90);
 };
 
-var drawHouse = function (length) {
+var drawHouse = function(length) {
   drawSquare(length);
   api.moveForward(length);
   api.turnRight(30);
@@ -87,7 +87,7 @@ var drawHouse = function (length) {
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
  */
-exports.answer = function (page, level) {
+exports.answer = function(page, level) {
   api.log = [];
   var count, sideIdx, len;
   if (page === 1) {
@@ -124,7 +124,7 @@ exports.answer = function (page, level) {
         break;
       case 7:
         // Glasses.
-        api.penColour('#00cc00');  // blue
+        api.penColour('#00cc00'); // blue
         api.turnRight(90);
         drawSquare(100);
         api.moveBackward(150);
@@ -156,7 +156,7 @@ exports.answer = function (page, level) {
         break;
       case 2:
         // Single green square.
-        api.penColour('#00ff00');  // green
+        api.penColour('#00ff00'); // green
         drawSquare(50);
         break;
       case 3:
@@ -175,7 +175,7 @@ exports.answer = function (page, level) {
           api.turnRight(10);
         }
         break;
-      case 5:  // Draw without using for-loop.  (Fall through to next case.)
+      case 5: // Draw without using for-loop.  (Fall through to next case.)
       case 6:
         // Squares with sides of 50, 60, 70, 80, and 90 pixels.
         for (len = 50; len <= 90; len += 10) {
@@ -307,7 +307,7 @@ exports.answer = function (page, level) {
           drawSquare(20);
           api.moveForward(20);
         }
-      break;
+        break;
       case 8:
         for (sideIdx = 0; sideIdx < 4; sideIdx++) {
           for (count = 0; count < 10; count++) {
@@ -317,7 +317,7 @@ exports.answer = function (page, level) {
           }
           api.turnRight(90);
         }
-      break;
+        break;
       case 9:
         for (sideIdx = 0; sideIdx < 4; sideIdx++) {
           for (count = 0; count < 10; count++) {
@@ -327,7 +327,7 @@ exports.answer = function (page, level) {
           }
           api.turnRight(80);
         }
-      break;
+        break;
       case 10:
         for (sideIdx = 0; sideIdx < 9; sideIdx++) {
           for (count = 0; count < 10; count++) {
@@ -337,7 +337,7 @@ exports.answer = function (page, level) {
           }
           api.turnRight(80);
         }
-      break;
+        break;
     }
   }
   return api.log;

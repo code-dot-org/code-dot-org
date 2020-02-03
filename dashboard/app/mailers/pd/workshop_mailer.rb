@@ -1,5 +1,9 @@
+require 'pd/certificate_renderer'
+
 class Pd::WorkshopMailer < ActionMailer::Base
   include Rails.application.routes.url_helpers
+
+  default bcc: MailerConstants::PLC_EMAIL_LOG
 
   SUPPORTED_TECH_URL = 'https://support.code.org/hc/en-us/articles/202591743-What-kind-of-operating-system-and-browser-do-I-need-to-use-Code-org-s-online-learning-system-'.freeze
 
@@ -28,7 +32,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
   ONLINE_URL = 'https://studio.code.org/my-professional-learning'
   INITIAL_PRE_SURVEY_DAYS_BEFORE = 10
 
-  after_action :save_timestamp
+  after_action :save_timestamp, :check_should_send
 
   def teacher_enrollment_receipt(enrollment)
     @enrollment = enrollment
@@ -36,6 +40,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @details_partial = get_details_partial @workshop.course, @workshop.subject
     @online_url = ONLINE_URL
+    @is_enrollment_receipt = true
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -61,7 +66,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
     mail content_type: 'text/html',
       from: from_teacher,
       subject: 'Code.org workshop cancellation',
-      to: email_address(@enrollment.full_name, @enrollment.email)
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_cancel_receipt(enrollment)
@@ -90,7 +96,9 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
     @is_reminder = true
     @pre_survey_url = @workshop.local_summer? ?
-      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0) :
+      url_for(action: 'new_general', controller: 'pd/workshop_daily_survey', day: 0,
+        enrollmentCode: @enrollment.code
+      ) :
       pd_new_pre_workshop_survey_url(enrollment_code: @enrollment.code)
     @is_first_pre_survey_email = days_before == INITIAL_PRE_SURVEY_DAYS_BEFORE
 
@@ -150,10 +158,10 @@ class Pd::WorkshopMailer < ActionMailer::Base
     @cancel_url = '#'
 
     mail content_type: 'text/html',
-         from: from_teacher,
-         subject: detail_change_notification_subject(@workshop),
-         to: email_address(@user.name, @user.email),
-         reply_to: email_address(@user.name, @user.email)
+      from: from_teacher,
+      subject: detail_change_notification_subject(@workshop),
+      to: email_address(@user.name, @user.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   def organizer_detail_change_notification(workshop)
@@ -165,6 +173,18 @@ class Pd::WorkshopMailer < ActionMailer::Base
          subject: detail_change_notification_subject(@workshop),
          to: email_address(@workshop.organizer.name, @workshop.organizer.email),
          reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
+  end
+
+  def teacher_survey_reminder(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+
+    # Pre-workshop survey reminder
+    mail content_type: 'text/html',
+      from: from_survey,
+      subject: 'Please complete the survey before your workshop!',
+      to: email_address(@enrollment.full_name, @enrollment.email),
+      reply_to: email_address(@workshop.organizer.name, @workshop.organizer.email)
   end
 
   # Exit survey email
@@ -190,6 +210,19 @@ class Pd::WorkshopMailer < ActionMailer::Base
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
+  def teacher_follow_up(enrollment)
+    @enrollment = enrollment
+    @workshop = enrollment.workshop
+    facilitators = @workshop.facilitators.map(&:email)
+    @contact_text = get_contact_text_for_teacher_follow_up(@workshop.regional_partner, facilitators)
+
+    # The subject below is only applicable for CSF Intro
+    mail content_type: 'text/html',
+      from: from_teacher,
+      subject: 'Having fun with CS Fundamentals?',
+      to: email_address(@enrollment.full_name, @enrollment.email)
+  end
+
   private
 
   def save_timestamp
@@ -197,15 +230,19 @@ class Pd::WorkshopMailer < ActionMailer::Base
     Pd::EnrollmentNotification.create(enrollment: @enrollment, name: action_name)
   end
 
+  # Virtual workshops should not have any mail sent.
+  def check_should_send
+    if @workshop.subject&.include? "Virtual"
+      mail.perform_deliveries = false
+    end
+  end
+
   def generate_csf_certificate
-    image = create_certificate_image2(
-      dashboard_dir('app', 'assets', 'images', 'pd_workshop_certificate_csf.png'),
-      @enrollment.full_name,
-      y: 444,
-      height: 100,
-    )
+    image = Pd::CertificateRenderer.render_workshop_certificate @enrollment
     image.format = 'jpg'
     image.to_blob
+  ensure
+    image.try :destroy!
   end
 
   def email_address(display_name, email)
@@ -236,7 +273,11 @@ class Pd::WorkshopMailer < ActionMailer::Base
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
-      "Your upcoming #{workshop.course} workshop and next steps"
+      if @is_first_pre_survey_email
+        "Your upcoming #{workshop.course} workshop and next steps"
+      else
+        "See you soon for your upcoming #{workshop.course} workshop!"
+      end
     else
       'Your upcoming Code.org workshop and next steps'
     end
@@ -248,5 +289,45 @@ class Pd::WorkshopMailer < ActionMailer::Base
     else
       'Details for your upcoming Code.org workshop have changed'
     end
+  end
+
+  # Returns contact information for CSF workshop follow up email
+  # The text will always include teacher@code.org, as well as the
+  # email for the regional partner and facilitator(s) if available
+  # Ex if all are available it will return:
+  # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
+  # patty@we_teach_code.ex.net, or to your facilitator(s) at
+  # fiona_facilitator@example.net or fred_facilitator@example.net.""
+  def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
+    has_partner = !!regional_partner&.contact_email
+    has_facilitator = !facilitators.empty?
+    after_teacher_contact = '.'
+
+    if has_facilitator || has_partner
+      after_teacher_contact = has_facilitator && has_partner ? ',' : ' or'
+    end
+
+    contact_text = "Remember that you can always reach out to us for support at "
+    contact_text += "#{email_tag('teacher@code.org')}#{after_teacher_contact}"
+    if has_partner
+      contact_text += " to your regional partner at #{email_tag(regional_partner.contact_email)}"
+      contact_text += has_facilitator ? ', or' : '.'
+    end
+    if has_facilitator
+      contact_text += " to your facilitator(s) at "
+      facilitators.each_with_index do |facilitator, i|
+        if i < facilitators.length - 1
+          succeed_text = (i == facilitators.length - 2) ? ' or ' : ', '
+          contact_text += "#{email_tag(facilitator)}#{succeed_text}"
+        else
+          contact_text += "#{email_tag(facilitator)}."
+        end
+      end
+    end
+    contact_text
+  end
+
+  def email_tag(email)
+    "<a href=mailto:#{email}>#{email}</a>"
   end
 end

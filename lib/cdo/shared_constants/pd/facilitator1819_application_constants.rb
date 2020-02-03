@@ -1,5 +1,6 @@
 module Pd
   module Facilitator1819ApplicationConstants
+    include FacilitatorCommonApplicationConstants
     # Remove newlines and leading whitespace from multiline strings
     def self.clean_multiline(string)
       string.gsub(/\n\s*/, ' ')
@@ -15,7 +16,7 @@ module Pd
       section_7_submission: 'Submission'
     }.freeze
 
-    PAGE_LABELS = {
+    PAGE_LABELS = BASE_PAGE_LABELS = {
       section_1_about_you: {
         title: 'Title',
         first_name: 'First Name',
@@ -151,27 +152,5 @@ module Pd
 
     ALL_LABELS = PAGE_LABELS.values.reduce(:merge).freeze
     ALL_LABELS_WITH_OVERRIDES = ALL_LABELS.map {|k, v| [k, LABEL_OVERRIDES[k] || v]}.to_h.freeze
-
-    NUMBERED_QUESTIONS = %w(
-      workedInCsJob csRelatedJobRequirements diversityTraining program
-      abilityToMeetRequirements csfAvailability csdCspTeacherconAvailability
-      csdCspFitAvailability ledCsExtracurriculars teachingExperience gradesTaught
-      gradesCurrentlyTeaching subjectsTaught yearsExperience experienceLeading completedPd
-      codeOrgFacilitator codeOrgFacilitatorYears codeOrgFacilitatorPrograms haveLedPd
-      groupsLedPd describePriorPd whoShouldHaveOpportunity howSupportEquity
-      expectedTeacherNeeds describeAdaptingLessonPlan describeStrategies
-      exampleHowUsedFeedback exampleHowProvidedFeedback hopeToLearn
-    ).freeze
-
-    TEXT_FIELDS = {
-      other_with_text: 'Other:'.freeze,
-      other_please_list: 'Other (Please List):'.freeze,
-      other_please_explain: 'Other (Please Explain):'.freeze,
-      how_heard_facilitator: 'A Code.org facilitator (please share name):'.freeze,
-      how_heard_code_org_staff: 'A Code.org staff member (please share name):'.freeze,
-      how_heard_regional_partner: 'A Code.org Regional Partner (please share name):'.freeze,
-      not_available_for_teachercon: "I'm not available for either TeacherCon. (Please Explain):".freeze,
-      not_available_for_fit_weekend: "I'm not available for either Facilitator-in-Training workshop. (Please Explain):".freeze
-    }.freeze
   end
 end

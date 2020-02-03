@@ -17,7 +17,7 @@
     "use_contract_editor": "false",
     "free_play": "false",
     "impressive": "false",
-    "instructions": "Which of the binary strings below could you loop 8 times to draw this image?",
+    "short_instructions": "Which of the binary strings below could you loop 8 times to draw this image?",
     "embed": "false",
     "disable_sharing": "false",
     "contract_highlight": "false",

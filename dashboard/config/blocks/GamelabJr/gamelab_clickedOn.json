@@ -1,5 +1,5 @@
 {
-  "category": "Events",
+  "category": "SL1",
   "config": {
     "color": [
       140,
@@ -8,11 +8,13 @@
     ],
     "func": "clickedOn",
     "blockText": "when {SPRITE} clicked",
+    "callbackParams": [
+      "extraArgs"
+    ],
     "args": [
       {
         "name": "SPRITE",
-        "type": "Sprite",
-        "defer": true
+        "type": "Sprite"
       }
     ],
     "eventBlock": true

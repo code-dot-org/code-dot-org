@@ -1,10 +1,12 @@
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
-import { Motion, spring } from 'react-motion';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {Motion, spring} from 'react-motion';
 import color from '../../util/color';
-import { borderRadius, levelTokenMargin } from './constants';
+import {borderRadius, levelTokenMargin} from './constants';
 import LevelTokenDetails from './LevelTokenDetails';
-import { toggleExpand, removeLevel } from './editorRedux';
+import {toggleExpand} from './editorRedux';
+import {levelShape} from './shapes';
 
 const styles = {
   levelToken: {
@@ -32,15 +34,28 @@ const styles = {
     width: '100%',
     borderTop: '1px solid #ddd',
     borderBottom: '1px solid #ddd',
-    cursor: 'text'
+    cursor: 'pointer'
   },
-  variants: {
+  tag: {
     color: 'white',
     background: color.purple,
     padding: '3px 5px',
     lineHeight: '12px',
     borderRadius: 5,
-    float: 'right'
+    float: 'right',
+    marginLeft: 3
+  },
+  progressionTag: {
+    color: color.purple,
+    background: 'white',
+    padding: '2px 5px',
+    lineHeight: '12px',
+    borderRadius: 5,
+    borderColor: color.purple,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    float: 'right',
+    marginLeft: 3
   },
   remove: {
     fontSize: 14,
@@ -59,90 +74,116 @@ const styles = {
 /**
  * Component for editing puzzle dots with one or more level variants.
  */
-const LevelToken = React.createClass({
-  propTypes: {
+class LevelToken extends Component {
+  static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func.isRequired,
     removeLevel: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired,
+    level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired,
     dragging: PropTypes.bool.isRequired,
-    drag: PropTypes.bool.isRequired,
+    draggedLevelPos: PropTypes.bool.isRequired,
     delta: PropTypes.number,
     handleDragStart: PropTypes.func.isRequired
-  },
+  };
 
-  handleDragStart(e) {
+  handleDragStart = e => {
     this.props.handleDragStart(this.props.level.position, e);
-  },
+  };
 
-  toggleExpand() {
-    this.props.toggleExpand(this.props.stagePosition, this.props.level.position);
-  },
+  toggleExpand = () => {
+    this.props.toggleExpand(
+      this.props.stagePosition,
+      this.props.level.position
+    );
+  };
 
-  handleRemove() {
-    this.props.removeLevel(this.props.stagePosition, this.props.level.position);
-  },
+  handleRemove = () => {
+    this.props.removeLevel(this.props.level.position);
+  };
 
   render() {
+    const {draggedLevelPos} = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
     return (
       <Motion
-        style={this.props.drag ? {
-          y: this.props.dragging ? this.props.delta : 0,
-          scale: spring(1.02, springConfig),
-          shadow: spring(5, springConfig)
-        } : {
-          y: this.props.dragging ? spring(this.props.delta, springConfig) : 0,
-          scale: 1,
-          shadow: 0
-        }} key={this.props.level.position}
+        style={
+          draggedLevelPos
+            ? {
+                y: this.props.dragging ? this.props.delta : 0,
+                scale: spring(1.02, springConfig),
+                shadow: spring(5, springConfig)
+              }
+            : {
+                y: this.props.dragging
+                  ? spring(this.props.delta, springConfig)
+                  : 0,
+                scale: 1,
+                shadow: 0
+              }
+        }
+        key={this.props.level.position}
       >
-        {
-          // Use react-motion to interpolate the following values and create
-          // smooth transitions.
-          ({y, scale, shadow}) =>
+        {// Use react-motion to interpolate the following values and create
+        // smooth transitions.
+        ({y, scale, shadow}) => (
           <div
             style={Object.assign({}, styles.levelToken, {
               transform: `translate3d(0, ${y}px, 0) scale(${scale})`,
               boxShadow: `${color.shadow} 0 ${shadow}px ${shadow * 3}px`,
-              zIndex: this.props.drag ? 1000 : 500 - this.props.level.position
+              zIndex: draggedLevelPos ? 1000 : 500 - this.props.level.position
             })}
           >
             <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-              <i className="fa fa-arrows-v"/>
+              <i className="fa fa-arrows-v" />
             </div>
             <span style={styles.levelTokenName} onMouseDown={this.toggleExpand}>
               {this.props.levelKeyList[this.props.level.activeId]}
-              {this.props.level.ids.length > 1 &&
-              <span style={styles.variants}>
-                {this.props.level.ids.length} variants
-              </span>
-              }
+              {this.props.level.ids.length > 1 && (
+                <span style={styles.tag}>
+                  {this.props.level.ids.length} variants
+                </span>
+              )}
+              {this.props.level.challenge && (
+                <span style={styles.tag}>challenge</span>
+              )}
+              {/* progression supercedes named, so only show the named tag
+                  when the level is behaving like a named level. */}
+              {this.props.level.named && !this.props.level.progression && (
+                <span style={styles.tag}>named</span>
+              )}
+              {this.props.level.assessment && (
+                <span style={styles.tag}>assessment</span>
+              )}
+              {this.props.level.progression && (
+                <span style={styles.progressionTag}>
+                  {this.props.level.progression}
+                </span>
+              )}
             </span>
             <div style={styles.remove} onMouseDown={this.handleRemove}>
-              <i className="fa fa-times"/>
+              <i className="fa fa-times" />
             </div>
-            {this.props.level.expand &&
-            <LevelTokenDetails
-              level={this.props.level}
-              stagePosition={this.props.stagePosition}
-            />
-            }
+            {this.props.level.expand && (
+              <LevelTokenDetails
+                level={this.props.level}
+                stagePosition={this.props.stagePosition}
+              />
+            )}
           </div>
-        }
+        )}
       </Motion>
     );
   }
-});
+}
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList
-}), dispatch => ({
-  toggleExpand(stage, level) {
-    dispatch(toggleExpand(stage, level));
-  },
-  removeLevel(stage, level) {
-    dispatch(removeLevel(stage, level));
-  }
-}))(LevelToken);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList
+  }),
+  dispatch => ({
+    toggleExpand(stage, level) {
+      dispatch(toggleExpand(stage, level));
+    }
+  })
+)(LevelToken);

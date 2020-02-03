@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Now let's put *another* loop around our whole creation!  Don't forget to add an angle at the end of the outer loop.",
+    "short_instructions": "Now let's put *another* loop around our whole creation!  Don't forget to add an angle at the end of the outer loop.",
     "x": 175,
     "y": 175,
     "start_direction": 0

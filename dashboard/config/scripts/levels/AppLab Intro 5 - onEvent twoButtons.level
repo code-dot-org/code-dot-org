@@ -24,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Complete this flashlight app. The right button should switch the make the screen `\"black\"` and the text `\"white\"`\r\n\r\n**How:** Add a second `onEvent()` block below the first. Then set the `\"background-color\"` of the screen and `\"text-color\"` of the label.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** Complete this flashlight app. The right button should switch the make the screen `\"black\"` and the text `\"white\"`\r\n\r\n**How:** Add a second `onEvent()` block below the first. Then set the `\"background-color\"` of the screen and `\"text-color\"` of the label.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/64c83d66a723eae01d09e4aea38fbad1-image-1507567249833.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

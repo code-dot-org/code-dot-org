@@ -1,7 +1,15 @@
 import {assert} from 'chai';
 import {stub} from 'sinon';
-import reducer, { ViewType, setViewType } from '@cdo/apps/code-studio/viewAsRedux';
-import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
+import reducer, {
+  ViewType,
+  changeViewType
+} from '@cdo/apps/code-studio/viewAsRedux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 
@@ -19,21 +27,21 @@ describe('viewAs redux', () => {
   });
 
   it('can set as teacher', () => {
-    const action = setViewType(ViewType.Teacher);
+    const action = changeViewType(ViewType.Teacher);
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Teacher);
   });
 
   it('can set as student', () => {
-    const action = setViewType(ViewType.Student);
+    const action = changeViewType(ViewType.Student);
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Student);
   });
 
   it('does not allow for invalid view types', () => {
-    const action = setViewType('Invalid');
+    const action = changeViewType('Invalid');
     assert.throws(() => {
       store.dispatch(action);
     });
@@ -53,7 +61,7 @@ describe('viewAs redux', () => {
     });
 
     it('changes the window location when changing to Student with user_id', () => {
-      const action = setViewType(ViewType.Student);
+      const action = changeViewType(ViewType.Student);
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));
       assert(codeStudioUtils.updateQueryParam.calledWith('user_id', undefined));

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Help me find all of the nectar using as few blocks as possible!",
+    "short_instructions": "Help me find all of the nectar using as few blocks as possible!",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",

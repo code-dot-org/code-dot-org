@@ -51,6 +51,25 @@ module Geocoder
       Geocoder.configure(always_raise: previous_always_raise_configuration)
     end
   end
+
+  # Override Geocoder#search to ensure all queries for Sauce Labs IP addresses resolve to the United States.
+  module SauceLabsOverride
+    # Ref: https://support.saucelabs.com/hc/en-us/articles/115003359593-IP-Blocks-Used-by-Sauce-Labs-Services
+    SAUCELABS_CIDR = [
+      IPAddr.new('162.222.72.0/21'),
+      IPAddr.new('66.85.48.0/21')
+    ]
+
+    def search(query, options = {})
+      ip = IPAddr.new(query) rescue nil
+      if SAUCELABS_CIDR.any? {|cidr| cidr.include?(ip)}
+        [OpenStruct.new(country_code: 'US', country: 'United States')]
+      else
+        super
+      end
+    end
+  end
+  singleton_class.prepend SauceLabsOverride
 end
 
 def geocoder_config
@@ -60,7 +79,15 @@ def geocoder_config
     units: :km,
   }.tap do |config|
     config[:cache] = Redis.connect(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
-    if CDO.google_maps_client_id && CDO.google_maps_secret
+    # Temporarily use a Google Maps Project that uses a new Billing Account while we resolve issues
+    # with our existing Billing Account.
+    if CDO.google_maps_api_key
+      config[:lookup] = :google
+      config[:use_https] = true
+      config[:api_key] = CDO.google_maps_api_key
+    # Normal execution path - use our Google Premium Maps Project
+    elsif CDO.google_maps_client_id && CDO.google_maps_secret
+      config[:use_https] = true
       config[:lookup] = :google_premier
       config[:api_key] = [CDO.google_maps_secret, CDO.google_maps_client_id, 'pegasus']
     end

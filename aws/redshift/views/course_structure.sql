@@ -12,10 +12,13 @@ select
   sc.name script_name, 
   st.id stage_id, 
   st.name stage_name, 
-  st.absolute_position stage_number, 
+  case when lockable = 1 then st.absolute_position else st.relative_position end stage_number, 
   lsl.level_id, 
   le.name level_name, 
-  sl.position as level_number
+  sl.position as level_number,
+  case when json_extract_path_text(sl.properties, 'challenge') = 'true' then 1 else 0 end as challenge,
+  case when sl.assessment = 1 then 1 else 0 end as assessment,
+  case when json_extract_path_text(le.properties, 'mini_rubric') = 'true' then 1 else 0 end as mini_rubric
 from dashboard_production.levels_script_levels lsl
   join dashboard_production.script_levels sl on sl.id = lsl.script_level_id
   join dashboard_production.stages st on st.id = sl.stage_id

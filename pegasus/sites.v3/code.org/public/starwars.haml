@@ -23,30 +23,24 @@ style_min: true
 
 %link{href: "/css/starwars.css", rel: "stylesheet"}
 
-%div{style: "clear:both"}
+:ruby
+  tutorial = {
+    heading: I18n.t(:starwars_subtitle),
+    background_image: "/images/fit-1940/sw_landingpage.jpg",
+    left_heading: I18n.t(:starwars_javascript_title),
+    left_description: I18n.t(:starwars_javascript_description),
+    left_specs: I18n.t(:starwars_javascript_specs),
+    left_button_link: '/api/hour/begin/starwars',
+    left_button_text: I18n.t(:try_now),
+    right_heading:  I18n.t(:starwars_blocks_title),
+    right_description: I18n.t(:starwars_blocks_description),
+    right_specs: I18n.t(:starwars_blocks_specs),
+    right_button_link: '/api/hour/begin/starwarsblocks',
+    right_button_text: I18n.t(:try_now),
+    id_for_mobile_image: "starwars-mobile-image",
+  }
 
-.starwars-container
-  .img-container
-    %img.starwars-img{src:"/images/fit-1940/sw_landingpage.jpg"}
-  %h1.starwars-heading= I18n.t(:starwars_subtitle)
-
-  .col-25.starwars-tutorial.starwars-js-tutorial{style: "display: none"}
-    .tutorial-box
-      %h2.sw-h2= I18n.t(:starwars_javascript_title)
-      .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:starwars_javascript_description)
-        %p.sw-tutorial-specs= I18n.t(:starwars_javascript_specs)
-      %a{:href => '/api/hour/begin/starwars', :target=>'_self'}
-        %button.sw-try-button= I18n.t(:try_now)
-
-  .col-25.starwars-tutorial.starwars-blocks-tutorial
-    .tutorial-box
-      %h2.sw-h2= I18n.t(:starwars_blocks_title)
-      .sw-tutorial-info
-        %p.sw-tutorial-description= I18n.t(:starwars_blocks_description)
-        %p.sw-tutorial-specs= I18n.t(:starwars_blocks_specs)
-      %a{:href => '/api/hour/begin/starwarsblocks', :target=>'_self'}
-        %button.sw-try-button= I18n.t(:try_now)
+= view :tutorial_promo, tutorial: tutorial
 
 %div{style: "clear:both"}
 
@@ -65,13 +59,3 @@ style_min: true
 %h2.sw-header2
   = I18n.t(:speak_another_language)
   %a{href: "/translate/starwars"}= I18n.t(:help_translate)
-
-= view 'mobilecheck.js'
-
-:javascript
-
-  $(document).ready(function() {
-    if (!window.mobilecheck() && "#{request.locale}" == "en-US") {
-      $('.starwars-js-tutorial').show();
-    }
-  });

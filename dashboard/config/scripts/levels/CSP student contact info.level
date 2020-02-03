@@ -11,9 +11,9 @@
     "peer_reviewable": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "instructions": "Please enter your email address.",
+    "short_instructions": "Please enter your email address.",
     "placeholder": "Please enter your email address",
-    "tts_markdown_instructions_override": "Please enter your email address."
+    "tts_long_instructions_override": "Please enter your email address."
   },
   "published": true,
   "notes": "",

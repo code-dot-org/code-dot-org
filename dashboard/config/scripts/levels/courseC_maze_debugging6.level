@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,1,1],[0,0,0,1,1,1,1,1],[1,1,2,1,0,3,4,1],[1,4,4,1,0,4,1,1],[1,1,1,1,0,0,1,1],[1,1,1,1,0,0,0,1]]",
     "skin": "scrat",
-    "instructions": "Figure out what is wrong and get Scrat to the acorn.",
+    "short_instructions": "Figure out what is wrong and get Scrat to the acorn.",
     "start_direction": "1",
     "step_mode": "1",
     "is_k1": "false",

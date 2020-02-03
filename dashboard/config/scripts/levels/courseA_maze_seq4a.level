@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,1,1,2,1,0],[0,0,1,1,4,1,4,0],[0,0,4,3,1,1,0,0],[0,0,0,1,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Get the bird to the pig using the fewest possible blocks.",
+    "short_instructions": "Get the bird to the pig using the fewest possible blocks.",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",

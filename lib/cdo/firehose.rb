@@ -28,7 +28,7 @@ class FirehoseClient
 
   # Initializes the @firehose to an AWS Firehose client.
   def initialize
-    if rack_env == :test
+    if [:development, :test].include? rack_env
       return
     end
     @firehose = Aws::Firehose::Client.new(region: REGION)
@@ -37,6 +37,8 @@ class FirehoseClient
   # Posts a record to the analytics stream.
   # @param data [hash] The data to insert into the stream.
   def put_record(data)
+    return unless Gatekeeper.allows('firehose', default: true)
+
     data_with_common_values = add_common_values(data)
 
     if [:development, :test].include? rack_env
@@ -55,12 +57,12 @@ class FirehoseClient
         record: {data: data_with_common_values.to_json}
       }
     )
-  rescue Aws::Firehose::Errors::ServiceError => e
-    # TODO(asher): Determine what action is appropriate here. In particular,
-    # if the exception is ServiceUnavailableException, we should consider
+  # Swallow and log all errors because an issue sending analytics should not prevent the caller from continuing.
+  rescue StandardError => error
+    # TODO(suresh): if the exception is Firehose ServiceUnavailableException, we should consider
     # backing off and retrying.
     # See http://docs.aws.amazon.com/sdkforruby/api/Aws/Firehose/Client.html#put_record-instance_method.
-    Honeybadger.notify(e)
+    Honeybadger.notify(error)
   end
 
   private

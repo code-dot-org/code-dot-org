@@ -1,5 +1,5 @@
 import React from 'react';
-import { DetailViewContents } from './detail_view_contents';
+import {DetailViewContents} from './detail_view_contents';
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
 import reactRouterStoryDecorator from '../reactRouterStoryDecorator';
 
@@ -16,12 +16,14 @@ export default storybook => {
             applicationId="1"
             applicationData={{
               course_name: 'CS Discoveries',
+              course: 'csd',
               regional_partner_name: 'partner',
               notes: 'notes',
               status: 'unreviewed',
-              school_name: 'School Name',
+              school_name: 'School Name 1',
               district_name: 'District Name',
               email: 'email',
+              application_year: '2019-2020',
               application_type: 'Facilitator',
               meets_criteria: 'Yes',
               bonus_points: 15,
@@ -36,6 +38,11 @@ export default storybook => {
                 program: 'program',
                 planOnTeaching: ['Yes'],
                 abilityToMeetRequirements: '10'
+              },
+              school_stats: {},
+              response_scores: {
+                meets_minimum_criteria_scores: {},
+                bonus_points_scores: {}
               }
             }}
             viewType="facilitator"

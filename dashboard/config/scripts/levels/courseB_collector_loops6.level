@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Figure out the code to help Laurel get all of the treasure!",
+    "short_instructions": "Figure out the code to help Laurel get all of the treasure!",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where things start going wrong? Use the \\\"Step\\\" button to run through your program one block at a time.\",\"hint_id\":\"courseB_collector_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/577a4455b7dcc7809a7be633e3639999/courseB_collector_loops6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can change the number of times the repeat loop runs by clicking on the \\\"3\\\" and choosing a different number.\",\"hint_id\":\"courseB_collector_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f3ace0fe0fa1371eb189c5c8c3f6228a/courseB_collector_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use 3 `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseB_collector_loops6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ce1c3bdeb8ee142ae0b7812a16022164/courseB_collector_loops6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you're confused, try breaking this puzzle into 3 pieces.\",\"hint_id\":\"courseB_collector_loops6_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c260d50ab60900771740d2492ad5689e/courseB_collector_loops6.mp3\"}]",
     "ideal": "10",
     "instructions_important": "false",

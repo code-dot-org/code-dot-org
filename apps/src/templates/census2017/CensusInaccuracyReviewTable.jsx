@@ -1,15 +1,16 @@
-import React, { PropTypes, Component } from 'react';
-import {Table} from 'reactabular';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import * as Table from 'reactabular-table';
 import Button from '../Button';
 
 export default class CensusInaccuracyReviewTable extends Component {
   static propTypes = {
     reportsToReview: PropTypes.array,
     resolvedReports: PropTypes.array,
-    onStartReview: PropTypes.func,
+    onStartReview: PropTypes.func
   };
 
-  formatTeachesCs = (teachesCs) => {
+  formatTeachesCs = teachesCs => {
     return (
       <div style={{textAlign: 'center', verticalAlign: 'middle'}}>
         {teachesCs}
@@ -17,26 +18,21 @@ export default class CensusInaccuracyReviewTable extends Component {
     );
   };
 
-  formatComment = (comment) => {
-    return (
-      <div>
-        {comment}
-      </div>
-    );
+  formatComment = comment => {
+    return <div>{comment}</div>;
   };
 
-  formatSchool = (school) => {
+  formatSchool = school => {
     return (
       <div>
         {school.name}
-        <br />
-        ({school.city}, {school.state})
+        <br />({school.city}, {school.state})
       </div>
     );
   };
 
   beginReviewButton = (_value, data) => {
-    if (this.props.resolvedReports.includes(data.rowData.id)) {
+    if (data.rowData.isResolved) {
       return (
         <div style={{textAlign: 'center', verticalAlign: 'middle'}}>
           Review Completed
@@ -45,7 +41,9 @@ export default class CensusInaccuracyReviewTable extends Component {
     } else {
       return (
         <Button
-          onClick={() => {this.props.onStartReview(data.rowData);}}
+          onClick={() => {
+            this.props.onStartReview(data.rowData);
+          }}
           size="large"
           text="Review this School"
         />
@@ -57,19 +55,19 @@ export default class CensusInaccuracyReviewTable extends Component {
     {
       property: 'school',
       header: {
-        label: "School"
+        label: 'School'
       },
       cell: {
-        format: this.formatSchool,
+        formatters: [this.formatSchool]
       }
     },
     {
       property: 'current_summary',
       header: {
-        label: "Current Summary"
+        label: 'Current Summary'
       },
       cell: {
-        format: this.formatTeachesCs,
+        formatters: [this.formatTeachesCs]
       }
     },
     {
@@ -78,47 +76,46 @@ export default class CensusInaccuracyReviewTable extends Component {
         label: "Submitter's comment"
       },
       cell: {
-        format: this.formatComment,
+        formatters: [this.formatComment]
       }
     },
     {
       property: 'button',
       header: {
-        label: "Action"
+        label: 'Action'
       },
       cell: {
-        format: this.beginReviewButton,
+        formatters: [this.beginReviewButton]
       }
     }
   ];
 
   render = () => {
     if (this.props.reportsToReview.length === 0) {
-      return (
-        <h3>
-          No Reports to Review
-        </h3>
-      );
+      return <h3>No Reports to Review</h3>;
     }
 
-    const rows = this.props.reportsToReview.map((row) => JSON.parse(row));
+    const rows = this.props.reportsToReview.map(row => JSON.parse(row));
     const numReviewed = this.props.resolvedReports.length;
     const numToReview = this.props.reportsToReview.length - numReviewed;
+
+    const decoratedRows = rows.map(row => ({
+      ...row,
+      isResolved: this.props.resolvedReports.includes(row.id)
+    }));
 
     return (
       <div>
         <h3>
-          {numToReview} {numToReview === 1 ? "report" : "reports"} remaining to review ({numReviewed} already reviewed)
+          {numToReview} {numToReview === 1 ? 'report' : 'reports'} remaining to
+          review ({numReviewed} already reviewed)
         </h3>
         <Table.Provider
           className="table table-bordered table-striped"
           columns={this.columns}
         >
           <Table.Header />
-          <Table.Body
-            rows={rows}
-            rowKey="id"
-          />
+          <Table.Body rows={decoratedRows} rowKey="id" />
         </Table.Provider>
       </div>
     );

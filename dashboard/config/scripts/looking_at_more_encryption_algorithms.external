@@ -7,8 +7,8 @@ markdown <<MARKDOWN
 In this curriculum, we have made the choice to use the Caesar Cipher, Random Substitution Cipher, Viginère Cypher, and asymmetric encryption to teach students about encryption and computationally hard problems.  This progression creates a story that move from encryption schemes that are simple to create and simple to break, to simple to create but difficult to break.  The intention is to help students feel comfortable with how the basics of how encryption works and start looking to how it functions in the real world.  For CSP, this is as deep as they need to go. (We will discuss this in the next resource.)  However, if you’d like to delve further into the world of encryption, there are many resources on the internet to do just that! Below are a few resources to get you started:
 
 
-- <a href = “http://www.storagecraft.com/blog/5-common-encryption-algorithms/” target=_blank> 5 Common Encryption Algorithms and the Unbreakables of the Future <i class="fa fa-external-link-square"/></a>
-- <a href = “http://www.networksorcery.com/enp/data/encryption.htm” target=_blank> Encryption Algorithms <i class="fa fa-external-link-square"/></a>
-- <a href = “https://www.wired.com/insights/2014/09/quantum-key-distribution/” target=_blank> Zeroing in on Un-Hackable Data with Quantum Key Distribution <i class="fa fa-external-link-square"/></a>
+- <a href = “http://www.storagecraft.com/blog/5-common-encryption-algorithms/” target=_blank> 5 Common Encryption Algorithms and the Unbreakables of the Future <i class="fa fa-external-link-square"></i></a>
+- <a href = “http://www.networksorcery.com/enp/data/encryption.htm” target=_blank> Encryption Algorithms <i class="fa fa-external-link-square"></i></a>
+- <a href = “https://www.wired.com/insights/2014/09/quantum-key-distribution/” target=_blank> Zeroing in on Un-Hackable Data with Quantum Key Distribution <i class="fa fa-external-link-square"></i></a>
 
 MARKDOWN

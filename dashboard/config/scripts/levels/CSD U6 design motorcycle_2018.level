@@ -61,7 +61,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Add Your Own Elements\r\n\r\nNow it's time to add some elements of your own. The motorcycle should be able to move up and down right now, but how can you control its speed?\r\n\r\n# Do This\r\n\r\n* Add a slider in design mode.\r\n  * Make sure you set the min and max values of the slider in design mode.\r\n* Create an event that will trigger when the slider value is changed.\r\n* Add code to get the slider value and store it into the `speed` variable when the event is triggered.",
+    "long_instructions": "# Add Your Own Elements\r\n\r\nNow it's time to add some elements of your own. The motorcycle should be able to move up and down right now, but how can you control its speed?\r\n\r\n# Do This\r\n\r\n* Add a slider in design mode.\r\n  * Make sure you set the min and max values of the slider in design mode.\r\n* Create an event that will trigger when the slider value is changed.\r\n* Add code to get the slider value and store it into the `speed` variable when the event is triggered.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

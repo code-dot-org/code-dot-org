@@ -1,5 +1,5 @@
 /** @file Style properties shared among cryptopgraphy widget components */
-import color from "../util/color";
+import color from '../util/color';
 
 /** @const {number} Line height for numbered steps, helps align input fields */
 export const LINE_HEIGHT = 30;

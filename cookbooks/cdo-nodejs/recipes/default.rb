@@ -11,12 +11,6 @@ package 'nodejs' do
   action :upgrade
 end
 
-nodejs_npm 'npm' do
-  version node['cdo-nodejs']['npm_version']
-end
-
-nodejs_npm 'grunt-cli'
-
 apt_repository "yarn" do
   uri "https://dl.yarnpkg.com/debian/"
   distribution 'stable'

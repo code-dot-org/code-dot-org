@@ -1,16 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import color from "@cdo/apps/util/color";
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import color from '@cdo/apps/util/color';
 import trophy from '!!file-loader!./images/trophy.svg';
 
 const styles = {
   main: {
-    marginLeft: 'auto',
-  },
+    marginLeft: 'auto'
+  }
 };
 
 export default class StageTrophyProgressBubble extends Component {
   static propTypes = {
-    percentPerfect: PropTypes.number.isRequired,
+    percentPerfect: PropTypes.number.isRequired
   };
 
   render() {
@@ -21,8 +22,8 @@ export default class StageTrophyProgressBubble extends Component {
     const x = Math.cos(theta) * 18;
     const y = Math.sin(theta) * 18;
 
-    const largeArc = (ratio > 0.5) ? 1 : 0;
-    const close = (ratio === 1) ? 'Z' : '';
+    const largeArc = ratio > 0.5 ? 1 : 0;
+    const close = ratio === 1 ? 'Z' : '';
 
     let shapeColor = color.level_perfect;
     if (ratio === 1) {
@@ -32,21 +33,11 @@ export default class StageTrophyProgressBubble extends Component {
     }
 
     return (
-      <svg
-        style={styles.main}
-        width="50"
-        height="90"
-      >
+      <svg style={styles.main} width="50" height="90">
         <g transform="translate(7, 27)">
           <g transform="translate(18, 18)">
-            <circle
-              r="25"
-              fill="white"
-            />
-            <circle
-              r="19.8"
-              fill={color.lighter_gray}
-            />
+            <circle r="25" fill="white" />
+            <circle r="19.8" fill={color.lighter_gray} />
             <circle
               r="16.2"
               fill={ratio === 1 ? color.white : color.lightest_gray}

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. ",
+    "short_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall. ",
     "x": "250",
     "y": "250",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "ideal": "3",
     "slider_speed": "0.4",
     "embed": "false",
-    "markdown_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall.",
+    "long_instructions": "This house has a half-finished wall. Each side is 100, but the half-finished wall is only 50. Complete the wall.",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_128_CSP_6_3_1'
+wrong 'I only'
+wrong 'I, II, and III '
+right 'II and III'
+wrong 'III only'
+markdown <<MARKDOWN
+Select the benefits of the HTTPS protocol
+I. HTTPS ensures that only the client and the server can view the packets sent during their communication and they cannot be intercepted by a third party.
+II. HTTPS verifies the identity of the server through a Certificate Exchange.
+III.  HTTPS provides reasonable assurance by which the user can assume minimal cybersecurity risk of transactions carried out on that site. 
+
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **6.3.1** and Essential Knowledge statements: **6.3.1H**
+<hr>
+ (A) This option is incorrect. I is incorrect. Even with HTTPS,  packets can be intercepted and viewed.
+
+<hr>
+ (B) This option is incorrect. I is incorrect. Even with HTTPS,  packets can be intercepted and viewed.
+
+<hr>
+ (C) This option is correct. The Certificate authority verifies the identity of the server, hence providing reasonable assurance of minimal cybersecurity risk of transactions carried out on that site. 
+
+<hr>
+ (D) This option is incorrect. While III is correct, it is achieved because of option II, where the Certificate authority verifies the identity of the server.
+
+MARKDOWN

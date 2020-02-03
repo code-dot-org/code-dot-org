@@ -9,7 +9,7 @@
     "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  return ((Studio.Globals.time == 18 && Studio.Globals.height == 324) && (Studio.Globals.rocket_height(10) == 100));\r\n}",
     "failure_condition": "function () {\r\n  return ((Studio.Globals.time > 17) && ((Studio.Globals.rocket_height(5) != 25) || (Studio.Globals.rocket_height(10) != 100) || (Studio.Globals.rocket_height(15) != 225)));\r\n }",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "Real rockets start off slowly and gain speed over time - let's make ours do the same! Write an exponential function that describes a rocket that travels at \"seconds\" squared meters per second.",
+    "short_instructions": "Real rockets start off slowly and gain speed over time - let's make ours do the same! Write an exponential function that describes a rocket that travels at \"seconds\" squared meters per second.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

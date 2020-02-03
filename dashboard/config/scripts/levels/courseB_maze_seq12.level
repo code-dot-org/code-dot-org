@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[1,1,1,4,1,1,1,4],[1,1,1,1,1,1,1,4],[3,1,1,1,1,1,1,4],[1,1,1,1,4,1,1,4],[4,1,1,1,1,1,1,4],[1,1,1,1,1,1,1,4],[1,1,1,1,1,1,2,4],[4,4,4,4,4,4,4,4]]",
     "skin": "birds",
-    "instructions": "Now get that pig any way you can!",
+    "short_instructions": "Now get that pig any way you can!",
     "start_direction": "3",
     "step_mode": "1",
     "is_k1": "true",

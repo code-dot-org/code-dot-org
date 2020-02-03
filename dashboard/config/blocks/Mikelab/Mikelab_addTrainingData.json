@@ -1,0 +1,53 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "addTrainingData",
+    "inline": false,
+    "blockText": "add training data: {NAME},{LOCATION}",
+    "color": [
+      184,
+      1,
+      0.74
+    ],
+    "args": [
+      {
+        "name": "NAME",
+        "options": [
+          [
+            "object",
+            "{x: 201, y: 100}"
+          ],
+          [
+            "fish",
+            "{x: 200, y: 100}"
+          ]
+        ]
+      },
+      {
+        "name": "COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "LOCATION",
+        "options": [
+          [
+            "fish",
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}"
+          ],
+          [
+            "not fish",
+            "{x: randomNumber(52, 350), y: randomNumber(50, 350)}"
+          ],
+          [
+            "my-label",
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}"
+          ],
+          [
+            "not my-label",
+            "{x: randomNumber(53, 350), y: randomNumber(50, 350)}"
+          ]
+        ]
+      }
+    ]
+  }
+}

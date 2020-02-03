@@ -1,7 +1,7 @@
 - content_for(:head) do
-  %script{src: asset_path('js/blockly.js')}
-  %script{src: asset_path("js/#{js_locale}/blockly_locale.js")}
-  %script{src: minifiable_asset_path('js/blocks/edit.js')}
+  %script{src: webpack_asset_path('js/blockly.js')}
+  %script{src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")}
+  %script{src: webpack_asset_path('js/blocks/edit.js')}
   = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   = stylesheet_link_tag asset_path('css/common.css'), media: 'all'
 

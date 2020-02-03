@@ -29,7 +29,7 @@
     "x": "200",
     "y": "200",
     "start_direction": "90",
-    "instructions": "Now you can use loops to draw whatever you like!"
+    "short_instructions": "Now you can use loops to draw whatever you like!"
   },
   "published": true,
   "notes": "Freeplay!",

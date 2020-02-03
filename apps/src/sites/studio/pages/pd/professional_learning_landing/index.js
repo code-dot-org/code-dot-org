@@ -10,7 +10,9 @@ ReactDOM.render(
   <LandingPage
     lastWorkshopSurveyUrl={landingPageData['last_workshop_survey_url']}
     lastWorkshopSurveyCourse={landingPageData['last_workshop_survey_course']}
-    professionalLearningCourseData={landingPageData['summarized_plc_enrollments']}
+    professionalLearningCourseData={
+      landingPageData['summarized_plc_enrollments']
+    }
   />,
   document.getElementById('landing-page-container')
 );

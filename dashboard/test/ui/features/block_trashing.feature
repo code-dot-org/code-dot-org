@@ -1,3 +1,4 @@
+@single_session
 Feature: Blocks can be trashed in certain circumstances
 
 Background:

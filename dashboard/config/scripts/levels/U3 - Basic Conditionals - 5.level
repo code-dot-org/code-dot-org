@@ -127,7 +127,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": " Random number\r\nvar dice = randomNumber(1,6)\r\nif( 3 < dice){\r\n console.log(“Bigger”)\r\n}",
+    "long_instructions": " Random number\r\nvar dice = randomNumber(1,6)\r\nif( 3 < dice){\r\n console.log(“Bigger”)\r\n}",
     "start_blocks": "var dice = randomNumber(1,6)\r\nif( 3 < dice){\r\n console.log(“Bigger”)\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

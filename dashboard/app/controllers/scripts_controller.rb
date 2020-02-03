@@ -1,8 +1,11 @@
 class ScriptsController < ApplicationController
+  include VersionRedirectOverrider
+
   before_action :require_levelbuilder_mode, except: :show
   before_action :authenticate_user!, except: :show
   check_authorization
   before_action :set_script, only: [:show, :edit, :update, :destroy]
+  before_action :set_redirect_override, only: [:show]
   authorize_resource
   before_action :set_script_file, only: [:edit, :update]
 
@@ -26,6 +29,22 @@ class ScriptsController < ApplicationController
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
       return
     end
+
+    # Attempt to redirect user if we think they ended up on the wrong script overview page.
+    override_redirect = VersionRedirectOverrider.override_script_redirect?(session, @script)
+    if !override_redirect && redirect_script = redirect_script(@script, request.locale)
+      redirect_to script_path(redirect_script) + "?redirect_warning=true"
+      return
+    end
+
+    # Lastly, if user is assigned to newer version of this script, we will
+    # ask if they want to be redirected to the newer version.
+    @redirect_script_url = @script.redirect_to_script_url(current_user, locale: request.locale)
+
+    @show_redirect_warning = params[:redirect_warning] == 'true'
+    @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
   end
 
   def index
@@ -41,9 +60,9 @@ class ScriptsController < ApplicationController
   def create
     @script = Script.new(script_params)
     if @script.save && @script.update_text(script_params, params[:script_text], i18n_params, general_params)
-      redirect_to @script, notice: I18n.t('crud.created', model: Script.model_name.human)
+      redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
-      render 'new'
+      render json: @script.errors
     end
   end
 
@@ -64,7 +83,25 @@ class ScriptsController < ApplicationController
   end
 
   def edit
+    beta = params[:beta].present?
+    if @script.script_levels.any?(&:has_experiment?)
+      beta = false
+      beta_warning = "The beta Script Editor is not available, because it does not support level variants with experiments."
+    end
     @show_all_instructions = params[:show_all_instructions]
+    @script_data = {
+      script: @script ? @script.summarize_for_edit : {},
+      i18n: @script ? @script.summarize_i18n : {},
+      beta: beta,
+      betaWarning: beta_warning,
+      levelKeyList: beta && Level.key_list,
+      stageLevelData: @script_file,
+      locales: options_for_locale_select,
+      script_families: ScriptConstants::FAMILY_NAMES,
+      version_year_options: Script.get_version_year_options,
+      flex_category_map: I18n.t('flex_category'),
+      is_levelbuilder: current_user.levelbuilder?
+    }
   end
 
   def update
@@ -102,7 +139,15 @@ class ScriptsController < ApplicationController
   end
 
   def set_script
-    @script = Script.get_from_cache(params[:id])
+    script_id = params[:id]
+    @script = ScriptConstants::FAMILY_NAMES.include?(script_id) ?
+      Script.get_script_family_redirect_for_user(script_id, user: current_user, locale: request.locale) :
+      Script.get_from_cache(script_id)
+    raise ActiveRecord::RecordNotFound unless @script
+
+    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
+      render :no_access
+    end
   end
 
   def script_params
@@ -112,18 +157,24 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :visible_to_teachers,
+      :curriculum_umbrella,
+      :family_name,
+      :version_year,
+      :project_sharing,
       :login_required,
       :hideable_stages,
+      :curriculum_path,
       :professional_learning_course,
       :peer_reviews_to_complete,
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :exclude_csf_column_in_legend,
       :stage_extras_available,
       :has_verified_resources,
       :has_lesson_plan,
       :script_announcements,
+      :pilot_experiment,
+      :editor_experiment,
       resourceTypes: [],
       resourceLinks: [],
       project_widget_types: [],
@@ -145,5 +196,26 @@ class ScriptsController < ApplicationController
       :description,
       :stage_descriptions
     ).to_h
+  end
+
+  def set_redirect_override
+    if params[:id] && params[:no_redirect]
+      VersionRedirectOverrider.set_script_redirect_override(session, params[:id])
+    end
+  end
+
+  def redirect_script(script, locale)
+    # Return nil if script is nil or we know the user can view the version requested.
+    return nil if !script || script.can_view_version?(current_user, locale: locale)
+
+    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
+    # none are assigned.
+    redirect_script = Script.latest_assigned_version(script.family_name, current_user)
+    redirect_script ||= Script.latest_stable_version(script.family_name, locale: locale)
+
+    # Do not redirect if we are already on the correct script.
+    return nil if redirect_script == script
+
+    redirect_script
   end
 end

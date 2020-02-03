@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "eval",
-    "instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
+    "short_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -24,7 +24,7 @@
     "definition_collapse": "false",
     "coordinate_grid_background": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
+    "long_instructions": "Free Play: Explore the blocks available to create something interesting. Make sure to share your favorite creations.",
     "never_autoplay_video": "false",
     "examples_required": "false"
   }

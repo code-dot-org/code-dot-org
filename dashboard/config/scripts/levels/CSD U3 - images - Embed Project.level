@@ -142,7 +142,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "markdown_instructions": "Example of the Final Project",
+    "long_instructions": "Example of the Final Project",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

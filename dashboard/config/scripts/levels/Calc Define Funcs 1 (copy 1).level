@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "calc",
-    "instructions": "Let's look at some more algebraic functions now. Here's a function translated from the simple algebraic function f(x) = x + 1. What would you expect this function to output if provided an input of 15?",
+    "short_instructions": "Let's look at some more algebraic functions now. Here's a function translated from the simple algebraic function f(x) = x + 1. What would you expect this function to output if provided an input of 15?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

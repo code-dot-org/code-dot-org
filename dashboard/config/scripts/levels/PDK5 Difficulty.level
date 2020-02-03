@@ -8,7 +8,7 @@
     "title": "Degree of Difficulty",
     "height": "200",
     "placeholder": "Your thoughts here",
-    "markdown_instructions": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
+    "long_instructions": "Was programming as hard as you expected? Explain why or why not. How does this impact your teaching of computer science?",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -1,8 +1,9 @@
 import FirebaseStorage from '../firebaseStorage';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import React, {PropTypes} from 'react';
+import React from 'react';
 import PendingButton from '../../templates/PendingButton';
-import { castValue, displayableValue, editableValue } from './dataUtils';
+import {castValue, displayableValue, editableValue} from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
@@ -18,7 +19,8 @@ class EditTableRow extends React.Component {
   static propTypes = {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,
-    record: PropTypes.object.isRequired
+    record: PropTypes.object.isRequired,
+    readOnly: PropTypes.bool
   };
 
   componentDidMount() {
@@ -42,7 +44,7 @@ class EditTableRow extends React.Component {
     const newInput = Object.assign({}, this.state.newInput, {
       [columnName]: event.target.value
     });
-    this.setState({ newInput });
+    this.setState({newInput});
   }
 
   handleSave = () => {
@@ -66,7 +68,7 @@ class EditTableRow extends React.Component {
   handleEdit = () => {
     this.setState({
       isEditing: true,
-      newInput: _.mapValues(this.props.record, editableValue),
+      newInput: _.mapValues(this.props.record, editableValue)
     });
   };
 
@@ -80,7 +82,7 @@ class EditTableRow extends React.Component {
     );
   };
 
-  handleKeyUp = (event) => {
+  handleKeyUp = event => {
     if (event.key === 'Enter') {
       this.handleSave();
     } else if (event.key === 'Escape') {
@@ -91,47 +93,45 @@ class EditTableRow extends React.Component {
   render() {
     return (
       <tr style={dataStyles.row}>
-        {
-          this.props.columnNames.map(columnName => (
-            <td key={columnName} style={dataStyles.cell}>
-              {
-                (this.state.isEditing && columnName !== 'id') ?
-                  <input
-                    style={dataStyles.input}
-                    value={this.state.newInput[columnName] || ''}
-                    onChange={event => this.handleChange(columnName, event)}
-                    onKeyUp={this.handleKeyUp}
-                  /> :
-                  displayableValue(this.props.record[columnName])
-              }
-            </td>
-          ))
-        }
+        {this.props.columnNames.map(columnName => (
+          <td key={columnName} style={dataStyles.cell}>
+            {this.state.isEditing && columnName !== 'id' ? (
+              <input
+                style={dataStyles.input}
+                value={this.state.newInput[columnName] || ''}
+                onChange={event => this.handleChange(columnName, event)}
+                onKeyUp={this.handleKeyUp}
+              />
+            ) : (
+              displayableValue(this.props.record[columnName])
+            )}
+          </td>
+        ))}
 
-        <td style={dataStyles.cell}/>
+        {!this.props.readOnly && <td style={dataStyles.cell} />}
 
-        <td style={dataStyles.editButtonCell}>
-          {
-            !this.state.isDeleting && (
-              this.state.isEditing ?
+        {!this.props.readOnly && (
+          <td style={dataStyles.editButtonCell}>
+            {!this.state.isDeleting &&
+              (this.state.isEditing ? (
                 <PendingButton
                   isPending={this.state.isSaving}
                   onClick={this.handleSave}
                   pendingText="Saving..."
                   style={dataStyles.saveButton}
                   text="Save"
-                /> :
+                />
+              ) : (
                 <button
+                  type="button"
                   style={dataStyles.editButton}
                   onClick={this.handleEdit}
                 >
                   Edit
                 </button>
-            )
-          }
+              ))}
 
-          {
-            !this.state.isSaving && (
+            {!this.state.isSaving && (
               <PendingButton
                 isPending={this.state.isDeleting}
                 onClick={this.handleDelete}
@@ -140,9 +140,9 @@ class EditTableRow extends React.Component {
                 style={dataStyles.redButton}
                 text="Delete"
               />
-            )
-          }
-        </td>
+            )}
+          </td>
+        )}
       </tr>
     );
   }

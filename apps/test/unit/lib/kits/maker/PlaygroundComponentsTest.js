@@ -2,12 +2,12 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import {
   createCircuitPlaygroundComponents,
-  destroyCircuitPlaygroundComponents,
-  componentConstructors,
+  cleanupCircuitPlaygroundComponents,
+  componentConstructors
 } from '@cdo/apps/lib/kits/maker/PlaygroundComponents';
 import Piezo from '@cdo/apps/lib/kits/maker/Piezo';
 import TouchSensor from '@cdo/apps/lib/kits/maker/TouchSensor';
@@ -42,11 +42,13 @@ describe('Circuit Playground Components', () => {
     // over the wire.  That's not great for unit tests, so here we stub waiting
     // for data to resolve immediately.
     sinon.stub(EventEmitter.prototype, 'once');
-    EventEmitter.prototype.once.withArgs('data').callsFake(function (_, callback) {
-      // Pretend we got a real analog value back on the component's pin.
-      setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
-      callback();
-    });
+    EventEmitter.prototype.once
+      .withArgs('data')
+      .callsFake(function(_, callback) {
+        // Pretend we got a real analog value back on the component's pin.
+        setSensorAnalogValue(this, INITIAL_ANALOG_VALUE);
+        callback();
+      });
     EventEmitter.prototype.once.callThrough();
   });
 
@@ -62,16 +64,16 @@ describe('Circuit Playground Components', () => {
       // add matching tests below!
       return createCircuitPlaygroundComponents(board).then(components => {
         expect(Object.keys(components)).to.deep.equal([
-           'colorLeds',
-            'led',
-            'toggleSwitch',
-            'buzzer',
-            'soundSensor',
-            'lightSensor',
-            'tempSensor',
-            'accelerometer',
-            'buttonL',
-            'buttonR',
+          'colorLeds',
+          'led',
+          'toggleSwitch',
+          'buzzer',
+          'soundSensor',
+          'lightSensor',
+          'tempSensor',
+          'accelerometer',
+          'buttonL',
+          'buttonR'
         ]);
       });
     });
@@ -100,7 +102,7 @@ describe('Circuit Playground Components', () => {
             'touchPad6',
             'touchPad9',
             'touchPad10',
-            'touchPad12',
+            'touchPad12'
           ]);
         });
       });
@@ -112,7 +114,7 @@ describe('Circuit Playground Components', () => {
       const boardTwo = newBoard();
       return Promise.all([
         createCircuitPlaygroundComponents(boardOne),
-        createCircuitPlaygroundComponents(boardTwo),
+        createCircuitPlaygroundComponents(boardTwo)
       ]).then(([componentsOne, componentsTwo]) => {
         expect(componentsOne.led.board === boardOne).to.be.true;
         expect(componentsTwo.led.board === boardTwo).to.be.true;
@@ -133,8 +135,9 @@ describe('Circuit Playground Components', () => {
           let led;
 
           beforeEach(() => {
-            return createCircuitPlaygroundComponents(board)
-              .then(({colorLeds}) => led = colorLeds[pin]);
+            return createCircuitPlaygroundComponents(board).then(
+              ({colorLeds}) => (led = colorLeds[pin])
+            );
           });
 
           it('creates a NeoPixel', () => {
@@ -156,8 +159,9 @@ describe('Circuit Playground Components', () => {
       let led;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then((components) => led = components.led);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (led = components.led)
+        );
       });
 
       it('creates a Led', () => {
@@ -177,8 +181,9 @@ describe('Circuit Playground Components', () => {
       let toggleSwitch;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then((components) => toggleSwitch = components.toggleSwitch);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (toggleSwitch = components.toggleSwitch)
+        );
       });
 
       it('creates a Switch', () => {
@@ -198,8 +203,9 @@ describe('Circuit Playground Components', () => {
       let buzzer;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then((components) => buzzer = components.buzzer);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (buzzer = components.buzzer)
+        );
       });
 
       it('creates a Piezo (our own wrapper around five.Piezo)', () => {
@@ -222,7 +228,7 @@ describe('Circuit Playground Components', () => {
       let soundSensor;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board).then((components) => {
+        return createCircuitPlaygroundComponents(board).then(components => {
           soundSensor = components.soundSensor;
         });
       });
@@ -311,8 +317,9 @@ describe('Circuit Playground Components', () => {
       let tempSensor;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then((components) => tempSensor = components.tempSensor);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (tempSensor = components.tempSensor)
+        );
       });
 
       it('creates a five.Thermometer', () => {
@@ -343,14 +350,13 @@ describe('Circuit Playground Components', () => {
         expect(tempSensor.C).not.to.be.null;
         expect(tempSensor.C).to.equal(0);
       });
-
     });
 
     describe('lightSensor', () => {
       let lightSensor;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board).then((components) => {
+        return createCircuitPlaygroundComponents(board).then(components => {
           lightSensor = components.lightSensor;
         });
       });
@@ -439,8 +445,9 @@ describe('Circuit Playground Components', () => {
       let buttonL;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then(components => buttonL = components.buttonL);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (buttonL = components.buttonL)
+        );
       });
 
       it('creates a five.Button', () => {
@@ -465,8 +472,9 @@ describe('Circuit Playground Components', () => {
       let buttonR;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then(components => buttonR = components.buttonR);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (buttonR = components.buttonR)
+        );
       });
 
       it('creates a five.Button', () => {
@@ -491,8 +499,9 @@ describe('Circuit Playground Components', () => {
       let accelerometer;
 
       beforeEach(() => {
-        return createCircuitPlaygroundComponents(board)
-          .then(components => accelerometer = components.accelerometer);
+        return createCircuitPlaygroundComponents(board).then(
+          components => (accelerometer = components.accelerometer)
+        );
       });
 
       it('creates a five.Accelerometer', () => {
@@ -506,13 +515,17 @@ describe('Circuit Playground Components', () => {
       // No pin?  Doesn't report one.
 
       it('with a start() method', () => {
-        accelerometer.io.sysexCommand.reset(); // Reset spy
+        accelerometer.io.sysexCommand.resetHistory(); // Reset spy
         expect(accelerometer).to.haveOwnProperty('start');
         expect(accelerometer.io.sysexCommand).not.to.have.been.called;
 
         accelerometer.start();
-        expect(accelerometer.io.sysexCommand).to.have.been.calledOnce
-            .and.calledWith([CP_COMMAND, CP_ACCEL_STREAM_ON]);
+        expect(
+          accelerometer.io.sysexCommand
+        ).to.have.been.calledOnce.and.calledWith([
+          CP_COMMAND,
+          CP_ACCEL_STREAM_ON
+        ]);
       });
 
       it('and a getOrientation method', () => {
@@ -532,7 +545,7 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getOrientation()).to.deep.equal([
           accelerometer.getOrientation('x'),
           accelerometer.getOrientation('y'),
-          accelerometer.getOrientation('z'),
+          accelerometer.getOrientation('z')
         ]);
 
         stub.restore();
@@ -556,7 +569,7 @@ describe('Circuit Playground Components', () => {
         expect(accelerometer.getAcceleration()).to.deep.equal([
           accelerometer.getAcceleration('x'),
           accelerometer.getAcceleration('y'),
-          accelerometer.getAcceleration('z'),
+          accelerometer.getAcceleration('z')
         ]);
 
         stub.restore();
@@ -570,10 +583,13 @@ describe('Circuit Playground Components', () => {
 
       it('only creates one five.Touchpad for all the TouchSensors', () => {
         return createCircuitPlaygroundComponents(board).then(components => {
-          const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
+          const theOnlyTouchpadController =
+            components.touchPad0.touchpadsController_;
           expect(theOnlyTouchpadController.board).to.equal(board);
           TOUCH_PINS.forEach(pin => {
-            expect(components[`touchPad${pin}`].touchpadsController_).to.equal(theOnlyTouchpadController);
+            expect(components[`touchPad${pin}`].touchpadsController_).to.equal(
+              theOnlyTouchpadController
+            );
           });
         });
       });
@@ -603,64 +619,92 @@ describe('Circuit Playground Components', () => {
   });
 
   // TODO (bbuchanan): Remove this whole describe block when maker-captouch is on by default.
-  describe('destroyCircuitPlaygroundComponents() with capTouch enabled', () => {
+  describe('cleanupCircuitPlaygroundComponents() with capTouch enabled', () => {
     let components;
 
     before(() => experiments.setEnabled('maker-captouch', true));
     after(() => experiments.setEnabled('maker-captouch', false));
 
     beforeEach(() => {
-      return createCircuitPlaygroundComponents(board)
-          .then(c => components = c);
+      return createCircuitPlaygroundComponents(board).then(
+        c => (components = c)
+      );
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
       expect(Object.keys(components)).to.have.length(17);
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
       expect(Object.keys(components)).to.have.length(18);
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
   });
 
-  describe('destroyCircuitPlaygroundComponents()', () => {
+  describe('cleanupCircuitPlaygroundComponents()', () => {
     let components;
 
     beforeEach(() => {
-      return createCircuitPlaygroundComponents(board)
-        .then(c => components = c);
+      return createCircuitPlaygroundComponents(board).then(
+        c => (components = c)
+      );
     });
 
     it('can be safely called on empty object', () => {
       expect(() => {
-        destroyCircuitPlaygroundComponents({});
+        cleanupCircuitPlaygroundComponents({});
       }).not.to.throw;
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
       expect(Object.keys(components)).to.have.length(10);
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
       expect(Object.keys(components)).to.have.length(0);
+    });
+
+    it('does not destroy components if shouldDestroyComponents is false', () => {
+      expect(Object.keys(components)).to.have.length(10);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        false /* shouldDestroyComponents */
+      );
+      expect(Object.keys(components)).to.have.length(10);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
       expect(Object.keys(components)).to.have.length(11);
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
 
-    it('calls stop on every color LED', () => {
-      const spies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
-      destroyCircuitPlaygroundComponents(components);
-      spies.forEach(spy => expect(spy).to.have.been.calledOnce);
+    it('calls off and stop on every color LED', () => {
+      const stopSpies = components.colorLeds.map(led => sinon.spy(led, 'stop'));
+      const offSpies = components.colorLeds.map(led => sinon.spy(led, 'off'));
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
+      stopSpies.forEach(spy => expect(spy).to.have.been.calledOnce);
+      offSpies.forEach(spy => expect(spy).to.have.been.calledOnce);
     });
 
     it('stops Led.RGB.blink()', () => {
@@ -678,7 +722,10 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledTwice;
 
       // Now destroy the component
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
 
       // Blink should no longer be calling toggle().
       clock.tick(50);
@@ -687,10 +734,15 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledTwice;
     });
 
-    it('calls stop on the red LED', () => {
-      const spy = sinon.spy(components.led, 'stop');
-      destroyCircuitPlaygroundComponents(components);
-      expect(spy).to.have.been.calledOnce;
+    it('calls off and stop on the red LED', () => {
+      const stopSpy = sinon.spy(components.led, 'stop');
+      const offSpy = sinon.spy(components.led, 'off');
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
+      expect(stopSpy).to.have.been.calledOnce;
+      expect(offSpy).to.have.been.calledOnce;
     });
 
     it('stops Led.blink()', () => {
@@ -708,7 +760,10 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledTwice;
 
       // Now destroy the component
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
 
       // Blink should no longer be calling toggle().
       clock.tick(50);
@@ -717,10 +772,15 @@ describe('Circuit Playground Components', () => {
       expect(spy).to.have.been.calledTwice;
     });
 
-    it('calls stop on the buzzer', () => {
-      const spy = sinon.spy(components.buzzer, 'stop');
-      destroyCircuitPlaygroundComponents(components);
-      expect(spy).to.have.been.calledOnce;
+    it('calls off and stop on the buzzer', () => {
+      const stopSpy = sinon.spy(components.buzzer, 'stop');
+      const offSpy = sinon.spy(components.buzzer, 'off');
+      cleanupCircuitPlaygroundComponents(
+        components,
+        true /* shouldDestroyComponents */
+      );
+      expect(stopSpy).to.have.been.calledOnce;
+      expect(offSpy).to.have.been.calledOnce;
     });
 
     ['play', 'playSong', 'playNotes'].forEach(methodUnderTest => {
@@ -736,58 +796,80 @@ describe('Circuit Playground Components', () => {
           frequencySpy.restore();
         });
 
-        it('stops Piezo.play()', function () {
+        it('stops Piezo.play()', function() {
           // Make a new one since we're spying on a 'prototype'
           return createCircuitPlaygroundComponents(board).then(({buzzer}) => {
-          // Set up a song
-          const tempoBPM = 120;
-          buzzer[methodUnderTest](['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'], tempoBPM);
-          expect(frequencySpy).to.have.been.calledOnce;
+            // Set up a song
+            const tempoBPM = 120;
+            buzzer[methodUnderTest](
+              ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5'],
+              tempoBPM
+            );
+            expect(frequencySpy).to.have.been.calledOnce;
 
-          // Make sure the song is playing
-          const msPerBeat = 15000 / tempoBPM;
-          clock.tick(msPerBeat);
-          expect(frequencySpy).to.have.been.calledTwice;
-          clock.tick(msPerBeat);
-          expect(frequencySpy).to.have.been.calledThrice;
+            // Make sure the song is playing
+            const msPerBeat = 15000 / tempoBPM;
+            clock.tick(msPerBeat);
+            expect(frequencySpy).to.have.been.calledTwice;
+            clock.tick(msPerBeat);
+            expect(frequencySpy).to.have.been.calledThrice;
 
-          // Now destroy the component(s)
-          destroyCircuitPlaygroundComponents({buzzer});
+            // Now destroy the component(s)
+            cleanupCircuitPlaygroundComponents(
+              {buzzer},
+              true /* shouldDestroyComponents */
+            );
 
-          // And ensure the song has stopped
-          clock.tick(msPerBeat);
-          expect(frequencySpy).to.have.been.calledThrice;
-          clock.tick(msPerBeat);
-          expect(frequencySpy).to.have.been.calledThrice;
+            // And ensure the song has stopped
+            clock.tick(msPerBeat);
+            expect(frequencySpy).to.have.been.calledThrice;
+            clock.tick(msPerBeat);
+            expect(frequencySpy).to.have.been.calledThrice;
+          });
         });
       });
-     });
     });
 
-    it('calls disable on the soundSensor', () => {
+    it('calls disable on the soundSensor and clears events', () => {
       const spy = sinon.spy(components.soundSensor, 'disable');
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        false /* shouldDestroyComponents */
+      );
+      console.log(components.soundSensor._events);
       expect(spy).to.have.been.calledOnce;
+      expect(components.soundSensor._events).to.be.empty;
     });
 
-    it('calls disable on the lightSensor', () => {
+    it('calls disable on the lightSensor and clears events', () => {
       const spy = sinon.spy(components.lightSensor, 'disable');
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        false /* shouldDestroyComponents */
+      );
       expect(spy).to.have.been.calledOnce;
+      expect(components.lightSensor._events).to.be.empty;
     });
 
-    it('calls disable on the tempSensor', () => {
+    it('calls disable on the tempSensor and clears events', () => {
       const spy = sinon.spy(components.tempSensor, 'disable');
-      destroyCircuitPlaygroundComponents(components);
+      cleanupCircuitPlaygroundComponents(
+        components,
+        false /* shouldDestroyComponents */
+      );
       expect(spy).to.have.been.calledOnce;
+      expect(components.tempSensor._events).to.be.empty;
     });
 
-    it('calls stop on the accelerometer', () => {
+    it('calls stop on the accelerometer and clears events', () => {
       // Spy on the controller template, because stop() ends up readonly on
       // the returned component.
       const spy = sinon.spy(Playground.Accelerometer.stop, 'value');
       return createCircuitPlaygroundComponents(board).then(components => {
-        destroyCircuitPlaygroundComponents(components);
+        cleanupCircuitPlaygroundComponents(
+          components,
+          false /* shouldDestroyComponents */
+        );
 
         let assertionError;
         try {
@@ -795,6 +877,8 @@ describe('Circuit Playground Components', () => {
         } catch (e) {
           assertionError = e;
         }
+
+        expect(components.accelerometer._events).to.be.empty;
 
         spy.restore();
         if (assertionError) {
@@ -814,7 +898,7 @@ describe('Circuit Playground Components', () => {
 
       function isPlainObject(obj) {
         // Check whether the constructor is native object
-        return obj.constructor === ({}).constructor;
+        return obj.constructor === {}.constructor;
       }
 
       // Recursively walk component map to check all components
@@ -848,7 +932,9 @@ describe('Circuit Playground Components', () => {
    */
   function setSensorAnalogValue(component, rawValue) {
     const {board, pin} = component;
-    const readCallback = board.io.analogRead.args.find(callArgs => callArgs[0] === pin)[1];
+    const readCallback = board.io.analogRead.args.find(
+      callArgs => callArgs[0] === pin
+    )[1];
     readCallback(rawValue);
   }
 });
@@ -880,8 +966,8 @@ function newBoard() {
     repl: false
   });
 
-  io.emit("connect");
-  io.emit("ready");
+  io.emit('connect');
+  io.emit('ready');
 
   return board;
 }

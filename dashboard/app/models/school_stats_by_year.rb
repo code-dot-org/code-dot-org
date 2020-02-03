@@ -46,33 +46,6 @@ class SchoolStatsByYear < ActiveRecord::Base
 
   belongs_to :school
 
-  # Mapping of urban-centric locale code to community type.
-  # @see https://nces.ed.gov/programs/edge/geographicZCTA.aspx
-  COMMUNITY_TYPE_MAP = {
-    '11' => 'city_large',
-    '12' => 'city_midsize',
-    '13' => 'city_small',
-    '21' => 'suburban_large',
-    '22' => 'suburban_midsize',
-    '23' => 'suburban_small',
-    '31' => 'town_fringe',
-    '32' => 'town_distant',
-    '33' => 'town_remote',
-    '41' => 'rural_fringe',
-    '42' => 'rural_distant',
-    '43' => 'rural_remote'
-  }.freeze
-
-  # Enumeration of urban-centric community types
-  enum community_type: COMMUNITY_TYPE_MAP.values.index_by(&:to_sym).freeze
-
-  # Maps the community type form the urban-centric locale code.
-  # @param code [String] The urban-centric locale code.
-  # @return [String] The community type.
-  def self.map_community_type(code)
-    return code.presence.try {|v| COMMUNITY_TYPE_MAP[v]}
-  end
-
   # Loads/merges the data from a CSV into the table.
   # Requires a block to parse the row.
   # @param filename [String] The CSV file name.
@@ -82,7 +55,11 @@ class SchoolStatsByYear < ActiveRecord::Base
       parsed = yield row
       loaded = find_by(primary_keys.map(&:to_sym).map {|k| [k, parsed[k]]}.to_h)
       if loaded.nil?
-        SchoolStatsByYear.new(parsed).save!
+        begin
+          SchoolStatsByYear.new(parsed).save!
+        rescue ActiveRecord::InvalidForeignKey
+          puts parsed[:school_id]
+        end
       else
         loaded.assign_attributes(parsed)
         loaded.update!(parsed) if loaded.changed?
@@ -96,5 +73,33 @@ class SchoolStatsByYear < ActiveRecord::Base
 
   def has_k8_grades?
     grade_kg_offered || grade_01_offered || grade_02_offered || grade_03_offered || grade_04_offered || grade_05_offered || grade_06_offered || grade_07_offered || grade_08_offered
+  end
+
+  # Percentage of underrepresented minorities students
+  def urm_percent
+    percent_of_students([student_am_count, student_hi_count, student_bl_count, student_hp_count].compact.reduce(:+))
+  end
+
+  # Percentage of free/reduced lunch eligible students
+  def frl_eligible_percent
+    percent_of_students(frl_eligible_total)
+  end
+
+  # Is this a rural school?
+  # Returns nil if there is no data. Otherwise returns true or false.
+  def rural_school?
+    return nil unless community_type
+
+    # The Rural Education Achievement Program (REAP) accepts the following NCES locale codes
+    # as "rural": town (distant and remote subcategories)
+    # and rural (fringe, distant, and remote subcategories).
+    %w(town_distant town_remote rural_fringe rural_distant rural_remote).
+      include? community_type
+  end
+
+  # returns what percent "count" is of the total student enrollment
+  def percent_of_students(count)
+    return nil unless count && students_total
+    (100.0 * count / students_total).round(2)
   end
 end

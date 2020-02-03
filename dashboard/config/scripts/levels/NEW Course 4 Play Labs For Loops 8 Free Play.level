@@ -16,7 +16,7 @@
       "upButton"
     ],
     "embed": "false",
-    "instructions": "It's Free Play time, have fun with all the blocks in your tool box. ",
+    "short_instructions": "It's Free Play time, have fun with all the blocks in your tool box. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

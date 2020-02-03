@@ -5,8 +5,10 @@ require 'cdo/chat_client'
 require 'cdo/test_run_utils'
 require 'cdo/rake_utils'
 require 'cdo/git_utils'
+require 'cdo/lighthouse'
 require 'parallel'
 require 'aws-sdk-s3'
+require 'cdo/mysql_console_helper'
 
 namespace :test do
   desc 'Runs apps tests.'
@@ -22,7 +24,17 @@ namespace :test do
   task :regular_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI tests...'
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--parallel', '120', '--magic_retry', '--with-status-page', '--fail_fast'
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--parallel', '120',
+        '--magic_retry',
+        '--with-status-page',
+        '--fail_fast',
+        '--priority 0'
+      )
       if failed_browser_count == 0
         message = '┬──┬ ﻿ノ( ゜-゜ノ) UI tests for <b>dashboard</b> succeeded.'
         ChatClient.log message
@@ -40,7 +52,18 @@ namespace :test do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
       eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
-      failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', CDO.site_host('studio.code.org'), '-p', CDO.site_host('code.org'), '--eyes', '--magic_retry', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
+      failed_browser_count = RakeUtils.system_with_chat_logging(
+        'bundle', 'exec', './runner.rb',
+        '-c', 'Chrome,iPhone,IE11',
+        '-d', CDO.site_host('studio.code.org'),
+        '-p', CDO.site_host('code.org'),
+        '--db', # Ensure features that require database access are run even if the server name isn't "test"
+        '--eyes',
+        '--magic_retry',
+        '--with-status-page',
+        '-f', eyes_features.join(","),
+        '--parallel', (eyes_features.count * 2).to_s
+      )
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
         ChatClient.log message
@@ -54,10 +77,15 @@ namespace :test do
     end
   end
 
+  desc 'Run Lighthouse audits against key pages (currently Code Studio homepage).'
+  task :lighthouse do
+    Lighthouse.report CDO.studio_url('', CDO.default_scheme)
+  end
+
   # Run the eyes tests and ui test suites in parallel. If one of these suites
   # raises, allow the other suite to complete, then make sure this task raises.
   task :ui_all do
-    Parallel.each([:eyes_ui, :regular_ui], in_threads: 2) do |target|
+    Parallel.each([:eyes_ui, :regular_ui, :lighthouse], in_threads: 3) do |target|
       Rake::Task["test:#{target}"].invoke
     end
   end
@@ -84,6 +112,7 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
+        ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['CODECOV_FLAGS'] = 'dashboard'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
@@ -94,6 +123,7 @@ namespace :test do
         fixture_hash = Digest::MD5.hexdigest(
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
+            push(dashboard_dir('config/videos.csv')).
             select(&File.method(:file?)).
             sort.
             map(&Digest::MD5.method(:file)).
@@ -118,7 +148,11 @@ namespace :test do
 
         seed_file = Tempfile.new(['db_seed', '.sql'])
         auto_inc = 's/ AUTO_INCREMENT=[0-9]*\b//'
-        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost')
+        writer = URI.parse(CDO.dashboard_db_writer || 'mysql://root@localhost/dashboard_test')
+        database = writer.path[1..-1]
+        writer.path = ''
+        opts = MysqlConsoleHelper.options(writer)
+        mysqldump_opts = "mysqldump #{opts} --skip-comments --set-gtid-purged=OFF"
 
         if seed_data
           File.write(seed_file, seed_data)
@@ -128,7 +162,7 @@ namespace :test do
           RakeUtils.rake_stream_output 'db:create db:test:prepare'
           ENV.delete 'TEST_ENV_NUMBER'
           # Store new DB contents
-          `mysqldump -u#{writer.user} dashboard_test1 --skip-comments | sed '#{auto_inc}' > #{seed_file.path}`
+          `#{mysqldump_opts} #{database}1 | sed '#{auto_inc}' > #{seed_file.path}`
           gzip_data = Zlib::GzipWriter.wrap(StringIO.new) {|gz| IO.copy_stream(seed_file.path, gz); gz.finish}.tap(&:rewind)
 
           s3_client.put_object(
@@ -140,7 +174,7 @@ namespace :test do
           CDO.log.info "Uploaded seed data to #{s3_key}"
         end
 
-        cloned_data = `mysqldump -u#{writer.user} dashboard_test2 --skip-comments | sed '#{auto_inc}'`
+        cloned_data = `#{mysqldump_opts} #{database}2 | sed '#{auto_inc}'`
         if seed_data.equal?(cloned_data)
           CDO.log.info 'Test data not modified'
         else
@@ -153,24 +187,39 @@ namespace :test do
           require 'parallel_tests'
           procs = ParallelTests.determine_number_of_processes(nil)
           CDO.log.info "Test data modified, cloning across #{procs} databases..."
-          databases = procs.times.map {|i| "dashboard_test#{i + 1}"}
+          databases = procs.times.map {|i| "#{database}#{i + 1}"}
           databases.each do |db|
             recreate_db = "DROP DATABASE IF EXISTS #{db}; CREATE DATABASE IF NOT EXISTS #{db};"
-            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql -u#{writer.user}"
+            RakeUtils.system_stream_output "echo '#{recreate_db}' | mysql #{opts}"
           end
-          pipes = databases.map {|db| ">(mysql -u#{writer.user} #{db})"}.join(' ')
+          pipes = databases.map {|db| ">(mysql #{opts} #{db})"}.join(' ')
           RakeUtils.system_stream_output "/bin/bash -c 'tee <#{seed_file.path} #{pipes} >/dev/null'"
         end
 
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
+        ENV.delete 'USE_PEGASUS_UNITTEST_DB'
         ENV.delete 'CODECOV_FLAGS'
       end
     end
   end
 
-  task ci: [:pegasus, :shared, :dashboard_ci, :ui_live]
+  task :shared_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_shared_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task :pegasus_ci do
+    # isolate unit tests from the pegasus_test DB
+    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
+    TestRunUtils.run_pegasus_tests
+    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
+  end
+
+  task ci: [:shared_ci, :pegasus_ci, :dashboard_ci, :ui_live]
 
   desc 'Runs dashboard tests.'
   task :dashboard do
@@ -200,8 +249,8 @@ namespace :test do
         [
           'apps/**/*',
           'dashboard/config/libraries/*.interpreted.js',
-          'shared/**/*.js',
-          'shared/**/*.css',
+          'shared/js/**/*',
+          'shared/css/**/*',
         ]
       ) do
         TestRunUtils.run_apps_tests
@@ -220,6 +269,7 @@ namespace :test do
         'dashboard',
         [
           'Gemfile',
+          'Gemfile.lock',
           'deployment.rb',
           'dashboard/**/*',
           'lib/**/*',
@@ -237,6 +287,7 @@ namespace :test do
         'pegasus',
         [
           'Gemfile',
+          'Gemfile.lock',
           'deployment.rb',
           'pegasus/**/*',
           'lib/**/*',
@@ -250,14 +301,14 @@ namespace :test do
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['Gemfile', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
+      run_tests_if_changed('shared', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'shared/**/*', 'lib/**/*']) do
         TestRunUtils.run_shared_tests
       end
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
     task :lib do
-      run_tests_if_changed('lib', ['Gemfile', 'deployment.rb', 'lib/**/*']) do
+      run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
         TestRunUtils.run_lib_tests
       end
     end

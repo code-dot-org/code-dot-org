@@ -26,7 +26,6 @@ Then /^I complete the level on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
     And I wait for the page to fully load
-    And I close the instructions overlay if it exists
   }
   steps PUZZLE_SOLUTIONS[puzzle_url]
   steps %{

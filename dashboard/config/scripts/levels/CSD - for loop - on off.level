@@ -67,7 +67,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# For Loops with Color LEDs\r\n\r\nFor loops can make doing something to all the `colorLed`s easier. \r\n\r\n**Starter Program:** There are two buttons one to turn all the `colorLeds` on and one to turn them all off. \r\n\r\nCan you fill in the functions for each of these task using a for loop to write your algorithm.",
+    "long_instructions": "# For Loops with Color LEDs\r\n\r\nFor loops can make doing something to all the `colorLed`s easier. \r\n\r\n**Starter Program:** There are two buttons one to turn all the `colorLeds` on and one to turn them all off. \r\n\r\nCan you fill in the functions for each of these task using a for loop to write your algorithm.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

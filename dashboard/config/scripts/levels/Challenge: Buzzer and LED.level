@@ -46,7 +46,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Challenge\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use the LED and buzzer, try creating an app that can play a variety of different sounds and which uses the LED. You could make a keyboard or synthesizer that plays various sounds when you click different buttons.",
+    "long_instructions": "# Challenge\r\n\r\nCheck with your teacher before starting the challenge.\r\n\r\nNow that you know how to use the LED and buzzer, try creating an app that can play a variety of different sounds and which uses the LED. You could make a keyboard or synthesizer that plays various sounds when you click different buttons.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

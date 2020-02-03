@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 568,
   "properties": {
-    "markdown_instructions": "# Make a Prediction\r\n\r\nLook at the code below. What do you think it's going to do?\r\n\r\nGive it a guess and run the code to find out!",
+    "long_instructions": "# Make a Prediction\r\n\r\nLook at the code below. What do you think it's going to do?\r\n\r\nGive it a guess and run the code to find out!",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

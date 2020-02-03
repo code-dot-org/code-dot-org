@@ -14,7 +14,7 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "Free Play: Awesome, we've kept Sam safe on the left and right! Use this free play stage to experiment with your functions and further improve onscreen?",
+    "short_instructions": "Free Play: Awesome, we've kept Sam safe on the left and right! Use this free play stage to experiment with your functions and further improve onscreen?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -44,7 +44,7 @@
     "custom_game_type": "Sam the Bat",
     "callout_json": "[]",
     "disable_examples": "false",
-    "markdown_instructions": "Free Play: Awesome, we've kept Sam safe on the left and right! Use this free play stage to experiment with your functions and further improve `onscreen?`"
+    "long_instructions": "Free Play: Awesome, we've kept Sam safe on the left and right! Use this free play stage to experiment with your functions and further improve `onscreen?`"
   }
 }]]></config>
   <blocks>

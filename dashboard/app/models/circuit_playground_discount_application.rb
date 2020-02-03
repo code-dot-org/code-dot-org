@@ -24,6 +24,7 @@
 class CircuitPlaygroundDiscountApplication < ApplicationRecord
   belongs_to :user
   belongs_to :circuit_playground_discount_code
+  belongs_to :school
 
   enum unit_6_intention: {
     no: 1,
@@ -31,10 +32,14 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     yes1819: 3,
     yesAfter: 4,
     unsure: 5,
+    yes1920: 6,
+    yesSpring2020: 7,
+    yesFall2020: 8,
+    yesSpring2021: 9
   }
 
   def eligible_unit_6_intention?
-    yes1718? || yes1819?
+    yesSpring2020? || yesFall2020? || yesSpring2021?
   end
 
   # We will set the application's school_id when the user confirms their school. This means
@@ -51,19 +56,47 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     where(user_id: associated_user_ids).first
   end
 
-  # @return {boolean} true if (1) Attended CSD TeacherCon '17 (2) are a CSD facilitator
-  def self.user_pd_eligible?(user)
-    csd_cohorts = %w(CSD-TeacherConPhiladelphia CSD-TeacherConPhoenix CSD-TeacherConHouston)
-
-    return true if user.cohorts.any? {|cohort| csd_cohorts.include?(cohort.name)}
-    return true if user.courses_as_facilitator.any? {|course_facilitator| course_facilitator.course == Pd::Workshop::COURSE_CSD}
-    return false
+  # Checks whether a user has attended a workshop with a given subject.
+  # Used to check both attendance at 5-day summer workshops and quarterly workshops.
+  # @param workshop_subjects [Array] A list of workshop subjects (or single value) to check for a user's attendance.
+  # @return {boolean} true if user is an eligible facilitator or attended relevant workshop
+  def self.user_pd_eligible?(user, workshop_subjects)
+    user_pd_eligible_as_teacher?(user, workshop_subjects) || user_pd_eligible_as_facilitator?(user)
   end
 
-  # Looks to see if any of the users associated with this studio_person_id are eligibile
-  # for our circuit playground discount
-  def self.studio_person_pd_eligible?(user)
-    User.where(studio_person_id: user.studio_person_id).any? {|associated_user| user_pd_eligible?(associated_user)}
+  private_class_method def self.user_pd_eligible_as_teacher?(user, workshop_subjects)
+    Pd::Attendance.
+      joins(:workshop).
+      where(
+        pd_attendances: {
+          teacher_id: user.id
+        },
+        pd_workshops: {
+          course: Pd::Workshop::COURSE_CSD,
+          subject: workshop_subjects
+        }
+      ).
+      where("pd_workshops.started_at > '2019-05-01'").
+      exists?
+  end
+
+  private_class_method def self.user_pd_eligible_as_facilitator?(user)
+    # We've got a specific list of facilitators eligible for the discount this year.
+    # Storing it in DCDO since this is a temporary list and not necessarily worth its
+    # own Rails model.
+    DCDO.get('facilitator_ids_eligible_for_maker_discount', []).include? user.id
+  end
+
+  # Given a user (which has a studio person ID), get all associated accounts
+  def self.get_user_accounts(user)
+    user.studio_person_id.nil? ? [user] : User.where(studio_person_id: user.studio_person_id)
+  end
+
+  # Looks to see if any of the users associated with this studio_person_id are eligible
+  # for our circuit playground discount via their attendance at a given PD workshop
+  def self.studio_person_pd_eligible?(user, workshop_subjects)
+    accounts = get_user_accounts(user)
+    accounts.any? {|associated_user| user_pd_eligible?(associated_user, workshop_subjects)}
   end
 
   # @return {boolean} true if we have at least one section that meets our eligibility
@@ -79,31 +112,27 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     # we have a school id associated with the user
     school_id = application.try(:school_id) || user.try(:school_info).try(:school_id)
 
-    status = {
+    {
       # This will be a number from 1-5 (representing which radio button) was selected,
       # or nil if no selection yet
       unit_6_intention: application.try(:unit_6_intention),
       has_confirmed_school: application.try(:has_confirmed_school?) || false,
       school_id: school_id,
       school_name: school_id ? School.find(school_id).name : nil,
+      school_high_needs_eligible: school_id ? School.find(school_id).try(:maker_high_needs?) : nil,
       # true/false once has_submitted_school is true
       # false implies partial discount
       gets_full_discount: application.try(:full_discount),
       discount_code: application.try(:circuit_playground_discount_code).try(:code),
       expiration: application.try(:circuit_playground_discount_code).try(:expiration),
-      admin_set_status: application.try(:admin_set_status) || false
+      admin_set_status: application.try(:admin_set_status) || false,
+      is_pd_eligible: studio_person_pd_eligible?(user,
+        [
+          Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+        ]
+      ),
+      is_progress_eligible: student_progress_eligible?(user)
     }
-
-    if application
-      # We won't let you create an application without meeting our eligibility requirements
-      # so no need to check them again if we find an existing application
-      status.merge({is_pd_eligible: true, is_progress_eligible: true})
-    else
-      status.merge(
-        is_pd_eligible: studio_person_pd_eligible?(user),
-        is_progress_eligible: student_progress_eligible?(user)
-      )
-    end
   end
 
   # Provides admin with information about the application status of a user's
@@ -120,17 +149,21 @@ class CircuitPlaygroundDiscountApplication < ApplicationRecord
     # exception being if the user changed schools since confirming.
 
     {
-      is_pd_eligible: studio_person_pd_eligible?(user),
+      is_pd_eligible: studio_person_pd_eligible?(user,
+        [
+          Pd::Workshop::SUBJECT_SUMMER_WORKSHOP,
+        ]
+      ),
       is_progress_eligible: student_progress_eligible?(user),
       user_school: {
         id: user_school.try(:id),
         name: user_school.try(:name),
-        high_needs: user_school.try(:high_needs?),
+        high_needs: user_school.try(:maker_high_needs?),
       },
       application_school: {
         id: application_school.try(:id),
         name: application_school.try(:name),
-        high_needs: application_school.try(:high_needs?),
+        high_needs: application_school.try(:maker_high_needs?),
       },
       unit_6_intention: application.try(:unit_6_intention),
       full_discount: application.try(:full_discount),

@@ -1,30 +1,32 @@
 var assets = [];
 
 module.exports = {
-  reset: function (list) {
-    return assets = list.slice();
+  reset: function(list) {
+    return (assets = list.slice());
   },
 
-  add: function (asset) {
+  add: function(asset) {
     assets = this.remove(asset.filename);
     assets.push(asset);
     return assets.slice();
   },
 
-  remove: function (filename) {
-    assets = assets.filter(function (asset) {
+  remove: function(filename) {
+    assets = assets.filter(function(asset) {
       return asset.filename !== filename;
     });
     return assets.slice();
   },
 
-  list: function (allowedExtensions) {
-    return allowedExtensions ? assets.filter(function (asset) {
-      var match = asset.filename.toLowerCase().match(/\.[^.]+$/);
-      if (match) {
-        var extension = match[0];
-        return allowedExtensions.split(', ').indexOf(extension) > -1;
-      }
-    }) : assets.slice();
+  list: function(allowedExtensions) {
+    return allowedExtensions
+      ? assets.filter(function(asset) {
+          var match = asset.filename.toLowerCase().match(/\.[^.]+$/);
+          if (match) {
+            var extension = match[0];
+            return allowedExtensions.split(', ').indexOf(extension) > -1;
+          }
+        })
+      : assets.slice();
   }
 };

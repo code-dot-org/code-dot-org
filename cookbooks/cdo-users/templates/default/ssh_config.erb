@@ -1,10 +1,10 @@
-Host *.ec2.internal *.cdn-code.org
+Host staging test levelbuilder-* production-daemon production-console i18n-dev adhoc-* *.ec2.internal *.cdn-code.org
   User ubuntu
   StrictHostKeyChecking no
   PreferredAuthentications publickey
   IdentityFile ~/.ssh/server_access_key
 
-<% @hosts.each do |node| %>
-Host <%= node.name %>
-  HostName <%= node['cloud'] ? node['cloud']['local_hostname'] : node['fqdn'] || 'fqdn_missing' %>
+<% @hosts.each do |name, hostname| %>
+Host <%= name %>
+  HostName <%= hostname %>
 <% end %>

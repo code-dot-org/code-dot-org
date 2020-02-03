@@ -17,44 +17,52 @@
             "sprites"
           ],
           [
-            "all aliens",
+            "aliens",
             "\"ALIEN\""
           ],
           [
-            "all bears",
+            "bears",
             "\"BEAR\""
           ],
           [
-            "all cats",
+            "cats",
             "\"CAT\""
           ],
           [
-            "all dogs",
+            "dogs",
             "\"DOG\""
           ],
           [
-            "all ducks",
+            "ducks",
             "\"DUCK\""
           ],
           [
-            "all frogs",
+            "frogs",
             "\"FROG\""
           ],
           [
-            "all moose",
+            "moose",
             "\"MOOSE\""
           ],
           [
-            "all pineapples",
+            "pineapples",
             "\"PINEAPPLE\""
           ],
           [
-            "all robots",
+            "robots",
             "\"ROBOT\""
           ],
           [
-            "all sharks",
+            "sharks",
             "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
           ]
         ]
       },
@@ -62,19 +70,31 @@
         "name": "MOVE",
         "options": [
           [
-            "Clap High",
-            "MOVES.ClapHigh"
+            "(Next)",
+            "\"next\""
           ],
           [
-            "Clown",
-            "MOVES.Clown"
+            "(Previous)",
+            "\"prev\""
+          ],
+          [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
+            "Body Roll",
+            "MOVES.Roll"
+          ],
+          [
+            "Clap High",
+            "MOVES.ClapHigh"
           ],
           [
             "Dab",
             "MOVES.Dab"
           ],
           [
-            "Double Jam",
+            "Double Down",
             "MOVES.DoubleJam"
           ],
           [
@@ -90,32 +110,20 @@
             "MOVES.Fresh"
           ],
           [
-            "Kick",
-            "MOVES.Kick"
+            "Gangnam",
+            "MOVES.Clown"
           ],
           [
-            "Roll",
-            "MOVES.Roll"
+            "Star",
+            "MOVES.Kick"
           ],
           [
             "This or That",
             "MOVES.ThisOrThat"
           ],
           [
-            "Thiller",
+            "Zombie",
             "MOVES.Thriller"
-          ],
-          [
-            "Next",
-            "\"next\""
-          ],
-          [
-            "Previous",
-            "\"prev\""
-          ],
-          [
-            "Random",
-            "\"rand\""
           ],
           [
             "None",

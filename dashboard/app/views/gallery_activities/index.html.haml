@@ -48,8 +48,8 @@
   %h4{style: 'text-align:center'}= t('gallery.how_to_save')
 .row
   .span3
-  = render partial: 'shared/course_tall_block', locals: { id: 'playlab' }
-  = render partial: 'shared/course_tall_block', locals: { id: 'artist' }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::PLAYLAB_NAME }
+  = render partial: 'shared/course_tall_block', locals: { id: Script::ARTIST_NAME }
   .span3
 .row
   %a{href: CDO.code_org_url('/report-abuse')}

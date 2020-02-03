@@ -17,4 +17,14 @@
   For Users
 
 %h3 Regional Partners
-= link_to t('crud.new_model', model: RegionalPartner.model_name.human), new_regional_partner_path
+= link_to "See all Regional Partners", regional_partners_path
+%br
+= link_to "Create a new Regional Partner", new_regional_partner_path
+
+%h3 Pilot Experiments
+- Experiment::PILOT_EXPERIMENTS.each do |pilot|
+  %p
+    = link_to pilot[:label], show_pilot_path(pilot_name: pilot[:name])
+
+%h3 Standards
+= link_to "Import Standards", admin_standards_import_path

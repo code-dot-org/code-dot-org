@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Programming Efficiency Question 3",
-    "markdown_instructions": "How can functions be used to make code more readable?\n",
+    "long_instructions": "How can functions be used to make code more readable?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

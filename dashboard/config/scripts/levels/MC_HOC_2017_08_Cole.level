@@ -47,8 +47,8 @@
     "agent_start_direction": "0",
     "is_agent_level": "true",
     "agent_start_position": "[4,8]",
-    "instructions": "Change the provided function to work for this biome.",
-    "markdown_instructions": "Now, instead of destroying before you move, you will need to place a block.  \r\n\r\nChange the provided function to work for the desert.",
+    "short_instructions": "Change the provided function to work for this biome.",
+    "long_instructions": "Now, instead of destroying before you move, you will need to place a block.  \r\n\r\nChange the provided function to work for the desert.",
     "place_block_options": "[\"lava\",  \"oreIron\", \"sand\", \"sandstone\", \"stone\"]",
     "contained_level_names": null
   },

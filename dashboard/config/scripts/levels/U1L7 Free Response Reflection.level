@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Reflection: Binary Numbers",
-    "markdown_instructions": "Reflect on your learning in this lesson. In the space below, enter:\n\n3 recollections (things you remember), \n\n2 observations (things you noticed), and \n\n1 insight (something you fully understand the significance of).\n",
+    "long_instructions": "Reflect on your learning in this lesson. In the space below, enter:\n\n3 recollections (things you remember), \n\n2 observations (things you noticed), and \n\n1 insight (something you fully understand the significance of).\n",
     "skip_dialog": true,
     "skip_sound": true
   },

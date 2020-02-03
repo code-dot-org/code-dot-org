@@ -1,0 +1,22 @@
+name 'csp-20-21-u4-assess-conditionals pick 1'
+editor_experiment ''
+
+
+
+
+wrong '![](https://images.code.org/ee9cda3b7b0a4b992e6d085ca15191b4-image-1552686189426.42.47 PM.png)>'
+wrong '![](https://images.code.org/365cfe7314133bb8f99a4075df41a2a0-image-1552685852116.36.58 PM.png)>'
+right '![](https://images.code.org/a9a6fab0bde8929dc19b22b2a6613685-image-1574868753247.30.49 AM.png)>'
+wrong '![](https://images.code.org/4736267db8711822944b7ccc6c9000f3-image-1552686069909.40.42 PM.png)>'
+
+markdown <<MARKDOWN
+A movie theater charges different ticket prices based on a customer's age. The prices are shown in the table below.
+
+| Age | Ticket Price |
+|:-----------------------:|:------------------:|
+|12 and younger|$5|
+|13 to 64|$8|
+|65 and older|$6|
+
+The customer's age is stored in the variable `age` and the price is stored in the variable `price`. Which piece of code will correctly decide the price for each ticket.
+MARKDOWN

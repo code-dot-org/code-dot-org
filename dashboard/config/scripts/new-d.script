@@ -101,7 +101,7 @@ level 'courseD_maze_nestedLoops6'
 level 'courseD_bee_nestedLoops7', challenge: true
 level 'courseD_bee_nestedLoops8'
 level 'courseD_bee_nestedLoops9'
-assessment 'courseD_bee_nestedLoops9_predict2'
+level 'courseD_bee_nestedLoops9_predict2', assessment: true
 bonus 'courseD_harvester_nested_loops_challenge1'
 bonus 'courseD_collector_nested_loops_challenge2'
 
@@ -117,7 +117,7 @@ level 'courseD_artist_nestedLoops7'
 level 'courseD_artist_nestedLoops8'
 level 'courseD_artist_nestedLoops9', challenge: true
 level 'courseD_artist_nestedLoops10'
-assessment 'courseD_artist_nestedLoops9_predict1'
+level 'courseD_artist_nestedLoops9_predict1', assessment: true
 level 'courseD_artist_nestedLoopsFP'
 bonus 'courseD_artist_nestedLoops_challenge1'
 bonus 'courseD_artist_nestedLoops_challenge2'
@@ -135,7 +135,7 @@ level 'courseD_farmer_while7'
 level 'courseD_farmer_while8', challenge: true
 level 'courseD_farmer_while9'
 level 'courseD_farmer_while10'
-assessment 'courseD_farmer_while10_predict2'
+level 'courseD_farmer_while10_predict2', assessment: true
 bonus 'courseD_farmer_while_challenge1'
 bonus 'courseD_farmer_while_challenge2'
 
@@ -172,7 +172,7 @@ level 'courseD_video_ifElse'
 level 'courseD_maze_until8'
 level 'courseD_maze_until9', challenge: true
 level 'courseD_maze_until10'
-assessment 'courseD_maze_until10_predict2'
+level 'courseD_maze_until10_predict2', assessment: true
 bonus 'courseD_maze_until_challenge1'
 bonus 'courseD_farmer_until_challenge2'
 
@@ -186,7 +186,7 @@ level 'courseD_farmer_condLoops6'
 level 'courseD_farmer_condLoops7', challenge: true
 level 'courseD_farmer_condLoops8'
 level 'courseD_farmer_condLoops9'
-assessment 'courseD_farmer_condLoops9_predict1'
+level 'courseD_farmer_condLoops9_predict1', assessment: true
 bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
@@ -217,7 +217,7 @@ level 'courseD_artist_binary5'
 level 'courseD_artist_binary6'
 level 'courseD_artist_binary7'
 level 'courseD_artist_binary8'
-assessment 'courseD_artist_binary8_predict1'
+level 'courseD_artist_binary8_predict1', assessment: true
 level 'courseD_artist_binaryFP'
 bonus 'courseD_artist_binary_challenge1'
 bonus 'courseD_artist_binary_challenge2'

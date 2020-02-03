@@ -34,7 +34,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "**Goal:** Make a \"This or That\" app, then share it with friends\r\n\r\n**How:** You know how to use `\"background-color\"`, `\"font-size\"`, `\"text-color\"`, `\"text\"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click \"Share\" to send it to a friend.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)",
+    "long_instructions": "**Goal:** Make a \"This or That\" app, then share it with friends\r\n\r\n**How:** You know how to use `\"background-color\"`, `\"font-size\"`, `\"text-color\"`, `\"text\"`, `playSound()`, and `onEvent()`. Use them to set the look of your app and make it change when your user clicks the buttons. Click \"Share\" to send it to a friend.\r\n\r\n**Show Me:** ![expandable](https://images.code.org/c1d23a0288a42d48963053e0d9a1002e-image-1505943063546.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

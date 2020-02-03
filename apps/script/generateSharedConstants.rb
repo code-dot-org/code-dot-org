@@ -17,6 +17,8 @@ REPO_DIR = File.expand_path('../../../', __FILE__)
 
 def generate_shared_js_file(content, path)
   output = <<CONTENT
+/* eslint-disable */
+
 // This is a generated file and SHOULD NOT BE EDITED MANUALLY!!
 // Contents are generated as part of grunt build
 // Source of truth is lib/cdo/shared_constants.rb and files in lib/cdo/shared_constants/
@@ -67,7 +69,6 @@ end
 def main
   shared_content = generate_multiple_constants %w(
     ARTIST_AUTORUN_OPTIONS
-    GAMELAB_AUTORUN_OPTIONS
     LEVEL_KIND
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
@@ -75,16 +76,28 @@ def main
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+    ALLOWED_WEB_REQUEST_HEADERS
+    ABUSE_CONSTANTS
+    ERROR_SEVERITY_LEVELS
   )
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabGoalBlocks.js")
-  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/gamelab/sharedGamelabBlocks.js")
+  generate_shared_js_file(generate_constants('GAMELAB_BLOCKS'), "#{REPO_DIR}/apps/src/p5lab/gamelab/sharedGamelabBlocks.js")
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(COURSES SUBJECTS STATES WORKSHOP_APPLICATION_STATES WORKSHOP_TYPES),
+      %w(
+        COURSES
+        SUBJECT_NAMES
+        SUBJECTS
+        LEGACY_SUBJECTS
+        STATES
+        WORKSHOP_APPLICATION_STATES
+        WORKSHOP_SEARCH_ERRORS
+        WORKSHOP_TYPES
+      ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
     ),
@@ -92,30 +105,39 @@ def main
   )
 
   generate_shared_js_file(
-    generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS),
-      source_module: Pd::Facilitator1819ApplicationConstants,
+    generate_constants(
+      'COHORT_CALCULATOR_STATUSES',
+      source_module: Pd::SharedApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/facilitator1819ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/sharedApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS),
-      source_module: Pd::Teacher1920ApplicationConstants,
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES NUMBERED_QUESTIONS TEXT_FIELDS INTERVIEW_QUESTIONS SCOREABLE_QUESTIONS),
+      source_module: Pd::Facilitator1920ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacher1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/facilitatorApplicationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
+      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      source_module: Pd::Teacher2021ApplicationConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
   )
 
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval1920ApplicationConstants,
+      source_module: Pd::PrincipalApproval2021ApplicationConstants,
       transform_keys: true
     ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApproval1920ApplicationConstants.js"
+    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
   )
 
   generate_shared_js_file(
@@ -125,6 +147,15 @@ def main
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teachercon1819RegistrationConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_constants(
+      'SCHOLARSHIP_DROPDOWN_OPTIONS',
+      source_module: Pd::ScholarshipInfoConstants,
+      transform_keys: true
+    ),
+    "#{REPO_DIR}/apps/src/generated/pd/scholarshipInfoConstants.js"
   )
 end
 

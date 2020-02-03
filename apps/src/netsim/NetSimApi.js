@@ -15,15 +15,13 @@ var NETSIM_API_BASE_URL = '/v3/netsim';
  * @name NetSimShardApi
  */
 var shardApi = {
-
   /**
    * Create an initialized NetSim Shard API instance.
    * @param {string} shardID
    * @returns {NetSimShardApi}
    */
-  create: function (shardID) {
+  create: function(shardID) {
     return Object.assign({}, shardApi, {
-
       /**
        * Shard identifier.
        * @type {string}
@@ -38,7 +36,7 @@ var shardApi = {
     });
   },
 
-  makeTableApi: function (tableName) {
+  makeTableApi: function(tableName) {
     return tableApi.create(this.shardID, tableName);
   }
 };
@@ -47,16 +45,14 @@ var shardApi = {
  * @name NetSimTableApi
  */
 var tableApi = {
-
   /**
    * Create an initialized NetSim Table API instance.
    * @param {string} shardID
    * @param {string} tableName
    * @returns {NetSimTableApi}
    */
-  create: function (shardID, tableName) {
+  create: function(shardID, tableName) {
     return Object.assign({}, tableApi, {
-
       /**
        * Shard identifier.
        * @type {string}
@@ -83,16 +79,18 @@ var tableApi = {
    * @param {NodeStyleCallback} callback - Expected result is an array of
    *        row objects.
    */
-  allRows: function (callback) {
+  allRows: function(callback) {
     $.ajax({
       url: this.baseUrl,
-      type: "get",
-      dataType: "json"
-    }).done(function (data, text) {
-      callback(null, data);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), null);
-    });
+      type: 'get',
+      dataType: 'json'
+    })
+      .done(function(data, text) {
+        callback(null, data);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), null);
+      });
   },
 
   /**
@@ -101,16 +99,18 @@ var tableApi = {
    * @param {NodeStyleCallback} callback - Expected result is an array of
    *        table rows.
    */
-  allRowsFromID: function (rowID, callback) {
+  allRowsFromID: function(rowID, callback) {
     $.ajax({
       url: this.baseUrl + '@' + rowID,
-      type: "get",
-      dataType: "json"
-    }).done(function (data, text) {
-      callback(null, data);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), null);
-    });
+      type: 'get',
+      dataType: 'json'
+    })
+      .done(function(data, text) {
+        callback(null, data);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), null);
+      });
   },
 
   /**
@@ -122,7 +122,7 @@ var tableApi = {
    *        row object or objects (which will include an assigned 'id'
    *        key).
    */
-  createRow: function (value, callback) {
+  createRow: function(value, callback) {
     var data;
 
     try {
@@ -134,14 +134,16 @@ var tableApi = {
 
     $.ajax({
       url: this.baseUrl,
-      type: "post",
-      contentType: "application/json; charset=utf-8",
+      type: 'post',
+      contentType: 'application/json; charset=utf-8',
       data: data
-    }).done(function (body, text) {
-      callback(null, body);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), undefined);
-    });
+    })
+      .done(function(body, text) {
+        callback(null, body);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), undefined);
+      });
   },
 
   /**
@@ -150,24 +152,28 @@ var tableApi = {
    * @param {NodeStyleCallback} callback - Expected result is TRUE.
    * @param {boolean} [async] default TRUE.
    */
-  deleteRows: function (ids, callback, async) {
+  deleteRows: function(ids, callback, async) {
     async = async !== false; // `undefined` maps to true
 
     // Generate query string in the form "id[]=1&id[]=2&..."
-    var queryString = ids.map(function (id) {
-      return 'id[]=' + id;
-    }).join('&');
+    var queryString = ids
+      .map(function(id) {
+        return 'id[]=' + id;
+      })
+      .join('&');
 
     $.ajax({
       url: this.baseUrl + '?' + queryString,
       type: 'delete',
       dataType: 'json',
       async: async
-    }).done(function (data, text) {
-      callback(null, true);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), false);
-    });
+    })
+      .done(function(data, text) {
+        callback(null, true);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), false);
+      });
   },
 
   /**
@@ -176,16 +182,18 @@ var tableApi = {
    * @param {NodeStyleCallback} callback - Expected result is the requested
    *        row object.
    */
-  fetchRow: function (id, callback) {
+  fetchRow: function(id, callback) {
     $.ajax({
-      url: this.baseUrl + "/" + id,
-      type: "get",
-      dataType: "json"
-    }).done(function (data, text) {
-      callback(null, data);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), undefined);
-    });
+      url: this.baseUrl + '/' + id,
+      type: 'get',
+      dataType: 'json'
+    })
+      .done(function(data, text) {
+        callback(null, data);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), undefined);
+      });
   },
 
   /**
@@ -194,17 +202,19 @@ var tableApi = {
    * @param {Object} value - The new row contents.
    * @param {NodeStyleCallback} callback - Expected result is the new row object.
    */
-  updateRow: function (id, value, callback) {
+  updateRow: function(id, value, callback) {
     $.ajax({
-      url: this.baseUrl + "/" + id,
-      type: "post",
-      contentType: "application/json; charset=utf-8",
+      url: this.baseUrl + '/' + id,
+      type: 'post',
+      contentType: 'application/json; charset=utf-8',
       data: JSON.stringify(value)
-    }).done(function (data, text) {
-      callback(null, data);
-    }).fail(function (request, status, error) {
-      callback(new NetSimApiError(request), false);
-    });
+    })
+      .done(function(data, text) {
+        callback(null, data);
+      })
+      .fail(function(request, status, error) {
+        callback(new NetSimApiError(request), false);
+      });
   }
 };
 
@@ -214,7 +224,7 @@ module.exports = {
    * @param {string} shardID
    * @returns {NetSimShardApi}
    */
-  makeShardApi: function (shardID) {
+  makeShardApi: function(shardID) {
     return shardApi.create(shardID);
   },
 
@@ -224,7 +234,7 @@ module.exports = {
    * @param {string} tableName
    * @returns {NetSimTableApi}
    */
-  makeTableApi: function (shardID, tableName) {
+  makeTableApi: function(shardID, tableName) {
     return tableApi.create(shardID, tableName);
   }
 };

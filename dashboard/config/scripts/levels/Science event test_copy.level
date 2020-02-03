@@ -1,0 +1,64 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2019-09-30T16:49:36.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "skin": "applab",
+    "code_functions": {
+      "onBoardEvent": {
+        "category": "",
+        "color": "red"
+      },
+      "setScreen": {
+        "category": "",
+        "color": "yellow"
+      }
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Test Your Collision Detector\r\n\r\nNow it's time to make sure it works.\r\n\r\n# Do this\r\n* Run the program.\r\n* Make sure it starts with the \"noCollision\" screen.\r\n* Shake the circuit playground and make sure that the screen changes to the \"collision\" screen.",
+    "mini_rubric": "false",
+    "never_autoplay_video": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "submittable": "false",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "false",
+    "beginner_mode": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "true",
+    "widget_mode": "false",
+    "parent_level_id": 19059,
+    "project_template_level_name": "Science earthquake project_copy",
+    "name_suffix": "_copy",
+    "reference_links": [
+      "/docs/concepts/app-lab/changing-screens/index.html",
+      "/docs/concepts/maker-toolkit/board-events/index.html"
+    ],
+    "libraries_enabled": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-20 15:57:33 +0000\",\"changed\":[\"notes\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:05:55 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"makerlab_enabled\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:06:28 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:09:58 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:15:02 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"hide_view_data_button\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:24:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 16:24:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 18:21:39 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_html\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 18:23:38 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-08-20 18:26:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-09-30 16:58:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-01-06 19:07:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-01-07 23:36:36 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</Applab>

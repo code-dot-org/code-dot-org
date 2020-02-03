@@ -6,7 +6,7 @@
   "user_id": 8,
   "properties": {
     "skin": "artist",
-    "instructions": "Let's make a quick adjustment to get completely different image!  \r\nHint: ? × 10 = 360",
+    "short_instructions": "Let's make a quick adjustment to get completely different image!  \r\nHint: ? × 10 = 360",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "start_direction": "270",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Let's make a quick adjustment to get completely different image!  \r\n<b>Hint:</b> ? × 10 = 360",
+    "long_instructions": "Let's make a quick adjustment to get completely different image!  \r\n<b>Hint:</b> ? × 10 = 360",
     "examples_required": "false",
     "authored_hints": "[]",
     "never_autoplay_video": "false",

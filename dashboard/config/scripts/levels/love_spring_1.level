@@ -7,8 +7,8 @@
   "properties": {
     "skin": "farmer",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1,\"value\":-3},{\"tileType\":1},{\"tileType\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1,\"value\":-3},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":4},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":1,\"value\":-3},{\"tileType\":1,\"value\":-2},{\"tileType\":1,\"value\":-2},{\"tileType\":1,\"value\":-2},{\"tileType\":1,\"value\":-2},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":4},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
-    "instructions": "Let's celebrate Spring!  We have put some seeds in the ground to prepare for the season's flowers.  Can you cover them up so that the birds don't eat them?",
-    "markdown_instructions": "Let's celebrate Spring!  \r\n\r\nWe have put some seeds in the ground to prepare for the season's flowers.  Can you cover them up so that the birds don't eat them?",
+    "short_instructions": "Let's celebrate Spring!  We have put some seeds in the ground to prepare for the season's flowers.  Can you cover them up so that the birds don't eat them?",
+    "long_instructions": "Let's celebrate Spring!  \r\n\r\nWe have put some seeds in the ground to prepare for the season's flowers.  Can you cover them up so that the birds don't eat them?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -27,7 +27,7 @@ var logger = require('./NetSimLogger').getSingleton();
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
-var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
+var NetSimBitLogPanel = (module.exports = function(rootDiv, options) {
   /**
    * The current binary contents of the log panel
    * @type {string}
@@ -85,26 +85,28 @@ var NetSimBitLogPanel = module.exports = function (rootDiv, options) {
     panelTitle: options.logTitle,
     beginMinimized: options.isMinimized
   });
-};
+});
 NetSimBitLogPanel.inherits(NetSimPanel);
 
-NetSimBitLogPanel.prototype.render = function () {
+NetSimBitLogPanel.prototype.render = function() {
   // Create boilerplate panel markup
   NetSimBitLogPanel.superPrototype.render.call(this);
 
   // Add our own content markup
-  var newMarkup = $(markup({
-    binary: this.binary_,
-    enabledEncodings: this.encodings_,
-    chunkSize: this.chunkSize_,
-    showReadWireButton: this.showReadWireButton_
-  }));
+  var newMarkup = $(
+    markup({
+      binary: this.binary_,
+      enabledEncodings: this.encodings_,
+      chunkSize: this.chunkSize_,
+      showReadWireButton: this.showReadWireButton_
+    })
+  );
   this.getBody().html(newMarkup);
   NetSimEncodingControl.hideRowsByEncoding(this.getBody(), this.encodings_);
 
-
-  this.getBody().find('#read-wire-button')
-      .click(this.onReceiveButtonPress_.bind(this));
+  this.getBody()
+    .find('#read-wire-button')
+    .click(this.onReceiveButtonPress_.bind(this));
 
   // Add a clear button to the panel header
   this.addButton(i18n.clear(), this.onClearButtonPress_.bind(this));
@@ -117,7 +119,7 @@ NetSimBitLogPanel.prototype.render = function () {
  * Remove all packets from the log, resetting its state.
  * @private
  */
-NetSimBitLogPanel.prototype.onClearButtonPress_ = function () {
+NetSimBitLogPanel.prototype.onClearButtonPress_ = function() {
   this.binary_ = '';
   this.render();
 };
@@ -127,38 +129,40 @@ NetSimBitLogPanel.prototype.onClearButtonPress_ = function () {
  * @param {Event} jQueryEvent
  * @private
  */
-NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function (jQueryEvent) {
+NetSimBitLogPanel.prototype.onReceiveButtonPress_ = function(jQueryEvent) {
   var thisButton = $(jQueryEvent.target);
   if (thisButton.is('[disabled]')) {
     return;
   }
 
   thisButton.attr('disabled', 'disabled');
-  this.netsim_.receiveBit(function (err, message) {
-    if (err) {
-      logger.warn("Error reading wire state: " + err.message);
+  this.netsim_.receiveBit(
+    function(err, message) {
+      if (err) {
+        logger.warn('Error reading wire state: ' + err.message);
+        thisButton.removeAttr('disabled');
+        return;
+      }
+
+      // A successful fetch with a null message means there's nothing
+      // on the wire.  We should log its default state: off/zero
+      var receivedBit = '0';
+      if (message) {
+        receivedBit = message.payload;
+      }
+
+      this.log(receivedBit);
+      this.netsim_.animateReadWireState(receivedBit);
       thisButton.removeAttr('disabled');
-      return;
-    }
-
-    // A successful fetch with a null message means there's nothing
-    // on the wire.  We should log its default state: off/zero
-    var receivedBit = '0';
-    if (message) {
-      receivedBit = message.payload;
-    }
-
-    this.log(receivedBit);
-    this.netsim_.animateReadWireState(receivedBit);
-    thisButton.removeAttr('disabled');
-  }.bind(this));
+    }.bind(this)
+  );
 };
 
 /**
  * Put a message into the log.
  * @param {string} binaryBit
  */
-NetSimBitLogPanel.prototype.log = function (binaryBit) {
+NetSimBitLogPanel.prototype.log = function(binaryBit) {
   this.binary_ += binaryBit.toString();
   this.render();
 };
@@ -168,7 +172,7 @@ NetSimBitLogPanel.prototype.log = function (binaryBit) {
  * mode.
  * @param {EncodingType[]} newEncodings
  */
-NetSimBitLogPanel.prototype.setEncodings = function (newEncodings) {
+NetSimBitLogPanel.prototype.setEncodings = function(newEncodings) {
   this.encodings_ = newEncodings;
   this.render();
 };
@@ -177,7 +181,7 @@ NetSimBitLogPanel.prototype.setEncodings = function (newEncodings) {
  * Change how binary input in interpreted and formatted in the log.
  * @param {number} newChunkSize
  */
-NetSimBitLogPanel.prototype.setChunkSize = function (newChunkSize) {
+NetSimBitLogPanel.prototype.setChunkSize = function(newChunkSize) {
   this.chunkSize_ = newChunkSize;
   this.render();
 };
@@ -186,7 +190,7 @@ NetSimBitLogPanel.prototype.setChunkSize = function (newChunkSize) {
  * Sets the vertical space that this log panel should consume (including margins)
  * @param {number} heightPixels
  */
-NetSimBitLogPanel.prototype.setHeight = function (heightPixels) {
+NetSimBitLogPanel.prototype.setHeight = function(heightPixels) {
   this.openHeight_ = heightPixels;
   this.sizeToOpenHeight_();
 };
@@ -196,24 +200,27 @@ NetSimBitLogPanel.prototype.setHeight = function (heightPixels) {
  * is the desired height.
  * @private
  */
-NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function () {
+NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function() {
   var root = this.getRoot().find('.netsim-panel');
   var panelHeader = root.find('h1');
   var panelBody = root.find('.panel-body');
   var scrollArea = root.find('.scroll-area');
 
-  var panelMargins = parseFloat(root.css('margin-top')) +
-      parseFloat(root.css('margin-bottom'));
+  var panelMargins =
+    parseFloat(root.css('margin-top')) + parseFloat(root.css('margin-bottom'));
   var headerHeight = panelHeader.outerHeight(true);
-  var panelBorders = parseFloat(panelBody.css('border-top-width')) +
-      parseFloat(panelBody.css('border-bottom-width'));
-  var scrollMargins = parseFloat(scrollArea.css('margin-top')) +
-      parseFloat(scrollArea.css('margin-bottom'));
+  var panelBorders =
+    parseFloat(panelBody.css('border-top-width')) +
+    parseFloat(panelBody.css('border-bottom-width'));
+  var scrollMargins =
+    parseFloat(scrollArea.css('margin-top')) +
+    parseFloat(scrollArea.css('margin-bottom'));
 
   // We set the panel height by fixing the size of its inner scrollable
   // area.
-  var newScrollViewportHeight = this.openHeight_ - (panelMargins + headerHeight +
-      panelBorders + scrollMargins);
+  var newScrollViewportHeight =
+    this.openHeight_ -
+    (panelMargins + headerHeight + panelBorders + scrollMargins);
   scrollArea.height(Math.floor(newScrollViewportHeight));
 };
 
@@ -221,8 +228,10 @@ NetSimBitLogPanel.prototype.sizeToOpenHeight_ = function () {
  * @returns {number} vertical space that panel currently consumes (including
  * margins) in pixels.
  */
-NetSimBitLogPanel.prototype.getHeight = function () {
-  return this.getRoot().find('.netsim-panel').outerHeight(true);
+NetSimBitLogPanel.prototype.getHeight = function() {
+  return this.getRoot()
+    .find('.netsim-panel')
+    .outerHeight(true);
 };
 
 /**
@@ -231,7 +240,7 @@ NetSimBitLogPanel.prototype.getHeight = function () {
  * @private
  * @override
  */
-NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
+NetSimBitLogPanel.prototype.onMinimizerClick_ = function() {
   NetSimBitLogPanel.superPrototype.onMinimizerClick_.call(this);
   NetSimGlobals.updateLayout();
 };

@@ -1,0 +1,10 @@
+name 'csp-post-survey-thanks-no-answers'
+right 'ready to submit'
+markdown <<MARKDOWN
+# Thanks!
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "<iframe width=\"370\" height=\"620\" style=\"float:right; margin-left: 25px; border: 0px;\" src=\"https://studio.code.org/projects/applab/kxyJyJI1Bg1fV_5NIl8MHQ/embed\"></iframe>\r\n\r\n# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. Once you've completed the experiment, answer the following questions for each sensor in the text box below.\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
+    "long_instructions": "<iframe width=\"370\" height=\"620\" style=\"float:right; margin-left: 25px; border: 0px;\" src=\"https://studio.code.org/projects/applab/kxyJyJI1Bg1fV_5NIl8MHQ/embed\"></iframe>\r\n\r\n# Sensor Experiment\r\n\r\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. Once you've completed the experiment, answer the following questions for each sensor in the text box below.\r\n\r\n* What does this sensor measure?\r\n* What is its maximum value?\r\n* What is its minimum value?",
     "instructions_important": "false",
     "display_name": "Sensor Experiment",
     "submittable": "false",

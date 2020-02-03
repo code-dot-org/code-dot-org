@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Now I just want to make honey. Some of these clouds might have honeycombs under them. The way we've been going about things won't work here. Be sure to check if a honeycomb is hiding behind each cloud!",
+    "short_instructions": "Now I just want to make honey. Some of these clouds might have honeycombs under them. The way we've been going about things won't work here. Be sure to check if a honeycomb is hiding behind each cloud!",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

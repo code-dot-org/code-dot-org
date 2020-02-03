@@ -1,7 +1,7 @@
 import React from 'react';
 import ProgressDetailToggle from './ProgressDetailToggle';
 import {combineReducers, createStore} from 'redux';
-import progress, { setIsSummaryView } from '@cdo/apps/code-studio/progressRedux';
+import progress, {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 
 export default storybook => {
   const initialState = {
@@ -37,12 +37,8 @@ export default storybook => {
     const store = createStore(combineReducers({progress}), initialState);
     store.dispatch(setIsSummaryView(true));
     return {
-      name:'isSummary is true',
-      story: () => (
-        <ProgressDetailToggle
-          store={store}
-        />
-      )
+      name: 'isSummary is true',
+      story: () => <ProgressDetailToggle store={store} />
     };
   }
 
@@ -50,12 +46,8 @@ export default storybook => {
     const store = createStore(combineReducers({progress}), initialState);
     store.dispatch(setIsSummaryView(false));
     return {
-      name:'isSummary is false',
-      story: () => (
-        <ProgressDetailToggle
-          store={store}
-        />
-      )
+      name: 'isSummary is false',
+      story: () => <ProgressDetailToggle store={store} />
     };
   }
 
@@ -63,12 +55,8 @@ export default storybook => {
     const store = createStore(combineReducers({progress}), initialStateGrouped);
     store.dispatch(setIsSummaryView(true));
     return {
-      name:'isSummary is true with groups',
-      story: () => (
-        <ProgressDetailToggle
-          store={store}
-        />
-      )
+      name: 'isSummary is true with groups',
+      story: () => <ProgressDetailToggle store={store} />
     };
   }
 
@@ -76,12 +64,8 @@ export default storybook => {
     const store = createStore(combineReducers({progress}), initialStateGrouped);
     store.dispatch(setIsSummaryView(false));
     return {
-      name:'isSummary is false with groups',
-      story: () => (
-        <ProgressDetailToggle
-          store={store}
-        />
-      )
+      name: 'isSummary is false with groups',
+      story: () => <ProgressDetailToggle store={store} />
     };
   }
 
@@ -91,6 +75,6 @@ export default storybook => {
       isSummaryTrue(),
       isSummaryFalse(),
       isSummaryTrueGrouped(),
-      isSummaryFalseGrouped(),
+      isSummaryFalseGrouped()
     ]);
 };

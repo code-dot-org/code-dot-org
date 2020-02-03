@@ -14,7 +14,7 @@
     "ideal": "6",
     "slider_speed": ".8",
     "free_play": "false",
-    "instructions": "Use your new skills to quickly draw the last row of windows for this building.\r\n\r\nThe windows are 20 pixel squares, each 20 pixels apart.",
+    "short_instructions": "Use your new skills to quickly draw the last row of windows for this building.\r\n\r\nThe windows are 20 pixel squares, each 20 pixels apart.",
     "embed": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",

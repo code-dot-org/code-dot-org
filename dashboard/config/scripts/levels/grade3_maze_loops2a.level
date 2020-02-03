@@ -13,7 +13,7 @@
     "skip_instructions_popup": "false",
     "ideal": "5",
     "step_speed": "3",
-    "markdown_instructions": "*\"Zombie hungry!\"*\r\n\r\nGet the zombie to the sunflower using the fewest number of blocks possible.",
+    "long_instructions": "*\"Zombie hungry!\"*\r\n\r\nGet the zombie to the sunflower using the fewest number of blocks possible.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -29,7 +29,7 @@
     "disable_examples": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To solve this puzzle, you will need to \\\"nest\\\" one `repeat` loop inside of another `repeat` loop.\",\"hint_id\":\"grade3_maze_loops2a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ad5ba765bb5abcf0bb15cb28e33e1fc7/grade3_maze_loops2a.mp3\"}]",
     "instructions_important": "false",
-    "instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
+    "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
     "contained_level_names": null
   },
   "published": true,

@@ -27,7 +27,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "<img src=\"https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen switches to `\"rightScreen\"` when the user clicks the \"Right!\" button.\r\n\r\n**How:** In Code Mode add a new `onEvent()` to your program for your \"Right!\" button. Add a `setScreen()` block inside of it that switches screens to `\"thatScreen\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)",
+    "long_instructions": "<img src=\"https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif\" style=\"float:right;height:200px\">\r\n\r\n**Goal:** The screen switches to `\"rightScreen\"` when the user clicks the \"Right!\" button.\r\n\r\n**How:** In Code Mode add a new `onEvent()` to your program for your \"Right!\" button. Add a `setScreen()` block inside of it that switches screens to `\"thatScreen\"`.\r\n\r\n**Stuck? Click here:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",

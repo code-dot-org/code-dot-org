@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Can you loop these blocks to draw 6 lines?",
+    "short_instructions": "Can you loop these blocks to draw 6 lines?",
     "x": "175",
     "y": "75",
     "start_direction": "90",

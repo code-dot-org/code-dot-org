@@ -11,7 +11,7 @@
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"size\":0.75,\"emotion\":1,\"sprite\":15},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0,\"emotion\":1,\"sprite\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":3},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"speed\":3,\"size\":0.5,\"sprite\":9},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "true",
-    "instructions": "Here is your finished game!",
+    "short_instructions": "Here is your finished game!",
     "is_k1": "true",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

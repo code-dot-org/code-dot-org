@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 import Alert from '@cdo/apps/templates/alert';
 
 describe('Alert', () => {
@@ -30,16 +30,18 @@ describe('Alert', () => {
         <span>This is an error.</span>
       </Alert>
     );
-    expect(error.find('div > div').props().style.backgroundColor)
-      .to.equal('#f2dede');
+    expect(error.find('div > div').props().style.backgroundColor).to.equal(
+      '#f2dede'
+    );
 
     const warning = shallow(
       <Alert type="warning" onClose={() => {}}>
         <span>This is a warning.</span>
       </Alert>
     );
-    expect(warning.find('div > div').props().style.backgroundColor)
-      .to.equal('#fcf8e3');
+    expect(warning.find('div > div').props().style.backgroundColor).to.equal(
+      '#fcf8e3'
+    );
   });
 
   it('calls onClose callback when close button is clicked', () => {

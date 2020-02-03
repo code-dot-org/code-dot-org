@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
+    "short_instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
     "x": "25",
     "y": "100",
     "start_direction": "90",
@@ -30,7 +30,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "**OOPS!**  \r\n\r\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \r\n\r\nAren't you glad you're using a variable?",
+    "long_instructions": "**OOPS!**  \r\n\r\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \r\n\r\nAren't you glad you're using a variable?",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
@@ -40,11 +40,17 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 16:00:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-12 21:04:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-12 21:05:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 23:47:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:00:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-10-12 21:04:09 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-10-12 21:05:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-04 23:47:41 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "variables": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

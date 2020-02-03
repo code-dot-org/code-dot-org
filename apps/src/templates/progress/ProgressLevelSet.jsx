@@ -1,9 +1,10 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
-import { levelType } from './progressTypes';
-import { getIconForLevel } from './progressHelpers';
+import {levelType} from './progressTypes';
+import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
 
 const styles = {
@@ -25,7 +26,7 @@ const styles = {
   linesAndDot: {
     whiteSpace: 'nowrap',
     marginLeft: '50%',
-    marginRight: 14,
+    marginRight: 14
   },
   verticalLine: {
     display: 'inline-block',
@@ -33,7 +34,7 @@ const styles = {
     height: 15,
     width: 3,
     position: 'relative',
-    bottom: 2,
+    bottom: 2
   },
   horizontalLine: {
     display: 'inline-block',
@@ -63,11 +64,11 @@ class ProgressLevelSet extends React.Component {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.string
   };
 
   render() {
-    const { name, levels, disabled, selectedSectionId } = this.props;
+    const {name, levels, disabled, selectedSectionId} = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -98,19 +99,17 @@ class ProgressLevelSet extends React.Component {
             </td>
             <td style={styles.col2}>
               <a href={url}>
-                <div style={{...styles.nameText, ...styles.text}}>
-                  {name}
-                </div>
+                <div style={{...styles.nameText, ...styles.text}}>{name}</div>
               </a>
             </td>
           </tr>
-          {multiLevelStep &&
+          {multiLevelStep && (
             <tr>
               <td>
                 <div style={styles.linesAndDot}>
-                  <div style={styles.verticalLine}/>
-                  <div style={styles.horizontalLine}/>
-                  <div style={styles.dot}/>
+                  <div style={styles.verticalLine} />
+                  <div style={styles.horizontalLine} />
+                  <div style={styles.dot} />
                 </div>
               </td>
               <td style={styles.col2}>
@@ -121,7 +120,7 @@ class ProgressLevelSet extends React.Component {
                 />
               </td>
             </tr>
-          }
+          )}
         </tbody>
       </table>
     );

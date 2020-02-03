@@ -1,11 +1,18 @@
-import React, {PropTypes} from 'react';
-import { connect } from 'react-redux';
-import VirtualizedSelect from 'react-virtualized-select';
-import 'react-virtualized/styles.css';
-import 'react-select/dist/react-select.css';
-import 'react-virtualized-select/styles.css';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {
+  chooseLevel,
+  addVariant,
+  removeVariant,
+  setActiveVariant,
+  setField,
+  NEW_LEVEL_ID
+} from './editorRedux';
+import {levelShape} from './shapes';
+import LevelNameInput from './LevelNameInput';
+import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
-import { chooseLevelType, chooseLevel, addVariant, setActiveVariant, setField } from './editorRedux';
 
 const styles = {
   checkbox: {
@@ -20,210 +27,324 @@ const styles = {
   levelFieldLabel: {
     display: 'inline-block',
     lineHeight: '36px',
-    margin: '0 7px 0 5px'
-  },
-  levelTypeSelect: {
-    width: 'calc(100% - 80px)',
-    margin: '0 0 5px 80px'
-  },
-  textInput: {
-    height: 34,
-    width: 350,
-    boxSizing: 'border-box',
+    margin: '0 7px 0 5px',
     verticalAlign: 'baseline',
-    margin: '7px 0 10px 0'
+    textAlign: 'right',
+    width: 80
+  },
+  shortTextInput: {
+    width: 330,
+    verticalAlign: 'baseline',
+    marginBottom: 0
+  },
+  progressionTextInput: {
+    width: 550,
+    verticalAlign: 'baseline',
+    marginBottom: 0
+  },
+  checkboxLabel: {
+    display: 'inline-block',
+    marginRight: 10,
+    marginBottom: 0
+  },
+  checkboxInput: {
+    marginTop: 0,
+    verticalAlign: 'middle'
+  },
+  checkboxText: {
+    verticalAlign: 'middle'
   },
   divider: {
     borderColor: '#ddd',
-    margin: '7px 0'
+    margin: '7px 0',
+    paddingBottom: 5
   },
-  addVariant: {
+  button: {
     fontSize: 14,
     background: 'white',
     border: '1px solid #ddd',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     margin: '0'
   },
-  progression: {
-    paddingTop: 5
+  removeVariant: {
+    float: 'right'
+  },
+  tooltip: {
+    maxWidth: 450
   }
+};
+
+const tooltipText = {
+  assessment:
+    'Visibly mark this level as an assessment, and show it in the Assessments tab in Teacher Dashboard.',
+  named:
+    'Show this level on a line by itself, with the Display Name of the level as the label. This option is deprecated. Please specify a progression name instead.',
+  challenge: 'Show students the Challenge dialog when viewing this level.',
+  progression:
+    'Group this level with other levels in the same progression, with this text as the label.'
 };
 
 const ArrowRenderer = ({onMouseDown}) => {
-  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown}/>;
+  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-const LevelTokenDetails = React.createClass({
-  propTypes: {
+export class UnconnectedLevelTokenDetails extends Component {
+  static propTypes = {
     levelKeyList: PropTypes.object.isRequired,
-    chooseLevelType: PropTypes.func.isRequired,
+    levelNameToIdMap: PropTypes.objectOf(PropTypes.number).isRequired,
     chooseLevel: PropTypes.func.isRequired,
     addVariant: PropTypes.func.isRequired,
+    removeVariant: PropTypes.func.isRequired,
     setActiveVariant: PropTypes.func.isRequired,
     setField: PropTypes.func.isRequired,
-    level: PropTypes.object.isRequired,
+    level: levelShape.isRequired,
     stagePosition: PropTypes.number.isRequired
-  },
+  };
 
-  levelKindOptions: [
-    {label: 'Puzzle', value: 'puzzle'},
-    {label: 'Assessment', value: 'assessment'},
-    {label: 'Named Level', value: 'named_level'},
-    {label: 'Unplugged', value: 'unplugged'}
-  ],
-
-  componentWillMount() {
-    this.levelKeyOptions = _.map(this.props.levelKeyList, (label, value) => ({
-      label,
-      value: +value
-    }));
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Variants are deprecated. Only show them if they are already in use.
+      // If the number of variants is reduced to 1, keep showing the Add
+      // Variants button for the rest of this editing session.
+      showAddVariants: props.level.ids.length > 1,
+      // Named levels are deprecated. Only show the checkbox if the level is
+      // already marked as named, otherwise the author can name the level by
+      // specifying a name in the progression field.
+      showNamed: props.level.named
+    };
+  }
 
   containsLegacyLevel() {
-    return this.props.level.ids.some(id => /^blockly:/.test(this.props.levelKeyList[id]));
-  },
+    return this.props.level.ids.some(id =>
+      /^blockly:/.test(this.props.levelKeyList[id])
+    );
+  }
 
-  handleLevelTypeSelected({value}) {
-    this.props.chooseLevelType(this.props.stagePosition, this.props.level.position, value);
-  },
+  handleLevelSelected = (variant, levelId) => {
+    this.props.chooseLevel(
+      this.props.stagePosition,
+      this.props.level.position,
+      variant,
+      levelId
+    );
+  };
 
-  handleLevelSelected(index, {value}) {
-    this.props.chooseLevel(this.props.stagePosition, this.props.level.position, index, value);
-  },
-
-  handleAddVariant() {
+  handleAddVariant = () => {
     this.props.addVariant(this.props.stagePosition, this.props.level.position);
-  },
+  };
 
-  handleActiveVariantChanged(id) {
-    this.props.setActiveVariant(this.props.stagePosition, this.props.level.position, id);
-  },
+  handleRemoveVariant = levelId => {
+    this.props.removeVariant(
+      this.props.stagePosition,
+      this.props.level.position,
+      levelId
+    );
+  };
 
-  handleFieldChange(field) {
-    const ref = this[`${field}Input`];
-    if (ref) {
-      this.props.setField(this.props.stagePosition, this.props.level.position, {[field]: ref.value});
-    }
-  },
+  handleActiveVariantChanged = id => {
+    this.props.setActiveVariant(
+      this.props.stagePosition,
+      this.props.level.position,
+      id
+    );
+  };
+
+  handleFieldChange = (field, event) => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      [field]: event.target.value
+    });
+  };
+
+  handleProgressionChange = e => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      progression: e.target.value
+    });
+  };
+
+  handleCheckboxChange = field => {
+    this.props.setField(this.props.stagePosition, this.props.level.position, {
+      [field]: !this.props.level[field]
+    });
+  };
 
   render() {
+    const {showAddVariants} = this.state;
+    const tooltipIds = {};
+    Object.keys(tooltipText).forEach(option => {
+      tooltipIds[option] = _.uniqueId();
+    });
+    const scriptLevelOptions = ['assessment', 'challenge'];
+    if (this.state.showNamed) {
+      scriptLevelOptions.push('named');
+    }
     return (
       <div style={styles.levelTokenActive}>
-        <span style={Object.assign({float: 'left'}, styles.levelFieldLabel)}>
-          Level type
+        <span className="level-token-checkboxes">
+          {scriptLevelOptions.map(option => (
+            <label
+              key={option}
+              style={styles.checkboxLabel}
+              data-for={tooltipIds[option]}
+              data-tip
+            >
+              <input
+                type="checkbox"
+                style={styles.checkboxInput}
+                checked={!!this.props.level[option]}
+                onChange={this.handleCheckboxChange.bind(this, option)}
+              />
+              &nbsp;
+              <span style={styles.checkboxText}>{option}</span>
+              <ReactTooltip id={tooltipIds[option]} delayShow={500}>
+                <div style={styles.tooltip}>{tooltipText[option]}</div>
+              </ReactTooltip>
+            </label>
+          ))}
         </span>
-        <VirtualizedSelect
-          value={this.props.level.kind}
-          options={this.levelKindOptions}
-          onChange={this.handleLevelTypeSelected}
-          clearable={false}
-          arrowRenderer={ArrowRenderer}
-          style={styles.levelTypeSelect}
-        />
-        {this.containsLegacyLevel() &&
+        <hr style={styles.divider} />
+        <div style={{clear: 'both'}} />
+        {this.containsLegacyLevel() && (
           <div>
-            <span style={styles.levelFieldLabel}>Skin</span>
+            <span style={styles.levelFieldLabel}>Skin:</span>
             <input
               defaultValue={this.props.level.skin}
               type="text"
-              style={styles.textInput}
-              ref={skinInput => this.skinInput = skinInput}
-              onChange={this.handleFieldChange.bind(this, 'skin')}
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('skin', event)}
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Video key</span>
-              <input
-                defaultValue={this.props.level.videoKey}
-                type="text"
-                style={styles.textInput}
-                ref={videoKeyInput => this.videoKeyInput = videoKeyInput}
-                onChange={this.handleFieldChange.bind(this, 'videoKey')}
-              />
-            </div>
-            <div style={{clear: 'both'}}></div>
-            <span style={styles.levelFieldLabel}>Difficulty</span>
+            <span style={styles.levelFieldLabel}>Video key:</span>
+            <input
+              defaultValue={this.props.level.videoKey}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('videoKey', event)}
+            />
+            <div style={{clear: 'both'}} />
+            <span style={styles.levelFieldLabel}>Difficulty:</span>
             <input
               defaultValue={this.props.level.conceptDifficulty}
               type="text"
-              style={styles.textInput}
-              ref={conceptDifficultyInput => this.conceptDifficultyInput = conceptDifficultyInput}
-              onChange={this.handleFieldChange.bind(this, 'conceptDifficulty')}
+              style={styles.shortTextInput}
+              onChange={event =>
+                this.handleFieldChange('conceptDifficulty', event)
+              }
             />
-            <div style={{float: 'right'}}>
-              <span style={styles.levelFieldLabel}>Concepts</span>
-              <input
-                defaultValue={this.props.level.concepts}
-                type="text"
-                style={Object.assign({}, styles.textInput, {width: 320})}
-                ref={conceptsInput => this.conceptsInput = conceptsInput}
-                onChange={this.handleFieldChange.bind(this, 'concepts')}
-              />
-            </div>
-          </div>
-        }
-        {this.props.level.ids.map((id, index) =>
-          <div key={id}>
-            {this.props.level.ids.length > 1 &&
-              <div>
-                <hr style={styles.divider} />
-                <span style={styles.levelFieldLabel}>Active</span>
-                <input
-                  type="radio"
-                  onChange={this.handleActiveVariantChanged.bind(this, id)}
-                  defaultChecked={id === this.props.level.activeId}
-                  style={styles.checkbox}
-                  name={`radio-${this.props.stagePosition}-${this.props.level.position}`}
-                />
-              </div>
-            }
-            <VirtualizedSelect
-              options={this.levelKeyOptions}
-              value={id}
-              onChange={this.handleLevelSelected.bind(null, index)}
-              clearable={false}
-              arrowRenderer={ArrowRenderer}
+            <span style={styles.levelFieldLabel}>Concepts:</span>
+            <input
+              defaultValue={this.props.level.concepts}
+              type="text"
+              style={styles.shortTextInput}
+              onChange={event => this.handleFieldChange('concepts', event)}
             />
           </div>
         )}
-        {/* We don't currently support editing progression names here, but do
-          * show the current progression if we have one. */}
-        {this.props.level.progression &&
-          <div style={styles.progression}>
-            Progression Name: {this.props.level.progression}
+        {this.props.level.ids.map((id, index) => (
+          <div key={id}>
+            {this.props.level.ids.length > 1 && (
+              <div>
+                <hr style={styles.divider} />
+                <span>
+                  <span style={styles.levelFieldLabel}>Active</span>
+                  <input
+                    type="radio"
+                    onChange={this.handleActiveVariantChanged.bind(this, id)}
+                    defaultChecked={id === this.props.level.activeId}
+                    style={styles.checkbox}
+                    name={`radio-${this.props.stagePosition}-${
+                      this.props.level.position
+                    }`}
+                  />
+                </span>
+                {id !== this.props.level.activeId && (
+                  <span style={styles.removeVariant}>
+                    <button
+                      onMouseDown={() => this.handleRemoveVariant(id)}
+                      className="btn"
+                      style={styles.button}
+                      type="button"
+                    >
+                      <i
+                        style={{marginRight: 7}}
+                        className="fa fa-minus-circle"
+                      />
+                      Remove Variant
+                    </button>
+                  </span>
+                )}
+              </div>
+            )}
+            <span style={{...styles.levelFieldLabel}}>Level name:</span>
+            <LevelNameInput
+              onSelectLevel={id => this.handleLevelSelected(index, id)}
+              levelNameToIdMap={this.props.levelNameToIdMap}
+              initialLevelName={this.props.levelKeyList[id] || ''}
+            />
           </div>
-        }
-        <hr style={styles.divider} />
-        <button
-          onMouseDown={this.handleAddVariant}
-          className="btn"
-          style={styles.addVariant}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Add Variant
-        </button>
+        ))}
+        {showAddVariants && <hr style={styles.divider} />}
+        <div style={styles.progression}>
+          <span
+            style={styles.levelFieldLabel}
+            data-for={tooltipIds.progression}
+            data-tip
+          >
+            Progression:
+          </span>
+          <ReactTooltip id={tooltipIds.progression} delayShow={500}>
+            <div style={styles.tooltip}>{tooltipText.progression}</div>
+          </ReactTooltip>
+
+          <span style={styles.levelSelect}>
+            <input
+              type="text"
+              onChange={event => this.handleFieldChange('progression', event)}
+              value={this.props.level.progression}
+              style={styles.progressionTextInput}
+              data-field-name="progression"
+            />
+          </span>
+        </div>
+        {showAddVariants && !this.props.level.ids.includes(NEW_LEVEL_ID) && (
+          <div>
+            <hr style={styles.divider} />
+            <button
+              onMouseDown={this.handleAddVariant}
+              className="btn"
+              style={styles.button}
+              type="button"
+            >
+              <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+              Add Variant
+            </button>
+          </div>
+        )}
       </div>
     );
   }
-});
+}
 
-export default connect(state => ({
-  levelKeyList: state.levelKeyList
-}), dispatch => ({
-  chooseLevelType(stage, level, value) {
-    dispatch(chooseLevelType(stage, level, value));
-  },
-  chooseLevel(stage, level, variant, value) {
-    dispatch(chooseLevel(stage, level, variant, value));
-  },
-  addVariant(stage, level) {
-    dispatch(addVariant(stage, level));
-  },
-  setActiveVariant(stage, level, id) {
-    dispatch(setActiveVariant(stage, level, id));
-  },
-  setField(stage, level, modifier) {
-    dispatch(setField(stage, level, modifier));
-  }
-}))(LevelTokenDetails);
+export default connect(
+  state => ({
+    levelKeyList: state.levelKeyList,
+    levelNameToIdMap: state.levelNameToIdMap
+  }),
+  dispatch => ({
+    chooseLevel(stage, level, variant, value) {
+      dispatch(chooseLevel(stage, level, variant, value));
+    },
+    addVariant(stage, level) {
+      dispatch(addVariant(stage, level));
+    },
+    removeVariant(stage, level, levelId) {
+      dispatch(removeVariant(stage, level, levelId));
+    },
+    setActiveVariant(stage, level, id) {
+      dispatch(setActiveVariant(stage, level, id));
+    },
+    setField(stage, level, modifier) {
+      dispatch(setField(stage, level, modifier));
+    }
+  })
+)(UnconnectedLevelTokenDetails);

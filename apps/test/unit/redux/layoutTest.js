@@ -1,10 +1,10 @@
 import reducer, * as layout from '@cdo/apps/redux/layout';
-import {expect} from '../../util/configuredChai';
+import {expect} from '../../util/deprecatedChai';
 
 describe('layout redux module', () => {
   it('has expected default state', () => {
     expect(reducer(undefined, {})).to.deep.equal({
-      visualizationScale: null,
+      visualizationScale: null
     });
   });
 
@@ -18,7 +18,7 @@ describe('layout redux module', () => {
     it('changes the visualization scale', () => {
       const newState = reducer(state, layout.setVisualizationScale(0.5));
       expect(newState).to.deep.equal({
-        visualizationScale: 0.5,
+        visualizationScale: 0.5
       });
       expect(layout.getVisualizationScale({layout: newState})).to.equal(0.5);
     });

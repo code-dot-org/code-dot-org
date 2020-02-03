@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "bee",
-    "instructions": "Functions are blocks of code that perform a task. Use the \"get 2 nectar\" function to collect the nectar from each flower.",
+    "short_instructions": "Functions are blocks of code that perform a task. Use the \"get 2 nectar\" function to collect the nectar from each flower.",
     "step_mode": "1",
     "is_k1": "false",
     "start_direction": "1",
@@ -18,7 +18,7 @@
     "skip_instructions_popup": "false",
     "ideal": "7",
     "video_key": "C3_bee_functions",
-    "markdown_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \r\n\r\nUse the `get 2 nectar` function to collect the nectar from each flower.",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -34,10 +34,11 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
     "hint_prompt_attempts_threshold": 3,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-09-23 15:12:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2019-09-23 15:15:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2,
@@ -63,13 +64,13 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" editable="false" uservisible="false">
+        <block type="procedures_defnoreturn" editable="false">
           <mutation/>
           <title name="NAME">get 2 nectar</title>
           <statement name="STACK">
-            <block type="maze_nectar" editable="false">
+            <block type="maze_nectar" deletable="false" can_disconnect_from_parent="false">
               <next>
-                <block type="maze_nectar" editable="false"/>
+                <block type="maze_nectar" deletable="false" next_connection_disabled="true" can_disconnect_from_parent="false"/>
               </next>
             </block>
           </statement>

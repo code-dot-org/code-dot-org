@@ -23,13 +23,27 @@ Scenario: Solving puzzle
 
 @no_ie
 @no_mobile
+@as_student
 Scenario: Submitting an incorrect solution
+  Given match level 0 contains 4 empty slots
   And I drag ".answer[originalindex=3]" to ".emptyslot:first"
   And I drag ".answer[originalindex=2]" to ".emptyslot:first"
   And I drag ".answer[originalindex=1]" to ".emptyslot:first"
   And I drag ".answer[originalindex=0]" to ".emptyslot:first"
+  And match level 0 contains 0 empty slots
   And I press ".submitButton:last" using jQuery
   Then I wait to see ".modal"
   And element ".modal .dialog-title" contains text "Incorrect"
   And I press ".modal #ok-button" using jQuery
   And I wait until element ".xmark" is visible
+
+  # For signed-in users, we remember the previous answer and display it when
+  # they next come back to the page.
+
+  When I reload the page
+  And I wait to see ".submitButton"
+  And I wait until element ".emptyslot" is not visible
+  And match placed answer 0 has original index 3
+  And match placed answer 1 has original index 2
+  And match placed answer 2 has original index 1
+  And match placed answer 3 has original index 0

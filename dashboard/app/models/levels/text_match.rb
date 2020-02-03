@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer
+#  ideal_level_source_id :integer          unsigned
 #  user_id               :integer
 #  properties            :text(65535)
 #  type                  :string(255)
@@ -26,12 +26,12 @@
 # Text Match type.
 class TextMatch < DSLDefined
   def dsl_default
-    <<ruby
-name 'Enter name here'
-title 'Enter title here'
-content1 'Enter prompt here'
-answer 'Enter answer here'
-ruby
+    <<~ruby
+      name 'Enter name here'
+      title 'Enter title here'
+      content1 'Enter prompt here'
+      answer 'Enter answer here'
+    ruby
   end
 
   def supports_markdown?
@@ -39,6 +39,6 @@ ruby
   end
 
   def icon
-    'fa-check-square-o'
+    'fa fa-list-ul'
   end
 end

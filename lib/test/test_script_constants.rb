@@ -30,10 +30,14 @@ class ScriptConstantsTest < Minitest::Test
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::STARWARS_BLOCKS_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::MINECRAFT_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::MINECRAFT_AQUATIC_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::INFINITY_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ARTIST_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::GUMBALL_NAME)
     assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::ICEAGE_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::DANCE_PARTY_EXTRAS_NAME)
+    assert ScriptConstants.script_in_category?(:hoc, ScriptConstants::OCEANS_NAME)
     refute ScriptConstants.script_in_category?(:hoc, ScriptConstants::COURSE4_NAME)
   end
 
@@ -59,14 +63,18 @@ class ScriptConstantsTest < Minitest::Test
 
   def test_category_priority
     assert_equal 0, ScriptConstants.category_priority(:full_course)
-    assert_equal 4, ScriptConstants.category_priority(:csf_international)
-    assert_equal 6, ScriptConstants.category_priority(:research_studies)
+    assert_equal 5, ScriptConstants.category_priority(:csf_international)
+    assert_equal 7, ScriptConstants.category_priority(:research_studies)
   end
 
   def test_assignable_info
-    assert_equal 1, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal 2, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal 3, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
+    assert_equal 1, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
+    assert_equal 2, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
+    assert_equal 3, ScriptConstants.assignable_info({name: 'oceans'})[:position]
+    assert_equal 4, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
+    assert_equal 5, ScriptConstants.assignable_info({name: 'hero'})[:position]
+    assert_equal 6, ScriptConstants.assignable_info({name: 'mc'})[:position]
+    assert_equal 7, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
   end
 
   describe 'ScriptConstants::script_in_any_category?' do
@@ -77,6 +85,12 @@ class ScriptConstantsTest < Minitest::Test
 
     it 'does not find nonexistent scripts' do
       refute ScriptConstants.script_in_any_category?('foo')
+    end
+  end
+
+  describe 'ScriptConstants::i18n' do
+    it 'finds course1 in i18n' do
+      assert ScriptConstants.i18n?('course1')
     end
   end
 end

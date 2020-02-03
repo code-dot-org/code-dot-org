@@ -1,0 +1,28 @@
+name 'AP_practice_Qs_rqb_61_CSP_2_3_2'
+wrong 'I and III'
+right 'I and IV'
+wrong 'II and III'
+wrong 'II and IV'
+markdown <<MARKDOWN
+Meteorologists would use a computer simulation of weather patterns for which of the following reasons?
+I. To study how weather in one region affects weather in a different area of the world.
+II. To observe what the real weather patterns are in a different area of the world.
+III. To record what the weather was like last week.
+IV. To test a theory about what causes extreme changes in weather patterns.
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.3.2** and Essential Knowledge statements: **2.3.2A**
+<hr>
+ (A) While option I is correct, III is not.  A model simulates weather rather than recording it.
+
+<hr>
+ (B) This option is correct. Using simulations you can make predictions and test theories to see a variety of outcomes.
+
+<hr>
+ (C) A model simulates weather rather than recording or depicting it.
+
+<hr>
+ (D) While option IV is correct, II is not.  A model simulates reality rather than depicting it.
+
+MARKDOWN

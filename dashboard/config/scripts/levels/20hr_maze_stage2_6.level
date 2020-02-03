@@ -7,7 +7,7 @@
   "properties": {
     "skin": "birds",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,2,1,1,1,1,3,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "instructions": "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?",
+    "short_instructions": "There's a way I can get to the silly pig using only 2 blocks. Can you figure it out?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

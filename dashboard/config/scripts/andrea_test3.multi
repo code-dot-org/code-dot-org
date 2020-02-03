@@ -1,0 +1,14 @@
+name 'andrea-test3'
+title 'selected response'
+description 'current events'
+question 'Who is the Vice President of the United States ?'
+wrong 'Barack Obama'
+wrong 'Hillary Clinton'
+right 'Mike Pence'
+wrong 'Donald Trump'
+
+markdown <<MARKDOWN
+## just wondering how this works
+
+test test test
+MARKDOWN

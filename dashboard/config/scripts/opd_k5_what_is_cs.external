@@ -3,9 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # CS Fundamentals > What is computer science?
 
-Have you ever wondered "Exactly what is computer science?" Or, "Why are some computer programs written with words and some are written using images?" If so, watch this video; it's a great introduction to the field of computer science. After watching this video, you'll answer two multiple choice questions based on the content.
+Have you ever wondered "Exactly what is computer science?" Or, "Why are some computer programs written with words and some are written using images?" If so, watch this video; it's a great introduction to the field of computer science.
 
 <iframe width="640" height="390" src="//youtubeeducation.com/embed/KHXvOO8cVDE" frameborder="0" allowfullscreen></iframe>
-
-**[Can't see the video? Click here.](https://www.dropbox.com/s/z376gxej3zuh7cc/K-5-PD2.mp4?dl=0)**
 MARKDOWN

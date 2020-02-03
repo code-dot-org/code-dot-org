@@ -1,35 +1,52 @@
 :ruby
+  hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
-  actions = Homepage.get_actions
-  show_census_layout, show_census_announcement, census_announcement = Homepage.get_census(request)
+  actions = Homepage.get_actions(request)
 
 - main_actions = capture_haml do
-  - actions.each do |entry|
-    .action
-      - if entry[:type] == "cta_button"
-        .buttongroup{style: "margin-bottom: 15px"}
+  - if show_single_hero == "changeworld"
+    .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
+      = hoc_s(:hoc2019_header_line2_mobile)
+  - if show_single_hero == "dance2019"
+    -# Two lines of text
+    .hero-message-line1{style: "font-size: 28px; line-height: 28px; padding-bottom: 10px; color: white"}
+      - if hoc_mode == "actual-hoc"
+        = hoc_s(:social_hoc2018_hoc_here)
+      - else
+        = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+    .hero-message-line2{style: "font-size: 28px; line-height: 28px; color: white; font-family: 'Gotham 5r', sans-serif; margin-bottom: 20px"}
+      -# Don't tint the word "create"
+      .desktop-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+      .mobile-feature= hoc_s(:codeorg_homepage_hoc2018_header_line2_mobile)
+  - elsif show_single_hero == "oceans2019"
+    = view :homepage_hero_oceans2019
+  - elsif show_single_hero == "hoc2019"
+    .hero-message
+      = hoc_s(:hoc2019_header_line1_mobile)
+    .hero-message-second
+      = hoc_s(:hoc2019_header_line2_mobile)
+    .hero-sub-message
+      = hoc_s(:codeorg_homepage_hoc2018_header_line1)
+  .action_buttons
+    - actions.each do |entry|
+      - if ["cta_button", "cta_button_solid_white", "cta_button_hollow_white"].include? entry[:type]
+        .action
           %a.linktag#hero-hoc{href: entry[:url]}
-            %button.herohocbutton{style: "min-width: 230px; margin-right: 0px"}= I18n.t(entry[:text])
-        %div{style: "clear: both;"}
+            - extra_class = "herohocbutton-solid-white" if entry[:type] == "cta_button_solid_white"
+            - extra_class = "herohocbutton-hollow-white" if entry[:type] == "cta_button_hollow_white"
+            %button.herohocbutton{class: extra_class}= I18n.t(entry[:text])
       - elsif entry[:type] == "video"
-        %button.clicktag#hero-video{onclick: "return showVideo_mainvideo();", style: "min-width: 230px; margin-top: 0px; background-color: transparent; border-color: white; border-width: 2px"}
-          %span#playtext{style: "font-size: 18px; pointer-events: none"}= I18n.t(entry[:text])
+        .action
+          %button.clicktag.herohocbutton#hero-video{onclick: "return showVideo_mainvideo();"}
+            %img.video-play-icon{src: "/shared/images/fit-48/play-button.png"}
+            %span#playtext= I18n.t(entry[:text])
 
-  - if show_census_announcement
-    %br/
-    %br/
-    - unless census_announcement['homepage_text'].nil_or_empty?
-      .bigheading{style: "font-size: 20px; line-height: 1.2em; font-family: 'Gotham 7r', sans-serif;"}
-        = census_announcement['homepage_text']
-    .subheading{style: "padding-top: 0px; font-size: 18px;"}
-      = census_announcement['homepage_subtext']
+  .clear{style: "clear: both"}
 
-    %a{href: "/yourschool"}
-      %button{style: "min-width: 230px; font-size: 18px; margin-top: 15px; background-color: transparent; border-color: white; border-width: 2px"}
-        See how
-
-#hero
-
+#hero{style: "position: relative"}
   - heroes_arranged.each_with_index do |entry, index|
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
@@ -51,15 +68,55 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
+  - if show_single_hero == "dance2019"
+    #actions.mobile-center.col-40
+      = main_actions
+
+    -# Stars image and text below it
+    %a{href: "/dance", style: "text-decoration: none"}
+      .col-60{style: "text-align: center; font-size: 40px; line-height: 40px; font-family: 'Gotham 5r', sans-serif"}
+        %img.desktop-feature{src: "/images/fit-1200/homepage/hoc2019_dance_stars.png", style: "width: 80%"}
+        %img.mobile-feature{src: "/images/fit-1200/homepage/hoc2019_dance_stars_mobile.png", style: "width: 100%; padding-left: 10%; padding-right: 10%"}
+
+        :css
+          .highlight-word {
+            color: rgb(89, 202, 211);
+          }
+
+        .hoc2018-dance-heading{style: "color: white; margin-bottom: 50px; padding-left: 10px; padding-right: 10px"}= hoc_s(:codeorg_homepage_hoc2019_dance_heading)
+
+    .clear{style: "clear: both"}
+
+    -# List of artists
+    %div{style: "color: white; text-align: center; margin-left: 10%; margin-right: 10%; margin-bottom: 15px; font-family: 'Gotham 4r', sans-serif; line-height: 19px;"}
+      %div{style: "margin-bottom: 5px"}= hoc_s(:codeorg_homepage_hoc2018_musician_before)
+      %div
+        - Homepage.get_dance_stars.each do |star|
+          %span{style: "white-space: nowrap"}= star
+          &nbsp; &nbsp;
+        %span{style: "white-space: nowrap"}= hoc_s(:codeorg_homepage_hoc2018_musician_after)
+
+  - elsif show_single_hero == "oceans2019"
+    #actions{style: "text-align: left; cursor: pointer", onclick: "location.href='/oceans'"}
+      = main_actions
+
+      - if hoc_mode == "actual-hoc"
+        -# Extra space because we're down to one button.
+        .blank{style: "height: 105px"}
+          &nbsp;
+      - else
+        .blank{style: "height: 54px"}
+          &nbsp;
+
+  - elsif show_single_hero
+    #actions
+      = main_actions
+
   #caption_container.container_responsive
-    - if show_census_layout
-      .bigannounce
-        #actions
-          = main_actions
-    - else
+    - unless show_single_hero
       .col-66.desktop-feature{style: "position:relative;"}
         - heroes_arranged.each_with_index do |entry, index|
-          - unless entry[:text].nil_or_empty? || show_census_layout
+          - unless entry[:text].nil_or_empty? || show_single_hero
             - text = I18n.t(entry[:text]).dup
 
             -# Replace special tags
@@ -114,6 +171,13 @@
     $(".caption").css({display: "block", opacity: 0});
 
     showQuote(null, 0);
+
+    // The hero might have an onclick handler; the buttons should prevent it from firing.
+    $("#hero button").each(function() {
+      $(this).click(function (e) {
+        e.stopPropagation();
+      });
+    });
   });
 
   function showQuote(lastImage, nextImage)

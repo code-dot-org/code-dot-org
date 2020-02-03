@@ -19,7 +19,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Stopping the Music\r\n\r\nSometimes you need to be able to stop the music when you want, like in the code below. Duration wasn't specified so now the note plays continuously. Luckily, the `buzzer.stop()` method is here to save your ears.\r\n\r\n# Do this\r\n\r\n* Find a way to get the note to stop playing with `buzzer.stop()`.\r\n* Celebrate your win over the endless note!",
+    "long_instructions": "# Stopping the Music\r\n\r\nSometimes you need to be able to stop the music when you want, like in the code below. Duration wasn't specified so now the note plays continuously. Luckily, the `buzzer.stop()` method is here to save your ears.\r\n\r\n# Do this\r\n\r\n* Find a way to get the note to stop playing with `buzzer.stop()`.\r\n* Celebrate your win over the endless note!",
     "instructions_important": "false",
     "start_blocks": "onBoardEvent(buttonL, \"down\", function(event) {\r\n  buzzer.note(\"A4\");\r\n});\r\n//Your code here",
     "is_k1": "false",

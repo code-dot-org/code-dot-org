@@ -6,13 +6,13 @@
  * stop observing those things.
  * @constructor
  */
-var Observer = module.exports = function () {
+var Observer = (module.exports = function() {
   /**
    * @private {Array.<Object>} event-key pairs of observed events, for easy
    *          unregistering later.
    */
   this.observed_ = [];
-};
+});
 
 /**
  * Begin observing the given event, forwarding it to the provided callback
@@ -20,7 +20,7 @@ var Observer = module.exports = function () {
  * @param {!ObservableEventDEPRECATED} event
  * @param {!function} callback
  */
-Observer.prototype.observe = function (event, callback) {
+Observer.prototype.observe = function(event, callback) {
   var key = event.register(callback);
   this.observed_.push({
     event: event,
@@ -31,8 +31,8 @@ Observer.prototype.observe = function (event, callback) {
 /**
  * Unregister all callbacks from all observed events.
  */
-Observer.prototype.unobserveAll = function () {
-  this.observed_.forEach(function (observable) {
+Observer.prototype.unobserveAll = function() {
+  this.observed_.forEach(function(observable) {
     observable.event.unregister(observable.key);
   });
   this.observed_.length = 0;

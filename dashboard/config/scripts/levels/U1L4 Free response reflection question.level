@@ -7,7 +7,7 @@
   "properties": {
     "title": "Assessment: Coordination and Binary Messages",
     "placeholder": "Enter your reflection here.",
-    "markdown_instructions": "Complete the Lesson 2 Rubric.\n\nA binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?\n",
+    "long_instructions": "Complete the Lesson 2 Rubric.\n\nA binary message consisting of four bits was sent to you by a friend. The message was supposed to be ABAB. Unfortunately, your friend sent the message at 1/2 the bit rate you agreed upon. What message did you receive instead?\n",
     "skip_dialog": true,
     "skip_sound": true
   },

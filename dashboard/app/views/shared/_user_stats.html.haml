@@ -1,4 +1,4 @@
-- script = @script || (user && user.primary_script) || Script.twenty_hour_script
+- script = @script || (user && Queries::ScriptActivity.primary_script(user)) || Script.twenty_hour_script
 - script_summary = script.summarize
 - progress = summarize_user_progress(script, user) || {}
 - level_progress = progress[:levels] || {}

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "calc",
     "embed": "false",
-    "instructions": "Can you write an expression that calculates age in months?",
+    "short_instructions": "Can you write an expression that calculates age in months?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",
@@ -15,7 +15,7 @@
     "use_modal_function_editor": "false",
     "use_contract_editor": "true",
     "free_play": "false",
-    "markdown_instructions": "Can you write an expression that calculates `age` in months?",
+    "long_instructions": "Can you write an expression that calculates `age` in months?",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

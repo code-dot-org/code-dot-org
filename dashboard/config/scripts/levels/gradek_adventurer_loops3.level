@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Can you fix Laurel's path to get all of this gold?",
+    "short_instructions": "Can you fix Laurel's path to get all of this gold?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To change how far the adventurer goes, change the number of times that the loop runs.\",\"hint_id\":\"gradek_adventurer_loops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ea00ea5b430d12025a7460bb50eeda3d/gradek_adventurer_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget that the adventurer needs to walk down and collect gold after she finishes the `repeat` loop!\",\"hint_id\":\"gradek_adventurer_loops3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6d34702d3c6592ab579c174c231fd212/gradek_adventurer_loops3.mp3\"}]",
     "ideal": "6",
     "instructions_important": "false",

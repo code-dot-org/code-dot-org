@@ -1,4 +1,4 @@
-import color from "../../util/color";
+import color from '../../util/color';
 
 export var input = {
   display: 'inline-block',
@@ -14,6 +14,11 @@ export var input = {
   borderRadius: 4,
   border: '1px solid ' + color.light_gray,
   verticalAlign: 'middle'
+};
+
+export var enumInput = {
+  marginBottom: 0,
+  border: '1px solid ' + color.light_gray
 };
 
 export var container = {

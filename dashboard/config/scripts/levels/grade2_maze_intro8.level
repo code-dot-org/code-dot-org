@@ -25,8 +25,8 @@
     "disable_examples": "false",
     "start_direction": "1",
     "step_mode": "0",
-    "instructions": "This is a challenge puzzle.  It is meant to be hard and will probably take you a couple of tries to solve.  If you don’t solve it after several tries, don’t worry!  It will be in the Play Zone at the end of the stage and you can try it again when you’ve had more practice.",
-    "markdown_instructions": "This is a challenge puzzle.  It is meant to be hard and will probably take you a couple of tries to solve.  If you don’t solve it after several tries, don’t worry!  It will be in the Play Zone at the end of the stage and you can try it again when you’ve had more practice.",
+    "short_instructions": "This is a challenge puzzle.  It is meant to be hard and will probably take you a couple of tries to solve.  If you don’t solve it after several tries, don’t worry!  It will be in the Play Zone at the end of the stage and you can try it again when you’ve had more practice.",
+    "long_instructions": "This is a challenge puzzle.  It is meant to be hard and will probably take you a couple of tries to solve.  If you don’t solve it after several tries, don’t worry!  It will be in the Play Zone at the end of the stage and you can try it again when you’ve had more practice.",
     "ideal": "16",
     "contained_level_names": null
   },

@@ -1,7 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {progressStyles} from "./multiGridConstants";
+import {progressStyles} from './multiGridConstants';
 import FontAwesome from '../FontAwesome';
 
 class SectionProgressLessonNumberCell extends Component {
@@ -14,11 +15,17 @@ class SectionProgressLessonNumberCell extends Component {
     lockable: PropTypes.bool.isRequired,
     lessonOfInterest: PropTypes.number.isRequired,
     tooltipId: PropTypes.string.isRequired,
-    onSelectDetailView: PropTypes.func.isRequired,
+    onSelectDetailView: PropTypes.func.isRequired
   };
 
   render() {
-    const {position, relativePosition, lockable, lessonOfInterest, tooltipId} = this.props;
+    const {
+      position,
+      relativePosition,
+      lockable,
+      lessonOfInterest,
+      tooltipId
+    } = this.props;
 
     let cellStyle = progressStyles.lessonNumberHeading;
     if (position === lessonOfInterest) {
@@ -35,7 +42,7 @@ class SectionProgressLessonNumberCell extends Component {
         data-tip
         data-for={tooltipId}
       >
-        {lockable ? <FontAwesome icon="lock"/> : relativePosition}
+        {lockable ? <FontAwesome icon="lock" /> : relativePosition}
       </div>
     );
   }
@@ -44,5 +51,5 @@ class SectionProgressLessonNumberCell extends Component {
 export const UnconnectedSectionProgressLessonNumberCell = SectionProgressLessonNumberCell;
 
 export default connect(state => ({
-  lessonOfInterest: state.sectionProgress.lessonOfInterest,
+  lessonOfInterest: state.sectionProgress.lessonOfInterest
 }))(Radium(SectionProgressLessonNumberCell));

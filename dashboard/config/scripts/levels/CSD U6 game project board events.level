@@ -186,7 +186,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Board Events\r\n\r\nGo back to the Events section of your activity guide and find any events that respond to your board (ones that would use `onBoardEvent()`). Create event handlers for each of those now. If these events rely on functions you haven't written yet, just leave yourself a comment in the code.",
+    "long_instructions": "# Board Events\r\n\r\nGo back to the Events section of your activity guide and find any events that respond to your board (ones that would use `onBoardEvent()`). Create event handlers for each of those now. If these events rely on functions you haven't written yet, just leave yourself a comment in the code.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",

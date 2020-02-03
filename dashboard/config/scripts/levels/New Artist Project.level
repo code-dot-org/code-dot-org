@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
+    "short_instructions": "Draw something awesome! Your code is saved as a project that you can return to at any time.",
     "is_k1": "false",
     "is_project_level": "true",
     "skip_instructions_popup": "true",

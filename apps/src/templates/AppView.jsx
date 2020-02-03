@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
@@ -20,6 +21,7 @@ class AppView extends React.Component {
     // not provided by redux
     visualizationColumn: PropTypes.element,
     onMount: PropTypes.func.isRequired,
+    rotateContainerWidth: PropTypes.number
   };
 
   componentDidMount() {
@@ -33,14 +35,14 @@ class AppView extends React.Component {
     });
 
     return (
-      <StudioAppWrapper>
+      <StudioAppWrapper rotateContainerWidth={this.props.rotateContainerWidth}>
         <Overlay />
         <div id="visualizationColumn" className={visualizationColumnClassNames}>
           {this.props.visualizationColumn}
         </div>
-        <VisualizationResizeBar/>
+        <VisualizationResizeBar />
         <InstructionsWithWorkspace>
-          <CodeWorkspace/>
+          <CodeWorkspace />
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );

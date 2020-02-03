@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "# Make a Prediction\r\n\r\nRead through the code for this program and predict what will happen each time the button is clicked?",
+    "long_instructions": "# Make a Prediction\r\n\r\nRead through the code for this program and predict what will happen each time the button is clicked?",
     "instructions_important": "false",
     "encrypted_solution": "tcDJ6MQDdN7wpIlf7PNYY97oTHhRYt1bkaDFsNDQwatQOaCQABJcVtp9It0U\nlan/r9dr++i5hB2M+A4gDsQJ5aJDpY7JkT/ReARD5CEybAfgBVvjCNV7eUfC\nHLOZH6xyBLSStEe31Rc4Mt3sDV/U5SoZYJf9WQ4BPU8xdYNsHd8=\n",
     "allow_user_uploads": "false",

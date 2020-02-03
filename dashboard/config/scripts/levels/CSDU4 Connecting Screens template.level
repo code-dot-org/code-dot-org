@@ -7,7 +7,7 @@
   "properties": {
     "skin": "applab",
     "embed": "false",
-    "markdown_instructions": "# Navigating\r\n\r\nOnce you start adding multiple screens to an app, you need to make sure that users can always get where they want to go. If you forget to provide a link back home or to a deeper page.\r\n\r\n# Do This\r\n\r\nHere's an app with four different pages, but only the \"red\" screen is linked so far.\r\n\r\n* Add event handlers for \"greenButton\" and \"blueButton\" to go to their respective screens\r\n* From each of the sub pages, add a button with event handler to navigate back to the home page\r\n* Test your app thoroughly to make sure all of your buttons work and you can always get back home",
+    "long_instructions": "# Navigating\r\n\r\nOnce you start adding multiple screens to an app, you need to make sure that users can always get where they want to go. If you forget to provide a link back home or to a deeper page.\r\n\r\n# Do This\r\n\r\nHere's an app with four different pages, but only the \"red\" screen is linked so far.\r\n\r\n* Add event handlers for \"greenButton\" and \"blueButton\" to go to their respective screens\r\n* From each of the sub pages, add a button with event handler to navigate back to the home page\r\n* Test your app thoroughly to make sure all of your buttons work and you can always get back home",
     "instructions_important": "false",
     "start_blocks": "// Change to the red, green, or blue page when the\r\n// appropriate button is clicked\r\n\r\nonEvent(\"redButton\", \"click\", function(event) {\r\n  setScreen(\"red\");\r\n});\r\n\r\n// Change back to the home page from the red, green\r\n// or blue pages\r\n",
     "is_k1": "false",

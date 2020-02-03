@@ -37,7 +37,7 @@ class RouterTest < Minitest::Test
       get('/erb_error_body')
     end
     file, line = err.backtrace.first.split(':')
-    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md')
+    assert_equal file, app.helpers.content_dir('code.org/public/erb_error_body.md.erb')
     assert_equal 8, line.to_i
   end
 
@@ -48,6 +48,22 @@ class RouterTest < Minitest::Test
     file, line = err.backtrace.first.split(':')
     assert_equal file, app.helpers.content_dir('code.org/public/haml_error.haml')
     assert_equal 10, line.to_i
+  end
+
+  def test_markdown_partial
+    path = '/test_md_partials'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "<h1>Markdown With Partials</h1>", resp.body
+    assert_match "<h2>Partial Content</h2>", resp.body
+  end
+
+  def test_markdown_partial_only_templates
+    path = '/test_md_partial_only_templates'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "<h1>Partials protect against directory transversal</h1>", resp.body
+    refute_match "<h3>Hello</h3>", resp.body
   end
 
   def test_view
@@ -68,5 +84,36 @@ class RouterTest < Minitest::Test
 
   def test_all_documents
     assert_includes app.helpers.all_documents, {site: 'code.org', uri: '/div_brackets'}
+  end
+
+  def test_localized_markdown
+    env 'cdo.locale', 'fr-FR'
+    path = '/test_md'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "Bonjour", resp.body
+  end
+
+  def test_localized_markdown_fallback
+    env 'cdo.locale', 'es-ES'
+    path = '/test_md'
+    resp = get(path)
+    assert_equal 200, resp.status, path
+    assert_match "Hello", resp.body
+  end
+
+  def test_no_erb_in_yaml
+    # This test exists for mostly historic reasons; it used to be the case that
+    # the YAML headers in pegasus documents would be parsed first as ERB before
+    # being parsed as YAML.
+    #
+    # In addition to being somewhat confusing, this also led to a security risk
+    # once we started allowing translators to translate entire files.
+    #
+    # This tests exists just to enforce that we don't revert back to the old
+    # functionality.
+    resp = get('/test_no_erb_in_yaml')
+    refute_match "<title>1,2,3</title>", resp.body
+    assert_match "<title><%= (1..3).to_a.join(',').inspect %></title>", resp.body
   end
 end

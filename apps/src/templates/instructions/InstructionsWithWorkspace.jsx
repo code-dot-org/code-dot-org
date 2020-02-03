@@ -1,5 +1,6 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 import TopInstructions from './TopInstructions';
@@ -17,7 +18,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,
-    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    setInstructionsMaxHeightAvailable: PropTypes.func.isRequired
   };
 
   // only used so that we can rerender when resized
@@ -26,7 +27,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     windowHeight: undefined
   };
 
-  setCodeWorkspaceContainerRef = (element) => {
+  setCodeWorkspaceContainerRef = element => {
     this.codeWorkspaceContainer = element;
   };
 
@@ -65,7 +66,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 
     const {instructionsHeight, setInstructionsMaxHeightAvailable} = this.props;
     const codeWorkspaceHeight = this.codeWorkspaceContainer
-      .getWrappedInstance().getRenderedHeight();
+      .getWrappedInstance()
+      .getRenderedHeight();
     if (codeWorkspaceHeight === 0) {
       // We haven't initialized the codeWorkspace yet. No need to change the
       // max height of instructions
@@ -94,7 +96,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   render() {
     return (
       <span>
-        <TopInstructions/>
+        <TopInstructions />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
           topMargin={this.props.instructionsHeight}
@@ -106,14 +108,17 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 }
 
-export default connect(function propsFromStore(state) {
-  return {
-    instructionsHeight: state.instructions.renderedHeight
-  };
-}, function propsFromDispatch(dispatch) {
-  return {
-    setInstructionsMaxHeightAvailable(maxHeight) {
-      dispatch(setInstructionsMaxHeightAvailable(maxHeight));
-    }
-  };
-})(UnwrappedInstructionsWithWorkspace);
+export default connect(
+  function propsFromStore(state) {
+    return {
+      instructionsHeight: state.instructions.renderedHeight
+    };
+  },
+  function propsFromDispatch(dispatch) {
+    return {
+      setInstructionsMaxHeightAvailable(maxHeight) {
+        dispatch(setInstructionsMaxHeightAvailable(maxHeight));
+      }
+    };
+  }
+)(UnwrappedInstructionsWithWorkspace);

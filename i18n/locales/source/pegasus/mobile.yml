@@ -31,7 +31,7 @@
   og_description: "Every student in every school deserves the opportunity to study computer science."
   og_description_celeb: "Try the new tutorials, win a celebrity video chat for yourself or your class!"
   csedweek_og_title: "Computer Science Education Week"
-  csedweek_og_description: "December 3-9, 2018. Computer science is foundational for every student to learn."
+  csedweek_og_description: "Computer science is foundational for every student to learn."
   csedweek_og_description_soon: "The Hour of Code is coming December 3-9, 2018. Computer science is foundational for every student to learn."
   csedweek_og_description_here: "The Hour of Code is here. Computer science is foundational for every student to learn."
   hoc2014_heading: "Join the <a href=\"http://hourofcode.com\">Hour of Code</a><br/>December 8 - 14, 2014<br/>"
@@ -148,6 +148,13 @@
   thanks_for_submitting: "Thanks for submitting!"
   if_you_enjoyed: "If you enjoyed learning, ask friends to try it too!  We want the whole world to learn."
   personalize_certificate: "Personalize your certificate"
+  print_batch_certificates: "Print a batch of certificates"
+  print_certificates: "Print certificates"
+  print_ice_art_from_frozen: "Print ice art from Frozen tutorials"
+  want_a_blank_certificate_template: "Want a blank certificate template to write in your students' names?"
+  landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
+  print_one_here_certificates: "Print one here."
+  enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
   share_achievement: "Share your achievement"
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: "Leaderboards for the Hour of Code."
@@ -228,6 +235,8 @@
   studiobar_title_nolink: "Explore Code.org's courses"
   studiobar_elementary_title: "Elementary courses"
   studiobar_elementary_body: "Our three new courses for K&#8209;5"
+  studiobar_dance_title: "Dance Party"
+  studiobar_dance_body: "Create and share your own Dance Party"
   studiobar_hoc_title: "The Hour of Code"
   studiobar_hoc_body: "Learn to code with Angry Birds"
   studiobar_flappy_title: "Flappy Code"
@@ -359,7 +368,7 @@
   homepage_slot_text_link_donate: "Donate"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
   homepage_slot_text_link_administrators: "Bring CS to your school"
-  homepage_header_codestudio: "Code.org student creations"
+  homepage_gallery_header: "Over %{project_count} million Code.org projects created"
   homepage_header_donors: "Code.org thanks its supporters"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "Donate"
@@ -423,11 +432,12 @@
   mc_gradelevel: "Ages 6-106"
   mc_platformtext: "Modern browsers, smartphones, tablets"
   mc_specs: "Many languages | Modern browsers and tablets | Ages 6-106"
-  minecraft_agent: 'Minecraft: Hero’s Journey'
+  minecraft_agent: "Minecraft Hero’s Journey"
   minecraft_designer: "Minecraft Designer"
   minecraft_adventurer: "Minecraft Adventurer"
   minecraft_tutorials: "Minecraft Hour of Code Tutorials"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_start_tutorial: "Start tutorial"
   minecraft_agent_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
   minecraft_agent_button: "Start"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
@@ -678,7 +688,7 @@
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Students"
   dashboard_sections_table_code: "Section Code"
-  dashboard_sections_name: "Section Name"
+  dashboard_sections_name: 'Section Name:'
   dashboard_sections_choose_secret: "If you would like to provide accounts to your students, choose a secret type of <b>word</b> or <b>picture</b> for that section."
   dashboard_sections_secret_word: "A <b>word</b> allows you to set a secret word for each student."
   dashboard_sections_secret_picture: "A <b>picture</b> allows you to set a secret picture for each student, ideal for younger students who can't yet type."
@@ -704,7 +714,7 @@
   dashboard_students_add_multiple: 'Type or paste the names of your students, one per line:'
   dashboard_students_new_google_classroom_section: "To add students, use <a href='http://classroom.google.com' target='_blank'>Google Classroom</a> and then click the <b>Sync students from Google Classroom</b> button above."
   dashboard_students_new_section: "You've created a new section! Now add your students using the <b>Add student</b> and <b>Add multiple students</b> buttons above."
-  dashboard_students_name: "Name"
+  dashboard_students_name: 'Name: '
   dashboard_students_progress: "Progress"
   dashboard_students_male: "Male"
   dashboard_students_female: "Female"
@@ -839,7 +849,8 @@
   carousel_heading_languages: "Partner tutorials in other programming languages"
   carousel_heading_beyond_languages: "Learn other programming languages"
   carousel_heading_apps_games: "Make your own apps or games"
-  carousel_heading_university: "University courses online"
+  carousel_heading_university: "Online courses and schools"
+  carousel_heading_online_university: "University Courses Available Online"
   carousel_heading_webpages: "Learn to make web pages"
   carousel_heading_robots: "Learn to program with robots and devices"
   carousel_heading_ide: "Platforms popular among teachers"
@@ -941,71 +952,21 @@
   coursed-2018_name: Course D (2018)
   coursee-2018_name: Course E (2018)
   coursef-2018_name: Course F (2018)
+  coursea-2019_name: Course A (2019)
+  courseb-2019_name: Course B (2019)
+  coursec-2019_name: Course C (2019)
+  coursed-2019_name: Course D (2019)
+  coursee-2019_name: Course E (2019)
+  coursef-2019_name: Course F (2019)
+  express-2018_name: Express Course (2018)
+  pre-express-2018_name: Pre-reader Express Course (2018)
+  express-2019_name: Express Course (2019)
+  pre-express-2019_name: Pre-reader Express Course (2019)
+  csd2_name: 'Unit 2: Web Development'
+  csd3_name: 'Unit 3: Animation and Games'
   accelerated_name: "Accelerated Course"
   express_name: "Express Course"
   pre-express_name: Pre-reader Express Course
-  express-2017_name: Express Course (2017)
-  pre-express-2017_name: Pre-reader Express Course (2017)
-  express-2018_name: Express Course (2018)
-  pre-express-2018_name: Pre-reader Express Course (2018)
-  cspunit1_name: "(old) Unit 1: Digital Information"
-  cspunit2_name: "(old) Unit 2: The Internet"
-  cspunit3_name: "(old) Unit 3: Programming"
-  cspunit4_name: "(old) Unit 4: Data"
-  cspunit5_name: "(old) Unit 5: Explore and Create PT"
-  cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Problem Solving'
-  csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Animation and Games'
-  csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
-  csd1-2017_name: 'Unit 1: Problem Solving'
-  csd2-2017_name: 'Unit 2: Web Development'
-  csd3-2017_name: 'Unit 3: Animation and Games'
-  csd4-2017_name: 'Unit 4: The Design Process'
-  csd5-2017_name: 'Unit 5: Data and Society'
-  csd6-2017_name: 'Unit 6: Physical Computing'
-  csd1-2018_name: 'Unit 1: Problem Solving'
-  csd2-2018_name: 'Unit 2: Web Development'
-  csd3-2018_name: 'Unit 3: Animation and Games'
-  csd4-2018_name: 'Unit 4: The Design Process'
-  csd5-2018_name: 'Unit 5: Data and Society'
-  csd6-2018_name: 'Unit 6: Physical Computing'
-  csp1-2017_name: 'Unit 1: The Internet'
-  csp2-2017_name: 'Unit 2: Digital Information'
-  csp3-2017_name: 'Unit 3: Algorithms and Programming'
-  csp4-2017_name: 'Unit 4: Big Data and Privacy'
-  csp5-2017_name: 'Unit 5: Building Apps'
-  csp-explore-2017_name: 'AP: Explore PT Prep'
-  csp-create-2017_name: 'AP: Create PT Prep'
-  csppostap-2017_name: 'Post AP: Databases in Apps'
-  csp1-2018_name: 'Unit 1: The Internet'
-  csp2-2018_name: 'Unit 2: Digital Information'
-  csp3-2018_name: 'Unit 3: Algorithms and Programming'
-  csp4-2018_name: 'Unit 4: Big Data and Privacy'
-  csp5-2018_name: 'Unit 5: Building Apps'
-  csp-explore-2018_name: 'AP: Explore PT Prep'
-  csp-create-2018_name: 'AP: Create PT Prep'
-  csppostap-2018_name: 'Post AP: Databases in Apps'
-  csp1_name: 'Unit 1: The Internet'
-  csp2_name: 'Unit 2: Digital Information'
-  csp3_name: 'Unit 3: Algorithms and Programming'
-  csp3-a_name: 'Unit 3: Intro Programming (version A)'
-  csp3-research-mxghyt_name: 'Unit 3: Intro Programming (Subgoals)'
-  csp4_name: 'Unit 4: Big Data and Privacy'
-  csp5_name: 'Unit 5: Building Apps'
-  csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
-  csppostap_name: 'Post AP: Databases in Apps'
-  csp-post-survey_name: Student Post-Course Survey
-  cspassessment_name: "Full Test - 50 questions"
-  csp-explore_name: 'AP: Explore PT Prep'
-  csp-create_name: 'AP: Create PT Prep'
-  cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
-  cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: "Grades 9-12"
-  cspunit3_shortdescription_congrats: "This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools."
   20-hour_name: Accelerated Course
   algebra_name: "CS in Algebra Full Course"
   AlgebraA_name: "CS in Algebra Course A"
@@ -1019,20 +980,6 @@
   flappy-impact-study_name: Flappy Code with Survey
   hoc-encryption_name: Simple Encryption
   text-compression_name: Text Compression
-  math_category_name: "Math"
-  hoc_category_name: "Hour of Code"
-  csf_category_name: "CS Fundamentals"
-  csf_2017_category_name: "CS Fundamentals (2017)"
-  csf_2018_category_name: "CS Fundamentals (2018)"
-  csf_international_category_name: "CS Fundamentals International"
-  csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: "CS Discoveries ('17-'18)"
-  csd_2018_category_name: "CS Discoveries ('18-'19)"
-  csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "CS Principles ('17-'18)"
-  csp_2018_category_name: "CS Principles ('18-'19)"
-  cspexams_category_name: "CS Principles Practice Test"
-  research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
   gamelab_name: "Game Lab"
   basketball_name: "Make a basketball game"
@@ -1111,6 +1058,12 @@
   coursed-2018_gradelevel: Ages 7-11
   coursee-2018_gradelevel: Ages 8-12
   coursef-2018_gradelevel: Ages 9-13
+  coursea-2019_gradelevel: Ages 4-7
+  courseb-2019_gradelevel: Ages 5-8
+  coursec-2019_gradelevel: Ages 6-10
+  coursed-2019_gradelevel: Ages 7-11
+  coursee-2019_gradelevel: Ages 8-12
+  coursef-2019_gradelevel: Ages 9-13
   accelerated_gradelevel: "Ages 10-18"
   codeorg_platformtext: "Modern browsers, smartphones, tablets"
   codeintl_platformtext: "Modern browsers, smartphones, tablets"
@@ -1231,6 +1184,12 @@
   coursed-2018_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
   coursee-2018_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
   coursef-2018_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+  coursea-2019_shortdescription_congrats: An introduction to computer science for pre-readers.
+  courseb-2019_shortdescription_congrats: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+  coursec-2019_shortdescription_congrats: Learn the basics of computer science and create your own art, stories, and games.
+  coursed-2019_shortdescription_congrats: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+  coursee-2019_shortdescription_congrats: Quickly cover concepts in Course C & D and then go further with functions.
+  coursef-2019_shortdescription_congrats: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
   codeorg_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   codeintl_longdescription: "Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 34 languages."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1466,6 +1425,7 @@
   sphero_beyond_longdescription: "Whether you're an educator or a parent, SPRK lessons give kids a fun crash course in programming robots while sharpening their skills in math and science."
   compatibility_hide_this_warning: "Hide this warning"
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
+  compatibility_unsupported_browser_markdown: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
   frozen_shortcode: "frzn"
@@ -1508,17 +1468,33 @@
   header_about: "About"
   header_teacher_community: "Teacher community"
   header_help_support: 'Help and support '
-  header_report_bug: "Report bug"
+  header_report_bug: "Report a problem"
   header_tutorials: "Tutorials"
+  app_lab_documentation: "App Lab Documentation"
+  app_lab_tutorials: "App Lab Tutorials"
+  game_lab_documentation: "Game Lab Documentation"
+  game_lab_tutorials: "Game Lab Tutorials"
+  sprite_lab_documentation: "Sprite Lab Documentation"
+  sprite_lab_tutorials: "Sprite Lab Tutorials"
   header_documentation: "Documentation"
-  csp_name: "CS Principles"
-  csd_name: "CS Discoveries"
-  csd_2018_name: "CS Discoveries"
-  full_course_category_name: "Full Courses"
   user_header_label: "Hi %{username}"
+  user_header_team: "Team"
+  user_header_my_projects: "My projects"
   user_header_settings: "Account settings"
   user_header_logout: "Sign out"
   user_header_signin: "Sign in"
+  user_header_create: 'Create '
+  user_header_applab: 'App Lab '
+  user_header_artist: 'Artist '
+  user_header_gamelab: "Game Lab"
+  user_header_playlab: "Play Lab"
+  user_header_dance: "Dance Party"
+  user_header_spritelab: "Sprite Lab"
+  user_header_minecraft: "Minecraft"
+  user_header_flappy: "Flappy"
+  user_header_view_all: "View all projects..."
+  user_header_view_project_gallery: "View project gallery"
+  user_header_view_my_projects: "View my projects"
   view_all_sections: "View all sections"
   view_section: "View Section"
   view_named_section: "View %{section_name}"
@@ -1548,3 +1524,152 @@
   google_sign_in_instruct: 'From there, they should choose the “Sign in with Google Account” option:'
   hero_name: 'Minecraft: Hero''s Journey'
   applab-intro_name: App Lab Intro
+  applab_tile_title: "Intro to App Lab (Ages 13+)"
+  applab_tile_subtitle: "Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)"
+  applab_tile_start_tutorial: "Start"
+  applab_tile_teacher_guide: "View teacher guide"
+  aquatic_name: 'Minecraft: Voyage Aquatic'
+  account_sign_up_email_opt_in: "Can we email you about updates to our courses, local opportunities, or other computer science news? (roughly once a month)"
+  account_sign_up_child_accept_terms: "I confirm that I have my parent or legal guardian's permission to use the Code.org services."
+  hoc_overview_dance_title: "Dance Party"
+  hoc_overview_dance_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!"
+  hoc_overview_dance_2019_subtitle: "Code a Dance Party to share with your friends. Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 more!"
+  hoc_overview_title: "Hour of Code Activities from Code.org"
+  hoc_overview_subtitle: "The <a href=\"https://hourofcode.com\">Hour of Code</a> is a global movement reaching tens of millions of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event or try any of the over 500+ one-hour tutorials, available in over 45 languages."
+  hoc_overview_partner_activities_title: "More activities from partners"
+  hoc_overview_partner_activities_body: "The Hour of Code website has over 500 computer science activities for all ages and experience levels, developed by Code.org and partners."
+  hoc_overview_partner_activities_link: "View Activities"
+  hoc_overview_start_tutorial: "Start"
+  hoc_overview_view_teacher_guide: "View teacher guide"
+  hoc2018_creativity: "creativity"
+  hoc2018_creativity_create: "Create"
+  hoc2018_creativity_hoc_coming: "The Hour of Code is coming…"
+  hoc2018_creativity_what_will_you_create: "What will you create?"
+  hoc2018_creativity_homepage: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be. Watch our video."
+  hoc2018_creativity_hoc_about: 'This year, the Hour of Code is all about creativity. '
+  hoc2018_creativity_social_media: 'This year''s #HourOfCode is about creativity. I’m in! Are you?'
+  hoc2018_creativity_social_media_2: 'This year''s #HourOfCode is about creativity. What will you create?'
+  hoc2018_creativity_courses: "Go further with Code.org courses"
+  hoc2018_creativity_courses_link: "Go further with <a href=\"https://studio.code.org/courses\">Code.org courses</a>"
+  hoc2018_homepage: "Sign up your class to try one of the over 150 NEW activites for the Hour of Code (Dec 3-9)!"
+  hoc2018_mc_page_title: "Minecraft Hour of Code Tutorials"
+  hoc2018_mc_details: "Many languages | Modern browsers and tablets | Grades 2+"
+  hoc2018_mc_aquatic_announcement: "Sign up your class to try one of the over 150 NEW activities for the Hour of Code (Dec 3-9). Be sure to check out our brand new Minecraft activity for 2018, the Voyage Aquatic! Sign up your class today."
+  hoc2018_mc_aquatic_title: "Minecraft Voyage Aquatic"
+  hoc2018_mc_aquatic_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2019_mc_aquatic_description: "Explore and build underwater worlds with code."
+  hoc2018_mc_hero_title: "Minecraft Hero’s Journey"
+  hoc2018_mc_hero_description: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2018_mc_designer_title: "Minecraft Designer"
+  hoc2018_mc_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
+  hoc2018_mc_adventurer_title: "Minecraft Adventurer"
+  hoc2018_mc_adventurer_description: "Use code to take Alex or Steve on an adventure."
+  hoc2018_mc_start: "Start"
+  hoc2018_mc_no_internet: "Don't have Internet?"
+  hoc2018_mc_download_adventurer: "Download the offline version of Minecraft Adventurer."
+  hoc2018_mc_educators: "For Educators"
+  hoc2018_mc_educators_box1_title: "Code with Minecraft"
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition provides standards-aligned curriculum, training and coding in Minecraft.'
+  hoc2018_mc_educators_box1_button: "Get started"
+  hoc2018_mc_educators_box2_title: "Download Facilitator Guide"
+  hoc2018_mc_educators_box2_desc: "This toolkit will help you host an Hour of Code and engage your students in computer science."
+  hoc2018_mc_educators_box2_button: "Download"
+  hoc2018_mc_educators_box3_title: "Attend a free student workshop"
+  hoc2018_mc_educators_box3_desc: "Visit a Microsoft Store in your area for a free Hour of Code workshop. For participants of all skill levels, ages six and up."
+  hoc2018_mc_educators_box3_button: "Find a workshop"
+  hoc2018_mc_educators_box4_title: "Access more computer science resources"
+  hoc2018_mc_educators_box4_desc: "Create change in your community with digital skills and computer science education resources from Microsoft."
+  hoc2018_mc_educators_box4_button: "Explore resources"
+  hoc2018_mc_watch_videos: "Before you get started, watch one of these inspirational videos"
+  hoc2018_mc_videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
+  hoc2018_mc_careers_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
+  hoc2018_mc_video_1min: "1 min"
+  hoc2018_mc_video_2min: "2 min"
+  hoc2018_mc_video_3min: "3 min"
+  hoc2018_mc_video_5min: "5 min"
+  hoc2018_mc_video_title_steph_curry: "Hour of Code with Steph Curry"
+  hoc2018_mc_video_title_sports: "Push yourself. Anybody can learn."
+  hoc2018_mc_video_title_cs_is_everything: "Computer Science is Changing Everything"
+  hoc2018_mc_video_title_inspire_girl: "Inspire a girl"
+  hoc2018_mc_video_title_cs_intro: "Computer Science intro"
+  hoc2018_mc_video_title_schools_dont_teach: "What Most Schools Don't Teach"
+  hoc2018_mc_video_title_obama: "President Obama on computer science"
+  hoc2018_mc_video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
+  hoc2018_mc_video_title_anybody_can_learn: "Anybody Can Learn"
+  hoc2018_mc_video_title_my_name_is_aracely: "My Name is Aracely"
+  hoc2018_mc_homepage_hoc_coming: "The Hour of Code is coming..."
+  hoc2018_mc_homepage_what_create: "What will you create?"
+  hoc2018_mc_homepage_give_flight: "Give flight to imagination and birth to innovation. Start with an Hour of Code and your own brand of creativity, whatever it may be."
+  hoc2018_mc_homepage_watch_video: "Watch our video"
+  hoc2018_mc_homepage_join_us: "Join us"
+  hoc2018_mc_homepage_try_it: "Try it"
+  hoc2018_mc_back: "Minecraft is back with a brand new activity for Hour of Code!"
+  hoc2018_mc_back_journey: "Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code."
+  hoc2018_mc_teacher_guide: "View teacher guide"
+  hoc2018_mc_minecraft_education: "Minecraft Education"
+  hoc2018_mc_continue_learning: "Continue learning with Minecraft."
+  hoc2018_mc_go_to_mc_education: "Go to Minecraft Education"
+  hoc2018_mc_short_description: "Use your creativity and problem solving skills to find treasure and explore under water worlds with the power of code."
+  hoc2018_mc_short_description_shorter: "Use your creativity and problem solving skills to explore and build underwater worlds with code."
+  hoc2018_mc_journey: "Journey through Minecraft with code."
+  hoc2018_dance_party_main_heading: "Dance Party"
+  hoc2018_dance_party_landing_title: "Dance"
+  hoc2018_dance_party_subheading: "Help translate Dance Party"
+  hoc2018_dance_create_your_own_dance_title: "Create Your Own Dance Party"
+  hoc2018_dance_party_box_title: "Dance Party"
+  hoc2018_dance_party_box_description: "Code a Dance Party to share with your friends!"
+  hoc2018_dance_party_specs: "Language | Format | Age 6-106"
+  hoc2018_dance_party_button: "Start"
+  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_description: "Go beyond the first hour with extended project ideas."
+  hoc2018_dance_keep_on_dancing_specs: "Language | Format | Age 13+"
+  hoc2018_dance_keep_on_dancing_button: "Start Part 2"
+  hoc2018_dance_teacher_resources_title: "Teacher Resources"
+  hoc2018_dance_teacher_resources_tile1_description: "Lesson plans, certificates, and music filtering."
+  hoc2018_dance_teacher_resources_tile1_button: "Lesson Plan"
+  hoc2018_dance_teacher_resources_tile2_title: "Dance Party Unplugged"
+  hoc2018_dance_teacher_resources_tile2_description: "No computers needed!  Learn coding concepts to choreograph a dance party together."
+  hoc2018_dance_teacher_resources_tile2_button: "Unplugged Activity"
+  hoc2018_dance_featured_student_creations_title: "Featured Student Creations"
+  hoc2018_dance_videos_section_heading: "Get Inspired"
+  hoc2018_dance_video_title_what_is_creativity: "What is Creativity?"
+  hoc2018_dance_view_creativity_video_playlist: "What is Creativity? View Full Series (5 min)"
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: "In partnership with"
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. <a href='%{amazon_future_engineer_link}' target='_blank'>Learn more</a>"
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Learn more about Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_title: "About Amazon Future Engineer"
+  hoc2018_dance_amazon_about_future_engineer_description: "Learn about Amazon’s kindergarten to career program to increase access to computer science education. Find information on how to get involved in our summer camps, high school CS classes, scholarships, and internships."
+  hoc2018_dance_amazon_about_future_engineer_button: "Learn more"
+  hoc2018_dance_amazon_try_coding_this_summer_title: "Try coding this summer"
+  hoc2018_dance_amazon_try_coding_this_summer_description: "Get involved in Amazon Future Engineer’s free, fun, and inclusive computer science camps! Summer camps are available for students from kindergarten through 8th grade in multiple locations in the US for summer 2019."
+  hoc2018_dance_amazon_try_coding_this_summer_button: "Join a camp"
+  hoc2018_dance_amazon_scholarship_programs_title: "Scholarship programs"
+  hoc2018_dance_amazon_scholarship_programs_description: "Amazon is offering scholarships of $10,000 per year for underserved students who have successfully completed or are currently enrolled in an AP CS course and intend to study a CS degree at a 4-year college or university in the United States."
+  hoc2018_dance_amazon_scholarship_programs_button: "Apply now"
+  hoc2018_dance_amazon_internships_title: "Come Intern at Amazon"
+  hoc2018_dance_amazon_internships_description: "Applications are now open for summer 2019 Amazon Future Engineer internships. Interns will partner with a manager, technical mentor, and other interns to innovate and create new features and services on behalf of Amazon customers. Internships are available in the US and Canada."
+  hoc2018_dance_amazon_internships_button: "Find an internship"
+  hoc2018_dance_amazon_k8_programs_title: "K-8 programs"
+  hoc2018_dance_amazon_funding_title: "Get funding for your CS degree"
+  hoc2018_dance_amazon_future_engineer_footer: "* The artists whose music is used in this tutorial are not sponsoring or endorsing Amazon as part of licensing use of their music to Code.org.\n\n"
+  hoc2018_dance_measure: "Measure"
+  hoc2018_dance_measure_colon: 'Measure:'
+  hoc2018_aquatic_video1: "Minecraft Voyage Aquatic - Introduction"
+  hoc2018_aquatic_video2: "Minecraft Voyage Aquatic - Loops"
+  hoc2018_aquatic_video3: "Minecraft Voyage Aquatic - Conditionals"
+  hoc2018_aquatic_video4: "Minecraft Voyage Aquatic - Congratulations"
+  hoc2018_dance_video1: "Dance Party - Introduction"
+  hoc2018_dance_video2: "Dance Party - Events"
+  hoc2018_dance_video3: "Dance Party - Properties"
+  hoc2018_dance_video4: "Dance Party - Congratulations"
+  page_not_found_title: "Page Not Found"
+  page_not_found_header: '404: Page Not Found'
+  page_not_found_description: "The page you are looking for doesn't exist at this address. Check the web address and resubmit. Or, go back to our homepage."
+  page_not_found_button: "Return home"
+  hoc2018_mc_with_microsoft: "In partnership with"
+  hoc2018_mc_thank_microsoft: "We thank Microsoft for supporting our vision and mission to ensure every child has the opportunity to learn computer science and the skills to succeed in the 21st century."
+  hoc2019_mc_mee_title: "Minecraft AI for Good"
+  hoc2019_mc_mee_description1: 'The new Minecraft Hour of Code tutorial is now available in Minecraft: Education Edition for Windows, Mac, and iPad. Learn the basics of coding and explore AI with your students!'
+  hoc2019_mc_mee_description2: "Access free resources including a lesson plan, videos, computer science curriculum, and teacher trainings."
+  hoc2019_mc_more_coding_resources: "More Coding Resources"
+  hoc2019_dance_previous_versions: "Looking for a previous version of Dance Party?  \nClick here to start [Part 1](%{dance_2018_link}) and [Part 2](%{dance_extras_2018_link}) from last year."

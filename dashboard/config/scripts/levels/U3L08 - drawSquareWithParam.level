@@ -31,7 +31,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Defining and Using a Function with a Parameter\r\nFrom the video, you learned that defining multiple functions to draw different sized squares results in lots of repetitive functions - they are essentially the same, with a few numbers changed - and this is not desirable.\r\nAny time you find yourself effectively copy and pasting large sections of code, it's usually a sign that there is a better way.\r\n\r\n# Do This:\r\nUh oh! Something's wrong! We've set up a program that runs, but doesn't do what it's supposed to do. The program is supposed to make a drawing with two squares that looks like this:\r\n\r\n<img src=\"https://images.code.org/3eae30651dabc2f83a8bbbbbf8bea7ad-image-1442420537113.26.34 AM.png\" style=\"width: 150px;\"> \r\n\r\nWe've given you the `drawSquare(size)`function that was created in the video, but it's not quite right. **Fix the code inside the `drawSquare` function so that the program creates the drawing correctly.**\r\n\r\n**HINT:** You should only need to change one thing about an existing line of code. You don't need to add or remove any lines of code. Remember: The parameter `size` acts like a placeholder for a value that gets plugged into each call to `moveForward()`.\r\n\r\n",
+    "long_instructions": "# Defining and Using a Function with a Parameter\r\nFrom the video, you learned that defining multiple functions to draw different sized squares results in lots of repetitive functions - they are essentially the same, with a few numbers changed - and this is not desirable.\r\nAny time you find yourself effectively copy and pasting large sections of code, it's usually a sign that there is a better way.\r\n\r\n# Do This:\r\nUh oh! Something's wrong! We've set up a program that runs, but doesn't do what it's supposed to do. The program is supposed to make a drawing with two squares that looks like this:\r\n\r\n<img src=\"https://images.code.org/3eae30651dabc2f83a8bbbbbf8bea7ad-image-1442420537113.26.34 AM.png\" style=\"width: 150px;\"> \r\n\r\nWe've given you the `drawSquare(size)`function that was created in the video, but it's not quite right. \r\n\r\n* **Fix the code inside the `drawSquare` function so that the program creates the drawing correctly.**\r\n\r\n* **HINT:** You should only need to change one thing about an existing line of code. You don't need to add or remove any lines of code. Remember: The parameter `size` acts like a placeholder for a value that gets plugged into each call to `moveForward()`.\r\n\r\n",
     "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawSquare(100);\r\nmoveTo(100,350);\r\ndrawSquare(25);\r\n\r\nfunction drawSquare(size){\r\n  penDown();\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(33);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -49,8 +49,6 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "app_width": "320",
-    "app_height": "480",
     "free_play": "true",
     "show_turtle_before_run": "true",
     "autocomplete_palette_apis_only": "true",
@@ -58,7 +56,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "true",
     "beginner_mode": "true",
-    "instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)",
+    "short_instructions": "Use drawSquare() to recreate the image of both squares, this time using parameters. (Click to see full instructions)",
     "submittable": "false",
     "hide_view_data_button": "true",
     "droplet_tooltips_disabled": "false",
@@ -101,11 +99,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-09 21:35:46 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 21:35:46 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2019-02-14 13:00:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

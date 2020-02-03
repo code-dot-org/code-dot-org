@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Loops can help you finish this pattern.",
+    "short_instructions": "Loops can help you finish this pattern.",
     "x": "50",
     "y": "50",
     "start_direction": "90",

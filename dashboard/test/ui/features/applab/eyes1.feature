@@ -1,9 +1,8 @@
 @eyes
-@dashboard_db_access
 @as_student
 Feature: App Lab Eyes -  Part 1
 
-Scenario: Button shows up on top of canvas
+Scenario: Design elements are visible in local and shared projects
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
   And I wait for the page to fully load
@@ -14,10 +13,7 @@ Scenario: Button shows up on top of canvas
   Then I see no difference for "button should be visible"
   And I click selector ".project_share"
   And I wait to see a dialog titled "Share your project"
-  Then I close the dialog
-  And I see no difference for "closed share dialog"
-  Then I click selector ".project_share"
-  And I wait to see a dialog titled "Share your project"
+  Then I see no difference for "project share dialog"
   And I navigate to the share URL
   And I wait until element "#divApplab" is visible
   Then I see no difference for "app lab share"
@@ -32,11 +28,11 @@ Scenario: App Lab UI elements from initial code and html
   And I wait for the page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
-  And I click selector "#runButton"
+  And I press "runButton"
   # wait for the last dynamically generated element to appear
   And I wait to see "#radioid"
   Then I see no difference for "dynamically generated elements in code mode"
-  And I click selector "#designModeButton"
+  And I press "designModeButton"
   And I wait for the page to fully load
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes

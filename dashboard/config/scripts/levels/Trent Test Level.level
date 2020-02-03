@@ -6,7 +6,7 @@
   "user_id": 0,
   "properties": {
     "title": "Enter title here",
-    "markdown_instructions": "More questions!\n",
+    "long_instructions": "More questions!\n",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Someone started the code, but then realized there must be a quicker way! Use a \"for\" block to replace the blocks and complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)",
+    "short_instructions": "Someone started the code, but then realized there must be a quicker way! Use a \"for\" block to replace the blocks and complete the hexagonal spiral. (Hint: the last line length is 200 pixels.)",
     "x": "200",
     "y": "200",
     "start_direction": "90",

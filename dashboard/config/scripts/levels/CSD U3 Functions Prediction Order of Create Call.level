@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# When Can Your Define Functions?\r\n\r\nSo far you've only seen functions created at the bottom of your code. What do you think happens if we create the function before we call it?\r\n\r\n# Do This\r\n\r\n",
+    "long_instructions": "# When Can Your Define Functions?\r\n\r\nSo far you've only seen functions created at the bottom of your code. What do you think happens if we create the function before we call it?\r\n\r\n# Do This\r\n\r\n",
     "start_blocks": "function drawRedSquare(){\r\n  fill(\"red\");\r\n  rect(100,100,50,50);\r\n}\r\n\r\ndrawRedSquare();\r\ndrawGreenSquare();\r\n\r\nfunction drawGreenSquare(){\r\n  fill(\"green\");\r\n  rect(300,300,50,50);\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",

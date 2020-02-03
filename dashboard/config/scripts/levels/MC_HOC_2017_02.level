@@ -45,8 +45,8 @@
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",
     "display_name": "Meet the Agent",
-    "instructions": "Get the Agent to the pressure plate.",
-    "markdown_instructions": "The player needs to get into that secret grove.  Help The Agent open the gate by writing code to get him to the pressure plate.",
+    "short_instructions": "Get the Agent to the pressure plate.",
+    "long_instructions": "The player needs to get into that secret grove.  Help The Agent open the gate by writing code to get him to the pressure plate.",
     "contained_level_names": null
   },
   "published": true,

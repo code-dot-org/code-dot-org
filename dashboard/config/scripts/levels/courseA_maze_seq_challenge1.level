@@ -7,7 +7,7 @@
   "properties": {
     "maze": "[[0,0,0,1,1,1,1,0],[0,0,0,1,4,4,1,0],[0,0,0,1,0,0,1,0],[0,0,1,2,1,0,3,0],[0,0,0,1,4,4,1,0],[0,0,0,1,1,1,1,0],[0,0,0,1,4,4,0,0],[0,0,0,0,0,0,0,0]]",
     "skin": "birds",
-    "instructions": "Something is wrong here. Help fix the code to get the bird to the pig!",
+    "short_instructions": "Something is wrong here. Help fix the code to get the bird to the pig!",
     "start_direction": "2",
     "step_mode": "1",
     "is_k1": "true",
@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "markdown_instructions": "Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!",
+    "long_instructions": "Debug this level. Remove the extra blocks, and add the missing blocks. Get the bird to the pig!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There are two solutions to this puzzle.\",\"hint_id\":\"courseA_maze_seq_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/95c88d35922d03203e752e7c8e864fad/courseA_maze_seq_challenge1.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",

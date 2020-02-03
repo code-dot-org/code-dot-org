@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
+    "short_instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
     "x": "200",
     "y": "255",
     "start_direction": "90",
@@ -16,7 +16,7 @@
     "slider_speed": "0.4",
     "free_play": "false",
     "embed": "false",
-    "markdown_instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
+    "long_instructions": "The code that we have for the leg and foot is wrong. \r\n\r\nCan you fix it?",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",

@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Draw squares with sides of 50, 60, 70, 80, and 90 pixels. You'll need to use the \"draw a square\" function five times.",
+    "short_instructions": "Draw squares with sides of 50, 60, 70, 80, and 90 pixels. You'll need to use the \"draw a square\" function five times.",
     "x": "165",
     "y": "235",
     "start_direction": "90",

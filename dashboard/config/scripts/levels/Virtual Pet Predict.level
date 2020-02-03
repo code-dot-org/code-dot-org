@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "markdown_instructions": "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?",
+    "long_instructions": "**Make a prediction:** This is Geraldine, your new pet giraffe. What do you think will happen if you press run and then click on her?",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

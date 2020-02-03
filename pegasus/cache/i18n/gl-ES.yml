@@ -281,7 +281,6 @@ gl-ES:
   homepage_slot_text_link_stats: Ve as estatísticas
   homepage_slot_text_link_buy: Participa
   homepage_slot_text_link_donate: Fai unha doazón
-  homepage_header_codestudio: Creacións de alumnos no Code Studio
   homepage_header_donors: A Code.org agradece aos seus colaboradores
   homepage_donors_seall: Ver todos
   homepage_donors_donate: Fai unha doazón
@@ -417,6 +416,8 @@ gl-ES:
   volunteer_engineer_submission_field_email_desc: O teu enderezo de e-mail nunca será
     compartido, pero enviarémosche solicitudes dos profesores.
   volunteer_engineer_submission_field_email_placeholder: Enderezo de email
+  volunteer_engineer_submission_field_email_preference_privacy: "(Ver a nosa política
+    de privacidade)"
   volunteer_engineer_submission_field_email_preference_yes: Si
   volunteer_engineer_submission_field_email_preference_no: Non
   volunteer_engineer_submission_final_paragraph: Estarás nunha lista nun mapa para
@@ -808,8 +809,6 @@ gl-ES:
   classicmaze_name: Labirinto clásico
   iceage_name: Era do Xeo
   minecraft_name: Minecraft
-  math_category_name: Matemáticas
-  hoc_category_name: Hora de Código
   applab_name: Laboratorio de aplicacións
   codeorg_gradelevel: De 4 a 104 anos
   codeintl_gradelevel: De 4 a 104 anos
@@ -867,6 +866,7 @@ gl-ES:
   coursee_gradelevel: De 8 a 12 anos
   coursee-2017_gradelevel: De 8 a 12 anos
   coursee-2018_gradelevel: De 8 a 12 anos
+  coursee-2019_gradelevel: De 8 a 12 anos
   accelerated_gradelevel: Idades de 10 a 18 anos
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores Web modernos, smartphones, tablets
@@ -1524,7 +1524,28 @@ gl-ES:
   header_teacher_community: Comunidade de profesorado
   header_report_bug: Comunicar un erro
   user_header_label: Ola, %{username}
+  user_header_team: Equipo
   user_header_settings: A miña conta
   user_header_logout: Pechar sesión
   user_header_signin: Iniciar Sesión
+  user_header_playlab: Laboratorio de Xogos
+  user_header_minecraft: Minecraft
+  user_header_flappy: Flappy bird
+  user_header_view_my_projects: Ver os meus proxectos
   view_all_sections: Ver todos os grupos
+  applab_tile_start_tutorial: Comezar
+  account_sign_up_email_opt_in: Marca esta casilla para recibir correos sobre melloras
+    nos nosos cursos, oportunidades locales, ou outras noticias de informática. (aproximadamente
+    unha ao mes)
+  account_sign_up_child_accept_terms: Confirmo que teño autorización de meus pais
+    ou titores legais para empregrar os servizos de Code.org.
+  hoc_overview_start_tutorial: Comezar
+  hoc2018_creativity_create: Crear
+  hoc2018_mc_start: Comezar
+  hoc2018_mc_video_title_inspire_girl: Anima a unha nena
+  hoc2018_mc_homepage_join_us: Participa
+  hoc2018_mc_homepage_try_it: Próbao
+  hoc2018_dance_party_button: Comezar
+  hoc2018_dance_teacher_resources_tile1_button: Planificación da lección
+  hoc2018_dance_teacher_resources_tile2_button: Actividade off-line
+  hoc2018_dance_amazon_about_future_engineer_button: Aprender máis

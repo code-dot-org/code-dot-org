@@ -1,7 +1,7 @@
 const studioApp = require('../../StudioApp').singleton;
 
 import ResultsHandler from './resultsHandler';
-import { TestResults } from '../../constants.js';
+import {TestResults} from '../../constants.js';
 const getStore = require('../../redux').getStore;
 
 import experiments from '@cdo/apps/util/experiments';
@@ -10,7 +10,7 @@ import mazeMsg from '../locale';
 import {
   setCollectorMinRequired,
   resetCollectorCurrentCollected,
-  setCollectorCurrentCollected,
+  setCollectorCurrentCollected
 } from '../redux';
 
 const TOO_MANY_BLOCKS = 0;
@@ -39,7 +39,7 @@ export default class CollectorHandler extends ResultsHandler {
       this.store_.dispatch(resetCollectorCurrentCollected());
     });
 
-    this.maze_.subtype.on('collected', (totalCollected) => {
+    this.maze_.subtype.on('collected', totalCollected => {
       this.store_.dispatch(setCollectorCurrentCollected(totalCollected));
     });
 
@@ -55,8 +55,10 @@ export default class CollectorHandler extends ResultsHandler {
   collectedTooMany() {
     let tooMany = false;
     this.maze_.map.forEachCell((cell, x, y) => {
-      if (cell.isDirt() &&
-          (cell.getCurrentValue() < 0 || isNaN(cell.getCurrentValue()))) {
+      if (
+        cell.isDirt() &&
+        (cell.getCurrentValue() < 0 || isNaN(cell.getCurrentValue()))
+      ) {
         tooMany = true;
       }
     });
@@ -67,7 +69,9 @@ export default class CollectorHandler extends ResultsHandler {
    * @return {boolean} Has the user collected all available collectibles?
    */
   collectedAll() {
-    return this.maze_.subtype.getTotalCollected() === this.getPotentialMaxCollected();
+    return (
+      this.maze_.subtype.getTotalCollected() === this.getPotentialMaxCollected()
+    );
   }
 
   /**
@@ -118,9 +122,14 @@ export default class CollectorHandler extends ResultsHandler {
       executionInfo.terminateWithValue(COLLECTED_NOTHING);
     } else if (this.collectedTooMany()) {
       executionInfo.terminateWithValue(COLLECTED_TOO_MANY);
-    } else if (studioApp().feedback_.getNumCountableBlocks() > this.maxBlocks_) {
+    } else if (
+      studioApp().feedback_.getNumCountableBlocks() > this.maxBlocks_
+    ) {
       executionInfo.terminateWithValue(TOO_MANY_BLOCKS);
-    } else if (this.minCollected_ && this.maze_.subtype.getTotalCollected() < this.minCollected_) {
+    } else if (
+      this.minCollected_ &&
+      this.maze_.subtype.getTotalCollected() < this.minCollected_
+    ) {
       executionInfo.terminateWithValue(COLLECTED_NOT_ENOUGH);
     } else if (!this.collectedAll()) {
       executionInfo.terminateWithValue(COLLECTED_ENOUGH_BUT_NOT_ALL);
@@ -142,22 +151,22 @@ export default class CollectorHandler extends ResultsHandler {
   getMessage(terminationValue) {
     switch (terminationValue) {
       case TOO_MANY_BLOCKS:
-        return mazeMsg.collectorTooManyBlocks({ blockLimit: this.maxBlocks_ });
+        return mazeMsg.collectorTooManyBlocks({blockLimit: this.maxBlocks_});
       case COLLECTED_NOTHING:
         return mazeMsg.collectorCollectedNothing();
       case COLLECTED_TOO_MANY:
         return mazeMsg.collectorCollectedTooMany();
       case COLLECTED_NOT_ENOUGH:
-        return mazeMsg.collectorCollectedNotEnough({ goal: this.minCollected_ });
+        return mazeMsg.collectorCollectedNotEnough({goal: this.minCollected_});
       case COLLECTED_ENOUGH_BUT_NOT_ALL:
         return mazeMsg.collectorCollectedSome({
-          count: this.getLastTotalCollected(),
+          count: this.getLastTotalCollected()
         });
       case true:
         // Remove this case when we turn the bubble dialog on for everyone
         if (!experiments.isEnabled('bubbleDialog')) {
           return mazeMsg.collectorCollectedEverything({
-            count: this.getPotentialMaxCollected(),
+            count: this.getPotentialMaxCollected()
           });
         } else {
           return super.getMessage(terminationValue);

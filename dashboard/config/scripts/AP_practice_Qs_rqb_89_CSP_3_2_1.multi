@@ -1,0 +1,30 @@
+name 'AP_practice_Qs_rqb_89_CSP_3_2_1'
+wrong 'I only'
+wrong 'I and II only'
+right 'I, II, and III'
+wrong 'II and III only'
+markdown <<MARKDOWN
+Michael and Nancy create 3 designs to build a balsa wood bridge with balsa sticks and glue, and decide to use data to decide which design would produce a structurally strongest bridge. They build 4 bridges of each design, resulting in a total of 12 bridges. They decide to divide the work amongst themselves evenly. They collect data relating to the weight of the balsa wood sticks before building, weight of the finished bridge, name of the person who built the bridge, the design number, the failure load (load at which the bridge breaks). 
+Which of the following conclusions can Michael and Nancy draw, based purely on the data they collect:
+Structural Efficiency= Ratio of (failure load/weight of finished bridge)
+
+I.  Who built the bridge with the best Structural Efficiency? 
+II. What design had the best average Structural Efficiency?
+III. Who uses more glue (average weight of glue used)  in building a bridge of each design - Michael, or Nancy? 
+
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **3.2.1** and Essential Knowledge statements: **3.2.1H, 3.2.1A, 3.2.1B, 3.2.1C**
+<hr>
+ (A) This is incorrect. While option I can be calculated, so can options II and III
+
+<hr>
+ (B) This is incorrect. While option I and II can be calculated, so can option III
+
+<hr>
+ (C) This is correct. It is possible to calculate who built the bridge with the best Structural Efficiency,  what design had the best average Structural Efficiency, and also who uses more glue (average weight of glue used)  in building a bridge of each design - Michael, or Nancy. 
+
+<hr>
+ (D) This is incorrect. While options II and II can be calculated, so can option I
+
+MARKDOWN

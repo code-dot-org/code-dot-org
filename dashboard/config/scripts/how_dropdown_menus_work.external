@@ -4,6 +4,7 @@ description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # How Dropdown Menus Work
+
 <img src="https://images.code.org/ba241edf138c3b4a75c85a1f930d4fb2-image-1479564920405.png" style="float: right">
 
 A dropdown menu provides a fixed list of choices for a user to choose from.  If you're expecting only a fixed set of responses from a user then it's a good alternative to a plain text input box.  For example, if you want the user to select a day of the week.
@@ -64,10 +65,10 @@ Here is an example that uses an *if* statement with a dropdown.
 <img src="https://images.code.org/bcc8601a9008645cd86ec00c15c678db-image-1479588076093.png" style="float: left; margin-right: 20px;">
 <br>
 <span style="color: #00adbc; font-weight: bold; font-size: 125%">1.</span> When the dropdown changes<br><br>
-<span style="color: #00adbc; font-weight: bold; font-size: 125%">2.</span> Save in a **variable** the beginning of a message that will eventually be displayed to the user: “It’s &lt;name of day&gt;!“<br><br>
-<span style="color: #00adbc; font-weight: bold; font-size: 125%">3.</span> Check the current value of the dropdown to see **if it's “Friday”**<br><br>
-<span style="color: #00adbc; font-weight: bold">4.</span> **Add text to the message**. *Either* “Whoo hoo…” if it’s Friday, *or* “Aw…” if it’s not.<br><br>
-<span style="color: #00adbc; font-weight: bold">5.</span> Finally, **set the text of a label** on the screen to the message that was constructed.
+<span style="color: #00adbc; font-weight: bold; font-size: 125%">2.</span> Save in a <strong>variable</strong> the beginning of a message that will eventually be displayed to the user: “It’s &lt;name of day&gt;!“<br><br>
+<span style="color: #00adbc; font-weight: bold; font-size: 125%">3.</span> Check the current value of the dropdown to see <strong>if it's “Friday”</strong><br><br>
+<span style="color: #00adbc; font-weight: bold">4.</span> <strong>Add text to the message</strong>. <em>Either</em> “Whoo hoo…” if it’s Friday, <em>or</em> “Aw…” if it’s not.<br><br>
+<span style="color: #00adbc; font-weight: bold">5.</span> Finally, <strong>set the text of a label</strong> on the screen to the message that was constructed.
 
 ## A note on your choices as a programmer
 
@@ -77,9 +78,7 @@ It's possible to write the program above without introducing the `msg` variable 
 
 However, the programmer realized that if she wrote it like this, the code in *both* the if and the else would effectively contain a *repeated* portion:
 
-```
-   setText("msg_label", "It's "+getText("day_dropdown")+"!...
-```
+`setText("msg_label", "It's "+getText("day_dropdown")+"!...`
 
 With experience you learn that repetitious code is bad and prone to errors.  In this case there are two different places that are changing a label on the screen.
 

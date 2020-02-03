@@ -80,7 +80,7 @@
     "beginner_mode": "false",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "instructions": "Delete the button and make the image move to a random location when you click on it. (click to see detailed instructions)"
+    "short_instructions": "Delete the button and make the image move to a random location when you click on it. (click to see detailed instructions)"
   }
 }]]></config>
   <blocks/>

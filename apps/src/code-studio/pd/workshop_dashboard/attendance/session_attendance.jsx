@@ -1,7 +1,8 @@
 /**
  * Display and edit attendance for a workshop session, for display in a WorkshopAttendance tab.
  */
-import React, {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -11,11 +12,7 @@ import Spinner from '../../components/spinner';
 import {Table} from 'react-bootstrap';
 import IdleTimer from 'react-idle-timer';
 import {COURSE_CSF} from '../workshopConstants';
-import {
-  PermissionPropType,
-  WorkshopAdmin,
-  Partner
-} from '../permission';
+import {PermissionPropType, WorkshopAdmin, ProgramManager} from '../permission';
 
 // in milliseconds
 const REFRESH_DELAY = 5000;
@@ -23,7 +20,7 @@ const IDLE_TIMEOUT = 60000;
 
 const styles = {
   idle: {
-    opacity: .5
+    opacity: 0.5
   },
   attendanceSummary: {
     fontFamily: 'Gotham 4r',
@@ -42,6 +39,7 @@ export class SessionAttendance extends React.Component {
     onSaving: PropTypes.func.isRequired,
     onSaved: PropTypes.func.isRequired,
     accountRequiredForAttendance: PropTypes.bool.isRequired,
+    scholarshipWorkshop: PropTypes.bool.isRequired,
     enrollmentCount: PropTypes.number.isRequired
   };
 
@@ -55,7 +53,6 @@ export class SessionAttendance extends React.Component {
     this.load();
     this.startRefreshInterval();
     this.isCSF = this.props.course === COURSE_CSF;
-    this.showPuzzlesCompleted = this.isCSF;
   }
 
   componentWillUnmount() {
@@ -104,9 +101,11 @@ export class SessionAttendance extends React.Component {
     }
 
     this.loadRequest = $.ajax({
-      method: "GET",
-      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${props.sessionId}`,
-      dataType: "json"
+      method: 'GET',
+      url: `/api/v1/pd/workshops/${props.workshopId}/attendance/${
+        props.sessionId
+      }`,
+      dataType: 'json'
     }).done(data => {
       this.loadRequest = null;
 
@@ -143,7 +142,7 @@ export class SessionAttendance extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Spinner/>;
+      return <Spinner />;
     }
 
     const tableRows = this.state.attendance.map((attendanceRow, i) => {
@@ -157,8 +156,10 @@ export class SessionAttendance extends React.Component {
           onSaving={this.handleAttendanceChangeSaving}
           onSaved={this.handleAttendanceChangeSaved.bind(this, i)}
           accountRequiredForAttendance={this.props.accountRequiredForAttendance}
-          showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={!this.props.permission.hasAny(WorkshopAdmin, Partner)}
+          scholarshipWorkshop={this.props.scholarshipWorkshop}
+          displayYesNoAttendance={
+            !this.props.permission.hasAny(WorkshopAdmin, ProgramManager)
+          }
         />
       );
     });
@@ -184,25 +185,21 @@ export class SessionAttendance extends React.Component {
               style={this.state.refreshInterval ? null : styles.idle}
             >
               <thead>
-              <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-                {this.props.accountRequiredForAttendance && <th>Code Studio Account</th>}
-                <th>Verified Teacher Account</th>
-                {this.showPuzzlesCompleted &&
-                <th>Puzzles Completed</th>
-                }
-                {this.isCSF ?
-                  <th>Attended</th>
-                  :
-                  <th>Present</th>
-                }
-              </tr>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th>Verified Teacher Account</th>
+                  {this.props.scholarshipWorkshop && (
+                    <th>Code.org Scholarship?</th>
+                  )}
+                  {this.props.scholarshipWorkshop && (
+                    <th>Other Scholarship?</th>
+                  )}
+                  {this.isCSF ? <th>Attended</th> : <th>Present</th>}
+                </tr>
               </thead>
-              <tbody>
-              {tableRows}
-              </tbody>
+              <tbody>{tableRows}</tbody>
             </Table>
           </div>
         </IdleTimer>

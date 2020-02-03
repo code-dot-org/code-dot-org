@@ -1,0 +1,26 @@
+name 'AP_practice_Qs_rqb_27_CSP_2_1_2'
+wrong 'I only'
+wrong 'II only'
+wrong 'I and II'
+right 'I, II, and III'
+markdown <<MARKDOWN
+You are given a 32-bit word which was copied from computer RAM and are asked to determine what was represented by the word.  Which of the following are accurate responses to this request?
+I. The 32-bit word could be II. integer data as binary is how data is always represented in RAM.
+II. The 32-bit word could be an instruction for the CPU as hardware processes binary words.
+III. We cannot be certain as to what the word represented without more information.
+MARKDOWN
+teacher_markdown <<MARKDOWN
+Learning Objective: **2.1.2** and Essential Knowledge statements: **2.1.2D**
+<hr>
+ (A) This option is incorrect. While the word could have been integer data, there are many other types the word could have represented.  Therefore, this response is not complete.
+
+<hr>
+ (B) This option is incorrect. Similar to choice A, while this is a possibility it is not the most complete response.
+
+<hr>
+ (C) This option is incorrect. Both of these are possible, but the word could have been other types like String, double or list data.
+
+<hr>
+ (D) This option is correct. At a minimum, we would need the preceding type to narrow down how the word should have been interpreted.  Answers I and II give possibilities.  Therefore, all three in combination give the most complete response.
+
+MARKDOWN

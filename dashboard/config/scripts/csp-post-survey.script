@@ -3,4 +3,4 @@ login_required true
 has_verified_resources true
 
 stage 'CSP post-course survey', flex_category: 'cspSurvey'
-assessment 'csp-post-survey-2018-levelgroup', progression: 'CS Principles Post-course Survey'
+level 'csp-post-survey-2018-levelgroup', progression: 'CS Principles Post-course Survey', assessment: true

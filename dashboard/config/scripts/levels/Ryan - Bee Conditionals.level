@@ -6,7 +6,7 @@
   "user_id": 9,
   "properties": {
     "skin": "bee",
-    "instructions": "The bee only wants nectar right now. Not all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding a flower. If it is, then you can gather nectar.",
+    "short_instructions": "The bee only wants nectar right now. Not all objects are flowers, so check underneath EVERY CLOUD to see if it is hiding a flower. If it is, then you can gather nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",

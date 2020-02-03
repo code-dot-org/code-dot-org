@@ -20,11 +20,11 @@ function showCourses() {
   const studentsCount = coursesData.studentscount;
   const codeOrgUrlPrefix = coursesData.codeorgurlprefix;
   const signedOut = coursesData.signedout;
-  const showInitialTips = !coursesData.initialtipsdismissed;
-  const userId = coursesData.userid;
-  const modernElementaryCoursesAvailable = coursesData.modernelementarycoursesavailable;
+  const modernElementaryCoursesAvailable =
+    coursesData.modernelementarycoursesavailable;
+  const specialAnnouncement = coursesData.specialAnnouncement;
 
-  ReactDOM.render (
+  ReactDOM.render(
     <Provider store={getStore()}>
       <Courses
         isEnglish={isEnglish}
@@ -33,9 +33,8 @@ function showCourses() {
         studentsCount={studentsCount}
         codeOrgUrlPrefix={codeOrgUrlPrefix}
         isSignedOut={signedOut}
-        showInitialTips={showInitialTips}
-        userId={userId}
         modernElementaryCoursesAvailable={modernElementaryCoursesAvailable}
+        specialAnnouncement={specialAnnouncement}
       />
     </Provider>,
     document.getElementById('courses-container')

@@ -1,10 +1,11 @@
-import React, { PropTypes, Component } from 'react';
-import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import { hideShareDialog } from './shareDialogRedux';
+import {hideShareDialog} from './shareDialogRedux';
 
 const styles = {
   container: {
@@ -13,7 +14,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    fontFamily: "'Gotham 5r', sans-serif"
   },
   middle: {
     marginTop: 20,
@@ -26,17 +27,17 @@ const styles = {
     borderLeftWidth: 0,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    display: 'flex',
+    display: 'flex'
   },
   bottom: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   }
 };
 class ShareDisallowedDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    hideShareDialog: PropTypes.func.isRequired,
+    hideShareDialog: PropTypes.func.isRequired
   };
   render() {
     return (
@@ -46,9 +47,7 @@ class ShareDisallowedDialog extends Component {
         handleClose={this.props.hideShareDialog}
       >
         <div style={styles.container}>
-          <div style={styles.heading}>
-            {i18n.createAccountToShare()}
-          </div>
+          <div style={styles.heading}>{i18n.createAccountToShare()}</div>
           <div style={styles.middle}>
             {i18n.createAccountToShareDescription()}
           </div>
@@ -72,6 +71,9 @@ class ShareDisallowedDialog extends Component {
 
 export const UnconnectedShareDisallowedDialog = ShareDisallowedDialog;
 
-export default connect(state => ({
-  isOpen: state.shareDialog.isOpen
-}), { hideShareDialog })(ShareDisallowedDialog);
+export default connect(
+  state => ({
+    isOpen: state.shareDialog.isOpen
+  }),
+  {hideShareDialog}
+)(ShareDisallowedDialog);

@@ -1,11 +1,11 @@
 /** @file Tests for our johnny-five Led wrapper */
-import {expect} from '../../../../util/configuredChai';
+import {expect} from '../../../../util/deprecatedChai';
 import sinon from 'sinon';
 import five from '@code-dot-org/johnny-five';
-import makeStubBoard from './makeStubBoard';
+import {makeStubBoard} from './makeStubBoard';
 import Led from '@cdo/apps/lib/kits/maker/Led';
 
-describe('Led', function () {
+describe('Led', function() {
   it('is a five.Led', () => {
     const led = newTestLed();
     expect(led).to.be.an.instanceOf(five.Led);
@@ -78,12 +78,12 @@ describe('Led', function () {
     });
 
     it(`calls stop() only once when blink starts`, () => {
-      led.stop.reset();
+      led.stop.resetHistory();
       led.blink(100);
       expect(led.stop).to.have.been.calledOnce;
 
       // Pass some time and make sure it doesn't happen again
-      led.stop.reset();
+      led.stop.resetHistory();
       clock.tick(100);
       expect(led.toggle).to.have.been.calledOnce;
       expect(led.stop).not.to.have.been.called;
@@ -100,7 +100,7 @@ describe('Led', function () {
 function newTestLed() {
   return new Led({
     controller: makeStubController(),
-    board: makeStubBoard(),
+    board: makeStubBoard()
   });
 }
 

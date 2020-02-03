@@ -10,7 +10,9 @@
     "ground_decoration_plane": "[\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"lavaPop\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\"]",
     "action_plane": "[\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"\",\"stone\",\"oreRedstone\",\"oreDiamond\",\"stone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"oreRedstone\",\"\",\"\",\"oreRedstone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreDiamond\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"oreRedstone\",\"stone\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"\",\"stone\",\"stone\",\"\",\"\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\",\"stone\"]",
     "player_start_position": "[3, 5]",
-    "available_blocks": "[\"cobblestone\"]",
+    "available_blocks": [
+      "cobblestone"
+    ],
     "verification_function": "function (verificationAPI) {\r\n      // there are at least 3 logOak blocks on the board\r\n      return verificationAPI.getInventoryAmount(\"oreRedstone\") >= 3;\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,13 +30,13 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "player_start_direction": "1",
-    "instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
+    "short_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
     "is_daytime": "false",
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
     "grid_height": "10",
-    "ideal": "9",
+    "ideal": "14",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The spaces with red speckles are where you will find Redstone.\",\"hint_id\":\"mc_12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5e79c0cae1a511249ccb788d91de5cdb/Underground If Statements.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Can you use a `repeat` loop to make your code shorter?\",\"hint_id\":\"mc_12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c13eec3e4d23dc1fc59603f0431b2f39/Underground If Statements.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use an `if` statement to check spaces for lava, then place cobblestones. \",\"hint_id\":\"mc_12_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3eef4e133d56876818b23b810783d20d/Underground If Statements.mp3\"}]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
@@ -46,17 +48,24 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "markdown_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
+    "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "hint_prompt_attempts_threshold": 12,
-    "contained_level_names": null
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "agent_start_direction": "0",
+    "is_agent_level": "false",
+    "is_aquatic_level": "false",
+    "boat": "false",
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 15:38:16 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:50:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-26 00:52:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 22:51:42 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:52:33 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 15:38:16 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:50:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-27 15:32:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-26 00:52:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-02-06 22:51:42 +0000\",\"changed\":[],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-02-06 22:52:33 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":772,\"changed_by_email\":\"tessa.wiedmann@code.org\"},{\"changed_at\":\"2018-10-01 13:03:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"available_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 5,
     "repeat_loops": 3,
-    "conditionals": 3
+    "conditionals": 2
   }
 }]]></config>
   <blocks>

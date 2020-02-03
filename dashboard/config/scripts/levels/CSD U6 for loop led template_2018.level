@@ -105,7 +105,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "markdown_instructions": "# Arrays and For Loops RGB LED Project Template",
+    "long_instructions": "# Arrays and For Loops RGB LED Project Template",
     "parent_level_id": 10603,
     "name_suffix": "_2018",
     "contained_level_names": null

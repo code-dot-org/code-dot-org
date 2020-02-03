@@ -28,7 +28,7 @@
     "fast_get_nectar_animation": "true",
     "nectar_goal": "18",
     "honey_goal": "5",
-    "instructions": "What a strange field of goodies! I wonder if there's a pattern here...",
+    "short_instructions": "What a strange field of goodies! I wonder if there's a pattern here...",
     "ideal": "8",
     "authored_hints": "[\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?\\n\\n![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)\",\r\n  \"hint_id\": \"conditional_pointer\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"pointer\",\r\n  \"hint_markdown\": \"Other than making honey, do you see anything different that you have to do at each honeycomb?\",\r\n  \"hint_id\": \"turn_at_honeycomb_pointer\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
     "contained_level_names": null

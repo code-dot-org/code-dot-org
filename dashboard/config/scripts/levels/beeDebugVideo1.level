@@ -6,7 +6,7 @@
   "user_id": 5,
   "properties": {
     "skin": "bee",
-    "instructions": "Use a `repeat` loop to collect all of the nectar.",
+    "short_instructions": "Use a `repeat` loop to collect all of the nectar.",
     "step_mode": "1",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -29,7 +29,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Collect all of the nectar.",
+    "long_instructions": "Collect all of the nectar.",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",

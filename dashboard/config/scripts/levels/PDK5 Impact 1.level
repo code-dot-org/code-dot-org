@@ -8,7 +8,7 @@
     "title": "Impact for students",
     "height": "200",
     "placeholder": "Your thoughts here",
-    "markdown_instructions": "Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?",
+    "long_instructions": "Do you think your students will find the online activities in the K-5 courses fun and engaging? Why or Why not?",
     "skip_dialog": true,
     "skip_sound": true
   },

@@ -49,6 +49,8 @@ export default function Sounds() {
 
   this.audioContext = null;
 
+  this.isMuted = false;
+
   /**
    * Detect whether audio system is "unlocked" - it usually works immediately
    * on dekstop, but mobile usually restricts audio until triggered by user.
@@ -79,7 +81,7 @@ export default function Sounds() {
 }
 
 let singleton;
-Sounds.getSingleton = function () {
+Sounds.getSingleton = function() {
   if (!singleton) {
     singleton = new Sounds();
   }
@@ -94,31 +96,35 @@ Sounds.getSingleton = function () {
  * the first user interaction and try unlocking audio again.
  * @private
  */
-Sounds.prototype.initializeAudioUnlockState_ = function () {
-  this.unlockAudio(function () {
-    if (this.isAudioUnlocked()) {
-      return;
-    }
-    var unlockHandler = function () {
-      this.unlockAudio(function () {
-        if (this.isAudioUnlocked()) {
-          document.removeEventListener("mousedown", unlockHandler, true);
-          document.removeEventListener("touchend", unlockHandler, true);
-          document.removeEventListener("keydown", unlockHandler, true);
-        }
-      }.bind(this));
-    }.bind(this);
-    document.addEventListener("mousedown", unlockHandler, true);
-    document.addEventListener("touchend", unlockHandler, true);
-    document.addEventListener("keydown", unlockHandler, true);
-  }.bind(this));
+Sounds.prototype.initializeAudioUnlockState_ = function() {
+  this.unlockAudio(
+    function() {
+      if (this.isAudioUnlocked()) {
+        return;
+      }
+      var unlockHandler = function() {
+        this.unlockAudio(
+          function() {
+            if (this.isAudioUnlocked()) {
+              document.removeEventListener('mousedown', unlockHandler, true);
+              document.removeEventListener('touchend', unlockHandler, true);
+              document.removeEventListener('keydown', unlockHandler, true);
+            }
+          }.bind(this)
+        );
+      }.bind(this);
+      document.addEventListener('mousedown', unlockHandler, true);
+      document.addEventListener('touchend', unlockHandler, true);
+      document.addEventListener('keydown', unlockHandler, true);
+    }.bind(this)
+  );
 };
 
 /**
  * Whether we're allowed to play audio by the browser yet.
  * @returns {boolean}
  */
-Sounds.prototype.isAudioUnlocked = function () {
+Sounds.prototype.isAudioUnlocked = function() {
   // Audio unlock doesn't make sense for the fallback player as used here.
   return this.audioUnlocked_ || !this.audioContext;
 };
@@ -129,7 +135,7 @@ Sounds.prototype.isAudioUnlocked = function () {
  * Otherwise it will occur after audio is successfully unlocked.
  * @param {function} callback
  */
-Sounds.prototype.whenAudioUnlocked = function (callback) {
+Sounds.prototype.whenAudioUnlocked = function(callback) {
   if (this.isAudioUnlocked()) {
     callback();
   } else {
@@ -148,7 +154,7 @@ Sounds.prototype.whenAudioUnlocked = function (callback) {
  * @param {function} [onComplete] callback for after we've checked whether
  *        audio was unlocked successfully.
  */
-Sounds.prototype.unlockAudio = function (onComplete) {
+Sounds.prototype.unlockAudio = function(onComplete) {
   if (this.isAudioUnlocked()) {
     return;
   }
@@ -164,19 +170,23 @@ Sounds.prototype.unlockAudio = function (onComplete) {
     source.noteOn(0);
   }
 
-  this.checkDidSourcePlay_(source, this.audioContext, function (didPlay) {
-    if (didPlay) {
-      this.audioUnlocked_ = true;
-      this.whenAudioUnlockedCallbacks_.forEach(function (cb) {
-        cb();
-      });
-      this.whenAudioUnlockedCallbacks_.length = 0;
-    }
+  this.checkDidSourcePlay_(
+    source,
+    this.audioContext,
+    function(didPlay) {
+      if (didPlay) {
+        this.audioUnlocked_ = true;
+        this.whenAudioUnlockedCallbacks_.forEach(function(cb) {
+          cb();
+        });
+        this.whenAudioUnlockedCallbacks_.length = 0;
+      }
 
-    if (onComplete) {
-      onComplete();
-    }
-  }.bind(this));
+      if (onComplete) {
+        onComplete();
+      }
+    }.bind(this)
+  );
 };
 
 /**
@@ -188,18 +198,26 @@ Sounds.prototype.unlockAudio = function (onComplete) {
  * @param {!function(boolean)} onComplete
  * @private
  */
-Sounds.prototype.checkDidSourcePlay_ = function (source, context, onComplete) {
+Sounds.prototype.checkDidSourcePlay_ = function(source, context, onComplete) {
   // Approach 1: Although AudioBufferSourceNode.playbackState is supposedly
   //             deprecated, it's still the most reliable way to check whether
   //             playback occurred on iOS devices through iOS9, and requires
   //             only a 0ms timeout to work.
   //             We feature-check this approach by seeing if the related enums
   //             exist first.
-  if (source.PLAYING_STATE !== undefined && source.FINISHED_STATE !== undefined) {
-    setTimeout(function () {
-      onComplete(source.playbackState === source.PLAYING_STATE ||
-          source.playbackState === source.FINISHED_STATE);
-    }.bind(this), 0);
+  if (
+    source.PLAYING_STATE !== undefined &&
+    source.FINISHED_STATE !== undefined
+  ) {
+    setTimeout(
+      function() {
+        onComplete(
+          source.playbackState === source.PLAYING_STATE ||
+            source.playbackState === source.FINISHED_STATE
+        );
+      }.bind(this),
+      0
+    );
     return;
   }
 
@@ -207,9 +225,14 @@ Sounds.prototype.checkDidSourcePlay_ = function (source, context, onComplete) {
   //             reliably with a longer delay and a check against the
   //             AudioContext.currentTime, which should be greater than the
   //             time passed to source.start() (in this case, zero).
-  setTimeout(function () {
-    onComplete('number' === typeof context.currentTime && context.currentTime > 0);
-  }.bind(this), 50);
+  setTimeout(
+    function() {
+      onComplete(
+        'number' === typeof context.currentTime && context.currentTime > 0
+      );
+    }.bind(this),
+    50
+  );
 };
 
 /**
@@ -220,8 +243,8 @@ Sounds.prototype.checkDidSourcePlay_ = function (source, context, onComplete) {
  * @param {string} soundID ID for sound
  * @returns {Sound}
  */
-Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
-  var soundRegistrationConfig = { id: soundID };
+Sounds.prototype.registerByFilenamesAndID = function(soundPaths, soundID) {
+  var soundRegistrationConfig = {id: soundID};
   for (var i = 0; i < soundPaths.length; i++) {
     var soundFilePath = soundPaths[i];
     var getExtensionRegexp = /\.(\w+)(\?.*)?$/;
@@ -240,7 +263,7 @@ Sounds.prototype.registerByFilenamesAndID = function (soundPaths, soundID) {
  * @param {Object} config
  * @returns {Sound}
  */
-Sounds.prototype.register = function (config) {
+Sounds.prototype.register = function(config) {
   var sound = new Sound(config, this.audioContext);
   this.soundsById[config.id] = sound;
   sound.preload();
@@ -254,20 +277,39 @@ Sounds.prototype.register = function (config) {
  * @param {boolean} [options.loop] default false
  * @param {function} [options.onEnded]
  */
-Sounds.prototype.play = function (soundId, options) {
+Sounds.prototype.play = function(soundId, options) {
   var sound = this.soundsById[soundId];
   if (sound) {
     sound.play(options);
   }
 };
 
-Sounds.prototype.playURL = function (url, playbackOptions) {
+/**
+ * Remove references to the specified sound so that it can be garbage collected
+ * to free up memory.
+ * @param soundId {string} Sound id to unload. This is the URL for sounds
+ * played via playURL.
+ */
+Sounds.prototype.unload = function(soundId) {
+  delete this.soundsById[soundId];
+};
+
+Sounds.prototype.playURL = function(url, playbackOptions) {
+  if (this.isMuted) {
+    return;
+  }
   // Play a sound given a URL, register it using the URL as id and infer
   // the file type from the extension at the end of the URL
   // (NOTE: not ideal because preload happens inside first play)
   var sound = this.soundsById[url];
-  if (sound) {
-    sound.play(playbackOptions);
+  // If the song previously failed to load, let the call to this.register()
+  // below replace its entry in this.soundsById and try again to load it.
+  if (sound && !sound.didLoadFail()) {
+    if (sound.isLoaded()) {
+      sound.play(playbackOptions);
+    } else {
+      sound.playAfterLoad(playbackOptions);
+    }
   } else {
     var soundConfig = {id: url};
     var ext = Sounds.getExtensionFromUrl(url);
@@ -275,7 +317,8 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
     // Force HTML5 audio if the caller requests it (cross-domain origin issues)
     soundConfig.forceHTML5 = playbackOptions && playbackOptions.forceHTML5;
     // Force HTML5 audio on mobile if the caller requests it
-    soundConfig.allowHTML5Mobile = playbackOptions && playbackOptions.allowHTML5Mobile;
+    soundConfig.allowHTML5Mobile =
+      playbackOptions && playbackOptions.allowHTML5Mobile;
     // since preload may be async, we set playAfterLoad in the config so we
     // play the sound once it is loaded
     // Also stick the playbackOptions inside the config as playAfterLoadOptions
@@ -289,7 +332,7 @@ Sounds.prototype.playURL = function (url, playbackOptions) {
  * @param {!string} url
  * @returns {boolean} whether the given sound is currently playing.
  */
-Sounds.prototype.isPlayingURL = function (url) {
+Sounds.prototype.isPlayingURL = function(url) {
   var sound = this.soundsById[url];
   if (sound) {
     return sound.isPlaying();
@@ -300,7 +343,7 @@ Sounds.prototype.isPlayingURL = function (url) {
 /**
  * Stop playing url.
  */
-Sounds.prototype.stopPlayingURL = function (url) {
+Sounds.prototype.stopPlayingURL = function(url) {
   var sound = this.soundsById[url];
   if (sound) {
     sound.stop();
@@ -308,9 +351,20 @@ Sounds.prototype.stopPlayingURL = function (url) {
 };
 
 /**
+ * While muted, playURL() has no effect.
+ */
+Sounds.prototype.muteURLs = function() {
+  this.isMuted = true;
+};
+
+Sounds.prototype.unmuteURLs = function() {
+  this.isMuted = false;
+};
+
+/**
  * Stop all playing sounds immediately.
  */
-Sounds.prototype.stopAllAudio = function () {
+Sounds.prototype.stopAllAudio = function() {
   for (let soundId in this.soundsById) {
     if (this.soundsById[soundId].isPlaying()) {
       this.soundsById[soundId].stop();
@@ -318,15 +372,15 @@ Sounds.prototype.stopAllAudio = function () {
   }
 };
 
-Sounds.prototype.stopLoopingAudio = function (soundId) {
+Sounds.prototype.stopLoopingAudio = function(soundId) {
   var sound = this.soundsById[soundId];
   sound.stop();
 };
 
-Sounds.prototype.get = function (soundId) {
+Sounds.prototype.get = function(soundId) {
   return this.soundsById[soundId];
 };
 
-Sounds.getExtensionFromUrl = function (url) {
+Sounds.getExtensionFromUrl = function(url) {
   return url.substr(url.lastIndexOf('.') + 1);
 };

@@ -12,7 +12,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "video_key": "C3_playlab_create_game",
     "embed": "false",
-    "instructions": "So far all of the programs we've written are executed in order from top to bottom. In this puzzle, we'll use \"Events\" to respond to an action on demand. Make the octopus say \"Hello\" only when you click on the Octopus. ",
+    "short_instructions": "So far all of the programs we've written are executed in order from top to bottom. In this puzzle, we'll use \"Events\" to respond to an action on demand. Make the octopus say \"Hello\" only when you click on the Octopus. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "disable_param_editing": "true",

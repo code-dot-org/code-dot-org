@@ -1,14 +1,14 @@
 / Show the correct answer to authorized teachers
-- if current_user.try(:should_see_inline_answer?, @script_level)
+- if Policies::InlineAnswer.visible?(current_user, @script_level)
   #markdown.teacher.hide-as-student
     %h3= t('teacher.answer')
     .content
       .column
-        %ul#questions
-          - data['questions'].each do |question|
-            %li{style: "height: #{height}px"}!= match_t(question['text'])
-      .column#answerdest
-        %ul#answers
-          - data['answers'].each do |answer|
-            %li.answer.answerlist{style: "height: #{height}px"}!= match_t(answer['text'])
+        %ul.match_questions
+          - level.localized_property(:questions).each do |question|
+            %li{style: "height: #{level.height}px"}!= render_multi_or_match_content(question['text'])
+      .column.match_answerdest
+        %ul.match_answers
+          - level.localized_property(:answers).each do |answer|
+            %li.answer.answerlist{style: "height: #{level.height}px"}!= render_multi_or_match_content(answer['text'])
       .clear

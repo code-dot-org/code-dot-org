@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
+    "short_instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
     "x": "50",
     "y": "150",
     "start_direction": "90",

@@ -6,7 +6,7 @@
   "user_id": 1,
   "properties": {
     "skin": "artist",
-    "instructions": "**Challenge:** Can you figure out how to use all of the things you've learned to create this image of polygons, all with 40 pixel sides?",
+    "short_instructions": "**Challenge:** Can you figure out how to use all of the things you've learned to create this image of polygons, all with 40 pixel sides?",
     "x": "200",
     "y": "170",
     "start_direction": "90",
@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Challenge:** Can you figure out how to use all of the things you've learned to create this image of polygons, all with 40 pixel sides?\r\n\r\nRemember, in order to create a spiral, you cannot close the polygon.  This means that each shape will need to have one fewer sides than usual.",
+    "long_instructions": "**Challenge:** Can you figure out how to use all of the things you've learned to create this image of polygons, all with 40 pixel sides?\r\n\r\nRemember, in order to create a spiral, you cannot close the polygon.  This means that each shape will need to have one fewer sides than usual.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",

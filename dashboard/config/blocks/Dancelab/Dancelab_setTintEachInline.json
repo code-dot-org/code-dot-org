@@ -1,0 +1,71 @@
+{
+  "category": "Groups",
+  "config": {
+    "func": "setTintEachInline",
+    "blockText": "set {THIS} tint to {VAL}",
+    "args": [
+      {
+        "name": "THIS",
+        "options": [
+          [
+            "all",
+            "sprites"
+          ],
+          [
+            "aliens",
+            "\"ALIEN\""
+          ],
+          [
+            "bears",
+            "\"BEAR\""
+          ],
+          [
+            "cats",
+            "\"CAT\""
+          ],
+          [
+            "dogs",
+            "\"DOG\""
+          ],
+          [
+            "ducks",
+            "\"DUCK\""
+          ],
+          [
+            "frogs",
+            "\"FROG\""
+          ],
+          [
+            "moose",
+            "\"MOOSE\""
+          ],
+          [
+            "pineapples",
+            "\"PINEAPPLE\""
+          ],
+          [
+            "robots",
+            "\"ROBOT\""
+          ],
+          [
+            "sharks",
+            "\"SHARK\""
+          ],
+          [
+            "sloths",
+            "\"SLOTH\""
+          ],
+          [
+            "unicorns",
+            "\"UNICORN\""
+          ]
+        ]
+      },
+      {
+        "name": "VAL",
+        "type": "Colour",
+        "customInput": "limitedColourPicker"
+      }
+    ]
+  }
+}

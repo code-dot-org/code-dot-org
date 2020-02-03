@@ -2,9 +2,8 @@
 # This allows `knife` commands to be run as the 'cdo-ci' user on daemon servers,
 # for uploading Chef cookbooks and updating per-environment cookbook constraints from the CI script.
 # The 'cdo-apps.cdo-ci' attribute must be provided in a Chef attribute on the chef-repo.
-require 'etc'
-user = Etc.getlogin
-home = Etc.getpwnam(user).dir
+user = node[:user]
+home = node[:home]
 
 if node['cdo-apps']['daemon'] && node['cdo-apps']['cdo-ci']
   directory "#{home}/.chef" do

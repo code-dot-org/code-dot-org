@@ -1,4 +1,4 @@
-import color from "../../../util/color";
+import color from '../../../util/color';
 
 export const createOutline = color => {
   return `
@@ -29,12 +29,12 @@ const progressStyles = {
   }),
   orangeButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.orange,
-    color: color.white,
+    color: color.white
   }),
   whiteButton: Object.assign({}, baseButtonStyle, {
     backgroundColor: color.white,
     color: color.dark_charcoal,
     borderColor: color.lighter_gray
-  }),
+  })
 };
 export default progressStyles;

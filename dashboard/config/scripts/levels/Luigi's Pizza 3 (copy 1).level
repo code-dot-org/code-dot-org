@@ -23,7 +23,7 @@
     "coordinate_grid_background": "false",
     "project_template_level_name": "Luigi's Pizza",
     "callout_json": "[]",
-    "instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the \"else\" clause so that we charge them a premium for toppings that we don't normally offer?",
+    "short_instructions": "That's better, everyone loves more variety in their pizza toppings! But you still can't please everyone, and folks are coming in to order toppings that Luigi doesn't have. Instead of saying no to those people, could you update the \"else\" clause so that we charge them a premium for toppings that we don't normally offer?",
     "min_workspace_height": "2000"
   }
 }]]></config>

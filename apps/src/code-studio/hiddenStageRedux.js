@@ -40,9 +40,13 @@ const HiddenState = Immutable.Record({
  * @throws If new state is invalid
  */
 function validateSectionIds(state) {
-  if (state.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
-      state.get('stagesBySection').size > 1) {
-    throw new Error('Should never have STUDENT_SECTION_ID alongside other sectionIds');
+  if (
+    state.getIn(['stagesBySection', STUDENT_SECTION_ID]) &&
+    state.get('stagesBySection').size > 1
+  ) {
+    throw new Error(
+      'Should never have STUDENT_SECTION_ID alongside other sectionIds'
+    );
   }
 }
 
@@ -51,7 +55,7 @@ function validateSectionIds(state) {
  */
 export default function reducer(state = new HiddenState(), action) {
   if (action.type === SET_HIDDEN_STAGES) {
-    const { hiddenStagesPerSection, hideableStagesAllowed } = action;
+    const {hiddenStagesPerSection, hideableStagesAllowed} = action;
 
     // Iterate through each section
     const sectionIds = Object.keys(hiddenStagesPerSection);
@@ -60,7 +64,10 @@ export default function reducer(state = new HiddenState(), action) {
       // And iterate through each hidden stage within that section
       const hiddenStageIds = hiddenStagesPerSection[sectionId];
       hiddenStageIds.forEach(stageId => {
-        nextState = nextState.setIn(['stagesBySection', sectionId, stageId.toString()], true);
+        nextState = nextState.setIn(
+          ['stagesBySection', sectionId, stageId.toString()],
+          true
+        );
       });
     });
     validateSectionIds(nextState);
@@ -72,15 +79,21 @@ export default function reducer(state = new HiddenState(), action) {
   }
 
   if (action.type === UPDATE_HIDDEN_STAGE) {
-    const { sectionId, stageId, hidden } = action;
-    const nextState = state.setIn(['stagesBySection', sectionId, stageId.toString()], hidden);
+    const {sectionId, stageId, hidden} = action;
+    const nextState = state.setIn(
+      ['stagesBySection', sectionId, stageId.toString()],
+      hidden
+    );
     validateSectionIds(nextState);
     return nextState;
   }
 
   if (action.type === UPDATE_HIDDEN_SCRIPT) {
-    const { sectionId, scriptId, hidden } = action;
-    const nextState = state.setIn(['scriptsBySection', sectionId.toString(), scriptId.toString()], hidden);
+    const {sectionId, scriptId, hidden} = action;
+    const nextState = state.setIn(
+      ['scriptsBySection', sectionId.toString(), scriptId.toString()],
+      hidden
+    );
     validateSectionIds(nextState);
     return nextState;
   }
@@ -186,8 +199,10 @@ export function getHiddenStages(scriptName, canHideStages) {
       dataType: 'json',
       contentType: 'application/json'
     })
-    .done(response => dispatch(initializeHiddenStages(response, canHideStages)))
-    .fail(err => console.error(err));
+      .done(response =>
+        dispatch(initializeHiddenStages(response, canHideStages))
+      )
+      .fail(err => console.error(err));
   };
 }
 
@@ -204,7 +219,7 @@ function initializeHiddenStages(data, canHideStages) {
     // For a student, we just get back a list of hidden stage ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
     if (Array.isArray(data)) {
-      data = { [STUDENT_SECTION_ID]: data };
+      data = {[STUDENT_SECTION_ID]: data};
     }
 
     dispatch(setHiddenStages(data, !!canHideStages));
@@ -226,7 +241,7 @@ export function initializeHiddenScripts(data) {
     // For a student, we just get back a list of hidden script ids. Turn that
     // into an object, under the 'sectionId' of STUDENT_SECTION_ID
     if (Array.isArray(data)) {
-      data = { [STUDENT_SECTION_ID]: data };
+      data = {[STUDENT_SECTION_ID]: data};
     }
 
     Object.keys(data).forEach(sectionId => {

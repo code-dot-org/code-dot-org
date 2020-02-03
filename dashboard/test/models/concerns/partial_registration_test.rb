@@ -61,68 +61,31 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal 'Different fake name', user.name
   end
 
-  test 'new_from_partial_registration loads oauth_token from cache' do
-    email = 'oauth@example.com'
-    CDO.shared_cache.write("oauth_token-#{email}", 'fake-oauth-token')
-    user = User.new_from_partial_registration fake_session(
-      user_type: 'student',
-      name: 'Fake Name',
-      email: email
-    )
-    assert_equal 'fake-oauth-token', user.oauth_token
-  end
-
-  test 'new_from_partial_registration loads oauth_refresh_token from cache' do
-    email = 'oauth@example.com'
-    CDO.shared_cache.write("oauth_refresh_token-#{email}", 'fake-refresh-token')
-    user = User.new_from_partial_registration fake_session(
-      user_type: 'student',
-      name: 'Fake Name',
-      email: email
-    )
-    assert_equal 'fake-refresh-token', user.oauth_refresh_token
-  end
-
-  test 'persist_attributes puts most attributes in the session' do
-    session = fake_empty_session
-    user = build :user,
-      provider: 'google_oauth2',
-      uid: 'fake-uid'
-
-    PartialRegistration.persist_attributes session, user
-
-    assert_equal user.user_type, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['user_type']
-    assert_equal user.name, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['name']
-    assert_equal user.email, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['email']
-    assert_equal user.provider, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['provider']
-    assert_equal user.uid, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['uid']
-  end
-
   test 'persist_attributes puts tokens in the cache' do
+    # Because some oauth tokens are quite large, we strip them from the session
+    # variables and pass them through via the cache instead - they are pulled
+    # out again in new_from_partial_registration.
+    # This avoids "cookie overflow" errors.
+
     session = fake_empty_session
-    user = build :user,
-      provider: 'google_oauth2',
-      uid: 'fake-uid',
-      oauth_token: 'fake-oauth-token',
-      oauth_refresh_token: 'fake-refresh-token'
+    user = build :student, :google_sso_provider
+
     PartialRegistration.persist_attributes session, user
 
     # Tokens are in cache
-    assert_equal user.oauth_token, CDO.shared_cache.read("oauth_token-#{user.email}")
-    assert_equal user.oauth_refresh_token, CDO.shared_cache.read("oauth_refresh_token-#{user.email}")
+    assert_equal user.oauth_token,
+      CDO.shared_cache.read(PartialRegistration.cache_key('oauth_token', user))
+    assert_equal user.oauth_refresh_token,
+      CDO.shared_cache.read(PartialRegistration.cache_key('oauth_refresh_token', user))
 
     # ...not in session
     refute_equal user.oauth_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_token']
     refute_equal user.oauth_refresh_token, session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]['oauth_refresh_token']
   end
 
-  test 'round-trip' do
+  test 'round-trip preserves important attributes' do
     session = fake_empty_session
-    user = build :user,
-      provider: 'google_oauth2',
-      uid: 'fake-uid',
-      oauth_token: 'fake-oauth-token',
-      oauth_refresh_token: 'fake-refresh-token'
+    user = build :user, :google_sso_provider
 
     PartialRegistration.persist_attributes session, user
 
@@ -134,7 +97,19 @@ class PartialRegistrationTest < ActiveSupport::TestCase
     assert_equal user.provider, result_user.provider
     assert_equal user.uid, result_user.uid
     assert_equal user.oauth_token, result_user.oauth_token
+    assert_equal user.oauth_token_expiration, result_user.oauth_token_expiration
     assert_equal user.oauth_refresh_token, result_user.oauth_refresh_token
+  end
+
+  test 'cancel ends signup tracking and deletes user attributes from the session' do
+    user = build :user, :google_sso_provider
+    session = fake_session user.attributes
+
+    SignUpTracking.expects(:log_cancel_finish_sign_up)
+    SignUpTracking.expects(:end_sign_up_tracking)
+    new_session = PartialRegistration.cancel(session)
+
+    assert_nil new_session[PartialRegistration::USER_ATTRIBUTES_SESSION_KEY]
   end
 
   private

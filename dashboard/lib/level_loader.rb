@@ -2,8 +2,9 @@ require 'set'
 
 class LevelLoader
   # Top-level entry point, called by rake seed:custom_levels
-  def self.load_custom_levels
-    import_levels 'config/scripts/**/*.level'
+  def self.load_custom_levels(level_name)
+    levels_glob = level_name ? "config/scripts/**/#{level_name}.level" : 'config/scripts/**/*.level'
+    import_levels levels_glob
   end
 
   #

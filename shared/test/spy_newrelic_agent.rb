@@ -1,6 +1,5 @@
 # Test-only NewRelic::Agent API which records logging of events and metrics
 # without contacting the remote service.
-
 module NewRelic
   module Agent
     def self.config
@@ -39,6 +38,20 @@ module NewRelic
       @@events.select do |event|
         regex.match event.first
       end
+    end
+
+    def self.add_custom_attributes(params)
+      (@@attributes ||= {}).merge!(params)
+    end
+
+    def self.custom_attributes
+      @@attributes ||= {}
+    end
+
+    def self.reset_stub
+      @@attributes = {}
+      @@events = []
+      @@metrics = []
     end
   end
 end

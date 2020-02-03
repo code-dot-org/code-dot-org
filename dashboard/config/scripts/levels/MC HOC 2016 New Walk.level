@@ -32,7 +32,7 @@
     "disable_examples": "false",
     "free_play": "false",
     "player_start_direction": "0",
-    "instructions": "Let's explore our world! Move with the arrows, and press the space bar or tap the game board to use items. Use the door to get inside the house.",
+    "short_instructions": "Let's explore our world! Move with the arrows, and press the space bar or tap the game board to use items. Use the door to get inside the house.",
     "is_event_level": "true",
     "day_night_cycle_start": "0",
     "day_night_cycle_time": "0",

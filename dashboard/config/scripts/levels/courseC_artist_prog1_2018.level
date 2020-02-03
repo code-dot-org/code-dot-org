@@ -6,7 +6,7 @@
   "user_id": 6,
   "properties": {
     "skin": "artist",
-    "instructions": "Play with the blocks in the toolbox to see what they do!",
+    "short_instructions": "Play with the blocks in the toolbox to see what they do!",
     "x": "200",
     "y": "200",
     "start_direction": "90",
@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
+    "long_instructions": "*\"Hi, I'm an artist. You can write code to make me draw almost anything.\"*\r\n\r\nPlay with the blocks in the toolbox to see what they do!",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -39,11 +39,16 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 22:13:52 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-07-24 18:13:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:13:52 +0000\",\"changed\":[\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-07-24 18:13:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

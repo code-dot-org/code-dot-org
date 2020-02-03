@@ -7,7 +7,7 @@
   "properties": {
     "skin": "elsa",
     "embed": "false",
-    "instructions": "Now you need to turn and repeat it 20 times! How many degrees do you turn to get 360 after 20 iterations?",
+    "short_instructions": "Now you need to turn and repeat it 20 times! How many degrees do you turn to get 360 after 20 iterations?",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 324,
   "properties": {
-    "markdown_instructions": "# Changing Velocity with Position\r\n\r\nOne advantage to using the velocity blocks inside conditionals (`if` blocks) is that your sprite keeps moving, even after the condition stops being true.  For example, you only had to press a key once to launch your fly bot, and it kept flying forever.  The code below uses if statements to make a fish sprite move in different directions.\r\n\r\n# Do This\r\n\r\n* Look at `if` statements that check the sprite's position and set its velocity.\r\n* With your partner, discuss what you think the code will do, and write your answer below.\r\n* Once you have submitted your answer, run the code.",
+    "long_instructions": "# Changing Velocity with Position\r\n\r\nOne advantage to using the velocity blocks inside conditionals (`if` blocks) is that your sprite keeps moving, even after the condition stops being true.  For example, you only had to press a key once to launch your fly bot, and it kept flying forever.  The code below uses if statements to make a fish sprite move in different directions.\r\n\r\n# Do This\r\n\r\n* Look at `if` statements that check the sprite's position and set its velocity.\r\n* With your partner, discuss what you think the code will do, and write your answer below.\r\n* Once you have submitted your answer, run the code.",
     "instructions_important": "false",
     "allow_user_uploads": "false",
     "submittable": "false",

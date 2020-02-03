@@ -18,21 +18,25 @@
 #  index_plc_enrollment_unit_assignments_on_user_id    (user_id)
 #
 
+# Maps a course enrollment to all the units that a teacher must complete in order to
+# complete the course.
+#
+# Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
-  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
-  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
-  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
-  belongs_to :user, class_name: 'User'
-
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked'.freeze,
     IN_PROGRESS = 'in_progress'.freeze,
     COMPLETED = 'completed'.freeze
   ].freeze
 
-  after_save :enroll_user_in_required_modules
+  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
+  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
+  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
+  belongs_to :user, class_name: 'User'
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
+
+  after_save :enroll_user_in_required_modules
 
   def module_assignment_for_type(module_type)
     plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)
@@ -76,8 +80,8 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     # If the course unit has an evaluation level, then status is determined by the completion of the focus group modules
     if plc_course_unit.has_evaluation?
       Plc::LearningModule::MODULE_TYPES.select {|type| categories_for_stage.include?(type)}.each do |flex_category|
-        module_category = flex_category || Plc::LearningModule::CONTENT_MODULE
-        category_name = I18n.t("flex_category.#{module_category}")
+        module_category = flex_category
+        category_name = I18n.t("flex_category.#{module_category}", default: I18n.t('flex_category.required'))
         summary << {
           category: category_name,
           status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,

@@ -6,7 +6,7 @@
   "user_id": 16,
   "properties": {
     "skin": "artist",
-    "instructions": "You can call functions from inside other functions! Using your \"shape\" function as a base, create 3 house shapes each 20 pixels larger than the last starting at 50 pixels in length. Using a counter loop might be helpful. ",
+    "short_instructions": "You can call functions from inside other functions! Using your \"shape\" function as a base, create 3 house shapes each 20 pixels larger than the last starting at 50 pixels in length. Using a counter loop might be helpful. ",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "slider_speed": ".5",

@@ -9,12 +9,20 @@ module ProjectsList
   PUBLISHED_PROJECT_TYPE_GROUPS = {
     applab: ['applab'],
     gamelab: ['gamelab'],
+    spritelab: ['spritelab'],
     playlab: ['playlab', 'gumball', 'infinity', 'iceage'],
     artist: ['artist', 'frozen'],
-    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero'],
+    minecraft: ['minecraft_adventurer', 'minecraft_designer', 'minecraft_hero', 'minecraft_aquatic'],
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
+    dance: ['dance'],
+    library: ['applab', 'gamelab']
   }.freeze
+
+  # Sharing of advanced project types to the public gallery is restricted for
+  # young students unless sharing is explciitly enabled by the student's
+  # teacher for privacy reasons.
+  ADVANCED_PROJECT_TYPES = ['applab', 'gamelab', 'spritelab']
 
   class << self
     # Look up every project associated with the provided user_id, excluding those that are hidden.
@@ -75,7 +83,7 @@ module ProjectsList
     #   which to search for the requested projects. Must not be specified
     #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_group, limit:, published_before:)
+    def fetch_published_projects(project_group, limit:, published_before: nil)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
@@ -84,7 +92,7 @@ module ProjectsList
         return include_featured(limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_group}" unless PUBLISHED_PROJECT_TYPE_GROUPS.keys.include?(project_group.to_sym)
-      fetch_published_project_types([project_group.to_s], limit: limit, published_before: published_before)
+      fetch_published_project_types([project_group.to_sym], limit: limit, published_before: published_before)
     end
 
     def include_featured(limit:)
@@ -107,6 +115,33 @@ module ProjectsList
         featured_published_projects[project_group].flatten!
       end
       return featured_published_projects
+    end
+
+    # Retrieve a class set of libraries for a specified class section
+    # @param section The section that has all students whose libraries should
+    #                be returned.
+    # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
+    def fetch_section_libraries(section)
+      project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
+      section_students = section.students
+      [].tap do |projects_list_data|
+        student_storage_ids = PEGASUS_DB[:user_storage_ids].
+          where(user_id: section_students.pluck(:id)).
+          select_hash(:id, :user_id)
+        student_storage_id_list = student_storage_ids.keys
+        PEGASUS_DB[:storage_apps].
+          where(storage_id: student_storage_id_list, state: 'active').
+          where(project_type: project_types).
+          where("value->'$.libraryName' IS NOT NULL").
+          each do |project|
+            # The channel id stored in the project's value field may not be reliable
+            # when apps are remixed, so recompute the channel id.
+            channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
+            project_owner = section_students.find {|student| student.id == student_storage_ids[project[:storage_id]]}
+            project_data = get_library_row_data(project, channel_id, project_owner)
+            projects_list_data << project_data if project_data
+          end
+      end
     end
 
     def project_and_featured_project_and_user_fields
@@ -132,13 +167,13 @@ module ProjectsList
         join(storage_apps, id: :storage_app_id).
         join(user_storage_ids, id: Sequel[:storage_apps][:storage_id]).
         join(:users, id: Sequel[:user_storage_ids][:user_id]).
-        where(unfeatured_at: nil,
+        where(
+          unfeatured_at: nil,
           project_type: project_type.to_s,
-          abuse_score: 0,
           state: 'active'
         ).
         exclude(published_at: nil).
-        order(Sequel.lit('RAND()')).limit(24).all
+        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
@@ -186,6 +221,20 @@ module ProjectsList
       }.with_indifferent_access
     end
 
+    # pull various fields out of the student and project records to populate
+    # a data structure that can be used to populate a UI component displaying a
+    # single library or a list of libraries.
+    def get_library_row_data(project, channel_id, student = nil)
+      project_value = project[:value] ? JSON.parse(project[:value]) : {}
+      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      {
+        channel: channel_id,
+        name: project_value['libraryName'],
+        description: project_value['libraryDescription'],
+        studentName: student&.name,
+      }.with_indifferent_access
+    end
+
     def project_and_user_fields
       [
         :storage_apps__id___id,
@@ -193,6 +242,7 @@ module ProjectsList
         :storage_apps__value___value,
         :storage_apps__project_type___project_type,
         :storage_apps__published_at___published_at,
+        :storage_apps__abuse_score___abuse_score,
         :users__name___name,
         :users__birthday___birthday,
         :users__properties___properties,
@@ -208,7 +258,7 @@ module ProjectsList
             select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: project_types, abuse_score: 0).
+            where(state: 'active', project_type: project_types).
             where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
@@ -224,9 +274,10 @@ module ProjectsList
     # @param [hash] the join of storage_apps and user tables for a published project.
     #  See project_and_user_fields for which fields it contains.
     # @returns [hash, nil] containing fields relevant to the published project or
-    #  nil when the user has sharing_disabled = true
+    #  nil when the user has sharing_disabled = true for App Lab, Game Lab and Sprite Lab.
     def get_published_project_and_user_data(project_and_user)
-      return nil if get_sharing_disabled_from_properties(project_and_user[:properties])
+      return nil if get_sharing_disabled_from_properties(project_and_user[:properties]) && ADVANCED_PROJECT_TYPES.include?(project_and_user[:project_type])
+      return nil if project_and_user[:abuse_score] > 0
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {

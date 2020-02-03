@@ -8,9 +8,7 @@ class ApplicationController < ActionController::Base
   include LocaleHelper
   include ApplicationHelper
 
-  # Commenting this stuff out because even if we don't have a reader configured
-  # it will set stuff in the session.
-  # include SeamlessDatabasePool::ControllerFilter
+  include SeamlessDatabasePool::ControllerFilter
   # use_database_pool :all => :master
 
   # Prevent CSRF attacks by raising an exception.
@@ -59,17 +57,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def reset_session_endpoint
-    client_state.reset
-    sign_out if current_user
-    reset_session
-    render text: 'OK <script>sessionStorage.clear()</script>'
-  end
-
   rescue_from CanCan::AccessDenied do
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
+    elsif rack_env? :development
+      raise
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -85,7 +78,7 @@ class ApplicationController < ActionController::Base
 
   def render_404
     respond_to do |format|
-      format.html {render file: 'public/404.html', layout: 'layouts/application', status: :not_found}
+      format.html {render template: 'errors/not_found', layout: 'layouts/application', status: :not_found}
       format.all {head :not_found}
     end
   end
@@ -177,9 +170,10 @@ class ApplicationController < ActionController::Base
       response[:message] = 'no script provided'
     end
 
+    response[:phone_share_url] = send_to_phone_url
+
     if options[:level_source].try(:id)
       response[:level_source] = level_source_url(id: options[:level_source].id)
-      response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
     end
 

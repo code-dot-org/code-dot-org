@@ -1,11 +1,13 @@
 require_relative './db'
 
 module Metrics
-  # Connect to db. Third param sets frequency to check connection. Currently set
-  # to check before each request to db.
-  unless rack_env == :production
-    DEVINTERNAL_DB = CDO.devinternal_db_writer ?
-                       sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1) : nil
+  def self.devinternal_db
+    raise "devinternal_db_writer not defined" unless CDO.devinternal_db_writer
+
+    # Connect to db. Third param sets frequency to check connection. Currently set
+    # to check before each request to db.
+    @@devinternal_db ||=
+      sequel_connect(CDO.devinternal_db_writer, CDO.devinternal_db_writer, validation_frequency: -1)
   end
 
   # Values for DTT metrics.
@@ -18,11 +20,8 @@ module Metrics
   # @param value [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param timestamp [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_metric(name, metadata, value, timestamp=nil)
-    if DEVINTERNAL_DB
-      dataset = DEVINTERNAL_DB[:metrics]
-    else
-      raise "devinternal_db_writer not defined"
-    end
+    return if rack_env == :production
+    dataset = devinternal_db[:metrics]
     data = {name: name, metadata: metadata, value: value}
     data[:created_at] = timestamp if timestamp
     dataset.insert(data)
@@ -35,11 +34,8 @@ module Metrics
   # @param row[:value] [Float] Numerical value relevant to the specific metric. See constants above for examples.
   # @param row[:timestamp] [Datetime] Only used if we want to explicitly set the created_at value for a particular metric, otherwise it is automatically populated.
   def self.write_batch_metric(rows)
-    if DEVINTERNAL_DB
-      dataset = DEVINTERNAL_DB[:metrics]
-    else
-      raise "devinternal_db_writer not defined"
-    end
+    return if rack_env == :production
+    dataset = devinternal_db[:metrics]
     dataset.multi_insert(rows)
   end
 end

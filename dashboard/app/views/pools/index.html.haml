@@ -1,0 +1,5 @@
+%h1= 'Pools'
+%h2= 'Choose a block Pool'
+%ul
+  - @pools.each do |p|
+    %li= link_to p, blocks_path(pool: p)

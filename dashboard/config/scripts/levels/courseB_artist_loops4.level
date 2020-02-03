@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
+    "short_instructions": "Now we need to get the soil ready to plant. Find the bugs in the code and help the artist prepare the ground. ",
     "x": "25",
     "y": "350",
     "start_direction": "90",
