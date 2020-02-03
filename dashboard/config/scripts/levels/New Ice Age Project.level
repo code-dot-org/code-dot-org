@@ -48,10 +48,21 @@
     "disable_if_else_editing": "false",
     "wall_map_collisions": "false",
     "block_moving_into_walls": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "mini_rubric": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "default_num_example_blocks": "false",
+    "show_type_hints": "false",
+    "remove_items_when_actor_collides": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-01-31 19:07:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":833,\"changed_by_email\":\"aaron@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -105,6 +116,10 @@
         <block type="studio_saySpriteChoices">
           <title name="SPRITE">0</title>
           <title name="VALUE">Hi there!</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
         </block>
         <block type="studio_wait">
           <title name="VALUE">500</title>
