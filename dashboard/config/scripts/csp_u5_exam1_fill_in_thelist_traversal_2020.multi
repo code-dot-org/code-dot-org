@@ -1,9 +1,9 @@
 name 'csp-u5-exam1-fill-in-thelist-traversal_2020'
 editor_experiment ''
-wrong 'i < list[list.length]'
-right 'i < list.length'
-wrong 'i < list[0]'
-wrong 'i < list[1]'
+wrong '`i < list[list.length]`'
+right '`i < list.length`'
+wrong '`i < list[0]`'
+wrong '`i < list[1]`'
 
 
 
@@ -16,5 +16,5 @@ for(var i = 0; <INSERT CODE>; i++){
 }
 ```
 
-Which of the following will NOT result if placed where the program reads `<INSERT CODE>` and the program is run?
+Which of the following will NOT result in an error if placed where the program reads `<INSERT CODE>` and the program is run?
 MARKDOWN

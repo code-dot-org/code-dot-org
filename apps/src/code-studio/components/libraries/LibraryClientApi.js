@@ -6,6 +6,7 @@ export default class LibraryClientApi {
   constructor(channelId) {
     this.channelId = channelId;
     this.libraryApi = clientApi.create('/v3/libraries');
+    this.cacheBustSuffix = new Date().getTime();
   }
 
   publish(library, onError, onSuccess) {
@@ -17,6 +18,7 @@ export default class LibraryClientApi {
         if (error) {
           onError(error);
         } else {
+          this.cacheBustSuffix = new Date().getTime();
           onSuccess(data);
         }
       }
@@ -25,11 +27,12 @@ export default class LibraryClientApi {
 
   fetchLatest(onSuccess, onError) {
     this.libraryApi.fetch(
-      this.channelId + '/' + LIBRARY_NAME,
+      this.channelId + '/' + LIBRARY_NAME + '?_=' + this.cacheBustSuffix,
       (error, data, _, request) => {
         if (data) {
           onSuccess(data);
         } else {
+          this.cacheBustSuffix = new Date().getTime();
           onError(error, request.status);
         }
       }
@@ -72,6 +75,7 @@ export default class LibraryClientApi {
       this.channelId + '/' + LIBRARY_NAME,
       (error, success) => {
         if (success) {
+          this.cacheBustSuffix = new Date().getTime();
           onSuccess();
         } else {
           onError(error);
