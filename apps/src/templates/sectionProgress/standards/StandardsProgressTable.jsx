@@ -152,6 +152,8 @@ class StandardsProgressTable extends Component {
   getNumCompleted = (standard, index) => {
     let count = 0;
     if (this.props.lessonsByStandard[standard.id]) {
+      console.log('standard.id', standard.id);
+      console.log('lessonsByStandard', this.props.lessonsByStandard);
       this.props.lessonsByStandard[standard.id].forEach(lesson => {
         if (lesson.completed) {
           count++;
