@@ -195,8 +195,9 @@ The animation has been skipped.
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
   def get_animation_objects(bucket)
     animations_by_name = {}
-    bucket.objects.each do |object_summary|
-      animation_name = object_summary.key[/^[^.]+/]
+    prefix = @options[:spritelab] ? 'spritelab' : 'gamelab'
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/category[^.]+/]
       extension = object_summary.key[/(?<=\.)\w+$/]
       next if extension.nil? # Skip 'directory' objects
 
@@ -321,7 +322,7 @@ The animation has been skipped.
       metadata['version'] = objects['png'].object.version_id
 
       # Generate appropriate sourceUrl pointing to the animation library API
-      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{@options[:spritelab] ? 'spritelab' : 'gamelab'}/#{metadata['version']}/#{name}.png"
 
       # Populate sourceSize if not already present
       unless metadata.key?('sourceSize')
