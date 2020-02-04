@@ -1,9 +1,17 @@
-# Test only on chrome; other browsers in the saucelabs ecosystem do not
+# Test playing audio only on chrome; other browsers in the saucelabs ecosystem do not
 # come with the appropriate audio codecs, and end up responding with
 # "Media resource could not be decoded" errors
-@chrome
 Feature: Text To Speech
 
+Scenario: Check that TTS player is displayed
+  Given I am a student
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
+  And I wait for the page to fully load
+
+  Then I wait until element ".inline-audio" is visible
+  Then I see 1 of jquery selector .inline-audio
+
+@chrome
 Scenario: Listen to TTS Audio in CSF
   Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/3?noautoplay=true"
   And I rotate to landscape
@@ -37,6 +45,7 @@ Scenario: Listen to TTS Audio in CSF
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 1st inline audio element
 
+@chrome
 Scenario: Listen to TTS Audio in CSF contained level
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
@@ -48,6 +57,7 @@ Scenario: Listen to TTS Audio in CSF contained level
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
+@chrome
 Scenario: Listen to TTS Audio in CSD
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2"
@@ -59,6 +69,7 @@ Scenario: Listen to TTS Audio in CSD
   #Checks that inline audio does not disappear (indication of error)
   And I listen to the 0th inline audio element
 
+@chrome
 Scenario: Listen to TTS Audio in CSP and CSP contained level
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/4"

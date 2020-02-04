@@ -12,7 +12,7 @@ describe('StandardsProgressTable', () => {
     const wrapper = mount(
       <StandardsProgressTable
         standards={fakeStandards}
-        lessonsCompletedByStandard={lessonCompletedByStandard}
+        lessonsByStandard={lessonCompletedByStandard}
       />
     );
     expect(wrapper.find('StandardDescriptionCell')).to.have.lengthOf(
