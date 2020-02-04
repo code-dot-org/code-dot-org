@@ -118,6 +118,12 @@ class I18nScriptUtils
     @levels_by_url ||= Hash.new do |hash, new_url|
       url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
       matches = new_url.match(url_regex)
+
+      if matches.nil?
+        STDERR.puts "could not find level for url: #{new_url}"
+        return nil
+      end
+
       hash[new_url] =
         if matches[:level_info].starts_with?("extras")
           level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
