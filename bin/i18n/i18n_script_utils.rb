@@ -119,13 +119,11 @@ class I18nScriptUtils
       url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
       matches = new_url.match(url_regex)
 
-      if matches.nil?
-        STDERR.puts "could not find level for url: #{new_url}"
-        return nil
-      end
-
       hash[new_url] =
-        if matches[:level_info].starts_with?("extras")
+        if matches.nil?
+          STDERR.puts "could not find level for url: #{new_url}"
+          nil
+        elsif matches[:level_info].starts_with?("extras")
           level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
           level_name = matches[:level_info].match(level_info_regex)[:level_name]
           Level.find_by_name(CGI.unescape(level_name))
