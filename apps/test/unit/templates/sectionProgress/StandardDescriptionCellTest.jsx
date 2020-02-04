@@ -10,13 +10,13 @@ import {
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
     description: fakeStandards[1].description,
-    lessonsForStandardStatus: lessonCompletedByStandard[1].lessons
+    lessonsForStandardStatus: lessonCompletedByStandard[1]
   };
 
   it('shows the correct number of progress boxes for lessons', () => {
     const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
     expect(wrapper.find('ProgressBoxForLessonNumber')).to.have.lengthOf(
-      lessonCompletedByStandard[1].lessons.length
+      lessonCompletedByStandard[1].length
     );
   });
 });
