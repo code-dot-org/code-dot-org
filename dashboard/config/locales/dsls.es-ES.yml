@@ -1043,6 +1043,16 @@ es-ES:
         - {}
         questions:
         - {}
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # Variables cubiertas
+
+          Variables permiten mucha libertad en ciencia de la computación. Esta lección ayuda a explicar qué son variables y cómo podemos usarlas en muchas maneras diferentes.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # Por el Divertido de Loop
+
+          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
       GoingPlacesSafely-unplugged:
         markdown: |
           # Navegando Con Seguridad
@@ -1072,6 +1082,11 @@ es-ES:
         content1: descripción aquí
       Internet Simulator Setup 3:
         content1: descripción aquí
+      Internet-Unplugged:
+        markdown: |
+          # El Internet
+
+          Construye tu propio Internet en la clase sólo usando pedazos de papel.
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -1329,6 +1344,7 @@ es-ES:
         - text: Izquierda luego abajo
         - text: Diagonalmente
         - text: Zig Zag
+          feedback: 'Incorrecto. '
         - text: Abajo, luego izquierda
           feedback: Incorrecto
         questions:
