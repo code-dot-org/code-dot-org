@@ -116,9 +116,8 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
       return <td>{enrollment.scholarship_ineligible_reason}</td>;
     }
 
-    let workshopCourseAbbreviation = CourseKeyMap[this.props.workshopCourse];
     let dropdownOptions = this.scholarshipDropdownOptions(
-      workshopCourseAbbreviation
+      CourseKeyMap[this.props.workshopCourse]
     );
 
     if (
