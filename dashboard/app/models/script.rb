@@ -677,6 +677,10 @@ class Script < ActiveRecord::Base
     curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
   end
 
+  def standards
+    stages.map(&:standards).flatten.uniq.map(&:summarize)
+  end
+
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -1567,7 +1571,9 @@ class Script < ActiveRecord::Base
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
     info[:stage_extras_available] = stage_extras_available
-
+    if has_standards_associations?
+      info[:standards] = standards
+    end
     info
   end
 

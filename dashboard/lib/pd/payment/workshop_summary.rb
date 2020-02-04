@@ -75,42 +75,34 @@ module Pd::Payment
     def generate_organizer_report_line_item(with_payment = false)
       line_item = {
         organizer_name: workshop.organizer&.name,
+        organizer_id: workshop.organizer&.id,
         organizer_email: workshop.organizer&.email,
         regional_partner_name: workshop.regional_partner.try(:name),
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
-        num_hours: num_hours,
+        on_map: workshop.on_map,
         funded: workshop.funding_summary,
         attendance_url: attendance_url,
+        facilitators: workshop.facilitators.pluck(:name).join(', '),
         num_facilitators: workshop.facilitators.count,
+        workshop_id: workshop.id,
+        workshop_name: workshop.friendly_name,
+        course: workshop.course,
+        subject: workshop.subject,
         num_registered: workshop.enrollments.count,
-        num_scholarship_teachers_attending_all_sessions: workshop.teachers_attending_all_sessions(true).count,
+        num_qualified_teachers: num_qualified_teachers,
+        days: num_days,
       }
-
-      # Attendance days 1-5
-      session_attendance_counts = attendance_count_per_session
-      (1..REPORT_ATTENDANCE_DAY_COUNT).each do |n|
-        line_item["attendance_day_#{n}".to_sym] = session_attendance_counts[n - 1]
-      end
-
-      # Waiting to add some columns until after attendance to make payment processing easier
-      line_item.merge!(
-        {
-          organizer_id: workshop.organizer&.id,
-          on_map: workshop.on_map,
-          facilitators: workshop.facilitators.pluck(:name).join(', '),
-          workshop_id: workshop.id,
-          workshop_name: workshop.friendly_name,
-          course: workshop.course,
-          subject: workshop.subject,
-          num_qualified_teachers: num_qualified_teachers,
-          days: num_days,
-        }
-      )
 
       # Facilitator names and emails, 1-6
       (1..REPORT_FACILITATOR_DETAILS_COUNT).each do |n|
         line_item["facilitator_name_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:name)
         line_item["facilitator_email_#{n}".to_sym] = workshop.facilitators[n - 1].try(&:email)
+      end
+
+      # Attendance days 1-5
+      session_attendance_counts = attendance_count_per_session
+      (1..REPORT_ATTENDANCE_DAY_COUNT).each do |n|
+        line_item["attendance_day_#{n}".to_sym] = session_attendance_counts[n - 1]
       end
 
       if with_payment
