@@ -213,6 +213,8 @@ class Pd::WorkshopMailer < ActionMailer::Base
   def teacher_follow_up(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
+    facilitators = @workshop.facilitators.map(&:email)
+    @contact_text = get_contact_text_for_teacher_follow_up(@workshop.regional_partner, facilitators)
 
     # The subject below is only applicable for CSF Intro
     mail content_type: 'text/html',
@@ -287,5 +289,45 @@ class Pd::WorkshopMailer < ActionMailer::Base
     else
       'Details for your upcoming Code.org workshop have changed'
     end
+  end
+
+  # Returns contact information for CSF workshop follow up email
+  # The text will always include teacher@code.org, as well as the
+  # email for the regional partner and facilitator(s) if available
+  # Ex if all are available it will return:
+  # "Remember that you can always reach out to us for support at teacher@code.org, to your regional partner at
+  # patty@we_teach_code.ex.net, or to your facilitator(s) at
+  # fiona_facilitator@example.net or fred_facilitator@example.net.""
+  def get_contact_text_for_teacher_follow_up(regional_partner, facilitators)
+    has_partner = !!regional_partner&.contact_email
+    has_facilitator = !facilitators.empty?
+    after_teacher_contact = '.'
+
+    if has_facilitator || has_partner
+      after_teacher_contact = has_facilitator && has_partner ? ',' : ' or'
+    end
+
+    contact_text = "Remember that you can always reach out to us for support at "
+    contact_text += "#{email_tag('teacher@code.org')}#{after_teacher_contact}"
+    if has_partner
+      contact_text += " to your regional partner at #{email_tag(regional_partner.contact_email)}"
+      contact_text += has_facilitator ? ', or' : '.'
+    end
+    if has_facilitator
+      contact_text += " to your facilitator(s) at "
+      facilitators.each_with_index do |facilitator, i|
+        if i < facilitators.length - 1
+          succeed_text = (i == facilitators.length - 2) ? ' or ' : ', '
+          contact_text += "#{email_tag(facilitator)}#{succeed_text}"
+        else
+          contact_text += "#{email_tag(facilitator)}."
+        end
+      end
+    end
+    contact_text
+  end
+
+  def email_tag(email)
+    "<a href=mailto:#{email}>#{email}</a>"
   end
 end

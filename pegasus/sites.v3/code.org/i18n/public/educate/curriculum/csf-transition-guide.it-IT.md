@@ -1,19 +1,19 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Fondamenti di informatica - Guida di transizione
 theme: responsive
 style_min: true
 ---
 
-# Teaching Courses A-F
+# Insegnamento dei Corsi A-F
 
 ## Indice
 
 * [Panoramica](#overview)
-* [Insegnando i nuovi corsi](#newcourses)
-* [Circle-Time Stories (Courses A and B)](#circletime)
-* [Lesson Scaffolding & Challenge Puzzles (All Ages)](#scaffolding)
-* [Bridging Activities For Unplugged Lessons (All Ages)](#unplugged)
-* [End of Course Projects (Courses E & F)](#endofcourse)
+* [Insegnando dei nuovi corsi](#newcourses)
+* [Storie cicliche (Corsi A e B)](#circletime)
+* [Lezioni di base & esercizi di sfida (tutte le età)](#scaffolding)
+* [Attività ponte verso le lezioni tradizionali (tutte le età)](#unplugged)
+* [Progetti di fine corso (Corsi E & F)](#endofcourse)
 * [Conclusione](#conclusion)
 * [Domande frequenti](#faq)
 
@@ -37,7 +37,7 @@ The biggest update to CS Fundamentals is that content will move from four course
 
 <a id="newcourses"></a>
 
-## Insegnando i nuovi corsi
+## Insegnando dei nuovi corsi
 As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
 
 The main updates to the courses are:
@@ -51,7 +51,7 @@ The rest of this guide will present each idea in more detail, offering tips and 
 
 <a id="circletime"></a>
 
-## Circle-Time Stories (Courses A and B)
+## Storie cicliche (Corsi A e B)
 Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
 
 Here is how the circle-time stories are intended to be used:
@@ -74,7 +74,7 @@ If you are unable to gather your entire class together, Code.org has provided a 
 
 <a id="scaffolding"></a>
 
-## Lesson Scaffolding & Challenge Puzzles (All Ages)
+## Lezioni di base & esercizi di sfida (tutte le età)
 Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
 
 Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
@@ -97,7 +97,7 @@ Some final notes for this area:
 
 <a id="unplugged"></a>
 
-## Bridging Activities For Unplugged Lessons (All Ages)
+## Attività ponte verso le lezioni tradizionali (tutte le età)
 Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
 
 Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
@@ -106,7 +106,7 @@ For the most part, bridging activities can be created either by taking the subje
 
 <a id="endofcourse"></a>
 
-## End of Course Projects (Courses E & F)
+## Progetti di fine corso (Corsi E & F)
 For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
 
 The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.

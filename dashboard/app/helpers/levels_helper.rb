@@ -463,6 +463,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -673,7 +674,7 @@ module LevelsHelper
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline)
+    @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
     @@markdown_renderer.render(text).html_safe
   end
 
