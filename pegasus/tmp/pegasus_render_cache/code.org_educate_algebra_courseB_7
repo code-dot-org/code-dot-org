@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/algebra/courseB/7" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Anybody can learn | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+
+
+
+
+
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="Using the same logic from the previous lesson, students will write code that checks whether their Target and Danger sprites have left the screen. If their function determines that a sprite is no longer visible on screen, it will be reset to the opposite side.">
+    <title>The Big Game Booleans</title>
+    <link rel="shortcut icon" href="https://cdo-curriculum.s3.amazonaws.com/static/img/favicon.ico">
+
+    
+
+    
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/mezzanine.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/bootstrap-theme.css">
+        <!--<link rel="stylesheet" href="https://code.org/style.css">-->
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/codeorg.css">
+        <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/common.css">
+        
+    <link rel="stylesheet" href="https://cdo-curriculum.s3.amazonaws.com/static/css/commonlesson.css">
+
+    
+
+    
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap.js"></script>
+        <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/bootstrap-extras.js"></script>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/toc.js"></script>
+    <script src="https://cdo-curriculum.s3.amazonaws.com/static/js/jquery.details.min.js"></script>
+    <script type="text/javascript">
+    </script>
+
+    
+
+
+    
+
+    <!--[if lt IE 9]>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/html5shiv.js"></script>
+<script src="https://cdo-curriculum.s3.amazonaws.com/static/js/respond.min.js"></script>
+<![endif]-->
+
+    
+
+
+
+
+
+    <div id="admin_edit">
+    
+
+
+    </div>
+
+
+
+<div class="container">
+    <div class="header printbackground">
+        <div class="headercontent">
+            <div class="top">
+                <div class="logo">
+                    <img src="https://cdo-curriculum.s3.amazonaws.com/static/images/logo.png">
+                </div>
+                
+    <div class="unitnumber">
+<span class="h2">Unit</span><span class="h1">2</span>
+</div>
+
+    <div class="lessons">
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/1" data-pdf-link="#unit2lesson1">
+        1
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/2" data-pdf-link="#unit2lesson2">
+        2
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/3" data-pdf-link="#unit2lesson3">
+        3
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/4" data-pdf-link="#unit2lesson4">
+        4
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/5" data-pdf-link="#unit2lesson5">
+        5
+    </a>
+    </div>
+    
+        
+            <div class="lesson finished">
+        
+    <a href="/educate/algebra/courseB/6" data-pdf-link="#unit2lesson6">
+        6
+    </a>
+    </div>
+    
+        
+            <div class="lesson current">
+        
+    <a href="/educate/algebra/courseB/7" data-pdf-link="#unit2lesson7">
+        7
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/algebra/courseB/8" data-pdf-link="#unit2lesson8">
+        8
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/algebra/courseB/9" data-pdf-link="#unit2lesson9">
+        9
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/algebra/courseB/10" data-pdf-link="#unit2lesson10">
+        10
+    </a>
+    </div>
+    
+        
+            <div class="lesson unfinished">
+        
+    <a href="/educate/algebra/courseB/11" data-pdf-link="#unit2lesson11">
+        11
+    </a>
+    </div>
+    
+</div>
+
+
+            </div>
+            <div class="bottom">
+            
+
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        
+
+    <div class="together" id="unit2lesson7">
+        
+            <h1>Lesson 7: The Big Game Booleans</h1>
+        
+    </div>
+
+    <div class="together overview-page row">
+
+        <div class="col-sm-7 left-col">
+            <h2>Overview</h2>
+            
+                <p>Using the same logic from the previous lesson, students will write code that checks whether their Target and Danger sprites have left the screen. If their function determines that a sprite is no longer visible on screen, it will be reset to the opposite side.</p>
+            
+
+            
+
+            <h2>Agenda</h2>
+            <div class="toc" id="tocthe-big-game-booleans">
+                
+            </div>
+
+        </div>
+
+        <div class="col-sm-5 right-col">
+
+            
+                <h2>Anchor Standard</h2>
+                
+                    
+                    
+                        <h3>Common Core Math Standards</h3>
+                        <ul>
+                            
+                                <li>
+<strong>6.EE.9</strong> - Use variables to represent two quantities in a real-world problem that change in relationship to one another; write an equation to express one quantity, thought of as the dependent variable, in terms of the other quantity, thought of as the independent variable. Analyze the relationship between the dependent and independent variables using graphs and tables, and relate these to the equation. For example, in a problem involving motion at constant speed, list and graph ordered pairs of distances and times, and write the equation d = 65t to represent the relationship between distance and time.</li>
+                            
+                        </ul>
+                    
+                
+            
+
+            
+                <h2>Objectives</h2>
+                <h3>Students will be able to:</h3>
+                <ul>
+                    
+                        <li>Using the same logic from the previous lesson, students will write code that checks whether their Target and Danger sprites have left the screen. If their function determines that a sprite is no longer visible on screen, it will be reset to the opposite s</li>
+                    
+                        <li>Apply Boolean logic, such as AND, OR, and NOT, to compose complex Boolean comparisons.</li>
+                    
+                </ul>
+            
+
+            
+
+            
+
+            
+
+        </div>
+    </div>
+
+    <div id="the-big-game-booleanscontent">
+
+        <h1>Teaching Guide</h1>
+
+        
+    </div>
+
+    <div class="standards">
+        <h2>Standards Alignment</h2>
+        
+
+    <div class="framework">
+        <h4>Common Core Math Standards</h4>
+        
+            
+            
+                <details class="standard">
+                    <summary><strong>EE</strong> - Expressions And Equations</summary>
+                    <ul>
+                        
+                            <li>
+<strong>6.EE.9</strong> - Use variables to represent two quantities in a real-world problem that change in relationship to one another; write an equation to express one quantity, thought of as the dependent variable, in terms of the other quantity, thought of as the independent variable. Analyze the relationship between the dependent and independent variables using graphs and tables, and relate these to the equation. For example, in a problem involving motion at constant speed, list and graph ordered pairs of distances and times, and write the equation d = 65t to represent the relationship between distance and time.</li>
+                        
+                            <li>
+<strong>7.EE.4</strong> - Use variables to represent quantities in a real-world or mathematical problem, and construct simple equations and inequalities to solve problems by reasoning about the quantities.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>F</strong> - Functions</summary>
+                    <ul>
+                        
+                            <li>
+<strong>8.F.1</strong> - Understand that a function is a rule that assigns to each input exactly one output. The graph of a function is the set of ordered pairs consisting of an input and the corresponding output.1</li>
+                        
+                            <li>
+<strong>8.F.2</strong> - Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions). For example, given a linear function represented by a table of values and a linear function represented by an algebraic expression, determine which function has the greater rate of change.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>MP</strong> - Math Practices</summary>
+                    <ul>
+                        
+                            <li>
+<strong>MP.1</strong> - Mathematically proficient students start by explaining to themselves the meaning of a problem and looking for entry points to its solution. They analyze givens, constraints, relationships, and goals. They make conjectures about the form and meaning of the solution and plan a solution pathway rather than simply jumping into a solution attempt. They consider analogous problems, and try special cases and simpler forms of the original problem in order to gain insight into its solution. They monitor and evaluate their progress and change course if necessary. Older students might, depending on the context of the problem, transform algebraic expressions or change the viewing window on their graphing calculator to get the information they need. Mathematically proficient students can explain correspondences between equations, verbal descriptions, tables, and graphs or draw diagrams of important features and relationships, graph data, and search for regularity or trends. Younger students might rely on using concrete objects or pictures to help conceptualize and solve a problem. Mathematically proficient students check their answers to problems using a different method, and they continually ask themselves, "Does this make sense?" They can understand the approaches of others to solving complex problems and identify correspondences between different approaches.</li>
+                        
+                            <li>
+<strong>MP.2</strong> - Mathematically proficient students make sense of quantities and their relationships in problem situations. They bring two complementary abilities to bear on problems involving quantitative relationships: the ability to decontextualize—to abstract a given situation and represent it symbolically and manipulate the representing symbols as if they have a life of their own, without necessarily attending to their referents—and the ability to contextualize, to pause as needed during the manipulation process in order to probe into the referents for the symbols involved. Quantitative reasoning entails habits of creating a coherent representation of the problem at hand; considering the units involved; attending to the meaning of quantities, not just how to compute them; and knowing and flexibly using different properties of operations and objects.</li>
+                        
+                            <li>
+<strong>MP.3</strong> - Mathematically proficient students understand and use stated assumptions, definitions, and previously established results in constructing arguments. They make conjectures and build a logical progression of statements to explore the truth of their conjectures. They are able to analyze situations by breaking them into cases, and can recognize and use counterexamples. They justify their conclusions, communicate them to others, and respond to the arguments of others. They reason inductively about data, making plausible arguments that take into account the context from which the data arose. Mathematically proficient students are also able to compare the effectiveness of two plausible arguments, distinguish correct logic or reasoning from that which is flawed, and—if there is a flaw in an argument—explain what it is. Elementary students can construct arguments using concrete referents such as objects, drawings, diagrams, and actions. Such arguments can make sense and be correct, even though they are not generalized or made formal until later grades. Later, students learn to determine domains to which an argument applies. Students at all grades can listen or read the arguments of others, decide whether they make sense, and ask useful questions to clarify or improve the arguments.</li>
+                        
+                            <li>
+<strong>MP.4</strong> - Mathematically proficient students can apply the mathematics they know to solve problems arising in everyday life, society, and the workplace. In early grades, this might be as simple as writing an addition equation to describe a situation. In middle grades, a student might apply proportional reasoning to plan a school event or analyze a problem in the community. By high school, a student might use geometry to solve a design problem or use a function to describe how one quantity of interest depends on another. Mathematically proficient students who can apply what they know are comfortable making assumptions and approximations to simplify a complicated situation, realizing that these may need revision later. They are able to identify important quantities in a practical situation and map their relationships using such tools as diagrams, two-way tables, graphs, flowcharts and formulas. They can analyze those relationships mathematically to draw conclusions. They routinely interpret their mathematical results in the context of the situation and reflect on whether the results make sense, possibly improving the model if it has not served its purpose.</li>
+                        
+                            <li>
+<strong>MP.5</strong> - Mathematically proficient students consider the available tools when solving a mathematical problem. These tools might include pencil and paper, concrete models, a ruler, a protractor, a calculator, a spreadsheet, a computer algebra system, a statistical package, or dynamic geometry software. Proficient students are sufficiently familiar with tools appropriate for their grade or course to make sound decisions about when each of these tools might be helpful, recognizing both the insight to be gained and their limitations. For example, mathematically proficient high school students analyze graphs of functions and solutions generated using a graphing calculator. They detect possible errors by strategically using estimation and other mathematical knowledge. When making mathematical models, they know that technology can enable them to visualize the results of varying assumptions, explore consequences, and compare predictions with data. Mathematically proficient students at various grade levels are able to identify relevant external mathematical resources, such as digital content located on a website, and use them to pose or solve problems. They are able to use technological tools to explore and deepen their understanding of concepts.</li>
+                        
+                            <li>
+<strong>MP.6</strong> - Mathematically proficient students try to communicate precisely to others. They try to use clear definitions in discussion with others and in their own reasoning. They state the meaning of the symbols they choose, including using the equal sign consistently and appropriately. They are careful about specifying units of measure, and labeling axes to clarify the correspondence with quantities in a problem. They calculate accurately and efficiently, express numerical answers with a degree of precision appropriate for the problem context. In the elementary grades, students give carefully formulated explanations to each other. By the time they reach high school they have learned to examine claims and make explicit use of definitions.</li>
+                        
+                            <li>
+<strong>MP.7</strong> - Mathematically proficient students look closely to discern a pattern or structure. Young students, for example, might notice that three and seven more is the same amount as seven and three more, or they may sort a collection of shapes according to how many sides the shapes have. Later, students will see 7 × 8 equals the well remembered 7 × 5 + 7 × 3, in preparation for learning about the distributive property. In the expression x2 + 9x + 14, older students can see the 14 as 2 × 7 and the 9 as 2 + 7. They recognize the significance of an existing line in a geometric figure and can use the strategy of drawing an auxiliary line for solving problems. They also can step back for an overview and shift perspective. They can see complicated things, such as some algebraic expressions, as single objects or as being composed of several objects. For example, they can see 5 - 3(x - y)2 as 5 minus a positive number times a square and use that to realize that its value cannot be more than 5 for any real numbers x and y.</li>
+                        
+                            <li>
+<strong>MP.8</strong> - Mathematically proficient students notice if calculations are repeated, and look both for general methods and for shortcuts. Upper elementary students might notice when dividing 25 by 11 that they are repeating the same calculations over and over again, and conclude they have a repeating decimal. By paying attention to the calculation of slope as they repeatedly check whether points are on the line through (1, 2) with slope 3, middle school students might abstract the equation (y - 2)/(x - 1) = 3. Noticing the regularity in the way terms cancel when expanding (x - 1)(x + 1), (x - 1)(x2 + x + 1), and (x - 1)(x3 + x2 + x + 1) might lead them to the general formula for the sum of a geometric series. As they work to solve a problem, mathematically proficient students maintain oversight of the process, while attending to the details. They continually evaluate the reasonableness of their intermediate results.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>NS</strong> - The Number System</summary>
+                    <ul>
+                        
+                            <li>
+<strong>6.NS.8</strong> - Solve real-world and mathematical problems by graphing points in all four quadrants of the coordinate plane. Include use of coordinates and absolute value to find distances between points with the same first coordinate or the same second coordinate.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>OA</strong> - Operations And Algebraic Thinking</summary>
+                    <ul>
+                        
+                            <li>
+<strong>5.OA.1</strong> - Use parentheses, brackets, or braces in numerical expressions, and evaluate expressions with these symbols.</li>
+                        
+                            <li>
+<strong>5.OA.2</strong> - Write simple expressions that record calculations with numbers, and interpret numerical expressions without evaluating them. For example, express the calculation “add 8 and 7, then multiply by 2” as 2 × (8 + 7). Recognize that 3 × (18932 + 921) is three times as large as 18932 + 921, without having to calculate the indicated sum or product.</li>
+                        
+                    </ul>
+                </details>
+            
+                <details class="standard">
+                    <summary><strong>Q</strong> - Quantities</summary>
+                    <ul>
+                        
+                            <li>
+<strong>N.Q.1</strong> - Use units as a way to understand problems and to guide the solution of multi-step problems; choose and interpret units consistently in formulas; choose and interpret the scale and the origin in graphs and data displays.</li>
+                        
+                            <li>
+<strong>N.Q.2</strong> - Define appropriate quantities for the purpose of descriptive modeling.</li>
+                        
+                    </ul>
+                </details>
+            
+        
+    </div>
+
+    </div>
+
+
+    
+
+
+
+    <script type="text/javascript">
+        $('#tocthe-big-game-booleans').toc({
+            'selectors': 'h2,h3', //elements to use as headings
+            'container': '#the-big-game-booleanscontent', //element to find all selectors in
+            'smoothScrolling': false, //enable or disable smooth scrolling on click
+            'prefix': 'the-big-game-booleans', //prefix for anchor tags and class names
+            'onHighlight': function(el) {}, //called when a new section is highlighted
+            'highlightOnScroll': true, //add class to heading that is currently in focus
+            'highlightOffset': 100, //offset to trigger the next headline
+            'anchorName': function(i, heading, prefix) { //custom function for anchor name
+                return prefix+i;
+            },
+            'headerText': function(i, heading, $heading) { //custom function building the header-item text
+                return $heading.text();
+            },
+            'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+                return $heading[0].tagName.toLowerCase();
+            }
+        });
+        $(function(){
+            $('.togglesay').live('click', function() {
+                $('.say').slideToggle();
+                $('.togglesay').toggle();
+            });
+        });
+        $(document).ready(function () {
+            // add checkboxes to lists in the prep section
+            var count = 1;
+            //$('<input type="checkbox" class="todo" name="' + (count++) + '"/>').prependTo(".prep ul li");
+            $(".prep ul li:visible").each(function(li) {
+                $(this).prepend('<input type="checkbox" class="todo" name="' + (count++) + '"/>');
+            });
+            // read the current/previous setting
+            $("input.todo").each(function() {
+                var mycookie = $.cookie($(this).attr('name'));
+                if (mycookie && mycookie == "true") {
+                    $(this).prop('checked', mycookie);
+                }
+            });
+            $("input.todo").change(function() {
+                $.cookie($(this).attr("name"), $(this).prop('checked'), {
+                    path: '/',
+                    expires: 365
+                });
+            });
+            // Add tooltip toggles to vocab
+            $('.vocab').each(function() {
+                $(this).attr('data-toggle', 'tooltip');
+                $(this).attr('data-placement', 'bottom');
+            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+    <!--<script type="text/javascript">
+        jQuery(function ($) {
+            $('body').annotator();
+        });
+    </script>-->
+
+    <!--<script type="text/javascript">
+        $(function() {
+            // Add conditional classname based on support
+            $('html').addClass($.fn.details.support ? 'details' : 'no-details');
+            // Emulate <details> where necessary and enable open/close event handlers
+            $('details').details();
+            // Bind some example event handlers
+            $('details').on({
+                'open.details': function() {
+                    console.log('opened');
+                },
+                'close.details': function() {
+                    console.log('closed');
+                }
+            });
+        });
+    </script>-->
+
+
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <a href="http://creativecommons.org/"> </a>
+        </div>
+    </div>
+</footer>
+<div id="print_trigger"></div>
+<script type="text/javascript">
+    var vars = [], hash;
+        var q = document.URL.split('?')[1];
+        if(q != undefined){
+            q = q.split('&');
+            for(var i = 0; i < q.length; i++){
+                hash = q[i].split('=');
+                vars.push(hash[1]);
+                vars[hash[0]] = hash[1];
+            }
+    }
+
+    if (vars['pdf']) {
+        jQuery(function () {
+            $('a[data-pdf-link]').each(function () {
+                this.href = $(this).attr('data-pdf-link');
+            });
+        });
+    }
+</script>
+
+
+
+
+
+
+
+<script>
+
+</script>
+
+<!--<script async defer src="https://factlink.com/lib/dist/factlink_loader.min.js"></script>-->
+
+
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

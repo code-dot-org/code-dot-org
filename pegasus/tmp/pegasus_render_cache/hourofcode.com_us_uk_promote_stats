@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Blurbs and useful stats" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/uk/promote/stats" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Blurbs and useful stats</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/uk/">
+<img alt="Година коду" src="/us/uk/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/stats';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option selected value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/uk/learn" title="Діяльності">Діяльності</a>
+</li>
+<li>
+<a href="/us/uk/how-to" title="Інструкції">Інструкції</a>
+</li>
+<li>
+<a href="/us/uk/promote" title="Поширити">Поширити</a>
+</li>
+<li>
+<a href="/us/uk/#faq" title="Часті питання">Часті питання</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a id="blurb"></a></p>
+
+<p><a href="/us/uk/#join">
+<button style="float: right; margin-top: 50px;">
+Проведіть Годину коду
+</button>
+</a></p>
+
+<h1>Blurbs and useful stats</h1>
+
+<h3>Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.</h3>
+
+<hr>
+
+<h2>Використовуйте ці дані для оголошень в інформаційних бюлетнях</h2>
+
+<h4>Bring computer science to your school. Start with an Hour of Code!</h4>
+
+<p>With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Але інформатики вчить менше ніж половина шкіл! Доброю новиною є те, що ми змінюємо це. Якщо ви чули про Годину коду минулого року, можливо ви знаєте, що вона увійшла в історію. 100 мільйонів учнів тепер дізналися, якою доступною та веселою може бути інформатика, зробивши лише одну Годину коду.</p>
+
+<p>Година коду — це одногодинний вступ до інформатики, розроблений для зняття покрову таємничості з неї, та показування, що її основ може навчитися кожен. Learn more at <a href="http://HourofCode.com">http://HourOfCode.com</a>, try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!</p>
+
+<h2>Messaging for frequently asked questions</h2>
+
+<h4>Чому ваша школа проводить Годину коду?</h4>
+
+<p>Хоча ми усі знаємо, як важливо навчити учнів орієнтуватися у сучасному технологічно насиченому світі, багато вчителів самі не володіють інформаційними технологіями і не знають з чого почати. Ця подія є шансом для всіх нас познайомитись із справжньою інформатикою.</p>
+
+<p>Ми сподіваємося, що це розпалить в учнів іскру інтересу до продовження навчання. Дослідження показують, що діти можуть опанувати базові поняття програмування, навіть до того, як вони навчаться читати і писати. Власне, їхній мозок більш сприйнятливий до комп'ютерних мов програмування у молодшому віці, так само як і до іноземних мов. <br> <br></p>
+
+<h4>Чому це важливо?</h4>
+
+<p>Технології змінюють кожну галузь на планеті. 2015 року 7 мільйонів вакансій у США були у професіях, — включно з мистецтвом та дизайном, — для яких мають значення навички кодування. But 55 percent of schools in the U.S. don't teach computer science. Настав час нам наздоганяти 21-ше сторіччя. Ми знаємо, що незалежно від того, чим вирішать займатися наші учні у дорослому житті, медициною, бізнесом, політикою чи мистецтвом, знання того, як створюються технології, надасть їм впевненості та конкурентоспроможності. <br> <br></p>
+
+<h4>A quote you can use in materials</h4>
+
+<p>«Годину коду створено для розвінчування міфів про складність програмування, адже основи доступні для кожного», говорить Гаді Партові, засновник і голова Code.org. «Понад 100 мільйонів учнів по всьому світу вже пробували Годину коду. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br> <br></p>
+
+<h4>Про Code.org</h4>
+
+<p>Code.org® є неприбутковою громадською організацією, яка займається розширенням залучення до інформатики, та збільшенням участі жінок та національних меншин. Its vision is that every student in every school has the opportunity to learn computer programming. Після утворення 2013 року Code.org започаткувала кампанію Години коду, яка на даний момент познайомила з інформатикою понад 100 мільйонів учнів, та уклала партнерство з 70-ма освітніми округами для розширення програм з інформатики. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: <a href="https://code.org">code.org</a>.</p>
+
+<h2>Share these on social media and in emails</h2>
+
+<p><a href="/images/social-media/social-1.png"><img src="/images/social-media/fit-250/social-1.png" alt="image"></a>     <a href="/images/social-media/social-2.png"><img src="/images/social-media/fit-250/social-2.png" alt="image"></a>     <a href="/images/social-media/social-3.png"><img src="/images/social-media/fit-250/social-3.png" alt="image"></a>    </p>
+
+<p><a id="infographics"></a></p>
+
+<h2>Infographics</h2>
+
+<div class="carousel-wrapper" id="stats-carousel-wrapper">
+<div class="carousel" id="stats-carousel">
+<div class="slides">
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide1_Schools_Teach.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide2_STEM_CS.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide_Students_Like_CS.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide3_Diversity_K12.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide4_CS_Foundational.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide5_CS_Education.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide6_Computing_Jobs.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide_States_Standards.png"></div>
+</div>
+
+<div class="slide">
+<div class="slide-img"><img src="/images/cs-stats/Slide7_States_Map.png"></div>
+</div>
+
+<p></p>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+
+<div class="pagination">
+<div id="stats-carousel-pagination"></div>
+</div>
+
+<p></p>
+</div>
+
+<div class="stats-sources-link">
+<a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub">Source data</a>
+</div>
+
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+
+<script src="/js/jquery.touchSwipe.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    var statistics = [
+    {
+      "id": 2,
+      "code_s": "Slide1_Schools_Teach",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362/2400047193424903/?type=3&av=309754825787494&eav=Afa8A2q4FqnsNf4JvrqrsY0c4ZX3mfRgr9cvsLhYV6zWJKNqQUB9A2xJiyEre3M8484&theater"
+    },
+    {
+      "id": 3,
+      "code_s": "Slide2_STEM_CS",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362/2524775634285391/?type=3&theater"
+    },
+    {
+      "id": 4,
+      "code_s": "Slide_Students_Like_CS",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362.1073741858.309754825787494/1664424540320509/?type=3&theater"
+    },
+    {
+      "id": 5,
+      "code_s": "Slide3_Diversity_K12",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362.1073741858.309754825787494/1628711220558508/?type=3&theater"
+    },
+    {
+      "id": 6,
+      "code_s": "Slide4_CS_Foundational",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362.1073741858.309754825787494/1689600024469627/?type=3&theater"
+    },
+    {
+      "id": 7,
+      "code_s": "Slide5_CS_Education",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362.1073741858.309754825787494/1689597964469833/?type=3&theater"
+    },
+    {
+      "id": 8,
+      "code_s": "Slide6_Computing_Jobs",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362.1073741858.309754825787494/1664423290320634/?type=3&theater"
+    },
+    {
+      "id": 9,
+      "code_s": "Slide_States_Standards",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362/2264508613645429/?type=3&theater"
+    },
+    {
+      "id": 10,
+      "code_s": "Slide7_States_Map",
+      "share_url_s": "https://www.facebook.com/Code.org/photos/a.899372753492362/2502150736547881/?type=3&theater"
+    }
+  ];
+    var id = '#stats-carousel';
+  
+    // Define the carousel using the ID.
+    $(id + ' .slides').carouFredSel({
+      items :  {
+        height : 'variable'
+      },
+      auto  : false,
+      responsive : true,
+      width : '100%',
+      height : 'variable',
+      prev  : id + ' .slide-prev',
+      next  : id + ' .slide-next',
+      pagination : '#stats-carousel-pagination',
+      swipe : {
+        onTouch : true,
+        onMouse : false
+      }
+    }).trigger(resize);
+  });
+</script>
+
+<p><a href="/us/uk/#join">
+<button style="float: right; margin-top: 50px;">
+Проведіть Годину коду
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/uk/promote">
+<div class="nav-header">Поширити</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote">
+Як взяти участь
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#onepager">
+Односторінковий буклет
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#brochure">
+Брошура
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#videos">
+Відео
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#posters">
+Плакати
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#social">
+Соціальні мережі
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#logo">
+Логотип Години коду
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#stickers">
+Наліпки
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/resources#sample-emails">
+Зразки листів
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/stats">
+Статистика та реклама
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/uk/promote/press-kit">
+Прес-кіт
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/uk/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/uk/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Ресурси</div>
+</div>
+</a>
+<a href="/us/uk/learn">
+<div class="display-link">
+<img class="display-img" src="/us/uk/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Спробуйте підручники</div>
+</div>
+</a>
+<a href="/us/uk/promote">
+<div class="display-link">
+<img class="display-img" src="/us/uk/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Як взяти участь</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Контакти</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Підтримка</a>
+</li>
+<li>
+<a href="/us/uk/partners" target="_blank">Партнери та радники</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Умови</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Політика конфіденційності</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. Всі права захищені.
+<br>
+Hour of Code™ є торговою маркою компанії Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

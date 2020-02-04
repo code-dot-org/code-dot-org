@@ -2,7 +2,7 @@
 -international_layout ||= nil
 -subheading ||= nil
 -company = request.GET['company']
--shuffle ||= false
+-shuffle = !ENV['PEGASUS_RENDER_CACHE'].present?
 -if check_language
   -items = tutorials.find_with_tag_and_language(tag, request.locale)
 -else

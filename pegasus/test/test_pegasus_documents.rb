@@ -1,5 +1,6 @@
 require_relative './test_helper'
 require_relative '../router'
+require 'fileutils'
 require 'helpers/auth_helpers'
 require 'cdo/rack/request'
 require 'parallel'
@@ -24,6 +25,21 @@ class PegasusTest < Minitest::Test
     end
     CDO.log.info "Found #{documents.length} Pegasus documents."
     assert_operator documents.length, :>, 2000
+  end
+
+  def url_to_filepath(url)
+    filename = url.tr('/', '_')
+    filepath = "./tmp/pegasus_render_cache/#{filename}"
+    filepath
+  end
+
+  def save_response(body, url)
+    # Only cache the pegasus renders if this ENV is set.
+    return unless ENV['PEGASUS_RENDER_CACHE']
+    filepath = url_to_filepath(url)
+    puts "Writing to filepath=#{filepath}"
+    FileUtils.mkdir_p(File.dirname(filepath))
+    File.write(filepath, body)
   end
 
   # All documents expected to return 200 status-codes, with the following exceptions:
@@ -115,6 +131,7 @@ class PegasusTest < Minitest::Test
       end
       response = last_response
       status = response.status
+      save_response(response.body, url)
 
       if status == 200
         content_type = response.headers['Content-Type'].split(';', 2).first.downcase

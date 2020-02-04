@@ -1,0 +1,3004 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Συνεργάτες" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/el/partners" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Συνεργάτες</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/el/">
+<img alt="Ώρα κώδικα" src="/us/el/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/partners';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option selected value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/el/learn" title="Δραστηριότητες">Δραστηριότητες</a>
+</li>
+<li>
+<a href="/us/el/how-to" title="Πώς να">Πώς να</a>
+</li>
+<li>
+<a href="/us/el/promote" title="Προώθηση">Προώθηση</a>
+</li>
+<li>
+<a href="/us/el/#faq" title="Συχνές ερωτήσεις">Συχνές ερωτήσεις</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+<p>The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.</p>
+
+<p>The <a href="/us/el/advisory-committee">Advisory Committee</a> is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.</p>
+
+<p>The <a href="/us/el/review-committee">Review Committee</a> is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. These educators review student-led activities and teacher-led lesson plans submitted by hundreds of activity partners, evaluating the activities' educational value, ability to engage learners, and potential appeal to diverse sets of students.</p>
+
+<p>Both committees' work and dedication have contributed to the success of the Hour of Code and its vision of offering an introduction to computer science for every student.</p>
+
+<h1>Major Partners and Corporate Supporters</h1>
+
+<div id="logos" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.accenture.com/us-en/?c=ad_usglbprioritypsgs&amp;n=Accenture_Core_Business_-_US&amp;KW_ID=s3eh86k17_dc%7Cpcrid%7C66973976537" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/accenture.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.amazon.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/amazon.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.acm.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/association_for_computing_machinery.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.csteachers.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/computer_science_teachers_association.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.csforall.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.donorschoose.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/donors_choose.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.facebook.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/facebook.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.google.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/google.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.infosys.com/infosys-foundation/infosys-usa-foundation" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/infosys_foundation_usa.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.khanacademy.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/khan_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.microsoft.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/microsoft.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.pwc.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pricewaterhousecoopers.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.teachforamerica.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/teach_for_america.gif" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.vistaequitypartners.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/vista_equity_partners.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+</div>
+
+<hr>
+
+<h1>International Partners</h1>
+
+<div id="logos" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.actua.ca/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/actua.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://adfaber.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/adfaber.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://adhyayan.edu.np/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/adhyayan_school.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.africachildrencode.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/africa_children_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/aksorn_education_plc.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://almooc.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/almooc.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.ara.ac.nz/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/ara_institute_of_canterbury.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://becre8v.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/be_cre8v.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.bebraschallenge.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bebras_challenge.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://brilliantlabs.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/brilliant_labs.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.canadalearningcode.ca/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/canada_learning_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.changetheworld.org.za/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/change_the_world.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://creativity.rw/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/childrens_creativity_lab.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.consorzio-cini.it/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/cini.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://classroom-aid.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/classroom_aid_inc_.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://clev.io" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/clevio.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://twitter.com/codaricahq" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codarica.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codeclub.nz/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_club_aotearoa.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.codenmicole.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_en_mi_cole.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://code.or.jp/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_for_everyone.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://code4kt.com.ng/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code4kt.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.codeforsu.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codeforsu.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codercub.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codercub.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://coderdojo.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coderdojo.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codersguild.net/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codersguild_net.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codetigers.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codetigers.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codingbee.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coding_bee_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.codingmarch.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codingmarch.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://nikolatesla.edu.mx/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/colegio_nikola_tesla.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.czechitas.cz/en/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/czechitas.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://designthinkingsociety.org.ge" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/design_thinking_society.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://digit.com.pk/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/digit.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.educaregeorgia.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/educare_georgia.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.eduxtra.com.ng/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/eduxtra.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://edvira.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/edvira.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://vimeo.com/excited" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/excited_digital_learning.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.fundacaolemann.org.br/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/fundacao_lemann.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.fundacionsadosky.org.ar/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/fundacion_sadosky.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www02.madeira-edu.pt/dre/main.aspx" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/gabinete_de_modernizacao_das_tecnologias_educativas.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://hadinarimtic.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hadina_rimtic.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://iamai.hk/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/iamai_academy.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.inspiringfifty.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/inspiring_fifty.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.jawwal.ps/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/jawwal.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://jengahub.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/jenga_hub.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.kidcodersacademy.gm/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kidcoders_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.kidsandcode.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kids_and_code.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://kidscodejeunesse.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kids_code_jeunesse.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://kcode.kr/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/korea_information_science_education_federation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.lovetocode.kz/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/love_to_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://makersacademy.net" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/makers_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://mdec.com.my/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/malaysia_digital_economy_corporation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.istruzione.it/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/miur.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://moinworld.de/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/moinworld.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://moscoding.ru/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/moscow_coding_school.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/nuc_ba_academia.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://omgtech.co.nz/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/omgtech.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.paltelgroup.ps/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/paltel_group.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.pirweb.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/partners_in_research_canada.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.thepijam.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pi_jam_foundation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.plan-b-gmbh.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/planb_gmbh.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.progracademy.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/progracademy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.programae.org.br/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/programae.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://program.ar/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/programar.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.programmailfuturo.it/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/programma_il_futuro.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/rana_maroun_jbeily_foundation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.rishsinternationalschool.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/rishs_international_school.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.robincode.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/robincode.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://ssmic.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/sault_ste_marie_innovation_centre.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.siamentis.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/siamentis.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://studentedge.com.au/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/student_edge.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://ftransformaespana.es/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/transforma_espana.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://upsitf.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/upsitf.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.vaatamaailma.ee/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/vaata_maailma_sa.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.wix.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/wix.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://worldtechmakers.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/world_tech_makers.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://tzefoundation.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/zariah_elizabeth_foundation.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+</div>
+
+<hr>
+
+<h1>Curriculum and Tutorial Partners</h1>
+
+<div id="logos" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.3dbear.io/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/3dbear.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.foxmovies.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/20th_century_fox.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.actimator.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/actimator.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.agentsheets.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/agentsheets.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.alice.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/alice.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.allcancode.com/web" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.barobo.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.beetik.net" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/beetik.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.birdbraintechnologies.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/birdbrain_technologies.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://bitsbox.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bitsbox.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.blockscad3d.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/blockscad.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://bomberbot.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bomberbot.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.bootstrapworld.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bootstrap.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.botschool.io/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bot_school.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.brainpop.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/brainpop.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://buzzcoder.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/buzzcoder.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.catrobat.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/catrobat.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://chibitronics.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/chibitronics.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.codecademy.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codeacademy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.codeavengers.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codeavengers.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codecombat.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codecombat.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codehs.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codehs.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codemoji.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codemoji.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.playcodemonkey.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codemonkey.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codepip.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codepip.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://coderdojo.com/wp-content/cache/all//index.html" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coderdojo.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codespeaklabs.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codespeak_labs.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codespark.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codespark.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codespells.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codespells.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codesters.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codesters.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codewards.org/#" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codewards.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codecampworld.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_camp_world.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://app.code-it-studio.de/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_it.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codingame.com/start" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codingame.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://codinggalaxy.com/en" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coding_galaxy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codingpiratesgame.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coding_pirates.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://ahab.southwestern.edu/departments/mathcompsci/OHProject/materials-overview.html" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/computing_educators_oral_history_project.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://cospaces.io/edu/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/cospaces.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.curriculumpathways.com/portal/#" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/curriculum_pathways.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.thewaltdisneycompany.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/disney.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://meetedison.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/edison.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.educative.io/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/educative.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.exploringcs.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/exploring_computer_science.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://firialabs.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/firia_labs.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.flocabulary.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/flocabulary.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://gameblox.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/gameblox.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://make.gamefroot.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/gamefroot.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.girlswhocode.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/girls_who_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://groklearning.com/courses/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/grok_learning.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.helloruby.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hello_ruby.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.gethopscotch.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hopscotch.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://htmlacademy.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/html_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.hyperpad.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hyperpad.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.icompute-uk.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/icompute.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.irobot.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://kano.me/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kano.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.khanacademy.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/khan_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://kinderlabrobotics.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kinderlab_robotics.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.surfscore.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kodable.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.kodugamelab.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kodu.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.letsstartcoding.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/lets_start_coding.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://lightbot.com/index.html" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/lightbot.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://littlebits.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/littlebits.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD14814&amp;bid=524&amp;aid=CD14814&amp;opt=" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/lynda_com.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.makeschool.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/makeschool.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.mathworks.com/?s_tid=gn_logo" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/mathworks.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://microbit.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/microbit.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://microblocks.fun/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/microblocks.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://education.minecraft.net/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/minecraft_education.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://appinventor.mit.edu/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/mit_app_inventor.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://modulogames.net/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://monstercoding.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/monster_coding.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.n2y.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/n2y.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://nclab.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/nclab.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.nybleapps.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/nybleapps.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.oppia.org/splash" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/oppia.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://ozobot.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/ozobot.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.pai.technology/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pai_technology.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://pbskids.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.peblio.co/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://phidgets.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.popcap.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/popcap.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://hello.processing.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/processing_foundation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.programmingbasics.org/en/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/programming_basics.gif" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.programmr.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/programmr_com.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.projectguts.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/project_guts.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://quorumlanguage.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/quorum.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.raspberrypi.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.radiantgames.is/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/radiant_games.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://robogarden.ca/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/robogarden.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.robomindacademy.com/go/robomind/home" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/robomind_academy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://robotmagic.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/robotmagic.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.robotmesh.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/robot_mesh.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.rovio.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/rovio.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://scratch.mit.edu/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/scratch.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.scriptacademy.net/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/scriptacademy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://snap.berkeley.edu" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/snap_.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.sololearn.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/sololearn.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.sphero.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/sphero.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.youtube.com/c/STEMcoding" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/stemcoding.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://store.teachergaming.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/teachergaming.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://terminaltwo.com/home" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.ti.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/texas_instruments.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/thinkersmith.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.thinkfun.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/thinkfun.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://thunkable.com/#/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/thunkable.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://tickleapp.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/tickle.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.tinkercad.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.toxicode.fr/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/toxicode.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.tralalere.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/tralalere.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://trinket.io/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/trinket.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.tynker.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/tynker.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.itchcode.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/ucodemy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://unity.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.tacoma.uw.edu/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.vidcode.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/vidcode.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.wolfram.com/programming-lab/?source=footer" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/wolfram.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.makewonder.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/wonder_workshop.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://c-stem.ucdavis.edu/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/uc_davis_cstem_center.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://zyrobotics.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/zyrobotics.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+</div>
+
+<hr>
+
+<h1>Infrastructure Partners and Tools</h1>
+
+<div id="logos" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://aws.amazon.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/amazon_web_services.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.aa.com/homePage.do" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/american_airlines.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.answerdash.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/answerdash.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://applitools.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/applitools.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.atlassian.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/atlassian.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.bugcrowd.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/bugcrowd.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.getchef.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/chef.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.dropbox.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/dropbox.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.edx.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/edx.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://education.github.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/github.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.jetbrains.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/jetbrains.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://lastpass.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/lastpass.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://newrelic.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/new_relic.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.optimizely.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/optimizely.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.pivotaltracker.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pivotal_tracker.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://pusher.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pusher.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.salesforce.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/salesforce.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://saucelabs.com/resources/case-studies/codeorg-reduced-testing-time-by-78-and-now-delivers-high-quality-code-faster-for-millions-of-students" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/sauce_labs.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.tableau.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://trello.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/trello.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.typography.com/cloud/welcome/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/typography_com.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.webpurify.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/webpurify.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.zendesk.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/zendesk.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+</div>
+
+<hr>
+
+<h1>Additional Partners</h1>
+
+<div id="logos" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://access-ca.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/access.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://doit-prod.s.uw.edu/accesscomputing/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/access_computing.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.afterschoolalliance.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/afterschool_alliance.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.ald.softbankrobotics.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/aldebaran.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.apple.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/apple.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://betterlesson.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/better_lesson.gif" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://blackgirlnerds.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/black_girl_nerds.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://blackgirlscode.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/black_girls_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/blacks_in_gaming.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.bgca.org/campaign/brand-campaign" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/boys_girls_clubs_of_america.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.careerbuilder.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/careerbuilder.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.carnegielearning.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/carnegie_learning.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.codeforfun.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/code_for_fun.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://codenow.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codenow.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://codestart.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/codestart.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.commonsense.org/education/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/common_sense_education.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.cra.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/computing_research_association.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://congressionalappchallenge.us" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/congressional_app_challenge.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.coursera.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/coursera.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://pbskids.org/designsquad/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/design_squad.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.digitalundivided.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/digitalundivided.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.discoveryeducation.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/discovery_education.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://diy.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/diy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.dropbox.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/dropbox.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://edhesive.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/edhesive.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.edmodo.com" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/edmodo.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://educatorinnovator.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/educator_innovator.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.ea.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/electronic_arts.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.exploringcs.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/exploring_computer_science.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.girldevelopit.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/girl_develop_it.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.greatschools.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/greatschools.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.hfsv.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hispanic_foundation_of_silicon_valley.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://hivelearningnetworks.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hive_learning_networks.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://hypothekids.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/hypothekids.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.computer.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/ieee_computer_society.gif" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.izonenyc.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/innovate_nyc_schools.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.eimacs.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/institute_for_mathematics_and_computer_science.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.juniorachievement.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/junior_achievement.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://getkahoot.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kahoot.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://kaporcenter.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kapor_center_for_social_impact.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.kippla.org/kai/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/kipp_academy_of_innovation.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.knodemy.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/knodemy.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://koding.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/koding.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.kidsakoder.no/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/laer_kidsa_koding.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.learnfresh.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/learn_fresh.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.learntomod.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/learn_to_mod.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.masstlc.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/mass_technology_leadership_council.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://masscan.edc.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/massachusetts_computing_attainment_network.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://webmaker.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/mozilla_webmaker.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.mos.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/museum_of_science.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://legacy.mos.org/nctl/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_center_for_technological_literacy.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.nctm.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_council_of_teachers_of_mathematics.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://ngcproject.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_girls_collaborative_project.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.nms.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_math_science_initiative.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.nsta.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_science_teachers_association.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.nwp.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/national_writing_project.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://nbamathhoops.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/nba_math_hoops.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.ncwit.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/ncwit.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.newschools.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/new_schools_venture_fund.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.npower.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/npower.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://one.laptop.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/one_laptop_per_child.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.pluralsightone.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/pluralsight_one.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.PowerMyLearning.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/powermylearning.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.rocketshipschools.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/rocketship_education.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.salesforce.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/salesforce.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.sas.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/sas.gif" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.schoolimprovement.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/school_improvement_network.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://science.discovery.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/science_channel.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.scripted.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/scripted.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://sharemylesson.com/partner/hour-code" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/share_my_lesson.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.smore.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/smore.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.splunk.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/splunk.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.iowastem.gov/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/stem_advisory_council.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://srnd.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/studentrnd.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.tagedonline.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/tag_education_collaborative.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://teachingkidsprogramming.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/teaching_kids_programming.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.teachingmatters.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/teaching_matters.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.technovationchallenge.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/technovation_challenge.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.thinkful.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/thinkful.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.thoughtstem.com/home" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/thoughtstem.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.udacity.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/udacity.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.usenix.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/usenix.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.valvesoftware.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/valve.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.washingtoninteractivenetwork.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/washington_interactive_network.jpg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.washingtonstem.org" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/washington_stem.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://washingtontechnology.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/washington_technology.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.womenwhocode.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/women_who_code.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.wyzant.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/wyzant.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="logo_row" style="width: 780px; padding: 0; margin: 0;">
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.yearup.org/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/year_up.jpeg" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://www.yetanalytics.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/yet_analytics.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="https://www.youtube.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/youtube.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<div class="logo_column" style="width: 190px; padding: 0px; margin: 0; float: left; text-align: center; display: table; height: 160px">
+<a href="http://zynga.com/" style="display: table-cell; vertical-align: middle; text-align: center;">
+<img src="/images/zynga.png" style="max-width: 140px; max-height: 140px;">
+</a>
+<p></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+</div>
+
+<p><a href="/us/el/#join">
+<button style="float: right; margin-top: 50px;">
+Φιλοξενήστε μια ώρα
+</button>
+</a></p>
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Επικοινωνείστε μαζί μας</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Υποστήριξη</a>
+</li>
+<li>
+<a href="/us/el/partners" target="_blank">Συνεργάτες</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Όροι</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Πολιτική Απορρήτου</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Πνευματικά δικαιώματα Code.org 2015. Όλα τα δικαιώματα είναι κατοχυρωμένα.
+<br>
+Η Ώρα του κώδικα ™ είναι εμπορικό σήμα της Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

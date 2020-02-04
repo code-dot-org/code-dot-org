@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Code.org Diversity Advisory Council" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/about/diversity-council" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Code.org Diversity Advisory Council | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<div>
+<div class="col-80-right">
+<h1>Code.org Diversity Advisory Council</h1>
+
+<p>Our Diversity Advisory Council brings together diversity and inclusion leaders from the tech industry. They advise us on how our professional development, outreach, curriculum, and advocacy work can better encourage underrepresented minorities and women. In their role as industry leaders, they help us create a bridge from our educational offerings to increasing diversity in the tech workforce. Spanning nonprofits to for-profits, startups to tech giants, our Diversity Advisory Council members bring unique perspective to our products and programs.</p>
+
+<div id="headshots" style="margin-top: 20px;"></div>
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="285">
+<img src="/images/fill-200x200/avatars/ana_diaz_hernandez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ana Diaz-Hernandez
+</h3>
+<p style="min-height: 40px;">Head of Sales at Interviewing.io</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ana is a business development leader, philanthropist and writer who creates spaces to discuss issues of employment, education, and reduction of bias in the hiring process. Ana has worked in technology, urban planning and venture capital, always driving to create opportunity for folks who have not had full access to the opportunity to reach their full potential.
+
+She heads up sales at a technology company called interviewing.io, which works to reduce bias in technical recruiting by anonymizing the names and other identifiable information of applicants using the platform to apply to jobs.
+
+Her background in the for-profit world spans working at several technology companies, including Udacity and Dropbox, as well as impact investing at a Bay Area based social impact venture capital fund called Kapor Capital. 
+
+She has spent much of her career working toward greater inclusion in the tech sector, being a frequent connector across communities and creating spaces for women of color particularly to connect with each other. She is the founder of the Facebook group, Women of Color in Tech - Bay Area, which features more than 3600 members and is a strong source of support for women looking to grow in their careers in technology.</p>
+</div>
+
+<div class="col-33 avatar_container" id="286">
+<img src="/images/fill-200x200/avatars/ayna_agrawal.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ayna Agrawal
+</h3>
+<p style="min-height: 40px;">Enterprise Lead in Palantir Technology's Government and Philanthropy</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ayna has worked extensively in software and social entrepreneurship. Most recently, she served as an Enterprise Lead in Palantir Technology's Government and Philanthropy businesses. Before that, she has stints at Microsoft, Evernote, Slice Technologies (acquired by Rakuten), and Eric Schmidt's Venture Capital Firm, Innovation Endeavors. She is Co-Founder and Co-Chair of the Board of Directors for she++. She sits on the board of The We Are Family Foundation (formed by Nile Rodgers to create a global force of activism and citizenry) and the Expanding Your Horizons Network (a gateway to STEM for which has reach over 1 million girls in the past 40 years).</p>
+</div>
+
+<div class="col-33 avatar_container" id="287">
+<img src="/images/fill-200x200/avatars/carissa_romero.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Carissa Romero
+</h3>
+<p style="min-height: 40px;">Partner at Paradigm</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Dr. Carissa Romero is a Partner at Paradigm, a strategy firm taking a data-driven approach to helping companies build stronger, more inclusive organizations. She is passionate about applying psychological research to help people and organizations reach their full potential. Carissa is an expert in fixed and growth mindsets, people’s beliefs about the nature of talents and abilities; Co-founder of PERTS, Stanford’s applied research center on mindsets; and a member of the Mindset Scholars Network. Carissa was named to Forbes 30 Under 30 list in 2016 for her work on growth mindset.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="288">
+<img src="/images/fill-200x200/avatars/clara_shih.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Clara Shih
+</h3>
+<p style="min-height: 40px;">CEO and Founder of Hearsay Systems</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Clara Shih is CEO and founder of Hearsay Systems, whose predictive analytics technology helps salespeople reach out to clients at the right time with the right message while staying in compliance with industry regulations. A pioneer in the social media industry, Clara developed the first social business application in 2007 and subsequently authored the New York Times-featured best-seller, The Facebook Era. Her latest book, The Social Business Imperative: Adapting Your Business Model to the Always-Connected Customer, was released in April 2016.  Clara has been named one of Fortune’s “Most Powerful Women Entrepreneurs,” Fast Company’s “Most Influential People in Technology,” BusinessWeek’s “Top Young Entrepreneurs,” and both Fortune’s and Ad Age’s “40 Under 40.” She was also named a “Young Global Leader” by the World Economic Forum, InvestmentNews’ “40 under 40,” and “5 to Watch” in ThinkAdvisor’s 2015 IA 35 for 35. Clara is a member of the Starbucks board of directors and previously served in a variety of technical, product, and marketing roles at Google, Microsoft, and Salesforce.com. She graduated #1 in computer science at Stanford University, where she also received an MS in computer science. She also holds an MS in Internet Studies from Oxford University, where she studied as a U.S. Marshall Scholar. </p>
+</div>
+
+<div class="col-33 avatar_container" id="289">
+<img src="/images/fill-200x200/avatars/daisy_auger_dominguez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Daisy Auger-Dominguez
+</h3>
+<p style="min-height: 40px;">Director, Global Diversity and Inclusion Strategy, Alphabet Google Inc.</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Daisy is a purpose-driven, tri-sector (finance, media/entertainment, technology) leader recognized for successfully cultivating and maximizing innovation and creativity through inclusive people, culture and corporate social responsibility practices. Daisy is currently Director, Global Diversity and Inclusion at Google, leading strategy and programs to enhance diversity and inclusion at Google and providing strategic thought leadership to emerging diversity and inclusion initiatives across the Alphabet companies. Prior to this role, Daisy led Global Diversity Staffing at Google. Formerly, Daisy was Vice President, Talent Acquisition, Diversity and Inclusion at the Disney ABC Television Group and Managing Director of Executive Search Initiatives at Time Warner Inc. She launched her career as a credit risk analyst at Moody’s Corporation where she went on to design and lead the company's first diversity and inclusion function, led the staffing function and managed corporate social responsibility initiatives. A frequent speaker at global conferences and events, Daisy has been recognized by LatinoJustice as a Latina Trailblazer in Corporate America and the New York City Council for her community leadership. Daisy serves on the board of directors of the Council of Urban Professionals, and as advisor to several service and professional organizations. An alum of the Coro Fellows Program, Daisy holds a B.A. from Bucknell University and an M.P.A. from the Robert F. Wagner Graduate School of Public Service at NYU.</p>
+</div>
+
+<div class="col-33 avatar_container" id="290">
+<img src="/images/fill-200x200/avatars/eli_kennedy.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Eli Kennedy
+</h3>
+<p style="min-height: 40px;">CEO at Level Playing Field Institute (LPFI)</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Eli is the CEO of the Level Playing Field Institute (LPFI). In this capacity he leads the operation and expansion of the preeminent STEM education program, SMASH Academy. The Summer Math and Science Honors Academy (SMASH) is a free of cost, STEM-intensive, college preparatory program for underrepresented high school students of color. SMASH boasts a rigorous 5-week, 3-year summer STEM enrichment program which provides access to rigorous coursework and access to mentors, role models, and support networks of students of color. SMASH has 5 programs at the campuses of Stanford, UC Berkeley, UCLA, UC Davis and Morehouse College. Prior to LPFI, Eli served as the Senior Vice President at Redbird Advanced Learning, an educational technology company that was spun out of Stanford University and was recently acquired by McGraw-Hill. Prior to joining Redbird, Eli was the President and Chief Executive Officer for Pacific Charter School Development (PCSD), one of the largest developers of charter schools in the country. Eli's background also includes serving as the Director at the Eli and Edythe Broad Foundation and as a Regional Director for Platform Learning. Eli co-founded Admit Advantage, an admissions consultancy that helps students gain admittance to top universities and graduate programs. Eli's passion for educational development began when he started tutoring students at the age of 10. In addition to his work in education, Eli has worked at start-up technology companies and as a strategy consultant with Anderson Consulting (now Accenture). Eli graduated with honors with a BBA in Finance from Howard University and earned an MBA in Entrepreneurial Management from the Wharton School at the University of Pennsylvania.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="291">
+<img src="/images/fill-200x200/avatars/ellen_pao.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ellen Pao
+</h3>
+<p style="min-height: 40px;">Investment Partner</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ellen Pao is an investment partner at Kapor Capital, the Chief Diversity and Inclusion Officer at the Kapor Center for Social Impact, and co-founder of the diversity consulting non-profit organization Project Include.  Previously she was the interim chief executive officer of social media technology company Reddit, an investment partner at Kleiner Perkins Caufield &amp; Byers, a Board director at Flipboard, and a corporate attorney.</p>
+</div>
+
+<div class="col-33 avatar_container" id="292">
+<img src="/images/fill-200x200/avatars/jackie_xu.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jackie Xu
+</h3>
+<p style="min-height: 40px;">Partner at Kleiner Perkins Caufield &amp; Byers</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jackie Xu joined Kleiner Perkins Caufield &amp; Byers in 2013. She supports strategic hiring efforts for the firm’s portfolio companies and advises them on technical recruiting, compensation and team-building. Her passion is to connect talented people to innovative startups.  Prior to joining KPCB, Jackie managed a bi-coastal team of engineering recruiters and partnered with executive leadership on strategic acquisitions for Twitter. </p>
+</div>
+
+<div class="col-33 avatar_container" id="293">
+<img src="/images/fill-200x200/avatars/jocelyn_goldfein.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jocelyn Goldfein
+</h3>
+<p style="min-height: 40px;">Managing Director at Zetta Venture Partners</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jocelyn Goldfein is a Managing Director at Zetta Venture Partners, where she leads investments in early stage technology companies. She is a widely recognized industry expert on product strategy, infrastructure and organizational scale. Her career as an engineering leader spans from early stage startups to high-growth years at Facebook and VMware. During Jocelyn's tenure at Facebook, she helped convert News Feed to Machine Learning and spearheaded the transition to a 'mobile first' product organization. As an early engineer at VMware, she built core virtualization technology and ultimately established and ran VMware's Desktop Business Unit, a $150M line of business. Jocelyn also held engineering and leadership roles at startups Datify, MessageOne and Trilogy/pcOrder. As an angel investor, she's backed over 20 startups with an emphasis on infrastructure and AI. She serves on several boards, including Harvey Mudd College, and is a visiting lecturer at Stanford University, where she received her BS in Computer Science.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="294">
+<img src="/images/fill-200x200/avatars/julia_hartz.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Julia Hartz
+</h3>
+<p style="min-height: 40px;">Co-Founder and CEO at Eventbrite</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Julia Hartz is an entrepreneur, investor and the Co-Founder and CEO of Eventbrite, which powers over 2 million events around the world each year. Under her leadership the company has generated billions in gross ticket sales, processes over 2 million tickets per week to events and experiences in 180 countries, and is consistently recognized for their award-winning culture and workplace. Julia has been honored as one of Fortune's 2015 40 Under 40 business leaders, Inc.'s 35 under 35 in 2014, Fortune's Most Powerful Women Entrepreneurs in 2013, and has been profiled for her leadership and impact in top publications around the world. Julia landed in Silicon Valley via Hollywood where she began her career as a development executive at MTV and FX Networks.</p>
+</div>
+
+<div class="col-33 avatar_container" id="295">
+<img src="/images/fill-200x200/avatars/julian_gutierrez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Julian Gutierrez
+</h3>
+<p style="min-height: 40px;">Community Partnerships Manager at Code2040</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Julian Gutierrez is the Community Partnerships Manager at Code2040, focused on creating and implementing world class programming for a community of innovators, students, entrepreneurs, industry professionals and volunteers. At Code2040, he spearheads major events, including the annual Code2040 Summit, holiday fundraiser and regular community happy hours. He also manages 600+ volunteers and facilitates opportunities for them to support a growing network of aspiring Black and Latinx technologists. Before moving to the Bay Area, he worked at New York University, where he managed the Office of Alumni Relations at the Gallatin School of Individualized Study. In this role, he enhanced the alumni experience with a wide array of transformative events, networking opportunities and innovative programs. He is a self-described 'geek' with a strong interest in comic book culture and stories, both in print and on the big screen.</p>
+</div>
+
+<div class="col-33 avatar_container" id="296">
+<img src="/images/fill-200x200/avatars/laura_gomez.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Laura Gomez
+</h3>
+<p style="min-height: 40px;">Founder and CEO at Atipica</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Laura I. Gómez, Founder and CEO at Atipica and founding team member of Project Include.  As a young immigrant to Silicon Valley, Laura grew up in Redwood City, the daughter of a single mother and nanny to several local tech leaders. At the age of 17, Laura had her first internship with Hewlett-Packard, which started her career in tech. Laura has worked at Google, YouTube, Jawbone, and Twitter, where she was a founding team member of the International team. Her passion for diversity in tech extends into her startup, Atipica, as well as her involvement with several non­profit organizations. Her passion is to lead data-driven initiatives that allow top level leaders to understand the business benefits of machine learning in recruiting and diversity.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="297">
+<img src="/images/fill-200x200/avatars/makinde_adeagbo.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Makinde Adeagbo
+</h3>
+<p style="min-height: 40px;">Founder of /dev/color</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Makinde is a software engineer and founder of /dev/color, a non-profit organization working to maximize the impact of Black software engineers. Before starting /dev/color he was a software engineer and manager at Pinterest, Dropbox, and Facebook.</p>
+</div>
+
+<div class="col-33 avatar_container" id="298">
+<img src="/images/fill-200x200/avatars/srinivas_tallapragada.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Srinivas Tallapragada
+</h3>
+<p style="min-height: 40px;">President-Technology at Salesforce</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Srinivas Tallapragada is President-Technology at Salesforce. He leads a globally distributed and diverse team of technologists responsible for creating all of the company’s innovative products. Tallapragada joined Salesforce in 2012 and brings more than 20 years of product development experience in enterprise software including leading the development of ERP, CRM, e-commerce and industry-specific applications. Prior to Salesforce, Tallapragada held multiple roles at Oracle and SAP leading the development of many of core enterprise applications and integration of technology from numerous acquisitions. Tallapragada holds a Masters from the school of Human Resources at XLRI, Jamshedpur, India and a Bachelors of Technology in Computer Science from the National Institute of Technology (NIT), Warangal, India.</p>
+</div>
+
+<div class="col-33 avatar_container" id="299">
+<img src="/images/fill-200x200/avatars/stacy_brown_philpot.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Stacy Brown-Philpot
+</h3>
+<p style="min-height: 40px;">CEO at TaskRabbit</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Stacy Brown-Philpot is CEO at TaskRabbit after having served as the company's COO for three years. A passion for the convergence of operational, analytical, and strategic execution inspired Stacy to join TaskRabbit, where she applied her experience to scaling and expanding the marketplace. Before taking the operational helm at TaskRabbit, Stacy served as Entrepreneur-In-Residence at Google Ventures, lending strategic expertise to the firm's portfolio companies. Prior to that, she spent nearly a decade leading global operations for Google's flagship products, including Search, Chrome, and Google+, and served as Head of Online Sales and Operations for Google India. Stacy founded the Black Googler Network, a seminal component of diversification initiatives at Google and the larger technology industry. She also brings a background in finance from her time at PricewaterhouseCoopers and Goldman Sachs. She was recently appointed to the HP Inc. Board of Directors, was named a 2016 Henry Crown Fellow with the Aspen Institute, and Fortune's 2015 40 Under 40. She holds a B.S. in Economics from the Wharton School of Business at the University of Pennsylvania, where she graduated Magna Cum Laude, an M.B.A. from the Graduate School of Business at Stanford University and is President Emeritus of the Stanford Graduate School of Business Alumni Association.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="300">
+<img src="/images/fill-200x200/avatars/tracy_chou.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Tracy Chou
+</h3>
+<p style="min-height: 40px;">Co-founder at Project Include</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Tracy Chou is an entrepreneur, software engineer, and diversity advocate. She is currently exploring and advising a range of new projects across the startup world, civic tech and engagement, and diversity activism. From 2011 to 2016 Tracy was an engineer and tech lead at Pinterest, with roles on home feed and recommendations, ads products, web, infrastructure, API, email, and growth. Before Pinterest, she worked at Quora, also as an early engineer there. During the previous federal administration she was on reserve with the U.S. Digital Service as a technical consultant as well. Alongside her engineering career, Tracy is most well-known for her work pushing for diversity in tech. In 2013, she helped to kick off the wave of tech company diversity data disclosures with a Github repository collecting numbers on women in engineering. Tracy is now a founding member of Project Include and focused on driving solutions in the space. She was named Forbes Tech 30 under 30 in 2014 and has been profiled in Vogue, WIRED, The Atlantic, and other outlets for her advocacy. Tracy is an advisor to Homebrew VC and enjoys working with startups on engineering, product, culture, and diversity. Tracy graduated from Stanford with an M.S. in Computer Science and a B.S. in Electrical Engineering, where she was a Terman Scholar and Mayfield Fellow and elected to Phi Beta Kappa and Tau Beta Pi.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+</div>
+<div class="left-nav desktop-feature">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/about">About Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/leadership">Leadership</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/donors">Donors</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/team">Full Team</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">Diversity Council</span>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">Newsroom</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/evaluation">Evaluation</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/jobs">Jobs</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/faq">FAQs</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Príručka - Ako na to" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/sk/how-to/afterschool" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Príručka - Ako na to</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/sk/">
+<img alt="Hodina kódu" src="/us/sk/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/afterschool';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option selected value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/sk/learn" title="Aktivity">Aktivity</a>
+</li>
+<li>
+<a href="/us/sk/how-to" title="Ako na to">Ako na to</a>
+</li>
+<li>
+<a href="/us/sk/promote" title="Šírte ďalej">Šírte ďalej</a>
+</li>
+<li>
+<a href="/us/sk/#faq" title="Časté otázky">Časté otázky</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/sk/#join">
+<button style="float: right; margin-top: 50px;">
+Pripraviť hodinu
+</button>
+</a></p>
+
+<h1>Ako realizovať Hodinu Kódu počas mimoškolskej aktivity</h1>
+
+<h3>Pridajte sa k hnutiu a absolvujte so skupinou študentov ich prvú hodinu informatiky podľa týchto krokov. Hodina Kódu je jednoduchá - aj pre začiatočníkov! If you'd like an extra set of hands to help out, you can find a <a href="https://test.code.org/volunteer/local">local volunteer</a> to help run an Hour of Code in your after-school class or club.</h3>
+
+<hr>
+
+<h2>1. Pozrite si “Ako na to” video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+</h2>
+
+<h2>2. Vyberte si návod</h2>
+
+<p>We provide a variety of <a href="/us/sk/learn">fun, hour-long tutorials</a> for participants all ages, created by a variety of partners. <a href="/us/sk/learn">Try them out!</a></p>
+
+<p><strong>All Hour of Code tutorials</strong> require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.</p>
+
+<p><a href="/us/sk/learn"><img src="/images/fit-700/tutorials.png" alt=""></a></p>
+
+<p><strong>Need a lesson plan for your afterschool Hour of Code?</strong> Check out this <a href="/files/AfterschoolEducatorLessonPlanOutline.docx">template</a>!</p>
+
+<h2>3. Spropagujte Vašu Hodinu Kódu</h2>
+
+<p>Promote your Hour of Code <a href="/us/sk/promote">with these tools</a> and encourage others to host their own events.</p>
+
+<h2>4. Naplánujte si technické vybavenie - počítače nie sú povinné</h2>
+
+<p>Pre čo najlepší zážitok s Hodinou Kódu sú potrebné počítače s pripojením na internet. Avšak <strong>nepotrebujete</strong> mať počítač pre každé dieťa, dokonca môžete spraviť Hodinu Kódu celkom bez počítača.</p>
+
+<p>Otestujte si návody na počítačoch alebo zariadeniach študentov a skontrolujte, že fungujú správne v prehliadačoch so zvukom a videom. <strong>Nízka rýchlosť internetu?</strong> Zobrazte videá hromadne pred celou triedou, aby nemuseli študenti sťahovať videá osobitne. Alebo vyskúšajte offline návody.</p>
+
+<p>Poskytnite slúchadlá alebo požiadajte študentov, aby si priniesli vlastné, ak ste vybrali návody, ktoré fungujú najlepšie so zvukom.</p>
+
+<p><strong>Nemáte dostatok zariadení?</strong> Použite <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> programovanie v pároch</a>. Keď sa študenti spoja, pomáhajú si navzájom a menej zaťažujú učiteľa. Taktiež uvidia, že informatika je spoločenská a podporuje spoluprácu.</p>
+
+<h2>5. Začnite Hodinu Kódu motivujúcim videom</h2>
+
+<p>Začnite Hodinu Kódu motiváciou účastníkov a diskusiou o tom, ako počítačové technológie ovplyvňujú každú oblasť nášho života.</p>
+
+<p><strong>Ukážte inšpiratívne video:</strong></p>
+
+<ul>
+<li>Pôvodné Code.org úvodné video s Billom Gatesom, Markom Zuckerbergom a hviezdou NBA Chrisom Boshom - na výber sú <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc">1 minutová</a>, <a href="https://www.youtube.com/watch?v=nKIu9yen5nc">5 minutová</a>, a <a href="https://www.youtube.com/watch?v=dU1xS07N-FA">9 minutová</a> verzia.</li>
+<li>
+<a href="https://www.youtube.com/watch?v=KsOIlDT145A">Celosvetové video Hodiny Kódu</a>.</li>
+<li>
+<a href="https://www.youtube.com/watch?v=6XvmhE1J9PY">Prezident Obama vyzýva všetkých študentov, aby sa učili informatiku</a>.</li>
+<li>Pozrite si viac inšpirujúcich videí <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">tu</a>.</li>
+</ul>
+
+<p><strong>It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:</strong></p>
+
+<ul>
+<li>Vysvetlite, ako technológie ovplyvňujú naše životy vrátane príkladov, ktoré pochopia chlapci i dievčatá (Hovorte o aplikáciach a technológiach, ktoré zachráňujú životy, pomáhajú ľuďom, spájajú ľudí a pod.).</li>
+<li>Menujte veci, ktoré používame v každodennom živote a používajú kód, program.</li>
+<li>See tips for getting girls interested in computer science <a href="https://test.code.org/girls">here</a>.</li>
+</ul>
+
+<p><strong>Need more guidance?</strong> Download this <a href="/files/AfterschoolEducatorLessonPlanOutline.docx">template lesson plan</a>.</p>
+
+<h2>6. Kódujte!</h2>
+
+<p><strong>Direct participants to the activity</strong> - Write the tutorial link on a whiteboard. Find the link listed on the <a href="/us/sk/learn">information for your selected tutorial</a> under the number of participants.</p>
+
+<p><strong>When someone comes across difficulties it's okay to respond:</strong> - “I don’t know. Let’s figure this out together.” - “Technology doesn’t always work out the way we want.” - “Learning to program is like learning a new language; you won’t be fluent right away.”</p>
+
+<p><strong>What to do if someone finishes early?</strong> - Encourage participants to try another Hour of Code activity at <a href="/us/sk/learn">hourofcode.com/learn</a> - Or, ask those who finish early to help others who are having trouble.</p>
+
+<h2>7. Oslavujte</h2>
+
+<ul>
+<li>
+<a href="https://test.code.org/certificates">Print certificates</a> for your students.</li>
+<li>
+<a href="/us/sk/promote/resources#stickers">Print "I did an Hour of Code!"</a> stickers for your students.</li>
+<li>
+<a href="http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more">Order custom t-shirts</a> for participants.</li>
+<li>Zdieľajte fotky a videá z Vašej Hodiny Kódu na sociálnych sieťach. Použite #HourOfCode a @codeorg, aby sme aj my mohli zdôrazniť Váš úspech!</li>
+</ul>
+
+<h2>Ďalšie zdroje k Hodine Kódu pre vyučujúcich</h2>
+
+<ul>
+<li>Check out <a href="http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466">best practices</a> from past Hour of Code organizers.</li>
+<li>Watch the recording of our <a href="https://youtu.be/EJeMeSW2-Mw">Educator's Guide to the Hour of Code webinar</a>.</li>
+<li>Visit the <a href="http://forum.code.org/c/plc/hour-of-code">Hour of Code Forum</a> to get advice, insight and support from other organizers.</li>
+<li>Pozrite si <a href="https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code">Časté otázky o Hodine Kódu</a>.</li>
+</ul>
+
+<h2>Čo nasleduje po Hodine Kódu?</h2>
+
+<p>The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. Help students continue their journey and encourage them to <a href="/beyond">learn more online</a>!</p>
+
+<p><a href="/us/sk/#join">
+<button style="float: right; margin-top: 50px;">
+Pripraviť hodinu
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/sk/how-to">
+<div class="nav-header">Príručky - Ako na to</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to">
+Pre učiteľov
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/afterschool">
+Pre mimoškolských učiteľov
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/companies">
+Pre spoločnosti
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/districts">
+Pre kraje
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/events">
+Pre školské zhromaždenia
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/parents">
+Pre rodičov
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/public-officials">
+Pre verejných činiteľov
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/sk/how-to/volunteers">
+Pre dobrovoľníkov
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/sk/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/sk/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Zdroje</div>
+</div>
+</a>
+<a href="/us/sk/learn">
+<div class="display-link">
+<img class="display-img" src="/us/sk/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Vyskúšajte si návody</div>
+</div>
+</a>
+<a href="/us/sk/promote">
+<div class="display-link">
+<img class="display-img" src="/us/sk/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Ako sa zapojiť</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Kontaktujte nás</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Podpora</a>
+</li>
+<li>
+<a href="/us/sk/partners" target="_blank">Partneri</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Podmienky</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Zásady ochrany osobných údajov</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. Všetky práva vyhradené.
+<br>
+Hour of Code™ je ochranná známka spoločnosti Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

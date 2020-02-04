@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Student Privacy policy" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/privacy/student-privacy-old" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Student Privacy policy | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<div id="share_privacy_policy" style="float: right; padding-top: 5px; padding-right: 5px">
+<label class="share-label">
+Share this notice with parents:
+</label>
+<a class="share-on-remind" href="https://www.remind.com/v1/share?url=code.org/privacy/student-privacy&amp;referer=code.org&amp;text=Computer+Science+and+Your+Child%27s+Privacy%3A" id="share_on_remind" target="_blank"></a>
+<a class="email-button" href="mailto:?to=&amp;subject=Code.org%20and%20your%20child's%20privacy&amp;body=Dear%20parents,%0A%0ASoftware%20and%20technology%20are%20everywhere%20-%20in%20our%20computers,%20in%20our%20pockets,%20in%20our%20cars,%20and%20used%20in%20banking,%20communications,%20entertainment,%20transportation,%20and%20science,%20to%20name%20a%20few.%20However,%20very%20few%20kids%20are%20learning%20how%20to%20actually%20create%20technology.%20In%20today%E2%80%99s%20world,%20computer%20science%20is%20fundamental%20for%20preparing%20students%20to%20be%20informed%20and%20successful%20in%20our%20increasingly%20technological%20society,%20regardless%20of%20what%20career%20path%20their%20future%20holds.%0A%0AThis%20year%20we%E2%80%99re%20proud%20to%20be%20teaching%20computer%20science%20in%20our%20classroom%20using%20Code.org%E2%80%99s%20online%20learning%20platform%20and%20curriculum.%20Code.org%20takes%20student%20privacy%20very%20seriously%20and%20has%20earned%20one%20of%20the%20highest%20privacy%20ratings%20from%20Common%20Sense%20Media.%20%20You%20can%20read%20their%20privacy%20notice%20here:%20https://code.org/privacy/student-privacy%0A%0AI%E2%80%99d%20encourage%20you%20to%20ask%20your%20student%20about%20what%20they%20are%20learning%20and%20have%20them%20show%20you%20the%20programs%20or%20games%20they%20create%20this%20year!%0A%0AThanks," id="email_button" target="_blank">
+<i aria-hidden="true" class="fa fa-envelope"></i>
+Email
+</a>
+<a class="print-button" href="javascript:window.print()" id="print_button">
+<i aria-hidden="true" class="fa fa-print"></i>
+Print
+</a>
+</div>
+
+<div style="clear: both"></div>
+
+<script src="/assets/js/code.org/views/share_privacy.js"></script>
+
+<style>
+  .share-on-remind {
+    display: inline-block;
+    width: 185px;
+    height: 40px;
+    background: url("/images/share-on-remind-button-with-text.png") no-repeat top;
+    background-position: center top;
+    text-decoration: none;
+    text-align: center;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  .share-label {
+    margin-right: 5px;
+  }
+  .share-on-remind:active {
+    background-position: center bottom;
+  }
+  .email-button, .print-button {
+    background-color: #7665a0;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+  .email-button:visited, .print-button:visited, .email-button:link, .print-button:link {
+      color: white;
+  }
+  @media print {
+    #share_privacy_policy {
+      display: none
+    }
+  }
+</style>
+
+<h1>Code Studio courses in Computer Science</h1>
+
+<p>Software and technology are everywhere - in our computers, in our pockets, in our cars, and used in banking, communications, entertainment, transportation, and science. But very few kids are learning how to actually <em>create</em> technology - games, apps and programs. Even fewer US schools teach computer science. Women are underrepresented in this field, and so are African Americans and Hispanic Americans. Computer science is foundational for every student, whether they want to pursue a career in software, or to be a more well rounded citizen in the 21st century. That’s why we’re proud to introduce our classroom to some of the basics of computer science using Code Studio an online learning platform by Code.org.</p>
+
+<h3>What is Code Studio?</h3>
+
+<p>Code Studio is a fun, creative platform for learning basic coding and computer science! Using a <em>blended learning model</em>, your children are learning with a mix of online activities (on the computer) and “unplugged” classroom activities that use no computer at all.</p>
+
+<p>This format helps nurture creativity, problem solving, collaboration, and logic through interactive, self-paced tutorials, featuring short video lectures and game-like puzzles.
+</p>
+<center>
+<img src="/images/privacy-student-image1.png" width="30%">
+<img src="/images/privacy-student-image2.png" width="30%">
+<img src="/images/privacy-student-image3.png" width="30%">
+</center>
+
+<h3>Students will study topics such as:</h3>
+
+<ul>
+<li>How the Internet works</li>
+<li>Basic computer programming</li>
+<li>Logic, problem solving and creativity</li>
+<li>Creating simple apps, animations, and “code art”</li>
+</ul>
+
+<h3>With an online course, students are able to benefit from a truly modern educational experience. For example, Code Studio is able to:</h3>
+
+<ul>
+<li>Make tutorials smarter and more personalized</li>
+<li>Use data to identify where students get stumped and improve puzzles</li>
+<li>Use smart hints to guide students with custom answers to common mistakes</li>
+</ul>
+
+<h3>Student login - for access outside the classroom</h3>
+
+<p>Because this is an online course, students can log in from outside the classroom - from a computer or tablet at home, or in the library.  For our classroom to participate in this course, we have created Code Studio accounts for each student.</p>
+
+<h2>Protecting student privacy</h2>
+
+<p>Code.org assigns the utmost importance to student safety and security and has designed Code Studio to maximize student privacy.  In particular, <strong>participation in this course doesn’t require sharing any private student information online</strong>. The online course requests the student’s display name, which can be represented as an alias (eg “John S” or “Cool coder”).</p>
+
+<p>The list below summarizes what student data is stored and protected by Code.org, and how it is used. You can find further details at <a href="http://code.org/privacy">http://code.org/privacy</a>.</p>
+
+<h3>Data that Code.org collects from students participating in the course:</h3>
+
+<ul>
+<li>Student display name (e.g. “John S” or “Cool coder”)</li>
+<li>Age (to protect the privacy of the youngest learners)</li>
+<li>Progress in the course (to display reports for students and teachers)</li>
+<li>Login date/time and other technical information (for debugging purposes)</li>
+</ul>
+
+<h3>Optional data:</h3>
+
+<ul>
+<li>Scrambled “hash” of email address. If a student creates an account directly (without a parent or teacher), they will login using their email address, but Code.org will never receive the actual email address, only a scrambled “hash” that can’t be converted back to the original. Learn more at <a href="http://code.org/emailprivacy">http://code.org/emailprivacy</a>. </li>
+<li>Gender or race (to anonymously summarize aggregate participation in computer science, to track progress towards increasing diversity in the field).</li>
+</ul>
+
+<p>For more information on Code.org and Code Studio, visit <a href="http://code.org">http://code.org</a>.</p>
+
+<p><br></p>
+
+<p></p>
+<center><img src="/images/privacy-student-codepartnership.png" width="20%"></center>
+
+<p><br></p>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

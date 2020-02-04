@@ -1,9 +1,9 @@
 - diamond_supporters = DB[:cdo_donors].where(level_s:'diamond').order(:url_s).all
 - platinum_supporters = DB[:cdo_donors].where(level_s:'platinum').order(:url_s).all
 - gold_supporters = DB[:cdo_donors].where(level_s:'gold').order(:url_s).all
-- diamond_supporters.shuffle!
-- platinum_supporters.shuffle!
-- gold_supporters.shuffle!
+- diamond_supporters.shuffle! unless ENV['PEGASUS_RENDER_CACHE']
+- platinum_supporters.shuffle! unless ENV['PEGASUS_RENDER_CACHE']
+- gold_supporters.shuffle! unless ENV['PEGASUS_RENDER_CACHE']
 
 %link{rel:'stylesheet', type:'text/css', href:'/css/donors.css'}
 

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Contact International Partners" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/tr/international-partners" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Contact International Partners</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/tr/">
+<img alt="Kodlama Saati" src="/us/tr/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/international-partners';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option selected value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/tr/learn" title="Etkinlikler">Etkinlikler</a>
+</li>
+<li>
+<a href="/us/tr/how-to" title="Nasıl Yapılır">Nasıl Yapılır</a>
+</li>
+<li>
+<a href="/us/tr/promote" title="Destekleyin">Destekleyin</a>
+</li>
+<li>
+<a href="/us/tr/#faq" title="SSS">SSS</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<style>
+  ul {
+    margin: 0px 20px 20px 20px;
+  }
+</style>
+
+<p><a href="/us/tr/#join">
+<button style="float: right; margin-top: 50px;">
+Yaklaşık bir saat
+</button>
+</a></p>
+
+<h1>Contact International Partners</h1>
+
+<p>Code.org works with many organizations around the world to make the Hour of Code a truly international movement. Did you know that in 2017, 60% of all Hour of Code events occurred outside of the U.S.?</p>
+
+<p>You, too, can play a leading role to get more people in your country involved! If you're in one of the countries below, reach out to the listed partner and get connected with your local Hour of Code.</p>
+
+<p><em>Don't see your country listed here?</em> <a href="https://goo.gl/forms/PZQEsqvet7yBE5ps2">Apply to become an Hour of Code International Partner</a>! <br> <br></p>
+
+<table>
+<thead>
+<tr>
+<th>Country</th>
+<th>Organization</th>
+<th>Contact Name</th>
+<th>Email or Website</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Albania</td>
+<td>ALMOOC</td>
+<td>Ridvan Aliu</td>
+<td></td>
+</tr>
+<tr>
+<td>Isak Bilalli</td>
+<td><a href="mailto:ridvan@eduongo.com">ridvan@eduongo.com</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="mailto:isaactiral@gmail.com">isaactiral@gmail.com</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Antigua and Barbuda</td>
+<td>iLabGlobal</td>
+<td></td>
+<td><a href="http://ilabglobal.com">http://ilabglobal.com</a></td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>Fundación Sadosky</td>
+<td></td>
+<td><a href="http://www.fundacionsadosky.org.ar">www.fundacionsadosky.org.ar</a></td>
+</tr>
+<tr>
+<td><a href="http://www.program.ar">www.program.ar</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Argentina</td>
+<td>Nuc Ba Academia</td>
+<td></td>
+<td><a href="http://academia.nucba.com.ar">http://academia.nucba.com.ar</a></td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Google</td>
+<td>Marie Efstathiou</td>
+<td><a href="https://www.google.com/edu/cs">https://www.google.com/edu/cs</a></td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>Grok</td>
+<td>Jane Abrams</td>
+<td><a href="https://groklearning.com">https://groklearning.com</a></td>
+</tr>
+<tr>
+<td>Brazil</td>
+<td>Programaê! - Fundação Telefônica Vivo</td>
+<td></td>
+<td><a href="http://programae.org.br/horadocodigo">http://programae.org.br/horadocodigo</a></td>
+</tr>
+<tr>
+<td>Cameroon</td>
+<td>Big IT Company Ltd</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Brilliant Labs Inc.</td>
+<td></td>
+<td><a href="https://www.brilliantlabs.ca">https://www.brilliantlabs.ca</a></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Hatch Canada</td>
+<td></td>
+<td><a href="http://www.hatchcanada.com">www.hatchcanada.com</a></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Canada Learning Code</td>
+<td>Carolyn Van</td>
+<td><a href="https://www.canadalearningcode.ca">https://www.canadalearningcode.ca</a></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Actua</td>
+<td>Tracy Ross</td>
+<td><a href="http://www.actua.ca">www.actua.ca</a></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Kids &amp; Code</td>
+<td></td>
+<td><a href="http://www.kidsandcode.org">www.kidsandcode.org</a></td>
+</tr>
+<tr>
+<td><a href="mailto:hello@kidsandcode.org">hello@kidsandcode.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Kids Code Jeunesse</td>
+<td>Bry LeBlanc</td>
+<td><a href="http://kidscodejeunesse.org">http://kidscodejeunesse.org</a></td>
+</tr>
+<tr>
+<td><a href="mailto:contact@kidscodejeunesse.org">contact@kidscodejeunesse.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Nova Scotia Department of Education &amp; Early Childhood Development</td>
+<td>Nick Baskwill</td>
+<td><a href="http://ednet.ns.ca">http://ednet.ns.ca</a></td>
+</tr>
+<tr>
+<td><a href="mailto:nicholas.baskwill@novascotia.ca">nicholas.baskwill@novascotia.ca</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Partners In Research Canada</td>
+<td>Stacey Joyce</td>
+<td><a href="http://www.pirweb.org/en">www.pirweb.org/en</a></td>
+</tr>
+<tr>
+<td><a href="mailto:sjoyce@pirweb.org">sjoyce@pirweb.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canada</td>
+<td>Sault Ste. Marie innovation Centre</td>
+<td></td>
+<td><a href="https://ssmic.com/">https://ssmic.com/</a></td>
+</tr>
+<tr>
+<td>Chile</td>
+<td>Fundación Kodea</td>
+<td>Claudia Jaña</td>
+<td><a href="http://horadelcodigo.cl">http://horadelcodigo.cl</a></td>
+</tr>
+<tr>
+<td><a href="mailto:cjana@kodea.org">cjana@kodea.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>China</td>
+<td>码趣学院CodingMarch</td>
+<td>Delia Wu</td>
+<td><a href="http://www.codingmarch.com">www.codingmarch.com</a></td>
+</tr>
+<tr>
+<td><a href="mailto:delia.wu@codingmarch.com">delia.wu@codingmarch.com</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>China</td>
+<td>Classroom Aid, Inc.</td>
+<td></td>
+<td><a href="http://classroom-aid.com/CS4Good">http://classroom-aid.com/CS4Good</a></td>
+</tr>
+<tr>
+<td>Colombia (also Brazil, Mexico, Spain)</td>
+<td>World Tech Makers</td>
+<td>Ilana Milkes</td>
+<td><a href="http://worldtechmakers.com">http://worldtechmakers.com</a></td>
+</tr>
+<tr>
+<td><a href="mailto:ilana@worldtechmakers.com">ilana@worldtechmakers.com</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Côte d’Ivoire</td>
+<td>Africa Children Code</td>
+<td>M. Gnahoré Didier</td>
+<td><a href="http://www.africachildrencode.org">http://www.africachildrencode.org</a></td>
+</tr>
+<tr>
+<td><a href="mailto:gnahore@africachildrencode.org">gnahore@africachildrencode.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Czech Republic</td>
+<td>Czechitas</td>
+<td>Pavla Randakova</td>
+<td><a href="https://czechitas.cz">https://czechitas.cz</a></td>
+</tr>
+<tr>
+<td><a href="mailto:paja@czechitas.cz">paja@czechitas.cz</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Ecuador</td>
+<td>Progracademy</td>
+<td>Angelica Rodriguez</td>
+<td><a href="http://www.progracademy.org">http://www.progracademy.org</a></td>
+</tr>
+<tr>
+<td><a href="mailto:angelica.rodriguez@progracademy.org">angelica.rodriguez@progracademy.org</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Egypt</td>
+<td>Q-STEAM Club</td>
+<td>Tamer Ragab</td>
+<td><a href="http://q-steam.com">http://q-steam.com</a></td>
+</tr>
+<tr>
+<td><a href="mailto:learn@q-steam.com">learn@q-steam.com</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Estonia</td>
+<td>Vaata Maailma SA</td>
+<td>Kristi Kivilo</td>
+<td><a href="http://www.vaatamaailma.ee">http://www.vaatamaailma.ee</a></td>
+</tr>
+<tr>
+<td><a href="mailto:kristi@vaatamaailma.ee">kristi@vaatamaailma.ee</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>The Gambia</td>
+<td>KidCoders Academy</td>
+<td>Amie Njie</td>
+<td><a href="http://www.kidcodersacademy.gm">http://www.kidcodersacademy.gm</a></td>
+</tr>
+<tr>
+<td><a href="mailto:njieamy03@gmail.com">njieamy03@gmail.com</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>Design Thinking Society</td>
+<td>Shota Murtskhvaladze</td>
+<td><a href="http://designthinkingsociety.org.ge">http://designthinkingsociety.org.ge</a></td>
+</tr>
+<tr>
+<td><a href="mailto:shotamur@mindworks.ge">shotamur@mindworks.ge</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Georgia</td>
+<td>Educare Georgia</td>
+<td>George Jibladze</td>
+<td></td>
+</tr>
+<tr>
+<td>Razmik Badalyan</td>
+<td><a href="http://www.educaregeorgia.org">http://www.educaregeorgia.org</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="mailto:gjibladze@educaregeorgia.com">gjibladze@educaregeorgia.com</a><br>
+<a href="mailto:rbadalyan@educaregeorgia.com">rbadalyan@educaregeorgia.com</a> |
+| Germany                               | moinworld e.V.                                                    |                                    | <a href="https://moinworld.de">https://moinworld.de</a><br>
+<a href="mailto:moin@moinworld.de">moin@moinworld.de</a>                                                     |
+| Ghana                                 | Ghana Code Club                                                   | Ernestina Edem Appiah              | <a href="http://www.ghanacodeclub.org">www.ghanacodeclub.org</a><br>
+<a href="mailto:tinasupport@gmail.com">tinasupport@gmail.com</a>                                                |
+| Hong Kong                             | Idea Maker HK                                                     | Henry Lee                          | <a href="http://www.ideamakerhk.com">www.ideamakerhk.com</a><br>
+<a href="mailto:henrylee@i3dprinter.com.hk">henrylee@i3dprinter.com.hk</a>                                             |
+| Hong Kong                             | IAMAI Academy (Hong Kong) Ltd                                     | Johnson Chu                        | <a href="http://www.iamai.hk">www.iamai.hk</a><br>
+<a href="mailto:johnson.chu@iamai.hk">johnson.chu@iamai.hk</a>                                                          |
+| India                                 | CodeTigers                                                        | Sandeep Sheokand                   | <a href="mailto:sandeep.sheokand@gmail.com">sandeep.sheokand@gmail.com</a>                                                                    |
+| India                                 | Mozilla Indore                                                    | Mrinal Jain                        | <a href="mailto:jain.mrinal140@gmail.com">jain.mrinal140@gmail.com</a>                                                                      |
+| India                                 | Pi Jam Foundation                                                 | Shoaib Dar                         | <a href="http://www.thepijam.org">http://www.thepijam.org</a><br>
+<a href="mailto:shoaib.dar@thepijam.org">shoaib.dar@thepijam.org</a>                                            |
+| India                                 | RISHS International School                                        |                                    | <a href="http://www.rishsinternationalschool.com">www.rishsinternationalschool.com</a><br>
+<a href="mailto:principal@rishsinternationalschool.com">principal@rishsinternationalschool.com</a>                    |
+| India                                 | Be Cre8v                                                          |                                    | <a href="http://www.becre8v.com">www.becre8v.com</a><br>
+<a href="mailto:sandeep@becre8v.com">sandeep@becre8v.com</a>                                                        |
+| Indonesia                             | Coding Bee Academy                                                | Eko Haripin                        | <a href="http://www.codingbee.org">http://www.codingbee.org</a><br>
+<a href="mailto:hello@codingbee.org">hello@codingbee.org</a>                                               |
+| Ireland                               | Cybersmarties.com                                                 | Diarmuid Hudner                    | <a href="http://www.cybersmarties.com">www.cybersmarties.com</a><br>
+<a href="mailto:diarmuid@cybersmarties.com">diarmuid@cybersmarties.com</a>                                           |
+| Israel                                | Wix                                                               | Yossi Hayut                        | <a href="http://www.wix.com">www.wix.com</a><br>
+<a href="mailto:yossih@wix.com">yossih@wix.com</a>                                                                 |
+| Italy                                 | Programma il Futuro                                               | Enrico Nardelli                    | <a href="https://programmailfuturo.it">https://programmailfuturo.it</a><br>
+<a href="mailto:didattica@programmailfuturo.it">didattica@programmailfuturo.it</a>                                |
+| Japan                                 | 特定非営利活動法人みんなのコード (Code for Everyone)                              | 利根川 裕太 (Yuta Tonegawa)             | <a href="mailto:info@code.or.jp">info@code.or.jp</a>                                                                               |
+| Japan                                 | 湘南ゼミナール (Shonan Seminar)                                          | Team Hour of Code                  | <a href="https://shozemi.com">https://shozemi.com</a>                                                                           |
+| Kazakhstan                            | Love to Code                                                      | Alyona Tkachenko                   | <a href="mailto:alyona@lovetocode.kz">alyona@lovetocode.kz</a>                                                                          |
+| Kenya                                 | Uzima Aid                                                         | Nicholas Juma                      | <a href="http://www.uzimaid.org">http://www.uzimaid.org</a><br>
+<a href="mailto:nicholasjuma@uzimaid.org">nicholasjuma@uzimaid.org</a>                                            |
+| Kuwait                                | Makers Academy                                                    |                                    | <a href="http://makersacademy.net/">http://makersacademy.net/</a><br>
+<a href="mailto:a.alsaleh@bbrains.net">a.alsaleh@bbrains.net</a>                                            |
+| Lebanon                               | Rana Maroun Jbeily Foundation                                     |                                    | <a href="mailto:rmjfoundation@hotmail.com">rmjfoundation@hotmail.com</a>                                                                     |
+| Malaysia                              | Malaysia Digital Economy Corporation (MDEC)                       | Mohamad Zulfadli Mohd Amin         | <a href="https://www.mdec.my">https://www.mdec.my</a><br>
+<a href="mailto:zulfadli.amin@mdec.com.my">zulfadli.amin@mdec.com.my</a>                                              |
+| Malaysia                              | Telebort Technologies Sdn Bhd                                     |                                    | <a href="http://www.telebort.com">www.telebort.com</a>                                                                              |
+| Mauritania                            | HADINA RIMTIC                                                     |                                    | <a href="http://hadinarimtic.org">http://hadinarimtic.org</a>                                                                       |
+| Mexico                                | Colegio Nikola Tesla                                              | Larisa Hinojosa                    | <a href="http://nikolatesla.edu.mx">http://nikolatesla.edu.mx</a>                                                                     |
+| Mexico                                | Cuantrix - Fundación Televisa                                     | Nomara Parra                       | <a href="http://www.cuantrix.mx">www.cuantrix.mx</a><br>
+<a href="mailto:nomara.parra@fundaciontelevisa.org">nomara.parra@fundaciontelevisa.org</a>                                         |
+| Mongolia                              | Codercub                                                          | Zolbayar Magsar                    | <a href="https://codercub.com">https://codercub.com</a><br>
+<a href="mailto:info@codercub.com">info@codercub.com</a>                                                     |
+| Morocco                               | S.T.E.M ROBOTICS AGADIR                                           | Dr. Isha Daramy                    | <a href="mailto:Stemagadir@gmail.com">Stemagadir@gmail.com</a>                                                                          |
+| Nepal                                 | Adhyayan School                                                   | Sandeep Sharma                     | <a href="http://adhyayan.edu.np">http://adhyayan.edu.np</a><br>
+<a href="mailto:sandeep.sharma@adhyayan.edu.np">sandeep.sharma@adhyayan.edu.np</a>                                      |
+| New Zealand                           | Ara Institute of Canterbury                                       | Amitrajit Sarkar                   | <a href="http://www.ara.ac.nz">www.ara.ac.nz</a><br>
+<a href="mailto:sarkara@cpit.ac.nz">sarkara@cpit.ac.nz</a>                                                           |
+| New Zealand                           | Google                                                            | Sally-Ann Williams                 | <a href="https://www.google.com/edu/cs">https://www.google.com/edu/cs</a>                                                                 |
+| New Zealand (Aotearoa)                | OMGTech!                                                          | Vivian Chandra                     | <a href="https://omgtech.co.nz">https://omgtech.co.nz</a><br>
+<a href="mailto:viv@omgtech.co.nz">viv@omgtech.co.nz</a>                                                    |
+| Nigeria                               | CODE4KT - coding for kids &amp; teens                                 | Mayokun Odusote                    | <a href="http://code4kt.com.ng">http://code4kt.com.ng</a><br>
+<a href="mailto:hello@code4kt.com.ng">hello@code4kt.com.ng</a>                                                 |
+| Nigeria                               | Dev's District Nigeria                                            | Emmanuel Odunlade                  | <a href="http://devsdistrictnigeria.com">http://devsdistrictnigeria.com</a><br>
+<a href="mailto:E.odunlade@devsdistrictnigeria.com">E.odunlade@devsdistrictnigeria.com</a>                          |
+| Nigeria                               | Eduxtra                                                           | Paul Obuke Omu                     | <a href="mailto:hello@eduxtra.com.ng">hello@eduxtra.com.ng</a>                                                                          |
+| Nigeria                               | Odyssey Educational Foundation                                    | Stella Uzochukwu-Denis             | <a href="http://www.odysseyedufoundation.org">www.odysseyedufoundation.org</a><br>
+<a href="mailto:ifywayne@gmail.com">ifywayne@gmail.com</a>                                            |
+| Nigeria                               | KodeHauz                                                          | Glory Agatevure                    | <a href="http://www.kodehauz.com">http://www.kodehauz.com</a>                                                                       |
+| Nigeria                               | The Zariah Elizabeth Foundation                                   | Akindayo Akindolani                | <a href="http://www.tzefoundation.org">www.tzefoundation.org</a><br>
+<a href="mailto:dayo@tzefoundation.org">dayo@tzefoundation.org</a>                                               |
+| Norway                                | Lær Kidsa Koding                                                  | Line Moseng                        | <a href="https://kidsakoder.no">https://kidsakoder.no</a>                                                                         |
+| Oman                                  | Engineering Village                                               |                                    | <a href="http://www.ev-center.com">www.ev-center.com</a>                                                                             |
+| Pakistan                              | DIGIT                                                             | Majid Hussain                      | <a href="https://digit.com.pk/">https://digit.com.pk/</a><br>
+<a href="mailto:majid.hussain@digit.com.pk">majid.hussain@digit.com.pk</a>                                           |
+| Pakistan                              | KnowledgeJump                                                     | Nasir Farhat Khan                  | <a href="mailto:nasir@knowledgejump.net">nasir@knowledgejump.net</a>                                                                       |
+| Pakistan                              | TechValley                                                        | Dr. Waqar S. Qureshi               |                                                                                               |
+| Peru                                  | Code en mi Cole                                                   | Renzo Sousa                        | <a href="http://codenmicole.com">http://codenmicole.com</a>                                                                        |
+| Philippines                           | CodersGuild.Net                                                   | Joey Gurango                       | <a href="https://www.codersguild.net">https://www.codersguild.net</a><br>
+<a href="mailto:joey@gurango.net">joey@gurango.net</a>                                               |
+| Philippines                           | The Startup Deck Balanga                                          | Mark Colentava                     | <a href="http://www.startupbataan.com">http://www.startupbataan.com</a><br>
+<a href="mailto:mark@colentava.com">mark@colentava.com</a>                                            |
+| Philippines                           | UP System Information Technology Foundation, Inc.                 | Noel Feria                         | <a href="https://upsitf.org">https://upsitf.org</a>                                                                            |
+| Poland                                | UMK Toruń                                                         | Maciej M. Sysło                    | <a href="http://godzinakodowania.pl">http://godzinakodowania.pl</a><br>
+<a href="mailto:syslo@ii.uni.wroc.pl">syslo@ii.uni.wroc.pl</a>                                            |
+| Portugal                              | Colégio EFANOR                                                    |                                    | <a href="http://www.colegioefanor.pt/pt">http://www.colegioefanor.pt/pt</a>                                                                |
+| Portugal                              | Gabinete de Modernização das Tecnologias Educativas               | Rodolfo Pinto                      | <a href="http://www02.madeira-edu.pt/dre/main.aspx">http://www02.madeira-edu.pt/dre/main.aspx</a>                                                     |
+| Romania                               | ADFABER                                                           | Alin Chiriac                       | <a href="mailto:alin@adfaber.org">alin@adfaber.org</a>                                                                              |
+| Rwanda                                | Children’s Creativity Lab                                         | Ildephonse Mungwarakarama          | <a href="http://creativity.rw">http://creativity.rw</a><br>
+<a href="mailto:ildephonse@creativity.rw">ildephonse@creativity.rw</a>                                              |
+| Singapore                             | Infocomm Media Development Authority of Singapore                 |                                    | <a href="https://www.imda.gov.sg">https://www.imda.gov.sg</a>                                                                       |
+| Slovakia                              | Accenture                                                         | Martina Pometlova                  | <a href="http://ds.blf.sk">http://ds.blf.sk</a><br>
+<a href="mailto:sk.hourofcode@accenture.com">sk.hourofcode@accenture.com</a>                                               |
+| South Africa                          | Code for Change                                                   |                                    | <a href="http://www.codeforchange.co.za">http://www.codeforchange.co.za</a>                                                                |
+| South Africa                          | ITC CLUB Mpumalanga                                               | Nomusa Keninda                     | <a href="http://mpumalangaictclub.blogspot.com">http://mpumalangaictclub.blogspot.com</a>                                                         |
+| South Korea                           | Korea Information Science Education Federation                    |                                    | <a href="http://kcode.kr">http://kcode.kr</a><br>
+<a href="mailto:hwankim92@gmail.com">hwankim92@gmail.com</a>                                                        |
+| Spain                                 | Acludi                                                            | Juana Martínez                     | <a href="http://www.acludi.blogspot.com">www.acludi.blogspot.com</a><br>
+<a href="mailto:acludi@yahoo.com">acludi@yahoo.com</a>                                                   |
+| Spain                                 | CSTA Spain                                                        | Santiago Fernández-Cabaleiro       | <a href="http://www.aapri.es">www.aapri.es</a><br>
+<a href="mailto:santiagocabaleiro@gmail.com">santiagocabaleiro@gmail.com</a>                                                   |
+| Spain                                 | Informatics Faculty - University of the Basque Country (UPV/EHU)  | Edurne Larraza Mendiluze           | <a href="https://www.ehu.eus/en/web/informatika-fakultatea/home">https://www.ehu.eus/en/web/informatika-fakultatea/home</a><br>
+<a href="mailto:edurne.larraza@ehu.eus">edurne.larraza@ehu.eus</a>              |
+| Sri Lanka                             | XiCigny                                                           | Dileepa Rajapaksa                  | <a href="mailto:dileepa@xicigny.com">dileepa@xicigny.com</a>                                                                           |
+| Sweden                                | Edvira                                                            |                                    | <a href="http://edvira.com">http://edvira.com</a><br>
+<a href="mailto:hoc@edvira.com">hoc@edvira.com</a>                                                           |
+| Taiwan                                | Girls in Tech Taiwan                                              | Jane Shih                          | <a href="https://facebook.com/girlsintechtaiwan">https://facebook.com/girlsintechtaiwan</a><br>
+<a href="mailto:Jane.shih@girlsintech.org">Jane.shih@girlsintech.org</a>                           |
+| Taiwan                                | Women Who Code Taipei                                             | Jane Shih                          | <a href="https://www.womenwhocode.com/taipei">https://www.womenwhocode.com/taipei</a><br>
+<a href="mailto:Janeshih@womenwhocode.com">Janeshih@womenwhocode.com</a>                              |
+| Tanzania                              | Jenga Hub                                                         |                                    | <a href="http://jengahub.com">http://jengahub.com</a>                                                                           |
+| Thailand                              | Aksorn Education PLC                                              |                                    | <a href="http://www.aksorn.com">www.aksorn.com</a>                                                                                |
+| Thailand                              | Siamentis Ltd.                                                    | Chet Chetsandtikhun                | <a href="mailto:chet@siamentis.com">chet@siamentis.com</a>                                                                            |
+| Turkey                                | RobinCode                                                         | Gözde Erbaz                        | <a href="http://www.robincode.org">www.robincode.org</a><br>
+<a href="mailto:gozde@robincode.org">gozde@robincode.org</a>                                                      |
+| UK                                    | Computing At School (CAS)                                         | Abi Edwards                        | <a href="http://www.computingatschool.org.uk">http://www.computingatschool.org.uk</a><br>
+<a href="mailto:compatsch@bcs.uk">compatsch@bcs.uk</a>                                       |
+| Vietnam                               | Microsoft Vietnam                                                 | Nhi Le                             | <a href="https://www.microsoft.com/vi-vn">https://www.microsoft.com/vi-vn</a><br>
+<a href="mailto:nhile@microsoft.com">nhile@microsoft.com</a>                                        |</p>
+
+<p><a href="/us/tr/#join">
+<button style="float: right; margin-top: 50px;">
+Yaklaşık bir saat
+</button>
+</a></p>
+
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Bize Ulaşın</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Destek</a>
+</li>
+<li>
+<a href="/us/tr/partners" target="_blank">Ortaklar</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Şartlar</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Gizlilik Politikası</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2015 Code.org. Tüm hakları saklıdır.
+<br>
+Hour of Code™ Code.org markasıdır.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

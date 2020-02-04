@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Towards Measuring Basic Coding Proficiency" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/about/evaluation/proficiency2016" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Towards Measuring Basic Coding Proficiency | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<div>
+<div class="col-80-right">
+<h1>Towards Measuring Basic Coding Proficiency</h1>
+
+<p><em>March, 2017</em></p>
+
+<h2>Summary</h2>
+
+<p>This report explains Code.org’s investigations into whether or not students using its courses designed for K-8 were achieving any level of "basic coding proficiency".  Since the course materials weren’t originally engineered to measure coding proficiency, nor was the curriculum designed with specific coding proficiency targets in mind, our challenge was to see what we could learn from data we had on hand. We have collected a relatively massive amount of user activity data over the year, and despite the fact that no universal definition of “coding proficiency” exists for this age group, we wanted see if we could at least gain some insight into how well students were doing with the coding concepts presented across the courses we offer on our platform. This paper gives background about the puzzles in our courses and the kinds of data we collect, explains our methods for tagging puzzles for concepts and difficulty, and defining what “proficiency” means for our platform. Finally we present a few of our results and describe learnings and future work.</p>
+
+<p>This report describes a starting point for us as our organization begins to turn its eye toward more rigorous experimental designs, statistical analysis and modeling to measure student learning.  We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing. If you’d like to get involved please contact <a href="mailto:data@code.org">data@code.org</a></p>
+
+<h2>Background</h2>
+
+<p>Code.org’s Computer Science Fundamentals program consists of five courses geared toward K-8 students.  Courses 1-4 are designed to be approximately 20 class-hours long, including "unplugged" activities which are lessons that happen off the computer.  Many of our materials are designed to be taught by a teacher in a classroom. They are typically taught once or twice a week over the course of a semester.</p>
+
+<p>The primary feature of these courses are programming puzzles that guide students through using a certain programming concept (like a loop) to solve a small problem.  Our puzzles are similar to what are known as "Parson’s Puzzles" <sup><a name="ftnt1ref" href="#ftnt1">[1]</a></sup> in which a small challenge or puzzle is laid forth, and you are presented with a set of coding blocks as tools to solve that problem.  This approach to learning programming makes it impossible to make certain kinds of typical “beginner mistakes” related to syntax and, in theory, allows the learner’s cognitive load to focus more on how to use code as a problem-solving medium.</p>
+
+<p>Computer Science Fundamentals courses are broken into "stages" (roughly speaking, each stage is one lesson or class-hour) and each stage is comprised of a sequence of “levels” - usually 10-15 per stage. </p>
+
+<p>Most levels are coding levels (which we’ll call "puzzles" for this paper) but not all.  There are whole stages devoted to unplugged activities, and there are a handful of “quiz”-style questions like matching or multiple choice.  Below is table that summarizes the courses, showing how many stages and levels each has along with programming concepts that students encounter in the course.</p>
+
+<table>
+  <tr>
+    <th>CS Fundamentals Course</th>
+    <th>Who’s it for?</th>
+    <th>Concepts </th>
+  </tr>
+  <tr>
+    <td>
+<a href="https://studio.code.org/s/course1" target="_blank">Course 1</a><br>
+18 stages<br>
+119/146 coding levels</td>
+    <td>Pre-readers (K-1)<br>
+NOTE: this course was not used in measuring student proficiency</td>
+    <td>Instruction Sequencing, Loops</td>
+  </tr>
+  <tr>
+    <td>
+<a href="https://studio.code.org/s/course2" target="_blank">Course 2</a><br>
+19 stages<br>
+128/159 coding levels</td>
+    <td>Elementary school students<br>Recommended starting point for students in 2nd-5th grade who have never tried CS before</td>
+    <td>Sequencing, Loops (+ small amount of Conditionals and Events)
+</td>
+  </tr>
+  <tr>
+    <td>
+<a href="https://studio.code.org/s/course3" target="_blank">Course 3</a><br>
+21 stages<br>
+148/177 coding levels</td>
+    <td>Elementary school students<br>
+Designed for students 3rd-5th grade after completing course 2</td>
+    <td>Sequencing, Loops, Conditionals, Events, Functions
+</td>
+  </tr>
+  <tr>
+    <td>
+<a href="https://studio.code.org/s/course4" target="_blank">Course 4</a><br>
+22 stages<br>
+161/167 coding levels</td>
+    <td>Elementary school students<br>
+Designed for 5-6th grade students after completing course 3</td>
+    <td>Sequencing, Lots of Loops, Conditionals, Events, Functions with parameters, Variables</td>
+  </tr>
+  <tr>
+    <td>
+<a href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a><br>
+20 stages<br>
+109/109 coding levels</td>
+    <td>Middle and high school students<br>Designed for older students new to computer science. The course covers most of the material in courses 2 and 3 (and a few concepts from course 4) in an accelerated format.</td>
+    <td>Sequencing, Loops, Conditionals, Events, Functions</td>
+  </tr>
+</table>
+
+<h3>A Brief History of our Data Investigations</h3>
+
+<p>Over time, this collection of courses became popular beyond anything we could have imagined.  The puzzles contained in the courses have been attempted millions of times by millions of students and we have logged much of that student activity, but haven’t done much with it, yet.</p>
+
+<p>Historically we reported superficial measures like the number of active student accounts or lines of code written. Going another iteration deeper we began to see if we could track student engagement in the courses. We tracked how many puzzles a student had solved and roughly mapped CS concepts to stages (groups of puzzles that comprise a "lesson") of each course. </p>
+
+<p>Looking at engagement data coupled with concept-tagging gave some further insight about whether students were progressing through the course, which puzzles students got stuck on or did quickly.  We could see where activity tailed off, presumably due to lack of interest or due to puzzles being too difficult. The insights gained from these investigations led us to develop more targeted hints and error messages for students in an effort to get them "over the hump."</p>
+
+<p>However, these measures were far too coarse-grained to tell us much beyond basic student activity, and whether they were they actively using a puzzle or not.  It did not differentiate the difficulty of the puzzle or student performance. </p>
+
+<h3>Looking for student learning</h3>
+
+<p>We wanted to take a step further to see if students in our CS Fundamentals courses were actually learning and applying CS concepts.  Most of the students using these courses are in elementary school and coding for the first time.  So while the courses ask students to solve puzzles using very basic coding concepts, anecdotally, we hear from teachers and professional development facilitators that students <em>are</em> <em>learning</em> the fundamentals of sequencing instructions, loops, conditionals, events, and more. </p>
+
+<p>As we looked into measuring this, we could not find an externally validated assessment for measuring computer science for this age group. Furthermore, the research on learning trajectories for students in this age range is at best in the nascent stages.<sup><a name="ftnt2ref" href="#ftnt2">[2]</a></sup> Measuring actual student learning in anything is a difficult and rigorous process and one for which our courses and puzzles were not originally designed. The CS Fundamentals puzzles are designed to help students learn to use basic coding concepts like sequence, iteration, and conditional logic, not for assessments. </p>
+
+<p>Our challenge then became: given all of this student activity data can we detect whether or not students are demonstrating any "proficiency" at coding? Could we take this student activity data, combined with our knowledge about the puzzles themselves, to determine if the user was doing more than passively watching the screen, randomly moving coding blocks around, and hitting run?</p>
+
+<p>While we do not have externally validated assessments "baked" into the course, we do gain some information every time a student solves a puzzle on Code Studio.  Among other things we capture: timestamps for starting, attempting and finishing a puzzle; the student’s code from each attempt; which hints they viewed, and so on.</p>
+
+<p>We know that we can’t make any strong claims about (capital L) learning or what caused it. There are too many environmental variables - students working together, teacher interactions, homework, parents, direct instruction, real class v. playtime - that we don’t have any insight into and will never be in our control.  The best we can do is look at our puzzles as though they are individual test or quiz questions and see if a student got them right.  Since our puzzles have a wide range of difficulty in terms of both the core concepts at play and the amount of guidance provided, we thought we could develop a cutoff point or bar over which we could theoretically say a student has demonstrated some amount of "coding proficiency".</p>
+
+<h2>Methods</h2>
+
+<h3>Defining "Coding Proficiency"</h3>
+
+<p>What does "coding proficiency" mean to us?  In a nutshell it means: the student can apply coding concepts (sequencing, iteration, functions, etc.) to solve some number of coding puzzles on our platform.  Because of the lack of validated assessments for grades K-8 computer science we want to be cautious about the term “proficiency”.  We use it as a shorthand, but it has a narrow and specific definition for our purposes here.  You should continue to read to understand how we measured things and where we set the proficiency bar.</p>
+
+<h3>Producing the Concepts-Difficulty Matrix</h3>
+
+<p>About a year ago, we published <a href="http://teacherblog.code.org/post/143765455379/were-tagging-puzzles-in-code-studio-with-their">this blog post</a> outlining a new approach of attempting to measure student "proficiency". We looked at the CS Fundamentals curriculum and identified 6 broad programming concepts addressed: sequencing, loops, conditionals, events, functions, and variables.</p>
+
+<p>Since then we also broke some of the concepts up into more descriptive parts. For example, "loops" (shorthand for: iteration) is a pretty big concept that is presented in our environment in several different ways: repeat loops, repeat until, for-loops and so on. Similarly, we broke up functions to differentiate using functions with parameters. In the end our set of concepts was:</p>
+
+<table>
+  <tr>
+    <td valign="top">Sequencing (Algorithms)
+</td>
+    <td valign="top">Conditionals</td>
+    <td valign="top">Variables</td>
+    <td valign="top">Loops
+<li>Repeat
+</li>
+<li>Repeat Until / Repeat While
+</li>
+<li>For Loops
+</li>
+</td>
+    <td valign="top">Functions 
+<li>Defining and Calling 
+</li>
+<li>Defining and Calling w/Params
+</li>
+</td>
+    <td valign="top">Events</td>
+  </tr>
+</table>
+
+<p><br><br></p>
+
+<p>The courses also present concepts such as debugging, collaboration, internet safety, and more, but those concepts and lessons are often "unplugged" or happen in the classroom outside the the Code Studio environment.  The metrics presented here only measure student performance on puzzles in Code Studio related to computer programming.</p>
+
+<p>We decided to rate puzzles for "difficulty" on a 5-point scale, with 1 being “easy” and 5 being “hard”.  Generally speaking, a rating of 1 meant the puzzle required virtually no problem solving - it might simply ask the student to click a button and observe the results, a stepping stone in a longer progression.  A rating of 5 meant the puzzle was very challenging, or the solution required sophisticated application of concepts to get it right or to produce the optimal solution.</p>
+
+<p>We produced a matrix of the concepts v. difficulty ratings.   Theoretically, each cell contained a list of items, typical for our puzzles, that we thought matched the given concept and difficulty.  Here’s a snippet that shows the difference between difficulty 1 and 5 for repeat loops:<br><br></p>
+
+<div align="center"><table width="70%">
+  <tr>
+    <th>Difficulty</th>
+    <th>Concept: Repeat Loops</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>a) Move existing code into a loop with prompting<br>
+b) Construct a simple (1-instruction) loop with prompting<br>
+c) Identify areas of a program that repeat exactly<br>
+d) Modify or delete a single loop instruction with prompting<br>
+e) Change loop run parameter</td>
+  </tr>
+  <tr>
+    <td>•••</td>
+    <td>•••</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>a) Use a single nested loop layer without prompting<br>
+b) Use multiple nested loops in sequence with or without prompting<br>
+c) Use nested loops more than one layer deep with prompting</td>
+  </tr>
+</table></div>
+
+<p><br><br></p>
+
+<p>We shared the resulting <a href="https://docs.google.com/spreadsheets/d/15u3XKI8dr2ysFlp-pymvyX6XCvUe3YeK05M-AaM6H1o/edit#gid=0">concept-difficulty matrix</a> for review in May of 2016. </p>
+
+<p>You can read more the work that led up to that in this page we created to define: <a href="https://code.org/about/evaluation/proficiency">What is Basic Coding Proficiency?</a></p>
+
+<p>Once we had the matrix, we set about tagging each of the ~500 puzzles across all of the CS Fundamentals courses to associate each puzzle with one or more concepts, and for each concept, a difficulty rating.  For example, the puzzle shown below has different levels of difficulty for different concepts.  It is tagged:  <em>Sequencing-4, Repeat Until Loops-2 and Conditionals-2.</em> </p>
+
+<p align="center"><img src="/images/proficiency/puzzle-screenshot.png" width="80%">
+<br>
+<a href="https://studio.code.org/s/course3/stage/8/puzzle/3" target="_blank">https://studio.code.org/s/course3/stage/8/puzzle/3</a>
+</p>
+
+<p>Once tagged, we turned the crank on the database to produce all of the student activity data side by side with the concept-difficulty rating of each puzzle they completed. Our hope was that doing even superficial analysis of this new data would yield more insights and point us in the direction of determining some level of "coding proficiency".</p>
+
+<h3>First attempts at Measuring student performance in Code Studio</h3>
+
+<p>The first step of our analysis was simply trying to get a handle on what a student has demonstrated when they complete a particular puzzle. We expect that this will be an area where we continually iterate and improve our understanding, but as a first attempt we looked at three factors:</p>
+
+<ol>
+<li><p><strong>Did they complete the puzzle correctly?</strong> On many puzzles, the student cannot complete the puzzle without using the concept correctly. Students who don’t get it may try over and over again or skip to the next puzzle leaving it temporarily incomplete.  We only counted puzzles that were solved correctly.</p></li>
+<li><p><strong>Did they complete the puzzle with optimal block counts?</strong> Most of the puzzles on Code Studio show an "optimal" block count - the expected number of lines of code in the desired solution. We chose to use optimal block count as an indicator of “proficiency” since in many cases the optimal block count is not achievable without applying the desired concept - this is especially true for puzzles with loops. For example, you can pass the puzzle without a loop by manually repeating lines of code over and over, but only students who use loops can pass with the optimal block count.  </p></li>
+<li><p><strong>Did they complete the puzzle without using hints?</strong> Many puzzles offer one or more hints which a student may elect to view by clicking on a "hint" button. We only count a puzzle as evidence of student proficiency if the student solves it without using any hints. This was a hard choice to make. These hints vary tremendously in the amount of help they give, from a gentle nudge in the right direction to something that basically gives away the answer.  And hints also have their own progressions. It’s worth noting that our system does give some custom error messages when an incorrect solution is attempted. Custom error messages are a form of hinting.  So for our analysis, to keep it simple, we only counted puzzle completion toward proficiency if a student did not ask for any hints. </p></li>
+</ol>
+
+<p>There are many additional factors that may be indicators of proficiency such as length of time to solve the puzzle, number of attempts, or particular solutions. However, as a first attempt at measurement, we only used indicators that unambiguously indicated success. A high number of attempts at a puzzle, for example, may indicate a student slowly building up his/her code and testing as they go along (a common best practice) or it could be a student struggling to find the correct answer. </p>
+
+<h3>Drawing the line on proficiency: Concepts + Difficulty</h3>
+
+<p>Defining "proficiency" using our tagging system is both somewhat arbitrary and nuanced.  But as a high-level metric we wanted to be able to say <em>X number of students using our platform demonstrated “basic coding proficiency”</em>.  We have to draw a line somewhere. This required us to make some choices about: </p>
+
+<ol>
+<li><p>How many different puzzles did a student have to complete correctly? </p></li>
+<li><p>Across how many different concepts? </p></li>
+<li><p>At what level of difficulty?  </p></li>
+</ol>
+
+<p><strong>How many puzzles?  Three.</strong></p>
+
+<p>For each puzzle a user completes correctly, with optimal block count, and without hints, we give that student "credit" for the associated concept and difficulty.  For example: if a certain puzzle had tags for: <em>Sequencing - 2</em>   and <em>Repeat-Loop - 4</em>  then that student would get 1 “point” toward sequencing at difficulty level 2, and one point for Repeat-Loops at difficulty 4.</p>
+
+<p>For our first pass we set the number of puzzles to solve at three (3) to say the student "demonstrated proficiency" for a given concept-difficulty pairing. It’s important to note that solving a higher-difficulty puzzle <em>also</em> counts toward the student’s proficiency at a lower levels of difficulty. So, for example, the student who completes a puzzle tagged <em>Repeat-Loop - 4</em> gets “points” toward proficiency for difficulties 1-3 as well. Thus:</p>
+
+<p><em>A student has demonstrated proficiency at concept X, difficulty Y when they have solved three puzzles tagged with concept X and difficulty Y or higher.</em></p>
+
+<p>It’s also worth noting that some pairs, like Sequencing at difficulty 3 are present in hundreds of puzzles, and also very easy -- you might be demonstrate proficiency within only a few puzzles attempted, and have many opportunities to do so.  Other pairs, like for-loops at difficulty 5 do not apply to many puzzles, and these puzzles tend to be fairly challenging.</p>
+
+<p>The heat map below shows the total number of concept-to-difficulty mappings across all puzzles that we counted toward "proficiency".      Notice that “sequencing” is prevalent - every puzzle that we tagged had some level of sequencing involved.</p>
+
+<p align="center"><img src="/images/proficiency/concept-difficulty-mapping.png" width="70%"></p>
+
+<p><strong>How many concepts? Three.</strong></p>
+
+<p>Basic computer programming requires students to learn multiple concepts that interact with and build on each other, but there is no established or "correct" order in which to learn them. For example, one might learn conditionals before loops and vice versa. Thus, we wanted to look at students who had demonstrated proficiency for <em>some number</em> of different concepts.  </p>
+
+<p>As an initial estimate we chose to look at students who demonstrated proficiency in three (3) concept areas. </p>
+
+<p><strong>How difficult? Difficulty Level 3.</strong></p>
+
+<p>Tagging puzzles for difficulty was problematic and, when vetted internally, showed some inconsistencies.  (See: Weaknesses and Challenges section at the end of this doc).  In the end we found that our 1-5 rating whittled down to three useful buckets:</p>
+
+<table>
+  <tr>
+    <th>Difficulty 1 - 2</th>
+    <th>Difficulty 3</th>
+    <th>Difficulty 4-5</th>
+  </tr>
+  <tr>
+    <td>Difficulty 1 and 2 tend to measure measure introduction or basic exposure to a concept or idea. The student does not have to understand the concepts to solve puzzles at these levels. While they may use loops, conditionals, etc., the puzzles are simple or the student is prompted to do it in the right way.</td>
+    <td>Difficulty 3 tends to be puzzles where students have to apply loops, conditionals or other concepts, toward solving a problem.  The instruction prompts for these puzzles also tend to be less explicit or prescriptive, and more like an open-ended challenge: "can you solve it?" </td>
+    <td>Difficulty 4-5 tend to be puzzles that are one or combination of open ended instructions, longer solutions, more complex application of ideas, or even require novel approaches to new situations.</td>
+  </tr>
+</table>
+
+<p>Since Difficulty 3 was the first where students tended to be solving problems rather than simply following instructions, we chose difficulty level 3 as the lower cut off point for demonstrating "basic proficiency".  We hope to have many students go beyond this basic level to reach difficulty levels 4 and 5. And, our middle school and high school courses go much further in teaching computer science. </p>
+
+<p><strong>Finally, our definition of "proficiency"</strong></p>
+
+<p>In the end our definition for showing "basic coding proficiency" is:</p>
+
+<p style="width: 70%; margin: auto;">
+<em>
+A student has demonstrated basic coding proficiency when they have solved three or more puzzles, for three or more concept-areas, at difficulty level 3 or higher, across one or more CS Fundamentals courses in Code Studio.
+</em>
+</p>
+
+<p><br></p>
+
+<p>The fact that there is some symmetry to this definition (3 puzzles, 3 concepts, difficulty 3) is purely coincidental.  We were not trying to be cute or to develop some kind of mnemonic.  Given the distribution of concept-difficulties (see the heat map above) this seemed to be a fair bar for our initial definition of "basic proficiency" and is helpful for visualizing progress, but it also has flaws, described later in this document, which we hope to improve over time.</p>
+
+<h1>Results</h1>
+
+<p>We have only begun to dig more deeply into the data to look for patterns and we still have more questions than answers. But, we wanted to share some of what we’ve found so far to begin the conversation.  </p>
+
+<h3>Dates and Scope of Data</h3>
+
+<p>What follows below are results and data collected between <strong>January 1 - December 31, 2016</strong> from student users who were <strong>logged in</strong> to the Code Studio environment.  Code Studio does not require users to be logged in order to use the puzzles.  A large number of users, roughly a third, use these materials without logging in. However, most of the non-logged in user sessions are show activity on puzzles early in courses, so our assumption is that most of these students either drop out or create accounts before they reach basic coding proficiency. </p>
+
+<h2>How many students?</h2>
+
+<p align="center"><img src="/images/proficiency/students-proficient.png" width="70%"></p>
+
+<p>887,829 students of all ages demonstrated proficiency according to our definition (3 concepts, 3 correct puzzles, difficulty 3 or higher). This number represents roughly 23% of all students who successfully complete any puzzles in our system. Here is a view of how the raw numbers break down with students who are in the K-12 age range.<sup><a name="ftnt3ref" href="#ftnt3">[3]</a></sup></p>
+
+<p></p>
+
+<p align="center">
+    <strong>Fig. 0 - Number of students demonstrating basic proficiency in 2016 by age</strong><br>
+       <img src="/images/proficiency/darkblue_sq.png"> demonstrated proficiency <img src="/images/proficiency/lightblue_sq.png">      not yet demonstrating proficiency<br>
+    <img src="/images/proficiency/proficiency-chart.png" width="80%"><br>
+    Age
+</p>
+
+<h3>An important note on percentages</h3>
+
+<p>Why do "only" 23% demonstrate basic coding proficiency? It’s important to note that the students using Code Studio aren’t all studying as part of a long-term course. Again, roughly a third of the students using Code Studio never even register for an account and their usage cannot be measured in this fashion, even if they complete every single puzzle in every single course.  Looking only at students with registered accounts, they fall into three roughly equal-sized buckets in terms of their general activity on our system: </p>
+
+<ol>
+<li><p>Roughly a third use the materials for <em>less than a day</em>. Many teachers and schools use CS Fundamentals courses for Hour of Code<sup><a name="ftnt4ref" href="#ftnt4">[4]</a></sup> activities; students work on the first few puzzles for a one-time event and never come back. </p></li>
+<li><p>Roughly a third try puzzles for less than a month, which probably isn’t enough time to complete enough qualifying puzzles. </p></li>
+<li><p>And roughly a third continue for at least a month, which is the group most relevant for the data in this report since it is the most likely that this group represents students of teachers who implemented the course(s) as part their classroom curriculum.</p></li>
+</ol>
+
+<p>Given the nature of how different students, schools, and teachers use Code Studio, we don’t set goals around the <em>percentage</em> of these students who demonstrate proficiency, because the fidelity or mode of implementation varies wildly from Hour of Code activities (one hour) all the way to complete course implementations (20+ hours). What’s more important to us is the absolute number of students who demonstrate proficiency, and the absolute number of teachers who implement a high-fidelity course in their classrooms. </p>
+
+<p>In the charts below, unless noted otherwise, when we report a percentage, <em>the denominator is the set of registered student accounts on Code Studio where the students completed at least one puzzle (with optimal block counts and without viewing hints) in any one of the courses where student progress counts towards our measure of coding proficiency during the period of Jan. 1 - Dec. 31, 2016.</em></p>
+
+<h3>Breakdown between classrooms vs. independent study</h3>
+
+<p>From our data we see that most students in the K-12 age range are using the materials "with a teacher" which means that the student account has been assigned to a section that belongs to a teacher account.  </p>
+
+<p align="center">
+    <strong>
+        Fig. 1 - Students with and without a teacher as a % of all students within their age group
+    </strong><br>
+       <img src="/images/proficiency/darkblue_sq.png"> with teacher <img src="/images/proficiency/lightblue_sq.png"> without teacher<br>
+    <img src="/images/proficiency/with-without-teacher.png" width="80%"><br>
+    Age
+</p>
+
+<h3>Breakdown by concept and difficulty</h3>
+
+<p>The table below shows, for each concept, the raw number of students who solved 3 or more puzzles (with optimal block count and no hints) at or above each level of difficulty. Recall that difficulty 3 is where we set the bar to say a student "demonstrated proficiency" for any given concept, but this table effectively shows what it would look like if we had set the bar at other levels of difficulty.</p>
+
+<p align="center">
+    <strong>Fig. 2 - Number of students demonstrating proficiency across concepts and levels of difficulty**
+</strong><br>
+<img src="/images/proficiency/concept-difficulty-breakdown.png" width="80%">
+</p>
+
+<h2>Activity of students demonstrating proficiency</h2>
+
+<p>Roughly speaking, a majority of students who reach the proficiency bar do so having worked on 100 puzzles or fewer, and most have done so by 200 puzzles or fewer.  Overall, most student activity is confined to one course as the number of coding puzzles in a course ranges from 109 to 161.  Many students reaching proficiency in 100 puzzles or fewer are older students using the accelerated course which has 109 coding puzzles. </p>
+
+<p>The chart below shows for all students who eventually reach the proficiency bar, how many <em>total</em> puzzles they attempted. Note that it does not indicate the moment when they actually reached proficiency. Rather, it shows for a student who reached proficiency, the all-time number of puzzles that student attempted.  </p>
+
+<p></p>
+
+<p align="center">
+    <strong>
+        Fig. 3 - Cumulative % of students demonstrating proficiency by number of puzzles attempted
+    </strong><br>
+    <img src="/images/proficiency/cumulative.png" width="80%"><br>
+
+</p>
+
+<p><em>Note: in the graph above we cut the x-axis off at 200 puzzles because the remaining portion of the curve flattens out considerably over another ~400 puzzles. The remaining ~10% likely represents students who did every puzzle in many, or all, of the different courses.</em></p>
+
+<h2>Does the age of the student make a difference?</h2>
+
+<p>Keeping in mind that 23% of all students demonstrate proficiency, the chart below shows how it breaks down by age. You can see that larger <em>percentages</em> of older students reach proficiency, though it’s worth noting (see above) that fewer older students overall use the courses.  For the chart below we’ve confined the data to the age range 7-13 which is the age the puzzles were designed for.</p>
+
+<p></p>
+
+<p align="center">
+    <strong>
+        Fig. 4 - Students demonstrating basic proficiency as % of all students within their age group
+    </strong><br>
+    <img src="/images/proficiency/age-group.png" width="70%"><br>
+    Age
+
+</p>
+
+<p>Because of where we set the bar, it’s pretty difficult for young students to demonstrate proficiency.  We did not count <em>any</em> of the puzzles in course 1 (course for pre-readers) toward the proficiency measure.  We suspect that older students’ reading level, physical dexterity with computer controls and the fact that they are more likely to be using these courses in a classroom setting, contribute to these effects.  </p>
+
+<h2>Does having a teacher make a difference?</h2>
+
+<p>We found students associated with teachers<sup><a name="ftnt5ref" href="#ftnt5">[5]</a></sup> were more likely to demonstrate proficiency. Having a teacher appears to make a slight difference for younger students, but for older students the difference is quite pronounced.  There are a variety of factors that may lead to this that we don’t have insight into at the moment.  For example, a younger student who appears to be working “on their own” might be at home side by side with a parent, whereas an older student might actually be on their own.  This is another area of potential future investigation.</p>
+
+<table>
+  <tr>
+    <td style="border: 0;" width="30%" valign="top">
+<strong>Fig. 5 - Students demonstrating proficiency with or without a teacher as % of all students</strong><br><br><img src="/images/proficiency/with-without-all-students.png" width="90%">
+</td>
+    <td style="border: 0;" width="60%" valign="top">
+<strong>Fig. 6. - Students demonstrating basic proficiency with or without a teacher as % of all students in their age group</strong><br><br><img src="/images/proficiency/teacher-age-group.png" width="90%">
+</td>
+  </tr>
+</table>
+
+<h2>Does gender make a difference?</h2>
+
+<p>Males are more likely to demonstrate proficiency than female students. Trying to slice the data other ways - by age, by course, with or without a teacher, etc., - the gender difference remained not only present, but roughly the same proportionally.  </p>
+
+<p></p>
+
+<p align="center">
+    <strong>
+        Fig. 7 - Percentage of students (all ages) demonstrating proficiency by gender
+    </strong><br>
+    <img src="/images/proficiency/gender.png" width="30%">
+
+</p>
+
+<p>We’re curious why we see this gender disparity - is it something inherent in our course materials, or other factors? We cannot make any broad generalizations about course implementation details that may affect this. For example, anecdotally, we know that some teachers use our materials as instruction for all students in the classroom, while others leave it as an optional or "special" activity. There are plenty of other external factors that influence classrooms or might drive students to our site to learn on their own that we do not account for in these measures.  What can we do to improve this? We’ll continue to look into it.</p>
+
+<h2>Weaknesses and challenges with this metric</h2>
+
+<p>While this metric improves our previous attempts to measure student coding activity, it is far from perfect. The top challenges we’ve identified include external validation, age appropriateness and the subjectivity inherent in the tagging process, especially as it related to "difficulty".  </p>
+
+<p>Furthermore, since the puzzles were not designed to give equal or even robust coverage to various concepts across levels of difficulty, there is very little opportunity for the student to demonstrate proficiency for certain concepts.  </p>
+
+<p><strong>External Validation</strong></p>
+
+<p>Ideally this measure would be validated against external tests of students proficiency with basic computer science concepts. As validated assessments are created for elementary school computer science, we will use them to test and refine the measure.  As more work on developing learning trajectories for students of this age group is done by other researchers and institutions, we’ll look to align our work with theirs.</p>
+
+<p><strong>Age appropriateness</strong></p>
+
+<p>In this work we’ve defined concepts and difficulties independent of age. Ideally, we would move to a framework where our definition of proficiency varies by age.  Again this work will align with work on learning trajectories. Unlike subjects such as math, teaching computer science is challenging because most of our students are entering as beginners at every age. This means that 4th graders and 2nd graders are both starting with the basic concepts of loops and sequencing. We would like to refine the metrics so that we can measure what students should learn at each grade level and match the age appropriate learning progressions based on the <a href="http://k12cs.org">K12 CS framework</a>.</p>
+
+<p><strong>Subjectivity in tagging and refining the concept difficulty matrix</strong></p>
+
+<p>While we tried to define strict guidelines for a given concept and difficulty, applying these in a uniform way across 500+ puzzles proved challenging. For example, we determined a puzzle to be more or less "difficult" based on the kind of prompt presented to the student. In theory what a student was asked to do could run the gamut from ambiguous - “solve this problem” - to explicit instruction - “drag out a repeat block and set the number to 5”. Since the blocks made available are also a form of prompting or hinting about how to solve the puzzle, it was difficult to judge how this should affect the difficulty rating of a puzzle.</p>
+
+<p>For the work outlined in this report, we had two different people tag the puzzles to cross reference and double-check tags, and then that tagging was audited by more people. But, even with this, there is a certain amount of inherent subjectivity. We’d like to refine the metric to make it more objective.</p>
+
+<p>In addition to reducing inconsistencies in tagging there are a few other changes we would like to make. As we tagged every puzzle, we struggled to account for the context in which the puzzle was presented, namely, taking into account the puzzles that came before it. We realized there were puzzles that strictly adhered to the concept-difficulty specifications we set, but in practice turned out to be easier or harder than expected. For example, a puzzle might have a limited toolbox that makes it easier for the student to find the right block to use to solve it. </p>
+
+<p>We also struggled to classify puzzles that touched on multiple concepts. Or, a single concept that could be done at many different levels of difficulty. For example, a simple nested loop puzzle where the instructions prompt you how to begin might be easier or harder than a single loop where you have to do it all on your own. </p>
+
+<p>To clarify these kinds of issues, we are drafting a new version of the matrix that will attempt to make the "difficulty" of the puzzle emerge from the data rather than be a subjective assignation.  We have some initial ideas about how to do this but would love to hear other ideas too! </p>
+
+<p><strong>Predictivity</strong></p>
+
+<p>An ideal metric of student proficiency would be predictive of future student performance. At this point, we can’t yet say how predictive this measure will be. </p>
+
+<p>In our current toolset in Code Studio, every student gets the same puzzles in the same order. Thus, we cannot easily test how students would perform on harder puzzles if they saw them earlier in the sequence. There is no indication of puzzles that are too easy. We also can’t easily measure how completing level-three difficulty puzzles might vary based on the problem context - is reasoning about a loop in a "zombie" puzzle different from a similar loop in “angry birds”? Nonetheless, we are beginning to look at what we can understand around predictivity in our current environment. </p>
+
+<p>One area in particular we’d like to explore is how many puzzles a student should solve to demonstrate proficiency.  We are currently using 3 to make sure we don’t give a student credit for anomalous successes  (perhaps with help from a neighbor or teacher). At the same time, 3 puzzles may be too few. We’ll look at whether changing the metric to require 4, 8, or 10+ puzzles makes it more predictive, but need to investigate further to find the right balance based on the number of puzzles that actually exist for certain concept-difficulty pairings.  However, we don’t want to make the number so large that it effectively makes it impossible to achieve "proficiency" in cases where there are only a handful of puzzles available for a particular concept.</p>
+
+<p>We’ll share any findings as we continue to study predictivity.</p>
+
+<h2>Next steps and future work</h2>
+
+<p>We plan to continue to measure and refine our metrics to assess student proficiency, but we also recognize we need to do more rigorous experimental designs, statistical analysis and modeling to measure student learning.    </p>
+
+<p>Some of the things we are planning to do in the near future related to this K-5 "coding proficiency" work:</p>
+
+<ul>
+<li>Remake the concept-difficulty matrix (and associated puzzle tags) to make it more objective, reliable and auditable</li>
+<li>Do classroom observations and studies to validate and calibrate proficiency measures from data</li>
+<li>Apply more rigorous statistical models and techniques (such as ELO modeling) for analysis</li>
+<li>Do a public data release</li>
+</ul>
+
+<p>We have some ideas about how to improve our work but we also invite feedback and others’ ideas about what we could be doing.  If you have suggestions or thoughts on how we can continue or improve this research or if you’d like to get involved, we’d welcome your input and feedback.  Please contact us at <a href="mailto:data@code.org">data@code.org</a> we’d welcome your feedback. </p>
+
+<hr>
+
+<p><a name="ftnt1" href="#ftnt1ref">[1]</a> Dale Parsons and Patricia Haden. 2006. <em>Parson's programming puzzles: a fun and effective learning tool for first programming courses.</em> <a href="https://dl.acm.org/citation.cfm?id=1151890">https://dl.acm.org/citation.cfm?id=1151890</a>)</p>
+
+<p><a name="ftnt2" href="#ftnt2ref">[2]</a> <em>K–12 Computer Science Framework.</em> (2016).  Chapter 10 - The Role of Research in the Development and Future of the Framework.  Retrieved from <a href="http://www.k12cs.org">http://www.k12cs.org</a> </p>
+
+<p><a name="ftnt3" href="#ftnt3ref">[3]</a> Student ages are derived from birthdate which comes from a variety of sources. It can be self-reported, reported by teacher, or from an external linked account like Google or Facebook. Over 90% of student accounts have an age associated.</p>
+
+<p><a name="ftnt4" href="#ftnt4ref">[4]</a> The Hour of Code is an annual event to celebrate and increase participation in computer science by encouraging as many people as possible around the world to spend one hour engaged in some kind of coding activity during Computer Science Education Week (early December).  See: <a href="https://hourofcode.com/us">https://hourofcode.com/us</a></p>
+
+<p><a name="ftnt5" href="#ftnt5ref">[5]</a> Our database keeps track of accounts associated with a “class” that a teacher (self-identified) sets up in Code Studio.</p>
+
+</div>
+<div class="left-nav desktop-feature">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/about">About Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/leadership">Leadership</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/donors">Donors</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/team">Full Team</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/diversity-council">Diversity Council</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">Newsroom</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/evaluation">Evaluation</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/jobs">Jobs</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/faq">FAQs</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<footer id='codeprojects_pagefooter'>
+<div class='codeprojects_pagefooter_content'>
+<a class='codeprojects_pagefooter_link' href='//test-studio.code.org/'>Built on Code Studio</a>
+<div class='codeprojects_pagefooter_dim'>&nbsp; | &nbsp;</div>
+<a class='codeprojects_pagefooter_link' href='//test-studio.code.org/report_abuse' target='blank'>Report Abuse</a>
+<div class='codeprojects_pagefooter_dim'>&nbsp; | &nbsp;</div>
+<a class='codeprojects_pagefooter_link' href='//test-studio.code.org/projects/weblab' id='pagefooter_view_code'>View Code</a>
+<div class='codeprojects_pagefooter_dim'>&nbsp; | &nbsp;</div>
+<a class='codeprojects_pagefooter_link' href='//test.code.org/tos'>Terms of Service</a>
+<div class='codeprojects_pagefooter_dim'>&nbsp; | &nbsp;</div>
+<a class='codeprojects_pagefooter_link' href='//test.code.org/privacy'>Privacy Policy</a>
+<div class='codeprojects_pagefooter_dim'>&nbsp; | &nbsp;</div>
+<a class='codeprojects_pagefooter_link'>&copy; Code.org, 2020.</a>
+</div>
+</footer>
+

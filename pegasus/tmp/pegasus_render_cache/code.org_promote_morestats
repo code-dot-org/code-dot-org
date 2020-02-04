@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/promote/morestats" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Anybody can learn | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+<script src="https://www.google.com/jsapi"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<h1>Make Your Own Advocacy Materials</h1>
+
+<p>Do you need to create a slide deck or one-pager to advocate for computer science in your state or city? The blog posts and links below contain resources and statistics that you can use to make your own custom materials!</p>
+
+<h2>Code.org Policy Resources</h2>
+
+<ul>
+<li>See <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml">state-by-state data</a> on our 9 model policies for computer science education.</li>
+<li>Code.org partnered with CSTA and ECEP to create the <a href="https://advocacy.code.org/2019_state_of_cs.pdf">2019 State of Computer Science Education</a> report on state-level policies that support equitable K-12 computer science education. You can also view the 2018 report <a href="https://code.org/files/2018_state_of_cs.pdf">here</a>, and the 2017 report (authored by Code.org, MassCAN, EDC, ECEP, SageFox, and ECS) <a href="http://code.org/files/State_of_the_states.pdf">here</a>.</li>
+<li>
+<a href="http://code.org/files/CS_and_ESSA.pdf">Computer science and ESSA</a>: Read our recommendations for how states can add computer science to their state ESSA plans.</li>
+<li>Download a <a href="https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing">master slide deck</a> that you can use to create your own presentations.</li>
+</ul>
+
+<h2>Code.org blog posts</h2>
+
+<h3>Why computer science?</h3>
+
+<ul>
+<li>Code.org classrooms with resourceful teachers see <a href="https://medium.com/@codeorg/code-org-resourceful-teachers-higher-student-achievement-8be1efdec06e">higher scores on English, math, and science standardized tests</a>.</li>
+<li>Computing occupations are the <a href="http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new">#1 source of new wages</a> in America (that's <a href="http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer">16%</a> of all new wages).</li>
+<li>The majority of Americans <a href="http://codeorg.tumblr.com/post/139445414968">want schools to teach computer science</a>.</li>
+<li>Computer Science is the <a href="https://medium.com/@codeorg/computer-science-climbs-to-4th-most-popular-stem-major-for-college-bound-students-773ce681b96c">4th most popular STEM major</a> for college-bound students.</li>
+<li>
+<a href="http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most">More high school students</a> like computer science classes than other academic subjects.</li>
+<li>In manufacturing, openings for <a href="https://medium.com/@codeorg/in-manufacturing-software-jobs-outpace-production-jobs-for-first-time-4a3c40fd8773">software jobs outpace production jobs</a> for the first time.</li>
+<li>Computer science jobs account for the majority of "skilled worker" <a href="http://codeorg.tumblr.com/post/116568172243/with-all-the-national-debate-on-immigration-i">immigration</a> (H1B Visas).</li>
+<li>Computer science accounts for <a href="http://codeorg.tumblr.com/post/89267280803/stem">the majority of new STEM jobs</a>.</li>
+<li>Learning computer science <a href="http://codeorg.tumblr.com/post/125429946375/cs-other-subjects">may be linked to</a> improved learning in math.</li>
+<li>Computer science counts as a core requirement in <a href="https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg">95% of BS degrees</a> in the University of California system.</li>
+</ul>
+
+<h3>Diversity in computer science</h3>
+
+<ul>
+<li>Women who learn computer science in high school are   <a href="http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university">10 times</a> more likely to study it in university.</li>
+<li>When computer science counts for graduation, <a href="https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407">diversity increases</a>.</li>
+<li>The <a href="https://medium.com/@codeorg/with-code-orgs-6d43964e3fff">underrepresentation of minorities in computer science isn't about lack of interest</a> but lack of access.</li>
+<li>Girls set AP Computer Science record: skyrocketing growth outpaces boys <a href="https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5">in 2017</a> and <a href="https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e">in 2018</a>.</li>
+<li><a href="http://blog.code.org/post/121123281798/md">Maryland makes a simple policy change to boost diversity in computer science.</a></li>
+<li>20% more high school girls like computer science <a href="https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04">after an Hour of Code</a>.</li>
+<li>Reporting on <a href="/diversity">Code.org's successful efforts</a> to increase diversity in computer science.</li>
+<li>
+<a href="https://medium.com/@codeorg/girls-and-underrepresented-minorities-are-represented-on-code-org-7fb32b7c4eba">Representation of girls and underrepresented minorities in Code.org courses</a> (2017).</li>
+</ul>
+
+<h3>Miscellaneous</h3>
+
+<ul>
+<li>Any teacher can <a href="https://twitter.com/codeorg/status/1058432567223967745">succeed</a> at teaching CS; what matters is how many <a href="https://twitter.com/codeorg/status/1073278358870507520">years of teaching experience</a> they have. </li>
+<li>Universities prepare <a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa">way fewer</a> computer science teachers than we need.</li>
+<li>University computer science graduates <a href="http://bit.ly/CS2003">finally surpass</a> the 2003 peak.</li>
+<li><a href="https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/">Exploding demand for computer science in universities</a></li>
+<li>AP Computer Science A is the <a href="http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer">fastest-growing</a> AP course of the decade.</li>
+<li>Code.org <a href="http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science">updated our position</a> on <a href="https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing">Making Computer Science Count</a>.</li>
+</ul>
+
+<h2>International K-12 computer science</h2>
+
+<p>We are interested in seeing what's happening in computer science education internationally. <a href="https://docs.google.com/document/d/1H171Mu2RKzD9Qvp38sjKu1vuXX524XqdHtUf0BFzpWI/edit?usp=sharing">This</a> crowd-sourced document tracks what we know about current policy and in-progress efforts.</p>
+
+<h2>Outside resources</h2>
+
+<h3>K-12 education</h3>
+
+<ul>
+<li>The <a href="https://k12cs.org/">K-12 Computer Science Framework</a> provides a vision for computer science education for all students, including concepts and practices by grade band.</li>
+<li>The International Society for Technology in Education (ISTE) recently released <a href="https://www.iste.org/standards/computational-thinking">guidelines</a> regarding the integration of computational thinking across disciplines. </li>
+<li>Access to computer science matters! <a href="https://dl.acm.org/citation.cfm?doid=3363561.3343195">A longitudinal study described in this article</a> and <a href="https://computinged.wordpress.com/2019/10/14/results-from-longitudinal-study-of-female-persistence-in-cs-ap-cs-matters-after-school-programs-and-internships-do-not/">this summary</a> report that the three best predictors of student persistence in computing-related majors were taking programming in high school, taking a computer science AP exam, and participating in the Aspirations awards program. </li>
+<li>The <a href="https://services.google.com/fh/files/misc/pre-college-computer-science-education-report.pdf">Pre-College Computer Science Education: A Survey of the Field</a> report from Google reviews the current state of the research into computer science education.</li>
+<li>
+<a href="http://amppob.com/nearly-4000-arkansas-students-enrolled-in-computer-science-in-fall-15/">Arkansas has seen a major boost in computer science enrollment and diversity</a>. Arkansas passed a law requiring (and funding) every high school to teach computer science. Months later, Arkansas saw a 260% increase in total CS enrollment, a 300% increase among female students, and a 600% increase among African American female students. This shows the massive impact of state policy on CS, and helps our advocacy efforts in other states.</li>
+<li>
+<a href="http://ecs.force.com/studies/rstempg?id=a0r0g000009TLeI">Low-income</a> or <a href="https://pbs.twimg.com/media/Dls3NzoU8AAASYB.jpg:large">underrepresented minority students</a> are less likely than other demographic groups to attend a school that offers computer science.</li>
+<li>74% of women working in computing were <a href="https://www.accenture.com/t20170417T030444Z__w__/us-en/_acnmedia/Accenture/next-gen-3/girls-who-code/Accenture-Cracking-The-Gender-Code-Report.pdfla=en">exposed to computing in junior high</a>.</li>
+<li>The <a href="http://digitalpromise.org/wp-content/uploads/2017/12/dp-comp-thinking-v1r5.pdf">Computational Thinking for a Computational World report</a> from Digital Promise describes the role of computational thinking and provides recommendations for expanding it in K-12.</li>
+<li>The <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE1UMWz">Closing the STEM Gap</a> report from Microsoft explores why girls and women lose interest in STEM subjects and careers, and suggests strategies to reverse the trend.</li>
+<li>According to <a href="https://www.nagb.gov/content/nagb/assets/documents/publications/frameworks/technology/2018-technology-framework.pdf">data from the National Assessment of Educational Progress (NAEP)</a>, 27% of middle school girls and 31% of boys have taken CS. </li>
+<li>
+<a href="https://www.nap.edu/catalog/24926/assessing-and-responding-to-the-growth-of-computer-science-undergraduate-enrollments">This National Academies report</a> describes the growth of computer science undergraduate enrollments.<br>
+</li>
+<li>
+<a href="https://www.excelined.org/wp-content/uploads/2019/06/ExcelinEdCode.AddressingAmericasGrowingDemandforITandCS.TheCaseforChangeinK12Ed.June2019.pdf">This report</a> by ExcelinEd describes the relationship between computer science and information technology (see p. 6).</li>
+</ul>
+
+<h3>State policy</h3>
+
+<ul>
+<li>A <a href="http://www.sreb.org/sites/main/files/file-attachments/cs_commission_2016_0.pdf">new report</a> by the SREB recommends 5 policy actions states can take to expand access to computer science education.</li>
+<li>A <a href="http://www.ecs.org/ec-content/uploads/09.13.2016_Computer-Science-in-High-School-Graduation-Requirements.pdf">report</a> by the Education Commission of the States provides details on computer science in high school graduation requirements.</li>
+<li>A <a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWfU56">guide</a> to computer science advocacy for student changemakers.</li>
+<li>
+<a href="http://www.prnewswire.com/news-releases/horizon-media-study-reveals-americans-prioritize-stem-subjects-over-the-arts-science-is-cool-coding-is-new-literacy-300154137.html">Americans believe</a> computer science is cool and one of the most important subjects of study in school.</li>
+</ul>
+
+<h3>Computing skills across all jobs</h3>
+
+<ul>
+<li>Half of the highest paying jobs in America require you to know how to code, according to <a href="http://burning-glass.com/research/coding-skills/">this report</a> by Burning Glass.</li>
+<li>
+<a href="http://ecs.force.com/studies/rstempg?id=a0r0g000009TLfB">Twice as many Americans</a> use computing in their jobs than previously reported, and half of those are in non-STEM fields. Outside of STEM fields, 40% of those doing complex computing work are women.</li>
+<li>A quarter of all jobs are now "highly digitalized" and they're the highest paying quartile of jobs (up from 5% of jobs in 2002), according to a <a href="https://www.brookings.edu/research/digitalization-and-the-american-workforce/">Brookings report</a>.</li>
+<li>Computer science skills are <a href="https://blogs.oracle.com/certification/five-job-categories-increasingly-requiring-computer-science-skills">increasingly valued</a> in marketing and design jobs.</li>
+<li>A survey from Microsoft Education and YouGov found that <a href="https://educationblog.microsoft.com/en-us/2018/08/new-survey-what-parents-think-about-technology-in-the-classroom">half of parents believed coding and computer programming to be the most beneficial subject</a> to their child's future employability.</li>
+</ul>
+
+<h3>Jobs in computing</h3>
+
+<ul>
+<li>
+<a href="http://www.naceweb.org/job-market/compensation/the-top-paid-majors-for-the-class-of-2018/">Projections</a> for the graduating college class of 2018 shows that computer science is still one of the top-paying college degrees, coming in just under engineering.</li>
+<li>On average, a computer science degree from ANY university earns a <a href="http://www.economist.com/news/united-states/21646220-it-depends-what-you-study-not-where">significantly higher</a> financial return on investment than an arts &amp; humanities degree from even the best schools.</li>
+<li>91% of open software jobs are <a href="http://www.inc.com/salvador-rodriguez/act-software-developers-map.html">outside Silicon Valley</a>, and <a href="https://qz.com/1212875/the-american-midwest-is-quickly-becoming-a-blue-collar-version-of-silicon-valley/">mid-tech jobs are increasing</a> in the midwest.<br>
+</li>
+<li>BSA released a report on the <a href="http://softwareimpact.bsa.org/">economic impact of software</a>.</li>
+<li>Change the Equation has a <a href="http://ecs.force.com/studies/rstempg?id=a0r0g000009U7Uo">summary</a> of untapped minority talent in computing.</li>
+<li>For each new high-tech job in a city, five jobs outside of tech are <a href="http://eml.berkeley.edu//%7Emoretti/book.htm">ultimately created</a>.</li>
+<li>A <a href="https://www.kaporcenter.org/wp-content/uploads/2018/02/KC18001_report_v6-1.pdf">comprehensive framework</a> for understanding and addressing the lack of diversity across the tech ecosystem, including the benefits of a diverse workforce.</li>
+<li>
+<a href="https://www.kauffman.org/currents/2019/09/new-survey-highlights-disconnect-between-high-school-and-real-world">Surveys from the Kauffman Foundation</a> found that 88% of students and 85% of adults say that computer science jobs will be in <a href="https://twitter.com/codeorg/status/1184493205607407619">greater demand in 10 years</a> - moreso than any other job category.</li>
+</ul>
+
+<h3>Landscape of K-12 Computer Science Education in the US</h3>
+
+<p>This <a href="http://csedu.gallup.com/home.aspx">series of reports</a> from Gallup and Google describes the landscape of computer science education across the states.</p>
+
+<ul>
+<li>
+<a href="https://services.google.com/fh/files/misc/images-of-computer-science-report.pdf">Images of Computer Science: Perceptions Among Students, Parents and Educators in the US</a> (Year 1):
+
+<ul>
+<li>Parents in lower-income households and teachers at schools with a greater percentage of free- or reduced-lunch-eligible students are most likely to value formal computer science education.</li>
+<li>Many students, parents, teachers and school administrators do not properly distinguish between computer science activities and general computer literacy.</li>
+<li>Observations from students and parents suggest that TV and film media portrayals, as well as personal perceptions among students, parents and educators, often reflect stereotypes about people who engage in computer science.</li>
+</ul>
+</li>
+<li>
+<a href="https://services.google.com/fh/files/misc/searching-for-computer-science_report.pdf">Searching for Computer Science: Access and Barriers in US K-12 Education</a> (Year 1):
+
+<ul>
+<li>Only 25% of schools across the country in 2015 offer a computer science class that includes coding or programming.</li>
+<li>90% of parents believe that offering computer science is a good use of resources at their child's school.</li>
+<li>Principals and superintendents from schools and districts that do not offer computer science learning opportunities are most likely to say the main reason their schools do not offer computer science is the limited time they have to devote to classes that are not tied to testing requirements and the low availability and budget for computer science teachers. Few principals and superintendents mention a lack of computer equipment and software as the main reason their schools do not offer computer science.</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/trends-in-the-state-of-computer-science-report.pdf">Trends in the State of Computer Science in US K-12 Schools</a> (Year 2)
+
+<ul>
+<li>Only 40% of schools across the country in 2016 offer a computer science class that includes coding or programming. Schools report a lack of qualified teachers and funds as key barriers to offering computer science.</li>
+<li>84% of parents, 71% of teachers, 66% of principals, and 65% of superintendents say that offering CS is more important than or just as important as required courses like math, science, history and English. Further, A majority of educators feel that students should be required to take computer science in schools when it is available (60% of teachers, 62% of principals and 56% of superintendents).</li>
+<li>93% of parents believe that offering computer science is a good use of resources at their child's school.</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-girls-brief.pdf">Computer Science Learning: Closing the Gap - Girls</a>
+
+<ul>
+<li>Girls are less likely to have learned computer science outside of school: 31% of girls who learned computer science did so online (vs. 44%) and 41% learned it on their own (vs 54% of boys).</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-black-brief.pdf">Computer Science Learning: Closing the Gap - Black Students</a>
+
+<ul>
+<li>Black (31%) middle and high school students are more likely to be very interested in learning CS than White students (21%).</li>
+<li>Black (47%) students are less likely to have computer science classes at their schools compared to White students (58%).</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-hispanic-brief.pdf">Computer Science Learning: Closing the Gap - Hispanic Students</a>
+
+<ul>
+<li>Hispanic (35%) middle and high school students are more likely to be very interested in learning CS than White students (21%), yet fewer Hispanic students have high confidence that they could learn computer science (51%, compared to 56% of White and 68% of Black students).</li>
+<li>92% of Hispanic parents whose children haven't learned computer science want their children to learn it (vs. 84% of White parents).</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/diversity-gaps-in-computer-science-report.pdf">Diversity Gaps in Computer Science: Exploring the Underrepresentation of Girls, Blacks and Hispanics</a>
+
+<ul>
+<li>Comprehensive document from Year 2 of the study; contains the talking points from the Closing the Gap reports for Girls, Black students, and Hispanic students; plus additional information.</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/computer-science-learning-closing-the-gap-rural-small-town-brief.pdf">Computer Science Learning: Closing the Gap - Rural and Small-Town School Districts</a>
+
+<ul>
+<li>86% of students in rural and small town schools believe that computer science is going to be important for their future jobs.</li>
+<li>83% of parents and 64% of principals in rural and small towns believe offering computer science is more or equally as important as any required course.</li>
+<li>Principals in rural and small town schools say the biggest obstacles to increasing access to K-12 computer science are the lack of teachers with the necessary skills and funding to prepare or hire teachers.</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/encouraging-students-toward-computer-science-learning-brief.pdf">Encouraging Students Toward Computer Science Learning</a>
+
+<ul>
+<li>Students who have been told by parents or teachers that they would be good at computer science are 2.5-3 times more likely to be interested in learning it in the future; yet boys are more likely than girls to have been told by teachers (39% vs. 26%) and parents (46% vs. 27%) that they would be good at computer science.</li>
+<li>Boys and girls have a similar level of interest in learning CS at age 12; however, girls' interest in learning CS decreases between ages 12 and 14 (27% to 12%) while boys’ increases (30% to 47%).</li>
+</ul>
+</li>
+<li>
+<a href="http://services.google.com/fh/files/misc/cs-edu-state-reports-2017.pdf">State-level reports</a>: Combined data from both Year 1 and Year 2 that summarizes the status of computer science in 43 US states.</li>
+</ul>
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

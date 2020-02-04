@@ -1,0 +1,2308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Full Team" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/about/team" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Full Team | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<div>
+<div class="col-80-right">
+<h1>Our Team</h1>
+
+<p><img src="/images/fit-1200/fullteam-2019.jpg" width="100%;"></p>
+
+<div id="headshots" style="margin-top: 20px;"></div>
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="2">
+<a href="https://sites.google.com/view/aaronhobsoncv/home" target="_self">
+<img src="/images/fill-200x200/avatars/aaron_hobson.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Aaron Hobson
+</h3>
+</a>
+<p style="min-height: 40px;">Curriculum Writer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Aaron writes curriculum for Code.org's early elementary courses. In addition to computer science itself, Aaron is invested in social-emotional learning. Aaron has taught and written curriculum for a range of computer science subjects across the K-12 spectrum. When he's not working, Aaron enjoys playing computer RPGs, reading and writing fiction, and spending time with his two children.</p>
+</div>
+
+<div class="col-33 avatar_container" id="3">
+<img src="/images/fill-200x200/avatars/aimee_lynch.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Aimee Lynch
+</h3>
+<p style="min-height: 40px;">Finance Associate</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Aimee supports the finance and human resource departments. A graduate of Washington State University, Aimee previously worked at (and has a passion for) Harley Davidson. Outside of Code.org, she enjoys spending most of her time with her Staffordshire Bull Terrier, Nikki. </p>
+</div>
+
+<div class="col-33 avatar_container" id="4">
+<img src="/images/fill-200x200/avatars/akiera_gilbert.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Akiera Gilbert
+</h3>
+<p style="min-height: 40px;">Regional Manager. Mid-Atlantic</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Akiera comes to Code.org with a background in education technology, with a focus on marginalized young women and people of color. Prior to Code.org, she worked in India, South Africa, and Kenya to help girls gain access to education through mobile applications, and in New York City managing the use of tablets as a means of delivering education to incarcerated people. Akiera is passionate about promoting equity in the CS education landscape, and she serves as a Regional Manager for the Mid-Atlantic. </p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="5">
+<img src="/images/fill-200x200/avatars/alana_aaron.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Alana Aaron
+</h3>
+<p style="min-height: 40px;">Regional Manager Lead</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Alana is an educator and native Oregonian. She comes to Code.org from the NYC Department of Education where she most recently worked on the CS4All initiative. Previously, she was an elementary school teacher in the Bronx and Washington Heights and taught computer science to her fifth grade students. Alana leads Code.org’s team of Regional Managers. </p>
+</div>
+
+<div class="col-33 avatar_container" id="6">
+<a href="https://www.linkedin.com/in/alex-brenner-3841a018/" target="_self">
+<img src="/images/fill-200x200/avatars/alex_brenner.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Alex Brenner
+</h3>
+</a>
+<p style="min-height: 40px;">Director of Accounting and Finance</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Alex heads up the Finance &amp; Accounting team at Code.org providing analysis and support across all groups in the organization. The team also provides audit compliance and legal support for Code.org. Before coming to Code.org, Alex spent the past 12 years in the Waste and Recycling industry holding a variety of roles throughout the Northwest. Prior to that he worked for a small education company in the Portland area and volunteered in the classroom with Middle School math students. 
+
+Alex has a Bachelor's degree in Economics from U.C. San Diego and a Masters in Business Administration from Oregon State University.</p>
+</div>
+
+<div class="col-33 avatar_container" id="7">
+<img src="/images/fill-200x200/avatars/alexis_harrigan.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Alexis Harrigan
+</h3>
+<p style="min-height: 40px;">Director of State Government Affairs</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Alexis Menocal Harrigan serves as Director of State Government Affairs at Code.org where she works with law and policy-makers in multiple states to expand access to computer science education. Based in Colorado, Alexis' career in education policy spans local, state and federal levels. As the proud daughter of Mexican immigrants, Alexis is passionate about Code.org's focus on increasing computer science participation by women and underrepresented minorities. She enjoys spending time with her husband and two young children.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="8">
+<a href="https://www.linkedin.com/in/alicesteinglass" target="_self">
+<img src="/images/fill-200x200/avatars/alice_steinglass.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Alice Steinglass
+</h3>
+</a>
+<p style="min-height: 40px;">President</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Before Code.org, Alice managed the PM team for the UX Platform on HoloLens, designed APIs and developer client libraries for Xbox 360, ran an ecosystem outreach and UX team for Windows and built project management tools. Outside of work, she's volunteered teaching computer science, literacy and English to students and refugees. </p>
+</div>
+
+<div class="col-33 avatar_container" id="9">
+<img src="/images/fill-200x200/avatars/amanda_font.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Amanda Font
+</h3>
+<p style="min-height: 40px;">Product Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Amanda is a Product Manager at Code.org. Since she didn't get to learn about Computer Science until college, Amanda is passionate about making sure everyone gets the opportunity to learn CS in school. Before joining Code.org, Amanda worked at Amazon on the Kindle reading experience and at Google on the Duo video calling app.</p>
+</div>
+
+<div class="col-33 avatar_container" id="10">
+<img src="/images/fill-200x200/avatars/amy_cox.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Amy Cox
+</h3>
+<p style="min-height: 40px;">Project Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Amy works on the Education team, and manages external communications relating to the middle and high school Teacher and Facilitator Development Programs. Previously, Amy taught high school English and college composition, worked in the nonprofit sector, and earned her Masters degree in English from the University of Oregon. She brings with her an enthusiasm for Victorian literature and the hit musical Hamilton.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="11">
+<img src="/images/fill-200x200/avatars/amy_roberts.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Amy Roberts
+</h3>
+<p style="min-height: 40px;">Director of State Government Affairs</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Amy Roberts, Director of State Government Affairs at Code.org, has nearly 20 years of experience working in public policy, law, politics and government. Amy advanced numerous public policy initiatives through the Minnesota legislature and within the Executive Branch while serving as the Director of Compliance for the Minnesota Department of Education, Government Affairs Manager for Comcast, and as a lawyer-lobbyist in the private sector. Amy is also a former prosecutor from Dakota County and has served as a campaign manager and advisor for multiple local candidates. She holds a Juris Doctor degree from Syracuse University College of Law and Bachelor’s degree in Communications and Political Science from the University of Minnesota.</p>
+</div>
+
+<div class="col-33 avatar_container" id="12">
+<img src="/images/fill-200x200/avatars/andrea_robertson_nottingham.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Andrea Robertson-Nottingham
+</h3>
+<p style="min-height: 40px;">Facilitator Development Specialist</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">As part of the Education team, Andrea focuses on the development and support of our amazing 6-12 facilitators. A National Board Certified teacher in CTE, Andrea has spent 26 years in secondary classrooms teaching mathematics, engineering and computer science. In her spare time, she works with a local youth development program as an adviser for their NSBE Jr. chapter.</p>
+</div>
+
+<div class="col-33 avatar_container" id="13">
+<img src="/images/fill-200x200/avatars/andrew_gealy.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Andrew Gealy
+</h3>
+<p style="min-height: 40px;">Product Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Andrew is a product manager working to support professional learning for teachers using Code.org in the classroom. Previously, he spent ten years in Berkeley and Oakland going to school, playing volleyball, and building standardized test prep products at Magoosh.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="14">
+<img src="/images/fill-200x200/avatars/anjali_pal.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Anjali Pal
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Anjali is a software engineer with a passion for CS education. She aspires to teach high school math and computer science some day. Prior to joining Code.org, she participated in Google's Engineering Residency program. Outside of work, she enjoys hiking, board games, and swimming.</p>
+</div>
+
+<div class="col-33 avatar_container" id="15">
+<img src="/images/fill-200x200/avatars/anthony_suarez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Anthony Suarez
+</h3>
+<p style="min-height: 40px;">Chief Technology Officer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Anthony leads the engineering team at Code.org. He is passionate about making computer science education available globally and supporting STEM education for kids. Previously, Anthony led engineering and product development for Elastic Container Services at Amazon Web Services where his teams built and operated core cloud computing products.</p>
+</div>
+
+<div class="col-33 avatar_container" id="16">
+<img src="/images/fill-200x200/avatars/baker_franke.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Baker Franke
+</h3>
+<p style="min-height: 40px;">Research and Evaluation Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Baker is a former high school CS teacher from the University of Chicago Laboratory Schools. He previously served on the leadership team of the Chicago CSTA in efforts to make computer science a requirement in Chicago Public Schools. At Code.org, Baker works primarily on the CS Principles project and evaluation of educational programs.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="17">
+<img src="/images/fill-200x200/avatars/ben_brooks.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ben Brooks
+</h3>
+<p style="min-height: 40px;">Data Scientist</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ben works to help better understand what and how much students are learning through Code.org’s curriculum. He has a background in data roles in public health research, web analytics, and city government settings.</p>
+</div>
+
+<div class="col-33 avatar_container" id="18">
+<img src="/images/fill-200x200/avatars/bethany_connor.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Bethany Connor
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Bethany is a software engineer who is passionate about expanding CS education and diversifying the tech industry. Prior to Code.org, she worked at Google and previously volunteered with the TEALs program.</p>
+</div>
+
+<div class="col-33 avatar_container" id="19">
+<img src="/images/fill-200x200/avatars/brad_buchanan.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Brad Buchanan
+</h3>
+<p style="min-height: 40px;">Software Engineering Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Brad supervises development of Code.org tools including App Lab, Game Lab, and Web Lab. He previously worked on the Plants vs Zombies franchise at PopCap Games.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="20">
+<a href="http://brendanreville.com/" target="_self">
+<img src="/images/fill-200x200/avatars/brendan_reville.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Brendan Reville
+</h3>
+</a>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Brendan is a software engineer who loves building user experiences.  Since moving to Seattle from Sydney, he has worked at Microsoft on the Xbox 360, volunteered in a low-income after-school tutoring program, and played some ice hockey.</p>
+</div>
+
+<div class="col-33 avatar_container" id="21">
+<img src="/images/fill-200x200/avatars/bria_barry.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Bria Barry
+</h3>
+<p style="min-height: 40px;">Regional Manager, Mid-Atlantic</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Bria is an equity practitioner and outreach specialist with 13 years of experience in higher education. She comes to Code.org from the University of Maryland's Women in Engineering Program, where she served as assistant director of outreach and recruitment. Bria is passionate about inspiring the next generation of innovators through access to STEM education!</p>
+</div>
+
+<div class="col-33 avatar_container" id="22">
+<img src="/images/fill-200x200/avatars/bryan_djunaedi.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Bryan Djunaedi
+</h3>
+<p style="min-height: 40px;">Product Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Bryan is passionate about making Code.org more accessible internationally and also manages core components of the Code.org website. As a UW computer science graduate, he previously worked as a software engineer at Boeing and a curriculum writer/CS teacher at the Light and Leadership Initiative in Peru.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="23">
+<a href="https://www.linkedin.com/in/cameronpwilson" target="_self">
+<img src="/images/fill-200x200/avatars/cameron_wilson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Cameron Wilson
+</h3>
+</a>
+<p style="min-height: 40px;">Chief Operating Officer and President of <a href="/advocacy">Code.org Advocacy Coalition</a></p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Cameron was previously Director of Public Policy for the Association for Computing Machinery. In 2010, he launched the Computing in the Core coalition to bring attention to K-12 CS education.  At Code.org he oversees government affairs and policy work, as well as regional outreach.</p>
+</div>
+
+<div class="col-33 avatar_container" id="24">
+<img src="/images/fill-200x200/avatars/carol_meadows.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Carol Meadows
+</h3>
+<p style="min-height: 40px;">Controller</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Carol enjoys reviewing our financial information and explaining the monthly results. She prepares the monthly financials and narrative, as well as teacher and partner payments. She assists with the budget, audit, and month ­end close. Carol received her Bachelors from Western Washington University and Masters from Thunderbird School of Global Management, and has worked in different Finance and Accounting roles since graduating.  </p>
+</div>
+
+<div class="col-33 avatar_container" id="25">
+<img src="/images/fill-200x200/avatars/caroline_herman.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Caroline Herman
+</h3>
+<p style="min-height: 40px;">Events Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">As the event coordinator, Caroline works to create impactful events that support the Code.org mission and reflect her passion for the increased representation of women and minorities. Prior to joining the team, she worked in events for an artisan jeweler in Brooklyn, NY. Caroline has a Bachelor of Science in communication design and enjoys creating art in her free time.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="26">
+<img src="/images/fill-200x200/avatars/case_soskin.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Case Soskin
+</h3>
+<p style="min-height: 40px;">HR Generalist</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Case supports the Code.org team in recruiting and hiring, onboarding, employee relations, benefits, and HR support. Case graduated from Penn State University with a BA in Broadcast Journalism. She just received her SHRM (Society for Human Resource Management) certification. Outside of work, Case spends her time volunteering through the Junior League of Seattle. </p>
+</div>
+
+<div class="col-33 avatar_container" id="27">
+<img src="/images/fill-200x200/avatars/clare_constantine.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Clare Constantine
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Clare is a software engineer with a passion for increasing access to computer science education and diversifying tech. Clare graduated from Stanford University. Prior to joining Code.org, they worked at Microsoft and Getty Images.</p>
+</div>
+
+<div class="col-33 avatar_container" id="28">
+<img src="/images/fill-200x200/avatars/dani_lamarca.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Dani LaMarca
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Dani comes from Worcester Academy where she was a Computer Science, Math and Design Teacher. She graduated from Bowdoin College with a B.A in Computer Science and Math Education. At Code.org, Dani works with the education team creating innovative curriculum material for the high school level.        </p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="29">
+<a href="http://www.linkedin.com/in/davidsbailey" target="_self">
+<img src="/images/fill-200x200/avatars/dave_bailey.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Dave Bailey
+</h3>
+</a>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Dave is a software engineer working on the Code.org K-12 Computer Science curriculum. Previously, he worked at Google on Gmail and Contact Manager.</p>
+</div>
+
+<div class="col-33 avatar_container" id="30">
+<img src="/images/fill-200x200/avatars/david_bernier.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+David Bernier
+</h3>
+<p style="min-height: 40px;">Director of Partnerships and Development</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">David develops and supports corporate and foundation partnerships to further our mission. Prior to his current role he worked on the Code.org Outreach Team leading expansion efforts in California, Arizona, and Nevada. He also served as a Project Director for an NSF grant at UCLA, and a curriculum specialist, and middle school teacher in Los Angeles. David has an M.A. from New York University and a B.A. from UCLA. </p>
+</div>
+
+<div class="col-33 avatar_container" id="31">
+<img src="/images/fill-200x200/avatars/dayne_wagner.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Dayne Wagner
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Dayne is a software engineer with a passion for making the world a better place, self improvement, and playing games. Previously, he worked at Amazon and Twitch.tv.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="32">
+<img src="/images/fill-200x200/avatars/don_miller.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Don Miller
+</h3>
+<p style="min-height: 40px;">Regional Manager, Southeast</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Don is an artist and educator based in Gainesville, Florida. Before Code.org, he served as the Senior Director of Computer Science Academics for the NYC Department of Education, working on the Mayor's CS4All initiative. He has also worked as a Learning Designer at the Institute of Play in NYC, developing project-based and game-like curricula. Before that Don spent time teaching creative coding to undergraduate students at CUNY schools in NYC. Don graduated from NYU's ITP program in 2011.</p>
+</div>
+
+<div class="col-33 avatar_container" id="33">
+<img src="/images/fill-200x200/avatars/elijah_hamovitz.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Elijah Hamovitz
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Elijah fell in love with programming with his first "Hello, World!" and he hasn't looked back. He's been making websites professionally since 2010. He particularly enjoys exploring the constantly-advancing cutting edge of the web and finding new ways to turn all the tools, languages, frameworks, and platforms out there into some really, really cool websites.</p>
+</div>
+
+<div class="col-33 avatar_container" id="34">
+<img src="/images/fill-200x200/avatars/elizabeth_bacon.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Elizabeth Bacon
+</h3>
+<p style="min-height: 40px;">Curriculum Development Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Elizabeth is a former computer science teacher and administrator.  Before coming to Code.org, she worked as the Dean of Studies at Pilgrim School in Los Angeles, supporting teachers in developing and implementing the secondary curriculum. </p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="35">
+<img src="/images/fill-200x200/avatars/eric_fershtman.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Eric Fershtman
+</h3>
+<p style="min-height: 40px;">Marketing Program Coordinator</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Eric coordinates and supports various marketing programs, including Hour of Code. Before joining Code.org, he held a wide range of roles, from university instructor to corporate communications specialist to grocery manager. Most recently, he worked at Pike Market Senior Center &amp; Food Bank, managing projects, relationships, and social media.</p>
+</div>
+
+<div class="col-33 avatar_container" id="36">
+<img src="/images/fill-200x200/avatars/erin_bond.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Erin Bond
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">With an academic background in neuroscience and education, Erin was previously an elementary school teacher and private learning specialist. She is a graduate of Ada Developers Academy and is excited to blend her long-term dedication to education and new-found interest in technology at Code.org.</p>
+</div>
+
+<div class="col-33 avatar_container" id="37">
+<img src="/images/fill-200x200/avatars/erin_peach.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Erin Peach
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Erin is a recent graduate of the University of Washington's Paul G. Allen School of Computer Science and has a passion for making computer science education available to all. She is thrilled to be working as a software engineer on the Code.org K-12 curriculum. In her spare time, she loves to craft and travel</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="38">
+<img src="/images/fill-200x200/avatars/gt_wrobel.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+GT Wrobel
+</h3>
+<p style="min-height: 40px;">Curriculum Development Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">GT develops curriculum and facilitates professional development for both AP CS Principles and CS Discoveries. Prior to joining Code.org he taught high school computer science in his hometown of Chicago where he helped field test Code.org's CS Principles curriculum.</p>
+</div>
+
+<div class="col-33 avatar_container" id="39">
+<img src="/images/fill-200x200/avatars/ha_nguyen.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ha Nguyen
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ha is a software engineer at Code.org. His interest in programing and computer science started when he learned to create a simple piano program using Pascal. Ha believes computer science is one of the easiest way to turn ideas into reality, to unlock creativity and to expand potential of everyone. He joined Code.org to pursue the mission of bringing computer science education to children worldwide. Previously, Ha worked at Microsoft on Windows Core team.</p>
+</div>
+
+<div class="col-33 avatar_container" id="40">
+<a href="/about/leadership/hadi_partovi" target="_self">
+<img src="/images/fill-200x200/avatars/hadi_partovi.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Hadi Partovi
+</h3>
+</a>
+<p style="min-height: 40px;">Founder and CEO</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Code.org CEO Hadi Partovi is an entrepreneur and angel investor.  Hadi was on the founding teams of Tellme and iLike, and was an investor or early advisor to numerous startups including <a href="http://www.facebook.com/">Facebook</a>, <a href="http://www.dropbox.com/">Dropbox</a>, <a href="http://www.zappos.com">Zappos</a>, and <a href="http://www.airbnb.com/">airbnb</a>. His full bio is available <a href="/about/leadership/hadi_partovi">here</a>.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="41">
+<img src="/images/fill-200x200/avatars/hannah_walden.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Hannah Walden
+</h3>
+<p style="min-height: 40px;">Curriculum Writer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Hannah is a high school curriculum writer at Code.org. Prior to joining the education team, Hannah taught computer science in rural Maine and facilitated professional development. She enjoys reading, gaming, and building things. Hannah is passionate about finding creative ways to make computer science engaging for all students.</p>
+</div>
+
+<div class="col-33 avatar_container" id="42">
+<img src="/images/fill-200x200/avatars/jael_topek.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jael Topek
+</h3>
+<p style="min-height: 40px;">Videographer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jael specializes in all aspects of video production with a special love for animation and design. Since the turn of the century he's worked on projects for SNL, Valve, AT&amp;T, Microsoft, Shutterstock and too many political campaigns, startups and non-profits to enumerate here.</p>
+</div>
+
+<div class="col-33 avatar_container" id="43">
+<img src="/images/fill-200x200/avatars/jared_fritz.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jared Fritz
+</h3>
+<p style="min-height: 40px;">Regional Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jared graduated from UIUC's Industrial Engineering program and spent nearly a decade developing software and technology partnerships before joining the Code.org team. He enjoys engaging and inspiring through STEAM-focused education and is focused on expanding access to computer science and increasing participation amongst underrepresented groups.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="44">
+<img src="/images/fill-200x200/avatars/jake_bell.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jake Bell
+</h3>
+<p style="min-height: 40px;">International Partnerships Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jake supports Code.org's international partners in their efforts to bring computer science to the students in their countries. He previously worked as a web development instructor, where he discovered his passion for helping others learn computer science.</p>
+</div>
+
+<div class="col-33 avatar_container" id="45">
+<img src="/images/fill-200x200/avatars/jess_baker.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jess Baker
+</h3>
+<p style="min-height: 40px;">Professional Learning Specialist</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jess is a member of the Education team. She primarily focuses on professional development programs. Before joining the team at code.org, Jess was the Director of Curriculum and Instruction at a school for girls in New Orleans. She has taught middle school science, high school Biology, and CS Principles. </p>
+</div>
+
+<div class="col-33 avatar_container" id="46">
+<img src="/images/fill-200x200/avatars/jessica_kulwik.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jessica Kulwik
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jessica is passionate about expanding access to computer science and demystifying technology. In her free time, she volunteers with local and rural high schools to teach intro computer science classes. She is a graduate of the University of Michigan and worked at Microsoft prior to joining Code.org.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="47">
+<img src="/images/fill-200x200/avatars/jordyn_seni.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jordyn Seni
+</h3>
+<p style="min-height: 40px;">Project Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jordyn supports Code.org's teacher and facilitator programs.</p>
+</div>
+
+<div class="col-33 avatar_container" id="48">
+<img src="/images/fill-200x200/avatars/jorge_castro.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jorge Castro
+</h3>
+<p style="min-height: 40px;">Program Coordinator</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jorge works with national and international partners to bring computer science education to underserved communities. Before code.org, he organized outreach campaigns with the Union of Concerned Scientists and taught marine science at a museum. Jorge studied chemistry and geoscience at Williams College.</p>
+</div>
+
+<div class="col-33 avatar_container" id="49">
+<img src="/images/fill-200x200/avatars/josh_schulte.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Josh Schulte
+</h3>
+<p style="min-height: 40px;">Support Program Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Josh is a graduate of the University of Iowa where he studied computer science and psychology. Before joining Code.org, he worked for eBay, Cracked.com, Phoenix Capital Management, and as IT Director for KRUI 98.7 FM in Iowa City. Josh is way too into music and has traveled around the country and across two oceans just to see his favorite bands play.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="50">
+<img src="/images/fill-200x200/avatars/katie_hendrickson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Katie Hendrickson
+</h3>
+<p style="min-height: 40px;">Director of State Government Affairs</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Katie works on state policy and advocacy issues for Code.org, including state implementation of computer science education initiatives. She earned a doctorate in mathematics education in 2016 from Ohio University, and is a former secondary mathematics teacher.</p>
+</div>
+
+<div class="col-33 avatar_container" id="51">
+<img src="/images/fill-200x200/avatars/kaitie_o_bryan.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Kaitie O'Bryan
+</h3>
+<p style="min-height: 40px;">Professional Learning Specialist</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Kaitie comes from Mounds View High School where she started her school's computer science program.  Kaitie is also a Knowles Senior Fellow and has served 3 years on the local CSTA chapter's leadership team.  She graduated with a B.A. in Mathematics and Studio Art from Gustavus Adolphus College and earned a Masters in Math Education from the University of Minnesota.</p>
+</div>
+
+<div class="col-33 avatar_container" id="52">
+<img src="/images/fill-200x200/avatars/kirsten_o_brien.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Kirsten O'Brien
+</h3>
+<p style="min-height: 40px;">PR &amp; Social Media Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Kirsten is the public relations and social media manager at Code.org. Prior to joining the team, she spent several years as a journalist at both SeattlePI.com and The Seattle Times. She is a proud Western Washington University graduate and also holds a master's degree in communication from the University of Washington. She is passionate about challenging computer science stereotypes, building Twitter bots, drinking too much coffee and planning her next international trip.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="53">
+<img src="/images/fill-200x200/avatars/kristin_neibert.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Kristin Neibert
+</h3>
+<p style="min-height: 40px;">Office Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Kristin ensures daily operations run smoothly by managing the day-to-day functions of the Code.org office.  In her spare time, she provides administrative support to leadership team member, Sarah, and manages all things swag and inventory.</p>
+</div>
+
+<div class="col-33 avatar_container" id="54">
+<img src="/images/fill-200x200/avatars/kristina_echols.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Kristina Echols
+</h3>
+<p style="min-height: 40px;">Administrative Assistant</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">As the Administrative Assistant, Kristina works to support the People Ops team at Code.org. Kristina is a graduate from Montana State University and has a Bachelor’s of Science in Business. Outside of work, Kristina spends her free time playing board games, testing new recipes, and spending time with her two small dogs.</p>
+</div>
+
+<div class="col-33 avatar_container" id="55">
+<h3 style="min-height: 20px;">
+Laura Schute
+</h3>
+<p style="min-height: 40px;">Program Coordinator</p>
+<p style="font-size: 13px;  margin-bottom: 50px;"></p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="56">
+<a href="https://www.linkedin.com/in/bowenleolin/" target="_self">
+<img src="/images/fill-200x200/avatars/leolin_bowen.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+LeoLin Bowen
+</h3>
+</a>
+<p style="min-height: 40px;">Regional Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">LeoLin is a Regional Manager on the Code.org Outreach Team. She has always been passionate about the importance of STEAM subjects and programming and the need to increase the participation of underrepresented groups. LeoLin studied Psychology at the University of Illinois in Urbana-Champaign.</p>
+</div>
+
+<div class="col-33 avatar_container" id="57">
+<a href="https://www.linkedin.com/in/ortizvillacorta" target="_self">
+<img src="/images/fill-200x200/avatars/leonardo_ortiz_villacorta.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Leonardo Ortiz Villacorta
+</h3>
+</a>
+<p style="min-height: 40px;">VP of International Partnerships</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Leonardo’s role is to drive partnerships with organizations from all over the globe, including governments, nonprofits and private entities, to scale Code.org’s mission by equipping students with the skills they need to better understand this new digital world and succeed in it. Before joining Code.org, he held various communications, public affairs and corporate social responsibility roles at Microsoft Corp., the Mexican Federal Government and Edelman PR Worldwide.</p>
+</div>
+
+<div class="col-33 avatar_container" id="58">
+<a href="https://www.linkedin.com/pub/lian-halbert/a7/710/24" target="_self">
+<img src="/images/fill-200x200/avatars/lian_swanson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Lian Swanson
+</h3>
+</a>
+<p style="min-height: 40px;">Executive Assistant</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Lian supports leadership team members Hadi, Alice, and Cameron. She also works with the fundraising team to support in-kind donor relations and donor communications. A born and raised Seattleite, she graduated from the University of Washington with a degree in history. </p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="59">
+<img src="/images/fill-200x200/avatars/liz_gauthier.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Liz Gauthier
+</h3>
+<p style="min-height: 40px;">Project Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Liz Gauthier is the Project Manager for Teacher Recruitment. Prior to this role, Liz has been a System Engineer at Lockheed Martin, Data Analyst for Backroads, and taught high school science for one year. Liz enjoys most making elaborate spreadsheets to track and predict everything. In her spare time, she enjoys the outdoors with her husband and two young daughters. </p>
+</div>
+
+<div class="col-33 avatar_container" id="60">
+<img src="/images/fill-200x200/avatars/maddie_kasula.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Maddie Kasula
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Maddie is a software engineer currently working on K-12 computer science curriculum. She got her start coding through Girl Develop It, and has been passionate about teaching computer science and giving others the same opportunity to learn to code ever since.</p>
+</div>
+
+<div class="col-33 avatar_container" id="61">
+<a href="https://www.linkedin.com/in/maggie-osorio/" target="_self">
+<img src="/images/fill-200x200/avatars/maggie_glennon.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Maggie Glennon
+</h3>
+</a>
+<p style="min-height: 40px;">Director of State Government Affairs</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Maggie works on state policy for Code.org across the western U.S. Previously, Maggie worked in grassroots advocacy and federal government affairs, as well as on political campaigns and in legislative offices. She's a graduate of Michigan State University.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="62">
+<img src="/images/fill-200x200/avatars/mariah_acuff.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Mariah Acuff
+</h3>
+<p style="min-height: 40px;">Marketing Associate</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Mariah graduated from the University of Washington with a degree in Communications, focusing on diversity and media studies. As the Marketing Associate, she currently supports Code.org's campaign and fundraising initiatives and enjoys writing fresh content, testing digital marketing strategies, and developing creative campaigns.   </p>
+</div>
+
+<div class="col-33 avatar_container" id="63">
+<img src="/images/fill-200x200/avatars/marina_taylor.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Marina Taylor
+</h3>
+<p style="min-height: 40px;">Director of Product</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Marina leads the Product team at Code.org which includes Product Management, Design, Data, and Customer Support. Prior to Code.org, she was Director of Product Management at DreamBox Learning where she found her passion for supporting teachers and bringing engaging learning experiences to students in all classrooms.</p>
+</div>
+
+<div class="col-33 avatar_container" id="64">
+<img src="/images/fill-200x200/avatars/mark_barrett.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Mark Barrett
+</h3>
+<p style="min-height: 40px;">Product Designer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Mark designs delightful and intuitive user experiences. After 10 years in the games industry, he is excited to apply his creativity and experience to the improvement of computer science education. He has been a mentor with the Big Brothers Big Sisters program for 11 years, and volunteer teaches after-school workshops at different schools throughout the Seattle area.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="65">
+<img src="/images/fill-200x200/avatars/mary_barnes.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Mary Barnes
+</h3>
+<p style="min-height: 40px;">Data Analyst</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Mary helps teams across Code.org make sense of how data informs the mission of the organization. She has previous experience creating teacher professional development programs at the University of Washington and as a museum educator. Embodying the ethos that ‘anybody can learn,’ she is currently studying Computer Science.</p>
+</div>
+
+<div class="col-33 avatar_container" id="66">
+<h3 style="min-height: 20px;">
+Max Vernikovskiy
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Max is a software engineer working at Code.org. Max strongly believes everyone deserves high quality, accessible education, and is excited to help Code.org in its mission of providing accessible computer science education to schools around the world. Prior to working at Code.org, he worked on backend services at Twitter, and prior to that he worked at Amazon's Amazon Web Services, contributing to infrastructure large parts of the internet rely on.</p>
+</div>
+
+<div class="col-33 avatar_container" id="67">
+<img src="/images/fill-200x200/avatars/megan_godwin.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Megan Godwin
+</h3>
+<p style="min-height: 40px;">Director of People Ops</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Megan manages administration, recruiting, hiring, onboarding, HR and employee development for the Code.org team. With a background in both startups and sales management, Megan is passionate about growing, supporting, and developing a successful team. </p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="68">
+<img src="/images/fill-200x200/avatars/megan_hochstatter.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Megan Hochstatter
+</h3>
+<p style="min-height: 40px;">Program Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Megan is the K-5 Program Manager on the Education Team where she supports the CS Fundamentals facilitator community. A lifelong learner, and curious by nature, Megan is devoted to empowering educators and students today so that they can shape the future.</p>
+</div>
+
+<div class="col-33 avatar_container" id="69">
+<img src="/images/fill-200x200/avatars/michael_oneppo.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Michael Oneppo
+</h3>
+<p style="min-height: 40px;">Product Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Michael works on Code.org's programming tools. His passion for Computer Science education was kindled at Nabu.org, where he helped use  technology to bring educational resources to classrooms in Haiti. A computer science major with a Master's degree from NYU's Interactive Telecommunications Program, Mike brings over a decade of program and product management experience from Microsoft and FiftyThree. When he's not working, he spends most of his time parenting two awesome little kids. When he's not doing that, he's either catching up on sleep or making music.</p>
+</div>
+
+<div class="col-33 avatar_container" id="70">
+<a href="https://www.linkedin.com/in/mikeharvey-cs/" target="_self">
+<img src="/images/fill-200x200/avatars/mike_harvey.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Mike Harvey
+</h3>
+</a>
+<p style="min-height: 40px;">Curriculum Writer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Before joining Code.org, Mike taught elementary and middle school computer science classes in a district outside of Portland, Maine. His students discovered an excitement for technology through lessons in robotics, game design, 3d printing, and physical computing. He also facilitated professional development for CS Fundamentals and CS Discoveries. At Code.org, Mike works with the education team to develop curriculum for elementary students.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="71">
+<img src="/images/fill-200x200/avatars/min_yoo.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Min Yoo
+</h3>
+<p style="min-height: 40px;">Director of Marketing &amp; Development</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Min oversees marketing, communications, and fundraising at Code.org. A computer science major who has spent over 25 years in roles spanning product management, marketing, and business development, she is an ardent believer in the foundational nature of computer science and the need for equitable access.</p>
+</div>
+
+<div class="col-33 avatar_container" id="72">
+<img src="/images/fill-200x200/avatars/molly_moen.jpeg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Molly Moen
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Molly is a software engineer with a passion for increasing access to computer science and diversifying the tech field. As someone who did not take an interest in CS until college, she is especially excited about Code.org's mission of bringing computer science to every school. In her spare time she enjoys baking, playing board games, and crafting. Previously, Molly worked at Microsoft. She is a graduate of the University of Washington.</p>
+</div>
+
+<div class="col-33 avatar_container" id="73">
+<img src="/images/fill-200x200/avatars/nimisha_ghosh_roy.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Nimisha Ghosh Roy
+</h3>
+<p style="min-height: 40px;">Strategic Development Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Nimisha is a project manager and educator with experience in teaching youth and adults in formal and informal environments, curriculum development with an equity lens, cross cultural communication and developing collaborative partnerships. She is a Seattle-native and is active in the local Indian dance/performing arts community.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="74">
+<a href="http://patyongpradit.com/" target="_self">
+<img src="/images/fill-200x200/avatars/pat_yongpradit.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Pat Yongpradit
+</h3>
+</a>
+<p style="min-height: 40px;">Chief Academic Officer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Pat is a former high school computer science teacher who specialized in creating authentic, project-based learning experiences. He has worked as a curriculum consultant for Microsoft, for Pearson, and also as a curriculum team lead for Montgomery County Public Schools. At Code.org he is responsible for creating (or curating) curriculum and professional development, to provide rich computer science opportunities to every school in the nation.</p>
+</div>
+
+<div class="col-33 avatar_container" id="75">
+<img src="/images/fill-200x200/avatars/reena_chaudhary.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Reena Chaudhary
+</h3>
+<p style="min-height: 40px;">Senior Accountant</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Reena is an Accountant who loves working with and analyzing numbers. Prior to joining Code.org, she worked in many different industries and roles as a Finance professional. At Code.org her main function is reconciling and analyzing all of the numbers that are the core of the financial statements.</p>
+</div>
+
+<div class="col-33 avatar_container" id="76">
+<a href="https://www.linkedin.com/in/rosie-nakyung-sullivan-1b9705166/" target="_self">
+<h3 style="min-height: 20px">
+Rosie Sullivan
+</h3>
+</a>
+<p style="min-height: 40px;">Program Coordinator</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Rosie comes from an education and community outreach background. Prior to joining the team, she worked for DC Mayor’s Office and LG Electronics. She is a graduate of Ewha Womans University where she studied education and business administration. Rosie is dedicated to advancing learning opportunities for youth so they can make a better world. In her free time, she enjoys playing with her fluffy corgi, Melody.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="77">
+<img src="/images/fill-200x200/avatars/sabine_thomas.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Sabine Thomas
+</h3>
+<p style="min-height: 40px;">Regional Manager, Northwest</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Sabine developed a passion for learning about Computer Science and Software Development after spending time at ADA Developers Academy. In her capacity of Regional Manager she is supporting Code.org’s regional partnerships in the Northwest.</p>
+</div>
+
+<div class="col-33 avatar_container" id="78">
+<img src="/images/fill-200x200/avatars/sarah_fairweather.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Sarah Fairweather
+</h3>
+<p style="min-height: 40px;">Program Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Sarah is a program manager for Code.org's middle and high school programs, focusing on teacher and facilitator professional learning. She comes to Code.org with a background in educational equity and leadership development.</p>
+</div>
+
+<div class="col-33 avatar_container" id="79">
+<img src="/images/fill-200x200/avatars/sean_roberts.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Sean Roberts
+</h3>
+<p style="min-height: 40px;">Director of State Government Affairs</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Sean leads Code.org's policy work in multiple states. A former classroom teacher, he has led state advocacy efforts in areas such as funding equity, teacher certification, and school accountability. Building strong partnerships is a hallmark of Sean’s work. Prior to joining code.org, Sean served as executive director of a school advocacy association and a district human capital consultant.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="80">
+<img src="/images/fill-200x200/avatars/sung_kim.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Sung Kim
+</h3>
+<p style="min-height: 40px;">Regional Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Sung is a Regional Manager on the Code.org Outreach Team. She believes in the necessity of integrated STEAM learning and in closing equity gaps in education. Sung previously organized the Cambridge Science Festival and studied Urban Studies and Planning.</p>
+</div>
+
+<div class="col-33 avatar_container" id="81">
+<img src="/images/fill-200x200/avatars/suresh_chanmugan.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Suresh Chanmugan
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Suresh was born and raised in Baton Rouge, but has called Seattle home since 1999. His interest in code.org's mission was kindled by time he spent volunteering at Technology Access Foundation and the Maya Angelou Public Charter School.  He previously worked at Liaison Technologies, a data integration company. 
+Screen reader support enabled.</p>
+</div>
+
+<div class="col-33 avatar_container" id="82">
+<img src="/images/fill-200x200/avatars/tawny_bradley.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Tawny Bradley
+</h3>
+<p style="min-height: 40px;">Outreach Program Manager</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Tawny is a Program Manager on the Outreach Team at Code.org. She has a master's degree from the University of Sheffield. Prior to Code.org, Tawny ran a vocational film program in Maine, worked in creative media skills-based curriculum development in London, and produced film festival programs across the UK.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="83">
+<img src="/images/fill-200x200/avatars/vinh_luong.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Vinh Luong
+</h3>
+<p style="min-height: 40px;">Regional Manager, Southwest</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Vinh comes from the University of California, Irvine where he was the California Coordinator for the Expanding Computing Education Pathways Alliance. He is focused on improving and broadening participation in computing education, especially amongst underrepresented groups.</p>
+</div>
+
+<div class="col-33 avatar_container" id="84">
+<a href="http://linkedin.com/in/wgjordan" target="_self">
+<img src="/images/fill-200x200/avatars/will_jordan.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px">
+Will Jordan
+</h3>
+</a>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Will works on the Code.org K-12 Computer Science curriculum. He recently completed a PhD in Comparative Literature at the University of California, Irvine, and previously worked as a software engineer for PopCap.</p>
+</div>
+
+<div class="col-33 avatar_container" id="85">
+<img src="/images/fill-200x200/avatars/winter_dong.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Winter Dong
+</h3>
+<p style="min-height: 40px;">Software Engineer</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Winter is a software engineer working on Code.org's backend services, scaling, and deployment infrastructure. Before Code.org, she worked at Amazon. Despite initially viewing tech through rose-colored lenses, she eventually became interested in improving diversity in tech and using tech for social good. Outside of work, she enjoys games and music, and volunteers for the TEALS program as a remote AP CS teacher for a school in Vancouver, Washington.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<p><a id="extended"></a></p>
+
+<h1>Our Extended Team</h1>
+
+<ul>
+<li>
+Alexandra Taylor
+- Events Intern
+</li>
+<li>
+<a href="http://www.crunchbase.com/person/avid-larizadeh" target="_blank">Avid Larizadeh</a>
+- COO &amp; co-founder, Boticca
+</li>
+<li>
+<a href="http://bosepublicaffairs.com/professionals/della-cronin/" target="_blank">Della B. Cronin</a>
+- Principal, Bose Washington Partners
+</li>
+<li>
+<a href="https://www.dorsey.com/" target="_blank">Dorsey Whitney</a>
+- Legal Advice
+</li>
+<li>
+<a href="https://www.polsinelli.com/offices/seattle" target="_blank">Polsinelli</a>
+- Legal Team
+</li>
+<li>
+Hannah Weissman
+- State Policy Intern
+</li>
+<li>
+Irina Lee
+- Graphic Designer
+</li>
+<li>
+Jeremy Stone
+- Chief Technology Officer
+</li>
+<li>
+Joran Naini
+- Finance Intern
+</li>
+<li>
+<a href="http://playwell-llc.com/" target="_blank">Linnette Attai</a>
+- Founder, Playwell LLC
+</li>
+<li>
+Phil Bogle
+- Google
+</li>
+<li>
+<a href="http://www.rubenstein.com/" target="_blank">Rubenstein - especially Lynn Trono</a>
+- Media Relations
+</li>
+</ul>
+
+<h3>Thank you to our extended team of <a href="https://code.org/about/contributors">Engineer Contributors</a> and <a href="https://code.org/translators">Lead Translators</a>!</h3>
+
+<h2>Our Facilitators</h2>
+
+<p>Our expert facilitators and professional learning partners are an extension of the Code.org team. This amazing team of experts are responsible for preparing the computer science teachers of tomorrow.</p>
+
+<p><img src="/images/AllFacilitators.jpg" width="100%;"></p>
+
+<h2>Special Thanks to</h2>
+
+<ul>
+<li>
+<a href="http://www.linkedin.com/in/adrieltam" target="_blank">Adriel Tam</a>
+- Technically Learning Board Member
+</li>
+<li>
+Alexandra Vlachakis
+- Educator
+</li>
+<li>
+Alicia Rinehart
+- Office Manager
+</li>
+<li>
+<a href="http://www.linkedin.com/in/amyhirotaka" target="_blank">Amy Hirotaka</a>
+- Government Affairs
+</li>
+<li>
+Andre Stackhouse
+- Software Engineer
+</li>
+<li>
+<a href="https://www.linkedin.com/pub/andrew-oberhardt/89/44a/986" target="_blank">Andrew Oberhardt</a>
+- Software Engineer
+</li>
+<li>
+Ann Puckett
+- Regional Manager
+</li>
+<li>
+Anthonette Pena
+- National Program Manager
+</li>
+<li>
+Anthony Bau
+- Engineering Intern
+</li>
+<li>
+Asher Kach
+- Data Engineer
+</li>
+<li>
+Audrey Clark
+- Curriculum Intern
+</li>
+<li>
+<a href="http://www.linkedin.com/in/aydinghajar" target="_blank">Aydin Ghajar</a>
+- Branding/Design for original code.org Website
+</li>
+<li>
+Beth Boatright
+- Technically Learning Board Member
+</li>
+<li>
+Blake Johnson
+- Director of Individual Giving
+</li>
+<li>
+Bow Jones
+- Videographer
+</li>
+<li>
+Brad Porter
+- Amazon
+</li>
+<li>
+Brent Van Minnen
+- Software Engineer
+</li>
+<li>
+<a href="http://bcjordan.com" target="_blank">Brian Jordan</a>
+- Software Engineer
+</li>
+<li>
+Brittany Scheuch
+- Operations Team Intern
+</li>
+<li>
+Brook Osborne
+- Education Program Manager
+</li>
+<li>
+Caley Brock
+- Engineer
+</li>
+<li>
+Carly Gliva
+- Opersations Coordinator
+</li>
+<li>
+<a href="https://www.linkedin.com/in/carinabox" target="_blank">Carina Box</a>
+- Director of Outreach
+</li>
+<li>
+Charley Williams
+- Regional Manager, Midwest
+</li>
+<li>
+Charles Dick
+</li>
+<li>
+Chris Pirich
+- Engineer
+</li>
+<li>
+Cody Edmonds
+- Program Coordinator
+</li>
+<li>
+Corey Morrison
+- Curriculum Writer
+</li>
+<li>
+<a href="http://www.linkedin.com/in/apone" target="_blank">Daniel Apone</a>
+- Technically Learning Board Member
+</li>
+<li>
+Daniel Schneider
+- Curriculum Writer
+</li>
+<li>
+David Ollodart
+- Curriculm Intern
+</li>
+<li>
+Elaine Kao
+- Government Affairs Intern
+</li>
+<li>
+Emma Achberger
+</li>
+<li>
+Emma Neiman
+- Program Associate
+</li>
+<li>
+Eric Hilton
+- Technically Learning Board Member
+</li>
+<li>
+Eric Jordan
+- Software Engineer
+</li>
+<li>
+Eric Oemig
+- Technically Learning Board Member
+</li>
+<li>
+Erin Purcell
+- Accountant
+</li>
+<li>
+George Zhang
+- Education Intern
+</li>
+<li>
+<a href="https://www.linkedin.com/in/jakebaskin" target="_blank">Jake Baskin</a>
+- Computer Science Advocate
+</li>
+<li>
+Jared Dozal
+- Curriculum Writer
+</li>
+<li>
+<a href="http://www.linkedin.com/pub/james-gwertzman/0/9/362/" target="_blank">James Gwertzman</a>
+- Evangelist
+</li>
+<li>
+Jeffrey Loppert
+- MathWorks
+</li>
+<li>
+Jenna Garcia
+- Program Manager
+</li>
+<li>
+Jessie Opaleski
+- Education Team Intern
+</li>
+<li>
+Joanne Polsky
+- Software Engineer
+</li>
+<li>
+Joe Basirico
+- Technically Learning Board Member
+</li>
+<li>
+Jon Lanthier
+- Marketing and Communications Manager
+</li>
+<li>
+Jon Smith
+- Manager
+</li>
+<li>
+<a href="https://www.linkedin.com/in/joshlory" target="_blank">Josh Lory</a>
+- Software Engineering Manager
+</li>
+<li>
+Josh Caldwell
+- K-12 Curriculum Lead
+</li>
+<li>
+Karis Kim
+- Engineer Intern
+</li>
+<li>
+<a href="https://www.linkedin.com/in/brunettekate" target="_blank">Kate Brunette</a>
+- Partnerships and Campaign Coordinator
+</li>
+<li>
+<a href="https://www.linkedin.com/in/katieapone/" target="_blank">Katie Apone</a>
+- Program Manager 
+</li>
+<li>
+<a href="http://www.linkedin.com/in/misskatiek" target="_blank">Katie Kurtz</a>
+- Grant Writer
+</li>
+<li>
+<a href="http://kikivsit.com/" target="_blank">Kiki Prottsman</a>
+- Curriculum Development Manager
+</li>
+<li>
+<a href="http://www.linkedin.com/in/lkline/" target="_blank">Laura Kline</a>
+- Marketing &amp; Product Manager
+</li>
+<li>
+<a href="http://www.imdb.com/name/nm0783147/" target="_blank">Lauren Selig</a>
+- Producer
+</li>
+<li>
+<a href="http://www.imdb.com/name/nm2026261/" target="_blank">Lesley Chilcott</a>
+- Filmmaker
+</li>
+<li>
+<a href="https://www.linkedin.com/in/madelinemador" target="_blank">Maddie Mador</a>
+- Marketing Associate
+</li>
+<li>
+Madeline Burton
+- Curriculum Writer
+</li>
+<li>
+<a href="https://www.linkedin.com/in/maloriecarlini" target="_blank">Malorie O'Toole</a>
+- Program Manager, Education
+</li>
+<li>
+Mara Downing
+- Curriculum Intern
+</li>
+<li>
+Marc Wautier
+</li>
+<li>
+Margot Grant
+- Government Affairs Intern
+</li>
+<li>
+<a href="https://www.linkedin.com/in/mariaschoi" target="_blank">Maria Choi</a>
+- Vice President, Fundraising &amp; Partnerships at Fast Forward
+</li>
+<li>
+Mary Magellan
+- Grant Writer / Fund Development
+</li>
+<li>
+Mary Pelfrey
+- Events Manager
+</li>
+<li>
+Matt Bauer
+- Curriculum Writer
+</li>
+<li>
+Matt Oshry
+- 24/7 Inc.
+</li>
+<li>
+Megan Sullivan
+- Curriculum Team Intern
+</li>
+<li>
+Mei'Lani Eyre
+- Curriculum Team Intern
+</li>
+<li>
+<a href="http://www.linkedin.com/in/melissadglenn" target="_blank">Melissa Glenn</a>
+- Executive Assistant
+</li>
+<li>
+<a href="https://www.linkedin.com/in/openclssrm" target="_blank">Melissa Jones</a>
+- Community Development Manager
+</li>
+<li>
+<a href="https://www.linkedin.com/in/michellepage1/" target="_blank">Michelle Page</a>
+- CFO
+</li>
+<li>
+Mike Finch
+- Designer
+</li>
+<li>
+Minh Nguyen
+- Fundraising Intern
+</li>
+<li>
+Monica Parsons
+- Videographer
+</li>
+<li>
+<a href="http://www.crunchbase.com/person/nat-brown" target="_blank">Nat Brown</a>
+- Founder, An Engineering Guild
+</li>
+<li>
+Nichol Bradford
+</li>
+<li>
+<a href="http://www.imdb.com/name/nm2021837/" target="_blank">Nicole Ehrlich</a>
+- Producer
+</li>
+<li>
+<a href="https://www.linkedin.com/in/nicolereitzlarsen" target="_blank">Nicole Reitz-Larsen</a>
+- District Manager
+</li>
+<li>
+Patricia Phillips
+- Curriculum Writer
+</li>
+<li>
+Paul Carduner
+- Software Engineer
+</li>
+<li>
+Phil Wagner
+- Instructional Designer, Google
+</li>
+<li>
+Poorva Singal
+- Senior Product Manager
+</li>
+<li>
+Rachel Klein
+- VP of Professional Learning &amp; Community
+</li>
+<li>
+Rachel Phillips
+- Research and Evaluation
+</li>
+<li>
+Ram Kandasamy
+- Software Engineer
+</li>
+<li>
+<a href="http://www.linkedin.com/in/deutschrebecca" target="_blank">Rebecca Deutsch</a>
+- Technically Learning Board Member
+</li>
+<li>
+<a href="http://www.hogin.com/" target="_blank">Ross Hogin</a>
+- Graphic Designer, Branding/Re-design of code.org
+</li>
+<li>
+<a href="http://www.linkedin.com/in/roxanneemadi" target="_blank">Roxanne Emadi</a>
+- Marketing &amp; Communications
+</li>
+<li>
+<a href="http://ryanjsloan.com" target="_blank">Ryan Sloan</a>
+- Product Manager
+</li>
+<li>
+Sally Liu
+- Marketing
+</li>
+<li>
+Sarah Chow
+- Customer Support and Fundraising Associate 
+</li>
+<li>
+Sarah Filman
+- VP of Education
+</li>
+<li>
+<a href="https://www.linkedin.com/in/scottbailey2/" target="_blank">Scott Bailey</a>
+- Audio Producer / Sound Design
+</li>
+<li>
+Scott Isaacs
+- Amazon
+</li>
+<li>
+<a href="https://www.linkedin.com/in/sheelavanhoose" target="_blank">Sheela VanHoose</a>
+- Director of State Government Affairs
+</li>
+<li>
+Shelby White
+- Program Coordinator
+</li>
+<li>
+<a href="http://stacyhsu.com/" target="_blank">Stacy Hsu</a>
+- Graphic Designer
+</li>
+<li>
+<a href="http://www.linkedin.com/pub/stephanie-chiang/13/59b/112" target="_blank">Stephanie Chiang</a>
+- Program Manager, Google
+</li>
+<li>
+Stephanie Wong
+- Education Intern
+</li>
+<li>
+Stephen Styrchak
+</li>
+<li>
+Suky Kang
+- Director of International Partnerships
+</li>
+<li>
+Susan Evans
+</li>
+<li>
+<a href="http://www.linkedin.com/in/tcparker" target="_blank">Tanya Parker</a>
+- Technical Product Manager
+</li>
+<li>
+Tessa Wiedmann
+- Data Intern
+</li>
+<li>
+Thi Phomprida
+- Customer Support
+</li>
+<li>
+Trent Kay Maverick
+- Curriculum Writer
+</li>
+<li>
+Trevor Berg
+- Software Engineer
+</li>
+</ul>
+
+</div>
+<div class="left-nav desktop-feature">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/about">About Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/leadership">Leadership</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/donors">Donors</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">Full Team</span>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/diversity-council">Diversity Council</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">Newsroom</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/evaluation">Evaluation</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/jobs">Jobs</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/faq">FAQs</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

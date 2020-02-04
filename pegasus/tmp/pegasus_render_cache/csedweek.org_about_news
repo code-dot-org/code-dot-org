@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="CSEd Week" property="og:site_name">
+<meta content="News" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://csedweek.org/about/news" property="og:url">
+<title>News | Computer Science Education Week</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'csedweek.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div style="width: 100%; background-color: rgba(255,255,255,0.8)">
+<div style="width: 970px; margin: 0 auto; overflow: hidden">
+<div style="width: 530px; float: left; padding-top: 14px; padding-bottom: 10px">
+<br>
+<a href="/" style="text-decoration:none">
+<img src="/images/logo_text.png" style="max-width: 100%; vertical-align: bottom">
+<img src="/images/logo_date.png" style="max-width: 100%; vertical-align: bottom">
+</a>
+</div>
+<div class="desktop-feature" style="width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px">
+<a href="http://facebook.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/facebook_green.png">
+</a>
+<a href="http://twitter.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/twitter_green.png">
+</a>
+<br>
+<br>
+<br>
+<a class="redheaderlink" href="/learn">LEARN</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/educate/hoc">TEACH</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/promote">PROMOTE</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/help">HELP US</a>
+<div style="height: 5px"></div>
+</div>
+</div>
+<div style='width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'>
+<br>
+</div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 140px; margin-right: 40px; float: left;">
+<div id="about_nav" style="width:140px;">
+<span class="about_list">
+<a class="about_list_item" href="/about">About CSEdWeek</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/advisory-committee">Hour of Code and CS Ed Week Advisory Committee</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">News</span>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/awards">Awards</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+<div style="width: 790px; float: left; margin: 0; padding: 0;">
+<h1>News</h1>
+<div></div>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/a-whole-new-hour-of-code-and-a-big-milestone-b0c908967915">
+A whole new Hour of Code, and a big milestone!
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Santa Fe New Mexican
+ - 
+<a href="https://www.santafenewmexican.com/news/local_news/santa-fe-indian-school-hosts-national-start-of-computer-science/article_765fb4e0-1a9d-11ea-94c6-eb954e192ef0.html">
+Santa Fe Indian School hosts national start of Computer Science Education Week
+</a>
+</strong>
+</p>
+<p>
+<strong>
+EdSurge
+ - 
+<a href="https://www.edsurge.com/news/2019-12-02-coding-can-be-a-gift-to-struggling-students-let-s-give-it-to-them">
+Coding Can Be a Gift to Struggling Students. Let’s Give It to Them.
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/fifty-nifty-every-state-has-adopted-k-12-cs-policy-135c9dcfad5e">
+Fifty Nifty: Every state has adopted K-12 CS policy!
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Inside Higher Ed
+ - 
+<a href="https://www.insidehighered.com/news/2019/11/08/virginia-pledges-1-billion-computer-science-degree-expansion">
+Virginia Pledges $1 Billion for Tech Talent Pipeline
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Inside Higher Ed
+ - 
+<a href="https://www.insidehighered.com/views/2019/10/28/why-every-student-should-study-computer-science-opinion">
+Why every student should study computer science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+OECD Education and Skills Today
+ - 
+<a href="https://oecdedutoday.com/computer-science-and-pisa-2021/">
+Computer Science and PISA 2021
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/u-s-announces-computer-science-funding-recipients-35309a5b6c51">
+U.S. announces computer science funding recipients
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/100-000-new-computer-science-teachers-1489771c28d3">
+Celebrating 100,000 new computer science teachers!
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/female-students-ap-cs-state-of-cs-report-b38ff039eada">
+Young women set record as CS gender gap continues to shrink
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Arkansas Business
+ - 
+<a href="https://www.arkansasbusiness.com/article/127095/codeorg-ceo-keep-up-computer-science-momentum">
+Code.org CEO: Maintain Computer Science Momentum
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/alabama-adopts-all-9-code-org-advocacy-coalition-policies-42b9dc737f69?fbclid=IwAR3Jmun9sXmoN7Jq3EA0_auWSIH0B3zuoGRXUyj72IEzfTI2nlO2TZ61UH8">
+Alabama adopts all 9 Code.org Advocacy Coalition policies
+</a>
+</strong>
+</p>
+<p>
+<strong>
+CSTA
+ - 
+<a href="http://advocate.csteachers.org/2019/05/09/yes-it-really-is-about-k-12/">
+Yes, it really is about K-12
+</a>
+</strong>
+</p>
+<p>
+<strong>
+The Line
+ - 
+<a href="https://thelinek12.com/leader-spotlight-robert-runcie-and-hadi-partovi/">
+Leader Spotlight: with Robert Runcie &amp; Hadi Partovi
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/us-dept-of-education-prioritizes-computer-science-funding-64d47807d1dc">
+US Dept of Education Prioritizes Computer Science Funding
+</a>
+</strong>
+</p>
+<p>
+<strong>
+code.org
+ - 
+<a href="https://medium.com/@codeorg/the-global-reach-of-the-hour-of-code-9985bf166499">
+The global reach of the Hour of Code
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/5-tips-from-the-pros-for-hosting-a-successful-hour-of-code-6d8aeb034213">
+5 tips for hosting a successful Hour of Code
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e">
+Girls and minorities break records in computer science as fastest-growing groups!
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/detroit-classroom-doubles-state-participation-of-black-students-in-computer-science-8dbc3a09df3?source=---------40------------------">
+Detroit classroom doubles state participation of Black students in computer science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/computer-science-mania-sweeps-the-us-b38e6b7518c3">
+Computer science mania sweeps the US
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/celebrating-teachers-at-the-heart-of-our-movement-9e8dd2be2729">
+Celebrating teachers at the heart of our movement
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/newly-released-federal-grant-program-shows-priority-for-computer-science-708a25000778">
+Newly released federal grant program shows priority for computer science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/is-diversity-in-computing-jobs-improving-32f30068b7de">
+Is diversity in computing jobs improving?
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/1-3-trillion-federal-spending-bill-has-good-news-for-cs-46c38e11ccb5">
+$1.3 trillion federal spending bill has good news for CS!
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/computer-science-is-particular-focus-of-federal-grants-951425166838">
+Computer science is ‘particular focus’ of federal grants
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/using-data-to-improve-computer-science-education-a226457a0e84">
+Using data to improve computer science education
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/2018-computer-science-policy-outlook-5559170d7dba">
+$37.5 million for CS proposed in states
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/9-states-76-school-districts-and-102-organizations-worldwide-pledge-to-expand-computer-science-a3a9042453d9">
+9 states, 76 school districts, and 102 organizations worldwide pledge to expand computer science education for millions of students
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/american-companies-fund-300m-in-largest-joint-effort-for-k-12-computer-science-763a33639818">
+American companies fund $300M in largest joint effort for K-12 computer science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/in-manufacturing-software-jobs-outpace-production-jobs-for-first-time-4a3c40fd8773">
+In manufacturing, software jobs outpace production jobs for first time
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/universities-arent-preparing-enough-computer-science-teachers-dd5bc34a79aa">
+Universities aren't preparing enough computer science teachers
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Code.org
+ - 
+<a href="https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5">
+Girls set AP Computer Science record…skyrocketing growth outpaces boys
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Education Dive
+ - 
+<a href="https://www.educationdive.com/news/33-states-adopted-57-computer-science-ed-policies-since-2018/562530/">
+33 states adopted 57 computer science ed policies since 2018
+</a>
+</strong>
+</p>
+<p>
+<strong>
+KTVN
+ - 
+<a href="https://www.ktvn.com/story/41040599/governor-sisolak-announces-1-million-grant-for-computer-science-education-in-nevada">
+Governor Sisolak Announces $1 Million Grant for Computer Science Education in Nevada
+</a>
+</strong>
+</p>
+<p>
+<strong>
+US News
+ - 
+<a href="https://www.usnews.com/news/best-states/articles/2019-09-11/states-with-more-computer-science-policies-see-increased-female-participation">
+States Boost Computer Science Education Efforts
+</a>
+</strong>
+</p>
+<p>
+<strong>
+CBS 60 Minutes
+ - 
+<a href="https://www.cbsnews.com/news/closing-the-gender-gap-in-the-tech-industry-60-minutes/">
+Closing the gender gap in the tech industry
+</a>
+</strong>
+</p>
+<p>
+<strong>
+EdScoop
+ - 
+<a href="https://edscoop.com/u-of-california-now-allows-computer-science-as-core-curriculum-credit/">
+U. of California now allows high-school computer science as core curriculum credit
+</a>
+</strong>
+</p>
+<p>
+<strong>
+New York Times
+ - 
+<a href="https://www.nytimes.com/2019/01/17/business/hadi-partovi-code-org-corner-office.html">
+Hadi Partovi Was Raised in a Revolution. Today He Teaches Kids to Code.
+</a>
+</strong>
+</p>
+<p>
+<strong>
+EdSurge
+ - 
+<a href="https://www.edsurge.com/news/2018-09-27-states-are-adopting-more-computer-science-policies-are-high-schools-keeping-up">
+States Are Adopting More Computer Science Policies. Are High Schools Keeping Up?
+</a>
+</strong>
+</p>
+<p>
+<strong>
+USA Today
+ - 
+<a href="https://www.usatoday.com/story/tech/news/2018/08/27/female-minority-students-took-ap-computer-science-record-numbers/1079699002/">
+Female, minority students took AP computer science in record numbers
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Ed Surge
+ - 
+<a href="https://www.edsurge.com/news/2017-12-04-why-big-names-and-big-money-are-backing-greater-access-to-computer-science">
+Why Big Names and Big Money Are Backing Greater Access to Computer Science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+American Libraries Magazine
+ - 
+<a href="https://americanlibrariesmagazine.org/blogs/the-scoop/teaching-girls-code-will-change-workforce-culture/">
+Why teaching girls to code will change the workforce … and the culture
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Forbes
+ - 
+<a href="https://www.forbes.com/sites/rebeccaheilweil1/2017/06/12/games-like-minecraft-could-help-syrian-children-refugees-thrive/#7118ed275a9c">
+Games Like 'Minecraft' Could Help Syrian Children Refugees Thrive
+</a>
+</strong>
+</p>
+<p>
+<strong>
+The Atlantic
+ - 
+<a href="https://www.theatlantic.com/education/archive/2016/10/a-plan-to-teach-every-child-computer-science/504587/">
+A Plan to Teach Every Child Computer Science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Huffington Post
+ - 
+<a href="http://www.huffingtonpost.com/jd-hoye/celebrating-computer-scie_b_13371386.html">
+Celebrating Computer Science Education Week 2016: Investing in Computer Science for All Will Be Key to College and Career Readiness
+</a>
+</strong>
+</p>
+<p>
+<strong>
+New York Times
+ - 
+<a href="http://www.nytimes.com/roomfordebate/2014/05/12/teaching-code-in-the-classroom/teach-coding-as-early-as-possible">
+Computing in the classroom: Teach it as early as possible
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Washington Post
+ - 
+<a href="https://www.washingtonpost.com/local/education/top-business-leaders-27-governors-urge-congress-to-boost-computer-science-education/2016/04/25/f161cbde-0ae7-11e6-bfa1-4efa856caf2a_story.html">
+Top business leaders, 27 governors, education leaders urge Congress to boost computer science education
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Wall Street Journal
+ - 
+<a href="http://www.wsj.com/articles/why-coding-is-your-childs-key-to-unlocking-the-future-1430080118">
+Why coding is your child’s key to unlocking the future
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Seattle Times
+ - 
+<a href="http://www.seattletimes.com/opinion/why-we-need-to-teach-all-students-computer-science-skills/">
+Why every school should teach computer science
+</a>
+</strong>
+</p>
+<p>
+<strong>
+New York Times
+ - 
+<a href="http://www.nytimes.com/2014/05/11/us/reading-writing-arithmetic-and-lately-coding.html">
+Reading, writing, arithmetic, and now, coding
+</a>
+</strong>
+</p>
+<p>
+<strong>
+Washington Post
+ - 
+<a href="http://www.washingtonpost.com/local/education/successful-hour-of-code-computer-tutorials-prompts-effort-to-change-school-policies/2014/01/14/f224f112-7d5f-11e3-95c6-0a7aa80874bc_story.html">
+Successful ‘Hour of Code’ prompts effort to change school policies
+</a>
+</strong>
+</p>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<div style="width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)">
+<div class="whitefooter" style="width: 970px; margin: 0 auto;">
+<div style="float:left">
+<a class="whitefooterlink" href="/about">About</a>
+    |    
+<a class="whitefooterlink" href="/partners">Partners</a>
+    |    
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+    |    
+<a class="whitefooterlink" href="/resource-kit">Resource Kit</a>
+    |    
+<a class="whitefooterlink" href="/resource_kit/frequently_asked_questions">FAQ</a>
+    |    
+<a class="whitefooterlink" href="http://forums.code.org/">Forums</a>
+    |    
+<a class="whitefooterlink" href="http://support.code.org/">Support</a>
+<br>
+<small class="dim">
+© Computer Science Education Week, 2020. Hour of Code® is a trademark of Code.org
+</small>
+</div>
+<div style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</div>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

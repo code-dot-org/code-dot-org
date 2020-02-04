@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Cara membimbing relawan Hour of Code" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/id/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Cara membimbing relawan Hour of Code</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/id/">
+<img alt="Hour of Code" src="/us/id/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option selected value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/id/learn" title="Kegiatan">Kegiatan</a>
+</li>
+<li>
+<a href="/us/id/how-to" title="Cara">Cara</a>
+</li>
+<li>
+<a href="/us/id/promote" title="Mempromosikan">Mempromosikan</a>
+</li>
+<li>
+<a href="/us/id/#faq" title="Pertanyaan Umum">Pertanyaan Umum</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/id/#join">
+<button style="float: right; margin-top: 50px;">
+Host satu jam
+</button>
+</a></p>
+
+<h1>Panduan Cara untuk Relawan</h1>
+
+<h3>Buat perbedaan di kelas hari ini!</h3>
+
+<hr>
+
+<h2>Mengapa relawan?</h2>
+
+<p>Simak beberapa kesaksian dari para sukarelawan masa lalu:</p>
+
+<ul>
+<li>"Bagian terbaik dari pengalaman saya adalah bahwa seluruh kelas adalah wanita dan orang kulit berwarna. Ini menjadi pertanda baik bagi masa depan industri kita untuk memiliki kesempatan untuk mencapai dan membangkitkan anak-anak ini. "</li>
+<li>"Sangat menikmati bisa mendorong gadis muda dalam teknologi. Merasa seperti saya membantu generasi berikutnya di daerah saya. "</li>
+<li>"SAYA MENYUKAI melihat betapa senangnya anak-anak itu. Satu hal yang menakjubkan adalah bahwa para guru memperhatikan bahwa beberapa siswa yang tidak melakukannya dengan baik secara akademis berprestasi berpikir seperti pengembang dan membantu orang lain belajar - memberi mereka tempat untuk merasa percaya diri. "</li>
+</ul>
+
+<h2>Siapa pun bisa menjadi sukarelawan</h2>
+
+<h3>Volunteers and speakers in tech:</h3>
+
+<p>Do you have a connection to CS or tech? Jika Anda bekerja di bidang rekayasa perangkat lunak, di perusahaan teknologi dalam peran (non-insinyur atau teknik), atau Anda telah mengikuti kursus sains komputer, Anda dapat membantu menginspirasi siswa! Banyak siswa belum pernah bertemu dengan orang yang bekerja di industri teknologi dan guru kami senang bisa menghubungkan kelas mereka dengan para profesional dan mahasiswa.</p>
+
+<p>You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br> <br></a></p> 
+
+<h3>
+  Anyone passionate about expanding opportunity:
+</h3>
+
+<p>
+  Do you believe that learning computer science can open doors of opportunity for students? Bantu di kelas lokal atau atur acara sepulang sekolah! You don’t need any background in computer science to host an Hour of Code. Dan, hanya menawarkan untuk membantu cukup sering untuk meyakinkan guru, teman, atau klub anak Anda untuk mencoba satu jam.
+</p>
+
+<h3>
+  How do you get started?
+</h3>
+
+<ol>
+  <li>
+    <a href="/us/id/promote/resources#help-schools%0A">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+  </li>
+  
+  <li>
+    Offer to host an Hour of Code event after school at a local school. <a href="/us/id/how-to%0A">Use this How-To Guide</a> to help you plan.
+  </li>
+</ol>
+
+<h2>
+  Merekrut rekan kerja Anda untuk menjadi sukarelawan
+</h2>
+
+<p>
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="/us/id/promote/resources#sample-emails%0A">Send this email</a> to your manager or the CEO to get everyone on board.
+</p>
+
+<h2>
+  Bagaimana cara mempersiapkannya
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/id/promote/resources#videos">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+  </li>
+  <li>
+    Check out <a href="/files/hoc-volunteer-toolkit.pdf"> Jam Kode Relawan Toolkit </a> yang mencakup gambaran, timeline, persiapan bahan, dan material marketing. Semua yang Anda butuhkan untuk siap untuk pengalaman sukarela Anda!
+  </li>
+  <li>
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="/us/id/learn">Hour of Code tutorial</a>.
+  </li>
+  <li>
+    Jika Anda mengunjungi sekolah, lengkapi pemeriksaan latar belakang atau dokumen yang diperlukan.
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Review these tips</a> about how to interact with students.
+  </li>
+  <li>
+    Join the conversation on Facebook, Twitter, Instagram, and Tumblr with #HourOfCode.
+  </li>
+  <li>
+    Connect with the teacher to discuss what you plan to speak about during your session.
+  </li>
+  <li>
+    Jika Anda seorang sukarelawan virtual, uji kemampuan A / V dan screen sharing sebelumnya.
+  </li>
+</ul>
+
+<h2>
+  Day-of Hour of Code Event
+</h2>
+
+<p>
+  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+</p>
+
+<h3>
+  Sample agenda:
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Waktu
+    </th>
+    
+    <th>
+      Item agenda
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 menit
+    </td>
+    
+    <td>
+      <a href="/us/id/promote/resources#videos">Show an inspirational video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 menit
+    </td>
+    
+    <td>
+      Perkenalkan diri Anda dan pelajari lebih banyak tentang siswa: 
+      
+      <li>
+        Apa pekerjaan Anda, apa yang Anda lakukan, dan apa yang paling Anda sukai dari pekerjaan Anda?
+      </li>
+      
+      <li>
+        Apa atau siapa yang menginspirasi kamu?
+      </li>
+      
+      <li>
+        Bagaimana Anda tertarik dengan ilmu komputer?
+      </li>
+      
+      <li>
+        Apakah Anda memiliki mentor?
+      </li>
+      
+      <li>
+        Bagikan cerita tentang bagaimana teknologi mempengaruhi semua orang.
+      </li>
+      
+      <br>Ask the students questions and leave time for Q&amp;A. 
+      
+      <li>
+        Pekerjaan apa yang mereka minati, gadget dan aplikasi favorit mereka, dan bagaimana mereka berpikir mereka dibangun?
+      </li>
+      
+      <li>
+        Apakah para siswa memiliki pertanyaan untuk Anda?</li>
+</td> </tr> <tr>
+          <td>
+            30-60 menit
+          </td>
+          
+          <td>
+            <strong> Kode!  strong&gt; Berjalan-jalanlah, menjawab pertanyaan, dan membimbing mereka melewati teka-teki yang sulit. Cobalah untuk tidak memberi solusi kepada siswa secara langsung, sebagai gantinya, cobalah mengajukan pertanyaan kepada mereka sehingga mereka dapat menjawab sendiri apa yang salah, dan dorong siswa untuk bertanya satu sama lain jika mereka memiliki pertanyaan. Belajar satu sama lain adalah kesempatan belajar yang hebat.</strong>
+</td> </tr> 
+            
+            <tr>
+              <td>
+                1-3 menit
+              </td>
+              
+              <td>
+                Terimakasih semuanya dan bagikan kata-kata perpisahan yang inspirasional. Serahkan salah satu barang perusahaan Anda (stikernya mengagumkan)!
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                Setelah
+              </td>
+              
+              <td>
+                <strong> Buat perubahan yang langgeng:  strong&gt; Bicara kepada guru tentang mengubah Jam Kode menjadi kursus sains komputer lengkap! Pergi ke <a href="https://%20kode.org/yourschool"> kode.org / yourschool </a> dengan guru Anda untuk mengisi apa yang diajarkan sekolah ini hari ini dan mendorong mereka untuk berjanji untuk membawa ilmu ccomputer ke kelas mereka.</strong>
+</td> </tr>  </table> 
+                
+
+<pre><code>            &lt;h3&gt;
+              After the Event:
+            &lt;/h3&gt;
+
+            &lt;ul&gt;
+              &lt;li&gt;
+                Bagikan foto dan cerita Anda dengan Code.org untuk memberi @ kode.org.
+              &lt;/li&gt;
+              &lt;li&gt;
+                Ingatlah untuk masuk dalam jam sukarela Anda di portal pelacakan sukarela perusahaan Anda.
+              &lt;/li&gt;
+              &lt;li&gt;
+                Bagikan pengalaman Anda di media sosial #HourOfCode!
+              &lt;/li&gt;
+              &lt;li&gt;
+                Jika Anda mengambil gambar / video selama acara berlangsung, &lt;strong&gt; terutama dengan siswa &lt;/ strong&gt;, pastikan Anda mendapatkan izin dari guru / orang tua jika ingin memposting cerita Anda di media sosial.&lt;/li&gt; 
+
+                &lt;li&gt;
+                  Dan, periksa kembali dalam sebulan: Apakah guru tertarik untuk menawarkan kursus ilmu komputer? Share &lt;a href="https:// kode.org/yourschool"&gt; sumber daya dan kesempatan belajar profesional untuk membantu mereka melakukan hal ini &lt;/a&gt;.
+                &lt;/li&gt;&lt;/ul&gt; 
+
+                &lt;h2&gt;
+                  Bagaimana Anda terpilih sebagai sukarelawan teknis pembicara tamu
+                &lt;/h2&gt;
+
+                &lt;ul&gt;
+                  &lt;li&gt;
+                    Guru akan mencari relawan pada kami href="https:// &lt;a kode.org/volunteer/local"&gt; peta relawan &lt;/a&gt;.
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    Cobalah untuk membuat profil Anda selengkap mungkin untuk meningkatkan kesempatan bahwa seorang guru akan memilih Anda.
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    Seorang guru akan menghubungi Anda melalui formulir ini (alamat email Anda tidak akan pernah dibagi dengan guru). &lt;em&gt; Jika Anda menerima terlalu banyak permintaan dari guru, Anda selalu dapat memperbarui preferensi Anda dengan mengeklik tautan untuk mengedit informasi atau berhenti berlangganan, yang disediakan di bagian bawah email dari seorang guru. &lt;/ em&gt;&lt;/li&gt; &lt;/ul&gt; 
+
+                    &lt;h2&gt;
+                      Kesukarelaan selama Jam Kode FAQ
+                    &lt;/h2&gt;
+
+                    &lt;h3&gt;
+                      I haven't been contacted by a teacher yet. How can I still volunteer?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+                    &lt;/p&gt;
+
+                    &lt;h3&gt;
+                      How long do classroom visits last for?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+                    &lt;/p&gt;
+
+                    &lt;h3&gt;
+                      What age group is the Hour of Code activity appropriate for?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+                    &lt;/p&gt;
+
+                    &lt;p&gt;
+                      &lt;a href='/us/id/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+Host satu jam
+</button>
+</p>
+
+<pre><code>                    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/id/how-to">
+<div class="nav-header">Panduan bagaimana-untuk</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to">
+Untuk pendidik
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/afterschool">
+Untuk pengajar les
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/companies">
+Untuk perusahaan
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/districts">
+Untuk daerah
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/events">
+Untuk kesatuan sekolah
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/parents">
+Untuk orang tua
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/public-officials">
+Untuk para pejabat publik
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/id/how-to/volunteers">
+Untuk sukarelawan
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/id/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/id/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Alat-alat Promosi</div>
+</div>
+</a>
+<a href="/us/id/learn">
+<div class="display-link">
+<img class="display-img" src="/us/id/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Coba Tutorial</div>
+</div>
+</a>
+<a href="/us/id/promote">
+<div class="display-link">
+<img class="display-img" src="/us/id/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Bagaimana cara untuk terlibat</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Hubungi kami</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Dukungan</a>
+</li>
+<li>
+<a href="/us/id/partners" target="_blank">Mitra-mitra</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Persyaratan</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Kebijakan Privasi</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Hak cipta 2015 Code.org. Semua hak dilindungi.
+<br>
+Hour of Code™ adalah merek dagang dari Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

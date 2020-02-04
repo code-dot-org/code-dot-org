@@ -1,0 +1,14 @@
+<div class='hide-print'>
+<h1>Hour of Code Certificates</h1>
+<p>Ready to print?</p>
+<p>Look at your certificates first to make sure they're correct before you waste a lot of paper.</p>
+<p>
+<b>IMPORTANT:</b>
+Make sure you print in Landscape orientation (sideways, not regular), so the certificates fill a full page.
+</p>
+<p>
+When you're ready...
+<button onclick='window.print(); return false;'>Print</button>
+</p>
+<div class='page-break'></div>
+</div>

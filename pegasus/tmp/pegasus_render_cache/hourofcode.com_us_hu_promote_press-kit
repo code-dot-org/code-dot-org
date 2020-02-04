@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Sajtóanyag" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/hu/promote/press-kit" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Sajtóanyag</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/hu/">
+<img alt="Hour of Code" src="/us/hu/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/press-kit';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option selected value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/hu/learn" title="Tevékenységek">Tevékenységek</a>
+</li>
+<li>
+<a href="/us/hu/how-to" title="Útmutató">Útmutató</a>
+</li>
+<li>
+<a href="/us/hu/promote" title="Támogatás">Támogatás</a>
+</li>
+<li>
+<a href="/us/hu/#faq" title="GYIK">GYIK</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/hu/#join">
+<button style="float: right; margin-top: 50px;">
+Tarts meg egy órát
+</button>
+</a></p>
+
+<h1>Hogyan lépj kapcsolatba a médiával a Kódolás Órája eseményed kapcsán</h1>
+
+<h3>Hívd fel a figyelmet a Kódolás Órája eseményedre és hívd meg a helyi médiát, hogy lássák, miért fontos a számítástechnika az iskoládnak.</h3>
+
+<p><em>Minden sajtó és média megkeresésekkel kérem érdeklődjön ezen a címen: <a href="mailto:press@code.org">press@code.org</a></em></p>
+
+<hr>
+
+<h2>Tippek</h2>
+
+<ul>
+<li>Lépj kapcsolatba a médiával két héttel az esemény előtt. Küldj újabb e-maileket vagy hívd őket telefonon, ha nem kapsz visszajelzést.</li>
+<li>Kérj meg egy iskolai dolgozót, vagy vállald te a fényképek készítését, amit később megoszthatsz vagy elküldhetsz a médiának.</li>
+<li>Írj a Kódolás Órájáról az weboldalad honlapján és az iskolád újságjában. Rakd ki az eseményed adatait és képeket a tevékenységekről.</li>
+<li>A Facebook-on és a Twitteren rakj frissítéseket a tervekről, rakd ki az eseményeket és tölts fel képeket 2019 során. Használd ezt a hashtaget <strong>#HourOfCode</strong>, hogy a Code.org lássa és támogassa az eseményeidet.</li>
+</ul>
+
+<h2>Leírás lépésről lépesre</h2>
+
+<h3>1. Tervezd meg az eseményed</h3>
+
+<ul>
+<li>Tervezz egy kick off eseményt a Kódolás Órájára.</li>
+<li>Küldj <a href="/us/hu/promote/resources#sample-emails">egy levelet</a> szülőknek és kérd meg őket, hogy osszák az igét.</li>
+<li>Küldj <a href="/us/hu/promote/resources#sample-emails">egy levelet</a> , hogy elhívd a helyi polgármesters, politikust vagy befolyásos üzletembert, hogy vegyen részt és beszéljen a diákokkal.</li>
+<li>Szervezz csoport tevékenységeket (mint egy 'unplugged' kódolási esemény) vagy mutasd be a diákok által szervezett és irányított tevékenységeket.</li>
+<li>Mutasd meg a Code.org <a href="/us/hu/">Kódolás Órája videóját</a> vagy <a href="/us/hu/promote/resources#videos">ezen videók</a> egyikét, hogy inspiráld a diákokat. <br>
+</li>
+</ul>
+
+<h3>2. Találj riportereket, akik oktatási és helyi eseményekről számolnak be</h3>
+
+<p>Hasonlókat, mint helyi újságok, TV csatornák, rádió csatornák vagy blogok. <br></p>
+
+<h3>3. Lépj kapcsolatba helyi médiával</h3>
+
+<p>Legjobb emailben kapcsolatot létesíteni. Rövid kellene legyen és azt kellene mondania, hogy "miért kellene az embereket érdekelje ez az esemény"? Elérhetőségi adatokat (beleértve a mobiltelefon számot) kellene tartalmaznia azon személyeknek, akik ott lesznek az eseményen. <strong><a href="/us/hu/promote/press-kit#sample-emails">Itt láthatsz egy rövid minta pitch-et (rövid értékesítési levél)</a></strong>.</p>
+
+<p>Keress online, hogy elérhetőségi adatokat találj riporterekhez. Ha nem találsz, telefonálj a kiadónak vagy írj a szervezet általános email címére és kérd bene, hogy a leveledet a megfelelő riporterhez továbbítsák. <br></p>
+
+<h3>4. Készülj fel lehetséges kérdésekre az iskolád eseménye kapcsán. Alább pár példa:</h3>
+
+<h4>Miért rendezzen az iskolád Kódolás órája eseményt?</h4>
+
+<p>Bár mindannyian tudjuk, hogy a diákok számára fontos, hogy megtanulják, hogyan kell navigálni a mai technológiailag telített világban, sok tanárnak nincs tapasztalata a számítástechnikában és nem is tudja, hogyan kezdje. Ez az esemény mindenkinek lehetőséget ad arra, hogy megismerje a számítástechnikát.</p>
+
+<p>Reméljük, ez felkelti majd a diákok érdeklődését a továbbtanulás iránt. A kutatások azt is kimutatták, hogy a gyerekek már azelőtt rá tudnak érezni a programozási alapelvekre, mielőtt megtanulnák, hogyan kell írni vagy olvasni. Ugyanis az agyuk fiatalkorban érzékenyebben reagál a számítógépes nyelvezetre, akárcsak az idegen nyelvekre. <br> <br></p>
+
+<h4>Miért fontos mindez?</h4>
+
+<p>A technológia átformál minden iparágat a világon. 2015-ben 7 millió olyan üres állás volt Amerikában, amelyhez előny jelentett volna a programozási ismeret. De az Egyesült Államok iskoláinak 60%-a nem oktat számítástechnikát. Itt az idő, hogy utolérjük a 21. századot. Függetlenül attól, hogy a diákok milyen területen helyezkednek el felnőttként - orvostudomány, üzleti élet, politika vagy művészet -, a számítástechnika ismerete önbizalmat és versenyképességet teremt számukra. <br></p>
+
+<p><a id="sample-emails"></a></p>
+
+<h2>Minta email, amit a helyi média meghívására tudsz használni a saját eseményedhez</h2>
+
+<p><strong>Tárgy</strong>: Helyi iskola küldetésének teszi, hogy bemutassa a számítástechnikát diákok számára</p>
+
+<p>A számítógépek mindenhol ott vannak, minden iparágat megváltoztatnak a világon, de az iskolák kevesebb, mint fele oktat számítástechnikát. Lányok és kisebbségek rendkívül alulreprezentáltak a számítástechnika órákon és az IT iparban. A jó hír az, hogy mi már dolgozunk azon, hogy ez megváltozzon.</p>
+
+<p>A Kódolás Órájával, a számítástechnika tudomány a Google, MSN, Yahoo! és a Disney honlapján is szerepelt. Több, mint 100 partner csatlakozott, hogy támogassa a mozgalmat. Minden Apple Store a világon tartott már egy Kódolás Órája eseményt. Még Obama elnök úr is megírta élete első kódját a kampány részeként.</p>
+
+<p>Ezért van az, hogy a [SCHOOL NAME] [X number] tanulójának mindegyike csatlakozik a történelem legnagyobb oktatási rendezvényéhez: A Kódolás Órája a Computer Science Education Week alatt (december 3-9.).</p>
+
+<p>Meg szeretnélek hívni, hogy részt vegyél a kick off eseményünkön és hogy lásd, ahogy a gyerekek elkezdik a munkát [DATE] napon.</p>
+
+<p>A Kódolás Órája, amelyet a non-profit Code.org és több, mint 100 partner szervez, egy globális mozgalom, amely hiszi, hogy a mai diákok készen állnak azon kritikus készségek elsajátítására, amellyel sikeresek lehetnek a 21. században. Kérlek csatlakozz hozzánk.</p>
+
+<p>Elérhetőség: [YOUR NAME], [TITLE], mobil: (212) 555-5555 Dátum: [DATE and TIME of your event] Helyszín: [ADDRESS and DIRECTIONS]</p>
+
+<p>Érdeklődve várom válaszát. <br></p>
+
+<h2>További adatok és egy idézet, amit használhatsz anyagokban</h2>
+
+<p>"A Kódolás órája esemény célja a programozás demisztifikálása, és annak bemutatása, hogy a számítástechnika nem atomfizika - bárki megtanulhatja az alapokat" - mondta Hadi Partovi, a Code.org alapítója és vezérigazgatója. Világszerte több mint 100 millió diák próbálta már ki a Kódolás óráját. A 21. századi számítástechnika oktatás iránti kereslet nem ismer határokat." <br> <br></p>
+
+<h4>A Code.org-ról</h4>
+
+<p>A Code.org egy 501c3 számú non-profit szervezet, amelynek célja a számítástechnikában való részvétel bővítése, valamint a nők és az alulreprezentált színesbőrű hallgatók felkarolása. Meglátása szerint, minden iskolában minden diáknak lehetőséget kell teremteni arra, hogy megtanulhassa a számítógépes programozást. A 2013-as elindulást követően a Code.org megszervezte a Kódolás órája kampányt, amely eddig több mint 100 millió diákot vezetett be a számítástechnika világába, és Amerika szerte 70 középiskolával együttműködve segíti a számítástechnikai programok bővítését. A Code.org-ot különböző társaságok, alapítványok és nagylelkű személyek jótékony felajánlásai támogatják, köztük a Microsoft, a Facebook, az Infosys Foundation USA, az Amazon és sokan mások. További információkért, kérlek látogass el ide: <a href="https://code.org">code.org</a>.</p>
+
+<p>Találj további anyagokat és minta emaileket <a href="/us/hu/promote/resources#sample-emails">itt</a>.</p>
+
+<p><a href="/us/hu/#join">
+<button style="float: right; margin-top: 50px;">
+Tarts meg egy órát
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/hu/promote">
+<div class="nav-header">Támogatás</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote">
+Hogyan csatlakozz
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#onepager">
+Egy oldalas emlékeztető
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#brochure">
+Tájékoztató füzet
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#videos">
+Videók
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#posters">
+Poszterek
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#social">
+Közmédia
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#logo">
+Kódolás Órája logó
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#stickers">
+Matricák
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/resources#sample-emails">
+Minta e-mailek
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/stats">
+Hasznos statisztikák és érdekességek
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hu/promote/press-kit">
+Sajtóanyag
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/hu/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/hu/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Segédanyagok</div>
+</div>
+</a>
+<a href="/us/hu/learn">
+<div class="display-link">
+<img class="display-img" src="/us/hu/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Próbáld ki az oktatóanyagokat</div>
+</div>
+</a>
+<a href="/us/hu/promote">
+<div class="display-link">
+<img class="display-img" src="/us/hu/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Hogyan csatlakozz</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Lépj velünk kapcsolatba</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Támogatás</a>
+</li>
+<li>
+<a href="/us/hu/partners" target="_blank">Partnerek</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Fetételek</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Adatvédelmi irányelvek</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2015 Code.org. Minden jog fenntartva.
+<br>
+Hour of Code™ a Code.org bejegyzett védjegye.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

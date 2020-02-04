@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Инструкции по организации мероприятия Часа Кода" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ru/how-to/events" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Инструкции по организации мероприятия Часа Кода</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ru/">
+<img alt="Час Кода" src="/us/ru/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/events';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option selected value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ru/learn" title="Упражнения">Упражнения</a>
+</li>
+<li>
+<a href="/us/ru/how-to" title="Инструкции">Инструкции</a>
+</li>
+<li>
+<a href="/us/ru/promote" title="Содействуйте популяризации">Содействуйте популяризации</a>
+</li>
+<li>
+<a href="/us/ru/#faq" title="Часто задаваемые вопросы">Часто задаваемые вопросы</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ru/#join">
+<button style="float: right; margin-top: 50px;">
+Хозяин часа
+</button>
+</a></p>
+
+<h1>How to organize an Hour of Code assembly or event</h1>
+
+<h3>Get your entire school or community involved in an Hour of Code!</h3>
+
+<hr>
+
+<h2>1. Подготовьтесь к своему мероприятию</h2>
+
+<ul>
+<li>Определитесь с местом, датой и временем.</li>
+<li>Send <a href="https://hourofcode.com/promote/resources#sample-emails">a letter</a> to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our <a href="/files/elected-official.pdf">how-to toolkit</a> when hosting an elected official during an Hour of Code for more info.</li>
+<li>Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our <a href="/us/ru/promote/press-kit">press kit</a> for help.</li>
+</ul>
+
+<h2>2. Во время вашего мероприятия</h2>
+
+<ul>
+<li>Kick off your event with one of our <a href="/us/ru/promote/resources#videos">inspirational videos</a>.</li>
+<li><p>Give an intro overviewing the importance of computer science, using these <a href="/us/ru/promote/stats">stats and infographics</a>.   </p></li>
+<li>
+<p><strong>Other event ideas</strong>: </p>
+
+<ul>
+<li>Пригласите лидера местной индустрии, чтобы обсудить как его или ее работа использует компьютерную науку.</li>
+<li>Пригласите местного политика, чтобы ученики обучили его или ее программированию.</li>
+<li>Пусть группа учеников продемонстрирует задания не требующие компьютера.</li>
+<li>Пусть группа учеников обучит директора или группу учителей программированию.</li>
+<li>Если ваша школа уже обучает компьютерным наукам, пусть ученики продемонстрируют свои проекты.</li>
+</ul>
+</li>
+</ul>
+
+<h2>3. Поделитесь тем как прошло ваше мероприятие</h2>
+
+<p>Share pictures of your event on Facebook and Twitter and use the hashtag <strong>#HourOfCode</strong>.</p>
+
+<hr>
+
+<h2>Проведите Семейный Вечер Кода с Часом Кода и пригласите родителей принять участие</h2>
+
+<p>Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. This is a great way to engage the larger community and encourage parent support for computer science at your school. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. <a href="http://www.familycodenight.org/DownloadCodeDotOrg.html">Click here to download the Event Kit</a>.</p>
+
+<hr>
+
+<h2>Example plan for a school assembly or event</h2>
+
+<p><strong>Event:</strong> School-wide Computer Science Education Week kick-off assembly</p>
+
+<p><strong>Date:</strong> Dec. 9
+ (start of Computer Science Education Week)</p>
+
+<p><strong>Time:</strong> During the school day. Mid-morning event preferred. Approximately 1 hour.</p>
+
+<p><strong>Location:</strong> School assembly hall (e.g. theater, gym, cafeteria)</p>
+
+<h2>Запуск шоу</h2>
+
+<table>
+<thead>
+<tr>
+<th>Время</th>
+<th>Действие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10:00 - 10:05</td>
+<td>Open with one of our <a href="/us/ru/promote/resources#videos">inspirational videos</a>.</td>
+</tr>
+<tr>
+<td>10:05 - 10:15</td>
+<td>Principal gives an intro overviewing the importance of computer science. Use these <a href="/us/ru/promote/stats">stats and infographics</a>.</td>
+</tr>
+<tr>
+<td>10:15 - 10:30</td>
+<td>Специальный гость расскажет о своем опыте и как технологии и компьютерные науки играют большую роль в их повседневной жизни.</td>
+</tr>
+<tr>
+<td>10:30 - 10:40</td>
+<td>Ученики демонстрируют Час Кода школе. Веселый поворот: пусть они обучат директора, политика или других учеников!</td>
+</tr>
+<tr>
+<td>10:40 - 11:00</td>
+<td>Ученики демонстрируют уроки не требующие компьютеров и как компьютерной науке можно научить без компьютеров.</td>
+</tr>
+<tr>
+<td>11:00 - 11:05</td>
+<td>Учитель, который помогал организовать мероприятие, говорит заключительную речь.</td>
+</tr>
+</tbody>
+</table>
+
+<p><a href="/us/ru/#join">
+<button style="float: right; margin-top: 50px;">
+Хозяин часа
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ru/how-to">
+<div class="nav-header">Практические руководства</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to">
+Для преподавателей
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/afterschool">
+Для преподавателей во внеучебное время
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/companies">
+Для компаний
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/districts">
+Для районов
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/events">
+Для школьных собраний
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/parents">
+Для родителей
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/public-officials">
+Для должностных лиц
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ru/how-to/volunteers">
+Для волонтеров
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ru/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ru/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Ресурсы</div>
+</div>
+</a>
+<a href="/us/ru/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ru/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Начать обучение</div>
+</div>
+</a>
+<a href="/us/ru/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ru/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Как принять участие</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Связаться с нами</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Поддержка</a>
+</li>
+<li>
+<a href="/us/ru/partners" target="_blank">Партнеры</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Условия</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Политика конфиденциальности</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Авторские права 2015 Code.org. Все права защищены.
+<br>
+Hour of Code™ является торговой маркой Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="新闻资料袋" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/cn/promote/press-kit" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>新闻资料袋</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/cn/">
+<img alt="编程一小时" src="/us/cn/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/press-kit';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option selected value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/cn/learn" title="活动">活动</a>
+</li>
+<li>
+<a href="/us/cn/how-to" title="操作方法">操作方法</a>
+</li>
+<li>
+<a href="/us/cn/promote" title="推广">推广</a>
+</li>
+<li>
+<a href="/us/cn/#faq" title="常见问题">常见问题</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/cn/#join">
+<button style="float: right; margin-top: 50px;">
+主办一小时
+</button>
+</a></p>
+
+<h1>How to attract media to your Hour of Code event</h1>
+
+<h3>Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.</h3>
+
+<p><em>所有的记者和媒体垂询，请联系<a href="mailto:press@code.org">press@code.org</a></em></p>
+
+<hr>
+
+<h2>Key Tips</h2>
+
+<ul>
+<li>在你的活动开始两周前通过电子邮件主动联系媒体，如果没有得到初步答复跟进邮件或电话联系。</li>
+<li>请学校工作人员或志愿者拍照在网上分享或发送给媒体。</li>
+<li>在你的个人网站主页和学校报纸上发表关于编程一小时的内容，发表你的活动细节，和学生活动的照片。</li>
+<li>On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during 2019. Use the hashtag <strong>#HourOfCode</strong> so Code.org can see and promote your events.</li>
+</ul>
+
+<h2>Step-by-step guide</h2>
+
+<h3>1. Plan your event</h3>
+
+<ul>
+<li>策划一系列活动揭开编程一小时的序幕</li>
+<li>Send <a href="/us/cn/promote/resources#sample-emails">a letter</a> to parents and ask them to spread the word.</li>
+<li>Send <a href="/us/cn/promote/resources#sample-emails">a letter</a> to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.</li>
+<li>组织集体活动（如策划“不插电”活动），或展示学生创建并领导的活动。</li>
+<li>Show Code.org’s <a href="/us/cn/">Hour of Code video</a> or one of <a href="/us/cn/promote/resources#videos">these videos</a> to inspire students. <br>
+</li>
+</ul>
+
+<h3>2. Identify specific reporters that cover education or local events</h3>
+
+<p>Like local newspapers, TV station or radio stations, or blogs. <br></p>
+
+<h3>3. Contact local media</h3>
+
+<p>The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. <strong><a href="/us/cn/promote/press-kit#sample-emails">See a sample pitch to media</a></strong>.</p>
+
+<p>Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br></p>
+
+<h3>4. Prepare to field questions about your school event. Here are some examples:</h3>
+
+<h4>为什么你的学校组织编程一小时活动？</h4>
+
+<p>我们都知道对于学生们来说学会如何在当今科技饱和的世界中生存是很重要的，但是许多老师并没有计算机科学相关的教学经验也不知道从哪里开始教。 这个活动对我们来说正是一个了解计算机科学的机会。</p>
+
+<p>我们希望它能激发学生们的兴趣并坚持学习下去。 研究也表明，孩子们在学会读写之前就已经可以学会编程概念。 事实上，就像学习外语一样，小时候他们的大脑更容易接受计算机语言。 <br> <br></p>
+
+<h4>为什么这很重要？</h4>
+
+<p>科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br></p>
+
+<p><a id="sample-emails"></a></p>
+
+<h2>Sample email to send to invite local media to your event</h2>
+
+<p><strong>Subject line</strong>: Local school joins mission to introduce students to computer science</p>
+
+<p>计算机无处不在，正在改变着地球上每一个行业，但我们只有不到一半的学校有在讲授计算机科学。 计算机课堂上的女性和少数族裔学生严重不足，在整个科技产业亦是如此。 好消息是，我们正在着手改变现状。</p>
+
+<p>因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都有举办过《编程一小时》。 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编码。</p>
+
+<p>这就是 [SCHOOL NAME] 有 [X number] 名学生都参加史上最大规模的学习活动的原因：计算机科学教育周（12 月 3 日至 9 日）中的编程一小时。</p>
+
+<p>我诚邀您参加我们的开幕式，来看看孩子们如何在[日期] 开始他们的编程之旅。</p>
+
+<p>《编程一小时》，由非营利机构Code.org和其他100多个单位共同组织，是一个全球性的运动，宗旨是让今天的学生都能准备好了学习能在21世纪取得成功的关键技能。 请加入我们。</p>
+
+<p>Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]</p>
+
+<p>I look forward to being in touch. <br></p>
+
+<h2>Additional details and a quote you can use in materials</h2>
+
+<p>Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br> <br></p>
+
+<h4>关于Code.org</h4>
+
+<p>Code.org®是501c3公立非营利项目，致力于扩展计算机科学，增加女性和有色弱势学生群体的参与。 Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: <a href="https://code.org">code.org</a>.</p>
+
+<p>Find more resources and sample emails <a href="/us/cn/promote/resources#sample-emails">here</a>.</p>
+
+<p><a href="/us/cn/#join">
+<button style="float: right; margin-top: 50px;">
+主办一小时
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/cn/promote">
+<div class="nav-header">推广</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote">
+如何参与
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#onepager">
+单页传单
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#brochure">
+宣传册
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#videos">
+视频
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#posters">
+海报
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#social">
+社交网络
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#logo">
+编程一小时图标
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#stickers">
+贴纸
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/resources#sample-emails">
+电子邮件示例
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/stats">
+有用的统计信息和导语
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cn/promote/press-kit">
+新闻资料袋
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/cn/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/cn/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">资源</div>
+</div>
+</a>
+<a href="/us/cn/learn">
+<div class="display-link">
+<img class="display-img" src="/us/cn/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">尝试教程</div>
+</div>
+</a>
+<a href="/us/cn/promote">
+<div class="display-link">
+<img class="display-img" src="/us/cn/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">如何参与</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">联系我们</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">支持</a>
+</li>
+<li>
+<a href="/us/cn/partners" target="_blank">合作伙伴</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">条款</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">隐私政策</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+版权所有 2015 Code.org。保留所有的权利。
+<br>
+Hour of Code ™ 是 Code.org 的注册商标。
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="إرشادات النشاط" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ar/activity-guidelines" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>إرشادات النشاط</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ar/">
+<img alt="ساعة البرمجة" src="/us/ar/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/activity-guidelines';">
+<option selected value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ar/learn" title="الأنشطة">الأنشطة</a>
+</li>
+<li>
+<a href="/us/ar/how-to" title="كيفية الاستعمال">كيفية الاستعمال</a>
+</li>
+<li>
+<a href="/us/ar/promote" title="تعزيز">تعزيز</a>
+</li>
+<li>
+<a href="/us/ar/#faq" title="الأسئلة المتداولة">الأسئلة المتداولة</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<style>
+  ul {
+    margin: 0px 20px 20px 20px;
+  }
+</style>
+
+<p><a href="/us/ar/#join">
+<button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</a></p>
+
+<h1>دليل الدرس ل (Hour of Code™) وأسبوع تدريس علوم الكمبيوتر</h1>
+
+<p>تستضيف Code.org أنشطة متنوعة ل (Hour of Code™)، وفيديوهات على Code.org، ساعة البرمجة، وواقع أسبوع تدريس علوم الكمبيوتر. اللائحة الحالية هي على <a href="/us/ar/learn">hourofcode.com/learn</a>.</p>
+
+<p>تريد تقديم لعبتك الموجهة الخاصة بك، أو الدرس الذي يقدمه المدرس، أو نشاطا يشرح مبادئ علوم الكمبيوتر؟ انضم إلى هذه الحركة العالمية وساعد المشاركين حول العالم وابدأ مع ساعة البرمجة أو تقدم مع دروس متعددة، طول اليوم، أو أنشطة طول الأسبوع.</p>
+
+<p>**بعد قراءة الإرشادات، يمكنك إرسال نشاطك في <a href="http://bit.ly/29zt9ki">صفحتنا لتسجيل أنشطة (Hour of Code™)</a>. يمكنك تقديم نشاطك في أي وقت، لكن آخر أجل لإدماجه في السنة هو 1 أكتوبر. مثلا، أي نشاط تم التوصل إليهبعد 1 أكتوبر، 2019 لن يتم إدراجه لساعة برمجة 2019.)إذا كان لديك أسئلة حول إلرسال نشاطك، المرجو الاطلاع على <a href="mailto:support@code.org">support@code.org</a>.</p> 
+
+<p>بعض التوجيهات:</p>
+
+<ol>
+<li><p><strong>أرسل أكثر من نشاط</strong>: إذا كنت قد أعددت أنشطة لمستويات متعددة، لأعمار مختلفة، أو لأصناف أخر، سنعر أنشطتك منفردة ليتمكن المدرس من العثور على شيء جيد لفصله الدراسي. لذلك إذا قمت بإنشاء صفحة أعطيتنا عنوانها الالكتروني، فلا تفعلذلك مجددا. أرسل كل دورة أو نشاط بشكل فردي. نظرا للعدد الكبير من الأنشطة المتوصل بها في هذه السنة، سيكون لدينا الوقت لمراجعة 5 أنشطة لكل شريك. بعد ذلك سنبذل قصارى جهدنا لمراجعة عدد أكبر قبل بداية ساعة البرمجة.</p></li>
+<li><p><strong>دروس أكثر للمبتدئين</strong>: بالإضافة إلى دروس المدرسين والمتعلمين الذين يتعلمونعلوم الكمبيوتر للمرة الأولى، سنعرض التجارب التعليمية لفصل علوم الكمبيوتر الذكي الذي يريد أن يتعلم أكثر! ساعدنا لنقدم دروسا لأقسام تعلمت الأساسيات. يمكن أن يكون عمر هؤلاء المتعملنن من 9 إلى 99.</p></li>
+<li><p><strong>مجالات المواضيع</strong>: لديك فكرة رائعة تدمج علوم الكمبيوتر في الرياضيات؟ السجل؟ فنون اللغة؟ علوم؟ فن؟ أو موضوع آخر؟ تلقينا العديد من الطلبات من المدرسين الذين يريدون ربط ساعة البرمجة نجال مواضعيهم (خاصة مع معايير (ISTE) المطَوَّرة للمتعلمين متضمنة "المصمم المبدع" و"المفكر المعلومياتي"). يمكن للمدرسين الانتقاء حسب نوع الفصل الدراسي (المستوى أو مجال الموضوع)، لذلك نحتاج مساعدتك لملء الفجوات لمنح الفصل الأنشطة أو تخطيط الدرس لربط علوم الكمبيوتر بمجال الموضوع الرئيسي لمختلف الفصول الدراسية. نواصل أيضا ليكون لدينا صنف "علوم الكمبيوتر" للمدرسين الذين يبحثون عن أنشطة علوم الكمبيوتر الشاملة.</p></li>
+</ol>
+
+<p><a id="top"></a></p>
+
+<h2>الفهرس:</h2>
+
+<ul>
+<li><a href="#whatsubmit">ماذا تقدم</a></li>
+<li><a href="#guidelines">مبادئ توجيهية عامة لنشاط "Hour of Code™"</a></li>
+<li><a href="#submit">كيف تقدم</a></li>
+<li><a href="#inclusion">كيفسيتم تقييم الأنشطة</a></li>
+<li><a href="#design">اقتراحات لتصميم نشاطك</a></li>
+<li><a href="#tm">المبادئ التوجيهية للعلامة التجارية</a></li>
+<li><a href="#pixel">عداد الزوار</a></li>
+<li><a href="#promote">عرف بانشطتك، أسبوع تدريس علوم الكمبيوتر، و ساعة البرمجة</a></li>
+</ul>
+
+<p><a id="whatsubmit"></a></p>
+
+<h2>ماذا تقدم</h2>
+
+<p><strong>لغز ذاتي التوجيه أو لعبة (<a href="https://code.org/mc">مثال</a>)</strong></p>
+
+<p>هذه الأنشطة مصمم للمتعلمين للتوجه الذاتي إلى الدورة. لا تتطلب العدد من التعليمات من المدرس أو الإعداد القبلي للمدرس.</p>
+
+<p><strong>درس ميسر من ظرف المدرس(<a href="https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA">مثال</a>، <a href="https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA">هيكل</a>)</strong></p>
+
+<p>الآن وقد جرب عشرات الآلاف من المدرسين ساعة البرمجةساعة البرمجة، العديد من الفصول جاهظة لمظيد من الأنشطة الإبداعية لتدريس أساسيات علوم الكمبيوتر. لمساعدة المدرسين الأكثر تقدما لإيجاد الإلهام، نجمع ونرتب الدروس وتخطيط الأنشطة التي يسيرها المدرسون لساعة برمجة قدماء المحاربين.</p>
+
+<p>أحد أنواع الأنشطة اللتي سنقدمها للمدرسين ذوي التجربة هو إنشاء مشروع "الصندوق المفتوح". الأنشطة التي تشجع الطلاب على بناء تطبيقهم الخاصة، لعبة، موقع أو مشروع آخر. إذا كانت سهلة، مزيد من أنشطة مفتوحة ستعرض جيدا الطبيعة الإبداعية لعلوم الكمبيوتر.</p>
+
+<p>يمكن لبعض لمدرسين أن يفضلوا استضافة أنشطة ساعة البرمجة التي تتبع شكل الدرس التقليدي أكثر من ألغاز موجهة/لعبة مجربة.</p>
+
+<p>يمكنك البدء مع هذا <a href="https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA">النموذج</a>لتخطيط الدرس.</p>
+
+<p><strong>أنشطة المدرس في مواضيع/مجالات</strong></p>
+
+<p>نقدم أيضا خطط درس مصممة لمواضع من مجالات مختلفة. مثلا، تخطيط درس ساعة واحدة لتدريس البرمجة في فصل الهندسة. أو تمرين لعبة الكلمات (mad-lib) لفصل الانجليزية. أو نشاط لإنشاء مسابفة إبداعية لفصل التاريخ. هذا يمكن أن يجذب مدرسين من مجالات أخرى لتسيير نشاط ساعة البرمجة الذي فريد لمجالهم، من خلال تبيان كيف تؤثر وتغني علوم الكمبيوتر مواضيع مجالات مختلفة.</p>
+
+<p>أمثلة:</p>
+
+<ul>
+<li>صور المرآة (نشاط لمدرس الفن)</li>
+<li>نشاط (arduino) (اللوحة الأم الالكترونية) لمدرس الفيزياء</li>
+<li>نشاط تاريخ التكنولوجيا لمدرس التاريخ</li>
+<li>وشاهد <a href="https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit">هذه اللائحة</a> للمزيد من الأفكار من المدرسين (أو أضف فكرتك إلى اللائحة لإلهام الآخرين)</li>
+</ul>
+
+<p><strong>للطلاب ذوي احتياجات خاصة</strong></p>
+
+<p>إذا أنشأت نشاطا أو دورة مصممة للطلاب ذوي احتياجات ختصة، المرجو الإشارة إليها في الوصف. علة وجه الخصوص، هناك خيارات قليلة لضعاف البصر. إذا كان نشاطك مصمما لهذه الفئة، المرجو إخبارنا بذلك.</p>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="guidelines"></a></p>
+
+<h2>مبادئ توجيهية عامة لإنشاء نشاط لساعة البرمجة</h2>
+
+<p>الهجف من ساعة البرمجة هو إعطاء المبتدئين رؤية حول علوم الكمبيوتر أو البرمجة. يجب أن تكون النغمة هكذا:</p>
+
+<ul>
+<li>كل شخص يمكنه تعلم علوم الكمبيوتر - بغض النظر عن العم، الجنس أو العرق. </li>
+<li>علوم الكمبيوتر مرتبطة بمجموعة متنوعة من المجالات والاهتمامات. ينبغي على الجميع أن يتعلم!</li>
+<li>شجع الطلاب على إنشاء أشياء فريدة يمكن مشاركتها مع الآباء/الأصدقاء على الإنترنت. </li>
+</ul>
+
+<p>يجب أن تدرس الأنشطة مفهوما من مفاهيم علوم الكمبيوتر كالحلقات، الشرطيات، التفير، أو كيف يعمل الأنترنت. يمكن لنشاط أن يدرس كيفية ارتباط علوم الكمبيوتر بمهن العالم الواقعي، أحداثه، أو التاريخ. كمثال، تدريس تصميم (UX) (تجربة المستعمل) لجعل التطبيق ذو معنى وأهمية لمستخدميه. لا ننصح بالأنشطة التي تركز على تركيب الكود أكثر من المفاهيم في البرمجة. كمثال، سندرج لائحة -دون تفاصيل- الأنشطة التي تدرس HTML. نفس الشيء، لا ننصح دروس الكتل البرمجية التي تركز على إعداد/تغيير خيارات الترتيب أكثر من تعلم كيفية نمذجة خوارزمية أو عملية.</p>
+
+<p><em>المتطلبات التقنية</em> بسبب اختلاف الإعدادات التكنولوجية للمؤسسات والأقسام الدراسية، أفضل الأنشطة هي التي تعتمد على الويب أو الهواتف الذكية، أو حتى المستقلة التي تدرس مفاهيم علوم الكمبيوتر بدون استعمال الحاسوب (انظر <a href="http://csunplugged.com/">http://csunplugged.com/</a>). تجارب الأنشطة التي تتطلب تثبيت تطبيق، تطبيق الحاسوب، أو عدة للألعاب مقبولة لكنها غير مثالية. لن نعرض الأنشطة التي تتطلب تسجيل دخول أو دفعا ماليا. (أنشطة الروبوتيات يمكن أن تتطلب شراء روبوتات.)</p>
+
+<p><em>صيغة يقودها المتعلمون (قيادة ذاتية):</em> ساعة البرمجة الأصلية تم بناؤها أساسا على نجاح الدروس والدورات الموجهة، والميسرة من قبل المدرس. هناك خيارات كثيرة، لكن إذا أردت إنشاء خيار جديد، فهذا النشاط يجب أن يصمم ليكون ممتعا لطالب يعمل لمفرده، أو لفثل مدرسه له إعداد أو معارف علوم الكمبيوتر قليلة. يجب أن يوفروا توجيهات للطلاب بدلا من تحد مفتوح لمدة ساعة طويلة. مثاليا، التوجيهات والدورات تكون في منصة البرمجة، لتجنب الانتقال من صفحة منصة البرمجة إلى صفحة الدورة التعليمية.</p>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="submit"></a></p>
+
+<h2>كيف تقدم</h2>
+
+<p>قم بزيارة <a href="http://bit.ly/29zt9ki">صفحة إرسال نشاط (Hour of Code™)</a> واتمم الأسئلة لإرسال نشاطك.</p>
+
+<p>ما ستحتاجه:</p>
+
+<ul>
+<li>الاسم والإيميل الرئيسي للاتصال الذي يمثل النشاط المقدم</li>
+<li>اسم الناشاط (لا يمكن أن يتضمن "Hour of Code" في الاسم)</li>
+<li>الرابط الالكتوني إلى النشاط</li>
+<li>وصف النشاط 
+
+<ul>
+<li>وصف مفصل لنسخة الحاسوب مع عدد أحرف أقصى: 400</li>
+<li>وصف قصير لنسخة الهاتف مع عدد حروف أقصى: 75</li>
+<li>الرجاء الإشارة اذا كان النشاط موجها ذاتيا او يستوجب وجود استاذ ميسر في الوصف. بالإضافة إلى ذلك، بعض المدارس تريد معرفة ما إن كان أنشطة ساعة البرمجة تتناول معايير مشتركة أو معايير العلوم للجيل القادم. إذا كان النشاط يتناول معايير محددة، يجب تضمينه هذه المعلومات.</li>
+</ul>
+</li>
+<li>المستوى أو المستويات الموصى بها للمستعملين المستهدفين. يمكنك الرجوع إلى [Computer Science Teachers’ Association’s K-12 Standards] (<a href="https://k12cs.org/framework-statements-by-grade-band/">https://k12cs.org/framework-statements-by-grade-band/</a>) للمفاهيم المناسبة لمستوى الفصل. مثال مستويات الصف تتضمن: 
+
+<ul>
+<li>روض الأطفال - المستوى 1 (أعمار 4-6)</li>
+<li>المستويات 2-5 (أعمار 7-10)</li>
+<li>المستويات 6-8 (أعمار 11-13)</li>
+<li>المستويات 9+ (عمر 14+)</li>
+</ul>
+</li>
+<li>لائحة المجالات التي تغطيها أنشطتك (بالإضافة إلى علوم الكمبيوتر). مثلا، إذا أمكن لمدرس الرياضيات استعمال نشاطك لتدريس الزوايا والسلاجم، فأدرجها كرياضيات. إذاكان لديك نشاط جنوني لتدريس الأفعال/الأسماء/الخ. اختر فنون اللغة.</li>
+<li>لائحة لغات البرمجة التي يدرسها نشاطك. I.e. C/C++، جافا، جافاسكريبت،. أو لغة مستقلة (بالنسبة لتخطيط الدروس التي يمكن أن تدرس بعدة لغات)</li>
+<li>لائحة لغات طبيعية معتمدة. ملاحظة: التعرف على اللغة هي وظيفة مقدم النشاط، ونحن سوف نعيد توجيه كل المستعملين إلى عنوان URL واحد مقدم.</li>
+<li>أي مستوى من التجربة يجب على المدرس لاستعمال نشاطك؟ (مثال المبتدئين أو المعتادين)، أي مستوى من التجربة يجب أن يكون لدى المتعلمين؟ إذا أحببت إعداد مزيدا من أنشطة (Hour of Code™)، المرجو تضمين المعارف ذات أولوية التي يتم احتياجها في وصف نشاطك.</li>
+<li>طول نشاطك 
+
+<ul>
+<li>ساعة واحدة</li>
+<li>ساعة واحدة مع دورات المتابعة</li>
+<li>2-6 ساعات (يمكن أن يكون عدو دروس)</li>
+</ul>
+</li>
+</ul>
+
+<h4>الأشياء الإضافية ستحتاج إليها عند تقديم خطط الدرس</h4>
+
+<ul>
+<li>اسمُكَ</li>
+<li>رابط لمخطط درسك. هذا يمكن ان يكون صفحة موقع، رابط دروب بوكس، غوغل درايف أو خجمات مماثلة. </li>
+<li>المؤسسة التي تدرس بها، المدينة، الولاية (اختيارية)</li>
+<li>المستوى(يات) والموضوع (المواضيع) التي تدرسها (اختياري)</li>
+<li>صورتك (اختيارية)</li>
+<li>أي برنامج سيحتاج إليه المدرس لإنجاز تخطيط درسك (سكراتش؟ روبوتات؟ لا شيء؟)</li>
+</ul>
+
+<h4>الأشياء الإضافية التي ستحتاجها عند إجراء الأنشطة على الأنترنت</h4>
+
+<ul>
+<li>اسم وعلامة منظمتك</li>
+<li>سواء كان متوافقا مع (COPPA) أم لا</li>
+<li>رابط عنوان الكتروني لملاحظات المدرس (اختياري)</li>
+<li>لائحة للمنصات المجربة والمناسبة: 
+
+<ul>
+<li>في إطار الويب: ما هي المنصات التي جربتها؟ 
+
+<ul>
+<li>الماك، الويندوز، ونسخ أخرى</li>
+<li>محركات البحث - IE11, Edge, Firefox, Chrome, Safari</li>
+<li>iOS mobile Safari (الخاصة بالهواتف)</li>
+<li>كروم على نظام اندرويد (الخاصة بالهواتف)</li>
+</ul>
+</li>
+<li>التي لا تعتمد على الويب: حدد منصة لكود أصلي (Mac, Win, iOS, Android, xBox, وأخر)</li>
+<li>مستقلة</li>
+</ul>
+</li>
+<li>التقط صورة للشاشة أو صورة تسويقية لنشاط ساعة البرمجة. المرجو إرسال صورة على الأقل بألعاد 4:3. يجب أن تكون على الأقل 520px × 390px. إن لم يتم إرسال صورة مناسبة، سنلتقط صورة للشاشة لدورتك أو يمكن ألا ندرجها. كل الصور يجب أن ترسل تحت صيغة jpg, .jpeg., أو png.</li>
+<li>من أجل تتبع المشاركة بدقة، تحتاج الأطراف الثالثة الشريكة في البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات ساعة البرمجة الخاصة بهم. ضع برنامج (pixel-image) في الصفحة الأولى. لا تضع برنامج عد المشاركين في صفحات أخرى). للمزيد من المعلومات اطلع على فقرة (Pixel) أسفله.</li>
+<li>عند الانتهاء من النشاط، يجب توجيه المستعملين إلى <a href="https://code.org/api/hour/finish">code.org/api/hour/finish</a> حيث يمكنهم: 
+
+<ul>
+<li>تقاسم عملهم في ساعة البرمجة على مواقع التواصل</li>
+<li>احصل على شهادة إنهاء ساعة البرمجة</li>
+<li>شاهد متصدري البلدان/المدن الحاصلين على تنقيط أعلى في أنشطة ساعة البرمجة</li>
+<li>بالنسبة للذين قضوا وقتا في نشاطك ولم ينهوه، فالمرجو إضافة زر "أنهيت ساعة البرمجة" كرابط إلى <a href="https://code.org/api/hour/finish">code.org/api/hour/finish</a> أيضا.</li>
+</ul>
+</li>
+<li>(اختياري) يمكن لنا المتابعة على الأنترنت من خلال رابط للاستطلاع حول لتقرير حول مقاييس النشاط القادم في الأسبوع من دجنبر. 12:01 صباحا 9دجنبر. 11:59 ليلا، 15) 
+
+<ul>
+<li>للأنشطة على الأنترنت (خاصة الهاتف الذكي/تطبيقات اللوحات): 
+
+<ul>
+<li>عدد المستعملين</li>
+<li>كم عدد من أنهوا المهمة</li>
+<li>معدل الوقت للمهمة</li>
+<li>عدد السطور النهائي للكود المكتوب لكل المستعملين</li>
+<li>عدد الذين وصلوا تعلما متقدما (يتم عد كل مستعمل أنهى المهمة وواصل المهمات الإضافية على موقعك)</li>
+</ul>
+</li>
+<li>للأنشطة دون ربط بالأنترنت 
+
+<ul>
+<li>عدد تحميلات النسخة الورقية للأنشطة (في حالة توفر ذلك)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+<h4>الأشياء الإضافية يمكنك ان تحتاجها عند استعمال الروبوتيات</h4>
+
+<ul>
+<li>إذا قدمت نشاط روبوت، نحتاج لمعرفة تكلفة الروبوتيات لكل طالب</li>
+<li>لتقييم أنشطة الروبوتيات لإدماجها في الموافع، سنحتاج إليك لترسل مثالا لعينة للمراجعين.</li>
+</ul>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="inclusion"></a></p>
+
+<h2>كيفسيتم تقييم الأنشطة</h2>
+
+<p>ستقوم لجنة مختلطة لمدرسي علوم الكمبيوتر بتصنيف الطلبات حسب معايير كمية وكيفية. سيتم إدراج كل الأنشطة التي تناسب المعايير العادية. سيتمكن المدرسون من البحث وتصنيف الأنشطة الأفضل لفصولهم الدراسية.</p>
+
+<p>سيبحث التقييم وخطط الدرس في المعايير التالية لكل الأنشطة لتصنيفها وفق:</p>
+
+<ul>
+<li>جودة الإنتاج العالي</li>
+<li>ترويج التعلم من قبل كل المجموعات الديموغرافية (esp. المجموعات ذات تمثيلة أقل)</li>
+<li>تربوي (يعلم مفاهيم علوم الكمبيوتر جيدا)</li>
+<li>ممتع وجذاب</li>
+<li>يشجع الطلاب على إنشاء شيء فريد يمكنهم تقاسمه (للتلاميذ الصغار: مع آبائهم أو زملائهم. للتلاميذ الكبار: على الأنترنت)</li>
+</ul>
+
+<p>إذا نقطت لجنة المراجعة نشاطا بنقطة 0 في جودة الإنتاج (بسبب مشكلات أو تعليمات غير واضحة تجعله صعبا)، أو في الترويج للتعلم أقليات (بسبب التمييز العنصري/الجنسي)، أو في القيمة التربوية (حيث لا يدرس مفاهيم علوم الكمبيوتر)، أو في المتعة والجاذبية (بسبب صعوبته/تنفير الطلاب من العمل فيه)، فالنشاط لن يتم إدراجه.</p>
+
+<p>بالإضافة إلى ذلك، ليتم إدراجه ضمن اللائحة، يجب على كل الأنشطة أن:</p>
+
+<ul>
+<li>تتناسب مع مجتمع طلاب الفصل الدراسي (لا أسلحة، لا محتوى صريح/ناضج، لا محتوى ديني، الخ)</li>
+<li>لا يحتاج إلى تسجيل الدخول </li>
+<li>مجاني (باستثناء أنشطة الروبوتيات فهي تتطلب شراء مجموعة الروبوت) بالنسبة للأنشطة ذاتية التوجيه للمدرسين الجدد والمتعلمين فلجنة المراجعة ستبحث لمعرفة:</li>
+<li>يمكن للمدرسين استعمال الدورات أو الأنشطة دون خلفيات في علوم الكمبيوتر</li>
+<li>يمكن للطلاب النجاح بدون خلفيات في علوم الكمبيوتر</li>
+<li>يمكن للطلاب توجيه أنفسهم في الدورات بدون توجيه الآباء أو المدرسين</li>
+</ul>
+
+<p>سيكون المدرسون والطلبة قادرين على البحث وتصنيف لائحة الأنشطة المرتبة حسب المستويات، مستوى التجربة، الموضوع والأجهزة إلى غير ذلك. بشكل ابتدائي، سنظهر خطط الدرس والأنشطة أولا:</p>
+
+<ul>
+<li>احصل على أعلى تنقيط من لجنة المراجعة</li>
+<li>هي ساعة أنشطة ذاتية التوجيه مصممة للمبتدئين (طلاب ومدرسون)</li>
+<li>ناد مجموعة واسعة من المستعملين (عبر المنصات، اللغات، والأعمار)</li>
+<li>لا يطلب التثبيت</li>
+<li>جدد هذه السنة</li>
+</ul>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="design"></a></p>
+
+<h2>افتراحات لتصميم ساعة دورات موجهة ذاتيا</h2>
+
+<p>يمكن إدماج <a href="https://hourofcode.com/us/promote/resources#logo">علامة ساعة البرمجة</a> في دورتك، لكنه غير مطلوب. إذا كنت تستعمل علامة ساعة البرمجة، انظر دليل استعمالها أسفله. <u>لا يمكن استعمال اسم وعلامة Code.org تحت أية ظروف.</u> كل منها لها حقوق محفوظة، ولا يمكن إدماجها مع طرف ثالث دون إذن صريح كتابي.</p>
+
+<p><strong>تأكد من كون الطالب المتوسط سينهي العمل خلال ساعة بشكل مريح.</strong> يمكن إضافة نشاط في النهاية للطلاب الذين ينتقلون بسرعة في الدرس. تذكر أن جل الأطفال سيكونون مبتدئين في علوم الكمبيوتر والبرمجة.</p>
+
+<p><strong>ضَمِّن ملاحظات المدرس.</strong> يجب أن تكون معظم الأنشطة موجهة للطالب، لكن إذا النشاط مبسطا أو مسيرا من طرف المدرس، فالمرجو تضمين توجيهات بسيطة وواضحة للمدرس كملاحظات للمدرس في عنوان الكتروني مستقل يقدم مع أنشطتك. ليس الطلاب هم من تنقصهم التجربة لوحدهم، لكن أيضا بعض المدرسين. ضَمِّن المعلومة مثل:</p>
+
+<ul>
+<li>ما هي المنصة أو محرك البحص الذي تعمل عليه الدورة جيدا؟</li>
+<li>هل يشتغل على الهاتف الذكي؟ اللوحات الالكترونية؟</li>
+<li>هل تنصح بالبرمجة الثنائية؟ </li>
+<li>اعتبارات للاستعمال في قسم؟ مثلا إذا كان هناك فيديوهات، انصح المدرسين بعرضها في مسلاط لكل الفصل لمشاهتها جماعيا</li>
+</ul>
+
+<p><strong>ضَمِّن التعليقات في نهاية النشاط.</strong>(مثلا "أنهيت 10 مستويات وتعلم الحلقات! عمل رائع</p>
+
+<p><strong>شجع الطلاب على النشر في مواقع التواصل (إذا أمكن) عند الانتهاء.</strong> مثلا "شاركت في ساعة البرمجة مع ________ هل قمت بذلك أيضا؟ #HourOfCode” أو "قمت ب #HourOfCode كجزء من #CSEdWeek. هل فعلت ذلك؟ @Scratch.” استعمل الهاشتاك <strong>#HourOfCode</strong> (بالحروف الكبيرة H, O, C)</p>
+
+<p><strong>أنشئ نشاطك بالاسبانية أو بلغات أخرى إلى جانب الانجليزية.</strong></p>
+
+<p><strong>اشرح النشاط أو اربطه بسياق اجتماعي دال.</strong> أصبحت برمجة الكمبيوتر قوة خارقة عندما يشاهد الطلاب كيف يمكن للعالم أن يتغير نحو الأفضل!</p>
+
+<p>**تأكد من إمكانية استعمال الدورة في نموذج <a href="http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning">البرمجة الثنائية</a>. هذا مفيد خاصة لساعة البرمجة لأن العديد من الفصول الدراسية لا تتوفر على حاسوب لكل طالب.</p> 
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="tm"></a></p>
+
+<h2>المبادئ التوجيهية للعلامة التجارية</h2>
+
+<p>العديد من دوراتنا استعملت علامة "ساعة البرمجة" على مواقعها الالكترونية. لا نريد منع هذا الاستعمال، لكن نريد أن يتم هذا الاستعمال في حدوده:</p>
+
+<ol>
+<li>كل إشارة إلى "ساعة البرمجية" يجب أن تستعمل دون الإيحاء إلى أنها اسم علامتك التجارية، لكن أن توحي إلى ساعة البرمجة كحركة مجتمعية. مثال جيد:" شارك في "Hour of Code™" على "ACMECorp.com". مثال سيء: "جرب ساعة البرمجة المقدمة من شركة "ACME Corp".</li>
+<li>استعمل العلامة "TM" في الأماكن التي تضع فيها "ساعة البرمجة"، في كل من موقعك الالكتروني أو توصيفات تطبيقك.</li>
+<li>ضَمِّن اللغة على الصفحة (أو في أسفلها)، ضَمِّن الروابط إلى مواقع ساعة البرمجة، أسبوع تدريس علوم الكمبيوتر و Code.org، التي تقول ما يلي. "<a href="http://hourofcode.com">ساعة البرمجة</a>™' هي مبادرة وطنية من <a href="http://csedweek.org">أسبوع تدريس علوم الكمبيوتر</a> و<a href="http://code.org">Code.org</a> لتعريف ملايين الطلاب بساعة علوم الكمبيوتر والبرمجة المعلوماتية."</li>
+<li>لا تستعمل "Hour of Code" في أسماء التطبيقات.</li>
+</ol>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="pixel"></a></p>
+
+<h2>عداد الزوار</h2>
+
+<p>من أجل تتبع المشاركة نطلب من كل شريك البرامج التعليمية تضمين برنامج تتبع زوار المواقع (1-pixel image) في صفحتهم الأولى لدورات ساعة البرمجة الخاصة بهم. يجن أن يكون برنامج (1-pixel image) في صفحة البدائة فقط. لا تضعها في أي مكان آخر من صفحات دوراتك.</p>
+
+<p>هذا سيمكننا من عد مستعملي دورتك لساعة البرمجة. سيقودنا إلى عد دقيق لمستعملي دورتك.</p>
+
+<p>إذا تمت الموافقة على برنامجك التعليمي وتم إدراجه في اللائحة النهائية، فستمنحك Code.org برنامج تتبع وحيد خاص بك لتضمينه في دورتك. انظر المثال أسفله.</p>
+
+<p>ملاحظة: هذا غير مهم للتطبيقات التي يمكن تثبيتها (اليوس، الأندرويد، تطبيقات التي تثبت على الحاسوب)</p>
+
+<p>مثال متابعة البيكسيلات لتطبيق (AppInventor):</p>
+
+<p>IMG SRC = <a href="http://code.org/api/hour/begin_appinventor.png">http://code.org/api/hour/begin_appinventor.png</a>   </p>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a id="promote"></a></p>
+
+<h2>عرف بانشطتك، أسبوع تعليم الحاسوب، و ساعة البرمجة</h2>
+
+<p>المرجو الترويج لنشاطك على شبكتك! قم بتوجيههم إلى صفحة ساعة البرمجة الخاصة بك. مستعملو انشطتك سيتفاعلون معها بإيجابية اكثر عند تلقي رسائلك حول الانشطة المقدمة. استخدم حملة ساعة البرمجة الدولية لأسبوع تعليم علوم الحاسوب كذريعة لتشجيع المستعملين على دعوة الآخرين للانضمام، وتساعدنا على الوصول إلى 100 مليون مشترك.</p>
+
+<ul>
+<li>أعد ساعة البرمجة وأسبوع تدريس علوم الكمبيوتر على موقعك. مثال: <a href="http://www.tynker.com/hour-of-code">http://www.tynker.com/hour-of-code</a>
+</li>
+<li>قم بدعاية لساعة البرمجة باستخدام الشبكات الاجتماعية، وسائل الإعلام التقليدية، البريد الالكتروني، إلخ، باستخدام الهاشتاك <strong>#HourOfCode</strong> (مع حروف H، O، C)</li>
+<li>استضف حدثا محليا، أو أطلب من موظفيك استضافته في المدارس المحلية أو الجماعات المحلية.</li>
+<li>راجع قائمة الموارد للحصول على مزيد من المعلومات (قريبا).</li>
+</ul>
+
+<p><a href="#top"><strong>عودة إلى أعلى</strong></a></p>
+
+<p><a href="/us/ar/#join">
+<button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</a></p>
+
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">إتصل بنا</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">الدعم</a>
+</li>
+<li>
+<a href="/us/ar/partners" target="_blank">الشركاء</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">شروط</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">سياسة الخصوصية</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+حقوق الطبع والنشر Code.org عام 2015. جميع الحقوق محفوظة.
+<br>
+إن ™Hour of Code هي علامة تجارية لصالح Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

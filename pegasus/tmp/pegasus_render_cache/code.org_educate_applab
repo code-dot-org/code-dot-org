@@ -1,0 +1,4475 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="App Lab" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/applab" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>App Lab | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<link href="/css/tools.css" rel="stylesheet">
+<link href="/css/highlights.css" rel="stylesheet">
+<div class="tools-banner">
+<div class="tools-img-box">
+<img class="tools-img-applab tools-img" src="//test.code.org/images/app-lab/applab-tool.png">
+</div>
+<div class="tools-info" style="max-width: 688px;">
+<div class="tools-title-bar">
+<h1 class="tools-title">App Lab</h1>
+</div>
+<div class="tools-description">
+<p>App Lab is a programming environment where you can make simple apps. Design an app, code in JavaScript with either blocks or text, then share your app in seconds.</p>
+<div class="tools-details">Ages 13+, all modern browsers, English only</div>
+<a href="//test-studio.code.org/projects/applab/new">
+<button>Try it out</button>
+</a>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="tile-container-responsive" id="resources">
+<div class="col-50">
+<div class="tutorial-tile">
+<a href="//test-studio.code.org/s/applab-intro/reset">
+<img class="tutorial-tile-img" src="//test.code.org/images/app-lab/applab-intro.png">
+</a>
+<div class="tutorial-info">
+<span>
+<h3 class="tutorial-info-h">Intro to App Lab (Ages 13+)</h3>
+<div class="smalltext">Create your own app in JavaScript using block based programming. Or take your skills to the next level with text-based programming. (English Only)</div>
+</span>
+<span>
+<a href="//test-studio.code.org/s/applab-intro/reset">
+<button class="tutorial-info-start tutorial-gray">Go</button>
+</a>
+<div class="tutorial-info-guide">
+<a href="https://curriculum.code.org/hoc/plugged/7/">View teacher guide</a>
+</div>
+</span>
+</div>
+</div>
+</div>
+
+<div class="col-50">
+<div class="tutorial-tile">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_app_lab_in_classroom()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/e1St8LB4VJA/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_app_lab_in_classroom">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/applab/in-the-classroom.mp4" data-video-code="e1St8LB4VJA"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/applab/in-the-classroom.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_app_lab_in_classroom"] = function()
+  {
+    $("#showVideo_app_lab_in_classroom").modal('show');
+    setupPopupWindows();
+    window["playVideo_app_lab_in_classroom"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_app_lab_in_classroom video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'app_lab_in_classroom');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_app_lab_in_classroom").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_app_lab_in_classroom"](false);
+    });
+  });
+  
+  window["playVideo_app_lab_in_classroom"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_app_lab_in_classroom video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_app_lab_in_classroom .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+<div class="tutorial-info" style="justify-content: flex-start;">
+<h3 style="margin-top: 0px;">App Lab in the classroom</h3>
+<div class="smalltext">This launch video introduces five reasons App Lab could be a great tool for students learning programming.</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="challenges">
+<h2>Starter Projects</h2>
+<p>Start with a blank project, explore the sample apps and take the challenge to make them even better, or check out projects that other students have built.</p>
+<div class="highlights-content">
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/new">
+<div class="highlight-img" style="background-image:url(/images/app-lab/new-project.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Blank project</h4>
+<div class="highlight-description">Start with a blank project and make anything you want.</div>
+<br>
+</div>
+<div class="learn-button">Start a blank project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/JNbplBXMisx2aMefUkh39g/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/slider-sketch.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Slider sketch</h4>
+<div class="highlight-description">Use the sliders to draw cool patterns and designs. Challenge: Add another slider to change the thickness of the line.</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/sNZOTB_PiXAHt3Q5h_aRgQ/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/landmark-flashcards.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Landmark flaschards</h4>
+<div class="highlight-description">Use this app to create flashcards to learn a new subject or practice for a test. Challenge: add more cards to the deck or create a whole new deck.</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/nI9iumSHbTn5mHBXl-wxMw/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/milk-adventure.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Choose your own adventure</h4>
+<div class="highlight-description">Choose carefully as you go through this short adventure. Challenge: continue the story by adding in more choices. Or create a different story!</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/r469vc1FFSOxOlUruTFlUA/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/poke-pig.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Poke the pig</h4>
+<div class="highlight-description">How many times you can poke the pig before time runs out? Challenge: Add a button and event to be able to play again and again, so you can improve your score.</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/TjHfwdUd3ENlyImb7VX5Cg/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/pet-data.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Pet poll</h4>
+<div class="highlight-description">Vote for your favorite pet in this fun app. Challenge: Add more animals so you can vote for more favorites.</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/applab/IAK_Qyc23QrkAB61KGvn1g/remix">
+<div class="highlight-img" style="background-image:url(/images/app-lab/pensive-painter.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Pensive painter</h4>
+<div class="highlight-description">Take a deep breath, relax, and paint whatever you desire. Challenge: Add a click event to clear the screen so you can start painting a new masterpiece.</div>
+<br>
+</div>
+<div class="learn-button">Remix the project</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://studio.code.org/projects/public">
+<div class="highlight-img" style="background-image:url(/images/app-lab/gallery.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Project gallery</h4>
+<div class="highlight-description">Check out projects other students have made and use them as insiration for your own app.</div>
+<br>
+</div>
+<div class="learn-button">View project gallery</div>
+</a>
+</div>
+
+</div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+<h2>Demos for creating apps with App Lab</h2>
+<div class="col-25" style="padding-right: 10px; margin-bottom: 20px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_app_lab_intro()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/xlbRL5eOgkI/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_app_lab_intro">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/applab/how-to-introduction.mp4" data-video-code="xlbRL5eOgkI"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/applab/how-to-introduction.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_app_lab_intro"] = function()
+  {
+    $("#showVideo_app_lab_intro").modal('show');
+    setupPopupWindows();
+    window["playVideo_app_lab_intro"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_app_lab_intro video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'app_lab_intro');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_app_lab_intro").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_app_lab_intro"](false);
+    });
+  });
+  
+  window["playVideo_app_lab_intro"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_app_lab_intro video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_app_lab_intro .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="col-25" style="padding-right: 10px; margin-bottom: 20px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_how_to_make_an_app()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/tDnoxkOSfQw/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_how_to_make_an_app">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/applab/how-to-make-an-app.mp4" data-video-code="tDnoxkOSfQw"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/applab/how-to-make-an-app.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_how_to_make_an_app"] = function()
+  {
+    $("#showVideo_how_to_make_an_app").modal('show');
+    setupPopupWindows();
+    window["playVideo_how_to_make_an_app"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_how_to_make_an_app video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'how_to_make_an_app');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_how_to_make_an_app").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_how_to_make_an_app"](false);
+    });
+  });
+  
+  window["playVideo_how_to_make_an_app"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_how_to_make_an_app video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_how_to_make_an_app .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="col-25" style="padding-right: 10px; margin-bottom: 20px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_choose_adventure()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/ZhgBSYKWL2A/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_choose_adventure">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/applab/how-to-choose-your-own-adventure.mp4" data-video-code="ZhgBSYKWL2A"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/applab/how-to-choose-your-own-adventure.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_choose_adventure"] = function()
+  {
+    $("#showVideo_choose_adventure").modal('show');
+    setupPopupWindows();
+    window["playVideo_choose_adventure"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_choose_adventure video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'choose_adventure');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_choose_adventure").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_choose_adventure"](false);
+    });
+  });
+  
+  window["playVideo_choose_adventure"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_choose_adventure video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_choose_adventure .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="col-25" style="padding-right: 10px; margin-bottom: 20px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_whack_e_moji()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/WZVAA3ajZxc/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_whack_e_moji">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/applab/whack-e-moji.mp4" data-video-code="WZVAA3ajZxc"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/applab/whack-e-moji.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_whack_e_moji"] = function()
+  {
+    $("#showVideo_whack_e_moji").modal('show');
+    setupPopupWindows();
+    window["playVideo_whack_e_moji"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_whack_e_moji video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'whack_e_moji');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_whack_e_moji").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_whack_e_moji"](false);
+    });
+  });
+  
+  window["playVideo_whack_e_moji"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_whack_e_moji video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_whack_e_moji .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="col-25" style="padding-right: 10px; margin-bottom: 20px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_app_lab_deep_dive()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/4DntNOOYmpo/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_app_lab_deep_dive">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/AppLabDemo.mp4" data-video-code="4DntNOOYmpo"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/AppLabDemo.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_app_lab_deep_dive"] = function()
+  {
+    $("#showVideo_app_lab_deep_dive").modal('show');
+    setupPopupWindows();
+    window["playVideo_app_lab_deep_dive"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_app_lab_deep_dive video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'app_lab_deep_dive');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_app_lab_deep_dive").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_app_lab_deep_dive"](false);
+    });
+  });
+  
+  window["playVideo_app_lab_deep_dive"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_app_lab_deep_dive video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_app_lab_deep_dive .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="clear"></div>
+<div id="teachers">
+<h2>For teachers</h2>
+<p>
+Want to do more with App Lab? Our introductory course,
+<a href="/csd">Computer Science Discoveries</a>,
+and our
+<a href="/csp">Computer Science Principles</a>
+course both use this tool to help teach students computer science concepts.
+</p>
+<div class="pl-callout">
+<div class="pl-icon">
+<i class="fa fa-book pl-book"></i>
+</div>
+<div class="pl-description">
+<div class="pl-text-area">
+<div class="pl-title">Professional Learning Program</div>
+<p>Course specific professional learning provides hands on experience with the curriculum.</p>
+</div>
+<div class="pl-button">
+<a href="/educate/professional-learning">
+<button class="tutorial-gray">Learn more</button>
+</a>
+</div>
+</div>
+</div>
+<h3>
+<a href="/csp">Computer Science Principles</a>
+units that use App Lab
+</h3>
+<table>
+<tr>
+<th style="min-width: 75px;">Link</th>
+<th>Unit description</th>
+</tr>
+<tr>
+<td>
+<a href="//test-studio.code.org/s/csp3">
+<img src="/educate/csp/images/thumb_applab.png">
+Unit 3
+</a>
+</td>
+<td>
+<b class="purple">Algorithms and Programming</b>
+<p>This unit introduces the foundational concepts of computer programming, which unlocks the ability to make rich, interactive apps. This course uses JavaScript as the programming language, and App Lab as the programming environment to build apps, but the concepts learned in these lessons span all programming languages and tools.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="//test-studio.code.org/s/csp5">
+<img src="/educate/csp/images/thumb_app.png">
+Unit 5
+</a>
+</td>
+<td>
+<b class="purple">Building Apps</b>
+<p>This unit continues to develop students’ ability to program in the JavaScript language, using Code.org’s App Lab environment to create a series of small applications (apps) that live on the web, each highlighting a core concept of programming. In this unit students transition to creating event-driven apps.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="//test-studio.code.org/s/csppostap">
+<img src="/educate/csp/images/data_button.png">
+Post-AP
+</a>
+</td>
+<td>
+<b class="purple">Post-AP material - Making Data-backed apps</b>
+<p>This unit teaches students how to use App Lab's database capabilites to make apps that store data in the cloud so it can be retrieved later.</p>
+</td>
+</tr>
+</table>
+<h3>
+<a href="/csd">Computer Science Discoveries</a>
+units that use App Lab
+</h3>
+<table>
+<tr>
+<th style="min-width: 75px;">Link</th>
+<th>Unit description</th>
+</tr>
+<tr>
+<td>
+<a href="//test-studio.code.org/s/csd4">
+<img src="/educate/csp/images/thumb_app.png">
+Unit 4
+</a>
+</td>
+<td>
+<b class="purple">The Design Process</b>
+<p>In this unit, students are asked to consider and understand the needs of others while developing a solution to a problem through a series of design challenges. The second half of the unit consists of an iterative team project, during which students have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test their solutions with real users to get feedback and drive further iteration</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="//test-studio.code.org/s/csd6">
+<img src="/images/fit-50/animated-examples/circuitplayground.gif">
+Unit 6
+</a>
+</td>
+<td>
+<b class="purple">Physical Computing</b>
+<p>
+In this unit, students develop their programming skills in App Lab while exploring the role of hardware platforms in computing. Students look towards current and “smart” devices to understand the ways in which different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Note: This unit requires access to
+<a href="https://code.org/circuitplayground">
+Adafruit's Circuit Playground
+</a>
+board.
+</p>
+</td>
+</tr>
+</table>
+</div>
+<div id="videos">
+<h2>Video library</h2>
+Watch these videos to learn how to create apps in App Lab and learn new programming concepts with the tool.
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Procedural abstraction and top-down design</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_turtle()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/i2KHYUhtOlM/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Program a turtle to move around the screen and draw anything from basic shapes to complex designs.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_turtle">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/turtle.mp4" data-video-code="i2KHYUhtOlM"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/turtle.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_turtle"] = function()
+  {
+    $("#showVideo_turtle").modal('show');
+    setupPopupWindows();
+    window["playVideo_turtle"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_turtle video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'turtle');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_turtle").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_turtle"](false);
+    });
+  });
+  
+  window["playVideo_turtle"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_turtle video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_turtle .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_functions()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/yPWQfa4CHbw/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Learn how to define and call functions so you can easily reuse code more efficiently.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_functions">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/functions.mp4" data-video-code="yPWQfa4CHbw"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/functions.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_functions"] = function()
+  {
+    $("#showVideo_functions").modal('show');
+    setupPopupWindows();
+    window["playVideo_functions"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_functions video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'functions');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_functions").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_functions"](false);
+    });
+  });
+  
+  window["playVideo_functions"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_functions video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_functions .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Documentation and simple loops</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_functions_params()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/k7Ji1E97-V0/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Create functions with parameters to make functions that are more flexible and can be used to solve different kinds of problems.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_functions_params">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/functions_parameters.mp4" data-video-code="k7Ji1E97-V0"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/functions_parameters.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_functions_params"] = function()
+  {
+    $("#showVideo_functions_params").modal('show');
+    setupPopupWindows();
+    window["playVideo_functions_params"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_functions_params video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'functions_params');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_functions_params").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_functions_params"](false);
+    });
+  });
+  
+  window["playVideo_functions_params"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_functions_params video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_functions_params .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_loops()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/G8hfAk4PfOM/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Learn how to use loops to repeat code and simplify your app.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_loops">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/loops.mp4" data-video-code="G8hfAk4PfOM"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/loops.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_loops"] = function()
+  {
+    $("#showVideo_loops").modal('show');
+    setupPopupWindows();
+    window["playVideo_loops"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_loops video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'loops');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_loops").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_loops"](false);
+    });
+  });
+  
+  window["playVideo_loops"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_loops video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_loops .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Event-driven programming and apps</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_design_mode()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/-EoTeD4mSNU/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Start using design mode to create a user interface for your app where users can click buttons, select from dropdowns, and even use a slider.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_design_mode">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/design.mp4" data-video-code="-EoTeD4mSNU"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/design.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_design_mode"] = function()
+  {
+    $("#showVideo_design_mode").modal('show');
+    setupPopupWindows();
+    window["playVideo_design_mode"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_design_mode video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'design_mode');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_design_mode").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_design_mode"](false);
+    });
+  });
+  
+  window["playVideo_design_mode"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_design_mode video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_design_mode .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Variables and strings</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_variables_1()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/G41G_PEWFjE/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">An introduction to variables that can be used throughout your code.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_variables_1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/variables_1.mp4" data-video-code="G41G_PEWFjE"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/variables_1.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_variables_1"] = function()
+  {
+    $("#showVideo_variables_1").modal('show');
+    setupPopupWindows();
+    window["playVideo_variables_1"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_variables_1 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'variables_1');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_variables_1").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_variables_1"](false);
+    });
+  });
+  
+  window["playVideo_variables_1"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_variables_1 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_variables_1 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_variables_2()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/ijjVDBPwA1o/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Learn how to use different kinds of variables to make your apps more complex.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_variables_2">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/variables_2.mp4" data-video-code="ijjVDBPwA1o"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/variables_2.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_variables_2"] = function()
+  {
+    $("#showVideo_variables_2").modal('show');
+    setupPopupWindows();
+    window["playVideo_variables_2"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_variables_2 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'variables_2');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_variables_2").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_variables_2"](false);
+    });
+  });
+  
+  window["playVideo_variables_2"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_variables_2 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_variables_2 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Conditionals and boolean logic</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_conditionals_1()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/y3rCKJNOwpA/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Use boolean expressions to make decisions in your app logic.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_conditionals_1">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/conditionals_1.mp4" data-video-code="y3rCKJNOwpA"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/conditionals_1.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_conditionals_1"] = function()
+  {
+    $("#showVideo_conditionals_1").modal('show');
+    setupPopupWindows();
+    window["playVideo_conditionals_1"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_conditionals_1 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'conditionals_1');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_conditionals_1").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_conditionals_1"](false);
+    });
+  });
+  
+  window["playVideo_conditionals_1"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_conditionals_1 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_conditionals_1 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_conditionals_2()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/UDi7xgIIW8E/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Create conditions with if/else statements to make your app more unique.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_conditionals_2">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/conditionals_2.mp4" data-video-code="UDi7xgIIW8E"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/conditionals_2.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_conditionals_2"] = function()
+  {
+    $("#showVideo_conditionals_2").modal('show');
+    setupPopupWindows();
+    window["playVideo_conditionals_2"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_conditionals_2 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'conditionals_2');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_conditionals_2").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_conditionals_2"](false);
+    });
+  });
+  
+  window["playVideo_conditionals_2"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_conditionals_2 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_conditionals_2 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_conditionals_3()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/kyFdniI-ZZs/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Add more complex logic like AND and OR to give users more choices in your apps.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_conditionals_3">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/conditionals_3.mp4" data-video-code="kyFdniI-ZZs"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/conditionals_3.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_conditionals_3"] = function()
+  {
+    $("#showVideo_conditionals_3").modal('show');
+    setupPopupWindows();
+    window["playVideo_conditionals_3"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_conditionals_3 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'conditionals_3');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_conditionals_3").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_conditionals_3"](false);
+    });
+  });
+  
+  window["playVideo_conditionals_3"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_conditionals_3 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_conditionals_3 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Loops and arrays</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_intro_lists()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/KFy7u3Rhozs/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Organize your information by using a list in your app.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_intro_lists">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/lists_intro_full.mp4" data-video-code="KFy7u3Rhozs"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/lists_intro_full.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_intro_lists"] = function()
+  {
+    $("#showVideo_intro_lists").modal('show');
+    setupPopupWindows();
+    window["playVideo_intro_lists"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_intro_lists video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'intro_lists');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_intro_lists").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_intro_lists"](false);
+    });
+  });
+  
+  window["playVideo_intro_lists"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_intro_lists video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_intro_lists .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<!-- / Show the chapter title at the -->
+<!-- / beginning of each video chapter -->
+<div class="clear"></div>
+<h3>Processing arrays of data</h3>
+<div style="float:left; padding:10px; width: 275px;">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_processing_lists()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/RQ6GJt9f2vg/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link">Create charts with your data by processing a list.</div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_processing_lists">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/2015/csp/applab/processing_lists.mp4" data-video-code="RQ6GJt9f2vg"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/2015/csp/applab/processing_lists.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_processing_lists"] = function()
+  {
+    $("#showVideo_processing_lists").modal('show');
+    setupPopupWindows();
+    window["playVideo_processing_lists"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_processing_lists video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'processing_lists');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_processing_lists").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_processing_lists"](false);
+    });
+  });
+  
+  window["playVideo_processing_lists"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_processing_lists video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_processing_lists .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+</div>
+<script>
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+  
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });
+</script>
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

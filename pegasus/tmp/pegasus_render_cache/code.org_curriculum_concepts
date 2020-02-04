@@ -1,0 +1,1444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+<p><link rel="stylesheet" type="text/css" href="/curriculum/unplugged/css/jumbotron-banner.css"></p>
+
+<div class="jumbo-container">
+  <div class="img-container">
+    <img class="jumbo-img" src="/curriculum/unplugged/images/unplugged-hero.png">
+  </div>
+
+  <div class="jumbo-tutorial">
+    <h1 class="jumbo-h1">CS Fundamentals Unplugged</h1>
+    <div class="jumbo-tutorial-box">
+      <div class="jumbo-tutorial-info">
+        <h1 class="jumbo-h1-second-box">CS Fundamentals Unplugged</h1>We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not! Try using these lessons as a stand alone course or as complementary lessons for any computer science course.
+        <p>
+        </p>
+<p class="jumbo-tutorial-specs">Ages 4+, English only</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- Use this only if we have extra info to share
+<table>
+<tr>
+  <td style="background-color: #00ADBC; color: #FFFFFF; font-size: 20px; font-weight: bold;">Looking for lessons that don't require computers?</td>
+</tr>
+<tr>
+  <td>
+
+  If this is your first time programming, you may want to go through one of the following online courses before teaching this material:
+<li> <a href="https://www.codecademy.com/learn/javascript" target="_blank">Codecademy</a>
+<li> <a href="https://www.khanacademy.org/computing/computer-programming/programming" target="_blank">Khan Academy</a>
+<li> <a href="https://codehs.com/library/course/1/module/1" target="_blank">CodeHS</a>
+
+
+  </td>
+</tr>
+</table> -->
+
+<p><br>
+Each of these activities can either be used alone or with other computer science lessons on related concepts.
+<br></p>
+
+<p><a href="https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf" target="_new">Course A-F Curriculum Book (v2)</a>  | <a href="https://code.org/curriculum/docs/csf/A-F_supplies_v2.pdf" target="_new">Course A-F Supply List</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
+<br></p>
+
+<table cellpadding="10">
+  <colgroup>
+    <col width="15%" style="background-color:#999999;">
+    <col width="25%" style="border:1px solid #999999;">
+    <col width="30%" style="border:1px solid #999999;">
+    <col width="30%" style="border:1px solid #999999;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th style="text-align: center;">Concept</th>
+      <th style="text-align: center;">Lesson</th>
+      <th style="text-align: center;">Curriculum Video</th>
+      <th style="text-align: center;">Additional Resources</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursee/stage/10/puzzle/1" target="_new">Dice Race</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course E : Lesson 1 <br> Course 3 : Lesson 10<br> (age 9+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In this lesson, students will relate the concept of algorithms back to real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursee/10/" target="_new">Lesson Plan</a>
+          | <a href="https://youtu.be/xaW3PAzHxCU">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/10/Key-Activity10-DiceRace.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course3/10/Key-Assessment10-DiceRace.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/xaW3PAzHxCU" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/xaW3PAzHxCU">https://youtu.be/xaW3PAzHxCU</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursed/stage/1/puzzle/1" target="_new">Graph Paper Programming</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course D : Lesson 1 <br> Express Course : Lesson 1 <br> Course 2 : Lesson 1<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">By "programming" one another to draw pictures, students will begin to understand what coding is really about. The class will begin by having students instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.
+
+<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursed/1" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=Yy1zbkfRtIg">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/1/Key-Activity1-GraphPaperProgramming.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course2/1/Key-Assessment1-GraphPaperProgramming.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/Y_paSrH2ffw" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/Y_paSrH2ffw">https://youtu.be/Y_paSrH2ffw</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/vBUtejDNvrs" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=vBUtejDNvrs">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course1/stage/1/puzzle/1" target="_new">Happy Maps</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course 1 : Lesson 1<br> (age 4+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">The bridge from algorithms to programming can be a short one if students understand the difference between planning out a sequence and encoding that sequence into the appropriate language. This activity will help students gain experience reading and writing in shorthand code.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/course1/1" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=En6Bshuqljg">Teacher Video</a><br>
+           <a href="https://code.org/curriculum/course1/1/Key-Activity1-HappyMaps.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://code.org/curriculum/course1/1/Key-Assessment1-HappyMaps.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/hrnhiKAQ1_k" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/hrnhiKAQ1_k">https://youtu.be/hrnhiKAQ1_k</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul>
+<li><a href="http://www.bbc.co.uk/guides/z3whpv4" target="_new">What is an algorithm?</a></li>
+<li><a href="http://www.tynker.com/blog/articles/ideas-and-tips/how-to-explain-algorithms-to-kids" target="_new">How to explain algorithms to kids</a></li>
+</ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/5/puzzle/1" target="_new">Happy Maps (Extended)</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 5<br> (age 4+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This extended unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/5" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=En6Bshuqljg">Teacher Video</a><br>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/hrnhiKAQ1_k" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/hrnhiKAQ1_k">https://youtu.be/hrnhiKAQ1_k</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul>
+<li><a href="http://www.bbc.co.uk/guides/z3whpv4" target="_new">What is an algorithm?</a></li>
+<li><a href="http://www.tynker.com/blog/articles/ideas-and-tips/how-to-explain-algorithms-to-kids" target="_new">How to explain algorithms to kids</a></li>
+</ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course1/stage/2/puzzle/1" target="_new">Move It, Move It</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course 1 : Lesson 2<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures. Once they understand the language, they will begin to "program" one another by giving multiple instructions in advance.<br><br>
+</div>
+        <a href="https://code.org/curriculum/course1/2/Teacher" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=aV4rqNUG-Jw">Teacher Video</a><br>
+           <a href="https://code.org/curriculum/course1/2/Key-Assessment2-MoveIt.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/VGi2bnRFqzM" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/VGi2bnRFqzM">https://youtu.be/VGi2bnRFqzM</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul>
+<li><a href="https://csedweek.org/unplugged/thinkersmith" target="_new">My Robotic Friends</a></li>
+<li><a href="https://www.kodable.com/hour-of-code/lessons/kindergarten-hour-of-code" target="_new">Fuzz Family Frenzy</a></li>
+</ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/courseb/stage/6/puzzle/1" target="_new">My Robotic Friends</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course B : Lesson 6 <br> Pre-Express Course : Lesson 6<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Using a predefined symbol key, your students will figure out how to guide one another to accomplish specific tasks without using any verbal commands. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/courseb/6" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=xaW3PAzHxCU">Teacher Video</a><br>
+
+      </td>
+      <td style="border:1px solid #999999;">
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://drive.google.com/file/d/0B-uvt08wYSQqOC0xN3BwLUdIdnc/edit">Teacher Prep Guide</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursec/stage/4/puzzle/1" target="_new">Real-Life Algorithms: Paper Planes</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course C : Lesson 4 <br> Course 2 : Lesson 2<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In this lesson, students will relate the concept of algorithms back to everyday activities. After discussing algorithms, students will make paper airplanes using an algorithm. The goal here is to start building the skills to translate real world situations to online scenarios and vice versa.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursec/4" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=EEwe28TF1VE">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/2/Key-Activity2-RealLifeAlgorithms.pdf" target="_new">Activity Answer Key</a><br> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/AWqo8Gxtrjs" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/AWqo8Gxtrjs">https://youtu.be/AWqo8Gxtrjs</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/kIAj43fK2mg" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=kIAj43fK2mg">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/3/puzzle/1" target="_new">Real Life Algorithms: Plant a Seed</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 3 <br>
+Course B : Lesson 3 <br> Pre-Express Course : Lesson 3 <br>
+Course 1 : Lesson 6<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/3" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=icVRxFr39AU">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course1/6/Key-Activity6-RealLifeAlgorithms.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://code.org/curriculum/course1/6/Key-Assessment6-RealLifeAlg.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/FHsuEh1kJ18" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/FHsuEh1kJ18">https://youtu.be/FHsuEh1kJ18</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Algorithms</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course4/stage/1/puzzle/1" target="_new">Tangrams</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course F : Lesson 1 <br> Course 4 : Lesson 1<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.<br><br>
+</div>
+        <a href="https://code.org/curriculum/course4/1/Teacher.pdf" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=9K4JAdvwdVM">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/1/Key-Assessment1-Tangrams.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/xZlKyTwQZv8" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/xZlKyTwQZv8">https://youtu.be/xZlKyTwQZv8</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Binary</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursec/stage/15/puzzle/1" target="_new">Binary Bracelets</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course C : Lesson 15 <br> Course 2 : Lesson 14<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursec/15" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=8HANsec7TiQ">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/14/Key-Assessment14-BinaryBracelets.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/3S2YfoO4_CM" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/3S2YfoO4_CM">https://youtu.be/3S2YfoO4_CM</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/fDLkBqZpxWQ" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=fDLkBqZpxWQ">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Binary</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursed/stage/16/puzzle/1" target="_new">Binary Images</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course D : Lesson 16 <br> Course 4 : Lesson 17<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursed/16" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=mMjfSiDeQu4">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/17/Key-Assessment17-BinaryImages.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/dzHlZV53VfY" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/dzHlZV53VfY">https://youtu.be/dzHlZV53VfY</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Computational Thinking</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course3/stage/1/puzzle/1" target="_new">Computational Thinking</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course 3 : Lesson 1<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.<br><br>
+</div>
+        <a href="https://code.org/curriculum/course3/1/Teacher" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=7sHTZsGMQuQ">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf" target="_new">Activity Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/TlAaklrolA0" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/TlAaklrolA0">https://youtu.be/TlAaklrolA0</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/b4a7Ty1TpKU" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Computational Thinking</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/20-hour/stage/3/puzzle/1" target="_new">Computational Thinking with Monsters</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Accelerated Course : Lesson 3<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract similar details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?<br><br>
+</div>
+        <a href="https://studio.code.org/unplugged/unplug2.pdf" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/injJWiSA0pw" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/injJWiSA0pw">https://youtu.be/injJWiSA0pw</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Conditionals</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursed/stage/10/puzzle/1" target="_new">Conditionals with Cards</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course D : Lesson 10 <br> Express Course : Lesson 15 <br> Course 2 : Lesson 12<br> (age 9+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursed/10" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=IcEL5ibSvTs">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/12/Key-Assessment12-Conditionals.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/UymN4lTL50s">https://youtu.be/UymN4lTL50s</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/2m2Rn9VxHfU" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=2m2Rn9VxHfU">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Crowdsourcing</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursee/stage/26/puzzle/1" target="_new">Crowdsourcing</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course E : Lesson 17 <br> Course 3 : Lesson 19<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursee/26/#beyond-programming-crowdsourcing4" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=UXCaokAHN1U">Teacher Video</a><br>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/IqZMnfxqEfY" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/IqZMnfxqEfY">https://youtu.be/IqZMnfxqEfY</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">CT - Abstraction</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course4/stage/5/puzzle/1" target="_new">Mad Glibs</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course 4 : Lesson 5<br> (age 9+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program. This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.<br><br>
+</div>
+        <a href="https://code.org/curriculum/course4/5/Teacher" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=16erXD_PVPg">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/TctGRrUdkcc" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/TctGRrUdkcc">https://youtu.be/TctGRrUdkcc</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Debugging</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursed/stage/7/puzzle/1" target="_new">Relay Programming</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course D : Lesson 7 <br> Express Course : Lesson 3 <br> Course 2 : Lesson 9<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This activity will begin with a short review of "Graph Paper Programming," then will quickly move to a race against the clock, as students break into teams and work together to write a program one instruction at a time.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursed/7" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=fvpFCI8yoeA">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/9/Key-Assessment9-RelayProgramming.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/l5MKkXbzOsk" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/l5MKkXbzOsk">https://youtu.be/l5MKkXbzOsk</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Debugging</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/1/puzzle/1" target="_new">Unspotted Bugs</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 1 <br> Course B : Lesson 1<br> (age 5+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This lesson will guide students through the steps of debugging. Students will learn the mantra: "What happened? What was supposed to happen? What does that tell you?"
+
+<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/1/" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/S8qub6aPysM" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/S8qub6aPysM">https://youtu.be/S8qub6aPysM</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Events</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/11/puzzle/1" target="_new">The Big Event</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 11 <br> Course B : Lesson 12 <br> Course C : Lesson 13 <br> Express Course : 11 <br> Pre-Express Course : Lesson 12 <br> Course 1 : Lesson 15<br> (age 5+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/11" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=8PN8aPWZ2sY">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course1/15/Key-Assessment15-TheBigEvent.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/u0WV9shCoak" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/u0WV9shCoak">https://youtu.be/u0WV9shCoak</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Functions</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/course3/stage/4/puzzle/1" target="_new">Functional Suncatchers</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course 3 : Lesson 4<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to “abstract out” the details of their specific materials and create vague terms for an individual’s supplies. This use of generic placeholders is a wonderful introduction to variables.<br><br>
+</div>
+        <a href="https://code.org/curriculum/course3/4/Teacher" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=VmIcnmPjNgw">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/d1MdyeXy0v0" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/d1MdyeXy0v0">https://youtu.be/d1MdyeXy0v0</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/Rb5DNYhLb7I" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Functions</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursef/stage/21/puzzle/1" target="_new">Songwriting with Parameters</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course F : Lesson 12 <br> Course 4 : Lesson 13<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursef/21/" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=z4EIW0VvRek">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/13/Key-Activity13-Songwriting.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course4/13/Key-Assessment13-Songwriting.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/28ujn3adHBA" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/28ujn3adHBA">https://youtu.be/28ujn3adHBA</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/QuIMLel1mmw" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=QuIMLel1mmw">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Functions</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursee/stage/6/puzzle/1" target="_new">Songwriting</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course E : Lesson 6 <br> Course 3 : Lesson 9<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursee/6" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=TaH7myEVHz0">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/9/Key-Assessment9-Songwriting.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/5iDCKkI6y2Y" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/5iDCKkI6y2Y">https://youtu.be/5iDCKkI6y2Y</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/QuIMLel1mmw" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=QuIMLel1mmw">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Internet</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursee/stage/25/puzzle/1" target="_new">Internet</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course E : Lesson 16 <br> Course 3 : Lesson 18<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursee/25/" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=Z6CEAOFZRRk">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/18/Key-Assessment18-Internet.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/mFOUbqYv1Sc" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/mFOUbqYv1Sc">https://youtu.be/mFOUbqYv1Sc</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Loops</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursec/stage/7/puzzle/1" target="_new">Getting Loopy</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course C : Lesson 7 <br> Course 1 : Lesson 12<br> (age 5+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Loops are a handy way to repeat actions a certain number of times. In this lesson, students will dance their way to a better understanding of how to use repeat loops.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursec/7" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=Vo2woYRRogA">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course1/12/Key-Assessment12-GettingLoopy.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/JoKTqHCni0M" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/JoKTqHCni0M">https://youtu.be/JoKTqHCni0M</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Loops</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/8/puzzle/1" target="_new">Happy Loops</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A: Lesson 8<br> (age 4+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/8" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Loops</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/courseb/stage/9/puzzle/1" target="_new">My Loopy Robotic Friends</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course B : Lesson 9 <br> Pre-Express Course : Lesson 9 <br> Express Course : Lesson 5<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Here, students learn the simplicity and utility of loops by “programming” their friends using the language from "My Robotic Friends." Once loops are introduced, students will find that they can build bigger structures faster.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/courseb/9" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Loops - For Loops</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursef/stage/18/puzzle/1" target="_new">For Loop Fun</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course F : Lesson 9 <br> Course 4 : Lesson 8<br> (age 9+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursef/18/" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=Ls_fAIRH26E">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/8/Key-Activity8-ForLoopFun.pdf" target="_new">Activity Answer Key</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/mX857v5B4gE" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/mX857v5B4gE">https://youtu.be/mX857v5B4gE</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/HO4uhoahtjM" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=HO4uhoahtjM">See Lesson in Action</a>
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Persistence</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursec/stage/1/puzzle/1" target="_new">Building a Foundation</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course C : Lesson 1 <br> Course 1 : Lesson 9<br> (age 4+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. In this lesson, students will be building a structure with common materials. The structure will be tested on its ability to hold a textbook for more than ten seconds. Most students will not get this right the first time, but it's important they push through and keep trying.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursec/1" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=J7y0o6VxMXQ">Teacher Video</a><br>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/eZqKqI8AvnA" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/eZqKqI8AvnA">https://youtu.be/eZqKqI8AvnA</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+          <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/90cSld-If04" frameborder="0" allowfullscreen></iframe>
+          <a href="https://www.youtube.com/watch?v=90cSld-If04">See Lesson in Action</a>
+      <iframe width="200" height="113" src="https://www.youtube.com/embed/2zrtHt3bBmQ?list=PLIChyVOpASG3UTHeoU-z6GuwyAFIFfpFj" frameborder="0" allowfullscreen></iframe>
+
+<ul>
+<li><a href="https://www.youtube.com/watch?v=2zrtHt3bBmQ&amp;list=PLIChyVOpASG3UTHeoU-z6GuwyAFIFfpFj" target="_new">Class Dojo: Growth Mindset videos</a></li> <li><a href="https://www.khanacademy.org/educator/reference-for-coaches/how-to/a/growth-mindset-lesson-plan" target="_new">Khan Academy: Growth Mindset</a></li>
+</ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Persistence</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/2/puzzle/1" target="_new">Stevie and the Big Project</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 1 <br> Course B : Lesson 1<br> (age 5+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up. This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure.
+
+This lession can be done over one or two class sessions. If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/2/" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/cybBscJ3G8c" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/cybBscJ3G8c">https://youtu.be/cybBscJ3G8c</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursed/stage/14/puzzle/1" target="_new">Common Sense Education: Digital Citizenship</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course D : Lesson 14 <br> Course 3 : Lesson 20<br> (age 8+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
+
+Students will also explore what it means to be responsible and respectful to their offline and online communities as a step toward learning how to be good digital citizens.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursed/14" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=fIlqt3P8Nsg">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course3/20/Key-Assessment20-DigitalCitizenship.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/S7A2n1c3UiA" frameborder="0" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=S7A2n1c3UiA">https://www.youtube.com/watch?v=S7A2n1c3UiA</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/courseb/stage/5/puzzle/1" target="_new">Common Sense Education: Your Digital Footprint</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course B : Lesson 5 <br> Pre-Express Course : Lesson 5 <br> Course 2 : Lesson 18<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In collaboration with Common Sense Education, this lesson helps students learn about the similarities of staying safe in the real world and when visiting websites. Students will also learn that the information they put online leaves a digital footprint or “trail.” This trail can be big or small, helpful or hurtful, depending on how they manage it.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/courseb/5" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=qjusxfefJdM">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course2/18/Key-followthedigitaltrail.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/rgbZAWnOWOo" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/rgbZAWnOWOo">https://youtu.be/rgbZAWnOWOo</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://code.org/curriculum/course2/18/followthedigitaltrail.pdf">Common Sense Education Teacher Prep Guide</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursea/stage/7/puzzle/1" target="_new">Common Sense Education: Going Places Online</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course A : Lesson 7 <br> Course 1 : Lesson 17<br> (age 6+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">In collaboration with Common Sense Education, this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursea/7" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=AG23gWMEB98">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course1/17/Key-Assessment17-KeepItPrivate.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/vUO7t92k4Xg" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/vUO7t92k4Xg">https://youtu.be/vUO7t92k4Xg</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://www.commonsensemedia.org/educators/lesson/going-places-safely-k-2">Common Sense Education Teacher Prep Guide</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursef/stage/12/puzzle/1" target="_new">Common Sense Education: Power of Words</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course F : Lesson 3<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Students consider that while they are enjoying their favorite websites they may encounter messages from other kids that can make them feel angry, hurt, sad, or fearful. They explore ways to handle cyberbullying and how to respond in the face of upsetting language online.
+
+Students discuss all the ways they use technology for communication and explore the similarities and differences between in-person and online communication. Students then brainstorm ways to respond to cyberbullying.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursef/12/" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/8rOnMl26dR8" frameborder="0" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/watch?v=8rOnMl26dR8">https://www.youtube.com/watch?v=8rOnMl26dR8</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://d2e111jq13me73.cloudfront.net/sites/default/files/3-5-unit1-thepowerofwords.pdf">Common Sense Education Teacher Prep Guide</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursee/stage/13/puzzle/1" target="_new">Common Sense Education: Private &amp; Personal Information</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course E : Lesson 4<br> (age 9+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Developed by Common Sense Education, this lesson is about the difference between information that is safe to share online and information that is not.
+
+As students visit sites that request information about their identities, they learn to adopt a critical inquiry process that empowers them to protect themselves and their families from identity theft. In this lesson, students learn to think critically about the user information that some websites request or require. They learn the difference between private information and personal information, as well as how to distinguish what is safe or unsafe to share online.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursee/13/" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://d2e111jq13me73.cloudfront.net/sites/default/files/3-5-unit1-privateandpersonalinformation.pdf">Common Sense Education Teacher Prep Guide</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Safety</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursec/stage/14/puzzle/1" target="_new">Common Sense Education: Screen Out The Mean</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course C : Lesson 14<br> (age 7+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">This lesson helps children to recognize that it is essential to tell a trusted adult if something online makes them feel angry, sad, or scared.
+
+Students learn that other people can sometimes act like bullies when they are online. They will explore what cyberbullying means and what they can do when they encounter it. After reading a scenario about mean online behavior, students discuss what cyberbullying is, how it can make people feel, and how to respond. Finally, they use their knowledge to create a simple tip sheet on cyberbullying in their journal.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursec/14" target="_new">Lesson Plan</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <ul><li><a href="https://drive.google.com/a/code.org/file/d/0B-uvt08wYSQqWnhrYXd5TF80VHM/view?usp=sharing">Online Safety Poster</a></li></ul>
+</td>
+    </tr>
+
+  </tbody>
+<tbody>
+    <tr>
+      <td rowspan="2" style="color: white; border:1px solid white; text-align: center;">Variables</td>
+      <td style="border:1px solid #999999;"> <h3><a href="https://studio.code.org/s/coursef/stage/15/puzzle/1" target="_new">Envelope Variables</a></h3>
+        <div style="font-size: 11px; line-height: 120%;">
+<b>Course F : Lesson 6 <br> Express Course : Lesson 20 <br> Course 4 : Lesson 4<br> (age 10+) </b><br><br>
+</div>
+        <div style="font-size: 12px; line-height: 110%;">Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.<br><br>
+</div>
+        <a href="https://curriculum.code.org/csf/coursef/15/" target="_new">Lesson Plan</a>
+          | <a href="https://www.youtube.com/watch?v=NFdtkajAtQs">Teacher Video</a><br>
+           <a href="https://www.code.org/curriculum/course4/4/Key-Activity4-Variables.pdf" target="_new">Activity Answer Key</a><br> 
+<a href="https://www.code.org/curriculum/course4/4/Key-Assessment4-Variables.pdf" target="_new">Assessment Answer Key</a> 
+
+      </td>
+      <td style="border:1px solid #999999;">
+      <iframe title="YouTube video player" width="250" height="141" src="http://www.youtube.com/embed/DI7DprN4FtE" frameborder="0" allowfullscreen></iframe>
+        <a href="https://youtu.be/DI7DprN4FtE">https://youtu.be/DI7DprN4FtE</a>
+
+      </td>
+      <td style="border:1px solid #999999;">
+      </td>
+    </tr>
+</tbody>
+</table>
+
+</div>
+
+<p><link rel="stylesheet" type="text/css" href="../morestyle.css"></p>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

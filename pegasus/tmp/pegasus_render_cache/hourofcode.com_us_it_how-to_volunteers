@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Guida per i volontari dell'Ora del Codice" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/it/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Guida per i volontari dell'Ora del Codice</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/it/">
+<img alt="L'Ora del Codice" src="/us/it/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option selected value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/it/learn" title="Attività">Attività</a>
+</li>
+<li>
+<a href="/us/it/how-to" title="Come">Come</a>
+</li>
+<li>
+<a href="/us/it/promote" title="Promuovi">Promuovi</a>
+</li>
+<li>
+<a href="/us/it/#faq" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/it/#join">
+<button style="float: right; margin-top: 50px;">
+Organizza un'Ora del Codice
+</button>
+</a></p>
+
+<h1>Guida per i Volontari</h1>
+
+<h3>Fai la differenza in una classe oggi!</h3>
+
+<hr>
+
+<h2>Perché fare volontariato?</h2>
+
+<p>Scopri alcune testimonianze dai volontari delle edizioni passate:</p>
+
+<ul>
+<li>"La parte migliore della mia esperienza è stata che l'intera classe era composta da donne e persone di colore. Questo fa ben sperare per il futuro della nostra industria, avendo la possibilità di raggiungere ed emozionare questi ragazzi."</li>
+<li>"Ho apprezzato soprattutto la possibilità di incoraggiare giovani ragazze alla tecnologia. Mi sembrava di aiutare la prossima generazione della mia zona."</li>
+<li>"Mi è piaciuto molto vedere come erano entusiasti i bambini. Una cosa incredibile è stata che gli insegnanti hanno notato che alcuni degli studenti che non andavano così bene nelle altre materie, erano invece eccellenti nel pensare come degli sviluppatori e nell'aiutare gli altri, dando loro così un ambito dove sentirsi a proprio agio ed aver maggiore fiducia in se stessi."</li>
+</ul>
+
+<h2>Chiunque può offrirsi volontario</h2>
+
+<h3>Volontari e testimonial in ambito tecnologico:</h3>
+
+<p>La tua attività è legata all'informatica o alla tecnologia? Se lavori in ambito informatico, presso una società tecnologica in qualsiasi ruolo (più o meno tecnico) o hai seguito corsi di informatica, puoi aiutare ad ispirare gli studenti! Molti studenti non hanno mai incontrato qualcuno che lavora in settori tecnologici ed i nostri insegnanti desiderano mettere in contatto le proprie classi con professionisti e studenti universitari.</p>
+
+<p>Puoi fare da testimonial per una classe o aiutare un insegnante a eseguire le esercitazioni. Visita una classe locale per stimolare gli studenti a continuare ad imparare informatica. <br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>Iscriviti subito come volontario!</button> <br> <br></a></p> 
+
+<h3>
+  Qualsiasi persona interessata ad ampliare le opportunità delle prossime generazioni:
+</h3>
+
+<p>
+  Credi che l'apprendimento dell'informatica possa dare molte opportunità agli studenti? Aiuta una classe locale o organizza un evento nel doposcuola! Non hai bisogno di alcuna conoscenza specifica in informatica per ospitare un'Ora del Codice. La tua offerta di aiuto spesso è sufficiente a convincere l'insegnante di tuo figlio, un amico o un club a provare un'Ora del Codice.
+</p>
+
+<h3>
+  Come iniziare?
+</h3>
+
+<ol>
+  <li>
+    <a href="/us/it/promote/resources#help-schools%0A">Invia questa email</a> all'insegnante di tuo figlio offrendoti di aiutare a svolgere un'Ora del Codice.
+  </li>
+  
+  <li>
+    Proponi di ospitare un evento dell'Ora del Codice nel doposcuola in una scuola locale. Puoi seguire i suggerimenti di <a href="/us/it/how-to%0A">questa guida</a> per pianificare l'evento.
+  </li>
+</ol>
+
+<h2>
+  Recluta i tuoi colleghi di lavoro come volontari
+</h2>
+
+<p>
+  Parla ai tuoi amici e colleghi di lavoro dell'Ora del Codice. Migliaia di insegnanti sono alla ricerca di volontari, quindi chiedi loro di <a href="https://code.org/volunteer"> iscriversi come volontari</a>. Proponi al tuo datore di lavoro di coinvolgere la tua organizzazione. <a href="/us/it/promote/resources#sample-emails%0A">Invia questo messaggio di posta elettronica</a> al tuo responsabile o all'Amministratore Delegato della tua azienda per diffondere il messaggio.
+</p>
+
+<h2>
+  Come prepararti
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/it/promote/resources#videos">Scegli un video</a> per catturare l'attenzione della classe ed entusiasmarli all'Ora del Codice. <a href="https://www.programmailfuturo.it/notizie/il-terzo-anno-del-progetto/marco-belinelli-con-programma-il-futuro" target="_blank">Qui</a> trovi anche un video in italiano di Programma il Futuro.
+  </li>
+  <li>
+    Guarda il <a href="/files/hoc-volunteer-toolkit.pdf">Kit per i volontari dell'Ora del Codice</a> (in inglese) che include un'introduzione, un modello di pianificazione, materiali per prepararsi e materiale promozionale. Tutto ciò di cui hai bisogno per essere pronto per la tua esperienza da volontario!
+  </li>
+  <li>
+    Se svolgerai un'esercitazione in aula, dedica almeno 30 minuti per provare almeno una <a href="/us/it/learn">Ora del codice</a>.
+  </li>
+  <li>
+    Se sei presso una scuola, fai tutti i controlli burocratici preliminari e compila tutta la documentazione necessaria.
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Leggi questi consigli</a> su come interagire con gli studenti.
+  </li>
+  <li>
+    Partecipa alle conversazioni su Facebook, Twitter, Instragram e Tumblr con l'hashtag #Hourofcode o #OradelCodice.
+  </li>
+  <li>
+    Mettiti in contatto con gli insegnanti per anticipare di cosa intendi parlare durante il tuo intervento.
+  </li>
+  <li>
+    Se sei un volontario virtuale, verifica prima le prestazioni del collegamento audio e video.
+  </li>
+</ul>
+
+<h2>
+  Giorno dell'evento dell'Ora del Codice
+</h2>
+
+<p>
+  Nel condurre l'evento dell'Ora del Codice, segui il modello di pianificazione qui sotto per gestire al meglio la giornata. Prima di allora, assicurati di come accedere alla scuola e saluta gli insegnanti il giorno dell'evento. Conferma la data concordata e discuti di eventuali punti critici.
+</p>
+
+<h3>
+  Esempio di organizzazione:
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Ora
+    </th>
+    
+    <th>
+      Attività
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minuti
+    </td>
+    
+    <td>
+      <a href="/us/it/promote/resources#videos">Proietta un video stimolante</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minuti
+    </td>
+    
+    <td>
+      Presentati e conosci gli studenti: 
+      
+      <li>
+        Qual'è il tuo lavoro, in cosa consiste e cosa ami di più del tuo lavoro?
+      </li>
+      
+      <li>
+        Che cosa o chi ti ha ispirato?
+      </li>
+      
+      <li>
+        Come ti è nata la passione per l'informatica?
+      </li>
+      
+      <li>
+        Hai avuto un mentore?
+      </li>
+      
+      <li>
+        Condividi una storia su come la tecnologia riguardi tutti noi.
+      </li>
+      
+      <br>Poni domande agli studenti e lascia del tempo per loro domande e relative risposte. 
+      
+      <li>
+        A che tipi di lavori sono interessati, quali solo i loro gadget o app preferiti e come pensano siano stati realizzati?
+      </li>
+      
+      <li>
+        Ci sono domande da parte degli studenti?</li>
+</td> </tr> <tr>
+          <td>
+            30-60 minuti
+          </td>
+          
+          <td>
+            <strong>Coding!</strong> Fai svolgere le esercitazioni, rispondi alle domande e guida gli studenti negli esercizi più difficili. Cerca di non dare agli studenti la soluzione vera e propria, invece, prova a porre loro domande con le quali possano capire cosa è andato storto ed incoraggia gli studenti ad aiutarsi a vicenda. L'apprendimento reciproco è una grande opportunità.
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            1-3 minuti
+          </td>
+          
+          <td>
+            Ringrazia tutti e salutali con stimolanti parole d'addio. Se possibile distribuisci dei gadget avvincenti della tua azienda (gli adesivi vanno molto bene)!
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Dopo
+          </td>
+          
+          <td>
+            <strong>Per un cambiamento duraturo:</strong> proponi all'insegnante di trasformare l'Ora del Codice in un corso di informatica completo! Vai su <a href="https://code.org/yourschool">code.org/yourschool</a> con l'insegnante per dichiarare cosa insegna oggi questa scuola ed incoraggiali ad impegnarsi a portare sempre più l'informatica in classe.
+          </td>
+        </tr> </table> 
+        
+
+<pre><code>    &lt;h3&gt;
+      Dopo l'evento:
+    &lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Condividi le tue foto e storie con Code.org scrivendo a giving@code.org e con &lt;a href="https://www.programmailfuturo.it/aiuto/invia-comunicazione" target="_blank"&gt;Programma il Futuro&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        Ricorda di riferire alla tua azienda le ore di volontariato che hai svolto.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Condividi la tua esperienza sui social network con l'hashtag #Hourofcode o #OradelCodice !
+      &lt;/li&gt;
+      &lt;li&gt;
+        Inoltre, è importante ricordare che durante l'evento si effettuano riprese o scatti &lt;strong&gt;specialmente con gli studenti&lt;/strong&gt; quindi chiedi ai genitori e insegnanti il permesso di condividere post sui social network.
+      &lt;/li&gt;
+      &lt;li&gt;
+        E controlla nuovamente entro un mese: l'insegnante è interessato a realizzare un corso di informatica? Condividi &lt;a href="https://code.org/yourschool"&gt;risorse e possibilità di Professional Learning&lt;/a&gt; (solo per gli USA) per aiutarli in questa impresa.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      Come essere selezionato come testimonial tecnico volontario
+    &lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Gli insegnanti saranno alla ricerca di volontari sulla nostra &lt;a href="https://code.org/volunteer/local"&gt;mappa dei volontari&lt;/a&gt;.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Compilare al meglio il tuo profilo aumenta la possibilità che un insegnante ti selezioni.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Un insegnante ti contatterà tramite questo modulo (il tuo indirizzo email non sarà mai condiviso con l'insegnante). Se si ricevono troppe richieste da parte degli insegnanti, è sempre possibile aggiornare le preferenze facendo clic sul link presente nella parte inferiore di qualsiasi email ricevuta, per modificare i propri dati o cancellarsi.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      FAQ sul volontariato
+    &lt;/h2&gt;
+    &lt;h3&gt;
+      Non sono ancora stato contattato da alcun insegnante. Come posso procedere?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Prova a contattare le scuole locali, proponendoti direttamente agli insegnanti o alla segreteria.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      Quanto durano le sessioni in classe?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Una visita di persona ad una classe normalmente dura 60-90 minuti, mentre una visita virtuale circa 20-30 minuti.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      Per quali età sono adatte le esercitazioni dell'Ora del Codice?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Code.org e i suoi partner progettano tutte le attività dell'Ora del Codice per coinvolgere studenti di tutti i livelli (dalla scuola dell'infanzia alle superiori), ragazzi e ragazze, di ogni provenienza. Tutti, anche gli adulti possono divertirsi!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href='/us/it/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+Organizza un'Ora del Codice
+</button>
+</p>
+
+<pre><code>    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/it/how-to">
+<div class="nav-header">Guide</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to">
+Per insegnanti
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/afterschool">
+Per gli insegnanti del doposcuola
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/companies">
+Per le aziende
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/districts">
+Per le province
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/events">
+Per le scuole
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/parents">
+Per i genitori
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/public-officials">
+Per organizzatori locali
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/it/how-to/volunteers">
+Per i volontari
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/it/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/it/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Risorse</div>
+</div>
+</a>
+<a href="/us/it/learn">
+<div class="display-link">
+<img class="display-img" src="/us/it/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Prova le esercitazioni</div>
+</div>
+</a>
+<a href="/us/it/promote">
+<div class="display-link">
+<img class="display-img" src="/us/it/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Come partecipare</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contattaci</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Supporto</a>
+</li>
+<li>
+<a href="/us/it/partners" target="_blank">Partner e Consulenti</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Termini di servizio</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Informativa sulla privacy</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. Tutti i diritti riservati.
+<br>
+Hour of Code™ è un marchio registrato di Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

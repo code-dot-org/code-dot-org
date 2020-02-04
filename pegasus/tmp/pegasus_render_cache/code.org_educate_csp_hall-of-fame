@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Congratulations to our new Hall of Famers!" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/csp/hall-of-fame" property="og:url">
+<meta content="In 2018, female and underrepresented minority students again made massive strides toward balanced representation in AP Computer Science exams. At the schools below, at least 10 students took the AP CS Principles exam in 2018." property="og:description">
+<meta content="http://code.org/images/csp-hof-2.png" property="og:image">
+<meta content="850" property="og:image:width">
+<meta content="502" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>CS Principles Hall of Fame | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<h1>Computer Science Principles Hall of Fame</h1>
+
+<p><img src="/images/csp-hof-2.png" width="100%"></p>
+
+<h3>In 2018, female and underrepresented minority students again made <a href="https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e">massive strides toward balanced representation</a> in AP Computer Science exams. At the schools below, at least 10 students took the AP CS Principles exam in 2018. Thank you to every teacher who is working to change the face of computer science.</h3>
+
+<p>Find your school below!</p>
+
+<p><a href="#AL">Alabama</a> | <a href="#AZ">Arizona</a> | <a href="#CA">California</a> | <a href="#CO">Colorado</a> | <a href="#CT">Connecticut</a> | <a href="#DE">Delaware</a> |<a href="#FL">Florida</a> | <a href="#GA">Georgia</a> | <a href="#ID">Idaho</a> | <a href="#IL">Illinois</a> | <a href="#IN">Indiana</a> | <a href="#IA">Iowa</a> | <a href="#KY">Kentucky</a> | <a href="#MA">Massachusetts</a> | <a href="#ME">Maine</a> | <a href="#MD">Maryland</a> | <a href="#MA">Massachusetts</a> | <a href="#MI">Michigan</a> | <a href="#MN">Minnesota</a> | <a href="#MS">Mississippi</a> | <a href="#NE">Nebraska</a> | <a href="#NV">Nevada</a> | <a href="#NJ">New Jersey</a> | <a href="#NY">New York</a> | <a href="#NC">North Carolina</a> | <a href="#OH">Ohio</a> | <a href="#OK">Oklahoma</a> | <a href="#OR">Oregon</a> | <a href="#PA">Pennsylvania</a> | <a href="#RI">Rhode Island</a> | <a href="#SC">South Carolina</a> | <a href="#SD">South Dakota</a> | <a href="#TN">Tennessee</a> | <a href="#TX">Texas</a> | <a href="#UT">Utah</a> | <a href="#VA">Virginia</a> | <a href="#WA">Washington</a> | <a href="#WV">West Virginia</a> | <a href="#WI">Wisconsin</a>                        </p>
+
+<p><a name="AL"></a></p>
+
+<h2>Alabama</h2>
+
+<ul>
+<li>Alabama School Of Fine Arts, Birmingham</li>
+<li>Arab High School, Arab</li>
+<li>Athens High School, Athens</li>
+<li>Austin High School, Decatur</li>
+<li>Buckhorn High School, New Market</li>
+<li>Central High School, Phenix City</li>
+<li>Cullman High School, Cullman</li>
+<li>Enterprise High School, Enterprise</li>
+<li>Eufaula High School, Eufaula</li>
+<li>Florence High School, Florence</li>
+<li>Foley High School, Foley</li>
+<li>Hazel Green High School, Hazel Green</li>
+<li>Helena High School, Helena</li>
+<li>Hillcrest High School, Tuscaloosa</li>
+<li>Holtville High School, Deatsville</li>
+<li>Lauderdale Co High School, Rogersville</li>
+<li>Munford High School, Munford</li>
+<li>Oak Mt High School, Birmingham</li>
+<li>Prattville High School, Prattville</li>
+<li>Russellville High School, Russellville</li>
+<li>Shades Valley High School, Irondale</li>
+<li>Sheffield High School, Sheffield</li>
+<li>Shelby Co High School, Columbiana</li>
+<li>Spain Park High School, Hoover</li>
+<li>Sparkman High School, Harvest</li>
+<li>Theodore High School, Theodore</li>
+<li>West Limestone High School, Lester</li>
+<li>West Point High School, Cullman<br>
+</li>
+</ul>
+
+<p><a name="AZ"></a></p>
+
+<h2>Arizona</h2>
+
+<ul>
+<li>Arizona College Prep Erie Campus, Chandler</li>
+<li>Basha High School, Chandler</li>
+<li>Carl Hayden High School, Phoenix</li>
+<li>Chandler High School, Chandler</li>
+<li>Dysart High School, El Mirage</li>
+<li>Flowing Wells High School, Tucson</li>
+<li>Maryvale High School, Phoenix</li>
+<li>Paradise Valley High School, Phoenix</li>
+<li>Perry High School, Gilbert</li>
+<li>Phoenix Coding Academy, Phoenix</li>
+<li>University High School, Tucson</li>
+<li>Verrado High School, Buckeye</li>
+<li>Western School Of Science And Technology, Phoenix</li>
+</ul>
+
+<p><a name="CA"></a></p>
+
+<h2>California</h2>
+
+<ul>
+<li>Academies Of Education And Empowerment At Carson High School, Carson</li>
+<li>Adrian Wilcox High School, Santa Clara</li>
+<li>Agoura High School, Agoura</li>
+<li>Alexander Hamilton Senior High School, Los Angeles</li>
+<li>Alhambra High School, Alhambra</li>
+<li>Alhambra Senior High School, Martinez</li>
+<li>Alliance Judy Ivie Burton Technology Academy High School, Los Angeles</li>
+<li>American Canyon High School, American Canyon</li>
+<li>Anaheim High School, Anaheim</li>
+<li>Arlington High School, Riverside</li>
+<li>Aspire Benjamin Holt College Preparatory Academy, Stockton</li>
+<li>Bell Senior High School, Bell</li>
+<li>Brawley High School, Brawley</li>
+<li>California Military Institute, Perris</li>
+<li>Carson Senior High School, Carson</li>
+<li>Cerritos High School, Cerritos</li>
+<li>Chaparral High School, Temecula</li>
+<li>Citrus Hill High School, Perris</li>
+<li>Coliseum College Prep Academy, Oakland</li>
+<li>College Park High School, Pleasant Hill</li>
+<li>Communication And Tech At Diego Rivera Learning Complex, Los Angeles</li>
+<li>Corona Del Mar High School, Newport Beach</li>
+<li>Covina High School, Covina</li>
+<li>Crawford High School, San Diego</li>
+<li>Cypress High School, Cypress</li>
+<li>East Union High School, Manteca</li>
+<li>Edward R. Roybal Learning Center, Los Angeles</li>
+<li>El Cajon Valley High School, El Cajon</li>
+<li>El Dorado High School, Placentia</li>
+<li>El Modena High School, Orange</li>
+<li>El Monte High School, El Monte</li>
+<li>El Toro High School, Lake Forest</li>
+<li>Escondido High School, Escondido</li>
+<li>Evergreen Valley High School, San Jose</li>
+<li>Felicitas And Gonzalo Mendez High School, Los Angeles</li>
+<li>Fontana A. B. Miller High School, Fontana</li>
+<li>Foshay Learning Center, Los Angeles</li>
+<li>Fountain Valley High School, Fountain Valley</li>
+<li>Freedom High School, Oakley</li>
+<li>Girls Academic Leadership Academy, Los Angeles</li>
+<li>Granada Hills Charter High School, Granada Hills</li>
+<li>Great Oak High School, Temecula</li>
+<li>Grover Cleveland Charter High School, Reseda</li>
+<li>Gunderson High School, San Jose</li>
+<li>Harbor Teacher Preparation Academy, Wilmington</li>
+<li>Harvard-Westlake School, Studio City</li>
+<li>Heritage High School, Romoland</li>
+<li>Hoover High School, San Diego</li>
+<li>James Monroe High School, North Hills</li>
+<li>John Marshall Senior High School, Los Angeles</li>
+<li>John W. North High School, Riverside</li>
+<li>King/Drew Medical Magnet High School, Los Angeles</li>
+<li>La Costa Canyon High School, Encinitas</li>
+<li>La Habra High School, La Habra</li>
+<li>Laguna Beach High School, Laguna Beach</li>
+<li>Laguna Hills High School, Laguna Hills</li>
+<li>Leland High School, San Jose</li>
+<li>Liberty High School, Brentwood</li>
+<li>Linda Esperanza Marquez High A Hntngtn Park Institute Of Applied Medicine, Huntington Park</li>
+<li>Loara High School, Anaheim</li>
+<li>Los Amigos High School, Fountain Valley</li>
+<li>Madison Park Academy 6-12, Oakland</li>
+<li>Martin Luther King Jr. High School, Riverside</li>
+<li>Maywood Academy High School, Maywood</li>
+<li>Miramonte High School, Orinda</li>
+<li>Murrieta Mesa High School, Murrieta</li>
+<li>North Hollywood Senior High School, North Hollywood</li>
+<li>Oakland High School, Oakland</li>
+<li>Oakland Technical High School, Oakland</li>
+<li>Orange Glen High School, Escondido</li>
+<li>Oxford Academy, Cypress</li>
+<li>Oxnard High School, Oxnard</li>
+<li>Pacifica High School, Oxnard</li>
+<li>Paloma Valley High School, Menifee</li>
+<li>Patriot High School, Jurupa Valley</li>
+<li>Perris High School, Perris</li>
+<li>Providence High School, Burbank</li>
+<li>Puc Early College Academy For Leaders And Scholars, Los Angeles</li>
+<li>Redondo Union High School, Redondo Beach</li>
+<li>RFK Community Schools-UCLA Community K-12, Los Angeles</li>
+<li>Robert Fulton College Preparatory, Van Nuys</li>
+<li>Sacramento Country Day School, Sacramento</li>
+<li>San Fernando Senior High School, San Fernando</li>
+<li>San Jacinto High School, San Jacinto</li>
+<li>San Leandro High School, San Leandro</li>
+<li>San Marin High School, Novato</li>
+<li>San Mateo High School, San Mateo</li>
+<li>San Pasqual High School, Escondido</li>
+<li>San Ramon Valley High School, Danville</li>
+<li>Santa Clara High School, Santa Clara</li>
+<li>Santiago High School, Corona</li>
+<li>Sherman Oaks Center For Enriched Studies, Reseda</li>
+<li>Skyline High School, Oakland</li>
+<li>Social Justice Leadership Academy At Esteban E. Torres High #5, Los Angeles</li>
+<li>Soledad High School, Soledad</li>
+<li>South East High School, South Gate</li>
+<li>South Hills High School, West Covina</li>
+<li>Stem Academy At Bernstein High, Hollywood</li>
+<li>Summit High School, Fontana</li>
+<li>Sylmar Senior High School, Sylmar</li>
+<li>Trabuco Hills High School, Mission Viejo</li>
+<li>Valencia High School, Valencia</li>
+<li>Valhalla High School, El Cajon</li>
+<li>Valley View High School, Moreno Valley</li>
+<li>Van Nuys Senior High School, Van Nuys</li>
+<li>Villa Park High School, Villa Park</li>
+<li>Vista Del Lago High School, Folsom</li>
+<li>Washington High School, Fresno</li>
+<li>Western Center Academy, Hemet</li>
+<li>Whittier High School, Whittier</li>
+<li>Woodlake High School, Woodlake</li>
+</ul>
+
+<p><a name="CO"></a></p>
+
+<h2>Colorado</h2>
+
+<ul>
+<li>Alamosa High School, Alamosa</li>
+<li>Basalt High School, Basalt</li>
+<li>Brighton High School, Brighton</li>
+<li>Canon City High School, Canon City</li>
+<li>Delta High School, Delta</li>
+<li>Denver School Of Innovation And Sustainable Design, Denver</li>
+<li>DSST: Cole High School, Denver</li>
+<li>Durango High School, Durango</li>
+<li>George Washington High School, Denver</li>
+<li>Harrison High School, Colorado Springs</li>
+<li>Legacy High School, Broomfield</li>
+<li>North High School, Denver</li>
+<li>Northfield High School, Denver</li>
+<li>Palmer Ridge High School, Monument</li>
+<li>Paonia Senior High School, Paonia</li>
+<li>Roaring Fork High School, Carbondale<br>
+</li>
+</ul>
+
+<p><a name="CT"></a>   </p>
+
+<h2>Connecticut</h2>
+
+<ul>
+<li>Central High School, Bridgeport</li>
+<li>Hill Regional Career High School, New Haven<br>
+</li>
+</ul>
+
+<p><a name="DE"></a></p>
+
+<h2>Delaware</h2>
+
+<ul>
+<li>Mot Charter School, Middletown</li>
+</ul>
+
+<p><a name="FL"></a></p>
+
+<h2>Florida</h2>
+
+<ul>
+<li>Alonso High School, Tampa</li>
+<li>Apopka High School, Apopka</li>
+<li>Atlantic Coast High School, Jacksonville</li>
+<li>Atlantic Technical College, Margate</li>
+<li>Barbara Goleman Senior High School, Miami Lakes</li>
+<li>Bloomingdale High School, Valrico</li>
+<li>Charles W Flanagan High School, Pembroke Pines</li>
+<li>Christopher Columbus High School, Miami</li>
+<li>Cooper City High School, Cooper City</li>
+<li>Coral Gables Senior High School, Coral Gables</li>
+<li>Coral Glades High School, Coral Springs</li>
+<li>Coral Shores High School, Tavernier</li>
+<li>Coral Springs High School, Coral Springs</li>
+<li>Cypress Bay High School, Weston</li>
+<li>Cypress Creek High School, Orlando</li>
+<li>Deerfield Beach High School, Deerfield Beach</li>
+<li>Dillard 6-12, Fort Lauderdale</li>
+<li>Divine Savior Academy, Doral</li>
+<li>Dixie County High School, Cross City</li>
+<li>Duncan U. Fletcher High School, Neptune Beach</li>
+<li>East River High School, Orlando</li>
+<li>Edgewater High School, Orlando</li>
+<li>Edward H. White High School, Jacksonville</li>
+<li>Flagler-Palm Coast High School, Palm Coast</li>
+<li>Forest Hill Community High School, West Palm Beach</li>
+<li>Fort Lauderdale High School, Fort Lauderdale</li>
+<li>Hallandale High School, Hallandale Beach</li>
+<li>Harmony High School, Harmony</li>
+<li>Hialeah Senior High School, Hialeah</li>
+<li>Homestead Senior High School, Homestead</li>
+<li>J. P. Taravella High School, Coral Springs</li>
+<li>J.R. Arnold High School, Panama City Beach</li>
+<li>John I. Leonard High School, Greenacres</li>
+<li>Jupiter High School, Jupiter</li>
+<li>Key West High School, Key West</li>
+<li>Keystone Heights Junior/Senior High School, Keystone Heights</li>
+<li>Kings Academy, West Palm Beach</li>
+<li>Lake Howell High School, Winter Park</li>
+<li>Lake Region High School, Eagle Lake</li>
+<li>Mandarin High School, Jacksonville</li>
+<li>Marjory Stoneman Douglas High School, Parkland</li>
+<li>Matanzas High School, Palm Coast</li>
+<li>Maynard Evans High School, Orlando</li>
+<li>Mcarthur High School, Hollywood</li>
+<li>Miami Coral Park Senior High School, Miami</li>
+<li>Miami Lakes Educational Center, Miami Lakes</li>
+<li>Miami Senior High School, Miami</li>
+<li>Miami Springs Senior High School, Miami Springs</li>
+<li>Miramar High School, Miramar</li>
+<li>Monarch High School, Coconut Creek</li>
+<li>Newsome High School, Lithia</li>
+<li>Northeast High School, Oakland Park</li>
+<li>Nova High School, Davie</li>
+<li>Oakleaf High School, Orange Park</li>
+<li>Ocoee High School, Ocoee</li>
+<li>Olympia High School, Orlando</li>
+<li>Olympic Heights Community High School, Boca Raton</li>
+<li>Osceola County School For The Arts, Kissimmee</li>
+<li>Palatka High School, Palatka</li>
+<li>Palm Beach Gardens High School, Palm Beach Gardens</li>
+<li>Palm Beach Lakes High School, West Palm Beach</li>
+<li>Park Vista Community High School, Lake Worth</li>
+<li>Paxon School/Advanced Studies, Jacksonville</li>
+<li>Plant High School, Tampa</li>
+<li>Plantation High School, Plantation</li>
+<li>Pompano Beach High School, Pompano Beach</li>
+<li>Professional &amp; Technical High School, Kissimmee</li>
+<li>Riverview High School, Riverview</li>
+<li>Royal Palm Beach High School, Royal Palm Beach</li>
+<li>Saint John Paul II Academy, Boca Raton</li>
+<li>San Jose Preparatory High School, Jacksonville</li>
+<li>Satellite Senior High School, Satellite Beach</li>
+<li>Seminole Ridge Community High School, Loxahatchee</li>
+<li>Sheridan Technical College, Hollywood</li>
+<li>South Broward High School, Hollywood</li>
+<li>South Miami Senior High School, Miami</li>
+<li>South Plantation High School, Plantation</li>
+<li>Spanish River Community High School, Boca Raton</li>
+<li>Spoto High School, Riverview</li>
+<li>Terry Parker High School, Jacksonville</li>
+<li>Timber Creek High School, Orlando</li>
+<li>University High School, Orlando</li>
+<li>Villages Charter School, The Villages</li>
+<li>Wekiva High School, Apopka</li>
+<li>West Broward High School, Pembroke Pines</li>
+<li>West Orange High School, Winter Garden</li>
+<li>Western High School, Davie</li>
+<li>William R Boone High School, Orlando</li>
+<li>Windermere High School, Windermere</li>
+<li>Winter Park High School, Winter Park</li>
+<li>Winter Springs High School, Winter Springs</li>
+</ul>
+
+<p><a name="GA"></a></p>
+
+<h2>Georgia</h2>
+
+<ul>
+<li>Berkmar High School, Lilburn</li>
+<li>Bowdon High School, Bowdon</li>
+<li>Calhoun High School, Calhoun</li>
+<li>Camden County High School, Kingsland</li>
+<li>Central Gwinnett High School, Lawrenceville</li>
+<li>Chapel Hill High School, Douglasville</li>
+<li>Decatur High School, Decatur</li>
+<li>Discovery High School, Lawrenceville</li>
+<li>East Coweta High School, Sharpsburg</li>
+<li>Elbert County High School, Elberton</li>
+<li>Etowah High School, Woodstock</li>
+<li>Flowery Branch High School, Flowery Branch</li>
+<li>Forsyth Central High School, Cumming</li>
+<li>Grayson High School, Loganville</li>
+<li>Johnson Magnet, Augusta</li>
+<li>Mcintosh High School, Peachtree City</li>
+<li>Meadowcreek High School, Norcross</li>
+<li>Mt. Zion High School, Carrollton</li>
+<li>Oconee County High School, Watkinsville</li>
+<li>Peachtree Ridge High School, Suwanee</li>
+<li>Pope High School, Marietta</li>
+<li>Rockdale County High School, Conyers</li>
+<li>Roswell High School, Roswell</li>
+<li>Sandy Creek High School, Tyrone</li>
+<li>Woodstock High School, Woodstock<br>
+</li>
+</ul>
+
+<p><a name="ID"></a></p>
+
+<h2>Idaho</h2>
+
+<ul>
+<li>Boise Senior High School, Boise</li>
+<li>Capital Senior High School, Boise<br>
+</li>
+</ul>
+
+<p><a name="IL"></a>   </p>
+
+<h2>Illinois</h2>
+
+<ul>
+<li>Adlai E Stevenson High School, Lincolnshire</li>
+<li>Amos Alonzo Stagg High School, Palos Hills</li>
+<li>Brooks College Prep Academy High School, Chicago</li>
+<li>Cary-Grove Community High School, Cary</li>
+<li>Crystal Lake Central High School, Crystal Lake</li>
+<li>Crystal Lake South High School, Crystal Lake</li>
+<li>Curie Metropolitan High School, Chicago</li>
+<li>Deerfield High School, Deerfield</li>
+<li>Elmwood Park High School, Elmwood Park</li>
+<li>Fenton High School, Bensenville</li>
+<li>Glenbrook South High School, Glenview</li>
+<li>Hancock College Preparatory High School, Chicago</li>
+<li>Harry D Jacobs High School, Algonquin</li>
+<li>Highland Park High School, Highland Park</li>
+<li>Hinsdale Central High School, Hinsdale</li>
+<li>Hubbard High School, Chicago</li>
+<li>Infinity Math Science &amp; Tech High School, Chicago</li>
+<li>J Sterling Morton East High School, Cicero</li>
+<li>Jones College Prep High School, Chicago</li>
+<li>Lake Zurich High School, Lake Zurich</li>
+<li>Lakes Community High School, Lake Villa</li>
+<li>Lane Technical High School, Chicago</li>
+<li>Libertyville High School, Libertyville</li>
+<li>Lincoln Park High School, Chicago</li>
+<li>Mather High School, Chicago</li>
+<li>Niles North High School, Skokie</li>
+<li>Niles West High School, Skokie</li>
+<li>Oak Park &amp; River Forest High School, Oak Park</li>
+<li>Payton College Preparatory High School, Chicago</li>
+<li>Prairie Central High School, Fairbury</li>
+<li>Prairie Ridge High School, Crystal Lake</li>
+<li>Ridgewood Comm High School, Norridge</li>
+<li>Saint Viator High School, Arlington Heights</li>
+<li>Solorio Academy High School, Chicago</li>
+<li>Warren Township High School, Gurnee</li>
+<li>Wauconda High School, Wauconda</li>
+<li>Waukegan High School, Waukegan</li>
+<li>Wheeling High School, Wheeling</li>
+<li>York Comm High School, Elmhurst</li>
+<li>Zion-Benton Township High School, Zion<br>
+</li>
+</ul>
+
+<p><a name="IN"></a>   </p>
+
+<h2>Indiana</h2>
+
+<ul>
+<li>Carmel High School, Carmel</li>
+<li>Castle High School, Newburgh</li>
+<li>Fishers High School, Fishers</li>
+<li>Hamilton Southeastern High School, Fishers</li>
+<li>Hammond Academy Of Science &amp; Tech, Hammond</li>
+<li>Jac-Cen-Del Middle/High School, Osgood</li>
+<li>Jasper High School, Jasper</li>
+<li>Munster High School, Munster</li>
+<li>North Wood High School, Nappanee</li>
+<li>Oldenburg Academy, Oldenburg</li>
+<li>Seymour Senior High School, Seymour</li>
+<li>Tell City Jr-Sr High School, Tell City</li>
+<li>Westfield High School, Westfield<br>
+</li>
+</ul>
+
+<p><a name="IA"></a></p>
+
+<h2>Iowa</h2>
+
+<ul>
+<li>East High School, Des Moines</li>
+<li>Roosevelt High School, Des Moines</li>
+</ul>
+
+<p><a name="KY"></a></p>
+
+<h2>Kentucky</h2>
+
+<ul>
+<li>Barbourville City School, Barbourville</li>
+<li>Bryan Station High School, Lexington</li>
+<li>Campbell County High School, Alexandria</li>
+<li>Clay County High School, Manchester</li>
+<li>Clinton County High School, Albany</li>
+<li>Glasgow High School, Glasgow</li>
+<li>Iroquois High School, Louisville</li>
+<li>Knott County Central High School, Hindman</li>
+<li>Lincoln County High School, Stanford</li>
+<li>Prestonsburg High School, Prestonsburg</li>
+<li>Seneca High School, Louisville</li>
+<li>Taylor County High School, Campbellsville</li>
+<li>Union County High School, Morganfield</li>
+</ul>
+
+<p><a name="MA"></a></p>
+
+<h2>Massachusetts</h2>
+
+<ul>
+<li>Arlington High School, Arlington</li>
+<li>Ashland High School, Ashland</li>
+<li>Boston Latin Academy, Dorchester</li>
+<li>Brockton High School, Brockton</li>
+<li>Ipswich High School, Ipswich</li>
+<li>Milton High School, Milton</li>
+<li>Prospect Hill Academy Charter School, Cambridge</li>
+</ul>
+
+<p><a name="ME"></a></p>
+
+<h2>Maine</h2>
+
+<ul>
+<li>Falmouth High School, Falmouth</li>
+<li>Maine Central Institute, Pittsfield</li>
+<li>Mountain Valley High School, Rumford<br>
+</li>
+</ul>
+
+<p><a name="MD"></a>   </p>
+
+<h2>Maryland</h2>
+
+<ul>
+<li>Albert Einstein High School, Kensington</li>
+<li>Arundel High School, Gambrills</li>
+<li>Atholton High School, Columbia</li>
+<li>Bethesda-Chevy Chase High School, Bethesda</li>
+<li>Calvert High School, Prince Frederick</li>
+<li>Centennial High School, Ellicott City</li>
+<li>Charles Herbert Flowers High School, Springdale</li>
+<li>Clarksburg High School, Clarksburg</li>
+<li>Eastern Technical High School, Baltimore</li>
+<li>Elizabeth Seton High School, Bladensburg</li>
+<li>Gaithersburg High School, Gaithersburg</li>
+<li>Glenelg High School, Glenelg</li>
+<li>Hereford High School, Parkton</li>
+<li>Howard High School, Ellicott City</li>
+<li>Huntingtown High School, Huntingtown</li>
+<li>Long Reach High School, Columbia</li>
+<li>Marriotts Ridge High School, Marriottsville</li>
+<li>Montgomery Blair High School, Silver Spring</li>
+<li>Mount Hebron High School, Ellicott City</li>
+<li>North Point High School For Science, Technology, And Industry, Waldorf</li>
+<li>Northwest High School, Germantown</li>
+<li>Northwood High School, Silver Spring</li>
+<li>Oakdale High School, Ijamsville</li>
+<li>Patuxent High School, Lusby</li>
+<li>Poolesville High School, Poolesville</li>
+<li>Quince Orchard High School, Gaithersburg</li>
+<li>Reservoir High School, Fulton</li>
+<li>Richard Montgomery High School, Rockville</li>
+<li>River Hill High School, Clarksville</li>
+<li>Rockville High School, Rockville</li>
+<li>Sherwood High School, Sandy Spring</li>
+<li>Southern Garrett High School, Oakland</li>
+<li>Springbrook High School, Silver Spring</li>
+<li>Thomas S. Wootton High School, Rockville</li>
+<li>Walt Whitman High School, Bethesda</li>
+<li>Westlake High School, Waldorf</li>
+<li>Wheaton High School, Silver Spring</li>
+<li>Winston Churchill High School, Potomac<br>
+</li>
+</ul>
+
+<p><a name="MI"></a>   </p>
+
+<h2>Michigan</h2>
+
+<ul>
+<li>Athens High School, Troy</li>
+<li>Bad Axe High School, Bad Axe</li>
+<li>Bay City Central High School, Bay City</li>
+<li>Bay City Western High School, Auburn</li>
+<li>Belding High School, Belding</li>
+<li>Berkley High School, Berkley</li>
+<li>Caledonia High School, Caledonia</li>
+<li>Catholic Central High School, Grand Rapids</li>
+<li>Central High School, Grand Rapids</li>
+<li>Eisenhower High School, Shelby Township</li>
+<li>Elk Rapids High School, Elk Rapids</li>
+<li>Escanaba Area Public High School, Escanaba</li>
+<li>Freeland Middle School/High School, Freeland</li>
+<li>Gladstone Area High School, Gladstone</li>
+<li>Grand Rapids Christian High School, Grand Rapids</li>
+<li>Grand Traverse Academy, Traverse City</li>
+<li>Greenhills School, Ann Arbor</li>
+<li>Hartland High School, Hartland</li>
+<li>Iron Mountain High School, Iron Mountain</li>
+<li>Kingsford High School, Kingsford</li>
+<li>Ludington High School, Ludington</li>
+<li>Mackinaw City K-12 School, Mackinaw City</li>
+<li>Milford High School, Highland</li>
+<li>North Muskegon High School, Muskegon</li>
+<li>Northern High School, Grand Rapids</li>
+<li>Oakridge High School, Muskegon</li>
+<li>Oscar A. Carlson High School, Rockwood</li>
+<li>Portland High School, Portland</li>
+<li>Renaissance High School, Detroit</li>
+<li>Romeo High School, Romeo</li>
+<li>Skyline High School, Ann Arbor</li>
+<li>St. Joseph High School, Saint Joseph</li>
+<li>Stockbridge High School, Stockbridge</li>
+<li>Swan Valley High School, Saginaw</li>
+<li>Tri-Unity Christian School, Wyoming</li>
+<li>Walled Lake Central High School, Commerce Township</li>
+<li>Walled Lake Western High School, Commerce Township</li>
+<li>Williamston High School, Williamston<br>
+</li>
+</ul>
+
+<p><a name="MN"></a>   </p>
+
+<h2>Minnesota</h2>
+
+<ul>
+<li>Mounds View Senior High School, Arden Hills</li>
+<li>Rosemount Senior High School, Rosemount</li>
+<li>South Senior High School, Minneapolis</li>
+</ul>
+
+<p><a name="MS"></a>   </p>
+
+<h2>Mississippi</h2>
+
+<ul>
+<li>Northwest Rankin High School, Flowood</li>
+</ul>
+
+<p><a name="NE"></a>   </p>
+
+<h2>Nebraska</h2>
+
+<ul>
+<li>Lincoln East High School, Lincoln</li>
+<li>Southwest High School, Lincoln</li>
+</ul>
+
+<p><a name="NV"></a></p>
+
+<h2>Nevada</h2>
+
+<ul>
+<li>Arbor View High School, Las Vegas</li>
+<li>Bishop Manogue Catholic High School, Reno</li>
+<li>Carson High School, Carson City</li>
+<li>Cimarron Memorial High School, Las Vegas</li>
+<li>Damonte Ranch High School, Reno</li>
+<li>East Career Technical Academy, Las Vegas</li>
+<li>Equipo Academy, Las Vegas</li>
+<li>Las Vegas Academy Of International Studies Performing And Visual Arts, Las Vegas</li>
+<li>Northwest Career And Technical Academy, Las Vegas</li>
+<li>Pinecrest Academy Of Nevada Cadence Campus, Henderson</li>
+<li>Shadow Ridge High School, Las Vegas</li>
+<li>Silverado High School, Las Vegas</li>
+<li>Southwest Career And Technical Academy, Las Vegas</li>
+<li>Veterans Tribute Career Techincal Academy, Las Vegas</li>
+<li>Western High School, Las Vegas </li>
+</ul>
+
+<p><a name="NJ"></a>   </p>
+
+<h2>New Jersey</h2>
+
+<ul>
+<li>Bergen County Technical High School - Teterboro, Teterboro</li>
+<li>Bergenfield High School, Bergenfield</li>
+<li>Burlington Township High School, Burlington</li>
+<li>Dunellen High School, Dunellen</li>
+<li>High Point Regional High School, Sussex</li>
+<li>Jefferson Township High School, Oak Ridge</li>
+<li>Point Pleasant Borough High School, Point Pleasant</li>
+<li>Watchung Hills Regional High School, Warren<br>
+</li>
+</ul>
+
+<p><a name="NY"></a>   </p>
+
+<h2>New York</h2>
+
+<ul>
+<li>Abraham Lincoln High School, Brooklyn</li>
+<li>Briarcliff High School, Briarcliff Manor</li>
+<li>Bronx Academy For Software Engineering (Base), Bronx</li>
+<li>Bronx Engineering And Technology Academy, Bronx</li>
+<li>Columbia Secondary School, New York</li>
+<li>Democracy Preparatory Charter School, New York</li>
+<li>Dreamyard Preparatory School, Bronx</li>
+<li>East-West School Of International Studies, Flushing</li>
+<li>Farmingdale Senior High School, Farmingdale</li>
+<li>Fiorello H Laguardia High School, New York</li>
+<li>Fordham High School For The Arts, Bronx</li>
+<li>Fox Lane High School, Bedford</li>
+<li>The Global Learning Collaborative, New York</li>
+<li>Hamburg High School, Hamburg</li>
+<li>High School Of Telecommunications Arts And Technology, Brooklyn</li>
+<li>Hillside Arts And Letters Academy, Jamaica</li>
+<li>Hyde Leadership Charter School, Bronx</li>
+<li>Information Technology High School, Long Island City</li>
+<li>Jamaica Gateway To The Sciences, Jamaica</li>
+<li>John Adams High School, Ozone Park</li>
+<li>Manhattan Bridges High School, New York</li>
+<li>Pablo Neruda Academy For Architecture And World Studies, Bronx</li>
+<li>Port Chester Senior High School, Port Chester</li>
+<li>Putnam Valley High School, Putnam Valley</li>
+<li>Queens Metropolitan High School, Rego Park</li>
+<li>Quest To Learn, New York</li>
+<li>Rachel Carson High School For Coastal Studies, Brooklyn</li>
+<li>Roslyn High School, Roslyn Heights</li>
+<li>Rye Neck Senior High School, Mamaroneck</li>
+<li>The School For Human Rights, Brooklyn</li>
+<li>Sleepy Hollow High School, Sleepy Hollow</li>
+<li>Thomas A Edison Career And Technical High School, Jamaica</li>
+<li>Tuckahoe High School, Eastchester</li>
+<li>William Cullen Bryant High School, Long Island City</li>
+<li>Williamsville East High School, East Amherst</li>
+<li>Williamsville North High School, Williamsville</li>
+<li>Wings Academy, Bronx</li>
+<li>Young Women's Leadership School Of Brooklyn, Brooklyn<br>
+</li>
+</ul>
+
+<p><a name="NC"></a></p>
+
+<h2>North Carolina</h2>
+
+<ul>
+<li>Ardrey Kell High School, Charlotte</li>
+<li>Cary High School, Cary</li>
+<li>Cedar Ridge High School, Hillsborough</li>
+<li>Chatham Central High School, Bear Creek</li>
+<li>Hillside New Tech High School, Durham</li>
+<li>Mallard Creek High School, Charlotte</li>
+<li>North Raleigh Christian Academy, Raleigh</li>
+<li>Perquimans County High School, Hertford</li>
+<li>Providence Day School, Charlotte<br>
+</li>
+</ul>
+
+<p><a name="OH"></a>   </p>
+
+<h2>Ohio</h2>
+
+<ul>
+<li>Andrews Osborne Academy, Willoughby</li>
+<li>Boardman High School, Youngstown</li>
+<li>Dublin Jerome High School, Dublin</li>
+<li>Loveland High School, Loveland</li>
+<li>North Ridgeville High School, North Ridgeville</li>
+<li>Ottawa-Glandorf High School, Ottawa</li>
+<li>Reynoldsburg High School Estem, Reynoldsburg</li>
+<li>Solon High School, Solon</li>
+<li>Upper Arlington High School, Upper Arlington</li>
+<li>Watkins Memorial High School, Pataskala</li>
+<li>Westlake High School, Westlake<br>
+</li>
+</ul>
+
+<p><a name="OK"></a>  </p>
+
+<h2>Oklahoma</h2>
+
+<ul>
+<li>Capitol Hill High School, Oklahoma City</li>
+<li>Dove Science Academy, Oklahoma City</li>
+<li>Holland Hall School, Tulsa</li>
+<li>Jenks High School, Jenks</li>
+<li>Southeast High School, Oklahoma City</li>
+</ul>
+
+<p><a name="OR"></a>  </p>
+
+<h2>Oregon</h2>
+
+<ul>
+<li>John F. Kennedy High School, Mt. Angel</li>
+</ul>
+
+<p><a name="PA"></a>  </p>
+
+<h2>Pennsylvania</h2>
+
+<ul>
+<li>Abington Senior High School, Abington</li>
+<li>Conestoga Senior High School, Berwyn</li>
+<li>Easton Area High School, Easton</li>
+<li>Emmaus High School, Emmaus</li>
+<li>North Pocono High School, Covington Twp</li>
+<li>Penn Wood High School, Lansdowne</li>
+<li>Plum Senior High School, Pittsburgh</li>
+<li>Schuylkill Valley High School, Leesport<br>
+</li>
+</ul>
+
+<p><a name="RI"></a> </p>
+
+<h2>Rhode Island</h2>
+
+<ul>
+<li>Toll Gate High School, Warwick</li>
+</ul>
+
+<p><a name="SC"></a> </p>
+
+<h2>South Carolina</h2>
+
+<ul>
+<li>Academic Magnet High School, North Charleston</li>
+<li>Clarendon Hall School, Summerton</li>
+<li>Clover High School, Clover</li>
+<li>Pendleton High School, Pendleton</li>
+<li>Ridge View High School, Columbia</li>
+<li>Spring Hill High School, Chapin</li>
+<li>Wando High School, Mt. Pleasant </li>
+</ul>
+
+<p><a name="SD"></a> </p>
+
+<h2>South Dakota</h2>
+
+<ul>
+<li>Washington High School - 01, Sioux Falls</li>
+</ul>
+
+<p><a name="TN"></a> </p>
+
+<h2>Tennessee</h2>
+
+<ul>
+<li>East Hickman High School, Lyles</li>
+<li>Henry Co High School, Paris</li>
+<li>Martin Luther King Jr. School, Nashville</li>
+<li>Red Bank High School, Chattanooga</li>
+<li>Republic High School, Nashville</li>
+<li>Ridgeway High School, Memphis</li>
+<li>William Blount High School, Maryville</li>
+</ul>
+
+<p><a name="TX"></a>   </p>
+
+<h2>Texas</h2>
+
+<ul>
+<li>Aledo High School, Aledo</li>
+<li>Austin High School, Houston</li>
+<li>Bellaire Senior High School, Bellaire</li>
+<li>C A Mcmillen High School, Murphy</li>
+<li>Carnegie Vanguard High School, Houston</li>
+<li>Chinquapin Preparatory School, Highlands</li>
+<li>Conroe High School, Conroe</li>
+<li>Energy Institute High School, Houston</li>
+<li>Faith Christian School, Grapevine</li>
+<li>Glenda Dawson High School, Pearland</li>
+<li>Harmony Science Acad, El Paso</li>
+<li>Klein Oak High School, Spring</li>
+<li>Langham Creek High School, Houston</li>
+<li>Mesquite High School, Mesquite</li>
+<li>Mickey Leland College Prep Academy For Young Men, Houston</li>
+<li>North Houston Early College High School, Houston</li>
+<li>Pearland High School, Pearland</li>
+<li>Sharpstown High School, Houston</li>
+<li>South Early College High School, Houston</li>
+<li>Sterling High School, Houston</li>
+<li>Trinidad Garza Early College At Mt. View, Dallas</li>
+<li>Westbury High School, Houston</li>
+<li>Yates High School, Houston<br>
+</li>
+</ul>
+
+<p><a name="UT"></a>  </p>
+
+<h2>Utah</h2>
+
+<ul>
+<li>Beehive Science &amp; Technology Academy, Sandy</li>
+<li>Itineris Early College High School, West Jordan</li>
+<li>Olympus High School, Salt Lake City</li>
+<li>West High School, Salt Lake City </li>
+</ul>
+
+<p><a name="VA"></a>  </p>
+
+<h2>Virginia</h2>
+
+<ul>
+<li>Albemarle High School, Charlottesville</li>
+<li>Chantilly High School, Chantilly</li>
+<li>Cosby High School, Midlothian</li>
+<li>Goochland High School, Goochland</li>
+<li>Harrisonburg High School, Harrisonburg</li>
+<li>Jefferson Forest High School, Forest</li>
+<li>Kecoughtan High School, Hampton</li>
+<li>Lloyd C Bird High School, Chesterfield</li>
+<li>Matoaca High School, Chesterfield</li>
+<li>Midlothian High School, Midlothian</li>
+<li>Norfolk Christian Upper School, Norfolk</li>
+<li>Powhatan High School, Powhatan</li>
+<li>Richmond Community High School, Richmond</li>
+<li>Saint Gertrude High School, Richmond</li>
+<li>Spotswood High School, Penn Laird</li>
+<li>Spotsylvania High School, Spotsylvania</li>
+<li>Yorktown High School, Arlington </li>
+</ul>
+
+<p><a name="WA"></a>   </p>
+
+<h2>Washington</h2>
+
+<ul>
+<li>Bethel High School, Spanaway</li>
+<li>Bonney Lake High School, Bonney Lake</li>
+<li>Cascade High School, Everett</li>
+<li>Central Valley High School, Veradale</li>
+<li>Colville Senior High School, Colville</li>
+<li>East Valley High School, Spokane Valley</li>
+<li>Eatonville High School, Eatonville</li>
+<li>Everett High School, Everett</li>
+<li>Foster Senior High School, Tukwila</li>
+<li>Henry M. Jackson High School, Mill Creek</li>
+<li>Lakes High School, Lakewood</li>
+<li>Lincoln High School, Tacoma</li>
+<li>Lindbergh Senior High School, Renton</li>
+<li>Mount Si High School, Snoqualmie</li>
+<li>Napavine Jr/Sr High School, Napavine</li>
+<li>North Central High School, Spokane</li>
+<li>Peninsula High School, Gig Harbor</li>
+<li>Puyallup High School, Puyallup</li>
+<li>Shorewood High School, Shoreline</li>
+<li>Spanaway Lake High School, Spanaway</li>
+<li>Stadium High School, Tacoma</li>
+<li>Todd Beamer High School, Federal Way</li>
+<li>Union High School, Camas</li>
+<li>University High School, Spokane</li>
+<li>West Valley High School, Spokane</li>
+</ul>
+
+<p><a name="WV"></a>   </p>
+
+<h2>West Virginia</h2>
+
+<ul>
+<li>Cabell Midland High School, Ona</li>
+</ul>
+
+<p><a name="WI"></a>   </p>
+
+<h2>Wisconsin</h2>
+
+<ul>
+<li>Cedarburg High School, Cedarburg</li>
+<li>East High School, Wauwatosa</li>
+<li>Indian Trail High School And Academy, Kenosha</li>
+<li>North High School, Appleton</li>
+<li>Tremper High School, Kenosha</li>
+<li>West De Pere High School, De Pere</li>
+<li>West High School, Wauwatosa</li>
+<li>Whitnall High School, Greenfield</li>
+</ul>
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

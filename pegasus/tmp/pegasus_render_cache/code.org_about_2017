@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Code.org 2017 Annual Report" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/about/2017" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Code.org 2017 Annual Report | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<div>
+<div class="col-80-right">
+<p align="center"><iframe style="max-width: 100%" width="560" height="315" src="https://www.youtube.com/embed/Qdc4F0Alhas" frameborder="0" allowfullscreen></iframe></p>
+
+<h1>Code.org 2017 Annual Report</h1>
+
+<p><a href="/files/annual-report-2017.pdf"><button>View PDF of this report</button></a>
+  </p>
+
+<div class="solid-block-header">
+
+<p>The state of K-12 computer science</p>
+
+</div>
+
+<p><em>January 29, 2018</em> – At Code.org we start our year with a look at the global landscape of K-12 computer science – whether it's the direct work of our team and our partners, or the indirect work of global efforts that share our vision. Although most of Code.org’s direct work has historically focused on the United States, the global momentum of the Hour of Code campaign has helped hundreds of partners and hundreds of thousands of educators who support this movement; and we celebrate all their work. </p>
+
+<p>It’s been just over four years since Code.org hired our first employee and the first launch of the Hour of Code. It’s been incredible to see global education embrace computer science, faster than ever before. </p>
+
+<p>In just 4 years, 25 countries, 40 U.S. states, and almost 200 U.S. cities and school districts have announced plans to expand access and diversity in computer science as part of primary and secondary education; over 72,000 U.S. teachers have attended Code.org workshops to teach computer science; a whopping 750,000 teachers have begun using Code.org to teach computer science classes to over 25 million students worldwide; diversity in computer science classrooms has improved for four years in a row; and the Hour of Code has surpassed 500 million served – reaching one out of every 10 students on the planet. Lastly, starting with President Obama in 2013, Code.org and our partners have recruited 9 Presidents and Prime Ministers to host events or record videos to inspire millions more to join this teacher-powered movement.</p>
+
+<p>This past year, the new AP Computer Science Principles exam launched, and the new AP course helped set records in participation and diversity in the U.S.: </p>
+
+<p align="center"><img src="/images/AR2017/ap-exam-stats.png" width="100%"></p>
+
+<p>The above isn’t our work alone. Code.org has had the support of <a href="/about/partners">hundreds of partners</a>, and hundreds of thousands of educators, globally. Many of them began this work years before Code.org even existed. The global momentum is driven by organizations who share our passion and support our mission on other continents. And in the U.S., our advocacy coalition has helped computer science win the bipartisan support of the federal government (in both the last administration and the current one) and most state governments, and their efforts have amplified the movement further. Our top donors – Amazon, Facebook, Google, Infosys, and Microsoft – deserve extra recognition for funding not only Code.org but also many other efforts pursuing the same goal. We are fortunate to be working alongside so many others – educators, nonprofits, corporations, and governments – that share our mission.</p>
+
+<p>When Code.org launched in 2013, it seemed unrealistic to change the entire education system. While there is much work left to do, 2017 was yet another record year, bringing us even closer to realizing our vision: <strong>that every student in every school should have the opportunity to learn computer science</strong>.</p>
+
+<p><br></p>
+
+<div class="breakoutquote">
+
+<div class="col-33">
+
+<p><img src="/images/AR2017/gregg.png" width="80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>“What you have done is by far the single most disruptive piece of education at scale within the existing education structure in my lifetime.”</p>
+
+<p><em>Gregg Fleisher, President, National Math &amp; Science Initiative</em></p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+<div class="solid-block-header">
+
+<p>Code.org by the Numbers</p>
+
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Code.org Goal</th>
+<th>End of 2013</th>
+<th>End of 2014</th>
+<th>End of 2015</th>
+<th>End of 2016</th>
+<th>End of 2017</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inspire students and increase diversity with the Hour of Code</td>
+<td>20 million served</td>
+<td>90M<br>48% female</td>
+<td>195M<br>49% female</td>
+<td>344M<br>49% female</td>
+<td>520M<br>49% female</td>
+</tr>
+<tr>
+<td>Engage classrooms and students in our CS courses. (Total # of accounts on Code Studio)</td>
+<td>10,000 teachers, 500,000 students</td>
+<td>90,000 teachers, 4M students</td>
+<td>250,000 teachers, 8M students</td>
+<td>495,000 teachers, 16M students</td>
+<td>750,000 teachers, 25M students</td>
+</tr>
+<tr>
+<td>Enable students to show “basic coding proficiency” with CS Fundamentals.</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>887,840 total, 365,842 female</td>
+<td>2,061,449 total, 860,361 female</td>
+</tr>
+<tr>
+<td>Code.org students take and pass the AP CS Principles exam</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>11,975 total, 3,406 female, 2,268 URM*</td>
+</tr>
+<tr>
+<td>Improve diversity in CS (survey of teachers on Code Studio)</td>
+<td>N/A</td>
+<td>43% female, 37% URM*</td>
+<td>43% female, 37% URM*</td>
+<td>45% female, 48% URM*, 47% free/reduced meal plans</td>
+<td>45% female, 48% URM*, 47% free/reduced meal plans</td>
+</tr>
+<tr>
+<td>Help school districts implement CS curricula</td>
+<td>10 district partners</td>
+<td>60 district partners</td>
+<td>100 district partners</td>
+<td>41 regional partners (120+ districts)</td>
+<td>56 regional partners (175+ districts)</td>
+</tr>
+<tr>
+<td>Prepare new CS teachers across grades K-12</td>
+<td>N/A</td>
+<td>4,000</td>
+<td>20,000</td>
+<td>52,000</td>
+<td>72,000</td>
+</tr>
+<tr>
+<td>Lead a coalition to set policies supporting CS.<br>Policies changed in:</td>
+<td>5 states</td>
+<td>16 states</td>
+<td>17 states, including $9M in CS funding</td>
+<td>
+<a href="https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit">31 states</a>, including $13M in CS funding</td>
+<td>
+<a href="https://docs.google.com/document/d/1J3TbEQt3SmIWuha7ooBPvlWpiK-pNVIV5uuQEzNzdkE/edit">40 states</a>, including $29M in CS funding</td>
+</tr>
+<tr>
+<td>Go global</td>
+<td>30 languages supported</td>
+<td>34 languages, 7 international partners</td>
+<td>46 langs, 70 intl partners</td>
+<td>50 langs, 70 intl partners</td>
+<td>62 langs, 84 intl partners</td>
+</tr>
+<tr>
+<td>Team size</td>
+<td>14</td>
+<td>38</td>
+<td>54</td>
+<td>59</td>
+<td>69</td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<p>*URM stands for underrepresented minorities, and includes students who are black / African American, Hispanic/Latino/Latina/Latinx, Native American/Alaskan, and Native Hawaiian/Pacific Islanders. In the reports for 2014 and 2015, the numbers reported above only counted black and Hispanic students.</p>
+
+<div class="solid-block-header">
+
+<p>Diversity in our classrooms</p>
+
+</div>
+
+<p>Addressing diversity in K-12 computer science is core to our mission. We all know the technology sector as a whole has a <a href="http://fortune.com/2014/08/29/how-tech-companies-compare-in-employee-diversity/">diversity problem</a>, caused by a variety of factors. Our focus is on one piece of the problem, the education pipeline, where historically only 20~25% of students are female, and 13~15% are underrepresented minorities. By contrast, the students across Code.org classrooms are far more balanced across gender, race, and also socioeconomic status. </p>
+
+<p align="center"><img src="/images/AR2017/student-stats-diversity.png" width="100%"></p>
+
+<p>This is partly because teachers integrate our courses into classrooms that are already diverse, and partly because we incorporate a focus on diversity <a href="/diversity">throughout our work</a>. </p>
+
+<p align="center"><img src="/images/AR2017/10-mil-girl.png" width="100%"></p>
+
+<p>We celebrated a special milestone in 2017: over 10 million girls have accounts on our Code Studio platform! Of course, creating an account isn’t the same as actively learning, but over half of these girls were actively coding in the last school year, mostly in grades 1-8. If only 1% of our active female learners continue to study CS in university, they would outnumber the gender gap that exists today! We can’t wait to watch diversity in computer science as our youngest learners graduate to high school and university.
+<br><br></p>
+
+<div class="breakoutquote">
+
+<div class="col-33">
+
+<p><img src="/images/AR2017/coder-team.png" width="80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>“This was my second year participating in the Hour of Code with all of my K-5 students. As a result of the students' success in learning to code, I sponsored an all girls coding team of 5th graders selected to present and share their coding skills at the GA Educators' Technology Conference in Atlanta this past November. You would have thought I was taking them to Disney World!! They could not believe we were taking a field trip on their behalf so they could demonstrate and show off their newly acquired skills. It was phenomenal!</p>
+
+<p>Thank you for all you do in supporting, encouraging, and providing resources for teachers like myself who strive to create authentic and relevant learning experiences for those students who have limited choices with such unlimited potential!”</p>
+
+<p><em>Lisa Lindley, Assistant Principal - Chapel Hill Elementary, Georgia
+(a Title I, high-poverty school)</em></p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+<p><br></p>
+
+<p>To measure the impact of our commitment to diversity, we recently measured racial diversity in our high school CS Principles classrooms and compared it to the diversity of the school overall. The result: thanks to our <a href="/diversity">end-to-end approach to diversity, equity and inclusivity</a>, the diversity of students in our computer science classrooms almost perfectly matched the diversity of their school population at large. While computer science has traditionally been a subject dominated by white and Asian students, the Code.org high school classrooms demonstrate an almost perfectly balanced student diversity.</p>
+
+<p><img src="/images/AR2017/code-school-diversity.png" width="100%"></p>
+
+<p>Lastly, although our mission focuses on diversity in CS <em>classrooms</em>, we’re proud to report the gender diversity on our own team. 58% of <a href="/about/team">Code.org’s staff are women</a>. 43% of our technical staff are women. Our <a href="/about/leadership">board and leadership team</a> are gender-balanced. </p>
+
+<div class="solid-block-header">
+
+<p>Our curriculum</p>
+
+</div>
+
+<p><img src="/images/AR2017/annual-report-courses.gif" width="100%"><br><br></p>
+
+<p>In the four years since we launched our Code Studio coding platform, 1/10 of all students on the planet have engaged in our computer science courses, making Code Studio the most broadly used curriculum in computer science. Of course, millions of these students are “drive-by” users. What matters more to us is how many teachers incorporate our lessons into their classrooms, and what their students learn.</p>
+
+<p><br></p>
+
+<p align="center"><img src="/images/AR2017/code-accounts.png" width="100%"></p>
+
+<p>Beyond just measuring logins or page-views, we’ve begun measuring student achievement, whether at solving coding puzzles in Code Studio or at passing the AP computer science exam. We began counting students who demonstrate “basic coding proficiency” in our <a href="/educate/curriculum/elementary-school">CS Fundamentals</a> course using a <a href="/about/evaluation/proficiency">definition</a> which we created based on student success at coding challenges. The chart below shows how many students demonstrated this proficiency at different levels of difficulty. (This is still our first stab at measuring student proficiency, and we have a lot of work to improve it.)</p>
+
+<p align="center"><img src="/images/AR2017/code-proficiency.png" width="100%"></p>
+
+<p>The secret behind our growth is simple: teachers recommend our courses to other teachers. One way to measure this is with the <a href="https://en.wikipedia.org/wiki/Net_Promoter">Net Promoter</a> methodology: we score <strong>85</strong>, which is outstanding, and supported by the testimonials we hear from teachers in classrooms.
+<br><br></p>
+
+<div class="breakoutquote">
+
+<div class="col-33">
+
+<p><img src="/images/AR2017/cheryl.jpg" width="80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>“CS Discoveries is the perfect name for this course. There is just enough structure to help students be successful CS learners while being given the opportunity to be creative and have choice about their learning. I truly believe that this course may level the playing field for some of my students and very likely give them a break they need to find a path to success. THANK YOU Code.org for providing this opportunity for me and my students.”</p>
+
+<p><em>Cheryl Angel, ‎Media Specialist - Dublin City Schools, Ohio</em></p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+<div class="solid-block-header">
+
+<p>Computer Science Principles</p>
+
+</div>
+
+<p align="center"><img src="/images/AR2017/pokemon.gif" width="60%"></p>
+
+<p align="center"><strong>High school CS Principles student project: a simple Pokemon app</strong></p>
+
+<p>In 2017, for the first time, students in Code.org classrooms faced the high-stakes of an Advanced Placement College Board exam. The <a href="/educate/csp">AP Computer Science Principles</a> exam had the <a href="https://twitter.com/codeorg/status/880048151272370176">largest launch</a> of any new AP exam, and Code.org classrooms accounted for 37% of all the exam takers. Since the founding of Code.org in 2013, the most common challenge we’d hear was: can America’s public schools really teach computer science? The new AP exam was our opportunity to answer this question, and the numbers speak for themselves:</p>
+
+<p align="center"><img src="/images/AR2017/exam-pass.png" width="100%"></p>
+
+<p>At Code.org, the exam pass-<em>rate</em> is not the most important metric, because for an optional course and an optional exam the pass-rate can vary widely based on the selection of students who take the class or the exam. Given our focus on diversity, what’s important to Code.org is to maximize the <em>total</em> participation and diversity of students in computer science, and to help as many students learn as possible. Over <strong>16,000</strong> Code.org students took the AP Computer Science exam, including <strong>5,000</strong> female students, and <strong>4,400</strong> underrepresented minorities.</p>
+
+<p align="center"><img src="/images/AR2017/overall-pass.png" width="100%"></p>
+
+<p>We’ve now begun a new school year, and the enrollment in Code.org CS Principles in 2017-18 classrooms is <strong>44,000</strong> students – larger than the entire AP CS Principles exam (across all curricula) last school year! If enough of our students take the AP exam, we are poised to see another year of monstrous growth in AP Computer Science Principles.</p>
+
+<p align="center"><iframe style="max-width: 100%" width="560" height="315" src="https://www.youtube.com/embed/rqU8eNJ-SS0" frameborder="0" allowfullscreen></iframe></p>
+
+<p align="center">
+<strong>This is the story of Aracely Casillas - a Code.org, AP CS Principles student who's going to change the world.</strong> 
+<br>
+“I feel like it's my responsibility to help guide other Latinas, other girls into this field. 
+Show them that if I can do it, they can do it too.”
+</p>
+
+<div class="solid-block-header">
+
+<p>Our work with America's educators &amp; schools</p>
+
+</div>
+
+<p><img src="/images/AR2017/teachercon.png" width="100%"></p>
+
+<p>In 2017, Code.org’s professional learning and school outreach programs accelerated in every dimension. We hosted 8 large professional learning conferences for educators, with stellar feedback. And we grew our network of regional partners and expert facilitators. This network will provide the backbone for the future of K-12 computer science, and in the past year they hosted 23 local workshops for teachers to begin teaching computer science.</p>
+
+<h3>Our professional learning network: 57 regional partners, 339 expert facilitators</h3>
+
+<p align="center"><img src="/images/AR2017/rp-map.png" width="100%"></p>
+
+<p>And above all, across all our programs, we passed a new milestone: 72,000 computer science teachers have been prepared by Code.org. </p>
+
+<p><br></p>
+
+<div class="breakoutquote">
+
+<div class="col-33">
+
+<p><img src="/images/AR2017/diane.jpg" width="80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>“I had no idea what coding was when I was asked to teach it, but I agreed to give it a try. The training provided by Code.org was impressive in every respect. They helped everyone feel comfortable with coding so that even newbies such as myself felt empowered. But, best of all, when I introduced coding to my students they loved it! Whenever I stumble a little, I can count on the team at Code.org to give me a detailed, easy to understand explanation within a day or so.”</p>
+
+<p><em>Diane Neville, Hallandale Beach, FL</em></p>
+
+<p><em><a href="https://csedweek.org/awards/2017/neville">2017 Champion for Computer Science Award Winner</a></em></p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+<div class="solid-block-header">
+
+<p>40 states are embracing computer science</p>
+
+</div>
+
+<p>While most of Code.org staff and resources are focused on implementing computer science programs in schools, we have a small team working to drive change in policy to support, expand, and sustain K-12 computer science. This effort wouldn’t be possible without our coalition partners (especially Microsoft, the College Board, the Computer Science Teacher Association and Amazon), and our many local champions deserve the real credit for driving local change.</p>
+
+<p>Our state policy work focuses on <a href="/files/Making_CS_Fundamental.pdf">9 ideas we urge every state to consider</a>. Below, we highlight our impact across 3 of these that are easiest to measure.</p>
+
+<table>
+<thead>
+<tr>
+<th>Policy area</th>
+<th>Policy changed since 2013</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>High school graduation policy</strong><br>States that have changed policies to allow rigorous CS courses to satisfy core high school graduation requirements</td>
+<td>AL, AZ, AR, CA, CO, DE, FL, GA, ID, IL, KY, LA, MD, MN, ND, NH, NJ, NM, NV, NY, OH, PA, TN, VA, WA, WV, and WI.</td>
+</tr>
+<tr>
+<td>
+<strong>Establishing state-level standards for CS</strong><br>States that have developed or are in the process of developing state education standards for computer science</td>
+<td>AL, AR, CA, CO, FL, IA, ID, IN, KY, MA, NH, NJ, NV, PA, OK, SC, TX, VA, WA, WI, and WV. States that are evaluating developing standards: AZ, CT, DE, HI, MD, MT, NC, OH, and RI.</td>
+</tr>
+<tr>
+<td>
+<strong>Funding for CS</strong><br>States that have allocated funding specifically to K-12 computer science</td>
+<td>AL, AR, AZ, CO, GA, IA, ID, MA, NC, NV, RI, UT, VA, WA. These states have allocated over $29M in total.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br></p>
+
+<p>Throughout 2017, the local momentum for computer science continued to grow and even accelerate. Multiple states have begun establishing state-wide plans to teach computer science in every school. The <a href="http://www.governorsforcs.org/">Governors for CS partnership</a> which we launched last year now has 16 state governors who are all committed to establishing educational standards, funding computer science, and expanding access and diversity in computer science in every school in their states.</p>
+
+<p align="center"><img src="/images/AR2017/gov-for-cs.png" width="100%"></p>
+
+<div class="breakoutquote">
+
+<div class="col-33">
+
+<p><img src="/images/AR2017/celena.jpg" width="80%"></p>
+
+</div>
+
+<div class="col-66">
+
+<p>“I am so appreciative of the opportunity to learn Code.org's curriculum. It is definitely pushing my limits as both a learner and a teacher. I will be a better educator and facilitator when this year of professional development is completed.”</p>
+
+<p><em>Celena Galbreaith, technology teacher - Ada Junior High School, Oklahoma</em></p>
+
+</div>
+
+<div class="clearboth">
+
+</div>
+
+</div>
+
+<div class="solid-block-header">
+
+<p>The Hour of Code and CS Education Week</p>
+
+</div>
+
+<p><img src="/images/AR2017/hoc-world.png" width="100%"></p>
+
+<p>2017 was another incredible year for the Hour of Code, which has now surpassed 500 million “served.” </p>
+
+<p>Hundreds of global nonprofits, corporations, and government agencies supported the campaign. Among tech companies, Microsoft helped create a new edition of the ever-popular <a href="/minecraft">Minecraft Hour of Code tutorial</a>, Google <a href="https://twitter.com/codeorg/status/937720682984517632">changed their logo into a coding tutorial</a>, Apple <a href="https://twitter.com/codeorg/status/935620874404687872">hosted an Hour of Code</a> in every store and <a href="https://twitter.com/tim_cook/status/937663417615126528">Tim Cook participated</a> at a Shanghai school for the deaf, Amazon Web Services provided the technology platform to host the Hour of Code, and Accenture <a href="https://twitter.com/Accenture/status/938873308271075328">ran a video</a> about the Hour of Code in Times Square.  </p>
+
+<p>To kick off computer science education week, the top women in tech – Melinda Gates, Peggy Johnson, Sheryl Sandberg, and Susan Wojcicki – joined Code.org president Alice Steinglass and CSTA’s Deborah Seehorn to kick off the week. As part of the event, 9 states, 76 school districts, and 102 organizations worldwide made <a href="https://medium.com/@codeorg/9-states-76-school-districts-and-102-organizations-worldwide-pledge-to-expand-computer-science-a3a9042453d9">new pledges</a> to expand access to computer science for millions of students.</p>
+
+<p align="center"><iframe style="max-width: 100%" width="560" height="315" src="https://www.youtube.com/embed/80-tkIR6o5s" frameborder="0" allowfullscreen></iframe></p>
+
+<p>The global Hour of Code campaign has established <a href="https://csedweek.org/">Computer Science Education Week</a> as a fixture in hundreds of thousands of schools, each year recruiting tens of millions of new students and hundreds of thousands of teachers to try computer science. The work of our global partners has also helped build global momentum for computer science.</p>
+
+<div class="solid-block-header">
+
+<p>Bipartisan support at the highest levels of government</p>
+
+</div>
+
+<p>Despite divisions in U.S. politics, computer science is perhaps the issue with the most bipartisan support from politicians at all levels. It is the only issue that has won federal support from both the previous and current administrations. </p>
+
+<p>Back in 2016, President Obama <a href="https://obamawhitehouse.archives.gov/blog/2016/01/30/computer-science-all">proposed</a> a $4 billion “Computer Science for All” initiative. Although the funding request wasn’t supported by Congress, the President reallocated $20m per year from the existing NSF budget to focus on computer science, and the announcement amplified the existing teacher and state-led momentum behind K-12 computer science. </p>
+
+<p>In 2017, as one of the new administration’s first education policies, the <a href="https://www.whitehouse.gov/articles/president-trump-signs-presidential-memo-increase-access-stem-computer-science-education/">President</a> announced $200 million in funding for science, mathematics, technology, and engineering education with a particular emphasis on computer science. This didn’t require approval from Congress – it directed the Department of Education to focus existing budgets on computer science. The Department of Education subsequently issued <a href="https://medium.com/@codeorg/computer-science-one-of-eleven-priorities-for-us-department-of-education-4a497c89f902">draft guidelines</a> stating computer science should be prioritized in scoring for competitive grants. A whopping <a href="https://www.regulations.gov/docketBrowser?rpp=25&amp;so=DESC&amp;sb=commentDueDate&amp;po=0&amp;dct=PS&amp;D=ED-2017-OS-0078">75% of the comments</a> the Department received on its proposal came from educators in our community, applauding the focus on computer science and asking for a clarified focus on CS.</p>
+
+<p>While the CS community is excited at the prospects of federal funding, there are still no details on how the community can apply for these grants. The process has been slow, partly because government moves slowly, and partly because Congress still has not approved a federal budget for 2018. One of our goals for 2018 is to confirm details on how this funding will work, to help school districts and other organizations that are ready to invest in computer science offerings.</p>
+
+<div class="solid-block-header">
+
+<p>Global momentum for computer science</p>
+
+</div>
+
+<p>In 2017, eight countries – Canada, Ecuador, Ireland, Sweden, Turkey, United Arab Emirates, UK, and Zimbabwe – all passed legislation or announced national plans allocating funding for computer science. Ever since the 2013 launch of the global Hour of Code movement, 25 countries have implemented nationwide policies to expand access to computer science in primary and secondary school. And ten additional countries have begun short-term or pilot initiatives or similar efforts to make CS accessible to more students.</p>
+
+<p>While many of these countries are acting completely independently of Code.org’s work, many of them have drawn inspiration from the strength of the effort in the United States, from the momentum of the global Hour of Code campaign, and from the work of classroom teachers who use Code.org’s courses in over 60 languages. In a few of these cases, Code.org has played a direct role in helping guide these announcements. Beginning in 2018, we expect to make a more robust investment in the international movement for computer science, working with partners around the world. (See <a href="https://docs.google.com/document/d/1H171Mu2RKzD9Qvp38sjKu1vuXX524XqdHtUf0BFzpWI/edit">status of global CS efforts</a>)</p>
+
+<div class="solid-block-header">
+
+<p>Code.org in the news</p>
+
+</div>
+
+<p>2017 was another great year as far as publicity for K-12 computer science in general, and for the work of Code.org in particular. For our donors and loyal supporters, we’d like to share three headline pieces that best showcased our work, in the New York Times, MSNBC, and CBS:</p>
+
+<div class="col-33">
+
+<p></p>
+<center><a href="http://www.msnbc.com/msnbc-news/watch/tech-program-help-students-gain-skills-to-compete-for-future-jobs-959562307944"><img src="/images/AR2017/msnbc.png" width="90%"></a></center>
+
+</div>
+
+<div class="col-33">
+
+<p></p>
+<center><a href="https://www.nytimes.com/2017/06/27/technology/education-partovi-computer-science-coding-apple-microsoft.html"><img src="/images/AR2017/ny-times.png" width="90%"></a></center>
+
+</div>
+
+<div class="col-33">
+
+<p></p>
+<center><a href="https://www.youtube.com/watch?v=1iwq-uZNOSg"><img src="/images/AR2017/cbs.png" width="90%"></a></center>
+
+</div>
+
+<p style="clear:both"> </p>
+
+<div class="solid-block-header">
+
+<p>We have a long way to go</p>
+
+</div>
+
+<p>With yet another year of stunning growth, we are more confident than ever in the strength and momentum behind the computer science movement, not just in the United States, but globally. Almost a million worldwide educators have decided to join this movement to bring opportunity to their students. </p>
+
+<p>The strength of this movement lies in the inspirational commitment of these teachers and educators. The nonprofits, philanthropists, and local governments who support them will continue and even accelerate our work in 2018 and beyond.  </p>
+
+<p>To all of our supporters and partners, to the other organizations helping in the cause, and especially to the teachers: your passion and dedication is what gives us our daily dose of motivation. Thanks to you, we are closer than ever to realizing our vision: that every student in every school receives the opportunity to learn computer science.</p>
+
+<p>Hadi Partovi, Code.org</p>
+
+<p></p>
+<hr>
+
+<h2>Finances</h2>
+
+<p>For calendar year 2017 our total expenses were approximately* $21.4 million. The chart below paints a general picture of how this money was spent.</p>
+
+<p><img src="/images/AR2017/2017-finances.png" width="100%"></p>
+
+<p>*Important note: The information above is not based on audited financials.</p>
+
+<p>The table below shows the total cost breakdown of our headline achievements since founding.</p>
+
+<table>
+<thead>
+<tr>
+<th>Areas of effort / Achievements in 2013 - 2017</th>
+<th>Fully-loaded cost (including admin)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Diversity and Global Marketing:</strong> Hour of Code campaign, 500M served, reaching 10% of students globally, with events in 196 countries. 49% female participation</td>
+<td>$10.4 million</td>
+</tr>
+<tr>
+<td>
+<strong>Curriculum + Code Studio learning platform:</strong> ~300 hours of coursework created, 750,000 teacher accounts. 25 million student accounts. 45% female, 48% underrepresented minorities</td>
+<td>$19.4 million</td>
+</tr>
+<tr>
+<td>
+<strong>Partnership + professional learning:</strong> 56 <a href="/educate/regional-partner">regional partners</a> and almost 400 facilitators who have prepared 72,000 new CS teachers across grades K-12. ($9.1M spent on grades K-5, $23.2M on grades 6-12)</td>
+<td>$32.3 million</td>
+</tr>
+<tr>
+<td>
+<strong>Government affairs:</strong> Policies changed in 40 states, $29M in state budgets allocated to CS, 3 Federal bills recognize CS.</td>
+<td>$5.0 million</td>
+</tr>
+<tr>
+<td>TOTAL SPENT (2013-2017)</td>
+<td>$67.1 million</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Other reports</h2>
+
+<ul>
+<li>See a <a href="/files/annual-report-2017.pdf">PDF version of this report</a>
+</li>
+<li>See the <a href="https://medium.com/@codeorg/the-impact-of-an-hour-of-code-1de0ac2acd73">2017 Hour of Code Impact Survey</a>
+</li>
+<li>See the <a href="/about/2016">2016 Annual Report</a> </li>
+<li>See the <a href="/files/HourOfCodeImpactStudy_Jan2017.pdf">2016 Hour of Code Impact Study</a>
+</li>
+<li>See the <a href="/files/EvaluationReport2015-16.pdf">2015-16 Code.org Evaluation Report</a>
+</li>
+<li>See the <a href="/about/2015">2015 Annual Report</a>
+</li>
+<li>See the <a href="/about/evaluation/hourofcode">2015 Hour of Code Impact Report</a>
+</li>
+<li>See the <a href="/about/evaluation">2014-15 Evaluation Report</a>
+</li>
+<li>See the <a href="/about/2014">2014 Annual Report</a>
+</li>
+</ul>
+
+<h2>Our generous donors</h2>
+
+<p>
+Code.org® is dedicated to the vision that every student in every school should have the opportunity to learn to computer science. We are supported by philanthropic donations from corporations, foundations, and generous individuals.  Code.org is a public 501c3. All donations to Code.org are tax-deductible.
+</p>
+
+<p>
+<a href="/donate">
+<button>
+Please consider a donation
+</button>
+</a>
+</p>
+
+<h2>
+Diamond Supporters ($10,000,000+ contribution)
+</h2>
+
+<p>
+<link href="/css/donors.css" rel="stylesheet">
+</p>
+<table>
+<tr></tr>
+<td class="large">
+<a href="http://www.microsoft.com" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/microsoft.jpg">
+</a>
+</td>
+<td class="large">
+<a href="http://www.facebook.com" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/facebook.png">
+</a>
+</td>
+<tr></tr>
+<td class="large">
+<a href="https://www.amazon.com/" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/amazon.jpg">
+</a>
+</td>
+<td class="large">
+<a href="http://www.infosys.com/infosys-foundation/infosys-usa-foundation/Pages/index.aspx" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/infosys_foundation_usa.png">
+</a>
+</td>
+</table>
+<br style="clear: both;">
+
+
+
+<h2>
+Platinum Supporters ($3,000,000+ contribution)
+</h2>
+
+<p>
+<link href="/css/donors.css" rel="stylesheet">
+</p>
+<table>
+<tr></tr>
+<td class="large">
+<a href="http://www.omidyar.com" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/omidyar_network.jpg">
+</a>
+</td>
+<td class="large">
+<a href="http://www.google.com" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/google.png">
+</a>
+</td>
+<tr></tr>
+<td class="large">
+<a href="http://www.gatesfoundation.org/" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/bill_and_melinda_gates_foundation.jpg">
+</a>
+</td>
+<td class="large">
+<a href="http://www.partovi.org" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/ali_and_hadi_partovi.jpg">
+<p class="large-font">
+Ali and Hadi Partovi
+</p>
+
+<p></p></a>
+</td>
+<tr></tr>
+<td class="large">
+<a href="http://en.wikipedia.org/wiki/Steve_Ballmer" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/ballmer_family_giving.jpg">
+
+<p class="large-font">
+Ballmer Family Giving
+</p>
+
+<p></p></a>
+</td>
+<td class="large">
+<a style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/pricewaterhousecoopers.jpg">
+</a>
+</td>
+<tr></tr>
+<td class="large">
+<a href="https://www.vistaequitypartners.com/" style="color: #7665a0" target="_blank">
+<img class="large-img" src="/images/fit-200/avatars/vista_equity_partners.png">
+</a>
+</td>
+</table>
+<br style="clear: both;">
+
+<p></p>
+
+<h2>
+Gold Supporters ($1,000,000+ contribution)
+</h2>
+
+<p>
+<link href="/css/donors.css" rel="stylesheet">
+</p>
+<table>
+<tr></tr>
+<td class="medium">
+<a href="http://www.startupeducation.org/" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/chan_zuckerberg_initiative.png">
+</a>
+</td>
+<td class="medium">
+<a href="http://www.qdvm.org/" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/quadrivium_foundation.jpg">
+</a>
+</td>
+<td class="medium">
+<a href="http://www.linkedin.com/in/reidhoffman" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/reid_hoffman.jpg">
+<p class="medium-font">
+Reid Hoffman
+</p>
+
+<p></p></a>
+</td>
+<tr></tr>
+<td class="medium">
+<a style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/linda_and_glenn_greenberg.jpg">
+
+<p class="medium-font">
+Linda and Glenn Greenberg
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/alfred_lin.png">
+
+<p class="medium-font">
+Alfred Lin
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="http://www.salesforce.com" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/salesforce.png">
+</a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="https://www.linkedin.com/in/feroz-dewan-4736502" style="color: #7665a0" target="_blank">
+
+<p class="medium-font">
+Feroz and Erica Dewan
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="http://research.google.com/pubs/author3770.html" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/diane_tang_and_ben_smith.jpg">
+
+<p class="medium-font">
+Diane Tang and Ben Smith
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="http://www.verizon.com/about/responsibility/verizon-foundation" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/verizon.jpg">
+</a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="http://en.wikipedia.org/wiki/Drew_Houston" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/drew_houston.jpg">
+
+<p class="medium-font">
+Drew Houston
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="http://en.wikipedia.org/wiki/Bill_Gates" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/bill_gates.jpg">
+
+<p class="medium-font">
+Bill Gates
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="https://www.pluralsightone.org" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/pluralsight_one.jpg">
+</a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="https://www.blackrock.com/" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/blackrock.jpg">
+</a>
+</td>
+<td class="medium">
+<a href="https://www.blizzard.com/en-us/" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/blizzard.png">
+</a>
+</td>
+<td class="medium">
+<a href="https://en.wikipedia.org/wiki/Jeff_Bezos" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/jeff_bezos.jpg">
+
+<p class="medium-font">
+Jeff Bezos
+</p>
+
+<p></p></a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="http://en.wikipedia.org/wiki/John_Doerr" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/john_and_ann_doerr.png">
+
+<p class="medium-font">
+John and Ann Doerr
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a style="color: #7665a0" target="_blank">
+
+<p class="medium-font">
+The Marie-Josée and Henry R. Kravis Foundation
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/nathan_and_elizabeth_blecharczyk.jpg">
+
+<p class="medium-font">
+Nathan and Elizabeth Blecharczyk
+</p>
+
+<p></p></a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="http://en.wikipedia.org/wiki/Sean_Parker" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/sean_parker.png">
+
+<p class="medium-font">
+Sean Parker
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/charlie_lee.png">
+
+<p class="medium-font">
+Charlie Lee
+</p>
+
+<p></p></a>
+</td>
+<td class="medium">
+<a href="http://www.crunchbase.com/person/jeffrey-wilke" style="color: #7665a0" target="_blank">
+
+<p class="medium-font">
+Jeff Wilke
+</p>
+
+<p></p></a>
+</td>
+<tr></tr>
+<td class="medium">
+<a href="http://about.att.com/content/csr/home/possibilities/at-t-aspire.html" style="color: #7665a0" target="_blank">
+<img class="medium-img" src="/images/fit-200/avatars/at_t.jpg">
+</a>
+</td>
+</table>
+<br style="clear: both;">
+
+<p></p>
+
+<h2>
+Silver Supporters ($500,000+ contribution)
+</h2>
+
+<p>
+<link href="/css/donors.css" rel="stylesheet">
+</p>
+<table>
+<tr></tr>
+<td class="small">
+<a href="http://www.juniper.net" style="color: #7665a0" target="_blank">
+<img class="small-img" src="/images/fit-200/avatars/juniper_networks_foundation_fund.jpg">
+</a>
+</td>
+<td class="small">
+<a href="https://www.accenture.com/us-en/company-skills-succeed" style="color: #7665a0" target="_blank">
+<img class="small-img" src="/images/fit-200/avatars/accenture.jpg">
+</a>
+</td>
+<td class="small">
+<a href="http://www.expedia.com/" style="color: #7665a0" target="_blank">
+<img class="small-img" src="/images/fit-200/avatars/expedia.png">
+</a>
+</td>
+<tr></tr>
+<td class="small">
+<a href="http://markcubancompanies.com/" style="color: #7665a0" target="_blank">
+<p class="small-font">
+Mark Cuban
+</p>
+
+<p></p></a>
+</td>
+<td class="small">
+<a href="https://www.whalerockcapital.com/login" style="color: #7665a0" target="_blank">
+<img class="small-img" src="/images/fit-200/avatars/whalerock.jpg">
+</a>
+</td>
+</table>
+<br style="clear: both;">
+
+<p></p>
+
+<h2>
+Bronze Supporters ($100,000+ contribution)
+</h2>
+
+<p>
+</p>
+<ul>
+<div class="listed_supporter">
+<a href="http://thewaltdisneycompany.com/" target="_blank">The Walt Disney Company</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.gm.com/" target="_blank">General Motors</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.humblebundle.com" target="_blank">Humble Bundle</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.uber.com/" target="_blank">Uber</a>
+</div>
+<div class="listed_supporter">
+Dara Khosrowshahi
+</div>
+<div class="listed_supporter">
+<a href="https://www.salesforce.com/company/leadership/bios/bio-taylor/" target="_blank">Bret Taylor</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.cmegroupfoundation.org/" target="_blank">CME Group Foundation</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.northropgrumman.com/" target="_blank">Northrop Grumman Foundation</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.workday.com" target="_blank">Workday</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.bankofamerica.com/" target="_blank">Bank of America</a>
+</div>
+<div class="listed_supporter">
+<a href="http://iac.com/" target="_blank">IAC</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.nortonlifelock.com/" target="_blank">NortonLifeLock</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.ea.com/" target="_blank">Electronic Arts</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.adobe.com/" target="_blank">Adobe</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.linkedin.com/in/jeffweiner08" target="_blank">Jeff Weiner</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.csnyc.org/" target="_blank">CSNYC</a>
+</div>
+<div class="listed_supporter">
+Max and Nellie Levchin
+</div>
+<div class="listed_supporter">
+<a href="https://www.ca.com" target="_blank">CA Technologies</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.acm.org/" target="_blank">Association for Computing Machinery (ACM)</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.crunchbase.com/person/owen-van-natta" target="_blank">Owen and Jennifer Van Natta</a>
+</div>
+<div class="listed_supporter">
+<a href="https://www.honest.com" target="_blank">The Honest Company</a>
+</div>
+<div class="listed_supporter">
+Mark Sugarman
+</div>
+<div class="listed_supporter">
+Motorola Solutions Foundation 
+</div>
+<div class="listed_supporter">
+<a href="https://www.qualcomm.com" target="_blank">Qualcomm</a>
+</div>
+<div class="listed_supporter">
+DXC Technology Foundation
+</div>
+<div class="listed_supporter">
+Emerson Collective
+</div>
+<div class="listed_supporter">
+Endless Network
+</div>
+<div class="listed_supporter">
+<a href="http://en.wikipedia.org/wiki/Jerry_Yang_(entrepreneur)" target="_blank">Jerry Yang</a>
+</div>
+<div class="listed_supporter">
+John and Allison Danner
+</div>
+<div class="listed_supporter">
+<a href="https://www.linkedin.com/in/kenfox/" target="_blank">Ken Fox</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.squarespace.com" target="_blank">Squarespace</a>
+</div>
+<div class="listed_supporter">
+<a href="http://www.crunchbase.com/person/vinod-khosla" target="_blank">Vinod and Neeru Khosla</a>
+</div>
+</ul>
+
+
+
+<h2>
+Supporters ($25,000+ contribution)
+</h2>
+
+<p>
+</p>
+<ul>
+<div class="listed_supporter">
+<a href="https://www.cisco.com/" target="_blank">Cisco</a>
+</div>
+<div class="listed_supporter">
+GoDaddy
+</div>
+<div class="listed_supporter">
+Ron Conway
+</div>
+<div class="listed_supporter">
+Sameer Gandhi
+</div>
+<div class="listed_supporter">
+CNYL Foundation
+</div>
+<div class="listed_supporter">
+Allen &amp; Co
+</div>
+<div class="listed_supporter">
+Barton Family Foundation
+</div>
+<div class="listed_supporter">
+Christian Leone
+</div>
+<div class="listed_supporter">
+Craig Silverstein and Mary Obelnicki
+</div>
+<div class="listed_supporter">
+Keith Rabois
+</div>
+<div class="listed_supporter">
+Phokion Potamianos-Homem
+</div>
+<div class="listed_supporter">
+Rackspace 
+</div>
+<div class="listed_supporter">
+Swartz Foundation
+</div>
+<div class="listed_supporter">
+Tableau Foundation
+</div>
+<div class="listed_supporter">
+Technically Learning
+</div>
+<div class="listed_supporter">
+John and Melissa Meier
+</div>
+<div class="listed_supporter">
+Megan Smith
+</div>
+<div class="listed_supporter">
+Nick and Leslie Hanauer Foundation
+</div>
+<div class="listed_supporter">
+Best Buy
+</div>
+<div class="listed_supporter">
+Ned and Haleh Clapp
+</div>
+<div class="listed_supporter">
+Dave Maestri
+</div>
+<div class="listed_supporter">
+Microsoft Alumni Foundation
+</div>
+<div class="listed_supporter">
+Taner Halicioglu
+</div>
+<div class="listed_supporter">
+Automattic
+</div>
+<div class="listed_supporter">
+<a href="https://www.twilio.com/" target="_blank">Jeff Lawson</a>
+</div>
+<div class="listed_supporter">
+JP Morgan Chase &amp; Co
+</div>
+<div class="listed_supporter">
+Ken Hirsh
+</div>
+<div class="listed_supporter">
+LinkedIn
+</div>
+<div class="listed_supporter">
+Matt Mullenweg
+</div>
+<div class="listed_supporter">
+Osman Rashid
+</div>
+<div class="listed_supporter">
+<a href="http://www.riotgames.com/" target="_blank">Riot Games</a>
+</div>
+<div class="listed_supporter">
+Ronald and Ling Cheng
+</div>
+<div class="listed_supporter">
+Sylvina Capital
+</div>
+<div class="listed_supporter">
+Susan Wojcicki and Dennis Troper
+</div>
+</ul>
+
+
+
+<p></p>
+<hr>
+<a href="/about/donors-other">
+View all other supporters
+</a>
+
+</div>
+<div class="left-nav desktop-feature">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/about">About Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/leadership">Leadership</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/donors">Donors</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/team">Full Team</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/diversity-council">Diversity Council</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">Newsroom</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/evaluation">Evaluation</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/jobs">Jobs</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/faq">FAQs</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

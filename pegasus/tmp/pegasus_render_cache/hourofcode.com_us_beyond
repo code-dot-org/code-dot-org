@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Beyond an Hour of Code" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/beyond" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Beyond an Hour of Code</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/">
+<img alt="Hour of Code" src="/us/en/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/beyond';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option selected value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/learn" title="Activities">Activities</a>
+</li>
+<li>
+<a href="/us/how-to" title="How-To">How-To</a>
+</li>
+<li>
+<a href="/us/promote" title="Promote">Promote</a>
+</li>
+<li>
+<a href="/us/#faq" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<link href="/css/beyond.css" rel="stylesheet">
+<h1>Beyond an Hour of Code</h1>
+<div class="scroll-nav">
+<span>Go beyond an Hour of Code!</span>
+  
+<a href="#teacher-section">
+<button class="teal-button">For teachers</button>
+</a>
+<a href="#student-section">
+<button class="teal-button">For students</button>
+</a>
+</div>
+<div class="clear"></div>
+<h1 id="student-section">For students</h1>
+<h2>Find a local class</h2>
+<div class="full-resource-block" style="margin-top: 20px;">
+<img class="side-image left" src="/images/beyond-local-map.png">
+<div class="side-description-area right">
+<div class="description">
+<h2 class="resource-title" style="padding-bottom: 10px;">Local classes</h2>
+Find a local workshop, school, or summer camp to learn in a classroom.
+</div>
+<a href="https://code.org/learn/local">
+<button class="gray-button">Find a class</button>
+</a>
+</div>
+</div>
+<div class="clear"></div>
+<h2>Online tutorials</h2>
+<div>
+<div style="clear:both"></div>
+<div id="carousel-ie8" style="display:none">
+<h3 class="course-carousel-title" style="margin-bottom:8px">Partner tutorials that work on older systems</h3>
+<p>These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a></p>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-ie8">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="https://code.org/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-ie8"></div>
+</div>
+</div>
+</div>
+
+</div>
+<div id="carousel-international" style="display:none">
+<h3 class="course-carousel-title" style="margin-bottom:8px">Partner tutorials in your language</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-international">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://lambda-school.sjv.io/codeorg" target="_blank"><img src="https://code.org/images/fit-520/lambdaintrocourses.jpg"></a></div>
+<div class="slide-text">
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"></a>
+<h3>Lambda</h3>
+</div>
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><img src="https://code.org/images/fit-520/trilogy-beyondk12.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"></a>
+<h3>Trilogy Education Services</h3>
+</div>
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><img src="https://code.org/images/fit-520/kodable.jpg"></a></div>
+<div class="slide-text">
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"></a>
+<h3>Kodable</h3>
+</div>
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="https://code.org/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"></a>
+<h3>Scratch</h3>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-international"></div>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<a href="#" id="englishtutorials" onclick="toggle_visibility();return false;">
+<button style="font-size:20px;">
+Partner tutorials available in English
+</button>
+</a>
+<br>
+<br>
+</div>
+<div id="all-tutorials" style="visibility:hidden; overflow:hidden;">
+<h3 class="course-carousel-title" style="margin-bottom:8px">For beginners: Get started with blocks-based coding</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Beginner">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://studio.code.org/" target="_blank"><img src="https://code.org/images/fit-520/logo_carousel.jpg"></a></div>
+<div class="slide-text">
+<a href="http://studio.code.org/" target="_blank"><h2>Intro courses for all ages</h2></a>
+<h3>Code.org</h3>
+<p class="slide-longdescription">Loved the Hour of Code but want more? Learn basic computer science with our suite of classroom-ready courses for different ages (even kindergarten).  Lessons blend game-like tutorials with unplugged classroom activities, and short video lectures with Bill Gates, Mark Zuckerberg, Angry Birds and more.  Learn repeat-loops, conditionals, algorithms, functions, and variables.</p>
+<p class="slide-shortdescription">Loved the Hour of Code? Try our suite of 20 hour courses.</p>
+<div class="slide-tags">All ages | Modern web browsers, tablets</div>
+<div class="slide-participants-count"><b class="participants_string_codeorg_beyond" style="display: none">
+<span class="participants_value_codeorg_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://code.org/educate/k5" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://studio.code.org/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://gethopscotch.com/" target="_blank"><img src="https://code.org/images/fit-520/hopscotch.jpg"></a></div>
+<div class="slide-text">
+<a href="http://gethopscotch.com/" target="_blank"><h2>Hopscotch: Programming On Your iPad</h2></a>
+<h3>Hopscotch</h3>
+<p class="slide-longdescription">Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).</p>
+<p class="slide-shortdescription">Learn visual programming on an iPad</p>
+<div class="slide-tags">Middle school + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_hopscotch_beyond" style="display: none">
+<span class="participants_value_hopscotch_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://gethopscotch.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.tynker.com/" target="_blank"><img src="https://code.org/images/fit-520/tynker.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.tynker.com/" target="_blank"><h2>Learn programming at home</h2></a>
+<h3>Tynker</h3>
+<p class="slide-longdescription">Tynker makes it fun &amp; easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.</p>
+<p class="slide-shortdescription">A fun and engaging course for children in grades 4-8</p>
+<div class="slide-tags">Ages 5-13 | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_tynker_beyond" style="display: none">
+<span class="participants_value_tynker_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.tynker.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="https://code.org/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://appinventor.mit.edu/" target="_blank"><img src="https://code.org/images/fit-520/appinventor.jpg"></a></div>
+<div class="slide-text">
+<a href="http://appinventor.mit.edu/" target="_blank"><h2>AppInventor Hour of Code</h2></a>
+<h3>MIT Center for Mobile Learning @ The Media Lab</h3>
+<p class="slide-longdescription">Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.</p>
+<p class="slide-shortdescription">Make your own app! (Android-only)</p>
+<div class="slide-tags">Middle school + | Modern web browser + Android</div>
+<div class="slide-participants-count"><b class="participants_string_appinventor_beyond" style="display: none">
+<span class="participants_value_appinventor_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://appinventor.mit.edu/hour-of-code/teach" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://appinventor.mit.edu/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Beginner"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Learn JavaScript</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-JavaScript">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://www.khanacademy.org/cs" target="_blank"><img src="https://code.org/images/fit-520/khanacademy.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.khanacademy.org/cs" target="_blank"><h2>Learn computer programming</h2></a>
+<h3>Khan Academy</h3>
+<p class="slide-longdescription">Learn the basics of JavaScript programming while creating fun drawings with your code. Do it on your own or with your class!</p>
+<p class="slide-shortdescription">Learn to draw in JavaScript</p>
+<div class="slide-tags">Middle school + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_khan_beyond" style="display: none">
+<span class="participants_value_khan_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://khanacademy.org/r/hour-of-code-for-teachers" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://www.khanacademy.org/cs" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.codecademy.com/" target="_blank"><img src="https://code.org/images/fit-520/codecademy.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.codecademy.com/" target="_blank"><h2>Codecademy</h2></a>
+<h3>Codecademy</h3>
+<p class="slide-longdescription">Codecademy is an interactive, student-guided introduction to the basics of CS through JavaScript that's used by tens of millions of students around the world. We've prepared a no-hassle Hour of Code experience with accompanying quizzes, slides, and a completed project for students at the end.</p>
+<p class="slide-shortdescription">Learn JavaScript programming, in a web-browser</p>
+<div class="slide-tags">High school | Modern web browsers. iOS, Android apps</div>
+<div class="slide-participants-count"><b class="participants_string_codecademy_beyond" style="display: none">
+<span class="participants_value_codecademy_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.codecademy.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://codecombat.com/?hour_of_code=true" target="_blank"><img src="https://code.org/images/fit-520/codecombat.jpg"></a></div>
+<div class="slide-text">
+<a href="http://codecombat.com/?hour_of_code=true" target="_blank"><h2>CodeCombat</h2></a>
+<h3>CodeCombat</h3>
+<p class="slide-longdescription">Defeat ogres to learn Python or JavaScript in this epic programming game!</p>
+<p class="slide-shortdescription">Play a game and learn JavaScript to win</p>
+<div class="slide-tags">Middle school + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_codecombat_beyond" style="display: none">
+<span class="participants_value_codecombat_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://codecombat.com/teachers" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://codecombat.com/?hour_of_code=true" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-JavaScript"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Apps for phones and tablets</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Apps">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://www.scratchjr.org/teach.html" target="_blank"><img src="https://code.org/images/fit-520/scratchjr.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.scratchjr.org/teach.html" target="_blank"><h2>Playful programming for young kids</h2></a>
+<h3>ScratchJr</h3>
+<p class="slide-longdescription">ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing</p>
+<p class="slide-shortdescription">Create interactive stories and games using ScratchJr.</p>
+<div class="slide-tags">Elementary | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_scratchjr_beyond" style="display: none">
+<span class="participants_value_scratchjr_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.scratchjr.org/teach.html" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><img src="https://code.org/images/fit-520/tutorials/new/codesparkbeyond.jpg"></a></div>
+<div class="slide-text">
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><h2>Full Curriculum for codeSpark Academy with The Foos</h2></a>
+<h3>codeSpark</h3>
+<p class="slide-longdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<p class="slide-shortdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<div class="slide-tags">Grades K-5 | iPhone, iPad, Android phone and tablet, Browser (first 3 lessons)</div>
+<div class="slide-participants-count"><b class="participants_string_codespark_beyond" style="display: none">
+<span class="participants_value_codespark_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><img src="https://code.org/images/fit-520/kodable.jpg"></a></div>
+<div class="slide-text">
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><h2>Kodable</h2></a>
+<h3>Kodable</h3>
+<p class="slide-longdescription">Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.</p>
+<p class="slide-shortdescription">A fun iPad game to teach computer programming concepts</p>
+<div class="slide-tags">Elementary | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_kodable_beyond" style="display: none">
+<span class="participants_value_kodable_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://lightbot.com/" target="_blank"><img src="https://code.org/images/fit-520/lightbot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://lightbot.com/" target="_blank"><h2>LightBot</h2></a>
+<h3>LightBot</h3>
+<p class="slide-longdescription">Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!</p>
+<p class="slide-shortdescription">A game to teach coding concepts</p>
+<div class="slide-tags">All ages | iOS, Android (or web browser)</div>
+<div class="slide-participants-count"><b class="participants_string_lightbot_beyond" style="display: none">
+<span class="participants_value_lightbot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://lightbot.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://pocketcode.org/hourOfCode" target="_blank"><img src="https://code.org/images/fit-520/pocketcode.jpg"></a></div>
+<div class="slide-text">
+<a href="https://pocketcode.org/hourOfCode" target="_blank"><h2>Pocket Code</h2></a>
+<h3>Catrobat</h3>
+<p class="slide-longdescription">Create your own game on your smart phone with Pocket Code! Help skydiver Steve to deliver his parcels. You can share it with friends and other users to try!</p>
+<p class="slide-shortdescription">Create a game on your smartphone and share with friends to try!</p>
+<div class="slide-tags">Middle school + | Mobile App</div>
+<div class="slide-participants-count"><b class="participants_string_pocketcode_beyond" style="display: none">
+<span class="participants_value_pocketcode_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://pocketcode.org/hourOfCode" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://twolivesleft.com/CargoBot/" target="_blank"><img src="https://code.org/images/fit-520/cargobot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://twolivesleft.com/CargoBot/" target="_blank"><h2>Cargobot</h2></a>
+<h3>Two Lives Left</h3>
+<p class="slide-longdescription">Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.</p>
+<p class="slide-shortdescription">Program a robot arm on your iPad</p>
+<div class="slide-tags">Ages 8+ | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_cargobot_beyond" style="display: none">
+<span class="participants_value_cargobot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://twolivesleft.com/CargoBot/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Apps"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Learn other programming languages</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-OtherLang">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://www.codesters.com/curriculum/intro-to-codesters/Building+your+First+Program/1/" target="_blank"><img src="https://code.org/images/fit-520/tutorials/beyond/codesters.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.codesters.com/curriculum/intro-to-codesters/Building+your+First+Program/1/" target="_blank"><h2>Intro to Codesters</h2></a>
+<h3>Codesters</h3>
+<p class="slide-longdescription">Codesters is built for teaching coding in schools. Our project-based lessons ensure that students learn core coding skills while they create engaging, interactive programs. Our unique coding environment makes text-based coding easy and accessible for students in middle grades – even those with no block-coding experience. And Codesters eases the burden on teachers by providing built-in course management, automatic feedback, lesson plans, and more.</p>
+<p class="slide-shortdescription">Codesters is built for teaching coding in schools. Students learn core coding skills with project-based lessons and our unique text-based coding environment. We provide built-in course management, lesson plans, and more for teachers.</p>
+<div class="slide-tags">Grades 4-10 | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_codesters_beyond" style="display: none">
+<span class="participants_value_codesters_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://bit.ly/CodestersLessonPlan1" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://www.codesters.com/curriculum/intro-to-codesters/Building+your+First+Program/1/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://groklearning.com/" target="_blank"><img src="https://code.org/images/fit-520/groklearning.jpg"></a></div>
+<div class="slide-text">
+<a href="https://groklearning.com/" target="_blank"><h2>Learn Python programming</h2></a>
+<h3>Grok Learning</h3>
+<p class="slide-longdescription">An introductory course using the programming language Python for people with no programming experience. Our unique mix of introductory content and challenges will bring you to a thorough understanding of Python and programming itself. We've taught this content to students of varying ages from diverse backgrounds and we're sure it'll suit you too.</p>
+<p class="slide-shortdescription">Basic intro to python programming</p>
+<div class="slide-tags">Middle school + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_groklearning_beyond" style="display: none">
+<span class="participants_value_groklearning_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://groklearning.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.robomindacademy.com/" target="_blank"><img src="https://code.org/images/fit-520/robomind.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.robomindacademy.com/" target="_blank"><h2>Program a virtual robot</h2></a>
+<h3>RoboMind Academy</h3>
+<p class="slide-longdescription">Students learn the basics of programming by controling their own virtual robot. The online course is fully self-contained with short presentations, movies, quizzes and automatic guidance/hints to help with the programming exercises. </p>
+<p class="slide-shortdescription">Write code for a virtual robot</p>
+<div class="slide-tags">Ages 8-13 | Modern web browsers, Mobile web</div>
+<div class="slide-participants-count"><b class="participants_string_robomind_beyond" style="display: none">
+<span class="participants_value_robomind_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://www.robomindacademy.com/go/navigator/coursedetails?course=HourOfCode" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://www.robomindacademy.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><img src="https://code.org/images/fit-520/makegameswithus.jpg"></a></div>
+<div class="slide-text">
+<a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><h2>Build an iPhone game in your browser!</h2></a>
+<h3>MakeSchool</h3>
+<p class="slide-longdescription">Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokémon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!</p>
+<p class="slide-shortdescription">Make an iPhone game! Learn by writing code to teach your monster new moves!</p>
+<div class="slide-tags">High school | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_makeschool_beyond" style="display: none">
+<span class="participants_value_makeschool_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><img src="https://code.org/images/fit-520/udemy.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><h2>Online Programming Courses</h2></a>
+<h3>Udemy</h3>
+<p class="slide-longdescription">Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]</p>
+<p class="slide-shortdescription">Dozens of online programming courses</p>
+<div class="slide-tags">High school + | Web based</div>
+<div class="slide-participants-count"><b class="participants_string_udemy_beyond" style="display: none">
+<span class="participants_value_udemy_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD14814&amp;bid=524&amp;aid=CD14814&amp;opt=" target="_blank"><img src="https://code.org/images/fit-520/linkedin-learning-2019.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD14814&amp;bid=524&amp;aid=CD14814&amp;opt=" target="_blank"><h2>Online Programming Courses</h2></a>
+<h3>LinkedIn Learning</h3>
+<p class="slide-longdescription">Learn how to code, create, and build web applications, from the foundations of object-oriented programming in C and C++, to how to write Java. Our developer tutorials can help you learn to develop and create mobile apps, work with PHP and MySQL databases, get started with the statistical processing language R, and much more. [Note: payment is required]</p>
+<p class="slide-shortdescription">Dozens of online programming courses</p>
+<div class="slide-tags">High school + | Web based ($$ required)</div>
+<div class="slide-participants-count"><b class="participants_string_linkedin_beyond" style="display: none">
+<span class="participants_value_linkedin_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD14814&amp;bid=524&amp;aid=CD14814&amp;opt=" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.kidsruby.com/" target="_blank"><img src="https://code.org/images/fit-520/kidsruby.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.kidsruby.com/" target="_blank"><h2>KidsRuby</h2></a>
+<h3>KidsRuby</h3>
+<p class="slide-longdescription">Have fun and make games, or hack your homework using Ruby! Just tell your parents or teachers you're learning Ruby programming... ;). Free and works on any computer. [Note: Desktop install required]</p>
+<p class="slide-shortdescription">Learn to program using Ruby</p>
+<div class="slide-tags">Ages 12+ | Desktop install</div>
+<div class="slide-participants-count"><b class="participants_string_kidsruby_beyond" style="display: none">
+<span class="participants_value_kidsruby_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.kidsruby.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-OtherLang"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Make your own apps or games</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-MakeApps">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://gethopscotch.com/" target="_blank"><img src="https://code.org/images/fit-520/hopscotch.jpg"></a></div>
+<div class="slide-text">
+<a href="http://gethopscotch.com/" target="_blank"><h2>Hopscotch: Programming On Your iPad</h2></a>
+<h3>Hopscotch</h3>
+<p class="slide-longdescription">Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).</p>
+<p class="slide-shortdescription">Learn visual programming on an iPad</p>
+<div class="slide-tags">Middle school + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_hopscotch_beyond" style="display: none">
+<span class="participants_value_hopscotch_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://gethopscotch.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><img src="https://code.org/images/fit-520/kodu.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><h2>Kodu</h2></a>
+<h3>Microsoft</h3>
+<p class="slide-longdescription">Kodu lets kids create games on the PC and Xbox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the Xbox is also available in the USA on the Xbox Marketplace, in the Indie Games channel for about $5.</p>
+<p class="slide-shortdescription">Design a 3D game world</p>
+<div class="slide-tags">Ages 8+ | Windows, xBox</div>
+<div class="slide-participants-count"><b class="participants_string_kodu_beyond" style="display: none">
+<span class="participants_value_kodu_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><img src="https://code.org/images/fit-520/makegameswithus.jpg"></a></div>
+<div class="slide-text">
+<a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><h2>Build an iPhone game in your browser!</h2></a>
+<h3>MakeSchool</h3>
+<p class="slide-longdescription">Learn to code by making an iPhone game using a brand new and beginner-friendly programming language called Swift! Create a Pokémon-inspired action game and write code to teach your monster new moves. You will learn how to use variables, methods, and objects to help your monster win!</p>
+<p class="slide-shortdescription">Make an iPhone game! Learn by writing code to teach your monster new moves!</p>
+<div class="slide-tags">High school | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_makeschool_beyond" style="display: none">
+<span class="participants_value_makeschool_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://hoc.makeschool.com/build-an-iphone-game-in-your-browser" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://appinventor.mit.edu/" target="_blank"><img src="https://code.org/images/fit-520/appinventor.jpg"></a></div>
+<div class="slide-text">
+<a href="http://appinventor.mit.edu/" target="_blank"><h2>AppInventor Hour of Code</h2></a>
+<h3>MIT Center for Mobile Learning @ The Media Lab</h3>
+<p class="slide-longdescription">Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.</p>
+<p class="slide-shortdescription">Make your own app! (Android-only)</p>
+<div class="slide-tags">Middle school + | Modern web browser + Android</div>
+<div class="slide-participants-count"><b class="participants_string_appinventor_beyond" style="display: none">
+<span class="participants_value_appinventor_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://appinventor.mit.edu/hour-of-code/teach" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://appinventor.mit.edu/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.microsoft.com/en-us/makecode?rtc=1" target="_blank"><img src="https://code.org/images/fit-520/touchdevelop.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.microsoft.com/en-us/makecode?rtc=1" target="_blank"><h2>MakeCode</h2></a>
+<h3>Microsoft Research</h3>
+<p class="slide-longdescription">MakeCode lets you create apps on iPad, iPhone, Android, PC, Mac, Windows Phone. Our touch-friendly editor makes coding fun, even on your phone or tablet!</p>
+<p class="slide-shortdescription">Code mobile apps directly on your phone, tablet or laptop</p>
+<div class="slide-tags">High school | Modern web browsers, smartphones, all devices</div>
+<div class="slide-participants-count"><b class="participants_string_touchdevelop_beyond" style="display: none">
+<span class="participants_value_touchdevelop_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="https://www.microsoft.com/en-us/makecode/resources" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://www.microsoft.com/en-us/makecode?rtc=1" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://education.roblox.com/" target="_blank"><img src="https://code.org/images/fit-520/roblox.jpg"></a></div>
+<div class="slide-text">
+<a href="https://education.roblox.com/" target="_blank"><h2>Coding and Game Development</h2></a>
+<h3>Roblox</h3>
+<p class="slide-longdescription">Roblox is an immersive educational tool where the opportunities for creativity and imagination are limitless. Using Roblox’s free creations tools and educational content, you can build and publish your own games while engaging in STEM learning. Students will learn coding, design, and entrepreneurial skills.</p>
+<p class="slide-shortdescription">Build and publish your own games while engaging in STEM learning.</p>
+<div class="slide-tags">Ages 10+ | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_roblox_beyond" style="display: none">
+<span class="participants_value_roblox_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://education.roblox.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><img src="https://code.org/images/fit-520/udemy.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><h2>Online Programming Courses</h2></a>
+<h3>Udemy</h3>
+<p class="slide-longdescription">Whether you've never seen a line of code or you code for a living, Udemy has a course for you, taught by professional instructors. [Note: payment is required]</p>
+<p class="slide-shortdescription">Dozens of online programming courses</p>
+<div class="slide-tags">High school + | Web based</div>
+<div class="slide-participants-count"><b class="participants_string_udemy_beyond" style="display: none">
+<span class="participants_value_udemy_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://www.udemy.com/courses/development/programming-languages/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://twolivesleft.com/Codea/" target="_blank"><img src="https://code.org/images/fit-520/codea.jpg"></a></div>
+<div class="slide-text">
+<a href="http://twolivesleft.com/Codea/" target="_blank"><h2>Codea</h2></a>
+<h3>Two Lives Left</h3>
+<p class="slide-longdescription">Codea for iPad lets you create games and simulations — or just about any visual idea you have. Turn your thoughts into interactive creations that make use of iPad features like Multi-Touch and the accelerometer. We think Codea is the most beautiful code editor you'll use, and it's easy. Codea is designed to let you touch your code. Want to change a number? Just tap and drag it. How about a color, or an image? Tapping will bring up visual editors that let you choose exactly what you want.</p>
+<p class="slide-shortdescription">Make apps on your iPad</p>
+<div class="slide-tags">High school + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_codea_beyond" style="display: none">
+<span class="participants_value_codea_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://twolivesleft.com/Codea/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-MakeApps"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Online courses and schools</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Univ">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://lambda-school.sjv.io/codeorg" target="_blank"><img src="https://code.org/images/fit-520/lambdaintrocourses.jpg"></a></div>
+<div class="slide-text">
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"><h2>Lambda Intro Courses</h2></a>
+<h3>Lambda</h3>
+<p class="slide-longdescription">Lambda School trains people online to be software engineers at no up-front cost. Instead of paying tuition, students can agree to pay a percentage of their income after they're employed, and only if they're making more than $50k per year. If you don't find a job, or don't reach that level of income, you'll never pay a cent.</p>
+<p class="slide-shortdescription">Intro courses with no up-front cost</p>
+<div class="slide-tags">University | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_lambda_beyond" style="display: none">
+<span class="participants_value_lambda_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><img src="https://code.org/images/fit-520/trilogy-beyondk12.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><h2>Trilogy</h2></a>
+<h3>Trilogy Education Services</h3>
+<p class="slide-longdescription">Enroll in a Trilogy-powered bootcamp. Programs include coding, data, design &amp; cybersecurity. Harvard Extension, UC Berkeley Extension, Georgia Tech &amp; 40+ other institutions, partner with Trilogy. 2,250+ companies have hired grads of Trilogy programs. If you’re 18+ with a H.S. diploma/GED, apply now. Mention Code.org to an admissions advisor for a $500 scholarship on select programs (new apps only &amp; can’t combine with other offers).</p>
+<p class="slide-shortdescription">Enroll in a Trilogy-powered bootcamp. </p>
+<div class="slide-tags">University | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_trilogy_beyond" style="display: none">
+<span class="participants_value_trilogy_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Univ"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Learn to make web pages</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Web">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://thimble.mozilla.org/" target="_blank"><img src="https://code.org/images/fit-520/thimble.jpg"></a></div>
+<div class="slide-text">
+<a href="https://thimble.mozilla.org/" target="_blank"><h2>Thimble</h2></a>
+<h3>Mozilla</h3>
+<p class="slide-longdescription">Thimble is an educational code editor for teaching the learning the Web. With Thimble, you can write and edit HTML, CSS, and JavaScript on the left side of your screen, and watch your code come to life on the right. Start with simple remixes, changing words and images on a page to familiarize yourself with code and build confidence. Or work your way to creating entire web pages from scratch. Perfect for beginners and experts alike.</p>
+<p class="slide-shortdescription">Create and share web pages</p>
+<div class="slide-tags">Ages 12+ | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_mozilla_beyond" style="display: none">
+<span class="participants_value_mozilla_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://thimble.mozilla.org/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.w3schools.com/" target="_blank"><img src="https://code.org/images/fit-520/w3schools.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.w3schools.com/" target="_blank"><h2>Learn HTML</h2></a>
+<h3>w3schools.com</h3>
+<p class="slide-longdescription">Learn to create websites on your own computer. Learn the server basics in less than a day. Learn to add databases to your website</p>
+<p class="slide-shortdescription">Learn to make web sites</p>
+<div class="slide-tags">Ages 12+ | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_w3schools_beyond" style="display: none">
+<span class="participants_value_w3schools_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.w3schools.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Web"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Learn to program with robots and devices</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Robot">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://makewonder.com/hourofcode" target="_blank"><img src="https://code.org/images/fit-520/wonderworkshop.jpg"></a></div>
+<div class="slide-text">
+<a href="http://makewonder.com/hourofcode" target="_blank"><h2>Wonder Workshop</h2></a>
+<h3>Coding with Dash &amp; Dot</h3>
+<p class="slide-longdescription">Dash &amp; Dot are robots that help kids learn the fundamentals of problem solving and coding while having fun. Download our four free iPad apps to control the robots. Use Path to learn basic sequencing and Blockly to start creating programs for Dash &amp; Dot. Create programs for the robots to deliver a message for you, transform into a creature, and follow you around!</p>
+<p class="slide-shortdescription">Dash &amp; Dot are robots that help kids learn the fundamentals of coding.</p>
+<div class="slide-tags">Elementary + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_wonderworkshop_beyond" style="display: none">
+<span class="participants_value_wonderworkshop_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://makewonder.com/hourofcode" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://microbit.org/code/" target="_blank"><img src="https://code.org/images/fit-520/microbit.jpg"></a></div>
+<div class="slide-text">
+<a href="https://microbit.org/code/" target="_blank"><h2>Introduction to Physical Computing</h2></a>
+<h3>micro:bit</h3>
+<p class="slide-longdescription">The micro:bit is a fun, handheld, easily programmable computer that uses a web browser to program in blocks, JavaScript or Python. The free, built-in web simulator allows students to run their program with or without connecting to a micro:bit. Simplicity and ease-of-use make micro:bit perfect for beginners while also having advanced features for experienced programmers and makers.</p>
+<p class="slide-shortdescription">The micro:bit is a fun, handheld, easily programmable computer that uses a web browser to program in blocks, JavaScript or Python.</p>
+<div class="slide-tags">Elementary + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_microbit_beyond" style="display: none">
+<span class="participants_value_microbit_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://microbit.org/code/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://education.lego.com" target="_blank"><img src="https://code.org/images/fit-520/lego.jpeg"></a></div>
+<div class="slide-text">
+<a href="https://education.lego.com" target="_blank"><h2>LEGO® MINDSTORMS® Education EV3</h2></a>
+<h3>LEGO Education</h3>
+<p class="slide-longdescription">Build and code with the ultimate playful learning experience. The endless flexibility of LEGO bricks and the open-ended nature of our curriculum and coding software allows students to explore and develop their ideas as far as their curiosity will take them. We empower teachers with the tools for creating and delivering the most engaging lessons in STEM for every student.</p>
+<p class="slide-shortdescription">Build and program a robot</p>
+<div class="slide-tags">Middle school + | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_lego_beyond" style="display: none">
+<span class="participants_value_lego_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://education.lego.com" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://kinderlabrobotics.com/" target="_blank"><img src="https://code.org/images/fit-520/kinderlab.jpg"></a></div>
+<div class="slide-text">
+<a href="http://kinderlabrobotics.com/" target="_blank"><h2>KIBO</h2></a>
+<h3>KinderLab Robotics</h3>
+<p class="slide-longdescription">Kids build their own robot with KIBO, program it using wooden blocks, and decorate it with arts and crafts materials - all without a PC, tablet, or smartphone. KIBO invites playful learning and children's creativity and imagination. Curriculum for schools, activities for the home, design journals and workbooks are also available. </p>
+<p class="slide-shortdescription">Kids build their own robot, program it with wooden blocks, and decorate it with arts and crafts materials</p>
+<div class="slide-tags">Ages 4 to 7 | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_kinderlab_beyond" style="display: none">
+<span class="participants_value_kinderlab_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://kinderlabrobotics.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://tickleapp.com/" target="_blank"><img src="https://code.org/images/fit-520/tickle.jpg"></a></div>
+<div class="slide-text">
+<a href="http://tickleapp.com/" target="_blank"><h2>Tickle</h2></a>
+<h3>Tickle Labs</h3>
+<p class="slide-longdescription">Experience the magic of programming drones, robots, smart homes, and Arduino, all wirelessly! Tickle is easy to learn, fun to use, yet powerful enough for university courses and research projects. You can program a variety of drones and robots to fly, take photos, and navigate through mazes. You can even create custom robots by adding Arduino-based sensors and motors.</p>
+<p class="slide-shortdescription">Program drones, robots, and Arduino, wirelessly</p>
+<div class="slide-tags">Ages 6+ | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_tickle_beyond" style="display: none">
+<span class="participants_value_tickle_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://tickleapp.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.sphero.com/education" target="_blank"><img src="https://code.org/images/fit-520/sphero.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.sphero.com/education" target="_blank"><h2>Sphero SPRK+</h2></a>
+<h3>Sphero Edu</h3>
+<p class="slide-longdescription">Designed to inspire curiosity, creativity, and invention through connected play and coding, SPRK+ is far more than just a robot. Powered by the Sphero Edu app, you can easily learn programming, complete hands-on activities, and share your creations with the community. Learning is evolving. Get on the ball.</p>
+<p class="slide-shortdescription">SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.</p>
+<div class="slide-tags">Ages 8+ | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_sphero_beyond" style="display: none">
+<span class="participants_value_sphero_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.sphero.com/education" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><img src="https://code.org/images/fit-520/ozobot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><h2>Ozobot</h2></a>
+<h3>Ozobot</h3>
+<p class="slide-longdescription">Ozobot is the tiny robot that makes coding and computer science fun and easy to learn. Choose from a wide variety of STEM lessons and activities ranging from kindergarten to high school grade levels. Whether your students are novices or experts, Ozobot will keep them engaged for hours of learning and fun. Not an experienced programmer yourself? Not a problem! Simple instruction guides, how-to videos and introductory lessons will make you an Ozobot expert in no time!</p>
+<p class="slide-shortdescription">Ozobot is the tiny robot that makes coding fun and easy with extensive resources for grades K-12.</p>
+<div class="slide-tags">All ages | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_ozobot_beyond" style="display: none">
+<span class="participants_value_ozobot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.finchrobot.com/" target="_blank"><img src="https://code.org/images/fit-520/finch.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.finchrobot.com/" target="_blank"><h2>Finch Robot and Hummingbird Robotics Kit</h2></a>
+<h3>BirdBrain Technologies</h3>
+<p class="slide-longdescription">The Finch Robot makes coding tangible in many programming languages ranging from Kindergarten to College-level computer science. The Hummingbird Robotics Kit is comprised of lights, sensors and motors, allowing students to build a robot out of any materials. Both of these products empower students to take ownership of their technical and creative skill sets and engage in flexible problem-solving activities.</p>
+<p class="slide-shortdescription">Both the Finch Robot and the Hummingbird Robotics Kit empower students to take ownership of their technical and creative skill sets and engage in flexible problem-solving activities.</p>
+<div class="slide-tags">Ages 8+ | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_finch_beyond" style="display: none">
+<span class="participants_value_finch_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.finchrobot.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><img src="https://code.org/images/fit-520/tutorials/beyond/botley.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><h2>Screen-free Coding with Botley™ the Coding Robot</h2></a>
+<h3>Learning Resources</h3>
+<p class="slide-longdescription">Never coded before? No problem! Botley™ the Coding Robot is ready to use right out of the box and will have you coding in minutes. Botley can be introduced to children as young as 5, and with advanced features, can grow with them as well. Botley is completely screen free – no phone or tablet required. Code Botley up to 120 steps, loop him and program him to go around objects with if/then logic. Botley can follow black lines, too – and even has hidden features to unlock!</p>
+<p class="slide-shortdescription">Never coded before? No problem! Botley™ the Coding Robot is ready to use right out of the box and will have you coding in minutes.</p>
+<div class="slide-tags">Ages 5-10 | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_botley_beyond" style="display: none">
+<span class="participants_value_botley_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Robot"></div>
+</div>
+</div>
+</div>
+
+<h3 class="course-carousel-title" style="margin-bottom:8px">Platforms popular among teachers</h3>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-IDE">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="https://code.org/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://appinventor.mit.edu/" target="_blank"><img src="https://code.org/images/fit-520/appinventor.jpg"></a></div>
+<div class="slide-text">
+<a href="http://appinventor.mit.edu/" target="_blank"><h2>AppInventor Hour of Code</h2></a>
+<h3>MIT Center for Mobile Learning @ The Media Lab</h3>
+<p class="slide-longdescription">Entertaining, quick video tutorials walk you through building three simple apps for your Android phone or tablet. Designed for novices and experts alike, this hour of code will get you ready to start building your own apps before you know it. Imagine sharing your own app creations with your friends! These activities are suitable for individuals and for teachers leading classes.</p>
+<p class="slide-shortdescription">Make your own app! (Android-only)</p>
+<div class="slide-tags">Middle school + | Modern web browser + Android</div>
+<div class="slide-participants-count"><b class="participants_string_appinventor_beyond" style="display: none">
+<span class="participants_value_appinventor_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://appinventor.mit.edu/hour-of-code/teach" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="http://appinventor.mit.edu/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://processing.org/" target="_blank"><img src="https://code.org/images/fit-520/processing.jpg"></a></div>
+<div class="slide-text">
+<a href="http://processing.org/" target="_blank"><h2>Program with Processing</h2></a>
+<h3>Processing</h3>
+<p class="slide-longdescription">Processing is a programming language, development environment, and online community. Since 2001, Processing has promoted software literacy within the visual arts and visual literacy within technology. Initially created to serve as a software sketchbook and to teach computer programming fundamentals within a visual context, Processing evolved into a development tool for professionals. Today, there are tens of thousands of students, artists, designers, researchers, and hobbyists who use Processing for learning, prototyping, and production.</p>
+<p class="slide-shortdescription">Learn the Processing languages</p>
+<div class="slide-tags">High school | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_processing_beyond" style="display: none">
+<span class="participants_value_processing_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://processing.org/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.alice.org/resources/lessons/hour-of-code-2/" target="_blank"><img src="https://code.org/images/fit-520/alice.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.alice.org/resources/lessons/hour-of-code-2/" target="_blank"><h2>Alice</h2></a>
+<h3>The Alice Project</h3>
+<p class="slide-longdescription">Using an innovative programming environment to support the creation of 3D animations, the Alice Project provides tools and materials for teaching and learning computational thinking, problem solving, and computer programming across a spectrum of ages and grade levels.</p>
+<p class="slide-shortdescription">Teach programming in a 3D environment</p>
+<div class="slide-tags">Middle school + | Windows or Mac (install required)</div>
+<div class="slide-participants-count"><b class="participants_string_alice_beyond" style="display: none">
+<span class="participants_value_alice_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.alice.org/resources/lessons/hour-of-code-2/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-IDE"></div>
+</div>
+</div>
+</div>
+
+</div>
+<br>
+<br>
+<div class="footer-banner">
+See the <a href="https://code.org/learn">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/activity-guidelines">click here.</a>
+</div>
+<script>
+  // Older systems
+  var ua = navigator.userAgent;
+  
+  //
+  // references:
+  //  https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent
+  //  http://www.useragentstring.com/pages/useragentstring.php
+  //  http://www.oldapps.com/mac/netscape.php
+  //
+  
+  var is_safari4 = ua.indexOf("Safari/") != -1 && ua.indexOf("Version/4.") != -1 && ua.indexOf("Chrome") == -1 && ua.indexOf("Chromium") == -1;
+  var is_netscape7 = ua.indexOf("Netscape/7.") != -1;
+  var is_ie5 = ua.indexOf("MSIE 5.") != -1;
+  
+  //if (!window.mobilecheck() && (is_ie8 || is_safari4 || is_netscape7 || is_ie5))
+  //{
+  //  $('#carousel-ie8').show();
+  //}
+  
+  // International
+  var pegasusLocale = "en-US";
+  
+  if (pegasusLocale.substring(0,2) == "en")
+  {
+    $('#all-tutorials').show();
+    $('#all-tutorials').css('visibility', 'visible');
+  }
+  else
+  {
+    $('#carousel-international').show();
+    $('#all-tutorials').css('height', '0');
+  }
+  
+  function toggle_visibility()
+  {
+    var e = document.getElementById('all-tutorials');
+    if ( e.style.visibility == 'visible' )
+    {
+      $('#all-tutorials').css('height', '0');
+      $('#all-tutorials').css('visibility', 'hidden');
+    }
+    else
+    {
+      $('#all-tutorials').css('height', '100%');
+      $('#all-tutorials').css('visibility', 'visible');
+    }
+  }
+</script>
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="/js/jquery.touchSwipe.min.js"></script>
+<script>
+  // enable swipe on links by removing 'a' from excludedElements.
+  $.fn.swipe.defaults.excludedElements = "label, button, input, select, textarea, .noSwipe";
+  
+  $(document).ready(function() {
+    createCarousels();
+    setupScratBlinking();
+  });
+  
+  function createCarousels()
+  {
+    // Look for carousels and loop through them.
+    $.each($('.course-carousel'), function() {
+      // Get the ID of the carousel.
+      var id = '#' + $(this).attr('id');
+  
+      // Define the carousel using the ID.
+      $(id + ' .slides').carouFredSel({
+        auto  : false,
+        responsive : true,
+        prev  : id + ' .slide-prev',
+        next  : id + ' .slide-next',
+        pagination : '#pagination-' + $(this).attr('id'),
+        swipe : {
+          onTouch : true,
+          onMouse : false
+        },
+        items :  {
+          visible : 1,
+          height: "variable"
+        },
+        onCreate: function() {
+          var match = id + " .slide.clear"
+          $(match).show();
+          $(id).fadeTo(500, 1.0);
+        }
+      });
+    });
+  }
+  
+  $(window).load(function(){
+    $(window).trigger('resize');
+  })
+  
+  function showScratBlink(blink) {
+    $(".scrat-standing").css('opacity', blink ? 0 : 1);
+    $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
+  }
+  
+  function setupScratBlinking() {
+    setTimeout(function() {
+      showScratBlink(true);
+      setTimeout(function() {
+        showScratBlink(false);
+        setupScratBlinking();
+      }, 200);
+    }, 4000);
+  }
+</script>
+<script>
+  function addCommas(nStr)
+  {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+      x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+  }
+</script>
+
+<script src="/js/learn-metrics.js"></script>
+
+</div>
+<div class="clear"></div>
+<h1 id="teacher-section">For teachers</h1>
+<div class="half-resource-block" style="margin-right: 20px;">
+<img class="top-image" src="/images/beyond-teacher.jpg">
+<div class="description-area">
+<div class="description">
+<h2 class="resource-title">Teach courses by Code.org</h2>
+Code.org offers a full K-12 course pathway and professional learning workshops for teachers, free of charge.
+</div>
+<a href="https://code.org/educate/curriculum/elementary-school">
+<button class="gray-button">Elementary</button>
+</a>
+  
+<a href="https://code.org/educate/curriculum/middle-school">
+<button class="gray-button">Middle</button>
+</a>
+  
+<a href="https://code.org/educate/curriculum/high-school">
+<button class="gray-button">High</button>
+</a>
+</div>
+</div>
+<div class="half-resource-block">
+<img class="top-image" src="/images/beyond-courses.png">
+<div class="description-area">
+<div class="description">
+<h2 class="resource-title">Teach courses by other providers</h2>
+Compare options by different partners, organized by grade band.
+</div>
+<a href="https://code.org/educate/curriculum/3rd-party">
+<button class="gray-button">Explore</button>
+</a>
+</div>
+</div>
+
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contact us</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Support</a>
+</li>
+<li>
+<a href="/us/partners" target="_blank">Partners and Advisors</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Privacy Policy</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. All rights reserved.
+<br>
+Hour of Code™ is a trademark of Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

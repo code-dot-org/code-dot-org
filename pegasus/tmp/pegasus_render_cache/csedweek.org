@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="CSEd Week" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://csedweek.org/" property="og:url">
+<meta content="@codeorg" property="twitter:site">
+<meta content="https://csedweek.org/" property="twitter:url">
+<meta content="Computer Science Education Week" property="og:title">
+<meta content="Computer Science Education Week" property="twitter:title">
+<meta content="Computer science is foundational for every student to learn." property="og:description">
+<meta content="Computer science is foundational for every student to learn." property="twitter:description">
+<meta content="https://csedweek.org/images/cs-is-everything-thumbnail.png" property="og:image">
+<meta content="https://csedweek.org/images/cs-is-everything-thumbnail.png" property="twitter:image:src">
+<meta content="1200" property="og:image:width">
+<meta content="627" property="og:image:height">
+<meta content="player" property="twitter:card">
+<meta content="http://youtube.com/v/QvyTEx1wyOY" property="og:video:url">
+<meta content="https://youtube.com/v/QvyTEx1wyOY" property="og:video:secure_url">
+<meta content="video/mp4" property="og:video:type">
+<meta content="640" property="og:video:width">
+<meta content="360" property="og:video:height">
+<meta content="https://youtube.com/embed/QvyTEx1wyOY" property="twitter:player">
+<meta content="640" property="twitter:player:width">
+<meta content="360" property="twitter:player:height">
+<title>Computer Science Education Week</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'csedweek.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div class="desktop-feature" id="desktop-header">
+<div style="width: 100%; background-color: rgba(255,255,255,0.8)">
+<div style="width: 970px; margin: 0 auto; overflow: hidden">
+<div style="width: 530px; float: left; padding-top: 14px; padding-bottom: 10px">
+<br>
+<a href="/" style="text-decoration:none">
+<img src="/images/logo_text.png" style="max-width: 100%; vertical-align: bottom">
+<img src="/images/logo_date.png" style="max-width: 100%; vertical-align: bottom">
+</a>
+</div>
+<div class="desktop-feature" style="width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px">
+<a href="http://facebook.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/facebook_green.png">
+</a>
+<a href="http://twitter.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/twitter_green.png">
+</a>
+<br>
+<br>
+<br>
+<a class="redheaderlink" href="/learn">LEARN</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/educate/hoc">TEACH</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/promote">PROMOTE</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/help">HELP US</a>
+<div style="height: 5px"></div>
+</div>
+</div>
+<div style='width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'>
+<br>
+</div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+
+</div>
+<div class="mobile-headers mobile-feature" id="mobile-header">
+<div id="pageheader" style="background-color:rgba(255,255,255,0.8)">
+<div class="container_responsive">
+<div id="left">
+<a href="/">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+</div>
+</div>
+
+</div>
+<div class="container_responsive">
+<div>
+<div class="lines_of_code_header" style="background-color: #d43f3a">
+<a href="/csteacher" style="color: white; text-decoration: none; font-weight: 400">Are you a CS teacher? See other CSEdWeek resources</a>
+</div>
+<br>
+<style>
+  .lines_of_code_header {
+    font-size: 18px;
+    padding: 15px;
+    margin: 0 auto;
+    width:100%;
+  }
+  
+  @media (max-width: 970px) {
+    .lines_of_code_header {
+      font-size: 14px;
+      padding: 15px;
+    }
+    .top_banner {
+      margin-top: 10px;
+    }
+  }
+</style>
+
+</div>
+<script src="/js/jquery.placeholder.js"></script>
+<script src="/js/jquery.geocomplete.min.js" type="text/javascript"></script>
+<div id="index">
+<div class="feature-codeorg" id="gap"></div>
+<div id="top">
+<div class="col-63 desktop-pad-right" id="video">
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_main_video()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/QvyTEx1wyOY/0.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+</div>
+<div class="modal fade" id="showVideo_main_video">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/social/cs-is-everything.mp4" data-video-code="QvyTEx1wyOY"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/social/cs-is-everything.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_main_video"] = function()
+  {
+    $("#showVideo_main_video").modal('show');
+    setupPopupWindows();
+    window["playVideo_main_video"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_main_video video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'main_video');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_main_video").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_main_video"](false);
+    });
+  });
+  
+  window["playVideo_main_video"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_main_video video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_main_video .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+</div>
+<div class="col-36" id="start">
+<div class="desktop-feature" style="height: 25px;"></div>
+<div id="hoc2014">
+<div class="count" style="font-family: 'Gotham 5r', sans-serif; margin-bottom:15px">
+<a href="/leaderboards" style="text-decoration:none">
+<h1>Try an</h1>
+<h2>Hour of Code</h2>
+<h3>910,905,104 served</h3>
+</a>
+<h4>
+Anybody can learn.
+</h4>
+</div>
+<div style="margin-bottom: 8px">
+<a href="/learn" id="try-button">
+<button class="optionbutton" style="min-width: 100px;">
+Start learning
+</button>
+</a>
+
+</div>
+</div>
+</div>
+<div class="mobile-center" id="below" style="clear:both; overflow:hidden; padding-top: 0px">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+<a class="window-popup share-button-facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcsedweek.org%2F" style="display: none"><button class="button-color-share share-button-facebook"><i class="fa fa-facebook"></i>Share on Facebook</button></a>
+<a class="window-popup share-button-twitter-link" href="https://twitter.com/intent/tweet?related=codeorg&amp;text=Computer+science+is+foundational+for+every+student+to+learn.+https%3A%2F%2Fyoutu.be%2FQvyTEx1wyOY." style="display: none"><button class="button-color-share share-button-twitter"><i class="fa fa-twitter"></i>Share on Twitter</button></a>
+<a class="desktop-feature" href="http://videos.code.org/social/cs-is-everything.mp4" style="padding-left:10px">
+<img src="/images/download.png" style="margin-top:10px" width="35px">
+</a>
+</div>
+
+</div>
+</div>
+<br>
+<div style="clear:both;"></div>
+<link href="/css/map.css" rel="stylesheet" type="text/css">
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+<script defer src="/assets/js/hourofcode.com/views/hoc_events_map.js"></script>
+<div id="hocmap">
+<h2 class="mapheader">
+<a href="//test.hourofcode.com/events">
+0 CSEdWeek / Hour of Code events around the world
+</a>
+<a href="//test.hourofcode.com/#join">
+<button class="signup-button">
+Host an hour
+</button>
+</a>
+</h2>
+<div id="mapbox-map"></div>
+<div class="legend" id="belowmaplegend">
+<div class="legend-title">Legend</div>
+<div class="color legend-hoc-event"></div>
+<div>Hour of Code Event</div>
+<div class="color legend-special-event"></div>
+<div>Special Event</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div class="footnote">
+All registered events with a valid address can be viewed on
+<a href="//test.hourofcode.com/events">
+the events page.
+</a>
+</div>
+</div>
+</div>
+<script>
+  mapboxgl.accessToken = "pk.eyJ1IjoiY29kZW9yZyIsImEiOiJjanlnOWZqejIwMHVvM2xxcGMyY25wMzYzIn0.WyPOM-uIk6djBffSPg9gNA";
+</script>
+</div>
+
+<div class="desktop-feature" id="columns" style="clear:both; overflow:hidden">
+<div id="column1" style="float:left; width: 50%">
+<h2>Teachers &amp; Educators</h2>
+<div id="column1content">
+Bring Hour of Code to your classroom.
+<a href="/educate/hoc">
+Get Involved
+</a>
+<hr class="narrow_hr">
+Bring full computer science classes to your classroom or district.
+<a href="/educate">
+See Options
+</a>
+<hr class="narrow_hr">
+Host a CS Tech Jam
+<a href="/educate/cstechjam">
+See Event Kit
+</a>
+<hr class="narrow_hr">
+Promote computer science locally.
+<a href="/promote">
+Get Advocacy Tools
+</a>
+<hr class="narrow_hr">
+Browse 3rd-party resources for CS education.
+<a href="/educate/3rdparty">
+Browse resources
+</a>
+<hr class="narrow_hr">
+Inspire your students to try computer science.
+<a href="/educate/inspire">
+Start inspiring
+</a>
+<br>
+<br>
+<a href="http://code.org/educate/hoc">
+<button style="width:200px">
+Teach an Hour of Code
+</button>
+</a>
+<iframe allowtransparency="true" frameborder="0" scrolling="no" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fcsedweek&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=500177453358606" style="border:none; overflow:hidden; height:290px; margin-top: 40px;"></iframe>
+
+</div>
+</div>
+<div id="column2" style="float:left; width: 50%; padding-left: 25px">
+<h2>Latest Highlights</h2>
+<div id="column2content">
+<a href="https://medium.com/@codeorg/a-whole-new-hour-of-code-and-a-big-milestone-b0c908967915" target="_blank">
+A whole new Hour of Code, and a big milestone!
+</a>
+<br>
+
+//
+Code.org
+<hr class="narrow_hr">
+<a href="https://www.santafenewmexican.com/news/local_news/santa-fe-indian-school-hosts-national-start-of-computer-science/article_765fb4e0-1a9d-11ea-94c6-eb954e192ef0.html" target="_blank">
+Santa Fe Indian School hosts national start of Computer Science Education Week
+</a>
+<br>
+
+//
+Santa Fe New Mexican
+<hr class="narrow_hr">
+<a href="https://www.edsurge.com/news/2019-12-02-coding-can-be-a-gift-to-struggling-students-let-s-give-it-to-them" target="_blank">
+Coding Can Be a Gift to Struggling Students. Let’s Give It to Them.
+</a>
+<br>
+
+//
+EdSurge
+<hr class="narrow_hr">
+<a href="https://medium.com/@codeorg/fifty-nifty-every-state-has-adopted-k-12-cs-policy-135c9dcfad5e" target="_blank">
+Fifty Nifty: Every state has adopted K-12 CS policy!
+</a>
+<br>
+
+//
+code.org
+<hr class="narrow_hr">
+<a href="https://www.insidehighered.com/news/2019/11/08/virginia-pledges-1-billion-computer-science-degree-expansion" target="_blank">
+Virginia Pledges $1 Billion for Tech Talent Pipeline
+</a>
+<br>
+
+//
+Inside Higher Ed
+<hr class="narrow_hr">
+<a href="https://www.insidehighered.com/views/2019/10/28/why-every-student-should-study-computer-science-opinion" target="_blank">
+Why every student should study computer science
+</a>
+<br>
+
+//
+Inside Higher Ed
+<hr class="narrow_hr">
+<a href="https://oecdedutoday.com/computer-science-and-pisa-2021/" target="_blank">
+Computer Science and PISA 2021
+</a>
+<br>
+
+//
+OECD Education and Skills Today
+<br>
+<br>
+<a href="/about/news" style="float:right">See all</a>
+</div>
+</div>
+</div>
+<div id="gap"></div>
+</div>
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<div style="width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)">
+<div class="whitefooter" style="width: 970px; margin: 0 auto;">
+<div style="float:left">
+<a class="whitefooterlink" href="/about">About</a>
+    |    
+<a class="whitefooterlink" href="/partners">Partners</a>
+    |    
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+    |    
+<a class="whitefooterlink" href="/resource-kit">Resource Kit</a>
+    |    
+<a class="whitefooterlink" href="/resource_kit/frequently_asked_questions">FAQ</a>
+    |    
+<a class="whitefooterlink" href="http://forums.code.org/">Forums</a>
+    |    
+<a class="whitefooterlink" href="http://support.code.org/">Support</a>
+<br>
+<small class="dim">
+© Computer Science Education Week, 2020. Hour of Code® is a trademark of Code.org
+</small>
+</div>
+<div style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<footer id="pagefooter">
+<div class="content" style="width:100%">
+<div class="left" style="float:left">
+© Computer Science Education Week, 2020
+</div>
+<div class="right" style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

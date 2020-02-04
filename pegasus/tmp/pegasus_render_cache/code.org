@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/" property="og:url">
+<meta content="@codeorg" property="twitter:site">
+<meta content="https://code.org/" property="twitter:url">
+<meta content="Learn computer science. Change the world." property="og:title">
+<meta content="Learn computer science. Change the world." property="twitter:title">
+<meta content="Every student has the potential to change the world. Help them get started. #CSforGood" property="og:description">
+<meta content="Every student has the potential to change the world. Help them get started. #CSforGood" property="twitter:description">
+<meta content="https://code.org/shared/images/social-media/codeorg2019_social.png" property="og:image">
+<meta content="https://code.org/shared/images/social-media/codeorg2019_social.png" property="twitter:image:src">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="photo" property="twitter:card">
+<title>Learn computer science. Change the world. | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<script>// Inline critical-font (~5k gzipped) into HTML that renders immediately.
+// Include this JS view in the head of common site entry-points.
+var supportsFontLoading = !!document.fonts && ("FontFace" in window);
+if (supportsFontLoading) {
+  var fontData = [119,79,70,50,79,84,84,79,0,0,17,144,0,13,0,0,0,0,31,124,0,0,17,64,0,1,0,65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,13,157,85,26,22,27,153,100,28,32,6,96,0,76,17,8,1,54,2,36,3,130,0,4,6,5,114,7,32,27,148,30,81,148,140,90,155,236,139,4,155,138,186,231,96,67,169,193,50,96,40,99,41,33,134,140,220,221,30,219,115,23,105,159,247,167,21,129,47,35,36,153,229,249,255,223,239,127,243,172,115,191,221,247,13,81,29,221,36,49,168,68,77,159,144,8,153,208,73,17,186,39,154,134,166,178,255,255,247,236,127,159,176,76,90,175,78,82,140,106,14,160,204,37,123,65,229,2,250,18,244,136,63,64,254,243,184,92,143,37,121,88,86,51,223,51,136,183,224,21,27,234,88,77,48,145,178,62,123,41,226,62,152,183,62,53,193,164,168,156,204,222,176,223,175,183,185,162,73,2,109,77,91,136,184,125,56,95,100,51,185,135,236,103,174,0,254,255,111,174,180,153,18,71,245,214,21,208,245,42,52,176,173,82,135,179,239,111,247,103,110,14,120,82,206,150,146,45,101,213,1,129,45,60,15,108,143,198,23,178,37,206,59,85,80,171,122,117,64,66,33,8,95,35,91,87,105,193,182,144,237,244,209,1,191,129,200,138,24,241,153,29,109,195,101,229,77,248,159,41,71,211,140,165,65,70,169,76,189,96,67,164,26,106,213,165,143,71,209,197,103,214,226,167,170,218,31,92,117,131,175,97,240,53,13,125,173,94,243,53,167,252,89,241,215,221,191,166,73,48,125,179,98,27,192,226,211,213,176,127,7,88,171,30,116,185,188,238,172,116,253,15,15,122,23,220,75,221,248,97,195,199,14,155,220,192,110,251,206,219,124,214,139,222,180,155,167,204,156,56,225,199,213,181,89,46,243,18,254,91,64,131,192,170,185,106,121,155,160,98,19,148,165,26,130,33,245,52,198,73,127,163,166,109,70,123,220,254,194,102,228,81,151,214,28,222,207,244,159,137,186,181,172,195,140,97,241,176,125,120,60,124,63,92,65,38,217,68,10,146,214,73,121,114,176,252,135,252,142,174,174,180,83,186,41,51,148,93,202,117,229,190,232,42,86,138,251,181,221,107,167,212,62,85,167,73,157,200,58,131,234,44,173,227,168,115,185,110,205,186,110,117,103,215,205,168,247,67,189,246,245,150,214,187,94,239,77,125,165,190,71,253,193,245,215,212,119,168,166,86,61,0,215,2,13,117,16,72,163,167,53,85,65,79,150,145,228,58,238,202,181,57,205,61,117,187,194,61,33,115,18,245,122,106,177,198,70,47,152,225,43,36,247,223,65,14,140,48,220,99,51,251,70,127,45,62,95,230,216,168,171,252,62,106,45,149,46,33,86,230,210,152,205,61,240,207,147,146,234,117,222,98,204,45,54,105,25,173,240,149,192,126,185,157,77,239,69,170,2,170,221,61,214,232,204,82,183,132,136,214,34,109,144,116,189,242,178,227,22,149,83,110,50,249,80,216,208,196,6,110,130,55,242,84,73,13,67,206,2,13,134,143,159,67,109,77,85,8,63,50,74,103,102,149,192,4,252,65,105,102,39,81,40,94,16,79,226,212,13,125,207,144,4,250,118,159,78,86,187,226,211,37,209,83,247,160,238,199,18,157,34,174,167,116,35,232,97,79,212,38,161,46,48,66,45,229,72,3,57,25,25,99,195,101,211,102,78,219,18,103,72,36,241,21,167,134,43,248,74,252,85,82,67,113,93,38,219,63,126,1,179,123,48,53,188,205,188,30,75,67,231,15,158,37,214,99,42,30,18,149,152,14,154,193,207,175,140,148,78,110,59,183,41,157,196,251,55,163,73,29,117,8,239,214,92,15,165,174,71,163,210,69,114,156,148,29,241,176,207,219,49,235,8,60,88,160,33,79,127,13,238,234,156,24,153,184,199,6,189,29,69,12,238,215,85,172,82,16,46,106,6,14,167,231,208,133,201,151,7,136,179,153,82,212,197,200,125,94,36,184,145,171,113,134,179,86,187,66,220,248,64,200,245,248,211,3,178,39,86,144,88,84,168,53,9,202,127,108,77,85,42,11,203,62,253,80,216,195,67,183,43,29,186,133,54,209,213,78,48,91,30,17,138,92,122,74,55,199,19,133,24,26,73,106,18,242,23,106,112,129,186,5,185,31,101,119,163,110,120,239,207,221,119,237,34,221,14,135,13,24,175,96,93,220,118,220,198,160,219,21,242,189,214,43,119,156,215,184,232,24,242,22,118,133,165,160,124,225,210,141,130,90,29,66,47,151,91,83,149,194,130,75,85,85,5,201,225,156,188,115,104,114,7,157,63,173,197,116,151,140,34,54,179,223,190,246,254,199,219,9,1,238,132,118,137,102,69,87,71,224,98,134,22,73,73,59,227,46,138,126,81,82,122,111,231,240,42,18,40,71,29,132,48,105,114,103,208,96,84,101,210,149,254,103,98,118,251,145,96,87,147,70,108,178,218,21,214,188,109,135,2,253,9,229,156,58,157,47,230,41,236,9,230,134,204,233,155,177,65,107,26,150,99,122,180,135,217,21,159,126,41,9,235,16,229,215,53,160,193,29,248,114,198,114,155,238,162,217,248,142,238,112,243,125,226,98,151,16,68,18,171,76,65,67,20,127,162,35,255,41,169,199,223,88,240,84,134,239,221,27,80,80,247,249,178,235,121,239,157,215,118,92,63,71,85,66,10,158,153,115,116,252,190,33,199,35,182,15,6,232,13,217,232,224,104,205,167,219,64,119,157,135,224,87,140,146,223,94,235,31,110,61,206,133,154,93,9,232,214,183,161,206,243,65,152,36,131,201,25,208,217,170,166,27,137,5,26,180,116,235,66,73,169,72,190,36,117,237,17,49,220,141,4,251,89,10,45,226,214,84,5,49,72,160,65,64,127,65,206,33,233,241,226,106,154,20,230,236,124,134,127,32,193,131,185,5,39,185,119,30,110,63,180,228,8,250,235,234,155,55,22,44,151,49,1,238,240,161,87,233,252,189,216,29,30,158,160,243,39,217,242,96,13,213,144,152,225,0,226,18,2,76,178,130,171,117,78,26,55,100,117,254,27,139,177,169,216,172,130,221,248,254,49,73,131,197,70,103,255,218,74,153,232,234,77,220,55,216,98,147,197,90,195,191,196,20,101,245,221,31,254,11,52,200,232,245,133,220,52,129,163,236,8,197,40,14,86,250,12,13,26,235,132,144,146,6,80,33,67,236,56,8,28,70,4,244,55,148,49,250,106,95,113,41,67,10,75,15,62,196,117,126,8,29,206,13,185,132,187,42,33,233,139,255,114,20,19,116,181,130,38,204,151,134,147,95,222,116,181,249,243,83,211,137,167,254,178,106,242,159,13,231,238,136,172,178,1,226,66,45,139,174,108,57,126,236,196,137,29,89,116,71,24,35,253,204,172,194,120,108,156,191,30,76,3,14,15,204,21,113,189,165,211,33,121,201,159,72,168,71,180,221,242,54,25,46,120,112,128,159,190,33,118,26,22,220,198,131,38,100,54,51,227,100,120,250,147,164,118,121,99,49,198,150,152,22,23,237,47,171,104,62,221,169,48,158,200,216,100,214,89,66,88,97,212,37,51,231,38,145,43,198,143,120,133,249,61,111,50,190,247,35,73,253,82,36,244,13,217,232,105,22,101,43,250,176,17,153,105,102,179,145,22,164,25,200,184,39,52,139,166,40,134,224,6,187,192,141,145,225,108,88,77,185,152,133,30,49,28,1,141,57,131,172,158,90,162,113,148,37,48,32,2,178,71,64,65,135,168,88,18,54,112,36,149,68,152,98,29,71,117,117,174,45,186,8,219,216,208,84,194,3,253,241,176,52,190,199,97,157,119,202,55,77,181,134,71,168,86,64,150,37,55,183,218,149,182,157,35,89,232,42,50,174,163,199,180,182,149,210,149,156,125,119,233,161,96,242,244,60,160,178,61,233,103,197,51,111,137,159,222,169,212,149,80,216,244,136,97,189,4,27,33,79,138,129,133,73,105,192,152,132,153,145,36,212,19,149,156,112,24,125,195,24,192,59,95,17,143,193,113,9,216,150,91,249,4,209,106,250,184,54,227,194,168,67,3,78,135,239,242,216,250,225,182,124,147,255,212,112,10,99,21,144,206,100,15,171,93,105,31,152,216,72,87,7,226,233,66,13,214,183,149,45,175,239,47,33,55,56,120,136,219,28,28,113,148,156,46,203,78,187,88,165,23,83,238,212,220,164,142,112,114,232,141,224,189,77,131,166,86,190,140,141,34,89,41,77,134,199,72,52,31,123,120,56,117,23,118,37,60,178,87,107,189,21,133,29,12,118,138,222,177,210,189,192,170,225,168,73,66,29,132,67,150,155,46,26,11,74,204,171,193,72,145,213,114,131,77,209,80,137,218,159,127,31,104,53,10,253,77,143,194,62,159,0,214,115,142,223,125,120,116,195,126,254,214,244,70,157,134,40,215,213,60,124,241,155,86,72,184,234,18,60,137,23,155,111,121,141,241,182,35,73,170,81,132,171,165,226,236,45,209,200,69,151,153,155,71,88,220,43,222,14,250,154,183,184,203,184,211,157,56,193,188,195,125,141,91,30,228,127,161,195,40,117,181,105,60,138,79,242,104,156,108,67,88,205,47,121,63,187,170,8,83,113,13,83,248,218,115,226,173,112,97,53,94,74,234,65,20,89,110,225,136,140,139,134,111,91,226,159,248,3,167,224,131,27,225,180,233,39,169,171,242,44,198,253,34,179,183,108,244,54,74,232,138,121,129,40,212,232,78,102,47,179,68,82,27,99,73,138,86,69,25,142,35,231,68,64,41,94,41,228,156,117,113,228,225,97,199,226,55,7,83,32,197,207,142,155,36,182,71,72,231,183,157,223,144,73,226,213,141,62,109,172,179,148,126,107,251,174,236,70,130,141,237,99,185,186,213,174,52,124,149,240,82,95,159,169,133,69,31,203,181,166,42,185,87,29,175,244,108,186,148,114,44,69,244,82,124,2,98,221,117,117,38,190,166,104,80,131,121,139,98,107,170,130,18,102,95,179,74,119,167,168,164,65,145,2,175,109,95,199,85,188,81,78,196,102,37,191,36,49,175,64,115,107,119,43,200,18,200,170,110,191,124,125,47,128,153,168,188,2,181,79,80,115,93,101,2,111,46,208,94,81,150,227,114,154,232,125,86,26,60,160,231,232,170,88,224,243,24,4,252,10,241,91,143,63,89,10,233,236,200,147,3,197,165,171,82,159,75,81,39,91,146,96,15,83,172,98,123,39,19,90,8,138,89,120,56,41,215,29,190,160,204,43,142,44,209,184,194,53,206,198,207,148,33,105,145,151,221,72,112,6,219,156,139,167,121,74,192,182,132,74,95,39,83,90,122,85,130,153,91,125,167,244,237,203,42,63,150,71,201,219,249,186,229,182,195,179,225,121,77,217,199,221,235,115,74,26,52,160,215,248,80,106,75,254,217,41,168,37,12,191,188,104,37,45,163,85,2,158,142,96,216,199,249,141,88,193,174,178,180,9,13,68,132,60,157,235,112,89,91,245,46,191,236,9,125,160,171,62,43,90,11,149,95,129,182,84,24,2,188,156,156,116,200,165,251,142,100,232,187,104,235,111,123,126,22,121,202,228,149,83,150,140,160,190,52,108,222,164,73,227,199,207,233,79,49,162,127,104,215,34,69,157,137,124,142,107,119,168,96,251,217,179,14,199,142,76,186,37,140,82,91,27,101,208,245,136,243,173,72,48,203,138,54,236,177,202,227,130,188,205,207,251,5,101,95,56,147,33,162,20,86,6,69,176,172,7,81,183,237,49,167,196,200,104,169,160,207,173,41,15,72,252,137,237,154,155,119,241,71,107,170,242,249,163,252,215,175,159,134,55,212,237,74,227,182,161,45,117,181,235,3,75,5,174,201,175,156,185,143,171,46,71,187,233,124,167,2,111,43,96,131,239,177,90,239,64,137,253,71,197,11,220,181,41,170,153,124,228,146,105,143,238,119,148,151,126,29,160,85,24,59,108,242,69,183,6,252,93,67,171,60,239,168,178,26,23,109,230,5,165,207,148,233,35,245,20,154,187,104,65,170,136,80,54,254,190,246,207,77,36,84,166,174,201,13,78,254,244,43,34,249,215,167,196,83,113,30,227,48,217,141,248,0,159,38,99,145,141,36,213,76,62,179,132,209,144,85,236,41,122,246,87,229,23,89,249,119,238,92,138,107,165,243,189,114,220,80,222,63,75,171,188,119,49,190,121,53,149,183,62,232,186,224,91,44,215,219,83,66,191,225,113,19,210,18,207,120,81,39,234,215,119,84,79,241,208,166,152,134,79,134,124,56,202,22,104,8,130,134,10,246,250,81,212,206,20,24,14,112,48,230,136,174,217,111,113,165,8,232,169,5,26,35,159,39,192,33,115,160,138,42,16,64,119,53,92,125,82,20,208,158,9,93,157,249,128,163,90,5,182,201,13,162,106,13,231,196,127,44,81,176,195,28,208,92,244,153,134,93,211,129,185,82,182,22,114,221,134,38,176,251,220,212,175,142,167,243,17,103,184,48,88,70,240,233,109,144,250,178,187,114,203,37,129,145,195,60,4,56,155,162,114,51,86,45,212,62,124,116,227,117,31,221,215,51,143,253,126,59,194,183,246,216,76,23,236,10,78,29,63,144,169,95,164,107,51,207,143,21,135,211,164,164,195,97,219,34,72,52,13,138,233,48,234,203,253,201,132,219,83,243,103,102,206,160,228,221,81,175,254,99,34,245,40,138,220,17,239,16,67,19,164,180,190,119,198,151,142,135,153,143,98,205,79,218,81,218,187,98,247,58,225,84,38,206,159,246,219,36,18,201,35,183,103,91,113,7,201,124,78,34,104,227,96,72,151,98,126,166,52,202,30,124,87,87,187,98,111,138,246,152,174,156,57,124,93,180,47,55,118,116,230,107,74,171,174,221,59,182,75,206,120,169,227,142,141,223,86,152,45,241,130,90,87,221,176,237,119,45,159,48,205,216,228,77,28,98,6,113,176,196,27,229,158,162,196,160,6,147,165,189,217,12,47,172,166,55,143,208,208,43,126,235,121,51,194,235,250,88,15,145,221,22,99,222,136,248,144,17,206,8,156,177,67,139,136,232,230,141,220,159,119,61,32,196,144,69,148,179,143,137,7,98,55,122,98,131,135,200,126,238,47,169,109,127,60,124,160,113,155,81,233,41,98,190,185,77,26,115,97,252,148,126,52,90,156,186,97,242,118,49,241,186,116,248,193,209,159,38,243,110,232,226,232,20,36,24,107,28,209,222,207,218,235,22,163,43,151,191,145,127,255,198,112,208,5,93,71,148,240,251,167,196,95,155,14,73,53,86,252,248,103,169,182,233,7,0,13,152,39,68,160,80,75,161,27,1,163,2,97,216,165,43,17,9,213,152,251,183,166,142,175,198,32,0,207,128,229,174,220,155,188,114,9,126,106,67,192,132,204,91,198,120,216,249,205,241,42,81,167,219,80,211,172,112,216,25,53,54,8,45,147,99,242,227,37,136,2,50,133,180,94,69,80,101,190,102,143,193,209,37,126,155,242,148,192,145,68,220,153,128,19,112,34,76,169,8,193,63,53,48,87,109,74,97,69,64,25,167,112,226,29,125,186,250,40,101,153,197,81,80,94,33,198,114,160,129,3,80,190,194,122,50,46,85,11,140,175,39,61,185,217,8,7,69,175,168,171,209,234,109,173,223,185,240,82,121,194,156,96,49,150,71,175,40,212,202,99,234,66,75,195,58,87,81,168,92,226,147,102,151,143,203,168,40,19,228,204,81,68,245,176,168,217,100,240,51,74,74,84,213,162,46,171,198,211,201,206,37,120,162,49,121,246,254,206,165,231,57,100,52,61,214,225,92,165,89,229,245,26,178,84,2,246,74,18,80,241,152,218,62,213,251,85,152,183,49,71,236,229,16,156,90,10,61,57,96,199,254,152,204,165,42,114,71,208,144,74,153,149,91,235,15,217,1,9,63,73,237,109,191,170,100,179,242,84,233,214,191,10,128,66,33,56,50,106,251,233,30,92,228,87,49,165,75,157,157,233,146,247,15,175,191,97,204,37,85,213,236,208,250,68,140,44,161,86,164,0,160,44,229,112,36,6,178,168,204,183,62,234,67,71,45,17,16,140,36,29,187,116,89,134,73,245,112,41,12,75,242,189,157,224,148,125,229,118,38,75,236,208,17,156,49,123,159,173,204,6,252,56,218,80,25,99,192,162,206,126,245,141,170,2,185,197,1,99,195,203,38,52,198,206,114,22,198,151,152,245,175,102,107,138,213,174,24,181,70,54,155,89,75,175,91,186,3,181,206,1,94,135,120,120,8,182,3,54,59,223,175,202,20,194,14,231,4,195,117,206,175,22,200,137,197,30,54,20,239,205,18,57,60,52,126,216,47,49,202,86,57,127,181,224,25,163,253,107,202,4,57,64,181,107,14,112,209,42,189,62,145,2,52,33,253,73,72,212,255,173,131,85,39,94,99,120,125,140,226,4,39,118,206,94,124,24,173,221,44,58,9,255,129,213,21,72,185,230,215,210,220,78,147,37,173,181,246,14,209,181,111,172,140,157,95,130,40,173,120,193,117,255,220,44,89,228,128,101,229,98,197,23,84,219,247,208,247,17,203,119,150,255,94,228,200,127,199,111,130,250,157,182,136,106,4,223,219,78,254,4,183,231,59,176,219,151,210,192,255,210,133,140,246,112,181,20,225,163,40,19,240,50,26,161,247,108,134,68,8,197,151,67,148,197,18,204,15,8,79,124,168,234,209,136,250,177,182,184,3,117,45,250,174,246,133,25,114,88,168,96,14,209,27,209,56,209,51,146,201,225,164,228,230,193,243,65,181,8,190,17,171,176,24,155,132,148,2,25,165,28,16,76,9,151,60,210,118,3,219,33,56,2,9,67,161,1,102,73,201,0,38,20,148,24,44,21,53,13,45,29,61,3,35,147,28,96,35,14,216,10,176,237,104,50,207,202,116,242,157,114,229,3,123,21,178,115,112,146,235,86,58,12,164,100,61,161,131,228,43,71,41,157,31,31,118,180,41,102,192,170,28,35,133,77,60,84,134,22,153,32,106,100,157,168,184,158,99,144,195,51,91,121,108,96,196,179,60,189,1,113,14,210,62,161,48,36,34,23,178,74,53,15,15,142,165,189,113,218,95,144,46,218,4,174,237,175,28,111,175,243,89,189,65,37,61,194,111,249,8,224,145,106,100,170,198,5,13,194,192,128,49,233,184,214,25,26,171,132,164,57,146,192,84,98,147,210,219,172,10,104,122,249,160,114,131,42,168,15,79,239,221,208,168,111,28,85,64,6,1,77,249,227,156,183,63,15,96,253,191,73,234,214,124,6,175,232,125,55,115,201,255,246,16,209,182,63,132,0,144,249,161,63,169,120,48,172,52,202,66,121,189,15,10,156,107,159,0,218,81,144,167,206,180,225,248,36,11,102,152,112,182,112,203,80,177,252,46,32,9,170,50,93,52,191,235,220,45,28,41,114,39,85,46,117,181,218,144,108,54,36,75,13,233,223,170,138,1,67,90,99,163,210,146,53,249,238,100,132,33,125,232,68,75,98,92,199,55,30,40,197,14,146,194,35,11,181,14,160,103,222,56,48,196,223,78,75,29,79,174,45,113,8,73,136,64,214,74,138,159,56,38,120,39,38,208,38,240,166,187,142,212,221,148,106,61,51,240,127,29,159,52,183,95,63,169,84,150,145,223,160,90,18,100,100,91,117,191,62,128,167,173,212,50,35,181,164,135,252,222,143,59,54,142,68,203,139,187,36,184,1,206,1,97,129,67,67,237,106,72,13,56,17,24,198,157,87,26,111,130,153,38,201,26,97,164,41,108,156,42,185,158,162,142,221,201,120,156,35,147,167,152,105,2,142,224,38,12,50,33,241,16,126,67,220,28,171,195,176,74,76,53,198,147,39,197,253,254,106,66,7,2,0,0,0];
+  // Passing a Uint8Array directly is much faster than decoding a Base64 Data-URI
+  // in some browsers.
+  // Slightly larger, but not much difference when the HTML is gzip-encoded.
+  var fontDataArray = new Uint8Array(fontData);
+  var fontOptions = {
+    style: 'normal',
+    weight: 'normal',
+    // 0-9,A-Z,a-z
+    unicodeRange: 'U+0020,U+0030-0039,U+0041-005A,U+0061-007A'
+  };
+
+  window.criticalFonts = ['4r', '5r', '7r', '4i', '5i', '7i'].map(function(path) {
+    var family = "Gotham " + path;
+    var criticalFont;
+    try {
+      criticalFont = new FontFace(family, fontDataArray, fontOptions);
+    } catch (e) {
+      // Some browsers (Safari) require the font-family string to be quoted.
+      criticalFont = new FontFace("'" + family + "'", fontDataArray, fontOptions);
+    }
+    criticalFont.load();
+    document.fonts.add(criticalFont);
+    return criticalFont;
+  });
+  // Remove critical font once the full font has finished loading.
+  document.fonts.addEventListener('loadingdone', function(load) {
+    load.fontfaces.forEach(function(font) {
+      window.criticalFonts.forEach(function(criticalFont) {
+        if(criticalFont.family == font.family) {
+          document.fonts.delete(criticalFont);
+        }
+      })
+    });
+  });
+} else {
+  // Unsupported browsers just lazy-load the full font normally.
+}
+</script>
+<link href="/css/fonts.css" media="none" onload="if(media!='all')media='all'" rel="stylesheet" type="text/css">
+
+<style>
+  ﻿/*!
+   * Bootstrap v3.3.2 (http://getbootstrap.com)
+   * Copyright 2011-2015 Twitter, Inc.
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   *//*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}footer{display:block}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}h1{margin:0.67em 0;font-size:2em}small{font-size:80%}img{border:0}svg:not(:root){overflow:hidden}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input,select{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button{-webkit-appearance:button;cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type="checkbox"]{box-sizing:border-box;padding:0px}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */@media print{*,:after,:before{color:#000 !important;text-shadow:none !important;background:0 0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100% !important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}select{background:#fff !important}.label{border:1px solid #000}}@font-face{font-family:'Glyphicons Halflings';src:url(/fonts/glyphicons-halflings-regular.eot);src:url(/fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),url(/fonts/glyphicons-halflings-regular.woff2) format("woff2"),url(/fonts/glyphicons-halflings-regular.woff) format("woff"),url(/fonts/glyphicons-halflings-regular.ttf) format("truetype"),url(/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg")}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}img{vertical-align:middle}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}h1,h2,h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,h2,h3{margin-top:20px;margin-bottom:10px}h4{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}p{margin:0 0 10px}.small,small{font-size:85%}ol,ul{margin-top:0;margin-bottom:10px}ol ul,ul ul{margin-bottom:0}.row{margin-right:-15px;margin-left:-15px}table{background-color:transparent}th{text-align:left}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}input[type=checkbox]{margin:4px 0 0;margin-top:1px \9;line-height:normal}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.btn:active:focus,.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:focus,.btn:hover{color:#333;text-decoration:none}.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{color:#fff;background-color:#286090;border-color:#204d74}.btn-primary:active{background-image:none}.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.dropdown{position:relative}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}.close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;filter:alpha(opacity=50);opacity:.5}button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;border:0}.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out;-webkit-transform:translate(0, -25%);-ms-transform:translate(0, -25%);-o-transform:translate(0, -25%);transform:translate(0, -25%)}.modal.in .modal-dialog{-webkit-transform:translate(0, 0);-ms-transform:translate(0, 0);-o-transform:translate(0, 0);transform:translate(0, 0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,0.2);border-radius:6px;outline:0;-webkit-box-shadow:0 3px 9px rgba(0,0,0,0.5);box-shadow:0 3px 9px rgba(0,0,0,0.5)}.modal-backdrop{position:absolute;top:0;right:0;left:0;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{min-height:16.43px;padding:15px;border-bottom:1px solid #e5e5e5}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}@media (min-width: 768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5)}}@media (min-width: 992px){.modal-lg{width:900px}}.carousel{position:relative}.modal-footer:after,.modal-footer:before,.row:after,.row:before{display:table;content:" "}.modal-footer:after,.row:after{clear:both}@-ms-viewport{width:device-width}/*!
+   *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+   *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+   */@font-face{font-family:'FontAwesome';src:url("/fonts/fontawesome-webfont.eot?v=4.6.3");src:url("/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"),url("/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"),url("/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"),url("/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"),url("/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-warning:before{content:"\f071"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-twitter:before{content:"\f099"}.fa-envelope:before{content:"\f0e0"}.fa-facebook:before{content:"\f09a"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-instagram:before{content:"\f16d"}.fa-print:before{content:"\f02f"}.fa-question-circle:before{content:"\f059"}.fa-tumblr:before{content:"\f173"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fa-user:before{content:"\f007"}#homepage .clear{clear:both}h1{color:#7665a0;font-size:32px;font-family:'Gotham 7r', sans-serif;margin-top:50px;margin-bottom:30px;line-height:1.2em}h2{color:#00adbc;font-size:22px;font-family:'Gotham 5r', sans-serif;margin-top:45px;margin-bottom:25px;line-height:1.2em}h3{color:#5b6770;font-size:18px;font-family:'Gotham 4r', sans-serif;margin-top:25px;margin-bottom:12px;line-height:1.2em}h4{color:#5b6770;font-size:14px;font-family:'Gotham 5r', sans-serif;line-height:1.2em}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:normal}a{font-family:'Gotham 7r', sans-serif}a:link{color:#7665a0;text-decoration:none}a:visited{color:#7665a0;text-decoration:none}a:hover,a:active{text-decoration:underline;color:#5b6770}strong{font-family:'Gotham 7r', sans-serif;font-weight:normal}em{font-family:'Gotham 4i', sans-serif;font-style:normal}body{font-family:'Gotham 4r', sans-serif;font-size:14px;line-height:22px;font-weight:normal;color:dimgray;margin:0}li>ul{margin-top:10px;margin-bottom:10px}ul{list-style:none;padding:0;margin:20px}ul li{padding-left:1em;text-indent:-.7em}ul li:before{content:"• ";color:#00a1e6}.invisiblelist li:before{content:""}img{border:none}th{background-color:#00b2c0;color:white;padding:15px;border-color:white;border-width:1px;border-style:solid;border-top-color:#00b2c0;border-left-color:#00b2c0;border-right-color:#00b2c0}td{border-width:1px;border-color:#8d8a8a;border-style:solid;padding:15px}.narrow_hr{margin-top:10px;margin-bottom:10px;border:0;border-top-width:1px;border-top-style:solid;border-top-color:#00adbc}.grey_input{font-size:14px;height:34px;background-color:#e2e4e3;border:none;padding:5px;color:#595959;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px}#petition_form a{font-family:'Gotham 4r', sans-serif}#petition_form a:link,#petition_form a:visited{color:#dcdcdc;text-decoration:none}#petition_form a:hover,#petition_form a:active{color:#fff;text-decoration:underline}.listed_supporter{font-family:'Gotham 7r', sans-serif;font-weight:normal;color:#7665a0}.greybox{background-color:#586771;color:white;padding:20px;text-align:center;overflow:hidden}#about_nav{margin:50px 0 0 0}.about_list_item_selected{color:#ff8a00;font-family:'Gotham 7r', sans-serif}a.about_list_item{color:#999c9f;font-family:'Gotham 5r', sans-serif}.button-color-share{background-color:#7e5ca2;border-color:#7e5ca2}button{-webkit-appearance:none;-webkit-user-select:none;-webkit-writing-mode:horizontal-tb;align-items:flex-start;background-color:#ffa400;border-color:#ffa400;background-image:none;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom-style:solid;border-bottom-width:1px;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;border-top-left-radius:4px;border-top-right-radius:4px;border-top-style:solid;border-top-width:1px;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:'Gotham 4r', sans-serif;font-size:14px;font-weight:normal;height:34px;letter-spacing:normal;line-height:20px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;padding-bottom:6px;padding-left:12px;padding-right:12px;padding-top:6px;text-align:center;text-indent:0px;text-shadow:none;text-transform:none;vertical-align:middle;white-space:nowrap;word-spacing:0px;writing-mode:lr-tb}.btn-white:hover{background-color:#E6E6F3;border-color:#adadad}.dropdown{border-color:#ccc;border-radius:5px}#stats-carousel .slide-prev>span{border-right-color:#b9bf15}#stats-carousel .slide-next>span{border-left-color:#b9bf15}.carousel-wrapper .pagination a{background:#7765a1}.carousel-wrapper .pagination a.selected{background:#ffa401}@media screen and (max-width: 450px){#index .count h1{font-size:32px;line-height:32px}#index .count h2{font-size:40px;line-height:40px}#index .count h3{font-size:32px;line-height:48px}#index .count h4{font-size:16px;line-height:16px}}label{font-family:'Gotham 5r', sans-serif;font-weight:normal}.video_caption_link{font-family:'Gotham 4r', sans-serif}html{height:100%}body{background-color:#fff;height:100%}.wrapper{min-height:100%;margin-bottom:-80px}.push{height:80px}#pageheader-wrapper .headerlink:link,#pageheader-wrapper .headerlink:visited{color:white;text-decoration:none}#pageheader-wrapper .headerlink:hover,#pageheader-wrapper .headerlink:active{color:white;border-bottom:solid 2px #ffa400}#pageheader-wrapper .learnoption:hover{text-decoration:underline}#pagefooter{width:100%;height:90px;padding:20px;overflow:hidden;background-color:#7665a0;box-sizing:border-box}#pagefooter .content{color:white;font-size:14px;font-weight:normal;width:970px;margin:0 auto}#pagefooter .dim{display:inline-block;opacity:0.5}.whitefooterlink:link{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}.whitefooterlink:hover{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}.whitefooterlink:visited{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}#user_hero #contents{margin:10px 0px;padding-left:5px;width:100%}#sign_in_or_user{margin:.6875em 0 0 30px}#sign_in_or_user .button-signin{text-decoration:none;-webkit-appearance:none;-webkit-user-select:none;-webkit-writing-mode:horizontal-tb;align-items:flex-start;background-color:#ffa400;border-color:#ffa400;background-image:none;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom-style:solid;border-bottom-width:1px;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;border-top-left-radius:4px;border-top-right-radius:4px;border-top-style:solid;border-top-width:1px;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:'Gotham 4r', sans-serif;font-size:14px;font-weight:normal;height:35px;letter-spacing:normal;line-height:22px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:-6px;padding-bottom:6px;padding-left:12px;padding-right:12px;padding-top:6px;text-align:center;text-indent:0px;text-shadow:none;text-transform:none;vertical-align:middle;white-space:nowrap;word-spacing:0px;writing-mode:lr-tb}
+
+</style>
+
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<style>
+  .feature-nonenglish{display:none}@media screen and (min-width: 0px) and (max-width: 600px){.container_responsive{width:100%;margin:0 auto;padding-left:10px;padding-right:10px}.jumbo{font-size:45px}.container_responsive h1{font-size:20px;margin-top:1em;margin-bottom:.5em}.container_responsive h2{font-size:18px}.container_responsive h3{font-size:16px}.container_responsive h4{font-size:14px}.container_responsive .solid-block-header *{font-size:20px}.container_responsive .solid-block-subtitle{font-size:14px;line-height:1em;padding-right:10px;padding-bottom:10px}.tile-container-responsive{display:flex;flex-direction:column}}@media screen and (min-width: 601px) and (max-width: 970px){.container_responsive{width:600px;margin:0 auto}}@media screen and (min-width: 601px){.phone-feature{display:none}.jumbo{font-size:60px}}@media screen and (max-width: 600px){.tablet-feature{display:none}}@media screen and (min-width: 971px){.mobile-feature{display:none}.col-16{width:16%;float:left}.col-18{width:18%;float:left}.col-20{width:20%;float:left}.col-23{width:23%;float:left}.col-25{width:25%;float:left}.col-26{width:26%;float:left}.col-32{width:32%;float:left}.col-33{width:33%;float:left}.col-36{width:36%;float:left}.col-40{width:40%;float:left}.col-45{width:45%;float:left}.col-50{width:50%;float:left}.col-60{width:60%;float:left}.col-63{width:63%;float:left}.col-66{width:66%;float:left}.col-80{width:80%;float:left}.col-95{width:95%;float:left}.col-80-right{width:80%;float:right}.left-nav{width:140px;float:left}.desktop-pad-right{padding-right:30px}.container_responsive{width:970px;margin:0 auto;max-width:none !important}.tile-container-responsive{display:flex;flex-direction:row;justify-content:space-between}.tile-container-responsive>*{margin-right:20px}.tile-container-responsive>:last-child{margin-right:0}.mobile-show-medium{display:none}.i-agree-button{width:9%}.avatar_container p{padding-right:30px}}@media screen and (min-width: 0px) and (max-width: 970px){.desktop-feature{display:none}.col-18{width:100%;float:left}.col-20{width:100%;float:left}.col-23{width:100%}.col-25{width:100%}.col-26{width:100%}.col-32{width:100%}.col-33{width:100%}.col-36{width:100%}.col-40{width:100%}.col-45{width:100%;float:left}.col-50{width:100%;float:left}.col-60{width:100%}.col-63{width:100%}.col-66{width:100%;float:left}.col-66 ul{margin-left:0px}.col-80{width:100%}.col-95{width:95%;float:left}.col-mobile-44{width:44%;float:left}.col-mobile-48{width:48%;float:left}.col-mobile-50{width:50%;float:left}.col-mobile-56{width:56%;float:left}.mobile-center{text-align:center}.mobile-pad{padding:10px}.mobile-pad-right{padding-right:10px}.mobile-pad-left64{padding-left:64px}.mobile-pad-edge{padding:20px}.avatar_container p{padding-right:0px}.avatar_container img{margin-left:25px}}@media screen and (min-width: 0px) and (max-width: 512px){.col-mobile-44{width:100%;float:left}.col-mobile-50{width:100%;float:left}.col-mobile-56{width:100%;float:left}.mobile-show-medium{display:none}.mobile-small-hide{display:none}}
+</style>
+
+<style>
+  .learnpage{width:970px}.solid-block-header{font-size:30px;font-family:'Gotham 7r', sans-serif;line-height:1.2em;background-color:#7665a0;color:white;height:auto;width:100%;padding-top:12px;padding-bottom:6px;padding-left:15px;margin:50px 0 10px 0}.solid-block-subheader{color:#7665a0;font-size:18px;font-family:'Gotham 7r', sans-serif;margin-top:10px;margin-bottom:20px;line-height:1.2em}.solid-block-subtitle{color:white;font-size:16px;font-family:'Gotham 4r', sans-serif}.video-smalltext{padding:10px}.soft-padding{padding:10px}.course-carousel{opacity:0.4}.clear:before,.clear:after{content:"\0020";display:block;height:0;overflow:hidden}.clear:after{clear:both}.carousel .slide-prev>span,.carousel .slide-next>span{width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;position:absolute;top:43%}.carousel .slide-prev>span{border-right:20px solid #b9bf11;left:8px}.carousel .slide-next>span{border-left:20px solid #b9bf11;right:8px}.carousel .slide-prev span.label,.carousel .slide-next span.label{display:none}.carousel-wrapper{position:relative}.carousel-wrapper .pagination{display:block;text-align:center;margin:10px 0 0 0}.carousel-wrapper .pagination a{display:inline-block;width:17px;height:17px;border-radius:50%;margin:0 7px;outline:none}.carousel-wrapper .pagination a span{display:none}.course-carousel-title{text-align:center}.course-carousel{width:100%;margin:0;background:#5a676f}.course-carousel .slides{width:100%;height:480px;background:#5a676f;overflow:hidden}.course-carousel .slide{display:block;position:relative;float:left;background:#5a676f;margin:0;padding:0 40px}.course-carousel .slide-img{float:left;width:100%}.course-carousel .slide img{width:100%;height:100%}.course-carousel .slide .slide-text{float:left;width:100%;padding:10px}.carousel-international .slide .slide-text{padding:20px 10px}.course-carousel .slide h2,.course-carousel .slide h3,.course-carousel .slide p,.course-carousel .slide div{line-height:1.2em;color:#fff}.course-carousel .slide h2{font-size:18px;font-family:'Gotham 5r', sans-serif;margin:0 0 .333em 0}.course-carousel .slide h3{font-size:14px;font-family:'Gotham 5r', sans-serif;margin:0 0 .857em 0}.course-carousel .slide p{font-size:12px;line-height:1.3em;margin:0 0 .833em 0}.course-carousel .slide a{font-weight:inherit}.course-carousel .slide a:link,.course-carousel .slide a:visited{color:#fff;text-decoration:none}.course-carousel .slide .slide-longdescription{display:none}.course-carousel .slide .slide-shortdescription{padding-right:75px;display:block}.course-carousel .slide .slide-tags{margin:0 0 .833em 0;font-size:12px;padding-right:75px}.course-carousel .slide div.slide-participants-count{display:none}.course-carousel .slide .slide-teachers-notes-link{display:none}.course-carousel .slide .slide-shorturl-link{display:none}.btn-carousel-slide{position:absolute;bottom:10px;right:50px;display:block;width:auto;padding:10px 20px;margin:0;font-size:18px;font-family:'Gotham 5r', sans-serif;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.course-carousel .slide-prev,.course-carousel .slide-next{position:absolute;top:0;width:40px;height:100%}.course-carousel .slide-prev{left:0}.course-carousel .slide-prev>span{border-right-color:#fff}.course-carousel .slide-next{right:0}.course-carousel .slide-next>span{border-left-color:#fff}@media screen and (max-width: 319px){.learnpage{width:100%}.fullwidth-carousel .slide{padding-left:0px;padding-right:0px}}@media screen and (min-width: 320px) and (max-width: 599px){.learnpage{width:320px;margin:0 auto}.course-carousel .slides{width:320px;height:383px}.course-carousel .slide{padding:0}.course-carousel .slide .slide-img{width:320px;height:180px;padding:0 40px}.course-carousel .slide .slide-tags{margin-bottom:0}.course-carousel .slide-prev,.course-carousel .slide-next{height:180px}.btn-carousel-slide{right:10px}.fullwidth-carousel .slide .slide-img{height:220px;padding-left:0px;padding-right:0px}}@media screen and (min-width: 600px) and (max-width: 969px){.learnpage{width:600px;margin:0 auto}.course-carousel .slides{width:600px;height:514px}.course-carousel .slide .slide-img{width:520px;height:390px}.fullwidth-carousel .slide{padding-left:0px}.fullwidth-carousel .slide .slide-img{width:600px}.fullwidth-carousel .slide .slide-text{width:600px}.fullwidth-carousel .slide-shortdescription{width:500px}}@media screen and (min-width: 970px){.course-carousel-title{text-align:left}.course-carousel .slides{width:446px;height:335px}.course-carousel .slide{padding:0 40px}.course-carousel .slide .slide-img{width:446px;height:335px}.course-carousel .slide .slide-text{width:444px;height:335px;padding:20px 20px 0 20px}.course-carousel .slide h2{font-size:28px;line-height:1em}.course-carousel .slide h3{font-size:18px}.course-carousel .slide p{font-size:13px}.course-carousel .slide .slide-longdescription{display:block}.course-carousel .slide .slide-shortdescription{display:none}.course-carousel .slide .slide-tags{font-size:14px;padding-right:120px}.course-carousel .slide div.slide-participants-count{margin:0 0 .5em;display:block;font-size:14px;padding-right:120px}.course-carousel .slide .slide-teachers-notes-link{display:block;margin:0.2em 0 0 0;padding-right:120px;font-size:11px}.course-carousel .slide .slide-teachers-notes-link :hover{text-decoration:underline}.course-carousel .slide .slide-shorturl-link{display:block;margin:1em 0 0 0;padding-right:120px;font-size:11px}.course-carousel .slide .slide-shorturl-link :hover{text-decoration:underline}.fullwidth-carousel .slide{padding:0 0}.fullwidth-carousel .slide .slide-img{width:486px}.fullwidth-carousel .slide .slide-text{width:484px}}.datepicker td,.datepicker th{background-color:transparent;color:#333;line-height:1em}.share-buttons{margin:0}.share-buttons button{width:auto;height:auto;font-family:'Gotham 5r', sans-serif;margin:10px 10px 0 0}.share-buttons button i{padding-right:.5em}button{margin-top:10px}#promote-page h1{float:left}#promote-page .section{clear:both;margin:0 0 20px 0}#promote-page h2{margin-bottom:10px}#promote-page .main-video{float:left;width:586px;margin:0 0 20px 0}#promote-page .share-buttons{float:left}#promote-page .youtube-channel-link{float:right;margin:15px 0 0 0}#promote-page .other-videos{float:right;width:380px}#promote-page .other-videos h3{margin:0 0 20px 20px}#promote-page .other-video{width:170px;float:left;margin:0 0 20px 20px}#promote-page .other-video-odd{clear:left}#promote-page .other-video img{width:100%;max-width:100%}#promote-page .other-video-caption{font-size:12px;line-height:1.2em;margin:5px 0 0 0}#promote-page .all-quotes-link,#promote-page .full-infographic-link{float:left;margin:15px 0 0 20px}#stats-carousel,#stats-impact-carousel{width:100%;margin:0;position:relative;background:#fff}#stats-carousel .slide,#stats-impact-carousel .slide{display:block;position:relative;float:left;background:#ebecec;margin:0;padding:0 0px 10px 60px}#stats-carousel .slide-img,#stats-impact-carousel .slide-img{width:100%}#stats-carousel .slide img,#stats-impact-carousel .slide img{width:100%;height:auto;display:block}#stats-carousel .slide-prev,#stats-carousel .slide-next,#stats-impact-carousel .slide-prev,#stats-impact-carousel .slide-next{position:absolute;top:0;width:40px;height:100%;background-color:#f7f7f7}#stats-carousel .slide-prev,#stats-impact-carousel .slide-prev{left:0}#stats-carousel .slide-next,#stats-impact-carousel .slide-next{right:0}#stats-carousel-wrapper .pagination,#stats-impact-carousel-wrapper .pagination{display:block;text-align:center;margin:10px 0 0 0;width:100%;position:absolute;left:0;bottom:10px}.stats-sources-link{float:right;font-size:12px;margin:20px 0 0 0}.stats-sources-link a{font-weight:normal}.impact-stats-link{width:100%;color:white;background-color:#7665a0;margin-top:20px;margin-bottom:20px;overflow:hidden;padding:16px}.impact-stats-link .left{float:left}.impact-stats-link .left p.title{font-size:16px;margin-bottom:3px;font-family:'Gotham 5r', sans-serif}.impact-stats-link .left p.details{margin-bottom:0px}.impact-stats-link .right{float:right}.impact-stats-link button{margin-top:0px;width:200px;height:50px;font-family:'Gotham 5r', sans-serif}@media screen and (min-width: 970px){#stats-carousel .slide .slide-img,#stats-impact-carousel .slide .slide-img{width:850px;height:503px}}#congress-right{margin:0 0 2em 0}#hoc-certificate{width:100%}#hoc-certificate img{width:100%;max-width:100%}@media all{.page-break{display:none}}@media print{.page-break{display:block;page-break-before:always;page-break-inside:avoid}.hide-print{display:none}}#contact-us-form{width:480px;max-width:100%}#contact-us-form #contact-message{height:240px}.resources-item{clear:both;margin:0 0 40px 0}.resources-item:before,.resources-item:after{content:"\0020";display:block;height:0;overflow:hidden}.resources-item:after{clear:both}.resources-item .resources-logo{float:left;width:240px;margin:0 20px 0 0;text-align:center}.resources-item .resources-logo img{max-width:100%;display:inline}.resources-item p{float:right;width:700px}#error-message{color:#b94a48;font-weight:bold;margin:1em 0}.form-required-field{color:#f00}.radio-inline,.checkbox-inline,.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-left:0;margin-right:2em}.letter{margin-left:5%;margin-right:30%}.letternames{margin-left:5%;margin-right:27%}.wideletternames{margin-left:5%}.user_menu,.create_menu{color:white;display:inline-block;background-color:#ffa400;background-color:transparent;border-radius:5px;padding:7px 14px;font-size:14px;line-height:20px;box-sizing:border-box;float:left;cursor:pointer;margin-top:-6px}.user_menu a:hover,.create_menu a:hover{text-decoration:none;background-color:#ffa400}.user_menu{margin-left:6px}@media screen and (min-width: 970px){.starwars-container .img-container{min-height:334px}}@media screen and (min-width: 513px) and (max-width: 970px){.starwars-container .img-container{min-height:202px}}@media screen and (min-width: 320px) and (max-width: 599px){.responsive-table{width:350px}}@media screen and (min-width: 600px) and (max-width: 969px){.responsive-table{width:600px}}@media screen and (min-width: 970px){.responsive-table{width:945px}}
+</style>
+
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script defer src="/js/jquery.min.js"></script>
+<script>/*
+Minimal jQuery shim.
+
+Implements bare-minimum jQuery functionality called by existing inline javascript
+so that we can defer loading the full jQuery library (or avoid loading entirely).
+
+To use, add `jquery: [defer|async|none]` to the page header, watch for page-load errors,
+then optionally implement any additional missing functionality here.
+*/
+window.$ = function() {
+  return {
+    ready: function(callback) {
+      document.addEventListener('DOMContentLoaded', callback);
+    },
+    load: function(callback) {
+      window.addEventListener('load', callback);
+    }
+  };
+}
+</script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div class="containerClass">
+<style>
+  a.underscorehover:hover{text-decoration:underline;color:white}.underscorehover:hover{text-decoration:underline;color:white}a.nounderscorehover:hover{text-decoration:none}@media screen and (max-width: 512px){.same-height-column{width:100%}}@media screen and (min-width: 513px){.same-height-column{float:none !important;width:50%}}body.modal-open .supreme-container{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);-ms-filter:blur(2px);filter:blur(2px)}@media screen and (min-width: 971px){.homepage-caption-bottom{top:190px}}#homepage #hero{position:relative;width:100%}#homepage #hero .widehero{display:none;z-index:-5;position:absolute;left:0;top:0;background-repeat:no-repeat;background-size:cover;width:100%;height:100%}#homepage #hero .widehero_do_not_hide{z-index:-5;position:absolute;left:0;top:0;background-repeat:no-repeat;background-size:cover;width:100%;height:100%}#hero #fullwidth0.widehero{animation:fadein 4s;display:block}@keyframes fadein{from{opacity:0}to{opacity:1}}#homepage #hero #fullwidth{width:100%}#homepage #caption_container{color:white;font-size:20px}#homepage #caption_container .captionarea{position:absolute;left:0;text-align:center;width:100%;color:#fff;line-height:22px}#homepage #caption_container .caption{display:none;position:absolute;opacity:0;padding:8px;text-shadow:0 0 5px black}#homepage #caption_container .smallcaption{font-size:14px}#homepage #caption_container #blankspaceleftdesktop{height:380px}#homepage #caption_container #blankspaceleftmobile{height:100px}#homepage #actions{position:relative;padding:20px}@media screen and (max-width: 970px){#homepage #hero{overflow:visible}}#homepage #actions{text-align:center}#homepage .hero-message{font-family:'Gotham 5r', sans-serif !important;font-size:44px;line-height:44px;color:white;margin-top:0px;margin-bottom:20px}#homepage .hero-message-second{font-family:'Gotham 5r', sans-serif !important;font-size:44px;line-height:44px;color:white;margin-bottom:40px}#homepage .hero-sub-message{color:white;font-size:24px;line-height:32px;margin-bottom:40px}#homepage .action .video-play-icon{width:24px;height:24px;margin-top:-4px;margin-right:4px}.curriculum-banner{width:100%;background-color:#7665a0;text-align:center;color:white;padding:14px;font-size:15px}.curriculum-banner a{color:white !important;font-family:'Gotham 4r', sans-serif !important;text-decoration:underline !important}.curriculum-link{color:white !important;font-family:'Gotham 4r', sans-serif !important;text-decoration:underline !important}#homepage .action_buttons{margin-bottom:20px}#homepage #actions a{text-decoration:none}#homepage #actions #title{font-family:'Gotham 5r', sans-serif;font-size:26px;color:white;line-height:30px}#homepage #actions #subtitle{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;margin:15px 0 5px 0}#homepage #actions #playimage{cursor:pointer}#homepage #actions #playtext{font-size:18px;cursor:pointer}#homepage #actions #herolearnlink{color:white;font-size:20px}#homepage #actions #herolearnbutton{font-weight:500;font-size:20px;height:50px}#homepage #actions .buttongroup{display:inline-block;margin-bottom:20px}#homepage #actions .herohocbutton{font-weight:500;font-size:18px;min-width:230px;height:40px;padding:0 30px;margin:10px 5px 0 0}#homepage #actions .herohocbutton-solid-white{color:black;background-color:white;border-color:white}#homepage #actions .herohocbutton-hollow-white{background-color:initial;border-color:white}#homepage #actions #hero-video{background:none;border:none}#homepage #actions #volunteeraction{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;margin-top:30px}#homepage #actions #volunteeraction a{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;text-decoration:none}#homepage #actions #petitionaction{display:none;font-weight:500;font-size:14px;height:50px;cursor:pointer}#homepage .quarterslot{float:left;height:250px;padding:0px 5px 10px 5px}#homepage .quarterslot .slotbox{position:relative;overflow:hidden;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-position:50%;height:220px;border-radius:5px}#homepage .quarterslot .slotbox .headerbox{position:absolute;bottom:0px;left:0px;color:white;width:100%;padding:10px;font-size:18px;text-align:left;font-family:'Gotham 4r', sans-serif;text-align:center}#homepage .quarterslot .slotbox .headerbox .header{font-family:"Gotham 7r",sans-serif}#homepage .quarterslot .slotbox .headerbox .sentence{font-size:14px;opacity:0.9}#homepage .quarterslot-links{float:left}#homepage .quarterslot-links-small{height:390px;padding:0px 5px 10px 5px}#homepage .quarterslot-links-large{padding:30px}#homepage .quarterslot-links .slotbox{position:relative;overflow:hidden;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-position:0% 50%;height:220px;border-top-left-radius:5px;border-top-right-radius:5px}#homepage .quarterslot-links .headerbox{position:absolute;bottom:0px;left:0px;color:white;width:100%;padding:10px;font-size:18px;text-align:left;font-family:'Gotham 4r', sans-serif;text-align:center}#homepage .quarterslot-links .headerbox .header{font-family:'Gotham 7r', sans-serif}#homepage .quarterslot-links .headerbox .sentence{font-size:14px;opacity:0.9}#homepage .quarterslot-links .thelinks{padding:5px;padding-top:20px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}#homepage .quarterslot-links .thelinks .linkentry{margin-bottom:20px}#homepage .quarterslot-links .thelinks .link{font-size:16px;font-family:'Gotham 4r', sans-serif;color:white}#homepage #gallerycolumn{width:100%;margin-bottom:20px;margin-top:40px;clear:both;overflow:hidden;border:5px solid #fff}#homepage #gallerycolumn .headingbox{left:0px;color:white;width:100%;padding:10px;font-size:20px;text-align:left;font-family:'Gotham 5r', sans-serif;text-align:center;border-top-left-radius:5px;border-top-right-radius:5px}#homepage #gallerycolumn .thelinks{padding:10px;height:0}@media screen and (min-width: 971px){#homepage #gallerycolumn .thelinks{padding-bottom:8%}}@media screen and (min-width: 0px) and (max-width: 970px){#homepage #gallerycolumn .thelinks{padding-bottom:32%}}#homepage #gallerycolumn .thelinks img{height:auto}#homepage #threedivs iframe{-ms-zoom:1.3;-moz-transform:scale(1.3);-moz-transform-origin:0 0;-o-transform:scale(1.3);-o-transform-origin:0 0;-webkit-transform:scale(1.3);-webkit-transform-origin:0 0}#homepage #threedivs .fb-like>span{height:27px !important}.grey_input{background-color:#e2e4e3;color:#525252;border:1px solid #929394}.dropdown{background-color:#e2e4e3;color:#525252;border:1px solid #929394}.stats-box{padding:50px 20px 20px 20px}.every-student{color:#4d575f;font-size:18px;text-align:center;margin-top:20px;margin-left:20px;margin-right:20px}.make-difference{font-weight:900;color:#00adbc;font-size:20px;text-align:center;margin-top:20px;text-transform:uppercase}.statistics{display:flex;flex-wrap:wrap}.statistics a .stats-number{text-align:center;color:#4d575f;font-family:'Gotham 4r', sans-serif;font-weight:900}.statistics a .stats-phrase{font-size:14px;text-align:center;padding-top:25px;color:#4d575f;font-family:'Gotham 4r', sans-serif}.statistics a .stats-number:hover{color:#00adbc}.below_hero_announcement{text-align:center;padding:10px}
+</style>
+
+<div class="supreme-container" id="homepage">
+<div id="hero" style="position: relative">
+<div class="widehero" id="fullwidth0" style="background-position: 50% 30%; background-image: url(/images/homepage/announcement.jpg);"></div>
+<div id="fullwidth">
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+</div>
+<div id="actions">
+<div class="hero-message-line1" dir="auto" style="color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif">
+Learn computer science.
+</div>
+<div class="hero-message-line2" dir="auto" style="color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif">
+Change the world.
+</div>
+<div class="action_buttons">
+<div class="action">
+<a class="linktag" href="//test-studio.code.org/courses" id="hero-hoc">
+<button class="herohocbutton">Start learning</button>
+</a>
+</div>
+<div class="action">
+<button class="clicktag herohocbutton" id="hero-video" onclick="return showVideo_mainvideo();">
+<img class="video-play-icon" src="/shared/images/fit-48/play-button.png">
+<span id="playtext">Watch the video</span>
+</button>
+</div>
+</div>
+<div class="clear" style="clear: both"></div>
+
+</div>
+<div class="container_responsive" id="caption_container">
+</div>
+<div class="clear" style="clear: both"></div>
+</div>
+<script>
+  // Swap in 2x versions of the hero image URLs for retina displays.
+  if (window.matchMedia('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('#hero .widehero'), function(item) {
+      if (item.dataset.bg) {
+        item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      }
+      if (item.style['background-image']) {
+        item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      }
+    });
+  }
+  
+  var petition;
+  
+  $(document).ready(function() {
+    // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
+    // set opacity to 0, ready for code to start showing them by fading them in.
+    $(".caption").css({display: "block", opacity: 0});
+  
+    showQuote(null, 0);
+  
+    // The hero might have an onclick handler; the buttons should prevent it from firing.
+    $("#hero button").each(function() {
+      $(this).click(function (e) {
+        e.stopPropagation();
+      });
+    });
+  });
+  
+  function showQuote(lastImage, nextImage)
+  {
+    if (lastImage !== null)
+    {
+      var lastImageId = "#captionarea" + lastImage;
+      //console.log("hiding", lastImageId);
+      $(lastImageId + " .captionspecial").animate({left: "50px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption1").animate({left: "50px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption2").animate({left: "30px", opacity:0}, { duration: 2000 });
+      $(lastImageId + " .caption3").animate({opacity:0}, { duration: 2000 });
+    }
+  
+    if (nextImageId !== null)
+    {
+      var nextImageId = "#captionarea" + nextImage;
+      //console.log("showing", nextImageId);
+      $(nextImageId + " .captionspecial").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption1").delay(1500).animate({ left: "0px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption2").delay(2000).animate({ left: "60px", opacity: 0.8 }, { duration: 2000 });
+      $(nextImageId + " .caption3").delay(4500).animate({ opacity: 0.6 }, { duration: 2000 });
+    }
+  }
+  
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+  
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+  
+  function cycleImage()
+  {
+    var numWideHeroes = $(".widehero").length;
+  
+    var lastImage = currentImage;
+    var nextImage = (currentImage + 1) % numWideHeroes;
+    $("#fullwidth" + currentImage).fadeTo(4000, 0);
+    $("#fullwidth" + nextImage).fadeTo(4000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+  
+    showQuote(lastImage, currentImage);
+  }
+  
+  $(document).ready(function() {
+    var numWideHeroes = $(".widehero").length;
+  
+    if (numWideHeroes > 1) {
+      timerId = setInterval(cycleImage, 13000);
+    }
+  });
+</script>
+
+
+
+<style>
+  @keyframes slideInFromLeft{0%{transform:translateX(-50px)}100%{transform:translateX(0)}}.animateSlideInFromLeft{animation:5s ease-out 0s 1 slideInFromLeft}.homepage-professional-learning-banner{background-color:#59b9dc;padding-top:5px;padding-bottom:5px}.homepage-professional-learning-banner a{font-family:'Gotham 4r', sans-serif;text-decoration:none}.homepage-professional-learning-banner .nonphone{padding:5px;background-color:#59b9dc;height:97px;margin:0 auto;float:none}.homepage-professional-learning-banner .nonphone .left{float:left;height:87px;position:relative}.homepage-professional-learning-banner .nonphone .left .banner{text-align:center;width:600px;margin:0 auto;position:relative}.homepage-professional-learning-banner .nonphone .left .banner img{width:600px}.homepage-professional-learning-banner .nonphone .left .banner .text{color:white;font-size:18px;padding:15px 15px 15px 0px;text-align:center;line-height:1.5;position:absolute;top:0px;left:37px;animation:fadein 5s}.homepage-professional-learning-banner .nonphone .right{float:left;padding-top:26px;height:87px;text-align:center}.homepage-professional-learning-banner .nonphone .right button{font-size:18px;min-width:140px;margin-top:0px;background-color:transparent;border-color:white;border-width:2px}.homepage-professional-learning-banner .phone{text-align:center}.homepage-professional-learning-banner .phone .text{color:white;font-size:18px;padding:15px;text-align:center;line-height:1.5;top:0px;left:30px;animation:fadein 5s}.homepage-professional-learning-banner .phone button{font-size:18px;min-width:140px;margin-top:0px;margin-bottom:15px;background-color:transparent;border-color:white;border-width:2px}.homepage-professional-learning-banner .clear{clear:both}
+</style>
+
+<div class="homepage-professional-learning-banner">
+<a class="linktag" href="/educate/professional-learning" id="pl-2019">
+<div class="nonphone col-80 tablet-feature">
+<div class="left col-80 animateSlideInFromLeft">
+<div class="banner">
+<img src="/images/homepage/professional-learning-2018-banner.png">
+<div class="text">
+Sign up for Professional Learning! Applications are
+<br>
+now open for Middle and High School teachers.
+</div>
+</div>
+</div>
+<div class="right col-20">
+<button>
+Join us
+</button>
+</div>
+</div>
+<div class="phone phone-feature">
+<div class="text">
+Sign up for Professional Learning! Applications are
+now open for Middle and High School teachers.
+</div>
+<button>
+Join us
+</button>
+</div>
+</a>
+<div class="clear"></div>
+</div>
+
+<div class="every-student">Every student in every school should have the opportunity to learn computer science</div>
+<div class="statistics">
+<a class="nounderscorehover col-20 stats-box linktag" href="//test-studio.code.org/courses" id="stats-0">
+<div class="jumbo stats-number">40%</div>
+<div class="stats-phrase">of U.S. students have accounts on Code.org</div>
+</a>
+<a class="nounderscorehover col-20 col-mobile-48 stats-box linktag" href="/diversity" id="stats-1">
+<div class="jumbo stats-number">20M</div>
+<div class="stats-phrase">of our students are young women</div>
+</a>
+<a class="nounderscorehover col-20 col-mobile-48 stats-box linktag" href="//test-studio.code.org/projects/public" id="stats-2">
+<div class="jumbo stats-number">35M</div>
+<div class="stats-phrase">projects created on Code.org</div>
+</a>
+<a class="nounderscorehover col-20 col-mobile-48 stats-box linktag" href="//test-studio.code.org/courses?view=teacher" id="stats-3">
+<div class="jumbo stats-number">1M</div>
+<div class="stats-phrase">teachers use Code.org</div>
+</a>
+<a class="nounderscorehover col-20 col-mobile-48 stats-box linktag" href="/advocacy" id="stats-4">
+<div class="jumbo stats-number">50</div>
+<div class="stats-phrase">All 50 states support computer science</div>
+</a>
+</div>
+
+<div id="audienceblocks" style="text-align:center; margin-top:0px">
+<div class="block">
+<div class="col-25 col-mobile-50 quarterslot-links quarterslot-links-small">
+<a class="linktag" href="//test-studio.code.org/courses" id="students-en">
+<div class="slotbox" style="background-image: url(/shared/images/fit-400/courses/logo_tall_elementary.jpg)">
+<div class="headerbox" style="background-color: rgb(118, 101, 160); background-color: rgba(118, 101, 160, 0.92)">
+<div class="header underscorehover">
+Students
+</div>
+<div class="sentence">
+Explore our courses
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(166, 155, 193)">
+<p class="linkentry">
+<a class="link linktag" href="//test-studio.code.org/" id="students-en-0" target="_self">
+Try Code Studio
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/learn/local" id="students-en-1" target="_self">
+Find a local class
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/learn/beyond" id="students-en-2" target="_self">
+Other online courses
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-25 col-mobile-50 quarterslot-links quarterslot-links-small">
+<a class="linktag" href="/educate" id="educators-en">
+<div class="slotbox" style="background-image: url(/shared/images/fit-400/courses/logo_tall_teacher2.jpg)">
+<div class="headerbox" style="background-color: rgb(0, 148, 202); background-color: rgba(0, 148, 202, 0.92)">
+<div class="header underscorehover">
+Educators
+</div>
+<div class="sentence">
+Teach your students
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(89, 185, 220)">
+<p class="linkentry">
+<a class="link linktag" href="/educate/curriculum/elementary-school" id="educators-en-0" target="_self">
+Elementary school
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/educate/curriculum/middle-school" id="educators-en-1" target="_self">
+Middle school
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/educate/curriculum/high-school" id="educators-en-2" target="_self">
+High school
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-25 col-mobile-50 quarterslot-links quarterslot-links-small">
+<a class="linktag" href="/hourofcode/overview" id="hoc-en">
+<div class="slotbox" style="background-image: url(/images/fit-400/mc/2016_homepage_hocblock.jpg)">
+<div class="headerbox" style="background-color: rgb(0, 173, 188); background-color: rgba(0, 173, 188, 0.92)">
+<div class="header underscorehover">
+Hour of Code
+</div>
+<div class="sentence">
+Anybody can learn. Start today
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(89, 202, 211)">
+<p class="linkentry">
+<a class="link linktag" href="https://hourofcode.com/" id="hoc-en-0" target="_self">
+About the Hour of Code
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://hourofcode.com/how-to" id="hoc-en-1" target="_self">
+Host an Hour of Code
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/leaderboards" id="hoc-en-2" target="_self">
+910,905,104 served
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-25 col-mobile-50 quarterslot-links quarterslot-links-small">
+<a class="linktag" href="/help" id="advocate-en">
+<div class="slotbox" style="background-image: url(/shared/images/fit-400/courses/logo_tall_map.jpg)">
+<div class="headerbox" style="background-color: rgb(185, 191, 21); background-color: rgba(185, 191, 21, 0.92)">
+<div class="header underscorehover">
+Get involved
+</div>
+<div class="sentence">
+Support diversity in computing
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(209, 213, 103)">
+<p class="linkentry">
+<a class="link linktag" href="/promote" id="advocate-en-0" target="_self">
+See the stats
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/yourschool" id="advocate-en-1" target="_self">
+Bring CS to your school
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/shop" id="advocate-en-2" target="_self">
+T-shirts, hats, &amp; more
+</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="same-height-column" id="gallerycolumn">
+<a class="nounderscorehover linktag" href="//test-studio.code.org/projects/public" id="projects-images">
+<div class="headingbox" style="background-color: rgb(255, 164, 0)">
+Over 35 million Code.org projects created
+</div>
+<div class="thelinks">
+<img class="col-50 lazyload" data-src="/shared/images/gallery/fit-750/gallery_thumbnails_2019a.jpg" height="120" width="750">
+<img class="col-50 lazyload" data-src="/shared/images/gallery/fit-750/gallery_thumbnails_2019b.jpg" height="120" width="750">
+</div>
+</a>
+</div>
+
+<link href="/css/donors.css" rel="stylesheet" type="text/css">
+<div id="donorslider">
+<div class="container_responsive">
+<div id="donorheader" style="position:relative; height:40px">
+<h1>
+Code.org thanks its supporters
+</h1>
+<div class="desktop-feature" id="donorlinks">
+<a href="/about/donors">
+See all
+</a>
+     
+<a href="/donate">
+Donate
+</a>
+</div>
+</div>
+<div class="donor-slider">
+<a href="http://www.facebook.com" target="_blank">
+Facebook, 
+</a>
+<a href="http://www.infosys.com/infosys-foundation/infosys-usa-foundation/Pages/index.aspx" target="_blank">
+Infosys Foundation USA, 
+</a>
+<a href="http://www.microsoft.com" target="_blank">
+Microsoft, 
+</a>
+<a href="https://www.amazon.com/" target="_blank">
+Amazon, 
+</a>
+<a target="_blank">
+PricewaterhouseCoopers, 
+</a>
+<a href="http://en.wikipedia.org/wiki/Steve_Ballmer" target="_blank">
+Ballmer Family Giving, 
+</a>
+<a href="http://www.gatesfoundation.org/" target="_blank">
+Bill and Melinda Gates Foundation, 
+</a>
+<a href="http://www.google.com" target="_blank">
+Google, 
+</a>
+<a href="http://www.omidyar.com" target="_blank">
+Omidyar Network, 
+</a>
+<a href="http://www.partovi.org" target="_blank">
+Ali and Hadi Partovi, 
+</a>
+<a href="https://www.vistaequitypartners.com/" target="_blank">
+Vista Equity Partners, 
+</a>
+<a target="_blank">
+Linda and Glenn Greenberg, 
+</a>
+<a target="_blank">
+Alfred Lin, 
+</a>
+<a target="_blank">
+The Marie-Josée and Henry R. Kravis Foundation, 
+</a>
+<a target="_blank">
+Nathan and Elizabeth Blecharczyk, 
+</a>
+<a target="_blank">
+Charlie Lee, 
+</a>
+<a href="http://about.att.com/content/csr/home/possibilities/at-t-aspire.html" target="_blank">
+AT&amp;T, 
+</a>
+<a href="http://en.wikipedia.org/wiki/Bill_Gates" target="_blank">
+Bill Gates, 
+</a>
+<a href="http://en.wikipedia.org/wiki/Drew_Houston" target="_blank">
+Drew Houston, 
+</a>
+<a href="http://en.wikipedia.org/wiki/John_Doerr" target="_blank">
+John and Ann Doerr, 
+</a>
+<a href="http://en.wikipedia.org/wiki/Sean_Parker" target="_blank">
+Sean Parker, 
+</a>
+<a href="http://research.google.com/pubs/author3770.html" target="_blank">
+Diane Tang and Ben Smith, 
+</a>
+<a href="http://www.crunchbase.com/person/jeffrey-wilke" target="_blank">
+Jeff Wilke, 
+</a>
+<a href="http://www.linkedin.com/in/reidhoffman" target="_blank">
+Reid Hoffman, 
+</a>
+<a href="http://www.qdvm.org/" target="_blank">
+Quadrivium Foundation, 
+</a>
+<a href="http://www.salesforce.com" target="_blank">
+Salesforce, 
+</a>
+<a href="http://www.startupeducation.org/" target="_blank">
+Chan Zuckerberg Initiative, 
+</a>
+<a href="http://www.verizon.com/about/responsibility/verizon-foundation" target="_blank">
+Verizon, 
+</a>
+<a href="https://en.wikipedia.org/wiki/Jeff_Bezos" target="_blank">
+Jeff Bezos, 
+</a>
+<a href="https://www.blackrock.com/" target="_blank">
+BlackRock, 
+</a>
+<a href="https://www.blizzard.com/en-us/" target="_blank">
+Blizzard, 
+</a>
+<a href="https://www.linkedin.com/in/feroz-dewan-4736502" target="_blank">
+Feroz and Erica Dewan, 
+</a>
+<a href="https://www.pluralsightone.org" target="_blank">
+Pluralsight One
+</a>
+</div>
+</div>
+</div>
+
+</div>
+<div id="videofullwidth" style="position:absolute; left: 0; top: 0; width: 100%"></div>
+<div class="modal fade" id="showVideo_mainvideo">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-download-path="//videos.code.org/social/what-most-schools-dont-teach.mp4" data-video-code="nKIu9yen5nc"></div>
+</div>
+</div>
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+<a class="window-popup share-button-facebook-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FCode.org%2Fvideos%2F10100689712053311%2F" style="display: none"><button class="button-color-share share-button-facebook"><i class="fa fa-facebook"></i>Share on Facebook</button></a>
+<a class="window-popup share-button-twitter-link" href="https://twitter.com/intent/tweet?related=codeorg&amp;text=Anybody+can+learn+computer+science%2C+starting+with+an+%23HourOfCode.+https%3A%2F%2Ftwitter.com%2Fcodeorg%2Fstatus%2F828716370053304321" style="display: none"><button class="button-color-share share-button-twitter"><i class="fa fa-twitter"></i>Share on Twitter</button></a>
+</div>
+
+</div>
+<div style="float:right">
+<a href="//videos.code.org/social/what-most-schools-dont-teach.mp4">
+<img height="34" src="/images/download_cropped.png" style="margin-top: 10px;" width="34">
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  window["showVideo_mainvideo"] = function()
+  {
+    $("#showVideo_mainvideo").modal('show');
+    setupPopupWindows();
+    window["playVideo_mainvideo"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_mainvideo video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'mainvideo');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_mainvideo").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_mainvideo"](false);
+    });
+  });
+  
+  window["playVideo_mainvideo"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_mainvideo video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_mainvideo .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature"></div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

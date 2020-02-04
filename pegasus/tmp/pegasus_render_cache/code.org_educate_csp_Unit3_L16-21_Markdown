@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/csp/Unit3_L16-21_Markdown" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Anybody can learn | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+<h1>---------Lesson 16----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h1>Getting Text from the User</h1>
+
+<p>Up until now, the event-driven apps you have created responded to the user clicking an element or typing a number when you used <code>promptNum</code>. <strong>What if we want the user to provide <em>text</em> instead of a number?</strong> You can probably think of many apps and websites that ask you to provide text in order to do something.</p>
+
+<p>In programming, we have to represent text in a specific way to distinguish it from other words in our code, such as variable names. But we'll cover that later...</p>
+
+<p>At the beginning of class you created a Mad Libs on paper, which takes user input in the form of nouns, adjectives, and verbs to create a unique "How-to" manual. You'll be translating your own Mad Libs How-to into an app in this lesson.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Play with this Mad Libs app</strong> a couple of times to see a digital version of the paper game. </li>
+<li>
+<strong>Think about how the final text is created</strong> based on the input from the user. How would you describe in words the algorithm for creating it?"</li>
+</ul>
+
+<h2>------ Level 3------</h2>
+
+<h1>Strings</h1>
+
+<p>The primary data type we have used so far is <strong>Numbers</strong>. If we want to interact with user-submitted text, however, we'll need to learn about a new data type called a <strong>String</strong>.  A string is a <strong>sequence of ASCII characters</strong>.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong></th>
+<th><strong>Rule</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>"aString"</code></td>
+<td>Strings <strong>might</strong> look a lot like a variable name but there are <strong>many differences</strong>.</td>
+</tr>
+<tr>
+<td><code>"look at all these spaces"</code></td>
+<td>Strings can <strong>contain spaces</strong>.</td>
+</tr>
+<tr>
+<td><code>"$2 bills are the coolest"</code></td>
+<td>Strings can <strong>contain special characters</strong> (and even start with them).</td>
+</tr>
+<tr>
+<td><code>"11"</code></td>
+<td>Strings might <strong>contain only digits</strong>. This looks like a number but it is really 2 ASCII characters.</td>
+</tr>
+<tr>
+<td><code>""</code></td>
+<td>Strings might <strong>contain no characters</strong>.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+You can <strong>store strings in a variable just like a number</strong>. In this example the variable name is <code>str</code> but you should choose a name that is <strong>descriptive and meaningful</strong>.</p>
+
+<p><img src="https://images.code.org/56e6b30a51556aa3b516e0a49b51cbeb-image-1445894334432.18.40%20PM.png" alt=""></p>
+
+<p><strong>Combining Strings:</strong> often you will want to combine multiple strings to create one longer string. You can do this with the <code>+</code> operator. The formal name of this process is <strong>concatenation</strong>.</p>
+
+<p>The program you're about to see is a very simple Mad Libs app that uses strings that are created inside the program and  saved inside of variables. These strings are then <strong>concatenated</strong> with other strings to create a Mad Lib.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>The input words of this Mad Lib are <strong>currently set to the empty string</strong>.</li>
+<li>
+<strong>Add your own input words</strong> and run the program to generate the Mad Lib."</li>
+</ul>
+
+<h2>------ Level 4------</h2>
+
+<h1>Importantance of Double Quotes</h1>
+
+<p>You may have noticed that the strings we've seen are <strong>wrapped in double quotes</strong>. These double quotes <strong>are not part of the string</strong>. Instead this is how you indicate that a sequence of characters <strong>is a string and not the name of a variable</strong>.</p>
+
+<p>As you start writing programs with strings <strong>it is common to generate errors from forgetting to place them in double quotes</strong>. We're going to generate some of those errors now so that we can recognize them more easily later.</p>
+
+<p><img src="https://images.code.org/89235457b9b9bf76ac4f8221cae5a62e-image-1445987270682.07.24%20PM.png" alt=""></p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>This program generates many errors</strong> because strings were not placed in quotes.</li>
+<li>
+<strong>Run the program</strong> before you change it to see the errors that are generated.</li>
+<li>
+<strong>Add double quotes</strong> around all the strings so that the program runs without errors.</li>
+</ul>
+
+<h2>------ Level 5------</h2>
+
+<h1>Text Input Elements</h1>
+
+<p>So far we've been using <code>promptNum</code> as a simple way to get a number as input. Now that we know a little about strings we are going to create <strong>user interface elements that users can use to submit text (i.e. strings) instead</strong>. The first and simplest example is <code>textInput</code> which you can find in Design Mode.</p>
+
+<p><img src="https://images.code.org/4436a3ba2a7596c7724380c7c82d5c29-image-1445533665376.36.19%20PM.png" style="width: 100px"></p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Add two text input elements to this program</strong>, one for the name and one for the age of the user.</li>
+<li>
+<strong>Give your text input elements descriptive and meaningful IDs</strong>.</li>
+<li>
+<strong>In Design Mode</strong> set their default text to prompt the user for their name and age.</li>
+<li>
+<strong>Compare your app to the example below</strong>.</li>
+</ul>
+
+<p><img src="https://images.code.org/865403f21bdb27246caeb31afa7c0b5f-image-1445902764676.39.11%20PM.png" style="float:left; width:200px;">
+<br>"</p>
+
+<h2>------ Level 6------</h2>
+
+<h1>Getting Text Input</h1>
+
+<p>As we saw a user can now type inside of a text input whenever they want, <strong>but now we'll need a way to access that text</strong>. In order to do that you'll need to use the <code>getText</code> command, which you can now find in the <strong>UI Controls</strong> tab.</p>
+
+<p><img src="https://images.code.org/0c6774f2b6d33f8107ec2936102b1a10-image-1445533677192.58.24%20PM.png" style="width: 150px;"></p>
+
+<p>You can use a <code>getText</code> command just like a string within a <code>console.log</code> or <code>write</code> command. Just like with <code>setText</code> you will refer to the UI element by its ID.</p>
+
+<p><img src="https://images.code.org/c17e419301d0cfeebf7f0ccee13e415f-image-1445892504376.47.54%20PM.png" alt=""></p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>*<em>Read the documentation *</em>  for <code>getText</code>.</li>
+<li>
+<strong>Add an event handler to the Submit button</strong> that fires when your button is clicked.</li>
+<li>
+<strong>Insider the event handler</strong> place code that will <strong>log the name your user input to the console</strong>.</li>
+</ul>
+
+<h2>------ Level 7------</h2>
+
+<h1>Saving Text Input in Variables</h1>
+
+<p>Often we want to save the information we pull in from the user for later use in our program. The best way to do this is to save it in a variable.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Create two variables inside your event handler</strong> to store the <strong>age</strong> and <strong>name</strong> of the user.</li>
+<li>
+<strong>Use <code>getText()</code> to update the values</strong> stored in each of these variables.</li>
+<li>
+<strong>Change your <code>console.log</code> statements to use your variable instead of <code>getText</code></strong>.</li>
+</ul>
+
+<p><img src="https://images.code.org/ca45dcb01ae2d1956ed2f87efeda0264-image-1445976691215.11.13%20PM.png" alt="">"</p>
+
+<h2>------ Level 8------</h2>
+
+<h1>Generating Text Output</h1>
+
+<p>So far we've been outputting our messages to the console, but now we'd like to display them in the app. In order to do so we're going to be using a new UI element called a <code>textArea</code>. You can use <code>setText</code> with a <code>textArea</code> just like you would with a <code>textLabel</code>.</p>
+
+<p><img src="https://images.code.org/45e6b6cdb1ca87f53cf1d6bba97cb812-image-1445977693641.24.43%20PM.png" alt=""></p>
+
+<p>If we want to combine user input with default text we can do so with <strong>string concatenation</strong>. Together with a <code>textArea</code> we can use this ability to compose longer messages based on user input.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Add a <code>textArea</code></strong> to your app and give it a descriptive and meaningful ID.</li>
+<li>
+<strong>Create a variable inside your event handler</strong> called <code>userMessage</code> to hold the full message that will be sent to the user.</li>
+<li>
+<strong>Use string concatenation</strong> to compose a message from the user input.</li>
+<li>
+<strong>Use <code>setText</code></strong> to place your <code>userMessage</code> inside the <code>textArea</code> you created.</li>
+</ul>
+
+<p><img src="https://images.code.org/193af3e0c993dbf0b7af9c571ec5f56d-image-1445977696957.27.08%20PM.png" style="width:250px;">"</p>
+
+<h2>------ Level 9------</h2>
+
+<h1>String Capitalization</h1>
+
+<p>If you want to change the capitalization of a string you can do so with two new functions</p>
+
+<p><img src="https://images.code.org/d8523cdae7c07b34baa1c61809bb80d4-image-1445980407200.42.31%20PM.png" alt=""></p>
+
+<p>Note that the syntax is similar to <code>console.log</code> . This is because <code>toUpperCase</code> really only makes sense as a command when you are using a <strong>string</strong>, just as <code>log</code> only makes sense when you are talking about the console. This function <strong>evaluates to a new string in which all characters have been made uppercase / lowercase</strong>. If you want to update the value in your original variable you'll have to do so explicitly, as in</p>
+
+<pre><code>
+var myString = "lower case for now";
+myString = myString.toUpperCase();
+</code></pre>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Update your application so that the user's name is printed in UPPERCASE</strong>.</li>
+</ul>
+
+<p><img src="https://images.code.org/26d8ffb7c631c1c510f781b5bf46d494-image-1445980322936.04.55%20PM.png" style="width:250px;">"</p>
+
+<h2>------ Level 10------</h2>
+
+<h1>Back to Mad Libs: Design Your App</h1>
+
+<p>Now that you've had some practice getting user text and making new strings with it, you're ready to turn your How-to Mad Libs into an app. To get started, you'll set up the layout. There are two main screens:</p>
+
+<p><strong>Screen 1: Collect User Input</strong>  </p>
+
+<ul>
+<li>On this screen, you'll use <strong>text labels</strong> and <strong>text input</strong> design elements to set up the different words you want the user to provide.</li>
+<li>A <strong>Next</strong> button takes you to Screen 2 to view the full Mad Libs.</li>
+</ul>
+
+<p><strong>Screen 2: View Mad Libs</strong>  </p>
+
+<ul>
+<li>On this screen, you'll use the <strong>text area</strong> design element to create the space where the user's completed Mad Libs will be displayed.</li>
+<li>A <strong>Play again</strong> button takes you to back Screen 1.
+<br>
+<br>
+</li>
+</ul>
+
+<table>
+<tr>
+<td>
+<strong>Screen 1:</strong>
+</td>
+<td>
+<strong>Screen 2:</strong>
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://images.code.org/ccea092b516047dff82fafa50b47bcc7-image-1447974038265.00.17%20PM.png" style="width:150px;float:right;">
+</td>
+<td>
+<img src="https://images.code.org/0f832e6314ad98170a3cddb317d26e41-image-1445898480304.27.45.png" style="width:151px;float:right;">
+</td>
+</tr>
+</table>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Create the two screens for your app, including the design elements in each one.</li>
+<li>Requirement: Request at least 3 separate words from the user on Screen 1.</li>
+<li>Create the event handlers for the <strong>Next</strong> and <strong>Play again</strong> buttons to respond to clicks.</li>
+<li>Use <code>setScreen</code> in the event handlers to get the screen navigation working.</li>
+</ul>
+
+<h2>------ Level 11------</h2>
+
+<h1>Update the Text Area with Your Mad Libs Outline</h1>
+
+<p>When figuring out how to make progress with a program, it helps to break the problem down into smaller steps and test your program incrementally. So rather than jumping straight to getting the user input and <strong>concatenating</strong> it with your Mad Libs outline, start first by just making sure that you can get your Mad Libs outline to appear in the text area when the <strong>Next</strong> button is clicked on the first screen. </p>
+
+<p>But wait! If you just use <code>setText</code> and pass in the string of your Mad Libs outline, it will look like the screen on the left where all the steps are smushed together. You can use one or more newline characters, <code>"\n"</code>, in your string to create a line break in your text.</p>
+
+<table>
+<tr>
+<td>
+<strong>Without newlines</strong>
+</td>
+<td>
+<strong>With newlines</strong>
+</td>
+</tr>
+<tr>
+<td>
+
+<img src="https://images.code.org/24fb1385d6199cd52c6e1d3d11e547fc-image-1448404478181.png" style="width:201px;float:right;">
+</td>
+<td>
+<img src="https://images.code.org/3a627993f9e0e4a6d462c8a21b335058-image-1448404299215.png" style="width:200px;float:right;">
+</td>
+</tr>
+</table>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>When the <strong>Next</strong> button is clicked, you already switch to Screen 2, but now you should also call <code>setText</code> on the text area on Screen 2 to your Mad Libs outline. See the images above for one way to temporarily handle the word placeholders.</li>
+<li>Add in newline characters <code>"\n"</code> in your Mad Libs string to format it.</li>
+</ul>
+
+<p><details>
+<summary><strong>Newline Examples</strong></summary></details></p>
+
+<table style="width:100%; margin-left:25px;">
+<tr>
+<td style="vertical-align: text-top; border-right:1px solid #000">
+    **Example1:**<br><br>
+    
+    <samp>console.log("How to Drive\nStep 1.");<br><br></samp>
+    
+    *will be displayed as...*<br><br>
+    
+    <samp>How to Drive<br>Step 1.<br><br></samp>
+    
+    *...on your console.*
+</td>
+<td style="padding-left:20px;">
+<samp>**Example2:**<br><br>
+    
+    var step1 = "Step 1: ...";<br>
+    
+    var step2 = "Step 2: ...";<br>
+    
+    console.log(step1 + "\n" + step2);<br><br></samp>
+    
+    *will be displayed as...*<br><br>
+    
+    <samp>Step 1: ...<br>Step 2: ...<br><br></samp>
+    
+    *...on your console.*
+</td>
+</tr>
+</table>
+
+<p>"</p>
+
+<h2>------ Level 12------</h2>
+
+<h1>Make It Mad! Add the User's Text to Your Mad Libs Outline</h1>
+
+<p>Now that you have your Mad Libs outline appearing in the text area, it's time to <strong>incorporate the user's text</strong> to make your Mad Libs come alive.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Did you pick good ID names for your text input elements? Update them now if you didn't!</li>
+<li>When the <strong>Next</strong> button is clicked, <strong>get the user's text from the text inputs on Screen 1 and store each in a separate variable</strong>.</li>
+<li>Use string concatenation to <strong>incorporate the user's text into your Mad Labs string</strong> before updating the text area on Screen 2. </li>
+</ul>
+
+<p><details>
+<summary><strong>Hint</strong></summary>
+Use <code>getText</code> to get the text from each of the text inputs on Screen 1.
+</details>
+<details>
+<summary><strong>Should I make local or global variables?</strong></summary>
+Remember that the decision to create local variables or global variables is a question of <em>scope</em>. Where will you need to access these variables in your program? If you are only using the variables in the click callback function for the "Next" button, then they can be <em>local</em> variables in that function. 
+</details>"</p>
+
+<h2>------ Level 13------</h2>
+
+<h1>Why Are You Yelling At Me?! <em>toUpperCase</em> and <em>toLowerCase</em>
+</h1>
+
+<p>The main functionality of the Mad Libs app is complete, but there are some finishing touches to add. The user may type input with random letter capitalization, but the Mad Libs output string should be consistently capitalized.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Pick one or more pieces of the user's input text to transform into "yelling" or emphasize by <strong>making it uppercase</strong> before displaying it.</li>
+<li>For the other pieces of the user's input text, <strong>make it lowercase</strong> before displaying it.</li>
+</ul>
+
+<p><details>
+<summary><strong>Hint</strong></summary>
+Remember the rules of updating variables! You can update a variable after first getting its current value and then doing something with it. <br> Example: <code>song = song.toUpperCase();</code>
+</details>"</p>
+
+<h2>------ Level 14------</h2>
+
+<h1>Play It Again and Again!</h1>
+
+<p>When the user clicks the "Play again" button, the first screen should reset and not show the user's previous text.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>When the "Play again" button is clicked, <strong>clear the text from each text input</strong> on Screen 1.</li>
+<li>
+<strong>Free play:</strong> Add images, or more How-to steps for your Mad Libs, and invite others to play!</li>
+</ul>
+
+<p><img src="https://images.code.org/a49fe3eba4d2d2fb03e45d15aad53dbf-image-1450143105779.16.14%20Mad%20Libs%20play%20again%20button.gif" style="width:200px"></p>
+
+<p><details>
+<summary><strong>Hint</strong></summary>
+Try setting the text to the empty string: <code>""</code>.
+</details></p>
+
+<h2>------ Level 15------</h2>
+
+<h1>---------Lesson 17----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h2>------ Level 3------</h2>
+
+<h1>Introduction to the Digital Assistant</h1>
+
+<p><strong>While digital assistants may seem like magic, they are just elaborate computer programs that parse, or process, text</strong> looking for combinations of words to make decisions about what to reply.</p>
+
+<p>Over the next few lessons, <strong>you're going to build up your own digital assistant that responds "intelligently" to a user's question</strong>, by making a decision about what to reply based on the contents.</p>
+
+<p>You'll now <strong>explore a demo digital assistant</strong>, Movie Bot, that represents the kind of program that you'll build up to. Try out some of the prompts below and also try your own. You'll quickly find the limits of what this program can and can't do.</p>
+
+<h1>Do This:</h1>
+
+<p>_<em>Run Movie Bot. In the _'enter your question here'</em> input, type each of the following prompts and hit 'enter.' __</p>
+
+<ul>
+<li>'help'</li>
+<li>'What is the best PG comedy movie ever?'</li>
+<li>'What PG comedy movie should I watch next?'</li>
+<li>'Could you please tell me the best romance movie?'</li>
+<li>'I waNT To WatCH a MovIE!!!'</li>
+<li>'What is the capital of Kentucky?'</li>
+<li>Play around! Ask more questions of Movie Bot and make a prediction about what logic it's using to reply.</li>
+</ul>
+
+<h2>------ Level 4------</h2>
+
+<h1>Introducing the  <em>change</em> Event</h1>
+
+<p>Did you notice with the demo digital assistant that you could just <strong>type a question, hit 'enter', and the assistant would respond</strong>? Up until now you've been using the click of a button to trigger getting the text from an input or text area.</p>
+
+<p>You can use a new event type to get this behavior: The <strong>'change' event</strong> is triggered when the user hits 'enter' in a text input after typing.</p>
+
+<p><img src="https://images.code.org/7d1725b236471f8e2a0efed5870660da-image-1446071579670.32.36.png" style="width:350px;"></p>
+
+<h1>Do This:</h1>
+
+<p><img src="https://images.code.org/f8f1f7ae18acbc570a367886bcd6ca88-image-1445976541574.gif" style="width:250px;"></p>
+
+<ul>
+<li>A <strong>text input</strong> has been created for you that asks for a user's name.</li>
+<li>Attach a <strong>'change'</strong> event handler to the text input.</li>
+<li>When the 'change' event triggers, <strong>write the user's name and a greeting</strong>.</li>
+</ul>
+
+<h2>------ Level 5------</h2>
+
+<h1>Getting Started with Your Digital Assistant</h1>
+
+<p><img src="https://images.code.org/e875ff7b54c314a378cdb784f92371a0-image-1445989933171.52.04.png" style="width:200px;float:right;">
+Over the course of the next few lessons, you'll be <strong>developing your own digital assistant</strong>. To make your digital assistant more useful, it needs to be able to make <strong>decisions</strong> based on questions the user asks it, and respond intelligently.</p>
+
+<p>To get started, <strong>choose a topic</strong> you want your digital assistant to specialize in. It should be something you are interested in and know a lot about. Examples: Country Music, Sushi, College Football, Comedy Movies.</p>
+
+<p>You'll next set up the layout for your app. <strong>The basic layout contains just two primary design elements:</strong> a text input and a text area.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Choose a topic</strong> for your digital assistant to specialize in.</li>
+<li>
+<strong>Create the layout</strong> for your app. Your digital assistant should have:
+
+<ul>
+<li>A name</li>
+<li>A text input for the user to ask a question</li>
+<li>A text area for the digital assistant to respond</li>
+<li>The text area should have a greeting for the user (e.g. Ask me a question about movies!)</li>
+</ul>
+</li>
+</ul>
+
+<h2>------ Level 6------</h2>
+
+<h1>Respond to Basic User Input</h1>
+
+<p><img src="https://images.code.org/2bed8002ff3c89afb02db5809de1c40e-image-1445996503055.gif" style="width:200px;float:right;">
+Now you can have your digital assistant repeat what the user typed and add a <strong>default response</strong>. It's not the most intelligent response, but you'll build up to that over the next couple of lessons and it's important to build this program in pieces.  </p>
+
+<h1>Looking Back to Move Forward</h1>
+
+<p>You're going to now add to your program without as much guidance as usual. Keep in mind that <strong>this is very similar to programs you've already built</strong>, so look back at your work for a refresher.</p>
+
+<ul>
+<li>
+<strong>Mad Libs:</strong> In Mad Libs you got a user's text when the 'Next' button was clicked, filled in the outline with the responses, and displayed the completed Mad Lib</li>
+<li>
+<strong>Introducing the 'change' event:</strong> You just learned about the 'change' event that triggers when the user hits 'enter' on a text input.</li>
+</ul>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Take the user's question and output it to the text area</strong> when the 'enter' key is pressed in the text input</li>
+<li>The response should also <strong>include a default phrase</strong> such as <em>"I don't know about that yet!"</em>
+</li>
+<li>
+<strong>Format the response with newline characters</strong> to separate the user's response from the assistant's response.: <code>\n</code>
+</li>
+<li>The <strong>text input should clear</strong> after the user hits 'enter'"</li>
+</ul>
+
+<h2>------ Level 7------</h2>
+
+<h1>---------Lesson 18----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h2>------ Level 3------ "<style></style>
+</h2>
+
+<p>td{
+ border: solid 1px black;
+}
+</p>
+
+<h1>Explore Comparison Operators</h1>
+
+<p>True/false decisions are made using boolean expressions. A <strong>boolean expression</strong> is an expression that only evaluates to TRUE or FALSE, and you can use <strong>comparison operators</strong> to craft boolean expressions.  </p>
+
+<h1>Do This:</h1>
+
+<p>Use <code>console.log</code> to <strong>print out the different boolean expressions below to see what information they return</strong>.</p>
+
+<table>
+<thead>
+<tr>
+<th>Boolean Expressions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 &gt; 2</td>
+</tr>
+<tr>
+<td>2 &gt; 3</td>
+</tr>
+<tr>
+<td>5 + 3 &lt; 10</td>
+</tr>
+<tr>
+<td>‘a’ &lt; ‘b’</td>
+</tr>
+<tr>
+<td>‘j’ &gt; ‘c’</td>
+</tr>
+<tr>
+<td>2 == 2</td>
+</tr>
+<tr>
+<td>2 != 2</td>
+</tr>
+<tr>
+<td>true == false</td>
+</tr>
+<tr>
+<td>"x" == x</td>
+</tr>
+<tr>
+<td>"Blue" == "blue"</td>
+</tr>
+<tr>
+<td>x &lt; 10</td>
+</tr>
+</tbody>
+</table>
+
+<h2>------ Level 4------</h2>
+
+<h2>------ Level 5------</h2>
+
+<h2>------ Level 6------</h2>
+
+<h1>
+<em>if</em> Statement</h1>
+
+<p><img src="https://images.code.org/040c8364e3795252194b816623e949e5-image-1446227663554.54.03%20PM.png" style="width: 100px; float: right"></p>
+
+<p>The boolean expression we tested on the last level allows us to make decisions. In order to make these decisions we need to use something called a conditional. <strong>Conditionals check if a boolean expression is true and then will execute the code inside of the <code>if</code> statement.</strong> </p>
+
+<p><img src="https://images.code.org/84123a7c317c63d8876b6b56086d717e-image-1446228290588.png" style="width: 150px; float: right"></p>
+
+<p>Over the number couple levels we are going to be creating a <strong>Guess My Number game</strong>. The starter code uses <code>promptNum</code> to ask the user for a number from 1 to 10. The <code>if</code> statement checks if the user guess is equal to the secret number.  Right now nothing happens when they guess the right number. Can you fix that?</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Read the code to identify the boolean expression.</li>
+<li>Add a text label to the screen. Have it start out with "Guess my secret number!"</li>
+<li>
+<strong>Set the text label to say "You got it right!" from inside the <code>if</code> statement</strong>. This will tell them they get it right only when that condition is true!</li>
+<li>
+<strong>Test your code out</strong> to make sure it works.</li>
+</ul>
+
+<p><img src="https://images.code.org/2f3487ec7a8d7cec1605f3da830c83f8-image-1446227512726.gif" style="width: 350px">"</p>
+
+<h2>------ Level 7------</h2>
+
+<h1>Dropdown</h1>
+
+<p>On the last level we used <code>promptNum</code> to get the user's guess. However, we had no way to limit them to the numbers we wanted. They could have typed 11 even though we told them not to. A better way to get input with a limited set of options is the dropdown. The <img src="https://images.code.org/3b21b4288a2a155d1e9a3c2cf3a5b09b-image-1446229368079.28.23%20PM.png" style="width: 75px"> is in your Design Mode Toolbox. You can control the list of options users can choose and then use <code>getText</code> to get the chosen number.</p>
+
+<p>We are going to need an event handler in order to do this. The event handler will detect when the user has changed the value of the dropdown. </p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Add a dropdown</strong> for their guess instead of <code>promptNum</code>. Make sure to give it a good ID.</li>
+</ul>
+
+<p><img src="https://images.code.org/fea164f6e53d1ce0c50981565e066d4c-image-1446229598357.gif" style="width: 350px"></p>
+
+<ul>
+<li>Under properties <strong>find the Options</strong> and change it to the <strong>numbers 1 to 10</strong>
+</li>
+</ul>
+
+<p><img src="https://images.code.org/0cfecbcdcfb95fc30876155ec6a3a021-image-1446229593687.gif" style="width: 250px"></p>
+
+<ul>
+<li>Add an event handler to detect the <code>change</code> event on your dropdown.<br><br>
+<img src="https://images.code.org/48cffda5b7ff3a446116a39b4dbcbe8c-image-1446232308751.gif" style="width: 150px; float: right">
+</li>
+<li>Move your <code>if</code> statement inside the event handler so it will check each time the dropdown is changed.<br><br>
+</li>
+<li>When the dropdown is changed <strong>use <code>getText</code> to find out the user's guess</strong>. Save the guess using a variable. <strong>Don't forget about scope!</strong><br><br>
+</li>
+<li>Test your app -- it should work like the demo."</li>
+</ul>
+
+<h2>------ Level 8------</h2>
+
+<h1>What happens after an <em>if</em> ?</h1>
+
+<p>You may have noticed that our flowchart for our game so far only does something if the condition is true. What happens after the <code>if</code> statement? Let's find out.</p>
+
+<p><img src="https://images.code.org/90b7a527091704a6ab4612b9f84db305-image-1446234882661.png" style="width: 200px"></p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Add a <code>setText</code> after the <code>if</code> statement</strong> to "Nope. Guess again."</li>
+</ul>
+
+<p><img src="https://images.code.org/f5c5de1b77a9caf16027e65ed24f91ec-image-1446234785600.gif" style="width: 450px"></p>
+
+<ul>
+<li>
+<strong>Run the program</strong> a couple times to <strong>look for a bug</strong>. We will fix this on the next level."</li>
+</ul>
+
+<h2>------ Level 9------</h2>
+
+<h2>------ Level 10------</h2>
+
+<h1><em>else</em></h1>
+
+<p><img src="https://images.code.org/b7942d778a54465ad6f9f19fbab8d1ef-image-1446237289306.34.23%20PM.png" style="width: 150px; float: right"></p>
+
+<p>Let's add an <code>else</code> statement so we can tell the user when they are right and when they are wrong.</p>
+
+<p><strong>Note:</strong>  You can create an <code>else</code> statement by hitting the <img src="https://images.code.org/f762344bc839dd8385730bb7d909657f-image-1446237096776.31.12%20PM.png" style="width: 40px"> at the bottom of an <code>if</code> statement.  There is also an <code>if-else</code> block in the toolbox. </p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Add an <code>else</code> statement</strong></p></li>
+<li><p><strong>Move your <code>setText</code> inside the <code>else</code> statement.</strong> So it should say "Nope that's not it. Guess again." when the user does not guess the secret number."</p></li>
+</ul>
+
+<h2>------ Level 11------</h2>
+
+<h2>------ Level 12------</h2>
+
+<h1><em>else-if</em></h1>
+
+<p>Let's help the user even more by telling them if they were right or if their guess was high or low. There are <strong>only 3 possible cases:</strong> </p>
+
+<ul>
+<li>They were right.</li>
+<li>Their guess was higher than the number.</li>
+<li>Their guess was lower than the number. </li>
+</ul>
+
+<p>Therefore, we can use a conditional set with one <code>if</code>, one <code>else-if</code>, and one <code>else</code> to implement this. Check out the flowchart below to see the logic. In order to check if something is high remember you can use the greater than <code>&gt;</code> symbol.</p>
+
+<p><strong>Remember:</strong>  You can create an <code>else-if</code> statement by hitting the <img src="https://images.code.org/f762344bc839dd8385730bb7d909657f-image-1446237096776.31.12%20PM.png" style="width: 40px"> at the bottom of an <code>if</code> statement. The first <img src="https://images.code.org/f762344bc839dd8385730bb7d909657f-image-1446237096776.31.12%20PM.png" style="width: 40px"> will add an <code>else</code>, the second will add an <code>else-if</code>.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Add an <code>else-if</code> statement to accommodate the 3 conditions.</strong></p></li>
+<li><p><strong>Update the conditions</strong> using <code>&lt;</code>, <code>&gt;</code>, and <code>==</code> to tell the user if their guess was correct, high, or low.</p></li>
+<li><p><strong>Test out the program</strong> to make sure your updates worked.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/f7e483414dfe1d4585841e653e44d8b0-image-1446169181724.png" style="width: 100%">"</p>
+
+<h2>------ Level 13------</h2>
+
+<h1>Debug Conditionals</h1>
+
+<p>Help! <strong>I was trying to give the player a hint when their guess was within 2 of the secret number but the code I wrote isn't working.</strong> Can you fix it?</p>
+
+<p>Check out the flow chart for the logic I wanted. <strong>Hint:</strong> The major problem here is that <strong>conditional statements run in order from top to bottom</strong>. Remember you have to check the smallest case first. Which set of numbers is larger (guess &gt; secret number) or (guess &gt; secret number + 2) ?</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p>Run the code to identify when the program is not working correctly.</p></li>
+<li><p>Fix the problem with the order of the conditionals.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/49a498425a6bd482523123ef46a1a747-image-1446416359338.png" style="width: 100%; float: right">
+<a href="https://images.code.org/49a498425a6bd482523123ef46a1a747-image-1446416359338.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 14------</h2>
+
+<h1>Using <code>if</code> to Display Images</h1>
+
+<p>We are going to set up a dice game. We want to show a picture of a single die for each random number generated 1 to 6. We've already set up the screen in Design Mode, with a button to generate the roll and an image to show a picture of the die.</p>
+
+<p><strong>Note:</strong> The flowchart for the desired behavior is below.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p>Add an event handler for the Roll! button so that when the button is clicked it generates a random number from 1 to 6. </p></li>
+<li>
+<p>Add conditionals (<code>if</code>, <code>else if</code>, and <code>else</code>) to change the picture of the image (ID: <code>dice_image</code>) to display the correct side of the die depending on the random number generated. You will need to use <img src="https://images.code.org/89f2c13ef4ead590475c863a087597f8-image-1446535826599.30.16.png" style="width:150px"> with the URLs below to set the images for the die.</p>
+
+<ul>
+<li>
+<img src="https://code.org/images/dice/1.png" style="width: 50px"> Dice 1 Image URL -  <a href="https://code.org/images/dice/1.png">https://code.org/images/dice/1.png</a>
+</li>
+<li>
+<img src="https://code.org/images/dice/2.png" style="width: 50px"> Dice 2 Image URL -  <a href="https://code.org/images/dice/2.png">https://code.org/images/dice/2.png</a>
+</li>
+<li>
+<img src="https://code.org/images/dice/3.png" style="width: 50px"> Dice 3 Image URL - <a href="https://code.org/images/dice/3.png">https://code.org/images/dice/3.png</a>
+</li>
+<li>
+<img src="https://code.org/images/dice/4.png" style="width: 50px"> Dice 4 Image URL - <a href="https://code.org/images/dice/4.png">https://code.org/images/dice/4.png</a>
+</li>
+<li>
+<img src="https://code.org/images/dice/5.png" style="width: 50px"> Dice 5 Image URL - <a href="https://code.org/images/dice/5.png">https://code.org/images/dice/5.png</a>
+</li>
+<li>
+<img src="https://code.org/images/dice/6.png" style="width: 50px"> Dice 6 Image URL -  <a href="https://code.org/images/dice/6.png">https://code.org/images/dice/6.png</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<p><img src="https://images.code.org/392c125a2620ac4949091fc075864f4c-image-1446174585241.png" style="width: 100%">
+<a href="https://images.code.org/392c125a2620ac4949091fc075864f4c-image-1446174585241.png" target="_blank">Open diagram in a new tab</a></p>
+
+<h2>------ Level 15------</h2>
+
+<h1>Adding Guess and Score to Dice Game</h1>
+
+<p>Let's have the user guess the number that will come up when we roll a single die. </p>
+
+<p>You can have multiple <code>if</code> statements, one after another, if they have different purposes which are separate. </p>
+
+<p>** Note: ** Use the flowchart below to help you figure out the logic of the game.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Add a dropdown</strong> to take in the user's guess from 1 to 6.</p></li>
+<li><p><strong>Add a set of <code>if</code> statements to check if the dice roll number is equal to the user guess.</strong> Put this set of <code>if</code> statements after your set of <code>if</code> statements for the dice image. It should be completely separate from the other set of <code>if</code> statements. </p></li>
+<li><p>Create a variable to <strong>keep track of score</strong>. Give 10 points if they guess right and take one point away when they guess wrong.</p></li>
+<li><p><strong>Display the score</strong> on the screen and update it after each dice roll.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png" style="width: 100%">
+<a href="https://images.code.org/ac24917ca18606f6f3c31a6be1a16d73-image-1446174953979.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 16------</h2>
+
+<h1>Adding Difficulty Levels: Dropdowns with Strings</h1>
+
+<p>Let's add another element to our dice game: <strong>difficulty levels</strong>. The user will pick either "Easy" or "Hard."  These are strings so you might be wondering how to check for equality. <strong>The <code>==</code> works on strings as well!</strong> It checks if the first string is exactly the same as the second string. <strong>Strings must be the same letters and even have the same case to be equal</strong>! So "dog" and "Dog" would not be equal. </p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Add a dropdown</strong> for difficulty level with the options of "Easy" or "Hard." </p></li>
+<li><p><strong>Create an <code>if</code> statement for difficulty level</strong> which prints the difficulty level to the console.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png" style="width: 100%">
+<a href="https://images.code.org/9db291c8dd4192390e008aa764576cd3-image-1446175136919.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 17------</h2>
+
+<h1>Nested <em>if</em> Statements</h1>
+
+<p><img src="https://images.code.org/1774efb17571d3370662e34b705dde47-image-1446485939643.37.11%20PM.png" style="width: 150px; float: right"></p>
+
+<p><strong>Let's change the scoring of the game to match the difficulty level.</strong> </p>
+
+<p>New scoring rules:</p>
+
+<ul>
+<li><em>Easy: +10 points right answer / -1 point for wrong answer</em></li>
+<li><em>Hard: +1 point right answer / -1 point for wrong answer</em></li>
+</ul>
+
+<p>How do we check <em>both</em> the difficulty level and if the user's guess was correct? <strong>We can actually put <code>if</code> statements inside of other <code>if</code> statements!</strong> So we first want to check what the difficulty level is and then check if the user was right or wrong to determine the score.</p>
+
+<p>** Note: ** The flowchart below outlines the logic you are trying to implement.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Move a copy of the score <code>if</code> statement inside of the difficulty levels. Be careful with indenting. All of the <code>if</code> statements for score need to be inside of the difficulty <code>if</code> statement (i.e. indented 1 level more than the difficulty <code>if</code> statement)</li>
+</ul>
+
+<p><img src="https://images.code.org/2125a027997aeca75d18b8423058063d-image-1446485524945.gif" style="width: 350px"></p>
+
+<ul>
+<li>Edit the <code>if</code> statements to give the correct scores
+
+<ul>
+<li>Easy level (+10 right, -1 wrong)</li>
+<li>Hard level (+1 right, -1 wrong)</li>
+</ul>
+</li>
+</ul>
+
+<p><img src="https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png" style="width: 100%">
+<a href="https://images.code.org/3b95a9f5cca60fc0ffbf7c2fb174d737-image-1446175290414.png" target="_blank">Open diagram in a new tab</a></p>
+
+<h1>---------Lesson 19----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h1>Adding Intelligence Using Conditionals</h1>
+
+<p>So far the digital assistant you created responds with the same message no matter what the user types. Let's look at how to make the digital assistant smarter. Let's work on creating a Movie Bot example before returning to your digital assistant.</p>
+
+<p>In the last lesson we learned about <code>if</code>, <code>else-if</code>, and <code>else</code> statements. These allow us to make decisions. In the digital assistant we want to make decisions based on keywords. *<em>The first keywords we want the Movie Bot to respond to are the movie genres: comedy, romance, action, and horror. *</em></p>
+
+<p>*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to add. The current portions of the diagram that we are creating are <mark>highlighted in yellow</mark>.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Run the code</strong> to understand what it does.</p></li>
+<li><p><strong>Add <code>else-if</code> statements</strong> to the <code>if</code> to check if the word the user typed matches <strong>action, romance and horror</strong>.  <strong>Note:</strong> Movie Bot will only understand input in the form of "comedy" not "Comedy" or "What is a comedy?" </p></li>
+<li><p><strong>Add an <code>else</code> statement</strong> to print a default answer for any other input.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/8ec655795042a2a3a22a85f0886f0d21-image-1446067226646.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/8ec655795042a2a3a22a85f0886f0d21-image-1446067226646.png" target="_blank">Open diagram in a new tab</a></p>
+
+<h2>------ Level 3------</h2>
+
+<h1>Dealing with Character Case</h1>
+
+<p>What if the user types <strong>ACTION</strong> instead of <strong>action</strong>? These are two different strings to the computer and therefore it won't recognize they are the same. We want Movie Bot to treat words the same ignoring the case of the letters. We can do this using the string command <code>toLowerCase</code>.</p>
+
+<p>*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to add. </p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Try typing COMEDY, ACtioN, horroR, and Romance</strong> into Movie Bot.</p></li>
+<li><p><strong>Use the <code>toLowerCase</code> command</strong> to change all user input into lowercase letters after they enter it.</p></li>
+<li><p><strong>Check that COMEDY, ACtioN, horroR, and Romance generate the same recommendations</strong> as comedy, action, horror, and romance.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/183082e89d296b88112a5a5380afac6c-image-1446069165327.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 4------</h2>
+
+<h1><em>includes</em></h1>
+
+<p><img src="https://images.code.org/7373ad2ad98b0d815ce0b8196c2ec177-image-1446070324010.11.43%20PM.png" style="width: 250px; float:right"></p>
+
+<p>We're going to explore a new function called <code>includes</code>. This function can be used to check if one string appears anywhere inside of another. Just like <code>toUpperCase</code> and <code>toLowerCase</code> this function is called using <strong>dot notation</strong>.</p>
+
+<h1>
+<em>includes</em> Returns a Boolean</h1>
+
+<p><strong><code>includes</code> is a function that returns a boolean.</strong> In other words, when the function runs it will <strong>evaulate to either <code>true</code> or <code>false</code></strong>. This function can be used <strong>anywhere you would normally use a boolean expression</strong>.</p>
+
+<p>You've actually <strong>seen a few functions that return a value before this</strong>. <code>randomNumber</code> is a function that returns a number and <code>getText</code> is a function that returns a string. In every case we've used these functions <strong>as if they were the data type they return (or evaulate to)</strong>. Notice that in block mode these functions don't have the connectors that other commands do since they will be used as a piece of data within another function.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Read the documentation</strong> for <code>includes</code>.</li>
+<li>
+<strong>Starter code</strong> has been provided which shows one instance where a string does include a <code>searchValue</code> and one where it does not.</li>
+<li>
+<strong>Replicate the style</strong> of these commands to check the rest of questions provided.</li>
+<li>
+<strong>Create three statements of your own using <code>includes</code></strong> making use of the <code>console.log</code> statements provided.</li>
+<li>
+<strong>Once you're comfortable with this command move on.</strong>"</li>
+</ul>
+
+<h2>------ Level 5------</h2>
+
+<h1>Adding <em>includes</em> to the Movie Bot</h1>
+
+<p>If our Movie Bot is asked a question like "What is a good comedy movie?" it currently won't know how to respond, <strong>even though the question includes one of its keywords.</strong> By using <code>includes</code> we can allow our Movie Bot to sense if a keyword appears anywhere in the question.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Suggestion: Switch to Text Mode.</strong> This will be much easier in Text Mode.</li>
+<li>
+<strong>Change all your boolean expressions to use <code>includes</code> instead of <code>==</code></strong>.</li>
+<li>
+<strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</li>
+</ul>
+
+<p><img src="https://images.code.org/0df459c4ccd9b613b23409af7ff5f59e-image-1446139233341.gif" alt=""></p>
+
+<p>*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to change.</p>
+
+<p><img src="https://images.code.org/ea8340252f50774c352f58fa7cc12e5c-image-1446069734921.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/ea8340252f50774c352f58fa7cc12e5c-image-1446069734921.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 6------</h2>
+
+<h1>Checking for a Question</h1>
+
+<p>We're going to start adding some "intelligence" to our Movie Bot. Since we've added <code>includes</code> it can now tell if its keywords appear anywhere in the input. As a result some inputs may be questions while others might simply be statements. <strong>We'd like the movie bot to respond differently to questions and statements.</strong></p>
+
+<p>In order to tell when the user is asking a question *<em>we will be checking whether the input includes a question mark *</em>.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>Add a separate statement to <strong>check if the input includes a "?"</strong>. </li>
+<li>If the input includes a question mark <strong>print "That's a good question." before the recommendation.</strong>
+</li>
+<li>Otherwise print <strong>"I only answer questions." before the recommendation.</strong>
+</li>
+<li>
+<strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>Example Input ---&gt;</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What's the best action movie?</td>
+<td>That's a good question. The best action movie is any James Bond movie.</td>
+</tr>
+<tr>
+<td>I love comedy</td>
+<td>I only respond to questions. The best comedy movie is The Princess Bride.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+<strong>Note:</strong> Check out the flowchart below to see the logic we are trying to change.</p>
+
+<p><img src="https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/e32fd89b6e03b9d49c94e39e79120c03-image-1446072381510.png" target="_blank">Open diagram in a new tab</a>"</p>
+
+<h2>------ Level 7------</h2>
+
+<h1>Nested Conditionals</h1>
+
+<p>The way we left the Movie Bot in the last exercise is a little strange to see as a user. <strong>Currently when the input doesn't have a question mark the Movie Bot says "I only respond to questions." but it still provides a recommendation</strong>. We're going to alter our code so that the movie recommendation is only provided if the user asks a question.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<strong>Nest your movie genre <code>if</code> statements</strong> inside the "?" <code>if</code> statement so that <strong>a recommendation is made only if a question was asked</strong>.</li>
+<li>
+<strong>Remove the "That's a good question."</strong> output.</li>
+<li>Ensure that <strong>if your input is not a question</strong> then the response is <strong>I only respond to questions.</strong>
+</li>
+<li>
+<strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th><strong>Example Input ---&gt;</strong></th>
+<th><strong>Output</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What's the best action movie?</td>
+<td>The best action movie is any James Bond movie.</td>
+</tr>
+<tr>
+<td>I love comedy</td>
+<td>I only respond to questions.</td>
+</tr>
+</tbody>
+</table>
+
+<p><br>
+*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to change.</p>
+
+<p><img src="https://images.code.org/c319d7ba43112451a6b25aa9475cacb5-image-1446074593924.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/c319d7ba43112451a6b25aa9475cacb5-image-1446074593924.png" target="_blank">Open diagram in a new tab</a></p>
+
+<h1>---------Lesson 20----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h1>OR Operator</h1>
+
+<p><img src="https://images.code.org/c1ec7743b3c8a888d76380f789263851-image-1446155863558.57.24%20PM.png" style="width: 100px; float: right"></p>
+
+<p>You will now see the JavaScript boolean operators AND (<code>&amp;&amp;</code>)  and OR (<code>||</code>) in code toolbox. You can drag them out or simply type them.</p>
+
+<p>Let's try OR right now.  As a reminder: the OR operator will evaluate to true if <em>either or both</em> statements are true. If both are false, the OR operator will evaluate to false. </p>
+
+<p><img src="https://images.code.org/48d59f73e701d452dd74ae304db59d93-image-1446482464792.png" style="width: 200px; float:right"> </p>
+
+<h1>Do This:</h1>
+
+<p>We've provided you with starting code that prompts the user to enter a day of the week and stores it in a variable.</p>
+
+<p><strong>Add an <code>if</code> statement that uses an OR (<code>||</code>)</strong> </p>
+
+<ul>
+<li>The program should write <strong>"It's the weekend!"</strong> if the day entered by the user is a weekend day.<br>
+</li>
+<li>Otherwise it should write <strong>"Can't wait for the weekend to get here."</strong>"</li>
+</ul>
+
+<h2>------ Level 3------</h2>
+
+<h1>AND Operator</h1>
+
+<p><img src="https://images.code.org/c1ec7743b3c8a888d76380f789263851-image-1446155863558.57.24%20PM.png" style="width: 100px; float: right"></p>
+
+<p>Again you will see the JavaScript boolean operators AND (<code>&amp;&amp;</code>)  and OR (<code>||</code>) in code toolbox. You can drag them out or simply type them.</p>
+
+<p>Let's now try out using an <strong>AND</strong> operator. As a reminder: <strong>if both statements are true</strong> then AND evaluates to <strong>true</strong>.  <strong>If either (or both) are false</strong> the AND operator will evaluate to <strong>false</strong>.</p>
+
+<p><img src="https://images.code.org/4a461db916ded2acccfcdb9a75ef8838-image-1446483668310.png" style="width: 250px; float: right"></p>
+
+<h1>Do This:</h1>
+
+<p>We've provided you with starting code that prompts the user to enter their <strong>age</strong> and stores it in a variable.</p>
+
+<p><strong>Add an <code>if</code> statement that uses an AND operator (<code>&amp;&amp;</code>)</strong></p>
+
+<ul>
+<li>The app should write "You are a teenager." if the age is between 13 and 19.</li>
+<li>Otherwise it should write "You are not a teenager."</li>
+</ul>
+
+<h2>------ Level 4------</h2>
+
+<h2>------ Level 5------</h2>
+
+<h1>Combining AND and OR</h1>
+
+<p>You can express more complex conditions by combining <strong>AND</strong> and <strong>OR</strong> in one statement.  Here is the example from the previous page which you can use as a reference. This statement will evaluate to <strong>true</strong> if the day is Tuesday or Thursday AND their age is 15 or 16.</p>
+
+<p><img src="https://images.code.org/3f3aba7828abd88fdbd90eda60611bd3-image-1448062956405.06.36.png" alt=""></p>
+
+<h1>Do This:</h1>
+
+<p>We've provided you with starting code that prompts the user to enter a <strong>day</strong> and their <strong>age</strong> and stores the result in variables.</p>
+
+<p><strong>Add an <code>if</code> statement that uses both AND and OR operators</strong></p>
+
+<ul>
+<li>The app should write "Sleep in!" if it's a weekend and the user is a teenager.</li>
+<li>Otherwise it should write "Uh oh. Have to wake up."</li>
+</ul>
+
+<p>Try it out!</p>
+
+<h2>------ Level 6------</h2>
+
+<h1>Combining AND and OR and NOT</h1>
+
+<p>You can stick a NOT (<code>!</code>) in front of any boolean expression to invert its result. This opens the door to express the same logical statements in different ways.  </p>
+
+<p>For example, let's say you want to determine if a person, based on his or her age (under 12 or over 65) gets to pay a reduced price for a movie ticket.  You might express that like this:</p>
+
+<pre><code>
+// If your age is less than 12 or greater than 65
+if( (age &lt; 12) || (age &gt; 65) ){
+    write("You qualify for a reduced price!");
+}
+</code></pre>
+
+<p>But you might also figure out a way to determine if a person gets a reduced price ticket by determining if his or her age is between 12 and 65 (<code>(age &gt;= 12) &amp;&amp; (age &lt;= 65)</code>) and then taking the inverse of that.  So using the NOT operator this would work as well:</p>
+
+<pre><code>
+// If your age is NOT between 12 and 65
+if( !( (age &gt;= 12) &amp;&amp; (age &lt;= 65) ) ){
+    write("You qualify for a reduced price!");
+}
+</code></pre>
+
+<p><strong>Why use one over the other?</strong> Personal preference.  Use the one that makes the most sense to you, but it should be a clear expression of what you are trying to say.  </p>
+
+<h1>Do This:</h1>
+
+<p>We've provided you with starting code that prompts the user to enter a <strong>day</strong> and their <strong>age</strong> and store it in variables.</p>
+
+<p><strong>Add an <code>if</code> statement that uses both AND and OR operators</strong></p>
+
+<ul>
+<li>The app should write "Time for school!" if it's a weekday and the user is under 18.
+
+<ul>
+<li>Hint: one way to say that it's a weekday is to say that it's NOT a weekend.</li>
+</ul>
+</li>
+<li>Otherwise, if it's a weekday and the user is 18 or older, it should write "Time to go to work!"</li>
+<li>Otherwise, it should write "Time to relax for the weekend!"</li>
+</ul>
+
+<p><strong>WARNING</strong> logic can get tricky sometimes.  Make sure to test your program with inputs that cover every possibility. There are 4 basic cases to test for:</p>
+
+<ul>
+<li>It is a weekday and age is under 18</li>
+<li>It is a weekday and age is not under 18</li>
+<li>It's not a weekday and age is under 18</li>
+<li>It's not a weekday and age is not under 18</li>
+</ul>
+
+<p>Try it out!"</p>
+
+<h2>------ Level 7------</h2>
+
+<h1>OR Operator in Movie Bot</h1>
+
+<p>Let's try to check for the keywords related to questions ("who", "what", "where", "when", "why", "how", and "?") to decide if the user asked a question. You could do this with a chain of <code>if-else-if</code> statements, but it would not be very efficient. </p>
+
+<p>Instead let's use a <strong>series of OR operators (<code>||</code>)</strong> to check whether "who", "what", "where", "when", "why", "how" or "?" show up in the user input. </p>
+
+<p>*<em>Note: *</em> We've updated the the flowchart below to show the logic we are trying to add to the initial question.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Update the <code>if</code> statement</strong> to check if <strong>"who" OR "what" OR "where" OR "when" OR "why" OR "how" OR "?"</strong> have been typed in by the user.</p></li>
+<li><p><strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/6104c7fd0ecd31010d12be79bc350831-image-1446495141539.png" style="width=500px"></p>
+
+<h2>------ Level 8------</h2>
+
+<h1>Adding Rating to Keywords</h1>
+
+<p>Up until now our movie suggestions have just been based on genre. Let's now also look for keywords related to the movie rating like "G", "PG", "PG-13", and "R" so we can give movie suggestions based on both genre and rating.</p>
+
+<p>*<em>Note: *</em> We've updated the flowchart below (highlighted in yellow) to see the logic we are trying to add.</p>
+
+<p>*<em>Note 2: *</em> The logic of the program right now will yield some odd results - there are some things you can type that will give 2 suggestions - this is expected, for now.  We are just taking a small step here.  We'll refine the code again in later levels.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Add another set of <code>if</code>, <code>else-if</code>, and <code>else</code> statements</strong> inside the question <code>if</code> statement to <strong>check for keywords for movie ratings (G, PG, PG-13, and R).</strong></p></li>
+<li><p><strong>Hint:</strong> When checking for "G", "PG" and "R" you need to be a little clever.  R and G are are letters that will show up in lots of words and PG will get confused with PG-13. We want to check for "g" and "r" with spaces on either side. So make sure to use <code>" g "</code> where there is a space on either side of g instead of <code>"g"</code>. For "pg" you can just add a space after the pg to look for <code>"pg "</code></p></li>
+<li><p><strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/3e05d49d32afbcb578cc3945f229dd2f-image-1448403915931.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/3e05d49d32afbcb578cc3945f229dd2f-image-1448403915931.png" target="_blank">Click to open in separate window.</a>"</p>
+
+<h2>------ Level 9------</h2>
+
+<h1>AND Operator in Movie Bot</h1>
+
+<p>On the last level you may have noticed that if you typed in a question like "What is an R rated comedy movie?" It gives two movie suggestions! It would make more sense for it to give one suggestion.</p>
+
+<p>We could use nested <code>if</code> statements to do this by nesting <code>if</code> statements about ratings inside of <code>if</code> statements about genre. However, you might be getting a sinking feeling that this could become a lot of nested <code>if</code> statements very quickly! </p>
+
+<p><strong>Instead let's use the AND operator (<code>&amp;&amp;</code>) to check for a genre and a rating at the same time.</strong> </p>
+
+<p><img src="https://images.code.org/a9307ead3b147e0a8016f2054f47f5f2-image-1446153610104.png" style="width: 200px; float:right"></p>
+
+<p>Be careful about the order of the <code>if</code> statements. As a general principle you want to check the most specific conditions before checking more general ones.  For example, you want to have an <code>if</code> statement that checks for rating AND genre evaluated before one that just checks for genre on its own. Having a more general <code>if</code> statement checked first might cut off or prevent more specific conditions from being reached.</p>
+
+<p>You still want your app to give suggestions when just a rating or just a genre is detected, so keep this principle of ordering in mind. (Try them in the reverse order if you're interested in seeing what happens :))</p>
+
+<p>*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to add.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li><p><strong>Try the question "What is an R rated comedy movie?</strong> to see the result.</p></li>
+<li>
+<p><strong>Update the code to give only one movie suggestion when a genre and a rating are detected in the input.</strong></p>
+
+<ul>
+<li>Make one set of <code>if</code>, <code>else-if</code>, and <code>else</code> statements about genre and rating</li>
+<li>Add conditional statements to check for a comedy movie AND a rating. You could do this for all the genres but stick to one for now.</li>
+</ul>
+</li>
+<li><p><strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/80f4a6b07c446896eef72b499a7eba55-image-1448403968703.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/80f4a6b07c446896eef72b499a7eba55-image-1448403968703.png" target="_blank">Click to open in separate window.</a>"</p>
+
+<h2>------ Level 10------</h2>
+
+<h1>Adding a Separate <em>if</em>
+</h1>
+
+<p>It's still the case that sometimes you want to have two completely separate groups of <code>if</code> statements because there are separate conditions you want to check and possibly have responses for both. You don't always just keep adding to a giant <code>if</code> statement forever.</p>
+
+<p>In the Movie Bot demo you probably saw that if you type "please" and "thank you" it adds something extra to the response (it says something like "Thanks for being polite!"). Let's add this functionality to your movie bot as well. </p>
+
+<p>*<em>Note: *</em> Check out the flowchart below to see the logic we are trying to add.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>
+<p>** Add an <code>if</code> and <code>else-if</code> statement that checks for "please" and "thank you"**. </p>
+
+<ul>
+<li>If the string includes "please" it should say "Thank you for being so polite!" before it gives its response.</li>
+<li>If the string includes "thank you" it should say "You are very welcome!" before it gives its response.</li>
+</ul>
+</li>
+<li><p><strong>Test out a couple sentences with your keywords</strong> to make sure the change worked.</p></li>
+</ul>
+
+<p><img src="https://images.code.org/5363cae7e68cf0a4283087c3a6acebf0-image-1446152576829.png" style="width: 100%"></p>
+
+<p><a href="https://images.code.org/5363cae7e68cf0a4283087c3a6acebf0-image-1446152576829.png" target="_blank">Click to open in separate window.</a></p>
+
+<h1>---------Lesson 21----------</h1>
+
+<h2>------ Level 2------</h2>
+
+<h1>Digital Assistant Project</h1>
+
+<p><strong>Your Digital Assistant Project is back!</strong> Now that you've learned how to use conditional logic to control your program flow, it's time to add functionality to the digital assistant you previously designed.</p>
+
+<h1>Do This:</h1>
+
+<ul>
+<li>You should have already created a flowchart to design the logic for your digital assistant. </li>
+<li>
+<strong>Use your flowchart to program your digital assistant so that it "intelligently" responds to user input.</strong>
+
+<ul>
+<li>Feel free to make changes to your existing project in Design Mode, if needed.</li>
+</ul>
+</li>
+<li>
+<strong>Test your program thoroughly</strong> to make sure your digital assistant responds to user input appropriately.</li>
+<li>Once you're done, <strong>submit your project!</strong>
+"</li>
+</ul>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

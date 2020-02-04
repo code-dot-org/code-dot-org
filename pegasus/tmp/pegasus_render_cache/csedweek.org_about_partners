@@ -1,0 +1,2399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="CSEd Week" property="og:site_name">
+<meta content="Partners" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://csedweek.org/about/partners" property="og:url">
+<title>Partners | Computer Science Education Week</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'csedweek.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div style="width: 100%; background-color: rgba(255,255,255,0.8)">
+<div style="width: 970px; margin: 0 auto; overflow: hidden">
+<div style="width: 530px; float: left; padding-top: 14px; padding-bottom: 10px">
+<br>
+<a href="/" style="text-decoration:none">
+<img src="/images/logo_text.png" style="max-width: 100%; vertical-align: bottom">
+<img src="/images/logo_date.png" style="max-width: 100%; vertical-align: bottom">
+</a>
+</div>
+<div class="desktop-feature" style="width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px">
+<a href="http://facebook.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/facebook_green.png">
+</a>
+<a href="http://twitter.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/twitter_green.png">
+</a>
+<br>
+<br>
+<br>
+<a class="redheaderlink" href="/learn">LEARN</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/educate/hoc">TEACH</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/promote">PROMOTE</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/help">HELP US</a>
+<div style="height: 5px"></div>
+</div>
+</div>
+<div style='width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'>
+<br>
+</div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 140px; margin-right: 40px; float: left;">
+<div id="about_nav" style="width:140px;">
+<span class="about_list">
+<a class="about_list_item" href="/about">About CSEdWeek</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">Partners</span>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/advisory-committee">Hour of Code and CS Ed Week Advisory Committee</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">News</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/awards">Awards</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+<div style="width: 790px; float: left; margin: 0; padding: 0;">
+<h1>Founding Partners</h1>
+
+<p><link href="/css/logos.css" rel="stylesheet" type="text/css"></p>
+
+<div id="logos" style="width: 100%; padding: 0; margin: 0;"></div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://anitab.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/anitab_org.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.acm.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/association_for_computing_machinery.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.collegeboard.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/college_board.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.csteachers.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/computer_science_teachers_association.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.cra.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/computing_research_association.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.google.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/google.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.computer.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ieee_computer_society.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.microsoft.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/microsoft.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.ncwit.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_center_for_women_in_information_and_technology.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.nctm.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_council_of_teachers_of_mathematics.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.nms.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_math_science_initiative.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.nsta.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_science_teachers_association.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.sas.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/sas.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<hr>
+
+<h1>Curriculum and Tutorial Partners</h1>
+
+<p><link href="/css/logos.css" rel="stylesheet" type="text/css"></p>
+
+<div id="logos" style="width: 100%; padding: 0; margin: 0;"></div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.3dbear.io/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/3dbear.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.foxmovies.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/20th_century_fox.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.actimator.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/actimator.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.agentsheets.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/agentsheets.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.alice.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/alice.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.beetik.net" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/beetik.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.birdbraintechnologies.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/birdbrain_technologies.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://bitsbox.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/bitsbox.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.blockscad3d.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/blockscad.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://bomberbot.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/bomberbot.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.bootstrapworld.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/bootstrap.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.botschool.io/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/bot_school.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.brainpop.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/brainpop.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://buzzcoder.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/buzzcoder.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.catrobat.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/catrobat.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://chibitronics.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/chibitronics.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.codecademy.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codeacademy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.codeavengers.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codeavengers.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codecombat.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codecombat.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codehs.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codehs.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codemoji.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codemoji.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.playcodemonkey.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codemonkey.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codepip.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codepip.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://coderdojo.com/wp-content/cache/all//index.html" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/coderdojo.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.codespeaklabs.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codespeak_labs.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codespark.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codespark.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codespells.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codespells.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.codesters.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codesters.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codewards.org/#" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codewards.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.codecampworld.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/code_camp_world.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://app.code-it-studio.de/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/code_it.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.codingame.com/start" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codingame.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codinggalaxy.com/en" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/coding_galaxy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.codingpiratesgame.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/coding_pirates.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://ahab.southwestern.edu/departments/mathcompsci/OHProject/materials-overview.html" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/computing_educators_oral_history_project.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://cospaces.io/edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/cospaces.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.curriculumpathways.com/portal/#" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/curriculum_pathways.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.thewaltdisneycompany.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/disney.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://meetedison.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/edison.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.educative.io/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/educative.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.exploringcs.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/exploring_computer_science.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://firialabs.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/firia_labs.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.flocabulary.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/flocabulary.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://gameblox.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/gameblox.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://make.gamefroot.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/gamefroot.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.girlswhocode.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/girls_who_code.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://groklearning.com/courses/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/grok_learning.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.helloruby.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hello_ruby.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.gethopscotch.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hopscotch.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://htmlacademy.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/html_academy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.hyperpad.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hyperpad.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.icompute-uk.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/icompute.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.irobot.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/irobot.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://kano.me/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kano.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.khanacademy.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/khan_academy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://kinderlabrobotics.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kinderlab_robotics.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.surfscore.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kodable.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.kodugamelab.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kodu.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.letsstartcoding.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/lets_start_coding.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://lightbot.com/index.html" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/lightbot.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://littlebits.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/littlebits.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.lynda.com/Developer-training-tutorials/50-0.html?utm_medium=ldc-partner&amp;utm_source=SSPRC&amp;utm_content=524&amp;utm_campaign=CD14814&amp;bid=524&amp;aid=CD14814&amp;opt=" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/lynda_com.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.makeschool.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/makeschool.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.mathworks.com/?s_tid=gn_logo" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mathworks.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://microbit.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/microbit.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://microblocks.fun/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/microblocks.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://education.minecraft.net/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/minecraft_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://appinventor.mit.edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mit_app_inventor.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://modulogames.net/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/modulo.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://monstercoding.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/monster_coding.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.n2y.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/n2y.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://nclab.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nclab.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.nybleapps.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nybleapps.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.oppia.org/splash" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/oppia.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://ozobot.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ozobot.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.pai.technology/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/pai_technology.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://pbskids.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/pbs_kids.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.peblio.co/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/peblio.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://phidgets.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/phidgets.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.popcap.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/popcap.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://hello.processing.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/processing_foundation.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.programmingbasics.org/en/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/programming_basics.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.programmr.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/programmr_com.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.projectguts.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/project_guts.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://quorumlanguage.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/quorum.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.raspberrypi.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/raspberry_pi.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.radiantgames.is/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/radiant_games.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://robogarden.ca/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/robogarden.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.robomindacademy.com/go/robomind/home" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/robomind_academy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://robotmagic.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/robotmagic.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.robotmesh.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/robot_mesh.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.rovio.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/rovio.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://scratch.mit.edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/scratch.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.scriptacademy.net/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/scriptacademy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://snap.berkeley.edu" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/snap_.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.sololearn.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/sololearn.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.sphero.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/sphero.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.youtube.com/c/STEMcoding" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/stemcoding.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://store.teachergaming.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/teachergaming.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://terminaltwo.com/home" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/terminal_two.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.ti.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/texas_instruments.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<img src="/images/fit-320/avatars/thinkersmith.png" style="max-width: 140px; max-height: 140px;">
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.thinkfun.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/thinkfun.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://thunkable.com/#/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/thunkable.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://tickleapp.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/tickle.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.tinkercad.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/tinkercad.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.toxicode.fr/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/toxicode.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.tralalere.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/tralalere.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://trinket.io/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/trinket.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.tynker.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/tynker.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.itchcode.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ucodemy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://unity.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/unity.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.tacoma.uw.edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/uw_tacoma.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.vidcode.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/vidcode.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.wolfram.com/programming-lab/?source=footer" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/wolfram.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.makewonder.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/wonder_workshop.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://c-stem.ucdavis.edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/uc_davis_cstem_center.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://zyrobotics.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/zyrobotics.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<hr>
+
+<h1>Additional Partners</h1>
+
+<p><link href="/css/logos.css" rel="stylesheet" type="text/css"></p>
+
+<div id="logos" style="width: 100%; padding: 0; margin: 0;"></div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.accenture.com/us-en/?c=ad_usglbprioritypsgs&amp;n=Accenture_Core_Business_-_US&amp;KW_ID=s3eh86k17_dc%7Cpcrid%7C66973976537" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/accenture.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.afterschoolalliance.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/afterschool_alliance.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.akamai.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/akamai.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.amazon.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/amazon.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://angelhack.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/angelhack.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.apple.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/apple.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.athle.technology/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/athletech.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://betterlesson.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/better_lesson.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://blackgirlnerds.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/black_girl_nerds.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://blackgirlscode.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/black_girls_code.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<img src="/images/fit-320/avatars/blacks_in_gaming.png" style="max-width: 140px; max-height: 140px;">
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.bgca.org/campaign/brand-campaign" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/boys_girls_clubs_of_america.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.carnegielearning.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/carnegie_learning.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://codenow.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codenow.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.commonsense.org/education/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/common_sense_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://congressionalappchallenge.us" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/congressional_app_challenge.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.coursera.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/coursera.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.digitalundivided.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/digitalundivided.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.discoveryeducation.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/discovery_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://diy.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/diy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.donorschoose.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/donors_choose.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.dropbox.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/dropbox.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.edmodo.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/edmodo.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.greatschools.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/greatschools.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.hfsv.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hispanic_foundation_of_silicon_valley.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://hivelearningnetworks.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hive_learning_networks.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.izonenyc.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/innovate_nyc_schools.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.eimacs.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/institute_for_mathematics_and_computer_science.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.juniorachievement.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/junior_achievement.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://getkahoot.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kahoot.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://kaporcenter.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kapor_center_for_social_impact.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://kenney.nl/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kenney.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.khanacademy.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/khan_academy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.knodemy.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/knodemy.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.kidsakoder.no/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/laer_kidsa_koding.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.masstlc.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mass_technology_leadership_council.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://masscan.edc.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/massachusetts_computing_attainment_network.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.mobile.pro" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mobile_pro.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://webmaker.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mozilla_webmaker.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.mos.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/museum_of_science.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.mytonomy.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/mytonomy.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://legacy.mos.org/nctl/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_center_for_technological_literacy.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://ngcproject.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_girls_collaborative_project.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.nwp.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_writing_project.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.newschools.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/new_schools_venture_fund.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.npower.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/npower.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://one.laptop.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/one_laptop_per_child.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.pluralsightone.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/pluralsight_one.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.PowerMyLearning.org" style="vertical-align: middle;">
+<img style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.pwc.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/pricewaterhousecoopers.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.pltw.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/project_lead_the_way.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.salesforce.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/salesforce.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://science.discovery.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/science_channel.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.splunk.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/splunk.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://srnd.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/studentrnd.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.teachforamerica.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/teach_for_america.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://teachingkidsprogramming.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/teaching_kids_programming.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.TechnovationChallenge.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/technovation_challenge.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.udacity.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/udacity.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.usenix.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/usenix.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.valvesoftware.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/valve.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.vistaequitypartners.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/vista_equity_partners.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.washingtoninteractivenetwork.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/washington_interactive_network.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.womenwhocode.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/women_who_code.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.youtube.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/youtube.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://zynga.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/zynga.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<div style="width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)">
+<div class="whitefooter" style="width: 970px; margin: 0 auto;">
+<div style="float:left">
+<a class="whitefooterlink" href="/about">About</a>
+    |    
+<a class="whitefooterlink" href="/partners">Partners</a>
+    |    
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+    |    
+<a class="whitefooterlink" href="/resource-kit">Resource Kit</a>
+    |    
+<a class="whitefooterlink" href="/resource_kit/frequently_asked_questions">FAQ</a>
+    |    
+<a class="whitefooterlink" href="http://forums.code.org/">Forums</a>
+    |    
+<a class="whitefooterlink" href="http://support.code.org/">Support</a>
+<br>
+<small class="dim">
+© Computer Science Education Week, 2020. Hour of Code® is a trademark of Code.org
+</small>
+</div>
+<div style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</div>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

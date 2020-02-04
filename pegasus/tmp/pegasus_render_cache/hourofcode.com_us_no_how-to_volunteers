@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Veiledning for Kodetimen frivillige" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/no/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Veiledning for Kodetimen frivillige</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/no/">
+<img alt="Kodetimen" src="/us/no/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option selected value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/no/learn" title="Aktiviteter">Aktiviteter</a>
+</li>
+<li>
+<a href="/us/no/how-to" title="Slik gjør du det">Slik gjør du det</a>
+</li>
+<li>
+<a href="/us/no/promote" title="Promotere">Promotere</a>
+</li>
+<li>
+<a href="/us/no/#faq" title="Vanlige spørsmål">Vanlige spørsmål</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/no/#join">
+<button style="float: right; margin-top: 50px;">
+Arranger en Kodetime
+</button>
+</a></p>
+
+<h1>Veiledning for frivillige</h1>
+
+<h3>Du kan gjøre en forskjell i en klasse i dag!</h3>
+
+<hr>
+
+<h2>Hvorfor bli frivillig?</h2>
+
+<p>Se hva noen tidligere frivillige har sagt:</p>
+
+<ul>
+<li>"Det mest positive i mine øyne var at hele klassen besto av bare jenter og fargede. Det lover godt for fremtiden når vi nå har en mulighet til å åpne øynene på og engasjere disse barna."</li>
+<li>"Jeg likte spesielt godt å oppmuntre unge jenter til å ta i bruk teknologien. Det føltes som jeg hjalp neste generasjon i nærmiljøet mitt."</li>
+<li>"Jeg ELSKET å se hvor glade barna var. Det var fascinerende for lærerne å se at noen av de elevene som vanligvis ikke gjorde det så godt på skolen viste seg å være svært gode til å tenke som utviklere, og til å hjelpe andre - slik at de fikk en helt ny mestringsarena.</li>
+</ul>
+
+<h2>Hvem som helst kan stille som frivillig</h2>
+
+<h3>Volunteers and speakers in tech:</h3>
+
+<p>Do you have a connection to CS or tech? Hvis du arbeider innenfor programvareutvikling, i et teknologifirma (teknisk eller ikke-teknisk stilling), eller har fulgt kurs i programmering, kan du være til inspirasjon for elevene! Mange av elevene har aldri før møtt noen som arbeider innenfor dette fagfeltet, og mange lærere setter pris på å kunne knytte kontakter med fagfolk og studenter.</p>
+
+<p>You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br> <br></a></p> 
+
+<h3>
+  Anyone passionate about expanding opportunity:
+</h3>
+
+<p>
+  Do you believe that learning computer science can open doors of opportunity for students? Hjelp til på en skole i nærmiljøet, eller sett i gang et tilbud etter skoletid! Du trenger ingen bakgrunn innenfor informatikk for å arrangere Kodetimen. Og husk, bare det å tilby å hjelpe er ofte det som skal til for å overbevise ditt barns lærer, en venn, eller en lokal fritidsklubb, til å teste en time.
+</p>
+
+<h3>
+  How do you get started?
+</h3>
+
+<ol>
+  <li>
+    <a href="/us/no/promote/resources#help-schools%0A">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+  </li>
+  
+  <li>
+    Offer to host an Hour of Code event after school at a local school. <a href="/us/no/how-to%0A">Use this How-To Guide</a> to help you plan.
+  </li>
+</ol>
+
+<h2>
+  Verv noen kolleger som frivillige
+</h2>
+
+<p>
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="/us/no/promote/resources#sample-emails%0A">Send this email</a> to your manager or the CEO to get everyone on board.
+</p>
+
+<h2>
+  Hvordan forberede seg
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/no/promote/resources#videos">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+  </li>
+  <li>
+    Sjekk ut hva som finnes av oversikter, timeplaner, forberedelseshjelp, markedsføringsmateriell og annet i <a href="/files/hoc-volunteer-toolkit.pdf">Kodetimens Verktøykasse</a>. Der finner du alt du trenger for å gjøre deg klar til å gjøre en innsats!
+  </li>
+  <li>
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="/us/no/learn">Hour of Code tutorial</a>.
+  </li>
+  <li>
+    Hvis du skal besøke en skole, husk å sette deg inn i og gjennomføre eventuelle påkrevde bakgrunnssjekker og papirarbeid i god tid.
+  </li>
+  <li>
+    Sjekk ut <a href="https://code.org/files/CSTT_Volunteers.pdf">disse tipsene</a> om hvordan man best samhandler med elevene.
+  </li>
+  <li>
+    Delta i diskusjoner på Facebook, Twitter, Instagram og Tumblr under emneknaggen #HourOfCode.
+  </li>
+  <li>
+    Ta kontakt med læreren for å fortelle og diskutere hvilke temaer du har tenkt til å ta opp i din presentasjon.
+  </li>
+  <li>
+    Hvis du er en virtuell frivillig, husk å teste at lyd og bilde samt skjermdelingsfunksjon fungerer på forhånd.
+  </li>
+</ul>
+
+<h2>
+  Dagen for Kodetimen
+</h2>
+
+<p>
+  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+</p>
+
+<h3>
+  Sample agenda:
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Tid
+    </th>
+    
+    <th>
+      Tema
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minutter
+    </td>
+    
+    <td>
+      <a href="/us/no/promote/resources#videos">Show an inspirational video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minutter
+    </td>
+    
+    <td>
+      Presenter deg, og få om litt informasjon om elevene: 
+      
+      <li>
+        Hvor arbeider du, hva driver du med, og hvorfor trives du med jobben din?
+      </li>
+      
+      <li>
+        Hvem eller hva har inspirert deg?
+      </li>
+      
+      <li>
+        Hvordan ble du interessert i informatikk?
+      </li>
+      
+      <li>
+        Hadde du en personlig veileder?
+      </li>
+      
+      <li>
+        Fortell en liten historie om hvordan informasjonsteknologi griper inn i alles hverdag.
+      </li>
+      
+      <br>Still noen spørsmål til klassen, og husk å sette av tid til en runde spørsmål og svar. 
+      
+      <li>
+        Hvilke yrker og hva slags jobber er elevene interessert i, hva er favoritt-dingsen eller den mest populære app'en, hvordan tror elevene de er laget?
+      </li>
+      
+      <li>
+        Har elevene noen spørsmål til deg?</li>
+</td> </tr> <tr>
+          <td>
+            30-60 minutter
+          </td>
+          
+          <td>
+            <strong>Koding!</strong> Gå rundt, svar på spørsmål, hjelp dem gjennom de vanskeligste oppgavene. Prøv å ikke servere løsninger direkte. Prøv istedet å stille spørsmål så de selv kan finne ut hva som gikk galt, og forsøk å oppmuntre dem til å spørre og hjelpe hverandre når de står fast. Det aller beste er om de kan lære av hverandre.
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            1-3 minutter
+          </td>
+          
+          <td>
+            Husk å takke alle som har deltatt, og kom gjerne med noen inspirerende avskjedord. Det er alltid populært å dele ut litt reklamemateriell fra bedriften din (klistremerker er kult)!
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Etterpå
+          </td>
+          
+          <td>
+            <strong>For en mer varig påvirkning:</strong> Snakk med læreren om mulighetene for å utvide Kodetimen til å bli et fullverdig informatikkurs på skolen! Gå sammen om å fylle ut skjemaet på <a href="https://code.org/yourschool">code.org/yourschool</a> om hva som undervises ved skolen i dag, og vær en pådriver for å få informatikk som fast innslag på timeplanen.
+          </td>
+        </tr> </table> 
+        
+
+<pre><code>    &lt;h3&gt;
+      After the Event:
+    &lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Del bilder og erfaringer med Code.org på giving@code.org.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Husk å registrere tiden du har brukt på frivillig arbeid hos arbeidsgiveren din, hvis dere har et system for det.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Del dine erfaringer på sosiale medier under #HourOfCode!
+      &lt;/li&gt;
+      &lt;li&gt;
+        Husk alltid å spørre om tillatelse fra deltagere og foreldre før du deler eller offentliggjør bilder eller videoer fra arrangementet. Dette er &lt;strong&gt;spesielt viktig&lt;/strong&gt; i en skolesituasjon.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Ta kontakt igjen med læreren etter en måneds tid og hør om det er interesse for å etablere et informatikkurs på skolen. Del &lt;a href="https://code.org/yourschool"&gt;ressurser og profesjonell læringsstøtte&lt;/a&gt; for å forenkle etableringen.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      Hvordan bli valgt som teknisk ressurs eller gjesteforeleser
+    &lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Lærere leter etter aktuelle frivillige på &lt;a href="https://code.org/volunteer/local"&gt;kartet&lt;/a&gt;.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Prøv å fylle inn profilen din så nøyaktig og fullstendig som mulig for å øke sjansene for å bli valgt.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Læreren vil ta kontakt med deg via dette skjemaet (vi gir aldri e-postadressen din ut til læreren). &lt;em&gt;Hvis du får for mange henvendelser fra lærere, kan du alltid oppdatere opplysningene dine, eller melde deg av, ved hjelp av lenkene nederst i e-postene.&lt;/em&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      Ofte Stilte Spørsmål for Kodetimens frivillige
+    &lt;/h2&gt;
+    &lt;h3&gt;
+      I haven't been contacted by a teacher yet. How can I still volunteer?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      How long do classroom visits last for?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      What age group is the Hour of Code activity appropriate for?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href='/us/no/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+Arranger en Kodetime
+</button>
+</p>
+
+<pre><code>    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/no/how-to">
+<div class="nav-header">Veiledninger</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to">
+For lærere
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/afterschool">
+For AKS/SFO
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/companies">
+For bedrifter
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/districts">
+For kommuner
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/events">
+For samlinger på skolen
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/parents">
+For foresatte
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/public-officials">
+For offentlige representanter
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/no/how-to/volunteers">
+For frivillige
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/no/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/no/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Ressurser</div>
+</div>
+</a>
+<a href="/us/no/learn">
+<div class="display-link">
+<img class="display-img" src="/us/no/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Prøv oppgavesettene</div>
+</div>
+</a>
+<a href="/us/no/promote">
+<div class="display-link">
+<img class="display-img" src="/us/no/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Hvordan involvere seg</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Kontakt oss</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Kundestøtte</a>
+</li>
+<li>
+<a href="/us/no/partners" target="_blank">Partnere</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Vilkår</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Personvern</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Kopieringsrettigheter 2015 Code.org. Alle rettigheter reservert.
+<br>
+Varemerket Hour of Code™ tilhører Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

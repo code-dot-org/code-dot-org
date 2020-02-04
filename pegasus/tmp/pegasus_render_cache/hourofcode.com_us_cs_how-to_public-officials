@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Návod jak na to pro úředníky veřejné správy" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/cs/how-to/public-officials" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Návod jak na to pro úředníky veřejné správy</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/cs/">
+<img alt="Hodina kódu" src="/us/cs/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/public-officials';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option selected value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/cs/learn" title="Aktivity">Aktivity</a>
+</li>
+<li>
+<a href="/us/cs/how-to" title="Návody">Návody</a>
+</li>
+<li>
+<a href="/us/cs/promote" title="Propagace">Propagace</a>
+</li>
+<li>
+<a href="/us/cs/#faq" title="Časté otázky">Časté otázky</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/cs/#join">
+<button style="float: right; margin-top: 50px;">
+Hostovat hodinu
+</button>
+</a></p>
+
+<h1>How to involve your entire community</h1>
+
+<h3>Show your state, district, or city your commitment to computer science</h3>
+
+<hr>
+
+<p></p>
+
+<h2>Are you hosting an elected official at your Hour of Code?</h2>
+
+<p><a href="/files/elected-official.pdf">View our toolkit</a> with all the information you need to make their visit and your event great!</p>
+
+<p><img src="/images/fit-800/hoc_govs.png" alt=""></p>
+
+<p>From left to right: <em>Governors from Arkansas, North Carolina, and Arizona participating in an Hour of Code.</em></p>
+
+<h2>Získejte, aby se každá škola zúčastnila, každý student se učil!</h2>
+
+<h3>1. Read our one-pager</h3>
+
+<p>See <a href="/files/hoc-one-pager.pdf">why computer science education is important</a>, and how you can help the effort by supporting the Hour of Code.</p>
+
+<h3>2. Recruit local schools and districts</h3>
+
+<p>Use <a href="/us/cs/promote/resources#sample-emails">this email</a> or <a href="/us/cs/promote/stats">this blurb</a> as a starting point, and take a look at this <a href="/us/cs/how-to">how-to</a> for schools and districts.</p>
+
+<h3>3. Host an Hour of Code event</h3>
+
+<p>See our <a href="/us/cs/how-to/events">event how-to guide</a> for a sample run of show, <a href="/us/cs/promote/press-kit">media outreach kit</a>, and other event-planning resources. Hosting an event is a great way to promote the Hour of Code and increase participation.</p>
+
+<h3>4. Attend an event during Computer Science Education Week (Dec. 9-15)</h3>
+
+<p><a href="/us/cs/events">Find classrooms and schools</a> participating in your district, city, or state.</p>
+
+<h3>5. Issue a proclamation or resolution</h3>
+
+<p>See this <a href="/us/cs/resources/proclamation">sample resolution</a> supportive of Computer Science Education Week and its goals that could be used by state and local legislators.</p>
+
+<h3>6. Draft an op-ed</h3>
+
+<p>Consider publishing an opinion piece in your local paper. See this <a href="/us/cs/promote/op-ed">sample op-ed</a> supporting Computer Science Education Week and its goals.</p>
+
+<h3>7. Spread the word</h3>
+
+<p><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus">Share the Hour of Code video on Facebook</a> and <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fhourofcode.com&amp;text=I%27m%20participating%20in%20this%20year%27s%20%23HourOfCode%2C%20are%20you%3F%20%40codeorg&amp;original_referer=https%3A%2F%2Fwww.google.com%2Furl%3Fq%3Dhttps%253A%252F%252Ftwitter.com%252Fshare%253Fhashtags%253D%2526amp%253Brelated%253Dcodeorg%2526amp%253Btext%253DI%252527m%252Bparticipating%252Bin%252Bthis%252Byear%252527s%252B%252523HourOfCode%25252C%252Bare%252Byou%25253F%252B%252540codeorg%2526amp%253Burl%253Dhttp%25253A%25252F%25252Fhourofcode.com%26sa%3DD%26sntz%3D1%26usg%3DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ&amp;related=codeorg&amp;hashtags=">talk about your support on Twitter</a>. Share pictures of events or a video of you and other adults doing the Hour of Code. Use the hashtag <strong>#HourOfCode</strong> so Code.org (@code.org) can see it and promote the support. Or, use these sample tweets:</p>
+
+<ul>
+<li><em>Every student, boy or girl, should have the chance to learn computer science. Join us in starting with one #HourOfCode <a href="/us/cs/">https://hourofcode.com</a></em></li>
+<li><em>Today, we're proud to join the Hour of Code movement. Are you in? #HourOfCode <a href="/us/cs/">https://hourofcode.com</a></em></li>
+</ul>
+
+<h3>8. Issue a press release</h3>
+
+<p><a href="/us/cs/promote/official-press-release">Use this sample</a> as a guide.</p>
+
+<h3>9. Connect locally</h3>
+
+<p><a href="https://advocacy.code.org">Learn more about computer science education in your state</a>. Sign the petition there and you’ll get updates on Code.org's local, state, and federal advocacy efforts.</p>
+
+<p><a href="/us/cs/#join">
+<button style="float: right; margin-top: 50px;">
+Hostovat hodinu
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/cs/how-to">
+<div class="nav-header">Návody</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to">
+Pro učitele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/afterschool">
+Pro mimoškolní pedagogy
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/companies">
+Pro firmy
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/districts">
+Pro okresy
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/events">
+Pro školní setkání
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/parents">
+Pro rodiče
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/public-officials">
+Pro úředníky veřejné správy
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/cs/how-to/volunteers">
+Pro dobrovolníky
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/cs/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/cs/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Zdroje</div>
+</div>
+</a>
+<a href="/us/cs/learn">
+<div class="display-link">
+<img class="display-img" src="/us/cs/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Vyzkoušejte kurzy</div>
+</div>
+</a>
+<a href="/us/cs/promote">
+<div class="display-link">
+<img class="display-img" src="/us/cs/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Jak se zapojit</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Kontaktujte nás</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Podpora</a>
+</li>
+<li>
+<a href="/us/cs/partners" target="_blank">Partneři</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Podmínky</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Zásady ochrany osobních údajů</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2015 Code.org. Všechna práva vyhrazena.
+<br>
+Hour of Code™ je ochranná známka společnosti Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

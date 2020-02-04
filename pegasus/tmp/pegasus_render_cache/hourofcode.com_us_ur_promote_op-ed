@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="کمپیوٹر سائنس ایجوکیشن ویک اور آور-آف-کوڈ Sample Op-ed (معاون مثال)" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ur/promote/op-ed" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>کمپیوٹر سائنس ایجوکیشن ویک اور آور-آف-کوڈ Sample Op-ed (معاون مثال)</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ur/">
+<img alt="آور آف کوڈ" src="/us/ur/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/op-ed';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option selected value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ur/learn" title="سرگرمیاں">سرگرمیاں</a>
+</li>
+<li>
+<a href="/us/ur/how-to" title="کیسے">کیسے</a>
+</li>
+<li>
+<a href="/us/ur/promote" title="فروغ دیں">فروغ دیں</a>
+</li>
+<li>
+<a href="/us/ur/#faq" title="عمومی سوالات">عمومی سوالات</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ur/#join">
+<button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</a></p>
+
+<h1>کمپیوٹر سائنس تعلیم ہفتہ کی حمایت میں ایک اختیاری لکھیں.</h1>
+
+<h3>ذیل میں کمپیوٹر سائنس ایجوکیشن ویک کی او-پڈ معاونت کا ایک سیمپل دیا گیا ہے جو کہ اسٹیٹ، لوکل لیجسلیٹرز، بزنس لیڈرز وغیرہ کے استعمال میں آ سکتا ہے۔.</h3>
+
+<h3>Visit <a href="https://advocacy.code.org">advocacy.code.org</a> to find state specific information about computer science.</h3>
+
+<hr>
+
+<h4>عنوان: کمپیوٹنگ... کہاں ملازمت ہیں</h4>
+
+<h4>[NAME] اور ناظرین کے ساتھ [کنسرڈر CO-آورٹرنگ، سپرنٹنڈنٹ یا بزنس لیڈر]</h4>
+
+<p>کمپیوٹرز ہر جگہ ہیں. وہ ہماری جیب میں ہیں. وہ ہماری دیواروں پر ہیں. وہ ہماری گاڑیوں میں ہیں. یہ ہمارے بنیادی ڈھانچے کا ایک اہم حصہ ہے، ٹریفک لائٹس سے ہمارے مالیاتی بازاروں کی اندرونی کاموں میں بجلی کی گرڈ سے. اور ان تمام کمپیوٹرز میں ایک چیز عام ہے. وہ سافٹ ویئر پر انحصار کرتے ہیں کہ وہ کیا کریں.</p>
+
+<p>لیکن یہ سافٹ ویئر کس طرح لکھ رہا ہے?</p>
+
+<p>اس بات پر غور کیا جارہا ہے کہ ہماری دنیا کو ٹیکنالوجی کی طرف سے تبدیل کیا جاسکتا ہے، آپ کو آج کل K-12 تعلیم میں کمپیوٹر سائنس کا مطالعہ کرنے کی طلب کی توقع ہوسکتی ہے. تم غلط ہو. حقیقت میں، کم طلباء کمپیوٹر سائنس کا مطالعہ کر رہے ہیں، اور ایک اسکول پہلے ہی ایک کم از کم اس اسکول میں پڑھ رہے ہیں.</p>
+
+<p>ایک وقت جب ہنر مند پروگرامرز کے لئے طلب کبھی زیادہ نہیں ہوا، ہم کم کمپیوٹر سائنسدانوں کو باہر نکال رہے ہیں. یہاں تک کہ اعلی بےروزگاری کے اس وقت میں، ہزاروں کی ملازمتیں، یہاں بہت سے لوگ یہاں ** [INSERT STATE / CITY] &lt;/ strong&gt; میں، صحیح مہارت سیٹ کے ساتھ کافی افراد کے فقدان کے لئے unfilled جا رہے ہیں.</p> 
+
+<p>یہ کیوں ہے؟ اور ہم اسے کس طرح ایڈریس کرسکتے ہیں?</p>
+
+<p>مسئلہ ہمارے وسط اور ہائی سکولوں میں شروع ہوتا ہے. ہمارے دس اسکولوں میں سے نیں کمپیوٹر پروگرامنگ کلاس پیش نہیں کرتے ہیں. گزشتہ سال ** [SCHOOL DISTRICT] &lt;/ strong&gt; میں، صرف ** [NUMBER] &lt;/ strong&gt; طالب علموں نے کالج سطح کے اعلی درجے کی پلیٹ فارم (اے پی) کمپیوٹر سائنس امتحان لیا، صرف &lt;مضبوط&gt; [٪] &lt;/ مضبوط&gt; تمام طالب علموں نے جو ہمارے ریاست میں اے پی پی لیا. ہم اپنے طالب علموں کی تیاری یا حوصلہ افزائی کرنے کے لئے کافی نہیں کر رہے ہیں تاکہ ان اعلی اداکاری، اہم کیریئرز کی پیروی کریں.</p> 
+
+<p>اس ملک میں تقریبا تمام بڑے کمپیوٹنگ بدعات کا انعقاد کیا گیا تھا، لیکن ہم اس قیادت کو کھونے کے خطرے میں ہیں اگر ہم ابھی کچھ نہیں کرتے.</p>
+
+<p>ہمیں کچھ تبدیلیاں کرنے کی ضرورت ہے.</p>
+
+<p><strong>[اس کے اختیارات کے لئے اختیاری اختیارات]</strong></p>
+
+<p>ایک مثبت تبدیلی سخت کمپیوٹر سائنس کے کورس کو ہائی سکول ریاضی یا سائنس گریجویشن کی ضروریات کو پورا کرنے کے لئے کی اجازت دی جائے گی. ** [INSERT STATE] &lt;/ strong&gt; میں، کمپیوٹر سائنس کورسز انتخابی ہیں. تعلیمی مطالبات کو دیکھتے ہوئے، طالب علموں کو الیکٹرانک کمپیوٹر سائنس کورسز لینے کے قابل نہیں ہوسکتی ہے. اور اس تبدیلی کو ایک بڑا اثر پڑے گا. ریاستوں میں جہاں کمپیوٹر سائنس کورس گریجویشن کی ضروریات کی طرف اشارہ کرتے ہیں، کورسوں میں پچاس فیصد بڑی ہیں، ان کے مقابلے میں غیر معمولی اقلیتوں کی طرف سے شرکت کی بہت زیادہ شرحوں کے ساتھ، کمپیوٹر سائنس کے انتخاب کے طور پر.</p> 
+
+<p>ہمیں ایک نوجوان عمر کے طالب علموں کے ساتھ بھی کام کرنا چاہئے کہ وہ اپنی دلچسپی کو کمپیوٹر سائنس اور کوڈنگ میں چراغ ڈالیں. ہمارے بچوں کو صرف یہ نہیں جاننا چاہئے کہ کس طرح ایپس استعمال کرتے ہیں اور ویڈیو گیمز کھیلتے ہیں - انہیں پتہ ہونا چاہئے کہ انہیں کس طرح بنانا ہے. بچوں کو دوسری گریڈ کے طور پر جلد کوڈنگ کی بنیادی معلومات سیکھ سکتے ہیں.</p>
+
+<p>ہمیں زیادہ کمپیوٹر سائنس اساتذہ کو بھرنے اور ان کے میدان میں پیشہ ورانہ ترقی کی حوصلہ افزائی کرنے کی ضرورت ہے. آج بہت سے آن لائن وسائل موجود ہیں جو اساتذہ کے لئے تازہ ترین ٹیکنالوجی کے ساتھ اساتذہ تک رسائی اور تاریخ تک رسائی میں مدد کرسکتے ہیں.</p>
+
+<p>لیبر کے اعداد و شمار کے بیورو کے مطابق، 2020 تک، STEM شعبوں میں 9.2 ملین ملازمتیں ہوں گے. ان ملازمتوں میں سے نصف - 4.6 ملین - کمپیوٹنگ یا انفارمیشن ٹیکنالوجی میں ہوں گے. اور کمپیوٹر سائنس 21 ویں صدی کے لئے تیزی سے بنیاد پرست علم ہے. کون سے ملازمتوں کو پورا کرنے کے لئے ہمارے بچوں کو موقع فراہم نہیں کیا جائے گا، یہ کون سا کام پورا کرے گا?</p>
+
+<p>This week, December 9-15, is Computer Science Education Week. ** [STATE] &lt;/ strong&gt; بھر میں اسکولوں میں، ہمارے طالب علموں کو قومی گھنٹہ کوڈ میں حصہ لیا جائے گا، کمپیوٹر سائنس کے موضوع کو مسترد کرتے ہوئے امید ہے کہ ان کی بھوکیں آگے بڑھیں اور مزید جانیں. میں ان میں شمولیت اختیار کروں گا، اور میں آپ کو بھی شامل ہونے کے لئے دعوت دیتا ہوں. ہر کسی کو کس طرح کوڈ سیکھنا چاہئے. Visit <a href="https://hourofcode.com/us">https://hourofcode.com/us</a>
+ to learn more and get started. اور ** [STATE] &lt;/ strong&gt; میں زیادہ سے زیادہ اسکولوں کو کمپیوٹر سائنس لانے کیلئے ہماری کوششوں کی حمایت کرتے ہیں.</p> 
+
+<p><a href="/us/ur/#join">
+<button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ur/promote">
+<div class="nav-header">فروغ دیں</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote">
+ملوث حاصل کرنے کے لئے کس طرح
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#onepager">
+ایک-صفحہ پر مبنی ھینڈ-آؤٹ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#brochure">
+بروشر
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#videos">
+ویڈیوز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#posters">
+پوسٹرز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#social">
+سوشل (سماجی)
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#logo">
+آور-آف-کوڈ کا لوگو
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#stickers">
+اسٹیکرز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#sample-emails">
+سیمپل ای-میلز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/stats">
+اِسٹیٹس اور بلربز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/press-kit">
+پریس کٹ
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ur/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">وسائل</div>
+</div>
+</a>
+<a href="/us/ur/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">ٹیٹوریئلز ٹرائی کریں</div>
+</div>
+</a>
+<a href="/us/ur/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">ملوث حاصل کرنے کے لئے کس طرح</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">ہم سے رابطہ کریں</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">سہارا</a>
+</li>
+<li>
+<a href="/us/ur/partners" target="_blank">پارٹنرز</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">پرائیویسی پالیسی</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+کاپی رائٹ۔  2020 Code.orgجملہ حقوق محفوظ.
+<br>
+Hour of Code™ Code.org کا تجارتی نشان ہے ۔
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Juhend KoodiTund vabatahtlikele" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/et/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Juhend KoodiTund vabatahtlikele</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/et/">
+<img alt="KoodiTund" src="/us/et/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/et/learn" title="Tegevused">Tegevused</a>
+</li>
+<li>
+<a href="/us/et/how-to" title="Abi">Abi</a>
+</li>
+<li>
+<a href="/us/et/promote" title="Reklaami">Reklaami</a>
+</li>
+<li>
+<a href="/us/et/#faq" title="KKK">KKK</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/et/#join">
+<button style="float: right; margin-top: 50px;">
+Vii läbi KoodiTundi
+</button>
+</a></p>
+
+<h1>Juhend vabatahtlikele</h1>
+
+<h3>Saad koolis lapsi inspireerida!</h3>
+
+<hr>
+
+<h2>Miks tulla vabatahtlikuks?</h2>
+
+<p>Mõned mõtted eelmiste aastate vabatahtlikelt:</p>
+
+<ul>
+<li>"Parim osa minu kogemusest oli see, et terve klass olid tüdrukud ja erineva nahavärviga inimesed. See on hea, sest kui jõuame nende lasteni, siis saame ka It-tööstuse tulevikku muuta."</li>
+<li>"Eriti meeldis mulle see, et sain noori tüdrukuid julgustada tehnoloogia valdkonda uurima. Tundsin, et saan aidata It-valdkonna järgmist põlvkorda oma kodukohas."</li>
+<li>"Mulle meeldis üliväga see, kui põnevil lapsed olid. Üks hämmastav asjaolu oli see, et õpilased, kes tavaliselt akadeemiliselt eriti edukad ei olnud, said nende ülesannetega väga hästi hakkama, mõtlesid nagu arendajad ning aitasid ka teisi. Kindlasti aitas see kaasa nende enesehinnangule."</li>
+</ul>
+
+<h2>Igaüks sobib vabatahtlikuks</h2>
+
+<h3>Vabatahtlikud IT-sektorist:</h3>
+
+<p>Kas sul on side arvutiteaduse või tehnoloogiavaldkonnaga? Kui töötad tarkvaraarendajana või mistahes ametis IT-ettevõttes (olgu see siis programmeerimisega seotud või mitte) või oled läbinud arvutiteaduse kursusi, siis saad aidata õpilasi innustada! Paljud õpilased ei ole kunagi khanud kedagi, kes IT-sektoris töötaks. Õpetajatele on väga oluline, et klassi õpilastel tekiks side valdkonna professionaalide ja üliõpilastega.</p>
+
+<p>Võid olla kas külalisesineja klassis või aidata KoodiTundi läbi viia. Külasta kohalikke koole ning innusta lapsi arvutiteadusi õppima.<br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>Registreeri vabatahtlikuks juba täna!</button> <br> <br></a></p> 
+
+<h3>
+  Kui soovid rohkem panustada:
+</h3>
+
+<p>
+  Usud, et arvuiteaduste õppimine avab õpilastele uusi võimalusi? Aita oma kohalikku kooli või korralda kooliväline üritus! Selleks, et KoodiTund üritust korraldada, ei pea sa olema arvutiteaduse taustaga. Isegi abipakkumine on vahel piisav selleks, et julgustada sinu lapse õpetajat, sõpra või huviringi KoodiTundi läbi tegema.
+</p>
+
+<h3>
+  Kuidas alustada?
+</h3>
+
+<ol>
+  <li>
+    <a href="/us/et/promote/resources#help-schools%0A">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+  </li>
+  
+  <li>
+    Offer to host an Hour of Code event after school at a local school. <a href="/us/et/how-to%0A">Use this How-To Guide</a> to help you plan.
+  </li>
+</ol>
+
+<h2>
+  Kaasa kolleege
+</h2>
+
+<p>
+  Räägi oma sõpradele ja kolleegidele KoodiTund kampaaniast. Paljud õpetajad otsivad vabatahtlikke, palu neil <a href="https://code.org/volunteer"> vabatahtlikuks registreeruda</a>. Kutsu oma tööandja kaasa lööma. <a href="/us/et/promote/resources#sample-emails%0A">Send this email</a> to your manager or the CEO to get everyone on board.
+</p>
+
+<h2>
+  Ettevalmistus
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/et/promote/resources#videos">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+  </li>
+  <li>
+    Tutvu <a href="/files/hoc-volunteer-toolkit.pdf">KoodiTund vabatahtliku juhendiga</a>, mis sisaldab ülevaadet, ajakava, ettevalmistavaid materjale ja reklmaammaterjale. Siin on olemas kõik, mida vabatahtlikuks hakkamisel vajad!
+  </li>
+  <li>
+    If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="/us/et/learn">Hour of Code tutorial</a>.
+  </li>
+  <li>
+    Kui külastad kooli, siis täida kõik vajalikud dokumendid (kui need on vajalikud).
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">Vaata neid soovitusi</a>, kuidas tudengitega suhelda.
+  </li>
+  <li>
+    Liitu meiega sotsiaalmeedia kanalites Facebook, Twitter, Instagram ja Tumblr kasutades #HourOfCode.
+  </li>
+  <li>
+    Võta ühendust õpetajaga ja arutage läbi, mida ürituse ajal räägite.
+  </li>
+  <li>
+    Kui oled virtuaalne vabatahtlik, siis testige ekraani jagamise võimalusi eelnevalt.
+  </li>
+</ul>
+
+<h2>
+  KoodiTund ürituse päeval
+</h2>
+
+<p>
+  Kui korraldate KoodiTund üritust, järgige allpool toodud juhendit oma päeva planeerimisel. Enne seda kohtuge koolis õpetajaga ja vajadusel registreerige enda külaskäik valvelauas. Kinnitage üle kokku lepitud kava päevaks ning arutage läbi lahtised küsimused.
+</p>
+
+<h3>
+  Lihtne päevakava:
+</h3>
+
+<table>
+  <tr>
+    <th>
+      Aeg
+    </th>
+    
+    <th>
+      Teema
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      1-5 minutit
+    </td>
+    
+    <td>
+      <a href="/us/et/promote/resources#videos">Show an inspirational video</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      5-10 minutit
+    </td>
+    
+    <td>
+      Tutvusta ennast ja saa õpilastega tuttavaks: 
+      
+      <li>
+        Kus sa töötad, mida teed ning mis sulle oma töö juures kõige rohkem meeldib?
+      </li>
+      
+      <li>
+        Kes või mis sind inspireerib?
+      </li>
+      
+      <li>
+        Millest sai alguse sinu huvi arvutiteaduse vastu?
+      </li>
+      
+      <li>
+        Kas sul on mentor?
+      </li>
+      
+      <li>
+        Räägi sellest, kuidas tehnoloogia kõiki mõjutab.
+      </li>
+      
+      <br>Küsi õpilastelt küsimusi ning jäta aega küsimusteks-vastusteks. 
+      
+      <li>
+        Millised töökohad õpilastele huvi pakuvad, mis on nende lemmikseadmed või -äpid ning kuidas nad arvavad, et need on loodud?
+      </li>
+      
+      <li>
+        Kas õpilastel on sulle küsimusi?</li>
+</td> </tr> <tr>
+          <td>
+            30-60 minutit
+          </td>
+          
+          <td>
+            <strong>Programmeeri!</strong> Kõnni ringi, vasta küsimustele ja juhata neid programmeerimismängude mängimisel. Proovi teha nii, et sa ei anna kohe vastust vaid küsid suunavaid küsimusi, et õpilased leiaksid ise õige vastuse. Julgusta õpilasi, et nad teistega suhtleks ja küsimusi küsiks. Üheskoos õppimine on suurepärane õppimisvorm.
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            1-3 minutit
+          </td>
+          
+          <td>
+            Täna kõiki ja ütle lõpetuseks midagi innustavat. Jaga võimalusel pisikingitusi (kleepsud on väga toredad)!
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Pärast
+          </td>
+          
+          <td>
+            <strong>Sinust võib alguse saada suur muutus:</strong> Räägi õpetajaga, kuidas KoodiTund muuta täispikaks arvutiteaduse kursuseks! Mine<a href="https://code.org/yourschool">code.org/yourschool</a>koos õpetajaga ning nimetage, mida koolis täna õpetatakse ning julgustage neid arvutiteadust oma koolis õpetama.
+          </td>
+        </tr> </table> 
+        
+
+<pre><code>    &lt;h3&gt;
+      Pärast üritust:
+    &lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Jaga oma fotosid ja lugusid Code.org korraldajatega kirjutades giving@code.org.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Lisa vabatahtlikuks olemise aeg vastavasse töötabelisse (kui see teie organisatsioonis olemas).
+      &lt;/li&gt;
+      &lt;li&gt;
+        Jaga oma kogemusi sotsiaalmeedias #HourOfCode!
+      &lt;/li&gt;
+      &lt;li&gt;
+        Või teete ürituse ajal pilte/videosid, &lt;strong&gt;eriti koos õpilastega&lt;/strong&gt;, siis küsige ka õpetaja/lapsevanemate nõusolek nende avaldamiseks sotsiaalmeedias.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Võta kuu aja pärast õpetajaga uuesti ühendust, et teada saada, kas õpetaja on huvitatud arvutiteaduse kursusest? Jaga&lt;a href="https://code.org/yourschool"&gt; materjale ja õppimisvõimalusi, mis selle võimalikuks muudavad.&lt;/a&gt;.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      Kuidas sinust võib saada vabatahtlik või külalisesineja
+    &lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        Õpetajad otsivad vabatahtlikke meie &lt;a href="https://code.org/volunteer/local"&gt; vabatahtlike kaardilt&lt;/a&gt;.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Katsu lisada võimalikult palju infot oma profiili juurde.
+      &lt;/li&gt;
+      &lt;li&gt;
+        Õpetaja võtab sinuga selle vormi kaudu ühendust (sinu e-posti aadressi ei jagata õpetajale). &lt;em&gt;Kui saad liiga palju palveid õpetejatelt, võid alati oma eelistustest infot muuta või loobuda. Vastav link on iga õpetajatelt tulnud e-kirja lõpus.&lt;/em&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      Vabatahtlikuks KoodiTund ajal KKK
+    &lt;/h2&gt;
+    &lt;h3&gt;
+      Õpetaja pole minuga veel ühendust võtnud. Kas saan siiski vabatahtlikuks minna?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Proovi ühendust võtta kohalike koolidega ning helista õpetajale/direktorile/sekretärile ning uuri, kuidas saaksid aidata.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      Kui kaua klassikülastus kestab?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Klassiruumis üritus kestab tavaliselt 60-90 minutit ning virtuaalse klassiruumi puhul tavaliselt 20-30 minutit.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      Mis vanusegrupile KoodiTund sobib?
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Code.org ja meie partnerid on kõik KoodiTund tegevused loonud selliselt, et need oleksid sobivad kõigile koolilastele, poistele ja tüdrukutele. Igaüks, isegi täiskasvanud, saab kaasa lüüa!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href='/us/et/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+Vii läbi KoodiTundi
+</button>
+</p>
+
+<pre><code>    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/et/how-to">
+<div class="nav-header">Juhendid</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to">
+Haridustöötajatele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/afterschool">
+Huviharidustöötajatele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/companies">
+Ettevõtetele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/districts">
+Piirkondadele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/events">
+Kooli kogunemisteks
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/parents">
+Vanematele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/public-officials">
+Ametiisikutele
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/et/how-to/volunteers">
+Vabatahtlikele
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/et/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/et/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Materjalid</div>
+</div>
+</a>
+<a href="/us/et/learn">
+<div class="display-link">
+<img class="display-img" src="/us/et/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Proovi juhendeid</div>
+</div>
+</a>
+<a href="/us/et/promote">
+<div class="display-link">
+<img class="display-img" src="/us/et/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Kuidas kaasa lüüa</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Võta meiega ühendust</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Abi</a>
+</li>
+<li>
+<a href="/us/et/partners" target="_blank">Partnerid</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Tingimused</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Privaatsuspoliitika</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Auoriõigused2020 Code.org. Kõik õigused kaitstud.
+<br>
+Hour of Code™ kaubamärk kuulub organisatsioonile Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

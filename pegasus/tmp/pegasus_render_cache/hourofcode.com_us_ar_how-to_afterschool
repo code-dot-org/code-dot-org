@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="دليل الاستخدام" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ar/how-to/afterschool" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>دليل الاستخدام</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ar/">
+<img alt="ساعة البرمجة" src="/us/ar/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/afterschool';">
+<option selected value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ar/learn" title="الأنشطة">الأنشطة</a>
+</li>
+<li>
+<a href="/us/ar/how-to" title="كيفية الاستعمال">كيفية الاستعمال</a>
+</li>
+<li>
+<a href="/us/ar/promote" title="تعزيز">تعزيز</a>
+</li>
+<li>
+<a href="/us/ar/#faq" title="الأسئلة المتداولة">الأسئلة المتداولة</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ar/#join">
+<button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</a></p>
+
+<h1>كيف تدرس " ساعة من البرمجة" لفصول وأندية "ما بعد المدرسة"</h1>
+
+<h3>انضم للحراك وقدم لمجموعة من طلابك ساعتهم الأولى من علوم الحاسب بهذه الخطوات. "ساعة من البرمجة" سهلة العمل - حتى للمبتدئين! اذا اردت مساعدة إضافية، يمكنك ان تجد <a href="%=%20codeorg_url('/volunteer/local')%20%">متطوعا محليا</a> ليساعدك في القيام بساعة برمجة بعد المدرسة أو في لنادي.</h3>
+
+<hr>
+
+<h2>١. شاهد هذا الفيديو كيف-تفعل <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+</h2>
+
+<h2>2. اختر برنامجاً تعليمياً</h2>
+
+<p>نوفر متعة متنوعة، <a href="/us/ar/learn">دورات طويلة</a> للمشاركين من كل الأعمار، مصممة من طرف شركاء مختلفين. <a href="/us/ar/learn">جربها</a></p>
+
+<p><strong>كل دروس "ساعة من البرمجة"</strong> تتطلب اقل وقت ممكن من الاعداد من المنظمين, وهي ذاتية الاسترشاد - بحيث تسمح للطلاب بالتعلم حسب مستوى مهارة كل فرد.</p>
+
+<p><a href="/us/ar/learn"><img src="/images/fit-700/tutorials.png" alt=""></a></p>
+
+<p><strong>هل أنت بحاجة إلى خطة دراسية لنشاط "ساعة من البرمجة" بعد المدرسة ؟</strong> تفقد هذا! <a href="/files/AfterschoolEducatorLessonPlanOutline.docx">النموذج</a>!</p>
+
+<h2>٣. عزّز ساعة البرمجة لديك</h2>
+
+<p>روج لحدثك لساعة البرمجة <a href="/us/ar/promote">مع هذه الأدوات</a> وشجع الآخرين على استضافتها.</p>
+
+<h2>٤. حدد احتياجاتك من التقنية - أجهزة الحاسب الآلي اختيارية</h2>
+
+<p>أفضل تجربة ل"ساعة من البرمجة" تتضمن أجهزة كمبيوتر متصلة بالإنترنت. لكن <strong>لا</strong> تحتاج إلى جهاز كمبيوتر لكل طفل، ويمكنك حتى تعليم "ساعة من البرمجة" دون كمبيوتر على الإطلاق.</p>
+
+<p>تأكد من اختبار البرامج التعليمية على كمبيوترات الطلاب أو أجهزتهم للتأكد من أنها تعمل بشكل صحيح على المتصفحات بالصوت والفيديو. <strong>هل سرعة النت ضعيفة ؟</strong> قم أنت بعرض مقاطع الفيديو أمام كل طلاب الفصل، بحيث لا يحتاج كل طالب تحميل المقاطع بنفسه. أو جرب البرامج التعليمية الغير متصلة / بدون انترنت.</p>
+
+<p><strong>وفر سماعات لطلاب الفصل</strong>، أو أطلب من الطلاب إحضار سماعاتهم، إذا اخترت برنامجا تعليميا يعمل بشكل أفضل مع الصوت.</p>
+
+<p><strong>ليس لديك ما يكفي من الاجهزة؟</strong>إستخدم<a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">البرمجة المزدوجة</a>. عندما يتعاون الطلبة، يقل الاعتماد على المعلم. أيضا سيلاحظون أن علم الحاسوب اجتماعي و تعاوني.</p>
+
+<h2>5) ابدأ تدريب "ساعة من البرمجة" بمشاهدة فيديو ملهم للطلاب</h2>
+
+<p>أطلق "ساعة من البزمجة" بإلهام المشاركين و مناقشة كيف يأثر علم الحاسوب في كل جزء من حياتنا.</p>
+
+<p><strong>اعرض احد الفيديوهات المُلهِمة:</strong></p>
+
+<ul>
+<li>الفيديو الرسمي ل Code.org، من تقديم بيل غاتس, مارك زوكربيرج ونجم إن بي أي كريس بوش (توجد نسح <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc">, </a><a href="https://www.youtube.com/watch?v=nKIu9yen5nc">5 دقائق</a>, <a href="https://www.youtube.com/watch?v=dU1xS07N-FA">9 دقائق</a>).</li>
+<li><a href="https://www.youtube.com/watch?v=KsOIlDT145A">الفيديو العالمي لساعة من البرمجة </a></li>
+<li>
+<a href="https://www.youtube.com/watch?v=6XvmhE1J9PY">الرئيس اوباما يدعو جميع الطلاب لتعلم علم الحاسوب</a>.</li>
+<li>للعثور على المزيد من أشرطة الفيديوهات الملهمة من <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP"> هنا</a>.</li>
+</ul>
+
+<p><strong>ليست مشكلة اذا كنت جديد على علم الحاسوب. هذا بعض الافكار اللتي ستعرفم على نشاط "ساعة برمجة":</strong></p>
+
+<ul>
+<li>اشرح كيف أن التكنولوجيا تؤثر على حياتنا بطرق متعددة، مع أمثلة بحيث أن كلا من الأولاد والبنات يهتمون ب (النقاش حول كيف أن التطبيقات التكنولوجية تستخدم في إنقاذ الأرواح، ومساعدة الناس، وربط الناس ببعضهم البعض وإلى أخره).</li>
+<li>بمشاركة الفصل، اسرد الاشياء التي نستخدم فيها البرمجة في حياتنا اليومية.</li>
+<li>هذه بعض التوجيهات لجعل الفتيات يهتمن بعلوم الكمبيوتر<a href="https://test.code.org/girls">هنا</a>.</li>
+</ul>
+
+<p><strong>بحاجة إلى المزيد من التوجيه؟</strong> حمل هذا <a href="/files/AfterschoolEducatorLessonPlanOutline.docx"> النموذج من الخطة الدراسية</a>.</p>
+
+<h2>٦- برمج!</h2>
+
+<p><strong>توجيه المشاركين الى النشاط</strong> -اكتب رابط الدرس في لوح المعلومات. اعثر على الرابط المدرج في <a href="/us/ar/learn">معلومات حول دورتك المختارة</a> تحت عدد المشاركين.</p>
+
+<p><strong>عندما يأتي شخص عبر الصعوبات لا بأس بأن يجاوب:</strong> --"أنا لا أعرف. دعونا نتخيل هذا معا. " -"التكنولوجيا لا تعمل دائماً بالطريقة التي نريد". -"تعلم البرمجة مثل تعلم لغة جديدة; لا يمكن ان تجيدها على الفور. "</p>
+
+<p><strong>ماذ تفعل إن أنهى أحد عمله باكرا؟</strong> - شجع المشاركين لإجراء نشاط ساعة برمجة آ على <a href="/us/ar/learn">خر hourofcode.com/learn</a> - أو اطلب ممن أنهوا باكرا ليساعدوا المتعثرين.</p>
+
+<h2>٧- احتفل</h2>
+
+<ul>
+<li>
+<a href="%=%20codeorg_url('/certificates')%">اطبع الشهادات</a> لطلابك.</li>
+<li>
+<a href="/us/ar/promote/resources#stickers">اطبع "أجريت ساعة البرمجة"</a> ملصقات لطلابك.</li>
+<li>
+<a href="http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more">اطلب قمصان خاصة</a> لمدرستك.</li>
+<li>شارك صور وفيديوهات حدث ساعة برمجة الذي قمت به على وسائل التواصل الاجتماعي. استخدم #HourOfCode و @codeorg حتى نسلط الضوء على نجاحك ايضا!</li>
+</ul>
+
+<h2>موارد أخرى لمعلمي ساعة برمجة</h2>
+
+<ul>
+<li>تفقد <a href="http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466"> أفضل الممارسات</a> من منظمين اخرين لنشاط "ساعة من البرمجة".</li>
+<li>شاهد تسجيلنا لمحاضرة <a href="https://youtu.be/EJeMeSW2-Mw"> دليل المعلم لنشاط"ساعة من البرمجة"</a>.</li>
+<li>قم بزيارة <a href="http://forum.code.org/c/plc/hour-of-code"> منتدى ساعة من البرمجة</a> للحصول على نصيحة، فكرة و دعم من منظمين اخرين.</li>
+<li>استعرض <a href="https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code">ساعة برمجة سؤال وجواب</a>.</li>
+</ul>
+
+<h2>ماذا بعد ساعة برمجة؟</h2>
+
+<p>نشاط"ساعة من البرمجة" هو مجرد خطوه اولية في الرحلة لمعرفه كيفيه عمل التكنولوجيا وكيفيه انشاء التطبيقات البرمجيات. Help students continue their journey and encourage them to <a href="/beyond">learn more online</a>!</p>
+
+<p><a href="/us/ar/#join">
+<button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ar/how-to">
+<div class="nav-header">أدلة إرشادية</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to">
+للمعلمين
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/afterschool">
+للمعلمين ما بعد المدرسة
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/companies">
+للشركات
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/districts">
+للمقاطعات
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/events">
+الجمعيات المدرسية
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/parents">
+للآباء
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/public-officials">
+للموظفين العموميين
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/volunteers">
+للمتطوعين
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ar/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">الموارد</div>
+</div>
+</a>
+<a href="/us/ar/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">قُم بتجربة هذه الدروس</div>
+</div>
+</a>
+<a href="/us/ar/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">كيفية المشاركة</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">إتصل بنا</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">الدعم</a>
+</li>
+<li>
+<a href="/us/ar/partners" target="_blank">الشركاء</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">شروط</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">سياسة الخصوصية</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+حقوق الطبع والنشر Code.org عام 2015. جميع الحقوق محفوظة.
+<br>
+إن ™Hour of Code هي علامة تجارية لصالح Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Computer Science Principles" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/csp-old" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Computer Science Principles | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<style>
+  ﻿/*!
+   * Bootstrap v3.3.2 (http://getbootstrap.com)
+   * Copyright 2011-2015 Twitter, Inc.
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   *//*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}footer{display:block}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}b,strong{font-weight:700}h1{margin:0.67em 0;font-size:2em}small{font-size:80%}img{border:0}svg:not(:root){overflow:hidden}hr{height:0;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}button,input,select{margin:0;font:inherit;color:inherit}button{overflow:visible}button,select{text-transform:none}button{-webkit-appearance:button;cursor:pointer}button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}input{line-height:normal}input[type="checkbox"]{box-sizing:border-box;padding:0px}table{border-spacing:0;border-collapse:collapse}td,th{padding:0}/*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */@media print{*,:after,:before{color:#000 !important;text-shadow:none !important;background:0 0 !important;-webkit-box-shadow:none !important;box-shadow:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}thead{display:table-header-group}img,tr{page-break-inside:avoid}img{max-width:100% !important}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}select{background:#fff !important}.label{border:1px solid #000}}@font-face{font-family:'Glyphicons Halflings';src:url(/fonts/glyphicons-halflings-regular.eot);src:url(/fonts/glyphicons-halflings-regular.eot?#iefix) format("embedded-opentype"),url(/fonts/glyphicons-halflings-regular.woff2) format("woff2"),url(/fonts/glyphicons-halflings-regular.woff) format("woff"),url(/fonts/glyphicons-halflings-regular.ttf) format("truetype"),url(/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular) format("svg")}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:focus,a:hover{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}img{vertical-align:middle}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}h1,h2,h3,h4{font-family:inherit;font-weight:500;line-height:1.1;color:inherit}h1,h2,h3{margin-top:20px;margin-bottom:10px}h4{margin-top:10px;margin-bottom:10px}h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}p{margin:0 0 10px}.small,small{font-size:85%}ol,ul{margin-top:0;margin-bottom:10px}ol ul,ul ul{margin-bottom:0}.row{margin-right:-15px;margin-left:-15px}table{background-color:transparent}th{text-align:left}label{display:inline-block;max-width:100%;margin-bottom:5px;font-weight:700}input[type=search]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}input[type=checkbox]{margin:4px 0 0;margin-top:1px \9;line-height:normal}.btn{display:inline-block;padding:6px 12px;margin-bottom:0;font-size:14px;font-weight:400;line-height:1.42857143;text-align:center;white-space:nowrap;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-image:none;border:1px solid transparent;border-radius:4px}.btn:active:focus,.btn:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}.btn:focus,.btn:hover{color:#333;text-decoration:none}.btn:active{background-image:none;outline:0;-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,0.125);box-shadow:inset 0 3px 5px rgba(0,0,0,0.125)}.btn-primary{color:#fff;background-color:#337ab7;border-color:#2e6da4}.btn-primary:active,.btn-primary:focus,.btn-primary:hover{color:#fff;background-color:#286090;border-color:#204d74}.btn-primary:active{background-image:none}.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.dropdown{position:relative}.pagination{display:inline-block;padding-left:0;margin:20px 0;border-radius:4px}.label{display:inline;padding:.2em .6em .3em;font-size:75%;font-weight:700;line-height:1;color:#fff;text-align:center;white-space:nowrap;vertical-align:baseline;border-radius:.25em}.close{float:right;font-size:21px;font-weight:700;line-height:1;color:#000;text-shadow:0 1px 0 #fff;filter:alpha(opacity=20);opacity:.2}.close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;filter:alpha(opacity=50);opacity:.5}button.close{-webkit-appearance:none;padding:0;cursor:pointer;background:0 0;border:0}.modal-open{overflow:hidden}.modal{position:fixed;top:0;right:0;bottom:0;left:0;z-index:1040;display:none;overflow:hidden;-webkit-overflow-scrolling:touch;outline:0}.modal.fade .modal-dialog{-webkit-transition:-webkit-transform .3s ease-out;-o-transition:-o-transform .3s ease-out;transition:transform .3s ease-out;-webkit-transform:translate(0, -25%);-ms-transform:translate(0, -25%);-o-transform:translate(0, -25%);transform:translate(0, -25%)}.modal.in .modal-dialog{-webkit-transform:translate(0, 0);-ms-transform:translate(0, 0);-o-transform:translate(0, 0);transform:translate(0, 0)}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:auto;margin:10px}.modal-content{position:relative;background-color:#fff;-webkit-background-clip:padding-box;background-clip:padding-box;border:1px solid #999;border:1px solid rgba(0,0,0,0.2);border-radius:6px;outline:0;-webkit-box-shadow:0 3px 9px rgba(0,0,0,0.5);box-shadow:0 3px 9px rgba(0,0,0,0.5)}.modal-backdrop{position:absolute;top:0;right:0;left:0;background-color:#000}.modal-backdrop.fade{filter:alpha(opacity=0);opacity:0}.modal-backdrop.in{filter:alpha(opacity=50);opacity:.5}.modal-header{min-height:16.43px;padding:15px;border-bottom:1px solid #e5e5e5}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:1.42857143}.modal-body{position:relative;padding:15px}.modal-footer{padding:15px;text-align:right;border-top:1px solid #e5e5e5}@media (min-width: 768px){.modal-dialog{width:600px;margin:30px auto}.modal-content{-webkit-box-shadow:0 5px 15px rgba(0,0,0,0.5);box-shadow:0 5px 15px rgba(0,0,0,0.5)}}@media (min-width: 992px){.modal-lg{width:900px}}.carousel{position:relative}.modal-footer:after,.modal-footer:before,.row:after,.row:before{display:table;content:" "}.modal-footer:after,.row:after{clear:both}@-ms-viewport{width:device-width}/*!
+   *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+   *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+   */@font-face{font-family:'FontAwesome';src:url("/fonts/fontawesome-webfont.eot?v=4.6.3");src:url("/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"),url("/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"),url("/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"),url("/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"),url("/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-warning:before{content:"\f071"}.fa-chevron-up:before{content:"\f077"}.fa-chevron-down:before{content:"\f078"}.fa-twitter:before{content:"\f099"}.fa-envelope:before{content:"\f0e0"}.fa-facebook:before{content:"\f09a"}.fa-caret-down:before{content:"\f0d7"}.fa-caret-up:before{content:"\f0d8"}.fa-instagram:before{content:"\f16d"}.fa-print:before{content:"\f02f"}.fa-question-circle:before{content:"\f059"}.fa-tumblr:before{content:"\f173"}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.fa-user:before{content:"\f007"}#homepage .clear{clear:both}h1{color:#7665a0;font-size:32px;font-family:'Gotham 7r', sans-serif;margin-top:50px;margin-bottom:30px;line-height:1.2em}h2{color:#00adbc;font-size:22px;font-family:'Gotham 5r', sans-serif;margin-top:45px;margin-bottom:25px;line-height:1.2em}h3{color:#5b6770;font-size:18px;font-family:'Gotham 4r', sans-serif;margin-top:25px;margin-bottom:12px;line-height:1.2em}h4{color:#5b6770;font-size:14px;font-family:'Gotham 5r', sans-serif;line-height:1.2em}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-weight:normal}a{font-family:'Gotham 7r', sans-serif}a:link{color:#7665a0;text-decoration:none}a:visited{color:#7665a0;text-decoration:none}a:hover,a:active{text-decoration:underline;color:#5b6770}strong{font-family:'Gotham 7r', sans-serif;font-weight:normal}em{font-family:'Gotham 4i', sans-serif;font-style:normal}body{font-family:'Gotham 4r', sans-serif;font-size:14px;line-height:22px;font-weight:normal;color:dimgray;margin:0}li>ul{margin-top:10px;margin-bottom:10px}ul{list-style:none;padding:0;margin:20px}ul li{padding-left:1em;text-indent:-.7em}ul li:before{content:"• ";color:#00a1e6}.invisiblelist li:before{content:""}img{border:none}th{background-color:#00b2c0;color:white;padding:15px;border-color:white;border-width:1px;border-style:solid;border-top-color:#00b2c0;border-left-color:#00b2c0;border-right-color:#00b2c0}td{border-width:1px;border-color:#8d8a8a;border-style:solid;padding:15px}.narrow_hr{margin-top:10px;margin-bottom:10px;border:0;border-top-width:1px;border-top-style:solid;border-top-color:#00adbc}.grey_input{font-size:14px;height:34px;background-color:#e2e4e3;border:none;padding:5px;color:#595959;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-top-left-radius:4px;border-top-right-radius:4px}#petition_form a{font-family:'Gotham 4r', sans-serif}#petition_form a:link,#petition_form a:visited{color:#dcdcdc;text-decoration:none}#petition_form a:hover,#petition_form a:active{color:#fff;text-decoration:underline}.listed_supporter{font-family:'Gotham 7r', sans-serif;font-weight:normal;color:#7665a0}.greybox{background-color:#586771;color:white;padding:20px;text-align:center;overflow:hidden}#about_nav{margin:50px 0 0 0}.about_list_item_selected{color:#ff8a00;font-family:'Gotham 7r', sans-serif}a.about_list_item{color:#999c9f;font-family:'Gotham 5r', sans-serif}.button-color-share{background-color:#7e5ca2;border-color:#7e5ca2}button{-webkit-appearance:none;-webkit-user-select:none;-webkit-writing-mode:horizontal-tb;align-items:flex-start;background-color:#ffa400;border-color:#ffa400;background-image:none;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom-style:solid;border-bottom-width:1px;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;border-top-left-radius:4px;border-top-right-radius:4px;border-top-style:solid;border-top-width:1px;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:'Gotham 4r', sans-serif;font-size:14px;font-weight:normal;height:34px;letter-spacing:normal;line-height:20px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:0px;padding-bottom:6px;padding-left:12px;padding-right:12px;padding-top:6px;text-align:center;text-indent:0px;text-shadow:none;text-transform:none;vertical-align:middle;white-space:nowrap;word-spacing:0px;writing-mode:lr-tb}.btn-white:hover{background-color:#E6E6F3;border-color:#adadad}.dropdown{border-color:#ccc;border-radius:5px}#stats-carousel .slide-prev>span{border-right-color:#b9bf15}#stats-carousel .slide-next>span{border-left-color:#b9bf15}.carousel-wrapper .pagination a{background:#7765a1}.carousel-wrapper .pagination a.selected{background:#ffa401}@media screen and (max-width: 450px){#index .count h1{font-size:32px;line-height:32px}#index .count h2{font-size:40px;line-height:40px}#index .count h3{font-size:32px;line-height:48px}#index .count h4{font-size:16px;line-height:16px}}label{font-family:'Gotham 5r', sans-serif;font-weight:normal}.video_caption_link{font-family:'Gotham 4r', sans-serif}html{height:100%}body{background-color:#fff;height:100%}.wrapper{min-height:100%;margin-bottom:-80px}.push{height:80px}#pageheader-wrapper .headerlink:link,#pageheader-wrapper .headerlink:visited{color:white;text-decoration:none}#pageheader-wrapper .headerlink:hover,#pageheader-wrapper .headerlink:active{color:white;border-bottom:solid 2px #ffa400}#pageheader-wrapper .learnoption:hover{text-decoration:underline}#pagefooter{width:100%;height:90px;padding:20px;overflow:hidden;background-color:#7665a0;box-sizing:border-box}#pagefooter .content{color:white;font-size:14px;font-weight:normal;width:970px;margin:0 auto}#pagefooter .dim{display:inline-block;opacity:0.5}.whitefooterlink:link{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}.whitefooterlink:hover{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}.whitefooterlink:visited{color:white;font-size:14px;font-family:'Gotham 4r', sans-serif}#user_hero #contents{margin:10px 0px;padding-left:5px;width:100%}#sign_in_or_user{margin:.6875em 0 0 30px}#sign_in_or_user .button-signin{text-decoration:none;-webkit-appearance:none;-webkit-user-select:none;-webkit-writing-mode:horizontal-tb;align-items:flex-start;background-color:#ffa400;border-color:#ffa400;background-image:none;border-bottom-left-radius:4px;border-bottom-right-radius:4px;border-bottom-style:solid;border-bottom-width:1px;border-image-outset:0px;border-image-repeat:stretch;border-image-slice:100%;border-image-source:none;border-image-width:1;border-left-style:solid;border-left-width:1px;border-right-style:solid;border-right-width:1px;border-top-left-radius:4px;border-top-right-radius:4px;border-top-style:solid;border-top-width:1px;box-sizing:border-box;color:#fff;cursor:pointer;display:inline-block;font-family:'Gotham 4r', sans-serif;font-size:14px;font-weight:normal;height:35px;letter-spacing:normal;line-height:22px;margin-bottom:0px;margin-left:0px;margin-right:0px;margin-top:-6px;padding-bottom:6px;padding-left:12px;padding-right:12px;padding-top:6px;text-align:center;text-indent:0px;text-shadow:none;text-transform:none;vertical-align:middle;white-space:nowrap;word-spacing:0px;writing-mode:lr-tb}
+
+</style>
+
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<p><link href="/shared/css/course-blocks.css" type="text/css" rel="stylesheet"></p>
+
+<h1>Computer Science Principles</h1>
+
+<h2>
+<a name="whatis"></a>What is CS Principles?</h2>
+
+<p>Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. More than a traditional introduction to programming, it is a rigorous, engaging, and approachable course that explores many of the foundational ideas of computing so all students understand how these concepts are transforming the world we live in.</p>
+
+<p><br>
+This year-long course can be taught as an AP or non-AP course - no prerequisites required for students or for teachers new to computer science! In addition, our curriculum is available at no cost for anyone, anywhere to teach. For more information about our goals and approach to our courses, please see our <a href="/educate/curriculum/values">curriculum values</a> and our <a href="/educate/professional-learning/values">professional learning values</a>.</p>
+
+<p><br></p>
+
+<div class="col-50" style="padding-right: 20px;">
+
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_intro_csp()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/DMr1iFYacGQ/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+
+<p></p>
+</div>
+
+<div class="modal fade" id="showVideo_intro_csp">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-video-code="DMr1iFYacGQ"></div>
+</div>
+
+<p></p>
+</div>
+
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+<p></p>
+</div>
+</div>
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+
+<script>
+  window["showVideo_intro_csp"] = function()
+  {
+    $("#showVideo_intro_csp").modal('show');
+    setupPopupWindows();
+    window["playVideo_intro_csp"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_intro_csp video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'intro_csp');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_intro_csp").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_intro_csp"](false);
+    });
+  });
+  
+  window["playVideo_intro_csp"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_intro_csp video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_intro_csp .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+<p><i>Interested in teaching the course? <a href="https://youtu.be/jQm0z894CG0" target="_blank">Find out more!</a></i></p>
+
+<p></p>
+</div>
+
+<div class="col-50">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/courses/csp-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Computer Science Principles</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Recommended for Grades 9 - 12</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.</div>
+<a href="//test-studio.code.org/courses/csp-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View course</button>
+</a>
+<a href="https://curriculum.code.org/csp" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+</div>
+
+<div style="clear: both;"></div>
+
+<hr>
+
+<h2>
+<a name="pl"></a>Professional Learning</h2>
+
+<p>Code.org offers hands-on workshops and online support. Over 80,000 teachers have been through our professional development workshops and thousands more attend every month. This year, we even have virtual professional learning options available! </p>
+
+<p>Whether you’re brand new to computer science or an experienced tech teacher looking for the best way to use the Code.org curriculum, our Professional Learning Program is a great way to get started. And teachers love it! Over 90% rank it the best professional development ever.</p>
+
+<p><a href="/educate/professional-learning/middle-high"><button>Learn about professional learning</button></a></p>
+
+<h2>Code.org's AP CS Principles Curriculum</h2>
+
+<p><img src="../files/apcsp_providerbadge_sm_alpha.png" style="float: right; width: 100px" alt="Code.org AP CSP Endorsed Badge">Code.org is recognized by the <a href="http://collegeboard.org/APCSP">College Board</a> as an endorsed provider of curriculum and professional development for AP® Computer Science Principles. This endorsement affirms that all components of Code.org CS Principles’s offerings are aligned to the AP Curriculum Framework standards and the AP CS Principles assessment. Using an endorsed provider affords schools access to resources including an AP CS Principles syllabus pre-approved by the College Board’s AP Course Audit, and officially recognized professional development that prepares teachers to teach this course.</p>
+
+<ul>
+<li><a href="/files/CSPSyllabus2019.pdf">Code.org 2019-20 AP CS Principles Endorsed Syllabus</a></li>
+</ul>
+
+<div style="clear:both"></div>
+
+<h2>
+<a name="overview"></a>Curriculum Resources and Features</h2>
+
+<div class="col-33">
+
+<p><a href="https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview"><center><img src="/images/csp/csp-crop-cover.jpg" width="90%"></center></a></p>
+
+<div style="margin-left: 15px; margin-top: 5px;">The <a href="https://docs.google.com/document/d/1ZVzF_-cON8pjDVUOZjVk32y4flCMXugcrA6gFeWDHzE/preview" target='_"blank"'>Curriculum Guide</a> contains details about the classroom and student practices that flow throughout the course, overviews of each unit, and implementation considerations.</div>
+
+</div>
+
+<div class="col-33">
+
+<p><a href="https://curriculum.code.org/csp"><center><img src="/images/animated-examples/lessonplans.png" width="90%"></center></a></p>
+
+<div style="margin-top: 5px;">
+<a href="https://curriculum.code.org/csp">Daily lesson plans</a> come with detailed instructions, activity guides, assessments, standards mappings, and more.</div>
+
+</div>
+
+<div class="col-33">
+
+<p><a href="https://studio.code.org/home"><center><img src="/images/csd/teacher_dashboard.png" width="100%"></center></a></p>
+
+<div style="margin-left: 15px; margin-top: 5px;">Create and manage your classroom sections, check student progress, administer assessments, and integrate with your Google or Clever classroom - all from your <a href="https://studio.code.org/home">Teacher Dashboard</a>!</div>
+
+</div>
+
+<p style="clear:both"> </p>
+
+<p><br></p>
+
+<div class="col-33">
+
+<p><a href="/files/CSPSyllabus2019.pdf"><center><img src="/images/csp/CSPSyllabus2018-19.png" width="90%"></center></a></p>
+
+<div style="margin-left: 15px; margin-top: 5px;">Teaching CS Principles as an AP course? Don't forget to submit the <a href="/files/CSPSyllabus2019.pdf">2019-20 AP Endorsed Syllabus</a> for the AP course audit.</div>
+
+</div>
+
+<div class="col-33">
+
+<p></p>
+<center><img src="/images/animated-examples/binary.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">Students get hands on experience with concepts like binary and pixels through <a href="/educate/csp/widgets">computational widgets.</a>
+</div>
+
+</div>
+
+<div class="col-33">
+
+<p></p>
+<center><img src="/images/animated-examples/fieldofflowers.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;"> Quickly create shareable apps with <a href="/educate/applab">Code.org's App Lab</a> - an online block to text, JavaScript programming environment. </div>
+
+</div>
+
+<p style="clear:both"> </p>
+
+<h3>Don't miss these additional resources:</h3>
+
+<ul>
+<li><a href="#materials"><strong>Course Materials List</strong></a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfV5ljCxR8BZWJRT_m_6CpB" target='_"blank"'><strong>CS Principles Video Library</strong></a></li>
+<li><a href="/educate/resources/videos"><strong>Code.org Video Library</strong></a></li>
+</ul>
+
+<h2>
+<a name="lessons"></a>Unit Overview</h2>
+
+<div class="col-50" style="padding-right: 20px">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp1-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Unit 1</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>The Internet</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">Students learn how the multi-layered systems of the Internet function as they collaboratively solve problems and puzzles about encoding and transmitting data, both 'unplugged' and using Code.org's Internet Simulator.</div>
+<a href="//test-studio.code.org/s/csp1-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/unit1/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-50">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp2-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Unit 2</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Digital Information</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">Students learn how complex information like text and images is stored in a computer and the way compression helps reduce the size of those files.</div>
+<a href="//test-studio.code.org/s/csp2-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/unit2/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp3-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Unit 3</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Algorithms and Programming</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">In this unit, students learn the JavaScript language with turtle programming in Code.org's App Lab. Students are introduced the general principles of algorithms and program design that are applicapble to any programming language.</div>
+<a href="//test-studio.code.org/s/csp3-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/unit3/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-50">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp4-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Unit 4</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Big Data and Privacy</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">Students research current events around the complex questions related to public policy, law, ethics, and societal impact. Students are also introduced to the basics of how and why modern encryption works.</div>
+<a href="//test-studio.code.org/s/csp4-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/unit4/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp-explore-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-teal-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">AP Explore Performance Task</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Explore - Impact of Computing Innovations</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">This unit provides activities and resources for students to prepare for and complete the AP Explore Performance Task, which requires students to identify a computing innovation, explore its impact, and create a related digital artifact.</div>
+<a href="//test-studio.code.org/s/csp-explore-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/csp-explore/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-50">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp5-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-purple-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Unit 5</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Building Apps</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">Students continue learning how to program in the JavaScript language. Using Code.org's App Lab environment, students create a series of applications that live on the web. Each app highlights a core concept of programming.</div>
+<a href="//test-studio.code.org/s/csp5-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/unit5/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<div class="col-50" style="padding-right: 20px">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csp-create-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-teal-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">AP Create Performance Task</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Create - Applications from Ideas</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">This unit provides activities and resources for students to prepare for and complete the AP Create Performance Task, which asks students to develop a program on a topic that interests them or one that solves a problem.</div>
+<a href="//test-studio.code.org/s/csp-create-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+<a href="https://curriculum.code.org/csp-19/csp-create/" target="_blank">
+<button style="margin-left: 10px; margin-top: 20px;">Lesson plans</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+<p></p>
+</div>
+
+<div class="col-50">
+
+<div class="courseblock-span6 courseblock-wide-large" style="height: 100%; max-width: 100%; padding-bottom: 20px; margin-bottom: 10px;">
+<div id="courseblock-header" style="position: relative; height: 80px;">
+<a href="//test-studio.code.org/s/csppostap-2019" style="position: absolute;">
+<img src="//test.code.org/shared/images/banners/small-teal-icons.png" style="width: 100%;">
+</a>
+<h3 style="position: absolute; color: white; margin-top: 20px; margin-left: 30px;">Post-AP</h3>
+</div>
+
+<div id="courseblock-content" style="padding-left: 20px; padding-right: 20px;">
+<h4>Making Data-backed Apps</h4>
+<div class="smalltext" style="min-height: 120px; margin-bottom: 10px;">After the AP Test, students learn how to analyze data using spreadsheets and use App Lab's database capabilities to create apps that store data in the cloud.
+<br><br>
+</div>
+<a href="//test-studio.code.org/s/csppostap-2019">
+<button style="margin-left: 10px; margin-top: 20px;">View unit</button>
+</a>
+</div>
+
+<p></p>
+</div>
+
+</div>
+
+<div style="clear:both"></div>
+
+<p><em>Use, share, and customize the resources, as they are distributed under a Creative Commons Attribution Non-Commerical ShareAlike License see our <a href="https://code.org/tos">Terms of Service</a>. If you are interested in licensing Code.org materials for commercial purposes, <a href="https://code.org/contact">contact us</a>.</em></p>
+
+<hr>
+
+<h2>Keep up with CS Principles</h2>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<h4>Let us know how we're doing</h4>
+
+We are always looking for ways to improve our courses. If something's not quite working, or you have ideas about features that you'd like to see, we'd love to hear from you!
+<br>
+
+<a href="mailto:support@code.org"><button>Give feedback</button></a>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<h4>Subscribe for the latest news</h4>
+
+Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for CS Principles.
+<br><br>
+
+<a href="/educate/csp/CSPStatus_Signup"> <button>Sign up</button></a>
+
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<h4>Chat about CS Principles in the forum</h4>
+
+We have forums for educators to discuss and trade ideas about CS Principles and talk about the curriculum. Code.org forums are used for all of our courses, K-12.
+<br><br>
+
+<a href="http://forum.code.org/c/csp"> <button>Visit the forum</button></a>
+
+</div>
+
+<div style="clear:both"></div>
+
+<hr>
+
+<h2>Spread the word about CS Principles</h2>
+
+<h3>Hand out these fliers around your school and consider sending home to parents.</h3>
+
+<p><a href="/files/CSPrinciples_1-pager.pdf"><img src="/images/fit-200/csp/CSPrinciples_1-pager.png" alt="image"></a>
+<a href="/files/programs/csp-recruitment-poster.pdf"><img src="/images/fit-200/csp/csp-recruitment-poster.png" alt="image"></a></p>
+
+<h3>Hang these posters in your classroom and around your school:</h3>
+
+<p><a href="/files/programs/kieran_rory_CS_recruitment.pdf"><img src="/images/fit-200/kieran_rory_CS_recruitment.png" alt="image"></a>
+<a href="/files/programs/kulkarni_parker_CS_recruitment.pdf"><img src="/images/fit-200/kulkarni_parker_CS_recruitment.png" alt="image"></a>
+<a href="/files/programs/madison_maxey_CS_recruitment.pdf"><img src="/images/fit-200/madison_maxey_CS_recruitment.png" alt="image"></a>
+<a href="/files/programs/javier_aguera_CS_recruitment.pdf"><img src="/images/fit-200/javier_aguera_CS_recruitment.png" alt="image"></a></p>
+
+<h3>Share these videos with students, teachers, and administrators:</h3>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_video4()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/jQm0z894CG0/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+
+<p></p>
+</div>
+
+<div class="modal fade" id="showVideo_video4">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-video-code="jQm0z894CG0"></div>
+</div>
+
+<p></p>
+</div>
+
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+<p></p>
+</div>
+</div>
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+
+<script>
+  window["showVideo_video4"] = function()
+  {
+    $("#showVideo_video4").modal('show');
+    setupPopupWindows();
+    window["playVideo_video4"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_video4 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'video4');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_video4").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_video4"](false);
+    });
+  });
+  
+  window["playVideo_video4"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_video4 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_video4 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+<p><i>Inspire students</i></p>
+
+<p></p>
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_video5()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/DMr1iFYacGQ/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+
+<p></p>
+</div>
+
+<div class="modal fade" id="showVideo_video5">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-video-code="DMr1iFYacGQ"></div>
+</div>
+
+<p></p>
+</div>
+
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+<p></p>
+</div>
+</div>
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+
+<script>
+  window["showVideo_video5"] = function()
+  {
+    $("#showVideo_video5").modal('show');
+    setupPopupWindows();
+    window["playVideo_video5"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_video5 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'video5');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_video5").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_video5"](false);
+    });
+  });
+  
+  window["playVideo_video5"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_video5 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_video5 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+<p><i>Recruit teachers</i></p>
+
+<p></p>
+</div>
+
+<div class="col-33" style="padding-right: 20px;">
+
+<style>
+  .videothumbnail {
+    cursor: pointer;
+    width: 100%; }
+    .videothumbnail .thumbnail-wrapper {
+      position: relative;
+      overflow: hidden; }
+      .videothumbnail .thumbnail-wrapper .thumbnail-image {
+        width: 100%; }
+  
+  .play-button-center img.play {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 20%; }
+  
+  .play-button-caption img.play {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    z-index: 100; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    background-color: black;
+    line-height: 50px;
+    width: 100%;
+    opacity: 0.4;
+    z-index: -1; }
+  .play-button-caption .thumbnail-wrapper .video_caption_link {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    color: white;
+    background-color: transparent;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 50px;
+    z-index: 10; }
+  
+  .play-button-none img.play {
+    display: none; }
+</style>
+<div class="play-button-center videothumbnail" onclick="return showVideo_video6()">
+<div class="thumbnail-wrapper">
+<img class="thumbnail-image" src="//i.ytimg.com/vi/POiMh0qISpI/mqdefault.jpg">
+<img class="play" src="/shared/images/play-button.png">
+<div class="video_caption_link"></div>
+</div>
+
+<p></p>
+</div>
+
+<div class="modal fade" id="showVideo_video6">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header" style="border-bottom-width: 0px; padding-top: 0px; padding-bottom: 4px; height:48px">
+<button class="close" data-dismiss="modal" style="height: 48px" type="button">
+<span aria-hidden="true" style="font-size:48px">×</span>
+<span class="sr-only">Close</span>
+</button>
+<div style="clear:both"></div>
+</div>
+
+<div class="modal-body" style="padding-top: 0px">
+<style>
+  .vjs-tech:focus, .vjs-poster:focus {
+    outline: 0; }
+</style>
+<div style="text-align:right; overflow:hidden">
+<div style="width:100%; height: 100%; margin: 0 auto;">
+<div class="videodiv" style="position:relative;">
+<img src="/images/16x9.png" style="display:block; width:100%; height:auto">
+<div class="insert_video_player" data-video-code="POiMh0qISpI"></div>
+</div>
+
+<p></p>
+</div>
+
+<div style="float:left">
+<script>
+  $(document).ready(function() {
+    setupPopupWindows();
+  });
+  
+  
+  // This is a separate function so that popup links that might appear later than documentReady 
+  // (such as in modal popup windows) can be set up as popup windows too.
+  
+  function setupPopupWindows() {
+  
+    // Unbind previous click handlers before binding this new one, since this function finds all
+    // window-popup links, even ones it would have setup already.
+  
+    $('a.window-popup').unbind().bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  }
+</script>
+
+<div class="share-buttons clear">
+</div>
+
+<p></p>
+</div>
+</div>
+
+<p></p>
+</div>
+</div>
+</div>
+</div>
+
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+
+<script>
+  window["showVideo_video6"] = function()
+  {
+    $("#showVideo_video6").modal('show');
+    setupPopupWindows();
+    window["playVideo_video6"](true);
+  
+    // send video start action to Google Analytics. Use action field to indicate whether this was from YouTube or Code.org CloudFront
+    var fallbackVideo = $("#showVideo_video6 video");
+    var eventAction = (fallbackVideo.length > 0 ? 'startVideoFallback' : 'startVideoYouTube');
+    ga('send', 'event', 'showvideo', eventAction, 'video6');
+  };
+  
+  $(document).ready(function() {
+    $("#showVideo_video6").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_video6"](false);
+    });
+  });
+  
+  window["playVideo_video6"] = function(play)
+  {
+    var fallbackVideo = $("#showVideo_video6 video");
+  
+    var youtubeIframeContent = null;
+    var videoDiv = $("#showVideo_video6 .videodiv");
+    if (videoDiv.length > 0)
+    {
+      var iframe = videoDiv[0].getElementsByTagName("iframe");
+      if (iframe.length > 0)
+      {
+        youtubeIframeContent = iframe[0].contentWindow;
+      }
+    }
+  
+    if (fallbackVideo.length > 0)
+    {
+      videojs(fallbackVideo[0], {}, function() {
+        play ? this.play() : this.pause();
+      });
+    }
+    else if (youtubeIframeContent)
+    {
+      func = play ? 'playVideo' : 'pauseVideo';
+      youtubeIframeContent.postMessage('{"event":"command","func":"' + func + '","args":""}', '*');
+    }
+  }
+</script>
+
+<p><i>Engage administrators</i></p>
+
+<p></p>
+</div>
+
+<div style="clear: both;"></div>
+
+<hr>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>
+<a name="materials"></a>What materials do I need for this course?</h3>
+
+<p><strong>Required Materials:</strong></p>
+
+<p>This course requires that students have access to computers with a modern web browser. At this time, our courses are not optimized for tablets or mobile devices. For more details, check out <a href="/educate/it">Code.org's technology requirements</a>.</p>
+
+<p>Many lessons have handouts that are designed to guide students through activities. While these handouts are not required, we highly recommend their use. </p>
+
+<p>In addition to handouts, several lessons call for specific items. You can find these listed below as well as our suggestions for alternatives:</p>
+
+<ul>
+<li>
+<strong>Unit 1, Lesson 2:</strong> various craft materials for constructing physical devices such as cups, string/yarn, construction paper, flashlights, slinkies, noise makers, markers, and glue</li>
+<li>
+<strong>Unit 3, Lesson 1:</strong> A handful of legos per 2-3 students (alternatives: post-it notes, construction paper)</li>
+<li>
+<strong>Unit 3, Lesson 2 - 3:</strong> Playing cards, we recommend 1 deck per 6 students (alternative: write numbers of post-it notes)</li>
+<li>
+<strong>Unit 4, Lesson 8:</strong> Clear dixie cups with beans (alternatives: any clear container such as a ziplock bag, empty water bottle, etc., and/or any small item such as beads, raisins, coffee beans, etc.)</li>
+</ul>
+
+<p><strong>Optional Materials</strong></p>
+
+<p>The following supplies are completely optional but will be useful to have on hand for various lessons:</p>
+
+<ul>
+<li>Graph paper</li>
+<li>Chart paper</li>
+<li>Markers</li>
+<li>Post-it notes</li>
+</ul>
+
+<h3>How can I access answer keys?</h3>
+
+<p>With an approved teacher account you can find answer keys in a blue "Teacher Only" panel that shows in the online lessons and activities.</p>
+
+<p>Teachers in our professional learning program will automatically be approved to view answer keys.  If you need an approved teacher account, any teacher can apply for Code Studio access to protected teacher-only materials (answer keys, etc) through <strong><a href="https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong>.</p>
+
+<h3>
+<a name="standards"></a>Is CS Principles mapped to standards?</h3>
+
+<p>CS Principles was written using the AP CS Principles Framework and prepares students for the AP CS Principles exam. The course has also been aligned to the newly revised 2017 CSTA standards. A summary of standards mappings can be found at <a href="https://curriculum.code.org/csp/standards">curriculum.code.org/csp/standards</a></p>
+
+<h3>What is the recommended timing for teaching CS Principles?</h3>
+
+<p>We recommend that CS Principles be taught as a full year course, assuming that you meet with students daily or nearly daily for 45 or more minutes. Full-year schedules where students are in class for a similar amount of time per week will also work.</p>
+
+<p>It is possible to teach the course on a semester block schedule, though we highly recommend this implementation only be used in the fall semester. Since the AP Performance Tasks are due in late April and require 20 dedicated hours of class time to complete, most schools find there is not enough time to complete the course on a block schedule in the spring.</p>
+
+<h3>Are there supports in CS Principles for students with learning differences or disabilities?</h3>
+
+<p>Yes. Code.org has collaborated closely with partners to make our CS Principles curriculum accessible. Every lesson includes detailed recommendations from the <a href="http://outlier.uchicago.edu/accessCSP/" target='_"blank"'>accessCSP project from Outlier Research</a> on how activities can be supplemented and modified to meet the needs of students with learning disabilities and attention deficit disorders, including reading disorders, written expression disorders, math disorders, and language disorders. In addition, the Lesson-Specific Adjustment Guides identify the underlying psychological process that each adjustment addresses, including processes related to: aspects of reasoning; areas of language; different types of memory; fine motor; processing, timing, and pacing; aspects of visual processing; and executive functioning, attention, and social skills.</p>
+
+<h3>Do you have blind or visually impaired students in your class?</h3>
+
+<p>Our partners at <a href="https://www.washington.edu/accesscomputing/accesscsforall" target='_"blank"'>AccessCSforAll</a> have created an <a href="https://quorumlanguage.com/lessons/code.html" target='_"blank"'>accessible version of the curriculum and online tools</a> designed specifically for students with these disabilities. AccessCSforAll also runs a <a href="https://quorumlanguage.com/epiq.html" target='_"blank"'>summer professional development</a> to help teachers learn how to support these students. </p>
+
+<h3>How can I communicate with other teachers who are using the curriculum?</h3>
+
+<p>Check out our forum at <a href="https://forum.code.org" target="_blank"></a><a href="https://forum.code.org">https://forum.code.org</a>. There you'll find a space for general CS Principles discussion as well as unit- and lesson-specific threads.</p>
+
+<h3>Can I give feedback on the lessons?</h3>
+
+<p>Yes, please! Our desire is that the curriculum will be a living document and not something set in stone. We are open to changes or alternatives to lessons so please send us your feedback by using the CS Principles forum.</p>
+
+<h3>How/Where can I get professional development for this course?</h3>
+
+<p>Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. <a href="/educate/professional-learning/middle-high">Click here</a> to learn more.</p>
+
+<h3>How can I learn about what's new or changing with the curriculum?</h3>
+
+<p>We send out monthly updates! <a href="http://code.org/educate/csp/CSPStatus_Signup">Sign up for future emails</a>.</p>
+
+<h3>Ideas and Inspirations</h3>
+
+<p>Please see this page about <a href="/educate/csp/inspirations">CS Principles Inspirations</a> to read about the influential works in computer science education that form some of the course's philosophical underpinnings.</p>
+
+<p>AP® is a registered trademark of the College Board.</p>
+
+<!--
+## <a name="what"></a>Professional Learning - Applications now available!
+
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever.
+
+**Applications for the [CS Principles Professional Learning Program](/educate/professional-learning/cs-principles) are now available!**
+
+[col-50]
+
+<center><img src="/images/recruitment_banner.png" width="90%"></center>
+
+[/col-50]
+
+<div class="col-50" style="padding-top:15px">
+  <a href="/educate/professional-learning/cs-principles">
+    <button>Learn more and apply now!</button>
+  <a>
+</div>
+
+<div style="clear:both"></div>
+
+<hr/>
+
+### Professional Learning 
+Our middle and high school programs offer year-round support. The program kicks off with a 5-day summer workshop where you'll have an opportunity to work hands-on with the curriculum and meet other teachers from your area. Throughout the year, we offer online support for upcoming units, forum support, and 1-day quarterly workshops. You don't need any prior computer science experience to get started. And teachers love it! 90% rank it the best professional development ever. Want to get notified when applications open for the 2019-2020 school year? Provide your contact information to a Regional Partner.
+
+[<button>Tell me when applications open</button>](https://studio.code.org/pd/regional_partner_contact/new)
+-->
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

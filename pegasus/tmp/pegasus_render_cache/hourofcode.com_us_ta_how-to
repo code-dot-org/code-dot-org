@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="எவ்வாறு செய்வது வழிகாட்டி" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ta/how-to" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>எவ்வாறு செய்வது வழிகாட்டி</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ta/">
+<img alt="குறியீடு மணி" src="/us/ta/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option selected value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ta/learn" title="நடவடிக்கைகள்">நடவடிக்கைகள்</a>
+</li>
+<li>
+<a href="/us/ta/how-to" title="எவ்வாறு இதைச் செய்யலாம்">எவ்வாறு இதைச் செய்யலாம்</a>
+</li>
+<li>
+<a href="/us/ta/promote" title="ஊக்குவிப்பு">ஊக்குவிப்பு</a>
+</li>
+<li>
+<a href="/us/ta/#faq" title="அடிக்கடி கேட்கப்படும் கேள்விகள்">அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ta/#join">
+<button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</a></p>
+
+<h1>ஒரு வகுப்பின் ஒரு மணி நேரத்தை உங்கள் வகுப்பில் எப்படி கற்பிக்க வேண்டும்</h1>
+
+<h3>இயக்கத்தில் சேர்ந்து, மாணவர் குழுக்களுக்கு கணினியியல் பற்றிய முதல் படிகளை அறிமுகப்படுத்துங்கள். மணிநேர நிரலாக்கம், புதிதாய் படிப்பவர்க்கும் இயக்க எளிதானது! உதவ கூடுதல் கைகளின் தொகுப்பை நீங்கள் விரும்பினால், உங்கள் வகுப்பில் ஒரு மணிநேர குறியீட்டை இயக்க உதவும் <a href="==%20%7Burls/volunteer_local%20%7D=="> உள்ளூர் தன்னார்வலரை </a> காணலாம்.</h3>
+
+<h3>உங்களிடம் இன்னும் கேள்விகள் இருந்தால் எங்கள் <a href="===%20localized_files/participation_guide%20%7Dibl"> பங்கேற்பு வழிகாட்டியைப் பாருங்கள் </a>.</h3>
+
+<hr>
+
+<h2>1. எப்படி செய்வது என்று காட்டும் காணொளியை பார்க்க <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+</h2>
+
+<h2>2. பயிற்சியை தேர்வு செய்க</h2>
+
+<p>எல்லா வயதினருக்கும் அனுபவ நிலைகளுக்கும் பலவிதமான வேடிக்கைகளை, <a href="==%20%7Burls/learn%20%7Da"> மாணவர் வழிகாட்டும் பயிற்சிகள் </a> வழங்குகிறோம். மாணவர்களே தங்கள் சொந்த நடவடிக்கைகளை மேற்கொள்கின்றனர், ஆனால் பல நடவடிக்கைகள், ஆசிரியர்களுக்கான பாடம் திட்டங்களை உள்ளடக்கியிருந்தாலும், நீங்கள் விவாதத்தை வழிகாட்டும் அல்லது நடவடிக்கைகளை நீட்டிக்க (நீங்கள் நடவடிக்கைகளை கிளிக் செய்யும் போது நீங்கள் இணைப்பைக் காணலாம்). <a href="/us/ta/learn"><img src="/images/fit-700/tutorials.png" alt=""></a></p>
+
+<h2>3. உங்கள் கோடை மணிநேரத்தை ஊக்குவிக்கவும்</h2>
+
+<p>இந்த கருவிகளைக் கொண்டு உங்கள் மணிநேர குறியீட்டை  ஊக்குவிக்கவும், மற்றவர்கள் தங்கள் சொந்த நிகழ்வுகளை நடத்த ஊக்குவிக்கவும்.</p> 
+
+<h2>4. உங்கள் தொழில்நுட்பத் தேவைகளைத் திட்டமிடுங்கள் - கணினிகள் விருப்பமானது</h2>
+
+<p>கோட் அனுபவத்தின் சிறந்த மணிநேர இணையம் இணைக்கப்பட்ட கணினிகள் அடங்கும். மணிநேர நிரலாக்கம் சொல்லிக் கொடுக்கப்படும் ஒவ்வொரு குழந்தைக்கும் ஒரு கணினி இருக்க <strong>தேவையில்லை</strong>. ஒரு கணினி கூட இல்லாமலும் சொல்லித்தர முடியும்.</p>
+
+<p>மாணவர்களின் கணினியில், சாதனங்களில் பயிற்சிகளை சோதிக்கவும். உலாவிகளில், ஒலி மற்றும் வீடியோ ஒழுங்காக இயங்குவதை உறுதிப்படுத்தவும். ** குறைவான பட்டையகலம் உள்ளதா? ** அனைத்து மாணவருக்கும் சேர்த்து வகுப்பின் முன், வீடியோக்களைக் காட்ட திட்டம் செய்க. அப்படி செய்வதால் ஒவ்வொரு மாணவரும் தங்கள் சொந்த வீடியோக்களை பதிவிறக்கம் செய்யவில்லை. அல்லது unplugged / அகல்நிலை பயிற்சிகளையும் முயற்சிக்கவும்.</p>
+
+<p>ஒலியோடு சிறந்த இயங்கும் பயிற்சியை நீங்கள் தேர்ந்து எடுத்தால், வகுப்பிற்கான காதணிபாடிகள் நீங்களே வழங்கலாம் அல்லது மாணவர்கள் தங்கள் சொந்தமாக காதணிபாடிகளை கொண்டு வரும்படியும் கேட்கலாம்.</p>
+
+<p>** போதுமான சாதனங்கள் இல்லையா? &lt;/ strong&gt; <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> ஜோடி நிரலாக்க </a> என்பதைப் பயன்படுத்துக. மாணவர்கள் பங்குதாரர் போது, அவர்கள் ஒருவருக்கொருவர் உதவி மற்றும் ஆசிரியர் குறைவாக நம்பியிருக்கிறார்கள். அவர்கள் கணினி அறிவியல் சமூக மற்றும் கூட்டு என்று பார்க்க வேண்டும்.</p> 
+
+<p><img src="/images/fit-350/group_ipad.jpg"></p>
+
+<h2>5. எழுச்சியூட்டும் பேச்சாளரோடோ அல்லது காணொளியொடோ உங்கள் மணிநேர நிரலாக்கத்தை தொடங்கவும்</h2>
+
+<p>** கணினி அறிவியலின் சாத்தியக்கூறுகளின் அகலத்தைப் பற்றி பேசுவதன் மூலம் உங்கள் மாணவர்களை ஊக்குவிக்க <a href="==%20%7Burls/volunteer_local%20%7Dsex"> உள்ளூர் தன்னார்வலரை </a> அழைக்கவும். &lt;/ strong&gt; சுற்றி ஆயிரக்கணக்கான தன்னார்வலர்கள் உள்ளனர் வகுப்பறை வருகை அல்லது உங்கள் மாணவர்களுடன் வீடியோ அரட்டை மூலம் உங்கள் குறியீட்டு நேரத்திற்கு உதவ உலகம் தயாராக உள்ளது!</p> 
+
+<p><strong>ஒரு தூண்டுதலாக வீடியோவை காட்டு:</strong></p>
+
+<ul>
+<li>அசல் Code.org வெளியீட்டு வீடியோ, பில் கேட்ஸ், மார்க் ஜுக்கர்பெர்க், மற்றும் NBA நட்சத்திர கிறிஸ் போஷ் ஆகியவற்றைக் கொண்டது. <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc"> 1 நிமிடம் </a>, <a href="https://www.youtube.com/watch?v%20=%20nKIu9yen5nc%20"> 5 நிமிடம் </a>, மற்றும் <a href="https://www.youtube.com/watch?v=dU1xS07N-FA"> 9 நிமிட </a> பதிப்புகளில் கிடைக்கும்)</li>
+<li>மேலும் உத்வேகம் தரும் &lt;a href="== {url / inspire} "</li>
+</ul>
+
+<p><strong>நீங்கள் மற்றும் உங்கள் மாணவர்கள் கணினி அறிவியல் புத்தம் புதிய என்றால் அது பரவாயில்லை. குறியீட்டு நடவடிக்கையின் உங்கள் மணிநேரத்தை அறிமுகப்படுத்த சில யோசனைகள் இங்கு உள்ளன:</strong></p>
+
+<ul>
+<li>தொழில்நுட்பங்கள் நம் வாழ்வில் தாக்கத்தை ஏற்படுத்தும் வழிகளை விவரிக்கவும், சிறுவர்கள் மற்றும் பெண்கள் ஆகிய இரு உதாரணங்களையும் எடுத்துக் கொள்ளுங்கள் (உயிர்களை காப்பாற்றுவதைப் பற்றி பேசுதல், மக்களுக்கு உதவுதல், மக்கள் இணைப்பது போன்றவை).</li>
+<li>ஒரு வர்க்கமாக, அன்றாட வாழ்வில் குறியீட்டை பயன்படுத்தும் விஷயங்களை பட்டியலிடுங்கள்.</li>
+<li>கணினி அறிவியலில் சிறுமிகள் ஆர்வம் காட்டுவதற்கான உதவிக்குறிப்புகளைக் காண்க <a href="a%3E%20%7Burls/girls%20%7Da"> இங்கே </a>.</li>
+</ul>
+
+<h2>6. கோட்!</h2>
+
+<p><strong>நடவடிக்கைக்கு நேரடி மாணவர்கள்</strong></p>
+
+<ul>
+<li>டுடோரியல் இணைப்பை ஒரு வெள்ளை பலகையில் எழுதவும். பங்கேற்பாளர்களின் எண்ணிக்கையின் கீழ் நீங்கள் தேர்ந்தெடுத்த டுடோரியலுக்கான <a href="==%20%7Burls/learn%20%7Dibl"> தகவல் </a> இல் பட்டியலிடப்பட்டுள்ள இணைப்பைக் கண்டறியவும்.</li>
+</ul>
+
+<p><strong>உங்கள் மாணவர்கள் சிரமங்களை எதிர்கொள்கையில் அது பதிலளிக்க வேண்டியது பரவாயில்லை:</strong></p>
+
+<ul>
+<li>"எனக்கு தெரியாது. இதை ஒன்றாகக் கண்டுபிடிப்போம். "</li>
+<li>"தொழில்நுட்பம் எப்போது வேண்டுமானாலும் வேலை செய்யாது."</li>
+<li>"நிரல் கற்றல் ஒரு புதிய மொழியை கற்று போன்ற ஆகிறது; நீங்கள் உடனடியாக சரளமாக மாட்டீர்கள். "</li>
+</ul>
+
+<p><strong>ஒரு மாணவர் ஆரம்பத்தில் முடிந்தால் என்ன செய்வது?</strong></p>
+
+<ul>
+<li>மாணவர்கள் அனைத்து டுடோரியல்களையும் பார்க்கலாம் மற்றும் <a href="a%3E%20%7Burls/learn%20%7Da"> மற்றொரு மணிநேர குறியீடு செயல்பாட்டை முயற்சிக்கவும் </a>.</li>
+<li>அல்லது, நடவடிக்கைகளைத் தொந்தரவு செய்யும் வகுப்புத் தோழர்களுக்கு உதவ ஆரம்பிக்கிற மாணவர்களைக் கேட்கவும்.</li>
+</ul>
+
+<div class="வண்ணம்-33">
+
+<p><img src="/images/fit-250/highschoolgirls.jpeg" alt=""></p>
+
+<p>9/5000 [/ நெடுவரிசை-33]</p>
+
+<p style="clear:both"> </p>
+
+<h2>7. கொண்டாடுங்கள்</h2>
+
+<div class="வண்ணம்-33">
+
+<p><img src="/images/fit-300/boy-certificate.jpg" alt=""></p>
+
+<p>9/5000 [/ நெடுவரிசை-33]</p>
+
+<ul>
+<li>உங்கள் மாணவர்களுக்கு <a href="==%20%7Burls/certificates%20%7Dibl"> அச்சிடும் சான்றிதழ்கள் </a>.</li>
+<li>
+<a href="%7B%7Burls/promote_stickers%20%7Da"> "நான் ஒரு மணிநேர குறியீட்டைச் செய்தேன்!" </a> உங்கள் மாணவர்களுக்கான ஸ்டிக்கர்களை அச்சிடுங்கள்.</li>
+<li><p>உங்கள் பள்ளிக்காக  தனிப்பயன் டி-ஷர்டுகளை ஆர்டர் செய்யவும்.</p></li> 
+
+<ul>
+<li>சமூக மீடியாவில் உங்கள் நிகழ்வு நிகழ்வு நிகழ்வுகளின் வீடியோ மற்றும் வீடியோக்களைப் பகிரலாம். #HourOfCode மற்றும் @codeorg பயன்படுத்தவும், எனவே உங்கள் வெற்றியை முன்னிலைப்படுத்தலாம்!</li>
+</ul> 
+</ul>
+
+<div class="வண்ணம்-33">
+
+<p><img src="/images/fit-260/highlight-certificates.jpg" alt=""></p>
+
+<p>9/5000 [/ நெடுவரிசை-33]</p>
+
+
+<p style="clear:both"> </p>
+
+<pre><code>## கல்வியாளர்களுக்கான கோட் வளங்களின் பிற மணி:...
+
+- அறிவுரை, அறிவுரை மற்றும் மற்ற கல்வியாளர்களிடமிருந்து உதவி பெற [ கோட் டீச்சர் அரங்கத்தின் மணிநேரத்தை பார்வையிடவும்](http://forum.code.org/c/plc/hour-of-code).
+- [ கோட் FAQ இன் மணிநேரத்தை ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code) மதிப்பாய்வு செய்யவும்.
+
+## கோட் ஆஃப் ஹவர் என்ன ஆனது?
+
+தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும்.
+
+- [ ஆன்லைனில் கற்றுக்கொள்ள ]({{urls/learn_beyond }a&gt;) தொடர மாணவர்களை ஊக்குவிக்கவும்.
+- ஒரு அனுபவமிக்க கணினி அறிவியல் வசதியாளரிடமிருந்து அறிவுறுத்தலைப் பெற [ கலந்து கொள்ளுங்கள் ]({{urls/professional_development_workshops }ibl) 1 நாள், நேரில் பயிலரங்கில் கலந்து கொள்ளுங்கள். (அமெரிக்க கல்வியாளர்கள் மட்டும்)
+
+&lt;a href='/us/ta/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ta/how-to">
+<div class="nav-header">எவ்வாறு செய்வது வழிகாட்டிகள்</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to">
+பயிற்றுவிப்பாளர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/afterschool">
+பள்ளி நேரத்திற்கு பின் பயிற்றுவிக்கும் ஆசிரியர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/companies">
+நிறுவனங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/districts">
+மாவட்டங்களுக்கு\
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/events">
+பள்ளிக் கூட்டங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/parents">
+பெற்றோர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/public-officials">
+பொது அதிகாரிகளுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/volunteers">
+தொண்டூழியர்களுக்கு
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ta/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">வள ஆதாரங்கள்</div>
+</div>
+</a>
+<a href="/us/ta/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">டுடோரியல்களை முயற்சிக்கவும்</div>
+</div>
+</a>
+<a href="/us/ta/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">எவ்வாறு ஈடுபடுவது</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">எங்களைத் தொடர்புகொள்க</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">ஆதரிக்கிறேன்</a>
+</li>
+<li>
+<a href="/us/ta/partners" target="_blank">பங்காளர்கள் மற்றும் ஆலோசகர்கள்</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">நிபந்தனைகள்</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">தனியுரிமைக் கொள்கை</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+காப்புரிமை 2020 Code.org. எல்லா உரிமைகளும் பாதுகாக்கப்பட்டவை.
+<br>
+Hour of Code™ என்பது Code.orgன் வணிக முத்திரையாகும்.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</div>
+</div>
+</div>
+</body>
+</html>

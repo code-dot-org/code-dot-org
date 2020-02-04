@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="हाउ-टु गाइड" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/hi/how-to" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>हाउ-टु गाइड</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/hi/">
+<img alt="ऑवर ऑफ कोड" src="/us/hi/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option selected value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/hi/learn" title="गतिविधियाँ">गतिविधियाँ</a>
+</li>
+<li>
+<a href="/us/hi/how-to" title="हाउ-टो">हाउ-टो</a>
+</li>
+<li>
+<a href="/us/hi/promote" title="प्रचार करें">प्रचार करें</a>
+</li>
+<li>
+<a href="/us/hi/#faq" title="सामान्य प्रश्न">सामान्य प्रश्न</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/hi/#join">
+<button style="float: right; margin-top: 50px;">
+एक घंटे की मेजबानी
+</button>
+</a></p>
+
+<h1>How to teach one Hour of Code with your class</h1>
+
+<h3>इस आंदोलन से जुड़ें और छात्रों के एक समूह को इन चरणों के साथ कंप्यूटर विज्ञान के उनके पहले घंटे का परिचय दें। अवर ओफ कोड को चलाना आसान है - किसी नौसिखिये के लिए भी! If you'd like an extra set of hands to help out, you can find a <a href="https://test.code.org/volunteer/local">local volunteer</a> to help run an Hour of Code in your class.</h3>
+
+<h3>Take a look at our <a href="/files/participation-guide.pdf">participation guide if you still have questions</a>.</h3>
+
+<hr>
+
+<h2>1. Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+</h2>
+
+<h2>2. Choose a tutorial for your hour</h2>
+
+<p>We provide a variety of fun, <a href="/us/hi/learn">student-guided tutorials</a> for all age groups and experience levels. Students do the activities on their own, though many activities include lesson plans for teachers (you'll see the link when you click the activity) to guide discussion or extend the activity. <a href="/us/hi/learn"><img src="/images/fit-700/tutorials.png" alt=""></a></p>
+
+<h2>3. Promote your Hour of Code</h2>
+
+<p>Promote your Hour of Code <a href="/us/hi/promote/resources">with these tools</a> and encourage others to host their own events.</p>
+
+<h2>4. Plan your technology needs - computers are optional</h2>
+
+<p>अवर ओफ कोड के उत्तम अनुभव के लिए इन्टरनेट से जुड़ा हुए संगणक की आवश्यकता है. लेकिन आपको हर बच्चे के लिए कंप्यूटर की ज़रूरत <strong>नहीं हैं</strong>, यहाँ तक कि, किसी कंप्यूटर के बिना भी आप ऑवर ऑफ़ कोड उपयोग कर सकते हैं।</p>
+
+<p>ट्यूटोरियल की कंप्यूटर या अन्य उपकरणों पे जाँच करे, ताकि ये सुनिश्चित हो जाए की वे ब्राउज़र पे ऑडियोऔर विडिओ के साथ ठीक से काम रहे हैं. ** कम बैंडविड्थ है? &lt;/ strong&gt; कक्षा के सामने वीडियो दिखाने की योजना बनाएं, इसलिए प्रत्येक छात्र अपने स्वयं के वीडियो डाउनलोड नहीं कर रहा है। या अनप्लग / ऑफ़लाइन ट्यूटोरियल का इस्तेमाल करें ।</p> 
+
+<p>अपनी कक्षा के लिए हेडफ़ोन प्रदान करें, या छात्रों को स्वयं लाने के लिए कहें, यदि आपके द्वारा चुना गया ट्यूटोरियल ध्वनि के साथ सबसे अच्छा काम करता है।</p>
+
+<p>आपके पास *<em>पर्याप्त संगणकीय उपकरण नहीं हैं? *</em> <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q"> साथ मिलके (युगुल) प्रोग्रामिंग </a> करें । जब छात्र भागीदारी करते हैं, तो वे एक-दूसरे की मदद करते हैं और शिक्षक पर कम निर्भर करते हैं। सभी को पता चलता है की संगणक शास्त्र साथ मिलके कम करने का सामाजिक शास्त्र है|</p>
+
+<p><img src="/images/fit-350/group_ipad.jpg"></p>
+
+<h2>5. Start your Hour of Code off with an inspiring speaker or video</h2>
+
+<p><strong>Invite a <a href="https://test.code.org/volunteer/local">local volunteer</a> to inspire your students by talking about the breadth of possibilities in computer science.</strong> There are thousands of volunteers around the world ready to help with your Hour of Code through either a classroom visit or video chat with your students!</p>
+
+<p><strong>प्रेरणादायी व्हिडीओ दिखाइए:</strong></p>
+
+<ul>
+<li>The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are <a href="https://www.youtube.com/watch?v=qYZF6oIZtfc">1 minute</a>, <a href="https://www.youtube.com/watch?v=nKIu9yen5nc">5 minute</a>, and <a href="https://www.youtube.com/watch?v=dU1xS07N-FA">9 minute</a> versions available)</li>
+<li>Find more inspirational <a href="https://test.code.org/inspire">resources</a> and <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">videos</a>.</li>
+</ul>
+
+<p><strong>It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:</strong></p>
+
+<ul>
+<li>Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).</li>
+<li>As a class, list things that use code in everyday life.</li>
+<li>See tips for getting girls interested in computer science <a href="https://test.code.org/girls">here</a>.</li>
+</ul>
+
+<h2>6. Code!</h2>
+
+<p><strong>Direct students to the activity</strong></p>
+
+<ul>
+<li>Write the tutorial link on a whiteboard. Find the link listed on the <a href="/us/hi/learn">information for your selected tutorial</a> under the number of participants.</li>
+</ul>
+
+<p><strong>When your students come across difficulties it's okay to respond:</strong></p>
+
+<ul>
+<li>"मुझे मालूम नहीं. चलो ये सुलझनेका साथ-साथ प्रयत्न करते है|"</li>
+<li>"तकनीक हमेशा जिस तरह से हम चाहते है वैसा काम नहीं करता है."</li>
+<li>"संगणक प्रोग्रामिंग सिखाना ये इक नयी भाषा सिखाने जैसा है; आप तुरंत सरलातासे प्रयोग नहीं कर पाएंगे|"</li>
+</ul>
+
+<p><strong>What if a student finishes early?</strong></p>
+
+<ul>
+<li>Students can see all tutorials and <a href="/us/hi/learn">try another Hour of Code activity</a>.</li>
+<li>Or, ask students who finish early to help classmates who are having trouble with the activity.</li>
+</ul>
+
+<div class="col-33">
+
+<p><img src="/images/fit-250/highschoolgirls.jpeg" alt=""></p>
+
+</div>
+
+<p style="clear:both"> </p>
+
+<h2>7. Celebrate</h2>
+
+<div class="col-33">
+
+<p><img src="/images/fit-300/boy-certificate.jpg" alt=""></p>
+
+</div>
+
+<ul>
+<li>
+<a href="https://test.code.org/certificates">Print certificates</a> for your students.</li>
+<li>
+<a href="/us/hi/promote/resources#stickers">Print "I did an Hour of Code!"</a> stickers for your students.</li>
+<li>
+<a href="http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more">Order custom t-shirts</a> for your school.</li>
+<li>सोशल मीडिया पर अवर ओफ कोड कार्यक्रम के फ़ोटो और वीडियो साझा करें । #HourOfCode और @codeorg का उपयोग करें तो अपनी सफलता को उजागर कर सकते हैं!</li>
+</ul>
+
+<div class="col-33">
+
+<p><img src="/images/fit-260/highlight-certificates.jpg" alt=""></p>
+
+</div>
+
+<p style="clear:both"> </p>
+
+<h2>शिक्षकों के लिए अवर ओफ कोड के अन्य संसाधन:</h2>
+
+<ul>
+<li>Visit the <a href="http://forum.code.org/c/plc/hour-of-code">Hour of Code Teacher Forum</a> to get advice, insight and support from other educators.</li>
+<li>Review the <a href="https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code">Hour of Code FAQ</a>.</li>
+</ul>
+
+<h2>अवर ओफ कोड के बाद क्या?</h2>
+
+<p>The Hour of Code is just the first step on a journey to learn more about how technology works and how to create software applications. To continue this journey:</p>
+
+<ul>
+<li>Encourage students to continue to <a href="https://test.code.org/learn/beyond">learn online</a>.</li>
+<li>
+<a href="https://test.code.org/professional-development-workshops">Attend</a> a 1-day, in-person workshop to receive instruction from an experienced computer science facilitator. (US educators only)</li>
+</ul>
+
+<p><a href="/us/hi/#join">
+<button style="float: right; margin-top: 50px;">
+एक घंटे की मेजबानी
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/hi/how-to">
+<div class="nav-header">हाउ-टु गाइड</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to">
+शिक्षकों के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/afterschool">
+स्कूल के बाद के शिक्षकों के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/companies">
+कंपनियों के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/districts">
+जिलों के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/events">
+स्कूल असेंबली के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/parents">
+माता पिता के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/public-officials">
+सरकारी अधिकारियों के लिए
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/hi/how-to/volunteers">
+स्वयंसेवकों के लिए
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/hi/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/hi/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">संसाधन</div>
+</div>
+</a>
+<a href="/us/hi/learn">
+<div class="display-link">
+<img class="display-img" src="/us/hi/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">ट्यूटोरियल का प्रयास करें</div>
+</div>
+</a>
+<a href="/us/hi/promote">
+<div class="display-link">
+<img class="display-img" src="/us/hi/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">कैसे शामिल हो</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">हमसे संपर्क करें</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">समर्थन</a>
+</li>
+<li>
+<a href="/us/hi/partners" target="_blank">भागीदार और सलाहकार</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">शर्तें</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">गोपनीयता नीति</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+कॉपीराइट 2020 Code.org.सभी अधिकार सुरक्षित।
+<br>
+Hour of Code™ Code.org का एक ट्रेडमार्क है।
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

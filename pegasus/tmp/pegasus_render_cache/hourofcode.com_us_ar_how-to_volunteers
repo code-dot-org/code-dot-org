@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="دليل المتطوعين لساعة البرمجة" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ar/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>دليل المتطوعين لساعة البرمجة</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ar/">
+<img alt="ساعة البرمجة" src="/us/ar/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option selected value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ar/learn" title="الأنشطة">الأنشطة</a>
+</li>
+<li>
+<a href="/us/ar/how-to" title="كيفية الاستعمال">كيفية الاستعمال</a>
+</li>
+<li>
+<a href="/us/ar/promote" title="تعزيز">تعزيز</a>
+</li>
+<li>
+<a href="/us/ar/#faq" title="الأسئلة المتداولة">الأسئلة المتداولة</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ar/#join">
+<button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</a></p>
+
+<h1>كيف- دليل للمتطوعين</h1>
+
+<h3>احدث تغييرا في أحد الفصول الدراسية اليوم!</h3>
+
+<hr>
+
+<h2>لماذا أتطوع؟</h2>
+
+<p>راجع بعض شهادات المتطوعين السابقين:</p>
+
+<ul>
+<li>"وكان الجزء الأفضل من تجربتي أن فئة كاملة من النساء والملونين. أنه يبشر بالخير لمستقبل الصناعة لدينا فرصة للوصول إلى تأثير هؤلاء الأطفال. "</li>
+<li>"لا سيما تتمتع الحصول على تشجيع الفتيات الصغيرات في التكنولوجيا. أنى شعرت بأني كنت مساعدة للجيل القادم في المنطقة التي في بلدي المحلية. "</li>
+<li>"أحب رؤية كيفة كانوا الاطفال متحمسون. الشيء المدهش هو أن المدرسين لاحظوا أن بعض الطلاب الذين لم يفعلوا ذالك أكاديمياً من المتفوقين في التفكير مثل مطور ومساعد للآخرين تعلم-منحهم مكاناً للشعور بالثقة. "</li>
+</ul>
+
+<h2>أي شخص يمكن أن يتطوع</h2>
+
+<h3>متطوعون ومتحدثون في التكنولوجيا:</h3>
+
+<p>هل لديك اتصال بعلوم الكمبيوتر أو التكنولوجيا؟ إذا كنت تعمل في هندسة البرمجيات، في شركة لتكنولوجيا في أي دور (غير مهندس أو مهندسة)، أو كنتم قد أخذتم دورات علوم الكمبيوتر، يمكنك المساعدة في المهام للطلاب! العديد من الطلاب قد اجتمعوا, البدأ لأي شخص يعمل في صناعة التكنولوجيا ويحب مدرسينا وقادراً على الاتصال بالفصول الدراسية للمهنيين وطلاب الجامعات.</p>
+
+<p>يمكنك أن تكون ضيفا متحدثاً في فصل دراسي، أو مساعد المدرسين لإنجاز النشاط. قم بزيارة أحد الفصول الدراسية المحلية لإلهام الطلاب ليستمروا في تعلم علوم الكمبيوتر. <br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>سجل الدخول اليوم للتتطوع!</button> <br> <br></a></p> 
+
+<h3>
+  أي شخص يحب أن تتوسع الفكرة:
+</h3>
+
+<p>
+  هل تعتقد أن تعلم علوم الكمبيوتر يمكن أن يفتح أبواب الفرص للطلاب؟ ساعد في أحد الفصول المحلية أو نظم حدثاً بعد المدرسة! لا تحتاج إلى خلفية في علوم الكمبيوتر حتى تستضيف ساعة برمجة. و حتى فقط عرضك للمساعدة غالبا ما يكون كافياً ليقنع معلم طفلك، صديقك، او النادي ليجرب ساعة.
+</p>
+
+<h3>
+  كيف تبدأ؟
+</h3>
+
+<ol>
+  <li>
+    <a href="%=%20resolve_url('/promote/resources#help-schools')%20%">ارسل هذا الايميل</a> لمدرس طفلك تقترح عليه مساعدته للمشاركة في ساعة البرمجة.
+  </li>
+  
+  <li>
+    قدم عرضاً لاستضافة حدث ساعة البرمجة في إحدى المدارس المحلية. <a href="/us/ar/how-to%0A">استخدم هذا الدليل</a> لمساعدتك على التخطيط.
+  </li>
+</ol>
+
+<h2>
+  اطلب من زملائك في العمل ليتطوعوا
+</h2>
+
+<p>
+  أخبر اصدقاءك وزملائك في العمل عن ساعة البرمجة. الاف المدرسين يبحثون عن متطوعين، لذلك اطلب منهم ان <a href="https://code.org/volunteer">يسجلوا الدخول كمتطوعين</a>. اطلب من صاحب عملك المشاركة. <a href="/us/ar/promote/resources#sample-emails%0A">أرسل هذا الإيميل</a> إلى المسؤول الكبير أو المدير العام ليشارك الجميع.
+</p>
+
+<h2>
+  كيف تستعد
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/ar/promote/resources#videos">اختر فيديو</a> لمساعدة الفصل وتحفيزه على إنجاز ساعة البرمجة.
+  </li>
+  <li>
+    اطلع على <a href="/files/hoc-volunteer-toolkit.pdf">أداة متطوعي ساعة البرمجة</a> التي تتضمن نظرة شاملة، وجدول زمني، عُدة الاستعداد وعُدة التسويق. كل ما تحتاجه لتكون جاهزا لتجربة التطوع!
+  </li>
+  <li>
+    إن كنت تفكر في استعمال دورة خلال حصصك، تدرب خلال 30 دقيقة على الأقل عيى <a href="/us/ar/learn">دورة ساعة البرمجة</a>.
+  </li>
+  <li>
+    إذا كنت في زيارة لمدرسة، فقم بإتمام فحص السوابق ووثائق العمل المطلوبة.
+  </li>
+  <li>
+    <a href="https://code.org/files/CSTT_Volunteers.pdf">راجع هذه النصائح</a> حول كيفية التفاعل مع المتعلمين.
+  </li>
+  <li>
+    انضم للمحادثة على فايسبوك، تويتر، أنستاغرام، وتامبلر مع #HourOfCode.
+  </li>
+  <li>
+    تواصل مع المدرس لمناقشة ماذا تخطط للحديث عنه خلال حصتك.
+  </li>
+  <li>
+    إن كنت متطوعا افتراضيا، اختبر قدرات الصوت/الصورة (A/V) وتقاسم الشاشة مسبقا.
+  </li>
+</ul>
+
+<h2>
+  يوم الحدث حدث ساعة البرمجة
+</h2>
+
+<p>
+  عندما تستضيف حدث ساعة البرمجة، اتبع مثال جدول الأعمال أسفله لمساعدتك على توجيه يومك. قبل ذلك، تاكد من تسجيل دخولك إلى المدرسة وحَيِّ المدرس يوم الحدث. أَكِّد التوقيت المتفق عليه لليوم وناقش أية نقط حديث.
+</p>
+
+<h3>
+  مثال لجدول الأعمال:
+</h3>
+
+<table>
+  <tr>
+    <th>
+      التوقيت
+    </th>
+    
+    <th>
+      جدول الأعمال
+    </th>
+  </tr>
+  
+  <tr>
+    <td>
+      5-1 دقائق
+    </td>
+    
+    <td>
+      <a href="/us/ar/promote/resources#videos">اعرض فيديو ملهما</a>.
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      10-5 دقائق
+    </td>
+    
+    <td>
+      قدم نفسك وتعرف أكثر على الطلاب: 
+      
+      <li>
+        ما هي مهنتك، ماذا تنجز، ما الذي تحب أكثر في عملك؟
+      </li>
+      
+      <li>
+        من أو ما الذي يلهمك؟
+      </li>
+      
+      <li>
+        كيف جاء اهتمامك بعلوم الكمبيوتر؟
+      </li>
+      
+      <li>
+        هل لديك مدرس خاص؟
+      </li>
+      
+      <li>
+        تقاسم قصة حول كيف تؤثر التكنولوجيا في كل شخص.
+      </li>
+      
+      <br>اطرح السؤال على الطلاب واترك لهم الوقت للإجابة. 
+      
+      <li>
+        ما هي الوظائف التي يهتمون بها، ما هي الأدوات الذكية أو التطبيقات المفضلة لديهم، وكيف يفكرون كيف صنعت؟
+      </li>
+      
+      <li>
+        هل للطالب أية أسئلة لك؟</li>
+</td> </tr> <tr>
+          <td>
+            60-30 دقيقة
+          </td>
+          
+          <td>
+            <strong>برمج!</strong> تجول، أجب عن الأسئلة، ووجههم من خلال الألغاز الصعبة. حاول ألا تقدم للطلاب الحلول بشكل صريح، حاول بدلا من ذلك، جعلهم يطرحون أسئلة ليجيبوا بأنفسهم على الخطأ، وشجعهم لطرح الأسئلة فيما بينهم إن كانت لديهم أسئلة. التعلم من بعضهم البعض هي فرصة رائعة.
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            3-1 دقائق
+          </td>
+          
+          <td>
+            اشكر كل واحد وتقاسم كلمات الوداع الملهمة. وزع أيا من هدايا شركتك (الملصقات رائعة)!
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            بعد
+          </td>
+          
+          <td>
+            <strong>قم بتغيير دائم:</strong> تحدث إلى المدرس حول تحويل ساعة البرمجة إلى درس كامل لعلوم الكمبيوتر! اذهب إلى <a href="https://code.org/yourschool">code.org/yourschool</a> مع مدرسك لتعبئة ما تدرسه هذه المدرسة اليوم وشجعهم على التعهد بجلب علوم الكمبيوتر إلى قسمهم.
+          </td>
+        </tr> </table> 
+        
+
+<pre><code>    &lt;h3&gt;
+      بعد الحدث:
+    &lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        تقاسم صورك وقصصك بواسطة Code.org على giving@code.org.
+      &lt;/li&gt;
+      &lt;li&gt;
+        تذكر إدخال ساعات تطوعك في بوابة تتيع المتطوعين في شركتك.
+      &lt;/li&gt;
+      &lt;li&gt;
+        تقاسم تجربتك على مواقع التواصل الاجتماعي #HourOfCode!
+      &lt;/li&gt;
+      &lt;li&gt;
+        إذا كنت قد أخذت صورا خلال حدثك، &lt;strong&gt;خصوصا مع طلابك&lt;/strong&gt;، تأكد من الحصول على إذن المدرس/الآباء إذا كنت تريد أن تنشرها على مواقع التواصل الاجتماعي.
+      &lt;/li&gt;
+      &lt;li&gt;
+        وتحقق بعد شهر: هل المدرس مهتم بتقديم دورة علوم الكمبيوتر؟ تقاسم &lt;a href="https://code.org/yourschool"&gt;الموارد وفرص التدريس المهنية لمساعدتهم على القيام بهذا&lt;/a&gt;.
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      كيف تم اختيارك متطوعا تقنيا أو ضيفا متحدثا
+    &lt;/h2&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        المدرسون سيبحثون عن متطوعين على &lt;a href="https://code.org/volunteer/local"&gt;خريطتنا للمتطوع&lt;/a&gt;.
+      &lt;/li&gt;
+      &lt;li&gt;
+        حاول أن تجعل ملفك التعريفي كاملا أكثر ما يمكن لزيادة فرصة اختيار المدرس لك.
+      &lt;/li&gt;
+      &lt;li&gt;
+        سيتصل بك أحد المدرسين من خلال هذا النموذج (لن يتم أبدا تقاسم بريدك الإلكتروني مع المدرس). &lt;em&gt;إذا كنت تتلقى عدة طلبات من المدرسين، يمكنك دائما تعديل اختياراتك بالنقر على الرابط لتغيير معلوماتك أو إلغاء الاشتراك، الموجود في أسفل أي البريد الإلكتروني من المدرس.&lt;/em&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;
+      التطوع خلال الأسئلة الشائعة لساعة البرمجة
+    &lt;/h2&gt;
+    &lt;h3&gt;
+      لم يتم الاتصال بي بعد. كيف سأبقى متطوعا؟
+    &lt;/h3&gt;
+    &lt;p&gt;
+      حاول البحث عن مدارس محلية واتصل بالمدير/المدرس/مكتب الاستقبال واسأل عن كيفية المساعدة.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      كم من الوقت تدوم زيارات الفصل الدراسي؟
+    &lt;/h3&gt;
+    &lt;p&gt;
+      غالبا ما تستغرق الزيارة الصفية الحضورية 60-90 دقيقة بينما غالبا ما تستغرق الافتراضية منها 20-30 دقيقة.
+    &lt;/p&gt;
+    &lt;h3&gt;
+      ما العمر الذي تناسبه أنشطة ساعة البرمجة؟
+    &lt;/h3&gt;
+    &lt;p&gt;
+      Code.org وشركاؤنا نصمم كل أنشطة ساعة البرمجة لإشراك جميع تلاميذ المستويات (K-12)، فتيات وفتيان. حتى البالغون يمكن أن يستمتعوا باللعب!
+    &lt;/p&gt;
+    &lt;p&gt;
+      &lt;a href='/us/ar/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+تبنى ساعة
+</button>
+</p>
+
+<pre><code>    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ar/how-to">
+<div class="nav-header">أدلة إرشادية</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to">
+للمعلمين
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/afterschool">
+للمعلمين ما بعد المدرسة
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/companies">
+للشركات
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/districts">
+للمقاطعات
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/events">
+الجمعيات المدرسية
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/parents">
+للآباء
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/public-officials">
+للموظفين العموميين
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ar/how-to/volunteers">
+للمتطوعين
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ar/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">الموارد</div>
+</div>
+</a>
+<a href="/us/ar/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">قُم بتجربة هذه الدروس</div>
+</div>
+</a>
+<a href="/us/ar/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ar/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">كيفية المشاركة</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">إتصل بنا</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">الدعم</a>
+</li>
+<li>
+<a href="/us/ar/partners" target="_blank">الشركاء</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">شروط</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">سياسة الخصوصية</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+حقوق الطبع والنشر Code.org عام 2015. جميع الحقوق محفوظة.
+<br>
+إن ™Hour of Code هي علامة تجارية لصالح Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

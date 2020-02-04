@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Apoyo a estudiantes con necesidades especiales para la Hora del Código" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/la/supporting-special-needs-students" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Apoyo a estudiantes con necesidades especiales para la Hora del Código</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/la/">
+<img alt="Hora del Código" src="/us/la/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/supporting-special-needs-students';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option selected value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/la/learn" title="Actividades">Actividades</a>
+</li>
+<li>
+<a href="/us/la/how-to" title="Cómo hacerlo">Cómo hacerlo</a>
+</li>
+<li>
+<a href="/us/la/promote" title="Promover">Promover</a>
+</li>
+<li>
+<a href="/us/la/#faq" title="Preguntas frecuentes">Preguntas frecuentes</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+<h1>Apoyo a estudiantes con discapacidades para la Hora del Código</h1>
+
+<p>Cualquiera puede probar una Hora del Código durante la Semana por la Educación en Ciencias de la Computación. A menudo, los estudiantes con autismo, TDAH u otras diferencias de aprendizaje descubren que les encanta programar. ¡Anima a todos los estudiantes en tu clase a que lo prueben! Cuando lleves la experiencia a tu aula, premia más la participación que los resultados. Puedes entregar a todos un <a href="https://test.code.org/certificates">certificado</a> sin importar cuántos desafíos hayan completado dentro de una hora. <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">La programación en parejas</a> es otra gran manera de enseñar colaboración y hacer que los estudiantes trabajen juntos para resolver problemas.</p>
+
+<h2>Adáptate a distintas necesidades con tutoriales sin conexión y en línea</h2>
+
+<p>Para encontrar la actividad adecuada para todos en tu clase, considera la opción en línea, así como las actividades "sin conexión" que no requieren computadoras. A través de las actividades sin conexión, los estudiantes pueden entender los conceptos de las ciencias de la computación. El <a href="https://studio.code.org/s/course1/stage/15/puzzle/1">Gran Evento</a> les da a los docentes la oportunidad de controlar las acciones de los estudiantes y adaptar el contenido a las habilidades de cada uno de ellos.</p>
+
+<p>Para otros estudiantes, las adaptaciones disponibles en la computadora les permiten participar mejor que una opción sin conexión. Por ejemplo, los estudiantes sordos o con dificultades auditivos pueden participar sin problemas de los tutoriales en línea.</p>
+
+<p>La opción más completa también puede depender de que el laboratorio informático sea accesible o tenga computadoras portátiles.</p>
+
+<p>Por ejemplo, ¿tus estudiantes tienen movilidad o destrezas reducidas? Si todos tus estudiantes tienen acceso a la tecnología en tu escuela, pregunta a ellos o al docente de tecnología qué adaptaciones suelen utilizar en las computadoras disponibles.</p>
+
+<h2>Discapacidad sensorial</h2>
+
+<h3>Estudiantes ciegos o con baja visión</h3>
+
+<p>El <a href="https://quorumlanguage.com/hourofcode/astro1.html">tutorial de Quorum para principiantes</a> o el tutorial de <a href="https://quorumlanguage.com/hourofcode/part1.html">Quorum para estudiantes cómodos</a> son ideales como puntos de partida para estudiantes que utilizan un lector de pantalla. Quorum comenzó como un lenguaje interpretado, diseñado para ser accesible a través de lectores de pantalla. Con el tiempo, se convirtió en un lenguaje de programación general para cualquier usuario. Puedes utilizar este tutorial de la Hora del Código con toda tu clase. Si quieres ir más allá de una Hora del Código, el equipo de Quorum tiene otros planes de estudios y herramientas.</p>
+
+<p>Si tu estudiante usa otras adaptaciones en las clases de tecnología, también puedes emplearlas en la Hora del Código. Estas pueden incluir monitores más grandes, aumento de la pantalla del software, configuraciones de alto contraste en el sistema operativo, control de voz y más.</p>
+
+<h3>Estudiantes sordos o con problemas auditivos</h3>
+
+<p>Los <a href="https://studio.code.org/">tutoriales de Code.org</a> se pueden usar con o sin sonido. Todos los videos tienen subtítulos. Algunos estudiantes también pueden usar auriculares con un volumen más alto.</p>
+
+<h2>Conoce más</h2>
+
+<p>Para saber más sobre la enseñanza de las ciencias de la computación y los estudiantes con necesidades especiales, recomendamos este <a href="/files/accommodating-students-with-disabilities.pdf">libro en línea</a>.</p>
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contáctanos</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Soporte</a>
+</li>
+<li>
+<a href="/us/la/partners" target="_blank">Socios y asesores</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Términos</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Política de privacidad</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. Todos los derechos reservados.
+<br>
+Hora del código ™ es una marca registrada de Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

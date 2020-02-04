@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="CSEd Week" property="og:site_name">
+<meta content="Frequently Asked Questions" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://csedweek.org/resource_kit/frequently_asked_questions" property="og:url">
+<title>Frequently Asked Questions | Computer Science Education Week</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'csedweek.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div style="width: 100%; background-color: rgba(255,255,255,0.8)">
+<div style="width: 970px; margin: 0 auto; overflow: hidden">
+<div style="width: 530px; float: left; padding-top: 14px; padding-bottom: 10px">
+<br>
+<a href="/" style="text-decoration:none">
+<img src="/images/logo_text.png" style="max-width: 100%; vertical-align: bottom">
+<img src="/images/logo_date.png" style="max-width: 100%; vertical-align: bottom">
+</a>
+</div>
+<div class="desktop-feature" style="width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px">
+<a href="http://facebook.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/facebook_green.png">
+</a>
+<a href="http://twitter.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/twitter_green.png">
+</a>
+<br>
+<br>
+<br>
+<a class="redheaderlink" href="/learn">LEARN</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/educate/hoc">TEACH</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/promote">PROMOTE</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/help">HELP US</a>
+<div style="height: 5px"></div>
+</div>
+</div>
+<div style='width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'>
+<br>
+</div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 140px; margin-right: 40px; float: left;">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/resource_kit">Introduction</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/tutorial">Tutorial Guide</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/blurbs">Blurbs and Useful Stats</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/one_pagers">One Pagers</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/logos">Logos</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/banners">Banners</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/posters">Posters</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/presentations">Presentations</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/press_kit">Press Kit</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/sample_emails">Sample Emails</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/resource_kit/videos">Videos</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">Frequently Asked Questions (FAQ)</span>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+<div style="width: 790px; float: left; margin: 0; padding: 0;">
+<h1>Frequently Asked Questions</h1>
+
+<h2>What is CSEdWeek?</h2>
+
+<p>Computer Science Education Week (CSEdWeek) is an annual program dedicated to showing K-12 students the importance of computer science education. CSEdWeek is held in recognition of the birthday of computing pioneer <a href="http://en.wikipedia.org/wiki/Grace_Hopper">Admiral Grace Murray Hopper</a> (December 9, 1906).</p>
+
+<hr>
+
+<h2>What is the Hour of Code?</h2>
+
+<p>The Hour of Code is a one-hour introduction to computer programming, designed to demystify code and show that anyone can learn. Your Hour of Code can take place any time during CS Ed Week!</p>
+
+<p>Existing <a href="/csteacher">computer science teachers</a> can create their own Hour of Code lesson, if they want. For everyone else, we'll provide self-guided tutorials that anybody can do. Participants don't need any prior experience or even a computer.</p>
+
+<hr>
+
+<h2>Do I need to know any computer science to host an Hour of Code?</h2>
+
+<p>No. Hour of Code modules and tools are self-directed. All you have to do is pick the tutorial you want and pick an hour -- we take care of the rest. You can learn more about the <a href="/resource_kit/tutorial">tutorials here</a>.</p>
+
+<hr>
+
+<h2>Do we need computers for every participant?</h2>
+
+<p>NO COMPUTERS NEEDED!
+We will curate a selection of computer science tutorials that work on PC’s, smartphones, and tablets – so really you can join wherever you are with whatever you have.</p>
+
+<p>If you have more than one device, research shows that <a href="http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning">students learn best when they are pair programming</a>, sharing a computer. So encourage your students to double up.  If using smartphones, they can take turns.</p>
+
+<p>If you have only one internet-connected device, then you can have an audience interactively shout out answers while you go through the tutorial on a shared screen using a projector.</p>
+
+<p>And if you don't have any internet-connected devices, you can still participate. Computer Science is all about problem solving, logic, and design, so you can start with pencil and paper (like some of the best professional programmers) using "unplugged" tutorials (see example "unplugged" tutorials:  by <a href="http://www.ncwit.org/unplugged">NCWIT</a> or by <a href="/files/CSEDrobotics.pdf">ThinkerSmith</a>).</p>
+
+<hr>
+
+<h2>What can you do if YouTube is blocked at your school?</h2>
+
+<p>We use YouTube to host video content, and if that's not accessible we fall back to video files served from videos.code.org.  If your school blocks YouTube, consider using <a href="http://googleappsupdates.blogspot.co.uk/2015/08/new-settings-in-admin-console-for.html">YouTube Settings for Google Apps users</a> to gain YouTube access.</p>
+
+<hr>
+
+<h2>What happens during CSEdWeek besides the Hour of Code?</h2>
+
+<p>We encourage all participant to organize their own creative activities for CSEdWeek, in any way that promotes computer science education -- especially the theme of equal access. The CSEdWeek team will highlight the best of these programs on the CSEdWeek.org website and to the press.</p>
+
+<hr>
+
+<h2>Why is it important for students to learn computer science?</h2>
+
+<p>Computer science is a foundational field for every 21st century career or field of study. Learning the basics of computer science prepares students for a world that is increasingly dominated by technology. Research shows that students who study computer science also perform better at math.</p>
+
+<p>Besides, computer science is where the jobs are. More than 50% of all jobs in STEM (science, technology, engineering, and math) are computing jobs. Some other stats:</p>
+
+<ul>
+<li>Computer science is one of the highest-paid college degree for new graduates.</li>
+<li>Computer programming jobs are growing at two times the national average -- but there aren’t enough graduates to fill these jobs.</li>
+<li>Nine out of 10 K-12 schools do not offer computer programming classes.</li>
+<li>In 35 out of 50 states, computer science does not even count toward high school graduation.</li>
+</ul>
+
+<p>See this <a href="http://www.code.org/stats">infographic</a> for more information.</p>
+
+<hr>
+
+<h2>How can I get involved?</h2>
+
+<ul>
+<li>Try an hour of computer science yourself</li>
+<li>Or organize an Hour of Code for your local school, employer or community.</li>
+</ul>
+
+<hr>
+
+<h2>How can I host the Hour of Code at my school, company, or organization?</h2>
+
+<p><strong>At your school:</strong>
+If you are a parent or student, ask the principal or a tech-savvy teacher for their support to allow you to host the Hour of Code. We can show you how to organize events and connect to the Hour of Code tutorials. See our <a href="/school">school participation guide</a> for more information.</p>
+
+<p>If you are a teacher, we have resources to support your leading an Hour of Code. Our tools are simple, painless, and easy to use. Don’t have enough computers in your school?  Don’t worry, we have offline or phone-based options. See our <a href="/school">school participation guide</a> for more information.</p>
+
+<p><strong>At your company:</strong>
+Sign up your co-workers for an hour of code. See our <a href="/employer">employer participation guide</a> for more information.</p>
+
+<p><strong>At your club or nonprofit:</strong>
+We have event ideas to share that will help you get your members excited and activated to host an Hour of Code in your community. See our <a href="/community">community participation guide</a> for more information.</p>
+
+<p><strong>At home:</strong>
+Organize a family hour of code and let your kids teach you. You can use PCs, tablets, smart phones, or one of our Hour of Code unplugged activities (<a href="/files/CSEDrobotics.pdf">example</a>).  Everything is available online, to make it easy for busy parents to participate.</p>
+
+<hr>
+
+<h2>What day do I need to do my Hour of Code?</h2>
+
+<p>You can do your Hour of Code on any day during CSEdWeek (December 4-10, 2017).</p>
+
+<hr>
+
+<h2>What if I live outside the US?</h2>
+
+<p>You are welcome to participate in the Hour of Code. Several of our tutorials will be localized into other languages.</p>
+
+<hr>
+
+<h2>What if I already teach computer science or coding?</h2>
+
+<p>You can use one of the existing tutorials, or you can develop your own for your students.  Even better, with your credibility, you can organize large-scale computer science activities at your school.  Some other ideas are below, but see our <a href="/csteacher">guide for CS teachers</a> for more details:</p>
+
+<ul>
+<li>Get your principal on board</li>
+<li>Organize a code-in or an Hour of Code activity</li>
+<li>Get sponsors (food, computers, prizes, etc.)</li>
+<li>Recruit and train volunteers</li>
+<li>Recruit students, especially from groups that are under-represented in computer science (women, student of color)</li>
+<li>Publicize your event on campus</li>
+</ul>
+
+<hr>
+
+<h2>What type of Hour of Code event should I host?</h2>
+
+<p>Here are some common options:</p>
+
+<p><strong>Group Event</strong>
+The simplest type of event to organize. Students (or adults) take the Hour of Code together in a group setting, typically all doing the same tutorial, selected by the leader, at the same time. This is best for a classroom or after-school club.</p>
+
+<p><strong>Group Event -- Limited Devices</strong>
+Similar to a group event, however with limited computers or tablets. You can either choose an unplugged tutorial, double-up your students to share computers, take turns, or use smartphones.</p>
+
+<p><strong>Holiday Party / Hour of Code</strong>
+Because the Hour of Code falls so close to the holidays, one way to make the Hour of Code more fun is to combine it with a classroom or club holiday party. Encourage your parents or PTA to bring in snacks and treats, and then have your students take one of the holiday themed tutorials, such as creating an interactive holiday card. Parents will be excited to see their kids learning how to program, and the children will have something fun to share with family members.</p>
+
+<p><strong>Participation Challenge</strong>
+Compete to see which group or team (within a larger organization) can have the highest % participation rate in the Hour of Code. This is a great friendly competition for business competitors, sororities and fraternities, departments (HR vs. marketing) etc. to see how many people they can each engage in coding.</p>
+
+<p><strong>District Competition</strong>
+Once you have the support of your principal, ask him or her to challenge another school to a friendly competition to see which school can generate the higher participation % rate. This could be a great way to link back to local businesses to provide prizes for the schools with the most participants.  Make sure your principal participates too!</p>
+
+<hr>
+
+<h2>How do I get sponsors to provide food, computers, prizes, etc.?</h2>
+
+<p>First, figure out what sort of event you want to host, and what sort of support you might need. Perhaps this is an opportunity to increase the size of your computer lab, or to procure new tablets for your students?</p>
+
+<p>Then, tell your community (parents, local businesses, etc.) about the Hour of Code, and invite them to support you. To help with that, we've provided a <a href="http://csedweek.org/sample-emails">sample support letter</a> in our <a href="/resource_kit/index">Resource Kit</a> that explains the Hour of Code.</p>
+
+<hr>
+
+<h2>How do I recruit and train volunteers?</h2>
+
+<p>You don’t need volunteers to host a successful event, since the tutorials are designed to be self-taught. However, to ensure that things run smoothly, it may be helpful to have a few parents or tech-savvy individuals on hand to support you.</p>
+
+<p>Ideally you would gather your volunteers together sometime in November to run through the tutorial together. Participating in person, however, is not required -- your volunteers can also take the tutorial at home.</p>
+
+<hr>
+
+<h2>How do I publicize the event?</h2>
+
+<p>Start with the <a href="/resource_kit/videos">videos</a>!</p>
+
+<p>It’s inspiring to see music, sports and business stars talk about how important it is to code. Help your students connect the dots between coding and fame, fortune, and fun and they will be more open to the Hour of Code.</p>
+
+<p>Then, check out our <a href="/resource_kit/press_kit">press kit</a>.</p>
+
+<h2>Slow internet? Want offline tutorials?</h2>
+
+<p>Code.org tutorials only work on an internet connection. But if you need offline support, you can download the original Blockly tutorials using this ZIP file, and then run them locally from a file server or even from a USB drive. These do not include any tutorial videos, and require a modern browser.</p>
+
+<p>See our <a href="/resource_kit/index">Resource Kit</a> for additional marketing collateral you can use.</p>
+
+<hr>
+
+<ul>
+<li>BACK: <a href="/resource_kit/videos">Resource Kit</a>
+</li>
+</ul>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<div style="width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)">
+<div class="whitefooter" style="width: 970px; margin: 0 auto;">
+<div style="float:left">
+<a class="whitefooterlink" href="/about">About</a>
+    |    
+<a class="whitefooterlink" href="/partners">Partners</a>
+    |    
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+    |    
+<a class="whitefooterlink" href="/resource-kit">Resource Kit</a>
+    |    
+<a class="whitefooterlink" href="/resource_kit/frequently_asked_questions">FAQ</a>
+    |    
+<a class="whitefooterlink" href="http://forums.code.org/">Forums</a>
+    |    
+<a class="whitefooterlink" href="http://support.code.org/">Support</a>
+<br>
+<small class="dim">
+© Computer Science Education Week, 2020. Hour of Code® is a trademark of Code.org
+</small>
+</div>
+<div style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</div>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

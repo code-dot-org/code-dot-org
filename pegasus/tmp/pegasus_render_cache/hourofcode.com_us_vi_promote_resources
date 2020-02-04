@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Nguồn tài liệu" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/vi/promote/resources" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Nguồn tài liệu</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/vi/">
+<img alt="Giờ viết mã" src="/us/vi/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/resources';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option selected value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/vi/learn" title="Hoạt động">Hoạt động</a>
+</li>
+<li>
+<a href="/us/vi/how-to" title="Hướng dẫn">Hướng dẫn</a>
+</li>
+<li>
+<a href="/us/vi/promote" title="Khuyến khích">Khuyến khích</a>
+</li>
+<li>
+<a href="/us/vi/#faq" title="Hỏi đáp">Hỏi đáp</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/vi/#join">
+<button style="float: right; margin-top: 50px;">
+Tổ chức một giờ
+</button>
+</a></p>
+
+<p><link rel="stylesheet" type="text/css" href="/css/promote-page.css"></p>
+
+<h1>Quảng bá Hour of Code</h1>
+
+<h3>Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our <a href="/us/vi/how-to">how-to guide for hosting an Hour of Code</a>!</h3>
+
+<hr>
+
+<h2 class="handouts-header">Share these handouts</h2>
+
+<p><a id="onepager"></a></p>
+
+<div class="handout col-50">
+<div class="handout-text">Spread the word with this one page handout</div>
+<a href="/files/hoc-one-pager.pdf">
+<img src="/us/vi/images/fit-250/one-pager.png">
+</a>
+</div>
+
+<p><a id="participationguide"></a></p>
+
+<div class="handout col-50">
+<div class="handout-text">Plan your Hour of Code with this participation guide</div>
+<a href="/files/participation-guide.pdf">
+<img src="/us/vi/images/fit-250/participation-guide.png">
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<p><a id="videos"></a></p>
+
+<h2>Truyền cảm hứng cho học sinh qua các video</h2>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/VYqHGIR7a_k?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?v=VYqHGIR7a_k">What is Creativity?</a>
+<a href="//videos.code.org/social/creativity-is.mp4">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf" target="_blank">
+<img class="dance-thumbnail-tile-img" src="/images/fit-350/dance_playlist_thumbnail.png">
+<br>
+What is Creativity? View Full Series.
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?v=nKIu9yen5nc">Những gì hầu hết các trường không dạy (5 phút)</a>
+<a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?FC5FbmsH4fw">Hour of Code is Here - Anybody Can Learn</a>
+<a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/6XvmhE1J9PY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?6XvmhE1J9PY">Tổng thống Obama với khoa học máy tính</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/qYZF6oIZtfc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?qYZF6oIZtfc">Bất cứ ai cũng có thể tìm hiểu (1 phút)</a>
+<a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<p><a id="posters"></a></p>
+
+<h2>Treo poster này trong trường học</h2>
+
+<p>A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so <a href="https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH">order your posters</a> soon. To print on your own, simply click an image below to view and save a printable version.</p>
+
+<p><a href="//downloads.code.org/posters/poster_steph.pdf">
+<img src="/us/vi/images/fit-250/poster_steph.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_malala.pdf">
+<img src="/us/vi/images/fit-250/poster_malala.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_hadi.pdf">
+<img src="/us/vi/images/fit-250/poster_hadi.png">
+   
+</a>
+<br>
+<br>
+<a href="//downloads.code.org/posters/poster_mary.pdf">
+<img src="/us/vi/images/fit-250/poster_mary.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_satya.pdf">
+<img src="/us/vi/images/fit-250/poster_satya.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_shakira.pdf">
+<img src="/us/vi/images/fit-250/poster_shakira.png">
+   
+</a></p>
+
+<ul>
+<li>Looking for our posters from previous years? <a href="/us/vi/promote/previous-posters">Find them here</a>!</li>
+</ul>
+
+<p><a id="social"></a></p>
+
+<h2>Đăng trên mạng xã hội</h2>
+
+<p><a href="/images/social-media/social-1.png"><img src="/images/social-media/fit-250/social-1.png" alt="image"></a>     <a href="/images/social-media/social-2.png"><img src="/images/social-media/fit-250/social-2.png" alt="image"></a>     <a href="/images/social-media/social-3.png"><img src="/images/social-media/fit-250/social-3.png" alt="image"></a>    </p>
+
+<p><a href="/images/social-media/bill_gates.png"><img src="/images/social-media/fit-250/bill_gates.png" alt="image"></a>     <a href="/images/social-media/malala_yousafzai.png"><img src="/images/social-media/fit-250/malala_yousafzai.png" alt="image"></a>     <a href="/images/social-media/chris_bosh.png"><img src="/images/social-media/fit-250/chris_bosh.png" alt="image"></a>    </p>
+
+<p><a href="/images/social-media/karlie_kloss.png"><img src="/images/social-media/fit-250/karlie_kloss.png" alt="image"></a>     <a href="/images/social-media/satya_nadella.png"><img src="/images/social-media/fit-250/satya_nadella.png" alt="image"></a>     <a href="/images/social-media/jeff_bezos.png"><img src="/images/social-media/fit-250/jeff_bezos.png" alt="image"></a>    </p>
+
+<p><a id="logo"></a></p>
+
+<h2>Dùng logo Hour of Code để quảng bá</h2>
+
+<p><a href="/us/vi/images/hour-of-code-logo.png"><img src="/us/vi/images/fit-200/hour-of-code-logo.png" alt="image"></a></p>
+
+<p><a href="http://images.code.org/share/hour-of-code-logo.zip">Download hi-res versions</a></p>
+
+<p><strong>"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:</strong></p>
+
+<ol>
+<li>Bất kỳ tham chiếu đến "Giờ mã" nên được sử dụng trong một thời trang không gợi ý rằng nó là tên thương hiệu riêng của bạn, nhưng thay vì tham khảo giờ mã như là một phong trào cơ sở. <strong>Good example</strong>: "Participate in the Hour of Code™ at ACMECorp.com." <strong>Bad example</strong>: "Try Hour of Code by ACME Corp."</li>
+<li>Use a "TM" superscript in the most prominent places you mention "Hour of Code," both on your web site and in app descriptions.</li>
+<li>
+<p>Include language on your page (or in the footer), including links to the CSEdWeek and <a href="https://code.org">Code.org</a> websites, that says the following:</p>
+
+<p><em>“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”</em></p>
+</li>
+<li><p>Không sử dụng "Hour of Code" trong tên ứng dụng.</p></li>
+</ol>
+
+<p><a id="stickers"></a></p>
+
+<h2>Print these stickers to give to your students</h2>
+
+<p>(Stickers are 1" diameter, 63 per sheet) <br></p>
+
+<p><a href="/images/hour-of-code-stickers.pdf"><img src="/images/fit-250/hour-of-code-stickers.png" alt="image"></a></p>
+
+<p><a id="sample-emails"></a></p>
+
+<h2>Invite people in your community to your Hour of Code and promote your event through email</h2>
+
+<h3>Find <a href="/us/vi/promote/stats">more information and language you can use</a> when talking about the Hour of Code.</h3>
+
+<hr>
+
+<p><a id="email"></a></p>
+
+<h3>Ask your school, employer, or friends to sign up:</h3>
+
+<p><strong>Subject line:</strong> Join me and over 100 million students for an Hour of Code <br></p>
+
+<p>Computers are everywhere, changing every industry on the planet. But only 45% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.</p>
+
+<p>With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.</p>
+
+<p>This year, let's make it even bigger. I’m asking you to join the Hour of Code 2019. Please get involved with an Hour of Code event during Computer Science Education Week, December 9-15.</p>
+
+<p>Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.</p>
+
+<p>Get started at <a href="http://hourofcode.com/us">http://hourofcode.com/us</a>
+ <br></p>
+
+<hr>
+
+<p><a id="help-schools"></a></p>
+
+<h3>Volunteer at a school:</h3>
+
+<h4>
+<a href="/us/vi/how-to/volunteers">Find more resources and information about volunteering in schools here</a>.</h4>
+
+<p><strong>Subject line:</strong> Can we help you host an Hour of Code?</p>
+
+<p>Between Dec. 9-15, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.</p>
+
+<p>[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.</p>
+
+<p>The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.</p>
+
+<p>Computers are everywhere, changing every industry on the planet. But only 45% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.</p>
+
+<p>You can read more about the event at <a href="http://hourofcode.com">http://hourofcode.com</a>. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br></p>
+
+<hr>
+
+<p><a id="parents"></a></p>
+
+<h3>Tell parents about your school's event:</h3>
+
+<p><strong>Subject line:</strong> Our students are changing the future with an Hour of Code</p>
+
+<p>Dear Parents,</p>
+
+<p>We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.</p>
+
+<p>But only a tiny fraction of us are learning <strong>how</strong> technology works. Only 45% of all high schools teach computer science.</p>
+
+<p>That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 9-15). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.</p>
+
+<p>This is a chance to change the future of education in [TOWN/CITY NAME].</p>
+
+<p>See <a href="http://hourofcode.com/us">http://hourofcode.com/us</a>
+ for details, and help spread the word. <br></p>
+
+<hr>
+
+<p><a id="media-pitch"></a></p>
+
+<h3>Invite media to attend your event:</h3>
+
+<h4><a href="/us/vi/promote/press-kit">Check out our press kit for more information on inviting media to your event.</a></h4>
+
+<p><strong>Subject line</strong>: Local school joins mission to introduce students to computer science</p>
+
+<p>Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.</p>
+
+<p>With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.</p>
+
+<p>Đó là lý do tại sao toàn bộ [X number] học sinh tại [SCHOOL NAME] sẽ tham gia vào sự kiện học tập lớn nhất trong lịch sử: Giờ Lập Trình, trong Tuần lễ Giáo dục về Khoa học Máy tính (ngày 3-9 tháng 12).</p>
+
+<p>I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].</p>
+
+<p>The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.</p>
+
+<p>Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]</p>
+
+<p>I look forward to being in touch. <br></p>
+
+<hr>
+
+<p><a id="politicians"></a></p>
+
+<h3>Invite a local politician to your school's event:</h3>
+
+<h4>
+<a href="/us/vi/how-to/public-officials">Need more info? Take a look at our resources for inviting politicians to attend your event</a>.</h4>
+
+<p><strong>Subject line</strong>: Join our school as we change the future with an Hour of Code</p>
+
+<p>Dear [Mayor/Governor/Representative/Senator LAST NAME]:</p>
+
+<p>Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.</p>
+
+<p>Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.</p>
+
+<p>That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 9-15). More than 100 million students worldwide have already tried an Hour of Code.</p>
+
+<p>I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.</p>
+
+<p>Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.</p>
+
+<p><a href="/us/vi/#join">
+<button style="float: right; margin-top: 50px;">
+Tổ chức một giờ
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/vi/promote">
+<div class="nav-header">Khuyến khích</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote">
+Tham gia như thế nào
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#onepager">
+One-page handout
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#brochure">
+Tài liệu
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#videos">
+Video
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#posters">
+Áp phích
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#social">
+Cộng đồng
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#logo">
+Biểu tượng của Hour of Code
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#stickers">
+Nhãn dán
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/resources#sample-emails">
+Email mẫu
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/stats">
+Số liệu thống kê và lời quảng cáo hữu ích
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/vi/promote/press-kit">
+Bấm Kit
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/vi/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/vi/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Nguồn tài liệu</div>
+</div>
+</a>
+<a href="/us/vi/learn">
+<div class="display-link">
+<img class="display-img" src="/us/vi/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Hãy thử các hướng dẫn</div>
+</div>
+</a>
+<a href="/us/vi/promote">
+<div class="display-link">
+<img class="display-img" src="/us/vi/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Tham gia như thế nào</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Liên hệ với chúng tôi</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Hỗ trợ</a>
+</li>
+<li>
+<a href="/us/vi/partners" target="_blank">Đối tác</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Các điều khoản của Code.org</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Chính sách bảo mật của Code.org</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Tất cả thông tin lấy từ trang Code.org, đều thuộc quyền sở hữu của Code.org, Mọi trích dẫn từ trang vui lòng ghi rõ nguồn Code.org 2015
+<br>
+Hour of Code là một tác quyền cá nhân/ thương hiệu của Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

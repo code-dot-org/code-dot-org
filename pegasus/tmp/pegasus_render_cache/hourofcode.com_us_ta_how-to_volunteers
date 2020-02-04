@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="தொண்டூழியர்களுக்கான எவ்வாறு செய்வது வழிகாட்டி" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ta/how-to/volunteers" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>தொண்டூழியர்களுக்கான எவ்வாறு செய்வது வழிகாட்டி</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ta/">
+<img alt="குறியீடு மணி" src="/us/ta/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/volunteers';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option selected value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ta/learn" title="நடவடிக்கைகள்">நடவடிக்கைகள்</a>
+</li>
+<li>
+<a href="/us/ta/how-to" title="எவ்வாறு இதைச் செய்யலாம்">எவ்வாறு இதைச் செய்யலாம்</a>
+</li>
+<li>
+<a href="/us/ta/promote" title="ஊக்குவிப்பு">ஊக்குவிப்பு</a>
+</li>
+<li>
+<a href="/us/ta/#faq" title="அடிக்கடி கேட்கப்படும் கேள்விகள்">அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ta/#join">
+<button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</a></p>
+
+<h1>எப்படி தொண்டர்கள் வழிகாட்டி</h1>
+
+<h3>இன்றைய வகுப்பறையில் ஒரு வித்தியாசத்தை!</h3>
+
+<hr>
+
+<h2>ஏன் தன்னார்வ?</h2>
+
+<p>கடந்த தொண்டர்கள் சில சாட்சிகளை பாருங்கள்:</p>
+
+<ul>
+<li>"எனது அனுபவத்தின் சிறந்த பகுதி, ஒட்டுமொத்த வர்க்கம் பெண்களாலும், வண்ணமயமான மக்களாலும் இருந்தது. இது எங்களுடைய தொழில் எதிர்காலத்திற்கு இந்த குழந்தைகளை அடையவும் உற்சாகப்படுத்தவும் ஒரு வாய்ப்பைப் பெறுகிறது. "</li>
+<li>"குறிப்பாக இளம் பெண்களை தொழில்நுட்பத்தில் ஊக்குவிப்பதில் மகிழ்ச்சியடைந்தேன். நான் என் உள்ளூர் பகுதியில் அடுத்த தலைமுறை உதவுவது போல் உணர்ந்தேன். "</li>
+<li>"குழந்தைகள் எவ்வளவு உற்சாகமாக இருந்தார்களோ அதை நான் விரும்பினேன். ஒரு அற்புதமான விஷயம் என்னவென்றால் ஆசிரியர்கள் கவனித்தனர், கல்வியில் சிறந்து விளங்காத சில மாணவர்கள், ஒரு டெவலப்பரைப் போல நினைத்து, மற்றவர்களுக்கு கற்றுக் கொடுப்பதில் சிறந்து விளங்குகிறார்கள் - அவர்களுக்கு நம்பிக்கையூட்டுவதற்கு ஒரு இடம் கொடுக்கும். "</li>
+</ul>
+
+<h2>எவரும் தன்னார்வத் தொண்டு செய்ய முடியும்</h2>
+
+<h3>Volunteers and speakers in tech:</h3>
+
+<p>Do you have a connection to CS or tech? மென்பொருள் பொறியியலில் நீங்கள் பணிபுரிகிறீர்கள் என்றால், ஒரு தொழில்நுட்ப நிறுவனத்தில் எந்தப் பாத்திரத்திலும் (பொறியியலாளர் அல்லது பொறியியலாளர்) அல்லது கணினி அறிவியல் படிப்புகளை நீங்கள் எடுத்துக் கொண்டால், நீங்கள் மாணவர்களுக்கு ஊக்கமளிக்கலாம்! பல மாணவர்கள் டெக் தொழினுட்பத்தில் பணியாற்றும் எவருக்கும் ஒருபோதும் சந்திப்பதில்லை, எங்கள் ஆசிரியர்கள் தங்கள் வகுப்பறைகளை தொழில் மற்றும் பல்கலைக்கழக மாணவர்களுக்கு இணைக்க விரும்புகின்றனர்.</p>
+
+<p>You can be a guest speaker in a classroom, or help a teacher run the activity. Visit a local classroom to inspire students to keep learning computer science. <br> <br></p>
+
+<p><a href="https://code.org/volunteer"><button>Sign up today to be a tech volunteer!</button> <br> <br></a></p> 
+
+<h3>
+  Anyone passionate about expanding opportunity:
+</h3>
+
+<p>
+  Do you believe that learning computer science can open doors of opportunity for students? ஒரு உள்ளூர் வகுப்பறையில் உதவுங்கள் அல்லது பள்ளிக்குப் பிறகு ஒரு நிகழ்வை ஏற்பாடு செய்யுங்கள்! கோடரியின் ஒரு மணிநேரத்தை நடத்த கணினித் துறையில் நீங்கள் எந்த பின்னணியும் தேவையில்லை. மேலும், உங்கள் குழந்தையின் ஆசிரியரை, ஒரு நண்பர் அல்லது ஒரு மணிநேரத்தை முயற்சிப்பதற்கு ஒரு கிளப்பைக் காப்பாற்றுவதற்கு உதவுவது போதும்.
+</p>
+
+<h3>
+  How do you get started?
+</h3>
+
+<ol>
+  <li>
+    <a href="/us/ta/promote/resources#help-schools%0A">Send this email</a> to your child’s teacher offering to help them run an Hour of Code.
+  </li>
+  
+  <li>
+    Offer to host an Hour of Code event after school at a local school. <a href="/us/ta/how-to%0A">Use this How-To Guide</a> to help you plan.
+  </li>
+</ol>
+
+<h2>
+  உங்கள் சக ஊழியர்களை தன்னார்வலரிடம் சேர்த்துக்கொள்ளுங்கள்
+</h2>
+
+<p>
+  Tell your friends and co-workers about the Hour of Code. Thousands of teachers are looking for volunteers, so ask them to <a href="https://code.org/volunteer">sign up as a volunteer</a>. Ask your employer to get involved. <a href="/us/ta/promote/resources#sample-emails%0A">Send this email</a> to your manager or the CEO to get everyone on board.
+</p>
+
+<h2>
+  தயாரிப்பது எப்படி
+</h2>
+
+<ul>
+  <li>
+    <a href="/us/ta/promote/resources#videos">Pick out a video</a> to show to help focus the class and get them excited to do an Hour of Code.
+  </li>
+  <li>
+    <a href="/files/hoc-volunteer-toolkit.pdf"> கோட் தொண்டர் டூல்கிட் மணிநேரத்தை பாருங்கள், இது ஒரு கண்ணோட்டம், காலவரிசை, தயாரிப்பு பொருள் மற்றும் மார்க்கெட்டிங் பொருள் ஆகியவற்றைக் கொண்டுள்ளது. உங்கள் தன்னார்வ அனுபவத்திற்கு நீங்கள் தயாராக இருக்க வேண்டும் எல்லாம்!</a>
+</li> 
+    
+    <li>
+      If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one <a href="/us/ta/learn">Hour of Code tutorial</a>.
+    </li>
+    
+    <li>
+      நீங்கள் ஒரு பள்ளியைப் பார்வையிட்டால், எந்தவொரு பின்னணி காசோலைகளையும் தேவையான ஆவணங்களையும் பூர்த்தி செய்யுங்கள்.
+    </li>
+    
+    <li>
+      மாணவர்களுடன் எவ்வாறு தொடர்புகொள்வது என்பது பற்றி <a href="https://code.org/files/CSTT_Volunteers.pdf"> இந்த உதவிக்குறிப்பைப் பார்வையிடவும் </a>.
+    </li>
+    
+    <li>
+      #HourOfCode உடன் பேஸ்புக், ட்விட்டர், Instagram மற்றும் Tumblr இல் உரையாடலில் சேரவும்.
+    </li>
+    
+    <li>
+      ஆசிரியருடன் உங்கள் அமர்வின் போது பேசுவதற்கு என்ன திட்டமிடுகிறீர்கள் என்று விவாதிக்கவும்.
+    </li>
+    
+    <li>
+      நீங்கள் ஒரு மெய்நிகர் தன்னார்வலராக இருந்தால், சோதனை ஏ / வி மற்றும் ஸ்கிரீன் பகிர்வு திறன்களை முன்பே.
+    </li>
+</ul> 
+    
+
+<pre><code>&lt;h2&gt;
+  கோட் நிகழ்வு நாள் நாள்
+&lt;/h2&gt;
+
+&lt;p&gt;
+  When you're hosting an Hour of Code event, follow the sample agenda below to help guide your day. Before then, make sure you sign into the school and greet the teacher the day of the event. Confirm the agreed schedule for the day and discuss any talking points.
+&lt;/p&gt;
+
+&lt;h3&gt;
+  Sample agenda:
+&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;
+      நேரம்
+    &lt;/th&gt;
+
+    &lt;th&gt;
+      நிகழ்ச்சி நிரல்
+    &lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      1-5 நிமிடங்கள்
+    &lt;/td&gt;
+
+    &lt;td&gt;
+      &lt;a href="/us/ta/promote/resources#videos"&gt;Show an inspirational video&lt;/a&gt;.
+    &lt;/td&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;
+      5-10 நிமிடங்கள்
+    &lt;/td&gt;
+
+    &lt;td&gt;
+      உங்களை அறிமுகப்படுத்தி மாணவர்கள் பற்றி மேலும் அறிய: &lt;/ul&gt;
+
+      &lt;li&gt;
+        நீங்கள் என்ன வேலை செய்கிறீர்கள், நீங்கள் என்ன செய்கிறீர்கள், உங்கள் வேலை பற்றி நீங்கள் என்ன விரும்புகிறீர்கள்?
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        என்ன அல்லது யார் உங்களை ஈர்க்கிறீர்கள்?
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        எப்படி கணினி அறிவியல் ஆர்வமாக?
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        உனக்கு ஒரு வழிகாட்டி இருக்கிறதா?
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        டெக் அனைத்தையும் எவ்வாறு பாதிக்கிறது என்பதைப் பற்றி ஒரு கதையைப் பகிரவும்.
+      &lt;/li&gt;
+
+      &lt;br /&gt;மாணவர்கள் கேள்விகளைக் கேளுங்கள் மற்றும் கே &amp; amp; A க்கான நேரத்தை விடுங்கள்.&lt;/br&gt; 
+
+      &lt;li&gt;
+        அவர்கள் என்ன வேலைகள் ஆர்வமாக உள்ளனர், அவர்களுக்கு பிடித்த டெக் கேஜெட்கள் அல்லது பயன்பாடுகள் என்ன, அவர்கள் எவ்வாறு கட்டப்பட்டது என்று நினைக்கிறார்கள்?
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        மாணவர்கள் உங்களிடம் ஏதாவது கேள்விகள் கேட்கிறார்களா?&lt;/ul&gt;&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt;
+          &lt;td&gt;
+            30-60 நிமிடங்கள்
+          &lt;/td&gt;
+
+          &lt;td&gt;
+            &lt;strong&gt;Code!&lt;/strong&gt; Walk around, answer questions, and guide them through tough puzzles. மாணவர்களின் தீர்வுக்கு பதிலாக முயற்சி செய்யாதீர்கள், அதற்கு பதிலாக, கேள்விகளை கேட்க முயற்சி செய்யுங்கள், அதனால் அவர்கள் என்ன தவறு செய்தார்கள் என்பதைப் பதிலளிப்பார்கள், கேள்விகளைக் கேட்டால் மாணவர்கள் ஒருவருக்கொருவர் கேட்டுக்கொள்வார்கள். ஒருவருக்கொருவர் கற்றுக் கொள்வது ஒரு சிறந்த கற்றல் வாய்ப்பாகும்.
+          &lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;
+            1-3 நிமிடங்கள்
+          &lt;/td&gt;
+
+          &lt;td&gt;
+            எல்லோருக்கும் நன்றி மற்றும் தூண்டுதல் பிரித்தல் வார்த்தைகளை பகிர்ந்து. உங்கள் நிறுவனத்தில் ஏராளமான கைப்பற்றல்கள் (ஸ்டிக்கர்கள் அருமை)!
+          &lt;/td&gt;
+        &lt;/tr&gt;
+
+        &lt;tr&gt;
+          &lt;td&gt;
+            பிறகு
+          &lt;/td&gt;
+
+          &lt;td&gt;
+            &lt;strong&gt; ஒரு நீடித்த மாற்றத்தை உருவாக்கவும்: &lt;/ strong&gt; ஆசிரியருக்கு ஒரு மணிநேர கோட் முழு கணினி அறிவியல் பாடமாக மாற்றுவது பற்றி பேசுங்கள்! உங்கள் பள்ளி ஆசிரியருடன் இன்றும் கற்றுக்கொள்வதன் மூலம் உங்கள் ஆசிரியருடன் &lt;a href="https://code.org/yourschool"&gt; code.org/yourschool &lt;/a&gt; என்பதற்கு சென்று, அவர்களது வகுப்பறைக்கு ccomputer science&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; 
+
+            &lt;h3&gt;
+              After the Event:
+            &lt;/h3&gt;
+
+            &lt;ul&gt;
+              &lt;li&gt;
+                உங்கள் புகைப்படங்களையும் கதையையும் Code.org உடன் கொடுப்பதற்கு giving@code.org.
+              &lt;/li&gt;
+              &lt;li&gt;
+                உங்கள் நிறுவனத்தின் தன்னார்வ கண்காணிப்பு போர்ட்டில் உங்கள் தன்னார்வ மணிநேரத்தில் நுழைய நினைவில் கொள்ளுங்கள்.
+              &lt;/li&gt;
+              &lt;li&gt;
+                சமூக ஊடக # HourOfCode இல் உங்கள் அனுபவத்தைப் பகிர்ந்து கொள்ளுங்கள்!
+              &lt;/li&gt;
+              &lt;li&gt;
+                நிகழ்வின் போது படங்கள் / வீடியோக்களை நீங்கள் எடுத்துக் கொண்டால், &lt;strong&gt; குறிப்பாக மாணவர்களுடன் &lt;/ strong&gt;, நீங்கள் சமூக ஊடகங்களில் உங்கள் கதையை இடுகையிட விரும்பினால் ஆசிரியர் / பெற்றோர் அனுமதியை பெற்றுக்கொள்ளுங்கள்.&lt;/li&gt; 
+
+                &lt;li&gt;
+                  மேலும், ஒரு மாதத்திற்குள் மீண்டும் சரிபார்க்கவும்: ஒரு கணினி அறிவியல் பாடத்திட்டத்தை ஆசிரியருக்கு ஆர்வமா? &lt;a href="https://code.org/yourschool"&gt; வளங்களை மற்றும் தொழில்முறை கற்றல் வாய்ப்புகளைப் பகிர்ந்து கொள்ள இது உதவும். &lt;/a&gt;
+                &lt;/li&gt;&lt;/ul&gt; 
+
+                &lt;h2&gt;
+                  விருந்தினர் பேச்சாளரின் தொழில்நுட்ப தன்னார்வலராக நீங்கள் எப்படி தேர்ந்தெடுக்கப்பட்டீர்கள்
+                &lt;/h2&gt;
+
+                &lt;ul&gt;
+                  &lt;li&gt;
+                    எங்கள் &lt;a href="https://code.org/volunteer/local"&gt; தன்னார்வ வரைபடத்தில் &lt;/a&gt; ஆசிரியர்கள் தொண்டர்களை தேடுவார்கள்.
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    ஒரு ஆசிரியர் உங்களை தேர்ந்தெடுப்பதற்கான வாய்ப்பை அதிகரிக்க முடிந்தவரை உங்கள் சுயவிவரத்தை முடிக்க முடிந்தவரை முயற்சி செய்யுங்கள்.
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                    இந்த படிவத்தை ஒரு ஆசிரியரால் நீங்கள் தொடர்புகொள்வீர்கள் (உங்கள் மின்னஞ்சல் முகவரி ஆசிரியருடன் ஒருபோதும் பகிரப்படாது). &lt;em&gt; ஆசிரியர்களிடம் இருந்து அதிகமான கோரிக்கைகளை நீங்கள் பெற்றிருந்தால், ஆசிரியரின் எந்த மின்னஞ்சலின் கீழே வழங்கப்படும் உங்கள் தகவலைத் திருத்த அல்லது குழுவிலகுவதற்கான இணைப்பைக் கிளிக் செய்வதன் மூலம் எப்போது வேண்டுமானாலும் உங்கள் முன்னுரிமைகளை புதுப்பிக்கலாம். &lt;/ em&gt;&lt;/li&gt; &lt;/ul&gt; 
+
+                    &lt;h2&gt;
+                      கோட் கேள்வி நேரத்தின் போது தன்னார்வத் தொண்டு
+                    &lt;/h2&gt;
+
+                    &lt;h3&gt;
+                      I haven't been contacted by a teacher yet. How can I still volunteer?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      Try searching for local schools and call the principal/teacher/front office and ask how you can help.
+                    &lt;/p&gt;
+
+                    &lt;h3&gt;
+                      How long do classroom visits last for?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.
+                    &lt;/p&gt;
+
+                    &lt;h3&gt;
+                      What age group is the Hour of Code activity appropriate for?
+                    &lt;/h3&gt;
+
+                    &lt;p&gt;
+                      Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
+                    &lt;/p&gt;
+
+                    &lt;p&gt;
+                      &lt;a href='/us/ta/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</p>
+
+<pre><code>                    &lt;/p&gt;
+</code></pre>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ta/how-to">
+<div class="nav-header">எவ்வாறு செய்வது வழிகாட்டிகள்</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to">
+பயிற்றுவிப்பாளர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/afterschool">
+பள்ளி நேரத்திற்கு பின் பயிற்றுவிக்கும் ஆசிரியர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/companies">
+நிறுவனங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/districts">
+மாவட்டங்களுக்கு\
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/events">
+பள்ளிக் கூட்டங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/parents">
+பெற்றோர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/public-officials">
+பொது அதிகாரிகளுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/volunteers">
+தொண்டூழியர்களுக்கு
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ta/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">வள ஆதாரங்கள்</div>
+</div>
+</a>
+<a href="/us/ta/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">டுடோரியல்களை முயற்சிக்கவும்</div>
+</div>
+</a>
+<a href="/us/ta/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">எவ்வாறு ஈடுபடுவது</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">எங்களைத் தொடர்புகொள்க</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">ஆதரிக்கிறேன்</a>
+</li>
+<li>
+<a href="/us/ta/partners" target="_blank">பங்காளர்கள் மற்றும் ஆலோசகர்கள்</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">நிபந்தனைகள்</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">தனியுரிமைக் கொள்கை</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+காப்புரிமை 2020 Code.org. எல்லா உரிமைகளும் பாதுகாக்கப்பட்டவை.
+<br>
+Hour of Code™ என்பது Code.orgன் வணிக முத்திரையாகும்.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

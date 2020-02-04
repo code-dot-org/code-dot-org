@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="CSEd Week" property="og:site_name">
+<meta content="Hour of Code and CSEdWeek Advisory Committee" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://csedweek.org/about/advisory-committee" property="og:url">
+<title>Hour of Code and CSEdWeek Advisory Committee | Computer Science Education Week</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'csedweek.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div style="width: 100%; background-color: rgba(255,255,255,0.8)">
+<div style="width: 970px; margin: 0 auto; overflow: hidden">
+<div style="width: 530px; float: left; padding-top: 14px; padding-bottom: 10px">
+<br>
+<a href="/" style="text-decoration:none">
+<img src="/images/logo_text.png" style="max-width: 100%; vertical-align: bottom">
+<img src="/images/logo_date.png" style="max-width: 100%; vertical-align: bottom">
+</a>
+</div>
+<div class="desktop-feature" style="width: 420px; float: right; overflow: hidden; text-align:right; padding-top: 3px">
+<a href="http://facebook.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/facebook_green.png">
+</a>
+<a href="http://twitter.com/CSEdWeek" style="text-decoration:none" target="_blank">
+<img src="/images/twitter_green.png">
+</a>
+<br>
+<br>
+<br>
+<a class="redheaderlink" href="/learn">LEARN</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/educate/hoc">TEACH</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/promote">PROMOTE</a>
+ 
+ 
+ 
+<a class="redheaderlink" href="/help">HELP US</a>
+<div style="height: 5px"></div>
+</div>
+</div>
+<div style='width: 970px; margin: 0 auto; background-repeat: repeat-x; background-image: url("/images/pattern_grey.png")'>
+<br>
+</div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 140px; margin-right: 40px; float: left;">
+<div id="about_nav" style="width:140px;">
+<span class="about_list">
+<a class="about_list_item" href="/about">About CSEdWeek</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/partners">Partners</a>
+<hr class="narrow_hr">
+<span class="about_list_item_selected">Hour of Code and CS Ed Week Advisory Committee</span>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/about/news">News</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/awards">Awards</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/contact">Contact Us</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+<div style="width: 790px; float: left; margin: 0; padding: 0;">
+<h1>Hour of Code and CSEdWeek Advisory Committee</h1>
+
+<div id="headshots" style="margin-top: 20px;"></div>
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="250">
+<img src="/images/fill-200x200/avatars/alberto_avalos.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Alberto Avalos
+</h3>
+<p style="min-height: 40px;">Hispanic Heritage Foundation, Code as a Second Language</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Alberto Ávalos is the the Co-Founder of the Code as a Second Language (CSL) national initiative. CSL focuses on introducing youth to computer programming to add to the growing pool of Latino and Latina entrepreneurial software engineers. With his team he has grown the initiative to over 20 different markets nationwide in over 50 different schools. Alberto's passion is leveraging technology across industries and working with communities in creating economic empowerment. He believes that when all communities have economic opportunity and influence, America will be more prosperous. He also serves on the Advisory Committee for Diversity for the Computer Science Teachers Association.</p>
+</div>
+
+<div class="col-33 avatar_container" id="251">
+<img src="/images/fill-200x200/avatars/amy_baldwin.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Amy Baldwin
+</h3>
+<p style="min-height: 40px;">Teacher</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Amy has been teaching at Oakbrook Middle in Ladson, South Carolina for sixteen years. She graduated from Charleston Southern University in 2000 as an Elementary Education major with an emphasis in mathematics and computer science. She taught 7th grade math and science before moving into her role as the Gateway to Technology/STEM teacher in 2013. Amy is National Board certified in Early Adolescent Mathematics and renewed her certification in 2015. She was named Dorchester District 2 Teacher of of the Year in 2011 and has served on numerous curriculum teams. In Spring 2015, she helped start the Girls in Tech program to encourage girls to explore computer science. She is also a coach for First Lego League and VEX robotics teams at her school.</p>
+</div>
+
+<div class="col-33 avatar_container" id="252">
+<img src="/images/fill-200x200/avatars/angela_de_guzman.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Angela de Guzman
+</h3>
+<p style="min-height: 40px;">MD State Dept of Education</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Angela de Guzman is currently a Professional Learning Specialist at the Maryland Department of Education. Through this work she is able to provide leadership across Maryland in professional learning for educators and school leaders. Angela formerly served as a technology integration and elementary classroom teacher in Baltimore County Public Schools.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="253">
+<img src="/images/fill-200x200/avatars/ben_chun.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Ben Chun
+</h3>
+<p style="min-height: 40px;">Teacher</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Ben is a product leader whose background includes 5 years as a software engineer and 7 years as a public high school teacher. He curates the short stories at ilearnedtoprogram.com and developed the free cartoons at ctillustrated.com. He is also a facilitator for Code.org's Computer Science Foundations and AP Computer Science Principles.</p>
+</div>
+
+<div class="col-33 avatar_container" id="255">
+<img src="/images/fill-200x200/avatars/brooke_haag.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Brooke Haag
+</h3>
+<p style="min-height: 40px;">Microsoft</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">As a former physicist and physics teacher, Brooke is responsible for driving Microsoft education’s STEM strategy working across marketing, sales, and product teams to empower teachers and students globally to achieve more. Before coming to Microsoft, she spent 7 years as a community college professor doing research in nuclear physics. She holds a PhD in physics from UC Davis and a Master’s degree in Education from the Harvard Graduate School of Education.</p>
+</div>
+
+<div class="col-33 avatar_container" id="256">
+<img src="/images/fill-200x200/avatars/bryan_twarek.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Bryan Twarek
+</h3>
+<p style="min-height: 40px;">CSTA</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Bryan "BT" Twarek is the Director of Education for the Computer Science Teachers Association (CSTA), where he develops programs to improve the teaching and learning of K-12 computer science. Prior to joining CSTA, BT was Computer Science Supervisor for SFUSD, where he worked to expand equitable access to creative, rigorous, and relevant computer science instruction to all San Francisco public school students. He was also the school district representative on the CSTA Board of Directors and a team lead and writer for the K-12 CS Framework, the CSTA K-12 CS Standards, the CSTA / ISTE Standards for CS Educators, and California's K-12 CS standards.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="257">
+<img src="/images/fill-200x200/avatars/champika_fernando.png" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Champika Fernando
+</h3>
+<p style="min-height: 40px;">Scratch Team</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Champika is the Director of Outreach and Communications for the Scratch Team. She supports partnerships and programs that promote the powerful ideas behind Scratch. Her work is focused on supporting communities (educators, parents, and kids) to ensure that all kids have meaningful experiences with code that are rooted in creativity and agency. Champika led the design and development of the Scratch 2.0 Online Community and has also been an engineer and product manager at Google. Her biggest claim to fame (to date) is being a sprite in the Scratch library.</p>
+</div>
+
+<div class="col-33 avatar_container" id="258">
+<img src="/images/fill-200x200/avatars/dawn_guest_johnson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Dawn Guest-Johnson
+</h3>
+<p style="min-height: 40px;">Los Angeles Unified School District</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Dawn Guest-Johnson is the Computer Science Coordinator for the Los Angeles Unified School District. She is a Mathematics, Computer Science, Fine Arts, and CTE Media Arts educator with over 19 years of experience teaching in the Los Angeles, Chicago, and Indianapolis public school districts and in the online environment with University of Phoenix. She received a BS in Mathematics Secondary Education from Chicago State University and a MSEd from Walden University in Education Technology. Outside of the classroom, she served as a mathematics coach, intervention coordinator, New Teacher Support Provider (BTSA), and Reed Mentor Teacher. She is a trained Interactive Mathematics Program teacher and believes in a constructivist student centered learning environment where students are actively engaged in inquiry and understanding. </p>
+</div>
+
+<div class="col-33 avatar_container" id="259">
+<img src="/images/fill-200x200/avatars/deborah_seehorn.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Deborah Seehorn
+</h3>
+<p style="min-height: 40px;">CS4NC / NC ECEP</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Deborah was co-chair of the 2017 CSTA Revision Task Force and served as the chair of the CSTA board of directors from 2013 to 2015. She is currently working on the Standards Refresh for CS Educators Writing Team as well as the AI for K-12 Initiative. Deborah is a former teacher and business, finance, and information technology education consultant for the North Carolina Department of Public Instruction. She is committed to empowering educators to develop computer science curriculum to prepare students to be leaders in the 21st Century.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="260">
+<img src="/images/fill-200x200/avatars/diane_levitt.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Diane Levitt
+</h3>
+<p style="min-height: 40px;">Cornell Tech</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Diane Levitt is the Sr. Director of K-12 Education for Cornell Tech. She drives engagement with the NYC computing education community, including the Dept. of Education's CS4All initiative, and works with individual schools to catalyze K-12 computer science. She is responsible for Cornell Tech's annual conference, To Code and Beyond, convening educators, nonprofit and industry leaders, policymakers and funders to examine best practices and innovative solutions in K-12 computing education. Before joining Cornell Tech, Diane was the Director of Corporate Social Responsibility for Belkin, and philanthropic advisor to Belkin's founder and CEO. Diane received a master’s degree in early childhood education from Bank Street College, and a bachelor of science in women’s studies and anthropology from Barnard College, Columbia University. </p>
+</div>
+
+<div class="col-33 avatar_container" id="261">
+<img src="/images/fill-200x200/avatars/enrico_nardelli.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Enrico Nardelli
+</h3>
+<p style="min-height: 40px;">Italy</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Full professor of Informatics in the University of Roma "Tor Vergata", coordinator of the national project "Programma il Futuro" http://programmailfuturo.it, for the introduction of basic concepts of informatics as a scientific subject in Italian schools, with emphasis on primary schools and on computational thinking. Member of the Executive Board of CINI, the Italian national inter-university Consortium for Informatics. Member of the "Committee on European Computing Education" a joint effort between Informatics Europe and ACM Europe.</p>
+</div>
+
+<div class="col-33 avatar_container" id="262">
+<img src="/images/fill-200x200/avatars/grant_hosford.jpeg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Grant Hosford
+</h3>
+<p style="min-height: 40px;">CodeSpark</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Grant is the CEO and co-founder of codeSpark, a venture backed edtech company turning programming into play for young kids around the world. codeSpark’s award-winning games codeSpark Academy and The Foos have been played by millions of kids in 172 countries. Grant lives near Pasadena with his author wife, 3 kid coders and a goofy pug named Fletcher.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="263">
+<img src="/images/fill-200x200/avatars/itzel_martinez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Itzel Martinez
+</h3>
+<p style="min-height: 40px;">Pandora</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Itzel works as a Software Engineer at Pandora Media. She is also the founder of the Latinas Engineering Leadership Program, a virtual mentorship program designed to support Latinas who are pursuing a degree in computer science and help them land their first internship. Her experience as a first-generation college student has inspired her to mentor younger generations, and to expose students in low-income communities to technology and a future in computer science. She is also passionate about creating opportunities for women of color in tech. Her hope is to create a supportive community where women are not only empowered to complete their degree in computer science, but also to become leaders in the tech industry.</p>
+</div>
+
+<div class="col-33 avatar_container" id="264">
+<img src="/images/fill-200x200/avatars/jannie_fernandez.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Jannie Fernandez
+</h3>
+<p style="min-height: 40px;">NCWIT</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Jannie works at NCWIT as the K-12 Alliance Manager and TECHNOLOchicas Program Manager. She obtained her BS in Special Education with a focus on learning disabilities. Prior to joining NCWIT, she taught various science subjects, including Biology and Physics, and also served as Special Education Department Head for a public high school in Miami for 10 years.</p>
+</div>
+
+<div class="col-33 avatar_container" id="265">
+<img src="/images/fill-200x200/avatars/leigh_ann_delyser.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Leigh Ann DeLyser
+</h3>
+<p style="min-height: 40px;">CSforAll Consortium and CSNYC</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Leigh Ann DeLyser is the co-founder and chief academic officer of the CSforAll Consortium, a national network of CS education content providers, school districts, education associations, and researchers devoted to the mission of CSforAll. Leigh Ann is also the director of education and research at CSNYC, a nonprofit founded to ensure that all of New York City’s 1.1 million public school students have access to a high-quality CS education. At CSNYC, Leigh Ann oversees research efforts and advising and implementing programs that align with the organization’s strategic goals. Leigh Ann earned her Ph.D. from Carnegie Mellon University in computer science and cognitive psychology, with a focus on CS education.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="266">
+<img src="/images/fill-200x200/avatars/leslie_aaronson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Leslie Aaronson
+</h3>
+<p style="min-height: 40px;">NCWIT</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Leslie Aaronson is the Strategic Director of K12 Initiatives with NCWIT (National Center for Women and Information Technology). She is also a Strategic Consultant for LA Promise Fund and their Girls Build LA Challenge. She was awarded Teacher of the Year by LAUSD for her work as the Lead Teacher and Coordinator of Foshay Learning Center’s Technology Academy.</p>
+</div>
+
+<div class="col-33 avatar_container" id="267">
+<img src="/images/fill-200x200/avatars/mark_sherman.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Mark Sherman
+</h3>
+<p style="min-height: 40px;">Emmanuel College, Boston</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Mark Sherman is an assistant professor of computer science at a liberal arts college. He believes that computing is a necessary domain for every person in society to be familiar with, just like math, history, and science. Mark received his Ph.D. in computer science specializing in CS education research at UMass Lowell, and was a postdoc researcher at MIT. He has taught students of all ages and prepared teachers of all levels. His current work focuses on the empowerment of regular people employing computing to solve problems, overcome obstacles, and create change.</p>
+</div>
+
+<div class="col-33 avatar_container" id="268">
+<img src="/images/fill-200x200/avatars/matthew_dawson.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Matthew Dawson
+</h3>
+<p style="min-height: 40px;">Google</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Matt works on computer science education programs at Google. Previously, he was a fourth and fifth grade teacher.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="269">
+<img src="/images/fill-200x200/avatars/paige_prescott.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Paige Prescott
+</h3>
+<p style="min-height: 40px;">Computer Science Alliance</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Paige Prescott has been involved in Computer Science education for more than twelve years. As Executive Director of the newly formed Computer Science Alliance, she is interested in strengthening the community of people involved computer science education and to advocate on a state, district and local level to see more computer science offerings in New Mexico, especially to the underserved areas in rural and tribal communities. She is the President of the Computer Science Teachers Association of New Mexico (CSTA-NM) and is pursuing a PhD in Learning Sciences at UNM where she is focusing on computer science education. Paige has trained over 500 teachers to bring computer science to their students K-8 through CS Fundamentals and CS in Science curriculum for Project GUTS.</p>
+</div>
+
+<div class="col-33 avatar_container" id="270">
+<img src="/images/fill-200x200/avatars/scott_nichols.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Scott Nichols
+</h3>
+<p style="min-height: 40px;">Maryland State Department of Education</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Scott Nichols is the Technology and Engineering Education Supervisor for the Maryland State Department of Education. Additionally, he oversees K-12 Computer Science and Project Lead the Way implementation. Scott previously worked with the Baltimore County Public Schools as a STEM teacher where he was awarded the International Technology and Engineering Educators Association Teacher Excellence Award, the Technology and Engineering Educators Association of Maryland (TEEAM) Award of Excellence, and both County Council and Governor Citations for Excellence in STEM Education. Scott also serves on the TEEAM Executive Board, the Maryland Science Olympiad Board of Directors, and the Maryland Title I Committee of Practitioners.</p>
+</div>
+
+<div class="col-33 avatar_container" id="271">
+<img src="/images/fill-200x200/avatars/vanessa_jones.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Vanessa Jones
+</h3>
+<p style="min-height: 40px;">Austin ISD Technology Design Coach</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Vanessa Jones is a Code.org Texas Facilitator and works as an Instructional Technology Design Coach for the Austin Independent School District in Austin, Texas. Vanessa is one of the lead writers for the K12 Computer Science Curriculum Frameworks concept and practices document (k12cs.org). She is also a moderator for the Intel Education Engage Community and a National PBS Teacherline Facilitator as well as an Educational Ambassador for the Discovery Education, BrainPoP and Edmodo communities.
+</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<div class="headshot_row" style="width: 100%; padding: 0;">
+<div class="col-33 avatar_container" id="272">
+<img src="/images/fill-200x200/avatars/veronica_catete.jpg" style="max-height: 200px; border-radius: 100px;">
+<h3 style="min-height: 20px;">
+Veronica Catete
+</h3>
+<p style="min-height: 40px;">NC State University</p>
+<p style="font-size: 13px;  margin-bottom: 50px;">Veronica Cateté is a research scientist at NC State University in the department of computer science studying the expansion and implementation of computer science in K-12 schools. Veronica has focused on both middle grades curriculum development and teacher professional development. She completed her Ph.D. in helping novice computing teachers evaluate programming projects for AP CS Principles students. She leads the NCSU chapter of the STARS Computing Corps for broadening participation in computing and is an ambassador for departmental outreach.</p>
+</div>
+
+<p></p>
+</div>
+<br style="clear: both;">
+
+<ul>
+<li>
+Alvalene Rogers
+- Teacher
+</li>
+<li>
+Debra Richardson
+- UC Irvine
+</li>
+</ul>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<div style="width: 100%; height: 80px; padding: 20px; overflow: hidden; background-color: rgb(4, 126, 188)">
+<div class="whitefooter" style="width: 970px; margin: 0 auto;">
+<div style="float:left">
+<a class="whitefooterlink" href="/about">About</a>
+    |    
+<a class="whitefooterlink" href="/partners">Partners</a>
+    |    
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+    |    
+<a class="whitefooterlink" href="/resource-kit">Resource Kit</a>
+    |    
+<a class="whitefooterlink" href="/resource_kit/frequently_asked_questions">FAQ</a>
+    |    
+<a class="whitefooterlink" href="http://forums.code.org/">Forums</a>
+    |    
+<a class="whitefooterlink" href="http://support.code.org/">Support</a>
+<br>
+<small class="dim">
+© Computer Science Education Week, 2020. Hour of Code® is a trademark of Code.org
+</small>
+</div>
+<div style="float:right">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+</div>
+</div>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "csedweek.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

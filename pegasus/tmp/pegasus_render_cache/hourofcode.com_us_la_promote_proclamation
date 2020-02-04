@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Ejemplo de resolución que apoya la Semana por la Educación en Ciencias de Computación y la Hora del Código" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/la/promote/proclamation" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Ejemplo de resolución que apoya la Semana por la Educación en Ciencias de Computación y la Hora del Código</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/la/">
+<img alt="Hora del Código" src="/us/la/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/proclamation';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option selected value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/la/learn" title="Actividades">Actividades</a>
+</li>
+<li>
+<a href="/us/la/how-to" title="Cómo hacerlo">Cómo hacerlo</a>
+</li>
+<li>
+<a href="/us/la/promote" title="Promover">Promover</a>
+</li>
+<li>
+<a href="/us/la/#faq" title="Preguntas frecuentes">Preguntas frecuentes</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/la/#join">
+<button style="float: right; margin-top: 50px;">
+Organiza una Hora del Código
+</button>
+</a></p>
+
+<h1>Ejemplo de resolución de la Semana por la Educación en Ciencias de la Computación</h1>
+
+<h3>A continuación encontrarás un ejemplo de resolución de apoyo para la Semana por la Educación en Ciencias de la Computación y las metas que pueden seguir los legisladores locales y estatales.</h3>
+
+<hr>
+
+<h4><strong>RESOLUCIÓN</strong></h4>
+
+<h4>Apoyar las metas y los ideales de la "Semana por la Educación en Ciencias de la Computación"</h4>
+
+<p>Considerando que la Semana por la Educación en Ciencias de la Computación resalta el rol crucial que las ciencias de la computación tienen a la hora de transformar nuestra sociedad y cómo impulsan la innovación y crean oportunidades económicas;</p>
+
+<p>Considerando que la tecnología informática es una parte integral de la cultura moderna y transforma la manera en que las personas se relacionan entre sí y con el mundo que las rodea;</p>
+
+<p>Considerando que las ciencias de la computación transforman la industria, crean nuevos campos de comercio, impulsan la innovación en todos los campos de la ciencia y fortalecen la productividad en los sectores económicos establecidos;</p>
+
+<p>Considerando que el campo de las ciencias de la computación sustenta al sector de tecnologías de la información de nuestra economía, que es un contribuyente significativo al PBI de los Estados Unidos;</p>
+
+<p>Considerando que el campo de las ciencias de la computación es fundamental para la era digital;</p>
+
+<p>Considerando que el sector de tecnologías de la información está en una posición única para ayudar a la recuperación económica a través de la investigación y el desarrollo de nuevas innovaciones;</p>
+
+<p>Considerando que las perspectivas para los empleos en ciencias de la computación son prometedoras, con más de 500,000 puestos vacantes en todo el país;</p>
+
+<p>Considerando que proporcionar a los estudiantes la oportunidad de participar en actividades de ciencias de la computación de alta calidad, los expone a las generosas oportunidades que ofrece el campo y les proporciona la habilidad de pensamiento crítico que le servirá a lo largo de sus vidas;</p>
+
+<p>Considerando que todos los estudiantes merecen una enseñanza profunda en ciencias de la computación, que incluya el acceso a docentes calificados, tecnología y un plan de estudios adecuado para que puedan aprender ciencias de la computación en los niveles de educación primaria y secundaria;</p>
+
+<p>Considerando que la enseñanza de las ciencias de la computación presenta desafíos, como la obligatoriedad de tomar clases de ciencias de la computación para graduarse de la escuela secundaria y el desarrollo profesional para docentes de ciencias de la computación;</p>
+
+<p>Considerando que la participación en la Hora del Código durante la Semana por la Educación en Ciencias de la Computación puede servir para romper las barreras en el campo de las ciencias de la computación y alentar a más estudiantes a que sigan aprendiendo;</p>
+
+<p>Considerando que el campo de las ciencias de la computación tiene importantes problemas de equidad que hay que resolver, como la necesidad de aumentar la participación de mujeres y minorías poco representadas en todos los niveles y ramas;</p>
+
+<p>Considerando que Grace Murray Hopper, una de las primeras mujeres en el campo de las ciencias de la computación, diseñó nuevos lenguajes de programación y fue pionera en las normas para los sistemas informáticos que sentaron las bases de muchos adelantos en ciencias de la computación; y</p>
+
+<p>Considerando que la semana de December 9, en honor al cumpleaños de Grace Hopper, es conocida como la 'Semana por la Educación en Ciencias de la Computación': por lo tanto, se <br></p>
+
+<p>Resuelve que (CÁMARA o SENADO, ESTADO, CONDADO, CIUDAD o JUNTA ESCOLAR):</p>
+
+<p>(1) apoya la designación de la Semana por la Educación en Ciencias de la Computación (December 9-15);</p>
+
+<p>(2) motiva a escuelas, educadores, padres y legisladores a participar en la Semana por la Educación en Ciencias de la Computación al animar a sus estudiantes a que participen en la Hora del Código;</p>
+
+<p>(3) motiva a escuelas, docentes, investigadores, universidades, empresarios y legisladores a identificar mecanismos para que los docentes reciban desarrollo profesional de primer nivel para proporcionar experiencias de aprendizaje sostenibles en ciencias de la computación en todos los niveles educativos y animen a los estudiantes a incorporar los conceptos de las ciencias de la computación;</p>
+
+<p>(4) motiva a los legisladores a eliminar las barreras que impiden que las clases de ciencias de la computación sean tomadas en cuenta como créditos de matemáticas o ciencias en los requisitos de graduación;</p>
+
+<p>(5) fomenta oportunidades, incluso a través de los programas existentes, para mujeres y minorías poco representadas en ciencias de la computación.</p>
+
+<p><a href="/us/la/#join">
+<button style="float: right; margin-top: 50px;">
+Organiza una Hora del Código
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/la/promote">
+<div class="nav-header">Promover</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote">
+Cómo participar
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#onepager">
+Folleto de una página
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#brochure">
+Folleto
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#videos">
+Videos
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#posters">
+Carteles
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#social">
+Social
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#logo">
+Logo de la Hora del Código
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#stickers">
+Pegatinas
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/resources#sample-emails">
+Ejemplos de correos electrónicos
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/stats">
+Estadísticas y propaganda
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/la/promote/press-kit">
+Paquete de prensa
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/la/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/la/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Recursos</div>
+</div>
+</a>
+<a href="/us/la/learn">
+<div class="display-link">
+<img class="display-img" src="/us/la/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Prueba los tutoriales</div>
+</div>
+</a>
+<a href="/us/la/promote">
+<div class="display-link">
+<img class="display-img" src="/us/la/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Cómo participar</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contáctanos</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Soporte</a>
+</li>
+<li>
+<a href="/us/la/partners" target="_blank">Socios y asesores</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Términos</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Política de privacidad</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. Todos los derechos reservados.
+<br>
+Hora del código ™ es una marca registrada de Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

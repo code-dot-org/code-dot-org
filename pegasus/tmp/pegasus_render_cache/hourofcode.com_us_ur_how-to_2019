@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="ھاؤ-ٹو-گائیڈ" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ur/how-to/2019" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>ھاؤ-ٹو-گائیڈ</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ur/">
+<img alt="آور آف کوڈ" src="/us/ur/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/2019';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option selected value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ur/learn" title="سرگرمیاں">سرگرمیاں</a>
+</li>
+<li>
+<a href="/us/ur/how-to" title="کیسے">کیسے</a>
+</li>
+<li>
+<a href="/us/ur/promote" title="فروغ دیں">فروغ دیں</a>
+</li>
+<li>
+<a href="/us/ur/#faq" title="عمومی سوالات">عمومی سوالات</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ur/#join">
+<button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</a></p>
+
+<h1>"کوڈ کا وقت" نامی تقریب کی منصوبہ بندی کیسے کریں</h1>
+
+<h3>تحریک میں شامل ہوں اوردیے گئے اقدامات کی مدد سے، طلبا کے ایک گروپ کو کمپیوٹر سائنس کے ساتھ پہلا گھنٹہ متعارف کرایئں. کوڈ گھنٹہ چلانا آسان ہے، حتیٰ کہ مبتدی کے لیئے بھی! If you'd like an extra set of hands to help out, you can find a <a href="https://test.code.org/volunteer/local">local volunteer</a> to help run an Hour of Code in your class.</h3>
+
+<h3>Take a look at our <a href="/files/participation-guide.pdf">participation guide if you still have questions</a>.</h3>
+
+<hr>
+
+<h2>1. معلوماتی ویڈیو دیکھیں <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
+</h2>
+
+<h2>2. اسباق اور سرگرمیاں ملاحظہ کریں</h2>
+
+<p>We provide a variety of fun, <a href="/us/ur/learn">student-guided tutorials</a> for all age groups and experience levels. طلبہ ازخود بھی دیے گئے اسباق سے استفادہ حاصل کر سکتے ہیں جبکہ اساتذہ کیلئے ان سرگرمیوں میں lesson Plan دیے گئے ہیں جن کی مدد سے وہ طلبہ کی بہتر رہنمائی کر سکتے ہیں.</p>
+
+<p>سرگرمیوں پر نظرِ ثانی کر کے آپ یہ فیصلہ کر سکتے ہیں کہ آیا ایک سبق ہی تمام طلباء کیلئے بہتر رہے گا یا ہر طالب علم کو انفرادی طور پر اپنے پسندیدہ سبق اور سرگرمی سے استفادہ حاصل کرنے دیا جائے۔.</p>
+
+<p><a href="/us/ur/learn"><img src="/images/fit-700/tutorials.png"></a></p>
+
+<h2>3. مطلوبہ دن اور وقت کی منصوبہ بندی کریں</h2>
+
+<h3>دیکھیں کون کون سی ٹیکنالوجی اس سلسلے میں مددگار ثابت ہو سکتی ہے۔ کمپیوٹرز کو فی الحال اختیاری ضرورت کے طور پر دیکھیں۔!</h3>
+
+<ul>
+<li>آور-آف-کوڈ کا بہترین تجربہ انٹرنیت سے منسلک کمپیوٹرز کے ساتھ ہوسکتا ہے. کمپیوٹرز کا استعمال لازمی نہیں ہے حتیٰ کہ آپ بچوں کو کمپیوٹر کے استعمال کے بغیر بھی کوڈ کرنا سکھا سکتے ہیں! آپ <a href="/learn">سرگرمیوں والے لنک </a>پر جا کر کلاس روم ٹیکنالوجی کے سیکشن میں سے "No computers or devices" کے آپشن کو منتخب کریں اگر آپ ان سرگرمیوں کی تلاش میں ہیں جو کمپیوٹرز کے بغیر بھی کوڈ سکھانے میں معاون ثابت ہوں.</li>
+<li>اس بات کو یقینی بنانا کہ طالب علموں کے کمپیوٹر یا آلات پر سبق آزمائیں تاکہ وہ براؤزر پر آواز اور ویڈیو کے ساتھ مناسب طریقے سے کام کریں. اگر آپکا انٹرنیٹ کنکشن ہر طالبِ علم کو انفرادی طور پر ویڈیو دیکھنے کی اجازت نہیں دیتا تو آپ ویڈیوز کو اجتماعی طور پر ساری کلاس کے سامنے دِکھا سکتے ہیں یا آپ ویڈیوز کو آف لائن ڈائونلوڈ کرنے کے بعد استعمال میں لا سکتے ہیں.</li>
+<li>اپنی کلاس کے لیے ھیڈ فون فراہم کریں، یا اسٹوڈینٹس سے کہیں کہ وہ اپنے ہیڈفونز اپنے ساتھ لے کر آئیں، جبکہ آپ کا منتخب کردہ ٹیٹوریئل ساؤنڈ کے ساتھ بہترین کام کرتا ہو۔.</li>
+<li>کیا آپ کے پاس ٹیکنالوجی کے آلات مثلاً کمپیوٹرز طلباء کی تعداد کے مطابق کم ہیں؟ اس مسئلے کے حل کیلئے <a href="https://www.youtube.com/watch?%3C/a%3Ev=vgkahOzFH2Q">pair programmingکا  استعمال کریں۔</a> جب اسٹوڈینٹس آپس میں پارٹنرز بنتے ہیں، تو وہ ایک دوسرے کی مدد کرتے ہیں اور ٹیچر پر کم انحصار کرتے ہیں۔. وہ یہ بھی دیکھتے ہیں کہ کمپیوٹر سائنس دراصل سوشل اور باہمی تعاون کی طرز پر ہے۔.</li>
+</ul>
+
+<p><img src="/images/fit-350/group_ipad.jpg"></p>
+
+<h3>دن اور وقت کا تعین کریں</h3>
+
+<p>زیادہ تر لوگ hour of code  سے ہمارے CS Education Week کے دوران استفادہ حاصل کرتے ہیں کیونکہ عموماً ہر سال دسمبر 9 سے دسمبر 13 کے درمیان ہم نئے اسباق اور سرگرمیاں متعارف کرواتے ہیں۔ لیکن اس کے باوجود آپ سال کے کسی بھی دن اس Hour of Code سے فائدہ اٹھا سکتے ہیں!</p>
+
+<h2>4. اپنے Hour of Code تقریب کا پرچار کریں</h2>
+
+<p>اب جبکہ آپ Hour of Code کی منصوبہ بندی مکمل کر چکے ہیں، تواب لازم ہے کہ اب آپ اس کی تشہیر کرنا شروع کریں!</p>
+
+<h3>اپنے سکول اور گردونواح میں تشہیر کریں</h3>
+
+<p>بہتر طریقہ یہ ہے کہ Hour of Code میں ان اساتذہ کو بھی شامل کیا جائے جو آپکے خیال میں آپکا ساتھ دے سکتے ہیں اسکے ساتھ ساتھ آپ اس موقع پر بچوں کو والدین کو بھی اعتماد میں لے سکتے ہیں اور انہیں طلباء کو مختلف سرگرمیوں میں مصروف رکھنے پر ابھار سکتے ہیں۔!</p>
+
+<h3>اپنی تقریب کی آواز رضاکارانہ کام کرنے والوں کے کانوں تک پہنچائیں</h3>
+
+<p>جیسے ہی آپ اپنے Hour of Code کی تقریب کو <a href="/">رجسٹر کروائیں </a>گے، آپکو کامیاب کوڈ نگ تقریب منعقد کرنے سے متعلق مفید معلومات ای میل کے ذریعے ملنا شروع ہو جائیں گی. اس سے آپ کو یہ فائدہ ہو گا کہ جو لوگ Hour of Code پر رضاکارانہ طور پر کام کرنا چاہتے ہیں ان تک آپکی تقریب کی خبر پہنچ جائے گی. رضاکار ایسے حالات میں بہت مفید ثابت ہوتے ہیں وہ آپکی کلاس کو کمپیوٹر سائنس کی مختلف سرگرمیاں کروا سکتے ہیں اور طلباء کی مدد کر سکتے ہیں.</p>
+
+<h3>طلباء میں جوش و خروش پیدا کریں</h3>
+
+<p>ایسی <a href="/promote/resources"> کارآمد ویڈیوز</a> اور دیگر مطالعاتی ریسورسز طلباء تک پہنچائیں جن کی بدولت وہ کوڈ اور کمپیوٹر سائنس کی اہمیت جان سکیں۔. اپنی کلاس روم میں ایسے پوسٹرز آویزاں کریں جن سے Hour of Code کا مقصد واضح ہو! طلباء اپنے جیسے دوسروں لوگوں کو جب یہ چیز سیکھتا ہوا پائیں گے تو ان میں سیکھنے کا جذبہ مزید پروان چڑھے گا.</p>
+
+<p><a href="//downloads.code.org/posters/poster_steph.pdf">
+<img src="/us/ur/images/fit-250/poster_steph.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_malala.pdf">
+<img src="/us/ur/images/fit-250/poster_malala.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_hadi.pdf">
+<img src="/us/ur/images/fit-250/poster_hadi.png">
+   
+</a>
+<br>
+<br>
+<a href="//downloads.code.org/posters/poster_mary.pdf">
+<img src="/us/ur/images/fit-250/poster_mary.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_satya.pdf">
+<img src="/us/ur/images/fit-250/poster_satya.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_shakira.pdf">
+<img src="/us/ur/images/fit-250/poster_shakira.png">
+   
+</a></p>
+
+<p>آپ تشہیر کیلئے ہماری ویب سائٹ سے بھی متعلقہ <a href="/promote/resources#posters">پوسٹرز ویڈیوز اور اسٹیکرز</a>حاصل کر سکتے ہیں.</p>
+
+<h2>5. Hour of Code کا جاندار طریقے سے آغاز کیسے کریں</h2>
+
+<p>مندرجہ ذیل نکات پر عمل کرتے ہوئے آپ تقریب کا آغاز ایک شاندار اور جاندار طریقے سے کر سکتے ہیں.</p>
+
+<p>کسی <a href="https://test.code.org/volunteer/local">مقامی رضاکار</a> کو مدعو کریں جو بچوں کو کمپیوٹر سائنس کی اہمیت اور اس کی مدد سے کیے جانے والے ممکنہ کاموں پر روشنی ڈالے. Hour of Code پر دنیا کے کونے کونے سے ایسے ہزاروں لوگ رجسٹرڈ ہیں جو رضاکارانہ طور پر کسی بھی تقریب میں مددگار ثابت ہو سکتے ہیں!</p>
+
+<p>کوئی متاثر کن (انسپائریشنل) ویڈیو دیکھائیں:</p>
+
+<ul>
+<li>اصل Code.org لانچ ویڈیو، جس میں بل گیٹس، مارک زکربربر، اور این بی اے اسٹار کرس بوش شامل ہیں. (<a href="https://www.youtube.com/watch%D8%9Fv=qYZF6oIZtfc"> 1 منٹ </a>، <a href="https://www.youtube.com/watch%D8%9Fv%20%DB%81%DB%8C%DA%BA%20=%20nKIu9yen5nc%20"> 5 منٹ </a>، اور <a href="https://www.youtube.com/watch%D8%9Fv=dU1xS07N-FA"> 9 منٹ </a> دستیاب ورژن دستیاب ہیں)</li>
+<li>Find more inspirational <a href="https://test.code.org/inspire">resources</a> and <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP">videos</a>.</li>
+</ul>
+
+<p>اس سے کوئی فرق نہیں پڑتا اگر آپ یا آپکے طلباء کمپیوٹر کے باقاعدہ استعمال کے عادی نہیں. ذیل میں چند نکات پیش کیے جارہے ہیں جن کی مدد سے آپ طلباء کو سرگرمی کیلئے تیار کر سکتے ہیں:</p>
+
+<ul>
+<li>ایسے طریقوں کی وضاحت کریں جو ٹیکنالوجی ہماری زندگیوں پر اثر انداز کرتی ہے، مثال کے ساتھ لڑکوں اور لڑکیوں دونوں کی پرواہ کرے گی (زندگی کو بچانے، لوگوں کی مدد کرنے، لوگوں سے منسلک کرنے وغیرہ وغیرہ).</li>
+<li>بطور ایک کلاس، روزمرہ زندگی میں کوڈ استعمال کرنے والی اشیاء درج فہرست کریں۔.</li>
+<li>See tips for getting girls interested in computer science <a href="https://test.code.org/girls">here</a>.</li>
+</ul>
+
+<h2>6. آئیں کوڈ کرنا شروع کریں!</h2>
+
+<p>ایکٹیویٹی کے لیے اسٹوڈینٹس کو ہدایات دیں</p>
+
+<ul>
+<li>سبق کا لنک تختہ سیاہ پر مارکر کی مدد سے لکھیں. Find the link listed on the <a href="/us/ur/learn">information for your selected tutorial</a> under the number of participants.</li>
+</ul>
+
+<p>:اگر آپ کے اسٹوڈینٹس مشکلات پیش آئیں تو کہیں</p>
+
+<ul>
+<li>میں اسکا جواب نہیں دینا چاہتا. آئیں ہم دونوں مل کر اس مسئلے کو حل کرنے کی کوشش کریں</li>
+<li>ٹیکنالوجی ہمیشہ اس طرح کام نہیں کرتی جیسا کہ ہم چاہتے ہیں"۔"</li>
+<li>پروگرامنگ سیکھنا بالکل ایسے ہی ہے جیسا کوئی نئی زبان سیکھنا؛ جس پر آپ فوراً ہی رواں نہیں ہوسکتے"۔"</li>
+</ul>
+
+<p>کیا ہو گا اگر ایک طالب علم جلد ہی ختم ہو جائے?</p>
+
+<ul>
+<li>Students can see all tutorials and <a href="/us/ur/learn">try another Hour of Code activity</a>.</li>
+<li>یا، جو اسٹوڈینٹس اپنا کام جلد مکمل کرلیں، اُن سے کہیں کہ وہ اپنے کلاس-میٹس (ہم جماعت ساتھیوں) کی مدد کریں جن کو ایکٹیویٹی میں مشکلات پیش آر ہی ہیں۔.</li>
+</ul>
+
+<p style="clear:both"> </p>
+
+<h2>7. طلباء کی کامیابی کا جشن منائیں</h2>
+
+<div class="کال -33">
+
+<p><img src="/images/fit-300/boy-certificate.jpg"></p>
+
+</div>
+
+<ul>
+<li>
+<a href="https://test.code.org/certificates">Print certificates</a> for your students.</li>
+<li>
+<a href="/us/ur/promote/resources#stickers">Print "I did an Hour of Code!"</a> stickers for your students.</li>
+<li>آپ کے اسکول کے لئے <a href="http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more"> آرڈر اپنی مرضی کے مطابق ٹی شرٹس </a>.</li>
+<li>اپنے Hour of Code تقریب کی تصاویر اور ویڈیوز سوشل میڈیا پر شئیر کریں تاکہ طلباء کی حوصلہ افزائی ہو سکے. آپ #HourOfCode اور codeorg@ کے استعمال سے ہمیں بھی اپنی شئیر کردہ تصاویر اور ویڈیوز میں مینشن کر سکتے ہیں، تاکہ ہم بھی آپکی کامیابی کے جشن میں شرکت کر سکیں!</li>
+</ul>
+
+<hr>
+
+<h2>اساتذہ کے لیے آور-آف-کوڈ کے دیگر ذرائع (ریسورسز):</h2>
+
+<ul>
+<li>دیگر ایجوکیٹرز سے مشاورت، بصیرت اور معاونت حاصل کرنے کے لیے <a href="http://forum.code.org/c/plc/hour-of-code">آور-آف-کوڈ ٹیچر فورم</a> پر وزٹ کریں۔.</li>
+<li>
+<a href="https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code">آور-آف-کوڈ FAQ </a>کا جائزہ لیں۔.</li>
+</ul>
+
+<h2>آور-آف-کوڈ کے بعد کیا ہو گا?</h2>
+
+<p>Hour of Code تقریب کا اختتام کمپیوٹر سائنس کا اختتام نہیں بننا چاہیے! ہمارا سلیبس اور ریسورسز ہر خاص و عام کیلئے فری میں اور ہمیشہ کیلئے ہماری ویب سائٹ پر دستیاب رہیں گی. Hour of Codeکو اپنے اسکول اور طلباء تک پہنچانے کے بارے میں <a href="/beyond">مزید جانئے</a>.</p>
+
+<p><a href="/us/ur/#join">
+<button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ur/how-to">
+<div class="nav-header">رہنما کتابچے</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to">
+برائے ایجوکیٹرز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/afterschool">
+اسکول کے بعد اساتذہ کے لئے
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/companies">
+کمپنیوں کے لئے
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/districts">
+برائے ڈسٹرکٹ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/events">
+اسکول اسمبلیز کیلئے
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/parents">
+برائے والدین
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/public-officials">
+برائے عوامی نمائندگان
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/how-to/volunteers">
+رضاکاروں کے لئے
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ur/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">وسائل</div>
+</div>
+</a>
+<a href="/us/ur/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">ٹیٹوریئلز ٹرائی کریں</div>
+</div>
+</a>
+<a href="/us/ur/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">ملوث حاصل کرنے کے لئے کس طرح</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">ہم سے رابطہ کریں</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">سہارا</a>
+</li>
+<li>
+<a href="/us/ur/partners" target="_blank">پارٹنرز</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">پرائیویسی پالیسی</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+کاپی رائٹ۔  2020 Code.orgجملہ حقوق محفوظ.
+<br>
+Hour of Code™ Code.org کا تجارتی نشان ہے ۔
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

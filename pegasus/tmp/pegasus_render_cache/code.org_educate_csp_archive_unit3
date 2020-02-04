@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Computer Science Principles" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/educate/csp/archive/unit3" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Computer Science Principles | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<link href="/css/brstrap-nonresponsive.css" rel="stylesheet" type="text/css">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 140px; margin-right: 40px; float: left;">
+<div id="about_nav">
+<span class="about_list">
+<a class="about_list_item" href="/educate">Educator Overview</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/curriculum/elementary-school">Elementary school</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/curriculum/middle-school">Middle school</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/curriculum/high-school">High school</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="https://hourofcode.com">Hour of Code</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/partner">Partner with us</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/curriculum/3rd-party">Beyond Code.org</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/resources/inspire">Inspire a student</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/community">Join the online community</a>
+<hr class="narrow_hr">
+<a class="about_list_item" href="/educate/resources/videos">Tools and videos</a>
+<hr class="narrow_hr">
+</span>
+</div>
+
+</div>
+<div style="width: 790px; float: left; margin: 0; padding: 0;">
+<h1>Computer Science Principles Lessons</h1>
+
+<h2>Unit 3</h2>
+
+<h3>Quick Links</h3>
+
+<p><a href="http://forum.code.org/c/csp">General CS Principles Forum</a> | <a href="http://forum.code.org/c/csp3">Unit 3 Discussion Forum</a> | <a href="https://studio.code.org/s/cspunit3">CS Principles Unit 3 in Code Studio</a>  | <a href="team">Writing Team</a> </p>
+
+<table>
+    <tr>
+        <td width="66%" style="padding: 3px; border-color: white">
+        <h3>Important notes about lessons and digital tools</h3>
+        <ul>
+                <li>To use the tools in this course and be able to see your students' progress, you will continue to use the section you set up for Unit 1 and Unit 2. When moving on to Unit 3, from the <a href="/teacher-dashboard#/sections">sections list</a> of the teacher dashboard, you can simply click the 'Edit' button for your section and toggle the Course dropdown to 'cspunit3'. You and your students will still be able to access their work from the previous unit. <i>Note:</i> Students must be part of the same section to use the Internet Simulator together.</li> 
+                
+                <li> When you go to <a href="https://studio.code.org/s/cspunit3">Unit 3 in Code Studio</a> each "stage" number corresponds to the lesson number.</li> 
+
+                <li> Unlike other Code.org courses, lessons for CS Principles on Code Studio are <strong>not self-guided</strong>. They require specific structure and context provided by the classroom teacher through the lesson plan. 
+
+                </li>
+<li>  When exploring the curriculum, or preparing for a lesson, <strong>start with the lesson plan</strong>, which contains all of the necessary details and links for how and when to use the online tools.
+
+                </li>
+<li>The course on Code Studio is in beta, so it is subject to revision as feedback is received and improvements are made.
+                </li>
+</ul>
+        </td>
+        <td style="padding: 3px; border-color: white" align="center">
+            <a href="https://studio.code.org/s/cspunit3"><img src="/educate/csp/images/codeStudioScreenCap3.png" align="right" width="100%">
+            https://studio.code.org/s/cspunit3</a>
+        </td>
+</tr>
+</table>
+
+<h3>Resources</h3>
+
+<ul>
+    <li>To familiarize yourself with the content in this unit, look through our <a href="https://code.org/educate/csp/unit3/learningresources" target="_blank">JavaScript Learning Resources</a>
+</li>
+    <li> You can view all of the lessons in Unit 3 through this <a href="http://bit.ly/csp-unit3"><strong>Google Drive folder</strong></a> </li>
+<li> If you're a teacher, you can apply for Code Studio access to protected, teacher-only materials (answer keys, etc) through <strong><a href="https://docs.google.com/forms/d/1f5QPKi3F_3nBDR8q9BcXCqixzY7SCQd7Seob0-JYizU/viewform" target="_blank">this form</a></strong> </li>
+<li>
+<a href="https://studio.code.org/s/CSP-Unit3-Support">Teacher support for Unit 3: </a> Want to understand more about how the unit is organized and what CS content is covered in each section? This overview is a great resource to get you acquainted with the unit and better prepared to teacher it.
+</li>
+</ul>
+
+<p><br><br></p>
+
+<table>
+<thead>
+<tr>
+<th>Lesson Description</th>
+<th style="text-align: center">Lesson Plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Lesson 01 - The Need for Programming Languages</strong> Students quickly recall the meaning of the word “algorithm” before moving into the day’s activity, building a small arrangement of LEGO® blocks and then creating text instructions a classmate could follow to construct the same arrangement.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/1/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 1"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 02 - Using Simple Commands</strong> This lesson is students’ first exposure to programming in the App Lab environment.  App Lab is embedded into Code Studio, and for this lesson students’ view is limited to only a very few simple “turtle” commands to draw graphics on the screen.  Using only combinations of four drawing commands, students must figure out the most “efficient” way to draw an image of a 3x3 grid.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/2/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 2"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 03 - Creating Functions</strong> In this lesson, students learn to define and call procedures (in JavaScript, procedures are called “functions”) in order to create and give a name to a group of commands for easy and repeated use in their code. They are introduced to functions as a form of abstraction that enables them to write code in larger, more logical chunks and focus on what something does, rather than how it does it.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/3/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 3"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 04 - Functions and Top-Down Design</strong> This lesson presents a top-down problem-solving strategy for designing solutions to programming problems. Students use a “top-down” problem-solving approach to identify sub-tasks of a larger programming task and then write a complete program with functions that solve sub-tasks of a larger programming task.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/4/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 4"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 05 - APIs and using Functions with Parameters</strong> Students learn to read App Lab’s API documentation and use functions that accept parameters in order to complete a series of drawing puzzles which require them to make use of the AppLab API documentation to learn new drawing commands. Many of these commands will require the use of parameters.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/5/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 5"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 06 - Creating Functions with Parameters</strong> Students practice using and creating functions with parameters. Students learn that writing functions with parameters can generalize solutions to problems even further. Students make a series of modifications to a program that creates an “Under the Sea” scene by adding parameters to functions to more easily add variation to the scene.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/6/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 6"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 07 - Looping and Random Numbers</strong> Students learn to use random values and looping to create variation in their drawings and quickly duplicate objects they wish to appear in their digital scenes many times. They build upon the "Under the sea" scene to create more complex backgrounds.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/7/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 1"></a></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Unit 3 Assessment 1 of 2</th>
+<th style="text-align: center">Lesson Plan</th>
+<th style="text-align: center">Student Project Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Lesson 8 - Practice PT - Design a Digital Scene</strong> To conclude their introduction to programming, students design a program that draws a digital scene of their choosing. Students work in groups of 3 or 4 and begin by identifying a scene they wish to create. They then use Top-Down Design to identify the high-level functions necessary to create that image, and assign these components to individual members. After programming their individual portion, students combine all of their code to compose the whole scene. The project concludes with reflection questions similar to those students will see on the AP® Performance Tasks.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/8/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 8"></a></td>
+<td style="text-align: center"><a href="https://docs.google.com/document/d/1FI-_esPMKY9I455G75w0-X932aGJktrLCc16v1iCtlQ/edit?usp=sharing"><img src="/educate/csp/images/thumb_activityGuide.png" alt="U3 Assessment Student Guide"></a></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Lesson Description</th>
+<th style="text-align: center">Lesson Plan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Lesson 09 - Events Unplugged</strong> In this lesson, students participate in an activity in which they simulate many of the behaviors and challenges associated with “event-driven” programs. Synchronizing activity in an event-driven program can be a challenge since an “event,” such as a user clicking a button, an animation timer, or data returning from a remote database request, can happen at any moment and take unpredictable amounts of time.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/9/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 9"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 10 - Event-Driven Programming and Debugging</strong> In this lesson, students have their first experience developing a simple user interface and defining its behavior through the use of event-driven programming. Students are introduced to the ability to place buttons on the screen and define their behavior through the use of event handlers.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/10/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 1"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 11 - Beyond Buttons Toward Apps</strong> Students expand their understanding by experimenting with new event types and screen elements, combining these skills to make a simple “chaser” game. This lesson transitions away from using the turtle, as students explore different event types (e.g. “mouseover” and “mouseout”) and are introduced to other user interface elements they can add to their apps, like text labels and images.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/11/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 11"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 12 - Introducing Design Mode</strong> Students are introduced to a new feature of App Lab: Design Mode. Design Mode allows students to easily design the User Interface (UI) of their apps using a drag-and-drop editor. Students learn how to create UI elements they have seen before such as images, text labels and buttons, but they see many more options for styling these elements with colors, font sizes and so on. In addition students see how to add multiple “screens” to their app and how to add sound to their games.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/12/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 12"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 13 - Multi-screen Apps</strong> This lesson gives students time to familiarize themselves with the process of making event-driven apps before moving on to deeper content.  They design and create a (minimum) 4-screen app on a topic of their choosing.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/13/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 1"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 14 - Controlling Memory with Variables</strong> This lesson gets into the basic mechanics of working with variables in programs.  The lesson shows students how to create and assign values to variables and navigates through a series of common misconceptions about variables and how they work.  Along the way the lesson tries to build up the student’s mental model of how computers and programs work that is essential for being able to reason about programs.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/14/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 14"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 15 - Using Variables in Apps</strong> In this lesson students add variables to two different exemplar apps to keep track of a score, or a count of some number of button clicks.  The major topic is variable scope and understanding the differences, benefits, and drawbacks, of using global versus local variables.  This lesson focuses more on using global variables since in event-driven apps that’s what you need to keep track of data across multiple events.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/15/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 15"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 16 - User Input and Strings</strong> Students are introduced to the string data type as a way of representing arbitrary sequences of ASCII characters. They use strings to accept input from a user as they work on mastering two new UI elements, the text input and the text area. Students combine these skills to develop a simple Mad Lib App.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/16/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 16"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 17 - Introduction to Digital Assistant Project</strong> Students analyze digital assistants in order to understand the underlying key features of the natural language processing (NLP) algorithms that allow them to appear to have intelligent conversations. They then begin to design the components of a simple digital assistant of their own they will be building over the subsequent lessons.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/17/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 17"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 18 - Understanding Program Flow and Logic</strong> Students program game decisions using conditional statements and boolean expressions. The lesson begins with a discussion on how statements are determined to be true/false in real life, and then how that is different in a computer.  Students practice thinking about decision making using flow charts.  They apply this to create two games. A ‘Guess My Number’ game and a Dice game.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/18/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 18"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 19 - Introduction to Conditional Logic</strong> Having explored the basics of conditional statements in the previous lesson students return to the Movie Bot digital assistant example in order to improve its functionality with conditional logic.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/19/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 19"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 20 - Compound Conditional Logic</strong> Students are introduced to the logic operators NOT, AND, and OR as tools for simplifying the expression of complex boolean conditions. Students learn how to improve nested or chained conditionals through the use of these logical operations and then use them to make additions to the functionality of the Movie Bot.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/20/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 20"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 21 - Digital Assistant Project</strong> In this lesson, students complete the digital assistant project in which they synthesize their abilities to write string functions and complex conditionals. This lesson is designed to allow students to hone their programming skills through the lens of creativity and innovation. Students continue to work on their digital assistant and analyze their work and reflect using questions similar to those of the create performance task.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/21/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 21"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 22 - While Loops</strong> This lesson demonstrates how a slight manipulation of a conditional statement can allow for the creation of a new and powerful tool in constructing programs, a while loop. Students are introduced to a while loop by analyzing the flow chart of a conditional statement in which the "true" branch leads back to the original condition.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/22/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 22"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 23 - Looping and Simulation</strong> In this lesson students gain more practice using while loops as they develop a simulation that repeatedly flips coins until certain conditions are met.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/23/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 23"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 24 - Introduction to Arrays</strong> This lesson introduces arrays as a means of storing lists of information within a program. The class begins by highlighting the difficulties that arise when trying to store lists on information in a variable. Students then practice using arrays in their programs.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/24/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 24"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 25 - Image Scroller with Key Events</strong> Students will extend the “My Favorite Things” app they built in the previous lesson so that it now manages and displays a collection of images and responds to key events. Students are introduced to the practice of refactoring code in order to keep programs consistent and remove redundancies when adding new functionality.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/25/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 25"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 26 - Processing Arrays</strong>  Thuis lesson introduces students to algorithms that process lists of data. The for loop is re-introduced to implement these algorithms because it’s straightforward to use to process all the elements of a list, and students practice writing programs using a for loop to visit every index in an array.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/26/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 26"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 27 - Functions with Return Values</strong> In this lesson students are introduced to the “return” command and learn to write their own functions that return values. Students first complete a simple unplugged activity based on the game Go Fish to introduce the concept of a return value. By the end of the lesson, students write and use functions that return values in a simple turtle driver app.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/27/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 27"></a></td>
+</tr>
+<tr>
+<td>
+<strong>Lesson 28 - Canvas and Arrays in Apps</strong> Students continue to practice working with arrays and are introduced to a new user interface element, the canvas. The canvas includes commands for drawing simple geometric shapes (circles, rectangles, lines) and also triggers mouse and key events like any other user interface element. Over the course of the lesson students combine these features to make an app that allows a user to draw an image while recording every dot drawn on the canvas in an array. By processing this array in different ways the app will allow students to redraw their image in different styles, like random, spray paint, and sketching.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/28/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 28"></a></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Unit 3 Assessment 2 of 2</th>
+<th style="text-align: center">Lesson Plan</th>
+<th style="text-align: center">Student Project Guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Lesson 29 - Practice PT - Create</strong> To conclude their introduction to programming, students will design an app based off of one they have previously worked on in the programming unit. Students will choose the kinds of improvements they wish to make to a past project in order to show their ability to make abstractions and implement complex algorithms. The project concludes with reflection questions similar to those students will see on the AP Performance Tasks. Students can either complete the project individually or with a partner. Every student will need a collaborative partner to give and receive feedback from.</td>
+<td style="text-align: center"><a href="https://code.org/curriculum/cspunit3/29/Teacher"><img src="/educate/csp/images/thumb_lesson1.png" alt="lesson 29"></a></td>
+<td style="text-align: center"><a href="https://drive.google.com/open?id=1twNRho-TKg39u1B6qz4AbJy4A6bHLJ4U1tByCFpM0cE"><img src="/educate/csp/images/thumb_activityGuide.png" alt="U3 Assessment Student Guide"></a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/" property="og:url">
+<meta content="@codeorg" property="twitter:site">
+<meta content="https://hourofcode.com" property="twitter:url">
+<meta content="Hour of Code: Join the Movement" property="og:title">
+<meta content="Hour of Code: Join the Movement" property="twitter:title">
+<meta content="The #HourOfCode is about #CSforGood. Learn computer science. Change the world." property="og:description">
+<meta content="The #HourOfCode is about #CSforGood. Learn computer science. Change the world." property="twitter:description">
+<meta content="https://hourofcode.com/shared/images/social-media/hoc2019_social.png" property="og:image">
+<meta content="https://hourofcode.com/shared/images/social-media/hoc2019_social.png" property="twitter:image:src">
+<meta content="1200" property="og:image:width">
+<meta content="630" property="og:image:height">
+<meta content="photo" property="twitter:card">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Join the largest learning event in history, December 9-15, 2019</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<link href="/css/highlights-homepage.css" id="highlight-styles" rel="stylesheet">
+<script src="https://maps.googleapis.com/maps/api/js?client=&amp;sensor=false&amp;libraries=places,geometry" type="text/javascript"></script>
+<script src="/js/jquery.geocomplete.min.js" type="text/javascript"></script>
+<script src="/assets/js/en_us/common_locale.js"></script>
+<script src="/assets/js/hourofcode.com/public/index.js" type="text/javascript"></script>
+<link href="/css/front-page.css" rel="stylesheet" type="text/css">
+<style>
+  html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+  .hero-image {
+    z-index: -5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+</style>
+<script>var AnswerDash;!function(e,t,n,s,a){if(!t.getElementById(s)){var i,r=t.createElement(n),c=t.getElementsByTagName(n)[0];e[a]||(i=e[a]=function(){i.__oninit.push(arguments)},i.__oninit=[]),r.type="text/javascript",r.async=!0,r.src="https://p1.answerdash.com/answerdash.min.js?siteid=736",r.setAttribute("id",s),c.parentNode.insertBefore(r,c)}}(window,document,"script","answerdash-script","AnswerDash");</script>
+
+<div id="top" style="position: relative; width: 100%; overflow: hidden;">
+<!-- / Canada's default langauge is set to 'en' but since we don't support 'en-CA' we make an exception -->
+<!-- / to localize homepage hero images for Canada in the view instead of using localized_image -->
+<!-- / (which is based on localizing for languages other than 'en'). -->
+<div class="hero-image" id="fullwidth0" style="background-image: url(/us/en/images/fit-1500/homepage_hoc2019.jpg); opacity: 1; background-position: 50% 10%;"></div>
+<div class="hero-image" id="fullwidth1" style="background-image: url(/us/en/images/fit-1500/homepage_4.jpg); opacity: 0; background-position: 50% 10%;"></div>
+<div class="hero-image" id="fullwidth2" style="background-image: url(/us/en/images/fit-1500/homepage_trudeau.jpg); background-position: 50% 50%"></div>
+<div class="hero-image" id="fullwidth3" style="background-image: url(/us/en/images/fit-1500/homepage_1.jpg); background-position: 50% 50%"></div>
+<div class="hero-image" id="fullwidth4" style="background-image: url(/us/en/images/fit-1500/homepage_2.jpg); background-position: 50% 50%"></div>
+<div class="hero-image" id="fullwidth5" style="background-image: url(/us/en/images/fit-1500/homepage_3.jpg); background-position: 50% 20%"></div>
+<div id="fullwidth" style="width: 100%;">
+<div class="thegap" style="height: 1px;">
+ 
+</div>
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/">
+<img alt="Hour of Code" src="/us/en/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option selected value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/learn" title="Activities">Activities</a>
+</li>
+<li>
+<a href="/us/how-to" title="How-To">How-To</a>
+</li>
+<li>
+<a href="/us/promote" title="Promote">Promote</a>
+</li>
+<li>
+<a href="#" onclick="return adjustScroll('faqs')" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container">
+<div class="row">
+<div class="col-12">
+<div id="textbacking">
+<div class="front-header-banner">
+<h4>
+Learn computer science.
+<br>
+Change the world.
+</h4>
+<div class="front-header-description">
+Anyone, anywhere can organize an Hour of Code event. One-hour tutorials in over 45 languages. No experience needed.
+</div>
+</div>
+<br>
+<br>
+<div class="ctabuttongroup">
+<div class="ctatext" id="tryittext">
+<a class="ctabuttonatag" href="/us/learn" id="tryitbutton">
+<button class="ctabutton-white">
+Try it
+</button>
+</a>
+ 
+<a class="ctabuttontag" id="videobutton" onclick="adjustScroll('homepage-video');" style="text-decoration: none;">
+<button class="ctabutton-white-inverse">
+Watch the video
+</button>
+</a>
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+<br>
+<br>
+<div class="container">
+<div class="row" id="description">
+<div class="col-xs-1">
+ 
+</div>
+<div class="col-xs-10 hoc-description">
+<div class="number-served">910,905,104 served.</div>
+A global movement in 180+ countries.
+<br>
+0 events registered in 2019.
+
+</div>
+</div>
+<br>
+<br>
+<div class="full-width" id="maparea">
+<link href="/css/map.css" rel="stylesheet" type="text/css">
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js"></script>
+<script defer src="/assets/js/hourofcode.com/views/hoc_events_map.js"></script>
+<div id="mapbox-map"></div>
+<div class="legend" id="belowmaplegend">
+<div class="legend-title">Legend</div>
+<div class="color orange"></div>
+<div>Hour of Code Event</div>
+<div class="color red"></div>
+<div>Special Event</div>
+</div>
+<script>
+  mapboxgl.accessToken = "pk.eyJ1IjoiY29kZW9yZyIsImEiOiJjanlnOWZqejIwMHVvM2xxcGMyY25wMzYzIn0.WyPOM-uIk6djBffSPg9gNA";
+</script>
+
+<div class="footnote">A full list of the events can be viewed on the <a href="/us/events">events page.</a>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<br>
+<h2>
+Hour of Code Highlights
+</h2>
+<a class="twitter-grid" data-chrome="noheader nofooter" data-tweet-limit="1" href="https://twitter.com/codeorg/timelines/925449654308704256">
+Hour of Code Highlights
+</a>
+<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+</div>
+<div class="col-md-3 highlights-column">
+<h2>Highlights from previous years</h2>
+<div class="highlight-tiles">
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.youtube.com/watch?v=8QwT58VTj_g" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/hoc-trudeau.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Prime Minister Justin Trudeau codes a game</h4>
+<div class="highlight-description">Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/chicago-2.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Brooklyn beats Chicago</h4>
+<div class="highlight-description">After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!</div>
+<br>
+<div class="learn-button">Read more</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://code.org/athletes" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/athletes.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Push yourself</h4>
+<div class="highlight-description">Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="clear"></div>
+<a href="/highlights">
+<button>See more highlights</button>
+</a>
+</div>
+</div>
+</div>
+
+<a id="hocsignupform" name="signup"></a>
+<div id="join">
+<h1 id="join-us-header">Join us</h1>
+<div id="signup-closed">
+You don't need to register to participate! The Hour of Code activities are available year-round. <a href="/us/learn">Try an activity</a> or read our <a href="/us/how-to">How-to guide</a> to plan an event for your class.
+And every year in December, your class can join millions of students around the world celebrating Computer Science Education Week with the Hour of Code. We'll open registration for the annual celebration in October.
+</div>
+<div class="video-responsive" id="homepage-video">
+<iframe allowfullscreen="true" frameborder="0" src="https://www.youtube-nocookie.com/embed/KsOIlDT145A?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0&amp;cc_load_policy=1"></iframe>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-xs-12">
+<div style="text-align: center; margin: 3em 0;">
+<h2></h2>
+</div>
+</div>
+</div>
+<div class="row" id="infotop" style="font-weight: 500; font-size: 16px; color: rgb(26, 172, 186);">
+<div class="col-xs-6 col-sm-4" style="text-align:center;">
+<p>Students are learning in over 45 languages</p>
+<img src="/images/fit-300/stats-languages.jpg" style="width: 100%;">
+</div>
+<div class="col-xs-6 col-sm-4" style="text-align:center">
+<p>Over 100M students have tried an Hour of Code</p>
+<img src="/images/fit-300/stats-800m.jpg" style="width: 100%;">
+</div>
+<div class="hidden-xs col-sm-4" style="text-align:center">
+<p>Participation of female students in computer science is only 20-25% of high school courses, university courses, and the workforce.</p>
+<img src="/images/fit-300/stats-females.jpg" style="width: 100%;">
+<p>During the Hour of Code, female students make up <b>50% of all participants</b>!</p>
+</div>
+</div>
+<a id="faqs" name="faq"></a>
+<div class="row">
+<div class="col-xs-12">
+<h1>FAQs</h1>
+<h2 id="about">What is the Hour of Code?</h2>
+<div>The Hour of Code started as a one-hour introduction to computer science, designed to demystify "code", to show that anybody can learn the basics, and to broaden participation in the field of computer science. It has since become a worldwide effort to celebrate computer science, starting with 1-hour coding activities but expanding to all sorts of community efforts. Check out the <a href="/us/learn">tutorials and activities</a>. This grassroots campaign is supported by over <a href="/us/partners">400 partners</a> and 200,000 educators worldwide.</div>
+<h2>When is the Hour of Code?</h2>
+<div>The Hour of Code takes place each year during <a href="https://csedweek.org">Computer Science Education Week</a>. The 2019 Computer Science Education Week will be December 9-15, but you can host an Hour of Code all year-round. Computer Science Education Week is held annually in recognition of the birthday of computing pioneer <a href="http://en.wikipedia.org/wiki/Grace_Hopper">Admiral Grace Murray Hopper</a> (December 9, 1906).</div>
+<h2>Why computer science?</h2>
+<div>
+<i>Every</i> student should have the opportunity to learn computer science. It helps nurture problem-solving skills, logic and creativity. By starting early, students will have a foundation for success in any 21st-century career path. See more stats <a href="/us/promote/stats">here</a>.</div>
+<h2>How do I participate in the Hour of Code?</h2>
+<div>
+<a href="/us/how-to">Start planning here</a> by reviewing our how-to guide. You can organize an Hour of Code event at your school or in your community — like in an extracurricular club, non-profit or at work. Or, just try it yourself when Dec. 9 arrives.</div>
+<h2>Who is behind the Hour of Code?</h2>
+<div>The Hour of Code is driven by the Hour of Code and Computer Science Education Week <a href="/us/partners">Advisory and Review Committees</a> as well as an unprecedented coalition of partners that have come together to support the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the College Board.</div>
+<h2>I don't know anything about coding. Can I still host an event?</h2>
+<div>Of course. Hour of Code activities are self-guided. All you have to do is <a href="https://test.code.org/learn">try our current tutorials</a>, pick the tutorial you want, and pick an hour — we take care of the rest. We also have options for every age and experience-level, from kindergarten and up. Start planning your event by reading our <a href="/us/how-to">how to guide</a>.</div>
+<h2>What devices should I use for my students?</h2>
+<div>Code.org tutorials work on all devices and browsers. You can see more information about Code.org's tutorial tech needs <a href="https://test.code.org/educate/it">here</a>. Tech needs for non-Code.org tutorials can be found on <a href="https://test.code.org/learn">code.org/learn</a> in the tutorial specific description. Don't forget we also offer <a href="https://test.code.org/curriculum/unplugged">unplugged activities</a> if your school can't accommodate the tutorials!</div>
+<h2>Do I need computers for every participant?</h2>
+<div>No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have. <p><i>Here are a few options:</i> <br> </p>
+<ul> <li>
+<b>Work in pairs.</b> <a href="http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning">Research shows</a> students learn best with <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>, sharing a computer and working together. Encourage your students to double up. </li>
+<li>
+<b>Use a projected screen.</b> If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions. </li>
+<li>
+<b>Go unplugged.</b> We offer <a href="https://test.code.org/curriculum/unplugged">tutorials that require no computer</a> at all. </li>
+</ul>
+</div>
+<h2>Are there limitations to how I can use the Hour of Code logo or name?</h2>
+<div>Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href="https://support.code.org/hc/en-us/articles/202518403">these guidelines for usage</a>.</div>
+<h2>How can I make an Hour of Code tutorial?</h2>
+<div>If you're interested in becoming a tutorial partner, <a href="/us/tutorial-guidelines">see our guidelines and instructions</a>. We'd like to host a variety of engaging options, but the primary goal is to optimize the experience for students and teachers who are new to computer science.</div>
+<h2>Do students need to log on using an account?</h2>
+<div>No. Absolutely no signup or login is required for students to try the Hour of Code. Most of the <a href="https://test.code.org/learn/beyond">follow-on courses</a> require account creation to save student progress. Also, signing up for the Hour of Code does NOT automatically create a Code Studio account. If you do want to create accounts for your students, please follow these <a href="https://youtu.be/_smelV_KISE">instructions</a>.</div>
+<h2>Where can I print certificates for my students?</h2>
+<div>Go to our <a href="https://test.code.org/certificates">certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href="https://test.code.org/certificates?course=mc">special certificates</a> for students doing the Minecraft tutorial.</div>
+<h2>Which activity should I do with high school students?</h2>
+<div>Our Star Wars and Minecraft tutorials are great for high schoolers, especially the Star Wars JavaScript version and the free play level on both tutorials. Alternately, we recommend trying one of the beginner tutorials on <a href="https://test.code.org/learn">code.org/learn</a> to start, such as the tutorial with Angry Birds or with Anna and Elsa. A high school student should be able to finish one of these in 30 minutes and can then try a more advanced tutorial in JavaScript, such as Khan Academy or CodeHS.</div>
+<h2>How do you count Hours of Code?</h2>
+<div>The Hour of Code tracker isn't an exact measurement of usage. We do not count unique student IDs perfectly when tracking participation in the Hour of Code, especially because we don't require students to log in or register. As a result, we both over-count and under-count participants at the same time. Read all the details <a href="https://test.code.org/loc">here</a>.</div>
+<h2>Why don't I see my dot on the map?</h2>
+<div>We're so sorry you aren't seeing your event on the Hour of Code map. Because of the tens of thousands of organizers who sign up, the map aggregates the data and displays one point for several events. If you click the <a href="/us/events">events page</a> link below the map you will be directed to a list of all events by state and can find your event listed there. Additionally, given the thousands of people signing up for the Hour of Code, the map and event list usually takes 48 hours to update. Check back in a few days!</div>
+<h2>How much can one learn in an hour?</h2>
+<div>The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result. <br><br> Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of. <br><br> Above all, what all participants can learn in an hour is that we can do this.</div>
+<h2>How do I keep learning after the Hour of Code?</h2>
+<div>Anyone can host an Hour of Code at any time. The tutorials stay up year-round. You can expect all our tutorials and curriculum to be available on our site in perpetuity. Please go to <a href="/us/promote">our resources</a> for event how-to guides and other resources to help make your Hour of Code event a success.</div>
+
+</div>
+</div>
+<a href="/us/#join">
+<button style="float: right; margin-top: 50px;">
+Host an hour
+</button>
+</a>
+
+<script>
+  $(document).ready(function() {
+    $('a.window-popup').bind('click', function() {
+      // Don't open a new window for Facebook on the mobile front page.
+      if ($('body').hasClass('mobile-front') && $(this).hasClass('btn-facebook')) {
+        return false;
+      }
+  
+      var url = $(this).attr('href');
+      var width = 640;
+      var height = 480;
+      var left = (screen.width/2)-(width/2);
+      var top = (screen.height/2)-(height/2);
+  
+      share = window.open(url,'Share', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=' + width + ', height=' + height + ', top=' + top + ', left=' + left);
+      if (window.focus) { share.focus() }
+      return false;
+    });
+  });
+</script>
+
+</div>
+<script>
+  var currentImage = 0;
+  var timerId;
+  var videoStarted = false;
+  
+  function cycleImage()
+  {
+    var nextImage = (currentImage + 1) % 6;
+    $("#fullwidth" + currentImage).fadeTo(2000, 0);
+    $("#fullwidth" + nextImage ).fadeTo(2000, videoStarted ? 0.3 : 1);
+    currentImage = nextImage;
+  }
+  
+  $(document).ready(function() {
+    // hoc2018: temporarily disable the cycling.
+    //timerId = setInterval(cycleImage, 6000);
+  });
+  
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+  
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });
+</script>
+
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contact us</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Support</a>
+</li>
+<li>
+<a href="/us/partners" target="_blank">Partners and Advisors</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Privacy Policy</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. All rights reserved.
+<br>
+Hour of Code™ is a trademark of Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

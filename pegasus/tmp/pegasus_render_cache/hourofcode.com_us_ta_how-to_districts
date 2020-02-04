@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="மாவட்டங்களுக்கான Hour of Code எவ்வாறு செய்வது" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ta/how-to/districts" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>மாவட்டங்களுக்கான Hour of Code எவ்வாறு செய்வது</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ta/">
+<img alt="குறியீடு மணி" src="/us/ta/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/how-to/districts';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option selected value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ta/learn" title="நடவடிக்கைகள்">நடவடிக்கைகள்</a>
+</li>
+<li>
+<a href="/us/ta/how-to" title="எவ்வாறு இதைச் செய்யலாம்">எவ்வாறு இதைச் செய்யலாம்</a>
+</li>
+<li>
+<a href="/us/ta/promote" title="ஊக்குவிப்பு">ஊக்குவிப்பு</a>
+</li>
+<li>
+<a href="/us/ta/#faq" title="அடிக்கடி கேட்கப்படும் கேள்விகள்">அடிக்கடி கேட்கப்படும் கேள்விகள்</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ta/#join">
+<button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</a></p>
+
+<h1>உங்கள் முழு பள்ளி மாவட்டத்தில் எப்படி தொடர்பு கொள்ளலாம்</h1>
+
+<h3>உங்கள் மாவட்டத்தில் உள்ள ஒவ்வொரு பள்ளி வரலாற்றில் மிகப்பெரிய கற்கும் நிகழ்வுகளில் பங்கேற்க முடியும்.</h3>
+
+<hr>
+
+<h2>ஒவ்வொரு பள்ளிக்கும் ஒவ்வொரு மாணவர்களுக்கும் கற்றுக்கொடுங்கள்!</h2>
+
+<h3>1. உள்ளூர் பள்ளிகளை சேர்ப்பது</h3>
+
+<p><a href="==%20%7B%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AE%B0%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%B5%E0%AF%81%E0%AE%AE%E0%AF%8D%20/%20%E0%AE%AE%E0%AE%BE%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF_%E0%AE%AE%E0%AF%86%E0%AE%AF%E0%AE%BF%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D%20%7Da"> இந்த மின்னஞ்சலை </a> மற்றும் <a href="===%20urls/how_to_guide%20%7Da"> ஆசிரியரை எவ்வாறு வழிநடத்துவது </a> என்பதைப் பகிரவும், அல்லது <a href="%7B%7B%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AE%B0%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81%20/%20%E0%AE%AA%E0%AF%81%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%B5%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D_%7D&gt;%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AF%81%E0%AE%95%E0%AE%BF%E0%AE%AF%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AF%81%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AF%81%20&lt;/a&gt;.%20&lt;br%20/&gt;&lt;/p&gt;%0A%0A&lt;h3&gt;2.%20%E0%AE%AA%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%8D%20%E0%AE%92%E0%AE%B0%E0%AF%81%20%E0%AE%AE%E0%AE%BE%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AE%BF%20%E0%AE%A4%E0%AE%B3%E0%AE%B5%E0%AE%BE%E0%AE%9F%20%E0%AE%A4%E0%AE%BF%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%88%20%E0%AE%B5%E0%AE%B4%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%A4%E0%AE%B2%E0%AF%8D&lt;/h3&gt;%0A%0A&lt;p&gt;%E0%AE%AE%E0%AF%81%E0%AE%B4%E0%AF%81%20%E0%AE%AA%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%20%E0%AE%AA%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%AA%E0%AF%88%E0%AE%AF%E0%AF%81%E0%AE%AE%E0%AF%8D%20%E0%AE%8E%E0%AE%B5%E0%AF%8D%E0%AE%B5%E0%AE%BE%E0%AE%B1%E0%AF%81%20%E0%AE%92%E0%AE%B4%E0%AF%81%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%AE%E0%AF%88%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%A4%E0%AF%81%20%E0%AE%8E%E0%AE%A9%E0%AF%8D%E0%AE%AA%E0%AE%A4%E0%AF%81%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%BF%E0%AE%A4%E0%AF%8D%E0%AE%A4%20%E0%AE%AF%E0%AF%8B%E0%AE%9A%E0%AE%A9%E0%AF%88%E0%AE%95%E0%AE%B3%E0%AF%88%20%E0%AE%B5%E0%AE%B4%E0%AE%99%E0%AF%8D%E0%AE%95%20%E0%AE%AA%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%E0%AE%95%E0%AE%B3%E0%AF%81%E0%AE%9F%E0%AE%A9%E0%AF%8D%20%E0%AE%87%E0%AE%A8%E0%AF%8D%E0%AE%A4%20&lt;a%20href="> மாதிரி தளவாடத் திட்டத்தை </a> பகிர்ந்து கொள்ளுங்கள். ஒவ்வொரு கணித வகுப்பிலும், ஹோமரூம் காலத்திலும் அல்லது வாரம் முழுவதும் கணினி ஆய்வகத்தின் மூலமாக சுழலும் போது இது எளிது.</p>
+
+<h3>3. சமூக ஊடகத்தில் பங்கு</h3>
+
+<p><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fhourofcode.com%2Fus"> Facebook </a> அல்லது <a href="https%20%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%20%E0%AE%85%E0%AE%A9%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%20?:%20//twitter.com/intent/tweet%20url%20=%20http%%203A%%202F%%202Fhourofcode.com%20amp;%20%E0%AE%89%E0%AE%B0%E0%AF%88%20=%20%E0%AE%A8%E0%AE%BE%E0%AE%A9%E0%AF%8D%%2027m%%2020participating%%2020in%%2020this%%2020year%%2027s%%2020%%2023HourOfCode%%202C%%2020are%%2020you%%203F%20%%2020%%2040codeorg%20amp;%20original_referer%20=%20https%20%E0%AE%90%E0%AE%AA%E0%AF%8D%%203A%%202F%%202Fwww.google.com%%202Furl%%203Fq%%203Dhttps%%20253A%%20252F%%20252Ftwitter.com%%20252Fshare%%20253Fhashtags%%20253D%%202526amp%%20253Brelated%%20253Dcodeorg%%202526amp%%20253Btext%%20253DI%20%%20252527m%%20252Bparticipating%%20252Bin%%20252Bthis%%20252Byear%%20252527s%%20252B%%20252523HourOfCode%%2025252C%%20252Bare%%20252Byou%%2025253F%%20252B%%20252540codeorg%%202526amp%%20253Burl%%20253Dhttp%%2025253A%%2025252F%%2025252Fhourofcode.com%%2026sa%%203DD%%2026sntz%%203D1%20%%2026usg%%203DAFQjCNE1GLTUbKZfMlEh9Aj5w0iswz6PYQ%20amp;%20%E0%AE%A4%E0%AF%86%E0%AE%BE%E0%AE%9F%E0%AE%B0%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%A9%20=%20codeorg%20amp;%20%E0%AE%B9%E0%AE%BE%E0%AE%B7%E0%AF%8D%E0%AE%9F%E0%AF%87%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%95%E0%AE%B3%E0%AF%88%E0%AE%9A%E0%AF%8D%20=%20"> ட்விட்டர் </a>. அல்லது உலகத் தலைவர்களிடமிருந்து இந்த உத்வேகம் தரும் <a href="==%20%7B%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AE%B0%20/%20%E0%AE%86%E0%AE%A4%E0%AE%BE%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D_%E0%AE%9A%E0%AE%AE%E0%AF%82%E0%AE%95%20%7D=="> படங்கள் மற்றும் மேற்கோள்களை </a> பகிர்ந்து கொள்ளுங்கள், அல்லது <a href="%7B%7B%E0%AE%B5%E0%AE%BF%E0%AE%B3%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AE%B0%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%B5%E0%AF%81%E0%AE%AE%E0%AF%8D%20/%20%E0%AE%AA%E0%AF%81%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%B5%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D_%E0%AE%85%E0%AE%B1%E0%AE%BF%E0%AE%B5%E0%AF%81%7D&gt;%20%E0%AE%AA%E0%AF%81%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%B5%E0%AE%B0%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D%20&lt;/%20a&lt;/p&gt;%0A%0A&lt;h3&gt;4.%20%E0%AE%89%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D%20%E0%AE%AE%E0%AE%BE%E0%AE%B5%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%A9%E0%AF%8D%20%E0%AE%AE%E0%AF%81%E0%AE%95%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AF%81%20%E0%AE%AA%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%B2%E0%AF%8D%20%E0%AE%8A%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%B5%E0%AE%BF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%B5%E0%AF%81%E0%AE%AE%E0%AF%8D&lt;/h3&gt;%0A%0A&lt;p&gt;%E0%AE%89%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D%20%E0%AE%AA%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AF%87%E0%AE%B1%E0%AF%8D%E0%AE%AA%E0%AF%81%20%E0%AE%AE%E0%AE%B1%E0%AF%8D%E0%AE%B1%E0%AF%81%E0%AE%AE%E0%AF%8D%20%E0%AE%AE%E0%AE%A3%E0%AE%BF%E0%AE%A8%E0%AF%87%E0%AE%B0%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%BF%E0%AE%AF%E0%AF%80%E0%AE%9F%E0%AF%81%20%E0%AE%A8%E0%AE%BF%E0%AE%95%E0%AE%B4%E0%AF%8D%E0%AE%B5%E0%AF%81%E0%AE%95%E0%AE%B3%E0%AF%8D%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%BF%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81%20%E0%AE%AA%E0%AE%BE%E0%AE%B0%E0%AF%8D%E0%AE%B5%E0%AF%88%E0%AE%AF%E0%AE%BE%E0%AE%B3%E0%AE%B0%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%20%E0%AE%A4%E0%AF%86%E0%AE%B0%E0%AE%BF%E0%AE%AF%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AF%81%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%8D.%20%E0%AE%87%E0%AE%A4%E0%AF%88%20&lt;a%20href="> குறியீட்டின் மணிநேரம் </a> உடன் இணைக்கவும்.</p>
+
+<h3>5. கோட் நிகழ்வின் மாவட்ட மணிநேரத்தை நடத்தவும்</h3>
+
+<p>நிகழ்ச்சி, மீடியா அவுட்ரீச் கிட் மற்றும் பிற ஆதரவுகளின் மாதிரி ஓட்டத்திற்காக எங்கள் <a href="==%20%7Burls/how_to_events%20%7Dibl"> நிகழ்வை எவ்வாறு வழிநடத்துவது </a> ஐப் பார்க்கவும்.</p>
+
+<h2>கோட் ஆஃப் ஹவர் என்ன ஆனது?</h2>
+
+<p>தொழில்நுட்பத்தின் வேலைகள் மற்றும் மென்பொருள் பயன்பாடுகளை எவ்வாறு உருவாக்குவது என்பது பற்றி மேலும் அறிய ஒரு பயணத்தின் முதல் படியாகும்.</p>
+
+<ul>
+<li>
+<a href="%7B%7Burls/learn_beyond%20%7Da"> ஆன்லைனில் கற்றுக்கொள்ள </a> தொடர மாணவர்களை ஊக்குவிக்கவும்.</li>
+<li>ஒரு அனுபவமிக்க கணினி அறிவியல் வசதியாளரிடமிருந்து அறிவுறுத்தலைப் பெற <a href="%7B%7Burls/professional_development_workshops%20%7Dibl"> கலந்து கொள்ளுங்கள் </a> 1 நாள், நேரில் பயிலரங்கில் கலந்து கொள்ளுங்கள். (அமெரிக்க கல்வியாளர்கள் மட்டும்)</li>
+</ul>
+
+<p><a href="/us/ta/#join">
+<button style="float: right; margin-top: 50px;">
+ஒரு மணிநேரம் நடத்திடுக
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ta/how-to">
+<div class="nav-header">எவ்வாறு செய்வது வழிகாட்டிகள்</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to">
+பயிற்றுவிப்பாளர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/afterschool">
+பள்ளி நேரத்திற்கு பின் பயிற்றுவிக்கும் ஆசிரியர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/companies">
+நிறுவனங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/districts">
+மாவட்டங்களுக்கு\
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/events">
+பள்ளிக் கூட்டங்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/parents">
+பெற்றோர்களுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/public-officials">
+பொது அதிகாரிகளுக்கு
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ta/how-to/volunteers">
+தொண்டூழியர்களுக்கு
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ta/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">வள ஆதாரங்கள்</div>
+</div>
+</a>
+<a href="/us/ta/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">டுடோரியல்களை முயற்சிக்கவும்</div>
+</div>
+</a>
+<a href="/us/ta/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ta/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">எவ்வாறு ஈடுபடுவது</div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">எங்களைத் தொடர்புகொள்க</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">ஆதரிக்கிறேன்</a>
+</li>
+<li>
+<a href="/us/ta/partners" target="_blank">பங்காளர்கள் மற்றும் ஆலோசகர்கள்</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">நிபந்தனைகள்</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">தனியுரிமைக் கொள்கை</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+காப்புரிமை 2020 Code.org. எல்லா உரிமைகளும் பாதுகாக்கப்பட்டவை.
+<br>
+Hour of Code™ என்பது Code.orgன் வணிக முத்திரையாகும்.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="وسائل" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ur/promote/resources" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>وسائل</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ur/">
+<img alt="آور آف کوڈ" src="/us/ur/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/resources';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option selected value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ur/learn" title="سرگرمیاں">سرگرمیاں</a>
+</li>
+<li>
+<a href="/us/ur/how-to" title="کیسے">کیسے</a>
+</li>
+<li>
+<a href="/us/ur/promote" title="فروغ دیں">فروغ دیں</a>
+</li>
+<li>
+<a href="/us/ur/#faq" title="عمومی سوالات">عمومی سوالات</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ur/#join">
+<button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</a></p>
+
+<p><link rel="stylesheet" type="text/css" href="/css/promote-page.css"></p>
+
+<h1>آور-آف-کوڈ کو پروموٹ کریں</h1>
+
+<h3>Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our <a href="/us/ur/how-to">how-to guide for hosting an Hour of Code</a>!</h3>
+
+<hr>
+
+<h2 class="handouts-header">یہ ہینڈ آؤٹوں کی حصہ داری</h2>
+
+<p><a id="onepager"></a></p>
+
+<div class="handout col-50">
+<div class="handout-text">اس بات کو عام کریں ھینڈ آؤٹ کے ذریعے</div>
+<a href="/files/hoc-one-pager.pdf">
+<img src="/us/ur/images/fit-250/one-pager.png">
+</a>
+</div>
+
+<p><a id="participationguide"></a></p>
+
+<div class="handout col-50">
+<div class="handout-text">آپ گھڑی کوڈ اس شرکت گائیڈ کے ساتھ منصوبہ بندی</div>
+<a href="/files/participation-guide.pdf">
+<img src="/us/ur/images/fit-250/participation-guide.png">
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<p><a id="videos"></a></p>
+
+<h2>اسٹوڈینٹس کو متاثر کرنے کیلئے یہ ویڈیوز دکھائیں</h2>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/VYqHGIR7a_k?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?v=VYqHGIR7a_k">تخلیقی کیا ہے؟</a>
+<a href="//videos.code.org/social/creativity-is.mp4">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf" target="_blank">
+<img class="dance-thumbnail-tile-img" src="/images/fit-350/dance_playlist_thumbnail.png">
+<br>
+تخلیق کیا ہے؟ منظر مکمل سیریز ہے ۔
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/nKIu9yen5nc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?v=nKIu9yen5nc">اکثر اسکول کیا نہیں سیکھاتے (5 منٹ)</a>
+<a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/Rjs8XgYNzr/Code-5-minute.mov?dl=1">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/FC5FbmsH4fw?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?FC5FbmsH4fw">آور-آف-کوڈ آگیا ہے۔ کوئی بھی سیکھ سکتا ہے</a>
+<a href="http://s3.amazonaws.com/cdo-videos/HoC-video-15mb.mp4">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/6XvmhE1J9PY?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?6XvmhE1J9PY">صدر اوباما اور کمپیوٹر سائنس</a>
+</div>
+
+<div class="video">
+<iframe allowfullscreen="true" frameborder="0" height="195" src="https://www.youtube-nocookie.com/embed/qYZF6oIZtfc?iv_load_policy=3&amp;rel=0&amp;autohide=1&amp;showinfo=0" width="350"></iframe>
+<br>
+<a href="https://www.youtube.com/watch?qYZF6oIZtfc">کوئی بھی سیکھ سکتا ہے (1 منٹ)</a>
+<a href="https://dl.dropbox.com/sh/6sdjczibjih6x8s/_0RSOSY8oW/Code-1-min.mov?dl=1">
+<img src="/images/download.png" width="30px">
+</a>
+</div>
+
+<div style="clear:both"></div>
+
+<p><a id="posters"></a></p>
+
+<h2>ان پوسٹرز کو اپنے اسکول پر لگائیں</h2>
+
+<p>پوسٹر کا ایک نیا سیٹ ملالہ، سٹیفن کڑھی، شاکارا اور مزید کی خاصیت دستیاب ہے! اس سال ہر سیٹ بھی 6 پوسٹر اور 126 کے ساتھ "ضابطہ کے وقت میں نے" اسٹیکرز آئیں گے ۔ <a href="https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH">کا آرڈر آپ پوسٹر</a> جلد ہی سپلائی محدود، ہیں ۔ To print on your own, simply click an image below to view and save a printable version.</p>
+
+<p><a href="//downloads.code.org/posters/poster_steph.pdf">
+<img src="/us/ur/images/fit-250/poster_steph.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_malala.pdf">
+<img src="/us/ur/images/fit-250/poster_malala.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_hadi.pdf">
+<img src="/us/ur/images/fit-250/poster_hadi.png">
+   
+</a>
+<br>
+<br>
+<a href="//downloads.code.org/posters/poster_mary.pdf">
+<img src="/us/ur/images/fit-250/poster_mary.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_satya.pdf">
+<img src="/us/ur/images/fit-250/poster_satya.png">
+   
+</a>
+<a href="//downloads.code.org/posters/poster_shakira.pdf">
+<img src="/us/ur/images/fit-250/poster_shakira.png">
+   
+</a></p>
+
+<ul>
+<li>Looking for our posters from previous years? <a href="/us/ur/promote/previous-posters">Find them here</a>!</li>
+</ul>
+
+<p><a id="social"></a></p>
+
+<h2>سوشل میڈیا پر اسے پوسٹ کریں</h2>
+
+<p><a href="/images/social-media/social-1.png"><img src="/images/social-media/fit-250/social-1.png" alt="تصویر"></a>     <a href="/images/social-media/social-2.png"><img src="/images/social-media/fit-250/social-2.png" alt="تصویر"></a>     <a href="/images/social-media/social-3.png"><img src="/images/social-media/fit-250/social-3.png" alt="تصویر"></a>    </p>
+
+<p><a href="/images/social-media/bill_gates.png"><img src="/images/social-media/fit-250/bill_gates.png" alt="تصویر"></a>     <a href="/images/social-media/malala_yousafzai.png"><img src="/images/social-media/fit-250/malala_yousafzai.png" alt="تصویر"></a>     <a href="/images/social-media/chris_bosh.png"><img src="/images/social-media/fit-250/chris_bosh.png" alt="تصویر"></a>    </p>
+
+<p><a href="/images/social-media/karlie_kloss.png"><img src="/images/social-media/fit-250/karlie_kloss.png" alt="تصویر"></a>     <a href="/images/social-media/satya_nadella.png"><img src="/images/social-media/fit-250/satya_nadella.png" alt="تصویر"></a>     <a href="/images/social-media/jeff_bezos.png"><img src="/images/social-media/fit-250/jeff_bezos.png" alt="تصویر"></a>    </p>
+
+<p><a id="logo"></a></p>
+
+<h2>آور-آف-کوڈ کے لوگو کو برسرعام کرنے کے لیے استعمال کریں</h2>
+
+<p><a href="/us/ur/images/hour-of-code-logo.png"><img src="/us/ur/images/fit-200/hour-of-code-logo.png" alt="تصویر"></a></p>
+
+<p><a href="http://images.code.org/share/hour-of-code-logo.zip">Download hi-res versions</a></p>
+
+<p><strong>"Hour of Code" is trademarked. We don't want to prevent its usage, but we want to make sure it fits within a few limits:</strong></p>
+
+<ol>
+<li>"آور-آف-کوڈ" کا کوئی بھی حوالہ (ریفرنس) ایک ایسے انداز میں استعمال کیا جانا چاہیئے جو کہ یہ تاثر نہ دے کہ یہ آپ کا ذاتی برانڈ نیم ہے، بلکہ اس کے بجائے آور-اف-کوڈ کو بنیادی سطح (گراس روٹ) کی تحریک کے حوالے سے لیا جائے۔ strong&gt; اچھی مثال &lt;/ strong&gt;: "ACMECorp.com پر کوڈ کا قیام میں حصہ لیں." ** غلط مثال &lt;/ strong&gt;: "ACME کارپوریشن کی طرف سے کوڈ کا قیام کریں".</li> 
+</ol>
+
+<pre><code>* آپ کے ویب سائٹ پر اور اے پی پی کی تفصیلات میں، "سب سے اہم مقامات" میں ایک "TM" سپرسکل کا استعمال کریں.
+* Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org](https://code.org ) websites, that says the following:
+
+    *اپنی ویب سائیٹ اور ایپ ڈسکرپشن، دونوں میں "آور-آف-کوڈ" کا ذکر سب سے نمایاں مقامات پر "TM" کے سپراسکرپٹ کا استعمال کرتے ہوئے کریں۔*
+
+* اے پی پی کے نام میں "قیامت کا کوڈ" کا استعمال نہیں.&lt;/ol&gt; 
+</code></pre>
+
+<p><a id="stickers"></a></p>
+
+<pre><code>## اپنے اسٹوڈینٹس کو دینے کے لیے یہ اسٹیکرز دیں
+
+(Stickers are 1" diameter, 63 per sheet) &lt;br /&gt;
+
+[![تصویر](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+</code></pre>
+
+<p><a id="sample-emails"></a></p>
+
+<pre><code>## اپنی کمیونٹی میں لوگوں کو آپکے قیامت تک مدعو کریں اور ای میل کے ذریعہ اپنے ایونٹ کو فروغ دیں
+
+### Find [more information and language you can use](/us/ur/promote/stats) when talking about the Hour of Code.
+
+* * *
+</code></pre>
+
+<p><a id="email"></a></p>
+
+<pre><code>### سائن اپ کرنے کے لئے اپنے اسکول، آجر، یا دوستوں سے پوچھیں
+
+**Subject line:** Join me and over 100 million students for an Hour of Code &lt;br /&gt;
+
+Computers are everywhere, changing every industry on the planet. But only 45% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+
+کوڈ کے قیام کے ساتھ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+This year, let's make it even bigger. I’m asking you to join the Hour of Code 2019. Please get involved with an Hour of Code event during Computer Science Education Week, December 9-15.
+
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+
+Get started at http://hourofcode.com/us
+</code></pre>
+
+<p><br></p>
+
+<pre><code>* * *
+</code></pre>
+
+<p><a id="help-schools"></a></p>
+
+<pre><code>### اسکول میں رضاکارانہ:
+
+#### [Find more resources and information about volunteering in schools here](/us/ur/how-to/volunteers).
+
+**Subject line:** Can we help you host an Hour of Code?
+
+Between Dec. 9-15, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+
+Computers are everywhere, changing every industry on the planet. But only 45% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. &lt;br /&gt;
+
+* * *
+</code></pre>
+
+<p><a id="parents"></a></p>
+
+<pre><code>### پیرینٹس کو اپنے اسکول کے ایونٹ کے بارے میں بتائیں:
+
+**Subject line:** Our students are changing the future with an Hour of Code
+
+Dear Parents,
+
+We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+
+But only a tiny fraction of us are learning **how** technology works. Only 45% of all high schools teach computer science.
+
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 9-15). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+
+This is a chance to change the future of education in [TOWN/CITY NAME].
+
+See http://hourofcode.com/us
+</code></pre>
+
+<p>for details, and help spread the word. <br></p>
+
+<pre><code>* * *
+</code></pre>
+
+<p><a id="media-pitch"></a></p>
+
+<pre><code>### اپنے ایونٹ میں شرکت کے لیے میڈیا کو انوائٹ کریں:
+
+#### [اپنے ایونٹ میں میڈیا کو مدعو کرنے کے بارے میں مزید معلومات کیلئے ہمارے پریس کٹ کو چیک کریں.](/us/ur/promote/press-kit)
+
+** موضوع کی لائن: &lt;/ strong&gt; مقامی اسکول کمپیوٹر سائنس میں طلباء کو متعارف کرانے کا مشن شامل ہے&lt;/p&gt; 
+
+Computers are everywhere, changing every industry on the planet, but only 45% of all high schools teach computer science. کمپیوٹر سائنس کی کلاسیں اور ٹیک صنعت میں گرلز اور اقلیتوں کو سختی سے کمتر قرار دیا جاتا ہے. اچھی خبر یہ ہے کہ ہم اس کو تبدیل کرنے کے لیے اپنے راستے پر ہیں ۔.
+
+کوڈ کے قیام کے ساتھ، کمپیوٹر سائنس گوگل، MSN، یاہو، اور ڈزنی کے گھروں پر ہے. اس تحریک کی حمایت کے لئے 100 سے زیادہ شراکت داروں کے ساتھ مل کر شامل ہو گئے ہیں. دنیا میں ہر ایپل سٹور نے ایک گھنٹہ کوڈ کی میزبانی کی ہے. یہاں تک کہ صدر اوبامہ نے اپنی پہلی لائن کو ایک مہم کے طور پر لکھا تھا.
+
+اس وجہ سے [XII] طالب علموں میں سے ہر ایک کو [اسکول NAME] تاریخ میں سب سے بڑا سیکھنے کے واقعہ پر شامل ہو رہا ہے: کوڈ آفس، کمپیوٹر سائنس تعلیم ہفتہ کے دوران (&lt;٪ = campaign_date ('full')٪&gt;) .
+
+میں لکھ رہا ہوں کہ آپ کو ہماری کٹوف اسمبلی میں شرکت کرنے کے لئے مدعو کرنا اور بچوں کو دیکھنے کے لئے [DATE] پر سرگرمی شروع کرنا ہے.
+
+کوڈ کا قیام، غیر منافع بخش Code.org اور 100 سے زائد دیگر، ایک عالمی تحریک ہے جس کا یقین ہے کہ آج کے طالب علموں کو 21st صدی کی کامیابی کے لئے اہم مہارت حاصل کرنے کے لئے تیار ہیں. براہ مہربانی ہمارے ساتھ شامل ہوں.
+
+رابطہ: [آپ کا نام], [TITLE], سیل: (212) 555-5555 جب: [کی تاریخ اور وقت آپ واقعہ] جہاں: [پتہ اور ہدایات]
+
+میں آپ سے رابطہ کے لیے چشم براہ ہوں۔&lt;br /&gt;
+
+* * *
+</code></pre>
+
+<p><a id="politicians"></a></p>
+
+<pre><code>### اپنے اسکول کے ایونٹ میں کسی مقامی پالیٹیشن (سیاسی رہنما) کو مدعو کریں:
+
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event](/us/ur/how-to/public-officials).
+
+**Subject line**: Join our school as we change the future with an Hour of Code
+
+Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 9-15). More than 100 million students worldwide have already tried an Hour of Code.
+
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+
+Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+
+&lt;a href='/us/ur/#join'&gt;
+</code></pre>
+
+<p><button style="float: right; margin-top: 50px;">
+ایک گھنٹے کی میزبانی کریں
+</button>
+</p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ur/promote">
+<div class="nav-header">فروغ دیں</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote">
+ملوث حاصل کرنے کے لئے کس طرح
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#onepager">
+ایک-صفحہ پر مبنی ھینڈ-آؤٹ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#brochure">
+بروشر
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#videos">
+ویڈیوز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#posters">
+پوسٹرز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#social">
+سوشل (سماجی)
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#logo">
+آور-آف-کوڈ کا لوگو
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#stickers">
+اسٹیکرز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/resources#sample-emails">
+سیمپل ای-میلز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/stats">
+اِسٹیٹس اور بلربز
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ur/promote/press-kit">
+پریس کٹ
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ur/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">وسائل</div>
+</div>
+</a>
+<a href="/us/ur/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">ٹیٹوریئلز ٹرائی کریں</div>
+</div>
+</a>
+<a href="/us/ur/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ur/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">ملوث حاصل کرنے کے لئے کس طرح</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">ہم سے رابطہ کریں</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">سہارا</a>
+</li>
+<li>
+<a href="/us/ur/partners" target="_blank">پارٹنرز</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">پرائیویسی پالیسی</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+کاپی رائٹ۔  2020 Code.orgجملہ حقوق محفوظ.
+<br>
+Hour of Code™ Code.org کا تجارتی نشان ہے ۔
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

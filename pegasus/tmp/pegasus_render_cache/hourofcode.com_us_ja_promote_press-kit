@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="プレスキット" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/ja/promote/press-kit" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>プレスキット</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/ja/">
+<img alt="Hour of Code" src="/us/ja/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/press-kit';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option selected value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/ja/learn" title="アクティビティ">アクティビティ</a>
+</li>
+<li>
+<a href="/us/ja/how-to" title="開催ガイド">開催ガイド</a>
+</li>
+<li>
+<a href="/us/ja/promote" title="宣伝する">宣伝する</a>
+</li>
+<li>
+<a href="/us/ja/#faq" title="よくある質問">よくある質問</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/ja/#join">
+<button style="float: right; margin-top: 50px;">
+開催する
+</button>
+</a></p>
+
+<h1>How to attract media to your Hour of Code event</h1>
+
+<h3>Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.</h3>
+
+<p><em>For all press and media inquiries, contact <a href="mailto:press@code.org">press@code.org</a></em></p>
+
+<hr>
+
+<h2>Key Tips</h2>
+
+<ul>
+<li>イベントの2週間前にメールでメディアに連絡を取りましょう。もし最初の返事がなければメールや電話でフォローアップしましょう。</li>
+<li>学校の先生やボランティアの人に、写真をとってオンラインで共有したり報道機関に送ってもらうようお願いしましょう。</li>
+<li>あなたのウェブサイトのトップページや学校新聞に Hour of Code について書いてみましょう。イベントの詳細や、学生の活動の写真を投稿しましょう。</li>
+<li>On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during 2019. ハッシュタグ<strong>#HourOfCode</strong>を使って、Code.orgがあなたのイベントを見つけて宣伝できるようにしてください。</li>
+</ul>
+
+<h2>Step-by-step guide</h2>
+
+<h3>1. Plan your event</h3>
+
+<ul>
+<li>Hour of Code を始める集まりを計画しましょう。</li>
+<li>Send <a href="/us/ja/promote/resources#sample-emails">a letter</a> to parents and ask them to spread the word.</li>
+<li>Send <a href="/us/ja/promote/resources#sample-emails">a letter</a> to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.</li>
+<li>（「電源のいらない」プログラミング活動の実演のような）グループ活動を準備したり、学生が作り主役となる活動を引き立たせたりしましょう。</li>
+<li>Show Code.org’s <a href="/us/ja/">Hour of Code video</a> or one of <a href="/us/ja/promote/resources#videos">these videos</a> to inspire students. <br>
+</li>
+</ul>
+
+<h3>2. Identify specific reporters that cover education or local events</h3>
+
+<p>Like local newspapers, TV station or radio stations, or blogs. <br></p>
+
+<h3>3. Contact local media</h3>
+
+<p>The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. <strong><a href="/us/ja/promote/press-kit#sample-emails">See a sample pitch to media</a></strong>.</p>
+
+<p>Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br></p>
+
+<h3>4. Prepare to field questions about your school event. Here are some examples:</h3>
+
+<h4>なぜあなたの学校はHour of Codeをやっているのですか？</h4>
+
+<p>今日の技術に満ちあふれた世界をどう生き抜いてゆくか。私たちはみな、それを学ぶことの重要性をわかっていますが、多くの先生たちはコンピューターサイエンスの経験がなく、どこから始めればよいのか分かりません。 This event is a chance for all of us to see what computer science is about.</p>
+
+<p>私たちはこれをきっかけに学生たちの興味が刺激されて学び続けることを願っています。 子供たちは、読み書きを覚える前にプログラミングの概念を習得できるという研究結果もあります。 実際に、若い時に外国語の学習が容易なように、子どもたちの脳はコンピューター言語の習得も早いのです。 <br> <br></p>
+
+<h4>なぜこれが重要なのですか？</h4>
+
+<p>技術は地球上のあらゆる産業を変えています。 2015年、米国での700万の求人は、芸術とデザインを含むプログラミングスキルを高く評価する職業でした。 But 60 percent of schools in the U.S. don't teach computer science. 今こそ私たちが21世紀に追いつくべきときです。 生徒たちが大人になって、医療や事業、政治、芸術といったどのような分野で何を行おうとも、技術を組み立てる方法を知ることは彼らに自信や競争力を与えるということを知っています。 <br></p>
+
+<p><a id="sample-emails"></a></p>
+
+<h2>Sample email to send to invite local media to your event</h2>
+
+<p><strong>Subject line</strong>: Local school joins mission to introduce students to computer science</p>
+
+<p>Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです。</p>
+
+<p>With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.</p>
+
+<p>[学校名] の[X番号] の生徒全員が、コンピューターサイエンス教育ウィーク（12月3〜9日）で史上最大の学習イベントHour of Code（アワー オブ コード）に参加しているのはそのためです。</p>
+
+<p>I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].</p>
+
+<p>The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.</p>
+
+<p>Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]</p>
+
+<p>I look forward to being in touch. <br></p>
+
+<h2>その他の詳細や資料の中で使える引用文</h2>
+
+<p>Code.orgの創始者兼CEOであるHadi Partovi曰く、「Hour of Codeはコードが神秘的なものではなく、わかりやすいものだということを伝えるためのものです。コンピューターサイエンスは難しいものではなく、だれでも基本を学べるものなのです」 「すでに1億人を超す世界中の生徒たちがHour of Codeを試しています。 21世紀のコンピューターサイエンス教育の需要は国境を越えとどまるところを知りません。」 <br> <br></p>
+
+<h4>Code.orgについて</h4>
+
+<p>Code.orgは501c3非営利の公的団体です。コンピューターサイエンスの普及と、女性や肌の色で過小評価されている生徒たちの参加機会の増大に取り組んでいます。 すべての学校のすべての生徒がコンピュータープログラミングを学ぶ機会を得るというビジョンを持っています。 Code.orgは2013年に設立された後、Hour of Codeのキャンペーンを行いました。キャンペーンでは1億人以上の学生にコンピューターサイエンスを紹介することができ、全米で70もの公立の学区とコンピューターサイエンスのプログラムを広げるための提携を結ぶことができました。 Code.org は、マイクロソフト、フェイスブック、インフォシス財団、アマゾンなどを含む企業や組織、そして寛大な個人からの慈善の寄付によってサポートされています。 For more information, please visit: <a href="https://code.org">code.org</a>.</p>
+
+<p>Find more resources and sample emails <a href="/us/ja/promote/resources#sample-emails">here</a>.</p>
+
+<p><a href="/us/ja/#join">
+<button style="float: right; margin-top: 50px;">
+開催する
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/ja/promote">
+<div class="nav-header">宣伝する</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote">
+どうやって協力すればいい？
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#onepager">
+チラシ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#brochure">
+パンフレット
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#videos">
+ビデオ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#posters">
+ポスター
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#social">
+ソーシャル
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#logo">
+Hour of Codeのロゴ
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#stickers">
+ステッカー
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/resources#sample-emails">
+サンプルメール
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/stats">
+統計情報や宣伝文句
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/ja/promote/press-kit">
+プレスキット
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/ja/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/ja/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">資料</div>
+</div>
+</a>
+<a href="/us/ja/learn">
+<div class="display-link">
+<img class="display-img" src="/us/ja/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">チュートリアルを試す</div>
+</div>
+</a>
+<a href="/us/ja/promote">
+<div class="display-link">
+<img class="display-img" src="/us/ja/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">どうやって協力すればいい？</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">お問い合わせ</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">サポート</a>
+</li>
+<li>
+<a href="/us/ja/partners" target="_blank">パートナー</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">利用規約</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">プライバシーポリシー</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. All rights reserved.
+<br>
+Hour of Code™ は Code.orgの商標です。
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

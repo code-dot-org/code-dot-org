@@ -3,6 +3,7 @@ require 'honeybadger/ruby'
 # Returns a random donor's twitter handle.
 def get_random_donor_twitter
   weight = SecureRandom.random_number
+  weight = 0 if ENV['PEGASUS_RENDER_CACHE']
   donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
   if donor && donor[:twitter_s]
     return donor[:twitter_s]

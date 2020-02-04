@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="Materiały prasowe" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/pl/promote/press-kit" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Materiały prasowe</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/pl/">
+<img alt="Godzina Kodowania" src="/us/pl/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/promote/press-kit';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option selected value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/pl/learn" title="Aktywności">Aktywności</a>
+</li>
+<li>
+<a href="/us/pl/how-to" title="Instrukcje">Instrukcje</a>
+</li>
+<li>
+<a href="/us/pl/promote" title="Promowanie">Promowanie</a>
+</li>
+<li>
+<a href="/us/pl/#faq" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div class="row">
+<div class="col-sm-9">
+<p><a href="/us/pl/#join">
+<button style="float: right; margin-top: 50px;">
+Ugość Godzinę Kodowania
+</button>
+</a></p>
+
+<h1>How to attract media to your Hour of Code event</h1>
+
+<h3>Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.</h3>
+
+<p><em>Wszelkie zapytania odnośnie prasy i mediów kieruj na <a href="mailto:press@code.org">press@code.org</a></em></p>
+
+<hr>
+
+<h2>Key Tips</h2>
+
+<ul>
+<li>Skontaktuj się z mediami na dwa tygodnie przed wydarzeniem za pośrednictwem poczty elektronicznej. Ponów kontakt e-mailowy oraz telefoniczny, jeśli nie otrzymałeś odpowiedzi.</li>
+<li>Poproś pracownika szkoły lub wolontariusza by robił zdjęcia, które będzie można opublikować online lub wysłać do prasy.</li>
+<li>Napisz o Godzinie Kodowania na swojej stronie internetowej i w gazetce szkolnej. Opublikuj szczegóły wydarzenia i zdjęcia.</li>
+<li>On Facebook and Twitter, share updates on your plans, announce your events, and post pictures during 2019. Use the hashtag <strong>#HourOfCode</strong> so Code.org can see and promote your events.</li>
+</ul>
+
+<h2>Step-by-step guide</h2>
+
+<h3>1. Plan your event</h3>
+
+<ul>
+<li>Zaplanuj zebranie, by wystartować z Godziną Kodowania.</li>
+<li>Send <a href="/us/pl/promote/resources#sample-emails">a letter</a> to parents and ask them to spread the word.</li>
+<li>Send <a href="/us/pl/promote/resources#sample-emails">a letter</a> to invite your local mayor, member of Congress, governor, or influential businessperson to attend and speak to your students.</li>
+<li>Zorganizuj zajęcia grupowe (na przykład pokaz programowania bez komputera) lub wyeksponuj aktywności wymyślone i przeprowadzone przez uczniów.</li>
+<li>Show Code.org’s <a href="/us/pl/">Hour of Code video</a> or one of <a href="/us/pl/promote/resources#videos">these videos</a> to inspire students. <br>
+</li>
+</ul>
+
+<h3>2. Identify specific reporters that cover education or local events</h3>
+
+<p>Like local newspapers, TV station or radio stations, or blogs. <br></p>
+
+<h3>3. Contact local media</h3>
+
+<p>The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. <strong><a href="/us/pl/promote/press-kit#sample-emails">See a sample pitch to media</a></strong>.</p>
+
+<p>Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br></p>
+
+<h3>4. Prepare to field questions about your school event. Here are some examples:</h3>
+
+<h4>Dlaczego Twoja szkoła organizuje Godzinę Kodowania?</h4>
+
+<p>Podczas gdy wszyscy wiemy, jak ważne jest dla uczniów, aby wiedzieli, jak poruszać się po dzisiejszym, nasyconym techniką, świecie, wielu nauczycieli nie ma doświadczenia w informatyce i nie wie jak zacząć. To wydarzenie jest szansą dla nas wszystkich, aby dowiedzieć się, czym właściwie jest informatyka.</p>
+
+<p>Mamy nadzieję, że uda się rozbudzić zainteresowanie uczniów, by kontynuowali naukę. Badania naukowe pokazują także, że dzieci chwytają pojęcia programistyczne, zanim nauczą się czytać i pisać. W rzeczywistości, ich mózgi są nastawione na rozumienie języków programowania, podobnie jak to jest z językami obcymi. <br> <br></p>
+
+<h4>Dlaczego jest to ważne?</h4>
+
+<p>Technologia zmienia każdą branżę na świecie. W 2015 r. było w USA 7 milionów wolnych miejsc pracy — włączając sztukę i projektowanie — które wymagały umiejętności kodowania. But 60 percent of schools in the U.S. don't teach computer science. It’s time for us to catch up to the 21st-century. Bez względu na to, czy nasi uczniowie w dorosłym życiu pójdą w kierunku medycyny, biznesu, polityki, czy sztuki, wiedza o tworzeniu technologii doda im pewności siebie w każdej dziedzinie i pozwoli im odnieść sukces. <br></p>
+
+<p><a id="sample-emails"></a></p>
+
+<h2>Sample email to send to invite local media to your event</h2>
+
+<p><strong>Subject line</strong>: Local school joins mission to introduce students to computer science</p>
+
+<p>Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. Dobrą wiadomością jest, że zamierzamy to zmienić.</p>
+
+<p>Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.</p>
+
+<p>Dlatego właśnie każdy z [X number] uczniów szkoły [SCHOOL NAME] przyłącza się do największego wydarzenia edukacyjnego w historii: Godziny Kodowania w trakcie Tygodnia Edukacji Informatycznej (03-09.12.).</p>
+
+<p>I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].</p>
+
+<p>The Hour of Code, organized by the nonprofit Code.org and over 100 others, is a global movement that believes the students of today are ready to learn critical skills for 21st-century success. Please join us.</p>
+
+<p>Contact: [YOUR NAME], [TITLE], cell: (212) 555-5555 When: [DATE and TIME of your event] Where: [ADDRESS and DIRECTIONS]</p>
+
+<p>I look forward to being in touch. <br></p>
+
+<h2>Additional details and a quote you can use in materials</h2>
+
+<p>„Celem Godziny Kodowania jest odczarowanie kodu i pokazanie, że informatyka to nie jest wielka filozofia. Każdy może nauczyć się podstaw”, powiedział Hadi Partovi, założyciel i CEO Code.org. "Ponad 100 milionów uczniów na całym świecie spróbowało Godziny Kodowania. Zapotrzebowanie na odpowiednią edukację informatyczną XXI wieku przekracza wszelkie granice i nie zna ograniczeń.” <br> <br></p>
+
+<h4>O Code.org</h4>
+
+<p>Code.org to publiczna organizacja non-profit 501c3, której celem jest zwiększenie udziału kobiet i niedostatecznie reprezentowanych studentów kolorowych. Jego wizja polega na tym, że każdy uczeń w każdej szkole ma możliwość nauki programowania komputerów. Po uruchomieniu w 2013, Code.org zainicjowała Godzinę Kodowania, która do dzisiaj stała się wprowadzeniem do informatyki dla ponad 100 milionów uczniów, współpracując z 70 okręgami szkół publicznych w USA, aby rozwijać programy zajęć informatycznych. Organizacja Code.org jest wspierana przez dobroczynne darowizny od korporacji, fundacji i hojnych osób, w tym Microsoft, Facebook, Infosys Foundation, USA, Amazon i inne. For more information, please visit: <a href="https://code.org">code.org</a>.</p>
+
+<p>Find more resources and sample emails <a href="/us/pl/promote/resources#sample-emails">here</a>.</p>
+
+<p><a href="/us/pl/#join">
+<button style="float: right; margin-top: 50px;">
+Ugość Godzinę Kodowania
+</button>
+</a></p>
+
+</div>
+<div class="col-sm-3 nav-col">
+<div class="resources-navigation">
+<a class="nav-link" href="/us/pl/promote">
+<div class="nav-header">Promowanie</div>
+</a>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote">
+Jak się zaangażować
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#onepager">
+Ulotka
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#brochure">
+Broszura
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#videos">
+Filmy
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#posters">
+Plakaty
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#social">
+Media społecznościowe
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#logo">
+Logo Godziny Kodowania
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#stickers">
+Naklejki
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/resources#sample-emails">
+Przykładowe e-maile
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/stats">
+Przydatne statystyki i liczby
+</a>
+</div>
+<div class="nav-item">
+<a class="nav-link" href="/us/pl/promote/press-kit">
+Materiały prasowe
+</a>
+</div>
+</div>
+<div class="resources-nav">
+<a href="/us/pl/promote/resources">
+<div class="display-link">
+<img class="display-img" src="/us/pl/images/fit-500/flyers.jpg">
+<div class="link-text display-purple">Materiały</div>
+</div>
+</a>
+<a href="/us/pl/learn">
+<div class="display-link">
+<img class="display-img" src="/us/pl/images/fit-500/try_tutorials.jpg">
+<div class="link-text display-blue">Wypróbuj samouczki</div>
+</div>
+</a>
+<a href="/us/pl/promote">
+<div class="display-link">
+<img class="display-img" src="/us/pl/images/fit-500/hourofcode-2015-video-thumbnail-cropped.jpg">
+<div class="link-text display-green">Jak się zaangażować</div>
+</div>
+</a>
+</div>
+
+<script>
+  function adjustScroll(destination)
+  {
+    $('html, body').animate({
+      scrollTop: $("#" + destination).offset().top
+    }, 1000);
+  }
+</script>
+
+</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Skontaktuj się z nami</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Pomoc techniczna</a>
+</li>
+<li>
+<a href="/us/pl/partners" target="_blank">Partnerzy i Doradcy</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Warunki</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Polityka Prywatności</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2015 Code.org. Wszelkie prawa zastrzeżone.
+<br>
+Hour od Code™ (Godzina Kodowania™) jest znakiem towarowym Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

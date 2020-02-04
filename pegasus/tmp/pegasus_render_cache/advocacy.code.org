@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://advocacy.code.org/" property="og:url">
+<meta content="Advocate for computer science education" property="og:title">
+<meta content="Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of the K-12 education." property="og:description">
+<meta content="@codeorg" property="twitter:site">
+<meta content="Advocate for computer science education" property="twitter:title">
+<meta content="Learn about our local policy and access resources to support computer science in our state." property="twitter:description">
+<meta content="https://advocacy.code.org/" property="twitter:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>CS Advocacy Site | CS Advocacy</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<style>
+  .feature-nonenglish{display:none}@media screen and (min-width: 0px) and (max-width: 600px){.container_responsive{width:100%;margin:0 auto;padding-left:10px;padding-right:10px}.jumbo{font-size:45px}.container_responsive h1{font-size:20px;margin-top:1em;margin-bottom:.5em}.container_responsive h2{font-size:18px}.container_responsive h3{font-size:16px}.container_responsive h4{font-size:14px}.container_responsive .solid-block-header *{font-size:20px}.container_responsive .solid-block-subtitle{font-size:14px;line-height:1em;padding-right:10px;padding-bottom:10px}.tile-container-responsive{display:flex;flex-direction:column}}@media screen and (min-width: 601px) and (max-width: 970px){.container_responsive{width:600px;margin:0 auto}}@media screen and (min-width: 601px){.phone-feature{display:none}.jumbo{font-size:60px}}@media screen and (max-width: 600px){.tablet-feature{display:none}}@media screen and (min-width: 971px){.mobile-feature{display:none}.col-16{width:16%;float:left}.col-18{width:18%;float:left}.col-20{width:20%;float:left}.col-23{width:23%;float:left}.col-25{width:25%;float:left}.col-26{width:26%;float:left}.col-32{width:32%;float:left}.col-33{width:33%;float:left}.col-36{width:36%;float:left}.col-40{width:40%;float:left}.col-45{width:45%;float:left}.col-50{width:50%;float:left}.col-60{width:60%;float:left}.col-63{width:63%;float:left}.col-66{width:66%;float:left}.col-80{width:80%;float:left}.col-95{width:95%;float:left}.col-80-right{width:80%;float:right}.left-nav{width:140px;float:left}.desktop-pad-right{padding-right:30px}.container_responsive{width:970px;margin:0 auto;max-width:none !important}.tile-container-responsive{display:flex;flex-direction:row;justify-content:space-between}.tile-container-responsive>*{margin-right:20px}.tile-container-responsive>:last-child{margin-right:0}.mobile-show-medium{display:none}.i-agree-button{width:9%}.avatar_container p{padding-right:30px}}@media screen and (min-width: 0px) and (max-width: 970px){.desktop-feature{display:none}.col-18{width:100%;float:left}.col-20{width:100%;float:left}.col-23{width:100%}.col-25{width:100%}.col-26{width:100%}.col-32{width:100%}.col-33{width:100%}.col-36{width:100%}.col-40{width:100%}.col-45{width:100%;float:left}.col-50{width:100%;float:left}.col-60{width:100%}.col-63{width:100%}.col-66{width:100%;float:left}.col-66 ul{margin-left:0px}.col-80{width:100%}.col-95{width:95%;float:left}.col-mobile-44{width:44%;float:left}.col-mobile-48{width:48%;float:left}.col-mobile-50{width:50%;float:left}.col-mobile-56{width:56%;float:left}.mobile-center{text-align:center}.mobile-pad{padding:10px}.mobile-pad-right{padding-right:10px}.mobile-pad-left64{padding-left:64px}.mobile-pad-edge{padding:20px}.avatar_container p{padding-right:0px}.avatar_container img{margin-left:25px}}@media screen and (min-width: 0px) and (max-width: 512px){.col-mobile-44{width:100%;float:left}.col-mobile-50{width:100%;float:left}.col-mobile-56{width:100%;float:left}.mobile-show-medium{display:none}.mobile-small-hide{display:none}}
+</style>
+
+<style>
+  .learnpage{width:970px}.solid-block-header{font-size:30px;font-family:'Gotham 7r', sans-serif;line-height:1.2em;background-color:#7665a0;color:white;height:auto;width:100%;padding-top:12px;padding-bottom:6px;padding-left:15px;margin:50px 0 10px 0}.solid-block-subheader{color:#7665a0;font-size:18px;font-family:'Gotham 7r', sans-serif;margin-top:10px;margin-bottom:20px;line-height:1.2em}.solid-block-subtitle{color:white;font-size:16px;font-family:'Gotham 4r', sans-serif}.video-smalltext{padding:10px}.soft-padding{padding:10px}.course-carousel{opacity:0.4}.clear:before,.clear:after{content:"\0020";display:block;height:0;overflow:hidden}.clear:after{clear:both}.carousel .slide-prev>span,.carousel .slide-next>span{width:0;height:0;border-top:20px solid transparent;border-bottom:20px solid transparent;position:absolute;top:43%}.carousel .slide-prev>span{border-right:20px solid #b9bf11;left:8px}.carousel .slide-next>span{border-left:20px solid #b9bf11;right:8px}.carousel .slide-prev span.label,.carousel .slide-next span.label{display:none}.carousel-wrapper{position:relative}.carousel-wrapper .pagination{display:block;text-align:center;margin:10px 0 0 0}.carousel-wrapper .pagination a{display:inline-block;width:17px;height:17px;border-radius:50%;margin:0 7px;outline:none}.carousel-wrapper .pagination a span{display:none}.course-carousel-title{text-align:center}.course-carousel{width:100%;margin:0;background:#5a676f}.course-carousel .slides{width:100%;height:480px;background:#5a676f;overflow:hidden}.course-carousel .slide{display:block;position:relative;float:left;background:#5a676f;margin:0;padding:0 40px}.course-carousel .slide-img{float:left;width:100%}.course-carousel .slide img{width:100%;height:100%}.course-carousel .slide .slide-text{float:left;width:100%;padding:10px}.carousel-international .slide .slide-text{padding:20px 10px}.course-carousel .slide h2,.course-carousel .slide h3,.course-carousel .slide p,.course-carousel .slide div{line-height:1.2em;color:#fff}.course-carousel .slide h2{font-size:18px;font-family:'Gotham 5r', sans-serif;margin:0 0 .333em 0}.course-carousel .slide h3{font-size:14px;font-family:'Gotham 5r', sans-serif;margin:0 0 .857em 0}.course-carousel .slide p{font-size:12px;line-height:1.3em;margin:0 0 .833em 0}.course-carousel .slide a{font-weight:inherit}.course-carousel .slide a:link,.course-carousel .slide a:visited{color:#fff;text-decoration:none}.course-carousel .slide .slide-longdescription{display:none}.course-carousel .slide .slide-shortdescription{padding-right:75px;display:block}.course-carousel .slide .slide-tags{margin:0 0 .833em 0;font-size:12px;padding-right:75px}.course-carousel .slide div.slide-participants-count{display:none}.course-carousel .slide .slide-teachers-notes-link{display:none}.course-carousel .slide .slide-shorturl-link{display:none}.btn-carousel-slide{position:absolute;bottom:10px;right:50px;display:block;width:auto;padding:10px 20px;margin:0;font-size:18px;font-family:'Gotham 5r', sans-serif;text-align:center;white-space:nowrap;vertical-align:middle;cursor:pointer;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.course-carousel .slide-prev,.course-carousel .slide-next{position:absolute;top:0;width:40px;height:100%}.course-carousel .slide-prev{left:0}.course-carousel .slide-prev>span{border-right-color:#fff}.course-carousel .slide-next{right:0}.course-carousel .slide-next>span{border-left-color:#fff}@media screen and (max-width: 319px){.learnpage{width:100%}.fullwidth-carousel .slide{padding-left:0px;padding-right:0px}}@media screen and (min-width: 320px) and (max-width: 599px){.learnpage{width:320px;margin:0 auto}.course-carousel .slides{width:320px;height:383px}.course-carousel .slide{padding:0}.course-carousel .slide .slide-img{width:320px;height:180px;padding:0 40px}.course-carousel .slide .slide-tags{margin-bottom:0}.course-carousel .slide-prev,.course-carousel .slide-next{height:180px}.btn-carousel-slide{right:10px}.fullwidth-carousel .slide .slide-img{height:220px;padding-left:0px;padding-right:0px}}@media screen and (min-width: 600px) and (max-width: 969px){.learnpage{width:600px;margin:0 auto}.course-carousel .slides{width:600px;height:514px}.course-carousel .slide .slide-img{width:520px;height:390px}.fullwidth-carousel .slide{padding-left:0px}.fullwidth-carousel .slide .slide-img{width:600px}.fullwidth-carousel .slide .slide-text{width:600px}.fullwidth-carousel .slide-shortdescription{width:500px}}@media screen and (min-width: 970px){.course-carousel-title{text-align:left}.course-carousel .slides{width:446px;height:335px}.course-carousel .slide{padding:0 40px}.course-carousel .slide .slide-img{width:446px;height:335px}.course-carousel .slide .slide-text{width:444px;height:335px;padding:20px 20px 0 20px}.course-carousel .slide h2{font-size:28px;line-height:1em}.course-carousel .slide h3{font-size:18px}.course-carousel .slide p{font-size:13px}.course-carousel .slide .slide-longdescription{display:block}.course-carousel .slide .slide-shortdescription{display:none}.course-carousel .slide .slide-tags{font-size:14px;padding-right:120px}.course-carousel .slide div.slide-participants-count{margin:0 0 .5em;display:block;font-size:14px;padding-right:120px}.course-carousel .slide .slide-teachers-notes-link{display:block;margin:0.2em 0 0 0;padding-right:120px;font-size:11px}.course-carousel .slide .slide-teachers-notes-link :hover{text-decoration:underline}.course-carousel .slide .slide-shorturl-link{display:block;margin:1em 0 0 0;padding-right:120px;font-size:11px}.course-carousel .slide .slide-shorturl-link :hover{text-decoration:underline}.fullwidth-carousel .slide{padding:0 0}.fullwidth-carousel .slide .slide-img{width:486px}.fullwidth-carousel .slide .slide-text{width:484px}}.datepicker td,.datepicker th{background-color:transparent;color:#333;line-height:1em}.share-buttons{margin:0}.share-buttons button{width:auto;height:auto;font-family:'Gotham 5r', sans-serif;margin:10px 10px 0 0}.share-buttons button i{padding-right:.5em}button{margin-top:10px}#promote-page h1{float:left}#promote-page .section{clear:both;margin:0 0 20px 0}#promote-page h2{margin-bottom:10px}#promote-page .main-video{float:left;width:586px;margin:0 0 20px 0}#promote-page .share-buttons{float:left}#promote-page .youtube-channel-link{float:right;margin:15px 0 0 0}#promote-page .other-videos{float:right;width:380px}#promote-page .other-videos h3{margin:0 0 20px 20px}#promote-page .other-video{width:170px;float:left;margin:0 0 20px 20px}#promote-page .other-video-odd{clear:left}#promote-page .other-video img{width:100%;max-width:100%}#promote-page .other-video-caption{font-size:12px;line-height:1.2em;margin:5px 0 0 0}#promote-page .all-quotes-link,#promote-page .full-infographic-link{float:left;margin:15px 0 0 20px}#stats-carousel,#stats-impact-carousel{width:100%;margin:0;position:relative;background:#fff}#stats-carousel .slide,#stats-impact-carousel .slide{display:block;position:relative;float:left;background:#ebecec;margin:0;padding:0 0px 10px 60px}#stats-carousel .slide-img,#stats-impact-carousel .slide-img{width:100%}#stats-carousel .slide img,#stats-impact-carousel .slide img{width:100%;height:auto;display:block}#stats-carousel .slide-prev,#stats-carousel .slide-next,#stats-impact-carousel .slide-prev,#stats-impact-carousel .slide-next{position:absolute;top:0;width:40px;height:100%;background-color:#f7f7f7}#stats-carousel .slide-prev,#stats-impact-carousel .slide-prev{left:0}#stats-carousel .slide-next,#stats-impact-carousel .slide-next{right:0}#stats-carousel-wrapper .pagination,#stats-impact-carousel-wrapper .pagination{display:block;text-align:center;margin:10px 0 0 0;width:100%;position:absolute;left:0;bottom:10px}.stats-sources-link{float:right;font-size:12px;margin:20px 0 0 0}.stats-sources-link a{font-weight:normal}.impact-stats-link{width:100%;color:white;background-color:#7665a0;margin-top:20px;margin-bottom:20px;overflow:hidden;padding:16px}.impact-stats-link .left{float:left}.impact-stats-link .left p.title{font-size:16px;margin-bottom:3px;font-family:'Gotham 5r', sans-serif}.impact-stats-link .left p.details{margin-bottom:0px}.impact-stats-link .right{float:right}.impact-stats-link button{margin-top:0px;width:200px;height:50px;font-family:'Gotham 5r', sans-serif}@media screen and (min-width: 970px){#stats-carousel .slide .slide-img,#stats-impact-carousel .slide .slide-img{width:850px;height:503px}}#congress-right{margin:0 0 2em 0}#hoc-certificate{width:100%}#hoc-certificate img{width:100%;max-width:100%}@media all{.page-break{display:none}}@media print{.page-break{display:block;page-break-before:always;page-break-inside:avoid}.hide-print{display:none}}#contact-us-form{width:480px;max-width:100%}#contact-us-form #contact-message{height:240px}.resources-item{clear:both;margin:0 0 40px 0}.resources-item:before,.resources-item:after{content:"\0020";display:block;height:0;overflow:hidden}.resources-item:after{clear:both}.resources-item .resources-logo{float:left;width:240px;margin:0 20px 0 0;text-align:center}.resources-item .resources-logo img{max-width:100%;display:inline}.resources-item p{float:right;width:700px}#error-message{color:#b94a48;font-weight:bold;margin:1em 0}.form-required-field{color:#f00}.radio-inline,.checkbox-inline,.radio-inline+.radio-inline,.checkbox-inline+.checkbox-inline{margin-left:0;margin-right:2em}.letter{margin-left:5%;margin-right:30%}.letternames{margin-left:5%;margin-right:27%}.wideletternames{margin-left:5%}.user_menu,.create_menu{color:white;display:inline-block;background-color:#ffa400;background-color:transparent;border-radius:5px;padding:7px 14px;font-size:14px;line-height:20px;box-sizing:border-box;float:left;cursor:pointer;margin-top:-6px}.user_menu a:hover,.create_menu a:hover{text-decoration:none;background-color:#ffa400}.user_menu{margin-left:6px}@media screen and (min-width: 970px){.starwars-container .img-container{min-height:334px}}@media screen and (min-width: 513px) and (max-width: 970px){.starwars-container .img-container{min-height:202px}}@media screen and (min-width: 320px) and (max-width: 599px){.responsive-table{width:350px}}@media screen and (min-width: 600px) and (max-width: 969px){.responsive-table{width:600px}}@media screen and (min-width: 970px){.responsive-table{width:945px}}
+</style>
+
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'advocacy.code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div class="containerClass">
+<style>
+  #map{width:700px;min-height:425px;float:left;margin-right:-100px;margin-top:100px}#map-right{float:right;overflow:hidden}#infobox{text-align:center;float:right;background-color:#e7e8ea;color:dimgrey;padding:20px;text-align:center;overflow:hidden}.info{font-family:'Gotham 7r', sans-serif}#infobox strong{font-size:44px;display:block;line-height:36px;margin-top:18px;margin-bottom:4px}#infobox button{margin-top:18px;width:100%}#infobox b{font-family:'Gotham 5r', sans-serif}#state-dropdown{width:70%;height:34px;background-color:#e2e4e3;color:#595959;margin-bottom:10px}.info a:link,.info a:visited,.states-link a:link,.states-link a:visited{color:white;cursor:pointer;text-decoration:underline}.icon-facts{display:inline-block}.icon-fact{margin-bottom:10px;display:block;width:270px}.policy-title{padding:10px 0px}.icon-fact .fa-times-circle{color:lightgray;font-size:48px}.fa-circle{color:dimgray;font-size:44px;padding-top:2px}.icon-fact .fa-check-circle{color:dimgray;display:inline-block;font-size:48px;vertical-align:middle;height:48px;width:48px}.fa-stack{height:48px;width:48px}.fact .fact-text{display:inline-block;text-align:left;vertical-align:middle;width:80%}.fact.subfact{color:dimgrey}.fact>a{color:dimgrey}#state-title{font-family:'Gotham 7r', sans-serif;color:#0094a3;font-size:38px;line-height:44px}.figure{font-size:20px}#sources{clear:both;float:right;font-size:12px;line-height:12px;text-align:center;color:dimgrey;opacity:0.8;padding-top:10px}#sources a{color:#7665a0}
+</style>
+
+<style>
+  .clear{clear:both}.greybox{background-color:#fff;color:#666;border:1px solid #888;padding:20px;text-align:center;overflow:hidden}.greybox ul li:before{color:#666}.info a:link,.info a:visited,.states-link a:link,.states-link a:visited{color:#888;cursor:pointer;text-decoration:underline}.fact.subfact{color:#777}.fact>a{color:#777}#fullwidth{height:400px}#pageheader{background-color:initial !important;position:absolute}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:initial;height:50px}.banner{background-image:url(/images/fit-2880/advocacy-banner.jpg);height:400px;background-size:cover;background-position:50% 40%;color:white;text-align:center;position:absolute;width:100%;font-size:16px}.banner-shade{background:#000;background:linear-gradient(0deg, rgba(0,0,0,0.44161) 0%, rgba(0,0,0,0.33237) 57%, transparent 76%);height:400px;position:absolute;width:100%}.banner h1{font-family:'Gotham 7r', sans-serif;font-size:36px;margin-top:220px;margin-bottom:10px;color:white}.learn-more{margin-top:10px}.banner-container .header-button{background-color:initial;border-color:white;border-width:2px}.non-banner{text-align:center;margin-top:20px}h2{font-size:32px;color:grey;text-align:center}.centered{text-align:center}#audienceblocks{text-align:center;margin-top:0px}
+</style>
+
+<div id="homepage">
+<div class="banner-container" id="fullwidth">
+<div class="banner">
+<div class="banner-shade">
+<div class="container_responsive">
+<h1>Advocate for computer science education</h1>
+<div class="desktop-feature">
+Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
+<div class="learn-more">
+<a href="//test.code.org/files/CoalitionOnePager.pdf" target="_blank">
+<button class="header-button">
+Learn more
+</button>
+</a>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper #pageheader #logo-wrapper #logo{width:initial;height:40px}#pageheader-wrapper #pageheader #right{float:right;position:initial}#footer{height:80px;background-color:#7665a0}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="/" id="logo-signedin">
+<img id="logo" src="/images/fit-350/logo.png">
+</a>
+</div>
+</div>
+<div id="right">
+<a href="//test.code.org/">
+<button class="header-button">
+Back to Code.org
+</button>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="container_responsive">
+<div class="non-banner mobile-feature">
+Bringing together more than 70 industry, nonprofit, and advocacy organizations, the Code.org Advocacy Coalition is growing the movement to make Computer Science a fundamental part of K-12 education.
+<div class="learn-more">
+<a href="//test.code.org/files/CoalitionOnePager.pdf" target="_blank">
+<button class="header-button">
+Learn more
+</button>
+</a>
+</div>
+
+</div>
+<style>
+  .announcement{width:100%;color:white;background-color:#7665a0;margin-top:20px;margin-bottom:20px;overflow:hidden;padding:16px;border-radius:5px}.announcement .left{float:left}.announcement-thumbnail{float:left;padding-right:15px}.announcement .left .title{font-size:16px;margin-bottom:3px;font-family:'Gotham 5r', sans-serif}.announcement .left .details{margin-bottom:0px}.announcement .right{float:right}.announcement .large-button{margin-top:0px;width:100px;height:50px;font-family:'Gotham 5r', sans-serif}.announcement .small-button{margin-top:0px;width:80px;height:50px;font-family:'Gotham 5r', sans-serif}
+</style>
+
+<div class="announcement">
+<div class="left col-80">
+<div class="announcement-thumbnail">
+<img src="/images/report-cover-2019.png">
+</div>
+<div class="title">
+2019 State of Computer Science Report
+</div>
+<div class="details">
+Includes diversity data, national momentum, policy trends, maps, state summaries, and implementation data.
+</div>
+</div>
+<div class="right col-20">
+<a href="/2019_state_of_cs.pdf" target="_blank">
+<button class="large_button">
+Download
+</button>
+</a>
+ 
+<a href="https://smile.amazon.com/2019-State-Computer-Science-Report/dp/B07XFH3Y1Z" target="_blank">
+<button class="small_button">
+Order
+</button>
+</a>
+</div>
+</div>
+
+<h2 class="tablet-feature">See what’s happening in your state</h2>
+<h3 class="centered">
+Click the map below for state-specific data on the computer science landscape
+</h3>
+<script src="/js/raphael.js"></script>
+<script src="/js/extended_us_map.js"></script>
+<div class="phone-feature" id="state-list">
+<h2>See what’s happening in your state</h2>
+<form>
+<select class="dropdown" id="state-dropdown">
+<option></option>
+<option value="AL">Alabama</option>
+<option value="AK">Alaska</option>
+<option value="AZ">Arizona</option>
+<option value="AR">Arkansas</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="GA">Georgia</option>
+<option value="HI">Hawaii</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="IA">Iowa</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="ME">Maine</option>
+<option value="MD">Maryland</option>
+<option value="MA">Massachusetts</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MS">Mississippi</option>
+<option value="MO">Missouri</option>
+<option value="MT">Montana</option>
+<option value="NE">Nebraska</option>
+<option value="NV">Nevada</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NY">New York</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VT">Vermont</option>
+<option value="VA">Virginia</option>
+<option value="WA">Washington</option>
+<option value="WV">West Virginia</option>
+<option value="WI">Wisconsin</option>
+<option value="WY">Wyoming</option>
+<option value="DC">Washington DC</option>
+</select>
+</form>
+</div>
+<div class="tablet-feature" id="map"></div>
+<div class="col-33" id="map-right">
+<div id="infobox">
+<p class="info">
+Computer science drives innovation throughout the US economy, but it remains marginalized throughout K-12 education.
+</p>
+<strong>19</strong>
+states have adopted a policy to give all high school students access to CS courses (and of those, only
+8
+states give all K-12 students access)
+<strong>494,070</strong>
+Open computing jobs nationwide
+<strong>
+61,642
+</strong>
+Computer science students graduated into the workforce last year
+<div class="summary-button">
+<a href="https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub" target="_blank">
+<button>
+See a summary of state efforts
+</button>
+</a>
+</div>
+</div>
+<p id="sources">
+<span>
+Sources:
+</span>
+<a href="http://www.conference-board.org/" target="_blank">The Conference Board</a>
+and
+<a href="http://nces.ed.gov/" target="_blank">National Center for Education Statistics</a>.
+<a href="https://docs.google.com/document/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub" target="_blank">More info</a>.
+</p>
+</div>
+<script>
+  var webServiceLocation = '/promote/state/';
+  
+  $(document).ready(function() {
+    if (false) {
+      // Check if the URL specifies a specific state. If so, load the state
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        var state = window.location.pathname.replace("/promote/", "");
+        $.ajax({
+          url: webServiceLocation + state.toLowerCase(),
+          type: "get",
+        }).done(function(data) {
+          $("#infobox").html(data);
+        }).fail(function () {
+          if (window.history.replaceState) {
+            history.replaceState({}, "", "../promote");
+          }
+        });
+      }
+    }
+  
+    $("#state-dropdown").change(
+        function(){
+  
+          var abbr = $('#state-dropdown option:selected').val();
+          console.log(abbr)
+          if (abbr != '') {          // Load the selected state's information into the infobox
+            $.ajax({
+              url: webServiceLocation + abbr.toLowerCase(),
+              type: "get",
+            }).done(function(data) {
+              $("#infobox").html(data);
+            }).fail(function () {
+              if (false) {
+                window.location = "/promote"
+              }
+            });
+          }
+        }
+      )
+  
+    // Load the SVG into the #map div
+    $('#map').usmap({
+      click: function(event, data) {
+        if (false) {
+          // Add data and URL to browser history when the user clicks a state
+          if (window.history.replaceState) {
+            if (window.history.replaceState) {
+              history.replaceState({state: data.name}, data.name, "../promote/" + data.name.toLowerCase());
+            }
+          }
+        }
+  
+        // Load the clicked state's information into the infobox
+        $.ajax({
+          url: webServiceLocation + data.name.toLowerCase(),
+          type: "get",
+        }).done(function(data) {
+          $("#infobox").html(data);
+        }).fail(function () {
+          if (false) {
+            window.location = "/promote"
+          }
+        });
+      },
+  
+      // Map styling
+      stateHoverAnimation: 0,
+      stateStyles: {fill: "#0094a3", stroke: "white"},
+      labelBackingStyles: {fill: "#0094a3", stroke: "white"},
+      labelBackingHoverStyles: {fill: "#59cad3"},
+      stateHoverStyles: {fill: "#59cad3"},
+      stateClickStyles: {fill: "#ffa400", persistent: false}
+    });
+  
+    // "Click" the current state if page is loaded with state in URL.
+    if (false) {
+      if (window.location.pathname.replace("/promote", "") !== "") {
+        $("#" + state.toUpperCase()).click();
+      }
+    }
+  });
+  
+  // When the user uses the "back" button, load previous data into infobox and URL bar
+  window.onpopstate = function(event) {
+    if (false) {
+      $.ajax({
+        url: webServiceLocation + event.state["state"].toLowerCase(),
+        type: "get",
+      }).done(function(data) {
+        $("#infobox").html(data);
+        $("#" + event.state["state"]).click();
+      }).fail(function () {
+        if (window.history.replaceState) {
+          history.replaceState({}, "", "../promote");
+        }
+      });
+    }
+  };
+</script>
+
+<div class="clear" style="clear:both"></div>
+<h2>
+Drive the change in your state
+</h2>
+<style>
+  a.underscorehover:hover{text-decoration:underline;color:white}.underscorehover:hover{text-decoration:underline;color:white}a.nounderscorehover:hover{text-decoration:none}@media screen and (max-width: 512px){.same-height-column{width:100%}}@media screen and (min-width: 513px){.same-height-column{float:none !important;width:50%}}body.modal-open .supreme-container{-webkit-filter:blur(2px);-moz-filter:blur(2px);-o-filter:blur(2px);-ms-filter:blur(2px);filter:blur(2px)}@media screen and (min-width: 971px){.homepage-caption-bottom{top:190px}}#homepage #hero{position:relative;width:100%}#homepage #hero .widehero{display:none;z-index:-5;position:absolute;left:0;top:0;background-repeat:no-repeat;background-size:cover;width:100%;height:100%}#homepage #hero .widehero_do_not_hide{z-index:-5;position:absolute;left:0;top:0;background-repeat:no-repeat;background-size:cover;width:100%;height:100%}#hero #fullwidth0.widehero{animation:fadein 4s;display:block}@keyframes fadein{from{opacity:0}to{opacity:1}}#homepage #hero #fullwidth{width:100%}#homepage #caption_container{color:white;font-size:20px}#homepage #caption_container .captionarea{position:absolute;left:0;text-align:center;width:100%;color:#fff;line-height:22px}#homepage #caption_container .caption{display:none;position:absolute;opacity:0;padding:8px;text-shadow:0 0 5px black}#homepage #caption_container .smallcaption{font-size:14px}#homepage #caption_container #blankspaceleftdesktop{height:380px}#homepage #caption_container #blankspaceleftmobile{height:100px}#homepage #actions{position:relative;padding:20px}@media screen and (max-width: 970px){#homepage #hero{overflow:visible}}#homepage #actions{text-align:center}#homepage .hero-message{font-family:'Gotham 5r', sans-serif !important;font-size:44px;line-height:44px;color:white;margin-top:0px;margin-bottom:20px}#homepage .hero-message-second{font-family:'Gotham 5r', sans-serif !important;font-size:44px;line-height:44px;color:white;margin-bottom:40px}#homepage .hero-sub-message{color:white;font-size:24px;line-height:32px;margin-bottom:40px}#homepage .action .video-play-icon{width:24px;height:24px;margin-top:-4px;margin-right:4px}.curriculum-banner{width:100%;background-color:#7665a0;text-align:center;color:white;padding:14px;font-size:15px}.curriculum-banner a{color:white !important;font-family:'Gotham 4r', sans-serif !important;text-decoration:underline !important}.curriculum-link{color:white !important;font-family:'Gotham 4r', sans-serif !important;text-decoration:underline !important}#homepage .action_buttons{margin-bottom:20px}#homepage #actions a{text-decoration:none}#homepage #actions #title{font-family:'Gotham 5r', sans-serif;font-size:26px;color:white;line-height:30px}#homepage #actions #subtitle{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;margin:15px 0 5px 0}#homepage #actions #playimage{cursor:pointer}#homepage #actions #playtext{font-size:18px;cursor:pointer}#homepage #actions #herolearnlink{color:white;font-size:20px}#homepage #actions #herolearnbutton{font-weight:500;font-size:20px;height:50px}#homepage #actions .buttongroup{display:inline-block;margin-bottom:20px}#homepage #actions .herohocbutton{font-weight:500;font-size:18px;min-width:230px;height:40px;padding:0 30px;margin:10px 5px 0 0}#homepage #actions .herohocbutton-solid-white{color:black;background-color:white;border-color:white}#homepage #actions .herohocbutton-hollow-white{background-color:initial;border-color:white}#homepage #actions #hero-video{background:none;border:none}#homepage #actions #volunteeraction{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;margin-top:30px}#homepage #actions #volunteeraction a{font-family:'Gotham 4r', sans-serif;font-size:16px;color:white;text-decoration:none}#homepage #actions #petitionaction{display:none;font-weight:500;font-size:14px;height:50px;cursor:pointer}#homepage .quarterslot{float:left;height:250px;padding:0px 5px 10px 5px}#homepage .quarterslot .slotbox{position:relative;overflow:hidden;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-position:50%;height:220px;border-radius:5px}#homepage .quarterslot .slotbox .headerbox{position:absolute;bottom:0px;left:0px;color:white;width:100%;padding:10px;font-size:18px;text-align:left;font-family:'Gotham 4r', sans-serif;text-align:center}#homepage .quarterslot .slotbox .headerbox .header{font-family:"Gotham 7r",sans-serif}#homepage .quarterslot .slotbox .headerbox .sentence{font-size:14px;opacity:0.9}#homepage .quarterslot-links{float:left}#homepage .quarterslot-links-small{height:390px;padding:0px 5px 10px 5px}#homepage .quarterslot-links-large{padding:30px}#homepage .quarterslot-links .slotbox{position:relative;overflow:hidden;background-repeat:no-repeat;background-size:cover;width:100%;height:100%;background-position:0% 50%;height:220px;border-top-left-radius:5px;border-top-right-radius:5px}#homepage .quarterslot-links .headerbox{position:absolute;bottom:0px;left:0px;color:white;width:100%;padding:10px;font-size:18px;text-align:left;font-family:'Gotham 4r', sans-serif;text-align:center}#homepage .quarterslot-links .headerbox .header{font-family:'Gotham 7r', sans-serif}#homepage .quarterslot-links .headerbox .sentence{font-size:14px;opacity:0.9}#homepage .quarterslot-links .thelinks{padding:5px;padding-top:20px;border-bottom-right-radius:5px;border-bottom-left-radius:5px}#homepage .quarterslot-links .thelinks .linkentry{margin-bottom:20px}#homepage .quarterslot-links .thelinks .link{font-size:16px;font-family:'Gotham 4r', sans-serif;color:white}#homepage #gallerycolumn{width:100%;margin-bottom:20px;margin-top:40px;clear:both;overflow:hidden;border:5px solid #fff}#homepage #gallerycolumn .headingbox{left:0px;color:white;width:100%;padding:10px;font-size:20px;text-align:left;font-family:'Gotham 5r', sans-serif;text-align:center;border-top-left-radius:5px;border-top-right-radius:5px}#homepage #gallerycolumn .thelinks{padding:10px;height:0}@media screen and (min-width: 971px){#homepage #gallerycolumn .thelinks{padding-bottom:8%}}@media screen and (min-width: 0px) and (max-width: 970px){#homepage #gallerycolumn .thelinks{padding-bottom:32%}}#homepage #gallerycolumn .thelinks img{height:auto}#homepage #threedivs iframe{-ms-zoom:1.3;-moz-transform:scale(1.3);-moz-transform-origin:0 0;-o-transform:scale(1.3);-o-transform-origin:0 0;-webkit-transform:scale(1.3);-webkit-transform-origin:0 0}#homepage #threedivs .fb-like>span{height:27px !important}.grey_input{background-color:#e2e4e3;color:#525252;border:1px solid #929394}.dropdown{background-color:#e2e4e3;color:#525252;border:1px solid #929394}.stats-box{padding:50px 20px 20px 20px}.every-student{color:#4d575f;font-size:18px;text-align:center;margin-top:20px;margin-left:20px;margin-right:20px}.make-difference{font-weight:900;color:#00adbc;font-size:20px;text-align:center;margin-top:20px;text-transform:uppercase}.statistics{display:flex;flex-wrap:wrap}.statistics a .stats-number{text-align:center;color:#4d575f;font-family:'Gotham 4r', sans-serif;font-weight:900}.statistics a .stats-phrase{font-size:14px;text-align:center;padding-top:25px;color:#4d575f;font-family:'Gotham 4r', sans-serif}.statistics a .stats-number:hover{color:#00adbc}.below_hero_announcement{text-align:center;padding:10px}
+</style>
+
+<div id="audienceblocks">
+<div class="block">
+<div class="col-50 col-mobile-50 quarterslot-links quarterslot-links-large">
+<a class="linktag">
+<div class="slotbox" style="background-image: url(/images/advocacy3.jpg)">
+<div class="headerbox" style="background-color: rgb(118, 101, 160); background-color: rgba(118, 101, 160, 0.92)">
+<div class="header">
+TAKE ACTION
+</div>
+<div class="sentence">
+ 
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(166, 155, 193)">
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/promote/letter" id="-0" target="_self">
+Letter to teacher or principal
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://www.votervoice.net/Code/campaigns/58463/respond" id="-1" target="_blank">
+Letter to local elected official
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/files/computer_science_advocacy.pptx" id="-2" target="_blank">
+Presentation to advocate for CS
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://hourofcode.com/how-to/public-officials" id="-3" target="_self">
+Host an Hour of Code
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-50 col-mobile-50 quarterslot-links quarterslot-links-large">
+<a class="linktag">
+<div class="slotbox" style="background-image: url(/images/advocacy4.jpg)">
+<div class="headerbox" style="background-color: rgb(0, 148, 202); background-color: rgba(0, 148, 202, 0.92)">
+<div class="header">
+NATIONWIDE MOMENTUM FOR CS
+</div>
+<div class="sentence">
+ 
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(89, 185, 220)">
+<p class="linkentry">
+<a class="link linktag" href="https://docs.google.com/document/d/15zBdBbXUA-yEzxEq0VeWAEb9nXuGjmNFWNrYp6UdM8U/edit?usp=sharing" id="-0" target="_blank">
+1-page summary
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://docs.google.com/document/d/e/2PACX-1vTIZJaNtmPRBNb7_ZFHBxsGwyZqBSdpJN0iJ_pOgF-K-MNYikEeKTTj49ezDkMFRb1C_1w45gSrkcq6/pub" id="-1" target="_blank">
+National landscape state details
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/current-legislation" id="-2" target="_self">
+Current state and federal legislation
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/files/open_letter_for_cs.pdf" id="-3" target="_blank">
+Nation's leaders support CS
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-50 col-mobile-50 quarterslot-links quarterslot-links-large">
+<a class="linktag">
+<div class="slotbox" style="background-image: url(/images/advocacy1.jpg)">
+<div class="headerbox" style="background-color: rgb(0, 173, 188); background-color: rgba(0, 173, 188, 0.92)">
+<div class="header">
+POLICY RECOMMENDATIONS
+</div>
+<div class="sentence">
+ 
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(89, 202, 211)">
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/files/Making_CS_Fundamental.pdf" id="-0" target="_blank">
+Our state policy agenda
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://docs.google.com/document/d/1yU2YS5YWHEZBN363pUUIy-FBqDDQVoOSFOsSb06qMbM/edit" id="-1" target="_blank">
+Funding models document
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/files/TeacherPathwayRecommendations.pdf" id="-2" target="_blank">
+Creating teacher pathways
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="/policy-resources" id="-3" target="_self">
+More policy resources
+</a>
+</p>
+</div>
+</div>
+
+</div>
+<div class="block">
+<div class="col-50 col-mobile-50 quarterslot-links quarterslot-links-large">
+<a class="linktag">
+<div class="slotbox" style="background-image: url(/images/advocacy2.jpg)">
+<div class="headerbox" style="background-color: rgb(185, 191, 21); background-color: rgba(185, 191, 21, 0.92)">
+<div class="header">
+MORE RESOURCES
+</div>
+<div class="sentence">
+ 
+</div>
+</div>
+</div>
+</a>
+<div class="thelinks" style="background-color: rgb(209, 213, 103)">
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/promote/ap" id="-0" target="_self">
+AP CS report
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit" id="-1" target="_blank">
+State planning toolkit
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/yourschool" id="-2" target="_self">
+Bring CS to your school or district
+</a>
+</p>
+<p class="linkentry">
+<a class="link linktag" href="//test.code.org/promote/morestats" id="-3" target="_self">
+Even more resources
+</a>
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<div class="clear"></div>
+<div class="coalition">
+<h2>Our Coalition</h2>
+<div class="centered">
+<a href="https://go.pardot.com/l/153401/2018-04-13/kspz3t" target="_blank">
+<button>Join the newsletter</button>
+</a>
+  
+<a href="https://bit.ly/joinadvocacycoalition" target="_blank">
+<button>Join the coalition</button>
+</a>
+</div>
+<link href="/css/logos.css" rel="stylesheet" type="text/css">
+<div id="logos" style="width: 100%; padding: 0; margin: 0;"></div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.washington.edu/accesscomputing/accesscsforall" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/accesscsforall.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.afterschoolalliance.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/afterschool_alliance.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://access-ca.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/alliance_for_california_computing_education_for_students_and_schools.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.aauw.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/american_association_for_university_women.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://anitaborg.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/anita_borg_institute.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.aztechcouncil.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/arizona_technology_council.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.acm.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/association_for_computing_machinery.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.batec.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/batec.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.battelle.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/battelle.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://bootuppd.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/bootup.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.childrennow.org/issue-areas/stem-network/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/california_stem_network.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://ceasom.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ceasom_regional_partnership.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.ccboe.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/charles_county_public_schools.jpeg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.bit.ly/chisuburbanCSTA" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/chicago_suburban_csta.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://codehs.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codehs.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.codevirginia.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/codeva.jpeg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.coloradosucceeds.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/colorado_succeeds.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.coloradotechnology.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/colorado_technology_association.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.commonsensemedia.org/kids-action" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/common_sense_media.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.comptia.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/comptia.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://cra.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/computing_research_association.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://ct.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/connecticut_technology_council.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.cccoe.k12.ca.us/index.html" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/contra_costa_county_office_of_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.cs4il.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/cs4il.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.cs4ri.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/cs4ri.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://cs4tx.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/cs4tx.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://csta.acm.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/csta.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://cstanj.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/csta_new_jersey.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://sites.google.com/a/csta-hq.org/new-mexico/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/csta_new_mexico.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://cyberinnovationcenter.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/cyber_innovation_center.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://dcps.dc.gov" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/district_of_columbia_public_schools.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.esd105.org/domain/175" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/educational_service_district_105.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://eisca.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/elementary_institute_of_science.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://excelined.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/excelined.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://expandingcomputing.cs.umass.edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/expanding_computing_education_pathways.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.facebook.com/facebookdiversity" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/facebook_diversity.jpeg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.fi.ncsu.edu" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/the_friday_institute_for_educational_innovation.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.GettingSmart.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/getting_smart.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.google.com/edu/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/google.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://hawaiikidscan.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/hawaii_kids_can.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://stem.idaho.gov" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/idaho_stem_action_center.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.illinoistech.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/illinois_technology_association.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.kctechcouncil.com/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/kc_tech_council.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.legoeducation.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/lego_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.lulac.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/lulac_illinois_education_council_5238.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://csmatters.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/maryland_center_for_computing_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://masscan.net/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/masscan.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.microsoft.com/about/corporatecitizenship/en-us/working-responsibly/principled-business-practices/integrity-governance/political-engagement/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/microsoft.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://mochamber.com/workforce/missouri-math-and-science-coalition/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/missouri_mathematics_and_science_coalition.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://technologycouncil.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nashville_technology_council.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.nms.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/national_math_and_science_initiative.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.css.edu/csed" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nccse.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.ncwit.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ncwit.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://nmtechcouncil.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/new_mexico_technology_council.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://nextech.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nextech.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://nhhtc.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nh_high_tech_council.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://nolacode.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/nola_code.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.osc.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/orlando_science_center.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://readyct.org/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/ready_ct.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.ruraltechfund.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/rural_technology_fund.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.sas.com" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/sas.gif" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.sfaz.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/science_foundation_arizona.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://ettc.net/" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/the_southern_regional_institute_and_educational_technology_training_center.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.stemx.us" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/stemx.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://www.teachforamerica.org/about-us/our-initiatives/stem-initiative" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/teach_for_america.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.technet.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/technet.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.talklou.com/wp" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/technology_association_of_louisville_kentucky.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.techoregon.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/technology_association_of_oregon.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/the_college_board.jpg" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="https://udtonline.com/portfolio-item/education" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/united_data_technologies.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://utahtech.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/utah_tech_council.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://www.washingtonstem.org" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/washington_stem.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<div class="col-25 col-mobile-30" style="text-align: center;">
+<div style="width: 160px; height: 190px; line-height:190px; text-align: center;">
+<a href="http://stemcenter.wvu.edu" style="vertical-align: middle;">
+<img src="/images/fit-320/avatars/west_virginia_university_center_for_excellence_in_stem_education.png" style="width: 140px; max-height: 140px;">
+</a>
+</div>
+</div>
+<br style="clear: both;">
+
+<ul>
+<li>
+<a href="https://www.ieee.org/index.html" target="_blank">IEEE</a>
+</li>
+<li>
+<a href="http://philadelphiapact.com" target="_blank">Philadelphia Alliance for Capital and Technologies</a>
+</li>
+<li>
+<a href="http://stand.org" target="_blank">Stand for Children</a>
+</li>
+<li>
+<a href="https://stem.utah.gov" target="_blank">Utah STEM Action Center</a>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature"></div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<div id="footer"></div>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<footer id="pagefooter">
+<div class="content" style="width:100%"></div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "advocacy.code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

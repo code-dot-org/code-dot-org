@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="EWBLxcxuqqtcdWikkxAOnMoaawa6XDoEPlvwO6wOg-A" name="google-site-verification">
+<meta content="Code.org" property="og:site_name">
+<meta content="Computer Science Curriculum for Grades K-5" property="og:title">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://code.org/student/elementary" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<title>Computer Science Curriculum for Grades K-5 | Code.org</title>
+<link href="/images/favicon.ico" rel="shortcut icon">
+<link href="/images/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+<script src="https://cdn.optimizely.com/js/12977480133.js"></script>
+<link href="/css/fonts.css" rel="stylesheet" type="text/css">
+
+<link href="/style.css" rel="stylesheet" type="text/css">
+<style>
+  .user_menu,.create_menu,.help_button{user-select:none;height:38px}.user_menu .create_button,.user_menu .display_name,.user_menu .pairing_name,.create_menu .create_button,.create_menu .display_name,.create_menu .pairing_name,.help_button .create_button,.help_button .display_name,.help_button .pairing_name{max-width:120px;display:inline-block;float:left;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.user_menu .user_menu_arrow_down,.user_menu .user_menu_arrow_up,.user_menu .create_menu_arrow_down,.user_menu .create_menu_arrow_up,.create_menu .user_menu_arrow_down,.create_menu .user_menu_arrow_up,.create_menu .create_menu_arrow_down,.create_menu .create_menu_arrow_up,.help_button .user_menu_arrow_down,.help_button .user_menu_arrow_up,.help_button .create_menu_arrow_down,.help_button .create_menu_arrow_up{font-size:25px;margin-top:-3px}.user_menu .user_options,.user_menu .create_options,.user_menu .help_contents,.create_menu .user_options,.create_menu .create_options,.create_menu .help_contents,.help_button .user_options,.help_button .create_options,.help_button .help_contents{position:absolute;top:55px;right:55px;background-color:#fff;border:1px solid #5b6770}.user_menu .user_options a,.user_menu .create_options a,.user_menu .help_contents a,.create_menu .user_options a,.create_menu .create_options a,.create_menu .help_contents a,.help_button .user_options a,.help_button .create_options a,.help_button .help_contents a{color:#5b6770 !important;transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-moz-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-webkit-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;-o-transition:background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out}.user_menu .user_options a:hover,.user_menu .create_options a:hover,.user_menu .help_contents a:hover,.create_menu .user_options a:hover,.create_menu .create_options a:hover,.create_menu .help_contents a:hover,.help_button .user_options a:hover,.help_button .create_options a:hover,.help_button .help_contents a:hover{background-color:#e7e8ea;text-decoration:none}.user_menu{padding:7px 14px}.user_menu .user_options{z-index:100001;text-align:left;white-space:nowrap;padding:0}.user_menu .user_options .display_name{font-family:"Gotham 5r", sans-serif;background-color:#5b6770;color:#fff;padding:10px;text-align:center;cursor:default}.user_menu .user_options a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.user_menu .user_options a+a{border-top:1px solid #5b6770}.user_menu .user_options.hide-responsive-menu{display:none}.help_button{padding-left:16px;padding-top:4px;display:inline-block;float:left;z-index:99;position:relative}.help_button.hide-mobile{display:block}.help_button .hide-mobile{display:block}.help_button .help_icon{padding:9px 0 16px 0;font-size:26px;color:#fff;height:25px;cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}.help_button .help_contents{z-index:100001;text-align:left;white-space:nowrap;padding:0;right:0px}.help_button .help_contents a{display:block;padding:10px;font-family:"Gotham 5r", sans-serif}.help_button .help_contents a+a{border-top:1px solid #5b6770}@media (max-width: 970px){.help_button.hide-mobile{display:none}.help_button .hide-mobile{display:none}}.create_menu .create_options{width:max-content;z-index:10000;border-bottom:0}.create_menu .create_options a{font-family:'Gotham 5r', sans-serif;min-width:240px;font-size:14px;border-bottom:1px solid #5b6770;box-sizing:content-box;white-space:nowrap;cursor:pointer}.create_menu .create_options img{height:70px;width:70px}.create_menu .create_options .project_link_box{display:block}.create_menu .create_options .project_link{display:inline-block;padding:0 10px 0 4px;line-height:67px}.create_menu .create_options #view_all_projects{height:70px;padding-left:10px}
+</style>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<link href="/css/brstrap.css" rel="stylesheet" type="text/css">
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if lt IE 9]>
+<script src='https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'></script>
+<script src='/js/respond.min.js'></script>
+<script src='/js/html5shiv.js'></script>
+<script>
+  is_ie8 = true;
+  document.addEventListener('DOMContentLoaded', function () {
+    $("#warning-banner").show();
+  });
+  if (window.newrelic) {
+    window.newrelic.setErrorHandler(function () {
+      return true;
+    });
+  }
+</script>
+<![endif]-->
+
+<script src="/js/jquery.min.js"></script>
+
+<script>(function () {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-37745279-1', 'code.org');
+
+  ga('set', 'anonymizeIp', true);
+  ga('set', 'dimension1', 'en');
+  ga('set', 'dimension4', '');
+
+  ga('send', 'pageview');
+  function trackEvent(category, action, label, value) {
+    ga('send', 'event', category, action, label, value);
+  }
+
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+  window.trackEvent = trackEvent;
+  window.readCookie = readCookie;
+  })();
+window.addEventListener('load', function() {
+  var ga = document.createElement('script');
+  ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = 'https://www.google-analytics.com/analytics.js';
+  document.body.appendChild(ga);
+});
+
+<!-- Google Tag Manager -->
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TZZBRK5');
+<!-- End Google Tag Manager -->
+</script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script defer src="/assets/js/code.org/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<style>
+  #warning-banner{position:absolute;z-index:1000;overflow:hidden;width:100%;box-sizing:border-box;padding:10px 20px;font-size:13px;line-height:16px;background-color:#7665a0;color:white;display:flex;align-items:center}#warning-banner #dismiss-icon{margin-left:auto}#warning-banner #warning-icon{padding-right:10px}#warning-banner a,#warning-banner a:visited{font-family:"Gotham 7r", sans-serif;color:white;text-decoration:underline}#warning-banner a:hover{background:transparent}#warning-banner #message{float:left;width:90%}#warning-banner #hide-warning{position:relative}#warning-banner #hide-warning .close{float:right;font-size:20px}.warning-sign{font-size:16px;color:#efcd1c}
+</style>
+
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<style>
+  #pageheader-wrapper{padding-top:0}#pageheader-wrapper .pageheader-translucent{background-color:#00adbc !important}#pageheader-wrapper #pageheader{width:100%;background-color:#00adbc;height:50px;margin:0 0 40px 0}#pageheader-wrapper #pageheader .content{width:100%;padding:0 10px;overflow:visible;box-sizing:border-box}#pageheader-wrapper #pageheader #left{float:left;margin:0}.rtl #pageheader-wrapper #pageheader #left{position:absolute;left:0;right:0;padding-right:300px}#pageheader-wrapper #pageheader #logo-wrapper{display:inline-block;padding:4px 0 4px 16px;float:left}#pageheader-wrapper #pageheader #logo-wrapper #logo{width:42px;height:42px;margin-left:5px}#pageheader-wrapper #pageheader #logo-wrapper #logo-uk{width:364px;height:87px;display:block}#pageheader-wrapper #pageheader #right{right:16px;position:absolute}#pageheader-wrapper #pageheader #headerlinks{float:left;position:relative;padding-left:6px;position:relative}.rtl #pageheader-wrapper #pageheader #headerlinks{float:right}#pageheader-wrapper #pageheader #headerlinks .headerlink{display:inline-block;font-size:14px;margin:14px 0 0 30px;font-family:'Gotham 4r', sans-serif;color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:link,#pageheader-wrapper #pageheader #headerlinks .headerlink:visited{color:#fff;text-decoration:none}#pageheader-wrapper #pageheader #headerlinks .headerlink:hover,#pageheader-wrapper #pageheader #headerlinks .headerlink:active{color:#fff;border-bottom:solid 2px #ffa400}.rtl #pageheader-wrapper #pageheader #headerlinks .headerlink{float:right}#pageheader-wrapper #pageheader .learnoption:hover{text-decoration:underline}#pageheader-wrapper #pageheader #sign_in_or_user{display:block;float:left;margin:11px 0 0 30px}#pageheader-wrapper #pageheader #sign_in_or_user .button-signin{margin-top:-4px;background-color:transparent;border:2px solid #fff;color:#fff;float:right;margin-left:6px}#pageheader-wrapper #pageheader #sign_in_or_user #signin_button{margin-top:-6px;height:38px}#pageheader-wrapper .user_menu,#pageheader-wrapper .create_menu{color:#fff;background-color:transparent;border:2px solid #fff}#pageheader-wrapper .user_menu .pairing_name,#pageheader-wrapper .user_menu .display_name,#pageheader-wrapper .user_menu .create_button,#pageheader-wrapper .create_menu .pairing_name,#pageheader-wrapper .create_menu .display_name,#pageheader-wrapper .create_menu .create_button{font-family:'Gotham 4r', sans-serif}#pageheader-wrapper .user_menu .user_options,#pageheader-wrapper .user_menu .create_options,#pageheader-wrapper .user_menu .help_contents,#pageheader-wrapper .create_menu .user_options,#pageheader-wrapper .create_menu .create_options,#pageheader-wrapper .create_menu .help_contents{font-size:14px}#pageheader-wrapper #hamburger{padding-top:4px;padding-left:16px}#pageheader-wrapper #hamburger .hide-responsive-menu{top:55px}@media screen and (max-width: 1023px){#pageheader-wrapper .create_menu{display:none !important}#pageheader-wrapper #signin_button{margin-top:-4px !important}}#language_dir.rtl #pageheader-wrapper .create_options{direction:rtl}#language_dir.rtl #pageheader-wrapper .create_options .project_link{padding:0 4px 0 10px}#language_dir.rtl #pageheader-wrapper .create_options #view_all_projects{padding-right:10px}
+</style>
+
+<style>
+  #pageheader-wrapper{z-index:99}#hamburger{display:inline-block;float:right;position:relative;font-size:14px}#hamburger.hide-always{display:none}#hamburger.show-mobile{display:none}#hamburger.hide-mobile{display:block}#hamburger.show-always{display:block}#hamburger .hide-always{display:none}#hamburger .show-mobile{display:none}#hamburger .hide-mobile{display:block}#hamburger .show-always{display:block}#hamburger #hamburger-icon{cursor:pointer;height:20px;vertical-align:middle;text-decoration:none}#hamburger #hamburger-contents{font-size:14px;list-style:none;margin:0;padding:0;width:300px;right:0;position:absolute;top:55px;background-color:#00adbc;z-index:1022;max-height:100vh;overflow-y:auto;padding-top:10px;padding-bottom:10px}#hamburger #hamburger-contents .item{color:#fff;line-height:20px;padding:4px;text-indent:0;list-style-type:none;border-radius:2px;padding-bottom:10px;margin-bottom:5px;margin-top:5px;margin-left:25px;display:block;float:none;max-width:240px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}html[dir=rtl] #hamburger #hamburger-contents .item{margin-left:0px;margin-right:25px}#hamburger #hamburger-contents .item:last-of-type{border-bottom:none}#hamburger #hamburger-contents .item::before{content:none}#hamburger #hamburger-contents .item:last-child{margin-right:0}#hamburger #hamburger-contents .item a{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none}#hamburger #hamburger-contents .item #about-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #educate-more{font-family:"Gotham 4r", sans-serif;color:#fff;text-decoration:none;cursor:pointer}#hamburger #hamburger-contents .item #about-down{font-size:30px;float:right}#hamburger #hamburger-contents .item #about-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-up{font-size:30px;float:right;display:none}#hamburger #hamburger-contents .item #educate-down{font-size:30px;float:right}#hamburger #hamburger-contents.hide-responsive-menu{display:none}#hamburger #hamburger-contents .hide-about{display:none}#hamburger #hamburger-contents .hide-educate{display:none}#hamburger #hamburger-contents .hamburger-expandable-item{cursor:pointer}#hamburger #hamburger-contents .hamburger-expandable-item .text{float:left;max-width:210px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-down{font-size:30px;float:right;margin-top:-7px}#hamburger #hamburger-contents .hamburger-expandable-item .arrow-up{font-size:30px;float:right;margin-top:-7px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items{margin-left:20px;display:none}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px;margin-top:0px}@media (max-width: 400px){#hamburger #hamburger-contents .item{max-width:240px}#hamburger #hamburger-contents .hamburger-expandable-item .text{max-width:210px}#hamburger #hamburger-contents .hamburger-expandable-items .item{max-width:220px}}#hamburger .divider{height:10px;background:#0094a3}@media (max-width: 970px){#hamburger.show-mobile{display:block}#hamburger .show-mobile{display:block}#hamburger.hide-mobile{display:none}#hamburger .hide-mobile{display:none}#hamburger #hamburger-contents{font-size:18px}#hamburger #hamburger{padding-left:0}}#hamburger #hamburger-icon{padding:10px 28px 16px 0;float:right;margin-top:8px;display:inline-block}#hamburger #hamburger-icon span,#hamburger #hamburger-icon span::before,#hamburger #hamburger-icon span::after{cursor:pointer;height:3px;width:25px;border-radius:2px;background:#fff;position:absolute;display:block;content:'';margin-top:2px;margin-bottom:2px}#hamburger #hamburger-icon span{transition:all 500ms ease-in-out}html[dir=rtl] #hamburger #hamburger-icon span{margin-right:-25px}html[dir=rtl] #hamburger #hamburger-icon span::before{margin-right:0}html[dir=rtl] #hamburger #hamburger-icon span::after{margin-right:0}#hamburger #hamburger-icon span::before{transition:all 500ms ease-in-out;top:-10px}#hamburger #hamburger-icon span::after{transition:all 500ms ease-in-out;bottom:-10px}#hamburger #hamburger-icon.active span{background-color:transparent}#hamburger #hamburger-icon.active span::before{top:0;transform:rotate(45deg)}#hamburger #hamburger-icon.active span::after{top:0;transform:rotate(-45deg)}
+</style>
+
+<div class="ltr" id="language_dir">
+<div id="pageheader-wrapper">
+<div id="pageheader">
+<div class="content">
+<div id="left">
+<div id="logo-wrapper">
+<a class="linktag" href="//test.code.org" id="logo-signedout">
+<img id="logo" src="/images/logo.png">
+</a>
+</div>
+<div class="desktop-feature" id="headerlinks">
+<a class="headerlink linktag" href="//test-studio.code.org/courses" id="header-en-learn">Learn</a>
+<a class="headerlink linktag" href="//test-studio.code.org/courses?view=teacher" id="header-en-teach">Teach</a>
+<a class="headerlink linktag" href="//test-studio.code.org/projects/public" id="header-en-projects">Projects</a>
+<a class="headerlink linktag" href="//test.code.org/promote" id="header-en-stats">Stats</a>
+<a class="headerlink linktag" href="//test.code.org/help" id="header-en-help">Help Us</a>
+<a class="headerlink linktag" href="//test.code.org/about" id="header-en-about">About</a>
+</div>
+</div>
+<div id="right">
+<div id="sign_in_or_user">
+<div class="header_button create_menu">
+<span class="create_button">
+Create 
+</span>
+ 
+<i class="create_menu_arrow_down fa fa-caret-down"></i>
+<i class="create_menu_arrow_up fa fa-caret-up" style="display: none"></i>
+<div class="create_options" style="display: none">
+<a class="project_link_box" href="//test-studio.code.org/projects/spritelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_spritelab.png">
+<div class="project_link" id="create_dropdown_spritelab">
+<div class="text">Sprite Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/artist/new">
+<img src="/shared/images/fill-70x70/courses/logo_artist.png">
+<div class="project_link" id="create_dropdown_artist">
+<div class="text">Artist </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/applab/new">
+<img src="/shared/images/fill-70x70/courses/logo_applab_square.png">
+<div class="project_link" id="create_dropdown_applab">
+<div class="text">App Lab </div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/gamelab/new">
+<img src="/shared/images/fill-70x70/courses/logo_gamelab_square.png">
+<div class="project_link" id="create_dropdown_gamelab">
+<div class="text">Game Lab</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects/dance/new">
+<img src="/shared/images/fill-70x70/courses/logo_dance.png">
+<div class="project_link" id="create_dropdown_dance">
+<div class="text">Dance Party</div>
+</div>
+</a>
+<a class="project_link_box" href="//test-studio.code.org/projects">
+<div class="project_link" id="view_all_projects">
+View all projects...
+</div>
+</a>
+</div>
+</div>
+<a class="button-signin linktag" href="//test-studio.code.org/users/sign_in" id="signin_button">
+<div class="header_button header_user">
+<span>Sign in</span>
+</div>
+</a>
+<script>
+  window.cookieEnvSuffix = '_test';
+  // Use function closure to avoid cluttering global namespace.
+  (function() {
+    // Ideally would use environment_specific_cookie_name, but that's not currently
+    // available to us in pegasus
+    var cookieKey = '_shortName' + window.cookieEnvSuffix;
+    // Share cookie with top-level domain.
+    var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');
+  
+    // Provide current_user.short_name to cached pages via session cookie.
+    // There is apps code that also depends on this query-selector, so if changes are made
+    // here we should be sure to also update other locations.
+    var displayNameSpan = document.querySelector('.header_button.header_user.user_menu .display_name');
+  
+    function retrieveUserShortName(element) {
+      if (element) {
+        var cookieMeta = "path=/;domain=" + topLevelDomain;
+        var cookieMatch = document.cookie.match('(^|;) ?' + cookieKey + '=([^;]*)(;|$)');
+        var storedName = cookieMatch && cookieMatch[2];
+        var dataName = element.dataset.shortname;
+        var id = element.dataset.id;
+        if (storedName && !id) {
+          element.innerHTML = element.innerHTML.replace(dataName, storedName);
+        }
+      }
+    }
+  
+    retrieveUserShortName(displayNameSpan);
+  
+    function hideUserOptions() {
+      $('.user_options').slideUp();
+      $('.user_menu_arrow_down').show();
+      $('.user_menu_arrow_up').hide();
+      $(document).off('click', hideUserOptions);
+    }
+    $(document).ready(function() {
+      $('.user_menu').click(function (e) {
+        if ($('.user_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.user_options').slideDown();
+          $('.user_menu_arrow_down').hide();
+          $('.user_menu_arrow_up').show();
+          $(document).on('click', hideUserOptions);
+          hideCreateOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.user_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+      $('.user_options a:last').click(function (e) {
+        // this partial can be on non-dashboard pages.
+        if (typeof dashboard !== 'undefined') {
+          dashboard.clientState.reset();
+        } else {
+          // Keep in sync with clientState#reset.
+          try {
+            sessionStorage.clear();
+          } catch (e) {}
+        }
+      });
+    });
+  
+    function hideCreateOptions() {
+      $('.create_options').slideUp();
+      $('.create_menu_arrow_down').show();
+      $('.create_menu_arrow_up').hide();
+      $(document).off('click', hideCreateOptions);
+    }
+    $(document).ready(function() {
+      $('.create_menu').click(function (e) {
+        if ($('.create_options').is(':hidden')) {
+          e.stopPropagation();
+          $('.create_options').slideDown();
+          $('.create_menu_arrow_down').hide();
+          $('.create_menu_arrow_up').show();
+          $(document).on('click', hideCreateOptions);
+          hideUserOptions()
+          $("#hamburger-icon").removeClass('active');
+          $("#help-icon").removeClass('active');
+          $('#hamburger #hamburger-contents').slideUp();
+          $('#help-button #help-contents').slideUp();
+        }
+      });
+      $('.create_options').click(function (e) {
+        e.stopPropagation(); // Clicks inside the popup shouldn't close it
+      });
+    });
+  
+  
+    if (typeof dashboard !== 'undefined') {
+      dashboard.pairing.init('//test-studio.code.org/pairing', hideUserOptions, false);
+    }
+  })();
+</script>
+
+
+</div>
+<div class="help_button hide-mobile" id="help-button">
+<div class="help_contents" id="help-contents" style="display: none">
+<a class="linktag" href="https://support.code.org/hc/en-us/requests/new" id="report-bug">Report a problem</a>
+<a class="linktag" href="https://support.code.org" id="support">Help and support </a>
+</div>
+<i class="clicktag fa fa-question-circle help_icon hide-mobile" id="help-icon">
+<span style="pointer-events: none"></span>
+</i>
+</div>
+
+<div class="show-mobile" id="hamburger">
+<div class="hide-responsive-menu" id="hamburger-contents">
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" target="_self">Course Catalog</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/projects/public" id="hamburger-signed-out-projects" target="_self">Projects</a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-signed-out"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org/hc/en-us/requests/new" id="report-bug" target="_blank">Report a problem</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="https://support.code.org" id="support" target="_blank">Help and support </a>
+</div>
+</div>
+<div class="divider show-mobile" id="after-help"></div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test-studio.code.org/courses" id="learn" target="_self">Learn</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="educate_entries">
+<div class="text">Teach</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="educate_entries-items">
+<div class="item">
+<a href="//test-studio.code.org/courses?view=teacher" id="educate-overview">Educator Overview</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/elementary-school">Elementary School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/middle-school">Middle School</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/high-school">High School</a>
+</div>
+<div class="item">
+<a href="https://hourofcode.com">Hour of Code</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/partner">Partner with Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/curriculum/3rd-party">Beyond Code.org</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/inspire">Inspire a Student</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/community">Online Community</a>
+</div>
+<div class="item">
+<a href="//test.code.org/educate/resources/videos">Tools and Videos</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/promote" id="stats" target="_self">Stats</a>
+</div>
+</div>
+<div class="show-mobile">
+<div class="item">
+<a href="//test.code.org/help" id="help-us" target="_self">Help Us</a>
+</div>
+</div>
+<div class="hamburger-expandable-item item" id="about_entries">
+<div class="text">About</div>
+<i class="arrow-down fa fa-caret-down"></i>
+<i class="arrow-up fa fa-caret-up"></i>
+</div>
+<div class="hamburger-expandable-items" id="about_entries-items">
+<div class="item">
+<a href="//test.code.org/about" id="about-us">About Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/leadership">Leadership</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/donors">Donors</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/partners">Partners</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/team">Full Team</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/news">Newsroom</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/evaluation">Evaluation</a>
+</div>
+<div class="item">
+<a href="//test.code.org/about/jobs">Jobs</a>
+</div>
+<div class="item">
+<a href="//test.code.org/contact">Contact Us</a>
+</div>
+<div class="item">
+<a href="//test.code.org/faq">FAQs</a>
+</div>
+</div>
+</div>
+<div class="clicktag show-mobile" id="hamburger-icon">
+<span style="pointer-events: none"></span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+<div class="desktop-feature" id="loc">
+</div>
+</div>
+</div>
+</div>
+<div id="clear" style="clear:both"></div>
+
+<div class="container_responsive">
+<link href="/css/learn-carousel.css" rel="stylesheet" type="text/css">
+<script>
+  // mobile
+  window.mobilecheck = function(options) {
+  
+    // Adapted from http://detectmobilebrowsers.com/ with the addition of |android|ipad|playbook|silk as
+    // it suggests at http://detectmobilebrowsers.com/about
+    // Note that there are two regular expressions in the blob.  The first tests against variable a (the entire
+    // user agent) while the second tests against just the first four characters in it.
+  
+    var check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4)))check = true})(navigator.userAgent||navigator.vendor||window.opera);
+    return check; }
+</script>
+
+<div class="solid-block-header">
+Grades K-5
+</div>
+<h1>Courses by Code.org</h1>
+<h2>Computer Science Fundamentals Express Courses</h2>
+A great option for students getting started on their own.  You'll learn the
+fundamentals of computer science with drag &amp; drop blocks.  Create your own
+drawings and games.
+<div style="clear: both"></div>
+<br>
+<div class="col-50" style="padding-right: 10px;">
+<a href="//test-studio.code.org/s/pre-express">
+<img src="/images/curriculum/course-tile-pre-reader-express.png" style="max-width: 100%;">
+</a>
+</div>
+<div class="col-50" style="padding-right: 10px;">
+<a href="//test-studio.code.org/s/express">
+<img src="/images/curriculum/course-tile-express.png" style="max-width: 100%;">
+</a>
+</div>
+<div style="clear: both"></div>
+<h2>Computer Science Fundamentals for Elementary Schools</h2>
+For pre-readers in elementary school classrooms
+<div style="clear: both"></div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/coursea">
+<img src="/images/curriculum/course-tile-courseA.png">
+</a>
+</div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/courseb">
+<img src="/images/curriculum/course-tile-courseB.png">
+</a>
+</div>
+<div style="clear: both"></div>
+<br>
+<br>
+For older students in elementary school classrooms
+<div style="clear: both"></div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/coursec">
+<img src="/images/curriculum/course-tile-courseC.png">
+</a>
+</div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/coursed">
+<img src="/images/curriculum/course-tile-courseD.png">
+</a>
+</div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/coursee">
+<img src="/images/curriculum/course-tile-courseE.png">
+</a>
+</div>
+<div class="col-25">
+<a href="//test-studio.code.org/s/coursef">
+<img src="/images/curriculum/course-tile-courseF.png">
+</a>
+</div>
+<div style="clear: both"></div>
+<h2>International CS Fundamentals: Courses 1-4 and Accelerated</h2>
+We are working on translating Courses A-F and the Express Course to languages
+beyond English. In the meantime, we recommend using Courses 1-4 and
+the Accelerated Course. These courses cover the same basic concepts and have
+already been translated into 25+ languages.
+<br>
+<a href="/educate/curriculum/cs-fundamentals-international">
+<button>View Courses 1-4</button>
+</a>
+  
+<a href="/educate/curriculum/cs-fundamentals-international">
+<button>View Accelerated Course</button>
+</a>
+<hr>
+<h1>Courses from 3rd parties</h1>
+<div style="clear:both"></div>
+<div id="carousel-ie8" style="display:none">
+<h2 class="course-carousel-title" style="margin-bottom:8px">Partner tutorials that work on older systems</h2>
+<p>These should work on older Web browsers. To access all tutorials, upgrade to a <a href="http://browsehappy.com/" target="_blank">modern Web browser.</a></p>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-ie8">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-ie8"></div>
+</div>
+</div>
+</div>
+
+</div>
+<div id="carousel-international" style="display:none">
+<h2 class="course-carousel-title" style="margin-bottom:8px">Partner tutorials in your language</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-international">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://lambda-school.sjv.io/codeorg" target="_blank"><img src="/images/fit-520/lambdaintrocourses.jpg"></a></div>
+<div class="slide-text">
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"></a>
+<h3>Lambda</h3>
+</div>
+<a href="https://lambda-school.sjv.io/codeorg" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><img src="/images/fit-520/trilogy-beyondk12.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"></a>
+<h3>Trilogy Education Services</h3>
+</div>
+<a href="https://www.trilogyed.com/students/?utm_source=mkt-partnership&amp;utm_campaign=trilogyed-students&amp;utm_term=codeorg&amp;utm_content=beyondk12" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><img src="/images/fit-520/kodable.jpg"></a></div>
+<div class="slide-text">
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"></a>
+<h3>Kodable</h3>
+</div>
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"></a>
+<h3>Scratch</h3>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-international"></div>
+</div>
+</div>
+</div>
+
+<br>
+<br>
+<a href="#" id="englishtutorials" onclick="toggle_visibility();return false;">
+<button style="font-size:20px;">
+Partner tutorials available in English
+</button>
+</a>
+<br>
+<br>
+</div>
+<div id="all-tutorials" style="visibility:hidden; overflow:hidden;">
+<h2 class="course-carousel-title" style="margin-bottom:8px">Learn to code on a computer</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Desktop">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://www.tynker.com/" target="_blank"><img src="/images/fit-520/tynker.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.tynker.com/" target="_blank"><h2>Learn programming at home</h2></a>
+<h3>Tynker</h3>
+<p class="slide-longdescription">Tynker makes it fun &amp; easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.</p>
+<p class="slide-shortdescription">A fun and engaging course for children in grades 4-8</p>
+<div class="slide-tags">Ages 5-13 | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_tynker_beyond" style="display: none">
+<span class="participants_value_tynker_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.tynker.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Desktop"></div>
+</div>
+</div>
+</div>
+
+<h2 class="course-carousel-title" style="margin-bottom:8px">For phones and tablets</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-MobTabElem">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://gethopscotch.com/" target="_blank"><img src="/images/fit-520/hopscotch.jpg"></a></div>
+<div class="slide-text">
+<a href="http://gethopscotch.com/" target="_blank"><h2>Hopscotch: Programming On Your iPad</h2></a>
+<h3>Hopscotch</h3>
+<p class="slide-longdescription">Student-guided tutorial on the iPad using the Hopscotch programming language. Students will build games and apps for their iPad on their iPad. Students can work individually or with friends (up to 3 per iPad).</p>
+<p class="slide-shortdescription">Learn visual programming on an iPad</p>
+<div class="slide-tags">Middle school + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_hopscotch_beyond" style="display: none">
+<span class="participants_value_hopscotch_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://gethopscotch.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><img src="/images/fit-520/tutorials/new/codesparkbeyond.jpg"></a></div>
+<div class="slide-text">
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><h2>Full Curriculum for codeSpark Academy with The Foos</h2></a>
+<h3>codeSpark</h3>
+<p class="slide-longdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<p class="slide-shortdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<div class="slide-tags">Grades K-5 | iPhone, iPad, Android phone and tablet, Browser (first 3 lessons)</div>
+<div class="slide-participants-count"><b class="participants_string_codespark_beyond" style="display: none">
+<span class="participants_value_codespark_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.tynker.com/" target="_blank"><img src="/images/fit-520/tynker.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.tynker.com/" target="_blank"><h2>Learn programming at home</h2></a>
+<h3>Tynker</h3>
+<p class="slide-longdescription">Tynker makes it fun &amp; easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.</p>
+<p class="slide-shortdescription">A fun and engaging course for children in grades 4-8</p>
+<div class="slide-tags">Ages 5-13 | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_tynker_beyond" style="display: none">
+<span class="participants_value_tynker_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.tynker.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://lightbot.com/" target="_blank"><img src="/images/fit-520/lightbot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://lightbot.com/" target="_blank"><h2>LightBot</h2></a>
+<h3>LightBot</h3>
+<p class="slide-longdescription">Learn core programming logic, starting from super-basic programming, for ages 4+, on iOS or Android (or Web browser) . Learn how to sequence commands, identify patterns, use procedures, and utilize loops!</p>
+<p class="slide-shortdescription">A game to teach coding concepts</p>
+<div class="slide-tags">All ages | iOS, Android (or web browser)</div>
+<div class="slide-participants-count"><b class="participants_string_lightbot_beyond" style="display: none">
+<span class="participants_value_lightbot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://lightbot.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://twolivesleft.com/CargoBot/" target="_blank"><img src="/images/fit-520/cargobot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://twolivesleft.com/CargoBot/" target="_blank"><h2>Cargobot</h2></a>
+<h3>Two Lives Left</h3>
+<p class="slide-longdescription">Cargo-Bot is a puzzle game where you teach a robot how to move crates. Sounds simple, right? It features 36 fiendishly clever puzzles, haunting music and stunning retina graphics. You can even record your solutions and share them on YouTube to show your friends.</p>
+<p class="slide-shortdescription">Program a robot arm on your iPad</p>
+<div class="slide-tags">Ages 8+ | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_cargobot_beyond" style="display: none">
+<span class="participants_value_cargobot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://twolivesleft.com/CargoBot/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-MobTabElem"></div>
+</div>
+</div>
+</div>
+
+<h2 class="course-carousel-title" style="margin-bottom:8px">For pre-readers</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-Prereader">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://www.scratchjr.org/teach.html" target="_blank"><img src="/images/fit-520/scratchjr.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.scratchjr.org/teach.html" target="_blank"><h2>Playful programming for young kids</h2></a>
+<h3>ScratchJr</h3>
+<p class="slide-longdescription">ScratchJr is an introductory programming language that enables young children to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing</p>
+<p class="slide-shortdescription">Create interactive stories and games using ScratchJr.</p>
+<div class="slide-tags">Elementary | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_scratchjr_beyond" style="display: none">
+<span class="participants_value_scratchjr_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.scratchjr.org/teach.html" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><img src="/images/fit-520/tutorials/new/codesparkbeyond.jpg"></a></div>
+<div class="slide-text">
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><h2>Full Curriculum for codeSpark Academy with The Foos</h2></a>
+<h3>codeSpark</h3>
+<p class="slide-longdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<p class="slide-shortdescription">A 10 lesson curriculum is available for FREE at thefoos.com.  Each lesson includes a printable and unplugged activity. Learn the ABCs of computer science by helping the Foos solve puzzles. Then use your coding skills to create and share video games.</p>
+<div class="slide-tags">Grades K-5 | iPhone, iPad, Android phone and tablet, Browser (first 3 lessons)</div>
+<div class="slide-participants-count"><b class="participants_string_codespark_beyond" style="display: none">
+<span class="participants_value_codespark_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://thefoos.com/coding-resources-for-you/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><img src="/images/fit-520/kodable.jpg"></a></div>
+<div class="slide-text">
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><h2>Kodable</h2></a>
+<h3>Kodable</h3>
+<p class="slide-longdescription">Kodable is a self-guided iPad game that introduces kids 5+ to programming basics. Having a teacher or parent nearby is optimal, but not necessary.</p>
+<p class="slide-shortdescription">A fun iPad game to teach computer programming concepts</p>
+<div class="slide-tags">Elementary | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_kodable_beyond" style="display: none">
+<span class="participants_value_kodable_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://itunes.apple.com/us/app/kodable/id577673067?mt=8" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://kinderlabrobotics.com/" target="_blank"><img src="/images/fit-520/kinderlab.jpg"></a></div>
+<div class="slide-text">
+<a href="http://kinderlabrobotics.com/" target="_blank"><h2>KIBO</h2></a>
+<h3>KinderLab Robotics</h3>
+<p class="slide-longdescription">Kids build their own robot with KIBO, program it using wooden blocks, and decorate it with arts and crafts materials - all without a PC, tablet, or smartphone. KIBO invites playful learning and children's creativity and imagination. Curriculum for schools, activities for the home, design journals and workbooks are also available. </p>
+<p class="slide-shortdescription">Kids build their own robot, program it with wooden blocks, and decorate it with arts and crafts materials</p>
+<div class="slide-tags">Ages 4 to 7 | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_kinderlab_beyond" style="display: none">
+<span class="participants_value_kinderlab_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://kinderlabrobotics.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-Prereader"></div>
+</div>
+</div>
+</div>
+
+<h2 class="course-carousel-title" style="margin-bottom:8px">Go beyond blocks - learn a programming language</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-BeyondBlocks">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://www.vidcode.com/beyond-hoc" target="_blank"><img src="/images/fit-520/tutorials/beyond/vidcode.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.vidcode.com/beyond-hoc" target="_blank"><h2>Code your Pixels</h2></a>
+<h3>Vidcode</h3>
+<p class="slide-longdescription">Learn JavaScript by bringing your photos and videos to life. Create filters, graphics, emojis, and special effects with step-by-step project tutorials. Learn code through something teens &amp; tweens love.</p>
+<p class="slide-shortdescription">Learn JavaScript by bringing your photos and videos to life. Create filters, graphics, emojis, and special effects with step-by-step project tutorials. Learn code through something teens &amp; tweens love.</p>
+<div class="slide-tags">Grades 5-12 | Modern web browsers, Tablet, Chromebook</div>
+<div class="slide-participants-count"><b class="participants_string_vidcode_beyond" style="display: none">
+<span class="participants_value_vidcode_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="https://static1.squarespace.com/static/53baf4ebe4b06cb7b6c4ea8a/t/598cc863197aea1ac7d91714/1502398564467/Cross-curricular+Coding+Guide.pdf" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://www.vidcode.com/beyond-hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.tynker.com/" target="_blank"><img src="/images/fit-520/tynker.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.tynker.com/" target="_blank"><h2>Learn programming at home</h2></a>
+<h3>Tynker</h3>
+<p class="slide-longdescription">Tynker makes it fun &amp; easy to learn programming. It makes it visual. Kids build games and mobile apps by arranging blocks of code. It removes the need to know programming syntax. Kids transform ideas into animated stories and math art right away. It promotes progressive learning. As kids learn fundamentals, Tynker introduces more advanced concepts including syntax driven programming.</p>
+<p class="slide-shortdescription">A fun and engaging course for children in grades 4-8</p>
+<div class="slide-tags">Ages 5-13 | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_tynker_beyond" style="display: none">
+<span class="participants_value_tynker_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.tynker.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-BeyondBlocks"></div>
+</div>
+</div>
+</div>
+
+<h2 class="course-carousel-title" style="margin-bottom:8px">Unreliable or no internet? Install these apps on your computer</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-NoInternet">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="https://scratch.mit.edu/hoc" target="_blank"><img src="/images/fit-520/scratch.jpg"></a></div>
+<div class="slide-text">
+<a href="https://scratch.mit.edu/hoc" target="_blank"><h2>Get creative with coding</h2></a>
+<h3>Scratch</h3>
+<p class="slide-longdescription">With Scratch, you can create your own interactive games, stories, animations — and share them with your friends. Get started by animating your name, creating a holiday card, or making a pong game.</p>
+<p class="slide-shortdescription">Create interactive games, stories, and animations.</p>
+<div class="slide-tags">Ages 8+ | Any browser</div>
+<div class="slide-participants-count"><b class="participants_string_scratch_beyond" style="display: none">
+<span class="participants_value_scratch_beyond">
+3
+</span>
+participants</b></div>
+<div class="slide-teachers-notes-link"><a href="http://scratched.gse.harvard.edu/hoc/" target="blank">Teacher's Notes</a></div>
+</div>
+<a href="https://scratch.mit.edu/hoc" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><img src="/images/fit-520/kodu.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><h2>Kodu</h2></a>
+<h3>Microsoft</h3>
+<p class="slide-longdescription">Kodu lets kids create games on the PC and Xbox via a simple visual programming language. Kodu can be used to teach creativity, problem solving, storytelling, as well as programming. Anyone can use Kodu to make a game, young children as well as adults with no design or programming skills. Kodu for the PC is available to download for free. Kodu for the Xbox is also available in the USA on the Xbox Marketplace, in the Indie Games channel for about $5.</p>
+<p class="slide-shortdescription">Design a 3D game world</p>
+<div class="slide-tags">Ages 8+ | Windows, xBox</div>
+<div class="slide-participants-count"><b class="participants_string_kodu_beyond" style="display: none">
+<span class="participants_value_kodu_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.kodugamelab.com/hour-of-code/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-NoInternet"></div>
+</div>
+</div>
+</div>
+
+<h2 class="course-carousel-title" style="margin-bottom:8px">Learn to program with robots and devices</h2>
+<div class="learnpage" style="position:relative">
+<div class="carousel-wrapper">
+<div class="carousel course-carousel" id="collection-RobotsElem">
+<div class="slides">
+<div class="slide clear">
+<div class="slide-img"><a href="http://makewonder.com/hourofcode" target="_blank"><img src="/images/fit-520/wonderworkshop.jpg"></a></div>
+<div class="slide-text">
+<a href="http://makewonder.com/hourofcode" target="_blank"><h2>Wonder Workshop</h2></a>
+<h3>Coding with Dash &amp; Dot</h3>
+<p class="slide-longdescription">Dash &amp; Dot are robots that help kids learn the fundamentals of problem solving and coding while having fun. Download our four free iPad apps to control the robots. Use Path to learn basic sequencing and Blockly to start creating programs for Dash &amp; Dot. Create programs for the robots to deliver a message for you, transform into a creature, and follow you around!</p>
+<p class="slide-shortdescription">Dash &amp; Dot are robots that help kids learn the fundamentals of coding.</p>
+<div class="slide-tags">Elementary + | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_wonderworkshop_beyond" style="display: none">
+<span class="participants_value_wonderworkshop_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://makewonder.com/hourofcode" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://microbit.org/code/" target="_blank"><img src="/images/fit-520/microbit.jpg"></a></div>
+<div class="slide-text">
+<a href="https://microbit.org/code/" target="_blank"><h2>Introduction to Physical Computing</h2></a>
+<h3>micro:bit</h3>
+<p class="slide-longdescription">The micro:bit is a fun, handheld, easily programmable computer that uses a web browser to program in blocks, JavaScript or Python. The free, built-in web simulator allows students to run their program with or without connecting to a micro:bit. Simplicity and ease-of-use make micro:bit perfect for beginners while also having advanced features for experienced programmers and makers.</p>
+<p class="slide-shortdescription">The micro:bit is a fun, handheld, easily programmable computer that uses a web browser to program in blocks, JavaScript or Python.</p>
+<div class="slide-tags">Elementary + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_microbit_beyond" style="display: none">
+<span class="participants_value_microbit_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://microbit.org/code/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://education.lego.com" target="_blank"><img src="/images/fit-520/lego.jpeg"></a></div>
+<div class="slide-text">
+<a href="https://education.lego.com" target="_blank"><h2>LEGO® MINDSTORMS® Education EV3</h2></a>
+<h3>LEGO Education</h3>
+<p class="slide-longdescription">Build and code with the ultimate playful learning experience. The endless flexibility of LEGO bricks and the open-ended nature of our curriculum and coding software allows students to explore and develop their ideas as far as their curiosity will take them. We empower teachers with the tools for creating and delivering the most engaging lessons in STEM for every student.</p>
+<p class="slide-shortdescription">Build and program a robot</p>
+<div class="slide-tags">Middle school + | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_lego_beyond" style="display: none">
+<span class="participants_value_lego_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://education.lego.com" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://kinderlabrobotics.com/" target="_blank"><img src="/images/fit-520/kinderlab.jpg"></a></div>
+<div class="slide-text">
+<a href="http://kinderlabrobotics.com/" target="_blank"><h2>KIBO</h2></a>
+<h3>KinderLab Robotics</h3>
+<p class="slide-longdescription">Kids build their own robot with KIBO, program it using wooden blocks, and decorate it with arts and crafts materials - all without a PC, tablet, or smartphone. KIBO invites playful learning and children's creativity and imagination. Curriculum for schools, activities for the home, design journals and workbooks are also available. </p>
+<p class="slide-shortdescription">Kids build their own robot, program it with wooden blocks, and decorate it with arts and crafts materials</p>
+<div class="slide-tags">Ages 4 to 7 | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_kinderlab_beyond" style="display: none">
+<span class="participants_value_kinderlab_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://kinderlabrobotics.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://tickleapp.com/" target="_blank"><img src="/images/fit-520/tickle.jpg"></a></div>
+<div class="slide-text">
+<a href="http://tickleapp.com/" target="_blank"><h2>Tickle</h2></a>
+<h3>Tickle Labs</h3>
+<p class="slide-longdescription">Experience the magic of programming drones, robots, smart homes, and Arduino, all wirelessly! Tickle is easy to learn, fun to use, yet powerful enough for university courses and research projects. You can program a variety of drones and robots to fly, take photos, and navigate through mazes. You can even create custom robots by adding Arduino-based sensors and motors.</p>
+<p class="slide-shortdescription">Program drones, robots, and Arduino, wirelessly</p>
+<div class="slide-tags">Ages 6+ | iPad</div>
+<div class="slide-participants-count"><b class="participants_string_tickle_beyond" style="display: none">
+<span class="participants_value_tickle_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://tickleapp.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://world.kano.me/projects" target="_blank"><img src="/images/fit-520/tutorials/beyond/kanoelem.jpg"></a></div>
+<div class="slide-text">
+<a href="https://world.kano.me/projects" target="_blank"><h2>Creative Coding with Kano</h2></a>
+<h3>Kano Computing </h3>
+<p class="slide-longdescription">Curious minds of all abilities can create art, games, music and more! Follow guided challenges, remix what others have made, and make original creations from scratch. Hours of challenges available with blocks or simple syntax-based coding languages.</p>
+<p class="slide-shortdescription">Curious minds of all abilities can create art, games, music and more! Follow guided challenges, remix what others have made, and make original creations from scratch. Hours of challenges available with blocks or simple syntax-based coding languages.</p>
+<div class="slide-tags">Elementary + | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_kanoelem_beyond" style="display: none">
+<span class="participants_value_kanoelem_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://world.kano.me/projects" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.sphero.com/education" target="_blank"><img src="/images/fit-520/sphero.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.sphero.com/education" target="_blank"><h2>Sphero SPRK+</h2></a>
+<h3>Sphero Edu</h3>
+<p class="slide-longdescription">Designed to inspire curiosity, creativity, and invention through connected play and coding, SPRK+ is far more than just a robot. Powered by the Sphero Edu app, you can easily learn programming, complete hands-on activities, and share your creations with the community. Learning is evolving. Get on the ball.</p>
+<p class="slide-shortdescription">SPRK lessons give kids a fun crash course in programming robots while sharpening skills in math and science.</p>
+<div class="slide-tags">Ages 8+ | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_sphero_beyond" style="display: none">
+<span class="participants_value_sphero_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.sphero.com/education" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><img src="/images/fit-520/ozobot.jpg"></a></div>
+<div class="slide-text">
+<a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><h2>Ozobot</h2></a>
+<h3>Ozobot</h3>
+<p class="slide-longdescription">Ozobot is the tiny robot that makes coding and computer science fun and easy to learn. Choose from a wide variety of STEM lessons and activities ranging from kindergarten to high school grade levels. Whether your students are novices or experts, Ozobot will keep them engaged for hours of learning and fun. Not an experienced programmer yourself? Not a problem! Simple instruction guides, how-to videos and introductory lessons will make you an Ozobot expert in no time!</p>
+<p class="slide-shortdescription">Ozobot is the tiny robot that makes coding fun and easy with extensive resources for grades K-12.</p>
+<div class="slide-tags">All ages | Modern web browsers</div>
+<div class="slide-participants-count"><b class="participants_string_ozobot_beyond" style="display: none">
+<span class="participants_value_ozobot_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://ozobot.com/stem-education/stem-lessons" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="http://www.finchrobot.com/" target="_blank"><img src="/images/fit-520/finch.jpg"></a></div>
+<div class="slide-text">
+<a href="http://www.finchrobot.com/" target="_blank"><h2>Finch Robot and Hummingbird Robotics Kit</h2></a>
+<h3>BirdBrain Technologies</h3>
+<p class="slide-longdescription">The Finch Robot makes coding tangible in many programming languages ranging from Kindergarten to College-level computer science. The Hummingbird Robotics Kit is comprised of lights, sensors and motors, allowing students to build a robot out of any materials. Both of these products empower students to take ownership of their technical and creative skill sets and engage in flexible problem-solving activities.</p>
+<p class="slide-shortdescription">Both the Finch Robot and the Hummingbird Robotics Kit empower students to take ownership of their technical and creative skill sets and engage in flexible problem-solving activities.</p>
+<div class="slide-tags">Ages 8+ | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_finch_beyond" style="display: none">
+<span class="participants_value_finch_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="http://www.finchrobot.com/" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+<div class="slide clear" style="display:none">
+<div class="slide-img"><a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><img src="/images/fit-520/tutorials/beyond/botley.jpg"></a></div>
+<div class="slide-text">
+<a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><h2>Screen-free Coding with Botley™ the Coding Robot</h2></a>
+<h3>Learning Resources</h3>
+<p class="slide-longdescription">Never coded before? No problem! Botley™ the Coding Robot is ready to use right out of the box and will have you coding in minutes. Botley can be introduced to children as young as 5, and with advanced features, can grow with them as well. Botley is completely screen free – no phone or tablet required. Code Botley up to 120 steps, loop him and program him to go around objects with if/then logic. Botley can follow black lines, too – and even has hidden features to unlock!</p>
+<p class="slide-shortdescription">Never coded before? No problem! Botley™ the Coding Robot is ready to use right out of the box and will have you coding in minutes.</p>
+<div class="slide-tags">Ages 5-10 | Robot purchase</div>
+<div class="slide-participants-count"><b class="participants_string_botley_beyond" style="display: none">
+<span class="participants_value_botley_beyond">
+3
+</span>
+participants</b></div>
+</div>
+<a href="https://www.learningresources.com/text/botley/index.html" target="_blank"><div class="btn-carousel-slide">Go</div></a>
+</div>
+</div>
+<a class="slide-prev" href="#"><span><span class="label">Previous</span></span></a>
+<a class="slide-next" href="#"><span><span class="label">Next</span></span></a>
+</div>
+<div class="pagination">
+<div id="pagination-collection-RobotsElem"></div>
+</div>
+</div>
+</div>
+
+</div>
+<br>
+<br>
+<div class="footer-banner">
+See the <a href="https://code.org/learn">comprehensive list of Hour of Code tutorials</a>. To see our criteria and submission guidelines for Hour of Code tutorials, <a href="https://hourofcode.com/activity-guidelines">click here.</a>
+</div>
+<br>
+<br>
+<script>
+  // Older systems
+  var ua = navigator.userAgent;
+  
+  //
+  // references:
+  //  https://developer.mozilla.org/en-US/docs/Browser_detection_using_the_user_agent
+  //  http://www.useragentstring.com/pages/useragentstring.php
+  //  http://www.oldapps.com/mac/netscape.php
+  //
+  
+  var is_safari4 = ua.indexOf("Safari/") != -1 && ua.indexOf("Version/4.") != -1 && ua.indexOf("Chrome") == -1 && ua.indexOf("Chromium") == -1;
+  var is_netscape7 = ua.indexOf("Netscape/7.") != -1;
+  var is_ie5 = ua.indexOf("MSIE 5.") != -1;
+  
+  if (!window.mobilecheck() && (is_ie8 || is_safari4 || is_netscape7 || is_ie5))
+  {
+    $('#carousel-ie8').show();
+  }
+  
+  // International
+  var pegasusLocale = "en-US";
+  
+  if (pegasusLocale.substring(0,2) == "en")
+  {
+    $('#all-tutorials').show();
+    $('#all-tutorials').css('visibility', 'visible');
+  }
+  else
+  {
+    $('#carousel-international').show();
+    $('#all-tutorials').css('height', '0');
+  }
+  
+  function toggle_visibility()
+  {
+    var e = document.getElementById('all-tutorials');
+    if ( e.style.visibility == 'visible' )
+    {
+      $('#all-tutorials').css('height', '0');
+      $('#all-tutorials').css('visibility', 'hidden');
+    }
+    else
+    {
+      $('#all-tutorials').css('height', '100%');
+      $('#all-tutorials').css('visibility', 'visible');
+    }
+  }
+</script>
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script>
+<script src="/js/jquery.touchSwipe.min.js"></script>
+<script>
+  // enable swipe on links by removing 'a' from excludedElements.
+  $.fn.swipe.defaults.excludedElements = "label, button, input, select, textarea, .noSwipe";
+  
+  $(document).ready(function() {
+    createCarousels();
+    setupScratBlinking();
+  });
+  
+  function createCarousels()
+  {
+    // Look for carousels and loop through them.
+    $.each($('.course-carousel'), function() {
+      // Get the ID of the carousel.
+      var id = '#' + $(this).attr('id');
+  
+      // Define the carousel using the ID.
+      $(id + ' .slides').carouFredSel({
+        auto  : false,
+        responsive : true,
+        prev  : id + ' .slide-prev',
+        next  : id + ' .slide-next',
+        pagination : '#pagination-' + $(this).attr('id'),
+        swipe : {
+          onTouch : true,
+          onMouse : false
+        },
+        items :  {
+          visible : 1,
+          height: "variable"
+        },
+        onCreate: function() {
+          var match = id + " .slide.clear"
+          $(match).show();
+          $(id).fadeTo(500, 1.0);
+        }
+      });
+    });
+  }
+  
+  $(window).load(function(){
+    $(window).trigger('resize');
+  })
+  
+  function showScratBlink(blink) {
+    $(".scrat-standing").css('opacity', blink ? 0 : 1);
+    $(".scrat-standing-blink").css('opacity', blink ? 1 : 0);
+  }
+  
+  function setupScratBlinking() {
+    setTimeout(function() {
+      showScratBlink(true);
+      setTimeout(function() {
+        showScratBlink(false);
+        setupScratBlinking();
+      }, 200);
+    }, 4000);
+  }
+</script>
+<script>
+  function addCommas(nStr)
+  {
+    nStr += '';
+    x = nStr.split('.');
+    x1 = x[0];
+    x2 = x.length > 1 ? '.' + x[1] : '';
+    var rgx = /(\d+)(\d{3})/;
+    while (rgx.test(x1)) {
+      x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
+  }
+</script>
+
+<script src="/js/learn-metrics.js"></script>
+
+
+<div id="clearboth" style="clear:both"></div>
+<div class="desktop-feature">
+<br>
+<br>
+<br>
+</div>
+</div>
+<div class="push"></div>
+</div>
+<div class="desktop-feature">
+<footer id="pagefooter">
+<div class="content">
+<div class="left" style="float:left; max-width: 80%;">
+<a class="whitefooterlink" href="/privacy" style="color: #ffa400;">Privacy Policy</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/about">About</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/partners">Partners</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" target="_blank">Blog</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/donate">Donate</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/shop">Store</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="http://support.code.org/" id="support" target="_blank">Support</a>
+<div class="dim">    |    </div>
+<a class="whitefooterlink" href="/tos">Terms</a>
+<small class="dim">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</small>
+</div>
+<div class="right" style="float:right">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media" style="margin-top: 10px; margin-left: 10px;">
+<small>
+<a class="whitefooterlink" href="https://www.facebook.com/Code.org/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://twitter.com/codeorg" style="text-decoration: none;" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://www.instagram.com/codeorg/" style="text-decoration: none;" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="whitefooterlink" href="https://medium.com/@codeorg" style="text-decoration: none;" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</small>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+<div class="mobile-headers mobile-feature">
+<style>
+  #footer-links{float:right;color:white;font-size:12px;z-index:2}#footer-links ul{list-style:none;margin:0;padding:0}#footer-links ul li{display:inline;text-indent:0;padding:0}#footer-links ul li:before{content:none}#footer-links ul li:after{content:"|";margin:0 12px;opacity:0.5}#footer-links ul li:last-child:after{content:none}#footer-links a{color:white;font-weight:normal;font-family:'Gotham 4r', sans-serif;opacity:0.5;text-decoration:none}#footer-links a:hover{opacity:1.0}#footer-toggle{display:none;text-align:center;border-bottom:1px solid #aaa2bd;padding:8px 16px;margin:0 24px;cursor:pointer;margin-bottom:10px}#copyright,#copyright-non-en{float:left;color:white;font-size:12px;opacity:0.5}.social-media a{text-decoration:none;color:white}#non-en{height:90px;background-color:#7665a0}#non-en .language-dropdown select{margin-top:20px;margin-left:25px}#copyright-non-en{margin-left:25px;padding-top:5px}@media screen and (max-width: 970px){#pagefooter{overflow:visible;padding:0;height:150px}.language-dropdown{padding-bottom:10px;padding-right:10px}.social-language-box{text-align:center}.social-media,.social-language-box .language-dropdown{text-align:center;display:inline;width:40%;padding-bottom:3px;margin-top:10px}#footer-links{float:none;margin-bottom:20px;padding-top:20px;text-align:center}#copyright{float:none;text-align:center;padding-top:10px;padding-bottom:10px}}@media screen and (min-width: 0px) and (max-width: 600px){#pagefooter{overflow:visible;padding:0;height:200px}#footer-links{position:relative;margin:0;padding-top:0px}#footer-links ul{display:none;position:absolute;bottom:38px;width:100%;background-color:#5c3f7f}#footer-links ul li{display:block;text-align:center;margin:0 24px;padding:8px 16px;border-bottom:1px solid #aaa2bd}#footer-links ul li:after{content:none}#footer-links ul li a{display:block;width:100%}#footer-toggle{display:block}#copyright{padding-left:10px;padding-right:10px}#privacy a{color:#ffa400;opacity:1;font-family:'Gotham 5r', sans-serif}#privacy a:hover{opacity:0.5}#down{display:none}.social-media,.language-dropdown{width:100%;display:block;padding-right:0px}}
+</style>
+
+<script defer src="/js/mobile-footer.js"></script>
+<footer id="pagefooter">
+<div id="footer-links">
+<ul>
+<li id="privacy">
+<a href="/privacy">Privacy Policy</a>
+</li>
+<li>
+<a href="/about">About</a>
+</li>
+<li>
+<a href="/partners">Partners</a>
+</li>
+<li>
+<a href="https://medium.com/@codeorg" target="_blank">Blog</a>
+</li>
+<li>
+<a href="/donate">Donate</a>
+</li>
+<li>
+<a href="/shop">Store</a>
+</li>
+<li>
+<a href="https://support.code.org/" id="support" target="_blank">Support</a>
+</li>
+<li>
+<a href="/tos">Terms</a>
+</li>
+</ul>
+<div id="footer-toggle">
+Code.org
+<i class="fa fa-chevron-up" id="up"></i>
+<i class="fa fa-chevron-down" id="down"></i>
+</div>
+</div>
+<div class="social-language-box">
+<div class="language-dropdown">
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="social-media">
+<a class="social-icon" href="https://www.facebook.com/Code.org" target="_blank">
+<i class="fa fa-facebook fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://twitter.com/codeorg" target="_blank">
+<i class="fa fa-twitter fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://www.instagram.com/codeorg" target="_blank">
+<i class="fa fa-instagram fa-lg"></i>
+   
+</a>
+<a class="social-icon" href="https://medium.com/@codeorg" target="_blank">
+<img src="/images/icons/medium-monogram-white.png" style="width: 20px">
+</a>
+</div>
+</div>
+<div id="copyright">
+© Code.org, 2020. Code.org®, the CODE logo and Hour of Code® are trademarks of Code.org.
+<br>
+Powered by Amazon Web Services
+</div>
+</footer>
+
+</div>
+
+<script defer src="/js/bootstrap.min.js" type="text/javascript"></script>
+<div class="modal fade" id="selectLanguage">
+<div class="modal-dialog" width="500px">
+<div class="modal-content">
+<div class="modal-header">
+<button class="close" data-dismiss="modal" type="button">
+<span aria-hidden="true">×</span>
+<span class="sr-only">Close</span>
+</button>
+<img class="lazyload" data-src="/images/fit-320/avatars/flag_sphere.png" style="width: 256px; height: 256px;">
+</div>
+<div class="modal-body">
+<h4 class="modal-title">Please select your language</h4>
+<select onchange="setLanguageCookie(this.value); location.reload(true);" style="color: black">
+<option value="ar-SA">العربية</option>
+<option value="az-AZ">Azərbaycan dili</option>
+<option value="bg-BG">български</option>
+<option value="bs-BA">Bosanski</option>
+<option value="ca-ES">Català</option>
+<option value="cs-CZ">Čeština</option>
+<option value="da-DK">Dansk</option>
+<option value="de-DE">Deutsch</option>
+<option value="el-GR">Ελληνικά</option>
+<option selected value="en-US">English</option>
+<option value="es-ES">Español (España)</option>
+<option value="es-MX">Español (LATAM)</option>
+<option value="et-EE">Eesti</option>
+<option value="eu-ES">Euskara</option>
+<option value="fa-IR">فارسی</option>
+<option value="fi-FI">Suomi</option>
+<option value="fr-FR">Français</option>
+<option value="ga-IE">Gaeilge</option>
+<option value="gl-ES">Galego</option>
+<option value="he-IL">עברית</option>
+<option value="hr-HR">Hrvatski</option>
+<option value="hu-HU">Magyar</option>
+<option value="hy-AM">Հայերեն</option>
+<option value="id-ID">Bahasa Indonesia</option>
+<option value="is-IS">Íslenska</option>
+<option value="it-IT">Italiano</option>
+<option value="ja-JP">日本語</option>
+<option value="ka-GE">ქართული</option>
+<option value="kk-KZ">Қазақша</option>
+<option value="km-KH">ភាសាខ្មែរ</option>
+<option value="ko-KR">한국어</option>
+<option value="ky-KG">Кыргызча</option>
+<option value="lt-LT">Lietuvių</option>
+<option value="lv-LV">Latviešu</option>
+<option value="mi-NZ">Māori (NZ)</option>
+<option value="my-MM">ဗမာစာ</option>
+<option value="nl-NL">Nederlands</option>
+<option value="nn-NO">Norsk (Nynorsk)</option>
+<option value="no-NO">Norsk (Bokmål)</option>
+<option value="pl-PL">Polski</option>
+<option value="pt-BR">Português (Brasil)</option>
+<option value="pt-PT">Português (Portugal)</option>
+<option value="ro-RO">Română</option>
+<option value="ru-RU">Pусский</option>
+<option value="si-LK">සිංහල</option>
+<option value="sk-SK">Slovenčina</option>
+<option value="sl-SI">Slovenščina</option>
+<option value="sq-AL">Shqip</option>
+<option value="sr-SP">Cрпски</option>
+<option value="sv-SE">Svenska</option>
+<option value="th-TH">ภาษาไทย</option>
+<option value="tr-TR">Türkçe</option>
+<option value="uk-UA">Українська</option>
+<option value="vi-VN">Tiếng Việt</option>
+<option value="zh-CN">简体字</option>
+<option value="zh-TW">繁體字</option>
+</select>
+<script>
+  function setLanguageCookie(value)
+  {
+    var c_name = 'language_';
+    var exdays = 5000;
+    var date = new Date();
+    date.setTime(date.getTime()+(exdays*60*60*24*1000));
+    var c_value=escape(value) + ((exdays==null) ? "" : "; expires=" + date.toGMTString());
+    var domainName = "code.org";
+    c_value += "; domain=." + escape(domainName) + "; path=/";
+    document.cookie=c_name + "=" + c_value;
+  }
+</script>
+
+</div>
+<div class="modal-footer">
+<button class="btn btn-primary" data-dismiss="modal" type="button">Submit</button>
+</div>
+</div>
+</div>
+</div>
+<style>
+  .modal{
+    text-align: center;
+  }
+</style>
+<script>
+  function setCookie(key, value, days) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+  }
+  
+  function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+  }
+  
+  $( document ).ready(function() {
+    already_shown = !!getCookie('_loc_notice');
+    if(!already_shown) {
+      $.getJSON( "/v2/client-location", function( data ) {
+        country_code = data['country_code'];
+        if(country_code != 'US') {
+          $('#selectLanguage').modal('show')
+        }
+      });
+      setCookie('_loc_notice', '1', 365)
+    }
+  });
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/highlights" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Highlights</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<link href="/css/wide-layout.css" rel="stylesheet" type="text/css">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/">
+<img alt="Hour of Code" src="/us/en/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/highlights';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option selected value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/learn" title="Activities">Activities</a>
+</li>
+<li>
+<a href="/us/how-to" title="How-To">How-To</a>
+</li>
+<li>
+<a href="/us/promote" title="Promote">Promote</a>
+</li>
+<li>
+<a href="/us/#faq" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container wide-index-content">
+<div id="signup-button" style="margin-right: 40px;">
+<a href="/us/#join">
+<button style="float: right; margin-top: 50px;">
+Host an hour
+</button>
+</a>
+
+</div>
+<link href="/css/highlights.css" id="highlight-styles" rel="stylesheet">
+<h1>Hour of Code Highlights</h1>
+<h3>Some of our favorite moments from the Hour of Code campaign.</h3>
+<div class="highlights-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://code.org/athletes" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/athletes.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Push yourself</h4>
+<div class="highlight-description">Champions and gold medalists Serena Williams, Neymar Jr, Carmelo Anthony and more inspire students to push themselves.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.youtube.com/watch?v=8QwT58VTj_g" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/hoc-trudeau.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Prime Minister Justin Trudeau codes a game</h4>
+<div class="highlight-description">Canadian Prime Minister Justin Trudeau coded a simple game featuring his favorite sport.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://www.brooklynpaper.com/stories/39/5/dtg-hour-of-code-challenge-2016-01-29-bk.html" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/chicago-2.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Brooklyn beats Chicago</h4>
+<div class="highlight-description">After an epic battle, 80% of Brooklyn schools did the Hour of Code vs. 60% in Chicago. Not bad!</div>
+<br>
+<div class="learn-button">Read more</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://video.disney.com/watch/disney-channel-365-hour-of-code-52b0d7bc069f190af05a81c7" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-disney-event.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Disney Channel stars do the Hour of Code</h4>
+<div class="highlight-description">Sophie Reynolds from “Gamer’s Guide to Pretty Much Everything” and Karan Brar from “Bunk’d” learn how to code their own basic game, then play it.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/kickoff-certificates.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Hour of Code 2015 kicks off</h4>
+<div class="highlight-description">The Hour of Code 2015 kicks off with a pep rally in New York City, hosted by Code.org, Microsoft, and Google (with a very special appearance by R2-D2 from Star Wars and more) </div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/kickoff-student-panel.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Students share their learn-to-code journeys</h4>
+<div class="highlight-description">Google Director of Education Maggie Johnson moderated a panel where Four students from around New York City spoke about how they got into computer science, and shared their advice for both their classmates and leading tech companies.   </div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/kickoff-vandana.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Pair programming in action</h4>
+<div class="highlight-description">Infosys Foundation USA Chairperson and Code.org Board Member Vandana Sikka helps students from Bronx, NY complete their Hour of Code tutorial at the Hour of Code Kickoff Pep Rally</div>
+<br>
+</div>
+</a>
+</div>
+
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://www.usatoday.com/story/tech/gaming/2015/11/16/minecraft-code-building-demo/75849510/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/news-usatoday-minecraft.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">USA TODAY: Hour of Code computer science tutorial built around Minecraft</h4>
+<br>
+<div class="learn-button">Read on USA TODAY</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://www.seattletimes.com/business/microsoft/microsofts-nadella-gives-seattle-kids-a-hand-with-coding/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/satya.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Satya Nadella gives kids a hand</h4>
+<div class="highlight-description">The CEO of Microsoft leads Seattle 4th graders through the basics of computer science with Minecraft</div>
+<br>
+<div class="learn-button">Read on Seattle Times</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://vine.co/v/iuWHOHuD7i7" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/minecraft-girl.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">"Minecraft" Hour of Code in action</h4>
+<div class="highlight-description">This girl tried our "Minecraft" Hour of Code tutorial and goes through every emotion you feel on your coding journey, with an amazing finish.</div>
+<br>
+<div class="learn-button">Watch the Vine</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/dona.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Microsoft Hololens developer inspires students</h4>
+<div class="highlight-description">"By learning to code today, you're already getting a head start on taking over the world." — Dona Sarkar</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://mashable.com/2015/12/09/tim-cook-hour-of-code/#Y.Oekf_a18qx" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/tim-cook.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Tim Cook crashes an Hour of Code</h4>
+<div class="highlight-description">Surprising everyone — even store employees — Apple's CEO joined an Hour of Code workshop and called for fundamental changes in education.</div>
+<br>
+<div class="learn-button">Read on Mashable</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.uktech.news/news/government-and-policy/david-cameron-takes-part-in-hour-of-code-week-20151209" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/david-cameron.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">David Cameron does the Hour of Code</h4>
+<div class="highlight-description">UK's Prime Minister hosts students at 10 Downing Street. "In this digital age, coding matters, which is why initiatives such as the Hour of Code are so important."</div>
+<br>
+<div class="learn-button">Read on UK Tech News</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://business.nasdaq.com/discover/market-bell-ceremonies/detail.html#!/!?ceremonyId=4987" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/opening-bell.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Hour of Code rings the NASDAQ stock market opening bell</h4>
+<div class="highlight-description">12th grade computer science student Amina Dualeh joins us to ring the Opening Bell at Nasdaq, celebrating the week's worldwide Hour of Code event.</div>
+<br>
+<div class="learn-button">More on Nasdaq</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://code.org/about/evaluation/hourofcode" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/namibia-quote.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Reaching almost every country</h4>
+<br>
+<div class="learn-button">More on the campaign's impact</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.facebook.com/Code.org/photos/a.901362219960082.1073741859.309754825787494/902620859834218/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/times-square.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Hour of Code takes over Times Square</h4>
+<br>
+<div class="learn-button">Share on Facebook</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewPodcast?id=1066982309" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/luna.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Speaking at Apple Store, SoHo, NYC</h4>
+<div class="highlight-description">Luna Ruiz, 17, joins Code.org founder Hadi Partovi. She tells the crowd: "Working in tech is about collaboration and playing your part."</div>
+<br>
+<div class="learn-button">Listen to the full talk</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/bill-gates-twitter.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Bill Gates shares how he learned to code</h4>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/ingrid.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">YouTube star Ingrid Nilsen does the Hour of Code</h4>
+<div class="highlight-description">She asks her fans to try it "because it's cool and important." </div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.facebook.com/Code.org/photos/pb.309754825787494.-2207520000.1453330310./795469473882691/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/jessica.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Jessica Alba learns an Hour of Code</h4>
+<div class="highlight-description">The actress, activist, and entrepreneur hosted an Hour of Code with the entire staff at The Honest Company</div>
+<br>
+<div class="learn-button">Share on Facebook</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/disney-event-2.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Star Wars characters code too</h4>
+<div class="highlight-description">Ahead of the release of Star Wars: The Force Awakens, Star Wars characters join the Hour of Code movement. </div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/disney-event.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Disney hosts a kickoff in Los Angeles</h4>
+<div class="highlight-description">Additional Disney VoluntEARS support the campaign worldwide.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/snapchat.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Snapchat releases an Hour of Code filter</h4>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/twitter-emoji.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Twitter celebrates the movement</h4>
+<div class="highlight-description">#HourOfCode gets a special Twitter emoji and the hashtags trends in the United States and abroad. </div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/pNiECaVMStY" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-international.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">180+ countries join together</h4>
+<div class="highlight-description">Students at 198,000 events nearly every country in the world — from France to Pakistan to Brazil to Cambodia to the US — begin the Hour of Code 2015.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://twitter.com/codeorg/status/664226950253154304" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/chicago.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Chicago steps up the the challenge</h4>
+<div class="highlight-description">The Windy City is in for the friendly competition, asking every single school to join the movement.</div>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://twitter.com/codeorg/status/664226076424433664" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/brooklyn.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Brooklyn vs. Chicago</h4>
+<div class="highlight-description">The Borough President of Brooklyn, New York City challenges Chicago on who can get more schools to do the Hour of Code.</div>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/mFPg96gdPkc" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-girl.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Inspire a girl</h4>
+<div class="highlight-description">Sheryl Sandberg, Karlie Kloss, Jessica Alba, and inspiring women in tech share their thoughts on changing the world.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://code.org/mc-announcement" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/minecraft.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">"Minecraft" joins the Hour of Code</h4>
+<div class="highlight-description">Microsoft and Code.org team up for “Minecraft” Hour of Code tutorial that aims to introduce millions of youth to the creativity of computer science</div>
+<br>
+<div class="learn-button">Read more</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://www.wired.com/2015/11/star-wars-characters-will-now-teach-your-kids-to-code/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/news-wired-starwars.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Wired: Star Wars Characters Will Now Teach Your Kids To Code</h4>
+<br>
+<div class="learn-button">Read on Wired</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://code.org/star-wars-announcement" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/star-wars.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Hour of Code features Star Wars: The Force Awakens</h4>
+<div class="highlight-description">Code.org, Disney and Star Wars launch Hour of Code "build-your-own-game" tutorial to broaden computer science participation. The lesson features Leia and Rey from Star Wars: The Force Awakens.</div>
+<br>
+<div class="learn-button">Read more</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.instagram.com/p/2J88hRtu_c/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/seahawks.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">An Hour of Code with a Seahawk</h4>
+<div class="highlight-description">NFL player Earl Thomas joins Washington Governor Jay Inslee and middle school students for an Hour of Code. </div>
+<br>
+<div class="learn-button">See on Instagram</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/2DxWIxec6yo" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-worldwide.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Calling all teachers — worldwide</h4>
+<div class="highlight-description">The Hour of Code 2015 is announced with a brand new video, and a goal to reach 100,000 events.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/amazon.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Giving back</h4>
+<div class="highlight-description">Amazon’s VP of Consumer Business &amp; Code.org Board member, Jeff Wilke joined the Code.org team to present a $10,000 prize to Rainer Elementary School in WA.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/verizon.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Inspiring youth</h4>
+<div class="highlight-description">Verizon employees participate in more than 15 schools, including the Verizon Innovative Learning Schools, where every student is provided a tablet to inspire learning anytime, anywhere.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/salesforce.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Volunteering on a global scale</h4>
+<div class="highlight-description">Over 400 Salesforce employees volunteered globally, including teaming up with 17 schools in San Francisco and 4 in Oakland.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://twitter.com/lifeatexpedia/status/673922793931575296" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/expedia.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Volunteer stars</h4>
+<div class="highlight-description">Expedia mobilizes volunteers in Vegas &amp; Seattle</div>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/iac.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Mobilizing volunteers</h4>
+<div class="highlight-description">Employees across IAC brands joined Hour of Code for the first time</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/att.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Setting records</h4>
+<div class="highlight-description">AT&amp;T sets new records by volunteering in schools, giving inspirational talks, and mentoring students across the country and even in the UK.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://twitter.com/codeorg/status/657237818092064768" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/godaddy.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Trying an hour of code </h4>
+<div class="highlight-description">Over 1,466 GoDaddy employees volunteered and tried an Hour of Code around the world.</div>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/amex.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Celebrating computer science</h4>
+<div class="highlight-description">AMEX employees present a Code.org $10,000 award to Nova Eisenhower Elementary.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/accenture.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Volunteer power</h4>
+<div class="highlight-description">Accenture employees participate in 186 cities across 56 countries and pledge to complete nearly 8,000 Hours of Code!</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/hp2015.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">HP employees participate</h4>
+<div class="highlight-description">Over 800 HP employees volunteer, introduce new learning tools in over 90 schools, and host over 50 events globally and nationally.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/goldman.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Student career day</h4>
+<div class="highlight-description">Goldman Sachs employees organize code-themed career days at their offices in Dallas &amp; Salt Lake City.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/opower.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Anybody can learn</h4>
+<div class="highlight-description">“It was amazing to see everybody engage and excel." - Charlie Mayer, Operations &amp; Investor Relations, Opower</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/apple-store-celebrate.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Apple hosts Hour of Code workshops in every store worldwide</h4>
+<div class="highlight-description">From Shanghai to Sydney to Brussels to New York City.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://www.facebook.com/Code.org/photos/a.713452212084418.1073741855.309754825787494/715488511880788/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/nba.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">NBA stars join in</h4>
+<div class="highlight-description">Pro basketball legend Dikembe Mutombo does the Hour of Code with students in Brooklyn, New York. </div>
+<br>
+<div class="learn-button">Share on Facebook</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/booker-selfie.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Epic Hour of Code selfie with Cory Booker</h4>
+<div class="highlight-description">Senator Cory Booker meets with students from Newark, New Jersey and inspires them to keep learning skills that'll prepare them for 21st-century futures.</div>
+<br>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/AI_dayIQWV4" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/obama-fistbump.jpg)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Coder in Chief</h4>
+<div class="highlight-description">President Obama is the first president to write a line of code, hosting a historic Hour of Code for students at the White House.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://time.com/3595217/frozen-anna-elsa-let-it-code-tech-gender-gap/" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/news-time-frozen.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">TIME: Frozen’s Anna and Elsa ‘Let It Code’ to Close the Tech Gender Gap</h4>
+<br>
+<div class="learn-button">Read on TIME</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/DHaRStXZqSk" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/news-fox-business.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">FOX Business: 29 Companies Join Forces for the Hour of Code </h4>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/cFdncBMDtP8" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-malala.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Nobel Peace Prize winner Malala Yousafzai challenges girls to do the Hour of Code</h4>
+<div class="highlight-description">“Every girl deserves to take part in creating the technology that'll change our world, and change who runs it.”</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="http://blog.code.org/post/104341574918/apple" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/apple-site.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Apple supports the Hour of Code on its homepage</h4>
+<div class="highlight-description">Eddy Cue, Apple’s SVP of Internet Software and Services: “Education is part of Apple’s DNA and we believe this is a great way to inspire kids to discover technology.”</div>
+<br>
+<div class="learn-button">Read more</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/6XvmhE1J9PY" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-obama-message.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">President Obama's message to students</h4>
+<div class="highlight-description">For the second year in a row, President Obama kicks off Computer Science Education Week by asking students to learn an Hour of Code.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://youtu.be/FC5FbmsH4fw" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/video-hoc.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">The Hour of Code is here</h4>
+<div class="highlight-description">Celebrities from all walks of life, including Ashton Kutcher, Shakira, Mark Zuckerberg, Angela Bassett, Dwight Howard, and more, kick off the 2013 campaign.</div>
+<br>
+<div class="learn-button">Watch the video</div>
+</div>
+</a>
+</div>
+
+<div class="highlight-item">
+<a class="learnmore-link" href="https://twitter.com/codeorg/status/410054065737854976" target="_blank">
+<div class="highlight-img" style="background-image:url(/images/highlights/fill-260x260/google-doodle.png)"></div>
+<div class="highlight-caption">
+<h4 class="caption-headline">Hour of Code Google Doodle</h4>
+<div class="highlight-description">Google celebrates the Hour of Code 2013 with this tribute to Grace Hopper, one of the very first computer programmers.</div>
+<br>
+<div class="learn-button">See on Twitter</div>
+</div>
+</a>
+</div>
+
+
+
+
+
+
+
+
+</div>
+<script>
+  $(function() {
+    $('.highlight-item').mouseover(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeIn();
+    });
+  
+    $('.highlight-item').mouseleave(function() {
+      var caption = $(this).find('.highlight-caption');
+      caption.fadeOut();
+    });
+  });
+</script>
+
+</div>
+<br>
+<br>
+<br>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contact us</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Support</a>
+</li>
+<li>
+<a href="/us/partners" target="_blank">Partners and Advisors</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Privacy Policy</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. All rights reserved.
+<br>
+Hour of Code™ is a trademark of Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

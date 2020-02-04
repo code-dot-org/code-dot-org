@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Code.org" property="og:site_name">
+<meta content="500177453358606" property="fb:app_id">
+<meta content="article" property="og:type">
+<meta content="https://www.facebook.com/Code.org" property="article:publisher">
+<meta content="http://hourofcode.com/review-committee" property="og:url">
+<meta content="https://test.code.org/images/default-og-image.png" property="og:image">
+<meta content="1220" property="og:image:width">
+<meta content="640" property="og:image:height">
+<meta content="https://test.code.org/images/default-og-image.png" property="twitter:image:src">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Hour of Code and CSEdWeek Review Committee</title>
+<link href="/images/icons/favicon.ico" rel="shortcut icon">
+<link href="/images/icons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+<link href="/images/icons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+<link href="/images/icons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+<link href="/images/icons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+<link href="/images/icons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+<link href="/images/icons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="/images/icons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="/images/icons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+<link href="/images/icons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/icons/favicon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+<link href="/images/icons/favicon-160x160.png" rel="icon" sizes="160x160" type="image/png">
+<link href="/images/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+<link href="/images/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+<link href="/images/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<meta content="#ffc40d" name="msapplication-TileColor">
+<meta content="/images/icons/mstile-144x144.png" name="msapplication-TileImage">
+<meta content="/images/icons/browserconfig.xml" name="msapplication-config">
+<!--[if lt IE 9]>
+<script src='/js/html5shiv.js'></script>
+<script src='/js/es5-shim.min.js'></script>
+<![endif]-->
+<script>
+  var is_ie8 = false;
+</script>
+<!--[if IE 8]>
+<script>
+  is_ie8 = true;
+</script>
+<![endif]-->
+<link href="/style.css" rel="stylesheet" type="text/css">
+<link href="/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css">
+
+<link href="/css/common.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src='/js/respond.min.js'></script>
+<![endif]-->
+<meta content="IE=8" http-equiv="X-UA-Compatible">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-37745279-1', 'hourofcode.com');
+  
+  var currentLocale = readCookie("language_");
+  if (currentLocale && currentLocale != "")
+  {
+    var currentLanguage = currentLocale.substring(0,2);
+    if (currentLanguage && currentLanguage != "")
+    {
+      ga('set', 'dimension1', currentLanguage);
+    }
+  }
+  
+  ga('set', 'anonymizeIp', true);
+  
+  ga('send', 'pageview');
+  
+  function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+      var c = ca[i];
+      while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+  }
+</script>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/sifter.min.js" type="text/javascript"></script>
+<script src="/js/microplugin.min.js" type="text/javascript"></script>
+<script src="/js/selectize.min.js" type="text/javascript"></script>
+<script src="/assets/js/webpack-runtime.js"></script>
+<script src="/assets/js/vendors.js"></script>
+<script src="/assets/js/hourofcode.com/views/theme_common_head_after.js"></script>
+
+</head>
+<body>
+<link href="/shared/css/warning-banner.css" rel="stylesheet" type="text/css">
+<div class="wrapper">
+<div id="warning-banner" style="display: none;">
+<i class="fa fa-warning warning-sign"></i>
+ 
+<p>Your browser is not supported. Please upgrade your browser to <a href="https://support.code.org/hc/en-us/articles/202591743">one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken.</p>
+
+</div>
+
+<div id="pageheader">
+<div class="container">
+<div id="hoc-header-branding">
+<a href="/us/">
+<img alt="Hour of Code" src="/us/en/images/hour-of-code-logo.png">
+</a>
+</div>
+<div id="hoc-header-main">
+<div id="language-dropdown">
+<select onchange="window.location.href = '/us/' + this.value + '/review-committee';">
+<option value="ar">العربية</option>
+<option value="az">Azərbaycan dili</option>
+<option value="bg">български</option>
+<option value="bs">Bosanski</option>
+<option value="ca">Català</option>
+<option value="cs">Čeština</option>
+<option value="da">Dansk</option>
+<option value="de">Deutsch</option>
+<option value="el">Ελληνικά</option>
+<option value="gb">English (UK)</option>
+<option selected value="en">English</option>
+<option value="es">Español (España)</option>
+<option value="la">Español (LATAM)</option>
+<option value="af">دريلو</option>
+<option value="fa">فارسی</option>
+<option value="ph">Pilipino</option>
+<option value="fr">Français</option>
+<option value="he">עברית</option>
+<option value="hi">हिन्दी</option>
+<option value="hr">Hrvatski</option>
+<option value="hu">Magyar</option>
+<option value="id">Bahasa Indonesia</option>
+<option value="is">Íslenska</option>
+<option value="it">Italiano</option>
+<option value="ja">日本語</option>
+<option value="ka">ქართული</option>
+<option value="kk">Қазақша</option>
+<option value="km">ភាសាខ្មែរ</option>
+<option value="ko">한국어</option>
+<option value="ky">Кыргызча</option>
+<option value="lv">Latviešu</option>
+<option value="mi">Māori (NZ)</option>
+<option value="mr">मराठी</option>
+<option value="ms">بهاس ملايو</option>
+<option value="ne">नेपाली</option>
+<option value="nl">Nederlands</option>
+<option value="nn">Norsk (Nynorsk)</option>
+<option value="no">Norsk (Bokmål)</option>
+<option value="pl">Polski</option>
+<option value="pt">Português (Brasil)</option>
+<option value="po">Português (Portugal)</option>
+<option value="ro">Română</option>
+<option value="ru">Pусский</option>
+<option value="si">සිංහල</option>
+<option value="sk">Slovenčina</option>
+<option value="sl">Slovenščina</option>
+<option value="sq">Shqip</option>
+<option value="sv">Svenska</option>
+<option value="ta">தமிழ்</option>
+<option value="te">తెలుగు</option>
+<option value="tr">Türkçe</option>
+<option value="uk">Українська</option>
+<option value="ur">اردو</option>
+<option value="vi">Tiếng Việt</option>
+<option value="cn">简体字</option>
+<option value="zh">繁體字</option>
+<option value="zu">isiZulu</option>
+</select>
+
+</div>
+<div id="hoc-nav">
+<ul class="hide-responsive-menu">
+<li>
+<a href="/us/learn" title="Activities">Activities</a>
+</li>
+<li>
+<a href="/us/how-to" title="How-To">How-To</a>
+</li>
+<li>
+<a href="/us/promote" title="Promote">Promote</a>
+</li>
+<li>
+<a href="/us/#faq" title="FAQ">FAQ</a>
+</li>
+</ul>
+<a href="#" id="hoc-nav-hamburger">
+☰
+</a>
+</div>
+</div>
+</div>
+</div>
+<div style="clear: both;"></div>
+
+<div class="container_nonresponsive">
+<div style="width: 970px;">
+<div style="width: 970px; float: left; margin: 0; padding: 0;">
+<h1>Hour of Code and CSEdWeek Review Committee</h1>
+
+<link href="/css/headshots.css" rel="stylesheet" type="text/css">
+<div id="headshots">
+<div class="headshot_row">
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/ashley_redhill.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Ashley Redhill
+</h3>
+<p class="person_title">High School</p>
+<p class="person_description">Ashley Redhill is a high school mathematics teacher for grades 10-12. He teaches at Calero High School, an alternative school in San Jose, CA and has experience using HTML, CSS, Scratch, Alice, JavaScript, Python, Quorum. Ashley was pulled into the CS Education movement by wanting to remedy inequities in CS access. As a math teacher, the problem solving skills he uses to teach Common Core Math are identical to the problem solving skills his students gain through CS. Ashley has a pet tortoise named Kaiju, featured here :)</p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/bob_richardson.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Bob Richardson
+</h3>
+<p class="person_title">High School</p>
+<p class="person_description">Bob Richardson is a Math and Computer Science teacher in Baltimore County, Maryland. He has been teaching for 13 years and has taught Computer Science at all levels (from 3rd grade all the way through college). Inspiring students to get involved with Computer Science has always been a passion of his, and he’s been incorporating CS initiatives for over 10 years. For a significant portion of that time, he has been conducting research and documenting the positive effect exposure to CS has on overall student success. This research was what originally led him to the Hour of Code and he has since been incorporating it in school and system-wide CS movements in Maryland. Bob has experience using Scratch, Code.org, Alice, Python, JavaScript, Java, C++, and multiple game based learning platforms.</p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/chinma_uche.png">
+</div>
+</div>
+
+<h3 class="person_name">
+Chinma Uche
+</h3>
+<p class="person_title">High School</p>
+<p class="person_description">Chinma is a math and computer science teacher who believes that Computer Science should be taught to all K-12 students. As a College Board’s AP CSP Consultant and a Code.org CS Fundamentals Facilitator, she trains and supports teachers to bring CS to their students. She is a member of many committees, including the Connecticut State Department of Education's CS Advisory Committee and the Connecticut Digital Learning Advisory Council. She serves in the Connecticut Science Center’s Women in Science Steering Committee and the Girls Scout STEM Advisory Group. She is also a member of the 100Kin10 Teacher Forum. She was the President of the Connecticut CSTA, a member of the CSTA Board and a member of the AP CSP Development Committee. While serving as an official CSP pilot instructor, she helped create the Mobile CSP curriculum. Chinma currently teaches AP CSP and AP CS A at the Academy of Aerospace and Engineering in Windsor, CT. She continues to use Scratch, Code.org, Codehs, Javascript, Java, and App Inventor in her classroom. Chinma was the 2015 CREC Teacher of the Year (TOY), a 2016 Connecticut TOY Semifinalist and a 2018 O’Toole Teacher Leader Awardee.</p>
+</div>
+</div>
+<br style="clear: both;">
+<div class="headshot_row">
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/darlene_bowman.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Darlene Bowman
+</h3>
+<p class="person_title">Middle/High School</p>
+<p class="person_description">Darlene has worked with special needs students for 15 years.  She teaches STEM/Software Engineering to HS students with Autism.  She loves integrating Science, Tech, Engineering and Art into academic subjects. Now she gets to do all that AND coding—every day!  Her students have done the Hour Of Code every year since 2013.  To her surprise, they excelled faster than she did. She says that’s the beauty of working with Special Needs students. You never know when their extraordinary TALENTS will shine. Darlene has used Code.org, Scratch, Scratch Jr., LEGO Mindstorm, Arduino, and Codecademy with her students. She is also a Professor at College of Staten Island, with 4 beautiful children, who love to code!! </p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/debby_taylor.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Debby Taylor
+</h3>
+<p class="person_title">Elementary School</p>
+<p class="person_description">Debby Taylor is a nationally STEM-certified educator from Marietta, Georgia, a suburb of metro Atlanta. She currently teaches 4th grade at Mountain View Elementary in the Cobb County School District. Her teaching career spans from preschool, as a teacher and an administrator, to middle school Language Arts. Before moving to 4th grade this year, she spent six years she teaching technology at Mountain View to Kindergarten through 5th grade students. It was during her first year as a computer lab teacher that Debby learned about Code.org. She has been hooked on coding ever since, hosting a school-wide Hour of Code event every year as well as an after-school coding club for 3rd - 5th grade students who want to learn more about computer science. Debby has experience using Code.org, Scratch, Lightbot, and Tynker with her classes as well as Ozobots and Spheros. As part of her school’s key STEM team, she collaborates regularly with other teachers integrating coding and technology into their classrooms whenever possible.</p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/joanne_barrett.png">
+</div>
+</div>
+
+<h3 class="person_name">
+Joanne Barrett
+</h3>
+<p class="person_title">Middle/High School</p>
+<p class="person_description">Joanne has been an independent school computer science educator and educational technologist for more than twenty years. Joanne has experience using Scratch, Alice, Greenfoot, Processing, Python, Java, Javascript, and Mathlab in the classroom. Old enough to have programmed using punch cards, Joanne has enjoyed introducing coding to the next generation of programmers. Joanne is the president and founder of the CSTA-Florida virtual chapter and is extremely interested in computer science education in the K12 environment. As a member of cohort 4 in the University of Florida’s College of Education Educational Technology Program, Joanne loves researching, exploring and learning about new tools for instruction across the curriculum and grade levels.</p>
+</div>
+</div>
+<br style="clear: both;">
+<div class="headshot_row">
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/kirsten_innes.png">
+</div>
+</div>
+
+<h3 class="person_name">
+Kirsten Innes
+</h3>
+<p class="person_title">Elementary School</p>
+<p class="person_description">Kirsten Innes is the Information Specialist at Prairieview School in Hainesville, part of Grayslake CCSD #46. Prior to landing her dream job, she was a 4th and 5th grade classroom teacher at Rupley Elementary, in Elk Grove Village, CCSD #59. She has a Bachelor's Degree in Elementary Education and Master's Degrees in Curriculum and Instruction and Instructional Media. She’s a SMART Exemplary Educator, SMART Certified Trainer, Google Educator Levels 1 and 2, Google Certified Trainer, Apple Teacher, and Tech4Learning Innovative Educator. She has experience using Scratch, Blockly, Code.org, Osmo, Ozobot, Dash and Dot, and LEGO in her classroom. At the start, Kirsten described herself as a true technophobe. Her first experience with coding was being thrown into HTML when web pages first became a "thing", thinking why would any normal everyday person need to know how to code and program? She says she’s glad to know she was wrong! She is passionate about learning and sharing with others! </p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/kitty_herbel.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Kitty Herbel
+</h3>
+<p class="person_title">Elementary/Middle School</p>
+<p class="person_description">Kitty is in her fifth year teaching computer science to 6th-8th graders at Waller Middle School in Enid, Oklahoma. She previously taught 4th and 5th grade for 10 years. She has a Bachelor's in Elementary Education and a Master's in Guidance and Counseling. Kitty has used Spheros, Drones, Hummingbird Robotics Kit, Alice 2.1, Tynker Lessons, and Code Studio Lessons with her classes. Seeing how excited her students were when they made something move for the first time got Kitty more excited about computer science. Now, she has students creating their own computer games on their own time and sharing them with other students for feedback. Kitty is also a Code.org Discoveries Facilitator. Outside of the classroom, Kitty loves to read and spend time with her husband and 4 year old. : )</p>
+</div>
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="avatar_image" src="/images/fill-200x200/pauline_white.jpg">
+</div>
+</div>
+
+<h3 class="person_name">
+Pauline White
+</h3>
+<p class="person_title">Middle/High School</p>
+<p class="person_description">Pauline White is a N.Y. state certified teacher of Technology Education and Mathematics, having taught grades 7-12. She holds a M.S. in Computer Science from Rensselaer Polytechnic Institute, Troy, N.Y., and a M.A.T. from Union Graduate College, Schenectady, N.Y. Pauline has worked as a software engineer for G.E. Global Research and Development, Niskauna, N.Y. In her time as a high school teacher of computer science at Burnt Hills-Ballston Lake High School, Burnt Hills, N.Y., she built a vibrant computer science department and established the Coding Club. She used Scratch, Snap, Alice, Greenfoot, Java, HTML/CSS/JavaScript, LEGO EV3, AppInventor, Pencil Code, Code.org, and CS Unplugged in her classroom. Pauline is president her local CSTA chapter and has recently joined the Siena College Computer Science Department as a full time instructor. She lives with her husband and three children in Duanesburg, N.Y., and enjoys life in the country, gardening, cooking, and crocheting.</p>
+</div>
+</div>
+<br style="clear: both;">
+<div class="headshot_row">
+<div class="headshot_column">
+<div id="headshot_image">
+<div class="avatar_container">
+<img class="gray_circle">
+<i class="fa fa-user user_icon"></i>
+</div>
+</div>
+
+<h3 class="person_name">
+Shane Asselstine
+</h3>
+<p class="person_title">Elementary/Middle School</p>
+<p class="person_description">Shane is the Complex Area Teacher focused on computer science for Pearl City-Waipahu Complex. He is also the Hawaii Society for Technology in Education (HSTE) President, CSTA Hawaii Chapter Past-President, a Minecraft Global Mentor, and a Code.org K-8 Facilitator for Hawaii. He has been integrating technology from Google to Micro:bits into his classes for over a decade with lessons ranging from economics to humanities. He is a strong advocate for computer science in the classroom and looks to have educators incorporates unplugged, digital and physical computing as part of the curriculum. Since August 2015, he has trained over 800 teachers in Hawaii to bring CS into the classroom. He has been presenting internationally on the use of technology in education for many years. Shane was awarded the ISTE Making It Happen Award in 2015 and was a PAEMST 2017 nominee.</p>
+</div>
+</div>
+<br style="clear: both;">
+</div>
+
+
+<ul>
+</ul>
+
+</div>
+</div>
+<div id="clearboth" style="clear:both"></div>
+<br>
+<br>
+<br>
+</div>
+<div class="push"></div>
+</div>
+
+<footer id="pagefooter">
+<div id="footer-links">
+<ul class="hide-responsive-footer-menu">
+<li>
+<a href="http://support.code.org/hc/en-us/requests/new" target="_blank">Contact us</a>
+</li>
+<li>
+<a href="http://support.code.org" target="_blank">Support</a>
+</li>
+<li>
+<a href="/us/partners" target="_blank">Partners and Advisors</a>
+</li>
+<li>
+<a href="https://test.code.org/tos" target="_blank">Terms</a>
+</li>
+<li>
+<a href="https://test.code.org/privacy" target="_blank">Privacy Policy</a>
+</li>
+</ul>
+<div id="footer-toggle">
+<a href="#">
+Code.org
+<i class="fa fa-chevron-up"></i>
+</a>
+</div>
+</div>
+<div id="copyright">
+Copyright 2020 Code.org. All rights reserved.
+<br>
+Hour of Code™ is a trademark of Code.org.
+</div>
+</footer>
+
+
+<script>
+  $(function() {
+    selectize = $('#language-dropdown select').selectize();
+    $('#language-dropdown').attr('style', 'visibility: visible;');
+  
+    // When nav hamburger is clicked, toggle responsive menu
+    $('#hoc-nav-hamburger').click(function(e){
+        $('#hoc-nav ul').toggleClass('hide-responsive-menu');
+        e.preventDefault();
+    });
+  
+    // When footer chevron is clicked, toggle responsive menu
+    $('#footer-toggle').click(function(e){
+        $('#footer-links ul').toggleClass('hide-responsive-footer-menu');
+        e.preventDefault();
+    });
+  
+    // When clicking anywhere outside the responsive menus, dismiss them
+    $(document).click(function(e) {
+      if(!$(e.target).closest('#hoc-nav-hamburger').length) {
+        $('#hoc-nav ul').addClass('hide-responsive-menu');
+      }
+      if(!$(e.target).closest('#footer-toggle').length) {
+        $('#footer-links ul').addClass('hide-responsive-footer-menu');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
