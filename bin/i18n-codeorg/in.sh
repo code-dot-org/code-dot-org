@@ -7,7 +7,6 @@
 set -e
 
 function cp_in() {
-  echo "$1 => $2"
   cp $1 $2
 }
 
