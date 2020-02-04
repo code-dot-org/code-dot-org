@@ -7,6 +7,8 @@ require_relative '../dashboard/config/environment'
 # existing Standards and to create new Standards.
 # Will not delete existing Standards.
 
+# Usage: ruby import_standards_from_csv <path_to_csv>
+
 # @param csv_path [String] The path to the CSV file.
 # Expected columns:
 # - organization
