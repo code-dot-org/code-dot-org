@@ -81,7 +81,7 @@ class LibraryTable extends React.Component {
       this.props.libraryManifest.tables,
       this.props.name
     );
-    if (!datasetInfo) {
+    if (!datasetInfo || !datasetInfo.published) {
       return null;
     }
 
