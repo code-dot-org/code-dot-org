@@ -6,6 +6,7 @@ import {getStore} from '../../../redux';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 import CustomMarshaler from './CustomMarshaler';
 import {generateAST} from '@code-dot-org/js-interpreter';
+import i18n from '@cdo/locale';
 
 import {setIsDebuggerPaused} from '../../../redux/runState';
 
@@ -38,6 +39,29 @@ function safeStepInterpreter(jsi) {
   } catch (err) {
     return err;
   }
+}
+
+/**
+ * Checks the code row number and library name to determine whether we are in
+ * the user's code
+ */
+function isInUserCode(userCodeRow, libraryName) {
+  return -1 !== userCodeRow && !libraryName;
+}
+
+/**
+ * Checks if a library name exists in the node
+ */
+function isNodeFromLibrary(node) {
+  return node.loc && !!node.loc.source;
+}
+
+/**
+ * Checks if the starting value of a node is within the defined boundrary of a
+ * user's code
+ */
+function isNodeWithinUserCode(start, userCodeLength) {
+  return start >= 0 && start < userCodeLength;
 }
 
 export default class JSInterpreter {
@@ -238,12 +262,29 @@ export default class JSInterpreter {
       // can be injected before the user code is processed (thus allowing user
       // code to override globals of the same names)
 
-      // Append the libraries first so line numbers are maintained:
-      if (!!options.libraryCode && typeof options.libraryCode === 'string') {
-        this.interpreter.appendCode(options.libraryCode);
+      // Setting libraryAST to null as that is acorn's default value for the
+      // program option
+      let libraryAST = null;
+      if (Array.isArray(options.projectLibraries)) {
+        options.projectLibraries.forEach(library => {
+          try {
+            libraryAST = acorn.parse(library.code, {
+              ecmaVersion: 5,
+              locations: true,
+              sourceFile: library.name,
+              program: libraryAST
+            });
+          } catch (err) {
+            err.message = i18n.errorParsingLibrary({
+              libraryName: library.name,
+              errorMessage: err.message
+            });
+            throw err;
+          }
+        });
       }
       // Now append the user code:
-      this.interpreter.appendCode(options.code);
+      this.interpreter.appendCode(options.code, {program: libraryAST});
       // And repopulate scope since appendCode() doesn't do this automatically:
       this.interpreter.populateScope_(this.interpreter.ast, this.globalScope);
     } catch (err) {
@@ -591,6 +632,7 @@ export default class JSInterpreter {
       //   maybe stop at a breakpoint, or add a `speed(n)` delay.
       // (3) Otherwise call a function that also highlights the code.
       let selectCodeFunc;
+      let libraryName;
       if (this.studioApp.hideSource && atMaxSpeed) {
         selectCodeFunc = function() {
           return -1;
@@ -621,7 +663,9 @@ export default class JSInterpreter {
         break;
       }
       userCodeRow = selectCodeFunc.call(this);
-      inUserCode = -1 !== userCodeRow;
+      libraryName = this.getLibraryName();
+      inUserCode = isInUserCode(userCodeRow, libraryName);
+
       // Check to see if we've arrived at a new breakpoint:
       //  (1) should be in user code
       //  (2) should never happen while unwinding
@@ -748,7 +792,8 @@ export default class JSInterpreter {
             if (wasUnwinding && !unwindingAfterStep) {
               // done unwinding.. select code that is next to execute:
               userCodeRow = selectCodeFunc.call(this);
-              inUserCode = -1 !== userCodeRow;
+              libraryName = this.getLibraryName();
+              inUserCode = isInUserCode(userCodeRow, libraryName);
               if (!inUserCode) {
                 // not in user code, so keep unwinding after all...
                 unwindingAfterStep = true;
@@ -790,7 +835,8 @@ export default class JSInterpreter {
         }
       } else {
         if (this.executionError) {
-          this.handleError(inUserCode ? userCodeRow + 1 : undefined);
+          const row = inUserCode || !!libraryName ? userCodeRow + 1 : undefined;
+          this.handleError(row, libraryName);
         }
         this.isExecuting = false;
         return;
@@ -821,7 +867,7 @@ export default class JSInterpreter {
     }
     const start = offset - this.codeInfo.userCodeStartOffset;
 
-    return start >= 0 && start < this.codeInfo.userCodeLength;
+    return isNodeWithinUserCode(start, this.codeInfo.userCodeLength);
   }
 
   /**
@@ -869,7 +915,7 @@ export default class JSInterpreter {
     const state = this.interpreter.peekStackFrame();
     const node = state.node;
 
-    if (!this.isOffsetInUserCode_(node.start)) {
+    if (!(this.isOffsetInUserCode_(node.start) || isNodeFromLibrary(node))) {
       return;
     }
 
@@ -915,13 +961,28 @@ export default class JSInterpreter {
   }
 
   /**
+   * Gets the library's name, if it exists, from the current node
+   */
+  getLibraryName() {
+    let libraryName;
+    if (this.interpreter.peekStackFrame()) {
+      const node = this.interpreter.peekStackFrame().node;
+
+      if (node.loc) {
+        libraryName = node.loc.source;
+      }
+    }
+    return libraryName;
+  }
+
+  /**
    * Helper that wraps some error preprocessing before we notify observers that
    * an execution error has occurred. Operates on the current error that is
    * already saved as this.executionError
    *
    * @param {number} [lineNumber]
    */
-  handleError(lineNumber) {
+  handleError(lineNumber, libraryName) {
     if (!lineNumber && this.executionError instanceof SyntaxError) {
       // syntax errors came before execution (during parsing), so we need
       // to determine the proper line number by looking at the exception
@@ -943,6 +1004,10 @@ export default class JSInterpreter {
     }
 
     var msg = String(this.executionError);
+    if (libraryName) {
+      msg = i18n.library() + ': ' + libraryName + ': ' + msg;
+    }
+
     if (
       this.executionError instanceof ReferenceError &&
       this.executionError.message
@@ -961,8 +1026,12 @@ export default class JSInterpreter {
         }
       }
     }
-
-    this.onExecutionError.notifyObservers(this.executionError, lineNumber, msg);
+    this.onExecutionError.notifyObservers(
+      this.executionError,
+      lineNumber,
+      msg,
+      libraryName
+    );
   }
 
   /**
@@ -1012,7 +1081,10 @@ export default class JSInterpreter {
       // Only return a valid userCodeRow if the node being executed is inside the
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
-      if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      if (
+        isNodeWithinUserCode(start, this.codeInfo.userCodeLength) ||
+        isNodeFromLibrary(node)
+      ) {
         userCodeRow = codegen.aceFindRow(
           this.codeInfo.cumulativeLength,
           0,
@@ -1042,7 +1114,10 @@ export default class JSInterpreter {
       // Only return a valid userCodeRow if the node being executed is inside the
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
-      if (start >= 0 && start < this.codeInfo.userCodeLength) {
+      if (
+        isNodeWithinUserCode(start, this.codeInfo.userCodeLength) ||
+        isNodeFromLibrary(node)
+      ) {
         userCodeRow = codegen.aceFindRow(
           this.codeInfo.cumulativeLength,
           0,
