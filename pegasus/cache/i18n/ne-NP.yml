@@ -205,6 +205,7 @@ ne-NP:
   if_you_enjoyed: If you enjoyed learning, ask friends to try it too!  We want the
     whole world to learn.
   personalize_certificate: Personalize your certificate
+  print_certificates: Print certificates
   share_achievement: Share your achievement
   beyond_hour_message: Keep going with our <a href='http://studio.code.org'>other
     courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>.
