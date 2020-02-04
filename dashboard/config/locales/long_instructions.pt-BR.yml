@@ -7155,7 +7155,7 @@ pt-BR:
 
         # Visibilidade
 
-        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `true` (a figura é visivel) ou `false` (a figura **não** é visível). Por padrão, o valor atribuído a visible é `true`.
+        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `verdadeiro` (a figura é visivel) ou `verdadeiro` (a figura **não** é visível). Por padrão, o valor atribuído a visivel é `verdadeiro`.
 
         # Faça Isto
 
@@ -7173,7 +7173,7 @@ pt-BR:
 
         # Visibilidade
 
-        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `true` (a figura é visivel) ou `false` (a figura **não** é visível). Por padrão, o valor atribuído a visible é `true`.
+        Algumas vezes é útil esconder a imagem por um tempo, e depois mostrá-la novamente. Você pode fazer isto usando a propriedade `visible`. A propriedade visible é um pouco diferente das outras propriedades que você viu no passado: Ela é um valor booleano, ou `verdadeiro` (a figura é visivel) ou `verdadeiro` (a figura **não** é visível). Por padrão, o valor atribuído a visivel é `verdadeiro`.
 
         # Faça Isto
 
@@ -7516,7 +7516,7 @@ pt-BR:
         -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
         -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
 
-        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+        Teste seu código. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
       CSD U3 AnimationsMulti defender enemies touch cake sprite2_2018: |-
         # Tocando o Bolo: Segunda Joaninha
 
@@ -7530,7 +7530,7 @@ pt-BR:
         -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
         -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
 
-        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+        Teste seu código. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
       CSD U3 AnimationsMulti defender enemies touch cake sprite2_2019: |-
         # Tocando o Bolo: Segunda Joaninha
 
@@ -7544,7 +7544,7 @@ pt-BR:
         -   Cole o código dentro da função `enemiesTouchCake`, logo abaixo do último (Ctrl-V)
         -   Altere o nome da figura contida neste código, de `enemy1` para `enemy2`.
 
-        Teste seu cõdigo. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
+        Teste seu código. Agora ambos os insetos deverão ser reiniciados ao tocarem o bolo.
       CSD U3 AnimationsMulti defender enemies touch cake_2018: |-
         # Tocando o Bolo
 
@@ -7686,7 +7686,7 @@ pt-BR:
         Neste nível você ainda vai escrever código dentro da função `movePlayer`.
 
         -   Use um bloco `if` juntamente com `keyDown` para detectar quando a seta para cima estiver pressionada.
-        -   Use `sprite.y` para incrementar a posição y do jogador em 3 unidades usando o padrão de contagem.
+        -   Use `sprite.y` para incrementar a posição do jogador em 3 unidades usando o padrão de contagem.
         -   Use um outro bloco `if` para mover o jogador para baixo quando a seta para baixo estiver pressionada.
 
         Teste seu código. Seu personagem deverá agora se mover em todas as 4 direções.
@@ -7700,7 +7700,7 @@ pt-BR:
         Neste nível você ainda vai escrever código dentro da função `movePlayer`.
 
         -   Use um bloco `if` juntamente com `keyDown` para detectar quando a seta para cima estiver pressionada.
-        -   Use `sprite.y` para incrementar a posição y do jogador em 3 unidades usando o padrão de contagem.
+        -   Use `sprite.y` para incrementar a posição do jogador em 3 unidades usando o padrão de contagem.
         -   Use um outro bloco `if` para mover o jogador para baixo quando a seta para baixo estiver pressionada.
 
         Teste seu código. Seu personagem deverá agora se mover em todas as 4 direções.
@@ -7953,9 +7953,9 @@ pt-BR:
 
         Antes de começar a escrever este programa, você precisará descobrir como verificar várias condições de uma só vez.
 
-        -   \*\* Brainstorm \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
+        -   \*\* Chuva de idéias \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
         -   \*\* Compartilhe \*\* de volta com outros colegas para ver outras abordagens em potencial.
-        -   \*\* Explore \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
+        -   \*\* Explorar \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
         -   \*\* Programa \*\* sua solução proposta.
         -   \*\* Teste \*\* seu programa para verificar se ele está realmente verificando todas as condições desejadas.
       CSD U3 Compound Nested Challenge_2019: |-
@@ -7972,9 +7972,9 @@ pt-BR:
 
         Antes de começar a escrever este programa, você precisará descobrir como verificar várias condições de uma só vez.
 
-        -   \*\* Brainstorm \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
+        -   \*\* Chuva de idéias \*\* com seus vizinhos maneiras que você pode verificar por mais de uma condição.
         -   \*\* Compartilhe \*\* de volta com outros colegas para ver outras abordagens em potencial.
-        -   \*\* Explore \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
+        -   \*\* Explorar \*\* a caixa de ferramentas para blocos que podem ajudar (preste atenção extra nas gavetas Math e Control).
         -   \*\* Programa \*\* sua solução proposta.
         -   \*\* Teste \*\* seu programa para verificar se ele está realmente verificando todas as condições desejadas.
       CSD U3 Conditionals Apple: |-
@@ -8005,7 +8005,7 @@ pt-BR:
 
         # Para fazer
 
-        Use um condicional no loop de desenho para verificar se `fruit.scale` é maior que 2. Se for, altere a animação da fruta para "pêra".
+        Use um condicional no laço de desenho para verificar se `fruit.scale` é maior que 2. Se for, altere a animação da fruta para "pêra".
 
         _Desafio: Você também pode fazer a fruta parar de crescer uma vez que se transforma em uma pêra?_
       CSD U3 Conditionals Apple 2_2018_2019: |-
@@ -8015,7 +8015,7 @@ pt-BR:
 
         # Para fazer
 
-        Use um condicional no loop de desenho para verificar se `fruit.scale` é maior que 2. Se for, altere a animação da fruta para "pêra".
+        Use um condicional no laço de desenho para verificar se `fruit.scale` é maior que 2. Se for, altere a animação da fruta para "pêra".
 
         _Desafio: Você também pode fazer a fruta parar de crescer uma vez que se transforma em uma pêra?_
       CSD U3 Conditionals Apple_2018: |-
@@ -8157,7 +8157,7 @@ pt-BR:
 
         # Faça isso
 
-        O sprite de inseto que responde à seta para cima que você fez foi trazido para esse nível. Adicione a interação para as outras três teclas de setas!
+        O bug do sprite que responde à seta para cima que você fez foi trazido para esse nível. Adicione a interação para as outras três teclas de setas!
 
         -   Adicione três declarações if - uma para cada seta.
         -   Cada declaração if deve mover o sprite na direção da seta.
@@ -8469,21 +8469,21 @@ pt-BR:
 
         <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
 
-        Algumas vezes queremos dizer a um programa não só o que fazer se uma condição for `true`, mas também o que fazer se ela for `false`. Ao pressionar o botão com sinal de mais no final do seu bloco condicional você terá uma nova seção chamada `else`. Essa sessão else é um plano B - ela será chamada toda vez que a condição no if anterior for `false`.
+        Algumas vezes queremos dizer a um programa não só o que fazer se uma condição for `verdadeira`, mas também o que fazer se ela for `falsa`. Ao pressionar o botão com sinal de mais no final do seu bloco condicional você terá uma nova seção chamada `outro`. Essa sessão é um plano B - ela será chamada toda vez que a condição no if anterior for `false`.
 
         # Faça Isso
 
         As engrenagens estão de volta. Da última vez que você trabalhou com elas, você fez elas girarem quando a barra de espaço é pressionada. Ao invés das engrenagens girarem apenas quando a barra de espaço é apertada, queremos que elas girem num sentido ao apertar a barra de espaço e em outro quando ela não é apertada.
         <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
 
-        -   Clique no botão _mais_ no final do bloco if para adicionar um else.
+        -   Clique no botão _mais_ no final do bloco if para adicionar um 'outro'.
         -   Adicione comandos para fazer as engrenagens girarem na direção oposta a que elas giram quando a barra de espaço é pressionada.
       CSD U3 Else_2018: |-
         # E se minha condição não for verdadeira?
 
         <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
 
-        Algumas vezes queremos dizer a um programa não só o que fazer se uma condição for `true`, mas também o que fazer se ela for `false`. Ao pressionar o botão com sinal de mais no final do seu bloco condicional você terá uma nova seção chamada `else`. Essa sessão else será executada toda vez que a condição no if anterior a ela for `false`.
+        Algumas vezes queremos dizer a um programa não só o que fazer se uma condição for `verdadeira`, mas também o que fazer se ela for `falsa`. Ao pressionar o botão com sinal de mais no final do seu bloco condicional você terá uma nova seção chamada `else`. Essa sessão else será executada toda vez que a condição no if anterior a ela for \`falsa'.
 
         # Faça Isso
 
@@ -8880,7 +8880,7 @@ pt-BR:
 
         # Faça Isto
 
-        Clique "Run" para ver o enxame de abelhas criadas para você e uma flor no lado esquerdo da tela. Faça o enxame de abelhas **aparecerem quando o mouse estiver próximo à flor** (no lado esquerdo da tela) e **desaparecerem quando o maouse estiver longe da flor** (no lado direito da tela). Veja o exemplo à direita.
+        Clique "Run" para ver o enxame de abelhas criadas para você e uma flor no lado esquerdo da tela. Faça o enxame de abelhas **aparecerem quando o mouse estiver próximo à flor** (no lado esquerdo da tela) e **desaparecerem quando o mouse estiver longe da flor** (no lado direito da tela). Veja o exemplo à direita.
 
         -   Acrescente uma declaração `if else` depois que você atualizar a posição das abelhas.
         -   Na entrada do if use um booleano para verificar se a posição x do mouse está no lado da tela junto à flor.
@@ -8901,7 +8901,7 @@ pt-BR:
 
         # Faça Isto
 
-        Clique "Run" para ver o enxame de abelhas criadas para você e uma flor no lado esquerdo da tela. Faça o enxame de abelhas **aparecerem quando o mouse estiver próximo à flor** (no lado esquerdo da tela) e **desaparecerem quando o maouse estiver longe da flor** (no lado direito da tela). Veja o exemplo à direita.
+        Clique "Run" para ver o enxame de abelhas criadas para você e uma flor no lado esquerdo da tela. Faça o enxame de abelhas **aparecerem quando o mouse estiver próximo à flor** (no lado esquerdo da tela) e **desaparecerem quando o mouse estiver longe da flor** (no lado direito da tela). Veja o exemplo à direita.
 
         -   Acrescente uma declaração `if else` depois que você atualizar a posição das abelhas.
         -   Na entrada do if use um booleano para verificar se a posição x do mouse está no lado da tela junto à flor.
@@ -9106,7 +9106,7 @@ pt-BR:
       CSD U3 Interactive Card Other Conditionals: |-
         # Outros condicionais
 
-        A _surprise_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
+        A _surpresa_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
 
         # Faça isso
 
@@ -9120,7 +9120,7 @@ pt-BR:
       CSD U3 Interactive Card Other Conditionals_2018: |-
         # Outros condicionais
 
-        A _surprise_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
+        A _surpresa_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
 
         # Faça isso
 
@@ -9134,7 +9134,7 @@ pt-BR:
       CSD U3 Interactive Card Other Conditionals_2019: |-
         # Outros condicionais
 
-        A _surprise_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
+        A _surpresa_ na sua placa vem de condicionais que não respondem diretamente à entrada do usuário, mas a algum outro elemento do seu cartão. Isso pode ser acionado por uma variável que é atualizada quando o usuário interage com o seu cartão ou um Sprite se movendo para uma determinada parte da tela.
 
         # Faça isso
 
@@ -9216,9 +9216,9 @@ pt-BR:
 
         _Fale com a pessoa que é sua professora ou monitora antes de tentar fazer esse desafio._
 
-        Aqui está o programa de insetos que você vem programando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
+        Aqui está o bug do programa que você vem trabalhando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
 
-        -   Use a tecla de "espaço" para controlar outra propriedade do seu sprite de inseto, como a sua rotação ou tamanho.
+        -   Use a tecla de "espaço" para controlar outra propriedade do seu bug do sprie, como a sua rotação ou tamanho.
         -   Adicione aleatoriedade à sua movimentação.
         -   Adicione um segundo sprite e controle-o com um conjunto diferente de teclas ("W", "A", "S" e "D" é uma escolha comum).
         -   Adicione algumas formas ao seu cenário para tornar a cena mais interessante.
@@ -9227,9 +9227,9 @@ pt-BR:
 
         _Fale com a pessoa que é sua professora ou monitora antes de tentar fazer esse desafio._
 
-        Aqui está o programa de insetos que você vem programando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
+        Aqui está o bug do programa que você vem trabalhando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
 
-        -   Use a tecla de "espaço" para controlar outra propriedade do seu sprite de inseto, como a sua rotação ou tamanho.
+        -   Use a tecla de "espaço" para controlar outra propriedade do seu bug do sprie, como a sua rotação ou tamanho.
         -   Adicione aleatoriedade à sua movimentação.
         -   Adicione um segundo sprite e controle-o com um conjunto diferente de teclas ("W", "A", "S" e "D" é uma escolha comum).
         -   Adicione algumas formas ao seu cenário para tornar a cena mais interessante.
@@ -9238,9 +9238,9 @@ pt-BR:
 
         _Fale com a pessoa que é sua professora ou monitora antes de tentar fazer esse desafio._
 
-        Aqui está o programa de insetos que você vem programando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
+        Aqui está o bug do programa que você vem trabalhando nos últimos níveis. Escolha um ou mais dos desafios a seguir, ou adicione as funcionalidades que você quiser!
 
-        -   Use a tecla de "espaço" para controlar outra propriedade do seu sprite de inseto, como a sua rotação ou tamanho.
+        -   Use a tecla de "espaço" para controlar outra propriedade do seu bug do sprie, como a sua rotação ou tamanho.
         -   Adicione aleatoriedade à sua movimentação.
         -   Adicione um segundo sprite e controle-o com um conjunto diferente de teclas ("W", "A", "S" e "D" é uma escolha comum).
         -   Adicione algumas formas ao seu cenário para tornar a cena mais interessante.
@@ -9331,7 +9331,7 @@ pt-BR:
       CSD U3 Keypress Watchers_2018: |-
         # Tente Adivinhar: Entrada do Usuário
 
-        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir a pressionamento de teclas, há outros blocos que talvez você queira usar.
+        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir ao pressionamento de teclas, há outros blocos que talvez você queira usar.
 
         # Instruções
 
@@ -9346,7 +9346,7 @@ pt-BR:
       CSD U3 Keypress Watchers_2019: |-
         # Tente Adivinhar: Entrada do Usuário
 
-        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir a pressionamento de teclas, há outros blocos que talvez você queira usar.
+        Até agora, você usou `teclaPressionada` para os usuários poderem controlar seus programas, mas essa é só uma das formas de receber uma entrada. Na verdade, uma das várias formas de _detectar o pressionamento de teclas_! Dependendo de como você quer reagir ao pressionamento de teclas, há outros blocos que talvez você queira usar.
 
         # Instruções
 
@@ -10815,7 +10815,7 @@ pt-BR:
 
         # Debug: observando o padrão do contador
 
-        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente.
 
         Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
       CSD U3 Watcher Debug_2018: |-
@@ -10823,7 +10823,7 @@ pt-BR:
 
         # Debug: observando o padrão do contador
 
-        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente.
 
         Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
       CSD U3 Watcher Debug_2019: |-
@@ -10831,7 +10831,7 @@ pt-BR:
 
         # Debug: observando o padrão do contador
 
-        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente para ver o que está errado.
+        Vamos praticar o uso de observadores para depurar seu código. Este programa deve mover a motocicleta da parte inferior esquerda para a parte superior direita, como a imagem à direita. Infelizmente a motocicleta sai da tela muito rapidamente.
 
         Usando os observadores fornecidos para `cycle.x` e`cycle.y`, descubra qual deles está se movendo na direção errada e corrija o programa.
       CSD U3 Watcher Predict response: |-
@@ -11009,7 +11009,7 @@ pt-BR:
         -   Use o bloco `sprite.velocityX` com um padrão de contador para desacelerar o carro em 0,25 enquanto ele se move pela tela.
         -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
 
-        _Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0._
+        \_Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0.
       CSD U3 abstraction decelerateX_2019: |-
         # Retardando as coisas
 
@@ -11022,7 +11022,7 @@ pt-BR:
         -   Use o bloco `sprite.velocityX` com um padrão de contador para desacelerar o carro em 0,25 enquanto ele se move pela tela.
         -   Discuta com seu parceiro: o que você acha que acontecerá quando o carro finalmente parar?
 
-        _Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0._
+        \_Desafio: adicione código que diminua a velocidade do carro apenas se sua velocidadeX for maior que 0.
       CSD U3 abstraction decelerateY: |-
         # Simulando a gravidade
 
@@ -11085,7 +11085,7 @@ pt-BR:
       CSD U3 abstraction jump_2018: |-
         # Saltando
 
-        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo do salto.
+        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo.
 
         # Faça isto
 
@@ -11098,7 +11098,7 @@ pt-BR:
       CSD U3 abstraction jump_2018_2019: |-
         # Saltando
 
-        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo do salto.
+        Agora você tem todos os blocos necessários para fazer o seu sprite saltar! O sprite deve pular para cima se estiver no chão e o usuário pressionar a tecla "para cima" e, em seguida, voltar a descer quando chegar ao topo.
 
         # Faça isto
 
@@ -12170,7 +12170,7 @@ pt-BR:
       CSD U3 collisions flyman displace coin: |-
         # Jogo de Voo - Moeda atrás do Obstáculo
 
-        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
 
         # Faça Isto
 
@@ -12179,7 +12179,7 @@ pt-BR:
       CSD U3 collisions flyman displace coin_2018: |-
         # Jogo de Voo - Moeda atrás do Obstáculo
 
-        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
 
         # Faça Isto
 
@@ -12188,7 +12188,7 @@ pt-BR:
       CSD U3 collisions flyman displace coin_2019: |-
         # Jogo de Voo - Moeda atrás do Obstáculo
 
-        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
+        No momento a moeda está se movendo para lugares aleatórios. Isso significa que pode acontecer de a moeda aparecer até mesmo atrás de um obstáculo, nesse caso o personagem não pode alcançar ela. Você pode corrigir isso usando as interações de sprite.
 
         # Faça Isto
 
@@ -12891,10 +12891,10 @@ pt-BR:
 
         Em seguida, você criará seus sprites e dará a eles propriedades iniciais na área "Criar Sprites" do seu código. Para cada sprite você deve:
 
-        -   Crie o sprite no lugar correto na tela
-        -   Defina sua animação (ou cor e tamanho)
-        -   Defina sua velocidade e velocidade de rotação, se necessário
-        -   Defina seu colisor e salto, se necessário
+        -   Criar o sprite no lugar correto na tela
+        -   Definir sua animação (ou cor e tamanho)
+        -   Definir sua velocidade e velocidade de rotação, se necessário
+        -   Definir seu colisor e salto, se necessário
 
         Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
 
@@ -12904,10 +12904,10 @@ pt-BR:
 
         Em seguida, você criará seus sprites e dará a eles propriedades iniciais na área "Criar Sprites" do seu código. Para cada sprite você deve:
 
-        -   Crie o sprite no lugar correto na tela
-        -   Defina sua animação (ou cor e tamanho)
-        -   Defina sua velocidade e velocidade de rotação, se necessário
-        -   Defina seu colisor e salto, se necessário
+        -   Criar o sprite no lugar correto na tela
+        -   Definir sua animação (ou cor e tamanho)
+        -   Definir sua velocidade e velocidade de rotação, se necessário
+        -   Definir seu colisor e salto, se necessário
 
         Depois de criar cada sprite, teste-o antes de fazer o próximo. Se o seu sprite começar a partir da tela, primeiro coloque-o na tela para testá-lo, e mova-o de volta para fora da tela, uma vez que você saiba que está correto.
 
@@ -12948,7 +12948,7 @@ pt-BR:
       CSD U3 game interactions: |-
         # Interações do Sprite
 
-        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafio 15] [1] como exemplos.
 
         Para cada interação:
 
@@ -12959,7 +12959,7 @@ pt-BR:
       CSD U3 game interactions_2018: |-
         # Interações do Sprite
 
-        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafio 15] [1] como exemplos.
 
         Para cada interação:
 
@@ -12970,7 +12970,7 @@ pt-BR:
       CSD U3 game interactions_2019: |-
         # Interações do Sprite
 
-        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafrio 15] [1] como exemplos.
+        O último passo é criar as funções que fazem seus sprites interagirem da maneira correta. Você precisará de uma função para cada tipo de interação de sprite. Você pode usar o `collectItems` em [Lição 21 Desafio 17] [0] e `displaceEnemies` em [Lição 20 Desafio 15] [1] como exemplos.
 
         Para cada interação:
 
@@ -13160,7 +13160,7 @@ pt-BR:
 
         # Faça isso
 
-        -   Dentro do loop de draw, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
+        -   Dentro do loop de desenho, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
         -   Teste seu código alterando a pontuação inicial para 100 e, em seguida, executando para codificar para ver se o plano de fundo é alterado.
 
         _Desafio: Se você tiver um terceiro plano de fundo, você pode clicar no sinal de mais na parte inferior do bloco `if`. Outro espaço aparecerá para sua terceira função de segundo plano, bem como um local para verificar a pontuação novamente._
@@ -13171,7 +13171,7 @@ pt-BR:
 
         # Faça isso
 
-        -   Dentro do loop de draw, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
+        -   Dentro do loop de desenho, use uma instrução `if` e suas duas funções de segundo plano para desenhar o seu segundo plano de acordo com o seu nível de pontuação.
         -   Teste seu código alterando a pontuação inicial para 100 e, em seguida, executando para codificar para ver se o plano de fundo é alterado.
 
         _Desafio: Se você tiver um terceiro plano de fundo, você pode clicar no sinal de mais na parte inferior do bloco `if`. Outro espaço aparecerá para sua terceira função de segundo plano, bem como um local para verificar a pontuação novamente._
@@ -13269,7 +13269,7 @@ pt-BR:
 
         <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
 
-        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+        Agora que seu item está caindo, você pode adicionar o código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
 
         # Faça isso
 
@@ -13281,7 +13281,7 @@ pt-BR:
 
         <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
 
-        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+        Agora que seu item está caindo, você pode adicionar o código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
 
         # Faça isso
 
@@ -13293,7 +13293,7 @@ pt-BR:
 
         <img src="https://images.code.org/bf06ad06acbba65dfd48b63608a08c90-image-1476212006882.gif" style="float:right">
 
-        Agora que seu item está caindo, você pode adicionar código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
+        Agora que seu item está caindo, você pode adicionar o código para voltar ao topo. Isso é semelhante ao que você fez para o sprite da plataforma, mas o sprite do item retornará para um local x e y aleatório quando for para o topo da tela.
 
         # Faça isso
 
@@ -13697,7 +13697,7 @@ pt-BR:
       CSD U3 platform sample3: |-
         # Coelhinho Saltitante
 
-        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao cairem e quicarem para fora das plataformas.
+        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao caírem e quicarem para fora das plataformas.
 
         Escolha uma ou mais das seguintes alterações, e adicione-as ao seu jogo.
 
@@ -13707,7 +13707,7 @@ pt-BR:
       CSD U3 platform sample3_2018: |-
         # Coelhinho Saltitante
 
-        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao cairem e quicarem para fora das plataformas.
+        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao caírem e quicarem para fora das plataformas.
 
         Escolha uma ou mais das seguintes alterações, e adicione-as ao seu jogo.
 
@@ -13717,7 +13717,7 @@ pt-BR:
       CSD U3 platform sample3_2019: |-
         # Coelhinho Saltitante
 
-        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao cairem e quicarem para fora das plataformas.
+        Aqui está um outro exemplo de um saltador. Neste exemplo, os itens ficam mais rápidos ao caírem e quicarem para fora das plataformas.
 
         Escolha uma ou mais das seguintes alterações, e adicione-as ao seu jogo.
 
@@ -13729,7 +13729,7 @@ pt-BR:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição 16 Nível 9] [1].
 
         # Faça isso
 
@@ -13741,7 +13741,7 @@ pt-BR:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição 16 Nível 9] [1].
 
         # Faça isso
 
@@ -13753,7 +13753,7 @@ pt-BR:
 
         <img src="https://images.code.org/ea490a1915a70676fd3a783adce93cdd-image-1476142534609.png" style="float:right;">
 
-        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição16 Nível 9] [1].
+        Você também precisará de um placar para que o jogador possa acompanhar a pontuação. Já existe uma função `showScore` escrita, mas mostra apenas o texto" Score "e não a pontuação real. ([Mostre-me onde] [0]) Você pode ver um exemplo de um placar de trabalho em [Lição 16 Nível 9] [1].
 
         # Faça isso
 
@@ -14111,8 +14111,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2018: |-
         # Número de 6 bits
 
@@ -14121,8 +14121,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 2_2019: |-
         # Número de 6 bits
 
@@ -14131,8 +14131,8 @@ pt-BR:
         # Faça isso
 
         -   Com o seu parceiro, responda às seguintes perguntas:
-                 1\. Qual é o maior número que você pode fazer com esta ferramenta?
-                 2\. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
+                 1. Qual é o maior número que você pode fazer com esta ferramenta?
+                 2. O recorde de mais saltos de um cão e pessoa em um minuto é 59. Como você codificaria 59 em binário?
       CSD U5 binary 4-new: |-
         # Decodificando vários números
 
@@ -14485,7 +14485,7 @@ pt-BR:
       CSD U6 Driver pt1: |-
         # Volante
 
-        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto por uma diferença. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
 
         # Faça isto
 
@@ -14496,7 +14496,7 @@ pt-BR:
       CSD U6 Driver pt1_2018: |-
         # Volante
 
-        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto por uma diferença. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
 
         # Faça isto
 
@@ -14507,7 +14507,7 @@ pt-BR:
       CSD U6 Driver pt1_2019: |-
         # Volante
 
-        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto um pouco diferente. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
+        Este jogo é semelhante ao jogo de goleiro que você acabou de jogar, exceto por uma diferença. Use sua placa como um volante para o carro (movendo-se de um lado para o outro). Você tem que chegar à bandeira quadriculada enquanto evita as bandeiras vermelhas ao longo do caminho!
 
         # Faça isto
 
@@ -14991,7 +14991,7 @@ pt-BR:
         -   Teste como diferentes valores de limite afetam o evento "change"
         -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
 
-        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
+        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limite que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
       CSD U6 analog threshold_2019: |-
         # Alterar limite
 
@@ -15005,7 +15005,7 @@ pt-BR:
         -   Teste como diferentes valores de limite afetam o evento "change"
         -   Escolha um valor limite que faça com que o fundo da tela mude apenas quando for detectado um ruído alto.
 
-        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limiar que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
+        \_ Dica: Seu limite depende de quanto ruído ambiente há na sala e de quanto ele muda. Um limite que funciona em uma sala silenciosa pode não funcionar em uma sala de aula mais barulhenta.\_
       CSD U6 array piano: |-
         # Pânico de Piano
 
@@ -15019,7 +15019,7 @@ pt-BR:
 
         -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
 
-        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
+        _Dica: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
       CSD U6 array piano_2018: |-
         # Pânico de Piano
 
@@ -15033,7 +15033,7 @@ pt-BR:
 
         -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
 
-        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
+        _Dica: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
       CSD U6 array piano_2019: |-
         # Pânico de Piano
 
@@ -15047,7 +15047,7 @@ pt-BR:
 
         -   Fixe o arranjo para que as teclas afiadas do piano possam realmente tocar a nota certa.
 
-        _Hint: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
+        _Dica: Modificar matrizes é muito mais fácil no modo de texto. Você sempre pode alternar entre o modo de bloco e de texto clicando no botão no canto superior direito da área de trabalho do código._
       CSD U6 arrays video: |-
         ## Perguntas a Considerar
 
@@ -16067,7 +16067,7 @@ pt-BR:
 
         Leia o código deste programa e preveja o que acontecerá cada vez que o botão for pressionado?
       CSD U6 for loop images: |-
-        # Construindo um laço de repetição for do zero
+        # Construindo um laço de repetição 'for' do zero
 
         Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
 
@@ -16082,7 +16082,7 @@ pt-BR:
 
         \_Desafio: Você pode adicionar um segundo botão que gire todas as imagens novamente para o polegar para baixo?
       CSD U6 for loop images_2018: |-
-        # Construindo um laço de repetição for do zero
+        # Construindo um laço de repetição 'for' do zero
 
         Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
 
@@ -16097,7 +16097,7 @@ pt-BR:
 
         \_Desafio: Você pode adicionar um segundo botão que gire todas as imagens novamente para o polegar para baixo?
       CSD U6 for loop images_2019: |-
-        # Construindo um laço de repetição for do zero
+        # Construindo um laço de repetição 'for' do zero
 
         Agora que você teve alguma prática modificando os laços de repetição para processar matrizes, vamos ver se você pode fazer isso sozinho.
 
@@ -16274,27 +16274,27 @@ pt-BR:
       CSD U6 for loop led on_2018: |-
         # Ligando Todos os LEDs Coloridos
 
-        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+        Agora que você sabe como usar um _laço de repetição_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
 
         # Faça Isto
 
         Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
 
         -   Adicione um manipulador de eventos para "botao\\ \_on"
-        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
-        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
+        -   Coloque um _laço de repetição_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED atual
       CSD U6 for loop led on_2019: |-
         # Ligando Todos os LEDs Coloridos
 
-        Agora que você sabe como usar um _laço de repetição for_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
+        Agora que você sabe como usar um _laço de repetição_ para processar todos os elementos em um vetor, você pode ativar todos os LEDs coloridos com muito mais facilidade do que antes.
 
         # Faça Isto
 
         Nos próximos níveis, você irá criar um aplicativo que controla todos os LEDs coloridos em sua placa. O primeiro passo é conectar o botão que liga todos os LEDs. (Não se preocupe com o restante dos comentários na área de trabalho. Você irá trabalhar com eles nos próximos níveis.)
 
         -   Adicione um manipulador de eventos para "botao\\ \_on"
-        -   Coloque um _laço de repetição for_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
-        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED corrent
+        -   Coloque um _laço de repetição_ no seu manipulador de eventos para que se repita até chegar ao final do vetor `ledsColoridos`
+        -   Dentro do laço for, chame `ledsColoridos[i].on()` para ativar o LED atual
       CSD U6 for loop led personalize_2019: |-
         # Faça Você Mesmo
 
@@ -17635,7 +17635,7 @@ pt-BR:
       CSD U6 tugowar conditional: |-
         # Procure um vencedor
 
-        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojies correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
+        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojis correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
 
         # Faça isso
 
@@ -17648,7 +17648,7 @@ pt-BR:
       CSD U6 tugowar conditional_2018: |-
         # Procure um vencedor
 
-        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojies correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
+        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojis correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
 
         # Faça isso
 
@@ -17661,7 +17661,7 @@ pt-BR:
       CSD U6 tugowar conditional_2019: |-
         # Procure um vencedor
 
-        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojies correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
+        Seu jogo deve estar bastante jogável agora. Dois jogadores podem clicar nos respectivos botões, e seus emojis correm pela tela. Ainda precisamos de uma maneira de um jogador vencer.
 
         # Faça isso
 
@@ -18124,7 +18124,7 @@ pt-BR:
 
         -   O que é um sprite?
         -   O que são propriedades?
-        -   Que problema os sprites resolvem?
+        -   Quais problemas os sprites resolvem?
       CSDU2 - PW - Class Style Personal Site: |-
         # Estilizando livremente
 
@@ -18800,9 +18800,9 @@ pt-BR:
         Verifique com seu professor antes de iniciar o desafio.
 
         Agora que você sabe como usar os eventos da placa, os botões, a chave e a campainha, tente criar um programa que transforme sua placa em uma placa de som quando você pressionar os botões ou girar a chave. Brinque com a duração e as frequências dos sons e ouça o resultado.
-      CSDU6 - button LED prediction: Veja o nível contido para o markdown
-      CSDU6 - button LED prediction_2018: Veja o nível contido para o markdown
-      CSDU6 - button LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - button LED prediction: Veja o nível contido para a remarcação
+      CSDU6 - button LED prediction_2018: Veja o nível contido para a remarcação
+      CSDU6 - button LED prediction_2019: Veja o nível contido para a remarcação
       CSDU6 - button_LED_prediction: |-
         # Eventos de Tabuleiro
 
@@ -19040,9 +19040,9 @@ pt-BR:
         # Fazer uma previsão
 
         Leia o código neste programa e faça uma previsão abaixo. O que você acha que este programa fará quando você o executar? Como o usuário pretende interagir com o quadro? Pode ser necessário soprar no quadro para ver toda a gama deste aplicativo.
-      CSDU6 - toggle state LED prediction: Veja o nível contido para o markdown
-      CSDU6 - toggle state LED prediction_2018: Veja o nível contido para o markdown
-      CSDU6 - toggle state LED prediction_2019: Veja o nível contido para o markdown
+      CSDU6 - toggle state LED prediction: Veja o nível contido para a remarcação
+      CSDU6 - toggle state LED prediction_2018: Veja o nível contido para a remarcação
+      CSDU6 - toggle state LED prediction_2019: Veja o nível contido para a remarcação
       CSDU6 - toggleswitch state setProp: |-
         # Estado e o interruptor de alternância
 
@@ -19575,7 +19575,7 @@ pt-BR:
 
         Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
 
-        # Fazem isto
+        # Faça isto
 
         -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
         -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
@@ -19586,7 +19586,7 @@ pt-BR:
 
         Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
 
-        # Fazem isto
+        # Faça isto
 
         -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
         -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
@@ -19597,7 +19597,7 @@ pt-BR:
 
         Você pode criar e tocar músicas completas com `campainha.tocarNotas()`. São necessários dois parâmetros: uma matriz de notas para tocar e um ritmo no qual as notas são tocadas. Nas bolhas anteriores, você criou matrizes de notas e as tocou aleatoriamente, mas o `campainha.tocarNotas()` toca cada nota consecutivamente.
 
-        # Fazem isto
+        # Faça isto
 
         -   Puxe um bloco `campainha.tocarNotas` e altere a matriz inicial dentro.
         -   Verifique se a nova matriz que você fornece possui pelo menos dois pares de notas próximos um do outro na lista (exemplo: `[" A5 "," A5 "," G4 "," G4 "]`)
@@ -22603,7 +22603,7 @@ pt-BR:
       course2_bee_conditionals_challenge1: Colete todo o nectar e produza todo o mel.
         Você só pode coletar néctar das flores e fazer mel com colmeias. Verifique
         todos os lugares para ver se há uma flor ou uma colmeia.
-      course2_bee_conditionals_challenge2: Colete todo o nectar e fala todo o mel.
+      course2_bee_conditionals_challenge2: Colete todo o nectar e faça todo o mel.
         Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto nectar
         > 0`.
       course2_collector_loops_challenge2: |-
@@ -23258,11 +23258,11 @@ pt-BR:
       courseB_Scrat_ramp3b_2018: |-
         Há um bloco extra no final desse código!
 
-        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
+        Arraste-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseB_Scrat_ramp3b_2019: |-
         Há um bloco extra no final desse código!
 
-        Arrate-o de volta para a caixa de ferramentas para jogá-lo fora.
+        Arraste-o de volta para a caixa de ferramentas para jogá-lo fora.
       courseB_Scrat_ramp4a_2018: Você consegue descobrir qual bloco você precisa adicionar
         aos outros blocos para terminar este código?
       courseB_Scrat_ramp4a_2019: Você consegue descobrir qual bloco você precisa adicionar
@@ -23441,7 +23441,7 @@ pt-BR:
       courseB_maze_seq4_2019: Use **2** blocos de movimento para levar Scrat até a
         noz.
       courseB_maze_seq5_2019: Este enigma é um pouco complicado!
-      courseB_maze_seq6_2019: Mova-me por um caminho, e então por outro para levar
+      courseB_maze_seq6_2019: Mova-se por um caminho, e então por outro para levar
         Scrat até a noz!
       courseB_maze_seq7_2019: Descubra o que está faltando e então adicione blocos
         para levar Scrat até a noz!
@@ -23509,7 +23509,7 @@ pt-BR:
 
         Para fazer isso, você precisará adicionar eventos que ajudem o cavaleiro a mover-se para cima, para baixo, para esquerda e para a direita.
       courseB_playlab_events7: |-
-        Vamos fazer esse jogo mais divertido fazendo o cavaleiro sumir em seu caminho para pagar as bandeiras e encontrar ao dragão!
+        Torne deste jogo mais divertido, fazendo com que o cavaleiro desapareça quando ele correr até o dragão para pegar as bandeiras!
 
         Toque uma música quando eles colidirem para trazer uma sensação mais realista.
 
@@ -23606,11 +23606,11 @@ pt-BR:
       courseB_starWars_prog6_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _"Você consegue!"_'
       courseB_starWars_prog7: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai, pega!"_'
+        _"Vai pegar!"_'
       courseB_starWars_prog7_2018: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai, pega!"_'
+        _"Vai pegar!"_'
       courseB_starWars_prog7_2019: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
-        _"Vai, pega!"_'
+        _"Vai pegar!"_'
       courseB_starWars_prog8: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
         _\"Continue assim, BB-8.\"_ \n\n**Desafio**: Junte toda a sucata."
       courseB_starWars_prog8_2018: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -23643,8 +23643,8 @@ pt-BR:
         do jeito que você gostaria. Quando estiver tudo pronto, clique em "Finalizar"!
       courseC19_playLab_EOC6: Você acabou! Agora você pode jogar o seu jogo ou compartilha-lo
         com seus amigos e colegas de classe!
-      courseC_PlayLab_events6_2019: Agora escreva um programa que faça Valfredo o
-        Penguin se mover usando as teclas com as setas para cima / para baixo / à
+      courseC_PlayLab_events6_2019: Agora escreva um programa que faça Waddles, o
+        Pinguim se mover usando as teclas com as setas para cima / para baixo / à
         esquerda / à direita, para atingir todos os alvos!
       courseC_PlayLab_events7: |-
         O bloco `repetir para sempre` permite que você execute o código repetidamente para sempre. Use este bloco para mover Chomp o Dinossauro (ator 2) para cima e para baixo em 400 pixels para sempre.
@@ -24581,33 +24581,13 @@ pt-BR:
 
         Para transformar esse código em um floco de neve, agrupe todo o código dentro de outro bloco de `repita` para executar o algoritmo **6** vezes. Você só precisa adicionar um bloco.
       courseD_artist_4_2018: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos tornar nossos flocos de neve especiais!"_
+        Você precisa desenhar um total de 6 triângulos (dica: use o código do seu último quebra-cabeça para iniciar). Depois de terminar cada triângulo, rotacione 60 graus e mova para iniciar o próximo triângulo.
 
-        **Inspiração:** Onde você precisa adicionar blocos se você quiser desenhar um pequeno quadrado na ponta de cada linha comprida?
-
-        * * *
-
-        Você pode tentar fazer o quê quiser neste desafio, mas aqui vai uma ideia:
-
-        Tente desenhar um quadrado no final de cada linha
-
-        -   Cada lado deve ter 15 pixels de comprimento
-        -   Você deve virar 90 graus
-        -   Repita esses passos 4 vezes
+        ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
       courseD_artist_4_2018_2019: |-
-        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Vamos tornar nossos flocos de neve especiais!"_
+        Você precisa desenhar um total de 6 triângulos (dica: use o código do seu último quebra-cabeça para iniciar). Depois de terminar cada triângulo, rotacione 60 graus e mova para iniciar o próximo triângulo.
 
-        **Inspiração:** Onde você precisa adicionar blocos se você quiser desenhar um pequeno quadrado na ponta de cada linha comprida?
-
-        * * *
-
-        Você pode tentar fazer o quê quiser neste desafio, mas aqui vai uma ideia:
-
-        Tente desenhar um quadrado no final de cada linha
-
-        -   Cada lado deve ter 15 pixels de comprimento
-        -   Você deve virar 90 graus
-        -   Repita esses passos 4 vezes
+        ![](https://images.code.org/ad6c6d98298df9f4e3cea5bbe5ec776e-image-1497476332024.2_solution2.gif)
       courseD_artist_5_2018: |-
         ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png) _"Tente mudar as formas e o tamanho das linhas para dar a sua cara ao floco de neve!"_
 
@@ -25111,16 +25091,16 @@ pt-BR:
 
         Verifique se existe uma flor atrás da nuvem. Se existir uma flor, colete nectar.
       courseD_bee_conditionals2: "Mais nuvens!\n\nVerifique abaixo de cada nuvem e
-        observe se ela está escondendo uma flor antes de colher o nectar. Se existir
-        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        observe se ela está escondendo uma flor antes de colher o néctar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
         Nem todas as nuvem escondem a mesma coisa!"
       courseD_bee_conditionals2_2018: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
-        e observe se ela está escondendo uma flor antes de colher o nectar. Se existir
-        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        e observe se ela está escondendo uma flor antes de colher o néctar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
         Nem todas as nuvem escondem a mesma coisa!"
       courseD_bee_conditionals2_2019: "Mais nuvens!\n\nVerifique abaixo de cada nuvem
-        e observe se ela está escondendo uma flor antes de colher o nectar. Se existir
-        uma flor abaixo da nuvem, a abelha vai precisar colher nectar _uma vez_. \n\nLembre-se:
+        e observe se ela está escondendo uma flor antes de colher o néctar. Se existir
+        uma flor abaixo da nuvem, a abelha vai precisar colher néctar _uma vez_. \n\nLembre-se:
         Nem todas as nuvem escondem a mesma coisa!"
       courseD_bee_conditionals3: Você só pode coletar nectar das flores, mas você
         pode verificar qualquer espaço para ver se há uma flor. Se existe uma flor
@@ -25158,17 +25138,17 @@ pt-BR:
 
         Algumas das nuvens podem possuir colmeias abaixo delas. Certifique-se de que a colmeia está escondida atrás cada nuvem. Se existir uma colmeia, a abelha só precisará fazer mel _uma vez_.
       courseD_bee_conditionals7: |-
-        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+        As vezes a nuvem cobre a flor, as vezes cobre a colmeia!
 
         Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
         Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
       courseD_bee_conditionals7_2018: |-
-        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+        As vezes a nuvem cobre a flor, as vezes cobre a colmeia!
 
         Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
         Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
       courseD_bee_conditionals7_2019: |-
-        As vezes a nuvem cobre a flor, as vezes sobre a colmeia!
+        As vezes a nuvem cobre a flor, as vezes cobre a colmeia!
 
         Utilize os blocos `se/se não` para coletar nectar das flores e fazer mel na colmeia.
         Lembre-se: Se existir uma flor, a abelha só precisa colher nectar _uma vez_. Se houver uma colmeia, a abelha só precisa fazer mel _uma vez_.
@@ -25199,42 +25179,42 @@ pt-BR:
 
         Colete o nectar uma vez se houver uma flor
         Se não, faça mel uma vez (pois já existe uma colmeia).
-      courseD_bee_conditionals9: Colete todo o nectar ou faça todo o mel. Você só
-        pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique todos
+      courseD_bee_conditionals9: Colete todo o néctar ou faça todo o mel. Você só
+        pode coletar néctar de flores e fazer mel com colmeias. Verifique todos lugares
+        para ver se existe uma flor ou colmeia. Só poderá haver uma flor ou uma colmeia
+        atrás de cada nuvem.
+      courseD_bee_conditionals9_2018: Colete todo o néctar ou faça todo o mel. Você
+        só pode coletar néctar de flores e fazer mel com colmeias. Verifique todos
         lugares para ver se existe uma flor ou colmeia. Só poderá haver uma flor ou
         uma colmeia atrás de cada nuvem.
-      courseD_bee_conditionals9_2018: Colete todo o nectar ou faça todo o mel. Você
-        só pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique
-        todos lugares para ver se existe uma flor ou colmeia. Só poderá haver uma
-        flor ou uma colmeia atrás de cada nuvem.
-      courseD_bee_conditionals9_2019: Colete todo o nectar ou faça todo o mel. Você
-        só pode coletar nectar de flores e apenas fazer mel com colmeias. Verifique
-        todos lugares para ver se existe uma flor ou colmeia. Só poderá haver uma
-        flor ou uma colmeia atrás de cada nuvem.
-      courseD_bee_conditionals_challenge1: Colete todo o nectar e fala todo o mel.
-        Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+      courseD_bee_conditionals9_2019: Colete todo o néctar ou faça todo o mel. Você
+        só pode coletar néctar de flores e fazer mel com colmeias. Verifique todos
+        lugares para ver se existe uma flor ou colmeia. Só poderá haver uma flor ou
+        uma colmeia atrás de cada nuvem.
+      courseD_bee_conditionals_challenge1: Colete todo o néctar e faça todo o mel.
+        Você só pode coletar néctar das flores e fazer mel com colmeias. Verifique
         todos lugares para ver se há uma flor ou uma colmeia.
-      courseD_bee_conditionals_challenge1_2018: Colete todo o nectar e fala todo o
-        mel. Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+      courseD_bee_conditionals_challenge1_2018: Colete todo o néctar e faça todo o
+        mel. Você só pode coletar néctar das flores e fazer mel com colmeias. Verifique
         todos lugares para ver se há uma flor ou uma colmeia.
-      courseD_bee_conditionals_challenge1_2019: Colete todo o nectar e fala todo o
-        mel. Você só pode coletar nectar das flores e fazer mel com colmeias. Verifique
+      courseD_bee_conditionals_challenge1_2019: Colete todo o néctar e faça todo o
+        mel. Você só pode coletar néctar das flores e fazer mel com colmeias. Verifique
         todos lugares para ver se há uma flor ou uma colmeia.
-      courseD_bee_conditionals_challenge2: Colete todo o nectar e fala todo o mel.
+      courseD_bee_conditionals_challenge2: Colete todo o nectar e faça todo o mel.
         Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto nectar
         > 0`.
-      courseD_bee_conditionals_challenge2_2018: Colete todo o nectar e fala todo o
+      courseD_bee_conditionals_challenge2_2018: Colete todo o nectar e faça todo o
         mel. Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto
         nectar > 0`.
-      courseD_bee_conditionals_challenge2_2019: Colete todo o nectar e fala todo o
+      courseD_bee_conditionals_challenge2_2019: Colete todo o nectar e faça todo o
         mel. Você pode coletar todo o nectar em uma flor utilizando o laço `enquanto
         nectar > 0`.
       courseD_bee_debugging_challenge1: Veja como as abelhas conseguem o néctar. Você
         pode usar o mesmo tipo de padrão para ajudar a abelha a fazer todo o mel?
       courseD_bee_debugging_challenge1a: |-
-        _"Buzz buzz! U sei como pegar nectar, agora me ajude a fazer mel!"_
+        _"Buzz buzz! Eu sei como pegar néctar, agora me ajude a fazer mel!"_
 
-        Observe como a abelha consegue o nectar. Você consegue utilizar o mesmo padrão para ajudar a abelha a fazer todo o mel?
+        Observe como a abelha consegue o néctar. Você consegue utilizar o mesmo padrão para ajudar a abelha a fazer todo o mel?
       courseD_bee_nestedLoops1: |-
         _"Isso será incrível!"_
 
@@ -25350,7 +25330,7 @@ pt-BR:
       courseD_collector_debugging10_predict1: |-
         _"É uma ilha do tesouro"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging1a_2018: |-
         _"O não! Eu vejo um problema."_
 
@@ -25390,15 +25370,15 @@ pt-BR:
 
         Conserte o(s) erro(s) para coletar todo o tesouro.
       courseD_collector_debugging5: |-
-        _"Este quebra-cabeça está de deixando louco!"_
+        _"Este quebra-cabeça está me deixando louco!"_
 
         Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
       courseD_collector_debugging5a_2018: |-
-        _"Este quebra-cabeça está de deixando louco!"_
+        _"Este quebra-cabeça está me deixando louco!"_
 
         Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
       courseD_collector_debugging5a_2019: |-
-        _"Este quebra-cabeça está de deixando louco!"_
+        _"Este quebra-cabeça está me deixando louco!"_
 
         Todos os comandos que você precisa já estão aí... agora use sua habilidade de investigação para descobrir como resolver este quebra-cabeça.
       courseD_collector_debugging6: "**Desafio.** Todos os blocos que você precisa
@@ -25411,27 +25391,27 @@ pt-BR:
       courseD_collector_debugging8: |-
         _"São tantos tesouros!"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging8a_2018: |-
         _"São tantos tesouros!"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging8a_2019: |-
         _"São tantos tesouros!"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging9: |-
         _"É uma ilha do tesouro"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging9a_2018: |-
         _"É uma ilha do tesouro"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_debugging9a_2019: |-
         _"É uma ilha do tesouro"_
 
-        Ajude Laura a consertar o código para pegar todo o tesouro.
+        Ajude Laurel a consertar o código para pegar todo o tesouro.
       courseD_collector_nested_loops_challenge2: "_\"Vamos caçar tesouros - utilizando
         laços!\"_ \n\nAjude o colecionador a chegar em pelo menos duas pilhas de tesouro
         utilizando apenas os blocos da sua caixa de ferramentas. É possível coletar
@@ -25835,12 +25815,18 @@ pt-BR:
         a chegar até o girassol."
       courseD_maze_until_challenge1: Sem dicas, apenas desafio. Leve o zumbi até o
         girassol.
-      courseD_playLab_cond1: Para começar o jogo, o pirate PegLeg (ator 1) precisa
-        conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos
-        para fazer PegLeg se mover.
-      courseD_playLab_cond1_2018: Para começar o jogo, o pirate PegLeg (ator 1) precisa
-        conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos
-        para fazer PegLeg se mover.
+      courseD_playLab_cond1: |-
+        Para começar o jogo, o pirata PegLeg (ator 1) precisa conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos para fazer PegLeg se mover.
+
+        * * *
+
+        Ajude Pegleg a reunir as bandeiras para resolver este quebra-cabeça.
+      courseD_playLab_cond1_2018: |-
+        Para começar o jogo, o pirata PegLeg (ator 1) precisa conseguir andar em todas direções. Ligue os blocos aos correspondentes eventos para fazer PegLeg se mover.
+
+        * * *
+
+        Ajude Pegleg a reunir as bandeiras para resolver este quebra-cabeça.
       courseD_playLab_cond2: "Hora de adicionar pontos!\n\nAltere o código para dar
         a PegLeg (ator 1) um ponto quando ele chegar ao dragão (ator 2). "
       courseD_playLab_cond2_2018: "Hora de adicionar pontos!\n\nAltere o código para
@@ -25851,12 +25837,12 @@ pt-BR:
         o dragão (ator 2) trocar entre emoções aleatórias a cada segundo.  '
       courseD_playLab_cond3a: "É hora de utilizar o que aprendemos sobre condicionais
         para fazer esse jogo ficar melhor ainda. \n\nAdicione um código para que quando
-        PegLeg, ao chegar no dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso
-        não esteja, ele deve ganhar apenas um ponto adicionado ao placar."
+        PegLeg chegar ao dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso não
+        esteja, ele deve ganhar apenas um ponto adicionado ao placar."
       courseD_playLab_cond3a_2018: "É hora de utilizar o que aprendemos sobre condicionais
         para fazer esse jogo ficar melhor ainda. \n\nAdicione um código para que quando
-        PegLeg, ao chegar no dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso
-        não esteja, ele deve ganhar apenas um ponto adicionado ao placar."
+        PegLeg chegar ao dragão, ganhe 2 pontos _se_ o dragão está feliz. Caso não
+        esteja, ele deve ganhar apenas um ponto adicionado ao placar."
       courseD_playLab_cond4: "As coisas estão ficando interessantes! \n\nAdicione
         um código para que o ninja (ator 3) comece a seguir PegLeg assim que o jogo
         comece. Termine o jogo com uma derrota caso o ninja o alcance."
@@ -25919,7 +25905,7 @@ pt-BR:
       courseD_scrat_ramp6: Ajude Scrat a chegar na nós utilizando uma repetição!
       courseD_scrat_ramp7: Ajude Scrat a chegar até a noz!
       courseD_scrat_ramp8: "**Desafio:** Utilize o que você aprendeu para levar Scrat
-        até a nós!"
+        até a noz!"
       courseE_aboutme_1: |-
         ![](https://images.code.org/93e1c04857ff781bb5c4cc76b15ed563-image-1557179820861.png)_"Olá, mundo! Meu nome é Rikki, e aqui estão algumas coisas que eu gostaria de compartilhar sobre mim!"_
 
@@ -26221,10 +26207,10 @@ pt-BR:
         * * *
 
         ##### Cada lado do quadrado tem comprimento de 200 pixels, e você precisará virar 90 graus para fazer cada ângulo.
-      courseE_artist_ramp9: Cada lado tem 100 pixels. Você precisa girar 120 graus
-        em cada canto.
-      courseE_artist_ramp9_2: Cada lado tem 100 pixels. Você precisa girar 120 graus
-        em cada canto.
+      courseE_artist_ramp9: "Use o que aprendeu para desenhar um triângulo. \n\nCada
+        lado tem 100 pixels. Você precisa girar 120 graus em cada canto."
+      courseE_artist_ramp9_2: "Use o que aprendeu para desenhar um triângulo. \n\nCada
+        lado tem 100 pixels. Você precisa girar 120 graus em cada canto."
       courseE_bee_concept1: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
         todo o nectar de cada flor. "
       courseE_bee_concept1_2018: "_\"Você consegue acreditar nessa quantidade de flores?\"_\n\nColete
@@ -27228,10 +27214,10 @@ pt-BR:
       iceage_move_to_actor: Diego (ator 1) está procurando pelo Manny (ator 2). Você
         consegue levar um ao outro? Ligue um bloco ao evento `quando ator tocar` para
         tocar um som quando eles se encontrarem.
-      iceage_move_to_flag: Scrat está procurando pela nós dele! Você consegue ajuda-lo
+      iceage_move_to_flag: Scrat está procurando pela noz dele! Você consegue ajuda-lo
         a andar os últimos 200 pixels?
       iceage_repeat: O bloco `repetir para sempre` te permite rodar um código sem
-        parar. Você consegue colocar blocos dentro dele para ajudar Granny a se exercitar
+        parar. Você consegue colocar blocos dentro dele para ajudar vovó a se exercitar
         andando para esquerda e para direita repetidamente?
       iceage_sound_and_points: "Aqui está seu código do último quebra-cabeça, assim
         como o código para mover Granny para esquerda e para direita. \nVocê consegue
