@@ -643,6 +643,8 @@ he:
     help_support: "עזרה ותמיכה"
     documentation: "מסמכים"
     tutorials: "מדריכים"
+  free_response:
+    placeholder: "הכנס את התשובה שלך כאן"
   multi:
     wrong_title: "תשובה לא נכונה"
     wrong_body: "התשובה שענית אינה נכונה. נא נסה שנית!"

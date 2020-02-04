@@ -750,14 +750,22 @@ $default-modal-width: 640px;
   background-color: $orange;
 }
 
-#video {
+#videoTabContainer {
   padding: 0;
+}
+
+#video {
+  border-width: 0;
 }
 
 .video-player {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+
+.vjs-tech:focus, .vjs-poster:focus {
+  outline: 0;
 }
 
 .video-player-rounded-corners {

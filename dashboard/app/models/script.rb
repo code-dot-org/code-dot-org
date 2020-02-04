@@ -681,10 +681,10 @@ class Script < ActiveRecord::Base
     standards = stages.map(&:standards).flatten.uniq
     standards_with_stages = []
     standards.each do |standard|
-      standards_summary = standard.summarize
-      stages_by_standard = stages && standard.stages
-      standards_summary[:lesson_ids] = stages_by_standard.pluck(:id)
-      standards_with_stages << standards_summary
+      standard_summary = standard.summarize
+      stages_by_standard = stages & standard.stages
+      standard_summary[:lesson_ids] = stages_by_standard.pluck(:id)
+      standards_with_stages << standard_summary
     end
     standards_with_stages
   end

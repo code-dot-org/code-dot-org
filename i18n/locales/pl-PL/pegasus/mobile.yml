@@ -146,6 +146,7 @@
   thanks_for_submitting: "Dziękujemy za przesłanie!"
   if_you_enjoyed: "Jeśli spodobała Ci się nauka, to zaproś znajomych, aby też spróbowali!  Chcemy, aby cały świat się uczył."
   personalize_certificate: "Spersonalizuj swój certyfikat"
+  print_certificates: "Drukuj certyfikaty"
   share_achievement: "Podziel się swoim osiągnięciem"
   beyond_hour_message: "Kontynuuj z naszymi <a href='http://studio.code.org'> innymi kursami</a>, lub zobacz więcej możliwości, aby <a href='/learn/beyond'> uczyć się poza Godziną Kodowania</a>."
   leaderboards_for_hoc: "Liderzy Godziny Programowania (Hour of Code)."

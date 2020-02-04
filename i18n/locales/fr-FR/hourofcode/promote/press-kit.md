@@ -61,7 +61,7 @@ Les ordinateurs sont partout, changeant tous les secteurs de la planète, mais m
 
 Avec l'événement Une Heure de Code, l'informatique fait la une de Google, MSN, Yahoo!, et Disney. Plus de 100 partenaires se sont réunis pour soutenir ce mouvement. Chaque Apple Store dans le monde a accueilli une heure de Code. Même le président Obama a écrit sa première ligne de code dans le cadre de la campagne.
 
-That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 3-9).
+C’est pourquoi tout le monde sur [X number] élèves à [SCHOOL NAME] participe au plus grand événement d’apprentissage de l’histoire : L'Heure du Code, durant la Semaine de l'éducation en informatique (3-9 décembre).
 
 Je vous écris pour vous inviter à assister au coup d'envoi de notre campagne et à voir les enfants commencer leur Heure de Code le [DATE].
 

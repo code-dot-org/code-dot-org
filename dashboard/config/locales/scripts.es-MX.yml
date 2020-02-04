@@ -1774,7 +1774,8 @@ es-MX:
               name: Hora del código 2015
         oceans:
           title: AI para océanos
-          description: Descripción a definir.
+          description: Aprende cómo IA y el aprendizaje automático se pueden usar
+            para abordar problemas del mundo.
           description_short: Descripción corta a definir.
           stages:
             Oceans:
@@ -16768,6 +16769,12 @@ es-MX:
               name: Examen semestral
             'Lesson 13: Assessment Day':
               name: 'Lección 13: día de evaluación'
+            Unit 5 STUDENT Survey:
+              name: Encuesta de la Unidad 5 para ESTUDIANTES
+            Unit 5 TEACHER Survey:
+              name: Encuesta de la Unidad 5 para DOCENTES
+            'Lesson 18: Assessment Day':
+              name: 'Lección 18: día de evaluación'
           title: 'Unidad 5: Listas, bucles y recorridos'
         fit2019-novice:
           stages:
@@ -17720,6 +17727,8 @@ es-MX:
               name: 'Lección 11: evaluación de la unidad'
             'Lesson 11: Assessment Day':
               name: 'Lección 11: día de evaluación'
+            Debugging:
+              name: Depuración
           title: 'Unidad 3: Introducción al diseño de aplicaciones'
         csl-vn:
           stages:
@@ -18221,7 +18230,7 @@ es-MX:
             'Lesson 15: Assessment Day':
               name: 'Lección 15: día de evaluación'
           title: Variables, condicionales y funciones
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: Secuencias en Laberinto
@@ -18249,7 +18258,6 @@ es-MX:
               name: Revisión de condicionales
             Drawing with Loops:
               name: Dibujar con bucles
-          title: Unidad 1 de control de Time4CS
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -18331,3 +18339,68 @@ es-MX:
           title: Unidad 2 de experimento de Time4CS
           description_short: "[Agregar descripción]"
           description: "[Agregar descripción]"
+        time4cs-control-unit-1:
+          title: Unidad 1 de control de Time4CS
+          stages:
+            Sequencing in Maze:
+              name: Secuencias en Laberinto
+            Programming and Loops with the Artist:
+              name: Programación y bucles con el Artista
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Condicionales
+            'Events: The Big Event':
+              name: 'Eventos: El Gran Evento'
+            Simon Says:
+              name: Simón dice
+            Learning Sprites with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
+            Private and Personal Information:
+              name: Información privada y personal
+            About Me:
+              name: Acerca de mí
+            Access Ability:
+              name: Habilidad de acceso
+            Conditionals Review:
+              name: Revisión de condicionales
+        time4cs-experiment-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Secuencias en Laberinto
+            Programming and Loops with the Artist:
+              name: Programación y bucles con el Artista
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Condicionales en Minecraft: Voyage Aquatic'
+            Conditionals:
+              name: Condicionales
+            'Events: The Big Event':
+              name: 'Eventos: El Gran Evento'
+            Simon Says:
+              name: Simón dice
+            Learning Sprites with Sprite Lab:
+              name: Aprender sprites con Laboratorio de Sprite
+            Alien Dance Party with Sprite Lab:
+              name: Fiesta de baile extraterrestre con Laboratorio de Sprite
+            Private and Personal Information:
+              name: Información privada y personal
+            About Me:
+              name: Acerca de mí
+            Access Ability:
+              name: Habilidad de acceso
+            Conditionals Review:
+              name: Revisión de condicionales
+        csp7-pilot:
+          stages:
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
+            Create PT - Complete the Task:
+              name: PT de creación - Completar la tarea

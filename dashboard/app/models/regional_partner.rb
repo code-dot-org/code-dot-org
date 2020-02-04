@@ -187,7 +187,7 @@ class RegionalPartner < ActiveRecord::Base
 
     # Force to be a string, ignore "-" and anything after it,
     # and only allow digits 0-9.
-    zip_code = zip_code_raw.to_s.split("-")[0].tr('^0-9', '')
+    zip_code = zip_code_raw.to_s.split("-")[0]&.tr('^0-9', '')
 
     if RegexpUtils.us_zip_code?(zip_code)
       # Try to find the matching partner using the ZIP code.

@@ -65,6 +65,7 @@
   join_section:
     code:
       placeholder: Seksjonskode (ABCDEF)
+      submit: Bli med
   add_hint_form:
     placeholder: Skriv inn et hint her
     submit: Legg til hint
@@ -324,6 +325,12 @@
       professional_learning: Profesjonell opplæring
       documentation: Dokumentasjon
       tutorials: Guide
+      app_lab_documentation: Programmerings lab dokumentasjon
+      app_lab_tutorials: Programmerings lab veiledning
+      game_lab_documentation: Spill lab dokumentasjon
+      game_lab_tutorials: Spill lab veiledning
+      sprite_lab_documentation: Animerte figurer lab dokumentasjon
+      sprite_lab_tutorials: Animerte figurer lab veiledning
       educate_overview: Oversikt for lærere
       educate_elementary: Barneskole
       educate_middle: Ungdomsskole
@@ -354,6 +361,7 @@
       district_dashboard: Distrikt skrivebord
       label: Hei %{username}
       stats: Min fremdrift
+      my_projects: Mine prosjekter
       settings: Min konto
       logout: Logg ut
       signin: Logg inn
@@ -391,6 +399,7 @@
       starwarsblocks: Star Wars (blokker)
       starwarsblocks_hour: Star Wars (blokker)
       weblab: Weblaboratoriet
+      view_all: Vis alle prosjekter...
     popup:
       progress_for_user: "%{name}s fremgang"
       progress: Din fremdrift
@@ -786,6 +795,8 @@
     help_support: Hjelp og støtte
     documentation: Dokumentasjon
     tutorials: Guide
+  free_response:
+    placeholder: Angi svaret her
   multi:
     wrong_title: Feil svar
     wrong_body: Svaret du har angitt er ikke riktig.  Prøv på nytt!

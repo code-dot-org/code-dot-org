@@ -24,6 +24,22 @@ module Cdo
             'rule-action': 'include'
           }
 
+          # Conditionally add transformation rule to prefix target table name with '_import_', so we can
+          # prototype exporting an Aurora table to a staging Redshift table, which is later swapped into the target table.
+          # TODO: (suresh) Replace this with a transformation rule to prefix all tables once prototyping completes.
+          if properties && properties['export_to_staging_table']
+            rules << {
+              'rule-type': 'transformation',
+              'rule-action': 'add-prefix',
+              'rule-target': 'table',
+              'object-locator': {
+                'schema-name': schema,
+                'table-name': table,
+              },
+              'value': '_import_'
+            }
+          end
+
           # Remove specified columns using transformation rule.
           properties &&
             (columns = properties['remove_column']) &&
