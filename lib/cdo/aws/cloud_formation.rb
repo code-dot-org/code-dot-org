@@ -204,7 +204,7 @@ module AWS
             CAPABILITY_IAM
             CAPABILITY_NAMED_IAM
           ]
-          if TEMPLATE == 'cloud_formation_stack.yml.erb'
+          if %w[cloud_formation_stack.yml.erb data.yml.erb].include?(TEMPLATE)
             options[:tags].push(
               key: 'environment',
               value: rack_env
