@@ -13989,3 +13989,85 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp4-2020:
+          stages:
+            Variables Explore:
+              name: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+            Variables Make:
+              name: Variables Make
+            Conditionals Explore:
+              name: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+            Conditional Make:
+              name: Conditional Make
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+            Functions Practice:
+              name: Functions Practice
+            Functions Make:
+              name: Functions Make
+            Project - Decision Maker App Part 1:
+              name: Project - Decision Maker App Part 1
+            Project - Decision Maker App Part 2:
+              name: Project - Decision Maker App Part 2
+            Project - Decision Maker App Part 3:
+              name: Project - Decision Maker App Part 3
+            'Lesson 15: Assessment Day':
+              name: 'Lesson 15: Assessment Day'
+          title: CSP Unit 4 - Variables, Conditionals, and Functions ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp5-2020:
+          stages:
+            Lists Explore:
+              name: Lists Explore
+            Lists Investigate:
+              name: Lists Investigate
+            Lists Practice:
+              name: Lists Practice
+            Lists Make:
+              name: Lists Make
+            Loops Explore:
+              name: Loops Explore
+            Loops Investigate:
+              name: Loops Investigate
+            Loops Practice:
+              name: Loops Practice
+            Loops Make:
+              name: Loops Make
+            Traversals Explore:
+              name: Traversals Explore
+            Traversals Investigate:
+              name: Traversals Investigate
+            Traversals Practice:
+              name: Traversals Practice
+            Traversals Make:
+              name: Traversals Make
+            Semester Hackathon Part 1:
+              name: Semester Hackathon Part 1
+            Semester Hackathon Part 2:
+              name: Semester Hackathon Part 2
+            Semester Hackathon Part 3:
+              name: Semester Hackathon Part 3
+            Semester Hackathon Part 4:
+              name: Semester Hackathon Part 4
+            Semester Hackathon Part 5:
+              name: Semester Hackathon Part 5
+            'Lesson 18: Assessment Day':
+              name: 'Lesson 18: Assessment Day'
+            Unit 5 STUDENT Survey:
+              name: Unit 5 STUDENT Survey
+            Unit 5 TEACHER Survey:
+              name: Unit 5 TEACHER Survey
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
