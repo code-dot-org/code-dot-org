@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {showWarning} from '../redux/data';
 import LibraryCategory from './LibraryCategory';
-import {categories} from './datasetManifest.json';
 import color from '../../util/color';
 import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
@@ -30,7 +29,8 @@ const styles = {
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
-    // from redux dispatch
+    // Provided via redux
+    libraryManifest: PropTypes.object.isRequired,
     onShowWarning: PropTypes.func.isRequired
   };
 
@@ -57,6 +57,7 @@ class DataLibraryPane extends React.Component {
   };
 
   render() {
+    const categories = this.props.libraryManifest.categories || [];
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
@@ -77,7 +78,9 @@ class DataLibraryPane extends React.Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    libraryManifest: state.data.libraryManifest || {}
+  }),
   dispatch => ({
     onShowWarning(warningMsg, warningTitle) {
       dispatch(showWarning(warningMsg, warningTitle));

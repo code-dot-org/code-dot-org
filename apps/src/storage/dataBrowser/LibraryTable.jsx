@@ -61,7 +61,8 @@ class LibraryTable extends React.Component {
     name: PropTypes.string.isRequired,
     importTable: PropTypes.func.isRequired,
 
-    // from redux dispatch
+    // Provided via redux
+    libraryManifest: PropTypes.object.isRequired,
     onShowPreview: PropTypes.func.isRequired
   };
 
@@ -76,7 +77,13 @@ class LibraryTable extends React.Component {
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
-    const datasetInfo = getDatasetInfo(this.props.name);
+    const datasetInfo = getDatasetInfo(
+      this.props.libraryManifest.tables,
+      this.props.name
+    );
+    if (!datasetInfo) {
+      return null;
+    }
 
     return (
       <div>
@@ -122,7 +129,9 @@ class LibraryTable extends React.Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    libraryManifest: state.data.libraryManifest || {}
+  }),
   dispatch => ({
     onShowPreview(tableName) {
       dispatch(showPreview(tableName));
