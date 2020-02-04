@@ -678,7 +678,15 @@ class Script < ActiveRecord::Base
   end
 
   def standards
-    stages.map(&:standards).flatten.uniq.map(&:summarize)
+    standards = stages.map(&:standards).flatten.uniq
+    standards_with_stages = []
+    standards.each do |standard|
+      standard_summary = standard.summarize
+      stages_by_standard = stages & standard.stages
+      standard_summary[:lesson_ids] = stages_by_standard.pluck(:id)
+      standards_with_stages << standard_summary
+    end
+    standards_with_stages
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
