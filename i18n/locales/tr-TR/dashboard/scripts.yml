@@ -1020,6 +1020,8 @@ tr:
               name: Tek başına video
             Curriculum Reference:
               name: Öğretim programı
+            Sprite Lab:
+              name: Kukla Laboratuvarı
             Contained Levels:
               name: İçerdiği Düzeyler
         algebraPD2b:
@@ -7328,7 +7330,7 @@ tr:
             Dance Party:
               name: Dans Partisi
           title: Dans Partisi
-          description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 farklı şarkıcı daha sizlerle!
+          description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ve 25 kişi daha!
           description: Kendi dans partinizi kodlayın ve arkadaşlarınızla paylaşın!
         frozen-2018-test-b:
           stages:
@@ -8433,6 +8435,8 @@ tr:
           stages:
             new stage:
               name: yeni kademe
+            Libraries:
+              name: Kütüphaneler
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -8666,6 +8670,8 @@ tr:
           stages:
             The Need for Programming Languages:
               name: Programlama dilleri ne duyulan ihtiyaç
+            Debugging:
+              name: Hata Ayıklama (Debugging)
         csl-vn:
           stages:
             Programming in Maze:
@@ -8789,6 +8795,8 @@ tr:
               name: Olaylar
             Functions:
               name: Fonksiyonlar
+            Sprite Lab:
+              name: Kukla Laboratuvarı
             Variables:
               name: Değişkenler
             For Loops:
@@ -8803,7 +8811,7 @@ tr:
           stages:
             new stage:
               name: yeni kademe
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Koşullar
@@ -8835,3 +8843,25 @@ tr:
               name: Sanatçıların İç İçe Döngüleri
             Functions with Artist:
               name: Sanatçı- Fonksiyonlar
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Koşullar
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Private and Personal Information:
+              name: Özel ve Kişisel Bilgiler
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Koşullar
+            'Events: The Big Event':
+              name: 'Olaylar: Büyük Olay'
+            Private and Personal Information:
+              name: Özel ve Kişisel Bilgiler
+        csp8-pilot:
+          stages:
+            new stage:
+              name: yeni kademe
+            Create PT - Complete the Task:
+              name: Performans Görevini Oluştur - Görevi Tamamla

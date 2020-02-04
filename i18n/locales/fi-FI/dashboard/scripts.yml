@@ -1527,7 +1527,7 @@ fi:
           stages:
             Dance Party:
               name: Tanssibileet
-          description_short: Mukana Katy Perry, Madonna, J.Balvinin, Sia, Keith Urban, Ciara ja 25 muuta!
+          description_short: Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja 25 muuta!
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
         frozen-2018-test-b:
           stages:
@@ -1755,7 +1755,7 @@ fi:
               name: Silmukat
         dance-extras-2019:
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Ehtolausekkeet
@@ -1765,3 +1765,11 @@ fi:
               name: Joukkoistaminen
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet

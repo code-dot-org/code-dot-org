@@ -1,7 +1,11 @@
 var extraArgs = null;
+var other = [];
 
 function draw() {
   executeDrawLoopAndCallbacks();
+  for (var i = 0; i < other.length; i++) {
+    other[i]();
+  }
 }
 
 /* Legacy code only. Do not add any new code below here */

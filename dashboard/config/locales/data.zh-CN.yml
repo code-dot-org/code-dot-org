@@ -39,7 +39,7 @@ zh-CN:
         Custom: 小艺术家
         CustomStudio: 游戏实验室
         Gamelab: 游戏实验室
-        Spritelab: 精灵实验室
+        Spritelab: 精灵图实验室
     trophy:
       name:
         Bronze: 铜牌
@@ -398,8 +398,8 @@ zh-CN:
         csd_external_netflix_data: Netflix（网飞）是如何生成电视和电影建议的？
         csd_external_waze_data: 为什么如此多的用户都着迷于Waze？
         csd_gamelab_animation_tab: 动画标签页
-        csd_gamelab_sprites_1: 精灵简介
-        csd_gamelab_sprites_2: 精灵的动画
+        csd_gamelab_sprites_1: 精灵图简介
+        csd_gamelab_sprites_2: 精灵图的动画
         csd_gamelab_velocity: 矢量
         csd_weblab_intro_1: 网络实验室介绍-第 1 部分
         csd_weblab_intro_2: 网络实验室介绍-第 2 部分
@@ -481,10 +481,10 @@ zh-CN:
         csd_gamelab_booleans: 布尔表达式
         csd_gamelab_conditional_statements: 条件表达式
         csd_gamelab_if_else: 如果/否则 语句
-        CSF_SpriteLabIntro_CDEF: 这是精灵实验室
-        CSF_Spritelab_MakeSprite_CDEF: 如何在精灵实验室制作精灵
-        CDEF_Video_SpritesInAction: 动作精灵
-        CSF_SpriteLab_SpritesInAction_CDEF: 动作精灵
+        CSF_SpriteLabIntro_CDEF: 这是精灵图实验室
+        CSF_Spritelab_MakeSprite_CDEF: 如何在精灵图实验室制作精灵图
+        CDEF_Video_SpritesInAction: 动作精灵图
+        CSF_SpriteLab_SpritesInAction_CDEF: 动作精灵图
         CSF_StarWars_ProjectIntro: 星球大战项目介绍
         mc_2018_intro: "《我的世界》：水上航行简介"
         MC_2018_loops: "《我的世界》：水上航行 重复直到"
@@ -516,11 +516,27 @@ zh-CN:
         csd_applab_loops: 应用实验室的循环
         csd_problem_solving_process: 解决问题的过程
         CSF_Going_Places_Safely: 我的在线邻居
-        CSF_SpriteLab_Intro_v2: 向你介绍精灵实验室
-        CSF_Spritelab_MakeSprite_v2: 如何制作精灵
-        CSF_SpriteLab_SpritesInAction_v2: 动作精灵
+        CSF_SpriteLab_Intro_v2: 向你介绍精灵图实验室
+        CSF_Spritelab_MakeSprite_v2: 如何制作精灵图
+        CSF_SpriteLab_SpritesInAction_v2: 动作精灵图
         csd_debugging: 调试
         csd_applab_designmode_short: 应用程序实验室 - 设计模式
+        csp-pd-welcome: 欢迎加入大家庭！
+        CSF-Teaching-Problem-Solving: 计算机科学基础中解决问题的教学
+        u5-traversals-get-list-explanation: Code.org [levelbuilder] - Pilot Video
+          - 数据块
+        u7-libraries-explanation: 应用实验室：创建自己的模块 - 如何使用库
+        how-to-k5-workshops: Code.org 的计算机科学基础：孩子们测试，老师批准
+        why-should-teach-unplugged-activities: 常见问答：为什么我要教"线下"活动？
+        cs-principles-intro-to-objects: 计算机科学原理：介绍对象
+        oceans_machine_learning: 机器学习
+        oceans_training_data: 训练数据
+        oceans_societal_implications: 社会意义
+        hoc_dance_congrats_2019: 舞蹈派对 2019 - 开跳！
+        hoc_dance_warmup_2019: 舞蹈派对 2019 - 热身！
+        hoc_dance_events_2019: 舞蹈派对 2019 - 事件
+        hoc_dance_measures_2019: 舞蹈派对 2019 - 小节
+        hoc_dance_properties_2019: 舞蹈派对 2019 - 属性
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

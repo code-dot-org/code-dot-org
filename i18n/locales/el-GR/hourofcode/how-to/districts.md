@@ -4,9 +4,9 @@ title: Η Ώρα του Κώδικα ανά περιοχή
 
 {{ signup_button }}
 
-# How to involve your entire school district
+# Πως να εμπλέξετε όλη την σχολική περιφέρεια
 
-### Every school in your district can take part in the largest learning event in history.
+### Κάθε σχολείο της περιφέρειας που ανήκετε μπορεί να συμμετέχει στο μεγαλύτερο μαθησιακό γεγονός της ιστορίας.
 
 * * *
 

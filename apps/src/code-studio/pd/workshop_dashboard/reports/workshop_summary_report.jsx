@@ -117,6 +117,10 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Organizer Name'}
       },
       {
+        property: 'organizer_id',
+        header: {label: 'Organizer Id'}
+      },
+      {
         property: 'organizer_email',
         header: {label: 'Organizer Email'}
       },
@@ -125,55 +129,20 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Regional Partner'}
       },
       {
-        property: 'workshop_dates',
-        header: {label: 'Dates'}
-      },
-      {
-        property: 'num_hours',
-        header: {label: 'Workshop Total Hours'}
-      },
-      {
-        property: 'funded',
-        header: {label: 'Funded'}
-      },
-      {
-        property: 'attendance_url',
-        header: {label: 'Attendance URL'},
-        cell: {format: this.formatUrl}
-      },
-      {
-        property: 'num_facilitators',
-        header: {label: 'Num Facilitators'}
-      },
-      {
-        property: 'num_registered',
-        header: {label: 'Num Registered'}
-      },
-      {
-        property: 'num_scholarship_teachers_attending_all_sessions',
-        header: {label: 'Num Scholarship Attending'}
-      }
-    ];
-
-    for (let i = 1; i <= ATTENDANCE_DAYS_COUNT; i++) {
-      columns.push({
-        property: `attendance_day_${i}`,
-        header: {label: `Attendance Day ${i}`}
-      });
-    }
-
-    columns.push(
-      {
-        property: 'organizer_id',
-        header: {label: 'Organizer Id'}
-      },
-      {
         property: 'workshop_name',
         header: {label: 'Workshop Name'}
       },
       {
         property: 'on_map',
         header: {label: 'Shown on Map'}
+      },
+      {
+        property: 'funded',
+        header: {label: 'Funded'}
+      },
+      {
+        property: 'workshop_dates',
+        header: {label: 'Dates'}
       },
       {
         property: 'workshop_id',
@@ -189,10 +158,19 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Subject'}
       },
       {
+        property: 'attendance_url',
+        header: {label: 'Attendance URL'},
+        cell: {format: this.formatUrl}
+      },
+      {
         property: 'facilitators',
         header: {label: 'Facilitators'}
+      },
+      {
+        property: 'num_facilitators',
+        header: {label: 'Num Facilitators'}
       }
-    );
+    ];
 
     if (this.state.showFacilitatorDetails) {
       for (let i = 1; i <= FACILITATOR_DETAILS_COUNT; i++) {
@@ -211,6 +189,10 @@ export class WorkshopSummaryReport extends React.Component {
 
     columns.push(
       {
+        property: 'num_registered',
+        header: {label: 'Num Registered'}
+      },
+      {
         property: 'num_qualified_teachers',
         header: {label: 'Num Qualified Teachers'}
       },
@@ -219,6 +201,13 @@ export class WorkshopSummaryReport extends React.Component {
         header: {label: 'Days'}
       }
     );
+
+    for (let i = 1; i <= ATTENDANCE_DAYS_COUNT; i++) {
+      columns.push({
+        property: `attendance_day_${i}`,
+        header: {label: `Attendance Day ${i}`}
+      });
+    }
 
     if (this.props.permission.has(WorkshopAdmin)) {
       columns.push(

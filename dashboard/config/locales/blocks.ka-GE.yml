@@ -134,6 +134,7 @@ ka:
           GROUP:
             sprites: ყველა
           FORMAT:
+            '"diamond"': ბრილიანტი
             '"grid"': ბადე
             '"row"': მწკრივი
             '"column"': სვეტი

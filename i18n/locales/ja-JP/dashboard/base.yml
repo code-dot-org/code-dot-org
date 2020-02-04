@@ -638,6 +638,8 @@ ja:
     help_support: "ヘルプとサポート"
     documentation: "ドキュメント"
     tutorials: "チュートリアル"
+  free_response:
+    placeholder: "ここに答えを入力"
   multi:
     wrong_title: "不正解"
     wrong_body: "不正解です。やりなおしてみてください。"

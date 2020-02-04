@@ -1251,7 +1251,7 @@ var projects = (module.exports = {
         study_group: 'v4',
         event: errorType,
         data_int: errorCount,
-        project_id: current.id + '',
+        project_id: current && current.id + '',
         data_string: errorText,
         // Some fields in the data_json are repeated in separate fields above, so
         // that they can be easily searched on as separate fields, and also have
@@ -1499,108 +1499,81 @@ var projects = (module.exports = {
       executeCallback(callback, data);
     });
   },
+
   /**
-   * @returns {jQuery.Deferred} A deferred which will resolve when the project loads.
+   * @returns {Promise} A Promise which will resolve when the project loads.
    */
   load() {
-    var deferred = new $.Deferred();
-
-    // Use the sources-public API for dancelab shares. Responses from this API
-    // can be publicly cached, which is helpful for HoC scalability in the
-    // celebrity tweet scenario where a single share link gets many hits.
-    const useSourcesPublic =
-      appOptions.share &&
-      appOptions.level &&
-      appOptions.level.projectType === 'dance';
-    let sourcesApi;
-    if (this.useSourcesApi()) {
-      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
-    }
-
     if (projects.isProjectLevel()) {
       if (redirectFromHashUrl() || redirectEditView()) {
-        deferred.resolve();
-        return deferred;
+        return Promise.resolve();
       }
-      var pathInfo = parsePath();
-
-      if (pathInfo.channelId) {
-        if (pathInfo.action === 'edit') {
-          isEditing = true;
-        } else {
-          $('#betainfo').hide();
-        }
-
-        // Load the project ID, if one exists
-        channels.fetch(pathInfo.channelId, (err, data) => {
-          if (err) {
-            if (err.message.includes('error: Not Found')) {
-              // Project not found. Redirect to the most recent project of this
-              // type, or a new project of this type if none exists.
-              const newPath = utils
-                .currentLocation()
-                .pathname.split('/')
-                .slice(PathPart.START, PathPart.APP + 1)
-                .join('/');
-              utils.navigateToHref(newPath);
-              if (IN_UNIT_TEST) {
-                // Allow unit test to confirm that navigation has happened.
-                deferred.resolve();
-              }
-            } else {
-              deferred.reject();
-            }
-          } else {
-            this.fetchSource(
-              data,
-              err => {
-                if (err) {
-                  deferred.reject();
-                } else {
-                  if (current.isOwner && pathInfo.action === 'view') {
-                    isEditing = true;
-                  }
-                  fetchAbuseScoreAndPrivacyViolations(this, function() {
-                    deferred.resolve();
-                  });
-                }
-              },
-              queryParams('version'),
-              sourcesApi
-            );
-          }
-        });
-      } else {
-        isEditing = true;
-        deferred.resolve();
-      }
+      return this.loadStandaloneProject_();
     } else if (appOptions.channel) {
-      isEditing = true;
-      channels.fetch(appOptions.channel, (err, data) => {
-        if (err) {
-          deferred.reject();
-        } else {
-          this.fetchSource(
-            data,
-            err => {
-              if (err) {
-                deferred.reject();
-              } else {
-                projects.showHeaderForProjectBacked();
-                fetchAbuseScoreAndPrivacyViolations(this, function() {
-                  deferred.resolve();
-                });
-              }
-            },
-            queryParams('version'),
-            sourcesApi
-          );
-        }
-      });
+      return this.loadProjectBackedLevel_();
     } else {
-      deferred.resolve();
+      return Promise.resolve();
     }
-    return deferred;
+  },
+
+  /**
+   * Loads the channel and source for a standalone project. The channel id
+   * is determined by parsing the current url path.
+   * @returns {Promise} A Promise which will resolve when the project loads.
+   */
+  loadStandaloneProject_: function() {
+    var pathInfo = parsePath();
+
+    if (pathInfo.channelId) {
+      if (pathInfo.action === 'edit') {
+        isEditing = true;
+      } else {
+        $('#betainfo').hide();
+      }
+
+      // Load the project ID, if one exists
+      return this.fetchChannel(pathInfo.channelId)
+        .catch(err => {
+          if (err.message.includes('error: Not Found')) {
+            // Project not found. Redirect to the most recent project of this
+            // type, or a new project of this type if none exists.
+            const newPath = utils
+              .currentLocation()
+              .pathname.split('/')
+              .slice(PathPart.START, PathPart.APP + 1)
+              .join('/');
+            utils.navigateToHref(newPath);
+          }
+          // Reject even after navigation, to allow unit tests which stub
+          // navigateToHref to confirm that navigation has happened.
+          return Promise.reject(err);
+        })
+        .then(this.fetchSource.bind(this))
+        .then(() => {
+          if (current.isOwner && pathInfo.action === 'view') {
+            isEditing = true;
+          }
+          return fetchAbuseScoreAndPrivacyViolations(this);
+        });
+    } else {
+      isEditing = true;
+      return Promise.resolve();
+    }
+  },
+
+  /**
+   * Loads the channel and source for a project-backed level. The channel id
+   * is determined by appOptions.channel.
+   * @returns {Promise} A Promise which will resolve when the project loads.
+   */
+  loadProjectBackedLevel_: function() {
+    isEditing = true;
+    return this.fetchChannel(appOptions.channel)
+      .then(this.fetchSource.bind(this))
+      .then(() => {
+        projects.showHeaderForProjectBacked();
+        return fetchAbuseScoreAndPrivacyViolations(this);
+      });
   },
 
   /**
@@ -1688,14 +1661,33 @@ var projects = (module.exports = {
   },
 
   /**
+   * Given a channel id, fetches the channel's data from the server.
+   * @param {string} channelId to fetch.
+   * @returns {Promise} A promise which resolves with the channel data.
+   */
+  fetchChannel(channelId) {
+    return new Promise((resolve, reject) => {
+      channels.fetch(channelId, (err, data) =>
+        err ? reject(err) : resolve(data)
+      );
+    }).catch(err => {
+      this.logError_(
+        'load-channel-error',
+        null,
+        `unable to fetch project channel: ${err}`
+      );
+      return Promise.reject(err);
+    });
+  },
+
+  /**
    * Given data from our channels api, updates current and gets sources from
    * sources api
    * @param {object} channelData Data we fetched from channels api
-   * @param {function} callback
    * @param {string?} version Optional version to load
-   * @param {boolean} sources api to use, if present.
+   * @returns {Promise} A promise that resolves when the source is loaded.
    */
-  fetchSource(channelData, callback, version, sourcesApi) {
+  fetchSource(channelData) {
     // Explicitly remove levelSource/levelHtml from channels
     delete channelData.levelSource;
     delete channelData.levelHtml;
@@ -1706,32 +1698,51 @@ var projects = (module.exports = {
     current = channelData;
 
     projects.setTitle(current.name);
+    const sourcesApi = this.getSourcesApi_();
     if (sourcesApi && channelData.migratedToS3) {
       var url = current.id + '/' + SOURCE_FILE;
+      const version = queryParams('version');
       if (version) {
         url += '?version=' + version;
       }
-      sourcesApi.fetch(url, (err, data, jqXHR) => {
-        if (err) {
+      return new Promise((resolve, reject) => {
+        sourcesApi.fetch(url, (err, data, jqXHR) =>
+          err ? reject(err) : resolve({data, jqXHR})
+        );
+      })
+        .catch(err => {
           this.logError_(
             'load-sources-error',
             null,
             `unable to fetch project source file: ${err}`
           );
-          console.warn(err);
-          callback(err);
-          return;
-        }
-        currentSourceVersionId =
-          jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
-        unpackSources(data);
-        callback();
-      });
+          return Promise.reject(err);
+        })
+        .then(({data, jqXHR}) => {
+          currentSourceVersionId =
+            jqXHR && jqXHR.getResponseHeader('S3-Version-Id');
+          unpackSources(data);
+        });
     } else {
       // It's possible that we created a channel, but failed to save anything to
       // S3. In this case, it's expected that html/levelSource are null.
-      callback();
+      return Promise.resolve();
     }
+  },
+
+  getSourcesApi_() {
+    // Use the sources-public API for dancelab shares. Responses from this API
+    // can be publicly cached, which is helpful for HoC scalability in the
+    // celebrity tweet scenario where a single share link gets many hits.
+    const useSourcesPublic =
+      appOptions.share &&
+      appOptions.level &&
+      appOptions.level.projectType === 'dance';
+    let sourcesApi;
+    if (this.useSourcesApi()) {
+      sourcesApi = useSourcesPublic ? sourcesPublic : sources;
+    }
+    return sourcesApi;
   }
 });
 
@@ -1793,24 +1804,26 @@ function fetchPrivacyProfanityViolations(resolve) {
   });
 }
 
-function fetchAbuseScoreAndPrivacyViolations(project, callback) {
-  const deferredCallsToMake = [
+/**
+ * @param project
+ * @returns {Promise} A Promise which resolves when all network calls complete.
+ */
+function fetchAbuseScoreAndPrivacyViolations(project) {
+  const promises = [
     new Promise(fetchAbuseScore),
     new Promise(fetchShareFailure)
   ];
 
   if (project.getStandaloneApp() === 'playlab') {
-    deferredCallsToMake.push(new Promise(fetchPrivacyProfanityViolations));
+    promises.push(new Promise(fetchPrivacyProfanityViolations));
   } else if (
     project.getStandaloneApp() === 'applab' ||
     project.getStandaloneApp() === 'gamelab' ||
     project.isWebLab()
   ) {
-    deferredCallsToMake.push(new Promise(fetchSharingDisabled));
+    promises.push(new Promise(fetchSharingDisabled));
   }
-  Promise.all(deferredCallsToMake).then(function() {
-    callback();
-  });
+  return Promise.all(promises);
 }
 
 /**

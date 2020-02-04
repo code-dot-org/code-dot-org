@@ -759,6 +759,8 @@ ga:
     help_support: Cabhair agus tacaíocht
     documentation: Doiciméadú
     tutorials: Cúrsaí Teagaisc
+  free_response:
+    placeholder: Cuir do fhreagra anseo
   multi:
     wrong_title: Freagra mícheart
     wrong_body: Faraor, ní é sin an freagra ceart. Déan iarracht eile!

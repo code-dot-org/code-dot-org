@@ -25,6 +25,8 @@ uk-UA:
         2-3_Artist_4_a: Щоб закінчити будинок, все що нам потрібно - це намалювати
           квадрат!
       2-3 Artist 6:
+        2-3_Artist_6_a: 'Щоб зробити ці маленькі кути, тобі потрібно повернути _далі_
+          кожного разу, як ти це робив з квадратом.   '
         2-3_Artist_6_b: Оскільки я вже стикаюсь праворуч, то найлегше почати шляхом
           переміщення вперед, а потім зробити поворот вліво для створення трикутника.
         2-3_Artist_6_c: У кожної сторони трикутника є довжини, як у кожної сторони
@@ -71,6 +73,49 @@ uk-UA:
         2-3_Artist_Functions_4_a: Художник повинен перетворити 120 градусів між кожним
           квадратом, щоб завершити цей дизайн.
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          Пригадай, в останньому завданні код був таким:
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Ваш новий хід має йти на \*\* кінці \*\* коду всередині
           циклу.
       2-3 Artist Loops New 12:
@@ -794,6 +839,8 @@ uk-UA:
           -   Використайте блок `при натисканні стрілки вліво`, щоб змусити Робота виконувати танцювальний рух при натисканні цієї клавіші.
 
           _Цей рівень закінчується після 7 тактів._"
+      Dance_Party_extras_alternate_2019:
+        alternate: Блок зміни рухів знаходиться в категорії "Танцівники".
       Function intro Ryan:
         Function_intro_Ryan_a: Ви можете викликати функцію в програмі багато разів!  Спробуйте
           викликати її двічі, щоб виконати завдання.
@@ -965,6 +1012,20 @@ uk-UA:
       course2_artist_nestedLoops_challenge1:
         courseD_artist_nestedLoops_challenge1_b: Додайте код, щоб намалювати трикутник
           всередині вкладеного циклу. Використовуйте 120 градусів для вашого трикутника.
+      course2_artist_prog_challenge1:
+        courseC_artist_prog_challenge1_a: 'Прямокутник 200 пікселів шириною та 100
+          пікселів висотою. '
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Ти можеш вставляти команди всередину блоку
+          \"Повтор\" для повторення їх знову и знову. Спробуй\n\n<xml>\n  \n          <block
+          type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n
+          \               <title name=\"DIR\">moveForward</title>\n                <title
+          name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n
+          \                 <block type=\"jump_by_constant_dropdown\">\n                    <title
+          name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n
+          \               </next>\n              </block>\n              </statement></block></xml>"
       course2_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_b: У цій головоломці кожен простір може
           мати квітку, медову гребіну або нічого. Це означає, що ви можете повторити
@@ -976,6 +1037,19 @@ uk-UA:
         courseC_harvester_loops_challenge2_a: Один із способів вирішити це виглядає
           як зигзаг. Інший спосіб виглядає як спіраль! Існує безліч різних рішень
           для загадки, як це. Бути наполегливим!
+      course2_maze_loops_challenge1:
+        courseC_maze_loops_challenge1_a: Думай про цей шлях, як про три різні етапи.
+          Кожен з них має патерн, який можна повторити.
+        courseC_maze_loops_challenge1_b: Між кожним блоком "Повтор", тобі буде треба
+          "Повернути ліворуч" або "Повернути праворуч" щоб підготувати Scrat до наступного
+          патерну.
+        courseC_maze_loops_challenge1_c: Якщо ти робиш це таким довгим шляхом, то
+          треба "повернути ліворуч" і тоді "рухатись вперед" де-кілька разів. Не здавайся
+      course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _Якщо направляєте мене в зворотньому
+          напрямку, уважно слідкуйте, щоб я повернувся в правильну сторону!_
+        courseC_maze_programming_challenge2_b: Найкоротша відповідь використовує лише
+          п'ять блоків, але в ній є блок "Повтор"!
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_c: "Після того, як бджола перетворить його
           у нижній рядок, повторіть ці команди: \n\n-   Повторіть 2 рази: \n-   Перемістіть

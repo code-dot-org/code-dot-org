@@ -7217,6 +7217,30 @@ sk-SK:
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
           `zober kukuricu` koľkokoľvek krát potrebuješ, potom v každom rohu použi
           blok `otoč sa vpravo`.
+        courseC_harvester_loops_challenge1_c: |-
+          Po tom ako dvakrát pozbieraš kukuricu, môžeš použiť vnorený cyklus na zber ďalších osem kúskov.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Toto by bolo bez cyklov príliš ťažké!
         courseC_harvester_loops_challenge1_b: Môžeš zopakovať `posuň sa dopredu` a
@@ -7784,6 +7808,12 @@ sk-SK:
           pohnúť dopredu.
         courseC_starWars_loops5_a: V najlepšom riešení použiješ otoč sa, potom jeden
           blok `posuň sa dopredu`, znova otoč sa a potom cyklus.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: Najlepší výsledok dosiahneš cez jeden príkaz `posuň
+          sa dopredu`, potom príkaz otočiť, a potom cyklus.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: Najlepší výsledok dosiahneš cez jeden príkaz `posuň
+          sa dopredu`, potom príkaz otočiť, a potom cyklus.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Zapíš si všetky kroky na papier a skús nájsť skupinu
           krokov, ktorá sa opakuje.
@@ -7865,6 +7895,16 @@ sk-SK:
           Na vyriešenie tejto úlohy sa nemusíš otočiť vľavo. Všetky tvoje otočenia môžu byť vpravo.
 
           ![](https://images.code.org/3dd00d424aa4112934053548b48bbb69-image-1510198997590.40.57.png)
+      courseD_artist_2_2018:
+        courseD_artist_project1_b: Zapamätaj si, že úsečku nakreslíš len `pohybom`
+          a nie `skokom`.
+      courseD_artist_2_2018_2019:
+        courseD_artist_project1_b: Zapamätaj si, že úsečku nakreslíš len `pohybom`
+          a nie `skokom`.
+      courseD_artist_5_2018:
+        '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
+      courseD_artist_5_2018_2019:
+        '1': Ak vymieňaš tvary, nezabudni, že musíš vymeniť aj ich uhly!
       courseD_artist_binary_challenge2_2018:
         courseD_artist_binary_challenge2_a: V pôvodnom kóde je potrebné opraviť len
           pár riadkov.
@@ -8252,6 +8292,18 @@ sk-SK:
         courseD_bee_conditionals3_c: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
+      courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_a: Predstav si každú stranu obdĺžnika ako samostatnú
+          cestu. Nastav zvonku vnorený cyklus s blokom `opakuj` a zvnútra cyklus `ak
+          je tam ceste vpred`. Koľko ciest musí včela preletieť, ak musí preletieť
+          každú stranu s kvetom?
+        courseD_bee_conditionals5_c: Obdĺžnik s kvetmi má 3 strany, takže kód sa musí
+          `opakovať 3 krát`. Pri každom opakovaní musí včela pokračovať po ceste `ak
+          tam je cesta vpred`. Včela musí `posuň sa dopredu`, ak má pokračovať po
+          ceste. Počas cesty musí hľadať kvety. `Ak pri kvete` včela `získať nektár`.
+        courseD_bee_conditionals5_b: Vo vnútri bloku `pokiaľ tam je cesta vpred` sa
+          posuň dopredu a hľadaj kvet. Ako zistíš či tam je kvet? Čo urobíš ak tam
+          je kvet?
       courseD_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: Nájdeš cestu, ktorou sa dostaneš ku
           všetkým kvetom a plástom bez toho, aby si narazil do stromu? Najlepšou cestou
@@ -8424,6 +8476,38 @@ sk-SK:
              </xml>
         courseD_bounce_events1s_b: Nezabudni stlačiť tlačítko "Spustiť" a šípkou posunúť
           ruku ku košu.
+      courseD_bounce_events2s_2018:
+        courseD_bounce_events2s_a: |-
+          Aby to fungovalo, musíš mať nakódované dva sety udalostí `pohybu`:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
+      courseD_bounce_events2s_2019:
+        courseD_bounce_events2s_a: |-
+          Aby to fungovalo, musíš mať nakódované dva sety udalostí `pohybu`:
+
+          <xml>
+            <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+              <next>
+                <block type="bounce_moveLeft"/>
+              </next>
+            </block>
+            <block type="bounce_whenRight" deletable="false" x="180" y="20">
+              <next>
+                <block type="bounce_moveRight"/>
+              </next>
+            </block>
+          </xml>
       courseD_bounce_events5s_2018:
         courseD_bounce_events5s_a: Na vyriešenie tejto úlohy nepotrebuješ hýbať rukou.
         courseD_bounce_events5s_b: |-
@@ -8441,11 +8525,15 @@ sk-SK:
           Máš vo svojom kóde takúto udalosť?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Ak si napísal kód správne, nemusíš už ani pohnúť
+          prstom a vyhráš.
       courseD_bounce_events6s_2019:
         courseD_bounce_events6s_a: |-
           Máš vo svojom kóde takúto udalosť?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
+        courseD_bounce_events6s_b: Ak si napísal kód správne, nemusíš už ani pohnúť
+          prstom a vyhráš.
       courseD_bounce_events7s_2018:
         courseD_bounce_events7s_a: Ak chceš, môžeš pridať zvuky aj na viacerých miestach!
       courseD_bounce_events7s_2019:
@@ -8812,6 +8900,14 @@ sk-SK:
       courseD_collector_ramp8:
         courseD_collector_ramp8_b: Ak chceš zjednodušiť svoj kód, môžeš vložiť jeden
           cyklus `opakuj` do vnútra iného cyklu! Toto sa nazýva **vnorený cyklus**.
+      courseD_farmer_condLoops6_2018:
+        courseD_farmer_condLoops6_a: Posúvaj farmárku po každom kúsku šprály s použitím
+          cyklu `pokiaľ tam je cesta vpred` alebo bloku `ak tam je cesta vpred / inak`.
+        courseD_farmer_condLoops6_b: Počas zberu potrebuješ zbierať len kukuricu.
+          Tekvicu stačí ak pozbieraš až na konci programu.
+      courseD_farmer_condLoops6_2019:
+        courseD_farmer_condLoops6_b: Počas zberu potrebuješ zbierať len kukuricu.
+          Tekvicu stačí ak pozbieraš až na konci programu.
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: Pri riešení tejto úlohy ti môže veľmi
           pomôcť tlačidlo "Krok".
