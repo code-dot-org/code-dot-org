@@ -13,7 +13,7 @@ class Policies::StageActivityTest < ActiveSupport::TestCase
       script: @script,
       stage: @stage,
       levels: [
-        create(:maze, name: 'ScriptActivity test level 1')
+        create(:maze, name: 'StageActivity test level 1')
       ]
     )
     @script_level_2 = create(
@@ -21,7 +21,7 @@ class Policies::StageActivityTest < ActiveSupport::TestCase
       script: @script,
       stage: @stage,
       levels: [
-        create(:maze, name: 'ScriptActivity test level 2')
+        create(:maze, name: 'StageActivity test level 2')
       ]
     )
     @script_level_3 = create(
@@ -29,7 +29,7 @@ class Policies::StageActivityTest < ActiveSupport::TestCase
       script: @script,
       stage: @stage,
       levels: [
-        create(:maze, name: 'ScriptActivity test level 3')
+        create(:maze, name: 'StageActivity test level 3')
       ]
     )
     @section = create(:section, user: create(:teacher))
