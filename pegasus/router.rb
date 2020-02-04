@@ -241,9 +241,9 @@ class Documents < Sinatra::Base
     return unless response.headers['X-Pegasus-Version'] == '3'
     return unless ['', 'text/html'].include?(response.content_type.to_s.split(';', 2).first.to_s.downcase)
 
-    if params.key?('embedded') && @header['embedded_layout']
-      @header['layout'] = @header['embedded_layout']
-      @header['theme'] ||= 'none'
+    if params.key?('embedded') && @header['embedded_theme']
+      @header['theme'] = @header['embedded_theme']
+      @header['layout'] = 'none'
       response.headers['X-Frame-Options'] = 'ALLOWALL'
     end
 
