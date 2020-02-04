@@ -57,7 +57,9 @@ class DataLibraryPane extends React.Component {
   };
 
   render() {
-    const categories = this.props.libraryManifest.categories || [];
+    const categories = (this.props.libraryManifest.categories || []).filter(
+      category => category.published
+    );
     return (
       <div style={styles.container}>
         <p>{msg.dataLibraryDescription()}</p>
