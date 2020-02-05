@@ -1,4 +1,3 @@
-import {lessonCompletedByStandard} from './standardsTestHelpers';
 import _ from 'lodash';
 
 const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
@@ -64,16 +63,22 @@ export function getUnpluggedLessonsForScript(state) {
   return _.map(unpluggedStages, filterStageData);
 }
 
-export function getLessonsCompletedByStandardForScript(script) {
-  return lessonCompletedByStandard;
-}
-
-export function getNumberLessonsCompleted(script) {
+export function getNumberLessonsCompleted(state) {
   return 5;
 }
 
-export function getNumberLessonsInCourse(script) {
-  return 10;
+export function getNumberLessonsInScript(state) {
+  let numStages = 0;
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+  ) {
+    numStages =
+      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+        .stages.length;
+  }
+  return numStages;
 }
 
 export const lessonsByStandard = state => {
