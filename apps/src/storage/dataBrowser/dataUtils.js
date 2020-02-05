@@ -18,7 +18,7 @@ export const ChartType = {
   CROSS_TAB: 4
 };
 
-export function getDatasetInfo(tables = [], tableName) {
+export function getDatasetInfo(tableName, tables = []) {
   return tables.find(table => table.name === tableName);
 }
 

@@ -27,8 +27,8 @@ class PreviewModal extends React.Component {
       return null;
     }
     const datasetInfo = getDatasetInfo(
-      this.props.libraryManifest.tables,
-      this.props.tableName
+      this.props.tableName,
+      this.props.libraryManifest.tables
     );
     return (
       <BaseDialog isOpen handleClose={this.props.onClose} fullWidth fullHeight>

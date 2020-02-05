@@ -9,6 +9,7 @@ import msg from '@cdo/locale';
 import PreviewModal from './PreviewModal';
 import FirebaseStorage from '../firebaseStorage';
 import {WarningType} from '../constants';
+import experiments from '../../util/experiments';
 
 const styles = {
   container: {
@@ -57,8 +58,11 @@ class DataLibraryPane extends React.Component {
   };
 
   render() {
+    const showUnpublishedTables = experiments.isEnabled(
+      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+    );
     const categories = (this.props.libraryManifest.categories || []).filter(
-      category => category.published
+      category => showUnpublishedTables || category.published
     );
     return (
       <div style={styles.container}>
