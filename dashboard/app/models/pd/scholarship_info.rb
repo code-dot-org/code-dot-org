@@ -33,7 +33,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   belongs_to :enrollment, class_name: 'Pd::Enrollment', foreign_key: :pd_enrollment_id
   belongs_to :application, class_name: 'Pd::Application::TeacherApplicationBase', foreign_key: :pd_application_id
 
-  validate :course_specific_scholarship_status
+  validate :scholarship_must_be_valid_for_course
   validates_presence_of :user_id
   validates_inclusion_of :application_year, in: SCHOLARSHIP_YEARS
   validates_inclusion_of :course, in: COURSE_KEY_MAP.values
@@ -55,7 +55,7 @@ class Pd::ScholarshipInfo < ActiveRecord::Base
   end
 
   # Confirm scholarship status is valid (course-specific)
-  def course_specific_scholarship_status
+  def scholarship_must_be_valid_for_course
     unless COURSE_SPECIFIC_SCHOLARSHIP_STATUSES[course].include? scholarship_status
       errors.add(:scholarship_status, 'must be in list of possible statuses.')
     end
