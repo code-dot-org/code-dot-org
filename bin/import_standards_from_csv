@@ -18,7 +18,7 @@ require_relative '../dashboard/config/environment'
 def main(csv_path)
   created = 0
   updated = 0
-  CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
+  CSV.foreach(csv_path, {headers: true}) do |row|
     parsed = {
       organization: row['organization'],
       organization_id: row['organization_id'],
