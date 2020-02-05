@@ -17,13 +17,13 @@ export const setValidScripts = (
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 ) => ({
   type: SET_VALID_SCRIPTS,
   validScripts,
   studentScriptIds,
   validCourses,
-  assignedCourseId
+  selectedSection
 });
 
 // Selectors
@@ -111,6 +111,13 @@ export default function scriptSelection(state = initialState, action) {
 
     if (action.studentScriptIds && action.validCourses) {
       const idMap = {};
+      let actionScriptId =
+        action.selectedSection &&
+        action.selectedSection.script &&
+        action.selectedSection.script.id;
+      if (!!actionScriptId) {
+        idMap[actionScriptId] = true;
+      }
       // First, construct an id map consisting only of script ids which a
       // student has participated in.
       action.studentScriptIds.forEach(id => (idMap[id] = true));
@@ -121,7 +128,8 @@ export default function scriptSelection(state = initialState, action) {
       action.validCourses.forEach(course => {
         if (
           course.script_ids.some(id => idMap[id]) ||
-          (action.assignedCourseId && action.assignedCourseId === course.id)
+          (action.selectedSection &&
+            action.selectedSection.course_id === course.id)
         ) {
           course.script_ids.forEach(id => (idMap[id] = true));
         }
@@ -141,9 +149,9 @@ export default function scriptSelection(state = initialState, action) {
           scriptId = state.scriptId;
           break;
         // When there is an assigned course, set scriptId to the first script in the assigned course.
-        case !!action.assignedCourseId:
+        case !!(action.selectedSection && action.selectedSection.course_id):
           action.validCourses.forEach(course => {
-            if (course.id === action.assignedCourseId) {
+            if (course.id === action.selectedSection.course_id) {
               scriptId = course.script_ids[0];
             }
           });
