@@ -1100,6 +1100,8 @@ en:
             '"left"': left
       gamelab_mouseLocation:
         text: mouse location
+      gamelab_moveBackward:
+        text: move {SPRITE} {DISTANCE} pixels backward
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} pixels forward
       gamelab_moveInDirection:
@@ -1213,6 +1215,8 @@ en:
           DIRECTION:
             '"right"': right
             '"left"': left
+      gamelab_updateTitleWithColor:
+        text: show title screen {BREAK} title {TITLE} color {COLOR}
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
