@@ -1076,15 +1076,16 @@ export default class JSInterpreter {
       const node = this.interpreter.peekStackFrame().node;
       // Adjust start/end by userCodeStartOffset since the code running
       // has been expanded vs. what the user sees in the editor window:
+
+      if (isNodeFromLibrary(node)) {
+        return node.loc.start.line - 1;
+      }
       const start = node.start - this.codeInfo.userCodeStartOffset;
 
       // Only return a valid userCodeRow if the node being executed is inside the
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
-      if (
-        isNodeWithinUserCode(start, this.codeInfo.userCodeLength) ||
-        isNodeFromLibrary(node)
-      ) {
+      if (isNodeWithinUserCode(start, this.codeInfo.userCodeLength)) {
         userCodeRow = codegen.aceFindRow(
           this.codeInfo.cumulativeLength,
           0,
@@ -1109,15 +1110,16 @@ export default class JSInterpreter {
       const node = this.interpreter.peekStackFrame(i).node;
       // Adjust start/end by userCodeStartOffset since the code running
       // has been expanded vs. what the user sees in the editor window:
+      if (isNodeFromLibrary(node)) {
+        return node.loc.start.line - 1;
+      }
+
       const start = node.start - this.codeInfo.userCodeStartOffset;
 
       // Only return a valid userCodeRow if the node being executed is inside the
       // user's code (not inside code we inserted before or after their code that
       // is not visible in the editor):
-      if (
-        isNodeWithinUserCode(start, this.codeInfo.userCodeLength) ||
-        isNodeFromLibrary(node)
-      ) {
+      if (isNodeWithinUserCode(start, this.codeInfo.userCodeLength)) {
         userCodeRow = codegen.aceFindRow(
           this.codeInfo.cumulativeLength,
           0,
