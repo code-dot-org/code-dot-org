@@ -24,9 +24,20 @@ export default function sectionStandardsProgress(state = initialState, action) {
 }
 
 export function getUnpluggedLessonsForScript(state) {
-  const stages =
+  let unpluggedStages = [];
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-      .stages;
+  ) {
+    const stages =
+      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+        .stages;
+
+    unpluggedStages = _.filter(stages, function(stage) {
+      return stage.unplugged;
+    });
+  }
 
   function filterStageData(stage) {
     return {
@@ -36,10 +47,6 @@ export function getUnpluggedLessonsForScript(state) {
       url: stage.lesson_plan_html_url
     };
   }
-
-  const unpluggedStages = _.filter(stages, function(stage) {
-    return stage.unplugged;
-  });
 
   return _.map(unpluggedStages, filterStageData);
 }
