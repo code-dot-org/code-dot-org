@@ -789,7 +789,7 @@ async function initDataTab(levelOptions) {
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
-        const datasetInfo = getDatasetInfo(libraryManifest.tables, table);
+        const datasetInfo = getDatasetInfo(table, libraryManifest.tables);
         if (!datasetInfo) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);

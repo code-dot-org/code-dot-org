@@ -6,6 +6,7 @@ import msg from '@cdo/locale';
 import color from '../../util/color';
 import {showPreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
+import experiments from '../../util/experiments';
 
 const styles = {
   tableName: {
@@ -78,10 +79,13 @@ class LibraryTable extends React.Component {
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
     const datasetInfo = getDatasetInfo(
-      this.props.libraryManifest.tables,
-      this.props.name
+      this.props.name,
+      this.props.libraryManifest.tables
     );
-    if (!datasetInfo || !datasetInfo.published) {
+    const shouldShowTable =
+      datasetInfo &&
+      (datasetInfo.published || experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES);
+    if (!shouldShowTable) {
       return null;
     }
 
