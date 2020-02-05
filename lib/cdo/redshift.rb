@@ -27,6 +27,9 @@ class RedshiftClient
     PGRES_FATAL_ERROR
   ).freeze
 
+  # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
+  TEMP_TABLE_PREFIX = '_import_'.freeze
+
   def initialize
     port = 5439
     options = ''
@@ -43,6 +46,18 @@ class RedshiftClient
     result_status = result.res_status(result.result_status)
     raise PostgreSQLQueryError.new(result_status) unless QUERY_SUCCESS_CODES.include? result_status
     result
+  end
+
+  # Returns an array of table names in a Redshift schema that were loaded via DMS to stage data from Aurora.
+  def get_temporary_import_tables(schema)
+    query = <<-SQL
+SELECT DISTINCT t.tablename
+FROM pg_table_def t LEFT JOIN pg_indexes i ON t.tablename = i.indexname
+WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table_def, as a table.
+  AND  t.schemaname ='#{schema}'
+  AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
+SQL
+    exec(query)
   end
 
   def truncate_table(schema, table)
