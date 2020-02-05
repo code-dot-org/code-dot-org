@@ -33,12 +33,12 @@ class HocSyncUtils
   end
 
   def self.sync_out
-    rename_downloads_from_crowdin_code_to_locale
+    rename_yml_to_locale
     copy_from_i18n_source_to_hoc
     restore_sanitized_headers
   end
 
-  def self.rename_downloads_from_crowdin_code_to_locale
+  def self.rename_yml_to_locale
     puts "Updating crowdin codes to our locale codes..."
     Languages.get_hoc_languages.each do |prop|
       # move downloaded folders to root source directory and rename from
@@ -50,7 +50,7 @@ class HocSyncUtils
       # language code
       old_path = File.join(dest_dir, "hourofcode/en.yml")
       crowdin_translation_data = YAML.load_file(old_path)
-      puts old_path
+      next unless File.exist?(old_path)
       new_translation_data = {}
       new_translation_data[prop[:unique_language_s]] = crowdin_translation_data.values.first
 
