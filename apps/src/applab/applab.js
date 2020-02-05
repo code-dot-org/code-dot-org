@@ -49,7 +49,8 @@ import {
   deleteTableName,
   updateTableColumns,
   updateTableRecords,
-  updateKeyValueData
+  updateKeyValueData,
+  setLibraryManifest
 } from '../storage/redux/data';
 import {setStepSpeed} from '../redux/runState';
 import {
@@ -783,11 +784,16 @@ async function initDataTab(levelOptions) {
     );
   }
   if (levelOptions.dataLibraryTables) {
-    let channelExists = await Applab.storage.channelExists();
+    const channelExists = await Applab.storage.channelExists();
+    const libraryManifest = await Applab.storage.getLibraryManifest();
     if (!channelExists) {
       const tables = levelOptions.dataLibraryTables.split(',');
       tables.forEach(table => {
-        if (getDatasetInfo(table).current) {
+        const datasetInfo = getDatasetInfo(table, libraryManifest.tables);
+        if (!datasetInfo) {
+          // We don't know what this table is, we should just skip it.
+          console.warn(`unknown table ${table}`);
+        } else if (datasetInfo.current) {
           Applab.storage.addCurrentTableToProject(
             table,
             () => console.log('success'),
@@ -884,6 +890,10 @@ function setupReduxSubscribers(store) {
     );
 
     if (experiments.isEnabled(experiments.APPLAB_DATASETS)) {
+      // Get data library manifest from cdo-v3-shared/v3/channels/shared/metadata/manifest
+      Applab.storage
+        .getLibraryManifest()
+        .then(result => store.dispatch(setLibraryManifest(result)));
       // /v3/channels/<channel_id>/current_tables tracks which
       // current tables the project has imported. Here we initialize the
       // redux list of current tables and keep it in sync

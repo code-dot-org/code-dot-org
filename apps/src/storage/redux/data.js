@@ -16,6 +16,7 @@ const SHOW_WARNING = 'data/SHOW_WARNING';
 const CLEAR_WARNING = 'data/CLEAR_WARNING';
 const SHOW_PREVIEW = 'data/SHOW_PREVIEW';
 const HIDE_PREVIEW = 'data/HIDE_PREVIEW';
+const SET_LIBRARY_MANIFEST = 'data/SET_LIBRARY_MANIFEST';
 
 /**
  * Types which a column can be coerced to.
@@ -36,7 +37,8 @@ const DataState = Record({
   warningTitle: '',
   warningMsg: '',
   isWarningDialogOpen: false,
-  isPreviewOpen: false
+  isPreviewOpen: false,
+  libraryManifest: {}
 });
 
 const initialState = new DataState();
@@ -94,6 +96,8 @@ export default function(state = initialState, action) {
         .set('tableName', '')
         .set('tableRecords', {})
         .set('tableColumns', []);
+    case SET_LIBRARY_MANIFEST:
+      return state.set('libraryManifest', action.libraryManifest);
     default:
       return state;
   }
@@ -155,3 +159,8 @@ export const clearWarning = () => ({
 export const showPreview = tableName => ({type: SHOW_PREVIEW, tableName});
 
 export const hidePreview = () => ({type: HIDE_PREVIEW});
+
+export const setLibraryManifest = libraryManifest => ({
+  type: SET_LIBRARY_MANIFEST,
+  libraryManifest
+});
