@@ -2,7 +2,8 @@ import {assert} from '../../util/deprecatedChai';
 import scriptSelection, {
   setValidScripts,
   setScriptId,
-  getSelectedScriptName
+  getSelectedScriptName,
+  getSelectedScriptDescription
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
@@ -12,14 +13,16 @@ const fakeValidScripts = [
     category_priority: 1,
     id: 456,
     name: 'Script Name',
-    position: 23
+    position: 23,
+    description: 'Description of Script'
   },
   {
     category: 'csp',
     category_priority: 1,
     id: 300,
     name: 'csp1',
-    position: 23
+    position: 23,
+    description: 'CSP Unit 1'
   },
   {
     // Use a different category to make sure we aren't relying on it to group
@@ -28,7 +31,8 @@ const fakeValidScripts = [
     category_priority: 1,
     id: 301,
     name: 'csp2',
-    position: 23
+    position: 23,
+    description: 'CSP Unit 2'
   },
   // Include Express Course to use as default if needed
   {
@@ -37,7 +41,8 @@ const fakeValidScripts = [
     id: 182,
     name: 'Corso Rapido',
     position: 6,
-    script_name: 'express-2017'
+    script_name: 'express-2017',
+    description: 'CSF Spanish Course'
   }
 ];
 
@@ -94,6 +99,28 @@ describe('scriptSelectionRedux', () => {
         }
       };
       assert.equal(getSelectedScriptName(state), null);
+    });
+  });
+
+  describe('getSelectedScriptDescription', () => {
+    it('returns the script description of the selected script', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: 182,
+          validScripts: fakeValidScripts
+        }
+      };
+      assert.equal(getSelectedScriptDescription(state), 'CSF Spanish Course');
+    });
+
+    it('returns null if no script is selected', () => {
+      const state = {
+        scriptSelection: {
+          scriptId: null,
+          validScripts: fakeValidScripts
+        }
+      };
+      assert.equal(getSelectedScriptDescription(state), null);
     });
   });
 
