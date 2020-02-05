@@ -98,7 +98,8 @@
 :ruby
   script_data = {
     applabOptions: {
-      data_library_tables: @level.data_library_tables
+      data_library_tables: @level.data_library_tables,
+      dataset_library_manifest: @dataset_library_manifest
     }.to_json
   }
 %script{src: webpack_asset_path('js/levels/editors/_applab.js'),
