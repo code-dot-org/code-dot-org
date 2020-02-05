@@ -133,11 +133,5 @@ module Pd
       local_summer: SUBJECT_SUMMER_WORKSHOP,
       both: 'both'
     }.freeze
-
-    COURSE_KEY_MAP = {
-      COURSE_CSF => 'csf',
-      COURSE_CSD => 'csd',
-      COURSE_CSP => 'csp'
-    }
   end
 end

@@ -8,11 +8,8 @@ import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles'
 import {ScholarshipDropdown} from '../../components/scholarshipDropdown';
 import Spinner from '../../components/spinner';
 import {WorkshopAdmin, ProgramManager} from '../permission';
-import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
-import {
-  SubjectNames,
-  CourseKeyMap
-} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import {ScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
@@ -106,19 +103,10 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
     return strs.join(', ');
   }
 
-  // Gets variable containing appropriate list of dropdown options given a course
-  scholarshipDropdownOptions(course) {
-    return CourseSpecificScholarshipDropdownOptions[course];
-  }
-
   scholarshipInfo(enrollment) {
     if (enrollment.scholarship_ineligible_reason) {
       return <td>{enrollment.scholarship_ineligible_reason}</td>;
     }
-
-    let dropdownOptions = this.scholarshipDropdownOptions(
-      CourseKeyMap[this.props.workshopCourse]
-    );
 
     if (
       this.props.permissionList.has(ProgramManager) ||
@@ -128,13 +116,12 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
         <td>
           <ScholarshipDropdown
             scholarshipStatus={enrollment.scholarship_status}
-            dropdownOptions={dropdownOptions}
             onChange={this.handleScholarshipStatusChange.bind(this, enrollment)}
           />
         </td>
       );
     } else {
-      let scholarshipInfo = dropdownOptions.find(o => {
+      let scholarshipInfo = ScholarshipDropdownOptions.find(o => {
         return o.value === enrollment.scholarship_status;
       });
       return <td>{scholarshipInfo ? scholarshipInfo.label : '--'}</td>;
