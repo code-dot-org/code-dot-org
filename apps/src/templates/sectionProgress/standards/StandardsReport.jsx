@@ -25,6 +25,8 @@ import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import Button from '../../Button';
 import _ from 'lodash';
+import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {loadScript} from '../sectionProgressRedux';
 
 const styles = {
   printView: {
@@ -56,6 +58,8 @@ const styles = {
 class StandardsReport extends Component {
   static propTypes = {
     //redux
+    scriptId: PropTypes.number,
+    loadScript: PropTypes.func.isRequired,
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
@@ -65,8 +69,14 @@ class StandardsReport extends Component {
     scriptDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
-    numLessonsInUnit: PropTypes.number
+    numLessonsInUnit: PropTypes.number,
+    getStandardsCoveredForScript: PropTypes.func.isRequired
   };
+
+  componentDidMount() {
+    this.props.loadScript(this.props.scriptId);
+    this.props.getStandardsCoveredForScript(this.props.scriptId);
+  }
 
   getLinkToOverview() {
     const {scriptData, section} = this.props;
@@ -171,15 +181,26 @@ class StandardsReport extends Component {
 
 export const UnconnectedStandardsReport = StandardsReport;
 
-export default connect(state => ({
-  section: state.sectionData.section,
-  scriptData: getCurrentScriptData(state),
-  scriptFriendlyName: getSelectedScriptFriendlyName(state),
-  scriptDescription: getSelectedScriptDescription(state),
-  numStudentsInSection: state.sectionData.section.students.length,
-  teacherComment: state.sectionStandardsProgress.teacherComment,
-  teacherName: state.currentUser.userName,
-  sectionName: sectionName(state, state.sectionData.section.id),
-  numLessonsCompleted: getNumberLessonsCompleted(state),
-  numLessonsInUnit: getNumberLessonsInCourse(state)
-}))(StandardsReport);
+export default connect(
+  state => ({
+    scriptId: state.scriptSelection.scriptId,
+    section: state.sectionData.section,
+    scriptData: getCurrentScriptData(state),
+    scriptFriendlyName: getSelectedScriptFriendlyName(state),
+    scriptDescription: getSelectedScriptDescription(state),
+    numStudentsInSection: state.sectionData.section.students.length,
+    teacherComment: state.sectionStandardsProgress.teacherComment,
+    teacherName: state.currentUser.userName,
+    sectionName: sectionName(state, state.sectionData.section.id),
+    numLessonsCompleted: getNumberLessonsCompleted(state),
+    numLessonsInUnit: getNumberLessonsInCourse(state)
+  }),
+  dispatch => ({
+    loadScript(scriptId) {
+      dispatch(loadScript(scriptId));
+    },
+    getStandardsCoveredForScript(scriptId) {
+      dispatch(getStandardsCoveredForScript(scriptId));
+    }
+  })
+)(StandardsReport);
