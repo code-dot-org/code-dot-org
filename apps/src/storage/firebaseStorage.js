@@ -49,6 +49,13 @@ function getKeysRef() {
   return kv;
 }
 
+FirebaseStorage.getLibraryManifest = function() {
+  return getSharedDatabase()
+    .child('metadata/manifest')
+    .once('value')
+    .then(snapshot => snapshot.val());
+};
+
 /**
  * @return {Promise<boolean>} whether the project channel exists
  */
