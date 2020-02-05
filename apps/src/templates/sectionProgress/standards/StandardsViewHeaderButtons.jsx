@@ -91,6 +91,8 @@ class StandardsViewHeaderButtons extends Component {
   }
 }
 
+export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
+
 export default connect(
   state => ({}),
   dispatch => ({
