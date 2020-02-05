@@ -40,7 +40,7 @@ level 'U5L3 CFU Lists Psuedocode 2', progression: 'Check For Understanding: AP P
 
 stage 'Lists Make', flex_category: 'csp_lists'
 level 'CSP U5L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Lists Make Project Sample App', progression: 'Try the Reminders App'
+level 'U5 Lists Make Project Sample App 2020', progression: 'Try the Reminders App'
 level 'U5 Lists Make Project 2020', progression: 'Build the Reminders App', assessment: true
 
 stage 'Loops Explore', flex_category: 'csp_loops'
@@ -70,7 +70,7 @@ level 'U5L7 CFU Loops Psuedocode 2', progression: 'Check For Understanding: AP P
 
 stage 'Loops Make', flex_category: 'csp_loops'
 level 'CSP U5L8 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Loops Make Wallpaper App Example', progression: 'Try the Lock Screen Maker'
+level 'U5 Loops Make Wallpaper App Example 2020', progression: 'Try the Lock Screen Maker'
 level 'U5 Loops Make Wallpaper App 2020', progression: 'Build the Lock Screen Maker', assessment: true
 
 stage 'Traversals Explore', flex_category: 'csp_traversals'
@@ -101,7 +101,7 @@ level 'U5L11 CFU For Each Psuedocode', progression: 'Check For Understanding: AP
 
 stage 'Traversals Make', flex_category: 'csp_traversals'
 level 'CSP U5L12 SFLP 20-21', progression: 'Lesson Overview'
-level 'U5 Traversals Make Project Sample App', progression: 'Try the Poem Personalizer'
+level 'U5 Traversals Make Project Sample App 2020', progression: 'Try the Poem Personalizer'
 level 'U5 Traversals Make Project 2020', progression: 'Build the Poem Personalizer', assessment: true
 
 stage 'Semester Hackathon Part 1', flex_category: 'csp_project'
