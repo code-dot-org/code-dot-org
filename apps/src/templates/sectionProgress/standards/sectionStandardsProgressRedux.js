@@ -1,7 +1,5 @@
-import {
-  unpluggedLessonList,
-  lessonCompletedByStandard
-} from './standardsTestHelpers';
+import {lessonCompletedByStandard} from './standardsTestHelpers';
+import _ from 'lodash';
 
 const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
@@ -38,8 +36,32 @@ export default function sectionStandardsProgress(state = initialState, action) {
   return state;
 }
 
-export function getUnpluggedLessonsForScript(script) {
-  return unpluggedLessonList;
+export function getUnpluggedLessonsForScript(state) {
+  let unpluggedStages = [];
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+  ) {
+    const stages =
+      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+        .stages;
+
+    unpluggedStages = _.filter(stages, function(stage) {
+      return stage.unplugged;
+    });
+  }
+
+  function filterStageData(stage) {
+    return {
+      id: stage.id,
+      name: stage.name,
+      number: stage.position,
+      url: stage.lesson_plan_html_url
+    };
+  }
+
+  return _.map(unpluggedStages, filterStageData);
 }
 
 export function getLessonsCompletedByStandardForScript(script) {
@@ -81,6 +103,7 @@ export const lessonsByStandard = state => {
           lessonDetails['lessonNumber'] = stage.relative_position;
           lessonDetails['numStudents'] = numStudents;
           lessonDetails['url'] = stage.lesson_plan_html_url;
+          lessonDetails['unplugged'] = stage.unplugged;
           lessons.push(lessonDetails);
         }
       });
