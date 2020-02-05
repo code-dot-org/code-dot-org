@@ -15,5 +15,8 @@
 
     =view :theme_common_head_after
   %body
+    %link{rel:'stylesheet', type:'text/css', href: '/shared/css/warning-banner.css'}
     =body
+    =view :cookie_banner
+    =view :footer
     =view :theme_common_body_after
