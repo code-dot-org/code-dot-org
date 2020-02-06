@@ -78,6 +78,7 @@ export class WorkshopForm extends React.Component {
       funding_type: PropTypes.string,
       course: PropTypes.string.isRequired,
       subject: PropTypes.string,
+      fee: PropTypes.string,
       notes: PropTypes.string,
       sessions: PropTypes.array.isRequired,
       enrolled_teacher_count: PropTypes.number.isRequired,
@@ -112,6 +113,7 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       course: '',
       subject: '',
+      fee: null,
       notes: '',
       sessions: [placeholderSession],
       destroyedSessions: [],
@@ -134,6 +136,7 @@ export class WorkshopForm extends React.Component {
           'funding_type',
           'course',
           'subject',
+          'fee',
           'notes',
           'regional_partner_id',
           'organizer'
@@ -576,6 +579,25 @@ export class WorkshopForm extends React.Component {
     }
   }
 
+  renderFeeInput(validation) {
+    return (
+      <FormGroup validationState={validation.style.fee}>
+        <ControlLabel>Fee Information (Leave blank for no cost)</ControlLabel>
+        <FormControl
+          type="text"
+          value={this.state.fee || ''}
+          id="fee"
+          name="fee"
+          onChange={this.handleFieldChange}
+          maxLength={30}
+          style={this.getInputStyle()}
+          disabled={this.props.readOnly}
+        />
+        <HelpBlock>{validation.help.fee}</HelpBlock>
+      </FormGroup>
+    );
+  }
+
   getInputStyle() {
     return this.props.readOnly && styles.readOnlyInput;
   }
@@ -682,6 +704,7 @@ export class WorkshopForm extends React.Component {
     this.setState({
       facilitators: [],
       subject: null,
+      fee: null,
       funded: '',
       funding_type: null
     });
@@ -699,6 +722,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
+      fee: this.state.fee,
       notes: this.state.notes,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
@@ -865,6 +889,7 @@ export class WorkshopForm extends React.Component {
 
   renderForm() {
     const validation = this.validate(this.state.shouldValidate);
+    const showFeeInput = this.state.course === 'CS Fundamentals';
 
     return (
       <Grid>
@@ -937,6 +962,9 @@ export class WorkshopForm extends React.Component {
             </Col>
             <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
             <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
+            {showFeeInput && (
+              <Col sm={3}>{this.renderFeeInput(validation)}</Col>
+            )}
           </Row>
           <Row>
             <Col sm={10}>
