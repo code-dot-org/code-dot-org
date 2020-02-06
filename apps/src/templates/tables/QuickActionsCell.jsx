@@ -30,7 +30,7 @@ const styles = {
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.darker_gray
+      color: color.charcoal
     }
   },
   hoverFocus: {

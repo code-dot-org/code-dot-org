@@ -113,7 +113,7 @@ class SectionActionDropdown extends Component {
 
     return (
       <span>
-        <QuickActionsCell>
+        <QuickActionsCell type={'header'}>
           <PopUpMenu.Item
             onClick={this.onClickEdit}
             className="edit-section-details-link"
