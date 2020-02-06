@@ -23,10 +23,11 @@ import StandardsLegendForPrint from './StandardsLegendForPrint';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
-import Button from '../../Button';
 import _ from 'lodash';
 import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {loadScript} from '../sectionProgressRedux';
+import PrintReportButton from './PrintReportButton';
+import {cstaStandardsURL} from './standardsConstants';
 
 const styles = {
   printView: {
@@ -49,9 +50,6 @@ const styles = {
   },
   table: {
     width: '100%'
-  },
-  button: {
-    margin: '20px 0px'
   }
 };
 
@@ -122,13 +120,7 @@ class StandardsReport extends Component {
     const linkToOverview = this.getLinkToOverview();
     return (
       <div>
-        <Button
-          onClick={this.printReport}
-          color={Button.ButtonColor.orange}
-          text={i18n.printReport()}
-          size={'narrow'}
-          style={styles.button}
-        />
+        <PrintReportButton onClick={this.printReport} />
         <div id="printArea" style={styles.printView}>
           <StandardsReportHeader
             sectionName={this.props.sectionName}
@@ -163,7 +155,7 @@ class StandardsReport extends Component {
               markdown={i18n.standardsHowToDetailsForPrint({
                 courseName: scriptFriendlyName,
                 courseLink: linkToOverview,
-                cstaLink: 'https://www.csteachers.org/page/standards'
+                cstaLink: cstaStandardsURL
               })}
             />
             <h2 style={styles.headerColor}>{i18n.standardsGetInvolved()}</h2>
@@ -181,13 +173,7 @@ class StandardsReport extends Component {
             </div>
           </div>
         </div>
-        <Button
-          onClick={this.printReport}
-          color={Button.ButtonColor.orange}
-          text={i18n.printReport()}
-          size={'narrow'}
-          style={styles.button}
-        />
+        <PrintReportButton onClick={this.printReport} />
       </div>
     );
   }
