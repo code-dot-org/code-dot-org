@@ -27,7 +27,6 @@ import Button from '../../Button';
 import _ from 'lodash';
 import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {loadScript} from '../sectionProgressRedux';
-import './standards-report.scss';
 
 const styles = {
   printView: {
@@ -99,7 +98,7 @@ class StandardsReport extends Component {
     printWindow.document.write(
       `<html><head><title>${i18n.printReportWindowTitle({
         sectionName: this.props.section.name
-      })}</title></head>`
+      })}</title><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
     );
     printWindow.document.write('<body onafterprint="self.close()">');
     printWindow.document.write(printArea);
