@@ -101,6 +101,7 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
+  console.log('Hey! We made it into getLessonCompletionStatus');
   // A lesson is "completed" by a student if at least 60% of the levels are
   // completed.
   const levelsPerLessonCompletionThreshold = 0.6;
@@ -111,7 +112,6 @@ export function getLessonCompletionStatus(state, stageId) {
   let completionByLesson = {};
 
   if (
-    state.sectionProgress.scriptDataByScript &&
     state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript &&
     state.sectionProgress.studentLevelProgressByScript &&
@@ -129,16 +129,15 @@ export function getLessonCompletionStatus(state, stageId) {
     const levelResultsByStudent =
       state.sectionProgress.studentLevelProgressByScript[scriptId];
 
-    const student_ids = Object.keys(levelResultsByStudent);
-
+    const studentIds = Object.keys(levelResultsByStudent);
     stages.forEach(stage => {
       const levelIds = _.map(stage.levels, 'activeId');
       let numStudentsCompletedLesson = 0;
-      student_ids.forEach(student_id => {
+      studentIds.forEach(studentId => {
         let numLevelsInLessonCompletedByStudent = 0;
-        levelIds.forEach(level_id => {
+        levelIds.forEach(levelId => {
           if (
-            levelResultsByStudent[student_id][level_id] >=
+            levelResultsByStudent[studentId][levelId] >=
             TestResults.MINIMUM_PASS_RESULT
           ) {
             numLevelsInLessonCompletedByStudent++;
