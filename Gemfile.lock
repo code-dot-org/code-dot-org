@@ -166,8 +166,8 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/puma.git
-  revision: 2ab96d67341a0ae1a4baf6bf80790389abc159ac
-  ref: out_of_band
+  revision: c0f187bc4eba3b1391b9e7c4c4ce39e3cc03fbac
+  branch: debugging
   specs:
     puma (3.12.0)
 
