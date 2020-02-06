@@ -16,7 +16,7 @@ class Pd::RegionalPartnerContactController < ApplicationController
       Somebody called GET #{request.path}, which was deprecated in February 2020.
       This might be a regional partner or Code.org staff member sharing a saved link,
       but we should follow up and see if we have a leftover link to this route somewhere.
-      See <Ben to insert PR link here!> for details.
+      See https://github.com/code-dot-org/code-dot-org/pull/33024 for details.
       MESSAGE
       context: {
         referer: request.referer
