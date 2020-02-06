@@ -5,6 +5,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {scriptDataPropType} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import color from '@cdo/apps/util/color';
+import {cstaStandardsURL} from './standardsConstants';
 
 const styles = {
   currentCourse: {
@@ -66,7 +67,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
             <li>
               <SafeMarkdown
                 markdown={i18n.mapsToCSTAStandards({
-                  cstaLink: 'https://www.csteachers.org/page/standards'
+                  cstaLink: cstaStandardsURL
                 })}
               />
             </li>
