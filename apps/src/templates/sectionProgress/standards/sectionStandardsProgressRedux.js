@@ -106,38 +106,30 @@ export function getLessonCompletionStatus(state, stageId) {
     state.sectionProgress.studentLevelProgressByScript[scriptId];
 
   let completionByLesson = {};
-  let levelsByLesson = {};
   stages.forEach(stage => {
     const levelIds = _.map(stage.levels, 'activeId');
-    const levels = [];
+    let numLevelsCompleted = 0;
     levelIds.forEach(levelId => {
-      let levelDetails = {};
       let numberStudentsCompletedLevel = 0;
       Object.values(levelResultsByStudent).forEach(levelResult => {
         if (levelResult[levelId] >= 10) {
           numberStudentsCompletedLevel++;
         }
       });
-      levelDetails['id'] = levelId;
-      levelDetails['numberStudentsCompleted'] = numberStudentsCompletedLevel;
       // A level is "complete" if passed by 80% of the students in the section.
       const sectionCompletedLevel =
         numberStudentsCompletedLevel / numberStudentsInSection >= 0.8;
-      levelDetails['completed'] = sectionCompletedLevel;
-      levels.push(levelDetails);
+      if (sectionCompletedLevel) {
+        numLevelsCompleted++;
+      }
     });
-
-    levelsByLesson[stage.id] = levels;
-
-    const numLevelsCompleted = _.filter(levels, 'completed').length;
     // A lesson is "completed" if at least 60% of the levels are completed.
-    const completed = numLevelsCompleted / levels.length >= 0.6;
+    const completed = numLevelsCompleted / levelIds.length >= 0.6;
     completionByLesson[stage.id] = {
       completed: completed,
       numStudentsCompleted: 50 //TODO: Calculate the real # :)
     };
   });
-
   return completionByLesson[stageId];
 }
 
