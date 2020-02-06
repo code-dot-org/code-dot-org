@@ -21,6 +21,7 @@ const styles = {
 
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number,
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired
@@ -48,10 +49,11 @@ class StandardsViewHeaderButtons extends Component {
   };
 
   openReport = () => {
-    window.open(
+    let reportWindow = window.open(
       teacherDashboardUrl(this.props.sectionId, '/standards_report'),
       '_blank'
     );
+    reportWindow.postMessage('hi', this.props.studioUrlPrefix);
   };
 
   onCommentChange = value => {

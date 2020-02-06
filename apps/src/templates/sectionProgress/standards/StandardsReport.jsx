@@ -76,6 +76,17 @@ class StandardsReport extends Component {
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
     this.props.getStandardsCoveredForScript(this.props.scriptId);
+
+    function receiveMessage(event) {
+      if (event.origin !== 'http://localhost-studio.code.org:3000') {
+        return;
+      }
+
+      console.log(event);
+      console.log(event.data);
+    }
+
+    window.addEventListener('message', receiveMessage, false);
   }
 
   getLinkToOverview() {
