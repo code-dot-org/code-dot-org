@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import StandardsReportCurrentCourseInfo from '@cdo/apps/templates/sectionProgress/standards/StandardsReportCurrentCourseInfo';
 
-describe('StandardsReport', () => {
+describe('StandardsReportCurrentCourseInfo', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
