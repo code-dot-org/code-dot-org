@@ -243,11 +243,7 @@ export class DetailViewContents extends React.Component {
       fit_workshop_id: this.props.applicationData.fit_workshop_id,
       scholarship_status: this.props.applicationData.scholarship_status,
       bonus_point_questions: this.scoreableQuestions['bonusPoints'],
-      cantSaveStatusReason: '',
-      statuses: getApplicationStatuses(
-        this.props.viewType,
-        this.props.applicationData.update_emails_sent_by_system
-      )
+      cantSaveStatusReason: ''
     };
   }
 
@@ -258,20 +254,6 @@ export class DetailViewContents extends React.Component {
       !this.props.applicationData.notes
     ) {
       this.setState({notes: DEFAULT_NOTES});
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (
-      prevProps.applicationData.update_emails_sent_by_system !==
-      this.props.applicationData.update_emails_sent_by_system
-    ) {
-      this.setState({
-        statuses: getApplicationStatuses(
-          this.props.viewType,
-          this.props.applicationData.update_emails_sent_by_system
-        )
-      });
     }
   }
 
@@ -308,7 +290,11 @@ export class DetailViewContents extends React.Component {
       this.setState({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
-                                this.state.statuses[event.target.value]
+                                getApplicationStatuses(
+                                  this.props.viewType,
+                                  this.props.applicationData
+                                    .update_emails_sent_by_system
+                                )[event.target.value]
                               }.`,
         showCantSaveStatusDialog: true
       });
@@ -664,6 +650,10 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
+    const statuses = getApplicationStatuses(
+      this.props.viewType,
+      this.props.applicationData.update_emails_sent_by_system
+    );
     const selectControl = (
       <div>
         <FormControl
@@ -677,9 +667,9 @@ export class DetailViewContents extends React.Component {
           onChange={this.handleStatusChange}
           style={styles.statusSelect}
         >
-          {Object.keys(this.state.statuses).map((status, i) => (
+          {Object.keys(statuses).map((status, i) => (
             <option value={status} key={i}>
-              {this.state.statuses[status]}
+              {statuses[status]}
             </option>
           ))}
         </FormControl>
