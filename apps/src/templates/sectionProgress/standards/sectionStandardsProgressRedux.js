@@ -1,5 +1,6 @@
 import {lessonCompletedByStandard} from './standardsTestHelpers';
 import _ from 'lodash';
+import {TestResults} from '@cdo/apps/constants';
 
 const ADD_STANDARDS_DATA = 'sectionProgress/ADD_STANDARDS_DATA';
 
@@ -78,12 +79,15 @@ export const lessonsByStandard = state => {
       stages.forEach(stage => {
         if (standard.lesson_ids.includes(stage.id)) {
           let lessonDetails = {};
-          lessonDetails['name'] = stage.name;
-          lessonDetails['lessonNumber'] = stage.relative_position;
-          lessonDetails['completed'] = getLessonCompletionStatus(
+          const lessonCompletionStatus = getLessonCompletionStatus(
             state,
             stage.id
-          ).completed;
+          );
+          lessonDetails['name'] = stage.name;
+          lessonDetails['lessonNumber'] = stage.relative_position;
+          lessonDetails['completed'] = lessonCompletionStatus.completed;
+          lessonDetails['numStudentsCompleted'] =
+            lessonCompletionStatus.numStudentsCompleted;
           lessonDetails['numStudents'] = numStudents;
           lessonDetails['url'] = stage.lesson_plan_html_url;
           lessonDetails['unplugged'] = stage.unplugged;
@@ -97,39 +101,65 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
-  const scriptId = state.scriptSelection.scriptId;
-  const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
-  const numberStudentsInSection =
-    state.teacherSections.sections[state.teacherSections.selectedSectionId]
-      .studentCount;
-  const levelResultsByStudent =
-    state.sectionProgress.studentLevelProgressByScript[scriptId];
+  // A lesson is "completed" by a student if at least 60% of the levels are
+  // completed.
+  const levelsPerLessonCompletionThreshold = 0.6;
+  // A lesson is "complete" for a section if passed by 80% of the students in
+  //the section.
+  const studentsPerSectionCompletionThreshold = 0.8;
 
   let completionByLesson = {};
-  stages.forEach(stage => {
-    const levelIds = _.map(stage.levels, 'activeId');
-    let numLevelsCompleted = 0;
-    levelIds.forEach(levelId => {
-      let numberStudentsCompletedLevel = 0;
-      Object.values(levelResultsByStudent).forEach(levelResult => {
-        if (levelResult[levelId] >= 10) {
-          numberStudentsCompletedLevel++;
+
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript &&
+    state.sectionProgress.studentLevelProgressByScript &&
+    state.sectionProgress.studentLevelProgressByScript[
+      state.scriptSelection.scriptId
+    ] &&
+    state.teacherSections.sections &&
+    state.teacherSections.selectedSectionId
+  ) {
+    const scriptId = state.scriptSelection.scriptId;
+    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+    const numberStudentsInSection =
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .studentCount;
+    const levelResultsByStudent =
+      state.sectionProgress.studentLevelProgressByScript[scriptId];
+
+    const student_ids = Object.keys(levelResultsByStudent);
+
+    stages.forEach(stage => {
+      const levelIds = _.map(stage.levels, 'activeId');
+      let numStudentsCompletedLesson = 0;
+      student_ids.forEach(student_id => {
+        let numLevelsInLessonCompletedByStudent = 0;
+        levelIds.forEach(level_id => {
+          if (
+            levelResultsByStudent[student_id][level_id] >=
+            TestResults.MINIMUM_PASS_RESULT
+          ) {
+            numLevelsInLessonCompletedByStudent++;
+          }
+        });
+        if (
+          numLevelsInLessonCompletedByStudent / levelIds.length >=
+          levelsPerLessonCompletionThreshold
+        ) {
+          numStudentsCompletedLesson++;
         }
       });
-      // A level is "complete" if passed by 80% of the students in the section.
-      const sectionCompletedLevel =
-        numberStudentsCompletedLevel / numberStudentsInSection >= 0.8;
-      if (sectionCompletedLevel) {
-        numLevelsCompleted++;
-      }
+      const completed =
+        numStudentsCompletedLesson / numberStudentsInSection >=
+        studentsPerSectionCompletionThreshold;
+      completionByLesson[stage.id] = {
+        completed: completed,
+        numStudentsCompleted: numStudentsCompletedLesson
+      };
     });
-    // A lesson is "completed" if at least 60% of the levels are completed.
-    const completed = numLevelsCompleted / levelIds.length >= 0.6;
-    completionByLesson[stage.id] = {
-      completed: completed,
-      numStudentsCompleted: 50 //TODO: Calculate the real # :)
-    };
-  });
+  }
   return completionByLesson[stageId];
 }
 
