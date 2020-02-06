@@ -67,7 +67,7 @@ export default class StandardsReportHeader extends Component {
         <div style={styles.headerRightColumn}>
           <div style={styles.headerRightColumnTitles}>
             <div>{i18n.teacherWithColon()}</div>
-            <div>{i18n.sectionAndName()}</div>
+            <div>{i18n.sectionWithColon()}</div>
             <div>{i18n.dateWithColon()}</div>
           </div>
           <div style={styles.headerRightColumnItems}>
