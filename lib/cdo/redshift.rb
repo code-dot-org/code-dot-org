@@ -48,7 +48,9 @@ class RedshiftClient
     result
   end
 
-  # Returns an array of table names in a Redshift schema that were loaded via DMS to stage data from Aurora.
+  # Get names of tables in a Redshift schema that were loaded via DMS to stage imported data from the database.
+  # @param schema [String] The Redshift schema to search for database import staging tables.
+  # Returns Array of Redshift table names.
   def get_temporary_import_tables(schema)
     query = <<-SQL
 SET search_path TO #{schema};
@@ -59,11 +61,12 @@ WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table
   AND  t.schemaname ='#{schema}'
   AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
 SQL
-    exec(query)
+    exec(query).map {|row| row['tablename']}
   end
 
-  # @schema [string]
-  # @table [string] Name of table that has new data imported from Aurora via DMS in a staging table with a prefixed name.
+  # Complete import of staged data from production database into the specified Redshift table.
+  # @param schema [String] Name of Redshift schema containing table whose data import should be completed.
+  # @param table [String] Name of Redshift table awaiting final import of data loaded by DMS into a staging table.
   def complete_table_import(schema, table)
     truncate_table(schema, table)
     move_rows(schema, "#{TEMP_TABLE_PREFIX}#{table}", schema, table)
@@ -71,14 +74,14 @@ SQL
   end
 
   def truncate_table(schema, table)
-    exec "TRUNCATE #{schema}.#{table}"
+    exec "TRUNCATE #{schema}.#{table};"
   end
 
   def drop_table(schema, table)
-    exec "DROP TABLE IF EXISTS #{schema}.#{table}"
+    exec "DROP TABLE IF EXISTS #{schema}.#{table};"
   end
 
   def move_rows(source_schema, source_table, target_schema, target_table)
-    exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table}"
+    exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table};"
   end
 end
