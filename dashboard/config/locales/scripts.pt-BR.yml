@@ -1769,7 +1769,8 @@ pt-BR:
               name: Hora do Código 2015
         oceans:
           title: IA para oceanos
-          description: Descrição TBD.
+          description: Aprenda como a Inteligência Artificial e aprendizado de máquina
+            pode ser usado para resolver problemas mundiais.
           description_short: Descrição curta TBD.
           stages:
             Oceans:
@@ -2048,12 +2049,13 @@ pt-BR:
               name: Pesquisa Pós-Curso
         csp3-2017:
           title: CSP Unidade 3 - Programação
-          description: Esta unidade introduz os conceitos fundamentais de programação
+          description: "Esta unidade introduz os conceitos fundamentais de programação
             de computadores, que ajudam na habilidade de criar ricos aplicativos interativos.
             Esse curso usa JavaScript como linguagem de programação, e o Laboratório
             de Aplicativo App Lab é o ambiente de programação para construir aplicativos,
             mas os conceitos aprendidos nessas lições envolvem todas as ferramentas
-            e linguagens de programação.
+            e linguagens de programação.\r\n\r\nEsta unidade foi atualizada em 30/12/2017.
+            Leia mais sobre as atualizações no currídulo em forum.code.org/c/csp/updates."
           description_short: Programação
           stages:
             APIs and Function Parameters:
@@ -3037,21 +3039,20 @@ pt-BR:
               name: Formas e Randomização
               description_student: Esta aula estende as habilidades de desenho para
                 incluir largura e altura e introduz o conceito de geração de números
-                aleatórios. A turma aprende a desenhar com versões de elipse() e ret()
-                que incluem parâmetros de largura e altura e a usar o bloco fundo()
-                para preencher a tela com alguma cor. No final, a turma é introduzida
-                ao bloco numeroAleatorio() e usa os novos blocos para desenhar uma
-                cobra arco-íris aleatória.
+                aleatórios. A turma aprende a desenhar com versões de ellipse() e
+                rect() que incluem parâmetros de largura e altura e a usar o bloco
+                background() para preencher a tela com alguma cor. No final, a turma
+                é introduzida ao bloco ramdomNumber() e usa os novos blocos para desenhar
+                uma cobra arco-íris aleatória.
               description_teacher: Nessa aula, a turma continua desenvolvendo suas
                 habilidades de desenho. No começo da aula, uma discussão guiada pela
                 pessoa professora conecta a funcionalidade de blocos expandidos (e.g.
                 formas de tamanhos diferentes) com a necessidade de mais "inserções
                 de dados" nos blocos, ou seja, "parâmetros". A turma aprende como
-                desenhar com versões de `elipse()` e `ret()`que incluem os parâmetros
-                de largura e altura. A turma também aprende como usar o bloco `fundo()`.
-                No fim, apresenta-se o bloco `numeroAleatorio()`. Combinando essas
-                habilidades, a turma vai desenhar uma cobra com cores aleatórias no
-                final da aula.
+                desenhar com versões de `ellipse()` e `rect()`que incluem os parâmetros
+                de largura e altura. A turma também aprende como usar o bloco `background()`.
+                No fim, apresenta-se o bloco `randomNumber()`. Combinando essas habilidades,
+                a turma vai desenhar uma cobra com cores aleatórias no final da aula.
             Variables:
               name: variáveis
               description_student: Esta lição apresenta variáveis como uma maneira

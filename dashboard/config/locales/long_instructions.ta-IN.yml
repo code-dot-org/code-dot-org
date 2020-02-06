@@ -11,7 +11,7 @@ ta-IN:
       CourseD_Dance_Party_02: |-
         நாம் இந்த மூஸை ஆடச் செய்வோம்!
 
-        ஒர்க்ஸ்பேசுக்குள் <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கை இழுக்கவும். ப்ளாக்கிற்கு அடியில் <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> அதை இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
+        ஒர்க்ஸ்பேசுக்குள் <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கை இழுக்கவும். ப்ளாக்கிற்கு அடியில் <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> அதை இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
 
         **அளவீடுகள்** என்பன இசையில் நேரத்தை கணக்கிட பயன்படுகின்றன. இந்த பாடத்தில், ஒரு அளவீடு என்பது நான்கு பீட்கள் நீளம் கொண்டது.
       CourseD_Dance_Party_04: |-
@@ -37,7 +37,7 @@ ta-IN:
       CourseD_Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -74,7 +74,7 @@ ta-IN:
 
         -   _நீங்கள் மேலதிக தகவல்களையோ அல்லது கூடுதல் சவால்களை விரும்பினாலோ லைட்பல்பை நீங்கள் இடதுபுறமாக க்ளிக் செய்யலாம்._"
       Dance_Party_02: "இந்த மூஸ் நடனத்தைக் கற்றுக்கொள்வோம்! \n\n<xml><block type=\"Dancelab_changeMoveLR\"><title
-        name=\"SPRITE\">new&#95;dancer</title><title name=\"MOVE\" config=\"MOVES.Dab,
+        name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab,
         MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml>
         ப்ளாக்கைப் பணியிடத்திற்கு இழுக்கவும். அதை <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>
@@ -109,7 +109,7 @@ ta-IN:
       Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right_unicorn</title>
+            <title name="SPRITE">right\_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
