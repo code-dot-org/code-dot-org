@@ -80,6 +80,10 @@ export const lessonsByStandard = state => {
           let lessonDetails = {};
           lessonDetails['name'] = stage.name;
           lessonDetails['lessonNumber'] = stage.relative_position;
+          lessonDetails['completed'] = getLessonCompletionStatus(
+            state,
+            stage.id
+          ).completed;
           lessonDetails['numStudents'] = numStudents;
           lessonDetails['url'] = stage.lesson_plan_html_url;
           lessonDetails['unplugged'] = stage.unplugged;
@@ -91,6 +95,51 @@ export const lessonsByStandard = state => {
   }
   return lessonsByStandardId;
 };
+
+export function getLessonCompletionStatus(state, stageId) {
+  const scriptId = state.scriptSelection.scriptId;
+  const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+  const numberStudentsInSection =
+    state.teacherSections.sections[state.teacherSections.selectedSectionId]
+      .studentCount;
+  const levelResultsByStudent =
+    state.sectionProgress.studentLevelProgressByScript[scriptId];
+
+  let completionByLesson = {};
+  let levelsByLesson = {};
+  stages.forEach(stage => {
+    const levelIds = _.map(stage.levels, 'activeId');
+    const levels = [];
+    levelIds.forEach(levelId => {
+      let levelDetails = {};
+      let numberStudentsCompletedLevel = 0;
+      Object.values(levelResultsByStudent).forEach(levelResult => {
+        if (levelResult[levelId] >= 10) {
+          numberStudentsCompletedLevel++;
+        }
+      });
+      levelDetails['id'] = levelId;
+      levelDetails['numberStudentsCompleted'] = numberStudentsCompletedLevel;
+      // A level is "complete" if passed by 80% of the students in the section.
+      const sectionCompletedLevel =
+        numberStudentsCompletedLevel / numberStudentsInSection >= 0.8;
+      levelDetails['completed'] = sectionCompletedLevel;
+      levels.push(levelDetails);
+    });
+
+    levelsByLesson[stage.id] = levels;
+
+    const numLevelsCompleted = _.filter(levels, 'completed').length;
+    // A lesson is "completed" if at least 60% of the levels are completed.
+    const completed = numLevelsCompleted / levels.length >= 0.6;
+    completionByLesson[stage.id] = {
+      completed: completed,
+      numStudentsCompleted: 50 //TODO: Calculate the real # :)
+    };
+  });
+
+  return completionByLesson[stageId];
+}
 
 export function getStandardsCoveredForScript(scriptId) {
   return (dispatch, getState) => {
