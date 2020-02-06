@@ -1184,6 +1184,15 @@ es-ES:
       Underground Mining Coal_2019: Encontrarás los recursos más valiosos bajo tierra,
         pero puede estar oscuro. Coloca al menos dos antorchas y extrae al menos dos
         de carbón.
+      behaviors 1: "¡Haz una predicción!"
+      behaviors 2: "¡Vuela el cohete hasta las estrella!"
+      behaviors 3: "¡Ayuda el vagabundo aventajar el robot!"
+      behaviors 3a: 'Depurar: ¡Haz todas las estrellas girar en la misma dirección!'
+      behaviors 4: "¡Haz una predicción!"
+      behaviors 5: Mueve el astronauta diagonalmente.
+      behaviors 6: Haz la pelota rodar.
+      behaviors 7: "¡Conduce hacia el horizonte!"
+      behaviors free play: 'Juego libre: ¡Crea tu propio escena del espacio exterior!'
       bounce_1: Une un bloque al bloque "cuando flecha izquierda" y pulsa "Ejecutar
         Programa". Mueve la paleta usando la flecha izquierda para alcanzar el objetivo
         final.

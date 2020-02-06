@@ -63,7 +63,7 @@
     "run": "Ejecutar",
     "mostImportantParts": "Estas fueron las partes más importantes del pez:",
     "clickIndividualFish": "Haz clic en el pez para ver su información.",
-    "mostImportantPartsDescription": "",
+    "mostImportantPartsDescription": "Estos fueron las partes de pez más importantes por determinar si este pez fue \"*{word}*\" or \"**{notWord}**\".",
     "newWord": "Palabra Nueva",
     "finish": "Terminar",
     "trainMore": "Entrenar más",

@@ -4,10 +4,19 @@ zh-CN:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: 从一个正方形开始<br/>在正方形上放置一个三角形<br/>再在正方形下放置一个三角形
+        - text: |-
+            从一个正方形开始
+            在正方形上放置一个三角形
+            再在正方形下放置一个三角形
         - correct: true
-        - text: 从一个正方形开始<br/>在正方形上面放置一个平行四边形<br/>在平行四边形右边放置一个三角形
-        - text: 从一个正方形开始<br/>在正方形下面放置一个三角形<br/>在三角形右边放置一个平行四边形
+        - text: |-
+            从一个正方形开始
+            在正方形上面放置一个平行四边形
+            在平行四边形右边放置一个三角形
+        - text: |-
+            从一个正方形开始
+            在正方形下面放置一个三角形
+            在三角形右边放置一个平行四边形
         content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: 为这个图像选择一种算法
@@ -19,9 +28,12 @@ zh-CN:
           correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
-        content1: 从一个三角形开始<br/>在三角形下面放置一个正方形<br/>在正方形下面放置另一个三角形
+        content1: |-
+          从一个三角形开始
+          在三角形下面放置一个正方形
+          在正方形下面放置另一个三角形
         questions:
-        - text: 哪个图像<em>不</em>符合算法？
+        - text: 哪个图像 _不_ 符合算法？
         title: 选择题
       2-3 Big Event Match 1:
         answers:
@@ -46,10 +58,10 @@ zh-CN:
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: 用键与字母的代码匹配
         questions:
-        - text: "<strong>N</strong>"
-        - text: "<strong>O</strong>"
-        - text: "<strong>P</strong>"
-        - text: "<strong>Q</strong>"
+        - text: "**N**"
+        - text: "**O**"
+        - text: "**P**"
+        - text: "**Q**"
         title: 匹配
       2-3 Conditionals Multi 1:
         answers:
@@ -265,16 +277,16 @@ zh-CN:
         title: 迷宫选择题一
       4-5 Algorithms Match 1:
         answers:
-        - text: "<h4>设置玩家 1 分数为 0</h4>"
-        - text: "<h4>玩家 1 掷出骰子</h4>"
-        - text: "<h4>将玩家 1 的比分添加到总分</h4>"
-        - text: "<h4>比较玩家的分数，看看谁赢了</h4>"
+        - text: "**设置玩家 1 分数为 0**"
+        - text: "**玩家 1 掷出骰子**"
+        - text: "**将玩家 1 的比分添加到总分**"
+        - text: "**比较玩家的分数，看看谁赢了**"
         content1: 匹配骰子游戏比赛的步骤及他们在算法中应该出现的顺序.
         questions:
-        - text: "<h4>1)</h4>"
-        - text: "<h4>2)</h4>"
-        - text: "<h4>3)</h4>"
-        - text: "<h4>4)</h4>"
+        - text: "**1)**"
+        - text: "**2)**"
+        - text: "**3)**"
+        - text: "**4)**"
         title: 匹配
       4-5 Algorithms Multi 1:
         answers:
@@ -294,10 +306,18 @@ zh-CN:
         - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: 这些车辆已被分解成更小的部分。匹配每辆车与其分解的列表。
         questions:
-        - text: "<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 0</h3>"
-        - text: "<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 1</h3>"
-        - text: "<h3>每侧车轮数量： 2 <br/>每侧窗户数量： 6</h3>"
-        - text: "<h3>每侧车轮数量： 3 <br/>每侧窗户数量： 2</h3>"
+        - text: |-
+            **每侧车轮数量： 2**
+            **每侧窗户数量： 0**
+        - text: |-
+            **每侧车轮数量： 2**
+            **每侧窗户数量： 1**
+        - text: |-
+            **每侧车轮数量： 2**
+            **每侧窗户数量： 6**
+        - text: |-
+            **每侧车轮数量： 3**
+            **每侧窗户数量： 2**
         title: 匹配
       4-5 Computational Thinking Multi 1:
         answers:
@@ -308,7 +328,10 @@ zh-CN:
         - text: 齐齐哈尔是一个______城市。
         content1: 这里有三个句子。哪一个模板描述了这三句话共有的特点？
         questions:
-        - text: 北京是一个大城市。<br/>齐齐哈尔是一个中等城市。<br/>张家界是一个小城市。
+        - text: |-
+            北京是一个大城市。
+            齐齐哈尔是一个中等城市。
+            张家界是一个小城市。
         title: 选择题
       4-5 Crowdsourcing Multi 1:
         answers:
@@ -363,7 +386,7 @@ zh-CN:
       4-5 Songwriting Multi 1:
         answers:
         - text: 走，走，快点走吧，
-        - text: 走，走，快点走吧，<br/>走，走，快点走吧， <br/>走，走，快点走吧，<br/>快点走吧，亲爱的.
+        - text: "走，走，快点走吧，\n走，走，快点走吧， \n走，走，快点走吧，\n快点走吧，亲爱的。"
           correct: true
         - {}
         - {}
@@ -373,10 +396,10 @@ zh-CN:
         title: 选择题
       4-5 Suncatchers Match 1:
         answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STACK**"
+        - text: "**STAMP**"
+        - text: "**STAR**"
+        - text: "**RAMP**"
         content1: 用提供的技巧，将程序匹配到输出的词语上。
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
         questions:
@@ -393,7 +416,7 @@ zh-CN:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
         content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
-        - text: 下面哪个程序所产生的顺序和程序 1的<em>有所不同</em>？
+        - text: 下面哪个程序所产生的顺序和程序 1 的顺序 _不同_ ？
         title: 选择题
       4-5 artist loops multi 1:
         answers:
@@ -609,6 +632,35 @@ zh-CN:
         content1: 描述
       CSD U2 L1 Overview:
         content1: 描述
+        markdown: |
+          # 概述
+
+          本课程讲述了网站对于用户和创作者的存在价值。探索了美国的几个最有名的网站，以及它们对用户的用途和对创作者的价值。
+          ## 词汇
+
+          * **网站** - 连接到互联网的位置，维护万维网中一个或多个网页。
+
+
+          ## 资源
+
+          * [网站的目的 - 活动指南](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+      CSD U2 L12 Overview:
+        markdown: |
+          # 概述
+
+          在第一次完成了网络搜索寻宝后，班级学会了搜索引擎内部如何工作，并有机会在搜索奇怪、罕见的动物上发挥分析能力。
+          ## 词汇表
+
+          * **算法（algorithm）** - 一组有精确顺序的计算机上的可执行指令
+          * **相关的（relevant）** - 与一些事情非常有关系。
+          * **搜索引擎（search engine）** - 在数据库中，通过用户输入的，相应的关键词或字符来找到对应的条目，特别是用来在互联网上搜索特定的网站和内容。
+          * **可信赖** - 因为诚实、真实而特别能被依赖。
+
+
+          ## 资源
+
+          * [网络寻宝 - 活动指南](https://docs.google.com/document/d/14sOf5YZ5iTvB0jzlm7X-18HE6S_KEG3IcrsFHN7OeCk/export?format=pdf)
+          * [奇怪的真实动物 - 活动指南](https://docs.google.com/document/d/1t7gmFWj0fneGzJbPRHk0eq3hz-kRQ_xwnVbKwdL3tEw/export?format=pdf)
       CSD U2 L2 Overview:
         content1: 描述
         markdown: |
@@ -706,6 +758,28 @@ zh-CN:
           * [许可你的作品 - 活动指南](https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
       CSD U2 Lesson 6 Overview:
         content1: 描述
+        markdown: |
+          # 概述
+
+          本课程将介绍设计HTML网页时会出现的常见问题。课程会纠正代码工作室里，一系列逐渐复杂的网页中找到的问题，并学习注释、空格和缩进的重要性，以及它们如何让网页更易读。
+          ## 词汇表
+
+          * **缺陷（bug）** - 程序中不能正常工作的部分。
+          * **注释（comment）** - 注释是在计算机程序源代码中，给程序员阅读的文字。
+          * **调试（debug）** - 找到并修复算法或程序中问题的过程。
+          * **缩进（indentation）** - 放置在文本右边或左边的空间，用来与周围的文本相区分，帮助理解代码的结构。
+          * **空格（whitespace）** - 空格指任何在屏幕上不能看到的空白空间，例如空格键，TAB 键或新行。空格能将文档分成不同部分，帮助阅读。
+
+          ## 引入的代码
+
+          *  **[注释](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
+      CSD U2 Lesson 9 Overview:
+        markdown: "# 概述\n\n本课介绍了超链接，网站开发者使用它来将多个页面连接到一起成为一个网站。本课会将以前的页面都连接到一个项目里，为每个页面创建导航栏，并将整个网站发布到网络中。
+          \ \n## 词汇表\n\n* **超链接** - 从一个 HTML 文件链接到另一个位置或文件，一般通过点击屏幕上高亮的文字或图片来激活。\n\n##
+          引入的代码\n\n*  **[超链接](//studio.code.org/docs/weblab/A/)** - `<a></a>`\n\n##
+          资源\n\n* [个人网站 - 项目指南](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
+          [个人网站 - 相互评审](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
+          [个人网站 - 专栏](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
       CSD U2 Top Websites:
         markdown: |
           # 美国最多访问量的网站
@@ -747,16 +821,16 @@ zh-CN:
         content1: 描述
       CSD U2 image debug match:
         answers:
-        - text: <img src="https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
-            PM.png">
-        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
-            PM.png">
-        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
-            PM.png">
-        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
-            PM.png">
-        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
-            PM.png">
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
+            PM.png
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
         content1: 将这段存在问题的 HTML 代码与描述中所对应的问题相连线。
         questions:
         - text: 属性“src”拼写错误。
@@ -852,12 +926,14 @@ zh-CN:
         - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
+        content1: 让布尔值表达式与描述一致。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 是否狗精灵图的旋转要比猫精灵图少？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要小？
+        - text: 是否狗精灵图的比例要大于猫精灵图的比例？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要大？
+        - text: 是否狗精灵图的 x 与猫精灵图的 x 相等？
+        title: 匹配：比较操作符
       CSD U3 - conditionals - Matching_2018:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -865,12 +941,14 @@ zh-CN:
         - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
+        content1: 让布尔值表达式与描述一致。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 是否狗精灵图的旋转要比猫精灵图少？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要小？
+        - text: 是否狗精灵图的比例要大于猫精灵图的比例？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要大？
+        - text: 是否狗精灵图的 x 与猫精灵图的 x 相等？
+        title: 匹配：比较操作符
       CSD U3 - conditionals - Matching_2018_2019:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -878,39 +956,77 @@ zh-CN:
         - text: dog.scale &gt; cat.scale
         - text: dog.x &gt; cat.x
         - text: dog.x == cat.x
+        content1: 让布尔值表达式与描述一致。
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: 是否狗精灵图的旋转要比猫精灵图少？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要小？
+        - text: 是否狗精灵图的比例要大于猫精灵图的比例？
+        - text: 是否狗精灵图的 x 比猫精灵图的 x 要大？
+        - text: 是否狗精灵图的 x 与猫精灵图的 x 相等？
+        title: 匹配：比较操作符
       CSD U3 Boolean MC:
         answers:
-        - text: 真<br>假<br>真
+        - text: |-
+            true
+            false
+            true
           correct: true
-        - text: "  0<br>200<br>100"
-        - text: "  真<br>错误<br>真"
-        - text: "  假<br>真<br>假"
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            true
+            error
+            true
+        - text: |-
+            false
+            true
+            false
         questions:
         - text: 程序的控制台将打印出什么结果？
         title: 标题
       CSD U3 Boolean MC_2018:
         answers:
-        - text: 真<br>假<br>真
+        - text: |-
+            true
+            false
+            true
           correct: true
-        - text: "  0<br>200<br>100"
-        - text: "  真<br>错误<br>真"
-        - text: "  假<br>真<br>假"
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            true
+            error
+            true
+        - text: |-
+            false
+            true
+            false
         questions:
         - text: 程序的控制台将打印出什么结果？
         title: 标题
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - text: 真<br>假<br>真
+        - text: |-
+            true
+            false
+            true
           correct: true
-        - text: "  0<br>200<br>100"
-        - text: "  真<br>错误<br>真"
-        - text: "  假<br>真<br>假"
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            true
+            error
+            true
+        - text: |-
+            false
+            true
+            false
         questions:
         - text: 程序的控制台将打印出什么结果？
         title: 标题
@@ -918,6 +1034,43 @@ zh-CN:
         content1: 描述
       CSD U3 Card Examples_2018_2019:
         content1: 描述
+      CSD U3 Collision Detection:
+        markdown: |
+          # 概述
+
+          学生学习计算机上的碰撞。团队探索了计算机如何使用精灵图的位置和尺寸属性，以及数学来检测两个精灵图是否碰到了。然后，会使用 isTouching() 模块，当精灵图碰到时来创造一些不同的效果，比如播放声音。最后，使用这些新技能来改进上节课开始的滑动游戏。
+          ## 词汇表
+
+          * **抽象（abstraction）** - 简化不同问题的差异，使得一个方法能解决多个问题。
+          * **调试（debug）** - 在算法或程序中找到并修复问题。
+          * **如果语句** - 大多数程序结构中实现的 "条件语句"。
+
+          ## 引入的代码
+
+          * [sprite.debug](//docs.code.org/gamelab/debug/)
+          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
+
+          ## 资源
+
+          * [碰撞检测 - 活动指南](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # 概述
+
+          学生会用新的交互方式来为精灵图编程。在简单回顾了如何使用 isTouching 模块后，班级会用头脑风暴找到其它让两个精灵图交互的方法。然后会用 isTouching 让一个精灵图推着另一个穿过屏幕，然后再练习四种碰撞模块（collide - 碰撞，displace - 置换，bounce - 弹跳，和 bounceOff - 反弹）。
+          ## 词汇表
+
+          * **抽象（abstraction）** - 简化不同问题的差异，使得一个方法能解决多个问题。
+
+          ## 引入的代码
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -941,133 +1094,374 @@ zh-CN:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
+        content1: 根据按键模块的描述来匹配它的功能。如果要再试试，可随时返回上一关。
         questions:
         - text: 仅当按键被按下时为真且单次有效。
         - text: 仅当按键被松开时为真且单次有效。
         - text: 当按键被按下或松开时均为真。
+        title: 匹配：响应按键
       CSD U3 Keypress Matching_2018:
         answers:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
+        content1: 根据按键模块的描述来匹配它的功能。如果要再试试，可随时返回上一关。
         questions:
         - text: 仅当按键被按下时为真且单次有效。
         - text: 仅当按键被松开时为真且单次有效。
         - text: 当按键被按下或松开时均为真。
+        title: 匹配：响应按键
       CSD U3 Keypress Matching_2018_2019:
         answers:
         - text: keyWentDown()
         - text: keyWentUp()
         - text: keyDown()
+        content1: 根据按键模块的描述来匹配它的功能。如果要再试试，可随时返回上一关。
         questions:
         - text: 仅当按键被按下时为真且单次有效。
         - text: 仅当按键被松开时为真且单次有效。
         - text: 当按键被按下或松开时均为真。
+        title: 匹配：响应按键
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          # 概述
+
+          班级需要考虑无聊和表达自我的 "问题"，反思怎样在生活中处理这类问题。从这里，要开始探索计算机科学是多么广泛，特别是编程。可在某个娱乐项目或媒介中自我表达来扮演角色。
+
+
+          ## 资源
+
+          * [娱乐中的计算机科学 - 活动指南](https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
+      CSD U3 Lesson Overview 10:
+        markdown: |
+          # 概述
+
+          本课会介绍布尔（boolean）值和逻辑，以及条件语句。学生会从玩一个简单的起立、坐下游戏开始，通过布尔（真、假）语句来描述个人的属性（头发、眼睛颜色、衣服类型、年龄等等）。然后会增加布尔语句的复杂性，并看看条件是如何影响程序执行的。
+          ## 词汇表
+
+          * **布尔 （boolean）** - 一个简单的值，为 TRUE（真） 或 FALSE（假）
+          * **条件 （conditionals）** - 只在某些条件下运行的代码。
+          * **表达式 （expression）** - 可以解析为一个值的代码。
+
+
+          ## 资源
+
+          * [布尔属性 - 活动指南](https://docs.google.com/document/d/1kRNIUD5Z3r7HK9twMPMnenyEFPh9ouMsJKIb4T0-6so/export?format=pdf)
+      CSD U3 Lesson Overview 11:
+        markdown: |
+          # 概述
+
+          班级从用布尔来比较精灵属性的当前值和目标值开始，通过比较来确定精灵是否到达了屏幕上的某个点，长到某个大小，否则会用计数器模式到达某个值。在使用了布尔值直接查看精灵属性或值以后，学生会添加条件的如果语句来响应布尔值的比较结果。
+          ## 词汇表
+
+          * **布尔表达式** - 在程序中，运行结果是 True 或 False。
+          * **如果语句** - 实现 "条件语句" 的通用编程结构。
+
+          ## 引入的代码
+
+          * [如果语句](//studio.code.org/docs/gamelab/ifBlock/)
+          * [小于操作符](//studio.code.org/docs/gamelab/lessThanOperator/)
+          * [不等于操作符](//studio.code.org/docs/gamelab/inequalityOperator/)
+          * [小于等于操作符](//studio.code.org/docs/gamelab/lessThanOrEqualOperator/)
+          * [大于操作符]](//studio.code.org/docs/gamelab/greaterThanOperator/)
+          * [等于操作符](//studio.code.org/docs/gamelab/equalityOperator/)
+          * [大于等于操作符](//studio.code.org/docs/gamelab/greaterThanOrEqualOperator/)
+      CSD U3 Lesson Overview 12:
+        markdown: |
+          # 概述
+
+          根据前面课程对布尔值和如果语句的介绍，学生们会学到新的 keyDown() 模块，它会返回布尔值，并用在条件语句中用来移动精灵图。最后，学生们会写程序来通过用户的键盘输入来控制屏幕上的精灵图。
+
+          ## 引入的代码
+
+          * [keyDown()](//studio.code.org/docs/gamelab/keyDown/)
+
+          ## 资源
+
+          * [布尔表达式](https://youtu.be/y3rCKJNOwpA) - 视频 ([下载](https://videos.code.org/2015/csp/applab/conditionals_1.mp4))
+      CSD U3 Lesson Overview 13:
+        markdown: |+
+          # 概述
+
+          学生会继续探索使用条件语句来获取用户输入的方法。除了已经学会的简单的 keyDown() 命令，学生还会学习一些其它的输入命令来获取鼠标的输入。
+          ## 词汇表
+
+          * **条件** - 在某些条件下才运行的语句。
+
+          ## 引入的代码
+
+          * [keyWentUp()](//studio.code.org/docs/gamelab/keyWentUp/)
+          * [mouseWentDown()](//studio.code.org/docs/gamelab/mouseWentDown/)
+          * [mouseWentUp()](//studio.code.org/docs/gamelab/mouseWentUp/)
+          * [keyWentDown()](//studio.code.org/docs/gamelab/keyWentDown/)
+          * [mouseDown()](//studio.code.org/docs/gamelab/mouseDown/)
+          * [mouseDidMove()](//studio.code.org/docs/gamelab/mouseDidMove/)
+          * [sprite.visible](//studio.code.org/docs/gamelab/visible/)
+          * [如果/否则 语句 （if/else）](//studio.code.org/docs/gamelab/ifElseBlock/)
+
+      CSD U3 Lesson Overview 14:
+        markdown: |
+          # 概述
+
+          这是第 1 章的连续项目，学生会使用学到的所有编程技巧来计划并开发交互的卡片。
+
+
+          ## 资源
+
+          * [交互卡片 - 项目指南](https://docs.google.com/document/d/1PtGpvAAyCYa_glecPhytGPrZau9ElJfJRhnVogFEqv4/export?format=pdf)
+          * [交互卡片 - 专栏](https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
+          * [交互卡片 - 相互评审](https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
+      CSD U3 Lesson Overview 2:
+        markdown: |
+          # 概述
+
+          本课探索了沟通中的挑战，如何画出各种形状，在游戏实验室中使用工具来引入此问题。班级使用游戏实验室的工具来在 400x400 的网格中交互画出图形。伙伴们会使用此工具，通过别人的指示来画出隐藏的图形，解决游戏实验室里的编程挑战。
+
+
+          ## 资源
+
+          * [画图形 - 活动指南](https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+      CSD U3 Lesson Overview 3:
+        markdown: |+
+          # 概述
+
+          班级会开始接触游戏实验室，这是本单元的编程环境，会用它定位屏幕上的图形。本课会介绍基本的序列和调试，也会有一些简单的命令。在课程结束时，学生会将上节课的图像做成在线版本。
+          ## 词汇表
+
+          * **缺陷（bug）** - 程序中不正常的部分。
+          * **调试（debug）** - 找到并修复算法或程序中的问题。
+          * **程序（program）** - 能在某台机器上运行的代码。
+
+          ## 引入的代码
+
+          * [ellipse() （椭圆）](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect() （矩形）](//studio.code.org/docs/gamelab/rect/)
+          * [fill() （填充）](//studio.code.org/docs/gamelab/fill/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # 概述
+
+          本课会扩展画图技巧，包括宽、高，以及生成随机数的概念。班级会学习画出不同版本的 ellipse() 和rect()，会实现宽和高的参数，并使用 background() 模块来填充屏幕的背景色。课程最后，会介绍 randomNumber() 模块，用新模块画出随机的彩虹蛇。
+          ## 词汇表
+
+          * **参数（parameter）** - 根据需要定制函数，来传递的额外信息。
+
+          ## 引入的代码
+
+          * [background() （背景色）](//studio.code.org/docs/gamelab/background/)
+          * [ellipse() （椭圆）](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect() （矩形）](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber() （随机数）](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # 概述
+
+          本课介绍了在程序中使用变量来标记数字，或保存随机生成的值。班级会从非常基础的变量意义开始，并练习使用新模块。随后，会用变量来保存随机数字，让程序可以多次使用这个随机数字。
+          ## 词汇表
+
+          * **变量（variable）** - 可以改动信息的占位符。
+
+          ## 引入的代码
+
+          * [声明变量](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [声明变量并赋值](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## 资源
+
+          * [变量的介绍](https://youtu.be/G41G_PEWFjE) - 视频 ([可下载](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U3 Lesson Overview 6:
+        markdown: |
+          # 概述
+
+          为了创建更有趣，更多细节的图像，会为班级介绍精灵图对象。每个精灵图都可以显示一张图片，精灵图也可以保存多个值，这样可以方便的显示动画。课程结束时，学生们会使用精灵图创建出一个场景。
+          ## 词汇表
+
+          * **属性 （property）** - 描述目标特征的一些信息
+          * **精灵图 （sprite）** - 在屏幕上的一个图形角色，有一些属性来描述位置、动作、外观等等。
+
+          ## 引入的代码
+
+          * [drawSprites()](//studio.code.org/docs/gamelab/drawSprites/)
+          * [sprite.scale](//studio.code.org/docs/gamelab/scale/)
+          * [var sprite = createSprite()](//studio.code.org/docs/gamelab/createSprite/)
+
+          ## 资源
+
+          * [精灵图场景 - 活动指南](https://docs.google.com/document/d/1I5w4VKBu4qPmoSSve_AwyaVQ47FWkJ-fSq4zfmQCsG8/export?format=pdf)
+      CSD U3 Lesson Overview 7:
+        markdown: |+
+          # 概述
+
+          本课介绍了画图循环，这是游戏实验室中重要的编程模式。本课会将画图循环与随机数组合起来，控制一些简单的动物，然后使用精灵图。最后，大家会用学会的知识来修改上节课的精灵图场景。
+          ## 词汇表
+
+          * **动画 （animation）** - 快速的顺序显示一系列的图片，让人产生运动的错觉
+          * **帧 （frame）** - 动画中的单张图片
+          * **帧率 （frame rate）** - 动画中显示帧的速度，一般以每秒显示帧的数量来衡量
+
+          ## 引入的代码
+
+          * [World.frameRate](//studio.code.org/docs/gamelab/World.frameRate/)
+          * [function draw() {}](//studio.code.org/docs/gamelab/draw/)
+
+
+      CSD U3 Lesson Overview 8:
+        markdown: |
+          # 概述
+
+          本线下课程会探索变量的基本行为。用记录卡和字符串来模拟程序中的变量，班级会实现一个非常短的程序。一旦习惯了语法，班级用精灵图属性一样的过程，来在屏幕上跟踪精灵图的变化。
+          ## 词汇表
+
+          * **表达式 （expression)** - 代码中一段可以解析值的部分。
+          * **变量 （variable）** - 一段可变化信息的占位符。
+
+
+          ## 资源
+
+          * [线下的变量 - 活动指南](https://docs.google.com/document/d/12-tfreuhFfNnxzBSl4dsLavDptTIruVcRiC3AzGKq1Y/export?format=pdf)
+          * [线下的变量板 - 操作](https://docs.google.com/document/d/1hxwkz9ed4Qd3KvKJ7MLQdgKGOtItXQ_qaYRQfZcfRn8/export?format=pdf)
+      CSD U3 Lesson Overview 9:
+        markdown: |+
+          # 概述
+
+          通过组合画图循环和计数器模式，本课写出程序来移动精灵图穿过屏幕，还会做其它的精灵图属性动画。
+
+
+      CSD U3 Movement Challenges:
+        markdown: |
+          # 挑战
+
+          _在进行任何挑战前，先获得老师的同意。_
+
+          * 返回 [15 关](15) 继续编写动画。首先要取消提交的项目，完成后再次提交。
+          * 返回 [12 关](12) 继续编写鱼的动画。试试随机改变鱼的方向，让它们看起来像是在有用。
+          * 返回 [13 关](13) 继续齿轮的动画。试试添加更多不同大小的齿轮，并调整它们的转速，来让它们看起来能正确的啮合。
+          * 打开 [完整的游戏实验室](/projects/gamelab/new) 来从头创建新的动画。
+      CSD U3 SFLP Velocity:
+        markdown: |
+          # 概述
+
+          了解了计数器模式是如何用来移动精灵图后，学生会了解用于设置速度和旋转速度的属性。这些使用这些新属性的方法，可以用来创建基本的滚动条游戏。
+
+          ## 引入的代码
+
+          * [sprite.velocityY](//studio.code.org/docs/gamelab/velocityY/)
+          * [sprite.velocityX](//studio.code.org/docs/gamelab/velocityX/)
+          * [sprite.rotationSpeed](//studio.code.org/docs/gamelab/rotationSpeed/)
       CSD U3 Sprite Movement Predict Multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 都程序，并预测会产生下列哪个动画。
       CSD U3 Sprite Movement Predict Multi_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 都程序，并预测会产生下列哪个动画。
       CSD U3 Sprite Movement Predict Multi_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
         questions:
-        - {}
+        - text: 都程序，并预测会产生下列哪个动画。
       CSD U3 Sprites intro predict multi:
         answers:
-        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/9b55104462fe654f5f5410e635671c36-image-1579828016057.png)"
+        - text: "![](https://images.code.org/03bee2faf00d4edb534098397596df49-image-1579828016060.png)"
+        - text: "![](https://images.code.org/f7641c6d502ccae8c6e311a7b764ea4e-image-1579828016054.png)"
           correct: true
-        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/cd6993477eac8964c01303661ef4e9ce-image-1579828016062.png)"
         questions:
-        - text: 当运行时，<code>mySprite</code> 会在何处？
+        - text: 当运行时，精灵图 `mySprite` 会在何处？
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
-        - text: 当运行时，<code>mySprite</code> 会在何处？
+        - text: 当运行时，精灵图 `mySprite` 会在何处？
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
-          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
         questions:
-        - text: 当运行时，<code>mySprite</code> 会在何处？
+        - text: 当运行时，精灵图 `mySprite` 会在何处？
       CSD U3 combining rep:
         content1: 描述
       CSD U3 combining rep_2018:
         content1: 描述
       CSD U3 combining rep_2018_2019:
         content1: 描述
+      CSD U3 complex sprite movement SFLP:
+        markdown: |+
+          # 概述
+
+          学生会学习组合精灵图的计数器模式和速度属性，来创建更复杂的精灵图的运动，比如模拟重力，跳跃，让精灵往左右飘。最后，学生会将这些运动组合到单个精灵图上，并创作一个来回飞，收集硬币的简单游戏。
+
+
       CSD U3 drawSprites placement match:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         content1: 将代码所生成的图像与之连线。
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         title: drawSprites
       CSD U3 drawSprites placement match_2019:
         answers:
-        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
-            AM.png">
-        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
-            AM.png">
-        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
-            AM.png">
-        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
-            AM.png">
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
         content1: 将代码所生成的图像与之连线。
         questions:
-        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
-            AM.png">
-        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
-            AM.png">
-        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
-            AM.png">
-        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
-            AM.png">
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
         title: drawSprites
       CSD U3 game intro:
         content1: 描述
@@ -1121,40 +1515,40 @@ zh-CN:
         content1: 描述
       CSD U6 array multi:
         answers:
-        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
-            PM.png" width="200px"
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
           correct: true
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
       CSD U6 array multi_2018:
         answers:
-        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
-            PM.png" width="200px"
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
           correct: true
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
       CSD U6 array multi_2018_2019:
         answers:
-        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
-            PM.png" width="200px" />
-        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
-            PM.png" width="200px"
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
           correct: true
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
@@ -1166,42 +1560,30 @@ zh-CN:
         content1: 描述
       CSD U6 setProperty predict multi:
         answers:
-        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
-            style="max-width: 100px;">'
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
         - {}
         title: 猜测一下
       CSD U6 setProperty predict multi_2018:
         answers:
-        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
-            style="max-width: 100px;">'
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
         - {}
         title: 猜测一下
       CSD U6 setProperty predict multi_2018_2019:
         answers:
-        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
-            style="max-width: 100px;">'
-        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
-            style="max-width: 100px;">'
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
         - {}
@@ -1465,7 +1847,7 @@ zh-CN:
           correct: true
         content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
-        - text: 哪一个动物留下的数字足迹<strong>最不安全</strong>？
+        - text: 哪一个动物留下的数字足迹最**不**安全？
         title: 选择题
       K-1 Getting Loopy Multi 1:
         answers:
@@ -1495,7 +1877,7 @@ zh-CN:
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
-        - text: 你 <strong>不</strong> 应该在线共享哪些信息？
+        - text: "**不**应该在线共享哪些信息？"
         title: 选择题
       K-1 Maze Debugging Multi 1:
         answers:
@@ -1670,6 +2052,69 @@ zh-CN:
 
           ##资料
           * [电脑是什么 - 活动指导](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 2 Lesson 10 Overview:
+        markdown: |
+          # 概述
+
+          本课覆盖了 CSS 类和自定义颜色。学生们会首先学习如何使用 RGB (red - 红, green - 绿, blue - 蓝) 值来指定某个颜色，然后会将颜色用到新的使用 CSS 类的四季页面中。通过使用类，学生们可以为四季页面添加更多的样式，最后在个人网站上使用它们。
+          ## 词汇表
+
+          * **HTML 类** - 给元素相同的类名后，它们可以使用相同的样式。
+
+          ## 引入的代码
+
+          * [RGB 颜色](//studio.code.org/docs/weblab/rgb-color/)
+
+          ## 资源
+
+          * [RGB 颜色 - 活动指南](https://docs.google.com/document/d/1zTamyJ71sVJ2JM2A2meX6kwPu4FS82KA_TJEliTPIFo/export?format=pdf)
+      Unit 2 Lesson 16 Overview:
+        markdown: |
+          # 概述
+
+          在这个单元里的最后几天，班级会完成个人网站，从伙伴那里获得反馈，回顾专栏，并在网站上完成最后的修补。要完成本单元，每个人都要分享项目，并分享如何开发出来的。
+
+
+          ## 资源
+
+          * [完成个人网站 - 同伴评审](https://docs.google.com/document/d/1YMcd2-oBmcjJkW7sADlRKXnGqLdy7A3hxwm74dZlGPE/export?format=pdf)
+          * [完成个人网站 - 项目指南](https://docs.google.com/document/d/15hP1rbdhWaOvcbN-KHCl3rgcNBoa0Wg2D1ZUVnkwNo0/export?format=pdf)
+          * [完成个人网站 - 专栏](https://docs.google.com/document/d/1SmZaZymJbMQL04j3evH4O0PYkbtZ_l6W_6rvddB1alg/export?format=pdf)
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # 概述
+
+          本课介绍了 CSS，它被用于改变页面上元素的样式。本课学习了 CSS 规则集的基本语法，然后探索了 HTML 文本元素的一些属性。最后，让大家将文本样式应用到个人网站上。
+          ## 词汇表
+
+          * **CSS** - CSS 是 Cascading Style Sheets （级联样式表）的缩写。CSS 能根据某一些规则集来改变每个 HTML 元素的样式。
+          * **CSS 选择器（Selector）** - 指明样式应用于哪些元素的代码。
+
+          ## 引入的代码
+
+          *  **[颜色](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[文本对齐](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[文本修饰](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[字体](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[文字大小](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # 概述
+
+          本课会继续介绍 CSS 样式属性，这次主要是非文本的元素。本课从调研并修改沙漠世界页面中新的 CSS 样式开始。然后，大家可以将新的知识应用到自己的个人网站中。
+
+          ## 引入的代码
+
+          *  **[背景颜色](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[浮动（float）](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[边距（margin）](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[宽度](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[高度](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[边框风格（border style）](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[边框宽度（border width）](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[边框颜色（border color）](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
+
       behaviors 1 predict:
         answers:
         - feedback: 错误。
@@ -1701,7 +2146,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 艺术家画了一个正方形。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: 艺术家将会画一个等边三角形。
@@ -1714,7 +2159,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 艺术家画了一个正方形。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: 艺术家将会画一个等边三角形。
@@ -1727,7 +2172,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 艺术家画了一个正方形。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1779,7 +2224,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
+        - text: 仔细看看下面的代码。 第一个造成错误的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
@@ -1792,7 +2237,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
+        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: 这个程序不会失败。松鼠会到达橡子的位置。
@@ -1805,7 +2250,7 @@ zh-CN:
         - text: 我不知道。
           feedback: '第一个错误是斯奎特在最后转向时走错了路。 '
         questions:
-        - text: '仔细查看下面的代码。 第一个将使此程序失败的bug是什么？ '
+        - text: 仔细看看下面的代码。 第一个让程序出错的缺陷是什么？
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -1818,7 +2263,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -1831,7 +2276,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: 这只鸟最终会比猪少走一步。
@@ -1844,7 +2289,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 这段代码会把小鸟完美地移动到猪的位置。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 将不会移动。
@@ -1896,7 +2341,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8将在第一个循环中走得太远。
@@ -1909,7 +2354,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8将在第一个循环中走得太远。
@@ -1922,7 +2367,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -1935,7 +2380,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         questions:
-        - text: 仔细查看下面的代码。当您点击 "运行" 后，这个程序将会生成哪个图形？
+        - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
@@ -1948,7 +2393,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         questions:
-        - text: 仔细查看下面的代码。当您点击 "运行" 后，这个程序将会生成哪个图形？
+        - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
@@ -1961,7 +2406,7 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         questions:
-        - text: 仔细查看下面的代码。当您点击 "运行" 后，这个程序将会生成哪个图形？
+        - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
@@ -1974,7 +2419,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 这个程序将会生成哪个图形？
+        - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -1987,7 +2432,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 这个程序将会生成哪个图形？
+        - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
         - text: A
@@ -2000,7 +2445,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。 内层的循环生成了一个正五边形, 外层的循环在一个圆圈中重复4次。
         questions:
-        - text: 仔细查看下面的代码。当你点击 "运行" 后, 这个程序将会生成哪个图形？
+        - text: 仔细查看下面的代码。点击 "运行" 后，会画出哪个图形？
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
@@ -2091,7 +2536,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
+        - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: 蜜蜂会向前移动，只能得到1个花蜜。
@@ -2104,7 +2549,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
+        - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: 蜜蜂会向前移动，只能得到1个花蜜。
@@ -2117,7 +2562,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 蜜蜂重复"移动前进和收集花蜜"的循环动作，来解决这个难题。
         questions:
-        - text: 请仔细查看下面的代码。 当您单击 "运行" 时，会发生什么情况？
+        - text: 仔细阅读下面的嵌套循环。 点击 "运行" 后，会发生什么？
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
@@ -2167,7 +2612,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 我不知道。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: 收割者将收获所有的农作物。
@@ -2178,7 +2623,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 我不知道。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: 收割者将收获所有的农作物。
@@ -2189,7 +2634,7 @@ zh-CN:
           feedback: 叮咚！答对啦！
         - text: 我不知道。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
       courseD_multi_farmer_ramp13:
         answers:
         - text: 农夫会走到路的尽头，并且收割南瓜。
@@ -2203,7 +2648,7 @@ zh-CN:
         - {}
       courseD_multi_farmer_while10_predict2:
         answers:
-        - text: 土堆和坑都消失了,土地变成了平地。
+        - text: 没东西了。只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -2216,7 +2661,7 @@ zh-CN:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while10_predict2_2018:
         answers:
-        - text: 土堆和坑都消失了,土地变成了平地。
+        - text: 没东西了。代码只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -2229,7 +2674,7 @@ zh-CN:
         - text: 请仔细查看下面的代码。这段代码的运行结果是什么？
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
-        - text: 土堆和坑都消失了,土地变成了平地。
+        - text: 没东西了。代码只会剩下平地。
           feedback: 错误。没有任何代码用来清除土堆。
         - text: 代码将对土堆不产生任何影响。
           correct: true
@@ -2286,7 +2731,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 这个代码中，僵尸在右转之前，会先判断是否可以向前移动。正因如此，解谜失败。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - text: 僵尸会通过正确的路径, 最终会永远的来回走动。
@@ -2299,7 +2744,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until10_predict2_2018_2019:
         answers:
         - text: 僵尸会通过正确的路径, 最终会永远的来回走动。
@@ -2312,7 +2757,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 在这个代码中，僵尸将会通过正确的路径，最终会永远的来回走动。
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until2_predict1:
         answers:
         - text: 小鸟不会移动。
@@ -2323,7 +2768,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: 小鸟不会移动。
@@ -2334,7 +2779,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: 小鸟不会移动。
@@ -2345,7 +2790,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
-        - text: 仔细阅读下面的代码。 当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。 当单击 "运行" 时，会发生什么？
       courseD_multi_scrat_predict1:
         answers:
         - text: 什么也没发生。斯奎特完全不会动。
@@ -2572,7 +3017,7 @@ zh-CN:
         - text: 我不知道。
           feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
         questions:
-        - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
+        - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - text: 艺术家将会绘制一个边长为50像素的三角形。
@@ -2585,7 +3030,7 @@ zh-CN:
         - text: 我不知道。
           feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
         questions:
-        - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
+        - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
       courseF_multi_artist_variables3a_predict1_2018_2019:
         answers:
         - text: 艺术家将会绘制一个边长为50像素的三角形。
@@ -2598,7 +3043,7 @@ zh-CN:
         - text: 我不知道。
           feedback: "`length`（长度）变量设置为 50，并在`向前移动`模块中使用。因此艺术家会画一个边长为 50 像素的三角形。"
         questions:
-        - text: 我们已将变量“长度”设置为50。当您单击“运行”时，会发生什么情况？
+        - text: 变量 "length"（长度）已设为 50。当单击 “运行” 时，会发生什么？
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
@@ -2630,7 +3075,7 @@ zh-CN:
 
 '
         questions:
-        - text: 仔细阅读下面的代码。当您单击 "运行" 时, 会发生什么情况？
+        - text: 仔细阅读下面的代码。点击 "运行" 后，会发生什么？
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -2643,7 +3088,7 @@ zh-CN:
         - text: 蜜蜂将向前移动，并在尝试收集比花朵中更多的花蜜。
           feedback: 错误。“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。
         questions:
-        - text: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
+        - text: 仔细阅读下面的代码。单击 "运行" 会发生什么情况？
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -2656,7 +3101,7 @@ zh-CN:
         - text: 我不知道。
           feedback: "“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。"
         questions:
-        - text: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
+        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 蜜蜂将向前移动，并收集所有花朵中的所有花蜜。
@@ -2669,7 +3114,7 @@ zh-CN:
         - text: 我不知道。
           feedback: "“for”循环将让蜜蜂收集正确数量的花蜜，但它的设置只能到达4朵花。"
         questions:
-        - text: 仔细阅读下面的代码。当您单击“运行”时，会发生什么情况？
+        - text: 仔细阅读下面的代码。当单击 "运行"，会发生什么情况？
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: 蜜蜂不会采集任何花蜜或蜂蜜。
@@ -2761,7 +3206,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 罗瑞尔在没有任何东西的时候，试着收集宝藏，这造成了错误。
         questions:
-        - text: 仔细观察下面的代码。若程序运行至结束（忽略所有错误），那么罗瑞尔会收集到多少宝藏呢？
+        - text: 仔细观察下面的代码。若程序运行至结束（忽略所有错误），罗瑞尔应该收集到多少宝藏？
       grade2_multi_collector_A_predict1_2018:
         answers:
         - text: 用这段代码让罗瑞尔收集4个宝贝
