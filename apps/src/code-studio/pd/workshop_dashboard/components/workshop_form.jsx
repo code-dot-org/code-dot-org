@@ -582,7 +582,9 @@ export class WorkshopForm extends React.Component {
   renderFeeInput(validation) {
     return (
       <FormGroup validationState={validation.style.fee}>
-        <ControlLabel>Fee Information (Blank if no cost)</ControlLabel>
+        <ControlLabel>
+          Fee Information (Leave blank for "No cost!")
+        </ControlLabel>
         <FormControl
           type="text"
           value={this.state.fee || ''}
@@ -944,7 +946,7 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col sm={2}>
+            <Col sm={1}>
               <FormGroup validationState={validation.style.capacity}>
                 <ControlLabel>Capacity</ControlLabel>
                 <FormControl
@@ -963,7 +965,7 @@ export class WorkshopForm extends React.Component {
             <Col sm={3}>{this.renderCourseSelect(validation)}</Col>
             <Col sm={3}>{this.renderSubjectSelect(validation)}</Col>
             {showFeeInput && (
-              <Col sm={3}>{this.renderFeeInput(validation)}</Col>
+              <Col sm={4}>{this.renderFeeInput(validation)}</Col>
             )}
           </Row>
           <Row>
