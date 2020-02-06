@@ -129,7 +129,9 @@ class TeacherDashboard extends Component {
           )}
           <Route
             path={TeacherDashboardPath.progress}
-            component={props => <SectionProgress />}
+            component={props => (
+              <SectionProgress studioUrlPrefix={studioUrlPrefix} />
+            )}
           />
           <Route
             path={TeacherDashboardPath.textResponses}

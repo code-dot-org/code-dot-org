@@ -68,6 +68,7 @@ const styles = {
  */
 class SectionProgress extends Component {
   static propTypes = {
+    studioUrlPrefix: PropTypes.string.isRequired,
     //Provided by redux
     scriptId: PropTypes.number,
     section: sectionDataPropType.isRequired,
@@ -215,7 +216,7 @@ class SectionProgress extends Component {
           )}
         </div>
 
-        <ProgressViewHeader />
+        <ProgressViewHeader studioUrlPrefix={this.props.studioUrlPrefix} />
         <div style={{clear: 'both'}}>
           {!levelDataInitialized && (
             <FontAwesome
