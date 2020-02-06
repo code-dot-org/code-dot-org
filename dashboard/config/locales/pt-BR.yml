@@ -46,7 +46,7 @@ pt-BR:
         edit_header: Editar Detalhes da Conta
         finish_sign_up_header: Finalize a criação da sua conta
         finish_sign_up_subheader: Preencha as informações a seguir para concluir a
-          criação da sua conta Code.org.
+          criação da sua conta Code.org <strong>%{email}</strong>.
         finish_sign_up_subheader_markdown: Preencha as informações a seguir para concluir
           a criação da sua conta Code.org para **%{email}**.
         finish_sign_up_subheader_provider: Preencha as informações a seguir para concluir
@@ -59,7 +59,7 @@ pt-BR:
         error:
           future: não pode estar no futuro
   beta: beta
-  hello: Olá, mundo
+  hello: Olá, mundo!
   welcome_back: Bem-vindo de volta, %{name}
   your_professional_learning_plan: Seu plano de aprendizagem profissional
   see_your_learning_plan: Veja seu plano de aprendizagem
@@ -596,6 +596,8 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
+  certificate:
+    sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.

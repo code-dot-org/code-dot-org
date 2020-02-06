@@ -33,6 +33,7 @@
   "and": "மற்றும்",
   "animationMode": "உயிரூட்டுதல்",
   "animationPicker_drawYourOwn": "நீங்கள் சொந்தமாக வரையவும்",
+  "animationPicker_error": "பிழை: {message}",
   "animationPicker_failedToParseImage": "படத்தை பாகுபடுத்த முடியவில்லை",
   "animationPicker_title": "அசைவூட்ட நூலகம்",
   "animationPicker_unsupportedType": "மன்னிக்கவும், இந்த கோப்பு வகை ஆதரிக்கப்படவில்லை.",

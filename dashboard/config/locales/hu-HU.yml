@@ -405,6 +405,7 @@ hu:
       example_with_number: Példa a megoldásra %{solution_number}
       submitted_on: 'Benyújtva ekkor: %{date}'
       unsubmit: Visszavon
+      worked_with: Dolgozott
       clear_response: Válasz törlése
   user:
     email_confirm_needed: 'Az e-mail cím nincs megerősítve:'

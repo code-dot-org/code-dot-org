@@ -9783,6 +9783,18 @@ zh-CN:
               name: 单元 4 教师问卷
             'Lesson 15: Assessment Day':
               name: '单元 15：评估日'
+            Project - Decision Maker App - Part 1:
+              name: 项目 - 决定制作者应用 - 第 1 部分
+            Project - Decision Maker App - Part 2:
+              name: 项目 - 决定制作者应用 - 第 2 部分
+            Project - Decision Maker App - Part 3:
+              name: 项目 - 决定制作者应用 - 第 3 部分
+            Project - Decision Maker App Part 1:
+              name: 项目 - 决定制作者应用 第 1 部分
+            Project - Decision Maker App Part 2:
+              name: 项目 - 决定制作者应用 第 2 部分
+            Project - Decision Maker App Part 3:
+              name: 项目 - 决定制作者应用 第 3 部分
           title: 单元 4：变量、条件、函数
         csp1-2019:
           title: 计算机科学原理单元 1 ：互联网 ('18-'19)
@@ -10106,6 +10118,14 @@ zh-CN:
               name: 圆形方形图案
             'Lesson 14: Assessment Day':
               name: '单元 14：评估日'
+            'Project: Digital Information Dilemmas Part 1':
+              name: '项目：数字信息困境 第 1 部分'
+            'Project: Digital Information Dilemmas Part 2':
+              name: '项目：数字信息困境 第 2 部分'
+            Project - Digital Information Dilemmas Part 1:
+              name: 项目 - 数字信息困境 第 1 部分
+            Project - Digital Information Dilemmas Part 2:
+              name: 项目 - 数字信息困境 第 2 部分
           title: 计算机科学原理 单元1 试验
         csd-tests:
           stages:
@@ -11203,6 +11223,10 @@ zh-CN:
               name: '第 11 课：单元评估'
             'Lesson 11: Assessment Day':
               name: '第 11 单元：评估日'
+            Project - Designing an App Part 5:
+              name: 项目 - 设计一个应用 第 5 部分
+            Intro to Programming:
+              name: 编程介绍
             Debugging:
               name: 调试
           title: 计算机科学原理第 3 单元试验 - 介绍应用设计
@@ -11459,6 +11483,10 @@ zh-CN:
               name: '第 9 单元：评估日'
             The Need for Addressing:
               name: 寻址的需要
+            Project - Internet Dilemmas Part 1:
+              name: 项目 - 互联网困境 第 1 部分
+            Project - Internet Dilemmas Part 2:
+              name: 项目 - 互联网困境 第 2 部分
         denny-science:
           stages:
             Earthquake Detector:
@@ -11505,6 +11533,10 @@ zh-CN:
               name: 并行和分布式算法
             The Limits of Algorithms:
               name: 算法的局限
+            Unit 6 STUDENT Survey:
+              name: 第 6 单元学生问卷
+            Unit 6 TEACHER Survey:
+              name: 第 6 单元教师问卷
         denny-science-8:
           title: 碰撞检测
           stages:
@@ -11634,6 +11666,26 @@ zh-CN:
               name: 保护数据 第 2 部分
             'Lesson 14: Unit Assessment Day':
               name: '第 14 课：单元评估日'
+            'Project: Innovation Simulation Part 4':
+              name: '项目：创新模拟 第 4 部分'
+            'Project: Innovation Simulation Part 5':
+              name: '项目：创新模拟 第 5 部分'
+            'Project: Innovation Simulation Part 6':
+              name: '项目：创新模拟 第 6 部分'
+            'Project: Innovation Simulation Part 7':
+              name: '项目：创新模拟 第 7 部分'
+            Project - Innovation Simulation Part 1:
+              name: 项目 - 创新模拟 第 1 部分
+            Project - Innovation Simulation Part 2:
+              name: 项目 - 创新模拟 第 2 部分
+            Project - Innovation Simulation Part 3:
+              name: 项目 - 创新模拟 第 3 部分
+            Project - Innovation Simulation Part 4:
+              name: 项目 - 创新模拟 第 4 部分
+            Project - Innovation Simulation Part 6:
+              name: 项目 - 创新模拟 第 6 部分
+            Project - Innovation Simulation Part 7:
+              name: 项目 - 创新模拟 第 7 部分
           title: 网络安全和全球影响
         csp4-preview:
           stages:
@@ -11700,6 +11752,7 @@ zh-CN:
               name: 条件的回顾
             Drawing with Loops:
               name: 艺术家的编程和循环
+          title: 计算机科学时间 原版 第 1 单元
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -11808,6 +11861,7 @@ zh-CN:
             Conditionals Review:
               name: 条件的回顾
         time4cs-experiment-unit-1:
+          title: 计算机科学时间 实验 第 1 单元
           stages:
             Sequencing in Maze:
               name: 迷宫中的序列
@@ -11835,13 +11889,61 @@ zh-CN:
               name: 条件的回顾
         csp7-pilot:
           stages:
+            Parameters and Returns Explore:
+              name: 参数和返回值探索
+            Parameters and Returns Investigate:
+              name: 参数和返回值调研
+            Parameters and Returns Practice:
+              name: 参数和返回值实践
+            Parameters and Returns Make:
+              name: 参数和返回值实践
             Libraries Explore:
               name: 探索 库
             Libraries Investigate:
               name: 库调研
+            Libraries Practice:
+              name: 库实践
+            Libraries Make:
+              name: 库制作
+            Project - Libraries Part 1:
+              name: 项目 - 库 第 1 部分
+            Project - Libraries Part 2:
+              name: 项目 - 库 第 2 部分
+            Project - Libraries Part 3:
+              name: 项目 - 库 第 3 部分
+            Assessment Day:
+              name: 评估日
+            Parameters and Return Explore:
+              name: 参数和返回值探索
+            Parameters and Return Investigate:
+              name: 参数和返回值调研
+            Parameters and Return Practice:
+              name: 参数和返回值实践
+            Parameters and Return Make:
+              name: 参数和返回值制作
+            Libraries Make Part 1:
+              name: 库制作 第 1 部分
+            Libraries Make Part  2:
+              name: 库制作 第 2 部分
+            Libraries Make Part 3:
+              name: 库制作 第 3 部分
+            Project - Make a Library Part 1:
+              name: 项目 - 制作库 第 1 部分
+            Project - Make a Library Part 2:
+              name: 项目 - 制作库 第 2 部分
+            Project - Make a Library Part 3:
+              name: 项目 - 制作库 第 3 部分
+            Variables Make Demo:
+              name: 变量制作演示
+          title: 计算机科学原理 第 7 单元 试用 - 参数，返回值和库
         csp8-pilot:
           stages:
             new stage:
               name: 新的阶段
+            Create PT - Review the Task:
+              name: 创建表演任务 - 评审任务
+            Create PT - Make a Plan:
+              name: 创建表演任务 - 制定计划
             Create PT - Complete the Task:
               name: 创建 表演任务- 完成任务
+          title: 计算机科学原理 第 8 单元 试用 - 创建表演任务 准备
