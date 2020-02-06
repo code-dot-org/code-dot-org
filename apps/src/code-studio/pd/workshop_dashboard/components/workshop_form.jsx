@@ -582,7 +582,7 @@ export class WorkshopForm extends React.Component {
   renderFeeInput(validation) {
     return (
       <FormGroup validationState={validation.style.fee}>
-        <ControlLabel>Fee Information (Leave blank for no cost)</ControlLabel>
+        <ControlLabel>Fee Information (Blank if no cost)</ControlLabel>
         <FormControl
           type="text"
           value={this.state.fee || ''}
