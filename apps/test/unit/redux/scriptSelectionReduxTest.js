@@ -212,7 +212,7 @@ describe('scriptSelectionRedux', () => {
       assert.deepEqual(expectedScripts, nextState.validScripts);
     });
 
-    it('includes units of the assigned course when filtering validScripts', () => {
+    it('includes units of the assigned course when filtering validScripts if course_id provided', () => {
       const studentScriptIds = [];
       const validCourses = fakeValidCourses;
       const assignedCourseId = 99;
@@ -220,7 +220,21 @@ describe('scriptSelectionRedux', () => {
         fakeValidScripts,
         studentScriptIds,
         validCourses,
-        assignedCourseId
+        {course_id: assignedCourseId}
+      );
+      const nextState = scriptSelection(initialState, action);
+      const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
+      assert.deepEqual(expectedScripts, nextState.validScripts);
+    });
+
+    it('includes units of the assigned course when filtering validScripts if script_id of a script for course provided', () => {
+      const studentScriptIds = [];
+      const validCourses = fakeValidCourses;
+      const action = setValidScripts(
+        fakeValidScripts,
+        studentScriptIds,
+        validCourses,
+        {script: {id: 300}}
       );
       const nextState = scriptSelection(initialState, action);
       const expectedScripts = [fakeValidScripts[1], fakeValidScripts[2]];
