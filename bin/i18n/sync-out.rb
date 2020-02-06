@@ -179,6 +179,7 @@ def distribute_course_content(locale)
 
     course_strings.each do |level_url, level_strings|
       level = I18nScriptUtils.get_level_from_url(level_url)
+      next unless level.present?
       locale_strings.deep_merge! serialize_i18n_strings(level, level_strings)
     end
   end
