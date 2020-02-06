@@ -36,7 +36,7 @@
   "fishshort-words-training-pause1": "Denkst du, dass die KI genug Trainingsdaten hat? Du kannst auf \"Weiter\" klicken, um dies herauszufinden.",
   "fishshort-words-training-pause2": "Tolle Arbeit!  Trainiere weiter die KI oder fahre fort, wenn du bereit bist.",
   "fishshort-predicting-init1": "Mit deinen Trainingsdaten hast du die KI so programmiert, dass sie \"{word}\"-Fische erkennt.",
-  "fishshort-predicting-init2": "Mal sehen, wie die KI \"{Wort}\" Fische identifiziert.",
+  "fishshort-predicting-init2": "Mal sehen, wie die KI \"{word}\" Fische identifiziert.",
   "fishshort-pond-init1": "Basierend auf deinem Training, hat die KI {n, plural,one {einen anderen Fisch} other {einige andere Fische}} als \"{Wort}\" identifiziert.  Wie hat die KI das gemacht? Du kannst mehr trainieren, wenn du die Ergebnisse verbessern willst.",
   "fishshort-pond-init2": "Klicke auf den Info-Button, um zu sehen, was die KI gelernt hat.",
   "fishlong-words-init1": "Jetzt lass uns sehen, ob die KI ein weniger offensichtliches Wort lernen kann.",

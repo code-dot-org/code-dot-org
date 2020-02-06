@@ -985,7 +985,7 @@ sk:
             '"when"': keď
             '"while"': pokiaľ
       gamelab_clickedOn:
-        text: keď {SPRITE} klikla
+        text: po kliknutí na {SPRITE}
       gamelab_clickedSpritePointer:
         text: klikla {SPRITE}
       gamelab_comment:
@@ -1453,7 +1453,7 @@ sk:
             "{x: 100, y: 300}": vľavo dole
             "{x: 300, y: 300}": vpravo dole
       Mikelab_whenClickedOn:
-        text: keď {SPRITE} klikla
+        text: po kliknutí na {SPRITE}
       Mikelab_whenKeyPressed:
         text: pri stlačení {KEY}
         options:
