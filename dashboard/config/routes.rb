@@ -527,7 +527,6 @@ Dashboard::Application.routes.draw do
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
-    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
 
     get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
     get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
