@@ -41,7 +41,7 @@ def inline_css(css)
     $log.warn "Too much inlined CSS in page! [#{@total_css} bytes]" if @total_css > max_inline_css
   end
 
-  <<-HTML
+  <<-HTML.html_safe
 <style>
 #{css_string.indent(2)}
 </style>

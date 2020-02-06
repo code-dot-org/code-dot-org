@@ -42,7 +42,7 @@ max_age: 60
 
 #intro_top.ee_markdown
   -if company['intro_top_copy_t']
-    =TextRender.safe_markdown company['intro_top_copy_t']
+    = company['intro_top_copy_t']
   -else
     =view :company_profile_intro_top
 
