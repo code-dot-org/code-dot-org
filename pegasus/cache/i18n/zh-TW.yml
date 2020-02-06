@@ -161,7 +161,7 @@ zh-TW:
     href='/learn/beyond'>超越一小時玩程式</a>以觀看更多學習內容。
   thanks_for_submitting: 感謝您的提交！
   if_you_enjoyed: 如果你喜歡這樣的學習方式，不妨邀請你的朋友一起體驗！我們希望全世界都能學習。
-  personalize_certificate: 在證書上留下你的英文姓名
+  personalize_certificate: 在證書上留下你的姓名（可以用中文喲）
   print_certificates: 列印所有證書
   share_achievement: 分享你的成就
   beyond_hour_message: 繼續<a href='http://studio.code.org'>其它的課程</a>，或前往<a href='/learn/beyond'>超越一小時玩程式</a>觀看更多可學習的項目。
@@ -1598,7 +1598,7 @@ zh-TW:
     150 個的主題活動，其中推薦你試試我們在 2018 年推出的全新一小時玩  Minecraft  - 水上巡航。快來註冊你的班級吧！
   hoc2018_mc_aquatic_title: Minecraft 水世界
   hoc2018_mc_aquatic_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
-  hoc2019_mc_aquatic_description: 使用代碼來探索並構建水底世界。
+  hoc2019_mc_aquatic_description: 用程式探索並打造海底世界。
   hoc2018_mc_hero_title: Minecraft 英雄之旅
   hoc2018_mc_hero_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
   hoc2018_mc_designer_title: Minecraft 設計師
