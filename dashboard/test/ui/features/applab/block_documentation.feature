@@ -15,7 +15,6 @@ Feature: App Lab Blocks Documentation
     And I wait until element ".tooltip-example-link" contains text "See examples"
     When I click ".tooltip-example-link"
     And I switch to the first iframe
-    And I wait for 1 second
     And I wait until element ".documentation-ui-test" is visible
     And I wait until ".content" contains text "moveForward"
     And I wait until "#doc_category" contains text "Turtle"
