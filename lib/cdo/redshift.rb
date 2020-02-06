@@ -51,6 +51,8 @@ class RedshiftClient
   # Returns an array of table names in a Redshift schema that were loaded via DMS to stage data from Aurora.
   def get_temporary_import_tables(schema)
     query = <<-SQL
+SET search_path TO #{schema};
+
 SELECT DISTINCT t.tablename
 FROM pg_table_def t LEFT JOIN pg_indexes i ON t.tablename = i.indexname
 WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table_def, as a table.
@@ -58,6 +60,14 @@ WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table
   AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
 SQL
     exec(query)
+  end
+
+  # @schema [string]
+  # @table [string] Name of table that has new data imported from Aurora via DMS in a staging table with a prefixed name.
+  def complete_table_import(schema, table)
+    truncate_table(schema, table)
+    move_rows(schema, "#{TEMP_TABLE_PREFIX}#{table}", schema, table)
+    drop_table(schema, "#{TEMP_TABLE_PREFIX}#{table}")
   end
 
   def truncate_table(schema, table)
