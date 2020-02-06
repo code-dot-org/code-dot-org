@@ -1440,7 +1440,7 @@ hu:
     és követni fogja az utasításaid.
   tutorial_hopgeo_shortdescription: 'Építsd fel saját Geometry Jumper játékod: térj
     ki az akadályok elől ahogy feléd repülnek!'
-  tutorial_tynkermult_shortdescription: Make a fun multiplication game!
+  tutorial_tynkermult_shortdescription: Készíts egy szórakoztató szorzós játékot!
   tutorial_monster_shortdescription: Egy színes, önállóan játszható programozó kaland
     gyerekeknek.
   tutorial_tynkerapp_shortdescription: Készítsd el a kedvenc játékot egyedi változatát!
@@ -1517,49 +1517,51 @@ hu:
   tutorial_knodsnake_shortdescription: 'Tanulj meg Kígyó játékot készíteni JavaScriptben! '
   tutorial_soccharater_shortdescription: Kódold le a te saját képpont karaktered HTML,
     CSS és JavaScript segítségével.
-  tutorial_silent_shortdescription: Discover the basic concepts of programming without
-    any word or explanation
-  tutorial_robomesh_shortdescription: Program either a virtual online robot, or a
-    real VEX IQ robot.
-  tutorial_amaze_shortdescription: Build and customize an exciting maze game with
-    with crazy physics obstacles and a grand prize!
+  tutorial_silent_shortdescription: Fedezd fel a programozás alapfogalmait egyetlen
+    szó vagy magyarázat nélkül
+  tutorial_robomesh_shortdescription: Programozz egy virtuális online robotot, vagy
+    egy igazi VEX IQ robotot.
+  tutorial_amaze_shortdescription: Építs fel és tégy egyedivé egy izgalmas labirintus
+    játékot őrült fizikájú akadályokkal és egy hatalmas nyereménnyel!
   tutorial_codestersds_shortdescription: írj egy történetet kötőszavakkal, miközben
     a számítógépekről is megtudhatsz valamit!
-  tutorial_knodtext_shortdescription: Learn to make a text adventure game in Python!
-  tutorial_alicegar_shortdescription: 'Tell stories and be creative while learning
-    to code. '
+  tutorial_knodtext_shortdescription: Tanuld meg hogyan készíts egy szöveges kalandjátékot
+    Pythonban!
+  tutorial_alicegar_shortdescription: 'Mondj el történeteket és légy kreatív miközben
+    kódolni tanulsz. '
   tutorial_codesterstransform_shortdescription: Ebben a matekos projektben felfedezheted
     és kipróbálhatod a koordináta geometriai transzformációkat.
   tutorial_flexfrog_shortdescription: A game for learning CSS flexbox
   tutorial_codemoji_shortdescription: 'Ez a feladat megtanítja a gyerekeknek az alapvető
     weboldal tervezést, és ehhez kapcsolódó programozási koncepciókat hangulatjelekkel,
     hogy a tanulók végig aktívan részt vegyenek, és észrevtlenül tanuljanak programozni. '
-  tutorial_robobii_shortdescription: 'RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. '
-  tutorial_robobm_shortdescription: 'RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. '
-  tutorial_codingrobots_shortdescription: 'RoboBlockly is designed for beginners to
-    learn coding and math with robots. '
-  tutorial_robob_shortdescription: 'RoboBlockly is designed for beginners to learn
-    robotics in Blockly. '
+  tutorial_robobii_shortdescription: 'RoboBlockly azért készült, hogy megtanítsa kezdőknek
+    hogyan kódoljanak robotokkal Blocklyban. '
+  tutorial_robobm_shortdescription: 'RoboBlockly azért készült, hogy kezdőknek matekot
+    tanítson robotokkal Blocklyban. '
+  tutorial_codingrobots_shortdescription: 'RoboBlockly azért készült, hogy megtanítsa
+    kezdőknek hogyan kódoljanak és matekozzanak robotokkal. '
+  tutorial_robob_shortdescription: 'RoboBlockly azért készült, hogy robotikát tanítson
+    kezdőknek Blocklyban. '
   tutorial_coders_shortdescription: Fedezd fel a bot programozást egy csillaghajó
     versenyben! (14 év fölött)
-  tutorial_tynkerhw_shortdescription: Solve fun coding puzzles to navigate your Hot
-    Wheels car and win the race!
-  tutorial_tynkermh_shortdescription: Solve fun coding puzzles with the ghouls of
-    Monster High.
-  tutorial_caphoto_shortdescription: Build an app that lets you customize photos with
-    stickers and filters.
-  tutorial_mozillahw_shortdescription: Learners will remix JavaScript code to change
-    the words on a website
-  tutorial_ticklep_shortdescription: With Tickle, a user-friendly coding app, you
-    can easily program Parrot Drone to swim in a number of ways by simply dragging
-    and dropping coding blocks to create a command for it to follow.
-  tutorial_bbot_shortdescription: Teach your students (ages 7 and up) programming
-    in a fun and easy way. No prior programming knowledge or experience needed!
+  tutorial_tynkerhw_shortdescription: Oldj meg szórakoztató kódolási rejtvényeket
+    hogy irányítsd Hot Wheels autódat és megnyerd a futamot!
+  tutorial_tynkermh_shortdescription: Oldj meg szórakoztató kódolási rejtvényeket
+    a Monster High szereplőivel.
+  tutorial_caphoto_shortdescription: Építs egy alkalmazást, hogy matricákkal és szűrőkkel
+    tehesd egyedivé fotóidat.
+  tutorial_mozillahw_shortdescription: A tanulók JavaScript kódokat fognak összemixelni,
+    hogy megváltoztassák a szavakat egy honlapon
+  tutorial_ticklep_shortdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    egyszerűen a kód-elemeket egymás után illesztve számos módon programozhatsz egy
+    Parrot Drónt, ami követni fogja az utasításaid.
+  tutorial_bbot_shortdescription: Tanítsd diákjaidat (7 éves kortól) programozni egy
+    egyszerű és szórakoztató módon. Nincs szükség előzetes programozó ismeretekre
+    vagy tapasztalatra!
   tutorial_scratchg_shortdescription: Tanuld meg hogyan programozz játékokat Scratch-ben
-  tutorial_roboticfriends_shortdescription: Unplugged tutorial for a group with no
-    devices
+  tutorial_roboticfriends_shortdescription: Offline oktatóanyag eszközökkel nem rendelkező
+    csoportoknak
   tutorial_sjforest_shortdescription: Használd a ScratchJr programozó alkalmazást,
     hogy készíts egy olyan programot, amiben egy sötét erdei környezetben mozognak
     különböző állatok.
@@ -1599,13 +1601,14 @@ hu:
   tutorial_bbcart_shortdescription: 'Standards-based lesson plan for levels K-5. '
   tutorial_tlcknight_shortdescription: Solve a puzzle where you must find a way for
     a knight to visit every square on a board exactly once.
-  tutorial_fufafit_shortdescription: 'Use functions to shorten the code that will
-    help the fuzzFamily build their strength! '
-  tutorial_ozodance_shortdescription: Help Ozobot learn to dance! Create and program
-    a dance routine for the Ozobot robot.
-  tutorial_codingrobotics_shortdescription: Students will focus on communication as
-    it relates to programming.
-  tutorial_box_shortdescription: Take a coding trip on Box Island with the brave Hiro.
+  tutorial_fufafit_shortdescription: 'Használj funkcókat a kód rövidítésére, ami segít
+    majd megerősíteni a fuzzCsaládot! '
+  tutorial_ozodance_shortdescription: Segíts Ozobotnak megtanulni táncolni! Készíts
+    és programozz egy tánc rutint Ozobot robotnak.
+  tutorial_codingrobotics_shortdescription: A tanulók arra fognak koncentrálni, hogy
+    a kommunikáció hogyan befolyásolja a programozást.
+  tutorial_box_shortdescription: Tegyél egy kódoló kirándulást Doboz Szigetre a bátor
+    hőssel.
   tutorial_hopgame_shortdescription: Lead a coding workshop, club, or a hackathon
     with this 6-lesson guide.
   tutorial_icontrol_shortdescription: Programming physical systems with iPads and
@@ -1788,8 +1791,8 @@ hu:
     a saját Csillagok háborúja játékodat, egy messzi, messzi galaxisban.
   tutorial_build-a-galaxy_shortdescription: Tanulj meg droidokat programozni, és készítsd
     el a saját Csillagok háborúja játékodat, egy messzi, messzi galaxisban.
-  tutorial_alicesims_shortdescription: 'Tell stories and be creative while learning
-    to code. '
+  tutorial_alicesims_shortdescription: 'Mondj el történeteket és légy kreatív miközben
+    kódolni tanulsz. '
   tutorial_tchr_shortdescription: Be inspired to design your own Hour of Code event
     with these lesson plans.
   tutorial_robogame_shortdescription: The grit, the games, the fun!
@@ -2978,7 +2981,8 @@ hu:
     words. Students will learn about basic syntax, strings, variables, and user input.
     They will use the platform and a sprite to tell a story and lead the user through
     a variety of scene changes. '
-  tutorial_knodtext_longdescription: Learn to make a text adventure game in Python!
+  tutorial_knodtext_longdescription: Tanuld meg hogyan készíts egy szöveges kalandjátékot
+    Pythonban!
   tutorial_alicegar_longdescription: 'Follow the animation production process from
     storyboarding to programming with Alice and Garfield.  Let creativity and storytelling
     drive your learning in a drag and drop coding environment.  The project will guide
@@ -3032,9 +3036,9 @@ hu:
   tutorial_mozillahw_longdescription: Learners will remix JavaScript code to change
     the words on a website, learning about composing for the web, coding JavaScript
     values, and remixing Web content.
-  tutorial_ticklep_longdescription: With Tickle, a user-friendly coding app, you can
-    easily program Parrot Drone to swim in a number of ways by simply dragging and
-    dropping coding blocks to create a command for it to follow.
+  tutorial_ticklep_longdescription: A Tickle felhasználóbarát kódoló alkalmazással
+    egyszerűen a kód-elemeket egymás után illesztve számos módon programozhatsz egy
+    Parrot Drónt, ami követni fogja az utasításaid.
   tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
     need any programming knowledge or experience to teach your students about programming!
     You can teach programming in a fun and easy way. Go over the activities and download

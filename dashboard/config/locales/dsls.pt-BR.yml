@@ -1456,7 +1456,7 @@ pt-BR:
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A sprite x do cachorro é menor que a x da sprite do gato?
         - text: A escala do sprite do cachorro é maior que a do gato?
         - text: O x da escala do cachorro é maior que o x do gato?
         - text: A sprite x do cachorro é igual ao x da sprite do gato?
@@ -1471,7 +1471,7 @@ pt-BR:
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A sprite x do cachorro é menor que a x da sprite do gato?
         - text: A escala do sprite do cachorro é maior que a do gato?
         - text: O x da escala do cachorro é maior que o x do gato?
         - text: A sprite x do cachorro é igual ao x da sprite do gato?
@@ -1486,7 +1486,7 @@ pt-BR:
         content1: Combine a expressão booleana com a descrição em inglês.
         questions:
         - text: A rotação da sprite do cachorro é menor que a do gato?
-        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        - text: A sprite x do cachorro é menor que a x da sprite do gato?
         - text: A escala do sprite do cachorro é maior que a do gato?
         - text: O x da escala do cachorro é maior que o x do gato?
         - text: A sprite x do cachorro é igual ao x da sprite do gato?
@@ -1508,7 +1508,10 @@ pt-BR:
           Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
       CSD U3 Boolean MC:
         answers:
-        - text: true<br>falso<br>verdadeiro
+        - text: |-
+            verdadeiro
+            falso
+            verdadeiro
           correct: true
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
@@ -1516,7 +1519,7 @@ pt-BR:
         markdown: |
           # Expressões booleanas
 
-          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `VERDADEIRO` ou` FALSO` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
 
           # Prever
 
@@ -1526,7 +1529,10 @@ pt-BR:
         title: título
       CSD U3 Boolean MC_2018:
         answers:
-        - text: true<br>falso<br>verdadeiro
+        - text: |-
+            verdadeiro
+            falso
+            verdadeiro
           correct: true
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
@@ -1534,7 +1540,7 @@ pt-BR:
         markdown: |
           # Expressões booleanas
 
-          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `VERDADEIRO` ou` FALSO` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
 
           # Prever
 
@@ -1544,7 +1550,10 @@ pt-BR:
         title: título
       CSD U3 Boolean MC_2018_2019:
         answers:
-        - text: true<br>falso<br>verdadeiro
+        - text: |-
+            verdadeiro
+            falso
+            verdadeiro
           correct: true
         - text: "  0<br>200<br>100"
         - text: "  verdadeiro<br>erro<br>verdadeiro"
@@ -1552,7 +1561,7 @@ pt-BR:
         markdown: |
           # Expressões booleanas
 
-          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `TRUE` ou` FALSE` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
+          A tomada de decisão em computadores é baseada em instruções chamadas ** expressões booleanas **. Uma expressão booleana é ** qualquer expressão que só pode ser avaliada como `VERDADEIRO` ou` FALSO` **. Isso pode ser particularmente útil quando usado para comparar as propriedades de dois sprites. Por exemplo, você pode descobrir qual é maior ou mais alto. Nos próximos quebra-cabeças, usaremos expressões booleanas simples para comparar propriedades de sprites.
 
           # Prever
 
@@ -1978,7 +1987,7 @@ pt-BR:
         markdown: |+
           # Visão global
 
-          Combinando o desenhar laço e o contador de pad, a classe escreve programas que movem sprites pela tela, além de animar outras propriedades de sprite.
+          Combinando o desenho do laço e o padrão do contador, a classe escreve programas que movem sprites pela tela, além de animar outras propriedades de sprite.
 
 
       CSD U3 Movement Challenges:
@@ -2081,9 +2090,9 @@ pt-BR:
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
-          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
@@ -2247,19 +2256,19 @@ pt-BR:
         markdown: |
           # Construa uma plataforma de salto
 
-          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
+          Nos próximos níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U3 platform intro_2018:
         content1: descrição aqui
         markdown: |
           # Construa uma plataforma de salto
 
-          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
+          Nos próximos níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U3 platform intro_2018_2019:
         content1: descrição aqui
         markdown: |
           # Construa uma plataforma de salto
 
-          Nos próximos vários níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
+          Nos próximos níveis, você estará construindo um jogo de plataformas. Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde as instruções do seu professor antes de clicar para o próximo nível.
       CSD U4L01 SFLP:
         markdown: |
           # Visão geral
@@ -3148,7 +3157,7 @@ pt-BR:
         markdown: |
           # Visão global
 
-          Nesta lição, você terá algumas decisões práticas com dados com alguns problemas que podem parecer familiares.
+          Nesta lição, você terá algumas decisões práticas com dados e alguns problemas que podem parecer familiares.
 
           ## Recursos
 
@@ -3158,6 +3167,7 @@ pt-BR:
           # Visão global
 
           Esta lição examina mais de perto o que é necessário para criar um sistema de representação. Os grupos criam sistemas que podem representar qualquer letra no alfabeto usando apenas uma única pilha de cartões, depois criam mensagens com seus sistemas e trocam com outros grupos para garantir que o sistema funcione como pretendido. A turma discute pontos comuns entre sistemas de trabalho enquanto reconhece que existem muitas soluções de trabalho possíveis.
+
           ## Vocabulário
 
           * ** Decifre ** - para alterar como as informações são representadas para que possam ser lidas por uma pessoa
@@ -3187,13 +3197,14 @@ pt-BR:
 
           * [Dados no mundo real] (https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - Guia de atividades
       CSD-U5-SFLP Representation Matters:
-        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
-          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
-          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
-          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
-          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
-          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
-          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+        markdown: |
+          # Visão geral
+
+          Experimente pela primeira vez a importância de como as informações são representadas e como elas afetam a maneira como tomamos decisões. Você ajudará algumas pessoas a decidirem qual refeição eles devem pedir.
+
+          ## Recursos
+
+          * [Assuntos de representação - Guia de atividades] (https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
       CSD-U5-SFLP Representing Images:
         markdown: |+
           # Visão global
@@ -3309,7 +3320,7 @@ pt-BR:
 
           Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
 
-          * Foco em soluções baseadas em hardware sobre programas de software
+          * Foque em soluções baseadas em hardware sobre programas de software
           * Concentre-se em inovações recentes sobre notícias antigas
           * Siga o que te interessa
 
@@ -3344,7 +3355,7 @@ pt-BR:
 
           Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
 
-          * Foco em soluções baseadas em hardware sobre programas de software
+          * Foque em soluções baseadas em hardware sobre programas de software
           * Concentre-se em inovações recentes sobre notícias antigas
           * Siga o que te interessa
 
@@ -3379,7 +3390,7 @@ pt-BR:
 
           Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
 
-          * Foco em soluções baseadas em hardware sobre programas de software
+          * Foque em soluções baseadas em hardware sobre programas de software
           * Concentre-se em inovações recentes sobre notícias antigas
           * Siga o que te interessa
 
@@ -5345,15 +5356,15 @@ pt-BR:
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
         content1: descrição aqui
-        markdown: 'É hora de apresentar seus projetos! Seu professor dará mais detalhes
-          sobre como você apresentará seu trabalho para seus colegas.
+        markdown: |
+          # Apresentação de Projeto
 
-'
+          É hora de apresentar seus projetos! Seu professor dará mais detalhes sobre como você apresentará seu trabalho para seus colegas.
       Prepare for your presentation_2018:
-        markdown: 'É hora de apresentar seus projetos! Seu professor dará mais detalhes
-          sobre como você apresentará seu trabalho para seus colegas.
+        markdown: |
+          # Apresentação de Projeto
 
-'
+          É hora de apresentar seus projetos! Seu professor dará mais detalhes sobre como você apresentará seu trabalho para seus colegas.
       PrivatePersonalInformation-Unplugged:
         markdown: |
           # Informação Privada e Pessoal
@@ -6180,17 +6191,17 @@ pt-BR:
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha só tentará
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: A abelha se moverá para a nuvem e só tentará obter o néctar se houver
             uma flor por baixo.
           correct: true
           feedback: Correto!
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha tentará
+          feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
+          feedback: O bloco 'if na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -6201,17 +6212,17 @@ pt-BR:
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha só tentará
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: A abelha se moverá para a nuvem e só tentará obter o néctar se houver
             uma flor por baixo.
           correct: true
           feedback: Correto!
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha tentará
+          feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
+          feedback: O bloco 'if na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -6222,17 +6233,17 @@ pt-BR:
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha só tentará
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: A abelha se moverá para a nuvem e só tentará obter o néctar se houver
             uma flor por baixo.
           correct: true
           feedback: Correto!
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha tentará
+          feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
+          feedback: O bloco 'if na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
         questions:
         - text: A nuvem está bloqueando a vista. Poderia haver uma flor sob esta nuvem.
@@ -6245,7 +6256,7 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco 'se na flor' permite que a abelha obtenha néctar
+          feedback: Incorreto. O bloco 'if na flor' permite que a abelha obtenha néctar
             em cada flor e mel em cada favo de mel.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreto. Incorreto. O bloco 'se na flor' permite que a abelha
@@ -6263,7 +6274,7 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco 'se na flor' permite que a abelha obtenha néctar
+          feedback: Incorreto. O bloco 'if na flor' permite que a abelha obtenha néctar
             em cada flor e mel em cada favo de mel.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreto. Incorreto. O bloco 'se na flor' permite que a abelha
@@ -6281,7 +6292,7 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco 'se na flor' permite que a abelha obtenha néctar
+          feedback: Incorreto. O bloco 'if na flor' permite que a abelha obtenha néctar
             em cada flor e mel em cada favo de mel.
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
           feedback: Incorreto. Incorreto. O bloco 'se na flor' permite que a abelha
@@ -6564,17 +6575,17 @@ pt-BR:
         answers:
         - text: Nada acontecerá.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
+            pilha, depois vai parar quando não houver mais pilha
         - text: O agricultor nunca irá parar de remover a sujeira.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
-        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha.
+            pilha, depois vai parar quando não houver mais pilha
+        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
-          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha
+          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
@@ -6582,17 +6593,17 @@ pt-BR:
         answers:
         - text: Nada acontecerá.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
+            pilha, depois vai parar quando não houver mais pilha
         - text: O agricultor nunca irá parar de remover a sujeira.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
-        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha.
+            pilha, depois vai parar quando não houver mais pilha
+        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
-          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha
+          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
@@ -6600,17 +6611,17 @@ pt-BR:
         answers:
         - text: Nada acontecerá.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
+            pilha, depois vai parar quando não houver mais pilha
         - text: O agricultor nunca irá parar de remover a sujeira.
           feedback: Incorreto. O fazendeiro removerá a sujeira contanto que haja uma
-            pilha, então pare quando não houver mais pilha
-        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha.
+            pilha, depois vai parar quando não houver mais pilha
+        - text: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
           correct: true
           feedback: Correto!
         - text: Eu não sei.
-          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, então
-            pare quando não houver pilha
+          feedback: O fazendeiro removerá a sujeira contanto que haja uma pilha, depois
+            vai parar quando não houver pilha.
         questions:
         - text: Observe atentamente o código abaixo. O que acontecerá depois que você
             clicar em "Executar"?
@@ -7305,17 +7316,17 @@ pt-BR:
         answers:
         - text: 'A abelha se moverá para a nuvem e tentará obter o néctar, não importa
             o que aconteça. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha só tentará
+          feedback: Incorreto. O bloco 'se na flor' assegura que a abelha só tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: A abelha se moverá para a nuvem e só tentará obter o néctar se houver
             uma flor por baixo.
           correct: true
           feedback: Correto!
         - text: 'A abelha se moverá para a nuvem e não fará nada, não importa o quê. '
-          feedback: Incorreta. O bloco 'se na flor' assegura que a abelha tentará
+          feedback: Incorreta. O bloco 'if na flor' assegura que a abelha tentará
             obter néctar se houver uma flor embaixo da nuvem.
         - text: Eu não sei.
-          feedback: O bloco 'se na flor' assegura que a abelha só tentará obter néctar
+          feedback: O bloco 'if na flor' assegura que a abelha só tentará obter néctar
             se houver uma flor embaixo da nuvem.
         markdown: 'A nuvem está bloqueando a exibição. Poderia haver uma flor sob
           esta nuvem. Se houver uma flor, a abelha precisará coletar néctar ** uma
@@ -7333,11 +7344,11 @@ pt-BR:
           correct: true
           feedback: Correto!
         - text: A abelha tentará obter o néctar das flores e do favo de mel.
-          feedback: Incorreto. O bloco `se na flor` permite que a abelha colete nectar
+          feedback: Incorreto. O bloco `if na flor` permite que a abelha colete nectar
             em cada flor e faça mel se não houver uma flor (consequentemente há um
             colmeia).
         - text: A abelha tentará obter mel de ambas as flores e do favo de mel.
-          feedback: Incorreta. Incorreta. O bloco 'se em flor' permite que a abelha
+          feedback: Incorreta. Incorreta. O bloco 'if em flor' permite que a abelha
             obtenha néctar em cada flor e mel em cada favo de mel.
         - text: Eu não sei.
           feedback: O bloco 'se na flor' permite que a abelha obtenha néctar em cada
@@ -7388,7 +7399,7 @@ pt-BR:
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
         - text: 'Eu não sei. '
           feedback: O laço de repetição irá fazer com que a abelha colete a quantidade
-            correta de nectar, mas apenas coletará de 3 flores.
+            correta de nectar, mas apenas coletará de 4 flores.
         markdown: |+
           Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
 
@@ -7410,7 +7421,7 @@ pt-BR:
             a quantidade correta de nectar, mas apenas chegará à 3 flores.
         - text: 'Eu não sei. '
           feedback: O laço de repetição irá fazer com que a abelha colete a quantidade
-            correta de nectar, mas apenas coletará de 3 flores.
+            correta de nectar, mas apenas coletará de 4 flores.
         markdown: |+
           Ah! O uso de laços de repetição `para` deixam esse desafio muito mais fácil!
 
@@ -7527,14 +7538,22 @@ pt-BR:
             polígono".
         questions:
         - text: O que acontecerá quando você pressionar o botão "Executar"?
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: |2-
+
+          Pesquisa aos estudantes ao final do curso do CS Discoveries
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
-        markdown: "# CS Descobertas Pesquisa pós-curso \n\n** A sua entrada e feedback
-          é importante para nós! ** Usamos para:\n\n* entenda sua experiência\n* fazer
-          melhorias no curso\n\nObrigado por dedicar um tempo para ajudar a tornar
-          os CS Descobertas ainda melhores!\n\n<a class=\"btn btn-large btn-success\"
+        markdown: "# CS Descobertas de Pesquisa pós-curso \n\n** A sua entrada e feedback
+          é importante para nós! ** Usamos para:\n\n* entender sua experiência\n*
+          fazer melhorias no curso\n\nObrigado por dedicar um tempo para ajudar a
+          tornar os CS Descobertas ainda melhores!\n\n<a class=\"btn btn-large btn-success\"
           href=\"/s/csd-post-survey-2018/stage/1/puzzle/1/page/1\" target=\"top\">
           Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+      csd-post-survey-levelgroup-2018:
+        title: |2-
+
+          Pesquisa aos estudantes ao final do curso do CS Discoveries
       csd-pre-survey-2017-levelgroup:
         markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
           de folha de alumínio que suportarão tantos centavos quanto for possível.
@@ -7543,6 +7562,8 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
+        title: Pesquisa rápida de Descobertas de CC!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.

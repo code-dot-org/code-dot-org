@@ -153,6 +153,9 @@ hu-HU:
         oldala 20 képponttal nagyobb, mint az előző háromszögé. '
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
         hogy ezt kapd!
+      Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot,
+        hogy megtudd, virág van-e a felhő alatt. \nCsak akkor gyűjts nektárt, ha tényleg
+        virágot találsz."
       Course 4 Bee 2: Használd a "ha/különben" blokkot, és ellenőrizd, hogy egy virágnál
         vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts egy nektárt, különben
         pedig készíts mézet!
@@ -165,6 +168,8 @@ hu-HU:
       Course 4 EC 2c: Nincsenek szabályok. Nincsenek tippek. Csak a kihívás!
       Course 4 Maze 2: Kerüld el a TNT-t!
       Course 4 Maze 3: 'Programozd be a dühös madarat, hogy eljusson a malacig. '
+      Course 4 Maze 4: Próbáld ki az "ismételd" blokkot, és használj kevesebb blokkot
+        a feladvány megoldásához...
       Course 4 Maze 5: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk
         felhasználásával?
       Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
@@ -629,6 +634,10 @@ hu-HU:
       courseA_collector_loops2_2019: Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a gyűjtőblokkot.
       courseA_maze_seq2: Változtasd meg a kódot, hogy elkapjam a malacot!
+      courseA_playLab_events1_2019: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
+        és nézd meg, mi történik!
+      courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
+        there". Tudsz segíteni neki?
       courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
         egy matricát. '
       courseC_artist_prog5: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
@@ -693,6 +702,14 @@ hu-HU:
       courseD_maze_nestedLoops6: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6_2018: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6_2019: Juttass el a napraforgóhoz!
+      courseD_maze_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és csatold
+        a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2018: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2019: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
+        csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseE_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
         nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel
         rövidebb, mint a négyzet oldala.'

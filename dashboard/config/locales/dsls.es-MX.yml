@@ -1608,9 +1608,9 @@ es-MX:
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
-          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
@@ -2389,6 +2389,16 @@ es-MX:
 
           </div>
 
+      EnvelopeVariables-Unplugged:
+        markdown: |
+          # Variables cubiertas
+
+          Variables permiten mucha libertad en ciencia de la computación. Esta lección ayuda a explicar qué son variables y cómo podemos usarlas en muchas maneras diferentes.
+      ForLoopFun-Unplugged:
+        markdown: |
+          # Por el Divertido de Loop
+
+          Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
       GoingPlacesSafely-unplugged:
         markdown: |
           # Ir a lugares con seguridad
@@ -2520,6 +2530,11 @@ es-MX:
 
 
           <a class="btn btn-large btn-primary next-stage submitButton">Continuar</a>
+      Internet-Unplugged:
+        markdown: |
+          # El Internet
+
+          Construye tu propio Internet en la clase sólo usando pedazos de papel.
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
