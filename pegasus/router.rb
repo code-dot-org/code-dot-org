@@ -1,5 +1,6 @@
 require_relative 'src/env'
 require 'rack'
+require 'cdo/pegasus/actionview_sinatra'
 require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'sinatra/verbs'
@@ -110,13 +111,6 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
-    set :markdown,
-      renderer: ::TextRender::MarkdownEngine::HTMLWithDivBrackets,
-      autolink: true,
-      tables: true,
-      space_after_headers: true,
-      fenced_code_blocks: true,
-      lax_spacing: true
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
@@ -161,6 +155,27 @@ class Documents < Sinatra::Base
         base = settings.configs[base][:base]
       end
     end
+
+    @actionview ||= begin
+      ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+      ActionViewSinatra::Base.new(
+        [
+          pegasus_dir('sites.v3/code.org/views'),
+          pegasus_dir("../shared/haml")
+        ]
+      )
+    end
+
+    view_assigns = {}
+    instance_variables.each do |name|
+      view_assigns[name[1..-1]] = instance_variable_get(name)
+    end
+    @actionview.assign(view_assigns)
+    @actionview.instance_variable_set("@_request", request)
+  end
+
+  def _prefixes
+    []
   end
 
   # Language selection
@@ -254,14 +269,14 @@ class Documents < Sinatra::Base
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join('')})
+      body render_template(template, {body: body.join('').html_safe})
     end
 
     theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join('')})
+      body render_template(template, {body: body.join('').html_safe})
     end
   end
 
@@ -363,10 +378,6 @@ class Documents < Sinatra::Base
         rescue
           ''
         end
-    end
-
-    def preprocess_markdown(markdown_content)
-      markdown_content.gsub(/```/, "```\n")
     end
 
     def resolve_static(subdir, uri)
@@ -492,10 +503,8 @@ class Documents < Sinatra::Base
       result = body
       extensions.reverse.each do |extension|
         case extension
-        when '.erb', '.html'
-          result = erb result, options
-        when '.haml'
-          result = haml result, options
+        when '.erb', '.html', '.haml', '.md'
+          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
@@ -506,9 +515,6 @@ class Documents < Sinatra::Base
 
           cache :static
           result = send_file(cache_file)
-        when '.md'
-          preprocessed = preprocess_markdown result
-          result = markdown preprocessed, options
         when '.partial'
           result = render_partials(result)
         when '.redirect', '.moved', '.301'
