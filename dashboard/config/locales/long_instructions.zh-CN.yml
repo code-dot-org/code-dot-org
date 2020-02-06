@@ -668,7 +668,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 Debugging 4_2018: |-
         # 格式
@@ -713,7 +713,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 Debugging 4_2019: |-
         # 格式
@@ -758,7 +758,7 @@ zh-CN:
         -   通过添加新行和缩进来让代码更易阅读。
         -   修复所有的缺陷，让这个页面和下面的目标页面一致。
 
-        ![](<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13
+        \!\[](\<<https://images.code.org/7e194db101f71235340fc075bf09776c-image-1508777739384.46.13>
         AM.png>)
       CSD U2 HTML Adding Paragraphs: "# 添加文本到正文中\n\n当你开始任何新的网络实验室项目时，它会自动添加\n`<!DOCTYPE>`,
         `<html>`, `<head>`, 和 `<body>` 标签到这个项目里。当你需要在其中添加自己的内容时，所有内容都要在`<body>`\n和
@@ -1459,6 +1459,41 @@ zh-CN:
       CSD U2 Project Start_2019: "# 开始你的项目\n\n现在你计划好要如何设计你的个人网页，就可以在这里开始了。不要担心如果你无法做完你所要的一切。
         在你学到更多关于网页开发的知识后，你有足够的机会可以改善你的作业。 \n\n# \n\n这样做\n\n-   使用HTML来创建你计划的页面。 请确保它含：\n-
         \  至少\\*_两个不同大小的标头_\n-   至少**一个段落**\n-   比对你的草图，**反想**你做出的网页，并把它给你的伙伴看。"
+      CSD U2 RGB intro: |-
+        # RGB 颜色
+
+        所有的颜色，不管它们有没有名字，都可以用不同程度的红、绿、蓝色光混合起来显示。这叫做 RGB 值（这是 Red-Green-Blue，也就是红-绿-蓝的简称）。可以用左边的小组件来试试不同的 RGB 值，看看能做出什么样的颜色。
+
+        -   **点击 "运行" 来使用左边的小部件，** 并用滑动条来改变红、绿、蓝光的程度。
+        -   对下面的每个颜色，匹配它们的 RGB 值。
+
+        A) 红: 216, 绿: 191, 蓝: 216 - rgb(216,191,216)
+
+        B) 红: 255, 绿: 239, 蓝: 213 - rgb(255,239,213)
+
+        C) 红: 250, 绿:128, 蓝: 114 - rgb(250,128,114)
+
+        D) 红: 70, 绿: 130, 蓝: 180 - rgb(70, 130, 180)
+
+        E) 红: 107, 绿: 142, 蓝: 35 - rgb(107,142,35)
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>为什么红色和绿色能组合出黄色？</strong></summary>
+
+        用颜料画画时，红色和绿色可混合出棕色，但 RGB 是将光混合起来，而不是颜料的反光，因此混合起来的颜色是不同的。RGB 用 _加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色。当将这三个三原色（红绿蓝）混合到一起，就会出现白色。阅读了解更多 <a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">Wikipedia - 加色法</a>
+
+        </details>
+        <details>
+        <summary><strong>RGB 能组合出多少种颜色？</strong></summary>
+
+        <p>
+        RGB 大概能组合出一千六百万种不同的颜色。</p>
+
+        </details>
+        </div>
       CSD U2 RGB intro_2018: |-
         # RGB（红绿蓝）颜色
 
@@ -1610,6 +1645,31 @@ zh-CN:
 
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
         </div>
+      CSD U2 RGB summer: |-
+        # 夏天的颜色
+
+        找到夏天黄色的Find the RGB values for a summery yellow color.
+
+        -   点击 "运行" 启动小组件。
+        -   在小组件下方调节级别，直到调出夏季的黄色。
+        -   在活动指南上写下 RGB 值。在下一个活动中还需要它们。
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>为什么红色和绿色能组合出黄色？</strong></summary>
+
+        用颜料画画时，红色和绿色可混合出棕色，但 RGB 是将光混合起来，而不是颜料的反光，因此混合起来的颜色是不同的。RGB 用 _加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色。当将这三个三原色（红绿蓝）混合到一起，就会出现白色。阅读了解更多 <a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">Wikipedia - 加色法</a>
+
+        </details>
+        <details>
+        <summary><strong>RGB 能组合出多少种颜色？</strong></summary>
+
+        <p>RGB 大概能组合出一千六百万种不同的颜色。</p>
+
+        </details>
+        </div>
       CSD U2 RGB summer_2018: |-
         # 夏天的颜色
 
@@ -1655,6 +1715,34 @@ zh-CN:
         <strong>**我能用RGB组合出多少种颜色？**</strong>
         </summary>
         <p>用RGB大概能组合出一千六百万种不同的颜色。</p></details>
+        </div>
+      CSD U2 RGB winter: |-
+        # 冬天的颜色
+
+        在接下来的几关中，要为网站找到各个季节的颜色。这里，需要找到冬季寒冷蓝色的 RGB 值。
+
+        -   点击 "运行" 启动小组件。
+        -   在小组件下方调节级别，直到符合冬季的蓝色。
+        -   在活动指南上写下 RGB 值。在下一个活动中还需要它们。
+
+        <div style="font-size: 16px">
+        <br />
+        <details>
+
+        <summary><strong>如何让颜色变浅？</strong></summary>
+        <p>要让颜色变浅，需要更亮，（调整滑动条的位置）。如果已经到达蓝色亮度的最大值，需要加一些红色和绿色让蓝色变得浅一些。</p></details>
+        <details>
+        <summary><strong>为什么红色和绿色能组合出黄色？</strong></summary>
+
+        用颜料画画时，红色和绿色可混合出棕色，但 RGB 是将光混合起来，而不是颜料的反光，因此混合起来的颜色是不同的。RGB 用 _加色法混合_。在加色法混合中，红色和绿色混合出黄色，红色和蓝色混合出紫红色，而蓝和绿混合出青色。当将这三个三原色（红绿蓝）混合到一起，就会出现白色。阅读了解更多 <a href="https://zh.wikipedia.org/wiki/%E5%8A%A0%E8%89%B2%E6%B3%95">Wikipedia - 加色法</a>
+
+        </details>
+        <details>
+        <summary><strong>RGB 能组合出多少种颜色？</strong></summary>
+
+        <p>RGB 大概能组合出一千六百万种不同的颜色。</p>
+
+        </details>
         </div>
       CSD U2 RGB winter_2018: |-
         # 冬天的颜色
@@ -2368,6 +2456,69 @@ zh-CN:
             target="_new">课程9关卡4</a>.
         -   确保每个页面的底部都有一个页脚，解释了你页面的版权信息。
             (浏览<a href="https://creativecommons.org/choose/" target="_new">知识共享</a> 获得创建这个HTMl的帮助。)
+      CSD U2 layout style bgcolor: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>代码如何起作用的？</strong></summary>
+
+        这是让页面背景是蓝色的代码：
+
+        <pre>body {
+          background-color: lightblue;
+        }</pre>
+
+        -   `body` 是 _选择器_，指定了哪些元素会遵循花括号中的规则。在这里， body 元素表示整个页面。
+        -   `background-color: lightblue;` 是将整个页面变为浅蓝色的规则。
+            -   `background-color` 是 _属性_。它表示这是什么规则，在这里是设置背景颜色。
+            -   `lightblue` 是 _值_。它表示这条规则如何起作用，在这里会让背景成为浅蓝色。
+                </details>
+                <details>
+                <summary><strong>在 CSS 中能使用什么颜色？</strong></summary>
+
+        CSS 包括了大多数常用颜色的名称 (red - 红, blue - 蓝, green - 绿, 等等.), 还有一些不常用的。可以在这里找到所有 CSS 颜色名称的列表 <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML 颜色名称</a>。如果颜色的名字没有列出来，也可以通过 RGB 值来使用。阅读这篇了解如何在 CSS 里使用颜色：<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS 合法的颜色值</a>
+
+        </details>
+        <details>
+        <summary><strong>`background-color` 属性会做什么？</strong></summary>
+
+        `background-color` 属性决定了元素背景的颜色。可阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_background-color.asp">W3Schools - CSS background-color 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>如果页面中某个元素的背景颜色与 body 不同会怎样？</strong></summary>
+
+        可以试试为 `p` 标签添加 `background-color` 规则来寻找答案。段落会使用 `p` 标签上设置的背景颜色规则，页面其它部分会遵循 `body` 标签中的规则。
+
+        </details>
+        <details>
+        <summary><strong>什么是样式表？</strong></summary>
+
+        样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+
+        </details>
+        <details>
+        <summary><strong>什么是 CSS？</strong></summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+        </div>
+
+        # 背景颜色
+
+        -   找到样式表中让整个页面背景是浅蓝色的代码。
+        -   修改代码让页面变成不同的颜色。
+        -   试试只改变段落的背景颜色。
       CSD U2 layout style bgcolor_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -2504,6 +2655,73 @@ zh-CN:
         -   在岩石表中找到让整个页面背景是蓝色的代码。
         -   改动代码，让页面成为不同的颜色。
         -   试着只改动这些段落的背景颜色。
+      CSD U2 layout style body: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
+        <details>
+
+        <summary><strong>`body` 选择器会做什么？</strong></summary>
+
+        因为网页的所有内容都在 `body` 标签里，body 选择器会将规则集应用到网页中所有元素上。
+
+        </details>
+        <details>
+        <summary><strong>`color` 属性会做什么？</strong></summary>
+
+        `color` 属性指定了文本的颜色。如果没有文本，不会有任何改变。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_text_color.asp"> W3Schools - CSS color 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`text-align` 属性会做什么？</strong></summary>
+
+        `text-align` 属性将文本向左、右或中间对齐。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`text-decoration` 属性会做什么？</strong></summary>
+
+        `text-decoration` 属性将一条线放在文字的上面、下面或中间。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`font-family` 属性会做什么？</strong></summary>
+
+        `font-family` 属性改变文字的字体。它会指定使用什么字体，每个字体都有些不同。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_font_font-family.asp">W3chools - CSS font-family 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`font-size` 属性会做什么？</strong></summary>
+
+        `font-size` 属性改变文字的大小。可使用一般的词汇，如 `small`, `medium`, 以及 `large`，也可以指定精确的像素大小，如 `20px`。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_font_font-size.asp">W3Schools - CSS font-size 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>什么是样式表？</strong></summary>
+
+        样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+
+        </details>
+        <details>
+        <summary><strong>什么是 CSS？</strong></summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+        </div>
+
+        # body 元素
+
+        -   找到样式表中的 `body` 规则集
+        -   与伙伴讨论，如果添加了 `text-align`, `color` 或其它文本属性到 `body` 规则集会发生什么。
+        -   试试一些别的属性来验证猜测。
       CSD U2 layout style body_2018: |-
         <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -2622,6 +2840,57 @@ zh-CN:
         -   在样式表中找到`body`规则集。
         -   和同伴讨论若在`body`规则集中添加`text-align`，`color`或其他文本属性会发生什么。
         -   尝试其他属性来检验你的猜测。
+      CSD U2 layout style border: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>在 CSS 中能使用什么颜色？</strong></summary>
+
+        CSS 包括了大多数常用颜色的名称 (red - 红, blue - 蓝, green - 绿, 等等.), 还有一些不常用的。可以在这里找到所有 CSS 颜色名称的列表 <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML 颜色名称</a>。如果颜色的名字没有列出来，也可以通过 RGB 值来使用。阅读这篇了解如何在 CSS 里使用颜色：<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS 合法的颜色值</a>
+
+        </details>
+        <details>
+        <summary><strong>代码是如何起作用的？</strong></summary>
+
+        这是产生图片边框的代码：
+
+        <pre>img {
+          border-color: saddlebrown;
+          border-width: 4px;
+          border-style: solid;
+          border-radius: 10px;
+        }</pre>
+
+        -   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。
+        -   `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, 和 `border-radius: 10px;` 是产生边框的规则。
+            </details>
+            <details>
+            <summary><strong><code>border-style</code> 属性会做什么？</strong></summary>
+
+        `border-style` 属性决定了元素的边框类型 (solid, dotted, 等等)。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style 属性</a>
+
+        </details>
+        <details>
+        <summary><strong><code>border-radius</code> 属性会做什么？</strong></summary>
+
+        `border-radius` 属性决定了元素角的圆弧半径。大的半径值会有更大的、更圆的圆弧，小的半径值会有更小、更尖的圆弧。半径值 0 表示正常的直角。阅读了解更多 <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius 属性</a>
+
+        </details>
+        <details>
+        <summary><strong><code>float</code> 属性会做什么？</strong></summary>
+
+        `float` 属性会让元素 "浮动"，这表示在其后面的元素都会浮动在它周围。如果 `float` 的值是 `left`，元素会向左浮动，它后面的元素都会显示在它的右边。如果 `float` 是 `right`，元素会向右浮动，后面的元素都会显示在它左边。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>
+
+        </details>
+        </div>
+
+        # 边框
+
+        -   找到样式表中设置图片边框颜色和宽度的规则。
+        -   改变边框的颜色和宽度。
+        -   试试不同的边框风格。
+            -   从 `dotted`, `dashed`, `solid`, 和 `double` 中选择
+        -   为另一种页面元素添加边框，例如标头或段落。
       CSD U2 layout style border_2018: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -2727,6 +2996,232 @@ zh-CN:
         -   试试不同的边框样式。
         -   从`dotted`, `dashed`, `solid`, 和`double`中选择。
         -   将边框应用到另一种页面元素上，比如某个标题或段落。
+      CSD U2 layout style borderradius: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>代码是如何起作用的？</strong></summary>
+
+        这是产生图片边框的代码：
+
+        <pre>img {
+          border-color: saddlebrown;
+          border-width: 4px;
+          border-style: solid;
+          border-radius: 10px;
+        }</pre>
+
+        -   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。
+        -   `border-color: saddlebrown;`,`border-width: 4px;`,`border-style: solid;`, 和 `border-radius: 10px;` 是产生边框的规则。
+            </details>
+            <details>
+            <summary><strong>`border-style` 属性会做什么？</strong>
+            </summary>
+
+        `border-style` 属性决定了元素的边框类型 (solid, dotted, 等等)。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style 属性</a>
+
+        </details>
+        <details>
+        <summary><strong><code>border-radius</code>code> 属性会做什么？</strong>
+
+        </summary>
+
+        `border-radius` 属性决定了元素角的圆弧半径。大的半径值会有更大的、更圆的圆弧，小的半径值会有更小、更尖的圆弧。半径值 0 表示正常的直角。阅读了解更多 <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius 属性</a>
+
+        </details>
+        <details>
+        <summary><strong><code>float</code> 属性会做什么？</strong>
+        </summary>
+
+        `float` 属性会让元素 "浮动"，这表示在其后面的元素都会浮动在它周围。如果 `float` 的值是 `left`，元素会向左浮动，它后面的元素都会显示在它的右边。如果 `float` 是 `right`，元素会向右浮动，后面的元素都会显示在它左边。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>
+
+        </details>
+        </div>
+
+        # 边框半径
+
+        -   看看 `img` 规则集中的 `border-radius` 属性
+        -   与伙伴讨论这个属性的作用。
+        -   试试不同的半径值，看看最喜欢哪个。
+      CSD U2 layout style float: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary><strong>代码是如何起作用的？</strong></summary>
+
+        这是让图片浮动在页面左边的代码：
+
+        <pre>img {
+          float: left;
+        }</pre>
+
+        -   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。
+        -   `float: left;` 是让图片浮动到左边的规则。
+            </details>
+            <details>
+            <summary><strong><code>float</code> 属性会做什么？</strong></summary>
+
+        `float` 属性会让元素 "浮动"，这表示在其后面的元素都会浮动在它周围。如果 `float` 的值是 `left`，元素会向左浮动，它后面的元素都会显示在它的右边。如果 `float` 是 `right`，元素会向右浮动，后面的元素都会显示在它左边。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>
+
+        </details>
+        </div>
+
+        # 浮动
+
+        -   看看 `img` 规则集中的 `float` 属性
+        -   与伙伴讨论，思考一下这个属性做了什么。
+        -   将值从 `left` 改为 `right`。
+      CSD U2 layout style float_2018: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+
+        <details>
+
+        <summary><strong>代码是如何起作用的？</strong></summary>
+
+        这是让图片浮动在页面左边的代码：
+
+        <pre>img {
+          float: left;
+        }</pre>
+
+        -   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。
+        -   `float: left;` 是让图片浮动到左边的规则。
+            </details>
+            <details>
+            <summary><strong><code>float</code> 属性会做什么？</strong></summary>
+
+        `float` 属性会让元素 "浮动"，这表示在其后面的元素都会浮动在它周围。如果 `float` 的值是 `left`，元素会向左浮动，它后面的元素都会显示在它的右边。如果 `float` 是 `right`，元素会向右浮动，后面的元素都会显示在它左边。阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_class_float.asp" target="_new">W3Schools - CSS float 属性</a>
+
+        </details>
+        </div>
+
+        # 浮动
+
+        -   看看 `img` 规则集中的 `float` 属性
+        -   与伙伴讨论，思考一下这个属性做了什么。
+        -   将值从 `left` 改为 `right`。
+      CSD U2 layout style freeplay: |-
+        # 个人网站
+
+        在个人网站上试试新的 CSS 属性。
+
+        -   将选择的样式添加到网站上。确保至少选择了三种新的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+
+            -   `background-color`
+            -   `height`
+            -   `width`
+            -   `border-style`
+            -   `border-radius`
+            -   `border-width`
+            -   `float`
+            -   `margin`
+
+        当然可以使用更多种类！探索其它 CSS 属性，将它们加到页面中。
+      CSD U2 layout style freeplay_2018: |-
+        # 个人网站
+
+        在个人网站上试试新的 CSS 属性。
+
+        -   将选择的样式添加到网站上。确保至少选择了三种新的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+
+            -   `background-color`
+            -   `height`
+            -   `width`
+            -   `border-style`
+            -   `border-radius`
+            -   `border-width`
+            -   `float`
+            -   `margin`
+
+        当然可以使用更多种类！探索其它 CSS 属性，将它们加到页面中。
+      CSD U2 layout style freeplay_2019: |-
+        # 个人网站
+
+        在个人网站上试试新的 CSS 属性。
+
+        -   将选择的样式添加到网站上。确保至少选择了三种新的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+
+            -   `background-color`
+            -   `height`
+            -   `width`
+            -   `border-style`
+            -   `border-radius`
+            -   `border-width`
+            -   `float`
+            -   `margin`
+
+        当然可以使用更多种类！探索其它 CSS 属性，将它们加到页面中。
+      CSD U2 layout style margin: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>代码是如何起作用的？</strong></summary>\n\n这是在图片周围添加额外空间的代码：\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。\n-
+        \  `margin: 10px;` 是在图片周围添加 10 像素空间的规则。\n    </details>\n    <details>\n    <summary><strong>`margin`
+        属性会做什么？</strong></summary>\n\n`margin` 属性决定了图片周围有多大的空白空间。大多数情况下，都用像素来定义边距。阅读更多内容
+        <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\">W3Schools - CSS
+        margin Property</a>\n\n</details>\n<details>\n<summary><strong>`px` 是什么意思？什么是像素？</strong></summary>\n\n像素（Pixel）的缩写是
+        `px`，在 CSS 里用来描述元素大小。它是屏幕上单个发光点的大小。\n\n</details>\n</div>\n\n# 边距\n\n边距指定了围绕一个元素的空白空间。\n\n-
+        \  找到 `img` 规则集中的 `margin` 属性。\n-   将边距改大，并与伙伴讨论一下改动的影响。\n-   再选择另一种元素类型，并设置边距。"
+      CSD U2 layout style margin_2018: "<div style=\"float: right; height: 250px;
+        width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary>\n<strong>代码是如何起作用的？</strong>\n</summary>\n这是在图片周围添加额外空间的代码：\n\n<pre>img
+        {\n\tmargin: 10px;\n}</pre>\n\n-   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。\n\n-
+        \  `margin: 10px;` 是在图片周围添加 10 像素空间的规则。\n    </details>\n    <details>\n    <summary>\n
+        \   <strong>`margin` 属性会做什么？</strong>\n    </summary>\n\n`margin` 属性决定了图片周围有多大的空白空间。大多数情况下，都用像素来定义边距。阅读更多内容
+        <a href=\"http://www.w3schools.com/cssref/pr_margin.asp\" target=\"_new\">W3Schools
+        - CSS margin Property</a>\n\n</details>\n<details>\n<summary>\n<strong>`px`
+        是什么意思？什么是像素？</strong>\n</summary>\n\n像素（Pixel）的缩写是 `px`，在 CSS 里用来描述元素大小。它是屏幕上单个发光点的大小。\n\n</details>\n</div>\n\n#
+        边距\n\n边距指定了围绕一个元素的空白空间。\n\n-   找到 `img` 规则集中的 `margin` 属性。\n-   将边距改大，并与伙伴讨论一下改动的影响。\n-
+        \  再选择另一种元素类型，并设置边距。"
+      CSD U2 layout style sample: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>`body` 选择器会做什么？</strong></summary>
+
+        因为网页的所有内容都在 `body` 标签里，body 选择器会将规则集应用到网页中所有元素上。
+
+        </details>
+        <details>
+        <summary><strong>`border-style` 属性会做什么？</strong></summary>
+
+        `border-style` 属性决定了元素的边框的类型 (solid, dotted, dashed, 等)。可阅读此属性的更多信息 <a href="http://www.w3schools.com/cssref/pr_border-style.asp">W3Schools - CSS border-style 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`border-radius` 属性会做什么？</strong></summary>
+
+        `border-radius` 属性决定了元素角的圆弧半径。大的半径值会有更大的、更圆的圆弧，小的半径值会有更小、更尖的圆弧。半径值 0 表示正常的直角。阅读这里了解更多 <a href="http://www.w3schools.com/cssref/css3_pr_border-radius.asp">W3Schools - CSS3 border-radius 属性</a>
+
+        </details>
+        <details>
+        <summary><strong>`float` 属性会做什么？</strong></summary>
+
+        `float` 属性会让元素 "浮动"，这表示在其后面的元素都会浮动在它周围。如果 `float` 的值是 `left`，元素会向左浮动，它后面的元素都会显示在它的右边。如果 `float` 是 `right`，元素会向右浮动，后面的元素都会显示在它左边。可阅读了解更多 <a href="http://www.w3schools.com/cssref/pr_class_float.asp">W3Schools - CSS float 属性</a>
+
+        </details>
+        </div>
+
+        # 布局和样式
+
+        -   看看下面网页中的新样式。
+        -   打开样式表
+        -   与伙伴一起讨论一下，你认为 CSS 代码中的哪部分让页面显得不同。
+            -   哪部分让整个页面变成了蓝色？
+            -   这些图片怎样出现在所有其它元素的左边的？
+            -   是什么让图片角变圆的？
+
+        在接下来的几关中，会在这个页面中改变并添加新样式。
       CSD U2 layout style sample_2018: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -2809,6 +3304,20 @@ zh-CN:
         -   什么让图片的角是圆的？
 
         在下一关中，你会更改并添加这个页面中的新样式。
+      CSD U2 layout style width: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\" markdown=\"1\">\n<details>\n\n<summary><strong>代码是如何起作用的？</strong></summary>\n这是调整图片显示大小的代码：\n\n<pre>img
+        {\n\twidth: 250px;\n}</pre>\n\n-   `img` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。在这里是图片。\n-
+        \  `width: 250px` 是让图片为 250 像素宽的规则。它会同时改变图片的高度，以免图片拉伸变形。\n    </details>\n
+        \   <details>\n    <summary><strong>`width` 属性会做什么？</strong></summary>\n\n`width`
+        属性决定了图片元素会有多宽。大部分情况下，宽度的单位是像素，这会控制图片在屏幕上显示的精确大小。如果定义宽度时，没有定义高度，那么也会同时改变图片的高度，这样图片就不会被拉伸。阅读更多内容
+        <a href=\"http://www.w3schools.com/cssref/pr_dim_width.asp\">W3Schools - CSS
+        width 属性</a>\n\n</details>\n<details>\n<summary><strong>`height` 属性会做什么？</strong></summary>\n\n`height`
+        \ 属性决定了图片元素会有多高。大部分情况下，高度的单位是像素，这会控制图片在屏幕上显示的精确大小。如果定义高度时，没有定义宽度，那么也会同时改变图片的宽度，这样图片就不会被拉伸。阅读更多内容
+        <a href=\"http://www.w3schools.com/cssref/pr_dim_height.asp\">W3Schools -
+        CSS width 属性</a>\n\n</details>\n<details>\n<summary><strong>`px` 是什么意思？什么是像素？</strong></summary>\n\n像素（Pixel）的缩写是
+        `px`，在 CSS 里用来描述元素大小。它是屏幕上单个发光点的大小。\n\n</details>\n<details>\n<summary><strong>为什么同时使用宽度或高度规则时，有时图片会被拉伸变形？</strong></summary>\n\n当图片宽度变化时，高度必须以同样的百分比变化，否则图片就会被拉伸。例如，如果将图片宽度设置为原先的两倍，也必须把图片的高度设为原先的两倍，否则图片就会被水平拉伸。如果只指定了宽度或高度，计算机会自动修改另一个属性，以便能正常比例显示。\n\n</details>\n</div>\n\n#
+        宽度和高度\n\n-   找到样式表中控制图片宽度的属性。\n-   将图片的宽度改大或改小。\n-   用 `height` 属性创建一条新规则来控制图片的高度。\n-
+        \  在 `p` 规则集中使用 `width` 属性来改变段落的宽度。"
       CSD U2 link demo: |-
         # 制作多个网页的网站
 
@@ -3271,7 +3780,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
+        通过点击 \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3286,7 +3795,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
+        通过点击 \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3301,7 +3810,7 @@ zh-CN:
         # 这样做
 
         \*
-        通过点击 ![](<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38
+        通过点击 \!\[](\<<https://images.code.org/9b9f9f78962ef77664333d1b0f762ff1-image-1493252448756.19.38>
         PM.png>)添加一个新页面。新页面会出现在左边工作区中的文件列表里。
 
         -   通过右击它或者选择"重命名"来给它重新命名。**确保这个文件名是唯一的，有描述性的，并以".html"结尾**.
@@ -3394,7 +3903,7 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
+            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
       CSD U2 project share_2018: |-
@@ -3405,7 +3914,7 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
+            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
       CSD U2 project share_2019: |-
@@ -3416,9 +3925,62 @@ zh-CN:
         # 这样做
 
         -   点击页面最上面的
-            ![](<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27
+            \!\[](\<<https://images.code.org/26bcf1645e18ac064cf0631fb5ca023c-image-1493744000091.52.27>
             AM.png>)按钮
         -   复制获得的链接，并发给你想要分享的人。
+      CSD U2 text style decoration: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>代码如何起作用的？</strong></summary>
+        这是让 `h1` 标签元素有下划线的代码：
+
+        <pre>h1 {
+          text-decoration: underline;
+        }</pre>
+
+        -   `h1` 是 _选择器_.  指定了哪些元素会遵循花括号中的规则。`h1` 表示 1 号标头。
+        -   `text-decoration: underline;` 是让 `h1` 标签内文字有下划线的规则。
+            -   `text-decoration` 是 _属性_。它表示这是什么的规则。在这里，表示是文本修饰。
+            -   `underline` 是 _值_。它表示这条规则如何起作用，在这里表示让文本有下划线。
+                </details>
+                <details>
+                <summary><strong>文本修饰可以有哪些值？</strong></summary>
+                可从 "underline", "overline", 和 "line-through" 中选择。了解更多 text-decoration 属性，可阅读 <a href="http://www.w3schools.com/cssref/pr_text_text-decoration.asp">W3Schools - CSS text-decoration 属性</a>。
+                </details>
+                <details>
+                <summary><strong>为什么需要所有的标点符号？</strong></summary>
+
+        这些标点，例如花括号 `{}`，冒号 `:`, 以及分号 `;`，帮计算机理解样式表中的规则。花括号容纳了某个选择器的所有规则。每条规则都应该以分号结束，属性和值之间用冒号隔开。
+
+        </details>
+        <details>
+        <summary><strong>什么是样式表？</strong></summary>
+        样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+        </details>
+        <details>
+        <summary><strong>什么是 CSS?</strong></summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+        </div>
+
+        # 下划线
+
+        -   找到样式表中让 h1 标签有下划线的代码。
+        -   改变文本的修饰，看看最喜欢下面哪个
+            -   从 "underline", "overline", 和 "line-through" 中选择一个
+        -   为段落或 h3 标签添加一个文本修饰规则。
       CSD U2 text style decoration_2018: "<div style=\"float:\nright; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n**这些代码是如何起作用的？**\n\n</summary>\n这是让`h1`元素有下划线的代码：\n\n<pre>h1
         {\n  text-decoration:\nunderline;\n}</pre>\n\n-   `h1`是_选择器_。它指定了哪些元素要使用花括号里的规则。这里的`p`表示段落（paragraph）。\n-
@@ -3447,6 +4009,65 @@ zh-CN:
         cursive;\n</pre>\n\n在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。
         \n\n</details>\n</div>\n# 下划线\n\n-   找到样式表中，让h1标签有下划线的代码。\n-   改动文本修饰，选择一个你喜欢的值。\n-
         \  从\"underline\"，\"overline\"，和\"line-through\"中选一个。\n-   为段落或h3标签添加一个文本修饰规则。"
+      CSD U2 text style font family: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>代码如何起作用的？</strong></summary>
+
+        这是控制段落字体的代码：
+
+        <pre>p {
+          font-family: cursive;
+        }</pre>
+
+        -   `p` 是 _选择器_.  指定了哪些元素会遵循花括号中的规则。`p` 表示段落。
+        -   `font-family: cursive;` 是让 `p` 标签中的文字使用某种字体的规则。
+            -   `font-family` 是 _属性_。它表示这是什么规则，在这里是字体。
+            -   `cursive` 是 _值_。它表示这条规则如何起作用，这里将文本设为草书。
+
+        </details>
+        <details>
+        <summary><strong>字体可以使用什么值？</strong></summary>
+
+        可在 "serif", "sans-serif", "cursive", "fantasy", 以及 "monospace" 中进行选择。也可以试试这里的一些特殊字体 <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">W3Schools - CSS 网页安全的字体组合</a>
+
+        </details>
+        <details>
+        <summary><strong>为什么需要所有的标点符号？</strong></summary>
+
+        这些标点，例如花括号 `{}`，冒号 `:`, 以及分号 `;`，帮计算机理解样式表中的规则。花括号容纳了某个选择器的所有规则。每条规则都应该以分号结束，属性和值之间用冒号隔开。
+
+        </details>
+        <details>
+        <summary><strong>什么是样式表？</strong></summary>
+
+        样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+
+        </details>
+        <details>
+        <summary><strong>什么是 CSS？</strong></summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+        </div>
+
+        # 改变字体
+
+        -   在 CSS 中找到决定段落标签样式的规则集。
+        -   改变字体，从其中选择自己最喜欢的。
+            -   从 "serif", "sans-serif", "cursive", "fantasy", 和 "monospace" 中选择。
+        -   为 h1 或 h3 标签添加字体规则。
       CSD U2 text style font family_2018: "<div style=\"float:\nright; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n\n<summary>\n<strong>这些代码是如何起作用的？</strong>\n</summary>\n这是控制段落字体的代码：\n\n<pre>p
         {\n  font-family:\ncursive;\n}</pre>\n\n-   `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\n-
@@ -3473,6 +4094,108 @@ zh-CN:
         cursive;\n</pre>\n\n在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。
         \n\n</details>\n</div>\n\n# 改变字体\n\n-   在样式表中找到决定段落标签样式的CSS规则集。\n-   选择一种最喜欢的字体族，并改变原来的值。\n-
         \  从\"serif\"，\"sans-serif\"，\"cursive\"，\"fantasy\"和\"monospace\"中选择\n-   为h1或h3标签增加一条字体族规则。"
+      CSD U2 text style freeplay: |-
+        # 添加样式
+
+        现在，可以为自己的个人网站文本添加样式了！
+
+        -   打开样式表，并为项目选择样式。确保至少使用了三种不同的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+            -   `font-size`
+            -   `font-family`
+            -   `color`
+            -   `text-decoration`
+            -   `text-align`
+
+        如果已经使用了清单中至少 3 种属性，可试试加一些其它的文本属性到项目中。
+      CSD U2 text style freeplay_2018: |-
+        # 添加样式
+
+        现在，可以为自己的个人网站文本添加样式了！
+
+        -   打开样式表，并为项目选择样式。确保至少使用了三种不同的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+            -   `font-size`
+            -   `font-family`
+            -   `color`
+            -   `text-decoration`
+            -   `text-align`
+
+        如果已经使用了清单中至少 3 种属性，可试试加一些其它的文本属性到项目中。
+      CSD U2 text style freeplay_2019: |-
+        # 添加样式
+
+        现在，可以为自己的个人网站文本添加样式了！
+
+        -   打开样式表，并为项目选择样式。确保至少使用了三种不同的 CSS 属性。
+
+        # 清单
+
+        -   使用下列至少 3 种 CSS 属性：
+            -   `font-size`
+            -   `font-family`
+            -   `color`
+            -   `text-decoration`
+            -   `text-align`
+
+        如果已经使用了清单中至少 3 种属性，可试试加一些其它的文本属性到项目中。
+      CSD U2 text style h1: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary><strong>在 CSS 中能使用什么颜色？</strong></summary>
+        CSS 包括了大多数常用颜色的名称 (red - 红, blue - 蓝, green - 绿, 等等.), 还有一些不常用的。可以在这里找到所有 CSS 颜色名称的列表 <a href="http://www.w3schools.com/colors/colors_names.asp">W3Schools - HTML 颜色名称</a>。如果颜色的名字没有列出来，也可以通过 RGB 值来使用。阅读这篇了解如何在 CSS 里使用颜色：<a href="http://www.w3schools.com/cssref/css_colors_legal.asp">W3Schools - CSS 合法的颜色名称</a>
+        </details><details>
+        <summary><strong>代码是如何起作用的？</strong></summary>
+        这是让 `h1` 标头是红色的代码：
+
+        <pre>h1 {
+          color: red;
+        }</pre>
+
+        -   `h1` 是 _选择器_。它指定了哪些元素会遵循花括号里的规则。
+        -   `color: red;` 这是让 `h1` 标签中文本变红的规则。
+            -   `color` 是 _属性_。它表示这是什么的规则。在这里，表示是文本的颜色。
+            -   `red` 是 _值_。它表示这条规则如何起作用，在这里表示文本是红色。
+                </details>
+                <details>
+                <summary><strong>为什么需要所有的标点符号？</strong></summary>
+                这些标点，例如花括号 `{}`，冒号 `:`, 以及分号 `;`，帮计算机理解样式表中的规则。花括号容纳了某个选择器的所有规则。每条规则都应该以分号结束，属性和值之间用冒号隔开。
+                </details>
+                <details>
+                <summary><strong>什么是样式表？</strong></summary>
+                样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+                </details>
+                <details>
+                <summary><strong>什么是 CSS？</strong></summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        }
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+        </div>
+
+        # CSS 和文本颜色
+
+        这个 HTML 文件使用了样式表 ("style.css") 来指定页面的样式。样式表包含了 HTML 元素显示方式的信息。
+
+        -   找到样式表中 (点击文件列表中的 "style.css")，让 h1 标头为红色的代码。
+        -   将 h1 标头颜色的代码从 `red` 改成不同的颜色。
       CSD U2 text style h1_2018: "<div style=\"float: right;\nheight: 250px; width:
         40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n\n<strong>我能在CSS里使用什么颜色？</strong>\n\n</summary>\nCSS包括了大部分常用的颜色名字（red
         - 红，blue - 蓝， green - 绿，等等），还有很多其它不常用的。你能在<a href=\"http://www.w3schools.com/colors/colors_names.asp\">W3Schools\n-
@@ -3604,6 +4327,88 @@ zh-CN:
         cursive;\n</pre>\n\n在这个例子里， `h2`是个选择器，`color`（颜色）和字体族是属性，`blue` （蓝色）和`cursive`（草书）是这两个属性的值。
         \n\n</details>\n</div>\n\n# 改变字体大小\n\n除了颜色，你能用其它属性控制别的样式。\n\n-   在样式表中找到决定段落样式的规则集.\n-
         \  将段落的文本大小改得更大一些。\n-   在h3标签的规则集中添加一条规则，来让文本变大或变小。"
+      CSD U2 text style text align: |-
+        <div style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
+        <details>
+
+        <summary>
+
+        **代码如何起作用的？**
+
+        </summary>
+        这是控制段落文本对齐的代码：
+
+        <pre>p {
+          text-align: left;
+        }</pre>
+
+        -   `p` 是 _选择器_，指定了哪些元素会遵循花括号中的规则。`p` 表示段落。
+        -   `text-align: left;` 是让 `p` 标签中的文字靠左对齐的规则。
+            -   `text-align` 是 _属性_。它表示这是什么规则，在这里是文本对齐。
+            -   `left` 是 _值_。它表示这条规则如何起作用，这里将段落中的文本向左对齐。
+                </details>
+                <details>
+                <summary>
+
+        **为什么 `text-align: left;` 不起作用？**
+
+        </summary>
+        大多数属性都有默认值。默认值是在使用样式表前，元素自动使用的样式。`text-align` 的默认样式是 `left`，因此它不会改变外观。
+        </details>
+        <details>
+        <summary>
+
+        **文本对齐可以使用什么值？**
+
+        </summary>
+        可从 "left", "right", 和 "center" 中选择。阅读来进一步了解 text-align 属性 <a href="http://www.w3schools.com/cssref/pr_text_text-align.asp">W3Schools - CSS text-align 属性</a>
+        </details>
+        <details>
+        <summary>
+
+        **为什么需要所有的标点符号？**
+
+        </summary>
+        这些标点，例如花括号 `{}`，冒号 `:`, 以及分号 `;`，帮计算机理解样式表中的规则。花括号容纳了某个选择器的所有规则。每条规则都应该以分号结束，属性和值之间用冒号隔开。
+        </details>
+        <details>
+        <summary>
+
+        **什么是样式表？**
+
+        </summary>
+        样式表是控制网页如何显示的文件。外部样式表放在单独的文件中，并连接到 HTML 页面中。
+        </details>
+        <details>
+        <summary>
+
+        **什么是 CSS？**
+
+        </summary>
+
+        CSS 是控制网站中内容如何显示的语言。它用规则集来改变页面的外观。每条规则集都有一个选择器，说明了页面上哪些元素会受其影响。还有一组规则，说明了如何显示元素。每条规则都由属性和值组成。
+
+        这是让 `h2` 标签中文本是蓝色草书的规则集示例：
+
+        <pre>h2 {
+           color: blue;
+           font-family: cursive;
+        </pre>
+
+        本示例中，`h2` 是选择器，`color` 和 `font-family` 是属性，而 `blue` 和 `cursive` 是这些属性的值。
+
+        </details>
+
+        </details>
+        </div>
+
+        # 文本对齐
+
+        `text-align` 属性设置每行中文本的水平 (两边) 的位置。
+
+        -   找到段落标签中的 "text-align" 属性。
+        -   修改段落对齐方式
+            -   从 "left", "right", 和 "center" 中选择
       CSD U2 text style text align_2018: "<div style=\"float:\nright; height: 250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\n<details>\n<summary>\n<strong>这些代码是如何起作用的？</strong>\n</summary>\n这是控制段落文本对齐的代码：\n\n<pre>p\n{\n
         \ text-align: left;\n}</pre>\n\n-   `p`是_选择器_。它指定了什么元素会采用花括号里的规则。`p`的意思是段落（paragraph）。\n-
@@ -3801,13 +4606,13 @@ zh-CN:
         -   将所有图片上传到你的项目中。如果忘了怎么做，就浏览
             <a href="/s/csd2/stage/7/puzzle/5" target="_new">课程 7 关卡 5</a>。
       CSD U3 - Booleans Video: "# 布尔表达式视频"
-      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+      CSD U3 - Simple Counter Predict_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。 \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 - complex - key up and down: |-
@@ -3849,6 +4654,60 @@ zh-CN:
         -   在条件里，给`clicks`变量增加1。
 
         _挑战：你能增加一个精灵图也响应`mouseWentDown`事件吗？增加一张你选择的图片，并在每次鼠标点击时，将它的尺寸放大。_
+      CSD U3 - complex - mouse down: "# 鼠标点击\n\n按键盘非常有用，但有时想让用户通过鼠标点击来交互。叫做 `mouseDown`
+        的新模块与 `keyDown` 相似。可以检测是否按下了了鼠标的左键或右键。如果使用只有一个按钮的鼠标或者触摸板,，只会使用到 `mouseDown(\"left\")`。
+        \n\n# 这样做\n\n这个程序会让气球在屏幕上往下落 - 需要编写程序，来在点击鼠标时，让气球飞上去。\n\n-   为 `mouseDown`
+        添加如果/否则语句。\n-   在条件中，如果按下了鼠标，就将气球向上移动一个像素。否则向下移动气球。\n\n_提示：需要将气球向下的代码移动一下
+        - 只用在 `mouseDown` 是 `false` 时才执行_\n\n_挑战：当气球上升或下降时，能让它随机向左右漂浮吗？_"
+      CSD U3 - complex - mouse down_2018: "# 鼠标点击\n\n按键盘非常有用，但有时想让用户通过鼠标点击来交互。叫做 `mouseDown`
+        的新模块与 `keyDown` 相似。可以检测是否按下了了鼠标的左键或右键。如果使用只有一个按钮的鼠标或者触摸板,，只会使用到 `mouseDown(\"left\")`。
+        \n\n# 这样做\n\n这个程序会让气球在屏幕上往下落 - 需要编写程序，来在点击鼠标时，让气球飞上去。\n\n-   为 `mouseDown`
+        添加如果/否则语句。\n-   在条件中，如果按下了鼠标，就将气球向上移动一个像素。否则向下移动气球。\n\n_提示：需要将气球向下的代码移动一下
+        - 只用在 `mouseDown` 是 `false` 时才执行_\n\n_挑战：当气球上升或下降时，能让它随机向左右漂浮吗？_"
+      CSD U3 - complex - mouse down_2019: "# 鼠标点击\n\n按键盘非常有用，但有时想让用户通过鼠标点击来交互。叫做 `mouseDown`
+        的新模块与 `keyDown` 相似。可以检测是否按下了了鼠标的左键或右键。如果使用只有一个按钮的鼠标或者触摸板,，只会使用到 `mouseDown(\"left\")`。
+        \n\n# 这样做\n\n这个程序会让气球在屏幕上往下落 - 需要编写程序，来在点击鼠标时，让气球飞上去。\n\n-   为 `mouseDown`
+        添加如果/否则语句。\n-   在条件中，如果按下了鼠标，就将气球向上移动一个像素。否则向下移动气球。\n\n_提示：需要将气球向下的代码移动一下
+        - 只用在 `mouseDown` 是 `false` 时才执行_\n\n_挑战：当气球上升或下降时，能让它随机向左右漂浮吗？_"
+      CSD U3 - complex - mouse move: |-
+        # mouseDidMove
+
+        可以用布尔表达式来检测是否鼠标移动了。`mouseDidMove`（鼠标是否移动了）模块会在鼠标没动的时候返回 `false`，如果移动了，就返回 `true`。
+
+        # 这样做
+
+        现在，程序只显示了盐罐精灵图。需要用 `mouseDidMove`，来通过晃动鼠标来 "摇动" 盐罐。
+
+        -   添加条件来检查是否 `mouseDidMove`。
+        -   如果条件为真，随机向左右旋转盐的精灵图。
+
+        _挑战：能否记录 `mouseDidMove` 摇动了多少次盐，并在 100 次的时候将它的右边旋转到上面？_
+      CSD U3 - complex - mouse move_2018: |-
+        # mouseDidMove
+
+        可以用布尔表达式来检测是否鼠标移动了。`mouseDidMove`（鼠标是否移动了）模块会在鼠标没动的时候返回 `false`，如果移动了，就返回 `true`。
+
+        # 这样做
+
+        现在，程序只显示了盐罐精灵图。需要用 `mouseDidMove`，来通过晃动鼠标来 "摇动" 盐罐。
+
+        -   添加条件来检查是否 `mouseDidMove`。
+        -   如果条件为真，随机向左右旋转盐的精灵图。
+
+        _挑战：能否记录 `mouseDidMove` 摇动了多少次盐，并在 100 次的时候将它的右边旋转到上面？_
+      CSD U3 - complex - mouse move_2019: |-
+        # mouseDidMove
+
+        可以用布尔表达式来检测是否鼠标移动了。`mouseDidMove`（鼠标是否移动了）模块会在鼠标没动的时候返回 `false`，如果移动了，就返回 `true`。
+
+        # 这样做
+
+        现在，程序只显示了盐罐精灵图。需要用 `mouseDidMove`，来通过晃动鼠标来 "摇动" 盐罐。
+
+        -   添加条件来检查是否 `mouseDidMove`。
+        -   如果条件为真，随机向左右旋转盐的精灵图。
+
+        _挑战：能否记录 `mouseDidMove` 摇动了多少次盐，并在 100 次的时候将它的右边旋转到上面？_
       CSD U3 - conditionals - first conditional: |-
         <img
         src="https://images.code.org/36c5543076622c96f7dabce8bc37f995-image-1468425774455.54.03
@@ -3867,6 +4726,24 @@ zh-CN:
         -   在更新了赛车的位置后，增加一个`如果`语句。
         -   将布尔表达式从console.log语句中移动到如果条件语句上。
         -   在`如果`语句中，增加一条语句在屏幕上写上"胜利者"。
+      CSD U3 - conditionals - first conditional 2: |-
+        <img src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif" style="width:200px;float:right">
+
+        # 可见性 （visible）
+
+        有了条件和图片以后，有时将图片隐藏一会儿再显示出来会非常有用。可以通过 `visible` 属性来做到。这个是否可见的属性和以前学过的其它属性有点不一样：它是布尔值，要么是 `true` （精灵图可见）或者是 `false` (精灵图 **不** 可见）。默认情况下，它是 `true`。
+
+        # 这样做
+
+        让球在到达游戏区域边缘的时候砰（pop）的一下！
+
+        -   添加 `如果` 语句来检查球是否到达了边缘。
+            -   在 `balloon.scale` 上使用观察器来帮忙。
+        -   使用动画标签页里的 "pop" 来创建砰（pop）精灵图。
+        -   在开始时将 pop 的 `visible` 属性设置为 `false`。
+        -   在 `如果` 里增加两条语句。
+            -   一条设置 `visible` 属性来将球精灵图隐藏起来。
+            -   一条设置 pop 精灵图的 `visible` 来显示出来。
       CSD U3 - conditionals - first conditional 2_2018: |-
         <img
         src="https://images.code.org/abd459d8d1477ac2f582417f4334cdaa-image-1466107090414.gif"
@@ -3925,6 +4802,30 @@ zh-CN:
         -   在更新了赛车的位置后，增加一个`如果`语句。
         -   将布尔表达式从console.log语句中移动到如果条件语句上。
         -   在`如果`语句中，增加一条语句在屏幕上写上"胜利者"。
+      CSD U3 - conditionals - transition: |-
+        # 布尔值
+
+        前面几关，已经比较了精灵图的值，来了解一些事情是真或假。现在要将这些放到动画的上下文中。
+
+        # 这样做
+
+        程序画出了一辆赛车和终点线。弄清楚什么时候赛车会跨过终点线。所有精灵图都设置好了。
+
+        -   在画图循环里添加 `console.log` 语句。 ( [显示在哪里](#triggercallout=callout) )
+        -   在 `console.log` 中添加布尔表达式来询问 "赛车的 x 位置是否小于终点线的 x 位置？"
+        -   看看赛车移动时程序的输出。什么时候输出会变化？为什么？
+      CSD U3 - conditionals - transition_2018: |-
+        # 布尔值
+
+        前面几关，已经比较了精灵图的值，来了解一些事情是真或假。现在要将这些放到动画的上下文中。
+
+        # 这样做
+
+        程序画出了一辆赛车和终点线。弄清楚什么时候赛车会跨过终点线。所有精灵图都设置好了。
+
+        -   在画图循环里添加 `console.log` 语句。 ( [显示在哪里](#triggercallout=callout) )
+        -   在 `console.log` 中添加布尔表达式来询问 "赛车的 x 位置是否小于终点线的 x 位置？"
+        -   看看赛车移动时程序的输出。什么时候输出会变化？为什么？
       CSD U3 AnimationsMulti Play Defender: |-
         # 保卫你的蛋糕！
 
@@ -4024,9 +4925,9 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵图是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        -   在动画标签页中，通过点击这个按钮： \!\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        -   使用工具来反转动画。确保用这个按钮： \!\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵图的动画？
@@ -4039,9 +4940,9 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵图是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        -   在动画标签页中，通过点击这个按钮： \!\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        -   使用工具来反转动画。确保用这个按钮： \!\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵图的动画？
@@ -4054,15 +4955,92 @@ zh-CN:
 
         读一下代码，并运行程序。确保你知道了精灵图是如何响应方向键的。
 
-        -   在动画标签页中，通过点击这个按钮： ![](<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09
+        -   在动画标签页中，通过点击这个按钮： \!\[](\<<https://images.code.org/aee81f9cd3f63bb8a9c91ac3ab250a87-image-1475699896387.38.09>
             PM.png>) 来创建一个外星人动画的副本。
-        -   使用工具来反转动画。确保用这个按钮： ![](<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03
+        -   使用工具来反转动画。确保用这个按钮： \!\[](\<<https://images.code.org/3b10b4a612f9a7c640dc7bb18f4c2b91-image-1475699599617.33.03>
             PM.png>) 两帧都翻转了。
         -   重命名新动画。
         -   使用新的动画和旧的动画，这样外星人就能在移动的时候朝向正确的方向了。你觉得应该在代码的什么地方设置精灵图的动画？
+      CSD U3 Boolean Modify: |-
+        # 布尔表达式
+
+        最简单的布尔表达式让计算机能回答真或假。这些表达式使用了下面的 **比较操作符**。
+
+        |                                                       比较操作符                                                       |   布尔表达式  |     意义    |
+        | :---------------------------------------------------------------------------------------------------------------: | :------: | :-------: |
+        | <img src="https://images.code.org/1a0798d75d4242715e7608d825f95101-image-1447271431312.png" style="width: 100px"> |  `1 < 9` | 1 是否小于 9？ |
+        | <img src="https://images.code.org/5ff460ac121f0ac51b569e96a4404c57-image-1447271431310.png" style="width: 100px"> |  `1 > 9` | 1 是否大于 9？ |
+        | <img src="https://images.code.org/a4daa9efccea2278e165592efe343c1a-image-1447271431308.png" style="width: 100px"> | `1 == 9` | 1 是否等于 9？ |
+
+        <br>
+
+        **注意：** 如果在数学课上看见了 3 \< 2 一定会认为这是个可怕的错误，但这不是数学课。在计算机科学中，比较操作符是在 **问问题**，计算机会回答 `true` 或 `false`。因此可以将 3 \< 2 读成 **"是否 3 小于 2？"** 在这里，答案是否、`false`。
+
+        另一种说法是，布尔表达式 `3 < 2` **结果** 为 `false`。
+
+        # 这样做
+
+        是否可以改变每个精灵属性的值，让每个布尔表达式的结果都为 `true`？
+
+        -   阅读整个程序，看看 `sprite1` 和 `sprite2` 是如何被创建的，哪些属性作了比较。
+        -   对每个布尔表达式，找出被比较的精灵图。
+        -   只改变 _前面 **11** 行_ 这样每个 `console.log()` 语句都会打印 `true`。
+      CSD U3 Complex Movement counter prediction: |-
+        # 速度和计数器模式
+
+        在精灵图的 x 和 y 属性上使用计数器模式，让精灵图平滑的穿过屏幕。这个程序中, **计数器 `sprite.velocityX` 属性上**。
+
+        # 预测
+
+        代码运行时会发生什么？为什么？准备好后，运行代码来看看。
+      CSD U3 Complex Movement counter prediction_2018: |-
+        # 速度和计数器模式
+
+        在精灵图的 x 和 y 属性上使用计数器模式，让精灵图平滑的穿过屏幕。这个程序中, **计数器 `sprite.velocityX` 属性上**。
+
+        # 预测
+
+        代码运行时会发生什么？为什么？准备好后，运行代码来看看。
+      CSD U3 Complex Movement counter prediction_2019: |-
+        # 速度和计数器模式
+
+        在精灵图的 x 和 y 属性上使用计数器模式，让精灵图平滑的穿过屏幕。这个程序中, **计数器 `sprite.velocityX` 属性上**。
+
+        # 预测
+
+        代码运行时会发生什么？为什么？准备好后，运行代码来看看。
+      CSD U3 Compound Nested Challenge: |-
+        # 挑战：检查多个条件
+
+        _在进行任何挑战前，先获得老师的同意。_
+
+        现在，已经学过了如何检查单个条件是否为真的很多方法，但程序经常要在做决定前检查多个条件的状态。这一关需要：
+
+        -   如果相应键按下时，精灵图需要向上下左右移动。
+        -   在任何方向，精灵图都 _不能_ 走出屏幕。
+
+        # 一起这样做
+
+        在写程序前，需要了解如何一次检查多个条件。
+
+        -   **头脑风暴** 来与伙伴看看有什么方法可以检查多个条件。
+        -   **分享** 给全班找到的潜在的方法。
+        -   **探索** 模块工具箱会有所帮助 （多注意数学和控制抽屉）。
+        -   **编程** 实现自己的方案。
+        -   **测试** 程序，确保它按照意图检查了所有条件。
       CSD U3 Conditionals Apple: "# 更多的布尔练习\n\n让我们再多加一个布尔表达式来检查精灵图的条件。\n\n# \n\n这样做\n这里有个正在变大的苹果精灵图。开始它是绿的，当它增加到两倍时应该变成红色。我们先不用担心如何将它变红，先用一条`console.log`（命令行.打印日志）命令来检查是否它到了两倍大。\n\n-
         \  添加一条`console.log`语句.\n-   在`console.log`中添加一个布尔表达式，来检查是否`apple.scale`\n
         \   大于2。"
+      CSD U3 Conditionals Apple 2: |-
+        # 变成红色
+
+        学会如何使用 _如果_ 语句后，除了检查苹果是否放大了两倍，还可以在达到条件时将它变成红色。
+
+        # 这样做
+
+        在画图循环里使用条件来检查 `apple.scale` 是否大于 2 - 如果是的话，设置苹果的新动画为 "apple\_red"。
+
+        _挑战：能让苹果在变成红色红停止长大吗？_
       CSD U3 Conditionals Apple 2_2018: "# 改变水果\n\n现在，我们知道了如何使用_如果_语句了，除了检查苹果是否被放大了两倍，还可以变大后将它变成梨。\n\n#
         \n\n这样做\n\n在画画的循环里添加一个条件，检查是否 `fruit.scale`（水果尺寸）大于2。- 如果是，那么设置新动画为\"pear\"（梨）。\n\n_挑战:\n你能在它变成梨时，同时让它停止变大吗？_"
       CSD U3 Conditionals Apple 2_2018_2019: "# 改变水果\n\n现在，我们知道了如何使用_如果_语句了，除了检查苹果是否被放大了两倍，还可以变大后将它变成梨。\n\n#
@@ -4086,15 +5064,15 @@ zh-CN:
         -   添加一个`console.log`语句。
         -   在`console.log`中增加一个布尔表达式来检查是否`apple.scale`（苹果.尺寸）大于2。
       CSD U3 Counters explaining counters contained 2: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Counters explaining counters contained 2_2018: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Counters explaining counters contained 2_2019: "# \n\n计数器模式\n\n这个模式是编程中最重要的模式之一。
-        \n\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
+        \n\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\n\n它被用来将变量的值每次增加1。你可以将它叫做**计数器模式**，因为它能让一个变量累加计数。很多地方都能用这个模式，特别是在循环中。我们先看看它是什么样的。\n\n#
         这样做\n\n这个程序创建了一个叫做`counter`（计数器）的变量，然后用**计数器模式**来增加它。当运行程序时，你觉得屏幕上会看见什么？\n\n\\*\n**阅读程序**，并预测一下输出会是什么。\n\\*\n**运行程序**检查一下你的预测。\n\n-
         \  **和同伴讨论**.\n    你能解释看到了什么吗？"
       CSD U3 Diagonal Movement: |-
@@ -4170,6 +5148,19 @@ zh-CN:
         -   \-
             编辑每一幅图，让它们各自指向4个方向。
         -   写代码来在按下不同的方向键时，用`sprite.setAnimation()`改变虫子精灵图的图片。
+      CSD U3 Direction Arrows: |-
+        # 向所有方向移动
+
+        通过响应 `keyDown`（按下键时）事件，能让精灵图能向某个方向移动后，向所有 4 个方向移动都类似。这些基本的键盘控制，会在以后开发的许多游戏中都能用上。
+
+        # 这样做
+
+        让虫子精灵图响应上方向键的代码已经加到了这一关中。添加上另外 3 个方向的交互！
+
+        -   增加三个如果语句 - 每个方向一个。
+        -   每个如果语句，要让精灵图向方向键的方向移动。
+
+        _提示：确保同时考虑了轴向（x 或 y）的移动，**并且**是需要增加还是减少这个值。_
       CSD U3 Direction Arrows_2018: |-
         # 向所有方向移动
 
@@ -4268,6 +5259,33 @@ zh-CN:
 
         -   运行代码看看它是如何工作的。
         -   和你的伙伴讨论一下，这和视频中的手翻书是否看起来是一样的。为什么是或不是呢？
+      CSD U3 Draw Loop Plugged predict 2 embed: |-
+        # 预测
+
+        这个程序中有一小处不同，这样运行结果也有点不同。再提醒一下：
+
+        -   画图循环外的代码会首先运行一次
+        -   画图循环内的代码会不停的运行
+
+        程序会做什么？写下你的预测。
+      CSD U3 Draw Loop Plugged predict 2 embed_2018: |-
+        # 预测
+
+        这个程序中有一小处不同，这样运行结果也有点不同。再提醒一下：
+
+        -   画图循环外的代码会首先运行一次
+        -   画图循环内的代码会不停的运行
+
+        程序会做什么？写下你的预测。
+      CSD U3 Draw Loop Plugged predict 2 embed_2019: |-
+        # 预测
+
+        这个程序中有一小处不同，这样运行结果也有点不同。再提醒一下：
+
+        -   画图循环外的代码会首先运行一次
+        -   画图循环内的代码会不停的运行
+
+        程序会做什么？写下你的预测。
       CSD U3 Draw Loop Plugged update your scene: |-
         # 扩展你的场景
 
@@ -4463,6 +5481,20 @@ zh-CN:
         # 这样做
 
         -   像图片中那样，将两个矩形精确的放在屏幕的角落里。
+      CSD U3 Else: |-
+        # 如果条件不为真呢?
+
+        <img src="https://images.code.org/1a997d78fcd88efeb9e6dc5a02aa88e8-image-1464706463138.53.58.png" width="125px" style="float:right">
+
+        有时，要告诉程序在条件为 `true`（真）时做什么，但有时也要决定为 `false` （假）时做什么。在条件模块下点击加号按钮，可以增加一个叫做 `else`（否则）的章节。 `否则` 章节是后备的情况，会在 `如果` 条件为 `假` 时运行。
+
+        # 这样做
+
+        齿轮又来了。上次在按下空格键时让它们旋转。这次除了在按下空格键时旋转，在没按下时，要往另一个方向旋转。
+        <img src="https://images.code.org/b074d47ca8dfa5ab3bfd08344b4f4e42-image-1464706389475.gif" style="float:right">
+
+        -   点击如果模块下的 _加号_ 按钮来增加一个 否则 章节。
+        -   增加命令来让齿轮往按下空格时的相反方向转动。
       CSD U3 Else_2018: |-
         # 如果我的条件不为真呢?
 
@@ -4676,6 +5708,34 @@ zh-CN:
         阅读循环中**如果语句**的条件。你觉得它为什么会在这里？
 
         -   使用这个如果语句和函数来让精灵图穿过屏幕多次。
+      CSD U3 If Else: |-
+        # 什么时候需要提供后备的代码
+
+        否则语句用来作为主条件不满足的后备情况  - 也就是说，如果 _关心_ 当主条件为 `false` 时需要发生些什么，就应该用 否则 语句。
+
+        <img src="https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif" style="float:right;">
+
+        # 这样做
+
+        点击 "运行" 来看看创建出的蜜蜂和左边的一朵花。让这群蜜蜂 **在鼠标接近花的时候出现** (在屏幕的左边) 并且 **在鼠标离开的时候消失** (到屏幕的右边)。看看右边的例子。
+
+        -   在更新蜜蜂位置的后面添加 `if else` 语句。
+        -   在如果语句的输入处，添加布尔值来检查是否鼠标的 x 位置在屏幕上花的这一侧。
+        -   在如果否则条件满足时，设置对应的 `visible` 属性，来让蜜蜂出现在花附近。
+      CSD U3 If Else_2018: |-
+        # 什么时候需要提供后备的代码
+
+        否则语句用来作为主条件不满足的后备情况  - 也就是说，如果 _关心_ 当主条件为 `false` 时需要发生些什么，就应该用 否则 语句。
+
+        <img src="https://images.code.org/730a895b50375781e72c95f5fa21d09d-image-1477681109870.gif" style="float:right;">
+
+        # 这样做
+
+        点击 "运行" 来看看创建出的蜜蜂和左边的一朵花。让这群蜜蜂 **在鼠标接近花的时候出现** (在屏幕的左边) 并且 **在鼠标离开的时候消失** (到屏幕的右边)。看看右边的例子。
+
+        -   在更新蜜蜂位置的后面添加 `if else` 语句。
+        -   在如果语句的输入处，添加布尔值来检查是否鼠标的 x 位置在屏幕上花的这一侧。
+        -   在如果否则条件满足时，设置对应的 `visible` 属性，来让蜜蜂出现在花附近。
       CSD U3 Input Fish: |-
         # 方向和鱼
 
@@ -4778,6 +5838,62 @@ zh-CN:
 
         **挑战：**
         你能用变量或者`randomNumber()`来在背景层增加一些小的动画吗？
+      CSD U3 Interactive Card Exemplar: |-
+        # 示例项目
+
+        运行几次程序并回答下列问题：
+
+        1.  哪些元素看着像使用了画图命令？
+
+        2.  哪些元素看着像精灵图？
+
+        3.  每个精灵图的哪些属性被更新了？
+
+        4.  能看到哪些地方使用了条件？
+
+        5.  有没有不理解的元素？
+      CSD U3 Interactive Card Exemplar_2018: |-
+        # 示例项目
+
+        运行几次程序并回答下列问题：
+
+        1.  哪些元素看着像使用了画图命令？
+
+        2.  哪些元素看着像精灵图？
+
+        3.  每个精灵图的哪些属性被更新了？
+
+        4.  能看到哪些地方使用了条件？
+
+        5.  有没有不理解的元素？
+      CSD U3 Interactive Card Exemplar_2019: |-
+        # 示例项目
+
+        运行几次程序并回答下列问题：
+
+        1.  哪些元素看着像使用了画图命令？
+
+        2.  哪些元素看着像精灵图？
+
+        3.  每个精灵图的哪些属性被更新了？
+
+        4.  能看到哪些地方使用了条件？
+
+        5.  有没有不理解的元素？
+      CSD U3 Interactive Card Final: |-
+        # 最后加工
+
+        现在需要最后加工一下卡片。这里有些以前没见过的新模块，花些时间看看，并试试这些新模块吧。
+
+        # 这样做
+
+        考虑添加下列的任何内容来完成卡片：
+
+        -   文字
+        -   为精灵图添加其它图片
+        -   背景的小动画
+        -   声音效果  (知道该怎么做吗？)
+        -   更多的让用户与卡片交互的方法
       CSD U3 Interactive Card Other Conditionals: "# 其它条件\n\n卡牌里的_惊喜_来源于不直接响应用户输入，而是牌的其它元素的条件语句。这些条件能被通过用户输入而更新的变量触发，或者精灵图移动到屏幕的某个部分。\n\n#
         \n\n这样做\n对于交互表里剩下的条目：\n\n\\*\n在循环中增加一个`如果`模块（如果你需要一个应变的行为，可以用`如果-否则`模块）。\n\n-
         \  在条件里增加一个合适的比较模块。（如：`<`，`>`，或`==`）。\n-   在`如果`模块中增加需要的行动。\n\n**挑战：**\n你能通过将它们组合在一起或者用组合的布尔来创造出巧妙的条件逻辑吗？"
@@ -4787,6 +5903,84 @@ zh-CN:
       CSD U3 Interactive Card Other Conditionals_2019: "# 其它条件\n\n卡牌里的_惊喜_来源于不直接响应用户输入，而是牌的其它元素的条件语句。这些条件能被通过用户输入而更新的变量触发，或者精灵图移动到屏幕的某个部分。\n\n#
         \n\n这样做\n对于交互表里剩下的条目：\n\n\\*\n在循环中增加一个`如果`模块（如果你需要一个应变的行为，可以用`如果-否则`模块）。\n\n-
         \  在条件里增加一个合适的比较模块。（如：`<`，`>`，或`==`）。\n-   在`如果`模块中增加需要的行动。\n\n**挑战：**\n你能通过将它们组合在一起或者用组合的布尔来创造出巧妙的条件逻辑吗？"
+      CSD U3 Interactive Card Sprites: |-
+        # 添加精灵图
+
+        现在，卡片上已经有了更多的静止元素了，该添加精灵图了。精灵图会为卡片提供大部分动画和交互 - 自由创造吧。
+
+        # 这样做
+
+        在计划表后面找到精灵图的表格。对表格中的每个精灵图：
+
+        -   在程序最上方用 `createSprite()` 来初始化精灵图。
+        -   为精灵图找到并使用 `setAnimation()` 创建图片。
+        -   在 `draw()` 循环里更新一直会动的精灵图属性（可以随后添加条件）。
+      CSD U3 Interactive Card Sprites_2018: |-
+        # 添加精灵图
+
+        现在，卡片上已经有了更多的静止元素了，该添加精灵图了。精灵图会为卡片提供大部分动画和交互 - 自由创造吧。
+
+        # 这样做
+
+        在计划表后面找到精灵图的表格。对表格中的每个精灵图：
+
+        -   在程序最上方用 `createSprite()` 来初始化精灵图。
+        -   为精灵图找到并使用 `setAnimation()` 创建图片。
+        -   在 `draw()` 循环里更新一直会动的精灵图属性（可以随后添加条件）。
+      CSD U3 Interactive Card Sprites_2019: |-
+        # 添加精灵图
+
+        现在，卡片上已经有了更多的静止元素了，该添加精灵图了。精灵图会为卡片提供大部分动画和交互 - 自由创造吧。
+
+        # 这样做
+
+        在计划表后面找到精灵图的表格。对表格中的每个精灵图：
+
+        -   在程序最上方用 `createSprite()` 来初始化精灵图。
+        -   为精灵图找到并使用 `setAnimation()` 创建图片。
+        -   在 `draw()` 循环里更新一直会动的精灵图属性（可以随后添加条件）。
+      CSD U3 Interactive Card User Input: |-
+        # 用户输入
+
+        有了背景，还有精灵图，现在是让用户做些事情了！
+
+        # 这样做
+
+        在计划表的交互表格中，找到所有依赖用户输入（按键和鼠标移动）的交互。对每个交互：
+
+        -   在 `draw()` 循环中添加 `if` 模块 (如果需要备用动作，就添加 `if-else` 模块)。
+        -   为条件添加合适的输入 (如 `keyDown()` 或 `mouseDown()`)。
+        -   在 `if` 模块中添加必要的动作。
+
+        **挑战：** 能否通过将一些条件组合起来，或使用复合布尔值来创造一些复杂的条件？
+      CSD U3 Interactive Card User Input_2018: |-
+        # 用户输入
+
+        有了背景，还有精灵图，现在是让用户做些事情了！
+
+        # 这样做
+
+        在计划表的交互表格中，找到所有依赖用户输入（按键和鼠标移动）的交互。对每个交互：
+
+        -   在 `draw()` 循环中添加 `if` 模块 (如果需要备用动作，就添加 `if-else` 模块)。
+        -   为条件添加合适的输入 (如 `keyDown()` 或 `mouseDown()`)。
+        -   在 `if` 模块中添加必要的动作。
+
+        **挑战：** 能否通过将一些条件组合起来，或使用复合布尔值来创造一些复杂的条件？
+      CSD U3 Interactive Card User Input_2019: |-
+        # 用户输入
+
+        有了背景，还有精灵图，现在是让用户做些事情了！
+
+        # 这样做
+
+        在计划表的交互表格中，找到所有依赖用户输入（按键和鼠标移动）的交互。对每个交互：
+
+        -   在 `draw()` 循环中添加 `if` 模块 (如果需要备用动作，就添加 `if-else` 模块)。
+        -   为条件添加合适的输入 (如 `keyDown()` 或 `mouseDown()`)。
+        -   在 `if` 模块中添加必要的动作。
+
+        **挑战：** 能否通过将一些条件组合起来，或使用复合布尔值来创造一些复杂的条件？
       CSD U3 Keyboard Input Challenge: |-
         # 挑战
 
@@ -4823,6 +6017,66 @@ zh-CN:
             添加一些随机数到移动过程里。
         -   添加第二个精灵图，并用另一组键来控制它（一般大家会用"w", "a", "s", 和 "d"）。
         -   在背景中加一些形状来让场景看起来更有趣。
+      CSD U3 Keypress Boolean: |-
+        # 预测 - keyDown()
+
+        `keyDown()` 模块是一组新模块中的第一个，这些新模块能从用户获取输入。这是制作真正游戏的第一步！看看能否预测 `keyDown()` 模块是如何工作的。**不要写任何代码**。
+
+        # 这样做
+
+        -   认真阅读程序。
+        -   **预测一下代码会怎样运行** 并写在下面的盒子里。写清楚一点！
+        -   运行程序。
+        -   程序运行时，按下键盘上的上方向键。
+        -   预测对了吗？是否感到惊讶？与同学讨论一下。
+      CSD U3 Keypress Boolean embed: |-
+        # 预测 - keyDown()
+
+        `keyDown()` 模块是一组新模块中的第一个，这些新模块能从用户获取输入。这是制作真正游戏的第一步！看看能否预测 `keyDown()` 模块是如何工作的。**不要写任何代码**。
+
+        # 这样做
+
+        -   认真阅读程序。
+        -   **预测一下代码会怎样运行** 并写在下面的盒子里。写清楚一点！
+        -   运行程序。
+        -   程序运行时，按下键盘上的上方向键。
+        -   预测对了吗？是否感到惊讶？与同学讨论一下。
+      CSD U3 Keypress Watchers Predict: |-
+        # 预测：用户输入
+
+        已经能用 `keyDown`（按下键时）来让用户控制程序了，但这只是多种输入方法中的一种。实际上这只是很多种 _检测按键盘_ 方法中的一种！根据希望怎样响应按键盘，这里有一些其它的有用模块。
+
+        读读程序，预测一下当按下上、下、左、右方向键时会发生什么。
+
+        做出预测后，运行代码并写下来，或者与伙伴分享发现。
+
+        -   `keyDown()`（按下键时）, `keyWentDown()`（键被按下时），和 `keyWentUp()`（键被释放时）事件看上去有什么不同？
+        -   第10行叹号 (`!`) 的作用是什么？
+        -   在游戏中会如何使用不同的按键相关的事件模块？
+      CSD U3 Keypress Watchers Predict_2018: |-
+        # 预测：用户输入
+
+        已经能用 `keyDown`（按下键时）来让用户控制程序了，但这只是多种输入方法中的一种。实际上这只是很多种 _检测按键盘_ 方法中的一种！根据希望怎样响应按键盘，这里有一些其它的有用模块。
+
+        读读程序，预测一下当按下上、下、左、右方向键时会发生什么。
+
+        做出预测后，运行代码并写下来，或者与伙伴分享发现。
+
+        -   `keyDown()`（按下键时）, `keyWentDown()`（键被按下时），和 `keyWentUp()`（键被释放时）事件看上去有什么不同？
+        -   第10行叹号 (`!`) 的作用是什么？
+        -   在游戏中会如何使用不同的按键相关的事件模块？
+      CSD U3 Keypress Watchers Predict_2019: |-
+        # 预测：用户输入
+
+        已经能用 `keyDown`（按下键时）来让用户控制程序了，但这只是多种输入方法中的一种。实际上这只是很多种 _检测按键盘_ 方法中的一种！根据希望怎样响应按键盘，这里有一些其它的有用模块。
+
+        读读程序，预测一下当按下上、下、左、右方向键时会发生什么。
+
+        做出预测后，运行代码并写下来，或者与伙伴分享发现。
+
+        -   `keyDown()`（按下键时）, `keyWentDown()`（键被按下时），和 `keyWentUp()`（键被释放时）事件看上去有什么不同？
+        -   第10行叹号 (`!`) 的作用是什么？
+        -   在游戏中会如何使用不同的按键相关的事件模块？
       CSD U3 Keypress Watchers_2018: |-
         # 更多的方法来获得用户输入
 
@@ -4862,254 +6116,254 @@ zh-CN:
       CSD U3 L11 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L11 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L11 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L12 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L13 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L15 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L16 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L17 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L18 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L19 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L3 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L4 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L5 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L6 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L7 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay_2018: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 L9 Freeplay_2019: |-
         # 自由发挥
 
-        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击![](<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png>)发送给朋友。或者点击 ![](<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        用你学会的知识任意创建你喜欢的作品。当你完成后，可以点击\!\[](\<<https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43>
+        PM.png>)发送给朋友。或者点击 \!\[](\<<https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50>
         PM.png>) 将它发送到你的作品集里。
       CSD U3 Mouse Input Bee 1: "<img src=\"https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif\"\nstyle=\"float:right\">\n\n#
         鼠标的X和Y\n\n最简单的输入方式之一，就是让一个精灵图跟随用户的鼠标位置。\n**你能通过`World.mouseX`和`World.mouseY`来获得鼠标的x、y值。**这和你以前学的精灵图的属性是一致的。`World`是目标对象的名字。`mouseX`和`mouseY`是属性的名字。\n\n#
@@ -5306,7 +6560,7 @@ zh-CN:
 
         确保点击 "运行" 并尝试打开网格来帮助精确地放置形状。
 
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2018: |-
         # 绘制形状
@@ -5315,7 +6569,7 @@ zh-CN:
 
         确保点击 "运行" 并尝试打开网格来帮助精确地放置形状。
 
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
         PM.png>)
       CSD U3 Plotting Shapes Shape Lab_2019: |-
         # 绘制形状
@@ -5324,7 +6578,7 @@ zh-CN:
 
         确保点击 "运行" 并尝试打开网格来帮助精确地放置形状。
 
-        ![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59
+        \!\[](\<<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59>
         PM.png>)
       CSD U3 Random Debug Cloud: |-
         <img src="https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50
@@ -5791,6 +7045,63 @@ zh-CN:
         # 调试
 
         程序应该已经创建了两个新精灵图，一个在屏幕左边，另一个在右边。但是它只画出了一个。**你不需要增加任何代码**，仅通过重新排列代码来让两个精灵图都像右边的图片一样显示出来。
+      CSD U3 Sprites intro sprites: |-
+        # 精灵图
+
+        **创建精灵图:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  创建新的精灵图，并赋值给变量。默认名称是 `sprite` （精灵图），可以将它改成一个有意义的名称。
+
+        **画精灵图：** 精灵图只有画出来，才会出现在屏幕上。调用 ![](<https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png>)，会将画出的所有精灵图显示在屏幕上。
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # 这样做
+
+        程序中的注释说明了应该把代码放到什么地方。程序应该看起来像右边的图像。
+
+        -   在注释 `创建精灵图` 下添加 `var sprite = createSprite(200, 200)`。
+            -   可以先忽略黄色的警告三角。这只是表示还没有使用精灵图。
+        -   在注释 `画图` 下添加 `drawSprites()`。
+        -   **运行代码** 在屏幕上画出第一个精灵图。
+
+        _提示：精灵图都是从中间画的，这是正方形的中间（不是左上角），在 (200, 200) 的位置。_
+      CSD U3 Sprites intro sprites_2018: |-
+        # 精灵图
+
+        **创建精灵图:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  创建新的精灵图，并赋值给变量。默认名称是 `sprite` （精灵图），可以将它改成一个有意义的名称。
+
+        **画精灵图：** 精灵图只有画出来，才会出现在屏幕上。调用 ![](<https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png>)，会将画出的所有精灵图显示在屏幕上。
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # 这样做
+
+        程序中的注释说明了应该把代码放到什么地方。程序应该看起来像右边的图像。
+
+        -   在注释 `创建精灵图` 下添加 `var sprite = createSprite(200, 200)`。
+            -   可以先忽略黄色的警告三角。这只是表示还没有使用精灵图。
+        -   在注释 `画图` 下添加 `drawSprites()`。
+        -   **运行代码** 在屏幕上画出第一个精灵图。
+
+        _提示：精灵图都是从中间画的，这是正方形的中间（不是左上角），在 (200, 200) 的位置。_
+      CSD U3 Sprites intro sprites_2019: |-
+        # 精灵图
+
+        **创建精灵图:**  <img src = "https://images.code.org/92e06cddc5355dc37aa2c6a033793dd0-image-1466027030772.43.41 PM.png" style = "height:30px">  创建新的精灵图，并赋值给变量。默认名称是 `sprite` （精灵图），可以将它改成一个有意义的名称。
+
+        **画精灵图：** 精灵图只有画出来，才会出现在屏幕上。调用 ![](<https://images.code.org/82a18afda6463323529acaa3dc326d55-image-1466004008638.19.16 AM.png>)，会将画出的所有精灵图显示在屏幕上。
+
+        <img src="https://images.code.org/fe5905d6b89c14dca525865f4e579104-image-1491254588895.png" style="width: 150px; float: right; border: 1px solid #f2f2f2; margin-left: 20px">
+
+        # 这样做
+
+        程序中的注释说明了应该把代码放到什么地方。程序应该看起来像右边的图像。
+
+        -   在注释 `创建精灵图` 下添加 `var sprite = createSprite(200, 200)`。
+            -   可以先忽略黄色的警告三角。这只是表示还没有使用精灵图。
+        -   在注释 `画图` 下添加 `drawSprites()`。
+        -   **运行代码** 在屏幕上画出第一个精灵图。
+
+        _提示：精灵图都是从中间画的，这是正方形的中间（不是左上角），在 (200, 200) 的位置。_
       CSD U3 Sprites scene challenge: |-
         # 挑战：扩展你的场景
 
@@ -5929,6 +7240,21 @@ zh-CN:
         你能用`text`（文本）将文本放到屏幕上的任何位置。改变已有代码里的文本，然后增加另一个`text`标签到屏幕的其它位置。
 
         _提示：默认文本的字体比较小，可以用`textSize`（文本尺寸）来改变它。也可以用`fill`（填充）来改变文本的颜色。_
+      CSD U3 UP_ARROW: |-
+        # 移动精灵图
+
+        根据改变动画的同样方法来根据按键移动精灵图。
+
+        # 这样做
+
+        虫子精灵图的起始位置已经有了。从动画标签页里选出想用的虫子图片。
+
+        -   将动画精灵图设置为想选的虫子。
+        -   在画图循环中增加如果语句。
+        -   在 keyDown 中添加如果语句，来检查是否上方向键按下了。
+        -   在条件中添加代码，以便当上方向键按下时让精灵图向上移动。
+
+        _需要改变精灵图的 x 还是 y 属性来让它向上移动？_
       CSD U3 UP_ARROW_2018: |-
         # 移动精灵图
 
@@ -6051,6 +7377,24 @@ zh-CN:
 
         -   运行程序看看它如何运行的。
         -   改动变量里的数字([显示在哪里](#triggercallout=code_triggered)) 并再运行一下。
+      CSD U3 Variables Predict Where XY Embed: |-
+        # 预测
+
+        圆圈会画在屏幕的哪个角落？
+
+        _提示: 点击 "显示网格" 来找到屏幕上的精确位置。_
+      CSD U3 Variables Predict Where XY Embed_2018: |-
+        # 预测
+
+        圆圈会画在屏幕的哪个角落？
+
+        _提示: 点击 "显示网格" 来找到屏幕上的精确位置。_
+      CSD U3 Variables Predict Where XY Embed_2019: |-
+        # 预测
+
+        圆圈会画在屏幕的哪个角落？
+
+        _提示: 点击 "显示网格" 来找到屏幕上的精确位置。_
       CSD U3 Variables Predict Where X_2018: |-
         # 使用变量
 
@@ -6174,6 +7518,30 @@ zh-CN:
         让我们练习使用观察器来调试代码。程序应该像右边的图片一样，将摩托车从左下角挪到右上角。不幸的是，摩托车移动得太快，而看不出哪里有问题。
 
         使用提供的`cycle.x`和`cycle.y`的观察器，确认哪一个方向的移动错了，并修复程序。
+      CSD U3 Watcher Predict response: |-
+        # 观察计数器模式
+
+        使用计数器模式时，观察器是调试程序的有用工具。
+
+        -   **读程序** 并预测程序会做什么。
+        -   **运行程序** 来验证预测。
+        -   **查看观察器** 并给伙伴解释一下看到了什么。
+      CSD U3 Watcher Predict response_2018: |-
+        # 观察计数器模式
+
+        使用计数器模式时，观察器是调试程序的有用工具。
+
+        -   **读程序** 并预测程序会做什么。
+        -   **运行程序** 来验证预测。
+        -   **查看观察器** 并给伙伴解释一下看到了什么。
+      CSD U3 Watcher Predict response_2019: |-
+        # 观察计数器模式
+
+        使用计数器模式时，观察器是调试程序的有用工具。
+
+        -   **读程序** 并预测程序会做什么。
+        -   **运行程序** 来验证预测。
+        -   **查看观察器** 并给伙伴解释一下看到了什么。
       CSD U3 abstraction accelerateX: "# 速度和计数器模式\n\n正如你刚刚看到的，将计数器模式用到`sprite.velocityX`属性上，会在程序中改变精灵图的速度。这会让精灵图加速。自己练习一下这个模式吧。\n\n#
         \n\n这样做\n\n这个程序已经让汽车穿越屏幕了，但是非常慢。\n\n-   用计数器模式来改变精灵图的velocityX属性，来让汽车加速。 (
         [显示在哪里](#triggercallout=code_triggered)\n    )"
@@ -6183,6 +7551,60 @@ zh-CN:
       CSD U3 abstraction accelerateX_2019: "# 速度和计数器模式\n\n正如你刚刚看到的，将计数器模式用到`sprite.velocityX`属性上，会在程序中改变精灵图的速度。这会让精灵图加速。自己练习一下这个模式吧。\n\n#
         \n\n这样做\n\n这个程序已经让汽车穿越屏幕了，但是非常慢。\n\n-   用计数器模式来改变精灵图的velocityX属性，来让汽车加速。 (
         [显示在哪里](#triggercallout=code_triggered)\n    )"
+      CSD U3 abstraction accelerateY: |-
+        # 掉落的石头
+
+        石头在屏幕上落下时，应该加速。在画图循环中，能否在 `velocityY` 上使用同样的计数器模式，来让石头掉落得越来越快？
+
+        # 这样做
+
+        -   在精灵图的 y 速度上使用计数器模式，来让石头在落下的时候加速。( [显示位置](#triggercallout=code_triggered) )
+
+        _挑战：能否让石头在下落的时候旋转？_
+      CSD U3 abstraction accelerateY up: |-
+        # 上升的气泡
+
+        程序会让水里的气泡上升。能让它越升越快吗？
+
+        # 这样做
+
+        -   使用计数器模式和精灵图的 y 速度来让气泡越升越快。
+      CSD U3 abstraction accelerateY up_2018: |-
+        # 上升的气泡
+
+        程序会让水里的气泡上升。能让它越升越快吗？
+
+        # 这样做
+
+        -   使用计数器模式和精灵图的 y 速度来让气泡越升越快。
+      CSD U3 abstraction accelerateY up_2019: |-
+        # 上升的气泡
+
+        程序会让水里的气泡上升。能让它越升越快吗？
+
+        # 这样做
+
+        -   使用计数器模式和精灵图的 y 速度来让气泡越升越快。
+      CSD U3 abstraction accelerateY_2018: |-
+        # 掉落的石头
+
+        石头在屏幕上落下时，应该加速。在画图循环中，能否在 `velocityY` 上使用同样的计数器模式，来让石头掉落得越来越快？
+
+        # 这样做
+
+        -   在精灵图的 y 速度上使用计数器模式，来让石头在落下的时候加速。( [显示位置](#triggercallout=code_triggered) )
+
+        _挑战：能否让石头在下落的时候旋转？_
+      CSD U3 abstraction accelerateY_2019: |-
+        # 掉落的石头
+
+        石头在屏幕上落下时，应该加速。在画图循环中，能否在 `velocityY` 上使用同样的计数器模式，来让石头掉落得越来越快？
+
+        # 这样做
+
+        -   在精灵图的 y 速度上使用计数器模式，来让石头在落下的时候加速。( [显示位置](#triggercallout=code_triggered) )
+
+        _挑战：能否让石头在下落的时候旋转？_
       CSD U3 abstraction add coin: "# 添加硬币\n\n在下面几关中，会丰富你的程序，来实现一个简单的游戏。在游戏里，玩家要收集点数来增加分数。这是一个好机会来看看不同的移动如何影响游戏的体验的，这回也能帮你练习编程技巧。\n\n#
         \n\n这样做\n\n这一关中，你只需要增加一个硬币精灵图。确保给它一个类似于**硬币**的描述名称。你需要在程序最上面，循环的外面添加。\n\n\\*\n用`createSprite()`（创建精灵图）模块来创建一个新的精灵图。确保给了它一个类似于**硬币**的描述。\n\n-
         \  用精灵图的`sprite.x`和`sprite.y`属性来给它一个随机的0到400之间的X和Y位置。\n-   在动画标签页中，已经有了硬币动画。用`sprite.setAnimation()`模块来给精灵图添加这个动画。\n\n在继续前，先测试你的代码。当运行程序时，你会看到一个硬币精灵图随机的出现在屏幕的某个位置。"
@@ -6201,6 +7623,65 @@ zh-CN:
       CSD U3 abstraction decelerateX_2019: "# 放慢速度\n\n现在，你已经练习过了如何加速，你能用计数器模式来给精灵图减速吗？\n\n#
         这样做\n\n汽车要开到水里了！你需要用计数器模式来给它减速。\n\n-   当汽车穿过屏幕时，用`sprite.velocityX`模块和计数器模式来给汽车每次减速0.25。
         \ \n-   \\*\n    和伙伴讨论一下：当汽车最终停下来时，会发生什么？\n\n    _挑战：添加代码让汽车只在velocityX大于零时才给它减速。_"
+      CSD U3 abstraction decelerateY: |-
+        # 模拟重力
+
+        上一关中，使用了 `sprite.velocityX` 模块和计数器模式来让汽车变慢。看起来好像汽车被往左边拉。
+
+        如果将同样的方法用在 `sprite.velocityY` 上，看起来就像是精灵图在被往下拉，就像重力一样！
+
+        # 这样做
+
+        石头被扔到了空中，但不会掉下来。
+
+        -   使用 `sprite.velocityY` 模块和计数器模式让石头慢下来，并往另一个方向下落。
+        -   在计数器模式中试试其它值。是不是想让石头变慢的速度更快或更慢？哪种更像现实中的情况？
+        -   与伙伴讨论：为什么要在画图循环外设置石头的初始速度？为什么要在画图循环里改变精灵图的速度？
+      CSD U3 abstraction decelerateY_2018: |-
+        # 模拟重力
+
+        上一关中，使用了 `sprite.velocityX` 模块和计数器模式来让汽车变慢。看起来好像汽车被往左边拉。
+
+        如果将同样的方法用在 `sprite.velocityY` 上，看起来就像是精灵图在被往下拉，就像重力一样！
+
+        # 这样做
+
+        石头被扔到了空中，但不会掉下来。
+
+        -   使用 `sprite.velocityY` 模块和计数器模式让石头慢下来，并往另一个方向下落。
+        -   在计数器模式中试试其它值。是不是想让石头变慢的速度更快或更慢？哪种更像现实中的情况？
+        -   与伙伴讨论：为什么要在画图循环外设置石头的初始速度？为什么要在画图循环里改变精灵图的速度？
+      CSD U3 abstraction decelerateY_2019: |-
+        # 模拟重力
+
+        上一关中，使用了 `sprite.velocityX` 模块和计数器模式来让汽车变慢。看起来好像汽车被往左边拉。
+
+        如果将同样的方法用在 `sprite.velocityY` 上，看起来就像是精灵图在被往下拉，就像重力一样！
+
+        # 这样做
+
+        石头被扔到了空中，但不会掉下来。
+
+        -   使用 `sprite.velocityY` 模块和计数器模式让石头慢下来，并往另一个方向下落。
+        -   在计数器模式中试试其它值。是不是想让石头变慢的速度更快或更慢？哪种更像现实中的情况？
+        -   与伙伴讨论：为什么要在画图循环外设置石头的初始速度？为什么要在画图循环里改变精灵图的速度？
+      CSD U3 abstraction jump: |-
+        # 跳跃
+
+        现在已经有了所有能让精灵图跳跃的模块了！
+
+        与检查鱼是否到达了左边缘，需要检查青蛙是否在地面上。如果是，可以往上跳或者呆在原地。因此，还需要一个 `if` 模块，来检测是否用户按下了上方向键。( [显示位置](#triggercallout=code_triggered1) ).
+
+        还需要检查青蛙是否到达了最高点，如果是的话，要让它下来。
+
+        # 这样做
+
+        -   找到检测精灵图是否在地面的 `if` 语句，看看 `if` 语句里检查用户是否按下了 "上" 方向键。( [显示位置](#triggercallout=code_triggered1) )
+            -   当用户按下上方向键时，用 `velocityY` 模块让青蛙跳起来。
+            -   否则，用 `velocityY` 模块让青蛙停止移动。
+        -   添加下面的如果语句 ( [显示位置](#triggercallout=code_triggered2) )
+            -   检查是否青蛙精灵图已经到了最高点。
+            -   如果是，用 `velocityY` 模块让精灵图落回来。
       CSD U3 abstraction jump_2018: |-
         # 跳跃
 
@@ -6235,6 +7716,39 @@ zh-CN:
             me where](#triggercallout=code_triggered2) )
             -   检查青蛙精灵图是否到达了它的最高点。
             -   如果是，让精灵图下来。
+      CSD U3 abstraction jumping: |-
+        # 跳跃
+
+        在计数器模式中增加精灵图的 y 速度，可以模拟重力。通过增加用户交互，可以让精灵图跳跃。开始时，可以实现简单的跳，在下一关，会让它显得更真实。
+
+        # 这样做
+
+        下落的精灵图已经创建好了，它的 y 速度在画图循环中增加。需要将精灵图变得像跳跃。
+
+        -   在 `if` 模块里检查，如果上方向键按下了，设置精灵图的 y 速度为 -5。( [显示位置](#triggercallout=callout1) )
+        -   与伙伴讨论：为什么代码运行起来是这样的？使用 -5 之外的数字，会看起来如何？怎样能跳得更高或更矮？
+      CSD U3 abstraction jumping_2018: |-
+        # 跳跃
+
+        在计数器模式中增加精灵图的 y 速度，可以模拟重力。通过增加用户交互，可以让精灵图跳跃。开始时，可以实现简单的跳，在下一关，会让它显得更真实。
+
+        # 这样做
+
+        下落的精灵图已经创建好了，它的 y 速度在画图循环中增加。需要将精灵图变得像跳跃。
+
+        -   在 `if` 模块里检查，如果上方向键按下了，设置精灵图的 y 速度为 -5。( [显示位置](#triggercallout=callout1) )
+        -   与伙伴讨论：为什么代码运行起来是这样的？使用 -5 之外的数字，会看起来如何？怎样能跳得更高或更矮？
+      CSD U3 abstraction jumping_2019: |-
+        # 跳跃
+
+        在计数器模式中增加精灵图的 y 速度，可以模拟重力。通过增加用户交互，可以让精灵图跳跃。开始时，可以实现简单的跳，在下一关，会让它显得更真实。
+
+        # 这样做
+
+        下落的精灵图已经创建好了，它的 y 速度在画图循环中增加。需要将精灵图变得像跳跃。
+
+        -   在 `if` 模块里检查，如果上方向键按下了，设置精灵图的 y 速度为 -5。( [显示位置](#triggercallout=callout1) )
+        -   与伙伴讨论：为什么代码运行起来是这样的？使用 -5 之外的数字，会看起来如何？怎样能跳得更高或更矮？
       CSD U3 abstraction left right counter: "# 向右浮动\n\n现在，你能用精灵图的Y轴速度上使用个计数器模式来模拟重力和跳跃。如果你在x轴速度上使用计数器模式，也能让精灵图从一边浮动到另一边。\n\n#
         \n\n这样做\n\n在这一关中，你需要在右方向键按下时，让精灵图向右浮动。\n\n-   在已经创建的\"上\"方向键下的循环里增加一个`如果`语句。\n-
         \  用`keyDown`模块来让`如果`语句在\"右\"方向键按下时进行响应。\n-   在`如果`模块中对`sprite.velocityX`使用计数器模式来为精灵图的X轴速度增加0.1。\n\n运行你的代码看看它是否正常工作。当你按下右方向键，精灵图应该开始向右浮动。按下\"上\"时还能跳跃。在下一关中，你要实现向左方向键的功能。"
@@ -6301,6 +7815,55 @@ zh-CN:
         # 这样做
 
         至少对游戏进行一项改进。准备好分享你的改进，并和同学一起提高它。
+      CSD U3 abstraction reset coin: |-
+        # 重置硬币
+
+        当角色碰到硬币时，要将硬币重置到屏幕的其它地方。
+
+        # 这样做
+
+        -   在画图循环里放一个 `if` 模块。
+        -   使用 `sprite.isTouching()` 模块作为条件，来检测橘色是否碰到了硬币。
+        -   在 `if` 模块里写代码来将硬币的 X 和 Y 位置随机设置为 0 到 400。
+            -   _提示：代码已经写到了程序里的其它位置。_
+
+        在完成前测试代码。当玩家碰到硬币后，应该将硬币移动到屏幕的其它位置。
+      CSD U3 abstraction reset coin_2018: |-
+        # 重置硬币
+
+        当角色碰到硬币时，要将硬币重置到屏幕的其它地方。
+
+        # 这样做
+
+        -   在画图循环里放一个 `if` 模块。
+        -   使用 `sprite.isTouching()` 模块作为条件，来检测橘色是否碰到了硬币。
+        -   在 `if` 模块里写代码来将硬币的 X 和 Y 位置随机设置为 0 到 400。
+            -   _提示：代码已经写到了程序里的其它位置。_
+
+        在完成前测试代码。当玩家碰到硬币后，应该将硬币移动到屏幕的其它位置。
+      CSD U3 abstraction reset coin_2019: |-
+        # 重置硬币
+
+        当角色碰到硬币时，要将硬币重置到屏幕的其它地方。
+
+        # 这样做
+
+        -   在画图循环里放一个 `if` 模块。
+        -   使用 `sprite.isTouching()` 模块作为条件，来检测橘色是否碰到了硬币。
+        -   在 `if` 模块里写代码来将硬币的 X 和 Y 位置随机设置为 0 到 400。
+            -   _提示：代码已经写到了程序里的其它位置。_
+
+        在完成前测试代码。当玩家碰到硬币后，应该将硬币移动到屏幕的其它位置。
+      CSD U3 abstraction rotation: |-
+        # rotationSpeed （旋转速度）
+
+        前面已经学习了使用 `rotation` 模块来让精灵图旋转。例如，当需要精灵图每次画的时候旋转两度，可以在画图循环里加上 `sprite.rotation = sprite.rotation + 2`。
+
+        现在，用 `rotationSpeed` 来在每次画图时，让精灵图旋转一定的度数。如果想要太阳每次旋转两度，可以在画图循环前，创建精灵图后，使用 `sun.rotationSpeed = 2`。
+
+        # 这样做
+
+        用 `rotationSpeed` 模块让太阳每次旋转 3 度。( [显示位置](#triggercallout=callout1) )
       CSD U3 abstraction rotation control: |-
         # 控制速度
 
@@ -6323,6 +7886,68 @@ zh-CN:
         看看循环里用来检查是否空格键被按下的`如果`语句。 ( [显示在哪里](#triggercallout=code_triggered1) )
         \*
         使用`rotationSpeed`模块来让彩色轮子在按下空格键时旋转。
+      CSD U3 abstraction rotation_2018: |-
+        # rotationSpeed （旋转速度）
+
+        前面已经学习了使用 `rotation` 模块来让精灵图旋转。例如，当需要精灵图每次画的时候旋转两度，可以在画图循环里加上 `sprite.rotation = sprite.rotation + 2`。
+
+        现在，用 `rotationSpeed` 来在每次画图时，让精灵图旋转一定的度数。如果想要太阳每次旋转两度，可以在画图循环前，创建精灵图后，使用 `sun.rotationSpeed = 2`。
+
+        # 这样做
+
+        用 `rotationSpeed` 模块让太阳每次旋转 3 度。( [显示位置](#triggercallout=callout1) )
+      CSD U3 abstraction rotation_2019: |-
+        # rotationSpeed （旋转速度）
+
+        前面已经学习了使用 `rotation` 模块来让精灵图旋转。例如，当需要精灵图每次画的时候旋转两度，可以在画图循环里加上 `sprite.rotation = sprite.rotation + 2`。
+
+        现在，用 `rotationSpeed` 来在每次画图时，让精灵图旋转一定的度数。如果想要太阳每次旋转两度，可以在画图循环前，创建精灵图后，使用 `sun.rotationSpeed = 2`。
+
+        # 这样做
+
+        用 `rotationSpeed` 模块让太阳每次旋转 3 度。( [显示位置](#triggercallout=callout1) )
+      CSD U3 abstraction tumbleweed: |-
+        # 蘑菇
+
+        现在需要一些东西让精灵图能够跳过去。程序里，在屏幕右边已经有了一个蘑菇，但还需要移向青蛙。
+
+        # 这样做
+
+        -   用 `velocityX` 模块让蘑菇向左移动穿过屏幕。
+
+        _提示：蘑菇需要从游戏一开始就移动，一直都不变，因此需要放在画图循环的里面还是外面？_
+      CSD U3 abstraction tumbleweed_2018: |-
+        # 蘑菇
+
+        现在需要一些东西让精灵图能够跳过去。程序里，在屏幕右边已经有了一个蘑菇，但还需要移向青蛙。
+
+        # 这样做
+
+        -   用 `velocityX` 模块让蘑菇向左移动穿过屏幕。
+
+        _提示：蘑菇需要从游戏一开始就移动，一直都不变，因此需要放在画图循环的里面还是外面？_
+      CSD U3 abstraction tumbleweed_2019: |-
+        # 蘑菇
+
+        现在需要一些东西让精灵图能够跳过去。程序里，在屏幕右边已经有了一个蘑菇，但还需要移向青蛙。
+
+        # 这样做
+
+        -   用 `velocityX` 模块让蘑菇向左移动穿过屏幕。
+
+        _提示：蘑菇需要从游戏一开始就移动，一直都不变，因此需要放在画图循环的里面还是外面？_
+      CSD U3 abstraction velocityX: |-
+        # velocityX
+
+        一种在游戏实验室移动精灵图的方法，是使用计数器。例如 `sprite1.x = sprite1.x + 1` 会在每一帧画图循环时，将精灵图移动 1 像素。这个模式会经常用到，所以精灵图有个 `velocityX` 属性用来做到这个。
+
+        # 这样做
+
+        -   拖拽出 `sprite.velocityX` 模块放到创建的精灵图下。       ( [显示位置](#triggercallout=code_triggered) )
+        -   在模块中写上精灵图的名字。
+        -   设置 `velocityX` 为 1。
+        -   运行代码。发生了什么？
+        -   将 `velocityX` 属性设成其它值。有什么变化？
       CSD U3 abstraction velocityX control: |-
         # 多个控制
 
@@ -6371,6 +7996,101 @@ zh-CN:
         -   如果鱼到达了屏幕的最右边，让它向左移动。
 
         -   如果 鱼到达了屏幕左边，让鱼停下来。
+      CSD U3 abstraction velocityX if-statements: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。
+
+        下面的代码里，鱼精灵图会在到达右边缘时往左移动，在到达左边缘时往右移动。精灵图会一直移动，直到碰到边缘。
+
+        # 这样做
+
+        -   看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，精灵图是如何知道在 `if` 语句不为真的时候也能移动（精灵图在屏幕的中间）。
+      CSD U3 abstraction velocityX if-statements predict: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。 下面的代码里，使用如果语句，让鱼精灵图往不同的方向移动。
+
+        # 这样做
+
+        -   L看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，代码会做什么，并写下答案。
+        -   提交答案后，运行代码。
+      CSD U3 abstraction velocityX if-statements predict_2018: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。 下面的代码里，使用如果语句，让鱼精灵图往不同的方向移动。
+
+        # 这样做
+
+        -   L看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，代码会做什么，并写下答案。
+        -   提交答案后，运行代码。
+      CSD U3 abstraction velocityX if-statements predict_2019: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。 下面的代码里，使用如果语句，让鱼精灵图往不同的方向移动。
+
+        # 这样做
+
+        -   L看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，代码会做什么，并写下答案。
+        -   提交答案后，运行代码。
+      CSD U3 abstraction velocityX if-statements_2018: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。
+
+        下面的代码里，鱼精灵图会在到达右边缘时往左移动，在到达左边缘时往右移动。精灵图会一直移动，直到碰到边缘。
+
+        # 这样做
+
+        -   看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，精灵图是如何知道在 `if` 语句不为真的时候也能移动（精灵图在屏幕的中间）。
+      CSD U3 abstraction velocityX if-statements_2019: |-
+        # 随着位置改变速度
+
+        在条件（`if`）模块中改变速度的一个好处是，精灵图会一直移动，甚至当条件不为真时。例如，只需要按一下键让飞行机器人启动，然后它就会一直飞行。
+
+        下面的代码里，鱼精灵图会在到达右边缘时往左移动，在到达左边缘时往右移动。精灵图会一直移动，直到碰到边缘。
+
+        # 这样做
+
+        -   看看 `if` 语句中，如何检查精灵图的位置，并设置速度。
+        -   与伙伴讨论，精灵图是如何知道在 `if` 语句不为真的时候也能移动（精灵图在屏幕的中间）。
+      CSD U3 abstraction velocityX_2018: |-
+        # velocityX
+
+        一种在游戏实验室移动精灵图的方法，是使用计数器。例如 `sprite1.x = sprite1.x + 1` 会在每一帧画图循环时，将精灵图移动 1 像素。这个模式会经常用到，所以精灵图有个 `velocityX` 属性用来做到这个。
+
+        # 这样做
+
+        -   拖拽出 `sprite.velocityX` 模块放到创建的精灵图下。       ( [显示位置](#triggercallout=code_triggered) )
+        -   在模块中写上精灵图的名字。
+        -   设置 `velocityX` 为 1。
+        -   运行代码。发生了什么？
+        -   将 `velocityX` 属性设成其它值。有什么变化？
+      CSD U3 abstraction velocityX_2019: |-
+        # velocityX
+
+        一种在游戏实验室移动精灵图的方法，是使用计数器。例如 `sprite1.x = sprite1.x + 1` 会在每一帧画图循环时，将精灵图移动 1 像素。这个模式会经常用到，所以精灵图有个 `velocityX` 属性用来做到这个。
+
+        # 这样做
+
+        -   拖拽出 `sprite.velocityX` 模块放到创建的精灵图下。       ( [显示位置](#triggercallout=code_triggered) )
+        -   在模块中写上精灵图的名字。
+        -   设置 `velocityX` 为 1。
+        -   运行代码。发生了什么？
+        -   将 `velocityX` 属性设成其它值。有什么变化？
+      CSD U3 abstraction velocityY: |-
+        # 向下移动
+
+        这个羽毛精灵图应该飘到屏幕下方。如果 `velocityX` 可以让精灵图向右移动，能不能找到模块让羽毛向下移动？
+
+        # 这样做
+
+        找到能让羽毛向下移动的模块，并在画图循环外使用它。   (  [显示位置](#triggercallout=code_triggered) )
       CSD U3 abstraction velocityY control: |-
         # 控制
 
@@ -6404,6 +8124,22 @@ zh-CN:
 
         -   将`如果` 语句放在循环里来检测是否有人按了空格键。
         -   用 `velocityY`模块让直升机会在有人按空格键时飞起来。无论空格键有没有被按下，直升机应当一直向前移动。
+      CSD U3 abstraction velocityY_2018: |-
+        # 向下移动
+
+        这个羽毛精灵图应该飘到屏幕下方。如果 `velocityX` 可以让精灵图向右移动，能不能找到模块让羽毛向下移动？
+
+        # 这样做
+
+        找到能让羽毛向下移动的模块，并在画图循环外使用它。   (  [显示位置](#triggercallout=code_triggered) )
+      CSD U3 abstraction velocityY_2019: |-
+        # 向下移动
+
+        这个羽毛精灵图应该飘到屏幕下方。如果 `velocityX` 可以让精灵图向右移动，能不能找到模块让羽毛向下移动？
+
+        # 这样做
+
+        找到能让羽毛向下移动的模块，并在画图循环外使用它。   (  [显示位置](#triggercallout=code_triggered) )
       CSD U3 challenge face: |-
         <img src="https://images.code.org/aa5aedbcfec082c2886d88b565e5fc09-image-1495732712591.png" style="float: right; max-width: 200px; border: 1px solid grey">
 
@@ -6440,6 +8176,84 @@ zh-CN:
       CSD U3 challenge new shape_2019: "<img src=\"https://images.code.org/cc725698ade5282931002db3bf762cbc-image-1495733456927.png\"\nstyle=\"float:
         right; max-width: 200px; border: 1px solid grey\">\n\n# \n\n挑战：形状组成的形状\n\n_在开始任何挑战前，先问问你的老师。_\n\n你能只用`rect`
         （矩形）和`ellipse`（椭圆）命令创建一个新形状吗？例如，用圆圈组成的三角形？"
+      CSD U3 collisions build isTouching: |-
+        # 气球
+
+        下面的代码会使用精灵图的 x 和 y 位置来检查是否碰到了。当图钉碰到了气球，会改变气球的动画。用方向键来移动图钉，让它碰到气球。
+
+        # 这样做
+
+        -   这一关不需要改动任何代码。
+        -   读一读画图循环里的如果语句，找到不同的精灵图属性，看看它们是怎么比较的。
+        -   与伙伴讨论代码。如何写代码，来检查两个精灵图是否碰上了？
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions build isTouching_2018: |-
+        # 气球
+
+        下面的代码会使用精灵图的 x 和 y 位置来检查是否碰到了。当图钉碰到了气球，会改变气球的动画。用方向键来移动图钉，让它碰到气球。
+
+        # 这样做
+
+        -   这一关不需要改动任何代码。
+        -   读一读画图循环里的如果语句，找到不同的精灵图属性，看看它们是怎么比较的。
+        -   与伙伴讨论代码。如何写代码，来检查两个精灵图是否碰上了？
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions build isTouching_2019: |-
+        # 气球
+
+        下面的代码会使用精灵图的 x 和 y 位置来检查是否碰到了。当图钉碰到了气球，会改变气球的动画。用方向键来移动图钉，让它碰到气球。
+
+        # 这样做
+
+        -   这一关不需要改动任何代码。
+        -   读一读画图循环里的如果语句，找到不同的精灵图属性，看看它们是怎么比较的。
+        -   与伙伴讨论代码。如何写代码，来检查两个精灵图是否碰上了？
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions car intro: |-
+        # 跳跃的青蛙
+
+        看看青蛙跳跃的游戏。看起来和上节课的很像，但青蛙会在碰到蘑菇的时候移动。什么代码让计算机知道两个精灵图是否碰到了？
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
+      CSD U3 collisions car intro_2018: |-
+        # 跳跃的青蛙
+
+        看看青蛙跳跃的游戏。看起来和上节课的很像，但青蛙会在碰到蘑菇的时候移动。什么代码让计算机知道两个精灵图是否碰到了？
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
+      CSD U3 collisions car intro_2019: |-
+        # 跳跃的青蛙
+
+        看看青蛙跳跃的游戏。看起来和上节课的很像，但青蛙会在碰到蘑菇的时候移动。什么代码让计算机知道两个精灵图是否碰到了？
+
+        [//]: # "https://images.code.org/ee9b677e93213846fe12abb3b34f563c-image-1469742494237.png"
+
+        [//]: # "https://images.code.org/5f738da1a2b1ef8af124e4470e2babe7-image-1469742830481.png"
+
+        [//]: # "https://images.code.org/f22e6b1a636337820e53fb37a137b3d1-image-1469742992179.png"
       CSD U3 collisions debug: |-
         # 调试
 
@@ -6643,8 +8457,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png>)
+        当苹果碰到搅拌器时，从"世界" 抽屉里，找到并使用`playSound`（播放声音）模块来播放 "<https://studio.code.org/docs/sounds/blender.mp3>" 声音。需要将声音的地址粘贴到模块中，看起来就像这样： ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -6658,8 +8471,7 @@ zh-CN:
 
         [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
 
-        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png"
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
       CSD U3 collisions egg2_2018: |-
         # 制造声音
 
@@ -6667,8 +8479,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png>)
+        当苹果碰到搅拌器时，从"世界" 抽屉里，找到并使用`playSound`（播放声音）模块来播放 "<https://studio.code.org/docs/sounds/blender.mp3>" 声音。需要将声音的地址粘贴到模块中，看起来就像这样： ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -6682,8 +8493,7 @@ zh-CN:
 
         [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
 
-        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png"
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
       CSD U3 collisions egg2_2019: |-
         # 制造声音
 
@@ -6691,8 +8501,7 @@ zh-CN:
 
         # 这样做
 
-        当苹果碰到搅拌器时，从"world"世界抽屉里，找到并使用`playSound`（播放声音）模块来播放"<https://docs.code.org/sounds/blender.mp3"声音。你需要将声音的地址粘贴到模块中，看起来就像这样：> ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png>)
+        当苹果碰到搅拌器时，从"世界" 抽屉里，找到并使用`playSound`（播放声音）模块来播放 "<https://studio.code.org/docs/sounds/blender.mp3>" 声音。需要将声音的地址粘贴到模块中，看起来就像这样： ![](<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png>)
 
         [//]: # "https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png"
 
@@ -6706,8 +8515,7 @@ zh-CN:
 
         [//]: # "https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png"
 
-        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57
-        PM.png"
+        [//]: # "https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57 PM.png"
       CSD U3 collisions egg_2018: |-
         # 苹果酱
 
@@ -6911,6 +8719,222 @@ zh-CN:
         -   往游戏里添加一个平台来让角色可以四处浏览。
         -   添加另一个障碍。
         -   创建自己的主意。
+      CSD U3 collisions horse: |-
+        # 彩虹马
+
+        当马碰到彩虹时，会变成独角兽。
+
+        # 这样做
+
+        当马碰到彩虹时，用 `if`、`isTouching` 和 `setAnimation` 模块来改变马精灵图的图像。独角兽图片已经加载到了动画标签页里。
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions horse_2018: |-
+        # 彩虹马
+
+        当马碰到彩虹时，会变成独角兽。
+
+        # 这样做
+
+        当马碰到彩虹时，用 `if`、`isTouching` 和 `setAnimation` 模块来改变马精灵图的图像。独角兽图片已经加载到了动画标签页里。
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions horse_2019: |-
+        # 彩虹马
+
+        当马碰到彩虹时，会变成独角兽。
+
+        # 这样做
+
+        当马碰到彩虹时，用 `if`、`isTouching` 和 `setAnimation` 模块来改变马精灵图的图像。独角兽图片已经加载到了动画标签页里。
+
+        [//]: # "https://images.code.org/4d1d0e36e574117140ecc377d406c1de-image-1470256869920.png"
+
+        [//]: # "https://images.code.org/b913bc2ee2231b908892472240a70105-image-1470256869922.png"
+
+        [//]: # "https://images.code.org/558b42903bf40cc26410e651a85de922-image-1470256869923.png"
+
+        [//]: # "https://images.code.org/1d41d2e5b3b55037911b8f73bdc2ff48-image-1470257277875.png"
+      CSD U3 collisions isTouching intro: |-
+        # isTouching() （是否碰到）
+
+        每次编写出检查两个精灵图是否碰到的公式，都要花一些时间。因此，有个程序员创造了 `isTouching` 模块，它可以检查是否某个精灵图碰到了另一个 _target_ （目标）。计算机会用与前一个程序一样的公式，另一个程序员已经写好了这个公式。
+
+        # 这样做
+
+        在画图循环里，将 `isTouching` 模块拖到 `if` 模块里。     ( [显示位置](#triggercallout=code_triggered) )
+
+        _提示：别忘了将 "sprite" 改成 "balloon" （气球），并将 "target" 改成 "tack" （图钉）。_
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions isTouching intro_2018: |-
+        # isTouching() （是否碰到）
+
+        每次编写出检查两个精灵图是否碰到的公式，都要花一些时间。因此，有个程序员创造了 `isTouching` 模块，它可以检查是否某个精灵图碰到了另一个 _target_ （目标）。计算机会用与前一个程序一样的公式，另一个程序员已经写好了这个公式。
+
+        # 这样做
+
+        在画图循环里，将 `isTouching` 模块拖到 `if` 模块里。     ( [显示位置](#triggercallout=code_triggered) )
+
+        _提示：别忘了将 "sprite" 改成 "balloon" （气球），并将 "target" 改成 "tack" （图钉）。_
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions isTouching intro_2019: |-
+        # isTouching() （是否碰到）
+
+        每次编写出检查两个精灵图是否碰到的公式，都要花一些时间。因此，有个程序员创造了 `isTouching` 模块，它可以检查是否某个精灵图碰到了另一个 _target_ （目标）。计算机会用与前一个程序一样的公式，另一个程序员已经写好了这个公式。
+
+        # 这样做
+
+        在画图循环里，将 `isTouching` 模块拖到 `if` 模块里。     ( [显示位置](#triggercallout=code_triggered) )
+
+        _提示：别忘了将 "sprite" 改成 "balloon" （气球），并将 "target" 改成 "tack" （图钉）。_
+
+        [//]: # "https://images.code.org/7afe11fccea99cd7f31497710cce5ac3-image-1471190004988.png"
+
+        [//]: # "https://images.code.org/0b6e98b829379d88b9952ee013cf70bd-image-1471190009596.png"
+
+        [//]: # "https://images.code.org/49c7a3b6fe2eff7e51d3f40581b1dcbb-image-1471190256258.png"
+      CSD U3 collisions predict set velocity code: |-
+        # 精灵图交互
+
+        现在，可以用 `sprite.isTouching()` 模块来创作简单的精灵图交互了。比如，可以在角色碰到硬币的时候，将硬币重置到其它位置。现在，该让精灵图做一些复杂的交互了。
+
+        # 这样做
+
+        -   运行程序，观察两个精灵图之间的交互。
+        -   与伙伴讨论：只使用现有的命令，如何创建这样的交互？有很多方法可以做到，但要使用到下面的一些模块：
+            -   `sprite.isTouching()`
+            -   `sprite.velocityX`
+            -   `sprite.velocityY`
+            -   `sprite.x`
+            -   `sprite.y`
+
+        准备好和同学们分享你的主意。
+      CSD U3 collisions predict set velocity code_2018: |-
+        # 精灵图交互
+
+        现在，可以用 `sprite.isTouching()` 模块来创作简单的精灵图交互了。比如，可以在角色碰到硬币的时候，将硬币重置到其它位置。现在，该让精灵图做一些复杂的交互了。
+
+        # 这样做
+
+        -   运行程序，观察两个精灵图之间的交互。
+        -   与伙伴讨论：只使用现有的命令，如何创建这样的交互？有很多方法可以做到，但要使用到下面的一些模块：
+            -   `sprite.isTouching()`
+            -   `sprite.velocityX`
+            -   `sprite.velocityY`
+            -   `sprite.x`
+            -   `sprite.y`
+
+        准备好和同学们分享你的主意。
+      CSD U3 collisions predict set velocity code_2019: |-
+        # 精灵图交互
+
+        现在，可以用 `sprite.isTouching()` 模块来创作简单的精灵图交互了。比如，可以在角色碰到硬币的时候，将硬币重置到其它位置。现在，该让精灵图做一些复杂的交互了。
+
+        # 这样做
+
+        -   运行程序，观察两个精灵图之间的交互。
+        -   与伙伴讨论：只使用现有的命令，如何创建这样的交互？有很多方法可以做到，但要使用到下面的一些模块：
+            -   `sprite.isTouching()`
+            -   `sprite.velocityX`
+            -   `sprite.velocityY`
+            -   `sprite.x`
+            -   `sprite.y`
+
+        准备好和同学们分享你的主意。
+      CSD U3 collisions scoreboard: |-
+        # 记分牌
+
+        可以用 `isTouching` 来决定是否增加分数。在游戏中，分数存储在 'score' 变量中。显示在屏幕上的  `text` 模块中。  ( [显示位置](#triggercallout=code_triggered) )
+
+        # 这样做
+
+        -   使用 `if` 和 `isTouching` 模块来检查是否兔子抓到了胡萝卜。( [显示位置](#triggercallout=code_triggered2) )
+        -   如果抓到了：
+            -   使用分数变量的计数器模式来增加分数。
+            -   重置屏幕右侧胡萝卜的 x 位置。
+            -   将胡萝卜的 y 位置设置为 10 到 390 之间的随机值。
+      CSD U3 collisions scoreboard_2018: |-
+        # 记分牌
+
+        可以用 `isTouching` 来决定是否增加分数。在游戏中，分数存储在 'score' 变量中。显示在屏幕上的  `text` 模块中。  ( [显示位置](#triggercallout=code_triggered) )
+
+        # 这样做
+
+        -   使用 `if` 和 `isTouching` 模块来检查是否兔子抓到了胡萝卜。( [显示位置](#triggercallout=code_triggered2) )
+        -   如果抓到了：
+            -   使用分数变量的计数器模式来增加分数。
+            -   重置屏幕右侧胡萝卜的 x 位置。
+            -   将胡萝卜的 y 位置设置为 10 到 390 之间的随机值。
+      CSD U3 collisions scoreboard_2019: |-
+        # 记分牌
+
+        可以用 `isTouching` 来决定是否增加分数。在游戏中，分数存储在 'score' 变量中。显示在屏幕上的  `text` 模块中。  ( [显示位置](#triggercallout=code_triggered) )
+
+        # 这样做
+
+        -   使用 `if` 和 `isTouching` 模块来检查是否兔子抓到了胡萝卜。( [显示位置](#triggercallout=code_triggered2) )
+        -   如果抓到了：
+            -   使用分数变量的计数器模式来增加分数。
+            -   重置屏幕右侧胡萝卜的 x 位置。
+            -   将胡萝卜的 y 位置设置为 10 到 390 之间的随机值。
+      CSD U3 collisions sidescroll2: |-
+        # 改进游戏
+
+        现在，已经学过了如何使用 `isTouching` 和 `playSound`，可以在精灵图跑到一起时，做一些更有趣的事情。
+
+        _注意： `playSound` 模块多了一个叫做 "loop" 的参数，可以设置为 true 或 false。如果为 true，声音会一直循环播放。_
+
+        # 这样做
+
+        -   当精灵图碰到一起时，至少添加两个效果。
+
+        _挑战：在屏幕上方，加一个计分板。_
+      CSD U3 collisions sidescroll2_2018: |-
+        # 改进游戏
+
+        现在，已经学过了如何使用 `isTouching` 和 `playSound`，可以在精灵图跑到一起时，做一些更有趣的事情。
+
+        _注意： `playSound` 模块多了一个叫做 "loop" 的参数，可以设置为 true 或 false。如果为 true，声音会一直循环播放。_
+
+        # 这样做
+
+        -   当精灵图碰到一起时，至少添加两个效果。
+
+        _挑战：在屏幕上方，加一个计分板。_
+      CSD U3 collisions sidescroll2_2019: |-
+        # 改进游戏
+
+        现在，已经学过了如何使用 `isTouching` 和 `playSound`，可以在精灵图跑到一起时，做一些更有趣的事情。
+
+        _注意： `playSound` 模块多了一个叫做 "loop" 的参数，可以设置为 true 或 false。如果为 true，声音会一直循环播放。_
+
+        # 这样做
+
+        -   当精灵图碰到一起时，至少添加两个效果。
+
+        _挑战：在屏幕上方，加一个计分板。_
       CSD U3 dancing alien: "# 绘图循环里的精灵图。\n\n改动绘图循环里精灵图的属性，你能让你的角色动起来。\n\n动画速度被减慢了。在程序开始处的`World.frameRate`（世界.帧率）模块将帧率设置为了10。通常的帧率是30。将帧率改成其它值。\n\n#
         \n\n这样做\n\n-   运行代码看看它是如何工作的。\n-   和你的伙伴讨论一下，为什么有些代码在绘图循环里面，有些在外面。\n-   试试改动帧率，然后再运行代码。"
       CSD U3 dancing alien_2018: "# 绘图循环里的精灵图。\n\n改动绘图循环里精灵图的属性，你能让你的角色动起来。\n\n动画速度被减慢了。在程序开始处的`World.frameRate`（世界.帧率）模块将帧率设置为了10。通常的帧率是30。将帧率改成其它值。\n\n#
@@ -7352,7 +9376,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
+        \!\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7366,7 +9390,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
+        \!\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7380,7 +9404,7 @@ zh-CN:
 
         这有一个工具能够计算4，5，6比特的数字。你能用它来找到编码的两个世界纪录。
 
-        ![](<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06
+        \!\[](\<<https://images.code.org/13b0d3307e688575b53e3e6bc86fb739-image-1505426509385.01.06>
         PM.png>)
 
         1.  人类在两分钟内能够举起并扔出去的数量。(4比特)
@@ -7396,7 +9420,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
+        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7412,7 +9436,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
+        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7428,7 +9452,7 @@ zh-CN:
 
         别忘了确保"1"比特永远在最右边。如果在左边有多余的比特，将它们关闭就行了
 
-        ![](<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14
+        \!\[](\<<https://images.code.org/e86788ff9b92a2b01b99749fa1aba8e8-image-1505426626592.01.14>
         PM.png>)
 
         1.  最长的狗尾巴（英寸）（5比特）
@@ -7442,7 +9466,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7457,7 +9481,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7472,7 +9496,7 @@ zh-CN:
 
         这里有一个新的二进制字符串。这次，你不知道两个数字的比特长度。试着在不知道比特长度的情况下解码这两个数字。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         1.  最大的风铃的英寸尺寸（？比特）
@@ -7489,24 +9513,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
-        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
+        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
+        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
-        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
+        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
+        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
+        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
         PM.png>)
 
         # 这样做
@@ -7520,24 +9544,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
-        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
+        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
+        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
-        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
+        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
+        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
+        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
         PM.png>)
 
         # 这样做
@@ -7551,24 +9575,24 @@ zh-CN:
 
         例如，下面的二进制字符串有多种方法来解码。
 
-        ![](<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46
+        \!\[](\<<https://images.code.org/cde9a4d100147b950a9be7540453fe89-image-1505426886341.07.46>
         PM.png>)
 
         如果你将字符串这样分开，这个字符串读作：10，84。
 
-        ![](<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01
-        PM.png>) ![](<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08
+        \!\[](\<<https://images.code.org/c8586b93427166ae6ecfdb8b1ff66bdd-image-1505427228630.13.01>
+        PM.png>) \!\[](\<<https://images.code.org/7d9814dc4bae8512dfaebbe459c29c9b-image-1505427230882.13.08>
         PM.png>)
 
         如果这样分开，这个字符串读作：42，20。
 
-        ![](<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13
-        PM.png>) ![](<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19
+        \!\[](\<<https://images.code.org/2e62b4a71b98b68bdf04713c508e4cb2-image-1505427233001.13.13>
+        PM.png>) \!\[](\<<https://images.code.org/10a316c870b575db4b30a687815bf481-image-1505427235482.13.19>
         PM.png>)
 
         为了解决这个问题，人们同意为每个数字都设置固定的长度。下面的字符串用了同样的两个数字，但无论实际上它有多少比特，每个数字都正好是8比特。
 
-        ![](<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26
+        \!\[](\<<https://images.code.org/257cb728fde57421e58ef31164be5a51-image-1505427467235.13.26>
         PM.png>)
 
         # 这样做
@@ -7589,63 +9613,63 @@ zh-CN:
 
         用像素小工具来画一个笑脸。
 
-        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
         PM.png>)
       CSD U5 black white images pixelation 2_2018: |-
         # 这样做
 
         用像素小工具来画一个笑脸。
 
-        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
         PM.png>)
       CSD U5 black white images pixelation 2_2019: |-
         # 这样做
 
         用像素小工具来画一个笑脸。
 
-        ![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47
+        \!\[](\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>
         PM.png>)
       CSD U5 black white images pixelation 3: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
+        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
         PM.png>)
       CSD U5 black white images pixelation 3_2018: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
+        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
         PM.png>)
       CSD U5 black white images pixelation 3_2019: |-
         # 这样做
 
         这幅图的高度和宽度滑块没有设置正确，所以它看起来什么都不像。改变它们，直到你发现了图片。
 
-        ![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17
+        \!\[](\<<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17>
         PM.png>)
       CSD U5 black white images pixelation 4: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
         PM.png>)
       CSD U5 black white images pixelation 4_2018: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
         PM.png>)
       CSD U5 black white images pixelation 4_2019: |-
         # 这样做
 
         在笑脸上添加眉毛。如果搞乱了，记得使用“可读格式”。
 
-        ![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37
+        \!\[](\<<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37>
         PM.png>)
       CSD U5 black white images pixelation 5: |-
         # 这样做
@@ -10958,7 +12982,7 @@ zh-CN:
       Dance_Party_02: |-
         让这只驼鹿舞动起来吧！
 
-        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 模块。您的舞者应在第四个小节后开始新的动作。
+        将<xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 模块拖放到工作区。将其连接到下面的 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 模块。您的舞者应在第四个小节后开始新的动作。
 
         **小节**用于音乐计时。本教程中，一个小节长度为四个节拍。
       Dance_Party_03: |-
@@ -11112,6 +13136,45 @@ zh-CN:
         -   添加另一组舞者
         -   使用箭头键显示和隐藏舞者
         -   隐藏所有的舞者，并切换到一个好玩的背景效果
+      Final Personal Website: |-
+        # 个人网站
+
+        就是它了！整个单元都在制作个人网站。最后改进一下，并提交给老师吧！记住，在准备最终产品时，要使用解决问题的流程。
+
+        # 这样做
+
+        -   明确：阅读专栏，直到要做些什么
+        -   计划：决定需要做什么，并定好优先级
+        -   尝试：将改进实现到个人网站上。
+        -   反思：从同学那里获得反馈，并决定要采取什么措施。
+
+        别忘了给首页截图，保存到计算机里，晚一些时候会再用到。（_需要帮助了解如何截图？查看<a href="http://www.take-a-screenshot.org/">这里</a>。_）
+      Final Personal Website_2018: |-
+        # 个人网站
+
+        就是它了！整个单元都在制作个人网站。最后改进一下，并提交给老师吧！记住，在准备最终产品时，要使用解决问题的流程。
+
+        # 这样做
+
+        -   明确：阅读专栏，直到要做些什么
+        -   计划：决定需要做什么，并定好优先级
+        -   尝试：将改进实现到个人网站上。
+        -   反思：从同学那里获得反馈，并决定要采取什么措施。
+
+        别忘了给首页截图，保存到计算机里，晚一些时候会再用到。（*需要帮助了解如何截图？查看<a href="http://www.take-a-screenshot.org/" target="_new">这里</a>。*）
+      Final Personal Website_2019: |-
+        # 个人网站
+
+        就是它了！整个单元都在制作个人网站。最后改进一下，并提交给老师吧！记住，在准备最终产品时，要使用解决问题的流程。
+
+        # 这样做
+
+        -   明确：阅读专栏，直到要做些什么
+        -   计划：决定需要做什么，并定好优先级
+        -   尝试：将改进实现到个人网站上。
+        -   反思：从同学那里获得反馈，并决定要采取什么措施。
+
+        别忘了给首页截图，保存到计算机里，晚一些时候会再用到。（*需要帮助了解如何截图？查看<a href="http://www.take-a-screenshot.org/" target="_new">这里</a>。*）
       Fish Tank 1-validated: "**做出预测**：你觉得当运行代码时，会发生什么？"
       Fish Tank 2-validated: |-
         我们来做个鱼缸！
@@ -12363,7 +14426,7 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseA_playlab_events_challenge1_2018: |-
         点击奥丽芙将使罗宾出现！
@@ -12371,7 +14434,7 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseA_playlab_events_challenge1_2019: |-
         点击奥丽芙将使罗宾出现！
@@ -12379,28 +14442,28 @@ zh-CN:
 
         在这个关卡中, 请务必点击提示！这些提示将帮助你逐步完成此项目!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseA_playlab_events_challenge2: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseA_playlab_events_challenge2_2018: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseA_playlab_events_challenge2_2019: |-
         当你点击他们的时候让每个人做点什么。动物们会怎么说？还会发生什么呢？
 
         在这个关卡中, 请务必点击提示。这些提示会给你尝试一些有趣的事情!
 
-        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        \!\[](\<<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19>
         PM.png>)
       courseB_Scrat_ramp1_2018: 让斯奎特到达橡子，将<xml><block type="maze_moveEast"/></xml>模块粘到<xml><block
         type="when_run"/></xml>模块的下面，然后点击"▶ 运行"！
