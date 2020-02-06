@@ -5,32 +5,26 @@ exit unless only_one_running?(__FILE__)
 require_relative '../../dashboard/config/environment'
 exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org'
 
-require 'aws-sdk-databasemigrationservice'
+require 'cdo/aws/dms'
 require 'cdo/chat_client'
 require 'ostruct'
 
 # Export production Aurora MySQL tables to Redshift once a day.
 # 1) Start Data Migration Service (DMS) Replication Tasks, which are configured to drop existing tables in a parallel
 # set of `import_` Redshift schemas and then carry out full load of Aurora MySQL tables into the temporary `import_` schemas.
-# 2) [NOT IMPLEMENTED YET] Verify that all tables have replicated from MySQL to the staging schemas in Redshift within a configurable timeout.
-# 3) [NOT IMPLEMENTED YET] Drop the existing tables in the main Redshift schemas and rename / move the newly transferred tables into the main
+# 2) Verify that all tables have replicated from MySQL to the staging schemas in Redshift within a configurable timeout.
+# 3) [NOT IMPLEMENTED YET] Truncate the existing tables in the main Redshift schemas and rename / move the newly transferred tables into the main
 # Redshift schemas.
 def main
   ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
-  dms_client = Aws::DatabaseMigrationService::Client.new
-  replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
-  production_tasks = replication_tasks.select do |task|
-    dms_client.
-      list_tags_for_resource({resource_arn: task.replication_task_arn}).
-      tag_list.
-      any? {|tag| tag.key == 'environment' && tag.value == 'production'}
-  end
+
+  production_tasks = Cdo::DMS.production_replication_tasks
 
   # Spawn one thread for each replication task, so we can start and monitor them independently.
   threads = []
   Thread.abort_on_exception = true
   production_tasks.each do |task|
-    threads << Thread.new {execute_replication_task(task.replication_task_arn, task.status)}
+    threads << Thread.new {Cdo::DMS.start_replication_task(task.replication_task_arn)}
   end
   threads.each(&:join)
 
@@ -38,92 +32,6 @@ def main
 rescue StandardError => error
   ChatClient.message'cron-daily', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
-end
-
-# Start a replication task and wait until it completes, raising an error if the task did not complete within a
-# configurable time period or did not complete successfully.
-# @replication_task_arn [String]
-def execute_replication_task(replication_task_arn, current_task_status)
-  ChatClient.message 'cron-daily', "Starting DMS Replication Task: #{replication_task_arn}"
-  dms_client = Aws::DatabaseMigrationService::Client.new
-  dms_client.start_replication_task(
-    {
-      replication_task_arn: replication_task_arn,
-      # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
-      start_replication_task_type: current_task_status != 'not-started' ? 'reload-target' : 'start-replication'
-    }
-  )
-
-  # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
-  task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
-  CDO.log.info task_status
-
-  ChatClient.message 'cron-daily', "DMS Task Completed Successfully: #{replication_task_arn}"
-rescue StandardError => error
-  ChatClient.message 'cron-daily', "Error executing DMS Replication Task #{replication_task_arn} - #{error.message}", color: 'red'
-  raise error
-end
-
-def wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
-  dms_client = Aws::DatabaseMigrationService::Client.new
-  attempts = 0
-  task = OpenStruct.new(
-    arn: replication_task_arn,
-    status: nil
-  )
-  while attempts <= max_attempts && task.status != 'stopped'
-    replication_task = dms_client.describe_replication_tasks(
-      {
-        filters: [
-          {
-            name: 'replication-task-arn',
-            values: [replication_task_arn]
-          }
-        ]
-      },
-      max_records: 1,
-      without_settings: true
-    ).replication_tasks[0]
-
-    # Collect the replication task attributes that identify overall replication status.
-    task.status = replication_task.status
-    task.last_failure_message = replication_task.last_failure_message
-    task.stop_reason = replication_task.stop_reason
-    task.start_date = replication_task.replication_task_start_date
-    task.full_load_progress_percent = replication_task.replication_task_stats.full_load_progress_percent
-    task.tables_loaded = replication_task.replication_task_stats.tables_loaded
-    task.tables_loading = replication_task.replication_task_stats.tables_loading
-    task.tables_queued = replication_task.replication_task_stats.tables_queued
-    task.tables_errored = replication_task.replication_task_stats.tables_errored
-
-    attempts += 1
-    CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
-    sleep delay
-  end
-
-  # Gather more detailed replication task status now that the task has stopped or we've given up waiting.
-  task.table_statistics = dms_client.describe_table_statistics(
-    {
-      replication_task_arn: replication_task_arn
-    }
-  ).table_statistics
-
-  return task if task_completed_successfully?(task)
-
-  raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
-    " #{replication_task_arn} did not complete successfully.  Task Status - #{task.status} / #{task}"
-  )
-end
-
-def task_completed_successfully?(task)
-  return task.status == 'stopped' &&
-    task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
-    task.full_load_progress_percent == 100 &&
-    task.tables_loaded > 0 &&
-    task.tables_loading == 0 &&
-    task.tables_queued == 0 &&
-    task.tables_errored == 0 &&
-    task.table_statistics.all? {|table| table.table_state == 'Table completed'}
 end
 
 main
