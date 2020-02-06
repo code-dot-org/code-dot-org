@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
 import {sortableSectionShape, OAuthSectionTypes} from './shapes.jsx';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {
@@ -115,6 +115,12 @@ class SectionActionDropdown extends Component {
       <span>
         <QuickActionsCell>
           <PopUpMenu.Item
+            onClick={this.onClickEdit}
+            className="edit-section-details-link"
+          >
+            {i18n.editSectionDetails()}
+          </PopUpMenu.Item>
+          <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
           >
             {i18n.sectionViewProgress()}
@@ -134,13 +140,6 @@ class SectionActionDropdown extends Component {
                   : i18n.printLoginCards()}
               </PopUpMenu.Item>
             )}
-          <MenuBreak />
-          <PopUpMenu.Item
-            onClick={this.onClickEdit}
-            className="edit-section-details-link"
-          >
-            {i18n.editSectionDetails()}
-          </PopUpMenu.Item>
           <PrintCertificates
             sectionId={sectionData.id}
             assignmentName={sectionData.assignmentNames[0]}
