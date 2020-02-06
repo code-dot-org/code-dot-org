@@ -16,7 +16,7 @@ const styles = {
   }
 };
 
-export default class StandardsLegend extends Component {
+export default class StandardsLegendForPrint extends Component {
   render() {
     return (
       <div style={styles.key}>
