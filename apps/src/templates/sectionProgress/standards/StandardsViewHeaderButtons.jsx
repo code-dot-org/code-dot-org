@@ -53,7 +53,7 @@ class StandardsViewHeaderButtons extends Component {
       teacherDashboardUrl(this.props.sectionId, '/standards_report'),
       '_blank'
     );
-    window.getStoreInfo = {
+    window.teacherDashboardStoreInformation = {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId
     };
