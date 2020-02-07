@@ -4,7 +4,7 @@ require 'honeybadger/ruby'
 # in favor of the regional_partner_mini_contact form.
 # That form is embedded at educate/professional-learning/contact-regional-partner,
 # which is what we redirect to here.
-# Not fully deprecating yet in case regional partners or Code.org staff
+# Not fully removing yet in case regional partners or Code.org staff
 # have saved links that use this controller.
 
 class Pd::RegionalPartnerContactController < ApplicationController
