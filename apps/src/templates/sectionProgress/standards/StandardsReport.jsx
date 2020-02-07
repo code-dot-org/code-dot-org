@@ -10,14 +10,16 @@ import {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {
   getSelectedScriptFriendlyName,
-  getSelectedScriptDescription
+  getSelectedScriptDescription,
+  setScriptId
 } from '@cdo/apps/redux/scriptSelectionRedux';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsProgressTable from './StandardsProgressTable';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   getNumberLessonsCompleted,
-  getNumberLessonsInScript
+  getNumberLessonsInScript,
+  setTeacherCommentForReport
 } from './sectionStandardsProgressRedux';
 import StandardsLegendForPrint from './StandardsLegendForPrint';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
@@ -68,23 +70,20 @@ class StandardsReport extends Component {
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
-    getStandardsCoveredForScript: PropTypes.func.isRequired
+    getStandardsCoveredForScript: PropTypes.func.isRequired,
+    setTeacherCommentForReport: PropTypes.func.isRequired,
+    setScriptId: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId);
-    this.props.getStandardsCoveredForScript(this.props.scriptId);
-
-    function receiveMessage(event) {
-      if (event.origin !== 'http://localhost-studio.code.org:3000') {
-        return;
-      }
-
-      console.log(event);
-      console.log(event.data);
-    }
-
-    window.addEventListener('message', receiveMessage, false);
+    this.props.setTeacherCommentForReport(
+      window.opener.getStoreInfo.teacherComment
+    );
+    this.props.setScriptId(window.opener.getStoreInfo.scriptId);
+    this.props.loadScript(window.opener.getStoreInfo.scriptId);
+    this.props.getStandardsCoveredForScript(
+      window.opener.getStoreInfo.scriptId
+    );
   }
 
   getLinkToOverview() {
@@ -106,7 +105,7 @@ class StandardsReport extends Component {
 
     printWindow.document.write(
       `<html><head><title>${i18n.printReportWindowTitle({
-        sectionName: this.props.section.name
+        sectionName: this.props.sectionName
       })}</title><link rel="stylesheet" type="text/css" href="/shared/css/standards-report-print.css"></head>`
     );
     printWindow.document.write('<body onafterprint="self.close()">');
@@ -201,6 +200,12 @@ export default connect(
     },
     getStandardsCoveredForScript(scriptId) {
       dispatch(getStandardsCoveredForScript(scriptId));
+    },
+    setTeacherCommentForReport(comment) {
+      dispatch(setTeacherCommentForReport(comment));
+    },
+    setScriptId(scriptId) {
+      dispatch(setScriptId(scriptId));
     }
   })
 )(StandardsReport);
