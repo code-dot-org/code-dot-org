@@ -70,7 +70,8 @@ export const validScriptPropType = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.number
+  position: PropTypes.number,
+  description: PropTypes.string
 });
 
 // Initial state of scriptSelectionRedux
