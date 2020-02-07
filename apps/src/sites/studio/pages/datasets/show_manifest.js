@@ -12,10 +12,7 @@ $(document).ready(function() {
   registerReducers({data});
   const store = getStore();
   store.dispatch(setLibraryManifest(manifest));
-
-  initializeCodeMirror('content', 'json', {
-    callback: onChange
-  });
+  initializeCodeMirror('content', 'application/json', {callback: onChange});
   ReactDOM.render(
     <Provider store={store}>
       <ManifestEditor />
@@ -29,6 +26,6 @@ function onChange(editor) {
     const newManifest = JSON.parse(editor.getValue());
     getStore().dispatch(setLibraryManifest(newManifest));
   } catch (e) {
-    // Invalid JSON. Do nothing.
+    getStore().dispatch(setLibraryManifest({}));
   }
 }
