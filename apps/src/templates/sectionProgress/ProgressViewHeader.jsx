@@ -32,7 +32,6 @@ const styles = {
 
 class ProgressViewHeader extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
     scriptId: PropTypes.number,
     //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
@@ -82,10 +81,7 @@ class ProgressViewHeader extends Component {
           </a>
         </span>
         {currentView === ViewType.STANDARDS && (
-          <StandardsViewHeaderButtons
-            sectionId={this.props.section.id}
-            studioUrlPrefix={this.props.studioUrlPrefix}
-          />
+          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
         )}
       </div>
     );

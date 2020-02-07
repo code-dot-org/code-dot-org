@@ -35,7 +35,6 @@ const styles = {
 
 class StandardsViewHeaderButtons extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
     sectionId: PropTypes.number,
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
