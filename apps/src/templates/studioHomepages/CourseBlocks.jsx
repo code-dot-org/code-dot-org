@@ -164,20 +164,19 @@ class CourseBlocksCsfLegacy extends Component {
 
 export class CourseBlocks extends Component {
   static propTypes = {
+    // Array of jQuery selectors to course blocks.
     tiles: PropTypes.arrayOf(PropTypes.string).isRequired
   };
-
-  componentDidMount() {
-    this.props.tiles.forEach((tile, index) => {
-      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
-    });
-  }
 
   render() {
     return (
       <div className="tutorial-row">
         {this.props.tiles.map((tile, index) => (
-          <ProtectedStatefulDiv className="tutorial-block" ref={index} />
+          <ProtectedStatefulDiv className="tutorial-block" ref={(el) => {
+            if (el) {
+              $(tile).appendTo(ReactDOM.findDOMNode(el));
+            }
+          }} />
         ))}
       </div>
     );
