@@ -310,7 +310,6 @@ module ScriptConstants
     {
       id: course_or_script[:id],
       name: name,
-      description: course_or_script.localized_description,
       # Would better be called something like assignable_name
       script_name: course_or_script[:name],
       category: first_category,
