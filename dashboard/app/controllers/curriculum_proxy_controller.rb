@@ -9,7 +9,7 @@ class CurriculumProxyController < ApplicationController
 
   EXPIRY_TIME = 30.minutes
 
-  # Proxy from studio.code.org/docs/ to curriculum.code.org/documentation
+  # Proxy from studio.code.org/docs/ to curriculum.code.org/docs
   def get_doc_landing
     render_proxied_url(
       'https://curriculum.code.org/docs/',
@@ -20,7 +20,7 @@ class CurriculumProxyController < ApplicationController
     )
   end
 
-  # Proxy from studio.code.org/docs/foo to curriculum.code.org/documentation/foo
+  # Proxy from studio.code.org/docs/foo to curriculum.code.org/docs/foo
   def get_doc
     render_proxied_url(
       URI.parse(request.original_url).path.sub(/^\/docs/, 'https://curriculum.code.org/docs'),
