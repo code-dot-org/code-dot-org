@@ -1143,8 +1143,8 @@ it-IT:
           target="_blank">lezione 16</a> per raccogliere un quantità specificata di
           nettare in una direzione specificata.
         Course_4_SCF_1a_b: "Considera questo tragitto come percorso principale:  \n\n![](https://images.code.org/1c3feab70af706409b3a05af4dc83c2e-image-1469726967858.png)"
-        Course_4_SCF_1a_c: Rifletti su come usare un "ciclo con contatore" (`for loop`)
-          per chiamare la funzione con il valore corretto del parametro.
+        Course_4_SCF_1a_c: Rifletti su come usare un ciclo `ripeti con counter` per
+          chiamare la funzione con il valore corretto del parametro.
         Course_4_SCF_1a_d: |-
           **Soluzione:**
 
@@ -1371,8 +1371,8 @@ it-IT:
         Course_4_SCF_1b_a: 'Osserva che le dosi di miele da produrre sono sempre le
           stesse: puoi usare una funzione.'
         Course_4_SCF_1b_b: "Un possibile percorso per l'ape:  \n\n![](https://images.code.org/996ab4a2de6048cbb99b84c56cc4ad61-image-1469726859769.png)"
-        Course_4_SCF_1b_c: Puoi usare un "ciclo con contatore" (`for loop`) per far
-          fare all'ape il percorso opportuno.
+        Course_4_SCF_1b_c: Puoi usare un ciclo `ripeti con counter` per far fare all'ape
+          il percorso opportuno.
         Course_4_SCF_1b_d: |-
           **Soluzione:**
 
@@ -2611,9 +2611,10 @@ it-IT:
             </block>
           </xml>
       Course 4 SCFL 7:
-        Course_4_SCFL_7_a: |-
-          -   La figura è composta da due onde, ognuna delle quali è disegnata da un "ciclo con contatore" (`for loop`), il primo che conta "a salire" ed il secondo che conta "a scendere".<br>
-          -   Entrambi i cicli hanno come estremi 5 e 200, come passo 2, ed eseguono <b>quasi</b> le stesse azioni.
+        Course_4_SCFL_7_a: "-   La figura è composta da due onde, ognuna delle quali
+          è disegnata da un ciclo `ripeti con counter` , il primo che conta \"a salire\"
+          ed il secondo che conta \"a scendere\".<br> \n-   Entrambi i cicli hanno
+          come estremi 5 e 200, come passo 2, ed eseguono <b>quasi</b> le stesse azioni."
         Course_4_SCFL_7_b: |-
           -   La larghezza (`width`) del pennello varia progressivamente all'interno del ciclo, seguendo il valore del contatore `counter`.<br>
           -   Ad ogni ripetizione l'artista deve avanzare di 5 pixel e poi girare di `360`/`counter`: attenzione alla direzione in cui gira!
@@ -4914,7 +4915,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -5163,14 +5164,24 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
-          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
-          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Aggiungi questi blocchi al tuo programma:
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -12385,7 +12396,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12396,7 +12407,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12407,7 +12418,7 @@ it-IT:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -12863,14 +12874,24 @@ it-IT:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: "Quindi, dopo aver fatto un passo
-          indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta
-          la fila.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAggiungi questi blocchi al tuo programma:\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Quindi, dopo aver fatto un passo indietro, raccogli i diamanti rimanenti. E ripeti questo meccanismo su tutta la fila.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Aggiungi questi blocchi al tuo programma:
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Infine, per raccogliere i diamanti
           rimanenti su tutti i lati del percorso, aggiungi questi blocchi al tuo programma:\n\n<xml>\n
           \ <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
@@ -18517,9 +18538,9 @@ it-IT:
       courseF_bee_fwp2:
         courseF_bee_fwp2_a: "Per creare la funzione, è sufficiente trascinare il codice
           nel blocco funzione denominato `rowOfNectar`  (_riga di nettare_) .  \n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)"
-        courseF_bee_fwp2_b: Non dimenticare di collegare il blocco `rowOfNectar` (_riga
-          di nettare_) al blocco arancione `quando si clicca su "Esegui"` per richiamare
-          la funzione che hai appena definito.
+        courseF_bee_fwp2_b: Non dimenticare di collegare il blocco `riga di nettare`
+          al blocco arancione `quando si clicca su "Esegui"` per richiamare la funzione
+          che hai appena definito.
       courseF_bee_fwp3:
         courseF_bee_fwp3_a: La funzione funzionerà indipendentemente dalla direzione
           in cui è rivolta l'ape.

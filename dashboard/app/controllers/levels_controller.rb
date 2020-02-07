@@ -131,6 +131,8 @@ class LevelsController < ApplicationController
     @visible = scripts.reject(&:hidden).any?
     @pilot = scripts.select(&:pilot_experiment).any?
     @standalone = ProjectsController::STANDALONE_PROJECTS.values.map {|h| h[:name]}.include?(@level.name)
+    fb = FirebaseHelper.new('shared')
+    @dataset_library_manifest = fb.get_library_manifest
   end
 
   # GET /levels/:id/get_rubric
