@@ -17,8 +17,6 @@
 class Pd::RegionalPartnerContact < ActiveRecord::Base
   include Pd::Form
 
-  UNMATCHED_FORM_EMAIL = 'liz.gauthier@code.org'
-
   belongs_to :user
   belongs_to :regional_partner
 
@@ -26,29 +24,6 @@ class Pd::RegionalPartnerContact < ActiveRecord::Base
   validate :validate_email
 
   before_save :update_regional_partner
-
-  after_create :send_regional_partner_contact_emails
-  def send_regional_partner_contact_emails
-    form = sanitize_and_trim_form_data_hash
-
-    if regional_partner_id
-      partner = RegionalPartner.find(regional_partner_id)
-      regional_partner_program_managers = RegionalPartnerProgramManager.where(regional_partner_id: partner)
-
-      if regional_partner_program_managers.empty?
-        matched_but_no_pms = true
-        Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL, matched_but_no_pms).deliver_now
-      else
-        regional_partner_program_managers.each do |rp_pm|
-          Pd::RegionalPartnerContactMailer.matched(form, rp_pm).deliver_now
-        end
-      end
-    else
-      Pd::RegionalPartnerContactMailer.unmatched(form, UNMATCHED_FORM_EMAIL).deliver_now
-    end
-
-    Pd::RegionalPartnerContactMailer.receipt(form, regional_partner).deliver_now
-  end
 
   def self.required_fields
     [
