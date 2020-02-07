@@ -4,7 +4,7 @@ video_player: true
 theme: responsive
 ---
 # Get ready for CS Fest 2020!
-![AP Computer Science Principles](/images/fit-700/hero-image-plualsight-2019.png)
+![Join Ciara, Russell Wilson and Jeff Bezos for CSFest!](/images/fit-800/marketing/dummyheadercsfest.png)
 ## Join Russell Wilson, Ciara, and Jeff Bezos for a celebration of computer science
 
 The CS Fest will bring together high school computer science students from Seattle area schools, to celebrate the young adults who are learning this important 21st century subject and to help them imagine their future in computer science.
