@@ -7,6 +7,8 @@ require_relative '../dashboard/config/environment'
 # existing Standards and to create new Standards.
 # Will not delete existing Standards.
 
+# Usage: ruby import_standards_from_csv <path_to_csv>
+
 # @param csv_path [String] The path to the CSV file.
 # Expected columns:
 # - organization
@@ -16,7 +18,7 @@ require_relative '../dashboard/config/environment'
 def main(csv_path)
   created = 0
   updated = 0
-  CSV.foreach(csv_path, {headers: true, quote_char: "\x00"}) do |row|
+  CSV.foreach(csv_path, {headers: true}) do |row|
     parsed = {
       organization: row['organization'],
       organization_id: row['organization_id'],
