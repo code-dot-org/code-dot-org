@@ -1,14 +1,19 @@
 - require 'json'
 - content_for(:head) do
-  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
   %script{src: webpack_asset_path('js/levelbuilder.js')}
+  = stylesheet_link_tag 'css/levelbuilder', media: 'all'
 
 %h1= 'Edit Dataset Manifest'
 
+%h2= 'Preview'
+.preview_container
+
+%h2= 'Manifest JSON'
 = form_tag(datasets_manifest_path) do
   = label_tag 'content'
   = text_area_tag 'content', JSON.pretty_generate(@dataset_library_manifest), placeholder: 'Insert JSON Data', rows: 4
-  :javascript
-    levelbuilder.initializeCodeMirror('content', 'javascript');
 
   = submit_tag
+
+%script{src: webpack_asset_path('js/datasets/show_manifest.js'),
+        data: {libraryManifest: @dataset_library_manifest.to_json}}
