@@ -1,5 +1,5 @@
 ---
-title: Cómo alojar un Hour of Code - Compañías
+title: Cómo organizar una Hora del Código - Empresas
 ---
 
 {{ signup_button }}

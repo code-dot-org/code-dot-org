@@ -26,8 +26,8 @@ require_relative './constants'
 include CdoCli
 
 DEFAULT_S3_BUCKET = 'cdo-animation-library'.freeze
-DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/animationLibrary.json".freeze
-SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/gamelab/spriteCostumeLibrary.json".freeze
+DEFAULT_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/gamelab/animationLibrary.json".freeze
+SPRITELAB_OUTPUT_FILE = "#{`git rev-parse --show-toplevel`.strip}/apps/src/p5lab/spritelab/spriteCostumeLibrary.json".freeze
 DOWNLOAD_DESTINATION = '~/cdo-animation-library'.freeze
 SPRITE_COSTUME_LIST = SPRITE_LAB_ANIMATION_LIST
 
@@ -195,8 +195,9 @@ The animation has been skipped.
   # ret_val['animation_name'] = {'json': JSON file, 'png': PNG file}
   def get_animation_objects(bucket)
     animations_by_name = {}
-    bucket.objects.each do |object_summary|
-      animation_name = object_summary.key[/^[^.]+/]
+    prefix = @options[:spritelab] ? 'spritelab' : 'gamelab'
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/category[^.]+/]
       extension = object_summary.key[/(?<=\.)\w+$/]
       next if extension.nil? # Skip 'directory' objects
 
@@ -321,7 +322,7 @@ The animation has been skipped.
       metadata['version'] = objects['png'].object.version_id
 
       # Generate appropriate sourceUrl pointing to the animation library API
-      metadata['sourceUrl'] = "/api/v1/animation-library/#{metadata['version']}/#{name}.png"
+      metadata['sourceUrl'] = "/api/v1/animation-library/#{@options[:spritelab] ? 'spritelab' : 'gamelab'}/#{metadata['version']}/#{name}.png"
 
       # Populate sourceSize if not already present
       unless metadata.key?('sourceSize')

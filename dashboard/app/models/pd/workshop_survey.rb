@@ -17,9 +17,6 @@
 class Pd::WorkshopSurvey < ActiveRecord::Base
   include Pd::FacilitatorSpecificForm
 
-  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
-  validates_presence_of :pd_enrollment
-
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = [
     'Strongly Disagree',
     'Disagree',
@@ -32,6 +29,10 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   OTHER = 'Other'.freeze
   YES = 'Yes'.freeze
   NO = 'No'.freeze
+
+  belongs_to :pd_enrollment, class_name: "Pd::Enrollment"
+
+  validates_presence_of :pd_enrollment
 
   def self.required_fields
     [

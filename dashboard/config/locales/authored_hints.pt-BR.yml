@@ -75,8 +75,8 @@ pt-BR:
         2-3_Artist_Functions_1_a: Cada um dos quadrados tem 100 de pixels de lado,
           o que significa que você terá que movê-lo para frente 175 pixels antes de
           desenhar o seu segundo quadrado.
-        2-3_Artist_Functions_1_b: É okey desenhar linhas sobrepostas para fazer seus
-          óculos.
+        2-3_Artist_Functions_1_b: Tudo bem desenhar linhas sobrepostas para fazer
+          seus óculos.
       2-3 Artist Functions 11:
         2-3_Artist_Functions_11_a: Você precisará mudar não só o número e o comprimento
           dos lados dentro da função, mas também o ângulo que o artista gira em cada
@@ -175,7 +175,7 @@ pt-BR:
       2-3 Artist Nested Loops 5:
         2-3_Artist_Nested_Loops_5_a: "Tente usar o bloco 'saltar para a frente' para
           conseguir ir do topo de um quadrado para o lugar onde você vai começar o
-          próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
+          próximo. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
           por 20 pixels entre si, qual distância você precisa saltar?"
       2-3 Artist Nested Loops 7:
         2-3_Artist_Nested_Loops_7_a: |-
@@ -2216,29 +2216,29 @@ pt-BR:
           _Esta fase termina após quatro compassos._
         challenges: |-
           **Desafios opcionais**
+
           \*Escolha uma música diferente para tocar.
-          \*Escolha um dançarino(a) diferente que se pareça com um alce!
           \*Renomeie seu(sua) dançarino(a).
       CourseD_Dance_Party_02:
         validation: |-
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       CourseD_Dance_Party_03:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
       CourseD_Dance_Party_04:
         validation: |-
           **Como passar desta fase?**
 
           \*Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
 
-          _Esta fase termina após 10 compassos._
+          _Esta fase termina após 9 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2261,7 +2261,7 @@ pt-BR:
 
           -   Dois dançarinos precisam ter um tamanho diferente de 100.
 
-          _Esta fase termina após seis compassos._
+          _Esta fase termina após 5 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2272,37 +2272,37 @@ pt-BR:
 
           -   Altere a tonalidade de pelo menos um(a) dançarino(a).
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_10:
         validation: |-
           **Como passar desta fase?**
 
           -   As propriedades de dois ou mais dançarinos devem mudar.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11_5:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseD_Dance_Party_11b:
         validation: |-
           **Como passar desta fase?**
 
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       CourseE_HOC 2018 Level_10:
-        voyage_aquatic_10a: Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Veja as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?
       CourseE_HOC 2018 Level_7a:
         aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
@@ -2342,7 +2342,7 @@ pt-BR:
           -   Ambos os dançarinos devem executar um movimento.
           -   Você deve pressionar as teclas de seta.
 
-          _Este nível termina após 4 compassos._
+          _Este nível termina após 6 compassos._
         challenges: |-
           \*\* Desafio opcional \*\*
 
@@ -2352,14 +2352,14 @@ pt-BR:
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       Dance_2019_05:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
         challenges: |-
           \*\* Desafio opcional \*\*
 
@@ -2428,29 +2428,29 @@ pt-BR:
           _Esta fase termina após quatro compassos._
         challenges: |-
           **Desafios opcionais**
+
           \*Escolha uma música diferente para tocar.
-          \*Escolha um dançarino(a) diferente que se pareça com um alce!
           \*Renomeie seu(sua) dançarino(a).
       Dance_Party_02:
         validation: |-
           **Como passar desta fase?**
           \*O(a) dançarino(a) precisa fazer um novo passo após quatro compassos.
 
-          _A fase termina após oito compassos._
+          _A fase termina após 7 compassos._
       Dance_Party_03:
         validation: |-
           **Como passar desta fase?**
 
           \*Após seis compassos, seu(sua) dançarino(a) precisa executar uma dança diferente da que estava fazendo após o quarto compasso.
 
-          _Esta fase termina após doze compassos._
+          _Esta fase termina após 11 compassos._
       Dance_Party_04:
         validation: |-
           **Como passar desta fase?**
 
           \*Você precisa alterar o efeito do plano de fundo durante o sétimo compasso da música.
 
-          _Esta fase termina após 10 compassos._
+          _Esta fase termina após 9 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2480,7 +2480,7 @@ pt-BR:
 
           -   Dois dançarinos precisam ter um tamanho diferente de 100.
 
-          _Esta fase termina após seis compassos._
+          _Esta fase termina após 5 compassos._
         challenges: |-
           **Desafio opcional**
 
@@ -2491,35 +2491,35 @@ pt-BR:
 
           -   Altere a tonalidade de pelo menos um(a) dançarino(a).
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_10:
         validation: |-
           **Como passar desta fase?**
 
           -   As propriedades de dois ou mais dançarinos devem mudar.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11_5:
         validation: |-
           **Como passar desta fase?**
 
           -   Seja criativo!
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_11b:
         validation: |-
           **Como passar desta fase?**
 
           -   Use o bloco 'com a seta para a esquerda pressionada' para fazer o robô executar um movimento de dança ao pressioná-la.
 
-          _Esta fase termina após oito compassos._
+          _Esta fase termina após 7 compassos._
       Dance_Party_extras_alternate_2019:
         alternate: O bloco alternativo está na categoria "Dançarinos".
       Function intro Ryan:
@@ -2533,7 +2533,7 @@ pt-BR:
         Function_intro_Ryan_a: Você pode executar uma função muitas vezes dentro de
           seu programa! Tente executá-la duas vezes para resolver este enigma.
       HOC 2018 Level_10:
-        voyage_aquatic_10a: Vê as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
+        voyage_aquatic_10a: Veja as **Lanternas do Mar** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Como você pode usar uma condicional nos itens para chegar ao Monumento Oceânico?
       HOC 2018 Level_7a:
         aquatic7: Você pode usar o bloco de caminho se para ajudá-lo a fazer as curvas
@@ -2999,7 +2999,7 @@ pt-BR:
         behaviors_hint1: Voce pode criar um novo comportamento que usa duas ações
           diferentes ou juntar dois comportamentos existentes.
         sprites_idea1: |-
-          Por diversão, você usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
+          Por diversão, você pode usar um comportamento semelhante para fazer uma nave escapar para o espaço ou um personagem correr para o plano de frente. Experimente alterar o plano de fundo e as vestimentas das figuras na sua cena!
 
           ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
 
@@ -3218,7 +3218,7 @@ pt-BR:
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Faça Boo, o Fantasma, aparecer quando
-          você clicar em Wendel!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          você clicar em Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -3310,7 +3310,7 @@ pt-BR:
 
           **Você pode resolver isto sem nunca virar à esquerda**
         courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
-          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          ter uma flor, uma colmeia ou nada. Isso significa que você pode repetir
           sua condicional `se / se não` em cada quadrado.
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge1_b: |-
@@ -3512,7 +3512,7 @@ pt-BR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
         courseD_collector_debugging_challenge2_b: |-
           Em seguida, colete as gemas restantes nessa linha.
 
@@ -4237,19 +4237,19 @@ pt-BR:
           </value>
           </block></xml>
       courseA_artist_loops2:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
           para resolver essa charada.
       courseA_artist_loops2_2018:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
           para resolver essa charada.
       courseA_artist_loops2_2019:
-        courseA_artist_loops2_a: Não consegue descobrir como  desenhar a linha? Comece
+        courseA_artist_loops2_a: Não consegue descobrir como desenhar a linha? Comece
           ligando os blocos ao <xml><block type="when_run"/></xml> bloco para ver
           o que acontece.
         courseA_artist_loops2_b: Utilize esse bloco <xml><block type="simple_move_right"/></xml>
@@ -4491,7 +4491,7 @@ pt-BR:
           name="TIMES" config="3-10">???</title></block></xml>.
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: |-
-          Experimente usar um laço
+          Experimente usar um laço de repetição
 
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>!
         courseA_collector_loops3_b: Lembre-se, você pode colocar mais de 1 bloco dentro
@@ -4732,7 +4732,7 @@ pt-BR:
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "Seu código terá **quatro** blocos `mover para
           oeste`\n\n<xml><block type=\"maze_moveWest\"/></xml> \n\ne **quatro** blocos
-          \ blocos <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
+          <xml>\n`pegar milho`\n<block type=\"harvester_corn\"/>\n</xml>. "
         courseA_harvester_loops2_b: 'Se você ainda está tendo problemas, tente dizer
           os passos em voz alta. '
       courseA_harvester_loops3:
@@ -5440,7 +5440,7 @@ pt-BR:
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Faça Boo, o Fantasma, aparecer quando
-          você clicar em Wendel!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          você clicar em Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -5466,7 +5466,7 @@ pt-BR:
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Faça Boo, o Fantasma, aparecer quando
-          você clicar em Wendel!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          você clicar em Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -5492,7 +5492,7 @@ pt-BR:
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
           \     </block>\n    </next>\n  </block></xml>"
         courseA_playlab_events_challenge1_b: "Faça Boo, o Fantasma, aparecer quando
-          você clicar em Wendel!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
+          você clicar em Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n
           \   <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
           \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
           \     </block>\n    </next>\n  </block></xml>"
@@ -5615,11 +5615,13 @@ pt-BR:
             </block></xml>
       courseB_Scrat_ramp1_2018:
         '1': Se o Scrat não está fazendo o que você quer, tenha certeza que os dois
-          blocos foram totalmente clicados em conjunto, e então, clique em "run" novamente.
+          blocos foram totalmente clicados em conjunto, e então, clique em "executar"
+          novamente.
         '2': Não tenha medo de errar! Tente algo, e se não funcionar, tente algo diferente!
       courseB_Scrat_ramp1_2019:
         '1': Se o Scrat não está fazendo o que você quer, tenha certeza que os dois
-          blocos foram totalmente clicados em conjunto, e então, clique em "run" novamente.
+          blocos foram totalmente clicados em conjunto, e então, clique em "executar"
+          novamente.
         '2': Não tenha medo de errar! Tente algo, e se não funcionar, tente algo diferente!
       courseB_Scrat_ramp2_2018:
         '1': |-
@@ -5692,34 +5694,34 @@ pt-BR:
       courseB_artist_loops2:
         courseB_artist_loops2_a: Se você quer que o laço se repita mais de 4 vezes,
           você pode mudar o número no topo do bloco.
-        courseB_artist_loops2_b: Tente rodas o código primeiro para ver onde o artista
+        courseB_artist_loops2_b: Tente rodar o código primeiro para ver onde o artista
           termina.
       courseB_artist_loops2_2018:
         courseB_artist_loops2_a: Se você quer que o laço se repita mais de 4 vezes,
           você pode mudar o número no topo do bloco.
-        courseB_artist_loops2_b: Tente rodas o código primeiro para ver onde o artista
+        courseB_artist_loops2_b: Tente rodar o código primeiro para ver onde o artista
           termina.
       courseB_artist_loops2_2019:
         courseB_artist_loops2_a: Se você quer que o laço se repita mais de 4 vezes,
           você pode mudar o número no topo do bloco.
-        courseB_artist_loops2_b: Tente rodas o código primeiro para ver onde o artista
+        courseB_artist_loops2_b: Tente rodar o código primeiro para ver onde o artista
           termina.
       courseB_artist_loops3:
         courseB_artist_loops3_a: Se lembre de usar o laço de `repeat` para um código
           melhor!
-        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenha
+        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenhar
           essa linha.
       courseB_artist_loops3_2018:
         courseB_artist_loops3_a: |-
           Se se lembre de suar o `repeat`<xml><block type="controls_repeat_simplified"><title name="TIMES">???</title>
           </block></xml>Repetição para um código melhor!
-        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenha
+        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenhar
           essa linha.
       courseB_artist_loops3_2019:
         courseB_artist_loops3_a: |-
           Se se lembre de suar o `repeat`<xml><block type="controls_repeat_simplified"><title name="TIMES">???</title>
           </block></xml>Repetição para um código melhor!
-        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenha
+        courseB_artist_loops3_b: O artista vai querer se mover para o Sul para desenhar
           essa linha.
       courseB_artist_loops4:
         courseB_artist_loops4_a: O bloco de pulo te permite andar para frente sem
@@ -5941,19 +5943,19 @@ pt-BR:
           laços de `repetição`, escreva seu código passo a passo e procure por um
           padrão.
         courseB_collector_loops10_b: Tente escrever os movimentos em um pedaço de
-          papel e procurando um padrão.
+          papel e procurar um padrão.
       courseB_collector_loops10_2018:
         courseB_collector_loops10_a: Se você não consegue descobrir onde colocar os
           laços de `repetição`, escreva seu código passo a passo e procure por um
           padrão.
         courseB_collector_loops10_b: Tente escrever os movimentos em um pedaço de
-          papel e procurando um padrão.
+          papel e procurar um padrão.
       courseB_collector_loops10_2019:
         courseB_collector_loops10_a: Se você não consegue descobrir onde colocar os
           laços de `repetição`, escreva seu código passo a passo e procure por um
           padrão.
         courseB_collector_loops10_b: Tente escrever os movimentos em um pedaço de
-          papel e procurando um padrão.
+          papel e procurar um padrão.
       courseB_collector_loops1_2018:
         courseB_collector_loops1_a: O bloco <xml><block type="collector_collect_simplified"/></xml>
           pode ser usado para pegar o tesouro quando você estiver parado em cima dele.
@@ -6494,13 +6496,13 @@ pt-BR:
           </block></xml>, então coloque o bloco que você quiser dentro dele.
       courseB_iceage_loops4:
         courseB_iceage_loops4_a: Tente escrever os passos que Scrat daria para chegar
-          à bolota. Você identifica um padrão?
+          à noz. Você identifica um padrão?
         courseB_iceage_loops4_b: Não tenha medo de executar o seu código e ver o que
           acontece!
         courseB_iceage_loops4_c: Esse é o caminho que Scrat deve seguir.
       courseB_iceage_loops4_2019:
         courseB_iceage_loops4_a: Tente escrever os passos que Scrat daria para chegar
-          à bolota. Você identifica um padrão?
+          à noz. Você identifica um padrão?
         courseB_iceage_loops4_b: Não tenha medo de executar o seu código e ver o que
           acontece!
         courseB_iceage_loops4_c: Esse é o caminho que Scrat deve seguir.
@@ -6516,34 +6518,34 @@ pt-BR:
         courseB_iceage_loops7_a: Se você ficar preso, tente escrever etapas em um
           pedaço de papel. Você vê um padrão?
         courseB_iceage_loops7_b: Este é o caminho que Scrat deveria seguir para chegar
-          à bolota.
+          à noz.
       courseB_iceage_loops7_2019:
         courseB_iceage_loops7_a: Se você ficar preso, tente escrever etapas em um
           pedaço de papel. Você vê um padrão?
         courseB_iceage_loops7_b: Este é o caminho que Scrat deveria seguir para chegar
-          à bolota.
+          à noz.
       courseB_iceage_loops8:
         courseB_iceage_loops8_a: Os blocos de movimento estão certos? O que mais você
           pode mudar?
         courseB_iceage_loops8_b: A primeira iteração deve ser repetida **3** vezes,
           a segunda **5** vezes, a terceira **4** vezes, e a última também **4** vezes.
-        courseB_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
+        courseB_iceage_loops8_c: Use os laços para ajudar o Scrat a seguir o caminho.
       courseB_iceage_loops8_2019:
         courseB_iceage_loops8_a: Os blocos de movimento estão certos? O que mais você
           pode mudar?
         courseB_iceage_loops8_b: A primeira iteração deve ser repetida **3** vezes,
           a segunda **5** vezes, a terceira **4** vezes, e a última também **4** vezes.
-        courseB_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
+        courseB_iceage_loops8_c: Use os laços para ajudar o Scrat a seguir o caminho.
       courseB_iceage_loops9:
         courseB_iceage_loops9_a: Com problemas? Tente separar este enigma em pedaços
-          menores. Não fique com medo de roda seu enigma conforme for codificando!
+          menores. Não fique com medo de rodar seu enigma conforme for codificando!
         courseB_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
-        courseB_iceage_loops9_c: Cuidado com o gelo quebrado! Scrat vai cair direto.
+        courseB_iceage_loops9_c: 'Scrat deve seguir este caminho para obter a noz. '
       courseB_iceage_loops9_2019:
         courseB_iceage_loops9_a: Com problemas? Tente separar este enigma em pedaços
-          menores. Não fique com medo de roda seu enigma conforme for codificando!
+          menores. Não fique com medo de rodar seu enigma conforme for codificando!
         courseB_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
-        courseB_iceage_loops9_c: Cuidado com o gelo quebrado! Scrat vai cair direto.
+        courseB_iceage_loops9_c: 'Scrat deve seguir este caminho para obter a noz. '
       courseB_maze_seq1:
         courseB_maze_seq1_a: Conecte os blocos ao bloco <xml><block type="when_run"/></xml>
           para fazer o passáro se mover!
@@ -6551,11 +6553,11 @@ pt-BR:
           para fora e conecte elas ao bloco <xml><block type="when_run"/></xml> para
           fazer o seu pássaro chegar ao porco.
       courseB_maze_seq10:
-        courseB_maze_seq10_a: Tente escrever os passos em um pedaço de papel.
+        courseB_maze_seq10_a: Tente escrever os passos em um pedaço de papel primeiro.
         courseB_maze_seq10_b: Você precisará se mover em duas direções diferentes
           para alcançar o porco.
       courseB_maze_seq11:
-        courseB_maze_seq11_a: Tente escrever os passos em um pedaço de papel.
+        courseB_maze_seq11_a: Tente escrever os passos em um pedaço de papel primeiro.
         courseB_maze_seq11_b: Quebre esse quebra-cabeça em dois pedaços, um antes
           do canto e outro depois do canto.
       courseB_maze_seq1_2018:
@@ -6589,12 +6591,12 @@ pt-BR:
           para resolver este desafio.
       courseB_maze_seq4_2018:
         courseB_maze_seq4_a: Tente adicionar uma instrução por vez até você conseguir
-          chegar à bolota.
+          chegar à noz.
         courseB_maze_seq4_b: Você vai querer usar o bloco <xml><block type="maze_moveEast"/></xml>
           para resolver este desafio.
       courseB_maze_seq4_2019:
         courseB_maze_seq4_a: Tente adicionar uma instrução por vez até você conseguir
-          chegar à bolota.
+          chegar à noz.
         courseB_maze_seq4_b: Você vai querer usar o bloco <xml><block type="maze_moveEast"/></xml>
           para resolver este desafio.
       courseB_maze_seq5:
@@ -6606,12 +6608,12 @@ pt-BR:
         courseB_maze_seq5_a: Se você ficar travado, tente desenhar o caminho em uma
           folha de papel.
         courseB_maze_seq5_b: Existem 2 maneiras de resolver este quebra-cabeças!
-        courseB_maze_seq5_c: Não tem certeza como chegar à bolota? Tente este caminho.
+        courseB_maze_seq5_c: Não tem certeza como chegar à noz? Tente este caminho.
       courseB_maze_seq5_2019:
         courseB_maze_seq5_a: Se você ficar travado, tente desenhar o caminho em uma
           folha de papel.
         courseB_maze_seq5_b: Existem 2 maneiras de resolver este quebra-cabeças!
-        courseB_maze_seq5_c: Não tem certeza como chegar à bolota? Tente este caminho.
+        courseB_maze_seq5_c: Não tem certeza como chegar à noz? Tente este caminho.
       courseB_maze_seq6:
         courseB_maze_seq6_a: Seu código final deve ter três blocos de movimento.
         courseB_maze_seq6_b: Se você ficar travado, tente resolver o enigma em duas
@@ -6623,13 +6625,13 @@ pt-BR:
         courseB_maze_seq6_b: Se você ficar travado, tente resolver o enigma em duas
           partes, uma de lado e outra de cima pra baixo.
         courseB_maze_seq5_c: Estes são os dois jeitos de resolver o enigma.
-        courseB_maze_seq5_d: Não tem certeza de como chegar à bolota? Tente este caminho!
+        courseB_maze_seq5_d: Não tem certeza de como chegar à noz? Tente este caminho!
       courseB_maze_seq6_2019:
         courseB_maze_seq6_a: Seu código final deve ter três blocos de movimento.
         courseB_maze_seq6_b: Se você ficar travado, tente resolver o enigma em duas
           partes, uma de lado e outra de cima pra baixo.
         courseB_maze_seq5_c: Estes são os dois jeitos de resolver o enigma.
-        courseB_maze_seq5_d: Não tem certeza de como chegar à bolota? Tente este caminho!
+        courseB_maze_seq5_d: Não tem certeza de como chegar à noz? Tente este caminho!
       courseB_maze_seq7:
         courseB_maze_seq7_a: Adicione 1 bloco para mover o pássaro até o porco.
         courseB_maze_seq7_b: Tente rodar o código que lhe foi dado para ver até onde
@@ -6639,41 +6641,41 @@ pt-BR:
         courseB_maze_seq7_a: Adicione 1 bloco para mover Scrat até a noz.
         courseB_maze_seq7_b: Tente rodar o código que lhe foi dado para ver até onde
           você vai.
-        courseB_maze_seq7_c: Não consegue chegar à bolota? Tente este caminho!
+        courseB_maze_seq7_c: Não consegue chegar à noz? Tente este caminho!
       courseB_maze_seq7_2019:
         courseB_maze_seq7_a: Adicione 1 bloco para mover Scrat até a noz.
         courseB_maze_seq7_b: Tente rodar o código que lhe foi dado para ver até onde
           você vai.
-        courseB_maze_seq7_c: Não consegue chegar à bolota? Tente este caminho!
+        courseB_maze_seq7_c: Não consegue chegar à noz? Tente este caminho!
       courseB_maze_seq8:
-        courseB_maze_seq8_a: Tente addicionar um bloco de cada vez, até você solucionar
+        courseB_maze_seq8_a: Tente adicionar um bloco de cada vez, até você solucionar
           o enigma.
         courseB_maze_seq8_b: Existem duas maneiras de resolver este quebra-cabeças!
         courseB_maze_seq8_c: Não sabe qual em qual direção ir? Tente esse caminho!
       courseB_maze_seq8_2018:
-        courseB_maze_seq8_a: Tente addicionar um bloco de cada vez, até você solucionar
+        courseB_maze_seq8_a: Tente adicionar um bloco de cada vez, até você solucionar
           o enigma.
         courseB_maze_seq8_b: Existem duas maneiras de resolver este quebra-cabeças!
         courseB_maze_seq8_c: Não sabe qual em qual direção ir? Tente esse caminho!
       courseB_maze_seq8_2019:
-        courseB_maze_seq8_a: Tente addicionar um bloco de cada vez, até você solucionar
+        courseB_maze_seq8_a: Tente adicionar um bloco de cada vez, até você solucionar
           o enigma.
         courseB_maze_seq8_b: Existem duas maneiras de resolver este quebra-cabeças!
         courseB_maze_seq8_c: Não sabe qual em qual direção ir? Tente esse caminho!
       courseB_maze_seq9:
-        courseB_maze_seq9_a: Tente escrever todos os passos em um pedaço de papel.
+        courseB_maze_seq9_a: Tente escrever todas as etapas em um pedaço de papel.
         courseB_maze_seq9_b: Construa seu programa um bloco por vez e teste conforme
           você codifica.
         courseB_maze_seq9_c: Estes são os dois jeitos de resolver o enigma.
         courseB_maze_seq9_d: Ficou preso? Tente esse caminho!
       courseB_maze_seq9_2018:
-        courseB_maze_seq9_a: Tente escrever todos os passos em um pedaço de papel.
+        courseB_maze_seq9_a: Tente escrever todas as etapas em um pedaço de papel.
         courseB_maze_seq9_b: Construa seu programa um bloco por vez e teste conforme
           você codifica.
         courseB_maze_seq9_c: Estes são os dois jeitos de resolver o enigma.
         courseB_maze_seq9_d: Ficou preso? Tente esse caminho!
       courseB_maze_seq9_2019:
-        courseB_maze_seq9_a: Tente escrever todos os passos em um pedaço de papel.
+        courseB_maze_seq9_a: Tente escrever todas as etapas em um pedaço de papel.
         courseB_maze_seq9_b: Construa seu programa um bloco por vez e teste conforme
           você codifica.
         courseB_maze_seq9_c: Estes são os dois jeitos de resolver o enigma.
@@ -6904,7 +6906,7 @@ pt-BR:
         courseB_playlab_events6_c: Chegue à todas as bandeiras para passar!
       courseB_playlab_events6_2018:
         courseB_playlab_events6_a: |-
-          Você necessitará estes blocos de evento:
+          Você necessitará destes blocos de evento:
 
           <xml>
           <block type="studio_whenArrow" id="callMe">
@@ -6921,7 +6923,7 @@ pt-BR:
         courseB_playlab_events6_c: Chegue à todas as bandeiras para passar!
       courseB_playlab_events6_2019:
         courseB_playlab_events6_a: |-
-          Você necessitará estes blocos de evento:
+          Você necessitará destes blocos de evento:
 
           <xml>
           <block type="studio_whenArrow" id="callMe">
@@ -7515,21 +7517,21 @@ pt-BR:
         courseC_PlayLab_events6_c: Quando estiver pronto, você poderá mover os Waddles
           usando as setas do seu computador!
       courseC_PlayLab_events7:
-        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 400 pixels para
-          cima` e `mover ator 2 400 pixels para baixo` dentro do laço `repetir para
-          sempre` para resolver esse quebra-cabeça. '
+        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 para cima 400
+          pixels` e `mover ator 2 para baixo, 400 pixels` dentro do laço `repetir
+          para sempre` para resolver esse quebra-cabeça. '
         courseC_PlayLab_events7_b: O laço `repetir para sempre` não precisa estar
           conectado a nenhum outro bloco de evento; ele vai rodar por conta própria.
       courseC_PlayLab_events7_2018:
-        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 400 pixels para
-          cima` e `mover ator 2 400 pixels para baixo` dentro do laço `repetir para
-          sempre` para resolver esse quebra-cabeça. '
+        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 para cima 400
+          pixels` e `mover ator 2 para baixo, 400 pixels` dentro do laço `repetir
+          para sempre` para resolver esse quebra-cabeça. '
         courseC_PlayLab_events7_b: O laço `repetir para sempre` não precisa estar
           conectado a nenhum outro bloco de evento; ele vai rodar por conta própria.
       courseC_PlayLab_events7_2019:
-        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 400 pixels para
-          cima` e `mover ator 2 400 pixels para baixo` dentro do laço `repetir para
-          sempre` para resolver esse quebra-cabeça. '
+        courseC_PlayLab_events7_a: 'Use os dois blocos `mover ator 2 para cima 400
+          pixels` e `mover ator 2 para baixo, 400 pixels` dentro do laço `repetir
+          para sempre` para resolver esse quebra-cabeça. '
         courseC_PlayLab_events7_b: O laço `repetir para sempre` não precisa estar
           conectado a nenhum outro bloco de evento; ele vai rodar por conta própria.
       courseC_PlayLab_events8:
@@ -7785,9 +7787,8 @@ pt-BR:
         courseC_artist_loops2a_b: Clique no número no topo do laço `repetir` para
           mudar quantas vezes ele repete.
       courseC_artist_loops2a_2019:
-        courseC_artist_loops2a_a: Dentro do seu loop, você vai querer saltar para
-          200 mais de 200 para baixo, em seguida, desenhe o adesivo do pássaro, em
-          seguida, gire 30 graus.
+        courseC_artist_loops2a_a: Dentro do seu laço de repetição, você vai querer
+          pular para o meio, depois desenhe um adesivo.
         courseC_artist_loops2a_b: Clique no número no topo do laço `repetir` para
           mudar quantas vezes ele repete.
       courseC_artist_loops3a:
@@ -7803,8 +7804,41 @@ pt-BR:
       courseC_artist_loops3a_2019:
         courseC_artist_loops3a_a: Você vai querer adicionar apenas um bloco dentro
           do seu loop, após o adesivo do pássaro.
-        courseC_artist_loops3a_b: Use o menu suspenso no bloco 'desenhar adesivo'
-          para encontrar o adesivo de morcego.
+        courseC_artist_loops3a_b: |-
+          Seu programa deve ficar assim!
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">???</title>
+                  <statement name="DO">
+                    <block type="jump_to">
+                      <title name="VALUE">13</title>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">???</title>
+                          <title name="VALUE" config="1,2,5,10,12,20,30,45,60,90,120,180">???</title>
+                          <next>
+                            <block type="sticker">
+                              <title name="VALUE">Cat</title>
+                              <next>
+                                <block type="sticker">
+                                  <title name="VALUE">Dog</title>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+
+          Você pode usar os adesivos que quiser!
       courseC_artist_loops4a:
         courseC_artist_loops4a_a: "Use este bloco para pular para frente: \n\n<xml>\n<block
           type=\"jump_by_constant\">\n<title name=\"DIR\">jumpForward</title>\n<title
@@ -8671,6 +8705,30 @@ pt-BR:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
           milho` quantas vezes precisar, depois `virar à direita` em cada esquina.
+        courseC_harvester_loops_challenge1_c: |-
+          Após colher os dois primeiros milhos, você pode usar a repetição aninhada para pegar as próximas oito espigas.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Isto é muito difícil sem loops!
         courseC_harvester_loops_challenge1_b: Você pode repetir `avançar` e `pegar
@@ -8803,19 +8861,19 @@ pt-BR:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging4_2018:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging4_2019:
         courseC_maze_debugging4_a: Use o botão `Passo` para percorrer as instruções,
           uma de cada vez. Isso ajuda você a encontrar a linha onde as coisas dão
           errado?
-        courseC_maze_debugging4_b: Um das viradas fazendo Scrat ir na direção errada.
+        courseC_maze_debugging4_b: Um das voltas fazem Scrat ir na direção errada.
           Você pode descobrir qual delas?
       courseC_maze_debugging5:
         courseC_maze_debugging5_a: "Existem muitos blocos úteis no espaço de trabalho.
@@ -9441,7 +9499,7 @@ pt-BR:
           e executar o código para ver o que acontece, mesmo que você não tenha resolvido
           o enigma ainda.
       courseD_artist_binary8:
-        courseD_artist_binary8_a: A espiral pode ser confusa às vezes. Isole cada
+        courseD_artist_binary8_a: O espiral pode ser confuso às vezes. Isole cada
           linha horizontal em sua mente conforme você cria o desenho.
         courseD_artist_binary8_b: Tente executar o código primeio para ver com o que
           você tem que trabalhar.
@@ -9449,7 +9507,7 @@ pt-BR:
           e executar o código para ver o que acontece se você ainda não resolveu o
           enigma.
       courseD_artist_binary8_2018:
-        courseD_artist_binary8_a: A espiral pode ser confusa às vezes. Isole cada
+        courseD_artist_binary8_a: O espiral pode ser confuso às vezes. Isole cada
           linha horizontal em sua mente conforme você cria o desenho.
         courseD_artist_binary8_b: Tente executar o código primeio para ver com o que
           você tem que trabalhar.
@@ -9457,7 +9515,7 @@ pt-BR:
           e executar o código para ver o que acontece se você ainda não resolveu o
           enigma.
       courseD_artist_binary8_2019:
-        courseD_artist_binary8_a: A espiral pode ser confusa às vezes. Isole cada
+        courseD_artist_binary8_a: O espiral pode ser confuso às vezes. Isole cada
           linha horizontal em sua mente conforme você cria o desenho.
         courseD_artist_binary8_b: Tente executar o código primeio para ver com o que
           você tem que trabalhar.
@@ -9539,32 +9597,32 @@ pt-BR:
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente'
           para conseguir ir do topo de um quadrado para o lugar onde você vai começar
-          o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
+          o próximo. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
           por 20 pixels entre si, qual distância você precisa saltar?"
         courseD_artist_nestedLoops3_b: 'Não se esqueça de usar um laço aninhado para
           resolver esse enigma rapidamente. '
         courseD_artist_nestedLoops3_c: 'Comece usando um laço `repetir` para fazer
-          um quadrado. Depois, repita esse quadrado 8 vexes, pulando 40 pixels de
+          um quadrado. Depois, repita esse quadrado 8 vezes, pulando 40 pixels de
           um para o outro. '
       courseD_artist_nestedLoops3_2018:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente'
           para conseguir ir do topo de um quadrado para o lugar onde você vai começar
-          o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
+          o próximo. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
           por 20 pixels entre si, qual distância você precisa saltar?"
         courseD_artist_nestedLoops3_b: 'Não se esqueça de usar um laço aninhado para
           resolver esse enigma rapidamente. '
         courseD_artist_nestedLoops3_c: 'Comece usando um laço `repetir` para fazer
-          um quadrado. Depois, repita esse quadrado 8 vexes, pulando 40 pixels de
+          um quadrado. Depois, repita esse quadrado 8 vezes, pulando 40 pixels de
           um para o outro. '
       courseD_artist_nestedLoops3_2019:
         courseD_artist_nestedLoops3_a: "Tente usar o bloco 'saltar para a frente'
           para conseguir ir do topo de um quadrado para o lugar onde você vai começar
-          o próxima. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
+          o próximo. \nSe seus quadrados tiverem 20 pixels de altura e estiverem separados
           por 20 pixels entre si, qual distância você precisa saltar?"
         courseD_artist_nestedLoops3_b: 'Não se esqueça de usar um laço aninhado para
           resolver esse enigma rapidamente. '
         courseD_artist_nestedLoops3_c: 'Comece usando um laço `repetir` para fazer
-          um quadrado. Depois, repita esse quadrado 8 vexes, pulando 40 pixels de
+          um quadrado. Depois, repita esse quadrado 8 vezes, pulando 40 pixels de
           um para o outro. '
       courseD_artist_nestedLoops4:
         courseD_artist_nestedLoops4_d: Para resolver isso, você precisará mover \*\*
@@ -9999,7 +10057,7 @@ pt-BR:
           e executar o código para ver o que acontece, mesmo que você não tenha resolvido
           o enigma ainda.
       courseD_autorun_binary8_2019:
-        courseD_artist_binary8_a: A espiral pode ser confusa às vezes. Isole cada
+        courseD_artist_binary8_a: O espiral pode ser confuso às vezes. Isole cada
           linha horizontal em sua mente conforme você cria o desenho.
         courseD_artist_binary8_b: Tente executar o código primeio para ver com o que
           você tem que trabalhar.
@@ -10259,23 +10317,23 @@ pt-BR:
       courseD_bee_conditionals_challenge1:
         courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
           que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
-          melhor caminho é uma espiral.
+          melhor caminho é um espiral.
         courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
-          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          ter uma flor, uma colmeia ou nada. Isso significa que você pode repetir
           sua condicional `se / se não` em cada quadrado.
       courseD_bee_conditionals_challenge1_2018:
         courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
           que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
-          melhor caminho é uma espiral.
+          melhor caminho é um espiral.
         courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
-          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          ter uma flor, uma colmeia ou nada. Isso significa que você pode repetir
           sua condicional `se / se não` em cada quadrado.
       courseD_bee_conditionals_challenge1_2019:
         courseD_bee_conditionals_challenge1_a: Você consegue encontrar um caminho
           que alcance todas as flores e favo de mel sem bater em nenhuma árvore? O
-          melhor caminho é uma espiral.
+          melhor caminho é um espiral.
         courseD_bee_conditionals_challenge1_b: Nesse quebra-cabeça, cada espaço poderia
-          ter uma flor, um pente de mel ou nada. Isso significa que você pode repetir
+          ter uma flor, uma colmeia ou nada. Isso significa que você pode repetir
           sua condicional `se / se não` em cada quadrado.
       courseD_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge1_b: |-
@@ -10638,8 +10696,8 @@ pt-BR:
         courseD_collector_debugging4_b: "Se você está tendo dificuldade em descobrir
           como fazer o padrão do passo de escada, tentar rastreá-lo com o dedo e dizer
           os comandos em voz alta. \n\nNão se esqueça de apontar a direção de curvas!"
-        courseD_collector_debugging4_c: Esse laço está faltando apenas um bloco. Você
-          pode descobrir qual deles?
+        courseD_collector_debugging4_c: Nesse laço está faltando apenas um bloco.
+          Você pode descobrir qual deles?
       courseD_collector_debugging4a_2018:
         courseD_collector_debugging4_a: "Tente usar o processo de depuração algumas
           vezes seguidas. \n\nO que causa o primeiro problema? \n\nQuando esse problema
@@ -11513,34 +11571,34 @@ pt-BR:
         courseB_iceage_loops7_a: Se você ficar preso, tente escrever etapas em um
           pedaço de papel. Você vê um padrão?
         courseB_iceage_loops7_b: Este é o caminho que Scrat deveria seguir para chegar
-          à bolota.
+          à noz.
       courseD_iceage_loops7_2019:
         courseB_iceage_loops7_a: Se você ficar preso, tente escrever etapas em um
           pedaço de papel. Você vê um padrão?
         courseB_iceage_loops7_b: Este é o caminho que Scrat deveria seguir para chegar
-          à bolota.
+          à noz.
       courseD_iceage_loops8:
         courseD_iceage_loops8_a: Os blocos `virar` estão certos? O que mais você pode
           mudar?
         courseD_iceage_loops8_b: A primeira iteração deve ser repetida **3** vezes,
           a segunda **5** vezes, a terceira **4** vezes, e a última também **4** vezes.
-        courseD_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
+        courseD_iceage_loops8_c: Use os laços para ajudar o Scrat a seguir o caminho.
       courseD_iceage_loops8_2019:
         courseD_iceage_loops8_a: Os blocos `virar` estão certos? O que mais você pode
           mudar?
         courseD_iceage_loops8_b: A primeira iteração deve ser repetida **3** vezes,
           a segunda **5** vezes, a terceira **4** vezes, e a última também **4** vezes.
-        courseD_iceage_loops8_c: Use os loops para ajudar o Scrat a seguir o caminho.
+        courseD_iceage_loops8_c: Use os laços para ajudar o Scrat a seguir o caminho.
       courseD_iceage_loops9:
         courseD_iceage_loops9_a: Com problemas? Tente separar este enigma em pedaços
-          menores. Não fique com medo de roda seu enigma conforme for codificando!
+          menores. Não fique com medo de rodar seu enigma conforme for codificando!
         courseD_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
-        courseD_iceage_loops9_c: Cuidado com o gelo quebrado! Scrat vai cair direto.
+        courseD_iceage_loops9_c: 'Scrat deve seguir este caminho para obter a noz. '
       courseD_iceage_loops9_2019:
         courseD_iceage_loops9_a: Com problemas? Tente separar este enigma em pedaços
-          menores. Não fique com medo de roda seu enigma conforme for codificando!
+          menores. Não fique com medo de rodar seu enigma conforme for codificando!
         courseD_iceage_loops9_b: Seu código final deve possuir **4** laços de repetição.
-        courseD_iceage_loops9_c: Cuidado com o gelo quebrado! Scrat vai cair direto.
+        courseD_iceage_loops9_c: 'Scrat deve seguir este caminho para obter a noz. '
       courseD_maze_intro4_2019:
         courseC_maze_programming4_a: Você pode virar à direita ou à esquerda do ponto
           de vista do Red. Se você estiver olhando para a direita, virar à direita
@@ -11960,16 +12018,16 @@ pt-BR:
           ao girassol!
       courseD_playLab_cond1:
         courseD_playLab_cond1_a: Para resolver este desafio, anexe o bloco `mover
-          o ator 1 para cima' para o evento`quando seta para cima\`, então faça o
-          mesmo para todas as outras direções.
+          o ator 1 para cima' para o evento`seta para cima\`, então faça o mesmo para
+          todas as outras direções.
         courseD_playLab_cond1_b: Use os menus suspensos nos blocos `quando seta` e
           `mover ator` para mudar a direção que eles seguem.
         courseD_playLab_cond1_c: Lembre-se de mover o Pegleg para ambas as bandeiras
           quando você clicar em "Executar"!
       courseD_playLab_cond1_2018:
         courseD_playLab_cond1_a: Para resolver este desafio, anexe o bloco `mover
-          o ator 1 para cima' para o evento`quando seta para cima\`, então faça o
-          mesmo para todas as outras direções.
+          o ator 1 para cima' para o evento`seta para cima\`, então faça o mesmo para
+          todas as outras direções.
         courseD_playLab_cond1_b: Use os menus suspensos nos blocos `quando seta` e
           `mover ator` para mudar a direção que eles seguem.
         courseD_playLab_cond1_c: Lembre-se de mover o Pegleg para ambas as bandeiras
@@ -12023,13 +12081,13 @@ pt-BR:
       courseD_playLab_cond6:
         courseD_playLab_cond6_a: Adicione o bloco `definir velocidade do ninja mascarado`
           ao início do programa para ajudar a diminuir a velocidade do ninja.
-        courseD_playLab_cond6_b: Você precisará usar um bloco `se posição y do ator
+        courseD_playLab_cond6_b: Você precisará usar um bloco `se posição do ator
           1 > 255` dentro de um bloco `repetir para sempre` para sempre verificar
           se o pirata está abaixo dos polvos.
       courseD_playLab_cond6_2018:
         courseD_playLab_cond6_a: Adicione o bloco `definir velocidade do ninja mascarado`
           ao início do programa para ajudar a diminuir a velocidade do ninja.
-        courseD_playLab_cond6_b: Você precisará usar um bloco `se posição y do ator
+        courseD_playLab_cond6_b: Você precisará usar um bloco `se posição do ator
           1 > 255` dentro de um bloco `repetir para sempre` para sempre verificar
           se o pirata está abaixo dos polvos.
       courseD_playLab_cond6a:
@@ -12171,7 +12229,7 @@ pt-BR:
         courseE_artist_functions1_a: Cada um dos quadrados tem 100 de pixels de lado,
           o que significa que você terá que movê-lo para frente 175 pixels antes de
           desenhar o seu segundo quadrado.
-        courseE_artist_functions1_b: É okey desenhar linhas sobrepostas para fazer
+        courseE_artist_functions1_b: Tudo bem desenhar linhas sobrepostas para fazer
           seus óculos.
         courseE_artist_functions1_c: Para códigos mais curtos, tente usar um laço
           `repetir` para desenhar os quadros quadrados dos óculos.
@@ -12596,6 +12654,8 @@ pt-BR:
         courseE_bee_concept3a_c: Existem três grupos de flores, então o laço externo
           de `repetição` deve repetir três vezes.
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Tente usar os blocos de repetição `repita` ou `enquanto`
+          aninhados para resolver este desafio.
         courseE_bee_concept3a_b: Se você não consegue descobrir onde colocar os laços
           de repetições, tente escrever seu código passo a passo e procurar por padrões.
       courseE_bee_concept4:
@@ -14253,15 +14313,200 @@ pt-BR:
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables4_2019:
-        courseF_artist_variables4_a: Seu código não será muito diferente do que foi
-          no último desafio, exceto que você vai precisar virar o artista para que
-          ele pule para baixo, para então virá-lo de volta para que esteja pronto
-          para desenhar o próximo triângulo.
+        courseF_artist_variables4_a: Seu código não será muito diferente do que estava
+          no último desafio, exceto que você precisará virar o artista para baixo,
+          então volte-o para ficar pronto para saltar novamente.
         courseF_artist_variables4_c: |-
           Este é o padrão que seu(sua) artista irá seguir:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables5:
         courseF_artist_variables5_a: A segunda metade do seu código deve parecer quase
           o mesmo que a primeira metade, exceto você estará virando para _esquerda_,
@@ -16127,7 +16372,7 @@ pt-BR:
           </block></xml>
       courseF_bee_variables_4_2019:
         courseF_bee_variables_4_2019_1: Ao invés de subtrair 1 de `obter`, adicione
-          1 a cada vez. Qual deve ser o valor de partida que a variável deverá ter?
+          1 a cada vez. Qual deve ser o valor que a variável terá primeiro?
       courseF_playlab_variables1a:
         courseF_playlab_variables1a_a: Você vai querer substituir as palavras “O que
           devo gritar?” no bloco verde com "Objetivo!”
@@ -16352,7 +16597,8 @@ pt-BR:
         iceage_click_hello_a: Adicione um ou mais blocos `personagem 1 say` ao evento
           `quando clicado` para completar este desafio.
       iceage_free_play:
-        iceage_free_play_a: 'Você pode fazer Sida e Manny uma luta de Cristal de Gelo?  '
+        iceage_free_play_a: 'Você pode fazer com que Sid e Manny tenham uma luta de
+          Cristal de Gelo?  '
         iceage_free_play_b: Faça Granny perseguir Diego. Termine o jogo como uma vitória
           se ela o capturar.
         iceage_free_play_c: Você consegue fazer Sid jogar flocos de neve em Diego
@@ -16377,7 +16623,7 @@ pt-BR:
         iceage_move_to_actor_b: Conecte o bloco `tocar ___ som` ao evento `quando
           o personagem 1 toca o personagem 2` para terminar este desafio.
       iceage_move_to_flag:
-        iceage_hello3_a: Use o bloco `mover personagem 1 200 pixels à direita` para
+        iceage_hello3_a: Use o bloco `mover personagem 1, 200 pixels à direita` para
           resolver este desafio.
       iceage_repeat:
         iceage_repeat_a: Use ambos os blocos `mover personagem 1 para esquerda` e

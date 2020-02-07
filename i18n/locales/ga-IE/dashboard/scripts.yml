@@ -1764,7 +1764,7 @@ ga:
               name: Athróga
             For Loops:
               name: Lúba "Do Gach"
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Coinníollacha
@@ -1774,3 +1774,11 @@ ga:
               name: Sluafhoinsiú
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Coinníollacha
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Coinníollacha

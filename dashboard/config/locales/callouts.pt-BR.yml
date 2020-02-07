@@ -81,13 +81,13 @@ pt-BR:
       CSD U3 abstraction accelerateY_2019:
         CSD_U3_L11_S7_C1: Adicione seu código aqui.
       CSD U3 abstraction jump:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
         CSD_U3_L11_S17_C2: Mande o sapo de volta para cá
       CSD U3 abstraction jump_2018:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
         CSD_U3_L11_S17_C2: Mande o sapo de volta para cá
       CSD U3 abstraction jump_2018_2019:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
         CSD_U3_L11_S17_C2: Mande o sapo de volta para cá
       CSD U3 abstraction jumping:
         CSD_U3_L13_S8_C1: Defina a velocidade aqui
@@ -96,13 +96,13 @@ pt-BR:
       CSD U3 abstraction jumping_2019:
         CSD_U3_L13_S8_C1: Defina a velocidade aqui
       CSD U3 abstraction looping:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction looping_2018:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction looping_2019:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction rotation:
-        CSD_U3_L11_S4_C1: Use o bloco velocidadeRotacao aqui
+        CSD_U3_L11_S4_C1: Use o bloco velocidade de rotação aqui
       CSD U3 abstraction rotation control:
         CSD_U3_L11_S5_C1: Olhe este código.
       CSD U3 abstraction rotation control_2018:
@@ -110,15 +110,15 @@ pt-BR:
       CSD U3 abstraction rotation control_2019:
         CSD_U3_L11_S5_C1: Olhe este código.
       CSD U3 abstraction rotation_2018:
-        CSD_U3_L11_S4_C1: Use o bloco velocidadeRotacao aqui
+        CSD_U3_L11_S4_C1: Use o bloco velocidade de rotação aqui
       CSD U3 abstraction rotation_2019:
-        CSD_U3_L11_S4_C1: Use o bloco velocidadeRotacao aqui
+        CSD_U3_L11_S4_C1: Use o bloco velocidade de rotação aqui
       CSD U3 abstraction tumbleweed:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction tumbleweed_2018:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction tumbleweed_2019:
-        CSD_U3_L11_S17_C1: Olhe esta condição se
+        CSD_U3_L11_S17_C1: Olhe a condição 'if'
       CSD U3 abstraction velocityX:
         CSD_U3_L11_S4_C1: Adicione seu bloco aqui.
       CSD U3 abstraction velocityX control:

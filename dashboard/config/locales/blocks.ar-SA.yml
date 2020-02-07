@@ -27,7 +27,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -40,7 +40,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -86,7 +86,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -108,7 +108,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Kick: الركل
             MOVES.ThisOrThat: هذا أو ذاك
             MOVES.Thriller: تايلر
@@ -179,7 +179,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.XHeadHips: الرأس +الوركين
             MOVES.XHop: هوب
             MOVES.XHighKick: ركلة
@@ -211,7 +211,7 @@ ar:
             MOVES.Drop: السقوط
             MOVES.Floss: أرجحة اليدين
             MOVES.Fresh: جديد
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.XHeadHips: الرأس +الوركين
             MOVES.XHop: هوب
             MOVES.XHighKick: ركلة
@@ -281,7 +281,7 @@ ar:
         options:
           DANCE:
             MOVES.ClapHigh: التصفيق بصوت عالٍ
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Dab: التربيت
             MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
             MOVES.Drop: السقوط
@@ -366,15 +366,20 @@ ar:
           FORMAT:
             '"border"': الحدود
             '"inner"': مربع داخلي
+            '"diamond"': ماسة
             '"circle"': دائرة
             '"grid"': شبكة
+            '"top"': الصف العلوي
             '"row"': صف
+            '"bottom"': الصف السفلي
+            '"left"': العمود الأيسر
             '"column"': عمود
+            '"right"': العمود الأيمن
             '"x"': متقاطع
             '"plus"': زائد
             '"random"': عشوائي
       Dancelab_makeAnonymousDanceSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           COSTUME:
             '"ALIEN"': كائن فضائى
@@ -509,7 +514,7 @@ ar:
             '"disco_ball"': كرة ديسكو
             '"fireworks"': مفرقعات
             '"swirl"': هيبنو
-            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"kaleidoscope"': رسم مختلف الألوان
             '"lasers"': أرضية رقص بالليزر
             '"splatter"': رشاش الطلاء
             '"rainbow"': ألوان
@@ -522,13 +527,13 @@ ar:
             '"stars"': نجوم
           PALETTE:
             '"rave"': أسود وأبيض
-            '"cool"': الأزرق بدرجاته
+            '"cool"': رائع
             '"electronic"': إلكتروني
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
             '"tropical"': استوائي
-            '"vintage"': عتيق
+            '"vintage"': الأحمر بدرجاته
             '"warm"': الأحمر بدرجاته
       Dancelab_setBackgroundEffectWithPalette:
         text: عيّن تأثيرات الخلفية {PALETTE} {EFFECT}
@@ -545,7 +550,7 @@ ar:
             '"flowers"': زهور
             '"growing_stars"': النجوم المتنامية
             '"swirl"': هيبنو
-            '"kaleidoscope"': منظار النماذج المتغيرة «مشكال
+            '"kaleidoscope"': رسم مختلف الألوان
             '"lasers"': أرضية رقص بالليزر
             '"splatter"': رشاش الطلاء
             '"rainbow"': ألوان
@@ -562,13 +567,13 @@ ar:
             '"music_wave"': أمواج
           PALETTE:
             '"rave"': أسود وأبيض
-            '"cool"': الأزرق بدرجاته
+            '"cool"': رائع
             '"electronic"': إلكتروني
             '"iceCream"': آيس كريم
             '"default"': ضوء
             '"neon"': نيون
             '"tropical"': استوائي
-            '"vintage"': عتيق
+            '"vintage"': الأحمر بدرجاته
             '"warm"': الأحمر بدرجاته
       Dancelab_setDanceSpeed:
         text: غيّر سرعة الرقص {SPRITE} إلى {SPEED}
@@ -608,15 +613,15 @@ ar:
           EFFECT:
             '"none"': لا شيء
             '"bubbles"': فقاعات
-            '"confetti"': قصاصات من الورق
+            '"confetti"': نثار
             '"hearts_red"': قلوب
-            '"music_notes"': نوتات موسيقية
+            '"music_notes"': نغمات موسيقية
             '"pineapples"': أناناس
             '"pizzas"': بيتزا
-            '"smiling_poop"': مؤخرة السفينة
+            '"smiling_poop"': مفرقعات
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
-            '"smile_face"': وجه مبتسم
+            '"smile_face"': ابتسامات
             '"spotlight"': ضوء كشاف
             '"color_lights"': أضواء المسرح
             '"raining_tacos"': شطائر التاكو
@@ -628,17 +633,17 @@ ar:
             '"rand"': "(عشوائي)"
             '"bubbles"': فقاعات
             '"hearts_colorful"': قلوب ملونة
-            '"confetti"': قصاصات من الورق
+            '"confetti"': نثار
             '"emojis"': الرموز التعبيرية
             '"hearts_red"': قلوب
-            '"music_notes"': نوتات موسيقية
+            '"music_notes"': نغمات موسيقية
             '"paint_drip"': الطلاء بالتنقيط
             '"pineapples"': أناناس
             '"pizzas"': بيتزا
-            '"smiling_poop"': مؤخرة السفينة
+            '"smiling_poop"': مفرقعات
             '"rain"': مطر
             '"floating_rainbows"': أقواس قزح
-            '"smile_face"': وجه مبتسم
+            '"smile_face"': ابتسامات
             '"spotlight"': ضوء كشاف
             '"color_lights"': أضواء المسرح
             '"exploding_stars"': النجمي
@@ -690,7 +695,7 @@ ar:
             '"y"': الموضع الرأسي
             '"tint"': لون خفيف
       Dancelab_setPropRandomEach:
-        text: Randomize {GROUP} {PROPERTY}
+        text: قم بالترتيب العشوائي {GROUP} {PROPERTY}
         options:
           GROUP:
             sprites: الكل
@@ -1275,7 +1280,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupChangeAnim:
-        text: تغيير {SELECT} {COSTUME} في {COSTUME2}
+        text: قم بتغيير {SELECT} {COSTUME} في {COSTUME2}
         options:
           SELECT:
             '"all"': الكل
@@ -1293,7 +1298,7 @@ ar:
             '"y"': الموضع ص
             '"direction"': اتجاه الحركة
       Mikelab_groupCreateNewSprite:
-        text: جعل جديده {COSTUME} في {LOCATION}
+        text: قم بإنشاء {COSTUME} جديد في {LOCATION}
         options:
           LOCATION:
             "{x: 200, y: 100}": أعلى
@@ -1388,7 +1393,7 @@ ar:
         options:
           DANCE:
             MOVES.ClapHigh: التصفيق بصوت عالٍ
-            MOVES.Clown: المهرج
+            MOVES.Clown: غانغنام
             MOVES.Dab: التربيت
             MOVES.DoubleJam: الحفلة الموسيقية المزدوجة
             MOVES.Drop: السقوط

@@ -5,6 +5,7 @@ import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import shapes from './shapes';
 
 const styles = {
   heading: {
@@ -215,24 +216,43 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string
+    announcement: shapes.specialAnnouncement
   };
 
+  state = {
+    buttonList: this.createButtonList()
+  };
+
+  createButtonList() {
+    const buttonList = [];
+    const {announcement} = this.props;
+    buttonList.push({
+      id: announcement.buttonId
+        ? announcement.buttonId
+        : 'special-announcement-btn-1',
+      url: announcement.buttonUrl,
+      text: announcement.buttonText
+    });
+    if (announcement.buttonUrl2 && announcement.buttonText2) {
+      buttonList.push({
+        id: announcement.buttonId2
+          ? announcement.buttonId2
+          : 'special-announcement-btn-2',
+        url: announcement.buttonUrl2,
+        text: announcement.buttonText2
+      });
+    }
+    return buttonList;
+  }
+
   render() {
+    const {announcement} = this.props;
     return (
       <TwoColumnActionBlock
-        imageUrl={pegasus(
-          '/shared/images/fill-485x281/teacher-announcement/hoc2019-posthoc.jpg'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingPostHoc2019()}
-        description={i18n.specialAnnouncementDescriptionPostHoc2019()}
-        buttons={[
-          {
-            id: 'go-beyond-learn-more-button',
-            url: '/courses?view=teacher',
-            text: i18n.learnMore()
-          }
-        ]}
+        imageUrl={announcement.image}
+        subHeading={announcement.title}
+        description={announcement.body}
+        buttons={this.state.buttonList}
       />
     );
   }

@@ -422,6 +422,13 @@ hu-HU:
           **Választható feladat**
 
           Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_05:
+        validation: |-
+          **Hogyan teljesíthetem ezt a szintet?**
+
+          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
+
+          _Ez a szint 12 ütem után ér véget._
       Dance_Party_06:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -480,6 +487,8 @@ hu-HU:
           -   A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
 
           _Ez a szint 8 ütem után ér véget._
+      Dance_Party_extras_alternate_2019:
+        alternate: A Váltakoztatás blokk a "Táncosok" kategóriában található.
       Function intro Ryan:
         Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A
           kirakós megoldásához próbáld kétszer meghívni.
@@ -645,6 +654,23 @@ hu-HU:
       courseD_artist_nestedLoops3_2019:
         courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
           egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      courseD_maze_ramp2:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Ha a motkány nem ér el a makkig, ellenőrizd,
+          hogy minden blokk a helyén van-e, és kattints újra a Futtatásra.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+        courseC_maze_programming2_b: Ellenőrizd, hogy mindhárom "menj előre" blokkot
+          csatlakoztattad a "futtatáskor" blokkhoz.
       courseE_artist_functions1:
         courseE_artist_functions1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
           hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
@@ -676,12 +702,3 @@ hu-HU:
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-      Dance_Party_05:
-        validation: |-
-          **Hogyan teljesíthetem ezt a szintet?**
-
-          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
-
-          _Ez a szint 12 ütem után ér véget._
-      Dance_Party_extras_alternate_2019:
-        alternate: Az alternatív blokk a "Dancers" kategóriába tartozik.

@@ -3603,11 +3603,11 @@ fr:
             new stage:
               name: nouvelle étape
             Dance Party:
-              name: Fête dansante
-          title: Fête dansante
+              name: Soirée Dansante
+          title: Soirée Dansante (2018)
           description_short: Avec Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
             Ciara, et 25 autres !
-          description: Codez votre propre soirée dansante à partager avec vos amis
+          description: Codez votre propre Soirée Dansante à partager avec vos amis
             !
         frozen-2018-test-b:
           stages:
@@ -3621,11 +3621,11 @@ fr:
         dance--draft:
           stages:
             Dance Party:
-              name: Fête dansante
+              name: Soirée Dansante
         dance-draft:
           stages:
             Dance Party:
-              name: Fête dansante
+              name: Soirée Dansante
         dance-extras:
           description: Allez au-delà de la première heure avec de longues idées de
             projets.
@@ -3659,7 +3659,7 @@ fr:
         dance-low:
           stages:
             Dance Party:
-              name: Fête dansante
+              name: Soirée Dansante
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -3682,7 +3682,7 @@ fr:
             Artist Binary:
               name: Artiste binaire
             Dance Party:
-              name: Fête dansante
+              name: Soirée Dansante
         coursee-2019:
           stages:
             Building a Foundation:
@@ -3729,7 +3729,7 @@ fr:
             Crowdsourcing:
               name: Financement participatif
             Dance Party:
-              name: Fête dansante
+              name: Soirée Dansante
         andrea-test:
           stages:
             new stage:
@@ -4202,8 +4202,9 @@ fr:
         dance-2019:
           stages:
             Dance Party:
-              name: Fête dansante
-          description: Codez votre propre soirée dansante à partager avec vos amis
+              name: Soirée Dansante
+          title: Soirée Dansante (2019)
+          description: Codez votre propre Soirée Dansante à partager avec vos amis
             !
         k5-onlinepd-2019:
           stages:
@@ -4250,7 +4251,7 @@ fr:
           stages:
             new stage:
               name: nouvelle étape
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Instructions conditionnelles
@@ -4260,3 +4261,15 @@ fr:
               name: Financement participatif
             Conditionals with Cards:
               name: Instructions conditionnelles avec des cartes
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape

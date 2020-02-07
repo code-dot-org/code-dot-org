@@ -408,6 +408,12 @@ FactoryGirl.define do
       full_name {user.name} # sets first_name and last_name
       email {user.email}
     end
+
+    trait :with_attendance do
+      after(:create) do |enrollment|
+        create_list(:pd_attendance, 1, enrollment: enrollment)
+      end
+    end
   end
 
   factory :pd_attendance, class: 'Pd::Attendance' do
@@ -418,6 +424,33 @@ FactoryGirl.define do
   factory :pd_attendance_no_account, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :enrollment, factory: :pd_enrollment
+  end
+
+  # Creates a teacher optionally enrolled in a workshop,
+  # or marked attended on either all (true) or a specified list of workshop sessions.
+  factory :pd_workshop_participant, parent: :teacher do
+    transient do
+      workshop nil
+      enrolled true
+      attended false
+      cdo_scholarship_recipient false
+    end
+    after(:create) do |teacher, evaluator|
+      raise 'workshop required' unless evaluator.workshop
+      create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
+      if evaluator.attended
+        attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
+        attended_sessions.each do |session|
+          create :pd_attendance, session: session, teacher: teacher
+        end
+      end
+      if evaluator.cdo_scholarship_recipient
+        create :pd_scholarship_info,
+          user: teacher,
+          course: Pd::Workshop::COURSE_KEY_MAP[evaluator.workshop.course],
+          application_year: evaluator.workshop.school_year
+      end
+    end
   end
 
   factory :pd_district_payment_term, class: 'Pd::DistrictPaymentTerm' do
@@ -625,6 +658,7 @@ FactoryGirl.define do
   factory :pd_regional_partner_mini_contact_hash, class: 'Hash' do
     initialize_with do
       {
+        mini: true,
         name: 'name',
         email: 'foo@bar.com',
         zip: '45242',

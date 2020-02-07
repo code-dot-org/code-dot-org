@@ -20,6 +20,27 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/(spritelab|gamelab)/<version-id>/<filename>
+  #
+  # Retrieve a file from the animation library for the given app type
+  #
+  get %r{/api/v1/animation-library/(spritelab|gamelab)/([^/]+)/(.+)} do |app_type, version_id, animation_name|
+    not_found if version_id.empty? || animation_name.empty?
+
+    begin
+      result = Aws::S3::Bucket.
+        new(ANIMATION_LIBRARY_BUCKET, client: AWS::S3.create_client).
+        object("#{app_type}/#{animation_name}").
+        get(version_id: version_id)
+      content_type result.content_type
+      cache_for 3600
+      result.body
+    rescue
+      not_found
+    end
+  end
+
+  #
   # GET /api/v1/animation-library/<version-id>/<filename>
   #
   # Retrieve a file from the animation library

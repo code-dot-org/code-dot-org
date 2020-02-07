@@ -23,6 +23,12 @@
 class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
   include Pd::ProgramRegistrationForm
 
+  TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
+  TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
+  TRAINING_DECLINE = 'No'.freeze
+  TRAINING_ALTERNATE = 'I want to participate in the program, but I\'m no longer able to attend these dates.'.freeze
+  TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
+
   def self.required_fields
     [
       :address_street,
@@ -47,12 +53,6 @@ class Pd::FacilitatorProgramRegistration < ActiveRecord::Base
       :subjects_taught,
     ].freeze
   end
-
-  TEACHERCON_DECLINE = 'No - I\'m no longer interested'.freeze
-  TEACHERCON_ALTERNATE = 'No - but I need to attend a different date.'.freeze
-  TRAINING_DECLINE = 'No'.freeze
-  TRAINING_ALTERNATE = 'I want to participate in the program, but I\'m no longer able to attend these dates.'.freeze
-  TRAINING_ALTERNATE_DECLINE = 'I am no longer interested in the Code.org Facilitator Development Program.'.freeze
 
   def self.options
     super.merge(
