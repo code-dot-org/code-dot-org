@@ -37,6 +37,7 @@ import {
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
@@ -576,6 +577,11 @@ export class DetailViewContents extends React.Component {
     return (
       <ScholarshipDropdown
         scholarshipStatus={this.state.scholarship_status}
+        dropdownOptions={
+          CourseSpecificScholarshipDropdownOptions[
+            this.props.applicationData.course
+          ]
+        }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
       />
