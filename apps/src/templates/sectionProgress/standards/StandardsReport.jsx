@@ -77,13 +77,13 @@ class StandardsReport extends Component {
 
   componentDidMount() {
     this.props.setTeacherCommentForReport(
-      window.opener.getStoreInfo.teacherComment
+      window.opener.teacherDashboardStoreInformation.teacherComment
     );
-    this.props.setScriptId(window.opener.getStoreInfo.scriptId);
-    this.props.loadScript(window.opener.getStoreInfo.scriptId);
-    this.props.getStandardsCoveredForScript(
-      window.opener.getStoreInfo.scriptId
-    );
+    const scriptIdFromTD =
+      window.opener.teacherDashboardStoreInformation.scriptId;
+    this.props.setScriptId(scriptIdFromTD);
+    this.props.loadScript(scriptIdFromTD);
+    this.props.getStandardsCoveredForScript(scriptIdFromTD);
   }
 
   getLinkToOverview() {
