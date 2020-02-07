@@ -153,7 +153,6 @@ dashboard_honeybadger_api_key: !Secret
 pegasus_honeybadger_api_key:   !Secret
 
 # Zendesk
-zendesk_secret:    !Secret
 zendesk_dev_token: !Secret
 
 # Webpurify
@@ -206,6 +205,7 @@ slack_endpoint_broken_links:
 # in Applab.
 firebase_name: cdo-v3-<%=env%>
 firebase_secret: !Secret
+firebase_shared_secret: !Secret
 firebase_channel_id_suffix: ''
 firebase_max_channel_writes_per_15_sec: 300
 firebase_max_channel_writes_per_60_sec: 600

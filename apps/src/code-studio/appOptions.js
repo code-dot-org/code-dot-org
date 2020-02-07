@@ -49,6 +49,7 @@
  * @property {string} share
  * @property {string} labUserId
  * @property {string} firebaseName
+ * @property {string} firebaseSharedAuthToken
  * @property {string} firebaseAuthToken
  * @property {string} firebaseChannelIdSuffix
  * @property {boolean} isSignedIn

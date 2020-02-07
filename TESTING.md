@@ -95,6 +95,7 @@ or
 
 To run a specific unit test, you can run
 `bundle exec spring testunit ./path/to/your/test.rb --name your_amazing_test_name`
+The test name is `test_` concatenated with the name of the test listed in the test file.
 
 You can get a local coverage report with
 `COVERAGE=1 bundle exec ruby -Itest ./path/to/your/test.rb`
@@ -144,3 +145,5 @@ There is an issue with PhantomJS and React when running on Linux. The current wo
 BROWSER=Chrome bundle exec rake test:all
 ```
 This will tell Karma, the testing framework this project uses, to use the Google Chrome browser instead of PhantomJS. *Note* you need to install Google Chrome for this to work. If you would prefer to use Chromium, you can use the prefix `BROWSER=Chrome CHROME_BIN=$(which chromium-browser)` instead.
+
+You can also instead prepend the test command with `BROWSER=ChromeHeadless` to run the tests in a headless chrome browser, rather than having your machine open a google chrome window to run the tests in.

@@ -366,10 +366,15 @@ en:
           FORMAT:
             '"border"': border
             '"inner"': inside square
+            '"diamond"': diamond
             '"circle"': circle
             '"grid"': grid
+            '"top"': top row
             '"row"': row
+            '"bottom"': bottom row
+            '"left"': left column
             '"column"': column
+            '"right"': right column
             '"x"': criss-cross
             '"plus"': plus
             '"random"': random
@@ -845,7 +850,7 @@ en:
             '"mid"': mid
             '"treble"': treble
       Dancelab_stopMappingEach:
-        text: "[GROUP][0] stops [PROPERTY][1] following [RANGE][2]"
+        text: "[GROUP][0] stop [PROPERTY][1] following [RANGE][2]"
         options:
           GROUP:
             sprites: all
@@ -1095,6 +1100,8 @@ en:
             '"left"': left
       gamelab_mouseLocation:
         text: mouse location
+      gamelab_moveBackward:
+        text: move [SPRITE][0] [DISTANCE][1] pixels backward
       gamelab_moveForward:
         text: move [SPRITE][0] [DISTANCE][1] pixels forward
       gamelab_moveInDirection:
@@ -1208,6 +1215,8 @@ en:
           DIRECTION:
             '"right"': right
             '"left"': left
+      gamelab_updateTitleWithColor:
+        text: show title screen [BREAK][0] title [TITLE][1] color [COLOR][2]
       gamelab_whenDownArrow:
         text: when down arrow pressed
       gamelab_whenKey:
