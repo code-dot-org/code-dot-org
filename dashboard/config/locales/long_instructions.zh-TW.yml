@@ -219,32 +219,32 @@ zh-TW:
         -   在上一次的課程中，你是如何跟著問題解決流程的?
         -   在你每天的生活中，你是如何利用這個流程去解決問題?
       CSD U3 - Booleans Video: "# 布林表達式影片"
-      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
@@ -266,9 +266,9 @@ zh-TW:
       CSD U5 Netflix Data Video_2019: 透過觀看影片來了解Netflix如何解決此問題。在觀看同時，請思考要收集什麼樣的數據、以及該數據來自何處。
       CSD U5 black white images pixelation: "# 做做看\\\r\n\n\\\r\n輸入 0 或是 1 來完成這個 X
         形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
-      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
       CSD U5 black white images pixelation 3: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
@@ -500,7 +500,7 @@ zh-TW:
       CourseD_Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區。連接到 <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 的後面。你的舞者應該就會在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區。連接到 <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 的後面。你的舞者應該就會在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂經過的時間。在本教學課程中，一小節的長度為四拍。
       CourseD_Dance_Party_03: |-
@@ -573,8 +573,9 @@ zh-TW:
       CourseE_HOC 2018 Level_5: 某個地方藏有**鸚鵡螺殼** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)！探索沉船，找到**箱子**
         ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)。
       CourseE_HOC 2018 Level_6: 外邊好冷啊！在前往水底廢墟的路上抓條**鮭魚** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)。
-      CourseE_HOC 2018 Level_7a: 你找到了水底廢墟了。在沙岩中搜尋一個裝有**海磷石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        的**箱子** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)。
+      CourseE_HOC 2018 Level_7a: 你找到了水底廢墟了。在沙岩中搜尋一個**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)，裡頭裝有**海磷石**
+        ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        。
       CourseE_HOC 2018 Level_8: 一開始是冰山，現在又是熔岩？穿越這座火山島，並在珊瑚礁中尋找**熱帶魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。
       CourseE_HOC 2018 Level_9b: 成功抵達珊瑚礁，趕快找到**海洋之心**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         吧！使用藍色和紅色珊瑚抵達藏有寶藏的**箱子** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。
@@ -647,7 +648,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
@@ -765,10 +766,10 @@ zh-TW:
       Dance_Party_extras_mixed_2019: |-
         # 更多按鈕
 
-        此舞蹈讓您在舞蹈演員自動跳舞時即時控制他們的屬性。嘗試在按下按鈕時更改其他屬性。例如：
+        此舞蹈讓你在舞者跳舞時即時改變他們的屬性。試著用按鈕控制，改變其它屬性。例如：
 
-        -   按「下」時，隨機分配舞蹈演員的色彩。
-        -   按「空格」時，添加一組具有隨機佈局的舞蹈演員。
+        -   按「向下」鍵時，隨機分配舞者的色調。
+        -   按「空白」鍵時，添加一群隨機分佈的舞者。
       Dance_Party_extras_on_beat: |-
         # 低音、中音和高音
 
@@ -821,8 +822,9 @@ zh-TW:
       HOC 2018 Level_5: 某個地方藏有**鸚鵡螺殼** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)！探索沉船，找到**箱子**
         ![](https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png)。
       HOC 2018 Level_6: 外邊好冷啊！在前往水底廢墟的路上抓條**鮭魚** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png)。
-      HOC 2018 Level_7a: 你找到了水底廢墟了。在沙岩中搜尋一個裝有**海磷石** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)
-        的**箱子** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)。
+      HOC 2018 Level_7a: 你找到了水底廢墟了。在沙岩中搜尋一個**箱子** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png)，裡頭裝有**海磷石**
+        ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png)
+        。
       HOC 2018 Level_8: 一開始是冰山，現在又是熔岩？穿越這座火山島，並在珊瑚礁中尋找**熱帶魚** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png)。
       HOC 2018 Level_9b: 成功抵達珊瑚礁，趕快找到**海洋之心**![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         吧！使用藍色和紅色珊瑚抵達藏有寶藏的**箱子** ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png)。

@@ -6470,6 +6470,10 @@ it-IT:
         <img src="https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png" width="350px"/>
       courseF_artist_fwp1: Continuiamo a sfruttare l'ambiente di modifica delle funzioni.
         Ti ricordi come si correggono gli errori nella funzione `disegna un quadrato`?
+      courseF_artist_fwp2: |-
+        Modifica la funzione in modo che preveda un parametro chiamato `lunghezza`.
+
+        I lati di ogni quadrato sono 25 pixel più grandi del precedente. Il primo quadrato ha i lati di 25 pixel.
       courseF_artist_fwp2_predict1: |-
         Modifica la funzione in modo che preveda un parametro chiamato `lunghezza`.
 

@@ -713,8 +713,8 @@ hu-HU:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - {}
         - correct: true
+        - {}
         - {}
         - {}
         questions:
@@ -973,6 +973,11 @@ hu-HU:
           # Digitális lábnyomod
 
           Az önmagdról szóló információk online létrehozása digitális lábnyomot hoz létre.
+      EnvelopeVariables-Unplugged:
+        markdown: "# A változók nagyon sok szabadságot biztosítanak a számítástechnikában.
+          Ez a lecke segít abban, hogy megértsd, mik azok a változók és hogyan használhatjuk
+          őket különféle módokon. Használd ezt a tevékenységet, az absztrakció lecke
+          előtt (vagy együtt), hogy igazán érthető legyen.\n"
       GoingPlacesSafely-unplugged:
         markdown: "# Helyek biztonságos felkeresése \n\nAz internet nagyon hasznos,
           de néha veszélyes hely is tud lenni. Figyel a biztonságra az internet használata

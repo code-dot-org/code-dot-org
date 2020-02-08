@@ -14,18 +14,42 @@ zh-CN:
         applab_hoc_finish: 屏幕变绿了吗？如果是这样, 请按 "完成"。如果不是, 请点击 "重置", 更改您的代码, 然后再次点击 "运行"。
       AppLab Intro 7 - thisOrThatAddButton:
         AppLabHoCFinal11: 你现在正处于设计模式中。
+      CSD U3 - conditionals - transition:
+        CSD_U3_L8_S6_C1: 将控制台日志语句放到这里
+      CSD U3 - conditionals - transition_2018:
+        CSD_U3_L8_S6_C1: 将控制台日志语句放到这里
+      CSD U3 - conditionals - transition_2019:
+        CSD_U3_L8_S6_C1: 将控制台日志语句放到这里
+      CSD U3 Boolean Predict:
+        '': 程序会在这里打印结果
+      CSD U3 Boolean Predict_2018:
+        '': 程序会在这里打印结果
+      CSD U3 Boolean Predict_2019:
+        '': 程序会在这里打印结果
       CSD U3 Sprites anitab 1:
         '': 点击打开动画标签页
       CSD U3 Sprites anitab 1_2018:
         '': 点击打开动画标签页
       CSD U3 Sprites anitab 1_2019:
         '': 点击打开动画标签页
+      CSD U3 Sprites intro sprites:
+        '': 用这个模块来创建精灵图
+      CSD U3 Sprites intro sprites_2018:
+        '': 用这个模块来创建精灵图
+      CSD U3 Sprites intro sprites_2019:
+        '': 用这个模块来创建精灵图
       CSD U3 Sprites text:
         '': 使用此模块在屏幕上放置文本
       CSD U3 Sprites text_2018:
         '': 使用此模块在屏幕上放置文本
       CSD U3 Sprites text_2019:
         '': 使用此模块在屏幕上放置文本
+      CSD U3 UP_ARROW:
+        '': 添加如果语句，并将移动的代码放在里面
+      CSD U3 UP_ARROW_2018:
+        '': 添加如果语句，并将移动的代码放在里面
+      CSD U3 UP_ARROW_2018_2019:
+        '': 添加如果语句，并将移动的代码放在里面
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where XY:
@@ -38,6 +62,108 @@ zh-CN:
         CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where X_2019:
         CSD_U3_variables: 改动这里的数字
+      CSD U3 abstraction accelerateX:
+        CSD_U3_L11_S6_C1: 在此处添加代码.
+      CSD U3 abstraction accelerateX_2018:
+        CSD_U3_L11_S6_C1: 在此处添加代码.
+      CSD U3 abstraction accelerateX_2019:
+        CSD_U3_L11_S6_C1: 在此处添加代码.
+      CSD U3 abstraction accelerateY:
+        CSD_U3_L11_S7_C1: 在此处添加代码.
+      CSD U3 abstraction accelerateY_2018:
+        CSD_U3_L11_S7_C1: 在此处添加代码.
+      CSD U3 abstraction accelerateY_2019:
+        CSD_U3_L11_S7_C1: 在此处添加代码.
+      CSD U3 abstraction jump:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+        CSD_U3_L11_S17_C2: 让青蛙落回这里
+      CSD U3 abstraction jump_2018:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+        CSD_U3_L11_S17_C2: 让青蛙落回这里
+      CSD U3 abstraction jump_2018_2019:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+        CSD_U3_L11_S17_C2: 让青蛙落回这里
+      CSD U3 abstraction jumping:
+        CSD_U3_L13_S8_C1: 在这里设置速度
+      CSD U3 abstraction jumping_2018:
+        CSD_U3_L13_S8_C1: 在这里设置速度
+      CSD U3 abstraction jumping_2019:
+        CSD_U3_L13_S8_C1: 在这里设置速度
+      CSD U3 abstraction looping:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction looping_2018:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction looping_2019:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction rotation:
+        CSD_U3_L11_S4_C1: 在这里使用 rotationSpeed 模块
+      CSD U3 abstraction rotation control:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction rotation control_2018:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction rotation control_2019:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction rotation_2018:
+        CSD_U3_L11_S4_C1: 在这里使用 rotationSpeed 模块
+      CSD U3 abstraction rotation_2019:
+        CSD_U3_L11_S4_C1: 在这里使用 rotationSpeed 模块
+      CSD U3 abstraction tumbleweed:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction tumbleweed_2018:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction tumbleweed_2019:
+        CSD_U3_L11_S17_C1: 看看这个如果语句
+      CSD U3 abstraction velocityX:
+        CSD_U3_L11_S4_C1: 在这里添加模块.
+      CSD U3 abstraction velocityX control:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX control_2018:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX control_2019:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX if-statements:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX if-statements_2018:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX if-statements_2019:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityX_2018:
+        CSD_U3_L11_S4_C1: 在这里添加模块.
+      CSD U3 abstraction velocityX_2019:
+        CSD_U3_L11_S4_C1: 在这里添加模块.
+      CSD U3 abstraction velocityY:
+        CSD_U3_L11_S5_C1: 在这里添加模块.
+      CSD U3 abstraction velocityY control:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityY control_2018:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityY control_2019:
+        CSD_U3_L11_S5_C1: 看看代码。
+      CSD U3 abstraction velocityY_2018:
+        CSD_U3_L11_S5_C1: 在这里添加模块.
+      CSD U3 abstraction velocityY_2019:
+        CSD_U3_L11_S5_C1: 在这里添加模块.
+      CSD U3 collisions isTouching intro:
+        CSD_U3_L12_S2_C1: 在这里添加模块.
+      CSD U3 collisions isTouching intro_2018:
+        CSD_U3_L12_S2_C1: 在这里添加模块.
+      CSD U3 collisions isTouching intro_2019:
+        CSD_U3_L12_S2_C1: 在这里添加模块.
+      CSD U3 collisions scoreboard:
+        CSD_U3_L12_S8_C1: 这些模块显示分数。
+        CSD_U3_L12_S8_C2: 这些模块会检查兔子是否抓到了胡萝卜。
+      CSD U3 collisions scoreboard_2018:
+        CSD_U3_L12_S8_C1: 这些模块显示分数。
+        CSD_U3_L12_S8_C2: 这些模块会检查兔子是否抓到了胡萝卜。
+      CSD U3 collisions scoreboard_2019:
+        CSD_U3_L12_S8_C1: 这些模块显示分数。
+        CSD_U3_L12_S8_C2: 这些模块会检查兔子是否抓到了胡萝卜。
+      CSD U3 collisions types:
+        CSD_U3_L13_S6_C1: 在此处添加代码.
+      CSD U3 collisions types_2018:
+        CSD_U3_L13_S6_C1: 在此处添加代码.
+      CSD U3 collisions types_2019:
+        CSD_U3_L13_S6_C1: 在此处添加代码.
       CSD U3 debug:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
@@ -65,6 +191,12 @@ zh-CN:
       CSD U3 fill_2019:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 拖动此模块放到代码区域。
+      CSD U3 keydown conditional:
+        '': 将模块加到下面的如果语句里
+      CSD U3 keydown conditional_2018:
+        '': 将模块加到下面的如果语句里
+      CSD U3 keydown conditional_2018_2019:
+        '': 将模块加到下面的如果语句里
       CSD U3 rect:
         CSD_U3_rect_c1: 这是代码
         CSD_U3_rect_c2: 这是"运行"按钮。
@@ -87,6 +219,12 @@ zh-CN:
         CSDU6L10_rainbow: 在此处添加代码
       CSD U6 colorLeds intensity_2019:
         CSDU6L10_rainbow: 在此处添加代码
+      CSD U6 getProperty input:
+        CSD_U6L06P03: 在这里添加模块.
+      CSD U6 getProperty input_2018:
+        CSD_U6L06P03: 在这里添加模块.
+      CSD U6 getProperty input_2019:
+        CSD_U6L06P03: 在这里添加模块.
       CSD U6 light show:
         CSDUDL03P09: 这条线是做什么用的？
       CSD U6 light show_2018:
