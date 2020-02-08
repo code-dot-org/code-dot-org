@@ -4,7 +4,7 @@ title: Contact your Regional Partner
 
 # Contact your Regional Partner
 
-Code.org works with many organizations around the country to bring computer science opportunities to all students. Review the table below to find out how to contact your Regional Partner. Not sure who your Regional Partner is? [Send a request here](https://studio.code.org/pd/regional_partner_contact/new), so we can determine your Regional Partner.
+Code.org works with many organizations around the country to bring computer science opportunities to all students. Review the table below to find out how to contact your Regional Partner. Not sure who your Regional Partner is? [Send a request here](/educate/professional-learning/contact-regional-partner), so we can determine your Regional Partner.
 
 <br>
 
