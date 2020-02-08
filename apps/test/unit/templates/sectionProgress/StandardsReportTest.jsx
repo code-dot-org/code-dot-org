@@ -41,7 +41,7 @@ describe('StandardsReport', () => {
 
   it('report shows print buttons', () => {
     const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Button')).to.have.lengthOf(2);
+    expect(wrapper.find('PrintReportButton')).to.have.lengthOf(2);
   });
 
   it('report shows StandardsReportHeader', () => {
@@ -65,7 +65,9 @@ describe('StandardsReport', () => {
   });
 
   it('report does not show teacher comment section if there is no comment', () => {
-    const wrapper = shallow(<StandardsReport {...DEFAULT_PROPS} />);
+    const wrapper = shallow(
+      <StandardsReport {...DEFAULT_PROPS} teacherComment={null} />
+    );
     expect(wrapper.contains('Teacher comments')).to.equal(false);
   });
 
