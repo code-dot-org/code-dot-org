@@ -83,6 +83,7 @@ module Cdo
 
     # Get current status of a Replication Task
     def self.replication_task_status(replication_task_arn)
+      dms_client = Aws::DatabaseMigrationService::Client.new
       dms_client.describe_replication_tasks(
         {
           filters: [
@@ -102,8 +103,8 @@ module Cdo
     # @replication_task_arn [String]
     def self.start_replication_task(replication_task_arn)
       CDO.log.info "Starting DMS Replication Task: #{replication_task_arn}"
-      dms_client = Aws::DatabaseMigrationService::Client.new
       current_task_status = replication_task_status(replication_task_arn).status
+      dms_client = Aws::DatabaseMigrationService::Client.new
       dms_client.start_replication_task(
         {
           replication_task_arn: replication_task_arn,
@@ -122,22 +123,51 @@ module Cdo
       raise error
     end
 
+    def wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
+      attempts = 0
+      task = OpenStruct.new(
+        arn: replication_task_arn,
+        status: nil
+      )
+      while attempts <= max_attempts && task.status != 'stopped'
+        replication_task = replication_task_status(replication_task_arn)
+
+        # Collect the replication task attributes that identify overall replication status.
+        task.status = replication_task.status
+        task.last_failure_message = replication_task.last_failure_message
+        task.stop_reason = replication_task.stop_reason
+        task.start_date = replication_task.replication_task_start_date
+        task.full_load_progress_percent = replication_task.replication_task_stats.full_load_progress_percent
+        task.tables_loaded = replication_task.replication_task_stats.tables_loaded
+        task.tables_loading = replication_task.replication_task_stats.tables_loading
+        task.tables_queued = replication_task.replication_task_stats.tables_queued
+        task.tables_errored = replication_task.replication_task_stats.tables_errored
+
+        attempts += 1
+        CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
+        sleep delay
+      end
+
+      # Gather more detailed replication task status now that the task has stopped or we've given up waiting.
+      dms_client = Aws::DatabaseMigrationService::Client.new
+      task.table_statistics = dms_client.describe_table_statistics(
+        {
+          replication_task_arn: replication_task_arn
+        }
+      ).table_statistics
+
+      return task if task_completed_successfully?(task)
+
+      raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
+    " #{replication_task_arn} did not complete successfully.  Task Status - #{task.status} / #{task}"
+      )
+    end
+
     # Determine whether a Full Load Replication Task has completed successfully.
     def self.replication_task_completed_successfully?(replication_task_arn)
-      dms_client = Aws::DatabaseMigrationService::Client.new
-      task = dms_client.describe_replication_tasks(
-        {
-          filters: [
-            {
-              name: 'replication-task-arn',
-              values: [replication_task_arn]
-            }
-          ]
-        },
-        max_records: 1,
-        without_settings: true
-      ).replication_tasks[0]
+      task = replication_task_status(replication_task_arn)
 
+      dms_client = Aws::DatabaseMigrationService::Client.new
       task_table_statistics = dms_client.describe_table_statistics(
         {
           replication_task_arn: replication_task_arn
