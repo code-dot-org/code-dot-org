@@ -48,6 +48,13 @@ const styles = {
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none'
+  },
+  noFeeContainer: {
+    paddingTop: 7,
+    paddingBottom: 12
+  },
+  yesFeeRadio: {
+    width: '100%'
   }
 };
 
@@ -580,22 +587,53 @@ export class WorkshopForm extends React.Component {
   }
 
   renderFeeInput(validation) {
+    // If state.fee is null, there is no fee and no custom fee message.
+    // If state.fee is '', the user needs to provide a custom fee message.
+
+    const customizeFee = this.state.fee !== null;
+
     return (
       <FormGroup validationState={validation.style.fee}>
-        <ControlLabel>
-          Fee Information (Leave blank for "No cost!")
-        </ControlLabel>
-        <FormControl
-          type="text"
-          value={this.state.fee || ''}
-          id="fee"
-          name="fee"
-          onChange={this.handleFieldChange}
-          maxLength={30}
-          style={this.getInputStyle()}
-          disabled={this.props.readOnly}
-        />
-        <HelpBlock>{validation.help.fee}</HelpBlock>
+        <ControlLabel>Fee</ControlLabel>
+
+        <div style={styles.noFeeContainer}>
+          <Radio
+            checked={!customizeFee}
+            inline
+            name="customize_fee"
+            value="no"
+            onChange={this.handleCustomizeFeeChange}
+            style={this.getInputStyle()}
+            disabled={this.props.readOnly}
+          >
+            No cost!
+          </Radio>
+        </div>
+
+        <div>
+          <Radio
+            checked={customizeFee}
+            inline
+            name="customize_fee"
+            value="yes"
+            onChange={this.handleCustomizeFeeChange}
+            style={{...this.getInputStyle(), ...styles.yesFeeRadio}}
+            disabled={this.props.readOnly}
+          >
+            <FormControl
+              type="text"
+              value={this.state.fee || ''}
+              id="fee"
+              name="fee"
+              onChange={this.handleFieldChange}
+              maxLength={30}
+              style={this.getInputStyle()}
+              disabled={this.props.readOnly || !customizeFee}
+              placeholder="Fee information"
+            />
+            <HelpBlock>{validation.help.fee}</HelpBlock>
+          </Radio>
+        </div>
       </FormGroup>
     );
   }
@@ -713,6 +751,15 @@ export class WorkshopForm extends React.Component {
     this.loadAvailableFacilitators(course);
   };
 
+  handleCustomizeFeeChange = event => {
+    const customizeFee = event.target.value === 'yes';
+    const fee = customizeFee ? '' : null;
+
+    this.setState({
+      fee
+    });
+  };
+
   save(notify = false) {
     const workshop_data = {
       facilitators: this.prepareFacilitatorsForApi(this.state.facilitators),
@@ -724,7 +771,7 @@ export class WorkshopForm extends React.Component {
       funding_type: this.state.funding_type,
       course: this.state.course,
       subject: this.state.subject,
-      fee: this.state.fee,
+      fee: this.state.fee ? this.state.fee : null,
       notes: this.state.notes,
       sessions_attributes: this.prepareSessionsForApi(
         this.state.sessions,
@@ -884,6 +931,11 @@ export class WorkshopForm extends React.Component {
         validation.isValid = false;
         validation.style.funded = 'error';
         validation.help.funded = 'Required';
+      }
+      if (this.state.fee === '') {
+        validation.isValid = false;
+        validation.style.fee = 'error';
+        validation.help.fee = 'Required';
       }
     }
     return validation;
