@@ -14071,3 +14071,37 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp7-2020:
+          stages:
+            Parameters and Return Explore:
+              name: Parameters and Return Explore
+            Parameters and Return Investigate:
+              name: Parameters and Return Investigate
+            Parameters and Return Practice:
+              name: Parameters and Return Practice
+            Parameters and Return Make:
+              name: Parameters and Return Make
+            Libraries Explore:
+              name: Libraries Explore
+            Libraries Investigate:
+              name: Libraries Investigate
+            Libraries Practice:
+              name: Libraries Practice
+            Project - Make a Library Part 1:
+              name: Project - Make a Library Part 1
+            Project - Make a Library Part 2:
+              name: Project - Make a Library Part 2
+            Project - Make a Library Part 3:
+              name: Project - Make a Library Part 3
+            Assessment Day:
+              name: Assessment Day
+            Unit 7 STUDENT Survey:
+              name: Unit 7 STUDENT Survey
+            Unit 7 TEACHER Survey:
+              name: Unit 7 TEACHER Survey
+            Variables Make Demo:
+              name: Variables Make Demo
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
