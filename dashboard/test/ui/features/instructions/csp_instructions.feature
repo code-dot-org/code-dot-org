@@ -17,7 +17,7 @@ Scenario: 'Help & Tips' and 'Instruction' tabs are visible if the level has a ma
   Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/18"
   And I wait for the page to fully load
   When I click selector ".uitest-helpTab" once I see it
-  And I wait until ".editor-column" contains text "The Circuit Playground is a simple single board computer with many built in Inputs and Outputs for us to explore."
+  And I wait until ".editor-column" contains text "Circuit Playground"
   And I click selector ".uitest-instructionsTab"
   And I wait until ".editor-column" contains text "Given only 4 turtle commands,"
 
