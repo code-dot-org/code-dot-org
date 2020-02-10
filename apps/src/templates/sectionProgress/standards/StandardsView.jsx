@@ -13,6 +13,7 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsIntroDialog from './StandardsIntroDialog';
 import StandardsProgressTable from './StandardsProgressTable';
 import StandardsLegend from './StandardsLegend';
+import {cstaStandardsURL} from './standardsConstants';
 
 class StandardsView extends Component {
   static propTypes = {
@@ -43,7 +44,7 @@ class StandardsView extends Component {
             markdown={i18n.standardsHowToDetails({
               courseName: scriptFriendlyName,
               courseLink: linkToOverview,
-              cstaLink: 'https://www.csteachers.org/page/standards'
+              cstaLink: cstaStandardsURL
             })}
           />
           <h3>{i18n.standardsGetInvolved()}</h3>
