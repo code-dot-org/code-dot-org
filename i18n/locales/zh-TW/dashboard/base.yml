@@ -160,7 +160,7 @@ zh-TW:
     student_consent: "我確定我的監護人已允許我使用 Code.org 提供的服務。 "
     agree_us_website: "我同意使用位於美國境內的網站。"
     my_data_to_us: "我在使用此網站時產生的數據資料可能會被系統傳送至並儲存在美國境內，或在美國境內進行處理。"
-    student_terms_markdown: "電子信箱的儲存形式並不允許我們聯繫學生。除了密碼恢復請求的通知信，學生不會收到來自 Code.org 的信件。詳情請參閱我們的[隱私政策](%{privacy_policy_url})。"
+    student_terms_markdown: "電子信箱的儲存形式並不允許我們聯繫學生。除了密碼恢復請求的通知信，學生不會收到來自 Code.org 的信件。詳情請參閱我們的[隱私政策](http://code.org/privacy)。"
     additional_information: "我們還需要一些其他資訊來完成你的註冊。"
     user_type_button: "更新帳戶類型"
     user_type_label: "帳戶類型"
@@ -424,7 +424,7 @@ zh-TW:
       example: '解答範例'
       example_with_number: '解答範例 %{solution_number}'
       submitted_on: '提交時間：'
-      last_updated: '最近一次更新:'
+      last_updated: '最近一次更新：'
       unsubmit: '取消提交'
       worked_with: '工作伙伴'
       update_lock_settings: '在此更新上鎖相關設定。'
