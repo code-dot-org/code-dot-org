@@ -46,6 +46,8 @@ class FirebaseHelper
     response.body
   end
 
+  # Important Note: this firebase database is shared across all of our environments.
+  # Changes made using this function will be visible immediately in all environments (including prod)
   def set_library_manifest(manifest)
     @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
   end

@@ -26,6 +26,8 @@ function onChange(editor) {
     const newManifest = JSON.parse(editor.getValue());
     getStore().dispatch(setLibraryManifest(newManifest));
   } catch (e) {
+    // There is a JSON error, so set the manifest to {} so we can show an error
+    // instead of the library preview
     getStore().dispatch(setLibraryManifest({}));
   }
 }

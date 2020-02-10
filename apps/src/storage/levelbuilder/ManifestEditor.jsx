@@ -7,11 +7,6 @@ import color from '@cdo/apps/util/color';
 import LibraryCategory from '../dataBrowser/LibraryCategory';
 
 const styles = {
-  warning: {
-    color: '#c00',
-    fontSize: 13,
-    fontWeight: 'bold'
-  },
   submit: {
     marginTop: '15px'
   },
@@ -89,13 +84,14 @@ class ManifestEditor extends React.Component {
             />
           ))
         ) : (
-          <p style={styles.warning}>Invalid JSON</p>
+          <p style={styles.errorNotice}>Invalid JSON</p>
         )}
         <h2>Manifest JSON</h2>
         <textarea
           id="content"
           ref="content"
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
+          // Change handler is required for this element, but changes are actually handled by the code mirror
           onChange={() => {}}
         />
         <Button
