@@ -611,7 +611,7 @@
   "eligibilityReqYear": "You plan to teach Unit 6 by the end of the 2020-21 school year.",
   "eligibilityReqYearConfirmInstructions": "Please confirm that you will be teaching Unit 6 of CS Discoveries with your students and when you will be teaching it:",
   "eligibilityReqYearFail": "The subsidy for classroom kits of the Adafruit Circuit Playground is available thanks to the generosity of Code.org's donors such as Microsoft, Facebook, Infosys Foundation, Omidyar Network, and Google. Additionally, Adafruit and DHL are helping to lower the cost of these kits directly. Our intention is that these subsidized kits are going to teachers who are teaching all units of CS Discoveries to their students (whether over 1 or 2 years), as we want to lower the barrier to teaching a hardware-based unit.",
-  "eligibilityRequirements": "Eligibility Requirements",
+  "eligibilityRequirements": "Other Eligibility Requirements",
   "eligibilitySchoolUnknown": "Because your school isn't listed, we were not able to look up the data on what percent of your students are eligible for free/reduced-price lunches.",
   "eligibilityYearDecline": "Unfortunately, we can only offer codes for subsidized kits for teachers who know they will be teaching Unit 6 of CS Discoveries by the '20-'21 school year. For any questions or concerns, please contact us at teacher@code.org.",
   "eligibilityYearNo": "No, I am not planning on teaching Unit 6 of CS Discoveries.",

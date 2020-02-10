@@ -36,13 +36,25 @@ describe('EligibilityChecklist', () => {
     assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
   });
 
-  it('renders Unit6ValidationStep if we previously answered school choice question', () => {
+  it('renders Unit6ValidationStep if we previously answered school choice question and are high needs', () => {
     const wrapper = shallow(
       <EligibilityChecklist
         {...defaultProps}
         hasConfirmedSchool
         schoolId="1"
         schoolHighNeedsEligible={true}
+      />
+    );
+    assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
+  });
+
+  it('renders Unit6ValidationStep if we previously answered school choice question and are not high needs', () => {
+    const wrapper = shallow(
+      <EligibilityChecklist
+        {...defaultProps}
+        hasConfirmedSchool
+        schoolId="1"
+        schoolHighNeedsEligible={false}
       />
     );
     assert.equal(wrapper.find('Unit6ValidationStep').length, 1);
@@ -84,7 +96,7 @@ describe('EligibilityChecklist', () => {
     assert.equal(wrapper.find('Button').length, 0);
   });
 
-  it('renders get code button if in future discount eligibility window', () => {
+  it('renders get code button if in discount eligibility window that is not today', () => {
     clock = sinon.useFakeTimers(new Date('2020-12-01'));
 
     const wrapper = shallow(
