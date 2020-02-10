@@ -60,6 +60,9 @@ class ManifestEditor extends React.Component {
     const isValidJson =
       this.props.libraryManifest.categories &&
       this.props.libraryManifest.tables;
+    const categories = (this.props.libraryManifest.categories || []).filter(
+      category => category.published
+    );
     return (
       <div>
         {this.state.notice && (
@@ -74,7 +77,7 @@ class ManifestEditor extends React.Component {
         <h1>Edit Dataset Manifest</h1>
         <h2>Preview</h2>
         {isValidJson ? (
-          this.props.libraryManifest.categories.map(category => (
+          categories.map(category => (
             <LibraryCategory
               key={category.name}
               name={category.name}
