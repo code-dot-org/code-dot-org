@@ -23,7 +23,6 @@ Feature: Viewing and Printing Standards Progress
 
     # Switch to Standards Part of Progress Tab
     And I press the first "#uitest-standards-toggle" element
-    #And I wait until element ".uitest-standards-view" is visible
     And I wait until element ".uitest-standards-generate-report" is visible
     And I press the first ".uitest-standards-generate-report" element
 
