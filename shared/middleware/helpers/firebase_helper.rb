@@ -46,6 +46,10 @@ class FirebaseHelper
     response.body
   end
 
+  def set_library_manifest(manifest)
+    @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
+  end
+
   def self.delete_channel(encrypted_channel_id)
     raise "channel_id must be non-empty" if encrypted_channel_id.nil? || encrypted_channel_id.empty?
     create_client.delete "/v3/channels/#{encrypted_channel_id}/"

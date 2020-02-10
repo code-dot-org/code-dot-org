@@ -12,13 +12,13 @@ $(document).ready(function() {
   registerReducers({data});
   const store = getStore();
   store.dispatch(setLibraryManifest(manifest));
-  initializeCodeMirror('content', 'application/json', {callback: onChange});
   ReactDOM.render(
     <Provider store={store}>
       <ManifestEditor />
     </Provider>,
-    document.querySelector('.preview_container')
+    document.querySelector('.manifest_editor')
   );
+  initializeCodeMirror('content', 'application/json', {callback: onChange});
 });
 
 function onChange(editor) {
