@@ -1,3 +1,5 @@
+require 'json'
+
 class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
   before_action :initialize_firebase
@@ -8,6 +10,15 @@ class DatasetsController < ApplicationController
   end
 
   def updated_manifest
+    parsed_manifest = JSON.parse(params['manifest'])
+    response = @firebase.set_library_manifest parsed_manifest
+    if response.success?
+      render json: {status: response.code}
+    else
+      render json: {status: response.code, msg: response.body}
+    end
+  rescue JSON::ParserError
+    render json: {msg: 'Invalid JSON'}
   end
 
   private
