@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import {LessonStatusDialog} from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
+import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const styles = {
   buttonsGroup: {
@@ -15,10 +19,16 @@ const styles = {
   }
 };
 
-export class StandardsViewHeaderButtons extends Component {
+class StandardsViewHeaderButtons extends Component {
+  static propTypes = {
+    sectionId: PropTypes.number,
+    // redux
+    setTeacherCommentForReport: PropTypes.func.isRequired
+  };
   state = {
     isLessonStatusDialogOpen: false,
-    isCreateReportDialogOpen: false
+    isCreateReportDialogOpen: false,
+    comment: ''
   };
 
   openLessonStatusDialog = () => {
@@ -34,7 +44,20 @@ export class StandardsViewHeaderButtons extends Component {
   };
 
   closeCreateReportDialog = () => {
-    this.setState({isCreateReportDialogOpen: false});
+    this.setState({isCreateReportDialogOpen: false}, this.openReport);
+  };
+
+  openReport = () => {
+    window.open(
+      teacherDashboardUrl(this.props.sectionId, '/standards_report'),
+      '_blank'
+    );
+  };
+
+  onCommentChange = value => {
+    this.setState({comment: value}, () => {
+      this.props.setTeacherCommentForReport(this.state.comment);
+    });
   };
 
   render() {
@@ -61,8 +84,20 @@ export class StandardsViewHeaderButtons extends Component {
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
           handleConfirm={this.closeCreateReportDialog}
+          onCommentChange={this.onCommentChange}
         />
       </div>
     );
   }
 }
+
+export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    setTeacherCommentForReport(comment) {
+      dispatch(setTeacherCommentForReport(comment));
+    }
+  })
+)(StandardsViewHeaderButtons);

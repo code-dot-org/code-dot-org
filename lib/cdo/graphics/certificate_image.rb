@@ -23,13 +23,7 @@ end
 def apply_text(image, text, pointsize, font, color, x_offset, y_offset)
   # If there is no text, don't try to render it.
   return if text.nil? || text.strip.empty?
-
   text = escape_image_magick_string(text)
-
-  # Limit the text length to prevent attacks where students send names hundreds
-  # of characters long and our system wastes memory trying to render a huge
-  # image.
-  text = text[0, 50] if text.size > 50
 
   begin
     # The text will be put into an image with a transparent background.  This
@@ -43,6 +37,8 @@ def apply_text(image, text, pointsize, font, color, x_offset, y_offset)
       self.pointsize = pointsize
       self.font = font
       self.fill = color
+      # Limit the size of the text_overlay to the size of the background image.
+      self.size = "#{image.columns}x#{image.rows}"
     end.first
   rescue Magick::ImageMagickError => exception
     # We want to know what kinds of text we are failing to render.
@@ -134,7 +130,8 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
     sponsor = donor[:name_s]
   end
 
-  sponsor_message = I18n.t('certificate.sponsor_message', sponsor_name: sponsor)
+  # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
+  sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: sponsor)
   apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, 447)
   image
 end
