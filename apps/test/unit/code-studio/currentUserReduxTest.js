@@ -4,7 +4,8 @@ import currentUser, {
   SignInState,
   setUserSignedIn,
   setUserType,
-  setCurrentUserHasSeenStandardsReportInfo
+  setCurrentUserHasSeenStandardsReportInfo,
+  setCurrentUserName
 } from '@cdo/apps/templates/currentUserRedux';
 
 describe('currentUserRedux', () => {
@@ -16,6 +17,14 @@ describe('currentUserRedux', () => {
       const nextState = currentUser(initialState, action);
 
       assert.deepEqual(nextState.userId, 1);
+    });
+  });
+  describe('setCurrentUserName', () => {
+    it('can set the current user name', () => {
+      const action = setCurrentUserName('Test Person');
+      const nextState = currentUser(initialState, action);
+
+      assert.deepEqual(nextState.userName, 'Test Person');
     });
   });
   describe('setUserSignedIn', () => {
