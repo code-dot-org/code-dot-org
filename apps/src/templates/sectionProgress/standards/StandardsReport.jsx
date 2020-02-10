@@ -17,7 +17,7 @@ import StandardsProgressTable from './StandardsProgressTable';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
   getNumberLessonsCompleted,
-  getNumberLessonsInCourse
+  getNumberLessonsInScript
 } from './sectionStandardsProgressRedux';
 import StandardsLegendForPrint from './StandardsLegendForPrint';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
@@ -179,7 +179,7 @@ export default connect(
     teacherName: state.currentUser.userName,
     sectionName: sectionName(state, state.sectionData.section.id),
     numLessonsCompleted: getNumberLessonsCompleted(state),
-    numLessonsInUnit: getNumberLessonsInCourse(state)
+    numLessonsInUnit: getNumberLessonsInScript(state)
   }),
   dispatch => ({
     loadScript(scriptId) {
