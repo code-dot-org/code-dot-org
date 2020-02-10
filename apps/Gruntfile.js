@@ -197,7 +197,7 @@ describe('entry tests', () => {
         // blockly media, etc).
         {
           expand: true,
-          cwd: './node_modules/video.js/dist/video-js',
+          cwd: './node_modules/video.js/dist',
           src: ['**'],
           dest: 'build/package/video-js'
         }
@@ -686,8 +686,6 @@ describe('entry tests', () => {
 
     'pd/professional_learning_landing/index':
       './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_contact/new.js',
     'pd/regional_partner_mini_contact/new':
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 

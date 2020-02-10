@@ -3,7 +3,6 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import datasets from '@cdo/apps/storage/dataBrowser/datasetManifest.json';
 
 $(document).ready(function() {
   const makerBlocks = {
@@ -64,7 +63,9 @@ $(document).ready(function() {
   });
 
   const data = getScriptData('applabOptions');
-  const tableNames = datasets.tables.map(table => table.name);
+  const tableNames = data.dataset_library_manifest.tables.map(
+    table => table.name
+  );
   class DataLibrary extends React.Component {
     state = {
       value: data.data_library_tables ? data.data_library_tables.split(',') : []

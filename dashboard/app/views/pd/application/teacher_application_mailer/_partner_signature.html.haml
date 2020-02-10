@@ -6,7 +6,7 @@
     %br
     = @application.regional_partner.name
   - else
-    = link_to @application.regional_partner.name, CDO.studio_url('/pd/regional_partner_contact/new', CDO.default_scheme)
+    = link_to @application.regional_partner.name, CDO.code_org_url('educate/professional-learning/contact-regional-partner', CDO.default_scheme)
 - else
   Liz Gauthier
   %br

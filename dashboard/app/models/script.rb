@@ -666,11 +666,27 @@ class Script < ActiveRecord::Base
     Script.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
   end
 
-  def self.scripts_for_standards
+  def self.scripts_with_standards
     Script.
       where("properties -> '$.curriculum_umbrella' = 'CSF'").
       where("properties -> '$.version_year' >= '2019'").
       map {|script| [script.localized_title, script.name]}
+  end
+
+  def has_standards_associations?
+    curriculum_umbrella == 'CSF' && version_year && version_year >= '2019'
+  end
+
+  def standards
+    standards = stages.map(&:standards).flatten.uniq
+    standards_with_stages = []
+    standards.each do |standard|
+      standard_summary = standard.summarize
+      stages_by_standard = stages & standard.stages
+      standard_summary[:lesson_ids] = stages_by_standard.pluck(:id)
+      standards_with_stages << standard_summary
+    end
+    standards_with_stages
   end
 
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
@@ -1360,7 +1376,8 @@ class Script < ActiveRecord::Base
       curriculum_umbrella: curriculum_umbrella,
       family_name: family_name,
       version_year: version_year,
-      assigned_section_id: assigned_section_id
+      assigned_section_id: assigned_section_id,
+      hasStandards: has_standards_associations?
     }
 
     summary[:stages] = stages.map {|stage| stage.summarize(include_bonus_levels)} if include_stages
@@ -1557,12 +1574,17 @@ class Script < ActiveRecord::Base
       # scripts, which just use version_year.
       info[:version_title] = version_year
     end
+    if localized_description
+      info[:description] = localized_description
+    end
     info[:is_stable] = true if is_stable
 
     info[:category] = I18n.t("data.script.category.#{info[:category]}_category_name", default: info[:category])
     info[:supported_locales] = supported_locale_names
     info[:stage_extras_available] = stage_extras_available
-
+    if has_standards_associations?
+      info[:standards] = standards
+    end
     info
   end
 

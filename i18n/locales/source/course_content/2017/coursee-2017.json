@@ -144,11 +144,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below.  What is the first bug that will make this program fail? "
-            }
-          ],
           "answers": [
             {
               "text": "The program won't fail. Scrat will get to the acorn.",
@@ -169,6 +164,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The first error is that Scrat goes the wrong way after his final turn. "
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What is the first bug that will make this program fail?"
             }
           ]
         }
@@ -252,11 +252,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look carefully at the code below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will draw a triangle with three equal sides.",
@@ -277,6 +272,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The artist draws a square."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look carefully at the code below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -357,11 +357,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the nested loops below.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The bee will move forward and get nectar only one time.",
@@ -382,6 +377,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee loops the looped action of moving forward and collecting nectar, allowing it to solve the puzzle."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the nested loops below. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -454,11 +454,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "4",
@@ -479,6 +474,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. How much honey will the bee make when you click \"Run\"?"
             }
           ]
         }
@@ -614,11 +614,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. Scrat will not move at all.",
@@ -639,6 +634,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "Putting the 'move forward' block inside the 'repeat' block will cause Scrat to move forward three times. He then turns and moves forward another three times, making it to the acorn!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "This code uses a new block. What do you think will happen when you press \"Run\"?"
             }
           ]
         }
@@ -786,11 +786,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "Nothing. The function is not called in the program.",
@@ -811,6 +806,11 @@
               "text": "The artist will draw two squares with a small gap in between.",
               "correct": true,
               "feedback": "Correct! The function is called two times in the program, with a jump in between."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press \"Run\"?"
             }
           ]
         }
@@ -945,11 +945,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "What will happen when you press the \"Run\" button?"
-            }
-          ],
           "answers": [
             {
               "text": "The artist will solve the puzzle correctly.",
@@ -970,6 +965,11 @@
               "text": "The artist will draw four squares on top of one another.",
               "correct": false,
               "feedback": "Incorrect. The loop turns 90 degrees between calls to \"draw polygon\"."
+            }
+          ],
+          "questions": [
+            {
+              "text": "What will happen when you press the \"Run\" button?"
             }
           ]
         }
@@ -1131,11 +1131,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed.  What will happen when you click \"Run\"?"
-            }
-          ],
           "answers": [
             {
               "text": "The same program will work to solve this puzzle, too.",
@@ -1156,6 +1151,11 @@
               "text": "I don't know.",
               "correct": false,
               "feedback": "The program will work to solve this puzzle, too. It is programmed to handle any amount of honey over 0."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Here is the exact same program from the last puzzle, but the amount of honey to collect in this puzzle has changed. What will happen when you click \"Run\"?"
             }
           ]
         }
@@ -1334,11 +1334,6 @@
     "contained levels": [
       {
         "dsls": {
-          "questions": [
-            {
-              "text": "Look at the functions defined below.  What will the harvester pick?"
-            }
-          ],
           "answers": [
             {
               "text": "The harvester will pick two pumpkins.",
@@ -1359,6 +1354,11 @@
               "text": "The harvester will pick the corn.",
               "correct": true,
               "feedback": "Correct!"
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look at the functions defined below. What will the harvester pick?"
             }
           ]
         }
@@ -1616,7 +1616,6 @@
   },
   "https://studio.code.org/s/coursee-2017/stage/22/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# The Design Process\nDesigning software means solving lots of little problems, all the time. The main problem in software design is what to create in the first place.\n\nThis process is useful for all kinds of things, but we are going to focus on using it for app design.\n\n<!-- Translate the terms \"Define\", \"Prepare\", \"Try\", \"Reflect\" and change font size and positioning as needed-->\n<div style=\"position: relative; text-align: center; font-size: 1em\">\n  <img src=\"https://images.code.org/a157e5f67444573e19e980a507db16fb-image-1563319667694.png\" alt=\"Design Process\" style=\"width: 50%;\">\n  <div style=\"position: absolute; top: 24%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Define</div> \n  <div style=\"position: absolute; top: 52%; left: 61%; transform: translateX(-61%); font-weight: bold;\">Prepare</div>\n  <div style=\"position: absolute; top: 79%; left: 49.8%; transform: translateX(-49.8%); font-weight: bold;\">Try</div>\n  <div style=\"position: absolute; top: 52%; left: 39%; transform: translateX(-39%); font-weight: bold;\">Reflect</div>\n</div>\n\n* **Define**\n  * What kind of app would you like to create?\n  * What are your constraints?\n  * What does success look like?\n* **Prepare**\n  * Brainstorm / research possible elements\n  * Compare pros and cons\n  * Make a plan\n* **Try**\n  * Put your plan into action\n* **Reflect**\n  * How do your results compare to the goals you set while defining the app?\n  * What can you learn from this or do better next time?\n  * What new problems have you discovered?\n\n# What it Looks Like\nOver the course of the next several weeks, you will have the opportunity to experiment with some existing games and design your own game based off of what you have learned.  After creating your game, you will get the chance to present it to others and receive feedback.  These steps are all critically important in the software industry, and getting practice with the elements of the design process will help you create better products more efficiently.  \n\nHere is what the coming weeks will hold as we learn more about the design process:\n\n1. **Define & Prepare**\n   * Play existing games to get ideas and understand limitations\n   * Brainstorm and plan your new or modified app\n1. **Try**\n   * Follow your plan to build an app\n1. **Reflect & Edit**\n   * Swap apps with another group to help make your projects better\n1. **Present**\n   * Show off your final product!\n"
     }
@@ -1631,7 +1630,6 @@
   },
   "https://studio.code.org/s/coursee-2017/stage/24/puzzle/1": {
     "dsls": {
-      "title": "title",
       "content1": "description here",
       "markdown": "# Project Presentations\n\nTime to present your projects! Your teacher will provide more details on how you will be presenting your work to your classmates.\n"
     }

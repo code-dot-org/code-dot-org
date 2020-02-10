@@ -6,9 +6,13 @@ state-facts: true
 
 :ruby
   if request.params["pdf_version"]
-    @header["layout"] = "page_print"
+    @header["layout"] = "none"
     @header["theme"] = "pdf"
   end
+
+%script{src:'https://www.google.com/jsapi'}
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts-print.css'}
+%link{:rel=>'stylesheet', :type=>'text/css', :href=>'/css/state-facts.css'}
 
 // Generates custom state fact sheets based on the data in cdo-state-promote Google Sheet.
 
@@ -263,6 +267,7 @@ state-facts: true
           - elsif state_info[:principals_barrier_s] == "Other"
             And one of their biggest barriers to offering computer science is the lack of funds for hiring and training teachers.
 
+
   .chart-text-group
     .improve-edu
       %h2.improve-edu-h2.together
@@ -275,36 +280,33 @@ state-facts: true
   .clear
 
   %div
-    %ol
+    %ul
       %li
-        Nominate a teacher for a professional learning scholarship:
-        %a{href: "www.code.org/nominate"} www.code.org/nominate
+        Nominate a teacher for professional learning:
+        %a{href:"https://code.org/nominate"} www.code.org/nominate
       %li
         Send a letter:
         %ul
           %li
             To your school/district asking them to expand computer science offerings at every grade level:
-            %a{href: "www.code.org/promote/letter"} www.code.org/promote/letter
+            %a{href:"https://code.org/promote/letter"} www.code.org/promote/letter
           %li
             To your elected officials asking them to support computer science education policy in
             = succeed ":" do
               = state_info[:state_name_s]
             - if state_info[:action_text_s] == "NA"
-              %a{href: "www.votervoice.net/Code/campaigns/58463/respond"} www.votervoice.net/Code/campaigns/58463/respond
+              %a{href: "https://votervoice.net/Code/campaigns/58463/respond"} www.votervoice.net/Code/campaigns/58463/respond
             - else
               = state_info[:action_text_s]
       %li
         Find out if your school teaches computer science or submit information about your school's offerings at
         = succeed "." do
-          %a{href: "www.code.org/yourschool"} www.code.org/yourschool
+          %a{href:"https://code.org/yourschool"} www.code.org/yourschool
       %li
         Visit
-        %a{href: "www.code.org/educate/3rdparty"} www.code.org/educate/3rdparty
+        %a{href:"https://code.org/educate/3rdparty"} www.code.org/educate/3rdparty
         to find out about courses and curriculum from a variety of providers, including Code.org.
-      %li
-        Visit
-        %a{href: state_info[:website_url_s]}= state_info[:website_url_s]
-        to learn more about supporting computer science in your state.
+     
 
 
   %h2.together

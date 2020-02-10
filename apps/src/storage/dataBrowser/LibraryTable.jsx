@@ -6,12 +6,18 @@ import msg from '@cdo/locale';
 import color from '../../util/color';
 import {showPreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
+import experiments from '../../util/experiments';
 
 const styles = {
   tableName: {
     fontFamily: '"Gotham 7r", sans-serif',
     cursor: 'pointer',
     color: color.dark_charcoal
+  },
+  tableDescription: {
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.dark_charcoal,
+    wordBreak: 'break-word'
   },
   preview: {
     backgroundColor: color.background_gray,
@@ -56,15 +62,14 @@ class LibraryTable extends React.Component {
     name: PropTypes.string.isRequired,
     importTable: PropTypes.func.isRequired,
 
-    // from redux dispatch
+    // Provided via redux
+    libraryManifest: PropTypes.object.isRequired,
     onShowPreview: PropTypes.func.isRequired
   };
 
   state = {
     collapsed: true
   };
-
-  datasetInfo = getDatasetInfo(this.props.name);
 
   toggleCollapsed = () =>
     this.setState({
@@ -73,6 +78,16 @@ class LibraryTable extends React.Component {
 
   render() {
     const icon = this.state.collapsed ? 'caret-right' : 'caret-down';
+    const datasetInfo = getDatasetInfo(
+      this.props.name,
+      this.props.libraryManifest.tables
+    );
+    const shouldShowTable =
+      datasetInfo &&
+      (datasetInfo.published || experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES);
+    if (!shouldShowTable) {
+      return null;
+    }
 
     return (
       <div>
@@ -83,7 +98,17 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             {/* TODO: Add last updated time */}
-            <div>{this.datasetInfo.description}</div>
+            <div style={styles.tableDescription}>
+              {datasetInfo.description}
+              {datasetInfo.sourceUrl && (
+                <span style={{display: 'inline-block'}}>
+                  {msg.dataSource() + ': '}
+                  <a href={datasetInfo.sourceUrl}>
+                    {datasetInfo.sourceText || datasetInfo.sourceUrl}
+                  </a>
+                </span>
+              )}
+            </div>
             <div>
               <button
                 style={styles.preview}
@@ -95,7 +120,7 @@ class LibraryTable extends React.Component {
               <button
                 style={styles.import}
                 type="button"
-                onClick={() => this.props.importTable(this.datasetInfo)}
+                onClick={() => this.props.importTable(datasetInfo)}
               >
                 {msg.import()}
               </button>
@@ -108,7 +133,9 @@ class LibraryTable extends React.Component {
 }
 
 export default connect(
-  state => ({}),
+  state => ({
+    libraryManifest: state.data.libraryManifest || {}
+  }),
   dispatch => ({
     onShowPreview(tableName) {
       dispatch(showPreview(tableName));
