@@ -25,6 +25,7 @@ import scriptSelection from '@cdo/apps/redux/scriptSelectionRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import currentUser, {
   setCurrentUserId,
+  setCurrentUserName,
   setCurrentUserHasSeenStandardsReportInfo
 } from '@cdo/apps/templates/currentUserRedux';
 import {setValidScripts} from '../../../../redux/scriptSelectionRedux';
@@ -57,6 +58,7 @@ $(document).ready(function() {
   const store = getStore();
   // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(setCurrentUserId(currentUserId));
+  store.dispatch(setCurrentUserName(scriptData.userName));
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );

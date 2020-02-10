@@ -41,6 +41,7 @@ class StandardDescriptionCell extends Component {
           <span key={lesson.name}>
             <ReactTooltip
               id={lesson.name}
+              class="print-hide"
               key={lesson.name}
               role="tooltip"
               wrapper="span"

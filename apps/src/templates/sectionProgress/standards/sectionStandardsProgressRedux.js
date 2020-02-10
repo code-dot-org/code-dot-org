@@ -1,16 +1,22 @@
-import {lessonCompletedByStandard} from './standardsTestHelpers';
 import _ from 'lodash';
 
-const ADD_STANDARDS_DATA = 'sectionProgress/ADD_STANDARDS_DATA';
+const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
+const SET_TEACHER_COMMENT_FOR_REPORT =
+  'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 
 // Action creators
 export const addStandardsData = standardsData => {
   return {type: ADD_STANDARDS_DATA, standardsData: standardsData};
 };
+export const setTeacherCommentForReport = teacherComment => ({
+  type: SET_TEACHER_COMMENT_FOR_REPORT,
+  teacherComment
+});
 
 // Initial State
 const initialState = {
-  standardsData: []
+  standardsData: [],
+  teacherComment: null
 };
 
 export default function sectionStandardsProgress(state = initialState, action) {
@@ -18,6 +24,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
     return {
       ...state,
       standardsData: action.standardsData
+    };
+  }
+  if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {
+    return {
+      ...state,
+      teacherComment: action.teacherComment
     };
   }
   return state;
@@ -51,8 +63,22 @@ export function getUnpluggedLessonsForScript(state) {
   return _.map(unpluggedStages, filterStageData);
 }
 
-export function getLessonsCompletedByStandardForScript(script) {
-  return lessonCompletedByStandard;
+export function getNumberLessonsCompleted(state) {
+  return 5;
+}
+
+export function getNumberLessonsInScript(state) {
+  let numStages = 0;
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+  ) {
+    numStages =
+      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+        .stages.length;
+  }
+  return numStages;
 }
 
 export const lessonsByStandard = state => {
