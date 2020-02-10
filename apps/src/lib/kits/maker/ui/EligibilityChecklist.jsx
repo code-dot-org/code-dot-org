@@ -95,6 +95,14 @@ export default class EligibilityChecklist extends React.Component {
     });
   };
 
+  schoolHighNeedsStatusMessage = schoolHighNeedsEligible => {
+    return schoolHighNeedsEligible === true ? (
+      <SafeMarkdown markdown={schoolIsEligibleMd} />
+    ) : (
+      <SafeMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)} />
+    );
+  };
+
   handleUnit6Submitted = ({eligible, unit6Intention}) => {
     this.setState({
       statusRedemptionWindow: inDiscountRedemptionWindow(unit6Intention)
@@ -150,12 +158,9 @@ export default class EligibilityChecklist extends React.Component {
           schoolConfirmed={this.props.hasConfirmedSchool}
           onSchoolConfirmed={this.handleSchoolConfirmed}
         />
-        {this.state.schoolEligible === false && !this.props.adminSetStatus && (
-          <SafeMarkdown markdown={schoolIsNotEligibleMd(this.state.schoolId)} />
-        )}
-        {this.state.schoolEligible === true && !this.props.adminSetStatus && (
+        {this.state.schoolEligible !== null && !this.props.adminSetStatus && (
           <div>
-            <SafeMarkdown markdown={schoolIsEligibleMd} />
+            {this.schoolHighNeedsStatusMessage(this.state.schoolEligible)}
             <h2>{i18n.eligibilityRequirements()}</h2>
             <p>{i18n.eligibilityExplanation()}</p>
             <ValidationStep
@@ -226,7 +231,7 @@ teachers at schools with 50% or greater free and reduced-price meals. To learn m
 the full eligibility requirements, read the overview [here](//code.org/circuitplayground).
 `;
 
-const schoolRequirementHeading = `School requirement`;
+const schoolRequirementHeading = `School Requirement`;
 const schoolRequirementDescriptionMd = `
 Please verify which school you teach at, so we can check if your school is eligible for a
 Code.org-provided subsidy.
