@@ -18,5 +18,15 @@ $(document).ready(function() {
     </Provider>,
     document.querySelector('.manifest_editor')
   );
-  initializeCodeMirror('content', 'application/json');
+  initializeCodeMirror('content', 'application/json', {callback: onChange});
 });
+
+function onChange(editor) {
+  try {
+    const newManifest = JSON.parse(editor.getValue());
+    getStore().dispatch(setLibraryManifest(newManifest));
+  } catch (e) {
+    // There is a JSON error. Set the manifest to {} so that we show an error instead of the library preview
+    getStore().dispatch(setLibraryManifest({}));
+  }
+}
