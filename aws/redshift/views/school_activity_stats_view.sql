@@ -72,6 +72,8 @@ csf_script_ids as
          ss.stage_el AS elementary,
          ss.stage_mi AS middle,
          ss.stage_hi AS high,
+         ss.grades_lo, 
+         ss.grades_hi,
          ss.frl_eligible as frl_eligible_count, 
          ss.frl_eligible_percent,
          ss.urm_percent * ss.students as urm_count,
@@ -131,7 +133,7 @@ csf_script_ids as
         ON hoc_event.school_id = ss.school_id
     LEFT JOIN applied_to_csd_csp_pd app
         ON app.school_id = ss.school_id
-  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18, 19, 20, 21
+  GROUP BY 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18, 19, 20, 21, 22, 23
   WITH NO SCHEMA BINDING;
   
 GRANT SELECT ON analysis.school_activity_stats_view TO GROUP reader;

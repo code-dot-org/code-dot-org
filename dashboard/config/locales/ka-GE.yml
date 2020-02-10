@@ -776,6 +776,8 @@ ka:
     help_support: დახმარება და მხარდაჭერა
     documentation: დოკუმენტაცია
     tutorials: ტუტორიალები
+  free_response:
+    placeholder: შეიყვანეთ პასუხი აქ
   multi:
     wrong_title: პასუხი არასწორია
     wrong_body: ეს პასუხი არასწორია. სცადეთ კიდევ ერთხელ!

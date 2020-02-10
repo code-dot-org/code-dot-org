@@ -745,6 +745,8 @@ fi:
     help_support: Ohjeet ja tuki
     documentation: Dokumentaatio
     tutorials: Oppaat
+  free_response:
+    placeholder: Kirjoita vastauksesi tähän
   multi:
     wrong_title: Väärä vastaus
     wrong_body: Antamasi vastaus ei ole oikein. Yritä uudelleen!

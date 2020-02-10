@@ -94,7 +94,6 @@ export default class LibraryListItem extends React.Component {
           <button
             type="button"
             onClick={() => this.props.onRemove(library.name)}
-            style={styles.deleteButton}
             className="btn-danger"
           >
             <FontAwesome icon="trash-o" />

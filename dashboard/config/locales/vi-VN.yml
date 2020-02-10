@@ -794,6 +794,8 @@ vi:
     help_support: Giúp đỡ và hỗ trợ
     documentation: Tài liệu
     tutorials: Hướng dẫn
+  free_response:
+    placeholder: Nhập câu trả lời của bạn ở đây
   multi:
     wrong_title: Câu trả lời không chính xác
     wrong_body: Câu trả lời mà bạn đã nhập không chính xác.  Xin vui lòng thử lại!

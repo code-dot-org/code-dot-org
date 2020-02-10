@@ -890,7 +890,15 @@ az:
               name: funksiyalar
             Variables:
               name: dəyişənlər
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: Şərti ifadələr
         time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Şərti ifadələr
+        time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Şərti ifadələr

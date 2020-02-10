@@ -54,6 +54,8 @@ hu-HU:
       CourseD_Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      CourseD_Dance_Party_11_5:
+        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat
       Dance_2019_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
       Dance_2019_02:
@@ -81,6 +83,8 @@ hu-HU:
       Dance_Party_11:
         dance_callout_11_a: Új blokk!
         dance_callout_11_b: Új blokk!
+      Dance_Party_11_5:
+        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat
       Function intro Ryan:
         Function_intro_Ryan_1: Ez a kis utasítás azt mondja a számítógépnek, hogy
           futassa a NAGY kódtömböt ugyanazzal a névvel a munkaterületen.
@@ -174,10 +178,43 @@ hu-HU:
         craft_what_is_iron: Bányászd ki a vasat!
       Underground Iron_2019:
         craft_what_is_iron: Bányászd ki a vasat!
+      courseA_maze_ramp2_2019:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseA_maze_ramp3a_2018:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseB_Scrat_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseB_Scrat_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseB_Scrat_ramp3a_2019:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Ezek a blokkok zárolva vannak és nem törölhetők!
       courseC_maze_debugging9_2019:
         courseC_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
+      courseC_maze_programming1:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseC_maze_programming1_2018:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseC_maze_programming1_2019:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseC_maze_programming2:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseC_maze_programming2_2018:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseC_maze_programming2_2019:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
       courseD_bee_conditionals2:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
@@ -187,6 +224,30 @@ hu-HU:
       courseD_bee_conditionals2_2019:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
+      courseD_maze_ramp1:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseD_maze_ramp1_2018:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseD_maze_ramp1_2019:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseD_scrat_ramp1:
+        grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
+          futtatásra, hogy elinduljon a program.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
+          is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
       express_maze_debugging9_2019:
         express_maze_debugging9_2019_1: Húzza a blokkokat az eszköztárból a munkaterületre.
       frozen circle function with parameter:
@@ -227,5 +288,3 @@ hu-HU:
       frozen square snowflake:
         replace_questions: Használd a legördülő menüt hogy helyettesítsd a "???" egy
           számmal
-      Dance_Party_11_5:
-        dance_party_11_5_groups: Itt keresd az "Összes kacsa" blokkokat
