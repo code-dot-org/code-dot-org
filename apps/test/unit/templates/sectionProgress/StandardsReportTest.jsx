@@ -2,6 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('StandardsReport', () => {
   let DEFAULT_PROPS;
@@ -18,6 +19,8 @@ describe('StandardsReport', () => {
       numLessonsCompleted: 5,
       numLessonsInUnit: 10,
       getStandardsCoveredForScript: () => {},
+      setTeacherCommentForReport: () => {},
+      setScriptId: () => {},
       section: {
         id: 6,
         script: {
@@ -37,6 +40,17 @@ describe('StandardsReport', () => {
       },
       scriptFriendlyName: 'Express Course (2019)'
     };
+
+    replaceOnWindow('opener', {
+      teacherDashboardStoreInformation: {
+        scriptId: 1,
+        teacherComment: 'Comment!'
+      }
+    });
+  });
+
+  afterEach(() => {
+    restoreOnWindow('opener');
   });
 
   it('report shows print buttons', () => {
