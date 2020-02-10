@@ -84,7 +84,8 @@ class LibraryTable extends React.Component {
     );
     const shouldShowTable =
       datasetInfo &&
-      (datasetInfo.published || experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES);
+      (datasetInfo.published ||
+        experiments.isEnabled(experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES));
     if (!shouldShowTable) {
       return null;
     }
