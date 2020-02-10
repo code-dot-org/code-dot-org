@@ -1,5 +1,6 @@
 require_relative '../../../deployment'
 require 'aws-sdk-databasemigrationservice'
+require 'ostruct'
 
 module Cdo
   class DMS
@@ -81,10 +82,12 @@ module Cdo
       end
     end
 
-    # Get current status of a Replication Task
+    # Get current status of a Replication Task including table statistics.
     def self.replication_task_status(replication_task_arn)
+      task = OpenStruct.new(arn: replication_task_arn)
+
       dms_client = Aws::DatabaseMigrationService::Client.new
-      dms_client.describe_replication_tasks(
+      replication_task = dms_client.describe_replication_tasks(
         {
           filters: [
             {
@@ -96,6 +99,25 @@ module Cdo
         max_records: 1,
         without_settings: true
       ).replication_tasks[0]
+
+      # Collect the replication task attributes that identify overall replication status.
+      task.status = replication_task.status
+      task.last_failure_message = replication_task.last_failure_message
+      task.stop_reason = replication_task.stop_reason
+      task.start_date = replication_task.replication_task_start_date
+      task.full_load_progress_percent = replication_task.replication_task_stats.full_load_progress_percent
+      task.tables_loaded = replication_task.replication_task_stats.tables_loaded
+      task.tables_loading = replication_task.replication_task_stats.tables_loading
+      task.tables_queued = replication_task.replication_task_stats.tables_queued
+      task.tables_errored = replication_task.replication_task_stats.tables_errored
+
+      task.table_statistics = dms_client.describe_table_statistics(
+        {
+          replication_task_arn: replication_task_arn
+        }
+      ).table_statistics
+
+      return task
     end
 
     # Start a replication task and wait until it completes, raising an error if the task did not complete within a
@@ -123,40 +145,18 @@ module Cdo
       raise error
     end
 
-    def wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
+    def self.wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
       attempts = 0
-      task = OpenStruct.new(
-        arn: replication_task_arn,
-        status: nil
-      )
+      task = nil
       while attempts <= max_attempts && task.status != 'stopped'
-        replication_task = replication_task_status(replication_task_arn)
-
-        # Collect the replication task attributes that identify overall replication status.
-        task.status = replication_task.status
-        task.last_failure_message = replication_task.last_failure_message
-        task.stop_reason = replication_task.stop_reason
-        task.start_date = replication_task.replication_task_start_date
-        task.full_load_progress_percent = replication_task.replication_task_stats.full_load_progress_percent
-        task.tables_loaded = replication_task.replication_task_stats.tables_loaded
-        task.tables_loading = replication_task.replication_task_stats.tables_loading
-        task.tables_queued = replication_task.replication_task_stats.tables_queued
-        task.tables_errored = replication_task.replication_task_stats.tables_errored
+        task = replication_task_status(replication_task_arn)
 
         attempts += 1
         CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
         sleep delay
       end
 
-      # Gather more detailed replication task status now that the task has stopped or we've given up waiting.
-      dms_client = Aws::DatabaseMigrationService::Client.new
-      task.table_statistics = dms_client.describe_table_statistics(
-        {
-          replication_task_arn: replication_task_arn
-        }
-      ).table_statistics
-
-      return task if task_completed_successfully?(task)
+      return task if replication_task_completed_successfully?(task.arn)
 
       raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
     " #{replication_task_arn} did not complete successfully.  Task Status - #{task.status} / #{task}"
@@ -167,13 +167,6 @@ module Cdo
     def self.replication_task_completed_successfully?(replication_task_arn)
       task = replication_task_status(replication_task_arn)
 
-      dms_client = Aws::DatabaseMigrationService::Client.new
-      task_table_statistics = dms_client.describe_table_statistics(
-        {
-          replication_task_arn: replication_task_arn
-        }
-      ).table_statistics
-
       return task.status == 'stopped' &&
         task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
         task.replication_task_stats.full_load_progress_percent == 100 &&
@@ -181,7 +174,7 @@ module Cdo
         task.replication_task_stats.tables_loading == 0 &&
         task.replication_task_stats.tables_queued == 0 &&
         task.replication_task_stats.tables_errored == 0 &&
-        task_table_statistics.all? {|table| table.table_state == 'Table completed'}
+        task.table_statistics.all? {|table| table.table_state == 'Table completed'}
     end
   end
 end
