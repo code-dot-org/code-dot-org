@@ -98,6 +98,8 @@
       cronjob at:'0 10 * * *', do:deploy_dir('bin', 'cron', 'redshift_rollups')
       cronjob at:'1 7 * * 6', do:deploy_dir('bin', 'cron', 'cleanup_workshop_attendance_codes')
       cronjob at:'0 14 * * 1-5', do:deploy_dir('bin', 'cron', 'zendesk_slack_report')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
+      cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
 
       # RDS backup window is 08:50-09:20, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
@@ -106,8 +108,6 @@
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
     cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
-    cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'daily_weather')
-    cronjob at:'0 12 * * *', do:deploy_dir('bin', 'cron', 'applab_datasets', 'spotify')
 
     # background tasks that adhoc instances don't need to run.
     unless node.chef_environment == 'adhoc'
