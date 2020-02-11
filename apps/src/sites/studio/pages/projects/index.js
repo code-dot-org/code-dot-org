@@ -22,6 +22,7 @@ import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/pub
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 
 $(document).ready(() => {
+  // TODO: use helper to get script data
   const script = document.querySelector('script[data-projects]');
   const projectsData = JSON.parse(script.dataset.projects);
 
@@ -32,25 +33,30 @@ $(document).ready(() => {
   });
   const store = getStore();
   setupReduxSubscribers(store);
-  ReactDOM.render(
-    <Provider store={store}>
-      <GallerySwitcher />
-    </Provider>,
-    document.getElementById('gallery-navigation')
-  );
 
   ReactDOM.render(
     <Provider store={store}>
-      <ProjectHeader
-        canViewAdvancedTools={projectsData.canViewAdvancedTools}
-        projectCount={projectsData.projectCount}
-      />
+      <div>
+        <ProjectHeader
+          canViewAdvancedTools={projectsData.canViewAdvancedTools}
+          projectCount={projectsData.projectCount}
+        />
+        <GallerySwitcher />
+        {projectsData.isPublic ? (
+          <PublicGallery limitedGallery={projectsData.limitedGallery} />
+        ) : (
+          <PersonalProjectsTable canShare={projectsData.canShare} />
+        )}
+        <PublishDialog />
+        <DeleteProjectDialog />
+      </div>
     </Provider>,
-    document.getElementById('projects-header')
+    document.querySelector('#projects-page')
   );
 
-  const isPublic = window.location.pathname.startsWith('/projects/public');
-  const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
+  const initialState = projectsData.isPublic
+    ? Galleries.PUBLIC
+    : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
   const url = `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`;
 
@@ -60,48 +66,15 @@ $(document).ready(() => {
     dataType: 'json'
   }).done(projectLists => {
     store.dispatch(setProjectLists(projectLists));
-    const publicGallery = document.getElementById('public-gallery');
-    ReactDOM.render(
-      <Provider store={store}>
-        <PublicGallery limitedGallery={projectsData.limitedGallery} />
-      </Provider>,
-      publicGallery
-    );
   });
-
-  const personalProjectsUrl = `/api/v1/projects/personal`;
 
   $.ajax({
     method: 'GET',
-    url: personalProjectsUrl,
+    url: '/api/v1/projects/personal',
     dataType: 'json'
   }).done(personalProjectsList => {
     store.dispatch(setPersonalProjectsList(personalProjectsList));
-    ReactDOM.render(
-      <Provider store={store}>
-        <PersonalProjectsTable canShare={projectsData.canShare} />
-      </Provider>,
-      document.getElementById('react-personal-projects')
-    );
   });
-
-  const publishConfirm = document.getElementById('publish-confirm');
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <PublishDialog />
-    </Provider>,
-    publishConfirm
-  );
-
-  const deleteConfirm = document.getElementById('delete-confirm');
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <DeleteProjectDialog />
-    </Provider>,
-    deleteConfirm
-  );
 });
 
 function showGallery(gallery) {
