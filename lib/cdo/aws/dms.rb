@@ -26,8 +26,8 @@ module Cdo
 
           # Conditionally add transformation rule to prefix target table name with '_import_', so we can
           # prototype exporting an Aurora table to a staging Redshift table, which is later swapped into the target table.
-          # TODO: (suresh) Replace this with a transformation rule to prefix all tables once prototyping completes.
-          if properties && properties['export_to_staging_table']
+          # TODO: (suresh) Replace this with a transformation rule to prefix ALL tables once prototyping is complete.
+          if schema == 'dashboard_production'
             rules << {
               'rule-type': 'transformation',
               'rule-action': 'add-prefix',
