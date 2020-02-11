@@ -63,8 +63,9 @@ class ManifestEditor extends React.Component {
         )}
         <h2>Manifest JSON</h2>
         <textarea
-          id="content"
           ref="content"
+          // 3rd parameter specifies number of spaces to insert into the output JSON string for readability purposes.
+          // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
