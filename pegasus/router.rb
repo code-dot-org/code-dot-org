@@ -157,13 +157,10 @@ class Documents < Sinatra::Base
     end
 
     @actionview ||= begin
+      view_dirs = @dirs.map {|dir| File.join(settings.views, dir, 'views') }
+      view_dirs << content_dir('..', '..', 'shared', 'haml')
       ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
-      ActionViewSinatra::Base.new(
-        [
-          pegasus_dir('sites.v3/code.org/views'),
-          pegasus_dir("../shared/haml")
-        ]
-      )
+      ActionViewSinatra::Base.new(view_dirs)
     end
 
     view_assigns = {}
