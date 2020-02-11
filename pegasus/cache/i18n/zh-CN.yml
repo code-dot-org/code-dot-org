@@ -168,6 +168,7 @@ zh-CN:
   landscape_recommended_certificates: 打印证书时，推荐选择 **风景**。
   print_one_here_certificates: 打印一份。
   enter_certificate_names: 输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   share_achievement: 分享你的成绩
   beyond_hour_message: 请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。
   leaderboards_for_hoc: 编程一小时的排行榜。
