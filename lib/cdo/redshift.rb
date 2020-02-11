@@ -1,5 +1,6 @@
 require 'pg'
 require 'singleton'
+require 'cdo/aws/dms'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
 # instance.
@@ -48,10 +49,25 @@ class RedshiftClient
     result
   end
 
+  # DMS Replication Tasks import data into temporary / staging tables prefixed with "_import_".
+  # Complete import of staged data from production database into Redshift by truncating each
+  # target table, moving all of the rows from each import table to its corresponding target table, and then dropping
+  # each temporary / staging import table.
+  def complete_table_import
+    Cdo::DMS::REDSHIFT_SCHEMAS_IMPORTED_FROM_DATABASE.each do |schema|
+      temporary_import_tables(schema).each do |import_table|
+        target_table = import_table.partition(TEMP_TABLE_PREFIX).last
+        truncate_table(schema, target_table)
+        move_rows(schema, import_table, schema, target_table)
+        drop_table(schema, import_table)
+      end
+    end
+  end
+
   # Get names of tables in a Redshift schema that were loaded via DMS to stage imported data from the database.
   # @param schema [String] The Redshift schema to search for database import staging tables.
   # Returns Array of Redshift table names.
-  def get_temporary_import_tables(schema)
+  def temporary_import_tables(schema)
     query = <<-SQL
 SET search_path TO #{schema};
 
@@ -62,15 +78,6 @@ WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table
   AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
 SQL
     exec(query).map {|row| row['tablename']}
-  end
-
-  # Complete import of staged data from production database into the specified Redshift table.
-  # @param schema [String] Name of Redshift schema containing table whose data import should be completed.
-  # @param table [String] Name of Redshift table awaiting final import of data loaded by DMS into a staging table.
-  def complete_table_import(schema, table)
-    truncate_table(schema, table)
-    move_rows(schema, "#{TEMP_TABLE_PREFIX}#{table}", schema, table)
-    drop_table(schema, "#{TEMP_TABLE_PREFIX}#{table}")
   end
 
   def truncate_table(schema, table)
