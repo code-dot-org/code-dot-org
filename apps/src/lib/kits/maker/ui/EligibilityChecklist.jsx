@@ -177,6 +177,7 @@ export default class EligibilityChecklist extends React.Component {
             </ValidationStep>
             <Unit6ValidationStep
               showRadioButtons={
+                this.state.schoolEligible === true &&
                 this.props.statusStudentCount === Status.SUCCEEDED &&
                 this.props.statusPD === Status.SUCCEEDED &&
                 !this.props.adminSetStatus
@@ -246,8 +247,8 @@ Just use the code \`ADAEDU\` at checkout.
 `;
 
 const schoolIsNotEligibleMd = ncesId => `
-Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
-your school has fewer than 50% of students that are eligible for free/reduced-price lunches
+**Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
+your school has fewer than 50% of students that are eligible for free/reduced-price lunches**
 ([source](https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=${ncesId})).
 However, you are still eligible for a discount! Adafruit has made available a 10% off educator
 discount that this kit is eligible for. Just use the code \`ADAEDU\` at checkout.
