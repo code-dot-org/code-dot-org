@@ -26,26 +26,43 @@ class ManifestEditor extends React.Component {
     libraryManifest: PropTypes.object.isRequired
   };
 
+  state = {
+    showUnpublishedTables: false
+  };
+
+  componentDidMount() {
+    this.setState({
+      showUnpublishedTables: experiments.isEnabled(
+        experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      )
+    });
+  }
+
   render() {
     const isValidJson =
       this.props.libraryManifest.categories &&
       this.props.libraryManifest.tables;
 
-    const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
-    );
     const categories = (this.props.libraryManifest.categories || []).filter(
-      category => showUnpublishedTables || category.published
+      category => this.state.showUnpublishedTables || category.published
     );
     return (
       <div>
         <h1>Edit Dataset Manifest </h1>
         <h2>Library Preview</h2>
-        {showUnpublishedTables && (
+        {this.state.showUnpublishedTables && (
           <p style={styles.warning}>
-            Note: Showing unpublished categories and tables. To hide, turn off
-            the experiment by adding
-            ?disableExperiments=showUnpublishedFirebaseTables to the URL.
+            Note: Showing unpublished categories and tables because you have the
+            showUnpublishedFirebaseTables experiment enabled.
+            <br />
+            <a
+              href={
+                location.href +
+                '?disableExperiments=showUnpublishedFirebaseTables'
+              }
+            >
+              Click here to turn off the experiment.
+            </a>
           </p>
         )}
         {isValidJson ? (
