@@ -18,7 +18,10 @@ $(document).ready(function() {
     </Provider>,
     document.querySelector('.manifest_editor')
   );
-  initializeCodeMirror('content', 'application/json', {callback: onChange});
+  const codeMirrorArea = document.getElementsByTagName('textarea')[0];
+  initializeCodeMirror(codeMirrorArea, 'application/json', {
+    callback: onChange
+  });
 });
 
 function onChange(editor) {

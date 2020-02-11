@@ -37,6 +37,7 @@ class ManifestEditor extends React.Component {
   };
 
   state = {
+    showUnpublishedTables: false,
     notice: '',
     isError: false
   };
@@ -59,16 +60,21 @@ class ManifestEditor extends React.Component {
       .fail(() => this.displayNotice('Error', true));
   };
 
+  componentDidMount() {
+    this.setState({
+      showUnpublishedTables: experiments.isEnabled(
+        experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      )
+    });
+  }
+
   render() {
     const isValidJson =
       this.props.libraryManifest.categories &&
       this.props.libraryManifest.tables;
 
-    const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
-    );
     const categories = (this.props.libraryManifest.categories || []).filter(
-      category => showUnpublishedTables || category.published
+      category => this.state.showUnpublishedTables || category.published
     );
     return (
       <div>
@@ -79,11 +85,19 @@ class ManifestEditor extends React.Component {
         )}
         <h1>Edit Dataset Manifest </h1>
         <h2>Library Preview</h2>
-        {showUnpublishedTables && (
+        {this.state.showUnpublishedTables && (
           <p style={styles.warning}>
-            Note: Showing unpublished categories and tables. To hide, turn off
-            the experiment by adding
-            ?disableExperiments=showUnpublishedFirebaseTables to the URL.
+            Note: Showing unpublished categories and tables because you have the
+            showUnpublishedFirebaseTables experiment enabled.
+            <br />
+            <a
+              href={
+                location.href +
+                '?disableExperiments=showUnpublishedFirebaseTables'
+              }
+            >
+              Click here to turn off the experiment.
+            </a>
           </p>
         )}
         {isValidJson ? (
@@ -101,8 +115,9 @@ class ManifestEditor extends React.Component {
         )}
         <h2>Manifest JSON</h2>
         <textarea
-          id="content"
           ref="content"
+          // 3rd parameter specifies number of spaces to insert into the output JSON string for readability purposes.
+          // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
           value={JSON.stringify(this.props.libraryManifest, null, 2)}
           // Change handler is required for this element, but changes will be handled by the code mirror.
           onChange={() => {}}
