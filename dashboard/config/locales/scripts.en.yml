@@ -14109,3 +14109,9 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd2-projects-temp:
+          stages: {}
+          title: CSD Web Projects - TEMP
+          description_audience: ''
+          description_short: ''
+          description: Temporary place to hold the new mini-projects for CSD Web Development
