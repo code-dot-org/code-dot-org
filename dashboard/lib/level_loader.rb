@@ -48,7 +48,11 @@ class LevelLoader
       changed_lcds = changed_levels.map(&:level_concept_difficulty).compact
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
           reject {|column| %i{id level_id created_at}.include? column}
-      LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
+      if rack_env?(:development)
+        LevelConceptDifficulty.import changed_lcds, on_duplicate_key_update: lcd_update_columns
+      else
+        LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
+      end
 
       # activerecord-import doesn't trigger before_save and before_create hooks
       # for imported models, so we trigger these manually to make sure they're
