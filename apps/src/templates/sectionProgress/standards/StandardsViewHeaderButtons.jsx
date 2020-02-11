@@ -45,6 +45,10 @@ class StandardsViewHeaderButtons extends Component {
   };
 
   closeCreateReportDialog = () => {
+    this.setState({isCreateReportDialogOpen: false});
+  };
+
+  closeCreateReportDialogAndPrintReport = () => {
     this.setState({isCreateReportDialogOpen: false}, this.openReport);
   };
 
@@ -89,7 +93,8 @@ class StandardsViewHeaderButtons extends Component {
         />
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
-          handleConfirm={this.closeCreateReportDialog}
+          handleConfirm={this.closeCreateReportDialogAndPrintReport}
+          handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
         />
       </div>
