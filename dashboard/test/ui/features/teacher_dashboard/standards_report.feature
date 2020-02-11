@@ -1,3 +1,4 @@
+@skip #Dani looking into as part of standards work
 @no_mobile
 Feature: Viewing and Printing Standards Progress
 
