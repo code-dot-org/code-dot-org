@@ -25,6 +25,7 @@ export class CreateStandardsReportDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
     handleConfirm: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     onCommentChange: PropTypes.func.isRequired
   };
 
@@ -44,7 +45,7 @@ export class CreateStandardsReportDialog extends Component {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.props.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
