@@ -122,11 +122,13 @@ class SectionActionDropdown extends Component {
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
+            className="view-progress-link"
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/manage_students')}
+            className="manage-students-link"
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
@@ -134,6 +136,7 @@ class SectionActionDropdown extends Component {
             sectionData.loginType !== OAuthSectionTypes.clever && (
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
+                className="print-login-link"
               >
                 {sectionData.loginType === SectionLoginType.email
                   ? i18n.joinInstructions()
