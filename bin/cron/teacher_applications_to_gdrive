@@ -58,11 +58,15 @@ def update_sheets(drive)
 end
 
 def notify_of_external_sharing(drive)
+  # List of external emails that we can share this document with
+  allowed_list = []
+
   acl = drive.get_spreadsheet_acl CDO.applications_2020_2021_gsheet_key
 
   external_emails = []
   acl.each do |entry|
-    external_emails << entry.email_address unless entry.email_address.end_with?('@code.org')
+    next if entry.email_address.end_with?('@code.org') || allowed_list.include?(entry.email_address)
+    external_emails << entry.email_address
   end
 
   if external_emails.present?
@@ -80,7 +84,7 @@ def main
   # Uses a Google Cloud service account to access Google Drive
   drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
 
-  update_sheets(drive)
+  # update_sheets(drive)
   notify_of_external_sharing(drive)
 end
 
