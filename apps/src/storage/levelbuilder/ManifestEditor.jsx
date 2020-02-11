@@ -38,13 +38,13 @@ class ManifestEditor extends React.Component {
 
   state = {
     showUnpublishedTables: false,
-    notice: '',
+    notice: null,
     isError: false
   };
 
   displayNotice = (notice, isError) => {
     this.setState({notice, isError}, () =>
-      setTimeout(() => this.setState({notice: '', isError: false}), 5000)
+      setTimeout(() => this.setState({notice: null, isError: false}), 5000)
     );
     window.scrollTo(0, 0);
   };
@@ -123,7 +123,7 @@ class ManifestEditor extends React.Component {
           onChange={() => {}}
         />
         <Button
-          text={'Submit'}
+          text="Submit"
           onClick={this.handleSubmit}
           disabled={!isValidJson}
           color={Button.ButtonColor.blue}
