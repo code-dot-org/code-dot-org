@@ -84,7 +84,7 @@ def main
   # Uses a Google Cloud service account to access Google Drive
   drive = Google::Drive.new service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json)
 
-  # update_sheets(drive)
+  update_sheets(drive)
   notify_of_external_sharing(drive)
 end
 
