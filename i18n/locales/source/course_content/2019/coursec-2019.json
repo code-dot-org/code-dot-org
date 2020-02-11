@@ -1146,8 +1146,7 @@
     "short_instructions": "Let's play a game. Score 5 points by moving the Penguin to the Octopus!",
     "long_instructions": "Let's play a game. Move the penguin to the octopus to score a point. Score 5 points to win.",
     "authored_hints": {
-      "courseC_PlayLab_eventsA_a": "Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.",
-      "courseC_PlayLab_eventsA_b": "You will need to specifically drag a `when run` event block into the workspace to solve this puzzle."
+      "courseC_PlayLab_eventsA_a": "Use the arrow keys to move the penguin. You do not need to write any code to finish this level."
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/16/puzzle/7": {
