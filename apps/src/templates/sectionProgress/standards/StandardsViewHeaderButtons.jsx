@@ -23,7 +23,8 @@ class StandardsViewHeaderButtons extends Component {
   static propTypes = {
     sectionId: PropTypes.number,
     // redux
-    setTeacherCommentForReport: PropTypes.func.isRequired
+    setTeacherCommentForReport: PropTypes.func.isRequired,
+    scriptId: PropTypes.number
   };
   state = {
     isLessonStatusDialogOpen: false,
@@ -44,6 +45,10 @@ class StandardsViewHeaderButtons extends Component {
   };
 
   closeCreateReportDialog = () => {
+    this.setState({isCreateReportDialogOpen: false});
+  };
+
+  closeCreateReportDialogAndPrintReport = () => {
     this.setState({isCreateReportDialogOpen: false}, this.openReport);
   };
 
@@ -52,6 +57,10 @@ class StandardsViewHeaderButtons extends Component {
       teacherDashboardUrl(this.props.sectionId, '/standards_report'),
       '_blank'
     );
+    window.teacherDashboardStoreInformation = {
+      teacherComment: this.state.comment,
+      scriptId: this.props.scriptId
+    };
   };
 
   onCommentChange = value => {
@@ -80,10 +89,12 @@ class StandardsViewHeaderButtons extends Component {
           text={i18n.generatePDFReport()}
           size={'narrow'}
           style={styles.button}
+          className="uitest-standards-generate-report"
         />
         <CreateStandardsReportDialog
           isOpen={this.state.isCreateReportDialogOpen}
-          handleConfirm={this.closeCreateReportDialog}
+          handleConfirm={this.closeCreateReportDialogAndPrintReport}
+          handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
         />
       </div>
@@ -94,7 +105,9 @@ class StandardsViewHeaderButtons extends Component {
 export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 
 export default connect(
-  state => ({}),
+  state => ({
+    scriptId: state.scriptSelection.scriptId
+  }),
   dispatch => ({
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));

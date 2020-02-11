@@ -69,6 +69,7 @@ export class CreateStandardsReportStep2 extends Component {
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>
       </div>
