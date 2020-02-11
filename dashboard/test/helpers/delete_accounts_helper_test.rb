@@ -948,6 +948,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "clears form_data from pd_regional_partner_contacts" do
+    RegionalPartner.stubs(:find_by_zip).returns([nil, nil])
+
     teacher = create :teacher
     contact = create :pd_regional_partner_contact, user: teacher
     refute_equal '{}', contact.form_data
