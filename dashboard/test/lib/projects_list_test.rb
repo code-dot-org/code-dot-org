@@ -6,6 +6,9 @@ class ProjectsListTest < ActionController::TestCase
     @storage_id = storage_id_for_user_id(@student.id)
     @channel_id = storage_encrypt_channel_id(@storage_id, 123)
 
+    @teacher = create :teacher
+    @teacher_storage_id = storage_id_for_user_id(@teacher.id)
+
     student_project_value = {
       name: 'Bobs App',
       level: '/projects/applab',
@@ -271,6 +274,7 @@ class ProjectsListTest < ActionController::TestCase
     gamelab_lib_name = 'gamelab_library'
     description = 'library description'
     student_name = 'student name'
+    teacher_name = 'teacher name'
     stub_projects = [
       {
         name: applab_lib_name,
@@ -294,12 +298,14 @@ class ProjectsListTest < ActionController::TestCase
       }
     ]
     stub_users = {
-      @storage_id => 4
+      @storage_id => 4,
+      @teacher_storage_id => 6
     }
-    Section = Struct.new(:students)
-    Student = Struct.new(:id, :name)
-    student = Student.new(4, student_name)
-    section = Section.new([student])
+    User = Struct.new(:id, :name, :user_type)
+    teacher = User.new(6, teacher_name, 'teacher')
+    student = User.new(4, student_name, 'student')
+    Section = Struct.new(:students, :user, :id)
+    section = Section.new([student], teacher, 321)
 
     PEGASUS_DB.stubs(:[]).returns(user_db_result(stub_users)).then.returns(library_db_result(stub_projects))
 
@@ -309,7 +315,7 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal applab_lib_name, lib_response[0][:name]
     assert_equal gamelab_lib_name, lib_response[1][:name]
     assert_equal description, lib_response[0][:description]
-    assert_equal student_name, lib_response[0][:studentName]
+    assert_equal student_name, lib_response[0][:userName]
   end
 
   private
