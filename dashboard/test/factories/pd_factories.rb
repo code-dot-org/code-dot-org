@@ -416,6 +416,14 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_scholarship_info, class: 'Pd::ScholarshipInfo' do
+    association :user, factory: :teacher
+
+    course Pd::Workshop::COURSE_KEY_MAP[Pd::Workshop::COURSE_CSP]
+    application_year Pd::Application::ApplicationConstants::YEAR_19_20
+    scholarship_status Pd::ScholarshipInfoConstants::YES_CDO
+  end
+
   factory :pd_attendance, class: 'Pd::Attendance' do
     association :session, factory: :pd_session
     association :teacher
@@ -467,6 +475,43 @@ FactoryGirl.define do
 
   factory :pd_pre_workshop_survey, class: 'Pd::PreWorkshopSurvey' do
     association :pd_enrollment
+  end
+
+  factory :pd_regional_partner_contact, class: 'Pd::RegionalPartnerContact' do
+    user nil
+    regional_partner nil
+    form_data {build(:pd_regional_partner_contact_hash, :matched).to_json}
+  end
+
+  factory :pd_regional_partner_contact_hash, class: 'Hash' do
+    initialize_with do
+      {
+        first_name: 'firstName',
+        last_name: 'lastName',
+        title: 'Dr.',
+        email: 'foo@bar.com',
+        role: 'School Administrator',
+        job_title: 'title',
+        grade_levels: ['High School'],
+        school_state: 'NY',
+        notes: 'Sample notes to regional partner',
+        opt_in: 'Yes'
+      }
+    end
+
+    trait :matched do
+      after(:build) do |hash|
+        hash.merge!(
+          {
+            school_type: 'public',
+            school_district_other: false,
+            school_district: 'District',
+            school_state: 'OH',
+            school_zipcode: '45242',
+          }
+        )
+      end
+    end
   end
 
   factory :pd_regional_partner_mini_contact, class: 'Pd::RegionalPartnerMiniContact' do
