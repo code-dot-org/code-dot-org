@@ -42,23 +42,27 @@ function safeStepInterpreter(jsi) {
 }
 
 /**
- * Checks the code row number and library name to determine whether we are in
- * the user's code
+ * User code is code the user has written in the editor. We could be outside
+ * the user's code if we are in system-generated code or if we are in
+ * user-imported library code.
  */
 function isInUserCode(userCodeRow, libraryName) {
   return -1 !== userCodeRow && !libraryName;
 }
 
 /**
- * Checks if a library name exists in the node
+ * If and only if we are within a library, the 'source' field will be set on
+ * the node's location object (this is set in the 'parse' function when it
+ * parses the library).
  */
 function isNodeFromLibrary(node) {
   return node.loc && !!node.loc.source;
 }
 
 /**
- * Checks if the starting value of a node is within the defined boundrary of a
- * user's code
+ * In some cases, we prepend or append system-generated code to a user's code.
+ * This checks if the starting value of a node is within the defined boundrary
+ * of a user's code.
  */
 function isNodeWithinUserCode(start, userCodeLength) {
   return start >= 0 && start < userCodeLength;
@@ -270,6 +274,7 @@ export default class JSInterpreter {
           try {
             libraryAST = acorn.parse(library.code, {
               ecmaVersion: 5,
+              // locations: adds information about row/col number and allows us to use the sourceFile option.
               locations: true,
               sourceFile: library.name,
               program: libraryAST
@@ -835,7 +840,8 @@ export default class JSInterpreter {
         }
       } else {
         if (this.executionError) {
-          const row = inUserCode || !!libraryName ? userCodeRow + 1 : undefined;
+          const shouldUseCodeRow = inUserCode || !!libraryName;
+          const row = shouldUseCodeRow ? userCodeRow + 1 : undefined;
           this.handleError(row, libraryName);
         }
         this.isExecuting = false;
