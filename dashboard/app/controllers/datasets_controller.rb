@@ -3,11 +3,13 @@ class DatasetsController < ApplicationController
   before_action :initialize_firebase
   authorize_resource class: false
 
+  # GET /datasets/manifest
   def show_manifest
     @dataset_library_manifest = @firebase.get_library_manifest
   end
 
-  def updated_manifest
+  # POST /datasets/manifest
+  def update_manifest
   end
 
   private
