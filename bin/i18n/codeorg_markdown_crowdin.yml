@@ -1,18 +1,17 @@
 "project_identifier" : "codeorg-markdown"
-"base_path" : "../../pegasus/sites.v3/code.org"
+"base_path" : "../.."
 
 # API Credentials must be loaded from a separate identity file. See
 # https://support.crowdin.com/configuration-file/#split-project-configuration-and-api-credentials
 "api_key" : ""
 
-"preserve_hierarchy": true
-
 files: [{
-  "source": "/public/international/about.md.partial",
+  "source": "i18n/locales/source/markdown/public/international/about.md",
   # cannot use %file_name% and %file_extension% helpers here, because crowdin
   # doesn't handle multiple extensions like we'd want
-  "translation": "/i18n/%original_path%/about.%locale%.md.partial",
-}, {
-  "source": "/public/educate/curriculum/csf-transition-guide.md",
-  "translation": "/i18n/%original_path%/%file_name%.%locale%.%file_extension%",
+  "translation": "pegasus/sites.v3/code.org/i18n/public/international/about.%locale%.md.partial",
+  },
+  {
+  "source": "18n/locales/source/markdown/public/educate/curriculum/csf-transition-guide.md",
+  "translation": "pegasus.sites.v3/code.org/i18n/public/educate/curriculum/%file_name%.%locale%.%file_extension%"
 }]
