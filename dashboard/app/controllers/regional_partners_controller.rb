@@ -99,7 +99,12 @@ class RegionalPartnersController < ApplicationController
     region = params[:region]
     state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
     zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
-    @regional_partner.mappings.find_or_create_by(state: state, zip_code: zip_code)
+    result = @regional_partner.mappings.find_or_create_by(state: state, zip_code: zip_code)
+    if !result.errors[:base].nil_or_empty?
+      flash[:alert] = "Failed to add #{region}. #{result.errors[:base].join(',')}."
+    else
+      flash[:notice] = "Successfully added #{region}."
+    end
     redirect_to @regional_partner
   end
 
@@ -111,28 +116,19 @@ class RegionalPartnersController < ApplicationController
 
   # POST /regional_partners/:id/replace_mappings
   def replace_mappings
-    regions = params[:regions]
-    mappings = []
-    # validate
-    errors = []
-    regions.each do |region|
-      state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
-      zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
-      if !state && !zip_code
-        errors << {region: region, message: "Invalid region"}
-        next
-      end
-      mapping = @regional_partner.mappings.build({state: state, zip_code: zip_code})
-      mapping.valid?
-      if !mapping.errors[:base].nil_or_empty?
-        errors << {region: region, message: mapping.errors[:base].join(',')}
-      else
-        mappings << mapping
-      end
+    regions_file = params[:regions]
+    csv = validate_csv_file(regions_file)
+    unless csv
+      redirect_to @regional_partner
+      return
     end
-    # upload
+
+    mappings = []
+    errors = []
+    parse_regions(csv, mappings, errors)
+
     if !errors.empty?
-      flash[:notice] = errors
+      flash[:upload_error] = parse_upload_errors(errors)
       redirect_to @regional_partner
     else
       @regional_partner.mappings.clear
@@ -184,5 +180,62 @@ class RegionalPartnersController < ApplicationController
 
   def restricted_users
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
+  end
+
+  def validate_csv_file(file)
+    unless file
+      flash[:alert] = "Replace mappings failed. CSV file not found."
+      return false
+    end
+    begin
+      csv = CSV.read(file.path, headers: true, liberal_parsing: true)
+      unless csv.headers.include?("Region")
+        flash[:alert] = "Replace mappings failed. CSV does not include 'Region' header."
+        return false
+      end
+      return csv
+    rescue
+      flash[:alert] = "Replace mappings failed. Could not read file."
+      return false
+    end
+  end
+
+  def parse_regions(csv, mappings, errors)
+    regions_missing = false
+    csv.each do |row|
+      region = row['Region']
+      unless region.present?
+        regions_missing = true
+        next
+      end
+      state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
+      zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
+      if !state && !zip_code
+        errors << {region: region, message: "Invalid region"}
+        next
+      end
+      mapping = @regional_partner.mappings.build({state: state, zip_code: zip_code})
+      mapping.valid?
+      if !mapping.errors[:base].nil_or_empty?
+        errors << {region: region, message: mapping.errors[:base].join(',')}
+      else
+        mappings << mapping
+      end
+    end
+    if regions_missing
+      errors << {region: nil, message: "At least one line is missing a region"}
+    end
+  end
+
+  def parse_upload_errors(errors)
+    error_message = "<b>Replace mappings failed. Please fix the following error(s):</b>"
+    errors.each do |error|
+      error_message += "<br>"
+      if error[:region]
+        error_message += "#{error[:region]}: "
+      end
+      error_message += error[:message]
+    end
+    return error_message
   end
 end
