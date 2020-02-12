@@ -10,7 +10,9 @@ import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
-  selectGallery
+  selectGallery,
+  setPersonalProjects,
+  setPublicProjects
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
@@ -28,6 +30,8 @@ $(document).ready(() => {
     ? Galleries.PUBLIC
     : Galleries.PRIVATE;
   store.dispatch(selectGallery(initialState));
+  store.dispatch(setPersonalProjects());
+  store.dispatch(setPublicProjects());
 
   ReactDOM.render(
     <Provider store={store}>
