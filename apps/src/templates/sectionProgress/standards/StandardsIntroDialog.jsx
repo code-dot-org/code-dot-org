@@ -92,6 +92,7 @@ class StandardsIntroDialog extends Component {
             text={i18n.gotIt()}
             onClick={this.dismissStandardsDialog}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-intro-button"
           />
         </DialogFooter>
       </BaseDialog>
