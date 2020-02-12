@@ -13459,6 +13459,8 @@ en:
               name: Unit 6 STUDENT Survey
             Unit 6 TEACHER Survey:
               name: Unit 6 TEACHER Survey
+            'Lesson 6: Assessment Day':
+              name: 'Lesson 6: Assessment Day'
           title: CSP Unit 6 Pilot - Algorithms
           description_audience: ''
           description_short: ''
@@ -13971,6 +13973,8 @@ en:
               name: Unit 7 STUDENT Survey
             Unit 7 TEACHER Survey:
               name: Unit 7 TEACHER Survey
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
           title: CSP Unit 7 Pilot - Parameters, Return, and Libraries
           description_audience: ''
           description_short: ''
@@ -14067,7 +14071,7 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
-          title: ''
+          title: Lists, Loops, and Traversals
           description_audience: ''
           description_short: ''
           description: ''
@@ -14105,3 +14109,9 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csd2-projects-temp:
+          stages: {}
+          title: CSD Web Projects - TEMP
+          description_audience: ''
+          description_short: ''
+          description: Temporary place to hold the new mini-projects for CSD Web Development

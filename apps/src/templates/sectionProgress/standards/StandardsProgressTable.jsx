@@ -33,6 +33,9 @@ const styles = {
 
 class StandardsProgressTable extends Component {
   static propTypes = {
+    style: PropTypes.object,
+    isViewingReport: PropTypes.bool,
+    //redux
     standards: PropTypes.array,
     lessonsByStandard: PropTypes.object
   };
@@ -55,6 +58,7 @@ class StandardsProgressTable extends Component {
         id={rowData.id}
         description={rowData.description}
         lessonsForStandardStatus={rowData.lessonsForStandardStatus}
+        isViewingReport={this.props.isViewingReport}
       />
     );
   };
@@ -175,7 +179,10 @@ class StandardsProgressTable extends Component {
     });
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider
+        columns={columns}
+        style={{...tableLayoutStyles.table, ...this.props.style}}
+      >
         <Table.Header />
         <Table.Body rows={rowData} rowKey="id" />
       </Table.Provider>

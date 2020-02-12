@@ -23,7 +23,12 @@ const styles = {
 export class CreateStandardsReportStep2 extends Component {
   static propTypes = {
     onBack: PropTypes.func.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired
+  };
+
+  commentChanged = event => {
+    this.props.onCommentChange(event.target.value);
   };
 
   render() {
@@ -50,8 +55,8 @@ export class CreateStandardsReportStep2 extends Component {
         </ul>
         <textarea
           type="text"
-          value={i18n.createStandardsReportSampleNoteText()}
-          onChange={() => {}}
+          placeholder={i18n.createStandardsReportSampleNoteText()}
+          onChange={this.commentChanged}
           style={styles.textArea}
         />
         <DialogFooter>
@@ -64,6 +69,7 @@ export class CreateStandardsReportStep2 extends Component {
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>
       </div>

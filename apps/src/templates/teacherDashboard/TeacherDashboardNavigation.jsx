@@ -14,7 +14,8 @@ export const TeacherDashboardPath = {
   projects: '/projects',
   stats: '/stats',
   manageStudents: '/manage_students',
-  loginInfo: '/login_info'
+  loginInfo: '/login_info',
+  standardsReport: '/standards_report'
 };
 
 const teacherDashboardLinks = [
