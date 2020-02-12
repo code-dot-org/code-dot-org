@@ -6,12 +6,6 @@
 "api_key" : ""
 
 files: [{
-  "source": "i18n/locales/source/markdown/public/international/about.md",
-  # cannot use %file_name% and %file_extension% helpers here, because crowdin
-  # doesn't handle multiple extensions like we'd want
-  "translation": "pegasus/sites.v3/code.org/i18n/public/international/about.%locale%.md.partial",
-  },
-  {
-  "source": "18n/locales/source/markdown/public/educate/curriculum/csf-transition-guide.md",
-  "translation": "pegasus.sites.v3/code.org/i18n/public/educate/curriculum/%file_name%.%locale%.%file_extension%"
-}]
+  "source": "/i18n/locales/source/markdown/**/*.md",
+  "translation": "/pegasus/sites.v3/code.org/i18n/public/%original_path%/%file_name%.%locale%.md.partial",
+  }]
