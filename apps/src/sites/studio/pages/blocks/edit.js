@@ -58,7 +58,9 @@ $(document).ready(() => {
   });
   poolField.addEventListener('change', updateBlockPreview);
 
-  updateBlockPreview();
+  if (blocks) {
+    updateBlockPreview();
+  }
 
   $('.alert.alert-success')
     .delay(5000)
