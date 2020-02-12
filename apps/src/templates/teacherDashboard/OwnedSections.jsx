@@ -21,6 +21,7 @@ import EditSectionDialog from './EditSectionDialog';
 import SetUpSections from '../studioHomepages/SetUpSections';
 import {recordOpenEditSectionDetails} from './sectionHelpers';
 import experiments from '@cdo/apps/util/experiments';
+import {recordImpression} from './impressionHelpers';
 
 const styles = {
   button: {
@@ -61,6 +62,11 @@ class OwnedSections extends React.Component {
   constructor(props) {
     super(props);
     this.onEditSection = this.onEditSection.bind(this);
+    if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+      recordImpression('OwnedSectionsTableTeacherHeaderWithButtons');
+    } else {
+      recordImpression('OwnedSectionsTableTeacherHeaderWithoutButtons');
+    }
   }
 
   componentDidMount() {
