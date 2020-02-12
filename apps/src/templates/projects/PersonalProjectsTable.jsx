@@ -17,6 +17,7 @@ import {
   ConditionallyPublishableProjectTypes
 } from '@cdo/apps/util/sharedConstants';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import {setPersonalProjects} from '@cdo/apps/templates/projects/projectsRedux';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
@@ -121,9 +122,11 @@ const dateFormatter = function(time) {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType)
-      .isRequired,
-    canShare: PropTypes.bool.isRequired
+    canShare: PropTypes.bool.isRequired,
+
+    // Provided by Redux
+    personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType),
+    setPersonalProjects: PropTypes.func.isRequired
   };
 
   state = {
@@ -134,6 +137,10 @@ class PersonalProjectsTable extends React.Component {
       }
     }
   };
+
+  componentDidMount() {
+    this.props.setPersonalProjects();
+  }
 
   publishedAtFormatter = (publishedAt, {rowData}) => {
     const {canShare} = this.props;
@@ -302,6 +309,10 @@ class PersonalProjectsTable extends React.Component {
   };
 
   render() {
+    if (!this.props.personalProjectsList) {
+      return null;
+    }
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -343,6 +354,13 @@ class PersonalProjectsTable extends React.Component {
 
 export const UnconnectedPersonalProjectsTable = PersonalProjectsTable;
 
-export default connect(state => ({
-  personalProjectsList: state.projects.personalProjectsList.projects
-}))(PersonalProjectsTable);
+export default connect(
+  state => ({
+    personalProjectsList: state.projects.personalProjectsList.projects
+  }),
+  dispatch => ({
+    setPersonalProjects() {
+      dispatch(setPersonalProjects());
+    }
+  })
+)(PersonalProjectsTable);

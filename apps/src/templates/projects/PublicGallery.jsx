@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import {setPublicProjects} from '@cdo/apps/templates/projects/projectsRedux';
+import ProjectCardGrid from './ProjectCardGrid';
 
 const styles = {
   clear: {
@@ -31,7 +32,11 @@ export const publishedProjectPropType = PropTypes.shape({
 
 class PublicGallery extends Component {
   static propTypes = {
-    // from redux state
+    // Controls hiding/showing view more links for App Lab and Game Lab.
+    limitedGallery: PropTypes.bool,
+    includeDanceParty: PropTypes.bool,
+
+    // Provided by Redux
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(publishedProjectPropType),
       spritelab: PropTypes.arrayOf(publishedProjectPropType),
@@ -41,10 +46,12 @@ class PublicGallery extends Component {
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
       dance: PropTypes.arrayOf(publishedProjectPropType)
     }),
-    // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool,
-    includeDanceParty: PropTypes.bool
+    setPublicProjects: PropTypes.func.isRequired
   };
+
+  componentDidMount() {
+    this.props.setPublicProjects();
+  }
 
   /**
    * Transform the projectLists data from the format expected by the
@@ -90,6 +97,13 @@ class PublicGallery extends Component {
     );
   }
 }
-export default connect(state => ({
-  projectLists: state.projects.projectLists
-}))(PublicGallery);
+export default connect(
+  state => ({
+    projectLists: state.projects.projectLists
+  }),
+  dispatch => ({
+    setPublicProjects() {
+      dispatch(setPublicProjects());
+    }
+  })
+)(PublicGallery);
