@@ -20,12 +20,11 @@ class RedshiftImport
     end
   end
 
-  private
-
   # Get names of tables in a Redshift schema that were loaded via DMS to stage imported data from the database.
   # @param schema [String] The Redshift schema to search for database import staging tables.
   # Returns Array of Redshift table names.
-  def temporary_import_tables(schema)
+  def self.temporary_import_tables(schema)
+    redshift_client = RedshiftClient.instance
     query = <<-SQL
 SET search_path TO #{schema};
 
@@ -35,18 +34,21 @@ WHERE  i.indexname IS NULL -- Don't count primary keys, which appear in pg_table
   AND  t.schemaname ='#{schema}'
   AND t.tablename LIKE '#{TEMP_TABLE_PREFIX}%';
 SQL
-    exec(query).map {|row| row['tablename']}
+    redshift_client.exec(query).map {|row| row['tablename']}
   end
 
-  def truncate_table(schema, table)
-    exec "TRUNCATE #{schema}.#{table};"
+  def self.truncate_table(schema, table)
+    redshift_client = RedshiftClient.instance
+    redshift_client.exec "TRUNCATE #{schema}.#{table};"
   end
 
-  def drop_table(schema, table)
-    exec "DROP TABLE IF EXISTS #{schema}.#{table};"
+  def self.drop_table(schema, table)
+    redshift_client = RedshiftClient.instance
+    redshift_client.exec "DROP TABLE IF EXISTS #{schema}.#{table};"
   end
 
-  def move_rows(source_schema, source_table, target_schema, target_table)
-    exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table};"
+  def self.move_rows(source_schema, source_table, target_schema, target_table)
+    redshift_client = RedshiftClient.instance
+    redshift_client.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table};"
   end
 end
