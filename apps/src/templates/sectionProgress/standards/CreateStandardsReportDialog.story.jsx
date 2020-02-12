@@ -24,6 +24,8 @@ export default storybook => {
           <CreateStandardsReportDialog
             isOpen
             handleConfirm={action('Confirm')}
+            handleClose={action('Close')}
+            onCommentChange={action('Comment')}
           />
         </Provider>
       );

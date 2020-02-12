@@ -50,6 +50,18 @@ export const getSelectedScriptFriendlyName = state => {
   return script ? script.name : null;
 };
 
+/* Get the description of a script(the unit or course name) */
+export const getSelectedScriptDescription = state => {
+  const scriptId = state.scriptSelection.scriptId;
+  if (!scriptId) {
+    return null;
+  }
+
+  const scripts = state.scriptSelection.validScripts;
+  const script = scripts.find(script => script.id === scriptId);
+  return script ? script.description : null;
+};
+
 /**
  * Shape for a validScript
  */
@@ -58,7 +70,8 @@ export const validScriptPropType = PropTypes.shape({
   category_priority: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  position: PropTypes.number
+  position: PropTypes.number,
+  description: PropTypes.string
 });
 
 // Initial state of scriptSelectionRedux
