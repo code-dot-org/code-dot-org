@@ -9,11 +9,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
-    subject = if form[:mini]
-                "Question about Code.org program"
-              else
-                "A teacher and/or administrator would like to connect with you"
-              end
+    subject = "Question about Code.org program"
 
     mail(
       to: pm.email,
