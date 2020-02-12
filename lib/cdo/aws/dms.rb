@@ -2,12 +2,9 @@ require_relative '../../../deployment'
 
 module Cdo
   class DMS
-    REDSHIFT_SCHEMAS_IMPORTED_FROM_DATABASE = %w(
-      dashboard_production
-      dashboard_production_pii
-      pegasus
-      pegasus_pii
-    ).freeze
+    def self.redshift_schemas_imported_from_database
+      %w(dashboard pegasus).map {|schema| CDO["#{schema}_db_name"]}.product(['', '_pii']).map(&:join)
+    end
 
     # Generates a set of DMS task definition hashes from a source YAML configuration file.
     def self.tasks(file)

@@ -8,8 +8,9 @@ class RedshiftImport
   # Complete import of staged data from production database into Redshift by truncating each
   # target table, moving all of the rows from each import table to its corresponding target table, and then dropping
   # each temporary / staging import table.
-  def self.complete_table_import
-    Cdo::DMS::REDSHIFT_SCHEMAS_IMPORTED_FROM_DATABASE.each do |schema|
+  # @param schemas [String] Array of Redshift schemas in which to complete data import.
+  def self.complete_table_import(schemas)
+    schemas.each do |schema|
       temporary_import_tables(schema).each do |import_table|
         target_table = import_table.partition(TEMP_TABLE_PREFIX).last
         truncate_table(schema, target_table)
