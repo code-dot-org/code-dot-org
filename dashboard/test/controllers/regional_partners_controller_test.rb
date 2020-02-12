@@ -4,7 +4,6 @@ class RegionalPartnersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @regional_partner = create :regional_partner
-    @regional_partner_with_mappings = create :regional_partner_with_mappings
     @workshop_admin = create :workshop_admin
   end
 
@@ -93,31 +92,46 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert @regional_partner.mappings.length == 1
   end
 
+  test 'replace mappings fails on invalid file' do
+    sign_in @workshop_admin
+    post :replace_mappings, params: {id: @regional_partner.id, regions: {path: 'invalid_path.csv'}}
+    assert_nil flash[:notice]
+    assert_equal(
+      'Replace mappings failed. Could not read file.',
+      flash[:alert]
+    )
+    assert @regional_partner.reload.mappings.empty?
+  end
+
   test 'replace mappings fails on invalid mapping' do
     sign_in @workshop_admin
-    post :replace_mappings, params: {id: @regional_partner.id, regions: %w(ABC 123456 12345 WA)}
-    notice = flash[:notice]
-    assert_not_equal 'Successfully replaced mappings', notice
-    assert_equal 2, notice.count
-    assert_equal 'ABC', notice[0][:region]
-    assert_equal 'Invalid region', notice[0][:message]
+    mapping = fixture_file_upload('regional_partner_mappings_invalid.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 2 error(s):</b><br>ABC: Invalid region<br>123456: Invalid region',
+      flash[:upload_error]
+    )
     assert @regional_partner.reload.mappings.empty?
   end
 
   test 'replace mappings fails on invalid non-unique mapping' do
+    @regional_partner_with_mappings = create :regional_partner_with_mappings
     sign_in @workshop_admin
-    post :replace_mappings, params: {id: @regional_partner.id, regions: %w(98105 WA)}
-    notice = flash[:notice]
-    assert_not_equal 'Successfully replaced mappings', notice
-    assert_equal 1, notice.count
-    assert_equal '98105', notice[0][:region]
-    assert_equal 'This region belongs to another partner', notice[0][:message]
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 1 error(s):</b><br>98143: This region belongs to another partner',
+      flash[:upload_error]
+    )
     assert @regional_partner.reload.mappings.empty?
   end
 
   test 'replace mappings succeeds on valid mapping' do
     sign_in @workshop_admin
-    post :replace_mappings, params: {id: @regional_partner.id, regions: %w(12345 WA 98115-4003 OR 98137)}
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
     assert_equal 'Successfully replaced mappings', flash[:notice]
     assert_equal 5, @regional_partner.reload.mappings.length
   end

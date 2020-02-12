@@ -117,7 +117,7 @@ class RegionalPartnersController < ApplicationController
   # POST /regional_partners/:id/replace_mappings
   def replace_mappings
     regions_file = params[:regions]
-    csv = validate_csv_file(regions_file)
+    csv = validate_mappings_csv(regions_file)
     unless csv
       redirect_to @regional_partner
       return
@@ -125,13 +125,14 @@ class RegionalPartnersController < ApplicationController
 
     mappings = []
     errors = []
-    parse_regions(csv, mappings, errors)
+    parse_mappings_from_csv(csv, mappings, errors)
 
     if !errors.empty?
       flash[:upload_error] = parse_upload_errors(errors)
       redirect_to @regional_partner
     else
-      @regional_partner.mappings.clear
+      # use destroy_all to ensure old mappings are soft deleted
+      @regional_partner.mappings.destroy_all
       @regional_partner.mappings = mappings
       flash[:notice] = "Successfully replaced mappings"
       redirect_to @regional_partner
@@ -182,7 +183,11 @@ class RegionalPartnersController < ApplicationController
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 
-  def validate_csv_file(file)
+  # Validate file for bulk replace of partner mappings exists,
+  # has a 'Region' header and is a valid CSV file. If any of the above
+  # are false, returns false and sets an alert instead of returning CSV
+  # as an object
+  def validate_mappings_csv(file)
     unless file
       flash[:alert] = "Replace mappings failed. CSV file not found."
       return false
@@ -200,7 +205,11 @@ class RegionalPartnersController < ApplicationController
     end
   end
 
-  def parse_regions(csv, mappings, errors)
+  # Given CSV object of region mappings, build and validate each mapping
+  # and, if valid, add to mappings array. If it is invalid add an
+  # error to the errors array in the format {region, message}
+  # Mappings are not added to any regional partner in this method.
+  def parse_mappings_from_csv(csv, mappings, errors)
     regions_missing = false
     csv.each do |row|
       region = row['Region']
@@ -208,8 +217,8 @@ class RegionalPartnersController < ApplicationController
         regions_missing = true
         next
       end
-      state = region if region.present? && region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
-      zip_code = region if region.present? && RegexpUtils.us_zip_code?(region)
+      state = region if region.in?(STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s))
+      zip_code = region if RegexpUtils.us_zip_code?(region)
       if !state && !zip_code
         errors << {region: region, message: "Invalid region"}
         next
@@ -227,9 +236,20 @@ class RegionalPartnersController < ApplicationController
     end
   end
 
+  # Output a friendly string from mapping parser errors. If there
+  # are more than 10 errors the message will only show the first 10 errors,
+  # along with a count of total errors, and a message that only 10 are shown.
+  # Error message format is:
+  # Replace mappings failed with x error(s):
+  # <region> <error message>
+  # ...
   def parse_upload_errors(errors)
-    error_message = "<b>Replace mappings failed. Please fix the following error(s):</b>"
-    errors.each do |error|
+    error_message = "<b>Replace mappings failed with #{errors.count} error(s)"
+    if errors.count > 10
+      error_message += ". The first 10 errors are"
+    end
+    error_message += ":</b>"
+    errors.take(10).each do |error|
       error_message += "<br>"
       if error[:region]
         error_message += "#{error[:region]}: "

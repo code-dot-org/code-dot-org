@@ -1119,7 +1119,7 @@ FactoryGirl.define do
       [
         create(
           :pd_regional_partner_mapping,
-          zip_code: 98105,
+          zip_code: 98143,
           state: nil
         )
       ]
