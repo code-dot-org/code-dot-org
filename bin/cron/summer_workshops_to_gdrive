@@ -33,7 +33,7 @@ workshops = []
 workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
 
 # Subsequent rows are for each workshop.
-Pd::Workshop.where(subject: subjects).find_each.each do |w|
+Pd::Workshop.where(subject: subjects).find_each do |w|
   if w.workshop_starting_date && w.workshop_starting_date >= Date.new(2020, 5, 15) && w.workshop_starting_date <= Date.new(2020, 8, 31)
     workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
   end
