@@ -27,7 +27,7 @@ class RegionalPartnerMiniContactMailerTest < ActionMailer::TestCase
 
   test 'matched receipt links are valid urls' do
     regional_partner = build :regional_partner
-    regional_partner_mini_contact = create :pd_regional_partner_mini_contact, regional_partner: regional_partner
+    regional_partner_mini_contact = build :pd_regional_partner_mini_contact, regional_partner: regional_partner
     form = regional_partner_mini_contact.sanitize_and_trim_form_data_hash
     mail = Pd::RegionalPartnerMiniContactMailer.receipt(form, regional_partner_mini_contact.regional_partner)
 
