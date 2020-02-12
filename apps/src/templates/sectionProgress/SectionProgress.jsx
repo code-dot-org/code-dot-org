@@ -102,6 +102,7 @@ class SectionProgress extends Component {
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
+    this.props.getStandardsCoveredForScript(scriptId);
 
     firehoseClient.putRecord(
       {

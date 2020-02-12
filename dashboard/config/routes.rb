@@ -223,6 +223,9 @@ Dashboard::Application.routes.draw do
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
+  get 'datasets/manifest', to: 'datasets#show_manifest'
+  post 'datasets/manifest', to: 'datasets#updated_manifest'
+
   resources :levels do
     member do
       get 'get_rubric'
