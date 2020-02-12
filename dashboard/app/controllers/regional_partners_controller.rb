@@ -115,6 +115,10 @@ class RegionalPartnersController < ApplicationController
   end
 
   # POST /regional_partners/:id/replace_mappings
+  # Replace mappings for partner with given id with contents
+  # of CSV file passed in regions parameter
+  # CSV file must have header 'Region' and all regions must be
+  # valid (zip code or state), or no replacement will be done
   def replace_mappings
     regions_file = params[:regions]
     csv = validate_mappings_csv(regions_file)
@@ -183,7 +187,7 @@ class RegionalPartnersController < ApplicationController
     User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
   end
 
-  # Validate file for bulk replace of partner mappings exists,
+  # Validate that file for bulk replace of partner mappings exists,
   # has a 'Region' header and is a valid CSV file. If any of the above
   # are false, returns false and sets an alert instead of returning CSV
   # as an object
@@ -205,7 +209,7 @@ class RegionalPartnersController < ApplicationController
     end
   end
 
-  # Given CSV object of region mappings, build and validate each mapping
+  # Given a CSV object of region mappings, build and validate each mapping
   # and, if valid, add to mappings array. If it is invalid add an
   # error to the errors array in the format {region, message}
   # Mappings are not added to any regional partner in this method.
@@ -237,8 +241,7 @@ class RegionalPartnersController < ApplicationController
   end
 
   # Output a friendly string from mapping parser errors. If there
-  # are more than 10 errors the message will only show the first 10 errors,
-  # along with a count of total errors, and a message that only 10 are shown.
+  # are more than 10 errors the message will only show the first 10 errors.
   # Error message format is:
   # Replace mappings failed with x error(s):
   # <region> <error message>

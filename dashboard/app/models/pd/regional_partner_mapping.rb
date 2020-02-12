@@ -35,6 +35,7 @@ class Pd::RegionalPartnerMapping < ActiveRecord::Base
     end
   end
 
+  # Region must not belong to another partner
   def unique_region_to_partner
     result = Pd::RegionalPartnerMapping.where(zip_code: zip_code, state: state).where.not(regional_partner_id: regional_partner.id)
     if result.any?
