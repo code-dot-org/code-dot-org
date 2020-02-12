@@ -268,13 +268,6 @@
   debug: true
   webfonts: false
 
-"mn": "mn-MN"
-"mn-MN":
-  english: "Mongolian"
-  native: "Монгол хэл"
-  debug: true
-  webfonts: false
-
 "mr": "mr-IN"
 "mr-IN":
   english: "Marathi"
