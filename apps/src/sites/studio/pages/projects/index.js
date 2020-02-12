@@ -6,7 +6,7 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
 import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
+import ProjectsGallery from '@cdo/apps/templates/projects/ProjectsGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
 import projects, {
@@ -40,7 +40,7 @@ $(document).ready(() => {
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
         />
-        <GallerySwitcher
+        <ProjectsGallery
           limitedGallery={projectsData.limitedGallery}
           canShare={projectsData.canShare}
         />
