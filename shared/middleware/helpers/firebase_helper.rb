@@ -41,6 +41,16 @@ class FirebaseHelper
     end
   end
 
+  def get_shared_table(table_name)
+    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    columns = columns_response.body.map {|_, value| value['columnName']} || []
+
+    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{table_name}/records")
+    records = records_response.body || []
+
+    {columns: columns, records: records}
+  end
+
   def get_library_manifest
     response = @firebase.get("v3/channels/shared/metadata/manifest")
     response.body

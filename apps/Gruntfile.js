@@ -585,6 +585,7 @@ describe('entry tests', () => {
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'datasets/edit': './src/sites/studio/pages/datasets/edit.js',
     'datasets/index': './src/sites/studio/pages/datasets/index.js',
     'datasets/show_manifest':
       './src/sites/studio/pages/datasets/show_manifest.js',

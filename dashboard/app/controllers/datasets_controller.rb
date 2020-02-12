@@ -8,6 +8,11 @@ class DatasetsController < ApplicationController
     @datasets = manifest['tables'].map {|table| table['name']}
   end
 
+  def edit
+    @table_name = params[:dataset]
+    @dataset = @firebase.get_shared_table(params[:dataset])
+  end
+
   # GET /datasets/manifest
   def show_manifest
     @dataset_library_manifest = @firebase.get_library_manifest

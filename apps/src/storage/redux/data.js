@@ -17,6 +17,7 @@ const CLEAR_WARNING = 'data/CLEAR_WARNING';
 const SHOW_PREVIEW = 'data/SHOW_PREVIEW';
 const HIDE_PREVIEW = 'data/HIDE_PREVIEW';
 const SET_LIBRARY_MANIFEST = 'data/SET_LIBRARY_MANIFEST';
+const SET_LB_DATA = 'data/SET_LB_DATA';
 
 /**
  * Types which a column can be coerced to.
@@ -98,6 +99,11 @@ export default function(state = initialState, action) {
         .set('tableColumns', []);
     case SET_LIBRARY_MANIFEST:
       return state.set('libraryManifest', action.libraryManifest);
+    case SET_LB_DATA:
+      return state
+        .set('tableName', action.tableName)
+        .set('tableRecords', action.tableRecords)
+        .set('tableColumns', action.tableColumns);
     default:
       return state;
   }
@@ -163,4 +169,11 @@ export const hidePreview = () => ({type: HIDE_PREVIEW});
 export const setLibraryManifest = libraryManifest => ({
   type: SET_LIBRARY_MANIFEST,
   libraryManifest
+});
+
+export const setLbData = (tableName, tableRecords, tableColumns) => ({
+  type: SET_LB_DATA,
+  tableName,
+  tableRecords,
+  tableColumns
 });
