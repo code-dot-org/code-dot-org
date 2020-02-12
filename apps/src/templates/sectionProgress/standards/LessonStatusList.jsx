@@ -41,7 +41,7 @@ const ComplexLessonComponent = function({style, lesson}) {
           lessonNumber={lesson.number}
         />
       </div>
-      <a style={{paddingLeft: 10}} href={lesson.url}>
+      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>

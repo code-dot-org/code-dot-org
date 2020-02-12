@@ -22,6 +22,7 @@
 #  on_map              :boolean
 #  funded              :boolean
 #  funding_type        :string(255)
+#  properties          :text(65535)
 #
 # Indexes
 #
