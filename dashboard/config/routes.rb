@@ -64,6 +64,7 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -221,6 +222,9 @@ Dashboard::Application.routes.draw do
   end
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
+
+  get 'datasets/manifest', to: 'datasets#show_manifest'
+  post 'datasets/manifest', to: 'datasets#updated_manifest'
 
   resources :levels do
     member do
@@ -527,10 +531,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
-    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
-
     get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
-    get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
 
     get 'international_workshop', to: 'international_opt_in#new'
     get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
