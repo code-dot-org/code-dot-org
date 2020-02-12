@@ -155,7 +155,6 @@
   landscape_recommended_certificates: "It is recommended that you choose **Landscape** when you print the certificates."
   print_one_here_certificates: "Print one here."
   enter_certificate_names: "Enter up to 30 names, **one per line**. A printable page with personalized %{script_name} certificates will be generated."
-  certificate_sponsor_message: "%{sponsor_name} made the generous gift to sponsor your learning."
   share_achievement: "Share your achievement"
   beyond_hour_message: "Keep going with our <a href='http://studio.code.org'>other courses</a>, or see more options to <a href='/learn/beyond'>Learn beyond an Hour</a>."
   leaderboards_for_hoc: "Leaderboards for the Hour of Code."
