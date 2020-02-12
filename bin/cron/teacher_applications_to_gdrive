@@ -71,7 +71,7 @@ def notify_of_external_sharing(drive)
 
   if external_emails.present?
     email_domains = external_emails.map {|email| email.slice(/@.*/)}
-    error_msg = "Document contains PII information is shared to "\
+    error_msg = "Document containing PII information is shared to "\
       "#{external_emails.length} external account(s) at the following domain(s): #{email_domains.join(', ')}. "\
       "Please check with PLC team that this is intentional!"
 
