@@ -103,6 +103,10 @@ export default class EligibilityChecklist extends React.Component {
     );
   };
 
+  schoolHighNeedsStatus = schoolHighNeedsEligible => {
+    return schoolHighNeedsEligible === true ? Status.SUCCEEDED : Status.FAILED;
+  };
+
   handleUnit6Submitted = ({eligible, unit6Intention}) => {
     this.setState({
       statusRedemptionWindow: inDiscountRedemptionWindow(unit6Intention)
@@ -163,6 +167,12 @@ export default class EligibilityChecklist extends React.Component {
             {this.schoolHighNeedsStatusMessage(this.state.schoolEligible)}
             <h2>{i18n.eligibilityRequirements()}</h2>
             <p>{i18n.eligibilityExplanation()}</p>
+            <ValidationStep
+              stepName={schoolIsEligibleHeader}
+              stepStatus={this.schoolHighNeedsStatus(this.state.schoolEligible)}
+            >
+              {schoolIsNotEligibleDescription}
+            </ValidationStep>
             <ValidationStep
               stepName={i18n.eligibilityReqPD()}
               stepStatus={this.props.statusPD}
@@ -245,6 +255,9 @@ requirements below. If you don’t meet these requirements, you are still eligib
 Adafruit has made available a 10% off educator discount that this kit is eligible for.
 Just use the code \`ADAEDU\` at checkout.
 `;
+
+const schoolIsEligibleHeader = `Your school is eligible for the Code.org provided subsidy.`;
+const schoolIsNotEligibleDescription = `See "School Requirement" section above for more detail.`;
 
 const schoolIsNotEligibleMd = ncesId => `
 **Unfortunately, you’re not eligible for the Code.org-provided subsidy for the kit because
