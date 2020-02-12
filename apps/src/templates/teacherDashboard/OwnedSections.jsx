@@ -63,9 +63,9 @@ class OwnedSections extends React.Component {
     super(props);
     this.onEditSection = this.onEditSection.bind(this);
     if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
-      recordImpression('OwnedSectionsTableTeacherHeaderWithButtons');
+      recordImpression('owned_sections_table_with_dashboard_header_buttons');
     } else {
-      recordImpression('OwnedSectionsTableTeacherHeaderWithoutButtons');
+      recordImpression('owned_sections_table_without_dashboard_header_buttons');
     }
   }
 
