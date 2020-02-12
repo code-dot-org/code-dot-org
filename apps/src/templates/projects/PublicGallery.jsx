@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import {setPublicProjects} from '@cdo/apps/templates/projects/projectsRedux';
 import ProjectCardGrid from './ProjectCardGrid';
 
 const styles = {
@@ -45,13 +44,8 @@ class PublicGallery extends Component {
       artist: PropTypes.arrayOf(publishedProjectPropType),
       minecraft: PropTypes.arrayOf(publishedProjectPropType),
       dance: PropTypes.arrayOf(publishedProjectPropType)
-    }),
-    setPublicProjects: PropTypes.func.isRequired
+    })
   };
-
-  componentDidMount() {
-    this.props.setPublicProjects();
-  }
 
   /**
    * Transform the projectLists data from the format expected by the
@@ -97,13 +91,6 @@ class PublicGallery extends Component {
     );
   }
 }
-export default connect(
-  state => ({
-    projectLists: state.projects.projectLists
-  }),
-  dispatch => ({
-    setPublicProjects() {
-      dispatch(setPublicProjects());
-    }
-  })
-)(PublicGallery);
+export default connect(state => ({
+  projectLists: state.projects.projectLists
+}))(PublicGallery);
