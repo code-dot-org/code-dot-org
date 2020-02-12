@@ -86,7 +86,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert teacher.program_manager?
   end
 
-  test 'add mappings ' do
+  test 'add mapping updates regional partner mapping' do
     sign_in @workshop_admin
     post :add_mapping, params: {id: @regional_partner.id, region: '12345'}
     assert @regional_partner.mappings.length == 1
@@ -103,20 +103,22 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert @regional_partner.reload.mappings.empty?
   end
 
-  test 'replace mappings fails on invalid mapping' do
+  test 'replace mappings on invalid mapping fails and does not delete old mapping' do
+    regional_partner_with_mapping = create :regional_partner_with_mappings
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings_invalid.csv', 'text/csv')
-    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    post :replace_mappings, params: {id: regional_partner_with_mapping.id, regions: mapping}
     assert_nil flash[:notice]
     assert_equal(
       '<b>Replace mappings failed with 2 error(s):</b><br>ABC: Invalid region<br>123456: Invalid region',
       flash[:upload_error]
     )
-    assert @regional_partner.reload.mappings.empty?
+    refute regional_partner_with_mapping.mappings.empty?
+    assert_equal '98143', regional_partner_with_mapping.mappings.first.zip_code
   end
 
   test 'replace mappings fails on invalid non-unique mapping' do
-    @regional_partner_with_mappings = create :regional_partner_with_mappings
+    create :regional_partner_with_mappings
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
     post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
