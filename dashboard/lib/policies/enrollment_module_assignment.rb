@@ -1,6 +1,6 @@
 class Policies::EnrollmentModuleAssignment
   def status
-    Plc::EnrollmentModuleAssignment.stages_based_status(
+    Policies::EnrollmentModuleAssignment.stages_based_status(
       [plc_learning_module.stage],
       user,
       plc_enrollment_unit_assignment.plc_course_unit.script

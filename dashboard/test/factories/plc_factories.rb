@@ -16,12 +16,6 @@ FactoryGirl.define do
     unit_order 1
   end
 
-  factory :plc_enrollment_module_assignment, class: 'Plc::EnrollmentModuleAssignment' do
-    plc_enrollment_unit_assignment nil
-    plc_learning_module nil
-    user nil
-  end
-
   factory :plc_user_course_enrollment, class: 'Plc::UserCourseEnrollment' do
     status "MyString"
     plc_course nil

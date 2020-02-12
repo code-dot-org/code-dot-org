@@ -22,7 +22,6 @@ class Plc::UserCourseEnrollment < ActiveRecord::Base
   belongs_to :plc_course, class_name: '::Plc::Course'
   belongs_to :user, class_name: 'User'
   has_many :plc_unit_assignments, class_name: '::Plc::EnrollmentUnitAssignment', foreign_key: 'plc_user_course_enrollment_id', dependent: :destroy
-  has_many :plc_module_assignments, through: :plc_unit_assignments, class_name: '::Plc::EnrollmentModuleAssignment', dependent: :destroy
 
   validates :user, presence: true
   validates :plc_course, presence: true
