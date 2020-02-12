@@ -389,7 +389,6 @@ const reducer = combineReducers({
 export default reducer;
 
 export const setPublicProjects = () => {
-  // TODO: only re-fetch if projectLists === defaultProjectLists
   return dispatch => {
     $.ajax({
       method: 'GET',
@@ -402,7 +401,6 @@ export const setPublicProjects = () => {
 };
 
 export const setPersonalProjects = () => {
-  // TODO: only re-fetch if personalProjectsList is null
   return dispatch => {
     $.ajax({
       method: 'GET',
