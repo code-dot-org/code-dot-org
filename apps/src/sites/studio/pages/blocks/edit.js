@@ -32,6 +32,13 @@ $(document).ready(() => {
   });
 
   const blockConfigElement = document.getElementById('block_config');
+
+  // Pretty print the config
+  let blocks = blockConfigElement.value;
+  if (blocks) {
+    blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
+  }
+
   validationDiv = $(
     blockConfigElement.parentNode.insertBefore(
       document.createElement('div'),
@@ -81,11 +88,11 @@ function validateBlockConfig(editor) {
   }
 }
 
-function getBlockName(funcName, pool) {
+function getBlockName(name, pool) {
   if (!pool || pool === 'GamelabJr') {
     pool = 'gamelab';
   }
-  return `${pool}_${funcName}`;
+  return `${pool}_${name}`;
 }
 
 function updateBlockPreview() {
@@ -97,7 +104,10 @@ function updateBlockPreview() {
       ? dancelabCustomInputTypes
       : spritelabCustomInputTypes;
 
-  const blockName = getBlockName(parsedConfig.func, poolField.value);
+  const blockName = getBlockName(
+    parsedConfig.func || parsedConfig.name,
+    poolField.value
+  );
   nameField.value = blockName;
   // Calling this function just so that we can catch and show errors (if any)
   installCustomBlocks({
