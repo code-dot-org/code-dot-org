@@ -1,9 +1,18 @@
 name 'cspu5_assess1_swap_2018_2019'
-wrong '<code>to = from;</code><br><code>from = to;</code>'
-wrong '<code>from = var temp;</code><br><code>to = temp;</code><br><code>from = to;</code>'
-wrong '<code>var temp = from;</code><br><code>from = to;</code><br><code>to = from;</code>'
-right '<code>var temp = from;</code><br><code>from = to;</code><br><code>to = temp;</code>'
-wrong '<code>var temp = to;</code><br><code>from = to;</code><br><code>to = temp;</code>'
+wrong '`to = from;`  
+`from = to;`'
+wrong '`from = var temp;`  
+`to = temp;`  
+`from = to;`'
+wrong '`var temp = from;`  
+`from = to;`  
+`to = from;`'
+right '`var temp = from;`  
+`from = to;`  
+`to = temp;`'
+wrong '`var temp = to;`  
+`from = to;`  
+`to = temp;`'
 
 markdown <<MARKDOWN
 Jose is writing a reply function for a text messaging app.  He’d like to swap the sender and receiver so that the value currently in variable _From_ ends up as the value in _To_ and _To_ ends up in _From_

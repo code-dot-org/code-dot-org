@@ -357,6 +357,16 @@ es-ES:
 
         -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
         -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Adding Paragraphs pt 2: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -453,6 +463,26 @@ es-ES:
 
         -   Coloque el texto que acaba de escribir dentro de al menos dos párrafos separados rodeándolo con las etiquetas `<p>` y `</p>`
         -   Comparar los resultados con un vecino. ¿Qué ha cambiado en la forma en que se muestra su texto?
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1273,11 +1303,11 @@ es-ES:
         Echa un vistazo a este bloque:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         ¡Ahora puedes crear un montón de bailarines a la vez!
 
@@ -1581,6 +1611,56 @@ es-ES:
       Underground If Statements_2019: Ahora las cosas se complican. Recoge tres bloques
         de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar
         roca sobre la lava que descubras.
+      Virtual Pet 2_2019: "¡Ahora es tu turno para crear tu propia mascota virtual!
+        Empieza por escogiendo una apariencia que te guste. \n\n1.  Haz un clic en
+        el tabulador de **disfraces** en el extremo superior izquierdo de tu pantalla
+        (junto a **Código**). \n2.  Edita el disfraz inicial, o añade un nuevo que
+        te guste. \n3.  Cambia el disfraz del sprite a tu propio en el código abajo.\n4.
+        \ ¡Haz un clic en **Corre** para ver la nueva apariencia de tu mascota!"
+      Virtual Pet 3_2019: |-
+        ¡Crea eventos para que tu mascota mueva en control!
+
+        Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
+
+        ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      behaviors 1: |-
+        ¡Haz una predicción! Estudia el código.
+
+        -   El sprite girará.
+        -   El sprite se reducirá.
+        -   El sprite moverá.
+        -   El sprite cambiará colores.
+      behaviors 2: |-
+        ¡Vuela el cohete hasta las estrellas!
+
+        -   Cambia el comportamiento del cohete para que vuele hacia arriba en la área de exhibidor.
+      behaviors 3: |-
+        ¡Ayuda el vagabundo aventajar el robot!
+
+        -   Edita el comportamiento del sprite de vagabundo (arriba) para que vaya más rápidamente que el robot.
+      behaviors 3a: |-
+        El <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml> bloque debería ser usado en lugar del bloque 'costume'. Este lo hará para cualquier sprite, en cualquier caso de qué disfraz usa.
+
+        **Depurar:** ¡Haz todas las estrellas girar en la misma dirección!
+      behaviors 4: "¡Haz una predicción! ¿Cuál vereda seguirá satélite para alcanzar
+        el sistema solar?"
+      behaviors 5: |-
+        Escribe tu propio comportamiento.
+
+        -   Escribe un nuevo comportamiento por este astronauta para dirigirlo hacia uno de los cuatro barcos en la área de exhibidor.
+      behaviors 6: |-
+        Hacer la pelota rodar.
+
+        -   Crea un comportamiento nuevo y úsalo para hacer la pelota rodar. Tu comportamiento debería combinar dos acciones diferentes.
+
+        ![](<https://images.code.org/4c81af6da51ce5b8ce83e9056dbfe34c-image-1567714812224.2019-09-05 16_19_45.gif>)
+      behaviors 7: |-
+        ¡Conduce hacia el horizonte!
+
+        -   Crea un comportamiento nuevo y úsalo para que el coche mueva hacia arriba (norte) y se reduzca. Si lo haces correcto, se vería conduciendo hacia el horizonte.
+
+        ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
+      behaviors free play: "**Juego libre:** ¡Crea tu propio escena del espacio exterior!"
       course1_artist_loops_challenge2: |-
         ¡Vamos a jugar un juego!! Dibuja tantas X como tú
         puedas! ¿Puedes obtener 3 en una fila?
@@ -2589,6 +2669,10 @@ es-ES:
         de bloques posible.
       courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número
         de bloques posible.
+      courseF_bee_variables_4_2019: |-
+        "¡Sigamos!"
+
+        Edite el código para que funcione por este desafío.
       frozen circle: Un círculo es una figura especial. ¿Puedes adivinar qué número
         debe reemplazar los signos de interrogación para dibujar un círculo?
       frozen circle function: Utiliza el nuevo bloque "Crear un círculo" para crear
@@ -2723,3 +2807,17 @@ es-ES:
         200 píxeles de lado.
       ramp_artist_loops9_2019: Resuelve este rompecabezas dibujando un cuadrado de
         200 píxeles de lado.
+      simconfig: |-
+        # Modificar y Predecir
+
+        Escoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.
+
+        Después de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?
+      simstarter: |-
+        # Coleccionando los Datos
+
+        Ejecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:
+
+        -   ¿Cuántas manzanas coleccionó el elefante?
+        -   ¿Cuántas manzanas coleccionó hipopótamo?
+        -   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?

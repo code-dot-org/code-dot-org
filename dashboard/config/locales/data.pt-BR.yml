@@ -112,8 +112,8 @@ pt-BR:
           bloco vire.'
         turtle_1_5: Agora, para praticar, desenhe um envelope usando um triângulo
           e um quadrado.
-        turtle_1_6: 'Você consegue descobrir como desenhar esse triângulo e esse quadrado?
-          Dica: faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
+        turtle_1_6: 'você consegue descobrir como desenhar esse triângulo e esse quadrado?
+          Dica: Faça o triângulo primeiro e, em seguida, descubra o quanto virar antes
           de desenhar o quadrado.'
         turtle_1_7: Ok, vamos dificultar um pouco - veja se você consegue desenhar
           esses óculos verdes. Os quadrados têm 100 pixels de cada lado, e eles são
@@ -208,9 +208,9 @@ pt-BR:
         turtle_2_8: Esse desafio é um pouco complicado. Use a função "desenhe um boneco
           de neve" e o novo bloco "pule para a frente" (na categoria Ações). Desenhe
           3 bonecos de neve com cores diferentes, separados por 100 pixels.
-        turtle_2_9: Use um laço "contar com" para desenhar uma família de bonecos
-          de neve, com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem
-          estar separados por 60 pixels.
+        turtle_2_9: Use um laço "for" para desenhar uma família de bonecos de neve,
+          com alturas de 100, 110, 90, 80 e 70. Os bonecos de neve devem estar separados
+          por 60 pixels.
         turtle_2_10: Aqui, temos alguns códigos para que você experimente em diferentes
           espirais. O que acontece se você alterar a quantidade de voltas? Ou definir
           uma cor aleatória no laço? Desenhe o que você quiser.

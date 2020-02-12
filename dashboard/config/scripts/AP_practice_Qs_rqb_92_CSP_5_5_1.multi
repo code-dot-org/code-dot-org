@@ -1,17 +1,14 @@
 name 'AP_practice_Qs_rqb_92_CSP_5_5_1'
-wrong 'IF  
-ELSE'
-right 'AND
-OR'
-wrong 'LIST
-REPEAT'
-wrong 'NOT
-LOOP'
+wrong 'IF ELSE'
+right 'AND OR'
+wrong 'LIST REPEAT'
+wrong 'NOT LOOP'
 markdown <<MARKDOWN
 Compound expressions are a facet of Boolean logic, and are part of most programming languages.
 Which of the following operators are both examples of Boolean operators used in complex expressions?
 
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 Learning Objective: **5.5.1** and Essential Knowledge statements: **5.5.1F**
 <hr>

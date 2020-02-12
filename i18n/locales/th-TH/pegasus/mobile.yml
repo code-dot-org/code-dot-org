@@ -121,6 +121,7 @@
   thanks_for_submitting: "ขอบคุณสำหรับการสมัคร!"
   if_you_enjoyed: "หากคุณชื่นชอบกับการเรียน ไม่ลองชวนเพื่อนๆมาเรียนด้วยหละ! เราอยากให้ทุกคนบนโลกได้เรียนแบบคุณ"
   personalize_certificate: "ออกแบบประกาศนียบัตรของคุณ"
+  print_certificates: "พิมพ์ใบรับรอง"
   share_achievement: "แบ่งปันความสำเร็จของคุณ"
   beyond_hour_message: "เรียนรู้เพิ่มเติมกับ<a href='http://studio.code.org'>คอร์สอื่นๆ</a> หรือศึกษาข้อมูล<a href='/learn/beyond'>การเรียนมากกว่า 1 ชั่วโมง</a>."
   leaderboards_for_hoc: "ตารางสรุปคะแนนสำหรับ Hour of Code"

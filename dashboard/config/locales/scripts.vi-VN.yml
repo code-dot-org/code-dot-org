@@ -4974,8 +4974,8 @@ vi:
             Dance Party:
               name: Bữa Tiệc Khiêu Vũ
           title: Bữa tiệc khiêu vũ
-          description_short: Hợp tác với Katy Perry, Madonna, J. Balvin, Sia, Keith
-            Urban, Ciara và 25 nghệ sĩ khác!
+          description_short: Với Katy Perry, Madonna, J. Balvin, Sia, Keith Urban,
+            Ciara, và 25 nghệ sĩ khác!
           description: Viết mã bữa tiệc khiêu vũ của riêng bạn để chia sẻ với bạn
             bè của mình!
         frozen-2018-test-b:
@@ -5865,7 +5865,7 @@ vi:
           stages:
             new stage:
               name: giai đoạn mới
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: Chuỗi tuần tự trong mê cung
@@ -5879,3 +5879,21 @@ vi:
           stages:
             Nested Loops with Frozen:
               name: Vòng lặp lồng với Frozen
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              name: Điều kiện
+        time4cs-experiment-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Chuỗi tuần tự trong mê cung
+            Conditionals:
+              name: Điều kiện
+        csp8-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới
+            Create PT - Complete the Task:
+              name: Tạo PT - hoàn thành nhiệm vụ

@@ -2247,6 +2247,8 @@ tr-TR:
           -   Sol oka bastığınızda Robota bir dans hareketi yaptırmak için `sol oka basıldığında` bloğunu kullanın.
 
           _Bu seviye 8 ölçüden sonra biter._
+      Dance_Party_extras_alternate_2019:
+        alternate: Alternatif blok "Dansçılar" kategorisindedir.
       Function intro Ryan:
         Function_intro_Ryan_b: Fonksiyonları düzgün çağırırsanız, bu yolda seyahat
           edeceksiniz...
@@ -11798,5 +11800,3 @@ tr-TR:
           eklemelisin. '
         iceage_warn_ice_age_b: Program başladıktan hemen sonra onlara sahip olmak
           için 'Çalıştığı zaman' olayının altına 2 yeni blok ekle.
-      Dance_Party_extras_alternate_2019:
-        alternate: Alternatif blok “Dansçılar” kategorisinde.

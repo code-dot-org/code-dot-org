@@ -355,7 +355,7 @@ fr:
       basketball: 'Basket-ball'
       bounce: 'Rebond'
       calc: 'Calc'
-      dance: 'Dance Party'
+      dance: 'Soirée Dansante'
       eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'La Reine des neiges'
@@ -599,9 +599,9 @@ fr:
       audience: 'Âge recommandé: 13 ans et plus'
       cta: 'Apprendre comment'
     dance:
-      title: 'Dance Party'
+      title: 'Soirée Dansante'
     dance-2019:
-      title: 'Dance Party'
+      title: 'Soirée Dansante'
     hoc:
       title: 'Labyrinthe classique'
       body: 'Essaie les fondamentaux de l''informatique. Des millions ont essayé.'
@@ -691,6 +691,8 @@ fr:
     help_support: "Aide et Support"
     documentation: "Documentation"
     tutorials: "Tutoriels"
+  free_response:
+    placeholder: "Entre ta réponse ici"
   multi:
     wrong_title: "Réponse incorrecte"
     wrong_body: "La réponse que tu as saisie est incorrecte.  Merci de réessayer !"

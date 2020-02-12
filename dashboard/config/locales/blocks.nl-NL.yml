@@ -22,26 +22,26 @@ nl:
             '"SLOTH"': traagheid
             '"UNICORN"': Eenhoorns
           MOVE1:
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
           MOVE2:
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -79,14 +79,14 @@ nl:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -100,14 +100,14 @@ nl:
             '"next"': "(Volgende)"
             '"prev"': "(Vorige)"
             '"rand"': "(Willekeurig)"
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -168,7 +168,7 @@ nl:
           MOVE:
             '"rand"': "(Willekeurig)"
             MOVES.XBend: Buigen
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.XClapSide: Klappen
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
@@ -177,7 +177,7 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
             MOVES.XHighKick: Schop
@@ -199,7 +199,7 @@ nl:
           MOVE:
             '"rand"': "(Willekeurig)"
             MOVES.XBend: Buigen
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.XClapSide: Klappen
             MOVES.ClapHigh: Hoog klappen
             MOVES.Dab: Dar
@@ -208,7 +208,7 @@ nl:
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Hoofd + Heupen
             MOVES.XHop: Hop
             MOVES.XHighKick: Schop
@@ -245,7 +245,7 @@ nl:
             '"verse"': couplet
             '"chorus"': refrein
       Dancelab_getEnergy:
-        text: krijg {RANGE}
+        text: krijg [RANGE] [0]
         options:
           RANGE:
             '"low"': Bass
@@ -275,13 +275,13 @@ nl:
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen
@@ -357,10 +357,15 @@ nl:
           FORMAT:
             '"border"': grens
             '"inner"': binnenkant vierkant
+            '"diamond"': diamant
             '"circle"': cirkel
             '"grid"': raster
+            '"top"': bovenste rij
             '"row"': rij
+            '"bottom"': onderste rij
+            '"left"': linkerkolom
             '"column"': kolom
+            '"right"': rechterkolom
             '"x"': kriskras
             '"plus"': Plus
             '"random"': willekeurig
@@ -499,19 +504,19 @@ nl:
             '"fireworks"': Vuurwerk
             '"swirl"': Hypno
             '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser-dansvloer
+            '"lasers"': Laser dansvloer
             '"splatter"': Verfspetters
             '"rainbow"': Regenboog
             '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
+            '"text"': Namen van liedjes
             '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
             '"spiral"': Spiraal
             '"disco"': Vierkanten
             '"stars"': Sterren
           PALETTE:
-            '"rave"': Zwart-wit
-            '"cool"': Blauw
+            '"rave"': Zwart en wit
+            '"cool"': Cool
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
             '"default"': Licht
@@ -520,7 +525,9 @@ nl:
             '"vintage"': Vintage
             '"warm"': Warm
       Dancelab_setBackgroundEffectWithPalette:
-        text: stel {PALETTE} {EFFECT} in als achtergrondeffect
+        text: |-
+          "achtergrondeffect
+          {PALETTE} {EFFECT} instellen"
         options:
           EFFECT:
             '"none"': Geen
@@ -535,13 +542,13 @@ nl:
             '"growing_stars"': Groeiende sterren
             '"swirl"': Hypno
             '"kaleidoscope"': Caleidoscoop
-            '"lasers"': Laser-dansvloer
+            '"lasers"': Laser dansvloer
             '"splatter"': Verfspetters
             '"rainbow"': Regenboog
             '"ripples_random"': Willekeurige rimpelingen
             '"ripples"': Rimpelingen
             '"snowflakes"': Sneeuw
-            '"text"': Titel van het lied
+            '"text"': Namen van liedjes
             '"squiggles"': Kronkels
             '"galaxy"': Ruimte
             '"sparkles"': Twinkelingen
@@ -550,8 +557,8 @@ nl:
             '"stars"': Sterren
             '"music_wave"': Golven
           PALETTE:
-            '"rave"': Zwart-wit
-            '"cool"': Blauw
+            '"rave"': Zwart en wit
+            '"cool"': Cool
             '"electronic"': Elektronisch
             '"iceCream"': Ijsco
             '"default"': Licht
@@ -602,10 +609,10 @@ nl:
             '"music_notes"': Muzieknoten
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
+            '"smiling_poop"': Poop
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiley
+            '"smile_face"': Smiles
             '"spotlight"': Spotlight
             '"color_lights"': Podiumverlichting
             '"raining_tacos"': Taco‘s
@@ -624,10 +631,10 @@ nl:
             '"paint_drip"': Verfdruppelen
             '"pineapples"': Ananassen
             '"pizzas"': Pizza's
-            '"smiling_poop"': Poep
+            '"smiling_poop"': Poop
             '"rain"': Regen
             '"floating_rainbows"': Regenboog
-            '"smile_face"': Smiley
+            '"smile_face"': Smiles
             '"spotlight"': Spotlight
             '"color_lights"': Podiumverlichting
             '"exploding_stars"': Sterrenvorming
@@ -1374,13 +1381,13 @@ nl:
         options:
           DANCE:
             MOVES.ClapHigh: Hoog klappen
-            MOVES.Clown: Clown
+            MOVES.Clown: Gangnam
             MOVES.Dab: Dar
             MOVES.DoubleJam: Double down
             MOVES.Drop: Naar de grond
             MOVES.Floss: Floss
             MOVES.Fresh: Vers
-            MOVES.Roll: Bodyroll
+            MOVES.Roll: Body Roll
             MOVES.Kick: Ster
             MOVES.ThisOrThat: Dit of dat.
             MOVES.Rest: Geen

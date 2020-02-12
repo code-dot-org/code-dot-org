@@ -34,6 +34,7 @@
   "bird": "kuş",
   "calloutPutCommandsHereRunStart": "Program başladığında uygulanmasını istediğiniz komutları buraya koyunuz",
   "calloutBlocklyPlaceGoUpHere": "Yukarı gitmek için buraya \"yukarı git\" bloğu ekle",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Olay fonksiyonu bloklarını görmek için Olaylar başlığına tıkla.",
   "calloutUseArrowButtons": "Hareketi başlatmak için, bu butonları veya klavyenizdeki ok tuşlarını basılı tutun",
   "calloutUseArrowButtonsAutoSteer": "Yazdığınız kodu gizledik, fakat ok tuşları ile hareket ettirebilirsiniz",

@@ -34,6 +34,7 @@
   "bird": "lintu",
   "calloutPutCommandsHereRunStart": "Aseta tänne komennot, jotka tulee suorittaa kun ohjelma käynnistyy",
   "calloutBlocklyPlaceGoUpHere": "Aseta liiku ylös -palikka tähän liikkuaksesi ylöspäin",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Napsauta otsikkoa \"tapahtumat\" nähdäksesi tapahtumiin reagoivat palikat.",
   "calloutUseArrowButtons": "Paina näitä nappeja tai näppäimistösi nuolinäppäimiä käynnistääksesi liikkumistapahtumia",
   "calloutUseArrowButtonsAutoSteer": "Olemme piilottaneet kirjoittamasi ohjelmakoodin, mutta voit silti käyttää nuolinäppäimiä likkuaksesi",

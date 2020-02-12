@@ -1604,7 +1604,7 @@ si:
               name: විචල්‍යන්
             For Loops:
               name: ලූපයන් සඳහා
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: කන්ඩිෂනලස්
@@ -1614,3 +1614,11 @@ si:
               name: Crowdsourcing වැඩසටහන
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: කන්ඩිෂනලස්
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: කන්ඩිෂනලස්

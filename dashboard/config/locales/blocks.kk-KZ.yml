@@ -68,6 +68,7 @@ kk:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': алмас
             '"random"': кездейсоқ
       Dancelab_makeAnonymousDanceSprite:
         options:

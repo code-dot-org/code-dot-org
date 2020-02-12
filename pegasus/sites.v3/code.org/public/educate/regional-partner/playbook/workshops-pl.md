@@ -12,7 +12,6 @@ Workshops are the core of Code.org's Teacher [Professional Learning Program](htt
 
 ## Quick Links
 
-- **[Announcements](#announce)**
 - **[K-5 Workshops](#csf)**
 - **[6-12 Workshops](#csp)**
 - **[Summer Workshop Specific](#local)**
@@ -55,8 +54,10 @@ ________________
   <br/>
 Please look at the agendas for each academic year workshop - shared with facilitators at the following links.  Pay particular attention to the "Supplies" portion of the agenda that the facilitator will need from regional partners to run a successful workshop.
 
-- **[CS Discoveries](https://curriculum.code.org/plcsd/)**: See Workshop Agendas section 
-- **[CS Principles](https://curriculum.code.org/plcsp/)**: See Workshop Agendas section
+- **<a href=“https://drive.google.com/drive/u/0/folders/15hxKPVotCLTy7yzneEbDpWLIlaDf4aq4” target_blank>2020 Teacher Welcome Kits</a>**
+- **<a href=“https://curriculum.code.org/plcsd/” target_blank>2019 CS Discoveries Agenda</a>**
+- **<a href=“https://curriculum.code.org/plcsd/” target_blank>2019 CS Principles Agenda</a>**
+
 </p>
 </details>
 
@@ -100,14 +101,13 @@ Always accommodate vegetarian needs, roughly ⅓ of the order. In communications
 
 ### Local Summer Workshop Specific
 
-Updated guidance for hosting 2019 Summer Workshops is now available!
+Updated guidance for hosting 2020 Summer Workshops is now available!
 
-- **[2019 Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)**
-- **[Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)**
-- **[2019-20 6-12 Supplies Plan for Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)**
-- **[2019 Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)**
-
-
+- <a href="https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit?usp=sharing" target=_blank>2020 Summer Workshop Process Doc</a> 
+- [2019 Summer Workshop Process Document](https://docs.google.com/document/d/1-1c0JqqnIDjMyj0MpCGVpT8WI75g05Cx3CJ4Tdf5tsw/edit?usp=sharing)
+- [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
+- [2019-20 6-12 Supplies Plan for Summer Workshops](https://docs.google.com/document/d/1NJHr2B469TqUjIOFSGomN5yUyu9Pqg9jTI_aYPFmGlY/edit#heading=h.gum5nuvbu7rr)
+- [2019 Summer Workshop Mimeo Marketplace Order Guidance](https://docs.google.com/document/d/1AEsSE76mqM6wehXGUWxwTQZzvfbXoEgRB767hF7JEtI/edit)
 
 <a id="academic"></a>
 
@@ -115,16 +115,12 @@ Updated guidance for hosting 2019 Summer Workshops is now available!
 
 - **[2019-20 Guidelines for Scheduling Academic Year Workshops](https://docs.google.com/document/d/1f9W6qwayfHLmx2a66rRu6MpR0Xb47O7JLomMhKGOEww/edit)**
 - **[2019-2020 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1sJUI1F7r270k8LYMbLBBZwqQho7xJMc0G-YUrfiRJwM/edit?usp=sharing)**
-- **[2018-2019 Academic Year Workshop Process Document] (https://docs.google.com/document/d/1P1IhiMVgGCGZFVaof9bdc7pRKmTK0ZOQTOw0KDkhMxs/edit?ts=5b294bbb)**
 
 <a id="virtual"></a>
 
 ### Virtual PL Specific
 
-- **[Teacher Signup Form](https://form.jotform.com/90353759556165)**
-- **[Teacher Tracking Sheet](https://docs.google.com/spreadsheets/d/19KrOp4JyAufdFowL9Yqnq1HTs7XXlUwUJF7QFotVRsg/edit)**
-- **[Process for Claiming Seats](https://docs.google.com/document/d/1d-PaJErPIoID-N5fyJHdwkwxOHFiJWY2VpYM6QaAChU/edit)**
-- **[Teacher-Facing Handout](https://docs.google.com/document/d/1lX_jgewtUmPxfCqCdNopaylvnNKnolIkIknoSJtZ4Zc/edit)**
+- <a href="https://docs.google.com/document/d/1roiQTm0bGpmbEu895XLvoEWRDx49ic6S2A3WrDf1XrQ/edit?usp=sharing" target=_blank>2020 Virtual Professional Learning Program</a> 
 
 [**Back to the top**](#top)
 <br/>

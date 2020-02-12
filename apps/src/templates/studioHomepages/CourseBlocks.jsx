@@ -162,30 +162,43 @@ class CourseBlocksCsfLegacy extends Component {
   }
 }
 
+export class CourseBlocks extends Component {
+  static propTypes = {
+    // Array of jQuery selectors to course blocks.
+    tiles: PropTypes.arrayOf(PropTypes.string).isRequired
+  };
+
+  render() {
+    return (
+      <div className="tutorial-row">
+        {this.props.tiles.map((tile, index) => (
+          <ProtectedStatefulDiv
+            className="tutorial-block"
+            ref={el => {
+              if (el) {
+                $(tile).appendTo(ReactDOM.findDOMNode(el));
+              }
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+}
+
 export class CourseBlocksHoc extends Component {
   static propTypes = {
     isInternational: PropTypes.bool
   };
 
-  componentDidMount() {
-    const tiles = this.props.isInternational
+  tiles() {
+    return this.props.isInternational
       ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
       : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
-
-    tiles.forEach((tile, index) => {
-      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
-    });
   }
 
   render() {
-    return (
-      <div className="tutorial-row">
-        <ProtectedStatefulDiv className="tutorial-block" ref="0" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="1" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="2" />
-        <ProtectedStatefulDiv className="tutorial-block" ref="3" />
-      </div>
-    );
+    return <CourseBlocks tiles={this.tiles()} />;
   }
 }
 
