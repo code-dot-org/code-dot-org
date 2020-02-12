@@ -32,9 +32,8 @@ If you’re a middle school or high school teacher in Puget Sound and your schoo
 ### **What if my school doesn’t teach computer science?**
 If your school doesn't teach computer science, [nominate a teacher for a scholarship](https://code.org/nominate) to learn how, because every student in every school should have this opportunity.
 
-
 ### **List of Participating Schools**
-Computer science classrooms in the following schools have been confirmed participate in this event:
+Computer science classrooms in the following schools have been confirmed to participate in this event:
 
 ### **Confirm your attendance**
 Schools invited to this event can RSVP for your computer science classrooms using this form. The number of attendees from your school may be limited due to space. 
