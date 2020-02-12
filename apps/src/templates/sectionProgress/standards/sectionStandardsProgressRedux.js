@@ -148,6 +148,7 @@ export function getLessonCompletionStatus(state, stageId) {
   ) {
     const scriptId = state.scriptSelection.scriptId;
     const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+    const stage = _.find(stages, ['id', stageId]);
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
@@ -155,36 +156,32 @@ export function getLessonCompletionStatus(state, stageId) {
       state.sectionProgress.studentLevelProgressByScript[scriptId];
 
     const studentIds = Object.keys(levelResultsByStudent);
-    stages.forEach(stage => {
-      const levelIds = _.map(stage.levels, 'activeId');
-      let numStudentsCompletedLesson = 0;
-      studentIds.forEach(studentId => {
-        let numLevelsInLessonCompletedByStudent = 0;
-        levelIds.forEach(levelId => {
-          if (
-            levelResultsByStudent[studentId][levelId] >=
-            TestResults.MINIMUM_PASS_RESULT
-          ) {
-            numLevelsInLessonCompletedByStudent++;
-          }
-        });
+    const levelIds = _.map(stage.levels, 'activeId');
+    let numStudentsCompletedLesson = 0;
+    studentIds.forEach(studentId => {
+      let numLevelsInLessonCompletedByStudent = 0;
+      levelIds.forEach(levelId => {
         if (
-          numLevelsInLessonCompletedByStudent / levelIds.length >=
-          levelsPerLessonCompletionThreshold
+          levelResultsByStudent[studentId][levelId] >=
+          TestResults.MINIMUM_PASS_RESULT
         ) {
-          numStudentsCompletedLesson++;
+          numLevelsInLessonCompletedByStudent++;
         }
       });
-      const completed =
-        numStudentsCompletedLesson / numberStudentsInSection >=
-        studentsPerSectionCompletionThreshold;
-      completionByLesson[stage.id] = {
-        completed: completed,
-        numStudentsCompleted: numStudentsCompletedLesson
-      };
+      if (
+        numLevelsInLessonCompletedByStudent / levelIds.length >=
+        levelsPerLessonCompletionThreshold
+      ) {
+        numStudentsCompletedLesson++;
+      }
     });
+    const completed =
+      numStudentsCompletedLesson / numberStudentsInSection >=
+      studentsPerSectionCompletionThreshold;
+    completionByLesson['completed'] = completed;
+    completionByLesson['numStudentsCompleted'] = numStudentsCompletedLesson;
   }
-  return completionByLesson[stageId];
+  return completionByLesson;
 }
 
 export function getStandardsCoveredForScript(scriptId) {
