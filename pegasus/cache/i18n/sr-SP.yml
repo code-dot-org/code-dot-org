@@ -511,6 +511,7 @@ sr-SP:
   dashboard_sections_print_secrets: Затим, можете отштампати листу са картицама на
     којима су подаци о налозима. Картице поделите  појединачно сваком ученику.
   dashboard_sections_switch_section: 'Промените групу:'
+  dashboard_sections_close: Затвори
   dashboard_students_add_multiple: 'Укуцајте или налепите имена ваших ученика, у сваком
     реду по једног:'
   dashboard_students_new_section: Направили сте нову групу! Сада додајте ваше ученике

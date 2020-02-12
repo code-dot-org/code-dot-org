@@ -46,6 +46,10 @@ class RegionalPartnerTest < ActiveSupport::TestCase
     assert_equal ['Zip code is invalid'], regional_partner.errors.full_messages
   end
 
+  test 'Fails lookup with nil zip' do
+    assert_equal RegionalPartner.find_by_zip(nil), [nil, nil]
+  end
+
   test 'assign program manager to regional partner assigns program manager' do
     regional_partner = create :regional_partner
     program_manager = create :teacher

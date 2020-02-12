@@ -1,7 +1,7 @@
 name 'CSD Header Size MC_2018_2019'
 display_name 'Headings Quick Check'
 title 'Headings Quick Check'
-description 'Look at the code below and predict how the headings will be displayed.  Choose from one of the options on the right.'
+description 'Look at the code below and predict how the headings will be displayed. Choose from one of the options on the right.'
 height '125'
 
 wrong 'https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47 AM.png'

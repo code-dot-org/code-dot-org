@@ -24,6 +24,8 @@ class ScriptTest < ActiveSupport::TestCase
     @csd_script = create :csd_script, name: 'csd1'
     @csp_script = create :csp_script, name: 'csp1'
 
+    @csf_script_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
+
     # ensure that we have freshly generated caches with this course/script
     Course.clear_cache
     Script.clear_cache
@@ -1798,7 +1800,7 @@ endvariants
 
   test "script_names_by_curriculum_umbrella returns the correct script names" do
     assert_equal(
-      [@csf_script.name],
+      [@csf_script.name, @csf_script_2019.name],
       Script.script_names_by_curriculum_umbrella('CSF')
     )
     assert_equal(
@@ -1818,6 +1820,22 @@ endvariants
     assert @csd_script.csd?
     assert @csp_script.under_curriculum_umbrella?('CSP')
     assert @csp_script.csp?
+  end
+
+  test "scripts_with_standards" do
+    assert_equal(
+      [
+        [
+          @csf_script_2019.localized_title, @csf_script_2019.name
+        ]
+      ],
+      Script.scripts_with_standards
+    )
+  end
+
+  test "has_standards_associations?" do
+    assert @csf_script_2019.has_standards_associations?
+    refute @csp_script.has_standards_associations?
   end
 
   private

@@ -139,7 +139,7 @@ gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 # Ref: https://github.com/puma/puma/pull/1646
-gem 'puma', github: 'wjordan/puma', ref: 'out_of_band'
+gem 'puma', github: 'wjordan/puma', branch: 'debugging'
 gem 'puma_worker_killer'
 gem 'unicorn', '~> 5.1.0'
 
