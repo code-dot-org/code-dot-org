@@ -29,25 +29,21 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     COMPLETED = 'completed'.freeze
   ].freeze
 
+  # Taken from the defunct Plc::EnrollmentModuleAssignment.
+  MODULE_STATUS_STATES = [
+    MODULE_NOT_STARTED = :not_started,
+    MODULE_IN_PROGRESS = :in_progress,
+    MODULE_COMPLETED = :completed
+  ].freeze
+
   belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
   belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
-  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
   belongs_to :user, class_name: 'User'
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
 
-  after_save :enroll_user_in_required_modules
-
   def module_assignment_for_type(module_type)
     plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)
-  end
-
-  def enroll_user_in_required_modules
-    transaction do
-      plc_course_unit.plc_learning_modules.required.each do |required_module|
-        enroll_in_module required_module
-      end
-    end
   end
 
   def unlock_unit
@@ -58,10 +54,6 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     transaction do
       Plc::LearningModule::NONREQUIRED_MODULE_TYPES.each do |module_type|
         module_assignment_for_type(module_type).try(:destroy)
-      end
-
-      learning_modules.each do |learning_module|
-        enroll_in_module learning_module
       end
 
       update!(status: IN_PROGRESS)
@@ -84,7 +76,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
         category_name = I18n.t("flex_category.#{module_category}", default: I18n.t('flex_category.required'))
         summary << {
           category: category_name,
-          status: module_assignment_for_type(flex_category).try(:status) || Plc::EnrollmentModuleAssignment::NOT_STARTED,
+          status: module_assignment_for_type(flex_category).try(:status) || MODULE_NOT_STARTED,
           link: Rails.application.routes.url_helpers.script_path(plc_course_unit.script, anchor: category_name.downcase.tr(' ', '-'))
         }
       end
@@ -93,7 +85,7 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
       categories_for_stage.each do |category|
         summary << {
           category: I18n.t("flex_category.#{category || 'content'}"),
-          status: Plc::EnrollmentModuleAssignment.stages_based_status(
+          status: Policies::EnrollmentModuleAssignment.stages_based_status(
             plc_course_unit.script.stages.select {|stage| stage.flex_category == category},
             user,
             plc_course_unit.script
@@ -113,17 +105,5 @@ class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
     end
 
     summary
-  end
-
-  private
-
-  def enroll_in_module(learning_module)
-    return unless learning_module.plc_course_unit == plc_course_unit
-
-    Plc::EnrollmentModuleAssignment.find_or_create_by(
-      plc_enrollment_unit_assignment: self,
-      plc_learning_module: learning_module,
-      user: user
-    )
   end
 end

@@ -1,39 +1,4 @@
-# == Schema Information
-#
-# Table name: plc_enrollment_module_assignments
-#
-#  id                                :integer          not null, primary key
-#  plc_enrollment_unit_assignment_id :integer
-#  plc_learning_module_id            :integer
-#  created_at                        :datetime         not null
-#  updated_at                        :datetime         not null
-#  user_id                           :integer
-#
-# Indexes
-#
-#  index_plc_enrollment_module_assignments_on_user_id  (user_id)
-#  module_assignment_enrollment_index                  (plc_enrollment_unit_assignment_id)
-#  module_assignment_lm_index                          (plc_learning_module_id)
-#
-
-# Maps a unit enrollment to all the modules that a teacher must complete in order to
-# complete the unit.
-#
-# Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
-class Plc::EnrollmentModuleAssignment < ActiveRecord::Base
-  belongs_to :plc_enrollment_unit_assignment, class_name: '::Plc::EnrollmentUnitAssignment'
-  belongs_to :plc_learning_module, class_name: '::Plc::LearningModule'
-  belongs_to :user
-
-  validates :plc_enrollment_unit_assignment, presence: true
-  validates :plc_learning_module, presence: true
-
-  MODULE_STATUS_STATES = [
-    NOT_STARTED = :not_started,
-    IN_PROGRESS = :in_progress,
-    COMPLETED = :completed
-  ].freeze
-
+class Policies::EnrollmentModuleAssignment
   def status
     Plc::EnrollmentModuleAssignment.stages_based_status(
       [plc_learning_module.stage],

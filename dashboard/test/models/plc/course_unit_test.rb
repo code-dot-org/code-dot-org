@@ -35,6 +35,6 @@ class CourseUnitTest < ActionView::TestCase
     assert_equal @course_unit, assignment.plc_course_unit
     assert_equal @enrollment, assignment.plc_user_course_enrollment
     assert_equal @user, assignment.user
-    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS.to_s, assignment.status
+    assert_equal Plc::EnrollmentUnitAssignment::MODULE_IN_PROGRESS.to_s, assignment.status
   end
 end

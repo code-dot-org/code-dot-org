@@ -16,7 +16,7 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     @content_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::CONTENT_MODULE)
     @practice_learning_module.stage.update(script: @script, flex_category: Plc::LearningModule::PRACTICE_MODULE)
 
-    Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
+    Plc::EnrollmentModuleAssignment.any_instance.stubs(:status).returns(Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED)
 
     @enrollment = Plc::UserCourseEnrollment.find_or_create_by(user: @teacher, plc_course: @course)
     @unit_enrollment = @enrollment.plc_unit_assignments.first
@@ -44,27 +44,27 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     Plc::CourseUnit.any_instance.stubs(:has_evaluation?).returns(true)
 
     @script.update(peer_reviews_to_complete: 2)
-    PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentModuleAssignment::NOT_STARTED)
+    PeerReview.stubs(:get_review_completion_status).returns(Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED)
 
     assert_equal [
       {
         category: "Overview",
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED,
         link: "/s/#{@script.name}#overview"
       },
       {
         category: "Content",
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED,
         link: "/s/#{@script.name}#content"
       },
       {
         category: "Teaching Practices",
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED,
         link: "/s/#{@script.name}#teaching-practices"
       },
       {
         category: "Peer Review",
-        status: Plc::EnrollmentModuleAssignment::NOT_STARTED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED,
         link: "/s/#{@script.name}#peer-review"
       }
     ], @unit_enrollment.summarize_progress
@@ -76,17 +76,17 @@ class Plc::EnrollmentUnitAssignmentTest < ActiveSupport::TestCase
     assert_equal [
       {
         category: "Teaching Practices",
-        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_::COMPLETED,
         link: "/s/#{@script.name}"
       },
       {
         category: "Content",
-        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_::COMPLETED,
         link: "/s/#{@script.name}"
       },
       {
         category: "Overview",
-        status: Plc::EnrollmentModuleAssignment::COMPLETED,
+        status: Plc::EnrollmentUnitAssignment::MODULE_::COMPLETED,
         link: "/s/#{@script.name}"
       }
     ], @unit_enrollment.summarize_progress

@@ -281,13 +281,13 @@ class PeerReviewTest < ActiveSupport::TestCase
     review_1 = create :peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm'
     review_2 = create :peer_review, script: @script, reviewer_id: @user.id, status: nil, data: 'lgtm'
 
-    assert_equal Plc::EnrollmentModuleAssignment::COMPLETED, PeerReview.get_review_completion_status(@user, @script)
+    assert_equal Plc::EnrollmentUnitAssignment::MODULE_COMPLETED, PeerReview.get_review_completion_status(@user, @script)
 
     review_2.destroy
-    assert_equal Plc::EnrollmentModuleAssignment::IN_PROGRESS, PeerReview.get_review_completion_status(@user, @script)
+    assert_equal Plc::EnrollmentUnitAssignment::MODULE_IN_PROGRESS, PeerReview.get_review_completion_status(@user, @script)
 
     review_1.destroy
-    assert_equal Plc::EnrollmentModuleAssignment::NOT_STARTED, PeerReview.get_review_completion_status(@user, @script)
+    assert_equal Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED, PeerReview.get_review_completion_status(@user, @script)
   end
 
   test 'peer review section status edge cases' do

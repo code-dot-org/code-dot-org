@@ -167,11 +167,11 @@ class PeerReview < ActiveRecord::Base
       reviews_done = PeerReview.where(reviewer: user, script: script).where('status IS NOT NULL or data IS NOT NULL').size
 
       if reviews_done >= script.peer_reviews_to_complete
-        Plc::EnrollmentModuleAssignment::COMPLETED
+        Plc::EnrollmentUnitAssignment::MODULE_COMPLETED
       elsif reviews_done > 0
-        Plc::EnrollmentModuleAssignment::IN_PROGRESS
+        Plc::EnrollmentUnitAssignment::MODULE_IN_PROGRESS
       else
-        Plc::EnrollmentModuleAssignment::NOT_STARTED
+        Plc::EnrollmentUnitAssignment::MODULE_NOT_STARTED
       end
     end
   end
