@@ -1,6 +1,5 @@
 require 'pg'
 require 'singleton'
-require 'cdo/aws/dms'
 
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
 # instance.
