@@ -6,8 +6,8 @@ require 'firebase'
 class FirebaseHelper
   def initialize(channel_id)
     raise "channel_id must be non-empty" if channel_id.nil? || channel_id.empty?
-    @firebase = FirebaseHelper.create_client
-    @channel_id = channel_id == 'shared' ? channel_id : channel_id + CDO.firebase_channel_id_suffix
+    @firebase = channel_id == 'shared' ? FirebaseHelper.create_shared_client : FirebaseHelper.create_client
+    @channel_id = channel_id + CDO.firebase_channel_id_suffix
   end
 
   # @param [String] table_name The name of the table to query.
@@ -41,9 +41,21 @@ class FirebaseHelper
     end
   end
 
+  def get_library_manifest
+    response = @firebase.get("v3/channels/shared/metadata/manifest")
+    response.body
+  end
+
   def self.delete_channel(encrypted_channel_id)
     raise "channel_id must be non-empty" if encrypted_channel_id.nil? || encrypted_channel_id.empty?
     create_client.delete "/v3/channels/#{encrypted_channel_id}/"
+  end
+
+  def self.create_shared_client
+    raise "CDO.firebase_shared_secret not defined" unless CDO.firebase_shared_secret
+    Firebase::Client.new \
+      'https://cdo-v3-shared.firebaseio.com/',
+      CDO.firebase_shared_secret
   end
 
   def self.create_client

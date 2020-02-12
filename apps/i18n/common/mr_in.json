@@ -10,6 +10,7 @@
   "copyright": "कॉपीराइट",
   "country": "देश",
   "courseCatalogTitle": "अभ्यासक्रमाचा कॅटलॉग",
+  "create": "बनवा",
   "createAccount": "अकाउंट तयार करा",
   "csfButton": "अभ्यासक्रम करून पहा ",
   "danceAfterPartyButton": "पलीकडे जा",
@@ -54,7 +55,8 @@
   "student": "विध्यार्थी",
   "teacherTabProjects": "प्रकल्प",
   "toolboxHeader": "ब्लॉक्स",
-  "welcomeToDanceParty": "डांस पार्टी मध्ये स्वागत असो! >!",
+  "tos": "सेवेच्या अटी",
+  "welcomeToDanceParty": "डांस पार्टी मध्ये स्वागत असो!",
   "workspaceHeaderShort": "वर्कस्पेस: ",
   "yes": "होय",
   "yourName": "तुमचे नाव"

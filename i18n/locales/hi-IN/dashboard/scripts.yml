@@ -11128,6 +11128,8 @@ hi:
               name: इकाई 3 अध्यापक सर्वेक्षण
             'Lesson 11: Unit Assessment':
               name: 'इकाई 11: इकाई मूल्यांकन'
+            Debugging:
+              name: डीबगिंग
           title: CSP इकाई 3 पायलट - ऐप डिज़ाइन का परिचय
         csl-vn:
           stages:
@@ -11586,7 +11588,7 @@ hi:
             'Lesson 15: Unit 4 Assessment':
               name: 'इकाई 15: इकाई 4 मूल्यांकन'
           title: 'वेरिएबल्स, सापेक्ष और फंक्शन्स'
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: भूलभुलैया में अनुक्रमण
@@ -11614,7 +11616,6 @@ hi:
               name: सापेक्षों की समीक्षा
             Drawing with Loops:
               name: लूप्स के साथ ड्राइंग बनाना
-          title: Time4CS नियंत्रण इकाई 1
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -11695,3 +11696,68 @@ hi:
           title: Time4CS प्रयोग इकाई 2
           description_short: "[विवरण जोड़ें]"
           description: "[विवरण जोड़ें]"
+        time4cs-control-unit-1:
+          title: Time4CS नियंत्रण इकाई 1
+          stages:
+            Sequencing in Maze:
+              name: भूलभुलैया में अनुक्रमण
+            Programming and Loops with the Artist:
+              name: आर्टिस्ट के साथ प्रोग्रामिंग और लूप्स
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft में सापेक्ष: समुद्री यात्रा जलचर'
+            Conditionals:
+              name: कंडीशनल्स
+            'Events: The Big Event':
+              name: 'इवेंट्स: विशाल इवेंट'
+            Simon Says:
+              name: सिमोन कहती है
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लैब के साथ स्प्राइट्स सीखना
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लैब के साथ एलियन डांस पार्टी
+            Private and Personal Information:
+              name: प्राइवेट और निजी जानकारी
+            About Me:
+              name: मेरे बारे में
+            Access Ability:
+              name: पहुंच क्षमता
+            Conditionals Review:
+              name: सापेक्षों की समीक्षा
+        time4cs-experiment-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: भूलभुलैया में अनुक्रमण
+            Programming and Loops with the Artist:
+              name: आर्टिस्ट के साथ प्रोग्रामिंग और लूप्स
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraft में सापेक्ष: समुद्री यात्रा जलचर'
+            Conditionals:
+              name: कंडीशनल्स
+            'Events: The Big Event':
+              name: 'इवेंट्स: विशाल इवेंट'
+            Simon Says:
+              name: सिमोन कहती है
+            Learning Sprites with Sprite Lab:
+              name: स्प्राइट लैब के साथ स्प्राइट्स सीखना
+            Alien Dance Party with Sprite Lab:
+              name: स्प्राइट लैब के साथ एलियन डांस पार्टी
+            Private and Personal Information:
+              name: प्राइवेट और निजी जानकारी
+            About Me:
+              name: मेरे बारे में
+            Access Ability:
+              name: पहुंच क्षमता
+            Conditionals Review:
+              name: सापेक्षों की समीक्षा
+        csp7-pilot:
+          stages:
+            Libraries Explore:
+              name: पुस्तकालयों की पड़ताल
+            Libraries Investigate:
+              name: पुस्तकालयों का निरीक्षण
+        csp8-pilot:
+          stages:
+            new stage:
+              name: नया चरण
+            Create PT - Complete the Task:
+              name: PT बनाएं - कार्य पूरा करें

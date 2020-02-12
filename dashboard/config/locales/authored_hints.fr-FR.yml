@@ -1069,7 +1069,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 1:
-        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1_b: 'Essaie d’utiliser deux boucles ˋpour\` : une pour aller
           vers le haut et obtenir le nectar, et l’autre pour aller vers le bas et
@@ -1137,7 +1137,7 @@ fr-FR:
       Course 4 SCFL 1a:
         Course_4_SCFL_1a_a: Tu devras peut-être avancer plus loin pour utiliser le
           moins de blocs possible.
-        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1a_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1a_c: Une boucle ˋpour\` t’aidera à suivre le même motif, mais
           avec un nombre différent d’étapes. Note que le nombre d’étapes requises
@@ -1200,7 +1200,7 @@ fr-FR:
           </xml>
       Course 4 SCFL 1b:
         Course_4_SCFL_1b_a: Essaie d’utiliser une boucle ˋpour\`.
-        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_1b_b: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_1b_c: |-
           **Solution :**
@@ -1259,7 +1259,7 @@ fr-FR:
           </block>
           </xml>
       Course 4 SCFL 2:
-        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCFL_2_a: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCFL_2_b: Note qu’il y a trois points pendant chaque itération de
           la boucle ˋpour\` où tu t’arrêtes pour interagir avec des objets.
@@ -1776,7 +1776,7 @@ fr-FR:
         Course_4_SCV_4_b: 'Il sera très utile d’utiliser trois boucles à l’intérieur
           de ta boucle principale. Une pour avancer, une pour collecter le nectar
           et une pour fabriquer du miel. '
-        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n\\!\\[]
+        Course_4_SCV_4_c: "Jette un œil à cette option pour le mouvement :  \n\n!\\[]
           (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         Course_4_SCV_4_d: |-
           **Solution :**
@@ -2081,7 +2081,7 @@ fr-FR:
           -   Crée plus d'un danseur.
       Dance_2019_02:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Le danseur doit effectuer un mouvement.
           -   Tu dois appuyer sur une touche fléchée.
@@ -2093,7 +2093,7 @@ fr-FR:
           -   Utilise plusieurs blocs <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
-          **Comment puis-je réussir à passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau ?**
 
           -   Les deux danseurs doivent faire un mouvement.
           -   Il faut appuyer sur les touches fléchées.
@@ -2102,7 +2102,7 @@ fr-FR:
         challenges: |-
           **Défi facultatif**
 
-          -   Demande à un danseur de répondre aux touches fléchées gauche et droite.
+          -   Un danseur doit répondre aux touches fléchées gauche et droite.
       Dance_2019_04:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2123,9 +2123,9 @@ fr-FR:
           -   Change l’arrière-plan à chaque changement de danseur.
       Dance_2019_06:
         validation: |-
-          **Comment puis-je réussir à passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau ?**
 
-          -   Créez un danseur principal et un groupe de danseurs en renfort.
+          -   Crée un danseur principal et un groupe de danseurs en renfort.
 
           _Ce niveau se termine après 7 mesures._
         challenges: |-
@@ -2134,7 +2134,7 @@ fr-FR:
           -   Crée plusieurs groupes de danseurs de secours.
       Dance_2019_07:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Modifie la taille d'au moins un danseur après le début de la musique.
 
@@ -2142,30 +2142,30 @@ fr-FR:
         challenges: |-
           **Défi optionnel**
 
-          -   Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.).
+          -   Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.).
       Dance_2019_08:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Change la teinte d'au moins un danseur.
 
           _Ce niveau se termine après 6 mesures._
-        tint_hint: As-tu remarqué que tes danseurs ne changent pas pour la couleur
-          exacte que tu choisis? En effet, **les teintes** mélangent la couleur que
-          tu choisis avec les couleurs du danseur.
+        tint_hint: As-tu remarqué que tes danseurs n'ont pas la couleur exacte que
+          tu choisis ? En effet, **les teintes** mélangent la couleur que tu choisis
+          avec les couleurs du danseur.
       Dance_2019_09:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
-          -   Appuie simplement sur le bouton "Terminer"!
+          -   Appuie simplement sur le bouton "Terminer" !
         repeat_every_ideas: |-
-          **Besoin d'idées?**
+          **Besoin d'idées ?**
 
           -   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.
-          -   Modifie à plusieurs reprises la rotation d'un danseur pour le faire tourner.
+          -   Modifie à plusieurs reprises l'angle d'un danseur pour le faire tourner.
           -   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.
 
-          _Tu peux également utiliser des nombres négatifs pour créer un effet opposé!_
+          _Tu peux également utiliser des nombres négatifs pour créer un effet opposé !_
         next_previous: |-
           **Défi facultatif**
 
@@ -2208,9 +2208,9 @@ fr-FR:
 
           _Ce niveau se termine après 9 mesures._
         challenges: |-
-          "**Optional Challenge**
+          "**Défi Optionnel**
 
-          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.".
+          Change l'effet de fond à plusieurs moments de la chanson en connectant les nouveaux blocs sous les évènements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> .".
       Dance_Party_05:
         validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
           au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
@@ -2226,7 +2226,7 @@ fr-FR:
           **Défis optionnels**
 
           -   Ajoute un troisième danseur (ou autant que tu veux !)
-          -   Fait en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson.
+          -   Fais en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson.
       Dance_Party_08:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2237,7 +2237,7 @@ fr-FR:
         challenges: |-
           **Défi optionnel**
 
-          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.)
       Dance_Party_09:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -3044,12 +3044,23 @@ fr-FR:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
-        courseD_collector_debugging_challenge2_b: "Ensuite, ramasse les diamants restant
-          dans la rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAjoute ces blocs à ton programme..\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Ensuite, ramasse les diamants restant dans la rangée.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Ajoute ces blocs à ton programme..
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -9818,7 +9829,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -9829,7 +9840,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -9840,7 +9851,7 @@ fr-FR:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">&gt;</title>
+              <title name="OP">></title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -10151,13 +10162,24 @@ fr-FR:
           \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
           name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
           \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
-          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
-        courseD_collector_debugging_challenge2_b: "Ensuite, ramasse les diamants restant
-          dans la rangée.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
-          AM.png>)\nAjoute ces blocs à ton programme..\n\n<xml><block type=\"maze_move\">\n
-          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
-          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
-          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: |-
+          Ensuite, ramasse les diamants restant dans la rangée.
+
+          ![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)
+          Ajoute ces blocs à ton programme..
+
+          <xml><block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+          <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+
+                  </statement>
+                </block>
+
+          </xml>
         courseD_collector_debugging_challenge2_c: "Enfin, ramasse le diamant principal.
           Ajoute ces blocs à ton programme.\n\n<xml>\n  <block type=\"maze_turn\">\n
           \               <title name=\"DIR\">turnRight</title>\n              </block>\n
@@ -12760,7 +12782,7 @@ fr-FR:
           ou ˋsi / sinonˋ) pour résoudre le problème."
       courseF_bee_for_challenge2:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -12903,7 +12925,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2018:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'
@@ -12969,7 +12991,7 @@ fr-FR:
           </xml>
       courseF_bee_for_challenge2_2019:
         courseF_bee_for_challenge2_a: "Jette un œil à cette option pour le mouvement :
-          \ \n\n\\!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
+          \ \n\n!\\[] (<https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png>)"
         courseF_bee_for_challenge2_b: 'Essaie d’utiliser deux boucles ˋpour\` : une
           pour aller vers le haut et obtenir le nectar, et l’autre pour aller vers
           le bas et fabriquer le miel.'

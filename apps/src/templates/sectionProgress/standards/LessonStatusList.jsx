@@ -41,7 +41,7 @@ const ComplexLessonComponent = function({style, lesson}) {
           lessonNumber={lesson.number}
         />
       </div>
-      <a style={{paddingLeft: 10}} href={lesson.url}>
+      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
         {lesson.name}
       </a>
     </div>
@@ -50,7 +50,7 @@ const ComplexLessonComponent = function({style, lesson}) {
 ComplexLessonComponent.propTypes = {
   style: PropTypes.object,
   lesson: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     name: PropTypes.string,
     number: PropTypes.number,
     url: PropTypes.string
@@ -60,5 +60,5 @@ ComplexLessonComponent.propTypes = {
 export const UnconnectedLessonStatusList = LessonStatusList;
 
 export default connect(state => ({
-  unpluggedLessonList: getUnpluggedLessonsForScript()
+  unpluggedLessonList: getUnpluggedLessonsForScript(state)
 }))(LessonStatusList);

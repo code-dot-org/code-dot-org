@@ -2,6 +2,11 @@
 sr-SP:
   data:
     callouts:
+      Dance_2019_01:
+        dance_callout_01: Изабери тип плесача овде.
+      Dance_2019_02:
+        dance_callout_11_a: Додај овај блок у свој програм.
+        arrow_buttons: Притисни тастер стрелице за контролу плесача.
       Overworld Chop Trees:
         craft_callout_preplaced: Неки блокови су већ постављени за почетак
       Overworld Chop Trees_2019:

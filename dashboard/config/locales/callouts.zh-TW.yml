@@ -16,6 +16,12 @@ zh-TW:
         AppLabHoCFinal11: 你現在處於設計模式中。
       CSD U3 Variables Predict Where X:
         CSD_U3_variables: 在此修改數值
+      CSD U3 Variables Predict Where XY:
+        grid: 點擊此處以顯示格線。
+      CSD U3 Variables Predict Where XY_2018:
+        grid: 點擊此處以顯示格線。
+      CSD U3 Variables Predict Where XY_2019:
+        grid: 點擊此處以顯示格線。
       CSD U3 Variables Predict Where X_2018:
         CSD_U3_variables: 在此修改數值
       CSD U3 Variables Predict Where X_2019:
@@ -102,11 +108,11 @@ zh-TW:
       CSD U3 platform platform1_2019:
         CSD_U3_S17_L8_C1: 這個積木創建了一個新的角色。
       CSD U3 platform scoreboard:
-        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+        CSD_U3_L17_S7_C1: 得分會輸出到這兒。
       CSD U3 platform scoreboard_2018:
-        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+        CSD_U3_L17_S7_C1: 得分會輸出到這兒。
       CSD U3 platform scoreboard_2019:
-        CSD_U3_L17_S7_C1: 分數會輸出到這兒。
+        CSD_U3_L17_S7_C1: 得分會輸出到這兒。
       CSD U3 platform variable1:
         callout: 這個積木創建了一個變數。
       CSD U3 platform variable1_2018:
@@ -178,11 +184,11 @@ zh-TW:
       Course 4 SCV 6:
         Course_4_SCV_6: 這個積木可以讓你自訂任何顏色！換換不同的數值，看看有什麼改變！
       CourseD_Dance_Party_01:
-        dance_callout_01: 將此程式積木新增至您的程式！
+        dance_callout_01: 把這個積木拖曳到工作區！
       CourseD_Dance_Party_02:
-        dance_callout_02: 將此程式積木新增至您的程式！
+        dance_callout_02: 把這個積木拖曳到工作區！
       CourseD_Dance_Party_04:
-        dance_callout_04: 將此程式積木新增至您的程式！
+        dance_callout_04: 把這個積木拖曳到工作區！
       CourseD_Dance_Party_06:
         dance_callout_06: 在此新增您的新舞者
       CourseD_Dance_Party_11:
@@ -196,7 +202,7 @@ zh-TW:
         dance_callout_11_a: 將此程式積木添加到您的程式中。
         arrow_buttons: 按箭頭按鈕控制舞者。
       Dance_2019_04:
-        dance_callout_02: 將此程式積木新增至您的程式！
+        dance_callout_02: 把這個積木拖曳到工作區！
       Dance_2019_05:
         dance_callout_05: 將新事件添加到程式中。
       Dance_2019_06:
@@ -207,11 +213,11 @@ zh-TW:
         new_block_3: 新的程式積木！
         new_block_4: 新的程式積木！
       Dance_Party_01:
-        dance_callout_01: 將此程式積木新增至您的程式！
+        dance_callout_01: 把這個積木拖曳到工作區！
       Dance_Party_02:
-        dance_callout_02: 將此程式積木新增至您的程式！
+        dance_callout_02: 把這個積木拖曳到工作區！
       Dance_Party_04:
-        dance_callout_04: 將此程式積木新增至您的程式！
+        dance_callout_04: 把這個積木拖曳到工作區！
       Dance_Party_06:
         dance_callout_06: 在此新增您的新舞者
       Dance_Party_11:
@@ -300,9 +306,9 @@ zh-TW:
       Underground Iron_2019:
         craft_what_is_iron: 開採這塊鐵礦！
       behaviors 5:
-        behaviors_edit: 添加程式給這個行為。
+        behaviors_edit: 給這個行為添加程式。
       behaviors free play:
-        behaviors_edit: 添加程式給這個行為。
+        behaviors_edit: 給這個行為添加程式。
       course2_bee_conditionals_challenge2:
         courseD_bee_conditionals_challenge2_1: 使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。
       course3_bee_debugging_challenge1:
@@ -399,6 +405,8 @@ zh-TW:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
       courseC_harvester_loops1_2019:
         courseC_harvester_loops1_callout1: 在南瓜上的數字 4 意思是有 4 個南瓜可以收集。
+      courseC_maze_debugging5:
+        courseC_maze_debugging5_1: 灰化的程式積木無法被刪除！
       courseC_maze_programming1:
         grade2_CaringForNewPet_0_1: 在連接所有的積木後，點擊「運行」來啟動你的程式。
       courseC_maze_programming1_2018:
