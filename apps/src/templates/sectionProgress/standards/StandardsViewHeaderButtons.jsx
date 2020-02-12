@@ -7,6 +7,7 @@ import {LessonStatusDialog} from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import firehoseClient from '../../../lib/util/firehose';
 
 const styles = {
   buttonsGroup: {
@@ -42,6 +43,18 @@ class StandardsViewHeaderButtons extends Component {
 
   openCreateReportDialog = () => {
     this.setState({isCreateReportDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'generate_report_dialog',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeCreateReportDialog = () => {
@@ -61,6 +74,18 @@ class StandardsViewHeaderButtons extends Component {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId
     };
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'generate_report',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   onCommentChange = value => {
