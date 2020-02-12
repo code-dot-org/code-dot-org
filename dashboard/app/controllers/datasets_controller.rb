@@ -3,6 +3,11 @@ class DatasetsController < ApplicationController
   before_action :initialize_firebase
   authorize_resource class: false
 
+  def index
+    manifest = @firebase.get_library_manifest
+    @datasets = manifest['tables'].map {|table| table['name']}
+  end
+
   # GET /datasets/manifest
   def show_manifest
     @dataset_library_manifest = @firebase.get_library_manifest

@@ -223,6 +223,7 @@ Dashboard::Application.routes.draw do
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
+  get 'datasets/index', to: 'datasets#index'
   get 'datasets/manifest', to: 'datasets#show_manifest'
   post 'datasets/manifest', to: 'datasets#updated_manifest'
 
