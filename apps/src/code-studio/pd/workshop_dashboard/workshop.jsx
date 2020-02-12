@@ -91,6 +91,7 @@ export class Workshop extends React.Component {
             'funding_type',
             'course',
             'subject',
+            'fee',
             'notes',
             'sessions',
             'state',

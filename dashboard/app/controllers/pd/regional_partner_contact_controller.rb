@@ -22,6 +22,6 @@ class Pd::RegionalPartnerContactController < ApplicationController
         referer: request.referer
       }
     )
-    redirect_to code_org_url('educate/professional-learning/contact-regional-partner')
+    redirect_to CDO.code_org_url('educate/professional-learning/contact-regional-partner')
   end
 end
