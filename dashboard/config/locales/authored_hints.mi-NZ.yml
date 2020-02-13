@@ -4,7 +4,7 @@ mi-NZ:
     authored_hints:
       CourseD_Dance_Party_01:
         validation: |-
-          **Me pewhea te paneke atu i tenei taumata?**
+          **Me pewhea te oti i tenei taumata?**
 
           -   Kia puta he kaihopu kanikani ki te ataata.
 
@@ -35,6 +35,22 @@ mi-NZ:
           -   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.
 
           _Ka mutu tenei taumata a muri i nga wahanga  e 9._
+        challenges: |-
+          **He Wero Ano**
+
+          Tapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.
+      CourseD_Dance_Party_06:
+        validation: |-
+          **Me pwhea ka oti i tenei taumata?**
+
+          -   Kia maha ake i nga kaikanikani e rua.
+
+          _Ka mutu tenei taumata a muri i nga whahanga e 5._
+        challenges: |-
+          **He Wero Ano**
+
+          -   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)
+          -   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.
       CourseD_Dance_Party_11:
         validation: |-
           **Me pewhea ka oti i tenei taumata?**
@@ -49,6 +65,13 @@ mi-NZ:
           -   kei a koe te auahatanga!
 
           _Ka mutu tenei taumata a muri i nga wahanga e 7._
+      CourseD_Dance_Party_11b:
+        validation: |-
+          **Me pewhea ka oti i tenei taumata?**
+
+          -   Whakamahia te paraka 'ka pehi te patuhi pere maui' kia mahia te Keretao he kanikani ano ia wa ka pehi ai.
+
+          _Ka mutu tenei taumata a muri i nga wahanga e 7._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: 'Ka kite nga  **Rama Moana** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Ka pewhea te whakamahia i nga tikanga kia whakawhiti i te Whakamaharatanga
@@ -61,7 +84,7 @@ mi-NZ:
           ākau.
       Dance_2019_01:
         validation: |-
-          **Me pewhea te paneke atu i tenei taumata?**
+          **Me pewhea te oti i tenei taumata?**
 
           -   Kia puta he kaihopu kanikani ki te ataata.
 
@@ -82,7 +105,7 @@ mi-NZ:
           _Ka mutu tenei taumata a muri nga wahanga e 11._
       Dance_Party_01:
         validation: |-
-          **Me pewhea te paneke atu i tenei taumata?**
+          **Me pewhea te oti i tenei taumata?**
 
           -   Kia puta he kaihopu kanikani ki te ataata.
 
@@ -113,6 +136,22 @@ mi-NZ:
           -   Me tinihia te papamuri i mua o te wahanga 7 o te waiata.
 
           _Ka mutu tenei taumata a muri i nga wahanga  e 9._
+        challenges: |-
+          **He Wero Ano**
+
+          Tapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.
+      Dance_Party_06:
+        validation: |-
+          **Me pwhea ka oti i tenei taumata?**
+
+          -   Kia maha ake i nga kaikanikani e rua.
+
+          _Ka mutu tenei taumata a muri i nga whahanga e 5._
+        challenges: |-
+          **He Wero Ano**
+
+          -   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)
+          -   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.
       Dance_Party_11:
         validation: |-
           **Me pewhea ka oti i tenei taumata?**
@@ -125,6 +164,13 @@ mi-NZ:
           **Me pewhea ka oti i tenei taumata?**
 
           -   kei a koe te auahatanga!
+
+          _Ka mutu tenei taumata a muri i nga wahanga e 7._
+      Dance_Party_11b:
+        validation: |-
+          **Me pewhea ka oti i tenei taumata?**
+
+          -   Whakamahia te paraka 'ka pehi te patuhi pere maui' kia mahia te Keretao he kanikani ano ia wa ka pehi ai.
 
           _Ka mutu tenei taumata a muri i nga wahanga e 7._
       HOC 2018 Level_10:

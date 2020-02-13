@@ -196,8 +196,6 @@ it:
     valid_password: Password valida!
     invalid_password: La password deve essere lunga almeno 6 caratteri
     mismatch_password: Le due password che hai inserito non corrispondono
-    under_13_consent: Se ho meno di 13 anni, confermo di avere l’autorizzazione dei
-      miei genitori o del mio tutore legale all’utilizzo dei servizi di Code.org.
     student_consent: Confermo che i miei genitori o chi ne fa le veci mi hanno dato
       il permesso di utilizzare i servizi di Code.org.
     agree_us_website: Accetto di utilizzare un sito Web con sede negli Stati Uniti.

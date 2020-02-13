@@ -2810,6 +2810,7 @@ zh-TW:
         courseC_maze_programming5_b: 記住，轉向角度是以鼠奎特為基準的。
       courseD_maze_ramp6:
         courseC_maze_programming6_a: 有 2 個方法可以完成這個關卡！
+        courseC_maze_programming6_b: 鳥兒剛開始是面對著牆，所以在移動之前記得要先轉彎。
       courseD_maze_ramp7:
         courseD_maze_ramp7_a: 使用重複積木來不停的運作同一個或是多個指令。
       courseD_maze_until1:

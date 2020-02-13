@@ -378,7 +378,9 @@ pt-BR:
         title: Múltipla Escolha
       4-5 Songwriting Multi 1:
         answers:
-        - text: Lou, Lou, skip to my Lou,
+        - text: |2-
+
+            Lou, Lou, pule para o meu Lou.
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
             Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
           correct: true
@@ -1795,6 +1797,16 @@ pt-BR:
         - text: É verdade apenas uma vez quando a tecla é liberada.
         - text: É verdade enquanto a tecla é pressionada ou segurada.
         title: 'Combinando: Respondendo a teclas pressionadas'
+      CSD U3 Lesson Overview 1:
+        markdown: |
+          # Visão geral
+
+          Solicita-se à classe que considere os "problemas" do tédio e da auto-expressão, e que reflita sobre como eles abordam esses problemas em suas próprias vidas. A partir daí, eles irão explorar como a Ciência da Computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a auto-expressão.
+
+
+          ## Recursos
+
+          * [CS in Entertainment - Guia de atividades] (https://docs.google.com/document/d/1RtwJU7Lh2dKdGoj-zfF1pjn-yxhkwP-05G8pgdYi-BY/export?format=pdf)
       CSD U3 Lesson Overview 10:
         markdown: |
           # Visão global
@@ -1872,13 +1884,20 @@ pt-BR:
           * [Cartão interativo - Rubrica] (https://docs.google.com/document/d/1EdEpsowofT8WGQSFvzYVF53HEKipLYdWULtjLgpOEBw/export?format=pdf)
           * [Cartão Interativo - Revisão por Pares] (https://docs.google.com/document/d/1aVP_8YU-JWkxVvRiituCOf66w7refwDaecNBLMZkKgs/export?format=pdf)
       CSD U3 Lesson Overview 2:
-        markdown: "# CS Descobertas Inquérito pós-curso \n\n** A sua entrada e feedback
-          é importante para nós! **Usamos para:\n\n* fazer melhorias no curso\n* entender
-          sua experiência\n* diga-nos quais tópicos você quer aprender mais no futuro\n\nObrigado
-          por dedicar um tempo para ajudar a tornar os CS Descobertas ainda melhores!\n\n<a
-          class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey/stage/1/puzzle/1/page/1\"
-          target=\"top\"> Clique aqui para completar as CS Descobertas Pesquisa pós-curso!!!</a>\n\n(abre
-          em uma nova aba)\n\n<br>\n\n\n\n\n\n"
+        markdown: |+
+          Visão geral
+
+          Esta lição explora os desafios de comunicar como desenhar com formas e usar uma ferramenta que introduz como esse problema é abordado no Game Lab. A classe usa uma ferramenta de Game Lab para colocar interativamente formas na grade de 400 por 400 do Game Lab. Os parceiros então se revezam, instruindo um ao outro como desenhar uma imagem oculta usando essa ferramenta, respondendo por muitos dos desafios da programação no Game Lab.
+
+
+          ## Recursos
+
+          * [Formas de desenho - Guia de atividades] (https://docs.google.com/document/d/1BKFLM2cmov3Lh23vsw1hGfUwTz9bM-diFCGHBf_GH6Y/export?format=pdf)
+
+
+
+
+
       CSD U3 Lesson Overview 3:
         markdown: |+
           # Visão global
@@ -2080,10 +2099,11 @@ pt-BR:
         - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
       CSD U3 Sprites intro predict multi_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
+          correct: true
+        - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+        - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+        - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
         questions:
         - text: Quando executado, onde o sprite <code> minhaSprite </code> será localizado?
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -6778,7 +6798,7 @@ pt-BR:
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. A colheitadeira não chama a função "verificar e coletar"
             até que a mesma chegue no milho.
-        - text: O colheitadora irá pegar a alface.
+        - text: A colheitadora irá pegar a alface.
           feedback: Incorreta. A colheitadeira só faz uma volta e termina no milho.
         - text: O colheitadora irá pegar o milho.
           correct: true
@@ -6789,32 +6809,32 @@ pt-BR:
         answers:
         - text: O colheitadora irá pegar duas abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
-        - text: O colheitadora irá pegar a alface.
+            vira-se e volte até coletar a alface.
+        - text: A colheitadora irá pegar a alface.
           correct: true
           feedback: Correto!
         - text: O colheitadora irá pegar o milho.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         questions:
         - text: Veja as funções definidas abaixo. O que a colheitadeira escolherá?
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: O colheitadora irá pegar duas abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         - text: O harvester vai pegar todas as abóboras.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
-        - text: O colheitadora irá pegar a alface.
+            vira-se e volte até coletar a alface.
+        - text: A colheitadora irá pegar a alface.
           correct: true
           feedback: Correto!
         - text: O colheitadora irá pegar o milho.
           feedback: Incorreto. O colheitadora irá seguir o caminho até o fim, então
-            vira-se e volta até coletar a alface.
+            vira-se e volte até coletar a alface.
         questions:
         - text: Veja as funções definidas abaixo. O que a colheitadeira escolherá?
       courseE_prediction_artistFunction1:
@@ -7539,9 +7559,7 @@ pt-BR:
         questions:
         - text: O que acontecerá quando você pressionar o botão "Executar"?
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
-        title: |2-
-
-          Pesquisa aos estudantes ao final do curso do CS Discoveries
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: "# CS Descobertas de Pesquisa pós-curso \n\n** A sua entrada e feedback
           é importante para nós! ** Usamos para:\n\n* entender sua experiência\n*
@@ -7551,9 +7569,7 @@ pt-BR:
           Clique aqui para completar o CS descobertas Pesquisa pós-curso</a>\n\n(abre
           em uma nova aba)\n\n<br>\n\n\n\n\n\n"
       csd-post-survey-levelgroup-2018:
-        title: |2-
-
-          Pesquisa aos estudantes ao final do curso do CS Discoveries
+        title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-pre-survey-2017-levelgroup:
         markdown: "# Visão Geral\n\nA turma se divide em grupos para projetar barcos
           de folha de alumínio que suportarão tantos centavos quanto for possível.
@@ -7562,8 +7578,134 @@ pt-BR:
           restante do curso.\n\n\n## Recursos\n* [Barcos de Alumínio](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
           \n- Guia de atividade (copiar como [Microsoft Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
+      csd-pulse-check-survey-1-levelgroup U1Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
       csd-pulse-check-survey-1-levelgroup U1Ch2_2018:
         title: Pesquisa rápida de Descobertas de CC!
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019:
+        title: |2-
+
+          Pesquisa rápida do CS Discoveries!
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel irá coletar 4 peças do tesouro usando este código.

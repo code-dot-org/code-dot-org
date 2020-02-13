@@ -391,7 +391,7 @@ hu-HU:
       CourseE_HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       CourseE_HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       CourseE_HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz
         vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       CourseE_HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben
@@ -646,7 +646,7 @@ hu-HU:
       HOC 2018 Level_4: Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png).
         Ismétlő blokkal gyorsabban átjutsz az óceánon.
       HOC 2018 Level_5: Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png)
-        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
+        rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \!\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).
       HOC 2018 Level_6: Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető
         utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).
       HOC 2018 Level_7a: Megtaláltad a víz alatti romokat. Keress a homokkőben egy
@@ -809,6 +809,12 @@ hu-HU:
         Használd a <xml><block type="jump_to_xy" id="callMe" block-text="jump to 200 over 200 down"><title name="XPOS">200</title><title name="YPOS">200</title></block></xml> blokkot, hogy a művész a rajzterület közepére kerüljön. Aztán rajzolj egy 50 képpont hosszúsági vonalat a  <xml><block type="draw_move_by_constant" block-text="move forward"><title name="DIR">moveForward</title><title name="VALUE">50</title></block></xml> segítségével.
       courseC_collector_prog2_2019: Move Laurelt a kincshez, majd használja <xml><block
         type="collector_collect" block-text="collect"/></xml> blokkot, hogy felvegye.
+      courseC_maze_debugging_challenge2: A motkány szédülni fog, ha túl sokat forog!
+        Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
+      courseC_maze_debugging_challenge2_2018: A motkány szédülni fog, ha túl sokat
+        forog! Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
+      courseC_maze_debugging_challenge2_2019: A motkány szédülni fog, ha túl sokat
+        forog! Segíts neki eljutni a makkig mindössze négy "fordulj" parancs használatával.
       courseC_maze_programming2_2019: Húzz egy extra <xml><block type="maze_moveForward"
         block-text="move forward"/></xml> blokkot elő a eszköztárból, hogy befejezd
         a kódod.
@@ -816,6 +822,9 @@ hu-HU:
         _\"Próbáld megváltoztatni az alakot vagy a vonal hosszát hogy sajátot alkoss\"_\n\n<br/>
         \ \n\n**Tanács:** bárhogy megváltoztathatod a rajzot, de itt egy ötlet: \n\n-
         \  Próbáld az alakzatok típusait megváltoztatni a hópehely közepén!"
+      courseD_bee_debugging_challenge1: Nézd meg, hogyan gyűjti össze a méh az összes
+        nektárt. Tudnád használni ezt a módszert, hogy segíts a méhnek elkészíteni
+        az összes mézet?
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
@@ -839,6 +848,13 @@ hu-HU:
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
         csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_scrat_ramp3: Van egy extra blokk, ami szegény motkány vesztét okozza.
+        Dobd ki innen úgy, hogy lekapcsolod a másik blokkról, és a toolboxba (szerszámosládába)
+        húzod.
+      courseD_scrat_ramp4: Óvakodj a megrepedt jégtől a motkány biztonsága érdekében!
+      courseD_scrat_ramp5: Óvakodj a megrepedt jégtől!
+      courseD_scrat_ramp6: Segíts a motkánynak, hogy megszerezze a makkot! Használj
+        ciklust!
       courseE_bee_functions3: A függvények olyan kódot tartalmazó blokkok, amelyek
         elvégeznek egy feladatot.  Használd a "gyűjts 5" függvényt, hogy egyszerre
         5 egység nektárt össze tudj gyűjteni. Ne felejts el ciklust használni és ügyelj
@@ -895,3 +911,58 @@ hu-HU:
       frozen square snowflake: Tudsz készíteni egy hópelyhet az ismételd blokkal?
         rajzoljunk négyzetet 10 alkalommal, és közben használjuk a fordulj blokkot
         36 fokos elfordulásokkal minden négyzet után.
+      ramp_artist_loops1: "Micsoda remek nap!  \n\nSegíts a Művésznek betakarni minden
+        virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
+      ramp_artist_loops1_2018: "Micsoda remek nap!  \n\nSegíts a Művésznek betakarni
+        minden virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
+      ramp_artist_loops1_2019: "Micsoda remek nap!  \n\nSegíts a Művésznek betakarni
+        minden virágot még a tél előtt úgy, hogy lépj előre 60 képpontnyit."
+      ramp_artist_loops2: Dobd fel azzal a mintát, hogy ötször ismételed ezt, és minden
+        lépésnél véletlen színt állítasz be.
+      ramp_artist_loops2_2018: Dobd fel azzal a mintát, hogy ötször ismételed ezt,
+        és minden lépésnél véletlen színt állítasz be.
+      ramp_artist_loops2_2019: Dobd fel azzal a mintát, hogy ötször ismételed ezt,
+        és minden lépésnél véletlen színt állítasz be.
+      ramp_artist_loops3: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
+        ciklust használva.
+      ramp_artist_loops3_2018: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
+        ciklust használva.
+      ramp_artist_loops3_2019: Rajzold újra az 5 színes vonalat, ezúttal az "ismétlés"
+        ciklust használva.
+      ramp_artist_loops4: Mi történik, ha 72 fokot jobbra fordulsz mindezek után a
+        cikluson belül?
+      ramp_artist_loops4_2018: Mi történik, ha 72 fokot jobbra fordulsz mindezek után
+        a cikluson belül?
+      ramp_artist_loops5: |-
+        A ciklusok megkönnyítik a kódok írását!
+
+        Használj ciklusokat, hogy megrajzold ezt a lépcsőt.
+
+        -   Minden lépcsőfok 50 képpont hosszú, és 50 képpont magas
+        -   90 fokot kell fordulnod minden irányba
+      ramp_artist_loops5_2018: |-
+        A ciklusok megkönnyítik a kódok írását!
+
+        Használj ciklusokat, hogy megrajzold ezt a lépcsőt.
+
+        -   Minden lépcsőfok 50 képpont hosszú, és 50 képpont magas
+        -   90 fokot kell fordulnod minden irányba
+      ramp_artist_loops5_2019: |-
+        A ciklusok megkönnyítik a kódok írását!
+
+        Használj ciklusokat, hogy megrajzold ezt a lépcsőt.
+
+        -   Minden lépcsőfok 50 képpont hosszú, és 50 képpont magas
+        -   90 fokot kell fordulnod minden irányba
+      ramp_artist_loops6: |-
+        Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
+
+        Javítsd ki a ciklust, hogy teljesítsd a feladványt.
+      ramp_artist_loops6_2018: |-
+        Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
+
+        Javítsd ki a ciklust, hogy teljesítsd a feladványt.
+      ramp_artist_loops6_2019: |-
+        Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
+
+        Javítsd ki a ciklust, hogy teljesítsd a feladványt.

@@ -155,7 +155,6 @@ es-MX:
     valid_password: "¡Contraseña válida!"
     invalid_password: "La contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas ingresadas no coinciden"
-    under_13_consent: "Si soy menor de 13 años de edad, confirmo que tengo autorización de mi padres o de mi tutor legal para utilizar los servicios de Code.org."
     student_consent: "Confirmo que tengo la autorización de mis padres o tutores legales para utilizar los servicios de Code.org."
     agree_us_website: "Acepto usar un sitio web con sede en Estados Unidos."
     my_data_to_us: "Acepto que se envíen y almacenen datos de mi utilización de este sitio web en Estados Unidos."

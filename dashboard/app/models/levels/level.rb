@@ -534,6 +534,10 @@ class Level < ActiveRecord::Base
       summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
     end
 
+    if summary[:sublevels]
+      summary[:sublevels] = summary[:sublevels].map {|level| level[:summary]}
+    end
+
     summary
   end
 

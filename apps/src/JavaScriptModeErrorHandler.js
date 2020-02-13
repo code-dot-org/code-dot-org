@@ -28,8 +28,8 @@ export default class JavaScriptModeErrorHandler {
    * @param {string} errorString
    * @param {number} [lineNumber]
    */
-  outputError(errorString, lineNumber) {
-    this.output_(errorString, LogLevel.ERROR, lineNumber);
+  outputError(errorString, lineNumber, libraryName) {
+    this.output_(errorString, LogLevel.ERROR, lineNumber, libraryName);
   }
 
   /**
@@ -62,7 +62,7 @@ export default class JavaScriptModeErrorHandler {
    *        calls we may want to pass this in to set a specific line number.
    * @private
    */
-  output_(message, logLevel, lineNumber) {
+  output_(message, logLevel, lineNumber, libraryName) {
     if (lineNumber === undefined) {
       lineNumber = this.getNearestUserCodeLine_();
     }
@@ -77,7 +77,7 @@ export default class JavaScriptModeErrorHandler {
     this.logTarget_.log(logText, logLevel);
 
     // Add an annotation directly in the editor for this output
-    if (lineNumber !== undefined) {
+    if (lineNumber !== undefined && !libraryName) {
       annotationList.addRuntimeAnnotation(logLevel, lineNumber, message);
     }
 

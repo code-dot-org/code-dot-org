@@ -362,7 +362,8 @@ de-DE:
         deines eigenen Musters!
       4-5 Bee Conditionals 1: Die Biene kann nicht unterscheiden, ob dies eine Blume
         oder eine Wabe ist. Sammle den Nektar nur aus Blüten, aber prüfe erst, ob
-        es sich um eine Wabe oder um eine Blüte handelt!
+        es sich um eine Wabe oder um eine Blüte handelt! Sei vorsichtig, es kann sich
+        ändern!
       4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
         eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
         Wolken verbergen das Gleiche!"
@@ -590,6 +591,8 @@ de-DE:
         Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
 
         Ansonsten leg mit Deinem eigenen Design los!
+      Course 4 Artist Vars 1: Kannst du mir helfen, ein gleichseitiges Dreieck zu
+        zeichnen? Es soll auf jeder Seite genau 100 Pixel lang sein.
       Course 4 Artist Vars 12: Setzen wir die Variable "Seiten" auf 5. Je mehr Seiten
         wir zu diesem Algorithmus hinzufügen, desto größer wird das ganze Muster!
         Beachte, dass es eine weitere Variable namens "Länge" gibt. Wir können sie
@@ -602,6 +605,9 @@ de-DE:
         der `Seiten`-Variablen im Inneren, um sicherzustellen, dass jede Form richtig
         passt.\\\nDer Umfang jedes Polygons beträgt 300 Pixel.\nBrauchst du Tipps?
         Klicke hier."
+      Course 4 Artist Vars 2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein
+        jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen,
+        um dieses neue Dreieck zu zeichnen?
       Course 4 Artist Vars 4: Nun möchte ich ein Rechteck zeichnen, das doppelt so
         lang wie breit ist. Dazu haben wir eine Variable namens „Breite“, die auf
         100 eingestellt werden muss. Kannst Du die Mathematik-Bausteine verwenden,
@@ -1080,6 +1086,13 @@ de-DE:
         sollte auch von einem Längenparameter ausgehen, genau wie das Dreieck. Zeichne
         dieses Mal 3 Quadrate: 25, 50 und 75 Pixel lang, jeweils 100 Pixel voneinander
         entfernt.'
+      NEW Course 4 Artist Vars 4: 'Probieren wir es noch einmal. Kannst du die Variable
+        „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis:
+        Es ist ein Vielfaches von 10.'
+      NEW Course 4 Artist Vars 6: 'Zeichne dieses Muster, indem du die Längenvariable
+        an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst.
+        (Hinweis: Es ist ein Vielfaches von 10).So braucht man die Länge nur an einer
+        Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!'
       NEW Course 4 Bee For Loops 1: Benutze eine Schleife um den Nektar von jeder
         Blume zu sammeln.
       NEW Course 4 Bee For Loops 8: |-
@@ -2466,6 +2479,15 @@ de-DE:
       courseD_collector_ramp10: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp8: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp9: Hilf Laurel alle Schätze einzusammeln.
+      courseD_farmer_while2: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while2_2018: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while2_2019: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while5: 'Hilf mir die ganze Erde wegzuschaffen. '
+      courseD_farmer_while5_2018: 'Hilf mir die ganze Erde wegzuschaffen. '
+      courseD_farmer_while5_2019: 'Hilf mir die ganze Erde wegzuschaffen. '
       courseD_iceage_loops1: Hilf Scrat über das Eis, um an die Eichel zu gelangen!
       courseD_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
       courseD_iceage_loops10_2019: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
@@ -2602,6 +2624,24 @@ de-DE:
         Funktion macht, die du gerade erstellt hast?
       courseF_artist_fwp9: 'Freizeit: Zeichne etwas cooles! Spiele mit die Stiftbreite
         zu sehen, wie unterschiedlich Deine Zeichnungen aussehen kann!'
+      courseF_artist_variables2: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables2_2018: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables2_2019: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables4: Jetzt nutze die `length` Variable, damit der Künster
+        vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2018: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2019: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables5: Füge weitere Schleifen am Ende deines Code ein um
+        drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und nach
+        oben!
+      courseF_artist_variables5_2018: Füge weitere Schleifen am Ende deines Code ein
+        um drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und
+        nach oben!
+      courseF_artist_variables5_2019: Füge weitere Schleifen am Ende deines Code ein
+        um drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und
+        nach oben!
       courseF_bee_for8: |-
         Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
         Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?
