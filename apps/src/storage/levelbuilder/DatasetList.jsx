@@ -4,7 +4,8 @@ import Button from '@cdo/apps/templates/Button';
 
 class DatasetList extends React.Component {
   static propTypes = {
-    datasets: PropTypes.arrayOf(PropTypes.string).isRequired
+    datasets: PropTypes.arrayOf(PropTypes.string).isRequired,
+    liveDatasets: PropTypes.arrayOf(PropTypes.string).isRequired
   };
 
   state = {
@@ -20,6 +21,9 @@ class DatasetList extends React.Component {
           {this.props.datasets.map(dataset => (
             <li key={dataset}>
               <a href={`/datasets/${dataset}`}>{dataset}</a>
+              {this.props.liveDatasets.includes(dataset) && (
+                <span> (Live)</span>
+              )}
             </li>
           ))}
         </ul>

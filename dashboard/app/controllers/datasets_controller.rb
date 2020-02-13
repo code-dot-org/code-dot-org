@@ -5,14 +5,18 @@ class DatasetsController < ApplicationController
   before_action :initialize_firebase
   authorize_resource class: false
 
+  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide']
+
   def index
     tables = @firebase.get_shared_table_list
     @datasets = tables.map {|name, _| name}
+    @live_datasets = LIVE_DATASETS
   end
 
   def show
     @table_name = params[:dataset_name]
     @dataset = @firebase.get_shared_table URI.escape(params[:dataset_name])
+    @live_datasets = LIVE_DATASETS
   end
 
   # POST /datasets/:dataset/edit

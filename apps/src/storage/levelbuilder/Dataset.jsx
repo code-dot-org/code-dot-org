@@ -23,6 +23,7 @@ const styles = {
 
 class Dataset extends React.Component {
   static propTypes = {
+    isLive: PropTypes.bool.isRequired,
     // Provided via Redux
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,
     tableName: PropTypes.string.isRequired,
@@ -79,11 +80,15 @@ class Dataset extends React.Component {
             {this.state.notice}
           </p>
         )}
-        <h1>{this.props.tableName}</h1>
+        <h1>{`${this.props.tableName}${
+          this.props.isLive ? ' (Live)' : ''
+        }`}</h1>
         <p>
           <a href="/datasets/">Back to Index</a>
         </p>
-        <ConfirmImportButton importCsv={this.importCsv} />
+        {!this.props.isLive && (
+          <ConfirmImportButton importCsv={this.importCsv} />
+        )}
         <DataTable readOnly rowsPerPage={10} />
       </div>
     );

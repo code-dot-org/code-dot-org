@@ -5,8 +5,9 @@ import DatasetList from '@cdo/apps/storage/levelbuilder/DatasetList';
 
 $(document).ready(function() {
   const datasets = getScriptData('datasets');
+  const liveDatasets = getScriptData('liveDatasets');
   ReactDOM.render(
-    <DatasetList datasets={datasets} />,
+    <DatasetList datasets={datasets} liveDatasets={liveDatasets} />,
     document.querySelector('.datasets')
   );
   console.log(datasets);

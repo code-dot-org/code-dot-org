@@ -9,6 +9,8 @@ import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 $(document).ready(function() {
   const dataset = getScriptData('dataset');
   const tableName = getScriptData('tableName');
+  const liveDatasets = getScriptData('liveDatasets');
+  const isLive = liveDatasets.includes(tableName);
   dataset.records.shift();
   registerReducers({data});
   const store = getStore();
@@ -16,7 +18,7 @@ $(document).ready(function() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <Dataset />
+      <Dataset isLive={isLive} />
     </Provider>,
     document.querySelector('.dataset')
   );
