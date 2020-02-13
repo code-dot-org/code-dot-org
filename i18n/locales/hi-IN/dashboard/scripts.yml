@@ -11761,3 +11761,69 @@ hi:
               name: नया चरण
             Create PT - Complete the Task:
               name: PT बनाएं - कार्य पूरा करें
+        csp4-2020:
+          stages:
+            Variables Explore:
+              name: वेरिएबल्स की पड़ताल
+            Variables Investigate:
+              name: वेरिएबल्स का निरीक्षण
+            Variables Practice:
+              name: वेरिएबल्स का अभ्यास
+            Variables Make:
+              name: वेरिएबल्स बनाना
+            Conditionals Explore:
+              name: सापेक्षों की पड़ताल
+            Conditionals Investigate:
+              name: सापेक्षों की जांच
+            Conditionals Practice:
+              name: सापेक्षों का अभ्यास
+            Conditional Make:
+              name: सापेक्ष बनाना
+            Functions Explore / Investigate:
+              name: फंक्शन्स की पड़ताल / जांच
+            Functions Practice:
+              name: फंक्शन्स का अभ्यास
+            Functions Make:
+              name: फंक्शन्स बनाना
+        csp5-2020:
+          stages:
+            Lists Explore:
+              name: सूचियों की पड़ताल
+            Lists Investigate:
+              name: सूचियों का निरीक्षण
+            Lists Practice:
+              name: सूचियों का अभ्यास
+            Lists Make:
+              name: सूचियां बनाना
+            Loops Explore:
+              name: लूप्स की पड़ताल
+            Loops Investigate:
+              name: लूप्स का निरीक्षण
+            Loops Practice:
+              name: लूप्स का अभ्यास
+            Loops Make:
+              name: लूप्स बनाना
+            Traversals Explore:
+              name: चक्रमण की पड़ताल
+            Traversals Investigate:
+              name: चक्रमण का निरीक्षण
+            Traversals Practice:
+              name: चक्रमण का अभ्यास
+            Traversals Make:
+              name: चक्रमण बनाना
+            Semester Hackathon Part 1:
+              name: अर्धवार्षिक हैकाथॉन भाग 1
+            Semester Hackathon Part 2:
+              name: अर्धवार्षिक हैकाथॉन भाग 2
+            Semester Hackathon Part 3:
+              name: अर्धवार्षिक हैकाथॉन भाग 3
+            Semester Hackathon Part 4:
+              name: अर्धवार्षिक हैकाथॉन भाग 4
+            Semester Hackathon Part 5:
+              name: अर्धवार्षिक हैकाथॉन भाग 5
+        csp7-2020:
+          stages:
+            Libraries Explore:
+              name: पुस्तकालयों की पड़ताल
+            Libraries Investigate:
+              name: पुस्तकालयों का निरीक्षण

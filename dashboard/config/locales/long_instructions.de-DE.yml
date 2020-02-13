@@ -1858,6 +1858,10 @@ de-DE:
         <img src="https://images.code.org/9b5897e059bb29bd2faf8504659a3cfc-image-1440719685627.49.33.png" width="250px"/>\
         <br/><br/>
         **Freispiel Inspiration:** Du hast jetzt alles gelernt, was du wissen musst um ein Muster wie dieses zu erstellen! Wenn dieses Bild Dich inspiriert, versuche, etwas Ähnliches zu machen. Ansonsten kannst du auch etwas ganz Eigenes erschaffen.
+      Course 4 Artist Vars 1: |-
+        Kannst du mir helfen, ein gleichseitiges Dreieck zu zeichnen? Es soll auf jeder Seite genau 100 Pixel lang sein.
+
+        <br/>
       Course 4 Artist Vars 12: |-
         Setzen wir die Variable "Seiten" auf 5. Je mehr Seiten wir zu diesem Algorithmus hinzufügen, desto größer wird das ganze Muster!
 
@@ -1870,6 +1874,9 @@ de-DE:
         die `Länge`-Variable manuell zu setzen, verwenden wir einen Mathematikblock
         mit der `Seiten`-Variablen im Inneren, um sicherzustellen, dass jede Form
         richtig passt.  \n\nDer Umfang jedes Polygons beträgt 300 Pixel."
+      Course 4 Artist Vars 2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein
+        jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen,
+        um dieses neue Dreieck zu zeichnen?
       Course 4 Artist Vars 4: Nun möchte ich ein Rechteck zeichnen, das doppelt so
         lang wie breit ist. Dazu haben wir eine Variable namens „Breite“, die auf
         100 eingestellt werden muss. Kannst Du die Mathematik-Bausteine verwenden,
@@ -2156,7 +2163,7 @@ de-DE:
       Dance_Party_02: |-
         Lasse den Elch tanzen!
 
-        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
+        Ziehe den Baustein <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> in den Arbeitsbereich. Verbinde ihn unterhalb des Bausteins <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Dein Tänzer sollte nach dem vierten Takt mit einem neuen Tanzschritt beginnen.
 
         **Takte** sind die zeitliche Struktur von Musik. In diesem Tutorial ist ein Takt vier Schläge lang.
       Dance_Party_03: |-
@@ -2701,6 +2708,13 @@ de-DE:
         hinzufügst?
       NEW Course 4 Artist Params 2: Erstelle eine Funktion „Zeichne ein Dreieck“ mit
         einer Seitenlänge von 50 Pixeln von Grund auf.
+      NEW Course 4 Artist Vars 4: 'Probieren wir es noch einmal. Kannst du die Variable
+        „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis:
+        Es ist ein Vielfaches von 10.'
+      NEW Course 4 Artist Vars 6: 'Zeichne dieses Muster, indem du die Längenvariable
+        an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst.
+        (Hinweis: Es ist ein Vielfaches von 10).So braucht man die Länge nur an einer
+        Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!'
       NetSim Standalone Freeplay: |-
         # Internet-Simulator-Freispiel
 
@@ -3005,6 +3019,12 @@ de-DE:
 
         -   Erstelle für jede Schaltfläche ein Ereignis, das beim Drücken der Taste auf den entsprechenden Bildschirm verweist.
         -   Führe Deine App aus und teste, ob alle Schaltflächen funktionieren.
+      Underground If Statements: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
+      Underground If Statements_2019: Jetzt wird des knifflig. Baue 3 Redstone-Bausteine
+        ab, aber falle nicht in die Lava. Benutze einen „Wenn“-Befehl, um Kopfsteinpflaster
+        über alle von dir entdeckte Lava zu platzieren.
       'Video: Intro to CSS Part 2_2019': |-
         ## Zu berücksichtigend Frage
 
@@ -4531,6 +4551,27 @@ de-DE:
         Nimm den gleichen Weg wie vorher, aber dieses Mal benutzte eine Wiederholungsschleife, um die Schätze zu sammeln, wenn du dort ankommst.
       courseD_collector_ramp9: Jetzt gibt es noch mehr Schätze.  Kannst du Laurel
         helfen, alles einzusammeln?
+      courseD_farmer_while1: "_\"Hallo, ich bin ein Bauer. Ich brauche deine Hilfe
+        beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while1_2018: "_\"Hallo, ich bin ein Bauer. Ich brauche deine
+        Hilfe beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while1_2019: "_\"Hallo, ich bin ein Bauer. Ich brauche deine
+        Hilfe beim Glätten meines Feldes um es für das Säen vorzubereiten!\"_  \n\nBewege
+        mich zu dem Erdblock und nutze den \"Entfernen\" Baustein um diesen zu entfernen."
+      courseD_farmer_while3: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
+      courseD_farmer_while3_2018: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
+      courseD_farmer_while3_2019: |-
+        _"Verschiebe mich zum Erdhaufen und sag mir, wie viele Schaufeln entfernt werden sollen. "_
+
+        Verwende dabei so wenig Bausteine wie möglich.
       courseD_iceage_loops1: Hilf Scrat über das glitschige Eis, um an die Eichel
         zu gelangen!
       courseD_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
@@ -4655,6 +4696,48 @@ de-DE:
         Blockzählung ermöglicht.
       courseE_farmer_functions4b: Benutze deine neue Funktion um dieses Puzzle zu
         lösen.
+      courseF_artist_variables2: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables2_2018: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables2_2019: "Jetzt nutze eine andere Schleife um drei dieser
+        Dreiecke nebeneinander zu zeichnen.   \n\nDu kann den Code aus dem letzten
+        Puzzle innerhalb einfügen."
+      courseF_artist_variables3: "Bevor die Sache knifflig wird, kannst du die Länge
+        von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables3_2018: "Bevor die Sache knifflig wird, kannst du die
+        Länge von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables3_2019: "Bevor die Sache knifflig wird, kannst du die
+        Länge von 50 in einer Variable festlegen, damit wir sie in den nächsten Puzzles
+        nutzen können? \n\n![expandable](https://images.code.org/73447d004093c6be8ab01a1358155f16-image-1498068386665.gif)"
+      courseF_artist_variables4: Jetzt nutze die `length` Variable, damit der Künster
+        vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2018: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2019: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables6: "**OOPS!** \n\nDie Dreiecke sollen eigentlich 60
+        Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine Variable
+        zu nutzen?"
+      courseF_artist_variables6_2018: "**OOPS!** \n\nDie Dreiecke sollen eigentlich
+        60 Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine
+        Variable zu nutzen?"
+      courseF_artist_variables6_2019: "**OOPS!** \n\nDie Dreiecke sollen eigentlich
+        60 Pixel breit sein, mit 60 Pixel Sprüngen.  \n\nBist du nicht froh, eine
+        Variable zu nutzen?"
+      courseF_artist_variables6a: Nutze was du gelernt hast um dieses Design zu entwerfen,
+        bei dem die Quadrate 80 Pixel Seiten haben und der Künstler über 80 Pixel
+        zwischen jedem springt.
+      courseF_artist_variables6a_2018: Nutze was du gelernt hast um dieses Design
+        zu entwerfen, bei dem die Quadrate 80 Pixel Seiten haben und der Künstler
+        über 80 Pixel zwischen jedem springt.
+      courseF_artist_variables6a_2019: Nutze was du gelernt hast um dieses Design
+        zu entwerfen, bei dem die Quadrate 80 Pixel Seiten haben und der Künstler
+        über 80 Pixel zwischen jedem springt.
       courseF_bee_for_challenge2: Löse diese Aufgabe mit so wenig Bausteinen wie möglich.
       courseF_bee_for_challenge2_2018: Löse diese Aufgabe mit so wenig Bausteinen
         wie möglich.
@@ -4755,6 +4838,12 @@ de-DE:
       grade2_collector_A: Hilf Laurel alle Schätze einzusammeln.
       grade2_collector_A_2018: Hilf Laurel alle Schätze einzusammeln.
       grade2_collector_A_2019: Hilf Laurel alle Schätze einzusammeln.
+      grade5_artist_variables_triangles1: "Lass uns, ein gleichseitiges Dreieck zu
+        zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
+      grade5_artist_variables_triangles1_2018: "Lass uns, ein gleichseitiges Dreieck
+        zu zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
+      grade5_artist_variables_triangles1_2019: "Lass uns, ein gleichseitiges Dreieck
+        zu zeichnen. \n\nEs soll auf jeder Seite genau 50 Pixel lang sein."
       grade5_pixelation: |-
         # Erstelle dein eigenes Bild in beliebiger Größe
 
