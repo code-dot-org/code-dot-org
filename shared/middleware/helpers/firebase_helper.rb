@@ -26,24 +26,52 @@ class FirebaseHelper
     table_to_csv(records, column_order: ['id'])
   end
 
+  def number?(num)
+    !Float(num).nil? rescue false
+  end
+
+  def csv_as_table(csv_data)
+    records = {}
+    id = 1
+    table = CSV.parse(csv_data, headers: true)
+    table.each do |row|
+      record = OpenStruct.new
+      record.id = id
+      table.headers.each do |col|
+        value = (number? row[col]) ? row[col].to_f : row[col]
+        record[col] = value
+      end
+      records[id] = record.to_h.to_json
+      id += 1
+    end
+    return records, table.headers.unshift('id')
+  end
+
   def delete_shared_table(table_name)
-    @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
-    @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    response = @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
+    return response unless response.success?
+    response = @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
+    return response unless response.success?
+    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    return response
   end
 
   def upload_shared_table(table_name, records, columns)
-    @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
-    @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
+    return response unless response.success?
+    response = @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
+    return response unless response.success?
+    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    return response unless response.success?
     columns.each do |column|
-      @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
+      response = @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
     end
+    return response
   end
 
   def get_shared_table(table_name)
     columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{table_name}/columns")
-    columns = columns_response.body.map {|_, value| value['columnName']} || []
+    columns = columns_response.body ? columns_response.body.map {|_, value| value['columnName']} : []
 
     records_response = @firebase.get("/v3/channels/shared/storage/tables/#{table_name}/records")
     records = records_response.body || []

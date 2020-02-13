@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import DataTable from '../dataBrowser/DataTable';
+import {setLbData} from '@cdo/apps/storage/redux/data';
+import ConfirmImportButton from '../dataBrowser/ConfirmImportButton';
 
 class Dataset extends React.Component {
   static propTypes = {
@@ -13,8 +15,30 @@ class Dataset extends React.Component {
     // it as an array."
     // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
     tableRecords: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-      .isRequired
+      .isRequired,
+    onUploadComplete: PropTypes.func.isRequired
   };
+
+  importCsv = (csv, onComplete) => {
+    $.ajax({
+      url: `/datasets/${this.props.tableName}/edit`,
+      method: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify({csv_data: csv})
+    })
+      .done(data => {
+        this.props.onUploadComplete(
+          this.props.tableName,
+          data.records,
+          data.columns
+        );
+        onComplete();
+      })
+      .fail((x, y) => {
+        console.log(x);
+      });
+  };
+
   render() {
     console.log(this.props.tableName);
     console.log(this.props.tableColumns);
@@ -22,6 +46,7 @@ class Dataset extends React.Component {
     return (
       <div>
         <p>{this.props.tableName}</p>
+        <ConfirmImportButton importCsv={this.importCsv} />
         <DataTable readOnly rowsPerPage={10} />
       </div>
     );
@@ -34,5 +59,9 @@ export default connect(
     tableRecords: state.data.tableRecords || {},
     tableName: state.data.tableName || ''
   }),
-  dispatch => ({})
+  dispatch => ({
+    onUploadComplete(tableName, records, columns) {
+      dispatch(setLbData(tableName, records, columns));
+    }
+  })
 )(Dataset);

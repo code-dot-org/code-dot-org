@@ -243,7 +243,7 @@ class Ability
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
 
-      can [:show_manifest, :updated_manifest, :index, :edit], :dataset
+      can [:show_manifest, :updated_manifest, :index, :edit, :upload], :dataset
     end
 
     if user.persisted?
