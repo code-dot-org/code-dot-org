@@ -293,8 +293,8 @@ function queueOnTick() {
   window.setTimeout(Applab.onTick, getCurrentTickLength());
 }
 
-function handleExecutionError(err, lineNumber, outputString) {
-  outputError(outputString, lineNumber);
+function handleExecutionError(err, lineNumber, outputString, libraryName) {
+  outputError(outputString, lineNumber, libraryName);
   Applab.executionError = {err: err, lineNumber: lineNumber};
 
   // prevent further execution
@@ -1275,7 +1275,7 @@ Applab.execute = function() {
     // Initialize the interpreter and parse the student code
     Applab.JSInterpreter.parse({
       code: codeWhenRun,
-      libraryCode: level.libraryCode,
+      projectLibraries: level.projectLibraries,
       blocks: level.levelBlocks,
       blockFilter: level.executePaletteApisOnly && level.codeFunctions,
       enableEvents: true
