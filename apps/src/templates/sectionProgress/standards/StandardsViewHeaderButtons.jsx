@@ -35,6 +35,18 @@ class StandardsViewHeaderButtons extends Component {
 
   openLessonStatusDialog = () => {
     this.setState({isLessonStatusDialogOpen: true});
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'standards',
+        event: 'click_update_lessons',
+        data_json: JSON.stringify({
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   closeLessonStatusDialog = () => {
@@ -47,7 +59,7 @@ class StandardsViewHeaderButtons extends Component {
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',
-        event: 'generate_report_dialog',
+        event: 'open_generate_report_dialog',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId
