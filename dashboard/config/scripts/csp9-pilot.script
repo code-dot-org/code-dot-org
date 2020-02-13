@@ -1,0 +1,40 @@
+login_required true
+hideable_stages true
+has_verified_resources true
+has_lesson_plan true
+curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit9/{LESSON}'
+pilot_experiment 'csp-piloters'
+curriculum_umbrella 'CSP'
+
+stage 'Learning From Data'
+level 'CSP U9L1 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Exploring One Column'
+level 'CSP U9L2 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Filtering and Cleaning Data'
+level 'CSP U9L3 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L3 Data Cleaning', progression: 'Cleaning Data'
+level 'CSP U9L3 Data Filtering', progression: 'Filtering Data'
+level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding'
+
+stage 'Exploring Two Columns - Discrete'
+level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Exploring Two Columns - Continuous'
+level 'CSP U9L5 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Big Data, Crowdsourcing, and Machine Learning'
+level 'CSP U9L6 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Machine Learning and Bias'
+level 'CSP U9L7 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project - Tell a Data Story - Part 1'
+level 'CSP U9L8 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Project - Tell a Data Story - Part 2'
+level 'CSP U9L9 SFLP 20-21', progression: 'Lesson Overview'
+
+stage 'Lesson 10: Assessment Day'
+level 'CSP U9L10 SFLP 20-21', progression: 'Lesson Overview'

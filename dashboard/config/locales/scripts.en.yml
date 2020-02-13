@@ -14119,3 +14119,31 @@ en:
           description_audience: ''
           description_short: ''
           description: Temporary place to hold the new mini-projects for CSD Web Development
+        csp9-pilot:
+          stages:
+            new stage:
+              name: new stage
+            Learning From Data:
+              name: Learning From Data
+            Exploring One Column:
+              name: Exploring One Column
+            Filtering and Cleaning Data:
+              name: Filtering and Cleaning Data
+            Exploring Two Columns - Discrete:
+              name: Exploring Two Columns - Discrete
+            Exploring Two Columns - Continuous:
+              name: Exploring Two Columns - Continuous
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, and Machine Learning
+            Machine Learning and Bias:
+              name: Machine Learning and Bias
+            Project - Tell a Data Story - Part 1:
+              name: Project - Tell a Data Story - Part 1
+            Project - Tell a Data Story - Part 2:
+              name: Project - Tell a Data Story - Part 2
+            'Lesson 10: Assessment Day':
+              name: 'Lesson 10: Assessment Day'
+          title: CSP Unit 9 Pilot - Data
+          description_audience: ''
+          description_short: ''
+          description: ''
