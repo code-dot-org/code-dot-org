@@ -3,7 +3,9 @@
   "addImageButton": "Add Image",
   "addHTMLButton": "Add HTML",
   "confirmExitWithUnsavedChanges": "Do you want to exit with unsaved changes?",
+  "errorSavingProject": "Something didn't work while saving your project. Check your internet connection and try that last action again.",
   "refreshPreview": "Refresh and Save",
   "toggleInspectorOn": "Inspector: Off",
-  "toggleInspectorOff": "Inspector: On"
+  "toggleInspectorOff": "Inspector: On",
+  "uploadError": "Upload Error"
 }
