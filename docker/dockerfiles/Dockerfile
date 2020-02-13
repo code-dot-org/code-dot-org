@@ -1,6 +1,6 @@
 # Based on Code.org CircleCI-dependencies Dockerfile in .circle directory
 # Pushed to Docker Hub at wintercdo/code-dot-org:0.7
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 USER root
 
