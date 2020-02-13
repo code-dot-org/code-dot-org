@@ -16,6 +16,12 @@ ro:
         pereche si incepe din nou.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: e invalid. Fiecare link poate fi folosit o singură dată pentru
+                resetarea parolei, și numai linkul trimis cel mai recent va funcționa.
       messages:
         blank: este necesar
         blank_plural: sunt necesare
@@ -48,6 +54,7 @@ ro:
           a finaliza crearea unui cont Code.org cu <strong>%{provider}</strong> pentru<strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Completează următoarele informații
           pentru a finaliza crearea unui cont Code.org cu **%{provider}** pentru**%{email}**.
+        reset_password_token: Linkul pentru resetarea parolei pe care l-ai folosit
         error:
           future: nu poate fi în viitor
   beta: beta
@@ -166,8 +173,6 @@ ro:
     valid_password: Parolă validă!
     invalid_password: Parola trebuie să conţină cel puțin 6 caractere
     mismatch_password: Cele două parole introduse nu se potrivesc
-    under_13_consent: Dacă am vârsta sub 13 ani, confirm că am permisiunea părintelui
-      sau tutorelui meu legal de a utiliza serviciile Code.org.
     student_consent: Confirm că am permisiunea părintelui sau tutorelui meu legal
       de a utiliza serviciile Code.org.
     agree_us_website: Sunt de acord să folosesc un site web din Statele Unite.

@@ -4668,7 +4668,6 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp6-pilot:
-          title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4868,6 +4867,19 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp8-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp4-2020:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp5-2020:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp7-2020:
+          title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'

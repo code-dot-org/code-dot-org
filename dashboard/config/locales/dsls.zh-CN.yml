@@ -553,6 +553,12 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
         content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
         title: 快速检查标题
       CSD Header Size MC_2018:
         answers:
@@ -566,6 +572,12 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
         content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
         title: 快速检查标题
       CSD Header Size MC_2018_2019:
         answers:
@@ -579,6 +591,12 @@ zh-CN:
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
         content1: 查看下面的代码，预测标题的显示方式，从右侧选项中选择一个选项。
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eggs &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
         title: 快速检查标题
       CSD U1 Lesson 5 Overview:
         markdown: |
@@ -626,10 +644,115 @@ zh-CN:
           * [应用程序和问题解决 - 专栏](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: 描述
+        markdown: |+
+          # 开始自己的页面
+
+          是时候创建自己的网页了！可以将内容分享给全世界。
+
+          ## 定义
+
+          用学会的知识，使用 HTML 来制作网页。页面要有至少 **两种不同大小的标头**，还要 **使用段落**。
+
+          ## 准备
+
+          在开始给网页写代码前，需要有个计划。通过前面课程写下的想法，决定页面是关于什么的。后面还有机会做其它页面。
+
+          先画个页面的草稿，包括标头段落。将草稿给伙伴看看，并解释一下页面不同部分会用哪些标签。如果忘了这些标签，可以看看前几课，或者让伙伴帮助。
+
+          如果草图里有些还不知道怎么写代码，可以先存下来。
+
+          ## 尝试
+
+          使用学过的 HTML 来创建页面。如果遇到了问题，可以找伙伴们来帮忙，但是 **你是自己网页的责任人**，这表示应该自己编写所有的代码。
+
+          ## 反思
+
+          完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
+
+
       CSD U2 Design Project_2018:
         content1: 描述
+        markdown: |+
+          # 开始自己的页面
+
+          是时候创建自己的网页了！可以将内容分享给全世界。
+
+          ## 定义
+
+          用学会的知识，使用 HTML 来制作网页。页面要有至少 **两种不同大小的标头**，还要 **使用段落**。
+
+          ## 准备
+
+          在开始给网页写代码前，需要有个计划。通过前面课程写下的想法，决定页面是关于什么的。后面还有机会做其它页面。
+
+          先画个页面的草稿，包括标头段落。将草稿给伙伴看看，并解释一下页面不同部分会用哪些标签。如果忘了这些标签，可以看看前几课，或者让伙伴帮助。
+
+          如果草图里有些还不知道怎么写代码，可以先存下来。
+
+          ## 尝试
+
+          使用学过的 HTML 来创建页面。如果遇到了问题，可以找伙伴们来帮忙，但是 **你是自己网页的责任人**，这表示应该自己编写所有的代码。
+
+          ## 反思
+
+          完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
+
+
       CSD U2 Design Project_2018_2019:
         content1: 描述
+        markdown: |+
+          # 开始自己的页面
+
+          是时候创建自己的网页了！可以将内容分享给全世界。
+
+          ## 定义
+
+          用学会的知识，使用 HTML 来制作网页。页面要有至少 **两种不同大小的标头**，还要 **使用段落**。
+
+          ## 准备
+
+          在开始给网页写代码前，需要有个计划。通过前面课程写下的想法，决定页面是关于什么的。后面还有机会做其它页面。
+
+          先画个页面的草稿，包括标头段落。将草稿给伙伴看看，并解释一下页面不同部分会用哪些标签。如果忘了这些标签，可以看看前几课，或者让伙伴帮助。
+
+          如果草图里有些还不知道怎么写代码，可以先存下来。
+
+          ## 尝试
+
+          使用学过的 HTML 来创建页面。如果遇到了问题，可以找伙伴们来帮忙，但是 **你是自己网页的责任人**，这表示应该自己编写所有的代码。
+
+          ## 反思
+
+          完成网页后，与草稿作比较，确保没有忘了什么内容。也请伙伴们看看，思考一下他们的反馈，是否应该做一些改动。
+
+
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # 个人网站示例
+
+          点击下面的链接，看看其他同学做的个人网站。
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # 个人网站示例
+
+          点击下面的链接，看看其他同学做的个人网站。
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: |
+          # 个人网站示例
+
+          点击下面的链接，看看其他同学做的个人网站。
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
       CSD U2 L1 Overview:
         content1: 描述
         markdown: |
@@ -780,6 +903,111 @@ zh-CN:
           资源\n\n* [个人网站 - 项目指南](https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)\n*
           [个人网站 - 相互评审](https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)\n*
           [个人网站 - 专栏](https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n"
+      CSD U2 PSP Programming:
+        markdown: |+
+          # 编程中解决问题的流程
+
+          ## 定义
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 认真阅读说明，确保理解了目标
+          * 用自己的话来重新描述问题
+          * 找到被要求申请的任何新技能
+          * 看看已解决的问题中有没有类似的
+          * 如果有入门的代码，阅读并理解它做了什么
+
+          ## 准备
+          * 用简单的语言或伪代码写出想法
+          * 在纸上勾勒出想法
+          * 列出已经知道怎样做的，和不知道怎样做的
+          * 给同学讲一下想法
+          * 回顾一下过去写的类似的程序
+
+          ## 尝试
+          * 一次写一小部分
+          * 经常的测试程序
+          * 用注释来记下代码做了什么
+          * 使用合适的调试策略
+          * 如果卡住了，或不知道问题是否解决了，回到前几步
+
+          ## 反思
+          * 将完成的程序与定义的问题相比较，确保解决了问题的所有方面
+          * 让同学来试试程序，并记录哪里有迷惑的情况
+          * 让同学阿里阅读代码，确保文档清楚、精确
+          * 试着 "中断" 程序来找到交互过程中可以处理得更好的地方
+          * 找到一些能在下一次迭代中增量改动的东西
+
+
+      CSD U2 PSP Programming_2018:
+        markdown: |+
+          # 编程中解决问题的流程
+
+          ## 定义
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 认真阅读说明，确保理解了目标
+          * 用自己的话来重新描述问题
+          * 找到被要求申请的任何新技能
+          * 看看已解决的问题中有没有类似的
+          * 如果有入门的代码，阅读并理解它做了什么
+
+          ## 准备
+          * 用简单的语言或伪代码写出想法
+          * 在纸上勾勒出想法
+          * 列出已经知道怎样做的，和不知道怎样做的
+          * 给同学讲一下想法
+          * 回顾一下过去写的类似的程序
+
+          ## 尝试
+          * 一次写一小部分
+          * 经常的测试程序
+          * 用注释来记下代码做了什么
+          * 使用合适的调试策略
+          * 如果卡住了，或不知道问题是否解决了，回到前几步
+
+          ## 反思
+          * 将完成的程序与定义的问题相比较，确保解决了问题的所有方面
+          * 让同学来试试程序，并记录哪里有迷惑的情况
+          * 让同学阿里阅读代码，确保文档清楚、精确
+          * 试着 "中断" 程序来找到交互过程中可以处理得更好的地方
+          * 找到一些能在下一次迭代中增量改动的东西
+
+
+      CSD U2 PSP Programming_2018_2019:
+        markdown: |+
+          # 编程中解决问题的流程
+
+          ## 定义
+          <img src="https://images.code.org/4684a4cd531d3750d2a11051f6e0729f-image-1493396308445.png" style="float:right; width: 250px;">
+
+          * 认真阅读说明，确保理解了目标
+          * 用自己的话来重新描述问题
+          * 找到被要求申请的任何新技能
+          * 看看已解决的问题中有没有类似的
+          * 如果有入门的代码，阅读并理解它做了什么
+
+          ## 准备
+          * 用简单的语言或伪代码写出想法
+          * 在纸上勾勒出想法
+          * 列出已经知道怎样做的，和不知道怎样做的
+          * 给同学讲一下想法
+          * 回顾一下过去写的类似的程序
+
+          ## 尝试
+          * 一次写一小部分
+          * 经常的测试程序
+          * 用注释来记下代码做了什么
+          * 使用合适的调试策略
+          * 如果卡住了，或不知道问题是否解决了，回到前几步
+
+          ## 反思
+          * 将完成的程序与定义的问题相比较，确保解决了问题的所有方面
+          * 让同学来试试程序，并记录哪里有迷惑的情况
+          * 让同学阿里阅读代码，确保文档清楚、精确
+          * 试着 "中断" 程序来找到交互过程中可以处理得更好的地方
+          * 找到一些能在下一次迭代中增量改动的东西
+
+
       CSD U2 Top Websites:
         markdown: |
           # 美国最多访问量的网站
@@ -815,10 +1043,73 @@ zh-CN:
           * Wikipedia.org - 自由而且免费的百科全书，用户可以编辑其中的内容
       CSD U2 expand project:
         content1: 描述
+        markdown: |
+          # 扩展网站
+
+          下一关中，要制作第二个页面来扩展网站。要和伙伴讨论计划，但还是自己做自己的网站。
+
+          下一关中要做下面三件事。
+
+          1. 创建一个新页面。
+          2. 给新页面命名。
+          3. 将内容放到新页面里。
+
+          新页面要有：
+
+          * 至少一个列表
+          * 至少一个标头
+
+          开始写代码以前，要为网站的主题做个计划。这里有些建议。可以点击每个页面看大点的版本。
+
+          | 配方 |  有趣的事实 | 帮助指南 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 expand project_2018:
         content1: 描述
+        markdown: |
+          # 扩展网站
+
+          下一关中，要制作第二个页面来扩展网站。要和伙伴讨论计划，但还是自己做自己的网站。
+
+          下一关中要做下面三件事。
+
+          1. 创建一个新页面。
+          2. 给新页面命名。
+          3. 将内容放到新页面里。
+
+          新页面要有：
+
+          * 至少一个列表
+          * 至少一个标头
+
+          开始写代码以前，要为网站的主题做个计划。这里有些建议。可以点击每个页面看大点的版本。
+
+          | 配方 |  有趣的事实 | 帮助指南 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 expand project_2018_2019:
         content1: 描述
+        markdown: |
+          # 扩展网站
+
+          下一关中，要制作第二个页面来扩展网站。要和伙伴讨论计划，但还是自己做自己的网站。
+
+          下一关中要做下面三件事。
+
+          1. 创建一个新页面。
+          2. 给新页面命名。
+          3. 将内容放到新页面里。
+
+          新页面要有：
+
+          * 至少一个列表
+          * 至少一个标头
+
+          开始写代码以前，要为网站的主题做个计划。这里有些建议。可以点击每个页面看大点的版本。
+
+          | 配方 |  有趣的事实 | 帮助指南 |
+          |---------|--------------|--------------|
+          | [![](https://images.code.org/fbfd4e89f4b1514845c203550c59bbd1-image-1493419989564.48.07 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/recipe.html) |[![](https://images.code.org/8780832b11e2149848bf944acaf0cd6a-image-1493419989562.47.46 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/candy.html) | [![](https://images.code.org/9cff12744e7036498821e7d59b21f2ba-image-1493419989560.29.25 PM.png)](https://codeprojects.org/rAljwuo4xh2h0bSjxqVdtw/juggle.html) |
       CSD U2 image debug match:
         answers:
         - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34
@@ -851,6 +1142,7 @@ zh-CN:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         content1: 匹配列表和相对应的代码。
+        markdown: " *提示：一些 HTML 列表有错误，想想代码里什么位置造成了这些错误。*\n\n"
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -876,6 +1168,7 @@ zh-CN:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         content1: 匹配列表和相对应的代码。
+        markdown: " *提示：一些 HTML 列表有错误，想想代码里什么位置造成了这些错误。*\n\n"
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -901,6 +1194,7 @@ zh-CN:
         - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
             PM.png
         content1: 匹配列表和相对应的代码。
+        markdown: " *提示：一些 HTML 列表有错误，想想代码里什么位置造成了这些错误。*\n\n"
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
             PM.png
@@ -915,10 +1209,70 @@ zh-CN:
         title: 快速检查列表
       CSD U2 project guide:
         content1: 描述
+        markdown: |
+          # 个人网站
+
+          下面几关中，会完成并发布自己的个人网站。
+
+          在网站上已经完成了很多工作了，现在有机会发挥创意，为自己感兴趣的内容增加新页面。
+
+          这是一些新页面的主意，也可以在老师同意的情况下，做些别的。
+
+          * 电影，电视或书的评论
+          * 最喜欢的节日传统的描述
+          * 解释对你重要的问题的 "原因" 页面
+
+          如果有多个想法，可以为网站加入多个页面。
+
+          项目指南会帮助记录所有要做的事情。确保在进入下一关以前，得到老师的同意。
+
+          ## 示例
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U2 project guide_2018:
         content1: 描述
+        markdown: |
+          # 个人网站
+
+          下面几关中，会完成并发布自己的个人网站。
+
+          在网站上已经完成了很多工作了，现在有机会发挥创意，为自己感兴趣的内容增加新页面。
+
+          这是一些新页面的主意，也可以在老师同意的情况下，做些别的。
+
+          * 电影，电视或书的评论
+          * 最喜欢的节日传统的描述
+          * 解释对你重要的问题的 "原因" 页面
+
+          如果有多个想法，可以为网站加入多个页面。
+
+          项目指南会帮助记录所有要做的事情。确保在进入下一关以前，得到老师的同意。
+
+          ## 示例
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U2 project guide_2018_2019:
         content1: 描述
+        markdown: |
+          # 个人网站
+
+          下面几关中，会完成并发布自己的个人网站。
+
+          在网站上已经完成了很多工作了，现在有机会发挥创意，为自己感兴趣的内容增加新页面。
+
+          这是一些新页面的主意，也可以在老师同意的情况下，做些别的。
+
+          * 电影，电视或书的评论
+          * 最喜欢的节日传统的描述
+          * 解释对你重要的问题的 "原因" 页面
+
+          如果有多个想法，可以为网站加入多个页面。
+
+          项目指南会帮助记录所有要做的事情。确保在进入下一关以前，得到老师的同意。
+
+          ## 示例
+
+          [![](https://images.code.org/77ab5eb6cbec8541f8ec83134fbb2e2d-image-1494627985387.24.43 PM.png)](https://codeprojects.org/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/2e39e80cb5227d908426184019fd6b70-image-1494631930884.23.49 PM.png)](https://codeprojects.org/OhiVQD7XXnijdjNp2yFaIB5fyNDwsp9ymYo7gvEy8qg/)
       CSD U3 - conditionals - Matching:
         answers:
         - text: dog.rotation &lt; cat.rotation
@@ -1071,24 +1425,63 @@ zh-CN:
           * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
           * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
 
+      CSD U3 Defender SFLP:
+        markdown: |
+          # 概述
+
+          本课介绍了在接下来的单元中设计游戏的流程。学生会在一系列的关卡中完成这个过程。作为课程的一部分，学生也会简单的学习使用游戏实验室中的多帧动画。课程的最后，学生有机会创作并改进自己的游戏。
+
+
+          ## 资源
+
+          * [项目指南 - 防守游戏 - 项目指南](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Functions Prediction define first:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 红色正方形会画出来，但绿色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 绿色正方形会画出来，但红色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 两个正方形都会画出来。可以在任何地方创建函数。
+          correct: true
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 没有正方形画出来。代码中有错误。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
       CSD U3 Functions Prediction define first_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 红色正方形会画出来，但绿色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 绿色正方形会画出来，但红色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 两个正方形都会画出来。可以在任何地方创建函数。
+          correct: true
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 没有正方形画出来。代码中有错误。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 红色正方形会画出来，但绿色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 绿色正方形会画出来，但红色的不会。不能在它们创建前调用函数。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 两个正方形都会画出来。可以在任何地方创建函数。
+          correct: true
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+        - text: 没有正方形画出来。代码中有错误。
+          feedback: 函数可以在代码的任何位置创建。但将函数放在下面是比较好的组织方法！
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # 概述
+
+          本课讲述了函数是组织代码的一种方法，能让代码更易阅读，减少重复的代码。学生们会学习一些更高级或更抽象的步骤，这样有助于理解这些步骤的原因，然后在游戏实验室中创建函数。在课程的最后，学生会用学会的知识来为滚动条游戏组织代码并添加新功能。
+          ## 词汇表
+
+          * **函数（function）** - 能够很容易的多次调用的代码段。
+
+          ## 引入的代码
+
+          * [定义函数](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [调用函数](//studio.code.org/docs/gamelab/callMyFunction/)
+
       CSD U3 Keypress Matching:
         answers:
         - text: keyWentDown()
@@ -1339,6 +1732,18 @@ zh-CN:
           * 返回 [12 关](12) 继续编写鱼的动画。试试随机改变鱼的方向，让它们看起来像是在有用。
           * 返回 [13 关](13) 继续齿轮的动画。试试添加更多不同大小的齿轮，并调整它们的转速，来让它们看起来能正确的啮合。
           * 打开 [完整的游戏实验室](/projects/gamelab/new) 来从头创建新的动画。
+      CSD U3 Project Build a Game SFLP:
+        markdown: |
+          # 概述
+
+          在前两节课中，学生根据项目指南，来计划并构建了游戏。独立或结对工作，学生们计划、开发游戏并相互反馈。合并了伙伴的反馈后，学生们会分享出完成的游戏。
+
+
+          ## 资源
+
+          * [制作自己的游戏 - 项目指南](https://docs.google.com/document/d/1SBye25XfdnytxCrc6a_OtpcS02YsT99nyJ9Vjwp_zeo/export?format=pdf)
+          * [制作自己的游戏 - 专栏](https://docs.google.com/document/d/1WChOizSb4gZsEbdER5KwYXj9c6Ogpeuv0AzegJ5HD8A/export?format=pdf)
+          * [制作自己的游戏 - 相互评审](https://docs.google.com/document/d/1ORjDuRep39xwiFaz20_jF74eWB63FVtK2FIQhq7Wecg/export?format=pdf)
       CSD U3 SFLP Velocity:
         markdown: |
           # 概述
@@ -1397,23 +1802,62 @@ zh-CN:
         - text: 当运行时，精灵图 `mySprite` 会在何处？
       CSD U3 Sprites intro predict multi_2018_2019:
         answers:
-        - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/8ca2c292184206f6b197b5818ac2af7c-image-1580245775794.png)"
           correct: true
-        - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
-            style="width: 150px; border: 1px solid">'
-        - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
-            style="width: 150px; border: 1px solid">'
+        - text: "![](https://images.code.org/2176c09b3f0e422581bef15c4e6ec4eb-image-1580245775797.png)"
+        - text: "![](https://images.code.org/62791d20c9fb0acd71ae0d11edfb639b-image-1580245775799.png)"
+        - text: "![](https://images.code.org/3624e09a23ed5409b3dae36e82d79233-image-1580245775795.png)"
         questions:
         - text: 当运行时，精灵图 `mySprite` 会在何处？
+      CSD U3 Using the Game Design Process SLFP:
+        markdown: |
+          # 概述
+
+          在几天的课程中，学生从第一单元开始，使用解决问题的流程来创建平台跳跃游戏。在观看了示例游戏后，学生定义游戏应该是什么样子，并用结构化的方法来创建它。最后，学生会反思游戏时如何改进的，并实现这些改动。
+
+
+          ## 资源
+
+          * [计划平台游戏 - 项目指南](https://docs.google.com/document/d/1-h8vfW6PfppsDKKqVeVDMU6FxbPP8tA1Up_oc5_p9Dk/export?format=pdf)
       CSD U3 combining rep:
         content1: 描述
+        markdown: |+
+          ### 能解码这个二进制字符串吗？
+
+
+
+          # 1000011
+
+
+
+          ### 需要什么样的信息来帮助解码？
+
       CSD U3 combining rep_2018:
         content1: 描述
+        markdown: |+
+          ### 能否解码这个二进制字符串？
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### 什么信息能帮助解码？
+
       CSD U3 combining rep_2018_2019:
         content1: 描述
+        markdown: |+
+          ### 能否解码这个二进制字符串？
+
+
+
+          ![](https://images.code.org/3aa6cac930e44cdc71b8fdcb7b1babe9-image-1531247036544.23.16 AM.png)
+
+
+
+          ### 什么信息能帮助解码？
+
       CSD U3 complex sprite movement SFLP:
         markdown: |+
           # 概述
@@ -1475,44 +1919,596 @@ zh-CN:
         content1: 描述
       CSD U3 platform intro_2018_2019:
         content1: 描述
+      CSD U4L01 SFLP:
+        markdown: |
+          # 概述
+
+          本课会学习，与用户需求产生共鸣，是设计流程中非常重要的部分。然后，会调研一组产品，思考并批判它们是如何满足多种需求的。
+
+          ## 词汇表
+
+          * **批判（critique）** - 明确和有建设性的评价方法。
+          * **共鸣（empathy）** - 在设计产品时，要注意用户的感受和需求。
+          * **用户（user）** - 使用软件或硬件的人。
+
+          ## 资源
+
+          * [确定用户](https://docs.google.com/document/d/1X0qwGigSXa1hq6Q6dws3PxHryGhEyCgkaEHyJCMgvj4/export?format=pdf) - 活动指南
+          * [共鸣的解决问题的过程](https://staging.code.org/curriculum/docs/csd/PSPE.png) - 图片
+      CSD U4L02 SFLP:
+        markdown: |
+          # 概述
+
+          设计者需要理解用户的需求。这节课中，会根据用户资料来扮演另一个人，并使用一系列的产品，从而能思考如何为别人设计产品。
+
+          ## 词汇表
+
+          * **易用性（usability）** - 在使用人造物体或设备（包括软件）时，有多容易、有效并满意。
+
+          ## 资源
+
+          * [像用户一样操作](https://docs.google.com/document/d/1cQXtr4zj3LEuOMoOYJf8KtBUl9ge3qmwBBzEBv8GixA/export?format=pdf) - 活动指南
+
+
+          * [人物简介 1](https://docs.google.com/document/d/1N6Ks8rp6YoLgsbA3FE0x9RatJY3znevnMkMyUN3yRE8/export?format=pdf) - 用户资料
+          * [人物简介 2](https://docs.google.com/document/d/14nHf-TzkKBUC0hvYlcviVe-S9wDdo1TqPUIcnTcHMzw/export?format=pdf) - 用户资料
+          * [人物简介 3](https://docs.google.com/document/d/1Nw_0v_uGCe4J_tcimhyJiWKYgw4jhNgg8qP1zo4GddE/export?format=pdf) - 用户资料
+          * [人物简介 4](https://docs.google.com/document/d/1kRKQYsomhS9UakiDazQ9dXNk8AIWHaq082Y4wBflK34/export?format=pdf) - 用户资料
+      CSD U4L03 SFLP:
+        markdown: |
+          # 概述
+
+          这节课会从头设计一个产品来满足用户需求。有各种方法来做，但前面学过的如何进行头脑风暴并分类想法，是非常有用的方法。
+
+          ## 资源
+
+          * [以用户为中心的设计](https://docs.google.com/document/d/1HxcW76EFNVIJykCVELgjr4WRpFjPgrVvz9tURRR1gWY/export?format=pdf) - 活动指南
+      CSD U4L04 SFLP:
+        markdown: |
+          # 概述
+
+          这节课会学习，什么是应用，以及如何设计应用来满足用户需要。还会学到如何使用原型来创建一部分软件的草稿。
+
+          ## 词汇表
+
+          * **原型（prototype）** - 产品最初或早期的模型，能在开发最终版前用来验证一些想法。
+          * **用户界面（user interface）** - 程序的可见元素，能让用户控制或与应用程序交流。通常缩写为 UI。
+
+
+          ## 资源
+
+          * [用户界面屏幕](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - 活动指南
+          * [用户测试 (计算机)](https://docs.google.com/document/d/1Rtla8WSmJol6sHT5SToep5_hhTM5I8z3UjA7yCap-nw/export?format=pdf) - 活动指南
+          * [用户测试 (用户)](https://docs.google.com/document/d/1IPu6hsHRui_ChXogq0nklAUuPUae2yx0RaADW9b4Nrs/export?format=pdf) - 活动指南
+      CSD U4L05 SFLP:
+        markdown: |
+          # 概述
+
+          这节课会学习如何仔细的阅读产品反馈，从而找到想要表达的需求。然后更新纸面的原型来更好的满足需求。
+
+          ## 资源
+
+          * [用户界面屏幕](https://docs.google.com/document/d/1JOVsR0T5P7zQ6LdxfDjRSsX1EC8xk0TYZKe7X_GjYlk/export?format=pdf) - 活动指南
+          * [原型反馈](https://docs.google.com/document/d/1DzoLUATK8k1lyr_TLhR4mJ5UHLhrZN6-sLRay0tLX4Q/export?format=pdf) - 活动指南
+          * [改进屏幕](https://docs.google.com/document/d/1y0YfE6qZKKlRRpeVGU2d-SuctJP9P5fI2062yo85nZg/export?format=pdf) - 活动指南
+      CSD U4L06 SFLP:
+        markdown: |
+          # 概述
+
+          目前，一直在学习为有些距离的用户来设计产品。无论通过头脑风暴，用户资料，文本反馈，都不是与最终用户的直接联系。这节课中，可以直接采访伙伴，来设计应用满足他们的需求。
+
+          ## 资源
+
+          * [采访用户](https://docs.google.com/document/d/1u3mOVcBHWJpsMJwrvjb4_B8532xg774hkiWPEH7fbqQ/export?format=pdf) - 活动指南
+          * [项目 - 纸面原型](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - 活动指南
+      CSD U4L07 SFLP:
+        markdown: |
+          # 概述
+
+          基于上节课进行的采访，设计一个应用能帮助伙伴，来克服学习新东西时的障碍。
+
+
+          ## 资源
+
+          * [纸面原型规则](https://docs.google.com/document/d/16llO0PF7rJhz_ImtNDAxG3MAt9vU6QVGpDSPGoi_-04/export?format=pdf) - 规则
+          * [项目 - 纸面原型](https://docs.google.com/document/d/12dSfN9z_sEbo41hx4reMUQxl399RjbE5cgCKl0rCHz4/export?format=pdf) - 活动指南
+      CSD U4L08 SFLP:
+        markdown: |+
+          # 概述
+
+          要开始应用的设计项目，学生要分组，并开始探索应用的主题。可以通过几个有社会影响力的应用来获得灵感。
+
+
+          ## 资源
+
+          * [开始应用设计](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - 活动指南
+
+      CSD U4L09 SFLP:
+        markdown: |
+          # 概述
+
+          通过探索已有的，能满足类似用户的应用来开始开发。每个小组都找到了一组应用，这些应用与小组正在进行的主题一样。用这些应用来帮助改进现有的一些想法。
+
+
+          ## 资源
+
+          * [市场调研](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - 活动指南
+      CSD U4L10 SFLP:
+        markdown: |
+          # 概述
+
+          纸面原型能让开发人员在写大量代码前，快速验证想法。在这节课中，小组会探索一些应用实验室已有的示例应用，通过这些来帮助创建第一个纸面原型。
+          ## 词汇表
+
+          * **原型（prototype）** - 产品最初或早期的模型，能在开发最终版前用来验证一些想法。
+
+
+          ## 资源
+
+          * [电话纸面原型](https://drive.google.com/open?id=0B2UNlnU_5Vg4c1VJZ1Zrd0NXUkE) - 模板
+          * [午餐吃什么](https://docs.google.com/drawings/d/12qoCyr8ApVLVT9OlnHpDX7qM5mVopbw7w-0TcxlQd2k) - 原型
+          * [原型头脑风暴](https://docs.google.com/document/d/1t6pRCn-oSUsuQ2rog24KzbbZ7iORothH_Gp1i3Hm8A4/export?format=pdf) - 活动指南
+      CSD U4L11 SFLP:
+        markdown: |
+          # 概述
+
+          本课中，小组会和班级里的其他人一起测试纸面原型。一个学生会扮演计算机，一个叙述，剩下的人观察。小组会立刻得到应用设计上的反馈，这会应用到下一版的原型上。
+
+
+          ## 资源
+
+          * [纸面原型用户测试](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - 活动指南
+          * [什么是午餐测试](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - 视频
+      CSD U4L12 SFLP:
+        markdown: |
+          # 概述
+
+          在纸面原型上经过开发、测试和收集反馈，小组现在要在应用实验室上进行应用的下一次迭代。使用设计模式中的拖放功能，每个小组成员都可以为团队应用制作出至少一个页面，对上一轮测试中收到的反馈做出响应。
+
+
+          ## 资源
+
+          * [屏幕的主人](https://docs.google.com/document/d/1eAl3Gpi1iLLOMjaO44-w2dUuJvHEzGVPrIDxpP4rkW4/export?format=pdf) - 活动指南
+          * [屏幕设计](https://docs.google.com/document/d/1dtMInlgLRk_DUZwpqF6KF8TvGUJNp-vWFYYU4wG-ZLc/export?format=pdf) - 活动指南
+      CSD U4L13 SFLP:
+        markdown: |+
+          # 概述
+
+          在上节课构建的屏幕上，小组会将屏幕组合成一个应用。可以加一些简单的代码能让按钮在点击后到达合适的屏幕。
+
+          ## 引入的代码
+
+          * [onEvent](//studio.code.org/docs/applab/onEvent/)
+          * [setScreen](//studio.code.org/docs/applab/setScreen/)
+
+      CSD U4L15 SFLP:
+        markdown: |
+          # 概述
+
+          小组进入了新的一轮用户测试，这次会有可交互的原型。从这轮收集的反馈会影响原型的最后一次迭代。
+
+          ## 资源
+
+          * [应用用户测试](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf) - 活动指南
+      CSD U4L16 SFLP:
+        markdown: |
+          # 概述
+
+          通过上一轮测试的反馈，小组实现了改动，并满足了用户的需求。每个小组对于要添加的功能和要修复的缺陷，都要进行跟踪并设置优先级。
+          ## 词汇表
+
+          * **缺陷（bug）** - 程序中不能正常工作的部分。
+          * **功能（feature）** - 软件的一个功能元素。它可以实现新的东西，或者支持更多平台，或提高效率。
+
+          ## 资源
+
+          * [应用的用户测试分析](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - 活动指南
+      CSD U4L17 SFLP:
+        markdown: |
+          # 概述
+
+          每个小组都要准备演示来 "推销" 自己开发的应用。这是分享奋斗、胜利，为下一步做计划的时刻。
+
+          ## 资源
+
+          * [应用演示模板](https://docs.google.com/presentation/d/19KVEybGqu6pdFB3QwjvJNA_VTM5W5Kxy3fUlxf1xnc4/edit) - 幻灯片
+          * [应用演示模板](https://docs.google.com/presentation/d/1qRbnSABMrfeZHUiQ_mGdhzW7UIGuiGiWyMcQK_pH-tY/edit) - 示例
+          * [应用演示模板](https://docs.google.com/document/d/1RVmBL9jCfG2QJXyEiya4w9dSBluRxinEOKBZLicv4lg/export?format=pdf) - 规则
       CSD U5 Encryption 1:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 编码系统：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 编码系统：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 1_2018_2019:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/6d8dcf1c1e6c2955fa767e9839af820e-image-1505420730035.24.20 PM.png)
+
+          ## 编码系统：
+
+          ![](https://images.code.org/df5db2027cac3c16c4ef4b2b8f940d5d-image-1505420957117.28.48 PM.png) ![](https://images.code.org/4de0035c9053477fa6f5484800dc8140-image-1505420957118.28.39 PM.png)
+
+          ![](https://images.code.org/8335bef013e9655291fcfecf2c60fcd3-image-1505420957118.28.30 PM.png)  &nbsp;&nbsp; ![](https://images.code.org/ab3337f5b0848557c37fd114fe0d65b7-image-1505420957116.28.56 PM.png)
       CSD U5 Encryption 2:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 能否解码这个二进制字符串？
+          * 解码前需要知道什么？
       CSD U5 Encryption 2_2018:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 能否解码这个二进制字符串？
+          * 解码前需要知道什么？
       CSD U5 Encryption 2_2018_2019:
         content1: 描述
+        markdown: |
+          # 解码二进制字符串
+
+          ![](https://images.code.org/8d98818a95a736974cb4e6e5ab3717f4-image-1514928554045.24.20 PM.png)
+
+          * 能否解码这个二进制字符串？
+          * 解码前需要知道什么？
       CSD U5 L13 SFLP Interpreting Data:
         content1: 描述
+        markdown: |
+          # 概述
+
+          通过找到两种不同类型数据间的相关性，来进一步了解数据解释。看看找到数据间的关系是如何帮助解决问题的。
+
+          ## 资源
+
+          * [表示数据](https://docs.google.com/document/d/1JZJ5-kZoHb6xI7B4Ua5EHwaS1UiLoeM8i6YUNAAbaEM/export?format=pdf) - 活动指南
+          * [表示数据](https://docs.google.com/document/d/1YCqOxw4u8m142zaIVdUk4eBn8VnJBpkMzr4uEaDq2pM/export?format=pdf) - 资源
       CSD U5 crosstab warmup:
         content1: 描述
+        markdown: |+
+          # 蛋糕问卷
+
+          这个问卷里，人们选择了蛋糕和糖霜的口味。
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">蛋糕口味</td><td style="width: 200px; background-color: gray; color:white">糖霜口味</td></tr>
+          <tr><td>1</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>2</td><td>红天鹅绒蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>3</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>4</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>5</td><td>胡萝卜蛋糕</td><td>香草糖霜</td></tr>
+          <tr><td>6</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>7</td><td>巧克力蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>8</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          </table>
+          <br><br>
+
+          如果人们必须为派对选出一种蛋糕和糖霜的组合，应该选什么？
+
+          如果能选择两种，应该怎么做？
+
+          知道这两种选择后，如何帮助决定订购什么样的蛋糕？
+
       CSD U5 crosstab warmup_2018:
         content1: 描述
+        markdown: |+
+          # 蛋糕问卷
+
+          这个问卷里，人们选择了蛋糕和糖霜的口味。
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">蛋糕口味</td><td style="width: 200px; background-color: gray; color:white">糖霜口味</td></tr>
+          <tr><td>1</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>2</td><td>红天鹅绒蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>3</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>4</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>5</td><td>胡萝卜蛋糕</td><td>香草糖霜</td></tr>
+          <tr><td>6</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>7</td><td>巧克力蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>8</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          </table>
+          <br><br>
+
+          如果人们必须为派对选出一种蛋糕和糖霜的组合，应该选什么？
+
+          如果能选择两种，应该怎么做？
+
+          知道这两种选择后，如何帮助决定订购什么样的蛋糕？
+
       CSD U5 crosstab warmup_2018_2019:
         content1: 描述
+        markdown: |+
+          # 蛋糕问卷
+
+          这个问卷里，人们选择了蛋糕和糖霜的口味。
+
+          <table style="text-align: center; border: solid 1px darkgray;">
+          <tr><td style="width: 50px; background-color: gray; color:white"></td><td style="width: 200px; background-color: gray; color:white">蛋糕口味</td><td style="width: 200px; background-color: gray; color:white">糖霜口味</td></tr>
+          <tr><td>1</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>2</td><td>红天鹅绒蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>3</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>4</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>5</td><td>胡萝卜蛋糕</td><td>香草糖霜</td></tr>
+          <tr><td>6</td><td>巧克力蛋糕</td><td>巧克力糖霜</td></tr>
+          <tr><td>7</td><td>巧克力蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          <tr><td>8</td><td>胡萝卜蛋糕</td><td>奶油乳酪糖霜</td></tr>
+          </table>
+          <br><br>
+
+          如果人们必须为派对选出一种蛋糕和糖霜的组合，应该选什么？
+
+          如果能选择两种，应该怎么做？
+
+          知道这两种选择后，如何帮助决定订购什么样的蛋糕？
+
       CSD U5 data visualization:
         content1: 描述
+        markdown: |
+          ## 班级最佳宠物
+          ### 有三种不同的方法来显示班级最佳宠物的投票结果。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 哪种方法对于人来说，是最容易决定哪个宠物是最受欢迎的？
+          ### 那种对于计算机最容易做出决定？
       CSD U5 data visualization_2018:
         content1: 描述
+        markdown: |
+          ## 班级最佳宠物
+          ### 有三种不同的方法来显示班级最佳宠物的投票结果。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 哪种方法对于人来说，是最容易决定哪个宠物是最受欢迎的？
+          ### 那种对于计算机最容易做出决定？
       CSD U5 data visualization_2018_2019:
         content1: 描述
+        markdown: |
+          ## 班级最佳宠物
+          ### 有三种不同的方法来显示班级最佳宠物的投票结果。
+
+          ![](https://images.code.org/7c9f4de7b0028ab929a3a10494535525-image-1488389767180.png) ![](https://images.code.org/7e14d63776050e7aad994ee2e47cb7ce-image-1488389776283.png) ![](https://images.code.org/cf0dd06d2e0ccdf9573e204d24aad90a-image-1488389830915.png)
+
+
+          ### 哪种方法对于人来说，是最容易决定哪个宠物是最受欢迎的？
+          ### 那种对于计算机最容易做出决定？
       CSD U5 student record:
         content1: 描述
+        markdown: "# 学生记录\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 学生记录用下列规则来保存：\n\n * <h4>前 8 位比特用二进制数字表示学生的年级。</h4>\n
+          * <h4>随后 8 位用二进制数字保存学生年龄。</h4>\n * <h4>接下来的 8 位用 ASCII 保存学生名字的首字母。</h4>\n
+          * <h4>最后 8 位用 ASCII 保存学生姓氏的首字母。</h4>\n\n<br />\n<br />\n"
       CSD U5 student record_2018:
         content1: 描述
+        markdown: "# 学生记录\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 学生记录用下列规则来保存：\n\n * <h4>前 8 位比特用二进制数字表示学生的年级。</h4>\n
+          * <h4>随后 8 位用二进制数字保存学生年龄。</h4>\n * <h4>接下来的 8 位用 ASCII 保存学生名字的首字母。</h4>\n
+          * <h4>最后 8 位用 ASCII 保存学生姓氏的首字母。</h4>\n\n<br />\n<br />\n"
       CSD U5 student record_2018_2019:
         content1: 描述
+        markdown: "# 学生记录\n\n<div style=\"float: right; height:209px; width: 456px;
+          background-color: black;\">\n  <div style=\"float:left; height:52px; width:
+          40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">0</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">1</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:52px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">2</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  \n  <div style=\"float:left; height:53px;
+          width: 40px; background-color: white; margin:0px; line-height: 50px; text-align:
+          center;font-size: 20px;\">3</div>\n  <div style=\"float:left; height:50px;
+          width: 50px; height: 50px; background-color: gray; margin:1px;\"></div>\n
+          \ <div style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          white; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: white; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n  <div style=\"float:left; height:50px; width:
+          50px; height: 50px; background-color: gray; margin:1px;\"></div>\n  <div
+          style=\"float:left; height:50px; width: 50px; height: 50px; background-color:
+          gray; margin:1px;\"></div>\n</div>\n\n## 学生记录用下列规则来保存：\n\n * <h4>前 8 位比特用二进制数字表示学生的年级。</h4>\n
+          * <h4>随后 8 位用二进制数字保存学生年龄。</h4>\n * <h4>接下来的 8 位用 ASCII 保存学生名字的首字母。</h4>\n
+          * <h4>最后 8 位用 ASCII 保存学生姓氏的首字母。</h4>\n\n<br />\n<br />\n"
       CSD U6 LED create intro:
         content1: 描述
+        markdown: |
+          # LED 应用
+
+          上一关中，制作了能用屏幕上不同按钮控制 LED 的应用。接下来的两关中，会看到一些其它应用的例子，然后有机会做出自己的应用。
+
+          当查看示例时，想想什么样的代码，可能对你和伙伴要创建的应用有用。
       CSD U6 LED create intro_2018:
         content1: 描述
+        markdown: |
+          # LED 应用
+
+          上一关中，制作了能用屏幕上不同按钮控制 LED 的应用。接下来的两关中，会看到一些其它应用的例子，然后有机会做出自己的应用。
+
+          当查看示例时，想想什么样的代码，可能对你和伙伴要创建的应用有用。
       CSD U6 LED create intro_2018_2019:
         content1: 描述
+        markdown: |
+          # LED 应用
+
+          上一关中，制作了能用屏幕上不同按钮控制 LED 的应用。接下来的两关中，会看到一些其它应用的例子，然后有机会做出自己的应用。
+
+          当查看示例时，想想什么样的代码，可能对你和伙伴要创建的应用有用。
       CSD U6 array multi:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -1524,8 +2520,11 @@ zh-CN:
         - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png,200px
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
+        title: 使用数组
       CSD U6 array multi_2018:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -1537,8 +2536,11 @@ zh-CN:
         - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png,200px
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
+        title: 使用数组
       CSD U6 array multi_2018_2019:
         answers:
         - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
@@ -1550,14 +2552,122 @@ zh-CN:
         - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png,200px
           correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
         questions:
         - text: 当左侧的代码运行时，应用实验室将显示什么内容？
+        title: 使用数组
+      CSD U6 circuit smart bike blinker build:
+        markdown: |
+          # 创建自己的闪光灯
+
+          用刚刚构建的电路，返回到智能自行车原型，并添加闪光灯。
+      CSD U6 circuit smart bike blinker build_2018:
+        markdown: |
+          # 创建自己的闪光灯
+
+          用刚刚构建的电路，返回到智能自行车原型，并添加闪光灯。
+      CSD U6 circuit smart bike blinker build_2018_2019:
+        markdown: |
+          # 创建自己的闪光灯
+
+          用刚刚构建的电路，返回到智能自行车原型，并添加闪光灯。
       CSD U6 final intro:
         content1: 描述
+        markdown: |
+          # 为自己的创新构建原型
+
+          现在已经学会了所有的技巧，该创作自己的游戏了！
+
+          与伙伴或小组头脑风暴一下，想一些能制作原型的物理设备。可以基于前面课程的程序，真实场景中见过的创新设备，或者任何疯狂的想法。
+
+          一旦和小组达成了共识，填写项目指南中的设备草图，需要的输入输出，计划需要处理的信息。
+
+          ## 创新的想法
+
+          为了帮助看展头脑风暴，可看看下面的示例项目：
+
+          ### 自动小夜灯
+
+          使用导线、LED 灯、和光纤传感器，创作小夜灯，熄灭后还可以当作墙面艺术装饰。这样的设计看起来像闪烁的萤火虫。
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### 乐器
+
+          设计能随意演奏的乐器，用传感器或按钮作为输入。在这个案例中，用导电的铜带做了 5 个新按钮，也可以用铝箔或其他导电物质。
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### 敲敲它
+
+          做个游戏！这个游戏使用数组来存放不同的命令，随机取出一个，并需要根据屏幕做出正确的指令。
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018:
         content1: 描述
+        markdown: |
+          # 为自己的创新构建原型
+
+          现在已经学会了所有的技巧，该创作自己的游戏了！
+
+          与伙伴或小组头脑风暴一下，想一些能制作原型的物理设备。可以基于前面课程的程序，真实场景中见过的创新设备，或者任何疯狂的想法。
+
+          一旦和小组达成了共识，填写项目指南中的设备草图，需要的输入输出，计划需要处理的信息。
+
+          ## 创新的想法
+
+          为了帮助看展头脑风暴，可看看下面的示例项目：
+
+          ### 自动小夜灯
+
+          使用导线、LED 灯、和光纤传感器，创作小夜灯，熄灭后还可以当作墙面艺术装饰。这样的设计看起来像闪烁的萤火虫。
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### 乐器
+
+          设计能随意演奏的乐器，用传感器或按钮作为输入。在这个案例中，用导电的铜带做了 5 个新按钮，也可以用铝箔或其他导电物质。
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### 敲敲它
+
+          做个游戏！这个游戏使用数组来存放不同的命令，随机取出一个，并需要根据屏幕做出正确的指令。
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 final intro_2018_2019:
         content1: 描述
+        markdown: |
+          # 为自己的创新构建原型
+
+          现在已经学会了所有的技巧，该创作自己的游戏了！
+
+          与伙伴或小组头脑风暴一下，想一些能制作原型的物理设备。可以基于前面课程的程序，真实场景中见过的创新设备，或者任何疯狂的想法。
+
+          一旦和小组达成了共识，填写项目指南中的设备草图，需要的输入输出，计划需要处理的信息。
+
+          ## 创新的想法
+
+          为了帮助看展头脑风暴，可看看下面的示例项目：
+
+          ### 自动小夜灯
+
+          使用导线、LED 灯、和光纤传感器，创作小夜灯，熄灭后还可以当作墙面艺术装饰。这样的设计看起来像闪烁的萤火虫。
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### 乐器
+
+          设计能随意演奏的乐器，用传感器或按钮作为输入。在这个案例中，用导电的铜带做了 5 个新按钮，也可以用铝箔或其他导电物质。
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### 敲敲它
+
+          做个游戏！这个游戏使用数组来存放不同的命令，随机取出一个，并需要根据屏幕做出正确的指令。
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
       CSD U6 setProperty predict multi:
         answers:
         - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
@@ -1566,7 +2676,7 @@ zh-CN:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: 阅读代码，并预测当应用运行起来，看起来会是什么样子。
         title: 猜测一下
       CSD U6 setProperty predict multi_2018:
         answers:
@@ -1576,7 +2686,7 @@ zh-CN:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: 阅读代码，并预测当应用运行起来，看起来会是什么样子。
         title: 猜测一下
       CSD U6 setProperty predict multi_2018_2019:
         answers:
@@ -1586,8 +2696,249 @@ zh-CN:
         - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
           correct: true
         questions:
-        - {}
+        - text: 阅读代码，并预测当应用运行起来，看起来会是什么样子。
         title: 猜测一下
+      CSD-U5-SFLP ASCII and Binary Representation:
+        markdown: "# 概述\n\n学习 ASCII 系统如何使用开关模式来表达字母，然后用它来创造自己的能表达字母表的二进制系统。 \n\n##
+          词汇表\n\n* **ASCII** - 美国信息交换标准代码（American Standard Code for Information Interchange）。ASCII
+          是任何计算机都认可并理解的原始的文本格式。\n* **二进制（binary）** - 只用两个选项表达信息的一种方法。\n* **比特（bit）**
+          - \"二进制数字（Binary Digit）\" 的缩写。一个比特是计算机上信息的最小单元，一般用 0 或 1 来表示。\n\n## 资源\n\n*
+          [ASCII - 活动指南](https://docs.google.com/document/d/1zg1hNebVEGMbIepFS1pGqS-QqAyzENjP9F59UqXwDzI/export?format=pdf)\n"
+      CSD-U5-SFLP Automating Data Decisions:
+        markdown: |
+          # 概述
+
+          将看到的示例说明了，如何使用计算机从根本上解决数据问题时，其中的每个步骤。可以创建计算机能够自动做决定的规则或算法。
+
+          ## Resources
+
+          * [自动的数据决策](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=pdf) - 资源 (版本 [MS Word](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/export?format=doc), [Google Doc](https://docs.google.com/document/d/1BaqqDWT1Y0cA80ytaXOfB8RbnVpMsqQ4K7KU_kX__gs/copy))
+          * [自动的数据决策](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=pdf) - 活动指南 (版本 [MS Word](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/export?format=doc), [Google Doc](https://docs.google.com/document/d/1ww7OiPAWu03K2C3c5LKbUm_Opkz9x0lZfizA_uJ7JsI/copy))
+      CSD-U5-SFLP Combining Representations:
+        markdown: |
+          # 概述
+
+          课程将组合三种二进制表示系统（ASCII 字符，二进制数字和图片）来在一条记录中编码更复杂的信息类型。拿到一些比特，并解密它们后，学生会学习到一种思想，即理解二进制的信息，必须理解被使用的编码系统，还要理解编码的信息的意义。
+
+
+          ## 资源
+
+          * [宠物记录 - 活动指南](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf)
+          * [ASCII 到二进制表格 - 参考](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf)
+      CSD-U5-SFLP Create a Representation:
+        markdown: |
+          # 概述
+
+          用这章学会的二进制表达系统，来设计一个结构，表达完美的一天。需要用到 ASCII，二进制数字和图片来设计打卡格式。
+
+          ## 资源
+
+          * [创建表示 - 项目指南](https://docs.google.com/document/d/1JAjFoPRfZF1V5WZqrdusZ_qjGWblaqTL-_l5jmaPhf0/export?format=pdf)
+      CSD-U5-SFLP Interpreting Data:
+        markdown: |
+          # 概述
+
+          通过清理并可视化原始数据，来进一步了解数据的结构。了解可视化是如何改变理解数据、做出决定的方法。
+
+          ## 资源
+
+          * [结构化数据](https://docs.google.com/document/d/1z2ocdwgBgWLeAG3IHhKvNHEVtyGrLePsmDg2liFkJ9Y/export?format=pdf) - 活动指南
+      CSD-U5-SFLP Making Decisions with Data:
+        markdown: |
+          # 概述
+
+          本课会练习用数据来解决一些感觉熟悉的问题。
+
+          ## Resources
+
+          * [用数据做决定](https://docs.google.com/document/d/1ByeV-Q0e0VsgphCoVUZOxol0Fp2ArrsyV3rH8djnllg/export?format=pdf) - 活动指南
+      CSD-U5-SFLP Patterns and Representation:
+        markdown: |
+          # 概述
+
+          课程会详细介绍创建表示系统需要些什么。小组们会创建一个系统，能只用一堆卡片就能表示字母表里的任何字母，然后用这个系统来创造消息，并与其他组交换信息，来确保系统能够按照设计工作。学生会讨论能工作的系统之间的共性，并认识到会有很多种可行的方案。
+          ## 词汇表
+
+          * **解码（decode）** - 将信息变换一种表达方式，以便人可以阅读
+          * **编码（encode）** - 将信息变换一种表达方式，以便计算机可以阅读
+
+
+          ## 资源
+
+          * [表示信息](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=pdf) - 活动指南 (复制为 [MS Word](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/export?format=doc), [Google 文档](https://docs.google.com/document/d/1emQKHuyzXvzg3cShX88CH8r8kMXInjItRIu9PdrfRpI/copy))
+      CSD-U5-SFLP Problem Solving and Data:
+        markdown: |
+          # 概述
+
+          用解决问题的流程，来帮助解决数据问题。
+
+          ## 资源
+
+          * [数据和解决问题](https://docs.google.com/document/d/1_5JzwIIl8u72QJq_dFpFPnVcNREBc3UHtQtObkwgckw/export?format=pdf) - 活动指南
+      CSD-U5-SFLP Problem Solving with Big Data:
+        markdown: |
+          # 概述
+
+          课程涵盖了数据是如何被组织来搜索并使用，从而能解决现实世界中的问题。学生们会观看三个用数据能解决的问题场景，并通过头脑风暴来怎样收集并使用不同类型的数据，来解决问题。每个场景都包括一个真实世界的视频，用数据解决了类似的问题。
+
+
+          ## 资源
+
+          * [真实世界中的数据](https://docs.google.com/document/d/10MwyEV-wgpE6tHZxi-d9SQKrTPoz8J-QwmND8rn-m2I/export?format=pdf) - 活动指南
+      CSD-U5-SFLP Representation Matters:
+        markdown: |
+          # 概述
+
+          首先了解信息如何表达的重要性，以及如何影响做决策。你需要帮助人们确定他们应该吃什么。
+
+          ## 资源
+
+          * [表达的重要性 - 活动指南](https://docs.google.com/document/d/1wU8QANCmyz_DiJf2vdg2QPqKHq1YE0XDLGJmEsbKfiU/export?format=pdf)
+      CSD-U5-SFLP Representing Images:
+        markdown: |+
+          # 概述
+
+          学习上节课了解的开关模式，是如何用来表示图片。在此过程中，会探索已了解的标识系统的属性，是如何应用到图像上的。
+
+          ## 词汇表
+
+          * **像素（pixel）** - 这是 "图片元素（picture element）" 的缩写，是数字图片的基本单元，一般表示一张大一些图片中的一个非常小的正方形或点的颜色。
+
+
+      CSD-U5-SFLP Representing Numbers Part 1:
+        markdown: |
+          # 概述
+
+          本课介绍了二进制数字系统。用一组卡片来表示二进制数字系统的数值，学生会将通过将卡片朝上或朝下来表示比特的 "开" 或 "关"，然后观察不同的图形表示的数字是多少。最后，这些图形会扩展到更通用的 4 比特系统。
+
+          ## 资源
+          * [表示数字 - 活动指南](https://docs.google.com/document/d/1Bv2q50lF0wxx9D9n5JzsKFKXXmP8-p6LInO29Lm3Plk/export?format=pdf)
+          * [数字卡片 - 可操作](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf)
+      CSD-U5-SFLP Representing Numbers Part 2:
+        markdown: |
+          # 概述
+
+          本课会解决如何在其他人能看到的时候，为数据保密的问题。学生会了解为表情符号编码的方法，然后学会用关键词给自己的表情消息加密。
+
+
+          ## 资源
+
+          * [数据保密 - 活动指南](https://docs.google.com/document/d/1i_s3XXcwG8QpE7dk7GfYkfcekGKTqpD0AOs1ZLvcnco/export?format=pdf)
+      CSD-U5-SFLP Solve a Data Problem:
+        markdown: |
+          # 概述
+
+          本单元中，需要设计一种方法，使用数据来进行推荐或预测，帮助解决选择的问题。
+
+          ## 资源
+
+          * [进行推荐](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - 项目指南
+          * [进行推荐](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - 相互评审
+      CSDU6 Innovation:
+        markdown: |+
+          # 创新研究
+
+          从下列主题中选择一个进行调查。可以找到此类的最新的创新计算设备。
+
+          ## 可穿戴技术
+          可穿戴技术包括让用户穿戴的各种形式计算，无论是嵌入到衣服中还是作为附件穿戴。许多可穿戴设备（例如智能计步器）在一定程度上与健康和安全领域重叠，因为该设备既可穿戴也可帮助改善个人健康。
+
+          ## 健康和安全
+          这个广泛的主题不仅包括消费者的技术（个人用来提高健康或安全），也包括专业技术（供医生或专业人员使用）。
+
+          ## 农业
+          农业可能不是一个明显的技术话题，但技术创新已经深入影响了农业生产。包括将计算机整合进现有的农业设备，使用传感器和机器人来监控农作物，分析数据来提高效率和可持续性。
+
+          ## 制造
+          快速原型制作，工业机器人和自动化方面的进步，已对商品生产产生了重大影响。无论是进行低成本的小规模制造（例如3D打印机和激光切割机），还是将计算机集成到工厂工作中，都有许多有趣的领域需要研究。
+
+          ## 艺术和设计
+          艺术的表达力和计算的交叉，产生了令人印象深刻，而又出乎意料的结果。可能不太容易找到与艺术和设计相关的商品，但会发现有各种自制的作品，它们用有创造性和表现力的方法来使用计算设备。
+
+          ## 智能家居
+          能够理解甚至预测人们需求的房屋的梦想快要实现了。无论是通过语音命令来明确控制，还是通过传感器来监视并响应条件变化，智能家居设备可以处理房屋能数量繁多而又重复的任务。
+
+
+          # 研究考虑
+
+          在研究有关主题的设备时，请记住以下注意事项：
+
+          * 聚焦于基于硬件的解决方案，而不仅仅是软件程序
+          * 聚焦于最近的创新，而不仅是旧新闻
+          * 跟随自己的兴趣
+
+          除了为每个主题推荐的站点列表，也可以看看一些众筹网站（例如，Kickstarter 和 Indiegogo），看一些刚刚开始成型的产品。
+
+      CSDU6 Innovation_2018:
+        markdown: |+
+          # 创新研究
+
+          从下列主题中选择一个进行调查。可以找到此类的最新的创新计算设备。
+
+          ## 可穿戴技术
+          可穿戴技术包括让用户穿戴的各种形式计算，无论是嵌入到衣服中还是作为附件穿戴。许多可穿戴设备（例如智能计步器）在一定程度上与健康和安全领域重叠，因为该设备既可穿戴也可帮助改善个人健康。
+
+          ## 健康和安全
+          这个广泛的主题不仅包括消费者的技术（个人用来提高健康或安全），也包括专业技术（供医生或专业人员使用）。
+
+          ## 农业
+          农业可能不是一个明显的技术话题，但技术创新已经深入影响了农业生产。包括将计算机整合进现有的农业设备，使用传感器和机器人来监控农作物，分析数据来提高效率和可持续性。
+
+          ## 制造
+          快速原型制作，工业机器人和自动化方面的进步，已对商品生产产生了重大影响。无论是进行低成本的小规模制造（例如3D打印机和激光切割机），还是将计算机集成到工厂工作中，都有许多有趣的领域需要研究。
+
+          ## 艺术和设计
+          艺术的表达力和计算的交叉，产生了令人印象深刻，而又出乎意料的结果。可能不太容易找到与艺术和设计相关的商品，但会发现有各种自制的作品，它们用有创造性和表现力的方法来使用计算设备。
+
+          ## 智能家居
+          能够理解甚至预测人们需求的房屋的梦想快要实现了。无论是通过语音命令来明确控制，还是通过传感器来监视并响应条件变化，智能家居设备可以处理房屋能数量繁多而又重复的任务。
+
+
+          # 研究考虑
+
+          在研究有关主题的设备时，请记住以下注意事项：
+
+          * 聚焦于基于硬件的解决方案，而不仅仅是软件程序
+          * 聚焦于最近的创新，而不仅是旧新闻
+          * 跟随自己的兴趣
+
+          除了为每个主题推荐的站点列表，也可以看看一些众筹网站（例如，Kickstarter 和 Indiegogo），看一些刚刚开始成型的产品。
+
+      CSDU6 Innovation_2018_2019:
+        markdown: |+
+          # 创新研究
+
+          从下列主题中选择一个进行调查。可以找到此类的最新的创新计算设备。
+
+          ## 可穿戴技术
+          可穿戴技术包括让用户穿戴的各种形式计算，无论是嵌入到衣服中还是作为附件穿戴。许多可穿戴设备（例如智能计步器）在一定程度上与健康和安全领域重叠，因为该设备既可穿戴也可帮助改善个人健康。
+
+          ## 健康和安全
+          这个广泛的主题不仅包括消费者的技术（个人用来提高健康或安全），也包括专业技术（供医生或专业人员使用）。
+
+          ## 农业
+          农业可能不是一个明显的技术话题，但技术创新已经深入影响了农业生产。包括将计算机整合进现有的农业设备，使用传感器和机器人来监控农作物，分析数据来提高效率和可持续性。
+
+          ## 制造
+          快速原型制作，工业机器人和自动化方面的进步，已对商品生产产生了重大影响。无论是进行低成本的小规模制造（例如3D打印机和激光切割机），还是将计算机集成到工厂工作中，都有许多有趣的领域需要研究。
+
+          ## 艺术和设计
+          艺术的表达力和计算的交叉，产生了令人印象深刻，而又出乎意料的结果。可能不太容易找到与艺术和设计相关的商品，但会发现有各种自制的作品，它们用有创造性和表现力的方法来使用计算设备。
+
+          ## 智能家居
+          能够理解甚至预测人们需求的房屋的梦想快要实现了。无论是通过语音命令来明确控制，还是通过传感器来监视并响应条件变化，智能家居设备可以处理房屋能数量繁多而又重复的任务。
+
+
+          # 研究考虑
+
+          在研究有关主题的设备时，请记住以下注意事项：
+
+          * 聚焦于基于硬件的解决方案，而不仅仅是软件程序
+          * 聚焦于最近的创新，而不仅是旧新闻
+          * 跟随自己的兴趣
+
+          除了为每个主题推荐的站点列表，也可以看看一些众筹网站（例如，Kickstarter 和 Indiegogo），看一些刚刚开始成型的产品。
+
       Dance_Party_extras_intro:
         markdown: |
           # 继续跳舞！
@@ -2022,6 +3373,101 @@ zh-CN:
           # 远离网络欺凌
 
           今天你将学习，如果网络上有些事情使您感到愤怒，悲伤或害怕，该怎么做。
+      Social Sleuth:
+        markdown: |+
+          # 社交侦探
+
+          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
+
+          ## 资料
+
+          点击图片来打开每个资料。
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+      Social Sleuth_2018:
+        markdown: |+
+          # 社交侦探
+
+          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
+
+          ## 资料
+
+          点击图片来打开每个资料。
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+      Social Sleuth_2018_2019:
+        markdown: |+
+          # 社交侦探
+
+          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
+
+          ## 资料
+
+          点击图片来打开每个资料。
+
+          ### FaceSpace
+
+          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
+
+
+          ### Chirpr
+
+          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
+
+
+          ### instantframe
+
+          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
+          | ---------  | ------ |  ------ |
+          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
+
+      Songwriting-Unplugged:
+        markdown: |
+          # 写歌
+
+          用歌曲中副歌的概念，来学习定义和调用函数。
       'Technique: Frequency Analysis':
         content1: 描述
       Terminology Recap:
@@ -2458,7 +3904,8 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
         questions:
-        - {}
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
@@ -2471,7 +3918,8 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
         questions:
-        - {}
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
       courseD_multi_bee_conditionals1_predict1_2018_2019:
         answers:
         - text: '蜜蜂会移动到云中，然后采花粉，不论云下是什么。 '
@@ -2484,7 +3932,8 @@ zh-CN:
         - text: 我不知道。
           feedback: 错误。积木块“如果在花里”能确保，如果云下有花朵的话，蜜蜂只会采花粉。
         questions:
-        - {}
+        - text: 云挡住了视线。在这朵云下可能有花。如果有 1 朵花，蜜蜂将需要收集 1 次花粉。如果没有花，蜜蜂就什么也不做。仔细查看下面的代码，在点击
+            “运行” 后会发生什么？
       courseD_multi_bee_conditionals7_predict2:
         answers:
         - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
@@ -2497,7 +3946,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         questions:
-        - {}
+        - text: 仔细查看下面的代码，在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
@@ -2510,7 +3959,7 @@ zh-CN:
         - text: 我不知道。
           feedback: 积木块“如果在花里”可以让蜜蜂得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
         questions:
-        - {}
+        - text: 仔细查看下面的代码，在点击 “运行” 后会发生什么？记住：每朵云下，蜜蜂要么酿 *一次* 蜂蜜，要么采 *一次* 花蜜。
       courseD_multi_bee_conditionals7_predict2_2018_2019:
         answers:
         - text: 蜜蜂将会得到每朵花的花粉，并在每个蜂窝中制作蜂蜜。
@@ -2566,51 +4015,75 @@ zh-CN:
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: 我不知道。
+          feedback: 蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         questions:
         - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: 我不知道。
+          feedback: 蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         questions:
         - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: '8'
           correct: true
           feedback: 叮咚！答对啦！
         - text: '12'
+          feedback: 错误。蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         - text: 我不知道。
+          feedback: 蜜蜂在向前移动的循环中采集了 2 个花蜜，接着在下面循环中收集了 2 个花蜜。 这两个循环在最外面循环的内部，被运行了两次。
+            4 乘以 2 等于 8！
         questions:
         - text: 仔细查看下面的代码。当你点击 "运行" 后，蜜蜂会采集多少蜂蜜？
       courseD_multi_collector_debugging10_predict1:
         answers:
-        - feedback: 错误。这个答案部分正确，循环没有运行足够多次数来获得所有的宝贝。
-        - {}
-        - correct: true
+        - text: 在画正方形时，罗瑞尔转向了错误的方向。
+          feedback: 错误。这个答案部分正确，循环没有运行足够多次数来获得所有的宝贝。
+        - text: '循环没有运行足够的次数，来让罗瑞尔获得所有的宝藏。 '
+          feedback: 错误。对了一部分，但蜜蜂在试着画正方形时，也转到了错误的路上。
+        - text: 罗瑞尔转到了错误的路上，*并且* 循环数量不够让罗瑞尔获得所有的宝藏。
+          correct: true
           feedback: 叮咚！答对啦！
         - text: 我不知道。
+          feedback: 罗瑞尔转到了错误的路上，*并且* 循环数量不够让罗瑞尔获得所有的宝藏。
         questions:
-        - {}
+        - text: 仔细看看下面的代码。为什么在点击 "运行" 后，罗瑞尔不能收集到所有的宝藏？警告：这是一个棘手的问题，确保在回答前阅读了所有的选项！
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: 收割者将收获所有的农作物。
           feedback: 错误。没有收割南瓜的代码。
         - text: 收割者将不会收割她路过的农作物。
+          feedback: 错误。代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
         - text: 收割者将收获到除了南瓜以外的所有农作物。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 我不知道。
+          feedback: 代码会让收获者重复上楼梯的模式，并搜集路上尽可能多的玉米或莴苣。不会收集南瓜。
         questions:
         - text: 仔细看看下面的代码。点击 "运行" 后，会发生什么？
       courseD_multi_farmer_condLoops9_predict1_2018:
@@ -2638,12 +4111,18 @@ zh-CN:
       courseD_multi_farmer_ramp13:
         answers:
         - text: 农夫会走到路的尽头，并且收割南瓜。
+          feedback: 错误。积木块 `捡起南瓜` 在循环内，所以农夫每一步都会尝试摘南瓜，而不是只在最后摘。
         - text: 农夫会试着在每一个正方形内摘南瓜，但是一直都摘不到。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 农夫会移动4个格子，然后摘一个南瓜。
+          feedback: 错误。积木块 `捡起南瓜` 在循环内，所以农夫每一步都会尝试摘南瓜，而不是只在最后摘。
         - text: 我不知道。
           feedback: 积木块“摘南瓜”在循环内，所以农夫每一步都会尝试摘南瓜，而不是直接结束。
+        markdown: |+
+          这一关用的模块和以前的很像。预测一下运行下面的代码后，会发生什么？
+
+
         questions:
         - {}
       courseD_multi_farmer_while10_predict2:
@@ -2695,8 +4174,9 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 我不知道。
+          feedback: 只要有土堆，农夫就会一直移除土，直到土堆消失。
         questions:
-        - {}
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: 什么都不会发生。
@@ -2707,8 +4187,9 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 我不知道。
+          feedback: 只要有土堆，农夫就会一直移除土，直到土堆消失。
         questions:
-        - {}
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: 什么都不会发生。
@@ -2719,15 +4200,18 @@ zh-CN:
           correct: true
           feedback: 叮咚！答对啦！
         - text: 我不知道。
+          feedback: 只要有土堆，农夫就会一直移除土，直到土堆消失。
         questions:
-        - {}
+        - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
       courseD_multi_maze_until10_predict2:
         answers:
         - text: 僵尸会立即右转，然后被卡住。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 僵尸会到达向日葵。
+          feedback: 错误。根据代码，在直走 *之前*，会检查是否可以右转走。因此，此关会失败。
         - text: 僵尸将在第一个路口右转，然后永远的绕着圈走。
+          feedback: 错误。僵尸只会右转或直行。从不会左转，所以几乎立刻就卡住了。
         - text: 我不知道。
           feedback: 这个代码中，僵尸在右转之前，会先判断是否可以向前移动。正因如此，解谜失败。
         questions:
@@ -2761,10 +4245,12 @@ zh-CN:
       courseD_multi_maze_until2_predict1:
         answers:
         - text: 小鸟不会移动。
+          feedback: 错误。当有路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
+          feedback: 错误。当有安全的路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
@@ -2772,10 +4258,12 @@ zh-CN:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: 小鸟不会移动。
+          feedback: 错误。当有路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
+          feedback: 错误。当有安全的路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
@@ -2783,10 +4271,12 @@ zh-CN:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: 小鸟不会移动。
+          feedback: 错误。当有路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 小鸟会到达猪的位置。
           correct: true
           feedback: 叮咚！答对啦！
         - text: 小鸟会撞上TNT炸药。
+          feedback: 错误。当有安全的路时，代码会让小鸟往前移动，然后左转。重复如此，直到到达猪那里！
         - text: 我不知道。
           feedback: 当前面有路时，这只鸟会向前走然后左转，反复如此，直到达到猪的位置！
         questions:
@@ -2794,48 +4284,61 @@ zh-CN:
       courseD_multi_scrat_predict1:
         answers:
         - text: 什么也没发生。斯奎特完全不会动。
+          feedback: 错误。将 `向前移动` 模块放到 '重复' 模块中，会让斯奎特向前移动 3 次。
         - text: 斯奎特会向前移动三次，转向，然后再次向前移动三次，让他到达橡子！
           correct: true
           feedback: 叮咚！答对啦！
         - text: 斯奎特会向前移动，然后转弯摔倒。
+          feedback: 错误。将 `向前移动` 模块放到 '重复' 模块中，会让斯奎特向前移动 3 次。
         - text: 我不知道。
         questions:
         - text: 此代码使用了一个新模块。你认为在你按下“运行”时会发生什么？
       courseE_multi_bee_functions_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: 同样的程序也会通过这一关。
+          correct: true
+          feedback: 正确！不管有多少数量的蜂蜜。函数都能解决。
+        - text: 蜜蜂不会采集足够的蜂蜜。
+          feedback: 错误。函数能够处理任何大于 0 个蜂蜜的数量。
+        - text: 蜜蜂会试着酿很多蜂蜜。
+          feedback: 错误。函数能够处理任何大于 0 个蜂蜜的数量。
         - text: 我不知道。
+          feedback: 程序也能解决此问题。它能处理任何大于 0 的蜂蜜数量。
         questions:
-        - {}
+        - text: 这和上一关的程序完全一样，但要手机的蜂蜜数量变了。点击 "运行" 后会发生什么？
       courseE_multi_farmer_functions11_predict:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: 收获者会采摘两个南瓜。
+          feedback: 错误。收获者在到达玉米前，不会调用 "检查并捡起" 函数。
+        - text: 收获者会采摘所有的南瓜。
+          feedback: 错误。收获者在到达玉米前，不会调用 "检查并捡起" 函数。
+        - text: 收获者会采摘莴苣。
+          feedback: 错误。收获者只会转一次弯，并在玉米那里停下。
+        - text: 收获者会采摘玉米。
+          correct: true
           feedback: 叮咚！答对啦！
         questions:
-        - {}
+        - text: 看看下面的函数定义。收获者会采摘什么？
       courseE_multi_farmer_functions11_predict_2018:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: 收获者会采摘两个南瓜。
+        - text: 收获者会采摘所有的南瓜。
+        - text: 收获者会采摘莴苣。
+          correct: true
           feedback: 叮咚！答对啦！
-        - {}
+        - text: 收获者会采摘玉米。
         questions:
-        - {}
+        - text: 看看下面的函数定义。收获者会采摘什么？
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: 收获者会采摘两个南瓜。
+        - text: 收获者会采摘所有的南瓜。
+        - text: 收获者会采摘莴苣。
+          correct: true
           feedback: 叮咚！答对啦！
-        - {}
+        - text: 收获者会采摘玉米。
         questions:
-        - {}
+        - text: 看看下面的函数定义。收获者会采摘什么？
       courseE_prediction_artistFunction1:
         answers:
         - text: 什么都没有发生，函数没有被调用。
@@ -3160,7 +4663,7 @@ zh-CN:
         - text: 这位艺术家将画四个互相重叠的正方形。
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
         questions:
-        - {}
+        - text: 点击 "运行" 按钮后会发生什么？
       coursee_prediction_artistfunction2_2018:
         answers:
         - text: 艺术家将正确解决谜题。
@@ -3173,7 +4676,7 @@ zh-CN:
         - text: 这位艺术家将画四个互相重叠的正方形。
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
         questions:
-        - {}
+        - text: 点击 "运行" 按钮后会发生什么？
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - text: 艺术家将正确解决谜题。
@@ -3186,7 +4689,7 @@ zh-CN:
         - text: 这位艺术家将画四个互相重叠的正方形。
           feedback: 不正确。在调用“画多边形”之间，循环转动了90度。
         questions:
-        - {}
+        - text: 点击 "运行" 按钮后会发生什么？
       csd-pre-survey-2017-levelgroup:
         markdown: |
           #概述

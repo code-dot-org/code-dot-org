@@ -186,8 +186,6 @@ da:
     valid_password: Gyldig adgangskode!
     invalid_password: Adgangskoden skal være på mindst 6 tegn
     mismatch_password: De to adgangskoder du har indtastet stemmer ikke overens
-    under_13_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
-      eller værges tilladelse til at benytte tjenesterne fra Code.org.
     student_consent: Hvis jeg er under 13 år, bekræfter jeg, at jeg har mine forældres
       eller værges tilladelse til at benytte tjenesterne fra Code.org.
     agree_us_website: Jeg accepterer at bruge en hjemmeside baseret i USA.

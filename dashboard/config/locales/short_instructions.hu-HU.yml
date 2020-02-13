@@ -640,6 +640,8 @@ hu-HU:
         there". Tudsz segíteni neki?
       courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
         egy matricát. '
+      courseC_artist_loops3a: Most adj hozzá egy denevért!
+      courseC_artist_loops3a_2018: Most adj hozzá egy denevért!
       courseC_artist_prog5: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2018: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
@@ -648,6 +650,18 @@ hu-HU:
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_maze_debugging9_2019: A program létrehozásához használja az eszköztár
         blokkjait. Vidd a madarat a disznóhoz.
+      courseC_maze_debugging_challenge1: Segíts a motkánynak kiválasztani, hogy melyik
+        úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge1_2018: Segíts a motkánynak kiválasztani, hogy
+        melyik úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge1_2019: Segíts a motkánynak kiválasztani, hogy
+        melyik úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge2: Segíts a motkánynak, hogy elérjen a makkig.
+        Csak a "fordulj" parancsokat használhatod.
+      courseC_maze_debugging_challenge2_2018: Segíts a motkánynak, hogy elérjen a
+        makkig. Csak a "fordulj" parancsokat használhatod.
+      courseC_maze_debugging_challenge2_2019: Segíts a motkánynak, hogy elérjen a
+        makkig. Csak a "fordulj" parancsokat használhatod.
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
         1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
@@ -690,12 +704,17 @@ hu-HU:
         11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_autorun_binary7_2019: Mi az a legrövidebb bináris karakterlánc, ami
         ha megismételed, kirajzolja ezt a képet?
+      courseD_bee_debugging_challenge1: Nézd meg, hogyan gyűjti össze a méh az összes
+        nektárt. Tudnád használni ezt a módszert, hogy segíts a méhnek elkészíteni
+        az összes mézet?
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_collector_debugging_challenge2: Profi vagy az egymásba ágyazott ciklusokban?
+        Használd azt, amit megtanultál eddig, hogy összegyűjtsd az összes kincset!
       courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
@@ -710,6 +729,12 @@ hu-HU:
         és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
       courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
         csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_scrat_ramp3: Van egy extra blokk, ami szegény motkány vesztét okozza.
+        Dobd ki innen úgy, hogy a toolboxba (szerszámosládába) húzod.
+      courseD_scrat_ramp4: Óvakodj a megrepedt jégtől a motkány biztonsága érdekében!
+      courseD_scrat_ramp5: Óvakodj a megrepedt jégtől.
+      courseD_scrat_ramp6: Segíts a motkánynak, hogy megszerezze a makkot! Használj
+        ciklust!
       courseE_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
         nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel
         rövidebb, mint a négyzet oldala.'
@@ -842,3 +867,25 @@ hu-HU:
       grade5_artist_binary9: "Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\\\r\n\\\r\nNézd
         mi történik, amikor elkezdünk játszani a bitekkel!"
       k-1 maze 1: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
+      ramp_artist_loops1: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops1_2018: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops1_2019: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops2: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops2_2018: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops2_2019: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops3: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops3_2018: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops3_2019: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops4: Mi történik, ha 72 fokot jobbra fordulsz mindezek után a
+        cikluson belül?
+      ramp_artist_loops4_2018: Mi történik, ha 72 fokot jobbra fordulsz mindezek után
+        a cikluson belül?
+      ramp_artist_loops5: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops5_2018: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops5_2019: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops6: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
+      ramp_artist_loops6_2018: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
+      ramp_artist_loops6_2019: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
