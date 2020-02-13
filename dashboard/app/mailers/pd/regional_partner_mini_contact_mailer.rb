@@ -1,4 +1,4 @@
-class Pd::RegionalPartnerContactMailer < ActionMailer::Base
+class Pd::RegionalPartnerMiniContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
   default from: 'Liz Gauthier <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
