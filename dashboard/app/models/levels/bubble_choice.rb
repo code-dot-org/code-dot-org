@@ -74,6 +74,7 @@ class BubbleChoice < DSLDefined
       display_name: display_name,
       description: description,
       name: name,
+      type: type,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
 

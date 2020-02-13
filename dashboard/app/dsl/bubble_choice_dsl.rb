@@ -3,7 +3,6 @@ class BubbleChoiceDSL < LevelDSL
     super
     @hash[:display_name] = nil
     @hash[:description] = nil
-    @hash[:name] = nil
     @hash[:sublevels] = []
   end
 
@@ -13,8 +12,6 @@ class BubbleChoiceDSL < LevelDSL
   end
 
   def display_name(text) @hash[:display_name] = text end
-
-  def name(text) @hash[:name] = text end
 
   def description(text) @hash[:description] = text end
 
