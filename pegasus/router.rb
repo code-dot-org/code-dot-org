@@ -157,10 +157,8 @@ class Documents < Sinatra::Base
     end
 
     @actionview ||= begin
-      view_dirs = @dirs.map {|dir| File.join(settings.views, dir, 'views') }
-      view_dirs << content_dir('..', '..', 'shared', 'haml')
       ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
-      ActionViewSinatra::Base.new(view_dirs)
+      ActionViewSinatra::Base.new(self)
     end
 
     view_assigns = {}
@@ -169,10 +167,6 @@ class Documents < Sinatra::Base
     end
     @actionview.assign(view_assigns)
     @actionview.instance_variable_set("@_request", request)
-  end
-
-  def _prefixes
-    []
   end
 
   # Language selection

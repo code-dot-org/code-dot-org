@@ -3,20 +3,6 @@ require 'haml'
 require 'haml/template'
 require 'redcarpet'
 
-#module MultiExtTemplateRenderer
-#  def render_template(template, layout_name = nil, locals = nil)
-#    puts "template: #{template}"
-#    #puts "template.source: #{template.source}"
-#    puts "template.formats: #{template.formats}"
-#    puts "template.virtual_path: #{template.virtual_path}"
-#    puts "template.type: #{template.type}"
-#    puts "template.handler: #{template.handler}"
-#    puts "layout_name: #{layout_name}"
-#    super
-#  end
-#end
-#ActionView::TemplateRenderer.send(:prepend, MultiExtTemplateRenderer)
-
 module ActionViewSinatra
   class MarkdownHandler
     class HTMLWithDivBrackets < Redcarpet::Render::HTML
@@ -63,44 +49,22 @@ module ActionViewSinatra
   end
 
   class Base < ActionView::Base
-    def view(uri, locals={})
-      render(partial: uri.to_s, locals: locals)
+    def initialize(sinatra, *args)
+      @sinatra = sinatra
+      super(*args)
+    end
+
+    def response
+      @sinatra.response
     end
 
     def params
       {}
     end
 
-    def content_dir(*paths)
-      File.join(pegasus_dir('sites.v3'), *paths)
-    end
-
-    def resolve_static(subdir, uri)
-      @dirs.each do |dir|
-        path = content_dir(dir, subdir, uri)
-        if File.file?(path)
-          return path
-        end
-      end
-      nil
-    end
-
-    def resolve_image(uri)
-      ['.png', '.jpeg', '.jpg', '.gif'].each do |extname|
-        file_path = resolve_static('public', "#{uri}#{extname}")
-        return file_path if file_path
-      end
-      nil
-    end
-  end
-
-  # non-underscore-prefixed views
-  ActionView::Resolver::Path.instance_eval do
-    def build(name, prefix, partial)
-      virtual = ""
-      virtual << "#{prefix}/" unless prefix.empty?
-      virtual << name
-      new name, prefix, partial, virtual
+    # Our templates currently use a bunch of sinatra methods like resolve_static, redirect, etc.
+    def method_missing(name, *args, &block)
+      @sinatra.send(name, *args)
     end
   end
 end
