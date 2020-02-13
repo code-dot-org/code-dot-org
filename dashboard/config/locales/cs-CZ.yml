@@ -165,8 +165,6 @@ cs:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
     mismatch_password: Zadaná dvě hesla se neshodují
-    under_13_consent: Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého
-      rodiče nebo zákonného zástupce k používání služeb Code.org.
     student_consent: Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno
       používat Code.org.
     agree_us_website: Souhlasím s používáním webových stránek provozovaných ve Spojených

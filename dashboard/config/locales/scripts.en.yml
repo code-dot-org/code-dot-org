@@ -14110,7 +14110,11 @@ en:
           description_short: ''
           description: ''
         csd2-projects-temp:
-          stages: {}
+          stages:
+            HTML  Project:
+              name: HTML  Project
+            CSS Project:
+              name: CSS Project
           title: CSD Web Projects - TEMP
           description_audience: ''
           description_short: ''

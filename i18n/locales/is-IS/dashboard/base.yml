@@ -155,7 +155,6 @@ is:
     valid_password: "Gilt lykilorð!"
     invalid_password: "Lykilorð verður að vera að minnsta kosti 6 stafir"
     mismatch_password: "Lykilorðin tvö sem þú slóst inn eru ekki eins"
-    under_13_consent: "Ef ég er undir 13 ára aldri, staðfesti ég hér með að ég hef samþykki foreldris eða forráðamanns til að nota þjónustur Code.org."
     student_consent: "Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns til að nota þjónustur Code.org."
     agree_us_website: "Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum."
     my_data_to_us: "Gögn sem verða til með notkun minni á þessum vef kunna að verða send til og geymd eða greind í Bandaríkjunum."

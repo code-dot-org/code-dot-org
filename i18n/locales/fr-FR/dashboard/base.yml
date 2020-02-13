@@ -145,7 +145,6 @@ fr:
     valid_password: "Mot de passe correct !"
     invalid_password: "Le mot de passe doit comporter au moins 6 caractères."
     mismatch_password: "Les deux mots de passe ne sont pas identiques."
-    under_13_consent: "Si j’ai moins de 13 ans, je confirme que j’ai l’autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     student_consent: "Je confirme que j’ai l'autorisation de mes parents ou de mon tuteur légal pour utiliser les services de Code.org."
     agree_us_website: "J’accepte d’utiliser un site Web basé aux États-Unis."
     my_data_to_us: "Des informations sur mon utilisation de ce site peuvent être envoyées et enregistrées ou traitées aux États-Unis."

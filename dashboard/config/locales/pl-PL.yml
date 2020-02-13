@@ -152,8 +152,6 @@ pl:
     valid_password: Prawidłowe hasło!
     invalid_password: Hasło musi zawierać przynajmniej 6 znaków
     mismatch_password: Dwa hasła, które podałeś, nie są zgodne
-    under_13_consent: Jeżeli mam mniej niż 13 lat, potwierdzam, że mój rodzic lub
-      opiekun prawny wyraża zgodę na korzystanie przeze mnie ze strony Code.org services.
     student_consent: Jeżeli mam mniej niż 13 lat, to potwierdzam, że mam zgodę mojego
       rodzica lub prawnego opiekuna na korzystanie przeze mnie z serwisu na stronie
       Code.org.

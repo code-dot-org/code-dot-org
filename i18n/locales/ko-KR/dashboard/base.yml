@@ -131,7 +131,6 @@ ko:
     valid_password: "사용 가능한 비밀번호!"
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
-    under_13_consent: "본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
     agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
     my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."

@@ -1621,6 +1621,8 @@ vi:
           stages:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+        oceans:
+          title: Trí Tuệ Nhân Tạo cho Đại Dương
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:

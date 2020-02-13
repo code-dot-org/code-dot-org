@@ -126,8 +126,6 @@ sv:
     valid_password: Giltigt lösenord!
     invalid_password: Lösenordet måste vara minst 6 tecken långt
     mismatch_password: De två lösenord du skrev matchar inte varandra
-    under_13_consent: Om jag är under 13 år bekräftar jag härmed att jag har min förälders
-      eller målsmans tillåtelse att använda tjänsterna på Code.org.
     agree_us_website: Jag samtycker till att använda en webbplats baserad i USA.
     my_data_to_us: När jag använder denna webbplats kan information om detta skickas
       till och lagras eller bearbetas i USA.

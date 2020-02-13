@@ -2168,6 +2168,22 @@ zh-TW:
               name: 小組工作與同伴學習
             Introduction to Teachercon:
               name: Teachercon簡介
+            Lesson 1,10:
+              name: 第1, 10 課
+            Lesson 1,11:
+              name: 第1, 11 課
+            Lesson 1,4:
+              name: 第1, 4 課
+            Lesson 1,6:
+              name: 第1, 6 課
+            Lesson 1,9:
+              name: 第1, 9 課
+            Lesson 2,10:
+              name: 第2, 10 課
+            Lesson 2,2:
+              name: 第2, 2 課
+            Lesson 2,3:
+              name: 第2, 3 課
         csd3-2017:
           title: CSD 單元 3 -互動式遊戲和動畫
           description_short: Game Lab 編程環境介紹
@@ -2759,6 +2775,8 @@ zh-TW:
           stages:
             Binary:
               name: 二進制（Binary）
+            Snowflakes:
+              name: 雪花
         sciencepd5:
           title: 科學中的 CS：第 5 部份
           stages:
@@ -2918,6 +2936,8 @@ zh-TW:
               name: 數字表示法
             8-bit Numbers:
               name: 8 位元數字
+            Encryption:
+              name: 加密
             Structuring Data:
               name: 資料的建構
         applab-1hour:
@@ -3109,6 +3129,8 @@ zh-TW:
               name: 數字表示法
             8-bit Numbers:
               name: 8 位元數字
+            Encryption:
+              name: 加密
             Structuring Data:
               name: 資料的建構
         csd3-old:
@@ -3472,8 +3494,14 @@ zh-TW:
           stages:
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Welcome:
               name: 歡迎
+            Congrats:
+              name: 恭喜
             Wrap Up:
               name: 總結
         cspnovice:
@@ -3482,6 +3510,10 @@ zh-TW:
               name: 歡迎
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Wrap Up:
               name: 總結
         novice-view:
@@ -3636,6 +3668,7 @@ zh-TW:
             Spelling Bee:
               name: 拼字蜜蜂
           title: 學前預讀
+          description_audience: 年齡：4-8
           description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         subgoal-labels-opt-in:
           stages:
@@ -4379,6 +4412,27 @@ zh-TW:
             pet game:
               name: 寵物遊戲
         csp-exam:
+          stages:
+            Unit 1 - Assessment 1:
+              name: 單元 1 - 評量 1
+            Unit 1 - Assessment 2:
+              name: 單元 1 - 評量 2
+            Unit 2 - Assessment 1:
+              name: 單元 2 - 評量 1
+            Unit 2 - Assessment 2:
+              name: 單元 2 - 評量 2
+            Unit 3 - Assessment 1:
+              name: 單元 3 - 評量 1
+            Unit 4 - Assessment 1:
+              name: 單元 4 - 評量 1
+            Unit 5 - Assessment 1:
+              name: 單元 5 - 評量 1
+            Unit 5 - Assessment 2:
+              name: 單元 5 - 評量 2
+            Unit 2 - Assessment 3:
+              name: 單元 2 - 評量 3
+            Unit 2 - Assessment 4:
+              name: 單元 2 - 評量 4
           title: 電腦科學原理AP測驗準備
           description_short: 電腦科學原理AP測驗準備
         coursec-2018:
@@ -4839,6 +4893,10 @@ zh-TW:
               name: 歡迎
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Wrap Up:
               name: 總結
             Friday:
@@ -4862,6 +4920,10 @@ zh-TW:
               name: 新手反思概覽
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Wrap Up:
               name: 總結
             Apprentice Reflection Overview:
@@ -4881,6 +4943,10 @@ zh-TW:
               name: 新手反思概覽
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Wrap Up:
               name: 總結
             Monday:
@@ -4900,6 +4966,10 @@ zh-TW:
               name: 新手反思概覽
             Tuesday:
               name: 週二
+            Wednesday:
+              name: 星期三
+            Thursday:
+              name: 星期四
             Wrap Up:
               name: 總結
             Apprentice Reflection Overview:
@@ -5656,6 +5726,8 @@ zh-TW:
           stages:
             Crowdsourcing:
               name: 群眾外包（Crowdsourcing）
+            Food Chains:
+              name: 食物鏈
             Conditionals with Cards:
               name: 用撲克牌學習條件判斷（Conditionals）
             Building a Foundation:
@@ -5668,6 +5740,10 @@ zh-TW:
               name: 創建一個星際大戰遊戲！
             Functions in Minecraft:
               name: Minecraft 中的函式
+            I'm in Big Trouble!:
+              name: 我遇上大麻煩了！
+            I am in Big Trouble:
+              name: 我遇上大麻煩了！
           description_audience: 四年級
         csp1-pilot-staging:
           stages:
@@ -5688,6 +5764,8 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+            Project - Designing an App Part 3:
+              name: 單元 3：應用程式開發簡介
         csp4-pilot-staging:
           stages:
             Variables Make:
@@ -5706,6 +5784,7 @@ zh-TW:
               name: 變數的建立
             Functions Make:
               name: 函式的建立
+          title: 單元 6：演算法
         csp7-pilot-staging:
           stages:
             new stage:
@@ -5744,6 +5823,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            Unit 5 Assessment:
+              name: 單元 5 評量
         fit2019-novice:
           stages:
             Novice Reflection Overview:
@@ -5870,6 +5951,14 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        csp3-pilot:
+          stages:
+            Project - Designing an App Part 3:
+              name: 單元 3：應用程式開發簡介
+            'Lesson 11: Unit Assessment':
+              name: 課程 11：單元測驗
+            'Lesson 11: Assessment Day':
+              name: 課程 11：評量日
         csl-vn:
           stages:
             Sequencing with Scrat:
@@ -5891,6 +5980,12 @@ zh-TW:
               name: 深度學習概覽
         dlp19-csd-mod-w1:
           stages:
+            Module 1:
+              name: 模組 1
+            Step 1:
+              name: 步驟1
+            Step 2:
+              name: 步骤2
             Deeper Learning Overview:
               name: 深度學習概覽
         dlp19-csd-mod-w2:
@@ -5933,6 +6028,8 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+            IP Addresses:
+              name: IP 位址
         peru-2019:
           stages:
             new stage:
@@ -5947,6 +6044,10 @@ zh-TW:
               name: 巢狀迴圈
             Introduction to Debugging:
               name: 除錯 Debug 介紹
+        csp6-pilot:
+          stages:
+            Algorithm Efficiency:
+              name: 演算法效率
         dance-2019:
           stages:
             Dance Party:
@@ -5980,6 +6081,10 @@ zh-TW:
               name: 下一步
             Understanding the Computer Science Fundamentals Courses:
               name: 瞭解計算機科學基礎課程
+            extra:
+              name: 額外
+            Welcome to this online course:
+              name: 歡迎來到這個線上課程
             Understanding the Computer Science Fundamentals courses:
               name: 瞭解計算機科學基礎課程
             Best practices for teaching computer science:
@@ -5994,6 +6099,8 @@ zh-TW:
               name: 事件
             Functions:
               name: 函式
+            Next steps:
+              name: 下一步
             Welcome to "Teaching Computer Science Fundamentals":
               name: 歡迎來到「教授計算機科學基礎」
             'Diving Deeper: Courses E and F':
@@ -6028,6 +6135,8 @@ zh-TW:
               name: 條件判斷（Conditionals）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
+            About Me:
+              name: 關於我
             Access Ability:
               name: 輔助功能
         time4cs-control-unit-2:
@@ -6044,6 +6153,10 @@ zh-TW:
               name: Minecraft 中的函式
         time4cs-experiment-unit-2:
           stages:
+            Food Chains:
+              name: 食物鏈
+            I am in Big Trouble:
+              name: 我遇上大麻煩了！
             Nested Loops in Maze:
               name: 迷宮裡的巢狀迴圈（Nested Loops）
             Fancy Shapes using Nested Loops:
@@ -6056,6 +6169,8 @@ zh-TW:
               name: 條件判斷（Conditionals）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
+            About Me:
+              name: 關於我
             Access Ability:
               name: 輔助功能
         time4cs-experiment-unit-1:
@@ -6064,9 +6179,35 @@ zh-TW:
               name: 條件判斷（Conditionals）
             Alien Dance Party with Sprite Lab:
               name: 用 Sprite Lab 創作外星人舞蹈派對
+            About Me:
+              name: 關於我
             Access Ability:
               name: 輔助功能
+        csp7-pilot:
+          stages:
+            Assessment Day:
+              name: 評量日
+            Unit 7 STUDENT Survey:
+              name: 單元 7 學生調查
+            Unit 7 TEACHER Survey:
+              name: 單元 7 教師調查
+            'Lesson 11: Assessment Day':
+              name: 課程 11：評量日
         csp8-pilot:
           stages:
             new stage:
               name: 新的階段
+        csp4-2020:
+          stages:
+            Variables Make:
+              name: 變數的建立
+            Functions Make:
+              name: 函式的建立
+        csp7-2020:
+          stages:
+            Assessment Day:
+              name: 評量日
+            Unit 7 STUDENT Survey:
+              name: 單元 7 學生調查
+            Unit 7 TEACHER Survey:
+              name: 單元 7 教師調查
