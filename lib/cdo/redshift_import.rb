@@ -48,6 +48,9 @@ class RedshiftImport
 
   def self.move_rows(source_schema, source_table, target_schema, target_table)
     redshift_client = RedshiftClient.instance
+    # IGNOREEXTRA ensures that moving rows to the target table does not fail if a column was added to the source
+    # MySQL table.
+    # TODO: (suresh) Switch to a technical design that supports schema changes in MySQL propagating to Redshift.
     redshift_client.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table} IGNOREEXTRA;"
   end
 end
