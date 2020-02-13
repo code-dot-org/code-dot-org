@@ -4,8 +4,8 @@ class DatasetsController < ApplicationController
   authorize_resource class: false
 
   def index
-    manifest = @firebase.get_library_manifest
-    @datasets = manifest['tables'].map {|table| table['name']}
+    tables = @firebase.get_shared_table_list
+    @datasets = tables.map {|name, _| name}
   end
 
   def edit
