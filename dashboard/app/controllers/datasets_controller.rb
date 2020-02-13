@@ -10,18 +10,18 @@ class DatasetsController < ApplicationController
     @datasets = tables.map {|name, _| name}
   end
 
-  def edit
-    @table_name = params[:dataset]
-    @dataset = @firebase.get_shared_table URI.escape(params[:dataset])
+  def show
+    @table_name = params[:dataset_name]
+    @dataset = @firebase.get_shared_table URI.escape(params[:dataset_name])
   end
 
   # POST /datasets/:dataset/edit
-  def upload
+  def update
     p params
     records, columns = @firebase.csv_as_table(params[:csv_data])
     p columns
-    @firebase.delete_shared_table URI.escape(params[:dataset])
-    response = @firebase.upload_shared_table(URI.escape(params[:dataset]), records, columns)
+    @firebase.delete_shared_table URI.escape(params[:dataset_name])
+    response = @firebase.upload_shared_table(URI.escape(params[:dataset_name]), records, columns)
     p response
     data = {status: response.code}
     if response.success?
@@ -32,7 +32,7 @@ class DatasetsController < ApplicationController
   end
 
   # GET /datasets/manifest
-  def show_manifest
+  def edit_manifest
     @dataset_library_manifest = @firebase.get_library_manifest
   end
 

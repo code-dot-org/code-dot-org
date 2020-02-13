@@ -19,7 +19,7 @@ class DatasetList extends React.Component {
         <ul>
           {this.props.datasets.map(dataset => (
             <li key={dataset}>
-              <a href={`/datasets/${dataset}/edit`}>{dataset}</a>
+              <a href={`/datasets/${dataset}`}>{dataset}</a>
             </li>
           ))}
         </ul>
@@ -33,7 +33,7 @@ class DatasetList extends React.Component {
         <br />
         <Button
           text="New Dataset"
-          href={`/datasets/${this.state.newTableName}/edit`}
+          href={`/datasets/${this.state.newTableName}`}
           disabled={!isValidTableName}
           color={Button.ButtonColor.blue}
           size={Button.ButtonSize.large}

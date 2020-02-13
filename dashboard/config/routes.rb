@@ -223,11 +223,12 @@ Dashboard::Application.routes.draw do
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
 
-  get 'datasets/:dataset/edit', to: 'datasets#edit', as: 'datasets_edit'
-  post 'datasets/:dataset/edit', to: 'datasets#upload'
-  get 'datasets/index', to: 'datasets#index'
-  get 'datasets/manifest', to: 'datasets#show_manifest'
-  post 'datasets/manifest', to: 'datasets#updated_manifest'
+  resources :datasets, param: 'dataset_name', only: [:index, :show, :update] do
+    collection do
+      get '/manifest/edit', to: 'datasets#edit_manifest'
+      post '/manifest/update', to: 'datasets#update_manifest'
+    end
+  end
 
   resources :levels do
     member do
