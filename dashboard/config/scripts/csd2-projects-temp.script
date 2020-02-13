@@ -1,3 +1,5 @@
 login_required true
 pilot_experiment 'csd-noaccess'
 
+stage 'HTML  Project'
+level 'CSD U2 HTML miniproject choices'
