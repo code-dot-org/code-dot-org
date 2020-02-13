@@ -57,22 +57,15 @@ class ProjectsGallery extends Component {
     selectGallery: PropTypes.func.isRequired
   };
 
-  constructor(props) {
-    super(props);
-
-    this.toggleToGallery = this.toggleToGallery.bind(this);
-    this.toggleToMyProjects = this.toggleToMyProjects.bind(this);
-  }
-
-  toggleToGallery() {
+  toggleToGallery = () => {
     window.history.pushState(null, null, '/projects/public');
     this.props.selectGallery(Galleries.PUBLIC);
-  }
+  };
 
-  toggleToMyProjects() {
+  toggleToMyProjects = () => {
     window.history.pushState(null, null, '/projects');
     this.props.selectGallery(Galleries.PRIVATE);
-  }
+  };
 
   render() {
     return (
