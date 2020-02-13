@@ -24,7 +24,7 @@ export default function sectionStandardsProgress(state = initialState, action) {
   if (action.type === ADD_STANDARDS_DATA) {
     return {
       ...state,
-      standardsData: action.standardsData
+      standardsData: _.orderBy(action.standardsData, 'concept', 'asc')
     };
   }
   if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {
