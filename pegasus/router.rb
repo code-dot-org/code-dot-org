@@ -161,12 +161,22 @@ class Documents < Sinatra::Base
       ActionViewSinatra::Base.new(self)
     end
 
+    update_actionview_assigns
+    @actionview.instance_variable_set("@_request", request)
+  end
+
+  # This will make all instance variables on our sinatra controller also
+  # available from our views.
+  #
+  # We do this to emulate existing sinatra behaviour, although we would ideally
+  # like to get to a place where variables can be exposed to views in a much
+  # more deliberate way.
+  def update_actionview_assigns
     view_assigns = {}
     instance_variables.each do |name|
       view_assigns[name[1..-1]] = instance_variable_get(name)
     end
     @actionview.assign(view_assigns)
-    @actionview.instance_variable_set("@_request", request)
   end
 
   # Language selection
