@@ -57,7 +57,7 @@ class Dataset extends React.Component {
       .done(data => {
         this.props.onUploadComplete(
           this.props.tableName,
-          data.records,
+          Object.values(data.records),
           data.columns
         );
         this.displayNotice('Upload succeeeded.', false);
