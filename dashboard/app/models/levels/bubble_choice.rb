@@ -73,6 +73,8 @@ class BubbleChoice < DSLDefined
     summary = {
       display_name: display_name,
       description: description,
+      name: name,
+      type: type,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
 
@@ -104,7 +106,8 @@ class BubbleChoice < DSLDefined
         id: level.id,
         display_name: level.display_name || level.name,
         description: level.try(:bubble_choice_description),
-        thumbnail_url: level.try(:thumbnail_url)
+        thumbnail_url: level.try(:thumbnail_url),
+        summary: level.summary_for_lesson_plans
       }
 
       level_info[:url] = script_level ?
