@@ -18,9 +18,11 @@ import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import {recordImpression} from './impressionHelpers';
 
 function Header(props) {
   if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+    recordImpression('teacher_dashboard_header_with_buttons');
     return (
       <div>
         {/* TeacherDashboardNavigation must be outside of
@@ -32,6 +34,7 @@ function Header(props) {
       </div>
     );
   } else {
+    recordImpression('teacher_dashboard_header_no_buttons');
     return <TeacherDashboardHeader sectionName={props.sectionName} />;
   }
 }
