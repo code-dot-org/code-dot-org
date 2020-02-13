@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProgressBox from '../ProgressBox';
+import firehoseClient from '../../../lib/util/firehose';
 
 const styles = {
   lessonBox: {
@@ -17,11 +18,33 @@ export default class ProgressBoxForLessonNumber extends Component {
     linkToLessonPlan: PropTypes.string
   };
 
+  handleClick = () => {
+    if (window.location.pathname.includes('standards_report')) {
+      firehoseClient.putRecord(
+        {
+          study: 'teacher_dashboard_actions',
+          study_group: 'standards_report',
+          event: 'click_progress_box',
+          data_json: JSON.stringify({
+            link: this.props.linkToLessonPlan
+          })
+        },
+        {includeUserId: true}
+      );
+    }
+  };
+
   render() {
     const {completed, lessonNumber, tooltipId, linkToLessonPlan} = this.props;
 
     return (
-      <a href={linkToLessonPlan} target="_blank" data-for={tooltipId} data-tip>
+      <a
+        href={linkToLessonPlan}
+        target="_blank"
+        data-for={tooltipId}
+        data-tip
+        onClick={this.handleClick}
+      >
         <ProgressBox
           style={styles.lessonBox}
           started={completed}
