@@ -157,6 +157,7 @@ ga:
     error: Tharla earráid.
     email_preference_question: An bhfuil cead againn ríomhphost a sheoladh chugat
       maidir lenár gcúrsaí, deiseanna foghlamtha áitiúla, nó nuacht eile faoin ríomheolaíocht?
+    email_preference_privacy: "(Féach ár bpolasaí príobháideachais)"
     email_preference_yes: Tá
     email_preference_no: Níl
   school_info:

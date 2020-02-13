@@ -7,9 +7,9 @@ fi:
         käytettävissä.
       teacher_must_accept_terms: Tähän sisältöön on asetettu ikäraja, joten se ei
         ole nuorempien opiskelijoiden käytettävissä. Kysy opettajaasi hyväksymään
-        päivitetyt käyttöehdot antaakseen sinulle oikeudet tähän sisältöön. Opettajasi
-        voi tehdä tämän kirjautumalla Code Studioon ja klikkaamalla "Review updated
-        terms" nappulaa lähellä yläreunaa Code Studion etusivulla.
+        päivitetyt käyttöehdot saadaksesi pääsyn tähän sisältöön. Opettajasi voi tehdä
+        tämän kirjautumalla Code Studioon ja klikkaamalla "Katso päivitetyt ehdot"
+        nappulaa lähellä Code Studio etusivun yläreunaa.
       pair_programmer: Olet tällä hetkellä pariohjelmoimassa oppilaan kanssa, jolla
         ei ole käyttöoikeuksia tähän sisältöön. Päästäksesi tähän sisältöön, lopeta
         pariohjelmointi ja yritä uudelleen.
@@ -30,7 +30,7 @@ fi:
     attributes:
       user:
         name: Nimimerkki
-        name_example: Näyttönimi (esim. Viileä Koodaaja tai Jaana S.)
+        name_example: Nimimerkki (esim. Viileä Koodaaja tai Jaana S.)
         email: Sähköposti
         parent_email: Huoltajan sähköpostiosoite
         personal_email: Henkilökohtainen sähköpostiosoite <a href="%{url}"> (klikkaa
@@ -146,12 +146,22 @@ fi:
     student_count: "%{count} oppilasta on jo rekisteröitynyt."
     teacher_count: "%{count} opettajaa on jo rekisteröitynyt."
     overview: Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi omaa
-      luokkaasi<a href="/">Voit selata lukuisia tasoja ja tehtäviä </a>ilman tiliä,
+      luokkaasi. <a href="/">Voit selata lukuisia tasoja ja tehtäviä</a> ilman tiliä,
       mutta sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.
     overview_markdown: Rekisteröi tili seurataksesi omaa edistymistäsi tai hallitaksesi
-      omaa luokkaasi[Voit selata lukuisia tasoja ja tehtäviä](/)ilman tiliä, mutta
+      omaa luokkaasi. [Voit selata lukuisia tasoja ja tehtäviä](/) ilman tiliä, mutta
       sinun täytyy rekisteröityä, jotta voit tallentaa edistymisesi.
     hoc_already_signed_up_heading: Aloita ilman sisäänkirjautumista
+    hoc_already_signed_up_content_post_hoc: Kiitos, että järjestät Koodaustunnin.
+      Kirjautuaksesi Koodistudioon, sinun täytyy asettaa tilillesi salasana. Se antaa
+      sinun tallentaa edistymisesi ja hallita luokkaasi. Voit antaa kursseja oppilaillesi
+      ja seurata heidän edistymistään. <a href="%{studio_url}">Voit myös jatkaa eri
+      tasojen ja tehtävien selailua</a> luomatta tiliä.
+    hoc_already_signed_up_content_post_hoc_markdown: Kiitos, että järjestät Koodaustunnin.
+      Kirjautuaksesi Koodistudioon, sinun täytyy asettaa tilillesi salasana. Se antaa
+      sinun tallentaa edistymisesi ja hallita luokkaasi. Voit antaa kursseja oppilaillesi
+      ja seurata heidän edistymistään. [Voit myös jatkaa eri tasojen ja tehtävien
+      selailua](%{studio_url}) luomatta tiliä.
     teacher_educator_guide: Katso opettajan opas
     title: Rekisteröidy Code.org:n
     school_name: Koulun nimi (vapaaehtoinen)
@@ -170,8 +180,6 @@ fi:
     valid_password: Salasana kelpaa!
     invalid_password: Salasanan tulee olla vähintään 6 merkkiä pitkä
     mismatch_password: Antamasi salasanat eivät täsmää
-    under_13_consent: Jos olen alle 13-vuotias, vahvistan että minulla on huoltajani
-      lupa käyttää Code.org palveluita.
     student_consent: Vahvistan että minulla on huoltajani lupa käyttää Code.org palveluita.
     agree_us_website: Annan suostumukseni Yhdysvaltalaisen sivuston käyttöön.
     my_data_to_us: Sivuston käyttötietoni voidaan lähettää, tallentaa ja käsitellä
@@ -339,6 +347,8 @@ fi:
       teacher_community: Opettajayhteisö
       documentation: Dokumentaatio
       tutorials: Oppaat
+      sprite_lab_documentation: Sprite-labra dokumentaatio
+      sprite_lab_tutorials: Sprite-labra oppitunnit
       educate_overview: Kouluttajan yleiskatsaus
       educate_elementary: Peruskoulu
       educate_middle: Yläaste
@@ -398,6 +408,7 @@ fi:
       playlab: Pelilabra
       starwars: Tähtien Sota
       weblab: Nettilabra
+      view_all: Kaikki projektit...
     popup:
       progress_for_user: Käyttäjän %{name} edistyminen
       progress: Sinun edistymisesi
@@ -613,7 +624,15 @@ fi:
     show_video: Näytä Video
   compatibility:
     upgrade:
+      unsupported_message: Selaintasi ei tueta. Päivitä selaimesi [johonkin tuetuista
+        selaimistamme](%{supported_browsers_url}). Voit yrittää katsella tätä sivua,
+        mutta todennäköisesti sen toiminnallisuudet ovat rikki.
       link: Lue lisää
+      oceans_unsupported_browser: Tätä oppituntia ei tueta tällä selaimella. Kokeile
+        tätä sivua Edge, Chrome, Firefox, tai muulla nykyaikaisella selaimella.
+      weblab_unsupported_browser: Valitettavasti meillä on tällä hetkellä vaikeuksia
+        tämän nettilabran laatamisessa tällä selaimella. Voisit onnistua paremmin
+        jollain toisella selaimella kunnes tämä on saatu toimimaan. Pahoittelemme.
   slow_loading: Tämä kestää kauemmin kuin tavallisesti...
   try_reloading: Yritä ladata sivu uudelleen
   next_stage: Valmis! Siirry seuraavalle tasolle
@@ -814,6 +833,11 @@ fi:
     tos: Ehdot
     privacy: Yksityisyyskäytäntö
     privacy_notice: Tietosuoja
+    accept_label: Hyväksyn <a href="%{tos_url}" target="_blank">käyttöehdot</a> ja
+      <a href="%{privacy_url}" target="_blank">tietosuojakäytännöt</a>.
+    accept_label_markdown: Hyväksyn [käyttöehdot](%{tos_url}) ja [tietosuojakäytännöt](%{privacy_url}).
+    accept_tos: Kirjautumalla Code.org:iin, hyväksyt [käyttöehtomme](%{tos_url}) ja
+      [tietosuojakäytäntömme](%{privacy_url}).
     accept: Hyväksy
     print: Tulosta
     review_terms: Katso päivitetyt ehdot
@@ -839,10 +863,10 @@ fi:
     tukisivustollemme. Voit selailla <a href="http://support.code.org">support.code.org</a>
     -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä
     meihin puolestasi.
-  zendesk_too_young_message_markdown: Pahoittelut, nuoremmat käyttäjät eivät voi kirjautua
-    tukisivustollemme. Voit selailla [support.code.org](http://support.code.org) -sivuja
-    ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan yhteyttä meihin
-    puolestasi.
+  zendesk_too_young_message_markdown: Pahoittelemme, mutta nuoret käyttäjät eivät
+    voi kirjautua tukisivustollemme. Voit selailla [support.code.org](http://support.code.org)
+    -sivuja ilman kirjautumista tai pyytää vanhempiasi tai opettajaasi ottamaan meihin
+    yhteyttä puolestasi.
   progress:
     not_started: ei aloitettu
     in_progress: käynnissä
@@ -999,6 +1023,10 @@ fi:
         opt_in_yes: Kyllä
         opt_in_no: Ei
   cookie_banner:
+    message: Jatkamalla sivustollemme tai napsauttamalla "Hyväksyn," hyväksyt evästeiden
+      tallentamisen laitteellesi.
+    more_information: Katso Code.org -sivuston tietosuojakäytäntö.
     accept: Hyväksyn
   gdpr_dialog:
+    heading: Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?
     true: Kyllä

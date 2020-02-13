@@ -1168,6 +1168,8 @@ pt-BR:
               name: Escolha da bolha
             Contained Levels:
               name: Níveis Contidos
+            ML Fish:
+              name: ML Fish
         algebraPD2b:
           title: Ciência da computação em álgebra PD
           description: 'Fase 2 - on-line: combinado de estudos de verão'
@@ -1263,6 +1265,8 @@ pt-BR:
               name: Resumo
         equityPD:
           stages:
+            Equity PD:
+              name: PD de ações
             Necessary Background:
               name: Fundo necessário
         algebraPD2:
@@ -1460,6 +1464,8 @@ pt-BR:
           stages:
             Prep With Your Modules:
               name: Prepare-se com seus módulos
+            The TLO:
+              name: O TLO
             Welcome Back!:
               name: Bem-vindo(a) de volta!
         frequency_analysis:
@@ -1575,6 +1581,10 @@ pt-BR:
               name: Armazenamento permanente de dados
             Permanent Data Storage and Clicker Completion:
               name: Armazenamento permanente de dados e conclusão do Clicker
+            'Practice Create PT: Data App':
+              name: |2-
+
+                Prática de Criar PT: Aplicativo de Dados
             Privacy in a Digital World:
               name: Privacidade em um Mundo Digital
             Privacy vs Utility:
@@ -1644,6 +1654,8 @@ pt-BR:
               name: Circuitos Básicos
             Blinky Lights:
               name: Luzes piscantes
+            JunkBot:
+              name: JunkBot
             Making Music:
               name: Fazendo Música
         Special Fun:
@@ -1795,6 +1807,17 @@ pt-BR:
               name: Resumo
         cspunit5:
           description_short: Programação
+          stages:
+            Create PT:
+              name: |2-
+
+                Criar PT
+            Create PT Prep:
+              name: 'AP: Criar a preparação da tarefa de desempenho'
+            Explore PT:
+              name: "\nExplorar "
+            Explore PT Prep:
+              name: 'AP: Explorar a preparação da tarefa de desempenho'
         cspunit4:
           description_short: Programação
           stages:
@@ -1816,6 +1839,12 @@ pt-BR:
               name: Introdução aos dados
             Making Data Visualizations:
               name: Desenvolvendo Visualização de Dados
+            Practice PT - Propose an Innovation:
+              name: Pratica PT - Propor uma Inovação
+            Practice PT - Tell a Data Story:
+              name: |2-
+
+                Prática - Conte uma história de dados
             Rapid Research - Data Innovations:
               name: Pesquisa rápida - inovações de dados
             The Cost of Free:
@@ -1945,6 +1974,10 @@ pt-BR:
               name: 'Offline: condicionais e funções definidas por partes'
             'Unplugged: Video Games and Coordinate Planes':
               name: 'Offline: video games e planos de coordenadas'
+        gamelab-hackathon:
+          stages:
+            Middle_School_Hackathon:
+              name: Middle_School_Hackathon
         algebraPD1:
           title: Ciência da computação em álgebra PD
           description: Ensine álgebra com programação funcional
@@ -2002,6 +2035,10 @@ pt-BR:
               name: Unidade 1 Capítulo 1 Avaliação
             Unit 1 Chapter 2 Assessment:
               name: Unidade 1 Capítulo 2 Avaliação
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2035,12 +2072,20 @@ pt-BR:
               name: Compressão com perdas e formatos de arquivo
             Making Data Visualizations:
               name: Desenvolvendo Visualização de Dados
+            Practice PT - Tell a Data Story:
+              name: |2-
+
+                Prática - Conte uma história de dados
             Text Compression:
               name: Compressão de texto
             Unit 2 Chapter 1 Assessment:
               name: Unidade 2 Capítulo 1 Avaliação
             Unit 2 Chapter 2 Assessment:
               name: Unidade 2 Capítulo 2 Avaliação
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2082,6 +2127,10 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             'Anonymous student survey: Taking the AP exam':
               name: 'Pesquisa anônima com estudantes: Fazer o exame AP'
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2090,6 +2139,8 @@ pt-BR:
               name: Criação de funções com parâmetros
             CSP End-of-Semester Mid-course survey:
               name: CSP pesquisa de final de semestre
+            CSP Mid-course survey:
+              name: Pesquisa Pós-Curso PCC
             Post-Course Survey:
               name: Pesquisa Pós-Curso
         csp4-2017:
@@ -2110,6 +2161,8 @@ pt-BR:
               name: Identificando pessoas com dados
             Practice PT - Cybersecurity Innovations:
               name: Prática PT - Inovações de segurança cibernética
+            Practice PT - Propose an Innovation:
+              name: Pratica PT - Propor uma Inovação
             Rapid Research - Data Innovations:
               name: Pesquisa rápida - inovações de dados
             Simple Encryption:
@@ -2120,6 +2173,10 @@ pt-BR:
               name: O que é Big Data?
             Unit 4 Chapter 1 Assessment:
               name: Unidade 4 Capítulo 1 Avaliação
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2219,6 +2276,10 @@ pt-BR:
               name: 'Construindo um aplicativo: Pintor de Tela'
             Unit 5 Assessment 5 - Practice AP questions:
               name: Unidade 5 Avaliação 5 - Questões Práticas de AP
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2233,6 +2294,16 @@ pt-BR:
               name: Pesquisa Pós-Curso
         csp6:
           stages:
+            Create PT:
+              name: |2-
+
+                Criar PT
+            Create PT Prep:
+              name: 'AP: Criar a preparação da tarefa de desempenho'
+            Explore PT:
+              name: "\nExplorar "
+            Explore PT Prep:
+              name: 'AP: Explorar a preparação da tarefa de desempenho'
             Create PT Prep - Reviewing the Task:
               name: Criar PT Preparação - Revendo a Tarefa
             Create PT Prep - Making a Plan:
@@ -2247,6 +2318,10 @@ pt-BR:
               name: Explorar PT - Complete a Tarefa
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             CSP Student Post-Course Survey:
@@ -2457,6 +2532,10 @@ pt-BR:
           stages:
             Unit 1 Overview:
               name: Unidade 1 Visão Geral
+        cspunit1-tools:
+          stages:
+            netsim:
+              name: netsim
         csp-facilitators:
           stages:
             Introduction to Events:
@@ -2467,8 +2546,26 @@ pt-BR:
           stages:
             CS Principles Culminating Assessment:
               name: Avaliação Culminante dos Princípios da CS
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
+            CSP Longitudinal Contact Request:
+              name: Solicitação de contato longitudinal do CSP
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+            "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
+              name: |2-
+
+                [Preterido - o professor não pode ver resultados] CSP Culminating Assessment
+            'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
+              name: |2-
+
+                NOTA: Descontinuado - o professor não pode ver os resultados. CSP Culminating Assessment
+            'NOTE: Deprecated. Teacher cannot see results. CSP Culminating Assessment':
+              name: |2-
+
+                NOTA: Descontinuado - o professor não pode ver os resultados. CSP Culminating Assessment
             RQB Questions test:
               name: Teste de perguntas RQB
         cspexam1-mWU7ilDYM9:
@@ -2659,6 +2756,8 @@ pt-BR:
               name: Eventos
             Events Unplugged:
               name: Eventos offline
+            Fuzz Fiesta:
+              name: Fuzz Fiesta
             'Jigsaw: Learn to drag and drop':
               name: 'Quebra-cabeça: aprenda a arrastar e soltar'
             Loops:
@@ -2707,6 +2806,8 @@ pt-BR:
               name: Estágio do projeto fases (laços, eventos, condicionais, funções)
             Songwriting:
               name: Composição
+            'Unplugged: Funky Functions':
+              name: 'Desplugado: Funky Functions'
         grade1:
           stages:
             Being Safe Online:
@@ -2988,12 +3089,46 @@ pt-BR:
                 um jogo básico de rolagem lateral.
             Collision Detection:
               name: Detecção de Colisão
+              description_student: |2-
+
+                A turma aprende sobre a detecção de colisões no computador. Os pares exploram como um computador pode usar a localização do sprite, as propriedades de tamanho e a matemática para detectar se dois sprites estão se tocando. A classe então usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
+              description_teacher: |2-
+
+                Os alunos aprendem sobre a detecção de colisões no computador. Trabalhando em pares, eles exploram como um computador pode usar as propriedades de localização e tamanho do sprite e a matemática para detectar se dois sprites estão se tocando. Eles então usam o bloco `isTouching ()` para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
             Complex Sprite Movement:
               name: Movimento complexo de Sprite
+              description_student: A turma aprende a combinar as propriedades de velocidade
+                dos sprites com o padrão do contador para criar movimentos de sprites
+                mais complexos, como simular a gravidade, fazer um salto do sprite
+                e permitir que o sprite flutue para a esquerda ou direita. Nos níveis
+                finais, a classe combina esses movimentos para animar e controlar
+                um único sprite e criar um jogo simples no qual um personagem voa
+                e coleta moedas.
+              description_teacher: Os alunos aprendem a combinar as propriedades de
+                velocidade dos sprites com o padrão do contador para criar movimentos
+                de sprites mais complexos. Em particular, os alunos aprenderão como
+                simular a gravidade, fazer um sprite pular e permitir que um sprite
+                flutue para a esquerda ou direita. Nos níveis finais da progressão
+                do Code Studio, os alunos combinam esses movimentos para animar e
+                controlar um único sprite e criar um jogo simples no qual um personagem
+                voa e recolhe uma moeda. Os alunos são incentivados a fazer suas próprias
+                adições ao jogo no nível final.
             Collisions:
               name: Colisões
+              description_student: A turma programa seus sprites para interagir de
+                novas maneiras. Depois de uma breve revisão de como eles usaram o
+                bloco isTouching, a classe faz um brainstorm de outras maneiras pelas
+                quais dois sprites poderiam interagir. Eles então usam isTouching
+                para fazer um sprite empurrar outro pela tela antes de praticar com
+                os quatro blocos de colisão (colidir, deslocar, pular e pular fora).
+              description_teacher: |2-
+
+                Os alunos programam seus sprites para interagir de novas maneiras. Após uma breve revisão de como eles usaram o bloco `isTouching`, os alunos discutem outras maneiras pelas quais dois sprites poderiam interagir. Eles então usam o `isTouching` para fazer um sprite empurrar outro pela tela antes de praticar com os quatro blocos de colisão (` colide`, `desloca`,` bounce` e `bounceOff`).
             Functions:
               name: funções
+              description_student: |2-
+
+                Esta lição aborda funções como uma maneira de organizar seu código, torná-lo mais legível e remover blocos repetidos de código. A turma aprende que as etapas abstratas de nível superior ou mais facilitam o entendimento e o raciocínio sobre as etapas e começam a criar funções no Game Lab. No final da lição, a classe usa essas habilidades para organizar e adicionar funcionalidades à versão final do jogo de rolagem lateral.
               description_teacher: Os alunos aprendem a criar funções para organizar
                 seu código, torná-lo mais legível e remover blocos repetidos de código.
                 Um aquecimento desconectado explora como as direções em diferentes
@@ -3007,6 +3142,12 @@ pt-BR:
                 funcionalidades à versão final do jogo de rolagem lateral.
             The Game Design Process:
               name: O processo de design de jogos
+              description_student: |2-
+
+                Esta lição apresenta o processo que a turma usará para criar jogos para o restante da unidade. A turma percorre esse processo em uma série de níveis. Como parte desta lição, a classe também aprendeu brevemente a usar animações de vários quadros no Game Lab. No final da lição, eles têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
+              description_teacher: |2-
+
+                Esta lição apresenta aos alunos o processo que eles usarão para criar jogos para o restante da unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que definam seus sprites, variáveis ​​e funções antes de começarem a programar seu jogo. Nesta lição, os alunos começam jogando um jogo no Game Lab, onde o código está oculto. Eles discutem o que acham que os sprites, variáveis ​​e funções precisariam ser para criar o jogo. Eles recebem um guia de projeto completo, que mostra uma maneira de implementar o jogo. Os alunos são então percorridos por esse processo através de uma série de níveis. Como parte desta lição, os alunos também aprendem brevemente a usar animações de vários quadros no Game Lab. No final da aula, os alunos têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
             Using the Game Design Process:
               name: Usando o processo de design de jogos
               description_student: Nesta lição de vários dias, a turma usa o processo
@@ -3035,6 +3176,26 @@ pt-BR:
                 como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
+              description_student: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
+              description_teacher: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
             Shapes and Randomness:
               name: Formas e Randomização
               description_student: Esta aula estende as habilidades de desenho para
@@ -3082,8 +3243,24 @@ pt-BR:
                 sobre si mesmos, o que será útil no futuro ao fazer animações.
             The Draw Loop:
               name: O laço de desenho
+              description_student: |2-
+
+                Esta lição apresenta o loop de empate, um dos principais paradigmas de programação do Game Lab. A classe combina o loop de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
+              description_teacher: Nesta lição, os alunos são apresentados ao loop
+                de empate, um dos principais paradigmas de programação do Game Lab.
+                Para começar a lição, os alunos examinam alguns flipbooks físicos
+                para ver que ter muitos quadros com imagens diferentes cria a impressão
+                de movimento. Os alunos assistem a um vídeo explicando como o ciclo
+                de empate no Game Lab ajuda a criar essa mesma impressão em seus programas.
+                Os alunos combinam o loop de desenho com números aleatórios para manipular
+                algumas animações simples com pontos e depois com sprites. No final
+                da lição, os alunos usam o que aprenderam para atualizar sua cena
+                de sprite da lição anterior
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_student: |2-
+
+                Esta lição desplugada explora o comportamento subjacente das variáveis. Usando notecards e string para simular variáveis ​​dentro de um programa, a classe implementa alguns programas curtos. Uma vez familiarizada com essa sintaxe, a classe usa o mesmo processo com propriedades de sprite, acompanhando o progresso de um sprite na tela.
               description_teacher: Os alunos exploram o comportamento subjacente das
                 variáveis por meio de uma atividade desconectada. Usando notecards
                 e string para simular variáveis dentro de um programa, os alunos implementam
@@ -3092,6 +3269,12 @@ pt-BR:
                 o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
+              description_student: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
+              description_teacher: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
             Conditionals:
               name: Condições
               description_student: A classe começa usando booleanos para comparar
@@ -3102,6 +3285,9 @@ pt-BR:
                 investigar os valores ou propriedades de sprite, a classe adiciona
                 instruções condicionais 'se' para escrever código que responde a essas
                 comparações booleanas.
+              description_teacher: |2-
+
+                Os alunos começam usando booleanos para comparar o valor atual de uma propriedade de sprite com um valor-alvo, usando essa comparação para determinar quando um sprite atingiu um ponto na tela, cresceu para um determinado tamanho ou atingiu um valor usando o padrão de contador . Depois de usar os booleanos diretamente para investigar os valores ou as propriedades do sprite, os alunos adicionam instruções _if_ condicionais para escrever o código que responde a essas comparações booleanas.
             Keyboard Input:
               name: Entrada do teclado
               description_student: Após a introdução aos booleanos e às instruções
@@ -3110,10 +3296,25 @@ pt-BR:
                 condicionais para mover sprites pela tela. No final desta lição, os
                 alunos terão programas escritos que recebem a entrada do teclado do
                 usuário para controlar sprites na tela.
+              description_teacher: Após a introdução aos booleanos e às instruções
+                _if_ na lição anterior, os alunos são apresentados a um novo bloco
+                chamado `keyDown ()`, que retorna um booleano e pode ser usado em
+                instruções condicionais para mover sprites pela tela. No final desta
+                lição, os alunos terão programas escritos que recebem a entrada do
+                teclado do usuário para controlar sprites na tela.
             Other Forms of Input:
               name: Outras formas de entrada
+              description_student: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
+              description_teacher: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
             Booleans Unplugged:
               name: Booleanos off-line
+              description_student: |2-
+
+                Esta lição apresenta valores e lógica booleanos, além de instruções condicionais. A aula começa com um jogo simples de Stand Up, Sit Down, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade etc.). A classe, em seguida, agrupa objetos com base em instruções booleanas cada vez mais complexas e analisa como as condicionais podem afetar o fluxo de um programa.
               description_teacher: |-
                 Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
 
@@ -3139,6 +3340,12 @@ pt-BR:
               name: Parâmetros e Randomização
             Shapes and Randomization:
               name: Formas e Randomização
+            CS Discoveries End of Semester Survey:
+              name: |2-
+
+                 CS Discoveries - Pesquisa de fim de semestre
+            CSD Post-Course Survey:
+              name: Pesquisa Pós-Curso CSD
         grade2:
           stages:
             At The Dog Park:
@@ -3572,6 +3779,8 @@ pt-BR:
                 Os alunos começam a decidir como organizarão seu conteúdo em suas
                 próprias páginas pessoais. No último nível, os alunos iniciam o projeto
                 no qual continuarão trabalhando em toda a unidade.
+            CSD Post-Course Survey:
+              name: Pesquisa Pós-Curso CSD
         csp2-support:
           stages:
             Unit 2 Overview:
@@ -3607,6 +3816,7 @@ pt-BR:
             Discovering Users:
               name: Descobrindo Usuários
             User-Centered Design Micro Activity:
+              name: Micro atividade de design centrado no usuário
               description_teacher: Esta lição orienta os alunos em uma versão abreviada
                 do processo de design que eles verão em toda a unidade. Os alunos
                 debatem primeiro uma lista de possíveis usuários de roupas inteligentes.
@@ -3691,6 +3901,8 @@ pt-BR:
                 muitos comentários para o desenvolvedor. A classe precisa classificar
                 todo esse feedback, identificar os temas e necessidades comuns e começar
                 a revisar o protótipo para melhor atender às necessidades dos usuários.
+            CSD Post-Course Survey:
+              name: Pesquisa Pós-Curso CSD
         minecraft:
           title: Designer Minecraft Hora do Código
           description_short: Crie animais e outras criaturas de Minecraft em sua própria
@@ -3736,6 +3948,8 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Events in Play Lab:
               name: Eventos no Laboratório de jogos
+            Fuzz Fiesta:
+              name: Fuzz Fiesta
             Going Places Safely:
               name: Navegando com segurança
             'Debugging: Unspotted Bugs':
@@ -3952,7 +4166,7 @@ pt-BR:
             Conditionals and Functions in Bee:
               name: Condicionais e funções na abelha
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
         classic-hoc-impact-study:
           description_short: Conheça os conceitos básicos da ciência da computação
             com a ajuda de vários personagens divertidos!
@@ -4016,6 +4230,8 @@ pt-BR:
           stages:
             Welcome Back!:
               name: Bem-vindo(a) de volta!
+            The TLO:
+              name: O TLO
             Prep With Your Modules:
               name: Prepare-se com seus módulos
         csp3-support:
@@ -4058,6 +4274,8 @@ pt-BR:
               name: 'Lições 1 - 4: Dados no Mundo Real'
             'Lessons 5 - 7: Security, Symmetric, and Asymmetric Encryption':
               name: 'Lições 5 - 7: Segurança, Codificação Assimétrica e Simétrica'
+            'Lessons 8 - 9: Practice PT':
+              name: 'Lições 8 - 9: Pratica PT'
             Group Work and Peer Learning:
               name: Trabalho em Grupo e Aprendizagem entre Pares
             Balancing Teachers and Tools:
@@ -4351,8 +4569,14 @@ pt-BR:
             Introduction:
               name: Introdução
         workshop-maker:
+          description_audience: Professores que participam de um workshop presencial
+            do Maker Toolkit
           description_short: Progressão de nível para acompanhar um workshop do Maker
             Toolkit pessoalmente
+          description: Essa progressão de nível destina-se a acompanhar um workshop
+            presencial do Maker Toolkit. O objetivo não é ensinar a ferramenta ou
+            os conceitos de CS, mas sim apoiar o facilitador do workshop na introdução
+            dos participantes na amplitude do App Lab e do Maker Toolkit.
           stages:
             App Lab Basics:
               name: Noções básicas do laboratório de aplicativos
@@ -4363,6 +4587,7 @@ pt-BR:
             Analog Input:
               name: Entrada analógica
         coursee-ramp:
+          title: percurso
           stages:
             Introduction:
               name: Introdução
@@ -4371,6 +4596,7 @@ pt-BR:
             'Real Life Algorithms: Dice Race':
               name: 'Algoritmos da vida real: Corrida de dados'
         csd6-2017:
+          title: Unidade de CDS 6 - Computação física ('17 -'18)
           stages:
             Computing Innovations:
               name: Inovações em computação
@@ -4966,6 +5192,8 @@ pt-BR:
                 a cor e a intensidade de cada LED e usarão o que aprenderam para programar
                 padrões de luz para criar um show de luzes no parque de diversões
                 do circuito.
+            CSD Post-Course Survey:
+              name: Pesquisa Pós-Curso CSD
         csd3-draft:
           title: 'CSD Unidade 3 - Programando: Animações e Jogos'
           description_short: Animações e Jogos
@@ -5075,8 +5303,11 @@ pt-BR:
               name: Criptografia
             Structuring Data:
               name: Estruturação de dados
+            CSD Post-Course Survey:
+              name: Pesquisa Pós-Curso CSD
         csd3-old:
           title: CSD Unidade 3 (descontinuada)
+          description_short: Projeto 2016/2017 da Unidade 3
           description: Este é o rascunho original da Unidade 3 de CSD, lançado no
             outono de 2016. A menos que você tenha estudantes atualmente usando este
             curso, você deve usar a versão atualizada desta unidade em studio.code.org/s/csd3
@@ -5120,6 +5351,7 @@ pt-BR:
               name: Projeto - Projetar um Jogo
         csd1-old:
           title: CSD Unidade 1 (descontinuada)
+          description_short: Projeto 2016/2017 da Unidade 1
           description: Este é o rascunho original da Unidade 1 do CSD, publicado originalmente
             no segundo semestre de 2016. Esta versão foi substituída por uma versão
             mais recente em studio.code.org/s/csd1 e estará disponível somente até
@@ -5260,7 +5492,7 @@ pt-BR:
         coursef-ramp:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdução
             Ice Age Play Lab:
@@ -5270,7 +5502,15 @@ pt-BR:
             Conditionals and Functions in Bee:
               name: Condicionais e funções na abelha
         csppostsurvey-staging:
+          title: "[Descontinuado] CSP post staging area"
+          description: |2-
+
+            Movido para / s / csp-pós-pesquisa. Destino após 05.05.17
           stages:
+            CSP Student Post Survey Staging:
+              name: |2-
+
+                Questionário CSP Pós-Estágio
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
         fmscsd3preview:
@@ -5289,6 +5529,7 @@ pt-BR:
               name: Participe de um estudo longitudinal!
           title: Pesquisa pós-curso do estudante
           description_audience: Alunos de PCC
+          description_short: Pesquisa pós-curso do estudante
           description: 'Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org.
             Esta pesquisa leva cerca de 10 minutos para ser concluída. Suas respostas
             são privadas e anônimas.  '
@@ -5300,7 +5541,11 @@ pt-BR:
               name: Participe de um estudo longitudinal!
             CSP Post-Course Survey:
               name: Pesquisa Pós-Curso PCC
+            CSP post-course survey:
+              name: Pesquisa Pós-Curso PCC
+          title: Pesquisa pós-curso do estudante)
           description_audience: Alunos de PCC
+          description_short: Pesquisa pós-curso do estudante
           description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org.
             Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas
             são privadas e anônimas - seu professor pode ver resultados agregados
@@ -5311,6 +5556,7 @@ pt-BR:
           stages:
             Public Key Crypto Widgets:
               name: Widgets de criptografia de chave pública
+          title: Para o Widget de Criptografia de Chave Pública
         csd2-old:
           stages:
             Quality Websites:
@@ -5376,6 +5622,10 @@ pt-BR:
               name: Laboratório da Era do Gelo
             Bounce:
               name: Pingue-pongue
+            NewBounce:
+              name: NewBounce
+            F PlayLab Variables:
+              name: F PlayLab - Variáveis
         coursea-2017:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5721,7 +5971,7 @@ pt-BR:
         coursee-2017:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             Introduction:
               description_student: Esta introdução rápida lhe dará a chance de praticar
                 a maioria das habilidades necessárias para resolver os quebra-cabeças
@@ -5872,7 +6122,7 @@ pt-BR:
         coursef-2017:
           stages:
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             The Power of Words:
               name: 'Cidadania digital: o poder das palavras'
             Ice Age Play Lab:
@@ -5954,6 +6204,7 @@ pt-BR:
               name: Parabéns
             Wrap Up:
               name: Resumo
+          title: '"CS Discoveries TeacherCon"  - Iniciante Facilitadores'
           description_audience: Facilitadores para Iniciantes em DCC
           description_short: Perguntas de reflexão para facilitadores iniciantes no
             TeacherCon.
@@ -5967,6 +6218,11 @@ pt-BR:
               name: Explore PT - Fazendo um Plano
             Explore PT - Complete the Task:
               name: Explorar PT - Complete a Tarefa
+          title: CSP Explorar a preparação PT
+          description_short: Essas lições abrangem a preparação e a conclusão da tarefa
+            de desempenho de explorar os princípios do CS da AP.
+          description: Essas lições abrangem a preparação e a conclusão da tarefa
+            de desempenho de explorar os princípios do CS da AP.
         csp-create-task:
           stages:
             Create PT Prep - Reviewing the Task:
@@ -5975,10 +6231,18 @@ pt-BR:
               name: Criar preparação PT - Fazendo um Plano
             Create PT - Complete the Task:
               name: Criar PT - Complete a Tarefa
+          description_short: Essas lições abrangem a preparação e a conclusão da tarefa
+            de desempenho de explorar os princípios do CS da AP.
+          description: Essas lições abrangem a preparação e a conclusão da tarefa
+            de desempenho de explorar os princípios do CS da AP.
         csp-ap-tech-setup:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
               name: Configuração tecnológica - Seu Portfólio Digital AP e Outras Ferramentas
+          title: 'Configuração: Portfólio Digital e Outras Ferramentas'
+          description: Abrange a configuração do portfólio digital de AP e outras
+            ferramentas técnicas necessárias para concluir e enviar as tarefas de
+            desempenho do AP.
         csp-ap:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -5997,6 +6261,11 @@ pt-BR:
               name: Explorar PT - Complete a Tarefa
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
+          title: Tarefas de exame e desempenho do CSP AP
+          description_short: As lições orientam os alunos a se prepararem e concluírem
+            o exame de AP e as Tarefas de desempenho.
+          description: As lições orientam os alunos a se prepararem e concluírem o
+            exame de AP e as Tarefas de desempenho.
         cspnovice:
           stages:
             Welcome:
@@ -6009,12 +6278,26 @@ pt-BR:
               name: Quinta-feira
             Wrap Up:
               name: Resumo
+          title: CS Principles TeacherCon - Facilitador de  Reflexão para iniciantes
           description_audience: Facilitadores para Iniciantes no PCC
           description_short: Perguntas de reflexão para facilitadores iniciantes no
             TeacherCon.
           description: 'Um local para acompanhar sua reflexão do TeacherCon como facilitador
             iniciante. '
         novice-view:
+          stages:
+            CSP Tuesday:
+              name: CSP Terça-feira
+            CSP Wednesday:
+              name: CSP Quarta-feira
+            CSP Thursday:
+              name: CSP Quinta-feira
+            CSD Tuesday:
+              name: CSD Terça-feira
+            CSD Wednesday:
+              name: CSD Quarta-feira
+            CSD Thursday:
+              name: CSD Quinta-feira
           title: ver respostas iniciantes
           description_short: N / D
           description: N / D
@@ -6028,6 +6311,8 @@ pt-BR:
               name: Unidade 1 - Reflexões de aprendizado mais profundo
           title: Unidade 1 PCC Aprendizado mais profundo
           description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
           description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda
             para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
             orientações e orientações para demonstrar a proficiência da Unidade 1
@@ -6040,52 +6325,166 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 2 Deeper Learning:
               name: Conclua Unidade 2 aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
+          title: Unidade 2 PCC Aprendizado mais profundo
           description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: 'Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda
+            para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações  para demonstrar a proficiência da Unidade 2 do Currículo
+            CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
+            inferior desta página, depois de enviar suas próprias reflexões para a
+            unidade. '
         csp3-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
+          title: Unidade 3 CSP Aprendizado mais profundo
           description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: 'Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda
+            para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações  para demonstrar a proficiência da Unidade 3 do Currículo
+            CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
+            inferior desta página, depois de enviar suas próprias reflexões para a
+            unidade. '
         csp4-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 4 Deeper Learning Reflections:
               name: Unidade 4 - Reflexões de aprendizado mais profundo
+          title: Unidade 4 PCC Aprendizado mais profundo
           description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: 'Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda
+            para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações  para demonstrar a proficiência da Unidade 4 do Currículo
+            CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
+            inferior desta página, depois de enviar suas próprias reflexões para a
+            unidade. '
         csp5-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Unidade 5 - Reflexões de aprendizado mais profundo
+          title: Unidade 5 PCC Aprendizado mais profundo
           description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: 'Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda
+            para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações  para demonstrar a proficiência da Unidade 5 do Currículo
+            CSP do Code.org. Os itens de revisão por pares estão disponíveis na parte
+            inferior desta página, depois de enviar suas próprias reflexões para a
+            unidade. '
         csd1-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 1 Deeper Learning Reflections:
               name: Unidade 1 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 1 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: 'Esta é a Unidade 1 do Plano de Aprendizagem Mais Profunda
+            para os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 1
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade. '
         csd6-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Unidade 6 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 6 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: Esta é a Unidade 6 do Plano de Aprendizagem Mais Profunda para
+            os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 6
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade.
         csd5-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Unidade 5 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 5 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: Esta é a Unidade 5 do Plano de Aprendizagem Mais Profunda para
+            os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 5
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade.
         csd4-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 4 Deeper Learning Reflections:
               name: Unidade 4 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 4 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: Esta é a Unidade 4 do Plano de Aprendizagem Mais Profunda para
+            os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 4
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade.
         csd3-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 3 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: Esta é a Unidade 3 do Plano de Aprendizagem Mais Profunda para
+            os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 3
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade.
         csd2-dlp:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
+          title: CS Discoveries - Unidade 2 Aprendizagem Profunda
+          description_audience: Princípios de CC Facilitadores em Treinamento
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
+          description: Esta é a Unidade 2 do Plano de Aprendizagem Mais Profunda para
+            os facilitadores de CSP do Code.org em treinamento. Aqui você encontrará
+            orientações e orientações para demonstrar a proficiência da Unidade 2
+            do Currículo CSP do Code.org. Os itens de revisão por pares estão disponíveis
+            na parte inferior desta página, depois de enviar suas próprias reflexões
+            para a unidade.
+        allthettsthings:
+          stages:
+            TTS:
+              name: TTS
         express-2017:
           stages:
             'Programming Unplugged: My Robotic Friends':
@@ -6166,6 +6565,8 @@ pt-BR:
               name: 'Cidadania digital: descubra a média'
             Events in Star Wars:
               name: Eventos em Guerra nas Estrelas
+            Events with Flappy:
+              name: Eventos com Flappy
             'Conditionals: Conditionals with Cards':
               name: 'Condicional: Condicionais com Cartões'
             Conditional Loops in Maze:
@@ -6229,16 +6630,27 @@ pt-BR:
             ser compartilhada.
         subgoal-labels-opt-in:
           stages:
+            Subgoal Labels Study Opt-In:
+              name: Opt-In do estudo de etiquetas de sub-objetivo
             deprecated:
               name: descontinuada
             other:
               name: outro
             Thanks:
               name: Obrigado
+          title: Opt-In do estudo de etiquetas de sub-objetivo
         csp-pre-survey-test-2017:
           stages:
             new stage:
               name: nova fase
+            test satge:
+              name: estágio de teste
+            CSP pre survey Test:
+              name: Teste CSP pré-pesquisa
+            CSD pre survey test:
+              name: Teste CSP pré-pesquisa
+            CSD pulse check survey:
+              name: Levantamento de verificação de pulso de CSD
         csp3-research-mxghyt:
           stages:
             new stage:
@@ -6267,6 +6679,10 @@ pt-BR:
               name: Unidade 3 Capítulo 1 Avaliação
             foo:
               name: foo
+            CSP Mid-course survey:
+              name: Pesquisa Pós-Curso PCC
+            Please complete the CSP Mid-course survey:
+              name: Por favor, complete a pesquisa CSP Mid-course
           title: CSP Unidade 3 - Programação
           description_short: Programação
           description: Esta unidade introduz os conceitos fundamentais de programação
@@ -6281,6 +6697,8 @@ pt-BR:
               name: Análise de Design
             Understanding Your User:
               name: Entendendo seu usuário
+            User-Centered Design Micro Activity:
+              name: Micro atividade de design centrado no usuário
             User Interface and Prototype Testing:
               name: Interface de usuário e teste de protótipo
             Feedback and Prototypes:
@@ -6446,6 +6864,9 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+          description_short: |2-
+
+            Versão alternativa da Unidade 3 do CSP para o grupo experimental A.
           description: Esta unidade apresenta os conceitos fundamentais de programação
             de computadores para estudantes do grupo de sub objetivos A.
         new-express:
@@ -6462,6 +6883,10 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Loops in Artist:
               name: Laços no Artista
+            Nested Loops Project in Frozen:
+              name: |2-
+
+                Projeto de Loops Aninhados em Frozen
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
@@ -6472,6 +6897,8 @@ pt-BR:
               name: 'Eventos: O Grande Evento'
             Events in Star Wars:
               name: Eventos em Guerra nas Estrelas
+            Events with Flappy:
+              name: Eventos com Flappy
             'Conditionals: Conditionals with Cards':
               name: 'Condicional: Condicionais com Cartões'
             While Loops in Farmer:
@@ -6527,6 +6954,8 @@ pt-BR:
               name: Laços no Artista
             Sequences with Scrat:
               name: Sequências com Scrat
+            Testing Template:
+              name: Modelo de teste
           title: Novas fases para 17/9
         new-e:
           stages:
@@ -6596,7 +7025,7 @@ pt-BR:
             Nested Loops with Frozen:
               name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             Course E Introduction:
               name: Curso E Introdução
             The Power of Words:
@@ -6679,18 +7108,63 @@ pt-BR:
             de solução de problemas de dados pode ser aplicado a uma área de sua escolha.
         subgoals-assessment-staging:
           stages:
+            subgoal assessments:
+              name: avaliações sub-objetivo
+            lg by itself:
+              name: |2-
+
+                LG por si só
+            test of single level lg:
+              name: |2-
+
+                teste de nível único lg
+            submittable question at end of lessson:
+              name: |2-
+
+                pergunta submetível no final da lição
             all assessment items as standalone assessment levels:
               name: todos os itens de avaliação como níveis de avaliação independentes
+            all assessment items clustered in levelgroup:
+              name: |2-
+
+                todos os itens de avaliação agrupados no levelgroup
+            submittable if last assessment item:
+              name: |2-
+
+                se submetido o último item de avaliação
+            assessment sandwiched between app lab levels:
+              name: |2-
+
+                avaliação  entre os níveis do laboratório de aplicativos
+            all assessment items clustered in levelgroup as a single "test":
+              name: |2-
+
+                todos os itens de avaliação agrupados no levelgroup como um único "teste"
+            dummy:
+              name: |2-
+
+                manequim
+            CSP 3 updates staging ground:
+              name: |2-
+
+                Atualizações do CSP 3
         hocali:
           stages:
             new stage:
               name: nova fase
+        colehoc2017:
+          stages:
+            colehoc2017 stage:
+              name: Etapa colehoc2017
+          title: 'HoC 17 - Cole '
         csd4-old:
           stages:
             Analysis of Design:
               name: Análise de Design
             Understanding Your User:
               name: Entendendo seu usuário
+            User-Centered Design Micro Activity:
+              name: Micro atividade de design centrado no usuário
             User Interface and Prototype Testing:
               name: Interface de usuário e teste de protótipo
             Feedback and Prototypes:
@@ -6719,6 +7193,8 @@ pt-BR:
               name: Improvizando e Interagindo
             App Presentation:
               name: Apresentação de aplicativos
+          title: "(DEPRECATED) Unidade CSD 4 - O Processo de Design"
+          description_short: 2016/17 Versão beta da CSD Unidade 4
         csp3-staging:
           stages:
             The Need For Programming Languages:
@@ -6743,6 +7219,15 @@ pt-BR:
               name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
+          title: |2-
+
+            CSP 3 Alterações propostas no campo de armazenamento temporário
+          description_short: |2-
+
+            Campo temporário de preparação para alterações de outubro no csp3
+          description: |2-
+
+            Esta é uma réplica de níveis ao vivo em / s / csp3 com estágios novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.
         pwc:
           stages:
             new stage:
@@ -6751,6 +7236,10 @@ pt-BR:
               name: Resolução de problemas - inovações pessoais
             'Technology Foundations: What is a Computer?':
               name: Fundamentos de tecnologia - o que é um computador?
+            'Data Science: Problem Solving with Big Data':
+              name: |2-
+
+                Ciência de dados: solução de problemas com big data
             Personal Innovations:
               name: Inovações Pessoais
             What is a Computer?:
@@ -6778,8 +7267,25 @@ pt-BR:
               name: Design inteligente de roupas
             Intro to App Lab (13+):
               name: Introdução ao Laboratório de Apps (13+)
+          title: |2-
+
+            Currículo da PwC Acesse seu potencial
+          description: Na PwC, acreditamos que todos os alunos têm o potencial de
+            serem os líderes de amanhã e a força de trabalho orientada pela tecnologia.
+            Acessar seu potencial é nosso compromisso para ajudar a diminuir a lacuna
+            de oportunidades, equipando os jovens, especialmente os de comunidades
+            desfavorecidas, com as habilidades financeiras, tecnológicas e de seleção
+            de carreira necessárias para mudar a trajetória de suas vidas. Como parte
+            de nosso compromisso, estamos entusiasmados em lançar nosso currículo
+            sobre carreiras e tecnologia do ensino médio Acesse seu potencial.
         allthesurveys:
           stages:
+            CSP pre survey Test:
+              name: Teste CSP pré-pesquisa
+            CSD pre survey test:
+              name: Teste CSP pré-pesquisa
+            CSD pulse check survey:
+              name: Levantamento de verificação de pulso de CSD
             CSP pre survey Test 2017:
               name: Teste CSP pré-pesquisa 2017
             Place for testing crazy stuff:
@@ -6841,6 +7347,9 @@ pt-BR:
               name: 'Configuração: Portfólio Digital e Outras Ferramentas'
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          title: |2-
+
+            Explorar - Preparação de tarefas de desempenho do AP ('17 -'18)
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -6874,6 +7383,9 @@ pt-BR:
           stages:
             special valentine:
               name: namorado especial
+          description_short: |2-
+
+            Divirta-se criando dia dos namorados
         colehoc17:
           stages:
             new stage:
@@ -6908,6 +7420,8 @@ pt-BR:
               name: Informações Privadas e Pessoais
             'Functions: Songwriting':
               name: 'Funções: Composição musical'
+            MINECRAFT STAGE GOES HERE:
+              name: Estágio MINECRAFT começar aqui
             Functions in Artist:
               name: Funções no Artista
             Functions in Bee:
@@ -6950,7 +7464,7 @@ pt-BR:
             Nested Loops with Frozen:
               name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdução
             The Power of Words:
@@ -7022,8 +7536,17 @@ pt-BR:
               name: Aplicações de sensores
             'Project: Prototype an Innovation':
               name: 'Projeto: Protótipo de Inovação'
+          title: "(Descontinuada) Unidade 6 de CSD - Computação Física"
         unembeddedlevels:
           stages:
+            CSD U3 Plotting Shapes Shape Lab - unembed:
+              name: |2-
+
+                Laboratório de formas de plotagem CSD U3 - sem montagem
+            CSD U3 Entertainment Sample 1 - unembed:
+              name: |2-
+
+                CSD U3 - Amostra 1 de entretenimento  - sem montagem
             Only Stage:
               name: Somente fases
           title: Níveis não integrados
@@ -7078,6 +7601,11 @@ pt-BR:
               name: Usando o processo de design de jogos
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
+            CS Discoveries End of Semester Survey:
+              name: |2-
+
+                 CS Discoveries - Pesquisa de fim de semestre
+          title: CSD Unidade 3 - Animações e Jogos
           description_short: Programação
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
             ao programar animações, arte interativa e jogos no Laboratório de Jogos.
@@ -7091,12 +7619,14 @@ pt-BR:
               name: Nível do mapa de teste
             new stage:
               name: nova fase
+          title: Páginas dos manuais do CSF
         glj-behavior-test:
           stages:
             Cats and Dogs:
               name: Gatos e Cachorros
           title: Teste do Laboratório de Jogos Jr. - Comportamento
         csd3-2018:
+          title: CSD Unidade 3 - Animações e Jogos ('18-'19)
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
             ao programar animações, arte interativa e jogos no Laboratório de Jogos.
             A unidade começa com formas simples e cria jogos sofisticados baseados
@@ -7121,6 +7651,26 @@ pt-BR:
                 como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
+              description_student: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
+              description_teacher: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
               description_student: A classe é apresentada ao Laboratório de Jogos,
@@ -7166,8 +7716,24 @@ pt-BR:
                 sobre si mesmos, o que será útil no futuro ao fazer animações.
             The Draw Loop:
               name: O laço de desenho
+              description_student: |2-
+
+                Esta lição apresenta o loop de empate, um dos principais paradigmas de programação do Game Lab. A classe combina o loop de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
+              description_teacher: Nesta lição, os alunos são apresentados ao loop
+                de empate, um dos principais paradigmas de programação do Game Lab.
+                Para começar a lição, os alunos examinam alguns flipbooks físicos
+                para ver que ter muitos quadros com imagens diferentes cria a impressão
+                de movimento. Os alunos assistem a um vídeo explicando como o ciclo
+                de empate no Game Lab ajuda a criar essa mesma impressão em seus programas.
+                Os alunos combinam o loop de desenho com números aleatórios para manipular
+                algumas animações simples com pontos e depois com sprites. No final
+                da lição, os alunos usam o que aprenderam para atualizar sua cena
+                de sprite da lição anterior
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_student: |2-
+
+                Esta lição desplugada explora o comportamento subjacente das variáveis. Usando notecards e string para simular variáveis ​​dentro de um programa, a classe implementa alguns programas curtos. Uma vez familiarizada com essa sintaxe, a classe usa o mesmo processo com propriedades de sprite, acompanhando o progresso de um sprite na tela.
               description_teacher: Os alunos exploram o comportamento subjacente das
                 variáveis por meio de uma atividade desconectada. Usando notecards
                 e string para simular variáveis dentro de um programa, os alunos implementam
@@ -7176,8 +7742,17 @@ pt-BR:
                 o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
+              description_student: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
+              description_teacher: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
             Booleans Unplugged:
               name: Booleanos off-line
+              description_student: |2-
+
+                Esta lição apresenta valores e lógica booleanos, além de instruções condicionais. A aula começa com um jogo simples de Stand Up, Sit Down, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade etc.). A classe, em seguida, agrupa objetos com base em instruções booleanas cada vez mais complexas e analisa como as condicionais podem afetar o fluxo de um programa.
               description_teacher: |-
                 Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
 
@@ -7194,6 +7769,9 @@ pt-BR:
                 investigar os valores ou propriedades de sprite, a classe adiciona
                 instruções condicionais 'se' para escrever código que responde a essas
                 comparações booleanas.
+              description_teacher: |2-
+
+                Os alunos começam usando booleanos para comparar o valor atual de uma propriedade de sprite com um valor-alvo, usando essa comparação para determinar quando um sprite atingiu um ponto na tela, cresceu para um determinado tamanho ou atingiu um valor usando o padrão de contador . Depois de usar os booleanos diretamente para investigar os valores ou as propriedades do sprite, os alunos adicionam instruções _if_ condicionais para escrever o código que responde a essas comparações booleanas.
             Keyboard Input:
               name: Entrada do teclado
               description_student: Após a introdução aos booleanos e às instruções
@@ -7202,8 +7780,20 @@ pt-BR:
                 condicionais para mover sprites pela tela. No final desta lição, os
                 alunos terão programas escritos que recebem a entrada do teclado do
                 usuário para controlar sprites na tela.
+              description_teacher: Após a introdução aos booleanos e às instruções
+                _if_ na lição anterior, os alunos são apresentados a um novo bloco
+                chamado `keyDown ()`, que retorna um booleano e pode ser usado em
+                instruções condicionais para mover sprites pela tela. No final desta
+                lição, os alunos terão programas escritos que recebem a entrada do
+                teclado do usuário para controlar sprites na tela.
             Other Forms of Input:
               name: Outras formas de entrada
+              description_student: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
+              description_teacher: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
             Project - Interactive Card:
               name: Projeto - Cartão Interativo
               description_student: Neste projeto cumulativo do Capítulo 1, a turma
@@ -7227,12 +7817,46 @@ pt-BR:
                 um jogo básico de rolagem lateral.
             Collision Detection:
               name: Detecção de Colisão
+              description_student: |2-
+
+                A turma aprende sobre a detecção de colisões no computador. Os pares exploram como um computador pode usar a localização do sprite, as propriedades de tamanho e a matemática para detectar se dois sprites estão se tocando. A classe então usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
+              description_teacher: |2-
+
+                Os alunos aprendem sobre a detecção de colisões no computador. Trabalhando em pares, eles exploram como um computador pode usar as propriedades de localização e tamanho do sprite e a matemática para detectar se dois sprites estão se tocando. Eles então usam o bloco `isTouching ()` para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
             Complex Sprite Movement:
               name: Movimento complexo de Sprite
+              description_student: A turma aprende a combinar as propriedades de velocidade
+                dos sprites com o padrão do contador para criar movimentos de sprites
+                mais complexos, como simular a gravidade, fazer um salto do sprite
+                e permitir que o sprite flutue para a esquerda ou direita. Nos níveis
+                finais, a classe combina esses movimentos para animar e controlar
+                um único sprite e criar um jogo simples no qual um personagem voa
+                e coleta moedas.
+              description_teacher: Os alunos aprendem a combinar as propriedades de
+                velocidade dos sprites com o padrão do contador para criar movimentos
+                de sprites mais complexos. Em particular, os alunos aprenderão como
+                simular a gravidade, fazer um sprite pular e permitir que um sprite
+                flutue para a esquerda ou direita. Nos níveis finais da progressão
+                do Code Studio, os alunos combinam esses movimentos para animar e
+                controlar um único sprite e criar um jogo simples no qual um personagem
+                voa e recolhe uma moeda. Os alunos são incentivados a fazer suas próprias
+                adições ao jogo no nível final.
             Collisions:
               name: Colisões
+              description_student: A turma programa seus sprites para interagir de
+                novas maneiras. Depois de uma breve revisão de como eles usaram o
+                bloco isTouching, a classe faz um brainstorm de outras maneiras pelas
+                quais dois sprites poderiam interagir. Eles então usam isTouching
+                para fazer um sprite empurrar outro pela tela antes de praticar com
+                os quatro blocos de colisão (colidir, deslocar, pular e pular fora).
+              description_teacher: |2-
+
+                Os alunos programam seus sprites para interagir de novas maneiras. Após uma breve revisão de como eles usaram o bloco `isTouching`, os alunos discutem outras maneiras pelas quais dois sprites poderiam interagir. Eles então usam o `isTouching` para fazer um sprite empurrar outro pela tela antes de praticar com os quatro blocos de colisão (` colide`, `desloca`,` bounce` e `bounceOff`).
             Functions:
               name: funções
+              description_student: |2-
+
+                Esta lição aborda funções como uma maneira de organizar seu código, torná-lo mais legível e remover blocos repetidos de código. A turma aprende que as etapas abstratas de nível superior ou mais facilitam o entendimento e o raciocínio sobre as etapas e começam a criar funções no Game Lab. No final da lição, a classe usa essas habilidades para organizar e adicionar funcionalidades à versão final do jogo de rolagem lateral.
               description_teacher: Os alunos aprendem a criar funções para organizar
                 seu código, torná-lo mais legível e remover blocos repetidos de código.
                 Um aquecimento desconectado explora como as direções em diferentes
@@ -7246,6 +7870,12 @@ pt-BR:
                 funcionalidades à versão final do jogo de rolagem lateral.
             The Game Design Process:
               name: O processo de design de jogos
+              description_student: |2-
+
+                Esta lição apresenta o processo que a turma usará para criar jogos para o restante da unidade. A turma percorre esse processo em uma série de níveis. Como parte desta lição, a classe também aprendeu brevemente a usar animações de vários quadros no Game Lab. No final da lição, eles têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
+              description_teacher: |2-
+
+                Esta lição apresenta aos alunos o processo que eles usarão para criar jogos para o restante da unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que definam seus sprites, variáveis ​​e funções antes de começarem a programar seu jogo. Nesta lição, os alunos começam jogando um jogo no Game Lab, onde o código está oculto. Eles discutem o que acham que os sprites, variáveis ​​e funções precisariam ser para criar o jogo. Eles recebem um guia de projeto completo, que mostra uma maneira de implementar o jogo. Os alunos são então percorridos por esse processo através de uma série de níveis. Como parte desta lição, os alunos também aprendem brevemente a usar animações de vários quadros no Game Lab. No final da aula, os alunos têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
             Using the Game Design Process:
               name: Usando o processo de design de jogos
               description_student: Nesta lição de vários dias, a turma usa o processo
@@ -7261,6 +7891,10 @@ pt-BR:
                 ou em pares, a turma planeja, desenvolve e dá feedback sobre os jogos.
                 Depois de incorporar o feedback dos colegas, a turma compartilha os
                 jogos concluídos.
+            CS Discoveries End of Semester Survey:
+              name: |2-
+
+                 CS Discoveries - Pesquisa de fim de semestre
         csd2-2018:
           stages:
             Exploring Websites:
@@ -7459,6 +8093,10 @@ pt-BR:
               name: 'Repetições: Meus amigos robôs esquisitos'
             Nested Loops:
               name: Laços aninhados
+            Nested Loops Project in Frozen:
+              name: |2-
+
+                Projeto de Loops Aninhados em Frozen
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
@@ -7469,6 +8107,8 @@ pt-BR:
               name: O grande evento
             Events in Star Wars:
               name: Eventos em Guerra nas Estrelas
+            Events with Flappy:
+              name: Eventos com Flappy
             'Conditionals: Conditionals with Cards':
               name: 'Condicional: Condicionais com Cartões'
             Conditional Loops in Maze:
@@ -7830,7 +8470,7 @@ pt-BR:
             Nested Loops with Frozen:
               name: Laços Aninhados com Frozen
             'Algorithms: Tangrams':
-              name: 'Algoritmos: tangrams'
+              name: 'Algoritmos: Tangrams'
             Introduction:
               name: Introdução
             The Power of Words:
@@ -7931,6 +8571,7 @@ pt-BR:
             Understanding Your User:
               name: Entendendo seu usuário
             User-Centered Design Micro Activity:
+              name: Micro atividade de design centrado no usuário
               description_teacher: Esta lição orienta os alunos em uma versão abreviada
                 do processo de design que eles verão em toda a unidade. Os alunos
                 debatem primeiro uma lista de possíveis usuários de roupas inteligentes.
@@ -8031,6 +8672,10 @@ pt-BR:
               name: Limpeza de dados
             Creating Summary Tables:
               name: Criando tabelas de resumo
+            Practice PT - Tell a Data Story:
+              name: |2-
+
+                Prática - Conte uma história de dados
             Unit 2 Chapter 2 Assessment:
               name: Unidade 2 Capítulo 2 Avaliação
             Unit 2 Assessment:
@@ -8209,28 +8854,56 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
             Complete Unit 1 Deeper Learning Reflections:
               name: Unidade 1 - Reflexões de aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csd2-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csd3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csd4-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
             Complete Unit 4 Deeper Learning Reflections:
               name: Unidade 4 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csd5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Unidade 5 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csd6-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Unidade 5 - Reflexões de aprendizado mais profundo
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Unidade 6 - Reflexões de aprendizado mais profundo
+          description_short: 'Materiais de aprendizagem mais profundos para facilitadores
+            de CSP em treinamento '
         csp1-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -8241,24 +8914,34 @@ pt-BR:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Unidade 2 - Reflexões de aprendizado mais profundo
         csp3-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
         csp4-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Unidade 3 - Reflexões de aprendizado mais profundo
             Complete Unit 4 Deeper Learning Reflections:
               name: Unidade 4 - Reflexões de aprendizado mais profundo
         csp5-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Unidade 5 - Reflexões de aprendizado mais profundo
         csp-explore-dlp-18:
           stages:
             Deeper Learning Overview:
               name: Visão geral do aprendizado mais profundo
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Unidade 6 - Reflexões de aprendizado mais profundo
         csp-create-dlp-18:
           stages:
             Deeper Learning Overview:
@@ -9300,6 +9983,26 @@ pt-BR:
                 como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
+              description_student: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
+              description_teacher: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
               description_student: A classe é apresentada ao Laboratório de Jogos,
@@ -9345,8 +10048,24 @@ pt-BR:
                 sobre si mesmos, o que será útil no futuro ao fazer animações.
             The Draw Loop:
               name: O laço de desenho
+              description_student: |2-
+
+                Esta lição apresenta o loop de empate, um dos principais paradigmas de programação do Game Lab. A classe combina o loop de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
+              description_teacher: Nesta lição, os alunos são apresentados ao loop
+                de empate, um dos principais paradigmas de programação do Game Lab.
+                Para começar a lição, os alunos examinam alguns flipbooks físicos
+                para ver que ter muitos quadros com imagens diferentes cria a impressão
+                de movimento. Os alunos assistem a um vídeo explicando como o ciclo
+                de empate no Game Lab ajuda a criar essa mesma impressão em seus programas.
+                Os alunos combinam o loop de desenho com números aleatórios para manipular
+                algumas animações simples com pontos e depois com sprites. No final
+                da lição, os alunos usam o que aprenderam para atualizar sua cena
+                de sprite da lição anterior
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_student: |2-
+
+                Esta lição desplugada explora o comportamento subjacente das variáveis. Usando notecards e string para simular variáveis ​​dentro de um programa, a classe implementa alguns programas curtos. Uma vez familiarizada com essa sintaxe, a classe usa o mesmo processo com propriedades de sprite, acompanhando o progresso de um sprite na tela.
               description_teacher: Os alunos exploram o comportamento subjacente das
                 variáveis por meio de uma atividade desconectada. Usando notecards
                 e string para simular variáveis dentro de um programa, os alunos implementam
@@ -9355,8 +10074,17 @@ pt-BR:
                 o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
+              description_student: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
+              description_teacher: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
             Booleans Unplugged:
               name: Booleanos off-line
+              description_student: |2-
+
+                Esta lição apresenta valores e lógica booleanos, além de instruções condicionais. A aula começa com um jogo simples de Stand Up, Sit Down, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade etc.). A classe, em seguida, agrupa objetos com base em instruções booleanas cada vez mais complexas e analisa como as condicionais podem afetar o fluxo de um programa.
               description_teacher: |-
                 Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
 
@@ -9373,6 +10101,9 @@ pt-BR:
                 investigar os valores ou propriedades de sprite, a classe adiciona
                 instruções condicionais 'se' para escrever código que responde a essas
                 comparações booleanas.
+              description_teacher: |2-
+
+                Os alunos começam usando booleanos para comparar o valor atual de uma propriedade de sprite com um valor-alvo, usando essa comparação para determinar quando um sprite atingiu um ponto na tela, cresceu para um determinado tamanho ou atingiu um valor usando o padrão de contador . Depois de usar os booleanos diretamente para investigar os valores ou as propriedades do sprite, os alunos adicionam instruções _if_ condicionais para escrever o código que responde a essas comparações booleanas.
             Keyboard Input:
               name: Entrada do teclado
               description_student: Após a introdução aos booleanos e às instruções
@@ -9381,8 +10112,20 @@ pt-BR:
                 condicionais para mover sprites pela tela. No final desta lição, os
                 alunos terão programas escritos que recebem a entrada do teclado do
                 usuário para controlar sprites na tela.
+              description_teacher: Após a introdução aos booleanos e às instruções
+                _if_ na lição anterior, os alunos são apresentados a um novo bloco
+                chamado `keyDown ()`, que retorna um booleano e pode ser usado em
+                instruções condicionais para mover sprites pela tela. No final desta
+                lição, os alunos terão programas escritos que recebem a entrada do
+                teclado do usuário para controlar sprites na tela.
             Other Forms of Input:
               name: Outras formas de entrada
+              description_student: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
+              description_teacher: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
             Project - Interactive Card:
               name: Projeto - Cartão Interativo
               description_student: Neste projeto cumulativo do Capítulo 1, a turma
@@ -9406,12 +10149,46 @@ pt-BR:
                 um jogo básico de rolagem lateral.
             Collision Detection:
               name: Detecção de Colisão
+              description_student: |2-
+
+                A turma aprende sobre a detecção de colisões no computador. Os pares exploram como um computador pode usar a localização do sprite, as propriedades de tamanho e a matemática para detectar se dois sprites estão se tocando. A classe então usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
+              description_teacher: |2-
+
+                Os alunos aprendem sobre a detecção de colisões no computador. Trabalhando em pares, eles exploram como um computador pode usar as propriedades de localização e tamanho do sprite e a matemática para detectar se dois sprites estão se tocando. Eles então usam o bloco `isTouching ()` para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
             Complex Sprite Movement:
               name: Movimento complexo de Sprite
+              description_student: A turma aprende a combinar as propriedades de velocidade
+                dos sprites com o padrão do contador para criar movimentos de sprites
+                mais complexos, como simular a gravidade, fazer um salto do sprite
+                e permitir que o sprite flutue para a esquerda ou direita. Nos níveis
+                finais, a classe combina esses movimentos para animar e controlar
+                um único sprite e criar um jogo simples no qual um personagem voa
+                e coleta moedas.
+              description_teacher: Os alunos aprendem a combinar as propriedades de
+                velocidade dos sprites com o padrão do contador para criar movimentos
+                de sprites mais complexos. Em particular, os alunos aprenderão como
+                simular a gravidade, fazer um sprite pular e permitir que um sprite
+                flutue para a esquerda ou direita. Nos níveis finais da progressão
+                do Code Studio, os alunos combinam esses movimentos para animar e
+                controlar um único sprite e criar um jogo simples no qual um personagem
+                voa e recolhe uma moeda. Os alunos são incentivados a fazer suas próprias
+                adições ao jogo no nível final.
             Collisions:
               name: Colisões
+              description_student: A turma programa seus sprites para interagir de
+                novas maneiras. Depois de uma breve revisão de como eles usaram o
+                bloco isTouching, a classe faz um brainstorm de outras maneiras pelas
+                quais dois sprites poderiam interagir. Eles então usam isTouching
+                para fazer um sprite empurrar outro pela tela antes de praticar com
+                os quatro blocos de colisão (colidir, deslocar, pular e pular fora).
+              description_teacher: |2-
+
+                Os alunos programam seus sprites para interagir de novas maneiras. Após uma breve revisão de como eles usaram o bloco `isTouching`, os alunos discutem outras maneiras pelas quais dois sprites poderiam interagir. Eles então usam o `isTouching` para fazer um sprite empurrar outro pela tela antes de praticar com os quatro blocos de colisão (` colide`, `desloca`,` bounce` e `bounceOff`).
             Functions:
               name: funções
+              description_student: |2-
+
+                Esta lição aborda funções como uma maneira de organizar seu código, torná-lo mais legível e remover blocos repetidos de código. A turma aprende que as etapas abstratas de nível superior ou mais facilitam o entendimento e o raciocínio sobre as etapas e começam a criar funções no Game Lab. No final da lição, a classe usa essas habilidades para organizar e adicionar funcionalidades à versão final do jogo de rolagem lateral.
               description_teacher: Os alunos aprendem a criar funções para organizar
                 seu código, torná-lo mais legível e remover blocos repetidos de código.
                 Um aquecimento desconectado explora como as direções em diferentes
@@ -9425,6 +10202,12 @@ pt-BR:
                 funcionalidades à versão final do jogo de rolagem lateral.
             The Game Design Process:
               name: O processo de design de jogos
+              description_student: |2-
+
+                Esta lição apresenta o processo que a turma usará para criar jogos para o restante da unidade. A turma percorre esse processo em uma série de níveis. Como parte desta lição, a classe também aprendeu brevemente a usar animações de vários quadros no Game Lab. No final da lição, eles têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
+              description_teacher: |2-
+
+                Esta lição apresenta aos alunos o processo que eles usarão para criar jogos para o restante da unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que definam seus sprites, variáveis ​​e funções antes de começarem a programar seu jogo. Nesta lição, os alunos começam jogando um jogo no Game Lab, onde o código está oculto. Eles discutem o que acham que os sprites, variáveis ​​e funções precisariam ser para criar o jogo. Eles recebem um guia de projeto completo, que mostra uma maneira de implementar o jogo. Os alunos são então percorridos por esse processo através de uma série de níveis. Como parte desta lição, os alunos também aprendem brevemente a usar animações de vários quadros no Game Lab. No final da aula, os alunos têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
             Using the Game Design Process:
               name: Usando o processo de design de jogos
               description_student: Nesta lição de vários dias, a turma usa o processo
@@ -9440,6 +10223,10 @@ pt-BR:
                 ou em pares, a turma planeja, desenvolve e dá feedback sobre os jogos.
                 Depois de incorporar o feedback dos colegas, a turma compartilha os
                 jogos concluídos.
+            CS Discoveries End of Semester Survey:
+              name: |2-
+
+                 CS Discoveries - Pesquisa de fim de semestre
             Post-Project Test:
               name: Teste pós-projeto
         csd4-2019:
@@ -9449,6 +10236,7 @@ pt-BR:
             Understanding Your User:
               name: Entendendo seu usuário
             User-Centered Design Micro Activity:
+              name: Micro atividade de design centrado no usuário
               description_teacher: Esta lição orienta os alunos em uma versão abreviada
                 do processo de design que eles verão em toda a unidade. Os alunos
                 debatem primeiro uma lista de possíveis usuários de roupas inteligentes.
@@ -9589,6 +10377,8 @@ pt-BR:
             Unit 4 Assessment:
               name: Unidade 4 Avaliação
         csp1-2019:
+          description_short: Explore os desafios de representar informações como bits
+            e como obtê-los de um lugar para outro.
           stages:
             Personal Innovations:
               name: Inovações Pessoais
@@ -10103,7 +10893,11 @@ pt-BR:
             Programming in Maze:
               name: Programação no labirinto
         csp-post-survey-2018:
+          stages:
+            CSP post-course survey:
+              name: Pesquisa Pós-Curso PCC
           description_audience: Alunos de PCC
+          description_short: Pesquisa pós-curso do estudante
           description: Bem-vindo à Pesquisa de Pós-Curso em Princípios da CC do Code.org.
             Esta pesquisa leva cerca de 15 minutos para ser concluída. Suas respostas
             são privadas e anônimas - seu professor pode ver resultados agregados
@@ -10277,6 +11071,26 @@ pt-BR:
                 como um veículo para a autoexpressão.
             Plotting Shapes:
               name: Formas de plotagem
+              description_student: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
+              description_teacher: Os alunos exploram os desafios de comunicar e  de
+                como desenhar com formas e usam uma ferramenta que apresenta como
+                esse problema é abordado no Game Lab. A atividade de aquecimento demonstra
+                rapidamente os desafios da posição de comunicação sem algum ponto
+                de referência compartilhado. Na atividade principal, os alunos exploram
+                uma ferramenta do Game Lab que permite colocar formas interativamente
+                na grade de 400 por 400 do Game Lab. Eles se revezam, instruindo um
+                parceiro a desenhar uma imagem oculta usando essa ferramenta, respondendo
+                a muitos desafios. Opcionalmente, os alunos criam sua própria imagem
+                para se comunicar antes de uma discussão.
             Drawing in Game Lab:
               name: Desenhando no Laboratório de Jogos
               description_student: A classe é apresentada ao Laboratório de Jogos,
@@ -10322,8 +11136,24 @@ pt-BR:
                 sobre si mesmos, o que será útil no futuro ao fazer animações.
             The Draw Loop:
               name: O laço de desenho
+              description_student: |2-
+
+                Esta lição apresenta o loop de empate, um dos principais paradigmas de programação do Game Lab. A classe combina o loop de desenho com números aleatórios para manipular algumas animações simples com pontos e depois com sprites. Depois, todos usam o que aprenderam para atualizar a cena do sprite da lição anterior.
+              description_teacher: Nesta lição, os alunos são apresentados ao loop
+                de empate, um dos principais paradigmas de programação do Game Lab.
+                Para começar a lição, os alunos examinam alguns flipbooks físicos
+                para ver que ter muitos quadros com imagens diferentes cria a impressão
+                de movimento. Os alunos assistem a um vídeo explicando como o ciclo
+                de empate no Game Lab ajuda a criar essa mesma impressão em seus programas.
+                Os alunos combinam o loop de desenho com números aleatórios para manipular
+                algumas animações simples com pontos e depois com sprites. No final
+                da lição, os alunos usam o que aprenderam para atualizar sua cena
+                de sprite da lição anterior
             The Counter Pattern Unplugged:
               name: O padrão do contador desconectado
+              description_student: |2-
+
+                Esta lição desplugada explora o comportamento subjacente das variáveis. Usando notecards e string para simular variáveis ​​dentro de um programa, a classe implementa alguns programas curtos. Uma vez familiarizada com essa sintaxe, a classe usa o mesmo processo com propriedades de sprite, acompanhando o progresso de um sprite na tela.
               description_teacher: Os alunos exploram o comportamento subjacente das
                 variáveis por meio de uma atividade desconectada. Usando notecards
                 e string para simular variáveis dentro de um programa, os alunos implementam
@@ -10332,8 +11162,17 @@ pt-BR:
                 o progresso de um sprite na tela.
             Sprite Movement:
               name: Movimento sprite
+              description_student: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
+              description_teacher: Visão global - Combinando o desenho do laço e o
+                padrão do contador, a classe escreve programas que movem sprites pela
+                tela, além de animar outras propriedades de sprite.
             Booleans Unplugged:
               name: Booleanos off-line
+              description_student: |2-
+
+                Esta lição apresenta valores e lógica booleanos, além de instruções condicionais. A aula começa com um jogo simples de Stand Up, Sit Down, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade etc.). A classe, em seguida, agrupa objetos com base em instruções booleanas cada vez mais complexas e analisa como as condicionais podem afetar o fluxo de um programa.
               description_teacher: |-
                 Nesta lição, os alunos são apresentados a valores e lógica booleanos, bem como a declarações condicionais. A aula começa com um jogo simples de Levante-se e Sente-se, no qual as declarações booleanas (verdadeiro / falso) descrevem propriedades pessoais (cabelo ou cor dos olhos, tipo de roupa, idade, etc.). Isso faz com que os alunos pensem em como podem enquadrar uma propriedade com vários valores potenciais (como idade) com uma pergunta binária.
 
@@ -10350,6 +11189,9 @@ pt-BR:
                 investigar os valores ou propriedades de sprite, a classe adiciona
                 instruções condicionais 'se' para escrever código que responde a essas
                 comparações booleanas.
+              description_teacher: |2-
+
+                Os alunos começam usando booleanos para comparar o valor atual de uma propriedade de sprite com um valor-alvo, usando essa comparação para determinar quando um sprite atingiu um ponto na tela, cresceu para um determinado tamanho ou atingiu um valor usando o padrão de contador . Depois de usar os booleanos diretamente para investigar os valores ou as propriedades do sprite, os alunos adicionam instruções _if_ condicionais para escrever o código que responde a essas comparações booleanas.
             Keyboard Input:
               name: Entrada do teclado
               description_student: Após a introdução aos booleanos e às instruções
@@ -10358,8 +11200,20 @@ pt-BR:
                 condicionais para mover sprites pela tela. No final desta lição, os
                 alunos terão programas escritos que recebem a entrada do teclado do
                 usuário para controlar sprites na tela.
+              description_teacher: Após a introdução aos booleanos e às instruções
+                _if_ na lição anterior, os alunos são apresentados a um novo bloco
+                chamado `keyDown ()`, que retorna um booleano e pode ser usado em
+                instruções condicionais para mover sprites pela tela. No final desta
+                lição, os alunos terão programas escritos que recebem a entrada do
+                teclado do usuário para controlar sprites na tela.
             Other Forms of Input:
               name: Outras formas de entrada
+              description_student: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
+              description_teacher: |2-
+
+                A classe continua a explorar maneiras de usar instruções condicionais para receber a entrada do usuário. Além do comando simples keyDown () aprendido ontem, a classe aprende sobre vários outros comandos de entrada do teclado, bem como maneiras de obter a entrada do mouse.
             Project - Interactive Card:
               name: Projeto - Cartão Interativo
               description_student: Neste projeto cumulativo do Capítulo 1, a turma
@@ -10383,12 +11237,46 @@ pt-BR:
                 um jogo básico de rolagem lateral.
             Collision Detection:
               name: Detecção de Colisão
+              description_student: |2-
+
+                A turma aprende sobre a detecção de colisões no computador. Os pares exploram como um computador pode usar a localização do sprite, as propriedades de tamanho e a matemática para detectar se dois sprites estão se tocando. A classe então usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
+              description_teacher: |2-
+
+                Os alunos aprendem sobre a detecção de colisões no computador. Trabalhando em pares, eles exploram como um computador pode usar as propriedades de localização e tamanho do sprite e a matemática para detectar se dois sprites estão se tocando. Eles então usam o bloco `isTouching ()` para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por fim, eles usam suas novas habilidades para melhorar o jogo sidescroller iniciado na última lição.
             Complex Sprite Movement:
               name: Movimento complexo de Sprite
+              description_student: A turma aprende a combinar as propriedades de velocidade
+                dos sprites com o padrão do contador para criar movimentos de sprites
+                mais complexos, como simular a gravidade, fazer um salto do sprite
+                e permitir que o sprite flutue para a esquerda ou direita. Nos níveis
+                finais, a classe combina esses movimentos para animar e controlar
+                um único sprite e criar um jogo simples no qual um personagem voa
+                e coleta moedas.
+              description_teacher: Os alunos aprendem a combinar as propriedades de
+                velocidade dos sprites com o padrão do contador para criar movimentos
+                de sprites mais complexos. Em particular, os alunos aprenderão como
+                simular a gravidade, fazer um sprite pular e permitir que um sprite
+                flutue para a esquerda ou direita. Nos níveis finais da progressão
+                do Code Studio, os alunos combinam esses movimentos para animar e
+                controlar um único sprite e criar um jogo simples no qual um personagem
+                voa e recolhe uma moeda. Os alunos são incentivados a fazer suas próprias
+                adições ao jogo no nível final.
             Collisions:
               name: Colisões
+              description_student: A turma programa seus sprites para interagir de
+                novas maneiras. Depois de uma breve revisão de como eles usaram o
+                bloco isTouching, a classe faz um brainstorm de outras maneiras pelas
+                quais dois sprites poderiam interagir. Eles então usam isTouching
+                para fazer um sprite empurrar outro pela tela antes de praticar com
+                os quatro blocos de colisão (colidir, deslocar, pular e pular fora).
+              description_teacher: |2-
+
+                Os alunos programam seus sprites para interagir de novas maneiras. Após uma breve revisão de como eles usaram o bloco `isTouching`, os alunos discutem outras maneiras pelas quais dois sprites poderiam interagir. Eles então usam o `isTouching` para fazer um sprite empurrar outro pela tela antes de praticar com os quatro blocos de colisão (` colide`, `desloca`,` bounce` e `bounceOff`).
             Functions:
               name: funções
+              description_student: |2-
+
+                Esta lição aborda funções como uma maneira de organizar seu código, torná-lo mais legível e remover blocos repetidos de código. A turma aprende que as etapas abstratas de nível superior ou mais facilitam o entendimento e o raciocínio sobre as etapas e começam a criar funções no Game Lab. No final da lição, a classe usa essas habilidades para organizar e adicionar funcionalidades à versão final do jogo de rolagem lateral.
               description_teacher: Os alunos aprendem a criar funções para organizar
                 seu código, torná-lo mais legível e remover blocos repetidos de código.
                 Um aquecimento desconectado explora como as direções em diferentes
@@ -10402,6 +11290,12 @@ pt-BR:
                 funcionalidades à versão final do jogo de rolagem lateral.
             The Game Design Process:
               name: O processo de design de jogos
+              description_student: |2-
+
+                Esta lição apresenta o processo que a turma usará para criar jogos para o restante da unidade. A turma percorre esse processo em uma série de níveis. Como parte desta lição, a classe também aprendeu brevemente a usar animações de vários quadros no Game Lab. No final da lição, eles têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
+              description_teacher: |2-
+
+                Esta lição apresenta aos alunos o processo que eles usarão para criar jogos para o restante da unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que definam seus sprites, variáveis ​​e funções antes de começarem a programar seu jogo. Nesta lição, os alunos começam jogando um jogo no Game Lab, onde o código está oculto. Eles discutem o que acham que os sprites, variáveis ​​e funções precisariam ser para criar o jogo. Eles recebem um guia de projeto completo, que mostra uma maneira de implementar o jogo. Os alunos são então percorridos por esse processo através de uma série de níveis. Como parte desta lição, os alunos também aprendem brevemente a usar animações de vários quadros no Game Lab. No final da aula, os alunos têm a oportunidade de fazer melhorias no jogo para torná-lo seu.
             Using the Game Design Process:
               name: Usando o processo de design de jogos
               description_student: Nesta lição de vários dias, a turma usa o processo
@@ -10495,6 +11389,8 @@ pt-BR:
               name: Visão geral do aprendizado mais profundo
         csd-pilot:
           stages:
+            Pilot Information 3:
+              name: Informação Piloto 3
             Pilot Information 4:
               name: Informações do piloto 4
             Pilot Information 5:
@@ -10547,6 +11443,7 @@ pt-BR:
               name: Informações do piloto 28
             Pilot Information 29:
               name: Informações do piloto 29
+          title: CSD Curso Piloto
         csd4-pilot:
           stages:
             What is a Computer?:
@@ -10594,6 +11491,8 @@ pt-BR:
               name: 'Lição 9: Dia da Avaliação'
             The Need for Addressing:
               name: A Necessidade de Endereçar
+            Project - Internet Dilemmas Part 1:
+              name: Projeto - Dilemas da Internet Parte 1
         denny-science:
           stages:
             Earthquake Detector:
@@ -10617,6 +11516,10 @@ pt-BR:
               name: Laços no Artista
             Nested Loops:
               name: Laços aninhados
+            Nested Loops Project in Frozen:
+              name: |2-
+
+                Projeto de Loops Aninhados em Frozen
             Events in Star Wars:
               name: Eventos em Guerra nas Estrelas
             Introduction to Debugging:
@@ -10899,5 +11802,34 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
+            Create PT - Review the Task:
+              name: Criar PT Preparação - Revendo a Tarefa
+            Create PT - Make a Plan:
+              name: Criar PT - Fazendo um Plano
             Create PT - Complete the Task:
               name: Criar PT - Complete a Tarefa
+          title: CSP Unidade 8 Piloto - Criar Preparação PT
+        csp4-2020:
+          stages:
+            Variables Explore:
+              name: Explorar Variáveis
+            Variables Investigate:
+              name: Investigar Variáveis
+            Variables Practice:
+              name: Prática de Variáveis
+            Variables Make:
+              name: Criar Variáveis
+            Conditionals Explore:
+              name: Explorar Condicionais
+            Conditionals Investigate:
+              name: Investigar Condicionais
+            Conditionals Practice:
+              name: Prática de Condicionais
+            Conditional Make:
+              name: Criar Condicionais
+            Functions Explore / Investigate:
+              name: Explorar / Investigar Funções
+            Functions Practice:
+              name: Prática de Funções
+            Functions Make:
+              name: Criar Funções
