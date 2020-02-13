@@ -20,6 +20,11 @@ const styles = {
   centerContent: {
     display: 'flex',
     justifyContent: 'center'
+  },
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic',
+    lineHeight: 1.2
   }
 };
 
@@ -106,7 +111,7 @@ class LibraryCreationDialog extends React.Component {
   };
 
   render() {
-    let bodyContent;
+    let subtitleContent, bodyContent;
     const {dialogState, libraryName, errorMessage} = this.state;
     const {dialogIsOpen, channelId} = this.props;
     switch (dialogState) {
@@ -128,6 +133,7 @@ class LibraryCreationDialog extends React.Component {
         bodyContent = <ErrorDisplay message={errorMessage} />;
         break;
       case DialogState.DONE_LOADING:
+        subtitleContent = i18n.libraryExportSubtitle();
         bodyContent = this.displayContent();
         break;
       default:
@@ -145,6 +151,9 @@ class LibraryCreationDialog extends React.Component {
           <PadAndCenter>
             <div style={styles.libraryBoundary}>
               <Heading1>{i18n.libraryExportTitle()}</Heading1>
+              {subtitleContent && (
+                <div style={styles.info}>{subtitleContent}</div>
+              )}
               {bodyContent}
             </div>
           </PadAndCenter>
