@@ -48,6 +48,6 @@ class RedshiftImport
 
   def self.move_rows(source_schema, source_table, target_schema, target_table)
     redshift_client = RedshiftClient.instance
-    redshift_client.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table};"
+    redshift_client.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table} IGNOREEXTRA;"
   end
 end
