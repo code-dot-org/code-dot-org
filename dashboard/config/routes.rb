@@ -224,7 +224,7 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   get 'datasets/manifest', to: 'datasets#show_manifest'
-  post 'datasets/manifest', to: 'datasets#updated_manifest'
+  post 'datasets/manifest', to: 'datasets#update_manifest'
 
   resources :levels do
     member do
@@ -437,7 +437,6 @@ Dashboard::Application.routes.draw do
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
-      post :regional_partner_contacts, to: 'regional_partner_contacts#create'
       post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
