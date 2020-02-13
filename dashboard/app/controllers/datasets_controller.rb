@@ -1,3 +1,5 @@
+require 'URI'
+
 class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
   before_action :initialize_firebase
@@ -10,7 +12,7 @@ class DatasetsController < ApplicationController
 
   def edit
     @table_name = params[:dataset]
-    @dataset = @firebase.get_shared_table(params[:dataset])
+    @dataset = @firebase.get_shared_table URI.escape(params[:dataset])
   end
 
   # POST /datasets/:dataset/edit
@@ -18,8 +20,8 @@ class DatasetsController < ApplicationController
     p params
     records, columns = @firebase.csv_as_table(params[:csv_data])
     p columns
-    @firebase.delete_shared_table(params[:dataset])
-    response = @firebase.upload_shared_table(params[:dataset], records, columns)
+    @firebase.delete_shared_table URI.escape(params[:dataset])
+    response = @firebase.upload_shared_table(URI.escape(params[:dataset]), records, columns)
     p response
     data = {status: response.code}
     if response.success?
