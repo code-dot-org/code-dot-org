@@ -93,7 +93,8 @@ class StandardsViewHeaderButtons extends Component {
         event: 'generate_report',
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
-          script_id: this.props.scriptId
+          script_id: this.props.scriptId,
+          added_comment: !!this.state.comment
         })
       },
       {includeUserId: true}
