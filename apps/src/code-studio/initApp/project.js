@@ -180,6 +180,17 @@ var projects = (module.exports = {
   },
 
   /**
+   * @returns {array} list of all class ids that this library has been shared
+   * with. Or undefined if we don't have a current project.
+   */
+  getCurrentLibrarySharedClasses() {
+    if (!current) {
+      return;
+    }
+    return current.sharedWith;
+  },
+
+  /**
    * @returns {string} description of the most recently published library from the
    * project, or undefined if we don't have a current project
    */
@@ -565,17 +576,10 @@ var projects = (module.exports = {
       this.setTitle(newName);
     }
   },
-  setLibraryDescription(description, callback) {
+  setLibrarySharedClasses(newSharedClasses, callback) {
     current = current || {};
-    if (description && current.libraryDescription !== description) {
-      current.libraryDescription = description;
-      this.updateChannels_(callback);
-    }
-  },
-  setLibraryName(newName, callback) {
-    current = current || {};
-    if (newName && current.libraryName !== newName) {
-      current.libraryName = newName;
+    if (Array.isArray(newSharedClasses)) {
+      current.sharedWith = newSharedClasses;
       this.updateChannels_(callback);
     }
   },
