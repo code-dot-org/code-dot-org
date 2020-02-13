@@ -10,16 +10,15 @@ import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import styleConstants from '../styleConstants';
+import {changeShowError} from './actions';
+import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import {getStore} from '../redux';
 
 /**
  * Top-level React wrapper for WebLab
  */
 class WebLabView extends React.Component {
   static propTypes = {
-    isProjectLevel: PropTypes.bool.isRequired,
-    isReadOnlyWorkspace: PropTypes.bool.isRequired,
-    isInspectorOn: PropTypes.bool.isRequired,
-    isFullScreenPreviewOn: PropTypes.bool.isRequired,
     onUndo: PropTypes.func.isRequired,
     onRedo: PropTypes.func.isRequired,
     onRefreshPreview: PropTypes.func.isRequired,
@@ -30,7 +29,14 @@ class WebLabView extends React.Component {
     onAddFileCSS: PropTypes.func.isRequired,
     onAddFileImage: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
-    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired
+
+    // From redux
+    isProjectLevel: PropTypes.bool.isRequired,
+    isReadOnlyWorkspace: PropTypes.bool.isRequired,
+    isInspectorOn: PropTypes.bool.isRequired,
+    isFullScreenPreviewOn: PropTypes.bool.isRequired,
+    showProjectTemplateWorkspaceIcon: PropTypes.bool.isRequired,
+    shouldShowError: PropTypes.bool.isRequired
   };
 
   componentDidMount() {
@@ -152,6 +158,13 @@ class WebLabView extends React.Component {
               style={iframeStyles}
             />
             {!this.props.isProjectLevel && <CompletionButton />}
+            <BaseDialog
+              isOpen={this.props.shouldShowError}
+              handleClose={() => getStore().dispatch(changeShowError(false))}
+            >
+              <h1>{weblabMsg.uploadError()}</h1>
+              <p>{weblabMsg.errorSavingProject()}</p>
+            </BaseDialog>
           </div>
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
@@ -160,6 +173,7 @@ class WebLabView extends React.Component {
 }
 
 export default connect(state => ({
+  shouldShowError: state.showError,
   isProjectLevel: state.pageConstants.isProjectLevel,
   isReadOnlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
   isInspectorOn: state.inspectorOn,
