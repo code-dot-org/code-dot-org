@@ -147,7 +147,7 @@ module Cdo
 
     def self.wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
       attempts = 0
-      task = nil
+      task = OpenStruct.new(arn: replication_task_arn, status: nil)
       while attempts <= max_attempts && task.status != 'stopped'
         task = replication_task_status(replication_task_arn)
 
