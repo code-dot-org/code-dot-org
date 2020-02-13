@@ -80,6 +80,9 @@ class Dataset extends React.Component {
           </p>
         )}
         <h1>{this.props.tableName}</h1>
+        <p>
+          <a href="/datasets/index">Back to Index</a>
+        </p>
         <ConfirmImportButton importCsv={this.importCsv} />
         <DataTable readOnly rowsPerPage={10} />
       </div>
