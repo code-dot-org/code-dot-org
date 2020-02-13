@@ -97,6 +97,8 @@ DSL
     expected_summary = {
       display_name: @bubble_choice.display_name,
       description: @bubble_choice.description,
+      name: @bubble_choice.name,
+      type: @bubble_choice.type,
       sublevels: @bubble_choice.summarize_sublevels
     }
 
@@ -127,14 +129,16 @@ DSL
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
-        url: level_url(@sublevel1.id)
+        url: level_url(@sublevel1.id),
+        summary: @sublevel1.summary_for_lesson_plans
       },
       {
         id: @sublevel2.id,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
-        url: level_url(@sublevel2.id)
+        url: level_url(@sublevel2.id),
+        summary: @sublevel2.summary_for_lesson_plans
       }
     ]
 
