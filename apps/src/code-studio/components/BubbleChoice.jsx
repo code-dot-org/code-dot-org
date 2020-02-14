@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -39,7 +40,10 @@ const styles = {
     opacity: 0.8
   },
   column: {
-    marginLeft: MARGIN * 2
+    marginLeft: MARGIN * 2,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-start'
   },
   title: {
     fontSize: 20,
@@ -75,6 +79,8 @@ export default class BubbleChoice extends React.Component {
           description: PropTypes.string,
           thumbnail_url: PropTypes.string,
           url: PropTypes.string.isRequired,
+          position: PropTypes.number,
+          letter: PropTypes.string,
           perfect: PropTypes.bool
         })
       )
@@ -144,12 +150,15 @@ export default class BubbleChoice extends React.Component {
               />
             )}
             <div style={styles.column}>
-              <a href={sublevel.url + location.search} style={styles.title}>
-                {sublevel.display_name}
-              </a>
-              {sublevel.description && (
-                <div style={styles.description}>{sublevel.description}</div>
-              )}
+              <ProgressBubble level={sublevel} disabled={false} />
+              <div>
+                <a href={sublevel.url + location.search} style={styles.title}>
+                  {sublevel.display_name}
+                </a>
+                {sublevel.description && (
+                  <div style={styles.description}>{sublevel.description}</div>
+                )}
+              </div>
             </div>
           </div>
         ))}
