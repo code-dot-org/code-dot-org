@@ -46,7 +46,8 @@ const styles = {
   title: {
     fontSize: 20,
     fontFamily: '"Gotham 5r"',
-    color: color.teal
+    color: color.teal,
+    marginLeft: 10
   },
   description: {
     marginTop: MARGIN
