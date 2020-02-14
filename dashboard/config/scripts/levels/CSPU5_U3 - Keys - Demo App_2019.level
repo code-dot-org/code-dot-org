@@ -169,13 +169,29 @@
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
     "short_instructions": "Play with the image scroller. Press the left and right arrows to progress through the images.",
-    "long_instructions": "# Making our App an Image Scroller\r\n\r\nOver the course of this lesson we are going to be working towards improving our \"My Favorite Things\" app to add some new features. Our improved app will be able to:\r\n\r\n* Respond to **key events**.\r\n* **Display images** by storing their URLs.\r\n\r\nWe'll call this new kind of app an **image scroller** but feel free to call it anything you like.\r\n\r\n# Do This:\r\n\r\n* Close these instructions.\r\n* **Experiment with the improved \"My Favorite Things\" app** to understand the new features we'll be adding.  \r\n* Make sure you try clicking the **left and right arrow keys!**\r\n\r\nOnce you think you've experimented enough, continue on to the next level.",
+    "long_instructions": "# Making our App an Image Scroller\r\n\r\nOver the course of this lesson we are going to be working towards improving our \"My Favorite Things\" app to add some new features. Our improved app will be able to:\r\n\r\n* Respond to **key events**.\r\n* **Display images** by storing their URLs.\r\n\r\nWe'll call this new kind of app an **image scroller** but feel free to call it anything you like.\r\n\r\n# Do This:\r\n\r\n* **Experiment with the improved \"My Favorite Things\" app** to understand the new features we'll be adding.  \r\n* Make sure you try clicking the **left and right arrow keys!**\r\n\r\nOnce you think you've experimented enough, continue on to the next level.",
     "parent_level_id": 13807,
     "name_suffix": "_2019",
     "show_debug_watch": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "mini_rubric": "false",
+    "hide_share_and_remix": "false",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "makerlab_enabled": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
-  "published": true
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-02-14 16:22:54 +0000\",\"changed\":[\"notes\",\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </Applab>
