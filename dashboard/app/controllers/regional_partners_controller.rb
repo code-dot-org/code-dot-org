@@ -135,9 +135,11 @@ class RegionalPartnersController < ApplicationController
       flash[:upload_error] = parse_upload_errors(errors)
       redirect_to @regional_partner
     else
-      # use destroy_all to ensure old mappings are soft deleted
-      @regional_partner.mappings.destroy_all
-      @regional_partner.mappings = mappings
+      ActiveRecord::Base.transaction do
+        # use destroy_all to ensure old mappings are soft deleted
+        @regional_partner.mappings.destroy_all
+        @regional_partner.mappings = mappings
+      end
       flash[:notice] = "Successfully replaced mappings"
       redirect_to @regional_partner
     end
@@ -228,11 +230,10 @@ class RegionalPartnersController < ApplicationController
         next
       end
       mapping = @regional_partner.mappings.build({state: state, zip_code: zip_code})
-      mapping.valid?
-      if !mapping.errors[:base].nil_or_empty?
-        errors << {region: region, message: mapping.errors[:base].join(',')}
-      else
+      if mapping.valid?
         mappings << mapping
+      else
+        errors << {region: region, message: mapping.errors[:base].join(',')}
       end
     end
     if regions_missing
