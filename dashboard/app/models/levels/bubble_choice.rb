@@ -109,6 +109,9 @@ class BubbleChoice < DSLDefined
       level_info[:thumbnail_url] = level.try(:thumbnail_url)
       level_info[:position] = index + 1
 
+      alphabet = ('a'..'z').to_a
+      level_info[:letter] = alphabet[index]
+
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
         level_url(level.id)
