@@ -128,19 +128,16 @@ class ProjectsController < ApplicationController
 
   @@project_level_cache = {}
 
-  # GET /projects
+  # GET /projects/:tab_name
+  # Where a valid :tab_name is (nil|public|library)
   def index
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
+    unless params[:tab_name] == 'public'
+      return redirect_to projects_public_path unless current_user
+      return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
-    redirect_to projects_public_path unless current_user
-  end
-
-  # GET /projects/public
-  def public
-    render template: 'projects/index', locals: {is_public: current_user&.present?, limited_gallery: limited_gallery?}
+    @limited_gallery = limited_gallery?
+    @current_tab = params[:tab_name]
   end
 
   def project_and_featured_project_fields
