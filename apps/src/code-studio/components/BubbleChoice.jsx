@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
@@ -28,12 +27,6 @@ const styles = {
     height: THUMBNAIL_IMAGE_SIZE,
     backgroundColor: color.lighter_gray
   },
-  thumbnailOverlay: {
-    position: 'absolute',
-    width: THUMBNAIL_IMAGE_SIZE,
-    height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: 'rgba(0, 255, 0, 0.3)'
-  },
   check: {
     fontSize: THUMBNAIL_IMAGE_SIZE,
     color: color.white,
@@ -42,8 +35,13 @@ const styles = {
   column: {
     marginLeft: MARGIN * 2,
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'flex-start'
+  },
+  bubbleAndTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   title: {
     fontSize: 20,
@@ -135,11 +133,6 @@ export default class BubbleChoice extends React.Component {
             style={styles.row}
             className="uitest-bubble-choice"
           >
-            {sublevel.perfect && (
-              <div style={styles.thumbnailOverlay}>
-                <FontAwesome icon="check" style={styles.check} />
-              </div>
-            )}
             {/* Render a square-shaped placeholder if we don't have a thumbnail. */}
             {sublevel.thumbnail_url ? (
               <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
@@ -150,15 +143,15 @@ export default class BubbleChoice extends React.Component {
               />
             )}
             <div style={styles.column}>
-              <ProgressBubble level={sublevel} disabled={false} />
-              <div>
+              <div style={styles.bubbleAndTitle}>
+                <ProgressBubble level={sublevel} disabled={false} />
                 <a href={sublevel.url + location.search} style={styles.title}>
                   {sublevel.display_name}
                 </a>
-                {sublevel.description && (
-                  <div style={styles.description}>{sublevel.description}</div>
-                )}
               </div>
+              {sublevel.description && (
+                <div style={styles.description}>{sublevel.description}</div>
+              )}
             </div>
           </div>
         ))}

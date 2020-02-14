@@ -1,14 +1,19 @@
 <CurriculumReference>
   <config><![CDATA[{
   "game_id": 59,
-  "created_at": "2017-03-20T20:02:43.000Z",
+  "created_at": "2019-10-24T16:55:06.000Z",
   "level_num": "custom",
   "user_id": 556,
   "properties": {
     "instructions_important": "false",
-    "reference": "/docs/csd/maker_leds/index.html"
+    "reference": "/docs/csd/maker_leds/index.html",
+    "encrypted": "false",
+    "bubble_choice_description": "Wow getting more information on this subject would be neat."
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2020-02-14 10:52:08 -0500\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </CurriculumReference>

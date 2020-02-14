@@ -1,7 +1,7 @@
 <Applab>
   <config><![CDATA[{
   "game_id": 41,
-  "created_at": "2015-04-29T03:29:25.000Z",
+  "created_at": "2019-10-24T16:55:06.000Z",
   "level_num": "custom",
   "user_id": 13,
   "properties": {
@@ -139,11 +139,16 @@
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "show_type_hints": "false",
-    "contained_level_names": null
+    "preload_asset_list": null,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "bubble_choice_description": "Do you like turtles? This is the level for you!",
+    "widget_mode": "false",
+    "libraries_enabled": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-14 15:54:10 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 16:30:33 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-05-31 16:31:58 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2017-06-09 21:39:48 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"never_autoplay_video\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2018-05-14 15:54:10 +0000\",\"changed\":[\"code_functions\",\"text_mode_at_start\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":13,\"changed_by_email\":\"baker@code.org\"},{\"changed_at\":\"2020-02-14 10:37:09 -0500\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"log_conditions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

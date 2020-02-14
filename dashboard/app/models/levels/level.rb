@@ -74,6 +74,7 @@ class Level < ActiveRecord::Base
     editor_experiment
     teacher_markdown
     bubble_choice_description
+    thumbnail_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

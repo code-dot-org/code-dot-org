@@ -104,14 +104,21 @@ class BubbleChoice < DSLDefined
     summary = []
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans
-      level_info[:id] = level.id
-      level_info[:display_name] = level.display_name || level.name
-      level_info[:description] = level.try(:bubble_choice_description)
-      level_info[:thumbnail_url] = level.try(:thumbnail_url)
-      level_info[:position] = index + 1
 
       alphabet = ('a'..'z').to_a
-      level_info[:letter] = alphabet[index]
+
+      level_info.merge!(
+        {
+          id: level.id,
+          description: level.try(:bubble_choice_description),
+          thumbnail_url: level.try(:thumbnail_url),
+          position: index + 1,
+          letter: alphabet[index]
+        }
+      )
+
+      # Make sure display name gets set even if we don't have the display_name property
+      level_info[:display_name] = level.display_name || level.name
 
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
