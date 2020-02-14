@@ -119,6 +119,7 @@ class BubbleChoice < DSLDefined
 
       if user_id
         level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
+        level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
       end
 
       summary << level_info
