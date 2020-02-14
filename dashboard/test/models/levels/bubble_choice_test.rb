@@ -126,20 +126,31 @@ DSL
     sublevel_summary = @bubble_choice.summarize_sublevels
     expected_summary = [
       {
+        # level_id and id are used by different features so keeping both
+        level_id: @sublevel1.id,
         id: @sublevel1.id,
         display_name: @sublevel1.display_name,
         description: @sublevel1.bubble_choice_description,
         thumbnail_url: @sublevel1.thumbnail_url,
         url: level_url(@sublevel1.id),
-        summary: @sublevel1.summary_for_lesson_plans
+        type: @sublevel1.type,
+        name: @sublevel1.name,
+        position: 1,
+        letter: 'a',
+        icon: nil
       },
       {
+        level_id: @sublevel2.id,
         id: @sublevel2.id,
         display_name: @sublevel2.name,
         description: @sublevel2.bubble_choice_description,
         thumbnail_url: nil,
         url: level_url(@sublevel2.id),
-        summary: @sublevel2.summary_for_lesson_plans
+        type: @sublevel2.type,
+        name: @sublevel2.name,
+        position: 2,
+        letter: 'b',
+        icon: nil
       }
     ]
 
