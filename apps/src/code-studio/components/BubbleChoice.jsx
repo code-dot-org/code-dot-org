@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -68,6 +69,7 @@ export default class BubbleChoice extends React.Component {
       previous_level_url: PropTypes.string,
       next_level_url: PropTypes.string,
       script_url: PropTypes.string,
+      teacher_markdown: PropTypes.string,
       sublevels: PropTypes.arrayOf(
         PropTypes.shape({
           id: PropTypes.number.isRequired,
@@ -154,6 +156,7 @@ export default class BubbleChoice extends React.Component {
           </div>
         ))}
         {this.renderButtons()}
+        {level.teacherMarkdown && <TeacherOnlyMarkdown />}
       </div>
     );
   }
