@@ -11,7 +11,8 @@ import CompletionButton from '../templates/CompletionButton';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import styleConstants from '../styleConstants';
 import {changeShowError} from './actions';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
 import {getStore} from '../redux';
 
 /**
@@ -41,6 +42,10 @@ class WebLabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+  }
+
+  closeErrorDialog() {
+    getStore().dispatch(changeShowError(false));
   }
 
   render() {
@@ -160,10 +165,21 @@ class WebLabView extends React.Component {
             {!this.props.isProjectLevel && <CompletionButton />}
             <BaseDialog
               isOpen={this.props.shouldShowError}
-              handleClose={() => getStore().dispatch(changeShowError(false))}
+              handleClose={this.closeErrorDialog}
             >
               <h1>{weblabMsg.uploadError()}</h1>
               <p>{weblabMsg.errorSavingProject()}</p>
+              <div style={{position: 'relative'}}>
+                <Button
+                  onClick={() => window.location.reload()}
+                  text={msg.reloadPage()}
+                />
+                <Button
+                  style={{position: 'absolute', right: 0}}
+                  onClick={this.closeErrorDialog}
+                  text={msg.dialogOK()}
+                />
+              </div>
             </BaseDialog>
           </div>
         </InstructionsWithWorkspace>
