@@ -95,12 +95,13 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert @regional_partner.mappings.length == 1
   end
 
-  test 'replace mappings fails on invalid file' do
+  test 'replace mappings fails on non-csv file' do
     sign_in @workshop_admin
-    post :replace_mappings, params: {id: @regional_partner.id, regions: {path: 'invalid_path.csv'}}
+    mapping = fixture_file_upload('regional_partners.tsv', 'text/tsv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
     assert_nil flash[:notice]
     assert_equal(
-      'Replace mappings failed. Could not read file.',
+      'Replace mappings failed. File is not a CSV.',
       flash[:alert]
     )
     assert @regional_partner.reload.mappings.empty?

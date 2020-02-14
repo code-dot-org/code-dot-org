@@ -127,9 +127,7 @@ class RegionalPartnersController < ApplicationController
       return
     end
 
-    mappings = []
-    errors = []
-    parse_mappings_from_csv(csv, mappings, errors)
+    mappings, errors = parse_mappings_from_csv(csv)
 
     if !errors.empty?
       flash[:upload_error] = parse_upload_errors(errors)
@@ -198,6 +196,15 @@ class RegionalPartnersController < ApplicationController
       flash[:alert] = "Replace mappings failed. CSV file not found."
       return false
     end
+    if file.path.split('.').last != 'csv'
+      flash[:alert] = "Replace mappings failed. File is not a CSV."
+      return false
+    end
+    if file.size > 500000
+      flash[:alert] = "Replace mappings failed. File must be smaller than 500 kb."
+      return false
+    end
+
     begin
       csv = CSV.read(file.path, headers: true, liberal_parsing: true)
       unless csv.headers.include?("Region")
@@ -215,8 +222,10 @@ class RegionalPartnersController < ApplicationController
   # and, if valid, add to mappings array. If it is invalid add an
   # error to the errors array in the format {region, message}
   # Mappings are not added to any regional partner in this method.
-  def parse_mappings_from_csv(csv, mappings, errors)
+  def parse_mappings_from_csv(csv)
     regions_missing = false
+    mappings = []
+    errors = []
     csv.each do |row|
       region = row['Region']
       unless region.present?
@@ -239,6 +248,7 @@ class RegionalPartnersController < ApplicationController
     if regions_missing
       errors << {region: nil, message: "At least one line is missing a region"}
     end
+    return mappings, errors
   end
 
   # Output a friendly string from mapping parser errors. If there

@@ -90,11 +90,19 @@
 %p
   Region mapping for this partner can be replaced by uploading a CSV file that includes the header
   %b Region,
-  where a region is a zip code or 2 letter state abbreviation.
+  where a region is a zip code or 2 letter state abbreviation. Example file text:
+  %br
+  Region
+  %br
+  12345
+  %br
+  WA
 = form_tag({action: 'replace_mappings'}, multipart: true) do
-  = file_field_tag('regions', accept: 'text/csv', style: 'line-height: initial;')
+  = file_field_tag('regions', accept: 'text/csv', style: 'line-height: initial;', onchange: 'validateRegionFile(this);')
   = submit_tag('Replace Region Mapping',
-   data: {confirm: 'This will delete the current mapping and replace it with the contents of the CSV file. Are you sure you want to continue?'})
+   data: {confirm: 'This will delete the current mapping and replace it with the contents of the CSV file. Are you sure you want to continue?'},
+   id: "submitReplaceMappings",
+   disabled: true)
 = form_tag(action: 'add_mapping') do
   %table.table.table-hover.table-condensed.table-auto-width{:id => 'mappings-table'}
     %thead
@@ -141,3 +149,26 @@
   = text_field_tag :email, nil, class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
+
+:javascript
+  function validateRegionFile(inputFile) {
+    if (inputFile.files && inputFile.files.length === 1) {
+      const file = inputFile.files[0];
+      // limit csv to 500 kb
+      const limit = 500000;
+      const fileSize = file.size;
+      if (fileSize > limit) {
+        window.alert('File must be less than 500 kb.')
+        updateReplaceMappingSubmitButton(true);
+      } else {
+        updateReplaceMappingSubmitButton(false);
+      }
+    } else {
+      updateReplaceMappingSubmitButton(true);
+    }
+  }
+
+  function updateReplaceMappingSubmitButton(isDisabled) {
+    $("#submitReplaceMappings").prop("disabled", isDisabled);
+  }
+
