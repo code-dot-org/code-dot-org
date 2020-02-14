@@ -105,6 +105,7 @@ class BubbleChoice < DSLDefined
     sublevels.each_with_index do |level, index|
       level_info = level.summary_for_lesson_plans
       level_info[:id] = level.id
+      level_info[:display_name] = level.display_name || level.name
       level_info[:description] = level.try(:bubble_choice_description)
       level_info[:thumbnail_url] = level.try(:thumbnail_url)
       level_info[:position] = index + 1
