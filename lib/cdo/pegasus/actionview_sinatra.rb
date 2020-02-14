@@ -62,6 +62,14 @@ module ActionViewSinatra
       {}
     end
 
+    # allow templates to throw a Sinatra::NotFound error to trigger a 404
+    def render(*args)
+      super(*args)
+    rescue ActionView::Template::Error => e
+      raise e.cause if e.cause.is_a?(Sinatra::NotFound)
+      raise e
+    end
+
     # Our templates currently use a bunch of sinatra methods like resolve_static, redirect, etc.
     def method_missing(name, *args, &block)
       @sinatra.send(name, *args)
