@@ -190,8 +190,6 @@ pt-BR:
     valid_password: Senha válida!
     invalid_password: A senha deve ter pelo menos 6 caracteres
     mismatch_password: As duas senhas que você digitou são diferentes
-    under_13_consent: Caso eu tenha menos de 13 anos de idade, confirmo que tenho
-      autorização dos meus pais ou do meu tutor legal para usar os serviços do Code.org.
     student_consent: Confirmo que tenho autorização dos meus pais ou do tutor legal
       para usar os serviços do Code.org.
     agree_us_website: Concordo em usar um site situado nos Estados Unidos.
@@ -596,8 +594,7 @@ pt-BR:
     no_primary_course: Faça um curso no Code Studio
     choose_next_course: Experimente um dos seguintes cursos do Code Studio
     print_certificate: Imprimir certificado
-  certificate:
-    sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
   move_students:
     new_section_dne: A seção %{new_section_code} não existe. Insira outro código de
       seção.

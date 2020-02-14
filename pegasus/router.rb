@@ -489,10 +489,6 @@ class Documents < Sinatra::Base
       # given file, in an "outside-in" order
       # IE, "foo.md.erb" will be processed as an ERB template, then the result
       # of that will be processed as a MD template
-      #
-      # TODO elijah: Note that several extensions will perform ERB templating
-      # in addition to their other operations. This functionality should be
-      # removed, and the relevant templates should be renamed to "*.erb.*"
       result = body
       extensions.reverse.each do |extension|
         case extension
@@ -501,12 +497,10 @@ class Documents < Sinatra::Base
         when '.haml'
           result = haml result, options
         when '.fetch'
-          url = erb(result, options)
-
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
             FileUtils.mkdir_p File.dirname(cache_file)
-            IO.binwrite(cache_file, Net::HTTP.get(URI(url)))
+            IO.binwrite(cache_file, Net::HTTP.get(URI(result)))
           end
           pass unless File.file?(cache_file)
 
@@ -518,9 +512,9 @@ class Documents < Sinatra::Base
         when '.partial'
           result = render_partials(result)
         when '.redirect', '.moved', '.301'
-          result = redirect erb(result, options), 301
+          result = redirect result, 301
         when '.found', '.302'
-          result = redirect erb(result, options), 302
+          result = redirect result, 302
         end
       end
 

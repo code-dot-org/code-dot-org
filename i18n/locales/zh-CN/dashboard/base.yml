@@ -155,7 +155,6 @@ zh-CN:
     valid_password: "有效的密码 ！"
     invalid_password: "密码必须至少为 6 个字符"
     mismatch_password: "您输入的两个密码不匹配"
-    under_13_consent: "如果我未满 13 岁，我确认在使用 Code.org 服务时已征得父母或法定监护人的同意。"
     student_consent: "我确认我的父母或法定监护人同意我使用 Code.org 的服务。"
     agree_us_website: "我同意使用美国的网站。"
     my_data_to_us: "我使用本网站产生的数据可能会被传输至美国并在美国存储或处理。"
@@ -503,8 +502,7 @@ zh-CN:
     no_primary_course: "试试代码工作室的课程"
     choose_next_course: "从下面代码工作室的课程中选一个体验"
     print_certificate: "打印证书"
-  certificate:
-    sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"

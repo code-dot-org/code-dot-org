@@ -528,6 +528,7 @@
   volunteer_engineer_submission_field_email: "Seoladh ríomhphoist"
   volunteer_engineer_submission_field_email_desc: "Ní fhoilseoimid do sheoladh ríomhphoist riamh, ach seolfaimid iarratais ó mhúinteoirí chugat."
   volunteer_engineer_submission_field_email_placeholder: "Seoladh ríomhphoist"
+  volunteer_engineer_submission_field_email_preference_privacy: "(Féach ár bpolasaí príobháideachais)"
   volunteer_engineer_submission_field_email_preference_yes: 'Tá'
   volunteer_engineer_submission_field_email_preference_no: 'Níl'
   volunteer_engineer_submission_final_paragraph: "Cuirfimid ar léarscáil thú atá dírithe ar mhúinteoirí atá ag lorg saorálaithe don Uair Chódála nó d'obair dheonach eile. Ní fhoilseoimid do sheoladh ríomhphoist ná do sheoladh baile RIAMH. Ach beidh múinteoirí in ann teacht ar gach faisnéis eile (d'áit chónaithe gharbh ina measc) go poiblí."
