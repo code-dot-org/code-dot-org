@@ -20,7 +20,9 @@ let dialog;
  * dialog on the screen and need to programmatically close the asset manager.
  */
 function hideAssetManager() {
-  dialog.hide();
+  if (dialog) {
+    dialog.hide();
+  }
 }
 
 /**
