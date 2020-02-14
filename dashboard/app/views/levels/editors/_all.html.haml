@@ -27,6 +27,12 @@
   %legend.control-legend.collapsed{data: {toggle: "collapse", target: "#bubble_choice"}}
     Bubble Choice
   #bubble_choice.in.collapse
+    - unless @level.is_a?(DSLDefined) || @level.is_a?(Unplugged)
+      .field
+        = f.label :display_name
+        %p Set the name that will show for this level on the parent bubble choice level. Also will override how this level is displayed on the Course Overview page.
+        = f.text_field :display_name, placeholder: '(defaults to Name)'
+
     .field
       = f.label 'bubble_choice_description'
       %p

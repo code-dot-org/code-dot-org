@@ -16,11 +16,12 @@
     "mini_rubric": "false",
     "bubble_choice_description": "You can make a webpage on this one!",
     "hide_share_and_remix": "false",
-    "thumbnail_url": "https://images.code.org/78b6eb71df859b3e222c58458981f950-image-1567806072924.PNG"
+    "thumbnail_url": "https://images.code.org/78b6eb71df859b3e222c58458981f950-image-1567806072924.PNG",
+    "display_name": "MAKE A WEBPAGE"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2020-02-14 09:52:45 -0500\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2020-02-14 10:06:22 -0500\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2020-02-14 10:10:36 -0500\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
+  "audit_log": "[{\"changed_at\":\"2020-02-14 09:52:45 -0500\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2020-02-14 10:06:22 -0500\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2020-02-14 10:10:36 -0500\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"},{\"changed_at\":\"2020-02-14 11:20:51 -0500\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"dev@levelbuilder.com\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
