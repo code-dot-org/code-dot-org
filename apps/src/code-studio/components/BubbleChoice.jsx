@@ -43,6 +43,11 @@ const styles = {
     flexDirection: 'column',
     alignItems: 'flex-start'
   },
+  bubbleAndTitle: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
   title: {
     fontSize: 20,
     fontFamily: '"Gotham 5r"',
