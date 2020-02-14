@@ -1,8 +1,7 @@
 require 'base64'
 require 'cdo/db'
 require 'cdo/parse_email_address_string'
-# TODO: elijah: update this to also use ActionView rather than TextRender
-#require 'cdo/pegasus/text_render'
+require 'cdo/pegasus/text_render'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
