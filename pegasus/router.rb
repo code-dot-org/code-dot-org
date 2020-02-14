@@ -166,11 +166,12 @@ class Documents < Sinatra::Base
   end
 
   # This will make all instance variables on our sinatra controller also
-  # available from our views.
+  # available from our views. Inspired by similar behavior in Rails' controller
+  # logic:
+  # https://github.com/rails/rails/blob/c4d3e202e10ae627b3b9c34498afb45450652421/actionpack/lib/abstract_controller/rendering.rb#L66-L77
   #
-  # We do this to emulate existing sinatra behaviour, although we would ideally
-  # like to get to a place where variables can be exposed to views in a much
-  # more deliberate way.
+  # If in the future Sinatra's controller functionality is replaced by Rails,
+  # this can probably go away.
   def update_actionview_assigns
     view_assigns = {}
     instance_variables.each do |name|
