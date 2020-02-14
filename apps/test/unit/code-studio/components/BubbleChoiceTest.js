@@ -68,8 +68,8 @@ describe('BubbleChoice', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
     const bubbles = wrapper.find('ProgressBubble');
     assert.equal(2, bubbles.length);
-    assert.equal('perfect', bubbles.at(0).props().status);
-    assert.equal('not_tried', bubbles.at(1).props().status);
+    assert.equal('perfect', bubbles.at(0).props().level.status);
+    assert.equal('not_tried', bubbles.at(1).props().level.status);
   });
 
   it('renders a placeholder div if sublevel thumbnail is not present', () => {
