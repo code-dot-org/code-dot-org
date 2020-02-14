@@ -1,6 +1,5 @@
 require_relative 'src/env'
 require 'rack'
-require 'cdo/pegasus/actionview_sinatra'
 require 'cdo/rack/locale'
 require 'sinatra/base'
 require 'sinatra/verbs'
@@ -157,6 +156,18 @@ class Documents < Sinatra::Base
     end
 
     @actionview ||= begin
+      # Lazily require actionview_sinatra here, because it it turn will require
+      # ActionView::Base, which will in turn run the ActiveSupport load hooks for
+      # the class.
+      #
+      # This can cause some issues for environments that want to load both
+      # Pegasus and Dashboard, since if ActionView is loaded outside the context
+      # of Rails it won't load all functionality, and ActionView won't be
+      # re-initialized when it _does_ get loaded by Rails.
+      #
+      # This is similar to the lazy loading we need to do for Haml:
+      # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
+      require 'cdo/pegasus/actionview_sinatra'
       ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
       ActionViewSinatra::Base.new(self)
     end
