@@ -26,28 +26,28 @@ export class CourseBlocksCsf extends Component {
 
 class CourseBlocksCsfModern extends Component {
   componentDidMount() {
-    $('#coursea-2017')
+    $('#coursea')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursea))
       .show();
-    $('#courseb-2017')
+    $('#courseb')
       .appendTo(ReactDOM.findDOMNode(this.refs.courseb))
       .show();
-    $('#coursec-2017')
+    $('#coursec')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursec))
       .show();
-    $('#coursed-2017')
+    $('#coursed')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursed))
       .show();
-    $('#coursee-2017')
+    $('#coursee')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursee))
       .show();
-    $('#coursef-2017')
+    $('#coursef')
       .appendTo(ReactDOM.findDOMNode(this.refs.coursef))
       .show();
-    $('#pre-express-2017')
+    $('#pre-express')
       .appendTo(ReactDOM.findDOMNode(this.refs.pre_express))
       .show();
-    $('#express-2017')
+    $('#express')
       .appendTo(ReactDOM.findDOMNode(this.refs.express))
       .show();
   }
@@ -162,30 +162,43 @@ class CourseBlocksCsfLegacy extends Component {
   }
 }
 
+export class CourseBlocks extends Component {
+  static propTypes = {
+    // Array of jQuery selectors to course blocks.
+    tiles: PropTypes.arrayOf(PropTypes.string).isRequired
+  };
+
+  render() {
+    return (
+      <div className="tutorial-row">
+        {this.props.tiles.map((tile, index) => (
+          <ProtectedStatefulDiv
+            className="tutorial-block"
+            ref={el => {
+              if (el) {
+                $(tile).appendTo(ReactDOM.findDOMNode(el));
+              }
+            }}
+          />
+        ))}
+      </div>
+    );
+  }
+}
+
 export class CourseBlocksHoc extends Component {
   static propTypes = {
     isInternational: PropTypes.bool
   };
 
-  componentDidMount() {
-    const tiles = this.props.isInternational
+  tiles() {
+    return this.props.isInternational
       ? ['#dance-2019', '#aquatic', '#frozen', '#hourofcode']
       : ['#dance-2019', '#aquatic', '#oceans', '#flappy'];
-
-    tiles.forEach((tile, index) => {
-      $(tile).appendTo(ReactDOM.findDOMNode(this.refs[index]));
-    });
   }
 
   render() {
-    return (
-      <div className="row">
-        <ProtectedStatefulDiv ref="0" />
-        <ProtectedStatefulDiv ref="1" />
-        <ProtectedStatefulDiv ref="2" />
-        <ProtectedStatefulDiv ref="3" />
-      </div>
-    );
+    return <CourseBlocks tiles={this.tiles()} />;
   }
 }
 

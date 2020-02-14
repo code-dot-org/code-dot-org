@@ -73,6 +73,8 @@ require 'digest/md5'
 require 'cdo/aws/metrics'
 require 'cdo/user_helpers'
 require 'school_info_interstitial_helper'
+require_dependency 'queries/school_info'
+require_dependency 'queries/script_activity'
 
 class User < ActiveRecord::Base
   include SerializedProperties
@@ -110,7 +112,6 @@ class User < ActiveRecord::Base
     data_transfer_agreement_source
     data_transfer_agreement_kind
     data_transfer_agreement_at
-    seen_oauth_connect_dialog
   )
 
   # Include default devise modules. Others available are:

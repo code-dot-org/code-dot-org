@@ -5640,6 +5640,10 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: გამართვა
         csl-vn:
           stages:
             Programming in Maze:
@@ -5724,7 +5728,7 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: პირობითი ბრძანებები
@@ -5754,3 +5758,23 @@ ka:
               name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
             Functions with Artist:
               name: ფუნქციები მხატვარში
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: პირობითი ბრძანებები
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            Private and Personal Information:
+              name: კონფიდენციალური და პირადი ინფორმაცია
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: პირობითი ბრძანებები
+            'Events: The Big Event':
+              name: 'მოვლენები: დიდი მოვლენა'
+            Private and Personal Information:
+              name: კონფიდენციალური და პირადი ინფორმაცია
+        csp8-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

@@ -5,7 +5,7 @@ import _ from 'lodash';
 import Hammer from 'hammerjs';
 
 import {singleton as studioApp} from '../../StudioApp';
-import craftMsg from './locale';
+import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,

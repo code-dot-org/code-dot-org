@@ -5,6 +5,7 @@ import color from '../../util/color';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import shapes from './shapes';
 
 const styles = {
   heading: {
@@ -171,7 +172,7 @@ export class LocalClassActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/shared/images/fill-540x289/misc/beyond-local-map.png'
+          '/shared/images/fill-540x300/misc/beyond-local-map.png'
         )}
         heading={heading}
         subHeading={i18n.findLocalClassSubheading()}
@@ -192,7 +193,7 @@ export class AdministratorResourcesActionBlock extends Component {
     return (
       <TwoColumnActionBlock
         imageUrl={pegasus(
-          '/images/fill-540x289/2015AR/newcsteacherstrained.png'
+          '/images/fill-540x300/2015AR/newcsteacherstrained.png'
         )}
         heading={i18n.administratorResourcesHeading()}
         description={i18n.administratorResourcesDescription()}
@@ -215,24 +216,43 @@ export class AdministratorResourcesActionBlock extends Component {
 
 export class SpecialAnnouncementActionBlock extends Component {
   static propTypes = {
-    hocLaunch: PropTypes.string
+    announcement: shapes.specialAnnouncement
   };
 
+  state = {
+    buttonList: this.createButtonList()
+  };
+
+  createButtonList() {
+    const buttonList = [];
+    const {announcement} = this.props;
+    buttonList.push({
+      id: announcement.buttonId
+        ? announcement.buttonId
+        : 'special-announcement-btn-1',
+      url: announcement.buttonUrl,
+      text: announcement.buttonText
+    });
+    if (announcement.buttonUrl2 && announcement.buttonText2) {
+      buttonList.push({
+        id: announcement.buttonId2
+          ? announcement.buttonId2
+          : 'special-announcement-btn-2',
+        url: announcement.buttonUrl2,
+        text: announcement.buttonText2
+      });
+    }
+    return buttonList;
+  }
+
   render() {
+    const {announcement} = this.props;
     return (
       <TwoColumnActionBlock
-        id="danceparty-2019-announcement"
-        imageUrl={pegasus(
-          '/shared/images/fill-540x300/teacher-announcement/hoc2019-danceparty.jpg'
-        )}
-        subHeading={i18n.specialAnnouncementHeadingHoc2019DanceParty()}
-        description={i18n.specialAnnouncementDescriptionHoc2019DanceParty()}
-        buttons={[
-          {
-            url: pegasus('/hourofcode/overview'),
-            text: i18n.tryIt()
-          }
-        ]}
+        imageUrl={announcement.image}
+        subHeading={announcement.title}
+        description={announcement.body}
+        buttons={this.state.buttonList}
       />
     );
   }

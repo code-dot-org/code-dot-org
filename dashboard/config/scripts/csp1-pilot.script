@@ -79,11 +79,11 @@ level 'CSP U1L12 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L12 CFU Creative Commons', progression: 'Check For Understanding', assessment: true
 level 'U1L12 CFU Copyright', progression: 'Check For Understanding', assessment: true
 
-stage 'Project: Digital Information Dilemmas, pt 1'
+stage 'Project - Digital Information Dilemmas Part 1'
 level 'CSP U1L13 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L13 CFU Digital Representation', progression: 'Check For Understanding', assessment: true
 
-stage 'Project: Digital Information Dilemmas, pt 2'
+stage 'Project - Digital Information Dilemmas Part 2'
 level 'CSP U1L14 SFLP 20-21', progression: 'Lesson Overview'
 level 'U1L14 CSP CFU digital information', progression: 'Check For Understanding', assessment: true
 

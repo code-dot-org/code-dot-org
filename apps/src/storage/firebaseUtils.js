@@ -1,6 +1,8 @@
 import Firebase from 'firebase';
+const SHARED_ENV = 'cdo-v3-shared';
 let config;
-let firebaseCache;
+let projectFirebaseCache;
+let sharedFirebaseCache;
 let firebaseConfig;
 
 export function init(setupConfig) {
@@ -72,7 +74,7 @@ export function resetConfigForTesting() {
 }
 
 export function getConfigRef() {
-  return getFirebase().child('v3/config/channels');
+  return getFirebase(config.firebaseName).child('v3/config/channels');
 }
 
 export function getRecordsRef(tableName) {
@@ -84,52 +86,54 @@ export function getProjectCountersRef(tableName) {
 }
 
 export function getSharedDatabase() {
-  return getFirebase().child('v3/channels/shared');
+  return getFirebase(SHARED_ENV).child('v3/channels/shared');
 }
 
 export function getProjectDatabase() {
   const path = `v3/channels/${config.channelId}${
     config.firebaseChannelIdSuffix
   }`;
-  return getFirebase().child(path);
+  return getFirebase(config.firebaseName).child(path);
 }
 
-function getFirebase() {
-  let fb = firebaseCache;
+function getFirebase(environment) {
+  let fb =
+    environment === SHARED_ENV ? sharedFirebaseCache : projectFirebaseCache;
   if (!fb) {
-    if (!config.firebaseName) {
+    if (!environment) {
       throw new Error(
         'Error connecting to Firebase: Firebase name not specified'
       );
     }
-    if (!config.firebaseAuthToken) {
-      let msg =
-        'Error connecting to Firebase: Firebase auth token not specified. ';
-      if (config.firebaseName === 'cdo-v3-dev') {
-        msg +=
-          'To use data blocks or data browser in development, you must ' +
-          'set "firebase_secret" in locals.yml to the value at ' +
-          'https://manage.chef.io/organizations/code-dot-org/environments/development/attributes ' +
-          '-> cdo-secrets';
-      }
-      throw new Error(msg);
+    const authToken =
+      environment === SHARED_ENV
+        ? config.firebaseSharedAuthToken
+        : config.firebaseAuthToken;
+    if (!authToken) {
+      throw new Error(
+        'Error connecting to Firebase: CDO.firebase_shared_secret and/or CDO.firebase_secret not specified'
+      );
     }
-    let base_url = `https://${config.firebaseName}.firebaseio.com`;
+    let base_url = `https://${environment}.firebaseio.com`;
     fb = new Firebase(base_url);
-    if (config.firebaseAuthToken) {
-      fb.authWithCustomToken(config.firebaseAuthToken, (err, user) => {
+    if (authToken) {
+      fb.authWithCustomToken(authToken, (err, user) => {
         if (err) {
           throw new Error(`error authenticating to Firebase: ${err}`);
         }
       });
     }
-    firebaseCache = fb;
+    if (environment === SHARED_ENV) {
+      sharedFirebaseCache = fb;
+    } else {
+      projectFirebaseCache = fb;
+    }
   }
   return fb;
 }
 
 export function isInitialized() {
-  return !!firebaseCache;
+  return !!projectFirebaseCache;
 }
 
 // The following characters are illegal in firebase paths: .#$[]/

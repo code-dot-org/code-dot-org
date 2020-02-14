@@ -19,7 +19,7 @@ social:
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry&v=3.37"}
+%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
 %script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
@@ -122,11 +122,11 @@ social:
       -# Show a picture of the map unless it is currently the week of HOC.
       -if hoc_mode != "actual-hoc"
         = view :hoc_events_map
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+        .footnote!=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
       -else
         %a{href: resolve_url('/map')}
           %img{src: '/images/fit-1000/map.jpg', style: 'width: 100%;'}
-        .footnote=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
+        .footnote!=hoc_s(:map_warning).gsub(/%{events_url}/, resolve_url('/events'))
 
   -# Signup and Highlights
 
@@ -161,9 +161,9 @@ social:
       -if @language == "en"
         %p=hoc_s(:stats_females)
         %img{src: "/images/fit-300/stats-females.jpg", style: "width: 100%;"}
-        %p=hoc_s(:stats_females_more)
+        %p!=hoc_s(:stats_females_more)
       -else
-        %p=hoc_s(:stats_girls_more)
+        %p!=hoc_s(:stats_girls_more)
         %img{src: "/images/fit-300/stats-info3.jpg", style: "width: 100%;"}
 
   -# FAQ

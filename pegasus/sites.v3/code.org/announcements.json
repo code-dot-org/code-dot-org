@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "/home": "teacher-apps-open-2020",
+    "/courses": "teacher-apps-open-2020"
+  },
+  "banners": {
+    "teacher-apps-open-2020": {
+      "image": "https://code.org/images/professional-learning-2019-3.png",
+      "title": "Sign up for Professional Learning",
+      "body": "98% of teachers recommend our engaging programs from elementary school to AP computer science for high school. Join our hands-on workshops with other teachers from your area. Spaces are limited, so apply today!",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-open-2020-sign-up"
+    },
+    "teacher-apps-closing-2020": {
+      "image": "https://code.org/images/professional-learning-2019-closing-soon.png",
+      "title": "Don’t miss out. Apply today!",
+      "body": "98% of teachers recommend it and 90% of parents want their child to study computer science. Whether you are new to teaching CS, or have years of experience, join us in this movement and submit your application today.",
+      "buttonText": "Join us",
+      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
+      "buttonId": "teacher-apps-closing-2020-sign-up"
+    }
+  }
+}

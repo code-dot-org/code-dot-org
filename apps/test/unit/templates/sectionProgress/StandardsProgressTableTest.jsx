@@ -5,14 +5,14 @@ import {
   fakeStandards,
   lessonCompletedByStandard
 } from '../../../../src/templates/sectionProgress/standards/standardsTestHelpers';
-import StandardsProgressTable from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
+import {UnconnectedStandardsProgressTable as StandardsProgressTable} from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
 
 describe('StandardsProgressTable', () => {
   it('renders a description cell for each standard', () => {
     const wrapper = mount(
       <StandardsProgressTable
         standards={fakeStandards}
-        lessonsCompletedByStandard={lessonCompletedByStandard}
+        lessonsByStandard={lessonCompletedByStandard}
       />
     );
     expect(wrapper.find('StandardDescriptionCell')).to.have.lengthOf(

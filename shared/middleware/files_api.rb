@@ -142,6 +142,9 @@ class FilesApi < Sinatra::Base
   # Read a file. Optionally get a specific version instead of the most recent.
   #
   get %r{/v3/(animations|assets|sources|files|libraries)/([^/]+)/([^/]+)$} do |endpoint, encrypted_channel_id, filename|
+    if endpoint == 'libraries'
+      dont_cache
+    end
     get_file(endpoint, encrypted_channel_id, filename)
   end
 
@@ -592,6 +595,10 @@ class FilesApi < Sinatra::Base
   # manifest.
   #
   def files_put_file(encrypted_channel_id, filename, body)
+    # Rename .jfif file extensions to .jpg because Sinatra does not support .jfif file types.
+    # .jfif files use the same protocol as .jpg files, which is why rename-only is sufficient.
+    filename.gsub!(/(.jfif|.JFIF)/, '.jpg') if File.extname(filename.downcase) == '.jfif'
+
     unescaped_filename = CGI.unescape(filename)
     unescaped_filename_downcased = unescaped_filename.downcase
     bad_request if unescaped_filename_downcased == FileBucket::MANIFEST_FILENAME

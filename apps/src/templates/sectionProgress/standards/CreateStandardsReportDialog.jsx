@@ -16,14 +16,17 @@ const styles = {
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
-    paddingBottom: 20
+    paddingBottom: 20,
+    fontFamily: '"Gotham 4r", sans-serif, sans-serif'
   }
 };
 
-class CreateStandardsReportDialog extends Component {
+export class CreateStandardsReportDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired
   };
 
   state = {
@@ -42,7 +45,7 @@ class CreateStandardsReportDialog extends Component {
     return (
       <BaseDialog
         isOpen={this.props.isOpen}
-        handleClose={this.props.handleConfirm}
+        handleClose={this.props.handleClose}
         useUpdatedStyles
         style={styles.dialog}
       >
@@ -54,6 +57,7 @@ class CreateStandardsReportDialog extends Component {
           <CreateStandardsReportStep2
             onBack={this.handleBack}
             handleConfirm={this.props.handleConfirm}
+            onCommentChange={this.props.onCommentChange}
           />
         )}
       </BaseDialog>

@@ -64,6 +64,7 @@ Dashboard::Application.routes.draw do
 
   get 'redirected_url', to: 'redirect_proxy#get', format: false
 
+  get 'docs/', to: 'curriculum_proxy#get_doc_landing'
   get 'docs/*path', to: 'curriculum_proxy#get_doc'
   get 'curriculum/*path', to: 'curriculum_proxy#get_curriculum'
 
@@ -147,8 +148,6 @@ Dashboard::Application.routes.draw do
     patch '/users/email', to: 'registrations#set_email'
     patch '/users/user_type', to: 'registrations#set_user_type'
     get '/users/cancel', to: 'registrations#cancel'
-    get '/users/clever_takeover', to: 'sessions#clever_takeover'
-    get '/users/clever_modal_dismissed', to: 'sessions#clever_modal_dismissed'
     get '/users/auth/:provider/connect', to: 'authentication_options#connect', as: :connect_authentication_option
     delete '/users/auth/:id/disconnect', to: 'authentication_options#disconnect'
     get '/users/migrate_to_multi_auth', to: 'registrations#migrate_to_multi_auth'
@@ -223,6 +222,9 @@ Dashboard::Application.routes.draw do
   end
   resources :shared_blockly_functions, path: '/functions'
   resources :libraries
+
+  get 'datasets/manifest', to: 'datasets#show_manifest'
+  post 'datasets/manifest', to: 'datasets#update_manifest'
 
   resources :levels do
     member do
@@ -358,6 +360,8 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
+  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
+  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -433,7 +437,6 @@ Dashboard::Application.routes.draw do
       post :pre_workshop_surveys, to: 'pre_workshop_surveys#create'
       post :workshop_surveys, to: 'workshop_surveys#create'
       post :teachercon_surveys, to: 'teachercon_surveys#create'
-      post :regional_partner_contacts, to: 'regional_partner_contacts#create'
       post :regional_partner_mini_contacts, to: 'regional_partner_mini_contacts#create'
       post :international_opt_ins, to: 'international_opt_ins#create'
       get :regional_partner_workshops, to: 'regional_partner_workshops#index'
@@ -527,10 +530,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course_from_facilitator'
 
     get 'regional_partner_contact/new', to: 'regional_partner_contact#new'
-    get 'regional_partner_contact/:contact_id/thanks', to: 'regional_partner_contact#thanks'
-
     get 'regional_partner_mini_contact/new', to: 'regional_partner_mini_contact#new'
-    get 'regional_partner_mini_contact/:contact_id/thanks', to: 'regional_partner_mini_contact#thanks'
 
     get 'international_workshop', to: 'international_opt_in#new'
     get 'international_workshop/:contact_id/thanks', to: 'international_opt_in#thanks'
@@ -567,6 +567,7 @@ Dashboard::Application.routes.draw do
   get '/api/lock_status', to: 'api#lockable_state'
   get '/dashboardapi/script_structure/:script', to: 'api#script_structure'
   get '/api/script_structure/:script', to: 'api#script_structure'
+  get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/student_progress/:section_id/:student_id', to: 'api#student_progress', as: 'student_progress'

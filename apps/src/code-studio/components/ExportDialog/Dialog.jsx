@@ -108,9 +108,6 @@ const styles = {
  */
 class ExportDialog extends React.Component {
   static propTypes = {
-    i18n: PropTypes.shape({
-      t: PropTypes.func.isRequired
-    }).isRequired,
     exportApp: PropTypes.func.isRequired,
     expoGenerateApk: PropTypes.func.isRequired,
     expoCheckApkBuild: PropTypes.func.isRequired,
@@ -681,7 +678,6 @@ class ExportDialog extends React.Component {
   render() {
     const {
       canShareSocial,
-      i18n: i18nProp,
       isAbusive,
       isProjectLevel,
       signInState,
@@ -717,8 +713,8 @@ class ExportDialog extends React.Component {
           {isAbusive && (
             <AbuseError
               i18n={{
-                tos: i18nProp.t('project.abuse.tos'),
-                contact_us: i18nProp.t('project.abuse.contact_us')
+                tos: i18n.tosLong({url: 'http://code.org/tos'}),
+                contact_us: i18n.contactUs({url: 'https://code.org/contact'})
               }}
               className="alert-error"
               style={styles.abuseStyle}
@@ -726,9 +722,7 @@ class ExportDialog extends React.Component {
             />
           )}
           {showShareWarning && (
-            <p style={styles.shareWarning}>
-              {i18nProp.t('project.share_u13_warning')}
-            </p>
+            <p style={styles.shareWarning}>{i18n.shareU13Warning()}</p>
           )}
           {this.renderMainContent()}
           <div style={styles.buttonRow}>

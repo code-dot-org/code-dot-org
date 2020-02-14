@@ -1,4 +1,5 @@
 require 'cdo/script_config'
+require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'firebase_token_generator'
@@ -462,6 +463,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
+      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -606,7 +608,9 @@ module LevelsHelper
   end
 
   def match_answer_as_image(path, width)
-    "<img src='#{path.strip}' #{"width='#{width.strip}'" if width}></img>"
+    attrs = {src: path.strip}
+    attrs[:width] = width.strip if width
+    content_tag(:img, '', attrs)
   end
 
   def match_answer_as_embedded_blockly(path)
@@ -666,11 +670,12 @@ module LevelsHelper
     return unless text
 
     path, width = text.split(',')
-    return match_answer_as_image(path, width) if %w(.jpg .png .gif).include? File.extname(path)
+    return match_answer_as_image(path, width) if %w(.jpg .png .gif).include? File.extname(path).downcase
     return match_answer_as_embedded_blockly(path) if File.extname(path).ends_with? '_blocks'
     return match_answer_as_iframe(path, width) if File.extname(path) == '.level'
 
-    text
+    @@markdown_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::Inline.new(filter_html: true))
+    @@markdown_renderer.render(text).html_safe
   end
 
   def level_title

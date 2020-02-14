@@ -23,7 +23,12 @@ const styles = {
 export class CreateStandardsReportStep2 extends Component {
   static propTypes = {
     onBack: PropTypes.func.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired
+  };
+
+  commentChanged = event => {
+    this.props.onCommentChange(event.target.value);
   };
 
   render() {
@@ -33,12 +38,8 @@ export class CreateStandardsReportStep2 extends Component {
           <h3>{i18n.createStandardsReportStep2()}</h3>
           <span style={styles.optionalText}>{i18n.optional()}</span>
         </div>
-        <p>
-          <SafeMarkdown markdown={i18n.createStandardsReportPrompt()} />
-        </p>
-        <p>
-          <SafeMarkdown markdown={i18n.createStandardsReportSuggestion()} />
-        </p>
+        <SafeMarkdown markdown={i18n.createStandardsReportPrompt()} />
+        <SafeMarkdown markdown={i18n.createStandardsReportSuggestion()} />
         <ul>
           <li>
             <SafeMarkdown markdown={i18n.createStandardsReportSuggestion1()} />
@@ -54,8 +55,8 @@ export class CreateStandardsReportStep2 extends Component {
         </ul>
         <textarea
           type="text"
-          value={i18n.createStandardsReportSampleNoteText()}
-          onChange={() => {}}
+          placeholder={i18n.createStandardsReportSampleNoteText()}
+          onChange={this.commentChanged}
           style={styles.textArea}
         />
         <DialogFooter>
@@ -68,6 +69,7 @@ export class CreateStandardsReportStep2 extends Component {
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>
       </div>

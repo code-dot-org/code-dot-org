@@ -15,12 +15,12 @@ zh-CN:
         draw_rect: draw_rect
       2-3 Artist Debugging 10:
         draw square: 画一个正方形
-        jump to controller top left: 切换至左上角控制区
-        jump to middle: 切换至中间区域
+        jump to controller top left: 跳到左上控制
+        jump to middle: 跳到中间
         draw a circle: 画一个圆圈
         draw a button: 画一个按钮
         draw cord: 画一根线
-        draw R pad: 绘制R垫
+        draw R pad: 画 R 板
       2-3 Artist Debugging 5:
         draw left leg: 画左腿
         draw right leg: 画右腿
@@ -28,15 +28,15 @@ zh-CN:
         draw a head: 画一个头
       2-3 Artist Debugging 6:
         draw right leg: 画右腿
-        draw sitting stick figure: 画坐姿棒图
+        draw sitting stick figure: 画坐棍图
         draw head: 画头
         draw arms: 画手臂
         jump to neck: 跳到颈部
         draw left leg: 画左腿
       2-3 Artist Debugging 7:
-        draw O: 画一个O
-        draw D: 画一个D
-        draw E: 画一个E
+        draw O: 画一个 O
+        draw D: 画一个 D
+        draw E: 画一个 E
       2-3 Artist Functions 1:
         draw ear stems: 画穗柄
       2-3 Artist Functions 10:
@@ -75,9 +75,9 @@ zh-CN:
       2-3 Bee Functions 9:
         get 7 make 7: 获取7并酿制7
       2-3 Bee Functions Assessment 1:
-        get 7: 得到7
+        get 7: 得到 7
       2-3 Bee Functions Assessment 2:
-        move and get 3: 移动并得到3
+        move and get 3: 移动并得到 3
       4-5 Artist 3:
         draw a flower: 画一朵花
       4-5 Artist 6:
@@ -87,14 +87,14 @@ zh-CN:
         draw a circle: 画一个圆圈
         draw a car: 画一辆车
       4-5 Artist 8:
-        draw circle: 绘制圆圈
-        draw goal: 绘制目标
+        draw circle: 画圆圈
+        draw goal: 画目标
       4-5 Bee Conditionals 7:
         check purple flower: 检查紫花
       4-5 Bee Conditionals 8:
         check flower make honey: 检查花并酿蜂蜜
       4-5 Bee Conditionals Assessment 1:
-        get nectar or make honey: 获取花蜜或酿制蜂蜜
+        get nectar or make honey: 采花蜜或酿制蜂蜜
       4-5 Bee Debugging 7:
         make 3 honey: 制作3个蜂蜜
       4-5 Bee Debugging 8:
@@ -279,7 +279,7 @@ zh-CN:
         function 1: 函数1
         function 2: 函数2
       NEW Course 4 Artist Functions 11:
-        draw a line of  squares: 画一条正方形线
+        draw a line of  squares: 画一条正方形的线
         draw a square 20: 画一个大小20的方块
         draw a line of squares: 画一条正方形线
       NEW Course 4 Artist Functions 12:
@@ -291,7 +291,7 @@ zh-CN:
       NEW Course 4 Artist Functions 14:
         empty function: 空函数
         draw a line of squares: 画一条正方形线
-        draw a square 40: 画一个大小40的方块
+        draw a square 40: 画一个 40 的正方形
         draw a square 20: 画一个大小20的方块
       NEW Course 4 Artist Functions 3:
         draw a square: 画一个正方形
@@ -789,7 +789,7 @@ zh-CN:
       courseE_farmer_functions10b:
         navigate: 导航
       courseE_farmer_functions11_predict:
-        check and pick: 检查并挑选
+        check and pick: 检查并捡起
         find pumpkin: 找到一个南瓜
         wander path: 漫游路径
       courseE_farmer_functions11_predict_2018:

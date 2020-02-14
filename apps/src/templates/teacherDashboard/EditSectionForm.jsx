@@ -13,6 +13,7 @@ import {
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
+  reloadAfterEditingSection,
   stageExtrasAvailable
 } from './teacherSectionsRedux';
 import {
@@ -199,30 +200,6 @@ class EditSectionForm extends Component {
   }
 }
 
-export const UnconnectedEditSectionForm = EditSectionForm;
-
-export default connect(
-  state => ({
-    initialCourseId: state.teacherSections.initialCourseId,
-    initialScriptId: state.teacherSections.initialScriptId,
-    validGrades: state.teacherSections.validGrades,
-    validAssignments: state.teacherSections.validAssignments,
-    assignmentFamilies: state.teacherSections.assignmentFamilies,
-    sections: state.teacherSections.sections,
-    section: state.teacherSections.sectionBeingEdited,
-    isSaveInProgress: state.teacherSections.saveInProgress,
-    stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-    hiddenStageState: state.hiddenStage,
-    assignedScriptName: assignedScriptName(state)
-  }),
-  {
-    editSectionProperties,
-    updateHiddenScript,
-    handleSave: finishEditingSection,
-    handleClose: cancelEditingSection
-  }
-)(EditSectionForm);
-
 const FieldProps = {
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
@@ -382,3 +359,39 @@ const YesNoDropdown = ({value, onChange, disabled}) => (
   </Dropdown>
 );
 YesNoDropdown.propTypes = FieldProps;
+
+let defaultPropsFromState = state => ({
+  initialCourseId: state.teacherSections.initialCourseId,
+  initialScriptId: state.teacherSections.initialScriptId,
+  validGrades: state.teacherSections.validGrades,
+  validAssignments: state.teacherSections.validAssignments,
+  assignmentFamilies: state.teacherSections.assignmentFamilies,
+  sections: state.teacherSections.sections,
+  section: state.teacherSections.sectionBeingEdited,
+  isSaveInProgress: state.teacherSections.saveInProgress,
+  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
+  hiddenStageState: state.hiddenStage,
+  assignedScriptName: assignedScriptName(state)
+});
+
+export const UnconnectedEditSectionForm = EditSectionForm;
+
+export const ReloadAfterEditSectionForm = connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: reloadAfterEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);
+
+export default connect(
+  defaultPropsFromState,
+  {
+    editSectionProperties,
+    updateHiddenScript,
+    handleSave: finishEditingSection,
+    handleClose: cancelEditingSection
+  }
+)(EditSectionForm);

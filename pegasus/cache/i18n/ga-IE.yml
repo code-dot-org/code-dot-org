@@ -219,6 +219,7 @@ ga-IE:
   if_you_enjoyed: Má bhain tú taitneamh as, iarr ar chairde triail a bhaint as freisin!
     Ba mhaith linn an saol ar fad a mhúineadh.
   personalize_certificate: Cuir d'ainm ar do theastas
+  print_certificates: Priontáil teastais
   share_achievement: Comhroinn a bhfuil déanta agat
   beyond_hour_message: Lean ort leis <a href='http://studio.code.org'>na cúrsaí eile
     atá againn</a>, nó <a href='/learn/beyond'>Foghlaim thar Uair an Chloig</a>.
@@ -705,6 +706,8 @@ ga-IE:
   volunteer_engineer_submission_field_email_desc: Ní fhoilseoimid do sheoladh ríomhphoist
     riamh, ach seolfaimid iarratais ó mhúinteoirí chugat.
   volunteer_engineer_submission_field_email_placeholder: Seoladh ríomhphoist
+  volunteer_engineer_submission_field_email_preference_privacy: "(Féach ár bpolasaí
+    príobháideachais)"
   volunteer_engineer_submission_field_email_preference_yes: Tá
   volunteer_engineer_submission_field_email_preference_no: Níl
   volunteer_engineer_submission_final_paragraph: Cuirfimid ar léarscáil thú atá dírithe

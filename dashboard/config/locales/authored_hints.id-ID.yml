@@ -672,10 +672,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 4 birama._
         challenges: |-
-          "**Tantangan pilihan**
+          **Tantangan pilihan**
 
           -   Pilih lagu yang lain untuk diputar.
-          -   Ganti nama penari Anda.".
+          -   Ganti nama penari Anda.
       CourseD_Dance_Party_02:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -698,9 +698,9 @@ id-ID:
 
           _Level ini akan berakhir setelah 9 birama._
         challenges: |-
-          "**Tantangan opsional**
+          **Tantangan opsional**
 
-          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.
       CourseD_Dance_Party_06:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -709,10 +709,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 5 birama._
         challenges: |-
-          "**Tantangan Opsional**
+          **Tantangan Opsional**
 
           -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
-          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.
       CourseD_Dance_Party_08:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -884,10 +884,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 4 birama._
         challenges: |-
-          "**Tantangan pilihan**
+          **Tantangan pilihan**
 
           -   Pilih lagu yang lain untuk diputar.
-          -   Ganti nama penari Anda.".
+          -   Ganti nama penari Anda.
       Dance_Party_02:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -910,9 +910,9 @@ id-ID:
 
           _Level ini akan berakhir setelah 9 birama._
         challenges: |-
-          "**Tantangan opsional**
+          **Tantangan opsional**
 
-          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.".
+          Ubah efek latar belakang pada berbagai titik berbeda selama pemutaran lagu dengan menghubungkan blok baru <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> acara.
       Dance_Party_05:
         validation: "**Bagaimana cara lulus dari level ini?** \n\n-   Penari Anda
           perlu melewati siklus minimal 4 gerakan tari yang berbeda sebelum level
@@ -925,10 +925,10 @@ id-ID:
 
           _Level ini akan berakhir setelah 5 birama._
         challenges: |-
-          "**Tantangan Opsional**
+          **Tantangan Opsional**
 
           -   Tambahkan penari ketiga (atau sebanyak yang Anda inginkan!)
-          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.".
+          -   Buat seluruh penari Anda melakukan berbagai gerakan berbeda pada berbagai saat pada lagu.
       Dance_Party_08:
         validation: |-
           **Bagaimana cara lulus dari level ini?**
@@ -975,6 +975,8 @@ id-ID:
           -   Gunakan blok `ketika panah kiri ditekan` untuk membuat Robot melakukan gerakan tari ketika Anda menekannya.
 
           _Level ini akan berakhir setelah 7 birama._
+      Dance_Party_extras_alternate_2019:
+        alternate: Blok yang berganti terdapat dalam kategori "Penari".
       Function intro Ryan:
         Function_intro_Ryan_b: Jika anda menyebut fungsi dengan benar, ini adalah
           jalan yang akan anda tempuh...
@@ -2210,18 +2212,27 @@ id-ID:
         courseB_collector_loops_challenge2a_b: |-
           Lihatlah pilihan ini untuk melewati labirin.
           Apakah Anda melihat sebuah pola yang dapat Anda mengulangi?
+        courseB_collector_loops_challenge2a_c: Untuk mengumpulkan semua harta karun,
+          kamu mungkin perlu menambahkan dua blok  <xml> <block type="collector_collect"/></xml>
+          ke dalam loop, atau memasukkan blok ke dalam blok `ulang` itu sendiri.
       courseB_collector_loops_challenge2a_2018:
         courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah
           debug itu. Jangan menyerah!
         courseB_collector_loops_challenge2a_b: |-
           Lihatlah pilihan ini untuk melewati labirin.
           Apakah Anda melihat sebuah pola yang dapat Anda mengulangi?
+        courseB_collector_loops_challenge2a_c: Untuk mengumpulkan semua harta karun,
+          kamu mungkin perlu menambahkan dua blok  <xml> <block type="collector_collect"/></xml>
+          ke dalam loop, atau memasukkan blok ke dalam blok `ulang` itu sendiri.
       courseB_collector_loops_challenge2a_2019:
         courseB_collector_loops_challenge2a_a: Jika sesuatu yang tidak beres, cobalah
           debug itu. Jangan menyerah!
         courseB_collector_loops_challenge2a_b: |-
           Lihatlah pilihan ini untuk melewati labirin.
           Apakah Anda melihat sebuah pola yang dapat Anda mengulangi?
+        courseB_collector_loops_challenge2a_c: Untuk mengumpulkan semua harta karun,
+          kamu mungkin perlu menambahkan dua blok  <xml> <block type="collector_collect"/></xml>
+          ke dalam loop, atau memasukkan blok ke dalam blok `ulang` itu sendiri.
       courseB_iceage_loops3:
         courseB_iceage_loops3_b: Untuk mengulang kode, seret sebuah loop `repeat`,
           kemudian letakkan blok yang anda inginkan di dalamnya.
@@ -2653,9 +2664,6 @@ id-ID:
       courseC_PlayLab_eventsA_2019:
         courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah
           `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_b: Anda akan perlu untuk secara khusus menyeret sebuah
-          `ketika run` acara blok ke ruang kerja untuk memecahkan ini teka-teki.
       courseC_PlayLab_events_challenge1:
         courseC_PlayLab_events_challenge_b: Coba gunakan `set aktor 1 ke posisi kiri
           tengah` saat menyentuh salah satu aktor lainnya. Ini akan mengatur ulang
@@ -2767,6 +2775,36 @@ id-ID:
         courseC_artist_loopsPre1a_b: 'Anda `mengulang` lingkaran harus memiliki 3
           blok di dalamnya: `melompat ke 200 lebih dari 200 down`,`bergerak maju dengan
           50 piksel`, dan`belok kanan oleh 60 degrees`.'
+      courseC_artist_loopsPrePre1a_2018:
+        courseC_artist_loopsPrePre1a_a: |-
+          Blok pertama yang kamu butuhkan adalah:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Untuk maju 50 pixel, gunakan blok ini:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
+      courseC_artist_loopsPrePre1a_2019:
+        courseC_artist_loopsPrePre1a_a: |-
+          Blok pertama yang kamu butuhkan adalah:
+
+          <xml>  <block type="jump_to_xy" id="callMe">
+              <title name="XPOS">200</title>
+              <title name="YPOS">200</title>
+            </block></xml>
+        courseC_artist_loopsPrePre1a_b: |-
+          Untuk maju 50 pixel, gunakan blok ini:
+
+          <xml><block type="draw_move_by_constant">
+              <title name="DIR">moveForward</title>
+              <title name="VALUE">50</title>
+            </block></xml>
       courseC_artist_prog2:
         courseC_artist_prog2_a: Jika Anda menggunakan blok agar saya 'bergerak maju
           dengan 100 pixel', saya akan menarik garis secara otomatis.
@@ -2826,15 +2864,15 @@ id-ID:
         courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-        courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah`
-          untuk melihat sudut mana yang Anda butuhkan!
+        courseC_artist_prog5_c: Kamu bisa gunakan menu panah pada blok `ubah` untuk
+          melihat sudut mana yang mereka butuhkan!
         courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
       courseC_artist_prog5_2019:
         courseC_artist_prog5_b: Jangan takut membuat kesalahan! Cobalah menambahkan
           blok dan menjalankan kode untuk melihat apa yang akan terjadi, bahkan jika
           anda berpikir bahwa anda belum menyelesaikan teka-teki itu.
-        courseC_artist_prog5_c: Anda bisa menggunakan menu drop dwon pada blok `ubah`
-          untuk melihat sudut mana yang Anda butuhkan!
+        courseC_artist_prog5_c: Kamu bisa gunakan menu panah pada blok `ubah` untuk
+          melihat sudut mana yang mereka butuhkan!
         courseC_artist_prog5_d: Setiap putaran harus 90 derajat ke kanan.
       courseC_artist_prog6:
         courseC_artist_prog6_a: Seniman sudah menghadapi cara yang benar untuk menggambar
@@ -3317,6 +3355,30 @@ id-ID:
         courseC_harvester_loops_challenge1_b: Anda bisa mengulang `bergerak maju`
           dan`memilih sudut` sebanyak yang Anda butuhkan, lalu belok kanan di setiap
           sudut.
+        courseC_harvester_loops_challenge1_c: |-
+          Setelah dua petikan jagung yang pertama, kamu bisa gunakan loop yang tersedia untuk memetik delapan sisanya.
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: Ini terlalu keras tanpa loop!
         courseC_harvester_loops_challenge1_b: Anda bisa mengulang `bergerak maju`
@@ -3395,9 +3457,13 @@ id-ID:
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging5_2018:
+        courseC_maze_debugging5_c: Kamu bisa mengubah arah blok putar dengan mengklik
+          menu panah.
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging5_2019:
+        courseC_maze_debugging5_c: Kamu bisa mengubah arah blok putar dengan mengklik
+          menu panah.
         courseC_maze_debugging5_b: Coba katakan apa yang harus dilakukan Scrat dengan
           suara keras. Apakah sama seperti kode di workspace? Apa yang salah?
       courseC_maze_debugging6:
@@ -3696,6 +3762,12 @@ id-ID:
           kemudian bergerak maju.
         courseC_starWars_loops5_a: Solusi terbaik menggunakan sebuah gilirannya, kemudian
           satu tunggal `langkah meneruskan`, giliran lain, makan satu lingkaran.
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: Solusi terbaiknya adalah dengan menggunakan satu
+          `maju ke depan`, lalu satu balik, lalu satu putaran.
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: Solusi terbaiknya adalah dengan menggunakan satu
+          `maju ke depan`, lalu satu balik, lalu satu putaran.
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: Mencoba menulis semua bergerak di atas sebuah kertas
           dan mencari sebuah pola.
@@ -5721,5 +5793,3 @@ id-ID:
           teka-teki ini. Menyeret blok `mengatakan` keluar dari toolbar dan menghubungkan
           itu ke `ketika menjalankan` event blok yang sudah ada di dalam ruang pekerjaan.
           Selanjutnya, ketik "Halo!" ke dalam.
-      Dance_Party_extras_alternate_2019:
-        alternate: Blok pengganti berada dalam kategori "Penari".

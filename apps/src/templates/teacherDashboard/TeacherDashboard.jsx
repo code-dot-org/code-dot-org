@@ -1,8 +1,12 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
-import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+import TeacherDashboardNavigation, {
+  TeacherDashboardPath
+} from './TeacherDashboardNavigation';
+import experiments from '@cdo/apps/util/experiments';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
+import TeacherDashboardHeaderWithButtons from './TeacherDashboardHeaderWithButtons';
 import StatsTableWithData from './StatsTableWithData';
 import SectionProgress from '@cdo/apps/templates/sectionProgress/SectionProgress';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
@@ -13,7 +17,27 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import EmptySection from './EmptySection';
 import _ from 'lodash';
 import firehoseClient from '../../lib/util/firehose';
+import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import {recordImpression} from './impressionHelpers';
 
+function Header(props) {
+  if (experiments.isEnabled(experiments.TEACHER_DASHBOARD_SECTION_BUTTONS)) {
+    recordImpression('teacher_dashboard_header_with_buttons');
+    return (
+      <div>
+        {/* TeacherDashboardNavigation must be outside of
+        TeacherDashboardHeader. Routing components do not work with
+        components using Connect/Redux. Library we could use to fix issue:
+        https://github.com/supasate/connected-react-router */}
+        <TeacherDashboardHeaderWithButtons />
+        <TeacherDashboardNavigation />
+      </div>
+    );
+  } else {
+    recordImpression('teacher_dashboard_header_no_buttons');
+    return <TeacherDashboardHeader sectionName={props.sectionName} />;
+  }
+}
 class TeacherDashboard extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string.isRequired,
@@ -69,12 +93,14 @@ class TeacherDashboard extends Component {
       location.pathname = TeacherDashboardPath.progress;
     }
 
-    // Include header components unless we are on the /login_info page.
-    const includeHeader = location.pathname !== TeacherDashboardPath.loginInfo;
+    // Include header components unless we are on the /login_info or /standards_report page.
+    const includeHeader =
+      location.pathname !== TeacherDashboardPath.loginInfo &&
+      location.pathname !== TeacherDashboardPath.standardsReport;
 
     return (
       <div>
-        {includeHeader && <TeacherDashboardHeader sectionName={sectionName} />}
+        {includeHeader && <Header {...this.props} />}
         <Switch>
           <Route
             path={TeacherDashboardPath.manageStudents}
@@ -93,6 +119,10 @@ class TeacherDashboard extends Component {
                 pegasusUrlPrefix={pegasusUrlPrefix}
               />
             )}
+          />
+          <Route
+            path={TeacherDashboardPath.standardsReport}
+            component={props => <StandardsReport />}
           />
           {/* Break out of Switch if we have 0 students. Display EmptySection component instead. */}
           {studentCount === 0 && (

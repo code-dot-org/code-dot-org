@@ -18,10 +18,10 @@ markdown <<MARKDOWN
 ## New Subgoals and Blocks
 
 *  **Subgoal** - `//Define function`
-	* **[Define a function with parameters](//docs.code.org/applab/functionParams_n/)** - `function myFunction(n){ //code }`
+	* **[Define a function with parameters](//studio.code.org/docs/applab/functionParams_n/)** - `function myFunction(n){ //code }`
 *  **Subgoal** - `//Call function`
-	* **[Call a function with parameters](//docs.code.org/applab/callMyFunction_n/)** - `Call a function with parameters`
-	* **[randomNumber min/max](//docs.code.org/applab/randomNumber_min_max/)** - `randomNumber min/max`
+	* **[Call a function with parameters](//studio.code.org/docs/applab/callMyFunction_n/)** - `Call a function with parameters`
+	* **[randomNumber min/max](//studio.code.org/docs/applab/randomNumber_min_max/)** - `randomNumber min/max`
 
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>

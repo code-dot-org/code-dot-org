@@ -14,13 +14,50 @@ import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 /**
  * Run the set of interface conformance tests on the provided class.
  * @param {function} BoardClass
+ * @param {function} boardType
+ * @param {function} boardSpecificSetup optional
  */
-export function itImplementsTheMakerBoardInterface(BoardClass) {
+
+const CP_CONSTRUCTOR_COUNT = 13;
+const CP_COMPONENT_COUNT = 16;
+const MB_CONSTRUCTOR_COUNT = 4;
+const MB_COMPONENT_COUNT = 6;
+const CP_COMPONENTS = [
+  'Led',
+  'Board',
+  'NeoPixel',
+  'PlaygroundButton',
+  'Switch',
+  'Piezo',
+  'Sensor',
+  'Thermometer',
+  'Pin',
+  'Accelerometer',
+  'Animation',
+  'Servo',
+  'TouchSensor'
+];
+const MB_COMPONENTS = [
+  'LedMatrix',
+  'MicroBitButton',
+  'Accelerometer',
+  'MicroBitThermometer'
+];
+
+export function itImplementsTheMakerBoardInterface(
+  BoardClass,
+  boardType,
+  boardSpecificSetup = null
+) {
   describe('implements the MakerBoard interface', () => {
     let board;
 
     beforeEach(() => {
       board = new BoardClass();
+      // Opportunity to stub any needed to test a board
+      if (boardSpecificSetup) {
+        boardSpecificSetup(board);
+      }
     });
 
     it('is an EventEmitter', () => {
@@ -66,8 +103,6 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
      * @param {JSInterpreter} jsInterpreter
      */
     describe('installOnInterpreter(codegen, jsInterpreter)', () => {
-      const CONSTRUCTOR_COUNT = 13;
-      const COMPONENT_COUNT = 16;
       let jsInterpreter;
 
       beforeEach(() => {
@@ -92,25 +127,20 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           board.installOnInterpreter(jsInterpreter);
         });
 
-        it(`${CONSTRUCTOR_COUNT} of them`, () => {
-          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(13);
+        it(`correct number of them`, () => {
+          let constructorCount =
+            boardType === 'microbit'
+              ? MB_CONSTRUCTOR_COUNT
+              : CP_CONSTRUCTOR_COUNT;
+          expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+            constructorCount
+          );
         });
 
-        [
-          'Led',
-          'Board',
-          'NeoPixel',
-          'Button',
-          'Switch',
-          'Piezo',
-          'Sensor',
-          'Thermometer',
-          'Pin',
-          'Accelerometer',
-          'Animation',
-          'Servo',
-          'TouchSensor'
-        ].forEach(constructor => {
+        let components =
+          boardType === 'microbit' ? MB_COMPONENTS : CP_COMPONENTS;
+
+        components.forEach(constructor => {
           it(constructor, () => {
             expect(jsInterpreter.globalProperties).to.have.ownProperty(
               constructor
@@ -133,105 +163,185 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
           board.installOnInterpreter(jsInterpreter);
         });
 
-        it(`${COMPONENT_COUNT} of them`, () => {
+        it(`correct number of them`, () => {
+          let globalPropsCount =
+            boardType === 'microbit'
+              ? MB_CONSTRUCTOR_COUNT + MB_COMPONENT_COUNT
+              : CP_CONSTRUCTOR_COUNT + CP_COMPONENT_COUNT;
           expect(Object.keys(jsInterpreter.globalProperties)).to.have.length(
-            CONSTRUCTOR_COUNT + COMPONENT_COUNT
+            globalPropsCount
           );
         });
 
-        describe('led', () => {
-          function expectLedToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
-              'function'
-            );
-          }
+        // Board-specific tests
+        if (boardType === 'circuit playground') {
+          describe('led', () => {
+            function expectLedToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.led[fnName]).to.be.a(
+                'function'
+              );
+            }
 
-          // Set of required functions derived from our dropletConfig
-          ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
-            it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
-          });
-        });
-
-        describe('colorLeds[]', () => {
-          function expectEachColorLedToHaveFunction(fnName) {
-            jsInterpreter.globalProperties.colorLeds.forEach(led => {
-              expect(led[fnName]).to.be.a('function');
-            });
-          }
-
-          it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
-            expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
-              .be.true;
-            expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
-              N_COLOR_LEDS
-            );
-          });
-
-          // Set of required functions derived from our dropletConfig
-          [
-            'on',
-            'off',
-            'toggle',
-            'blink',
-            'stop',
-            'intensity',
-            'color'
-          ].forEach(fnName => {
-            it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
-          });
-        });
-
-        describe('buzzer', () => {
-          function expectBuzzerToHaveFunction(fnName) {
-            expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
-              'function'
-            );
-          }
-
-          // Set of required functions derived from our dropletConfig
-          ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
-            it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
-          });
-        });
-
-        describe('toggleSwitch', () => {
-          it('isOpen', () => {
-            expect(jsInterpreter.globalProperties.toggleSwitch.isOpen).to.be.a(
-              'boolean'
-            );
-          });
-        });
-
-        ['soundSensor', 'lightSensor'].forEach(sensorName => {
-          describe(sensorName, () => {
-            let component;
-
-            beforeEach(() => {
-              component = jsInterpreter.globalProperties[sensorName];
-            });
-
-            it('start()', () => {
-              expect(component.start).to.be.a('function');
-            });
-
-            it('value', () => {
-              expect(component).to.have.property('value');
-            });
-
-            it('getAveragedValue()', () => {
-              expect(component.getAveragedValue).to.be.a('function');
-              expect(component.getAveragedValue()).to.be.a('number');
-            });
-
-            it('setScale()', () => {
-              expect(component.setScale).to.be.a('function');
-            });
-
-            it('threshold', () => {
-              expect(component.threshold).to.be.a('number');
+            // Set of required functions derived from our dropletConfig
+            ['on', 'off', 'toggle', 'blink', 'pulse'].forEach(fnName => {
+              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
             });
           });
-        });
+
+          describe('colorLeds[]', () => {
+            function expectEachColorLedToHaveFunction(fnName) {
+              jsInterpreter.globalProperties.colorLeds.forEach(led => {
+                expect(led[fnName]).to.be.a('function');
+              });
+            }
+
+            it(`is an array of ${N_COLOR_LEDS} color led components`, () => {
+              expect(Array.isArray(jsInterpreter.globalProperties.colorLeds)).to
+                .be.true;
+              expect(jsInterpreter.globalProperties.colorLeds).to.have.length(
+                N_COLOR_LEDS
+              );
+            });
+
+            // Set of required functions derived from our dropletConfig
+            [
+              'on',
+              'off',
+              'toggle',
+              'blink',
+              'stop',
+              'intensity',
+              'color'
+            ].forEach(fnName => {
+              it(`${fnName}()`, () => expectEachColorLedToHaveFunction(fnName));
+            });
+          });
+
+          describe('buzzer', () => {
+            function expectBuzzerToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.buzzer[fnName]).to.be.a(
+                'function'
+              );
+            }
+
+            // Set of required functions derived from our dropletConfig
+            ['frequency', 'note', 'off', 'stop', 'play'].forEach(fnName => {
+              it(`${fnName}()`, () => expectBuzzerToHaveFunction(fnName));
+            });
+          });
+
+          describe('toggleSwitch', () => {
+            it('isOpen', () => {
+              expect(
+                jsInterpreter.globalProperties.toggleSwitch.isOpen
+              ).to.be.a('boolean');
+            });
+          });
+
+          ['soundSensor', 'lightSensor'].forEach(sensorName => {
+            describe(sensorName, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[sensorName];
+              });
+
+              it('start()', () => {
+                expect(component.start).to.be.a('function');
+              });
+
+              it('value', () => {
+                expect(component).to.have.property('value');
+              });
+
+              it('getAveragedValue()', () => {
+                expect(component.getAveragedValue).to.be.a('function');
+                expect(component.getAveragedValue()).to.be.a('number');
+              });
+
+              it('setScale()', () => {
+                expect(component.setScale).to.be.a('function');
+              });
+
+              it('threshold', () => {
+                expect(component.threshold).to.be.a('number');
+              });
+            });
+          });
+
+          ['buttonL', 'buttonR'].forEach(button => {
+            describe(button, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[button];
+              });
+
+              it('isPressed', () =>
+                expect(component.isPressed).to.be.a('boolean'));
+              it('holdtime', () =>
+                expect(component.holdtime).to.be.a('number'));
+            });
+          });
+
+          describe('Constants', () => {
+            it('INPUT', () => {
+              expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
+            });
+
+            it('OUTPUT', () => {
+              expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
+            });
+
+            it('ANALOG', () => {
+              expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
+            });
+
+            it('PWM', () => {
+              expect(jsInterpreter.globalProperties.PWM).to.equal(3);
+            });
+
+            it('SERVO', () => {
+              expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
+            });
+          });
+        }
+
+        // Board-specific tests
+        if (boardType === 'microbit') {
+          ['buttonA', 'buttonB'].forEach(button => {
+            describe(button, () => {
+              let component;
+
+              beforeEach(() => {
+                component = jsInterpreter.globalProperties[button];
+              });
+
+              it('isPressed', () =>
+                expect(component.isPressed).to.be.a('boolean'));
+            });
+          });
+
+          describe('ledMatrix', () => {
+            function expectLedToHaveFunction(fnName) {
+              expect(jsInterpreter.globalProperties.ledMatrix[fnName]).to.be.a(
+                'function'
+              );
+            }
+
+            // Set of required functions derived from our dropletConfig
+            [
+              'on',
+              'off',
+              'toggle',
+              'allOff',
+              'scrollString',
+              'scrollInteger'
+            ].forEach(fnName => {
+              it(`${fnName}()`, () => expectLedToHaveFunction(fnName));
+            });
+          });
+        }
 
         describe('tempSensor', () => {
           let component;
@@ -263,45 +373,9 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
             expect(component.getAcceleration).to.be.a('function'));
         });
 
-        ['buttonL', 'buttonR'].forEach(button => {
-          describe(button, () => {
-            let component;
-
-            beforeEach(() => {
-              component = jsInterpreter.globalProperties[button];
-            });
-
-            it('isPressed', () =>
-              expect(component.isPressed).to.be.a('boolean'));
-            it('holdtime', () => expect(component.holdtime).to.be.a('number'));
-          });
-        });
-
         describe('board', () => {
           it('exists', () => {
             expect(jsInterpreter.globalProperties).to.have.ownProperty('board');
-          });
-        });
-
-        describe('Constants', () => {
-          it('INPUT', () => {
-            expect(jsInterpreter.globalProperties.INPUT).to.equal(0);
-          });
-
-          it('OUTPUT', () => {
-            expect(jsInterpreter.globalProperties.OUTPUT).to.equal(1);
-          });
-
-          it('ANALOG', () => {
-            expect(jsInterpreter.globalProperties.ANALOG).to.equal(2);
-          });
-
-          it('PWM', () => {
-            expect(jsInterpreter.globalProperties.PWM).to.equal(3);
-          });
-
-          it('SERVO', () => {
-            expect(jsInterpreter.globalProperties.SERVO).to.equal(4);
           });
         });
       });
@@ -410,28 +484,30 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
       });
     });
 
-    /**
-     * @function
-     * @name MakerBoard#createLed
-     * @param {number} pin
-     * @return {Led} a newly constructed Led component
-     */
-    describe(`createLed(pin)`, () => {
-      beforeEach(() => {
-        return board.connect();
-      });
+    if (boardType === 'circuit playground') {
+      /**
+       * @function
+       * @name MakerBoard#createLed
+       * @param {number} pin
+       * @return {Led} a newly constructed Led component
+       */
+      describe(`createLed(pin)`, () => {
+        beforeEach(() => {
+          return board.connect();
+        });
 
-      it(`returns an Led component`, () => {
-        const led = board.createLed(10);
-        // FakeBoard doesn't provide an LED component, so check the basic LED
-        // shape instead.
-        expect(led.on).to.be.a('function');
-        expect(led.off).to.be.a('function');
-        expect(led.blink).to.be.a('function');
-        expect(led.toggle).to.be.a('function');
-        expect(led.pulse).to.be.a('function');
+        it(`returns an Led component`, () => {
+          const led = board.createLed(10);
+          // FakeBoard doesn't provide an LED component, so check the basic LED
+          // shape instead.
+          expect(led.on).to.be.a('function');
+          expect(led.off).to.be.a('function');
+          expect(led.blink).to.be.a('function');
+          expect(led.toggle).to.be.a('function');
+          expect(led.pulse).to.be.a('function');
+        });
       });
-    });
+    }
 
     /**
      * @function
@@ -450,12 +526,16 @@ export function itImplementsTheMakerBoardInterface(BoardClass) {
         return board.connect();
       });
 
-      it(`returns an Led component`, () => {
+      it(`returns a Button component`, () => {
         const button = board.createButton(10);
         // Check the basic button shape
         expect(button).to.be.an.instanceOf(EventEmitter);
         expect(button).to.have.property('isPressed');
-        expect(button).to.have.property('holdtime');
+
+        // TODO - not yet implemented for microbit
+        if (boardType === 'circuit playground') {
+          expect(button).to.have.property('holdtime');
+        }
       });
     });
   });

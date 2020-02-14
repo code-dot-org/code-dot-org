@@ -12,7 +12,7 @@ Feature: Using the SectionActionDropdown
 
     When I sign in as "Teacher_Sally" and go home
     And I open the section action dropdown
-    And I press the child number 0 of class ".pop-up-menu-item"
+    And I click selector ".view-progress-link"
     And I wait until current URL contains "/progress"
 
   # * Check that we get redirected to the right page
@@ -20,7 +20,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I press the child number 1 of class ".pop-up-menu-item"
+    And I click selector ".manage-students-link"
     And I wait until current URL contains "/manage"
 
   # * Check that we get redirected to the right page
@@ -28,7 +28,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I press the child number 2 of class ".pop-up-menu-item"
+    And I click selector ".print-login-link"
     And I wait until current URL contains "/login_info"
 
   # * Add a section and then opens the edit dialog.
@@ -38,7 +38,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I press the child number 3 of class ".pop-up-menu-item"
+    And I click selector ".edit-section-details-link"
     And I press the first ".uitest-saveButton" element
 
   # * Checks that section can be hidden and shown

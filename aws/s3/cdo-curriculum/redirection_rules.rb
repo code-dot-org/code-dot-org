@@ -88,11 +88,11 @@ routing_rules = [
   },
   {
     condition: {
-      key_prefix_equals: "docs/"
+      key_prefix_equals: "documentation/"
     },
     redirect: {
       host_name: HOST_NAME,
-      replace_key_prefix_with: "documentation"
+      replace_key_prefix_with: "docs/"
     }
   },
 ]

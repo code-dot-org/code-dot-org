@@ -9207,7 +9207,7 @@ mk:
         (<https://images.code.org/00e4ee128c4beb11c0c7a6bba6024494-image-1470317549555.png>)"
       CSD U3 collisions egg2: "# Making Sounds\\\r\n\n\\\r\nYou can\nalso use code
         to play a blender sound.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\nUse the `playSound`\nblock
-        from the \"World\" drawer to play the \"<https://docs.code.org/sounds/blender.mp3>\"\nsound
+        from the \"World\" drawer to play the \"<https://studio.code.org/docs/sounds/blender.mp3>\"\nsound
         when the apple touches the blender.  You will need to paste the address\nof
         the sound into the block, so it looks like this: !\\[](\\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\nPM.png>)\\\r\n\\\r\n[//]\\:
         #  (<https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png>)\\\r\n\\\r\n[//]\\:\n\n#
@@ -9219,7 +9219,7 @@ mk:
         (<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\n\nPM.png)"
       CSD U3 collisions egg2_2018: "# Making Sounds\\\r\n\n\\\r\nYou\ncan also use
         code to play a blender sound.\\\r\n\\\r\n\n# Do This\\\r\n\n\\\r\nUse the\n`playSound`
-        block from the \"World\" drawer to play the \"<https://docs.code.org/sounds/blender.mp3>\"\nsound
+        block from the \"World\" drawer to play the \"<https://studio.code.org/docs/sounds/blender.mp3>\"\nsound
         when the apple touches the blender.  You will need to paste the address\nof
         the sound into the block, so it looks like this: !\\[](\\<<https://images.code.org/8376df7a92ff8e6ba0a2d6e51c24547e-image-1484091385498.34.57>\nPM.png>)\\\r\n\\\r\n[//]\\:
         #  (<https://images.code.org/82436176c744caa106cfc4971cd1db6c-image-1470247395711.png>)\\\r\n\\\r\n[//]\\:\n\n#

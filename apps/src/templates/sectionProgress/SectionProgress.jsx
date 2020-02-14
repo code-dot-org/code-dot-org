@@ -17,7 +17,8 @@ import {
   getCurrentProgress,
   getCurrentScriptData,
   setLessonOfInterest,
-  scriptDataPropType
+  scriptDataPropType,
+  setCurrentView
 } from './sectionProgressRedux';
 import {tooltipIdForLessonNumber} from './multiGridConstants';
 import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
@@ -29,6 +30,7 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
+import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -71,21 +73,36 @@ class SectionProgress extends Component {
     section: sectionDataPropType.isRequired,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
+    setCurrentView: PropTypes.func.isRequired,
     scriptData: scriptDataPropType,
     loadScript: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool
+    showStandardsIntroDialog: PropTypes.bool,
+    getStandardsCoveredForScript: PropTypes.func.isRequired
   };
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
+    this.props.getStandardsCoveredForScript(this.props.scriptId);
+  }
+
+  componentDidUpdate() {
+    // Check if we are on a script that does NOT have standards associations and
+    // currentView is Standards. If so re-set currentView to Summary since
+    // Standards doesn't apply.
+    const hasStandards =
+      this.props.scriptData && this.props.scriptData.hasStandards;
+    if (this.props.currentView === ViewType.STANDARDS && !hasStandards) {
+      this.props.setCurrentView(ViewType.SUMMARY);
+    }
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
+    this.props.getStandardsCoveredForScript(scriptId);
 
     firehoseClient.putRecord(
       {
@@ -104,6 +121,20 @@ class SectionProgress extends Component {
 
   onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
+
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'jump_to_lesson',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id,
+          script_id: this.props.scriptId,
+          stage_id: this.props.scriptData.stages[lessonOfInterest].id
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   renderTooltips() {
@@ -150,13 +181,14 @@ class SectionProgress extends Component {
 
     const levelDataInitialized = scriptData && !isLoadingProgress;
     const lessons = scriptData ? scriptData.stages : [];
+    const scriptWithStandardsSelected =
+      levelDataInitialized && scriptData.hasStandards;
     const summaryStyle =
       currentView === ViewType.SUMMARY ? styles.show : styles.hide;
     const detailStyle =
       currentView === ViewType.DETAIL ? styles.show : styles.hide;
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
-
     return (
       <div>
         <div style={styles.topRowContainer}>
@@ -170,11 +202,14 @@ class SectionProgress extends Component {
               onChange={this.onChangeScript}
             />
           </div>
-          <div style={styles.toggle}>
-            <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
-            <SectionProgressToggle />
-          </div>
-
+          {levelDataInitialized && (
+            <div style={styles.toggle}>
+              <div style={{...h3Style, ...styles.heading}}>{i18n.viewBy()}</div>
+              <SectionProgressToggle
+                showStandardsToggle={scriptWithStandardsSelected}
+              />
+            </div>
+          )}
           {currentView === ViewType.DETAIL && lessons.length !== 0 && (
             <LessonSelector lessons={lessons} onChange={this.onChangeLevel} />
           )}
@@ -201,7 +236,7 @@ class SectionProgress extends Component {
           )}
           {levelDataInitialized && this.renderTooltips()}
           {experiments.isEnabled(experiments.STANDARDS_REPORT) && (
-            <div style={standardsStyle}>
+            <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
                 showStandardsIntroDialog={
                   currentView === ViewType.STANDARDS && showStandardsIntroDialog
@@ -237,6 +272,12 @@ export default connect(
     },
     setLessonOfInterest(lessonOfInterest) {
       dispatch(setLessonOfInterest(lessonOfInterest));
+    },
+    setCurrentView(viewType) {
+      dispatch(setCurrentView(viewType));
+    },
+    getStandardsCoveredForScript(scriptId) {
+      dispatch(getStandardsCoveredForScript(scriptId));
     }
   })
 )(SectionProgress);

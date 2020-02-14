@@ -4,6 +4,8 @@ import * as Table from 'reactabular-table';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 import StandardDescriptionCell from './StandardDescriptionCell';
+import {connect} from 'react-redux';
+import {lessonsByStandard} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 export const COLUMNS = {
   STANDARD_CATEGORY: 0,
@@ -31,8 +33,11 @@ const styles = {
 
 class StandardsProgressTable extends Component {
   static propTypes = {
+    style: PropTypes.object,
+    isViewingReport: PropTypes.bool,
+    //redux
     standards: PropTypes.array,
-    lessonsCompletedByStandard: PropTypes.object
+    lessonsByStandard: PropTypes.object
   };
 
   standardCategoryCellFormatter = (standard, {rowData, rowIndex}) => {
@@ -53,6 +58,7 @@ class StandardsProgressTable extends Component {
         id={rowData.id}
         description={rowData.description}
         lessonsForStandardStatus={rowData.lessonsForStandardStatus}
+        isViewingReport={this.props.isViewingReport}
       />
     );
   };
@@ -60,7 +66,7 @@ class StandardsProgressTable extends Component {
   getColumns = () => {
     let dataColumns = [
       {
-        property: 'category',
+        property: 'concept',
         header: {
           label: i18n.standardConcept(),
           props: {
@@ -81,7 +87,7 @@ class StandardsProgressTable extends Component {
         }
       },
       {
-        property: 'number',
+        property: 'organization_id',
         header: {
           label: i18n.standardIdentifier(),
           props: {
@@ -147,37 +153,36 @@ class StandardsProgressTable extends Component {
     return dataColumns;
   };
 
-  getNumCompleted = (standard, index) => {
+  getNumLessonsCompleted = (standard, index) => {
     let count = 0;
-    if (this.props.lessonsCompletedByStandard[index + 1]) {
-      this.props.lessonsCompletedByStandard[index + 1].lessons.forEach(
-        lesson => {
-          if (lesson.completed) {
-            count++;
-          }
+    if (this.props.lessonsByStandard[standard.id]) {
+      this.props.lessonsByStandard[standard.id].forEach(lesson => {
+        if (lesson.completed) {
+          count++;
         }
-      );
+      });
     }
     return count;
   };
 
   render() {
     const columns = this.getColumns();
-
-    const rowData = this.props.standards.map((standard, index) => {
+    const standards = this.props.standards || [];
+    const rowData = standards.map((standard, index) => {
       return {
         ...standard,
-        numCompleted: this.getNumCompleted(standard, index),
-        lessonsForStandardStatus: this.props.lessonsCompletedByStandard[
-          index + 1
-        ]
-          ? this.props.lessonsCompletedByStandard[index + 1].lessons
+        numCompleted: this.getNumLessonsCompleted(standard, index),
+        lessonsForStandardStatus: this.props.lessonsByStandard[standard.id]
+          ? this.props.lessonsByStandard[standard.id]
           : []
       };
     });
 
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+      <Table.Provider
+        columns={columns}
+        style={{...tableLayoutStyles.table, ...this.props.style}}
+      >
         <Table.Header />
         <Table.Body rows={rowData} rowKey="id" />
       </Table.Provider>
@@ -185,4 +190,9 @@ class StandardsProgressTable extends Component {
   }
 }
 
-export default StandardsProgressTable;
+export const UnconnectedStandardsProgressTable = StandardsProgressTable;
+
+export default connect(state => ({
+  lessonsByStandard: lessonsByStandard(state),
+  standards: state.sectionStandardsProgress.standardsData
+}))(StandardsProgressTable);

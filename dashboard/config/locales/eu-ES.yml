@@ -475,6 +475,8 @@ eu:
   landing:
     report_bug: Akatsa jakinarazi
     support: Lortu laguntza
+  free_response:
+    placeholder: Idatzi hemen zure erantzuna
   multi:
     wrong_title: Erantzun okerra
     wrong_body: Erantzuna ez da zuzena. Saiatu berriro!

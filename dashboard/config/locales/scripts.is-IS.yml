@@ -5346,6 +5346,10 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: Villuleit
         csl-vn:
           stages:
             Loops in Ice Age:
@@ -5416,6 +5420,8 @@ is:
               name: Atvik
             Functions:
               name: Föll
+            'Diving Deeper: Courses E and F':
+              name: 'Kafað dýpra: Námskeið E og F'
             Sprite Lab:
               name: Kvikasmiðjan
             Variables:
@@ -5433,7 +5439,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Sequencing in Maze:
               name: Röð aðgerða í Völundarhúsi
@@ -5445,3 +5451,19 @@ is:
               name: Hópvistun
             Conditionals with Cards:
               name: Skilyrði með kortum
+        time4cs-control-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
+        time4cs-experiment-unit-1:
+          stages:
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Conditionals:
+              name: Skilyrði
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi

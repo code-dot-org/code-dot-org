@@ -56,8 +56,8 @@ När du har valt den övning som du vill göra, kan du skapa ett bokmärke för 
 Det är okej att svara:
 
 - "Jag vet inte. Låt oss lista ut detta tillsammans."
-- "Tekniken fungerar inte alltid som vi vill."
-- "Att lära sig programmera är som att lära sig ett nytt språk: Du blir inte flytande på en gång."
+- "Teknik fungerar inte alltid som vi vill."
+- "Att lära sig programmera är som att lära sig ett nytt språk: du skriver inte flytande på en gång."
 
 ## 6) Fira
 

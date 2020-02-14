@@ -12,13 +12,18 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
+import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 const styles = {
   heading: {
     marginBottom: 0
   },
   tableHeader: {
-    marginBottom: 10
+    marginBottom: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between'
   },
   scriptLink: {
     color: color.teal
@@ -27,11 +32,12 @@ const styles = {
 
 class ProgressViewHeader extends Component {
   static propTypes = {
+    scriptId: PropTypes.number,
+    //redux
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
-    scriptId: PropTypes.number
+    scriptData: scriptDataPropType
   };
 
   getLinkToOverview() {
@@ -64,14 +70,19 @@ class ProgressViewHeader extends Component {
     };
     return (
       <div style={{...h3Style, ...styles.heading, ...styles.tableHeader}}>
-        <span>{headingText[currentView]}</span>
-        <a
-          href={linkToOverview}
-          style={styles.scriptLink}
-          onClick={this.navigateToScript}
-        >
-          {scriptFriendlyName}
-        </a>
+        <span>
+          {headingText[currentView] + ' '}
+          <a
+            href={linkToOverview}
+            style={styles.scriptLink}
+            onClick={this.navigateToScript}
+          >
+            {scriptFriendlyName}
+          </a>
+        </span>
+        {currentView === ViewType.STANDARDS && (
+          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
+        )}
       </div>
     );
   }

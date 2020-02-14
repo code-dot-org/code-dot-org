@@ -34,6 +34,7 @@
   "bird": "fågel",
   "calloutPutCommandsHereRunStart": "Lägg kommandona här så körs de när programmet startas",
   "calloutBlocklyPlaceGoUpHere": "Lägg blocket \"flytta upp\" här för att flytta uppåt",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Klicka på rubriken händelser för att se funktionsblock för händelser.",
   "calloutUseArrowButtons": "Håll ned dessa knappar eller piltangenterna på tangentbordet för att skapa flytt-händelser",
   "calloutUseArrowButtonsAutoSteer": "Vi har gömt koden du skrev, men du kan fortfarande använda piltangenterna för att röra dig",

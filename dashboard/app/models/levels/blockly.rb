@@ -409,6 +409,7 @@ class Blockly < Level
     options.freeze
   end
 
+  # FND-985 Create shared API to get localized level properties.
   def get_localized_property(property_name)
     if should_localize? && try(property_name)
       I18n.t(

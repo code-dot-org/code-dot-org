@@ -115,6 +115,11 @@ export default class App extends React.Component {
       this.setState({needsEmptyRender: false});
     }
 
+    let readAccessToURL;
+    if (Platform.OS === 'ios' && indexUri) {
+      readAccessToURL = indexUri.substring(0, indexUri.lastIndexOf('/') + 1);
+    }
+
     return (
       <View onLayout={this.onLayout} style={styles.container}>
         {showWebView && <View style={this.webViewContainerStyle()}>
@@ -122,6 +127,8 @@ export default class App extends React.Component {
             allowUniversalAccessFromFileURLs
             originWhitelist={['*']}
             allowFileAccess
+            allowFileAccessFromFileURLs
+            allowingReadAccessToURL={readAccessToURL}
             source={needsEmptyRender ? undefined : {uri: indexUri}}
             style={Platform.OS === 'ios' ? styles.webViewIOS : styles.webViewAndroid}
             javaScriptEnabled
@@ -129,6 +136,7 @@ export default class App extends React.Component {
             scrollEnabled={false}
             bounces={false}
             onLoad={this.onLoad}
+            useWebkit
           />
         </View>}
         {!loaded && <View style={styles.cover} />}

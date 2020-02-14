@@ -8,6 +8,7 @@
 #  zip_code            :string(255)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  deleted_at          :datetime
 #
 # Indexes
 #
@@ -17,6 +18,7 @@
 require 'state_abbr'
 
 class Pd::RegionalPartnerMapping < ActiveRecord::Base
+  acts_as_paranoid # use deleted_at column instead of deleting rows
   belongs_to :regional_partner
 
   validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: :state?

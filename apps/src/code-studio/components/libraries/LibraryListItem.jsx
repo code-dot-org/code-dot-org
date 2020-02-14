@@ -65,8 +65,8 @@ export default class LibraryListItem extends React.Component {
         <span style={styles.description}>
           {library.description}
           <br />
-          {library.studentName && (
-            <span style={styles.author}>Author: {library.studentName}</span>
+          {library.userName && (
+            <span style={styles.author}>Author: {library.userName}</span>
           )}
           <a onClick={this.viewCode} style={styles.viewCode}>
             {i18n.viewCode()}
@@ -94,7 +94,6 @@ export default class LibraryListItem extends React.Component {
           <button
             type="button"
             onClick={() => this.props.onRemove(library.name)}
-            style={styles.deleteButton}
             className="btn-danger"
           >
             <FontAwesome icon="trash-o" />

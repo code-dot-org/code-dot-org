@@ -34,6 +34,7 @@
   "bird": "pasăre",
   "calloutPutCommandsHereRunStart": "Pune comenzile aici pentru a le rula atunci când începe programul",
   "calloutBlocklyPlaceGoUpHere": "Plaseaza un bloc \"urca\" pentru a merge in sus",
+  "calloutBlocklyPlaceMoveUpHere": "Plasează un bloc \"urcă\" aici pentru a merge în sus",
   "calloutClickEvents": "Fă clic pe antetul evenimentelor pentru a vedea blocurile de tip eveniment.",
   "calloutUseArrowButtons": "Ţineţi apăsate aceste butoane sau tastele săgeată de pe tastatură pentru a declanşa evenimente de mutare",
   "calloutUseArrowButtonsAutoSteer": "Am ascuns codul pe care l-ai scris, dar inca poti folosi sagetile pentru miscare",

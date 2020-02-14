@@ -153,6 +153,9 @@ hu-HU:
         oldala 20 képponttal nagyobb, mint az előző háromszögé. '
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
         hogy ezt kapd!
+      Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot,
+        hogy megtudd, virág van-e a felhő alatt. \nCsak akkor gyűjts nektárt, ha tényleg
+        virágot találsz."
       Course 4 Bee 2: Használd a "ha/különben" blokkot, és ellenőrizd, hogy egy virágnál
         vagy egy lépnél állsz-e. Ha virágnál állsz, akkor gyűjts egy nektárt, különben
         pedig készíts mézet!
@@ -165,6 +168,8 @@ hu-HU:
       Course 4 EC 2c: Nincsenek szabályok. Nincsenek tippek. Csak a kihívás!
       Course 4 Maze 2: Kerüld el a TNT-t!
       Course 4 Maze 3: 'Programozd be a dühös madarat, hogy eljusson a malacig. '
+      Course 4 Maze 4: Próbáld ki az "ismételd" blokkot, és használj kevesebb blokkot
+        a feladvány megoldásához...
       Course 4 Maze 5: Meg tudod oldani ezt a feladványt a lehető legkevesebb blokk
         felhasználásával?
       Course 4 Play Lab Params 4: "Itt van egy járőr nevű függvény. \n\nSzerkeszd
@@ -243,6 +248,8 @@ hu-HU:
       Dance_2019_06: Állíts össze egy csoport háttértáncost a középen elhelyezkedő
         vezető táncos körül.
       Dance_2019_07: Változtasd meg a háttértáncosok csoportjának méretét.
+      Dance_2019_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész csoport)
+        színárnyalatát!
       Dance_2019_09: Légy kreatív ezekkel az új blokkokkal!
       Dance_2019_10: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
@@ -270,6 +277,33 @@ hu-HU:
         ahogyan csak tudod!
       Dance_Party_12: Lássuk, te hogy táncolsz! Hozd létre a saját táncodat, és oszd
         meg az ismerőseiddel.
+      Dance_Party_extras_alternate_2019: Előre és hátra! (Kattints a "Több" gombra
+        a részletekért)
+      Dance_Party_extras_battle: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_battle_2019: Dance Crews (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_every_beat: Negyed jegyzetek (a részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_every_beat_2019: Negyed jegyzetek (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_layout: Befelé az alakzatba! (A részletekért kattintson a
+        „Tovább” gombra)
+      Dance_Party_extras_layout_2019: Befelé az alakzatba! (A részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_mixed_2019: Több gomb (Kattints a "Több" gombra a részletekért)
+      Dance_Party_extras_on_beat: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_on_beat_2019: Basszus, középső és háromdimenziós (a részletekért
+        kattintson a „Tovább” gombra)
+      Dance_Party_extras_speed: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_speed_2019: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
+        a „Tovább” gombra)
+      Dance_Party_extras_visible: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)
+      Dance_Party_extras_visible_2019: Hová mentek? (A részletekért kattintson a „Tovább”
+        gombra)
       Find the Wizard: Csinálj bármit, amit szeretnél. Egy egy számkitalálós játékra
         példa!
       FoodFight: Ez egy példa játék, amit elkészíthetsz a játéklaborban.
@@ -600,8 +634,14 @@ hu-HU:
       courseA_collector_loops2_2019: Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a gyűjtőblokkot.
       courseA_maze_seq2: Változtasd meg a kódot, hogy elkapjam a malacot!
+      courseA_playLab_events1_2019: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
+        és nézd meg, mi történik!
+      courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
+        there". Tudsz segíteni neki?
       courseC_artist_loops1a_2019: 'Hozd a művészet a játéktér közepére, majd rajzolj
         egy matricát. '
+      courseC_artist_loops3a: Most adj hozzá egy denevért!
+      courseC_artist_loops3a_2018: Most adj hozzá egy denevért!
       courseC_artist_prog5: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_artist_prog5_2018: 'A háznak tetőre van szüksége! Rajzold meg a háromszöget.
@@ -610,6 +650,18 @@ hu-HU:
         Tipp: Mind a három oldal egyforma hosszú.'
       courseC_maze_debugging9_2019: A program létrehozásához használja az eszköztár
         blokkjait. Vidd a madarat a disznóhoz.
+      courseC_maze_debugging_challenge1: Segíts a motkánynak kiválasztani, hogy melyik
+        úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge1_2018: Segíts a motkánynak kiválasztani, hogy
+        melyik úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge1_2019: Segíts a motkánynak kiválasztani, hogy
+        melyik úton induljon el, hogy elérjen a makkhoz.
+      courseC_maze_debugging_challenge2: Segíts a motkánynak, hogy elérjen a makkig.
+        Csak a "fordulj" parancsokat használhatod.
+      courseC_maze_debugging_challenge2_2018: Segíts a motkánynak, hogy elérjen a
+        makkig. Csak a "fordulj" parancsokat használhatod.
+      courseC_maze_debugging_challenge2_2019: Segíts a motkánynak, hogy elérjen a
+        makkig. Csak a "fordulj" parancsokat használhatod.
       courseD_artist_binary1: "A bináris az információ ábrázolása mindössze 2 állapot
         használatával. Most a \"ki\" (ezt a 0 számjegy jelöli) és a \"be\" (ezt az
         1 számjegy jelöli) állapotokat használjuk.\\\r\n\\\r\nEgy \"képpontokból\"
@@ -652,18 +704,37 @@ hu-HU:
         11 alkalommal ismételned ennek a képnek a megrajzolásához?
       courseD_autorun_binary7_2019: Mi az a legrövidebb bináris karakterlánc, ami
         ha megismételed, kirajzolja ezt a képet?
+      courseD_bee_debugging_challenge1: Nézd meg, hogyan gyűjti össze a méh az összes
+        nektárt. Tudnád használni ezt a módszert, hogy segíts a méhnek elkészíteni
+        az összes mézet?
       courseD_bee_nestedLoops8: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2018: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
       courseD_bee_nestedLoops8_2019: Gyűjtsd össze az összes nektárt az összes virágról,
         és készíts mézet minden lépbe. Használj beágyazott ciklust!
+      courseD_collector_debugging_challenge2: Profi vagy az egymásba ágyazott ciklusokban?
+        Használd azt, amit megtanultál eddig, hogy összegyűjtsd az összes kincset!
       courseD_maze_nestedLoops4: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2018: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops4_2019: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6_2018: Juttass el a napraforgóhoz!
       courseD_maze_nestedLoops6_2019: Juttass el a napraforgóhoz!
+      courseD_maze_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és csatold
+        a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2018: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_maze_ramp2_2019: Húzz egy további "menj előre" blokkot a programhoz,
+        és csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_scrat_ramp2: Húzz egy további "menj előre" blokkot a programhoz, és
+        csatold a blokkokat a "futtatáskor" részhez, hogy befejezd a kódodat.
+      courseD_scrat_ramp3: Van egy extra blokk, ami szegény motkány vesztét okozza.
+        Dobd ki innen úgy, hogy a toolboxba (szerszámosládába) húzod.
+      courseD_scrat_ramp4: Óvakodj a megrepedt jégtől a motkány biztonsága érdekében!
+      courseD_scrat_ramp5: Óvakodj a megrepedt jégtől.
+      courseD_scrat_ramp6: Segíts a motkánynak, hogy megszerezze a makkot! Használj
+        ciklust!
       courseE_artist_functions1: 'Helló! Zombi művész vagyok. Szeretek rajzolni. Segíts
         nekem szögletes szemüveget rajzolni. Tipp: a két üveg közti összekötő 25 pixellel
         rövidebb, mint a négyzet oldala.'
@@ -796,44 +867,25 @@ hu-HU:
       grade5_artist_binary9: "Itt egy nagyobb felbontású vászon - 16 x 16 pixel!\\\r\n\\\r\nNézd
         mi történik, amikor elkezdünk játszani a bitekkel!"
       k-1 maze 1: El tudsz mozgatni Nyugatra, hogy elkapjam a malacot?
-      scrat 16: Makk! Makk! Makk! Használd a "ha"blokkot, hogy eljuttass hozzájuk
-        a lehető legkevesebb blokk felhasználásával.
-      scrat 17: Oké, csináljuk meg még egyszer gyakorlásképpen -  hasonló a feladat,
-        de vigyázz a falra!
-      scrat 18: A "ha-különben" blokk ellenőriz egy feltételt, és az alapján végzi
-        el az egyik VAGY a másik utasítást. Próbáld használni azt az új blokkot, hogy
-        eljuttass a makkhoz.
-      scrat 19: Még egy gyakorlat a „ha-különben” blokkhoz. Meg tudod csinálni elsőre?
-      scrat 20: Tudnál nekem segíteni kijutni ebből az útvesztőből mindössze 3 elem
-        hozzáadásával? Ha jól csinálod, bármilyen kacskaringós utat be tudok járni
-        hosszától függetlenül. Siess! Olvad a jég!
-      Dance_2019_08: Próbáld megváltoztatni az egyik táncosod (vagy egy egész csoport)
-        színárnyalatát!
-      Dance_Party_extras_alternate_2019: Előre-hátra! (A részletekért kattintson a
-        "Több" elemre)
-      Dance_Party_extras_battle: Dance Crews (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_battle_2019: Dance Crews (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_every_beat: Negyed jegyzetek (a részletekért kattintson a
-        „Tovább” gombra)
-      Dance_Party_extras_every_beat_2019: Negyed jegyzetek (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_layout: Befelé az alakzatba! (A részletekért kattintson a
-        „Tovább” gombra)
-      Dance_Party_extras_layout_2019: Befelé az alakzatba! (A részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_mixed_2019: További gombok (a részletekért kattintson a "Több"
-        gombra)
-      Dance_Party_extras_on_beat: Basszus, középső és háromdimenziós (a részletekért
-        kattintson a „Tovább” gombra)
-      Dance_Party_extras_on_beat_2019: Basszus, középső és háromdimenziós (a részletekért
-        kattintson a „Tovább” gombra)
-      Dance_Party_extras_speed: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_speed_2019: Gyorsítsa fel, Lassítsa le (a részletekért kattintson
-        a „Tovább” gombra)
-      Dance_Party_extras_visible: Hová mentek? (A részletekért kattintson a „Tovább”
-        gombra)
-      Dance_Party_extras_visible_2019: Hová mentek? (A részletekért kattintson a „Tovább”
-        gombra)
+      ramp_artist_loops1: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops1_2018: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops1_2019: Lépj előre 60 képpontot, hogy teljesítsd ezt a feladványt.
+      ramp_artist_loops2: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops2_2018: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops2_2019: Lépj előre ötször és készítsd el ezeket a színes vonalakat.
+      ramp_artist_loops3: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops3_2018: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops3_2019: Használj egy "ismétlés" ciklust hogy öt színes gondolatjelet
+        rajzolj.
+      ramp_artist_loops4: Mi történik, ha 72 fokot jobbra fordulsz mindezek után a
+        cikluson belül?
+      ramp_artist_loops4_2018: Mi történik, ha 72 fokot jobbra fordulsz mindezek után
+        a cikluson belül?
+      ramp_artist_loops5: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops5_2018: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops5_2019: Használj ciklusokat, hogy megrajzold a lépcsőt.
+      ramp_artist_loops6: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
+      ramp_artist_loops6_2018: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.
+      ramp_artist_loops6_2019: Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.

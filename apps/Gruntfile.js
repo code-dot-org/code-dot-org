@@ -197,7 +197,7 @@ describe('entry tests', () => {
         // blockly media, etc).
         {
           expand: true,
-          cwd: './node_modules/video.js/dist/video-js',
+          cwd: './node_modules/video.js/dist',
           src: ['**'],
           dest: 'build/package/video-js'
         }
@@ -208,12 +208,12 @@ describe('entry tests', () => {
         {
           expand: true,
           cwd: 'lib/blockly',
-          src: ['??_??.js'],
+          src: ['*_*.js'],
           dest: 'build/locales',
           // e.g., ar_sa.js -> ar_sa/blockly_locale.js
           rename: function(dest, src) {
             var outputPath = src.replace(
-              /(.{2}_.{2})\.js/g,
+              /(.+_.+)\.js/g,
               '$1/blockly_locale.js'
             );
             return path.join(dest, outputPath);
@@ -567,7 +567,6 @@ describe('entry tests', () => {
     'maker/setup': './src/sites/studio/pages/maker/setup.js',
     'projects/featured': './src/sites/studio/pages/projects/featured.js',
     'projects/index': './src/sites/studio/pages/projects/index.js',
-    'projects/public': './src/sites/studio/pages/projects/public.js',
     'scripts/show': './src/sites/studio/pages/scripts/show.js',
     'scripts/stage_extras': './src/sites/studio/pages/scripts/stage_extras.js',
     'sections/show': './src/sites/studio/pages/sections/show.js',
@@ -581,9 +580,13 @@ describe('entry tests', () => {
   };
 
   var internalEntries = {
+    'admin_standards/index':
+      './src/sites/studio/pages/admin_standards/index.js',
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
+    'datasets/show_manifest':
+      './src/sites/studio/pages/datasets/show_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
@@ -653,6 +656,8 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/pd-workshop-survey/splat.js',
     'code.org/public/learn/local':
       './src/sites/code.org/pages/public/learn/local.js',
+    'code.org/views/professional_learning_apply_banner':
+      './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
@@ -682,8 +687,6 @@ describe('entry tests', () => {
 
     'pd/professional_learning_landing/index':
       './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-    'pd/regional_partner_contact/new':
-      './src/sites/studio/pages/pd/regional_partner_contact/new.js',
     'pd/regional_partner_mini_contact/new':
       './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
 

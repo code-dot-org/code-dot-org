@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191122183555) do
+ActiveRecord::Schema.define(version: 20200206194012) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -801,6 +801,7 @@ ActiveRecord::Schema.define(version: 20191122183555) do
     t.string   "zip_code"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
+    t.datetime "deleted_at"
     t.index ["regional_partner_id", "state", "zip_code"], name: "index_pd_regional_partner_mappings_on_id_and_state_and_zip_code", unique: true, using: :btree
     t.index ["regional_partner_id"], name: "index_pd_regional_partner_mappings_on_regional_partner_id", using: :btree
   end
@@ -961,6 +962,7 @@ ActiveRecord::Schema.define(version: 20191122183555) do
     t.boolean  "on_map",                                         comment: "Should this workshop appear on the 'Find a Workshop' map?"
     t.boolean  "funded",                                         comment: "Should this workshop's attendees be reimbursed?"
     t.string   "funding_type"
+    t.text     "properties",          limit: 65535
     t.index ["organizer_id"], name: "index_pd_workshops_on_organizer_id", using: :btree
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id", using: :btree
   end
@@ -1337,6 +1339,23 @@ ActiveRecord::Schema.define(version: 20191122183555) do
     t.integer  "relative_position",                               null: false
     t.text     "properties",        limit: 65535
     t.index ["script_id"], name: "index_stages_on_script_id", using: :btree
+  end
+
+  create_table "stages_standards", id: false, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "stage_id",    null: false
+    t.integer  "standard_id", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["stage_id"], name: "index_stages_standards_on_stage_id", using: :btree
+    t.index ["standard_id"], name: "index_stages_standards_on_standard_id", using: :btree
+  end
+
+  create_table "standards", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string "organization",                  null: false
+    t.string "organization_id",               null: false
+    t.text   "description",     limit: 65535
+    t.text   "concept",         limit: 65535
+    t.index ["organization", "organization_id"], name: "index_standards_on_organization_and_organization_id", unique: true, using: :btree
   end
 
   create_table "state_cs_offerings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|

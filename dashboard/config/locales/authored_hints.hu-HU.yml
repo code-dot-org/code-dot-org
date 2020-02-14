@@ -422,6 +422,13 @@ hu-HU:
           **Választható feladat**
 
           Módosítsd a háttéreffektet a dal különböző pontjain. Ehhez csatlakoztasd az új blokkot az <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> események alá.
+      Dance_Party_05:
+        validation: |-
+          **Hogyan teljesíthetem ezt a szintet?**
+
+          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
+
+          _Ez a szint 12 ütem után ér véget._
       Dance_Party_06:
         validation: |-
           **Hogyan csinálhatom meg ezt a szintet?**
@@ -480,6 +487,8 @@ hu-HU:
           -   A „balra nyíl megnyomásakor“ blokk használatával érd el, hogy a Robot valamilyen táncmozdulatot tegyen, amikor megnyomod.
 
           _Ez a szint 8 ütem után ér véget._
+      Dance_Party_extras_alternate_2019:
+        alternate: A Váltakoztatás blokk a "Táncosok" kategóriában található.
       Function intro Ryan:
         Function_intro_Ryan_a: A programodon belül többször is meghívhatsz egy függvényt.  A
           kirakós megoldásához próbáld kétszer meghívni.
@@ -607,6 +616,76 @@ hu-HU:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
+      course3_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_a: Ennek a programnak miért csak az első
+          fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia.
+          Mennyi nektárt gyűjt a méh, amikor a virághoz ér?
+        courseD_bee_debugging_challenge1_b: Visszafelé a méh ugyanezt a mintát követi.
+          Mennyi mézet kell a méhnek minden alkalommal készítenie, miközben a méhsejtek
+          között mozog?
+        courseD_bee_debugging_challenge1_c: "Miután a méh elért az oszlop aljára,
+          ismételje ezeket a parancsokat: \n\n-   Ismételd 2 alkalommal:\n    -   Menj
+          előre\n    -   Készíts 3 mézet \n-   Menj hátra"
+      course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_b: "És most gyűjtd össze a maradék
+          gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Végül gyűjtd össze a maradék gyémántokat
+          is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block
+          type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
+          \             </block>\n      <block type=\"controls_repeat\">\n        <title
+          name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n
+          \       </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Itt a teljes megoldása ennek rejtvénynek.
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">2</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      course3_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: |-
           Próbáld ezt használni
@@ -636,6 +715,114 @@ hu-HU:
           rajzolok egy vonalat.
         courseC_artist_prog2_b: Baj van a bekanyarodással a sarkon? Használd a 'fordulj
           jobbra 90 fokot' blokkot!
+      courseC_artist_prog5:
+        courseC_artist_prog5_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_artist_prog5_2018:
+        courseC_artist_prog5_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_artist_prog5_2019:
+        courseC_artist_prog5_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_artist_prog7:
+        courseC_artist_prog7_e: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_artist_prog7_2018:
+        courseC_artist_prog7_e: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_artist_prog7_2019:
+        courseC_artist_prog7_e: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog2:
+        courseC_collector_prog2_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog4:
+        courseC_collector_prog4_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog4_2018:
+        courseC_collector_prog4_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_collector_prog4_2019:
+        courseC_collector_prog4_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
+          futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_maze_debugging_challenge1:
+        courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
+        courseC_maze_debugging_challenge1_b: A motkány útvonala valójában egy téglalap!
+          Ugyanúgy kell fordulnia minden alkalommal.
+        courseC_maze_debugging_challenge1_c: Ha elakadtál, bármikor újra kezdheted,
+          és próbálkozhatsz egy másik módszerrel!
+      courseC_maze_debugging_challenge1_2018:
+        courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
+        courseC_maze_debugging_challenge1_b: A motkány útvonala valójában egy téglalap!
+          Ugyanúgy kell fordulnia minden alkalommal.
+        courseC_maze_debugging_challenge1_c: Ha elakadtál, bármikor újra kezdheted,
+          és próbálkozhatsz egy másik módszerrel!
+      courseC_maze_debugging_challenge1_2019:
+        courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
+        courseC_maze_debugging_challenge1_b: A motkány útvonala valójában egy téglalap!
+          Ugyanúgy kell fordulnia minden alkalommal.
+        courseC_maze_debugging_challenge1_c: Ha elakadtál, bármikor újra kezdheted,
+          és próbálkozhatsz egy másik módszerrel!
+      courseC_maze_debugging_challenge2:
+        courseC_maze_debugging_challenge2_b: Ha elakadtál, próbáld kijavítani a kódban
+          a hibát. Hol lehet a hiba?
+        courseC_maze_debugging_challenge2_c: |-
+          Két különböző utat követhetsz csak előrefelé haladva és elfordulva négyszer. Ha megtalálod az egyik utat a ciklushoz, meg fogod találni a másikat is!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseC_maze_debugging_challenge2_2018:
+        courseC_maze_debugging_challenge2_b: Ha elakadtál, próbáld kijavítani a kódban
+          a hibát. Hol lehet a hiba?
+        courseC_maze_debugging_challenge2_c: |-
+          Két különböző utat követhetsz csak előrefelé haladva és elfordulva négyszer. Ha megtalálod az egyik utat a ciklushoz, meg fogod találni a másikat is!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseC_maze_debugging_challenge2_2019:
+        courseC_maze_debugging_challenge2_b: Ha elakadtál, próbáld kijavítani a kódban
+          a hibát. Hol lehet a hiba?
+        courseC_maze_debugging_challenge2_c: |-
+          Két különböző utat követhetsz csak előrefelé haladva és elfordulva négyszer. Ha megtalálod az egyik utat a ciklushoz, meg fogod találni a másikat is!
+
+          ![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)
+      courseC_maze_programming5:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+      courseC_maze_programming5_2018:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+      courseC_maze_programming5_2019:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+      courseC_maze_programming8:
+        courseC_maze_programming8_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_maze_programming8_2018:
+        courseC_maze_programming8_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseC_maze_programming8_2019:
+        courseC_maze_programming8_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
       courseD_artist_nestedLoops3:
         courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
           egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
@@ -645,6 +832,227 @@ hu-HU:
       courseD_artist_nestedLoops3_2019:
         courseD_artist_nestedLoops3_a: Próbáld meg az "ugrás előre" blokkot, hogy
           egy négyzet tetejéről oda kerülj, ahol a következő kezdődik?
+      courseD_bee_debugging_challenge1:
+        courseD_bee_debugging_challenge1_a: Ennek a programnak miért csak az első
+          fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia.
+          Mennyi nektárt gyűjt a méh, amikor a virághoz ér?
+        courseD_bee_debugging_challenge1_b: Visszafelé a méh ugyanezt a mintát követi.
+          Mennyi mézet kell a méhnek minden alkalommal készítenie, miközben a méhsejtek
+          között mozog?
+        courseD_bee_debugging_challenge1_c: "Miután a méh elért az oszlop aljára,
+          ismételje ezeket a parancsokat: \n\n-   Ismételd 2 alkalommal:\n    -   Menj
+          előre\n    -   Készíts 3 mézet \n-   Menj hátra"
+      courseD_bee_debugging_challenge1a:
+        courseD_bee_debugging_challenge1_a: Ennek a programnak miért csak az első
+          fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia.
+          Mennyi nektárt gyűjt a méh, amikor a virághoz ér?
+      courseD_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "Kezdjük csak **két** gyémánt összegyűjtésével,
+          az első **két** halomból, egymás után.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\nHasználd ezeket a blokkokat.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "És most gyűjtd össze a maradék
+          gyémántokat is a sorban.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png>)\nAdd ezeket a blokkokat a programodhoz.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Végül gyűjtd össze a maradék gyémántokat
+          is a sorban. Add hozzá ezeket a blokkokat a programodhoz.\n\n<xml>\n  <block
+          type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n
+          \             </block>\n      <block type=\"controls_repeat\">\n        <title
+          name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n
+          \       </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Itt a teljes megoldása ennek rejtvénynek.
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">4</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="controls_repeat">
+                          <title name="TIMES">2</title>
+                          <statement name="DO">
+                            <block type="maze_move">
+                              <title name="DIR">moveForward</title>
+                              <next>
+                                <block type="controls_repeat">
+                                  <title name="TIMES">2</title>
+                                  <statement name="DO">
+                                    <block type="collector_collect"/>
+                                  </statement>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="maze_move">
+                              <title name="DIR">moveBackward</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
+      courseD_maze_intro5a_2019:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp1:
+        courseC_maze_programming1_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp1_2018:
+        courseC_maze_programming1_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp1_2019:
+        courseC_maze_programming1_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp2:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_maze_ramp2_2018:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_maze_ramp2_2019:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+      courseD_maze_ramp3:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz,
+          hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben,
+          és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni
+          szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott
+          blokkokat húzd vissza oda, ahová tartoznak."
+      courseD_maze_ramp3_2018:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz,
+          hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben,
+          és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni
+          szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott
+          blokkokat húzd vissza oda, ahová tartoznak."
+      courseD_maze_ramp3_2019:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz,
+          hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben,
+          és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni
+          szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott
+          blokkokat húzd vissza oda, ahová tartoznak."
+      courseD_maze_ramp5:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5_2018:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5_2019:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5a:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5a_2018:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5a_2019:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5b:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5b_2018:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_maze_ramp5b_2019:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_scrat_ramp1:
+        courseC_maze_programming1_a: Ha a motkány nem ér el a makkig, ellenőrizd,
+          hogy minden blokk a helyén van-e, és kattints újra a Futtatásra.
+        courseC_maze_programming1_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_scrat_ramp2:
+        courseC_maze_programming2_a: A "menj előre" blokk használatához fogd és csatlakoztasd
+          a munkaterületen a "futtatáskor" blokkhoz.
+        courseC_maze_programming2_b: Ellenőrizd, hogy mindhárom "menj előre" blokkot
+          csatlakoztattad a "futtatáskor" blokkhoz.
+      courseD_scrat_ramp3:
+        courseC_maze_programming3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nAhhoz,
+          hogy kitörölj egy blokkot a kód közepéről, fogd meg az alatta lévőket egyben,
+          és húzd el kissé jobbra a munkaterületen. \n\nKattints a blokkra, amit törölni
+          szeretnél, és húzd a toolboxba (szerszámosláda).\n\nVégül a jobbra félrehúzott
+          blokkokat húzd vissza oda, ahová tartoznak."
+        courseC_maze_programming3_b: Emlékezz rá, hogy a jobbra vagy balra fordulást
+          a motkány szemszögéből kell nézni.
+      courseD_scrat_ramp4:
+        courseC_maze_programming4_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_scrat_ramp5:
+        courseC_maze_programming5_a: Próbáld használni a "lépés" gombot, hogy a kódot
+          lépésenként futtasd. Ki tudod találni, hogy mit kell tenned ezután?
+        courseC_maze_programming5_b: Milyen messzire kell elmenned, hogy elérj a sarokig?
+        courseC_maze_programming5_c: Balra kell majd fordulnod a saroknál, hogy elérj
+          a makkig.
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: Használj egy "ismétlés" ciklust, hogy mozgásba
+          hozd a motkányt!
+      courseD_scrat_ramp7:
+        courseD_scrat_programming6_b: Figyelj oda, hogy először fordulj a megfelelő
+          irányba.
+        courseD_scrat_programming6_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat,
+          és futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
+          ha még nem oldottad meg teljesen a feladatot.
+      courseD_scrat_ramp8:
+        courseD_maze_ramp7_c: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és futtasd
+          a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer, ha még
+          nem oldottad meg teljesen a feladatot.
       courseE_artist_functions1:
         courseE_artist_functions1_a: A négyzetek oldali 100 pixelesek, ez azt jelenti,
           hogy 175 pixelt kell előre menned, mielőtt elkezded a második négyzet rajzolását.
@@ -676,12 +1084,3 @@ hu-HU:
           Ne feledd, hogy a kódod a zöld blokkon belül építheted.
 
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
-      Dance_Party_05:
-        validation: |-
-          **Hogyan teljesíthetem ezt a szintet?**
-
-          -   A táncosodnak meg kell tennie legalább 4 különböző táncmozdulatot a szint vége előtt.
-
-          _Ez a szint 12 ütem után ér véget._
-      Dance_Party_extras_alternate_2019:
-        alternate: Az alternatív blokk a "Dancers" kategóriába tartozik.

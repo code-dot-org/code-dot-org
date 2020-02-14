@@ -97,8 +97,9 @@ trained_2019 as
     course,
     '2019-20' as school_year,
     tt.regional_partner_id,
-    case when source = 'scholarship' then 1 else 0 end as scholarship
+    max(case when source = 'scholarship' then 1 else 0 end) as scholarship
   from analysis_pii.teachers_trained_2019 tt
+  group by 1,2,3,4
 )
 select 
   t.*,
@@ -115,7 +116,7 @@ select
   sc.school_id
 from trained_2017 t
   join schools sc on sc.studio_person_id = t.studio_person_id
-  
+
 union all
 
 select 
@@ -135,3 +136,4 @@ from trained_2019 t
 
 with no schema binding;
 
+grant select on analysis.csp_csd_teachers_trained to group reader, group reader_pii, group admin;
