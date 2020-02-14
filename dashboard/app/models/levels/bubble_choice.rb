@@ -103,13 +103,11 @@ class BubbleChoice < DSLDefined
   def summarize_sublevels(script_level: nil, user_id: nil)
     summary = []
     sublevels.each_with_index do |level, index|
-      level_info = {
-        id: level.id,
-        display_name: level.display_name || level.name,
-        description: level.try(:bubble_choice_description),
-        thumbnail_url: level.try(:thumbnail_url),
-        summary: level.summary_for_lesson_plans
-      }
+      level_info = level.summary_for_lesson_plans
+      level_info[:id] = level.id
+      level_info[:description] = level.try(:bubble_choice_description)
+      level_info[:thumbnail_url] = level.try(:thumbnail_url)
+      level_info[:position] = index + 1
 
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
