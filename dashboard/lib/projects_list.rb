@@ -221,7 +221,11 @@ module ProjectsList
         updatedAt: project_value['updatedAt'],
         publishedAt: project[:published_at]
       }
-      row_data[:library] = get_library_row_data(project, channel_id) if with_library
+
+      if with_library
+        row_data[:libraryName] = project_value['libraryName']
+        row_data[:libraryDescription] = project_value['libraryDescription']
+      end
 
       row_data.with_indifferent_access
     end
