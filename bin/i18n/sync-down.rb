@@ -29,6 +29,9 @@ def sync_down
         # skip lines detailing individual file extraction
         next if line.start_with?("Extracting: ")
 
+        # skip warning that happens if the sync is run multiple times in succession
+        next if line == "Warning: Export was skipped. Please note that this method can be invoked only once per 30 minutes.\n"
+
         puts line
       end
 
