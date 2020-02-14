@@ -1,4 +1,6 @@
+# no_safari due to Known issue with menu selectors, fixing by EOD - Brad
 @single_session
+@no_safari
 Feature: Using the SectionActionDropdown
 
   @no_ie
