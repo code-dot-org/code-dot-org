@@ -14,7 +14,7 @@ def sync_up
     puts "Uploading source strings to #{name} project"
     command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
     Open3.popen2(command) do |_stdin, stdout, status_thread|
-      stdout.each_line do |line|
+      while line = stdout.gets
         # skip lines detailing individual file upload, unless that file
         # resulted in an unexpected response
         next if line.start_with?("File ") && line.end_with?("OK\n", "SKIPPED\n")
