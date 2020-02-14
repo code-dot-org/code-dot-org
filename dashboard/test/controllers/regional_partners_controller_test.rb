@@ -133,7 +133,6 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert @regional_partner.reload.mappings.empty?
   end
 
-
   test 'replace mappings fails on invalid non-unique state mapping' do
     create(:regional_partner_with_mappings, mappings: [
              create(
