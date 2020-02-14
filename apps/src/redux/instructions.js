@@ -20,7 +20,6 @@ const SET_ALLOW_INSTRUCTIONS_RESIZE =
   'instructions/SET_ALLOW_INSTRUCTIONS_RESIZE';
 const SET_HAS_AUTHORED_HINTS = 'instructions/SET_HAS_AUTHORED_HINTS';
 const SET_FEEDBACK = 'instructions/SET_FEEDBACK';
-const SET_TEACHER_MARKDOWN = 'instructions/SET_TEACHER_MARKDOWN';
 const HIDE_OVERLAY = 'instructions/HIDE_OVERLAY';
 
 const LOCALSTORAGE_OVERLAY_SEEN_FLAG = 'instructionsOverlaySeenOnce';
@@ -162,13 +161,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
     });
   }
 
-  if (action.type === SET_TEACHER_MARKDOWN) {
-    return {
-      ...state,
-      teacherMarkdown: action.teacherMarkdown
-    };
-  }
-
   return state;
 }
 
@@ -197,9 +189,9 @@ export const setInstructionsConstants = ({
   referenceLinks
 });
 
-export const setTeacherMarkdown = teacherMarkdown => ({
-  type: SET_TEACHER_MARKDOWN,
-  teacherMarkdown
+export const setInstructionsRenderedHeight = height => ({
+  type: SET_INSTRUCTIONS_RENDERED_HEIGHT,
+  height
 });
 
 /**

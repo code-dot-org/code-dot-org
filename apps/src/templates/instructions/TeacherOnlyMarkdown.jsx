@@ -32,8 +32,6 @@ const TeacherOnlyMarkdown = ({content}) => {
     return null;
   }
 
-  console.log(content);
-
   return (
     <div style={styles.container}>
       <div style={styles.header}>{i18n.forTeachersOnly()}</div>
