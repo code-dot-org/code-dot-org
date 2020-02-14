@@ -3,8 +3,11 @@ require 'test_helper'
 class RegionalPartnersControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @regional_partner = create :regional_partner
     @workshop_admin = create :workshop_admin
+  end
+
+  setup do
+    @regional_partner = create :regional_partner
   end
 
   def self.test_workshop_admin_only(method, action, params = nil)
@@ -125,6 +128,28 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert_nil flash[:notice]
     assert_equal(
       '<b>Replace mappings failed with 1 error(s):</b><br>98143: This region belongs to another partner',
+      flash[:upload_error]
+    )
+    assert @regional_partner.reload.mappings.empty?
+  end
+
+
+  test 'replace mappings fails on invalid non-unique state mapping' do
+    create(:regional_partner_with_mappings, mappings: [
+             create(
+               :pd_regional_partner_mapping,
+               zip_code: nil,
+               state: 'WA'
+             )
+           ]
+    )
+
+    sign_in @workshop_admin
+    mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
+    post :replace_mappings, params: {id: @regional_partner.id, regions: mapping}
+    assert_nil flash[:notice]
+    assert_equal(
+      '<b>Replace mappings failed with 1 error(s):</b><br>WA: This region belongs to another partner',
       flash[:upload_error]
     )
     assert @regional_partner.reload.mappings.empty?
