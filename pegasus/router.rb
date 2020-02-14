@@ -494,8 +494,6 @@ class Documents < Sinatra::Base
     end
 
     def render_(body, path=nil, line=0, locals={})
-      options = {locals: locals, line: line, path: path}
-
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
       # Now, apply the processing operations implied by each extension to the
