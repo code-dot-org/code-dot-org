@@ -5,6 +5,8 @@ import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const THUMBNAIL_IMAGE_SIZE = 150;
 const MARGIN = 10;
@@ -25,10 +27,13 @@ const styles = {
   placeholderThumbnail: {
     width: THUMBNAIL_IMAGE_SIZE,
     height: THUMBNAIL_IMAGE_SIZE,
-    backgroundColor: color.lighter_gray
+    backgroundColor: color.lighter_gray,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  check: {
-    fontSize: THUMBNAIL_IMAGE_SIZE,
+  icon: {
+    fontSize: THUMBNAIL_IMAGE_SIZE - 50,
     color: color.white,
     opacity: 0.8
   },
@@ -138,10 +143,13 @@ export default class BubbleChoice extends React.Component {
             {sublevel.thumbnail_url ? (
               <img src={sublevel.thumbnail_url} style={styles.thumbnail} />
             ) : (
-              <div
-                style={styles.placeholderThumbnail}
-                className="placeholder"
-              />
+              <div style={styles.placeholderThumbnail} className="placeholder">
+                <FontAwesome
+                  icon={getIconForLevel(sublevel)}
+                  style={styles.icon}
+                  key={sublevel.id}
+                />
+              </div>
             )}
             <div style={styles.column}>
               <div style={styles.bubbleAndTitle}>
