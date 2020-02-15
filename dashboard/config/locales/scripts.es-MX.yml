@@ -18398,9 +18398,85 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+            'Lesson 11: Assessment Day':
+              name: 'Lección 11: día de evaluación'
         csp8-pilot:
           stages:
             new stage:
               name: nueva etapa
             Create PT - Complete the Task:
               name: PT de creación - Completar la tarea
+        csp4-2020:
+          stages:
+            Variables Explore:
+              name: Variables Explorar
+            Variables Investigate:
+              name: Investigar variables
+            Variables Practice:
+              name: Variables Practicar
+            Variables Make:
+              name: Variables Crear
+            Conditionals Explore:
+              name: Condicionales Explorar
+            Conditionals Investigate:
+              name: Condicionales Investigar
+            Conditionals Practice:
+              name: Condicionales Practicar
+            Conditional Make:
+              name: Condicionales Crear
+            Functions Explore / Investigate:
+              name: Funciones Explorar / Investigar
+            Functions Practice:
+              name: Funciones Practicar
+            Functions Make:
+              name: Funciones Crear
+            'Lesson 15: Assessment Day':
+              name: 'Lección 15: día de evaluación'
+        csp5-2020:
+          stages:
+            Lists Explore:
+              name: Explorar listas
+            Lists Investigate:
+              name: Investigar listas
+            Lists Practice:
+              name: Práctica de listas
+            Lists Make:
+              name: Crear listas
+            Loops Explore:
+              name: Explorar bucles
+            Loops Investigate:
+              name: Bucles Investigar
+            Loops Practice:
+              name: Bucles Practicar
+            Loops Make:
+              name: Bucles Crear
+            Traversals Explore:
+              name: Explorar recorridos
+            Traversals Investigate:
+              name: Investigar recorridos
+            Traversals Practice:
+              name: Practicar recorridos
+            Traversals Make:
+              name: Crear recorridos
+            Semester Hackathon Part 1:
+              name: Hackatón semestral Parte 1
+            Semester Hackathon Part 2:
+              name: Hackatón semestral Parte 2
+            Semester Hackathon Part 3:
+              name: Hackatón semestral Parte 3
+            Semester Hackathon Part 4:
+              name: Hackatón semestral Parte 4
+            Semester Hackathon Part 5:
+              name: Hackatón semestral Parte 5
+            'Lesson 18: Assessment Day':
+              name: 'Lección 18: día de evaluación'
+            Unit 5 STUDENT Survey:
+              name: Encuesta de la Unidad 5 para ESTUDIANTES
+            Unit 5 TEACHER Survey:
+              name: Encuesta de la Unidad 5 para DOCENTES
+        csp7-2020:
+          stages:
+            Libraries Explore:
+              name: Explorar bibliotecas
+            Libraries Investigate:
+              name: Investigar bibliotecas

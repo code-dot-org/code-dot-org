@@ -49,7 +49,7 @@ class Ability
       Pd::InternationalOptIn,
       :maker_discount,
       :show_manifest,
-      :updated_manifest
+      :update_manifest
     ]
     cannot :index, Level
 
@@ -243,7 +243,7 @@ class Ability
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
 
-      can [:show_manifest, :updated_manifest], :dataset
+      can [:show_manifest, :update_manifest], :dataset
     end
 
     if user.persisted?
