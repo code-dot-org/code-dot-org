@@ -203,7 +203,7 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
 
-      get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|library)/}
+      get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
     end
   end
 
