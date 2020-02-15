@@ -1,7 +1,6 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 import firehoseClient from './lib/util/firehose';
-import {getCurrentId} from './code-studio/initApp/project';
 
 function project() {
   return require('./code-studio/initApp/project');
@@ -106,7 +105,7 @@ class CollectionsApi {
               study: 'weblab_loading_investigation',
               study_group: 'empty_manifest',
               event: 'error_uploading_starter_files',
-              project_id: getCurrentId()
+              project_id: this.getProjectId()
             },
             {includeUserId: true}
           );
@@ -364,8 +363,9 @@ class FilesApi extends CollectionsApi {
    * @param fileData {Blob} file data
    * @param success {Function} callback when successful (includes xhr parameter)
    * @param error {Function} callback when failed (includes xhr parameter)
+   * @param skipPreWriteHook {Boolean} skip calling the pre write hook
    */
-  putFile(filename, fileData, success, error, skipPreWriteHook) {
+  putFile(filename, fileData, success, error, skipPreWriteHook = false) {
     let functionCall = () =>
       this._putFileInternal(filename, fileData, success, error);
     if (skipPreWriteHook) {
