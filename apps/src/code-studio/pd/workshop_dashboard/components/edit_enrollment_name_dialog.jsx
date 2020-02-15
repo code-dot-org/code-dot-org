@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 import _ from 'lodash';
 
-export default class Edit_enrollment_name_dialog extends React.Component {
+export default class EditEnrollmentNameDialog extends React.Component {
   static propTypes = {
     selectedEnrollment: PropTypes.object,
     show: PropTypes.bool,
@@ -31,8 +31,6 @@ export default class Edit_enrollment_name_dialog extends React.Component {
     this.props.onEdit(_.pick(this.state, ['firstName', 'lastName']));
   }
 
-  // TO DO: add default values
-  // defaultValue={this.props.selectedEnrollment.first_name} causing errors on page load
   render() {
     return (
       <Modal show={this.props.show} onHide={this.props.onCancel}>
@@ -46,7 +44,6 @@ export default class Edit_enrollment_name_dialog extends React.Component {
               <input
                 type="text"
                 name="firstName"
-                defaultValue={this.props.selectedEnrollment.firstName}
                 onChange={this.handleInputChange}
               />
             </label>
