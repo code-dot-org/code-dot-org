@@ -67,7 +67,10 @@ def notify_of_external_sharing(drive)
 
   external_emails = []
   acl.each do |entry|
-    next if entry.email_address.end_with?('@code.org') || allowed_list.include?(entry.email_address)
+    next if entry.email_address.blank? ||
+      entry.email_address.end_with?('@code.org') ||
+      allowed_list.include?(entry.email_address)
+
     external_emails << entry.email_address
   end
 
