@@ -1,4 +1,4 @@
-class Pd::RegionalPartnerContactMailer < ActionMailer::Base
+class Pd::RegionalPartnerMiniContactMailer < ActionMailer::Base
   NO_REPLY = 'Code.org <noreply@code.org>'
   default from: 'Liz Gauthier <partner@code.org>'
   default bcc: MailerConstants::PLC_EMAIL_LOG
@@ -9,11 +9,7 @@ class Pd::RegionalPartnerContactMailer < ActionMailer::Base
     pm = User.find(rp_pm.program_manager_id)
     @name = pm.name
 
-    subject = if form[:mini]
-                "Question about Code.org program"
-              else
-                "A teacher and/or administrator would like to connect with you"
-              end
+    subject = "Question about Code.org program"
 
     mail(
       to: pm.email,
