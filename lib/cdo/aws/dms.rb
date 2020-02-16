@@ -125,19 +125,18 @@ module Cdo
     # @replication_task_arn [String]
     def self.start_replication_task(replication_task_arn)
       CDO.log.info "Starting DMS Replication Task: #{replication_task_arn}"
-      current_task_status = replication_task_status(replication_task_arn).status
+      task = replication_task_status(replication_task_arn)
       dms_client = Aws::DatabaseMigrationService::Client.new
       dms_client.start_replication_task(
         {
           replication_task_arn: replication_task_arn,
           # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
-          start_replication_task_type: current_task_status != 'not-started' ? 'reload-target' : 'start-replication'
+          start_replication_task_type: task.status != 'not-started' ? 'reload-target' : 'start-replication'
         }
       )
 
-      # Wait 16 hours, checking every 10 minutes.  As of late-2019, it takes about 8 hours for the user_levels task to complete.
-      task_status = wait_until_replication_task_completed(replication_task_arn, 96, 600)
-      CDO.log.info task_status
+      # Wait 30 hours, checking every 10 minutes.  As of early-2020, it takes about 30 hours for the level_sources task to complete.
+      wait_until_replication_task_completed(replication_task_arn, 180, 600)
 
       CDO.log.info "DMS Task Completed Successfully: #{replication_task_arn}"
     rescue StandardError => error
@@ -146,20 +145,20 @@ module Cdo
     end
 
     def self.wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
-      attempts = 0
-      task = nil
+      attempts = 1
+      task = replication_task_status(replication_task_arn)
       while attempts <= max_attempts && task.status != 'stopped'
-        task = replication_task_status(replication_task_arn)
+        CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
 
         attempts += 1
-        CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
+        task = replication_task_status(replication_task_arn)
         sleep delay
       end
 
       return task if replication_task_completed_successfully?(task.arn)
 
       raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
-    " #{replication_task_arn} did not complete successfully.  Task Status - #{task.status} / #{task}"
+    " #{replication_task_arn} did not complete successfully.  Task Status - #{task}"
       )
     end
 
@@ -169,11 +168,11 @@ module Cdo
 
       return task.status == 'stopped' &&
         task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
-        task.replication_task_stats.full_load_progress_percent == 100 &&
-        task.replication_task_stats.tables_loaded > 0 &&
-        task.replication_task_stats.tables_loading == 0 &&
-        task.replication_task_stats.tables_queued == 0 &&
-        task.replication_task_stats.tables_errored == 0 &&
+        task.full_load_progress_percent == 100 &&
+        task.tables_loaded > 0 &&
+        task.tables_loading == 0 &&
+        task.tables_queued == 0 &&
+        task.tables_errored == 0 &&
         task.table_statistics.all? {|table| table.table_state == 'Table completed'}
     end
   end
