@@ -136,7 +136,7 @@ module Cdo
       )
 
       # Wait 30 hours, checking every 10 minutes.  As of early-2020, it takes about 30 hours for the level_sources task to complete.
-      wait_until_replication_task_completed(replication_task_arn, 96, 600)
+      wait_until_replication_task_completed(replication_task_arn, 180, 600)
 
       CDO.log.info "DMS Task Completed Successfully: #{replication_task_arn}"
     rescue StandardError => error
