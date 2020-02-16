@@ -3,19 +3,24 @@ require 'cdo/redshift'
 class RedshiftImport
   # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
   TEMP_TABLE_PREFIX = '_import_'.freeze
+  BACKUP_TABLE_PREFIX = '_old_'.freeze
 
   # DMS Replication Tasks import data into temporary / staging tables prefixed with "_import_".
   # Complete import of staged data from production database into Redshift by truncating each
   # target table, moving all of the rows from each import table to its corresponding target table, and then dropping
   # each temporary / staging import table.
   # @param schemas [String] Array of Redshift schemas in which to complete data import.
-  def self.complete_table_import(schemas)
+  def self.t(schemas)
     schemas.each do |schema|
       temporary_import_tables(schema).each do |import_table|
         target_table = import_table.partition(TEMP_TABLE_PREFIX).last
-        truncate_table(schema, target_table)
-        move_rows(schema, import_table, schema, target_table)
-        drop_table(schema, import_table)
+        backup_table = BACKUP_TABLE_PREFIX + target_table
+        # Rename existing table to back it up.
+        rename_table(schema, target_table, backup_table)
+        # Make staging table the production table.
+        rename_table(schema, import_table, target_table)
+        # Drop the old production table.
+        drop_table(schema, backup_table)
       end
     end
   end
@@ -46,11 +51,13 @@ class RedshiftImport
     redshift_client.exec "DROP TABLE IF EXISTS #{schema}.#{table};"
   end
 
-  def self.move_rows(source_schema, source_table, target_schema, target_table)
+  # Rename a table within the same schema to preserve permissions.
+  def self.rename_table(schema, current_table_name, new_table_name)
     redshift_client = RedshiftClient.instance
-    # IGNOREEXTRA ensures that moving rows to the target table does not fail if a column was added to the source
-    # MySQL table.
-    # TODO: (suresh) Switch to a technical design that supports schema changes in MySQL propagating to Redshift.
-    redshift_client.exec "ALTER TABLE #{target_schema}.#{target_table} APPEND FROM #{source_schema}.#{source_table} IGNOREEXTRA;"
+    query = <<~SQL
+      SET search_path TO #{schema};
+      ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
+    SQL
+    redshift_client.exec(query)
   end
 end
