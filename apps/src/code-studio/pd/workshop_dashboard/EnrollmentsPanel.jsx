@@ -119,11 +119,16 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   handleEditEnrollment = (updatedName, selectedEnrollment) => {
+    let updatedNameSnakeCase = {
+      first_name: updatedName.firstName,
+      last_name: updatedName.lastName
+    };
+
     this.editEnrollmentRequest = $.ajax({
       method: 'POST',
-      url: '/api/v1/pd/enrollments/' + selectedEnrollment.id + '/edit',
+      url: `/api/v1/pd/enrollments/${selectedEnrollment.id}/edit`,
       contentType: 'application/json',
-      data: JSON.stringify(updatedName)
+      data: JSON.stringify(updatedNameSnakeCase)
     })
       .done(() => {
         // reload

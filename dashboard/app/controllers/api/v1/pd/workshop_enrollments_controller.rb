@@ -116,7 +116,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def edit
     return head :forbidden unless current_user.workshop_admin?
     enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:firstName], last_name: params[:lastName])
+    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
   end
 
   private
