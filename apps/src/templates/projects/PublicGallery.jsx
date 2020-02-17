@@ -71,7 +71,7 @@ class PublicGallery extends Component {
     const {projectLists, limitedGallery, includeDanceParty} = this.props;
 
     return (
-      <div>
+      <div id="uitest-public-projects">
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
