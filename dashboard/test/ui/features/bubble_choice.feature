@@ -12,8 +12,11 @@ Feature: BubbleChoice
 
     # Make sure you are taken back to the BubbleChoice activity page with progress
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
+    And element ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first" is visible
+      #.uitest-ProgressBubble:first
     And check that the url contains "/s/allthethings/stage/40/puzzle/1"
-    And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
+    And element ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first" is visible
+    Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first .uitest-bubble" is "perfect"
 
     And I sign out
 
@@ -32,8 +35,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings/stage/40/puzzle/1"
     And I wait until element ".teacher-panel" is visible
     # Teacher has not completed level, so make sure it is not shown as complete
-    And element ".uitest-bubble-choice:eq(0) i.fa-check" is not visible
+    Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first .uitest-bubble" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
     And I wait for 2 seconds
-    And element ".uitest-bubble-choice:eq(0) i.fa-check" is visible
+    Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .uitest-ProgressBubble:first .uitest-bubble" is "perfect"
