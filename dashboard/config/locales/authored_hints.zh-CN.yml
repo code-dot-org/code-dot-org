@@ -2334,6 +2334,14 @@ zh-CN:
         behavior hint: |-
           尝试编辑行为！
           \*哪个值控制每个精灵图的速度？
+      behaviors 7:
+        behaviors_hint1: 可以创建一个新的行为，来使用两个动作，或组合两个行为。
+        sprites_idea1: |-
+          为了好玩，还可以用类似的行为让飞船飞向太空，或让角色跑到前面来。试试在场景中改变背景和精灵图图案！
+
+          ![](<https://images.code.org/7070e44239b53f4b33a5b4fe054bb61c-image-1567714335486.2019-09-05 16_05_19.gif>)
+
+          ![](<https://images.code.org/278494432d56f1f5d41e345a51223695-image-1567714335485.2019-09-05 16_11_12.gif>)
       comment_intro_maze_2018:
         courseC_maze_programming4_a: 当其他人试图读取您的代码时，注释也很有用。
         courseC_maze_programming4_b: 当你更改方向时，增加一条注释 - 如果转向另一条路，会发生什么情况？
@@ -3577,6 +3585,8 @@ zh-CN:
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops3_2019:
+        courseA_collector_loops3_a: "试试使用 \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n 循环！"
         courseA_collector_loops3_b: 请记住, 您可以在 <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> 循环中放置超过1个模块。
       courseA_collector_loops4:
@@ -6397,6 +6407,8 @@ zh-CN:
       courseC_PlayLab_eventsA_2019:
         courseC_PlayLab_eventsA_a: 使用`设置背景`模块和`设置演员为____ 速`模块来通过这个关卡。
         courseC_PlayLab_eventsA_b: 您需要将`当运行时`事件模块具体拖到工作区中以解决此关卡。
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: 用方向键移动企鹅。不需要写代码来完成这关。
       courseC_PlayLab_eventsFP:
         idea1: |-
           -   需要一个主意？\*
@@ -7252,6 +7264,30 @@ zh-CN:
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
+        courseC_harvester_loops_challenge1_c: |-
+          首先采集两次玉米后，可以用嵌套循环来采集接下来的 8 个。
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2019:
         courseC_harvester_loops_challenge1_a: 如果不使用循环这太难了。
         courseC_harvester_loops_challenge1_b: 你可以多次重复`前进`和`采摘玉米`，然后在每个角落右转。
@@ -7683,6 +7719,10 @@ zh-CN:
       courseC_starWars_loops5:
         courseC_starWars_loops5_b: 要往下走, 你必须转向, 然后向前移动。
         courseC_starWars_loops5_a: 最好的解决方案是使用一个转向, 然后一个单一的`向前移动` ，另一个转向，然后一个循环。
+      courseC_starWars_loops5_2018:
+        courseC_starWars_loops5_a: 最好的方案是用一个 `向前移动`，然后转向，然后是循环。
+      courseC_starWars_loops5_2019:
+        courseC_starWars_loops5_a: 最好的方案是用一个 `向前移动`，然后转向，然后是循环。
       courseC_starWars_loops6:
         courseC_starWars_loops6_a: 试着在一张纸上写下移动的情况, 来寻找模式。
         courseC_starWars_loops6_b: 如果你想使用更少的代码, 你可以把`重复循环`放在另一个里面！这称为 \*\* 嵌套循环 \*\*。
@@ -8366,6 +8406,10 @@ zh-CN:
         courseD_bee_conditionals5_b: 在`当前面有路时`模块的里面, 你需要往前走开寻找朵花。你如何检查哪里是否有一朵花？如果有一朵花,
           你会怎么做？
         courseD_bee_conditionals5_hintVid2: 观看此视频帮助解决这个难题。
+      courseD_bee_conditionals5_2019:
+        courseD_bee_conditionals5_a: 如果使用了 `如果在花上` 模块，可以用嵌套循环来解决。写程序到左下的路，然后重复两次！
+        courseD_bee_conditionals5_c: 要继续走下这条路，蜜蜂需要 `向前移动`。移动的时候，蜜蜂需要检查花，`如果有花`，蜜蜂应该
+          `采花蜜`。
       courseD_bee_conditionals6:
         courseD_bee_conditionals6_hintVid1: 需要入门帮助吗？ 看视频!
         courseD_bee_conditionals6_a: 请确保使用`如果`语句检查每个云下是否有蜂窝。
@@ -9253,6 +9297,7 @@ zh-CN:
           请注意, 获取所有农作物的最简单途径仍然是螺旋形。
 
           ![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)
+        courseD_farmer_condLoops7_b: 试试用 `当前面有路` 使收获者移动正确的步数。
       courseD_farmer_condLoops_challenge1:
         courseD_farmer_condLoops_challenge1_a: 在这个挑战中, "步进" 按钮可能非常有用。
         courseD_farmer_condLoops_challenge1_b: 通常情况下, 如果你是在南瓜那里, 你只会`摘南瓜`。如果你在南瓜那里,
@@ -9457,6 +9502,12 @@ zh-CN:
           </block></xml>
         courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复`循环, 然后把想要重复的模块放到它里面。
       courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          用这个新的模块！
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
         courseB_iceage_loops3_b: 要重复代码, 拖出一个`重复`循环, 然后把想要重复的模块放到它里面。
       courseD_iceage_loops4:
         courseD_iceage_loops4_a: 别害怕运行你的代码，看看会发生什么！
@@ -9497,9 +9548,11 @@ zh-CN:
         courseD_iceage_loops9_b: 最后的代码会有**4**个循环。
         courseD_iceage_loops9_c: 斯奎特应该沿着这条路去找橡子。
       courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: 要从红鸟的视角向右或向左转。如果面对右边，向右转会朝下。
         courseC_maze_programming4_b: 要沿着这条路前进, 向前移动，然后转向一条路, 然后再移动, 转向相反的方向。再往前走一次就能到达橡子。
       courseD_maze_intro5a_2019:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
+        courseC_maze_programming5_b: 记住，转弯是从红鸟的角度看的。
         courseC_maze_programming5_c: 不要害怕犯错误! 即使你不认为你已经解决了这个关卡，尝试添加模块并运行代码, 看看会发生什么,。
       courseD_maze_nestedLoops3:
         courseD_maze_nestedLoops3_a: 为了通过这一关，需要在另一个`重复`循环中"嵌套"一个`重复`循环。
@@ -9824,6 +9877,8 @@ zh-CN:
         courseC_maze_programming5_a: 尝试使用"步进"按钮来一行一行运行你的代码。你能想出下一步需要做什么吗？
         courseC_maze_programming5_b: 你要走多远才能到拐角处？
         courseC_maze_programming5_c: 你需要在拐角处向左拐才能找到猪。
+      courseD_scrat_ramp6:
+        courseC_maze_programming6a_a: 使用 `重复` 循环来让斯奎特移动！
       courseD_scrat_ramp7:
         courseD_scrat_programming6_a: 有两种方法来解决这个难题 ！
         courseD_scrat_programming6_b: 记住在移动前先转向, 因为斯奎特朝着错误的方向。
@@ -10213,6 +10268,7 @@ zh-CN:
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
         courseE_bee_concept3a_c: 有三组花, 所以外面的 `重复`循环应该重复三次。
       courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: 尝试使用 `重复` 或 `当` 循环来通过此关。
         courseE_bee_concept3a_b: 不知道在哪里放循环？尝试逐步把代码写下, 并寻找规律。
       courseE_bee_concept4:
         courseE_bee_concept4_a: 一个`如果/否则`的语句真的可以在这里帮到您。
@@ -11556,12 +11612,198 @@ zh-CN:
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables4_2019:
         courseF_artist_variables4_a: 你的代码不会和上一关有太大的不同，除了你需要让艺术家转弯往下跳，然后把他转回来准备再次往前跳。
         courseF_artist_variables4_c: |-
           这是你的艺术家将遵循的模式:
 
           ![](https://images.code.org/41ae98c1633755cf4553f90a80e125cf-image-1500325529204.6_hint.gif)
+        courseF_artist_variables4_b: |-
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="variables_set">
+                  <title name="VAR">length</title>
+                  <value name="VALUE">
+                    <block type="math_number">
+                      <title name="NUM">50</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat_ext">
+                      <value name="TIMES">
+                        <block type="math_number">
+                          <title name="NUM">3</title>
+                        </block>
+                      </value>
+                      <statement name="DO">
+                        <block type="controls_repeat_ext">
+                          <value name="TIMES">
+                            <block type="math_number">
+                              <title name="NUM">3</title>
+                            </block>
+                          </value>
+                          <statement name="DO">
+                            <block type="draw_move">
+                              <title name="DIR">moveForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnLeft</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">120</title>
+                                    </block>
+                                  </value>
+                                </block>
+                              </next>
+                            </block>
+                          </statement>
+                          <next>
+                            <block type="jump">
+                              <title name="DIR">jumpForward</title>
+                              <value name="VALUE">
+                                <block type="variables_get">
+                                  <title name="VAR">length</title>
+                                </block>
+                              </value>
+                              <next>
+                                <block type="draw_turn">
+                                  <title name="DIR">turnRight</title>
+                                  <value name="VALUE">
+                                    <block type="math_number">
+                                      <title name="NUM">90</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="jump">
+                                      <title name="DIR">jumpForward</title>
+                                      <value name="VALUE">
+                                        <block type="variables_get">
+                                          <title name="VAR">length</title>
+                                        </block>
+                                      </value>
+                                      <next>
+                                        <block type="draw_turn">
+                                          <title name="DIR">turnLeft</title>
+                                          <value name="VALUE">
+                                            <block type="math_number">
+                                              <title name="NUM">90</title>
+                                            </block>
+                                          </value>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </xml>
       courseF_artist_variables5:
         courseF_artist_variables5_a: 你的代码的后半部分应该看起来和上半部差不多, 除了你会向_左_转，跳跃, 然后向_右_转。
         courseF_artist_variables5_b: 代码的前半部分将绘制三个三角形, 而第二部分将绘制其他的三个三角形。
