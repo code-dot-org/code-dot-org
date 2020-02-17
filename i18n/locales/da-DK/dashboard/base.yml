@@ -642,6 +642,7 @@ da:
     tos: "Termer"
     privacy: "Privatlivspolitik"
     accept_label_markdown: Eg godtar [tenestevilkåra](%{tos_url}) og[retningslinjer for personvern](%{privacy_url}).
+    accept_tos: Ved at tilmelde dig Code.org, accepterer du vores [Servicevilkår](%{tos_url}) og [Privatlivspolitik](%{privacy_url}).
     print: "Udskriv"
     reminder_desc_markdown: Vi har oppdatert våre [tenestevilkår](%{tos_url}) og [vilkår for personvern](%{privacy_url}). Ver venleg å les desse nøye før du aksepterer dei. Merk at våre verktøy for å undervise i JavaScript kan vere utilgjengeleg for dine elevar før dei oppdaterte vilkåre er akseptert.
   school_info_interstitial:
