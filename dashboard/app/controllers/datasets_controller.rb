@@ -1,9 +1,12 @@
 require 'json'
+require 'URI'
 
 class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
   before_action :initialize_firebase
   authorize_resource class: false
+
+  LIVE_DATASETS = ['Daily Weather', 'Top 200 USA', 'Top 200 Worldwide', 'Viral 50 USA', 'Viral 50 Worldwide']
 
   # GET /datasets
   def index
@@ -11,6 +14,9 @@ class DatasetsController < ApplicationController
 
   # GET /datasets/:dataset_name/
   def show
+    @table_name = params[:dataset_name]
+    @dataset = @firebase.get_shared_table URI.escape(params[:dataset_name])
+    @live_datasets = LIVE_DATASETS
   end
 
   # POST /datasets/:dataset_name/
