@@ -1,6 +1,4 @@
-# no_safari due to Known issue with menu selectors, fixing by EOD - Brad
 @single_session
-@no_safari
 Feature: Using the SectionActionDropdown
 
   @no_ie
@@ -14,7 +12,7 @@ Feature: Using the SectionActionDropdown
 
     When I sign in as "Teacher_Sally" and go home
     And I open the section action dropdown
-    And I click selector ".view-progress-link"
+    And I press the first ".view-progress-link" element
     And I wait until current URL contains "/progress"
 
   # * Check that we get redirected to the right page
@@ -22,7 +20,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I click selector ".manage-students-link"
+    And I press the first ".manage-students-link" element
     And I wait until current URL contains "/manage"
 
   # * Check that we get redirected to the right page
@@ -30,7 +28,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I click selector ".print-login-link"
+    And I press the first ".print-login-link" element
     And I wait until current URL contains "/login_info"
 
   # * Add a section and then opens the edit dialog.
@@ -40,7 +38,7 @@ Feature: Using the SectionActionDropdown
     Given I am a teacher
     And I create a new section and go home
     And I open the section action dropdown
-    And I click selector ".edit-section-details-link"
+    And I press the first ".edit-section-details-link" element
     And I press the first ".uitest-saveButton" element
 
   # * Checks that section can be hidden and shown
@@ -55,7 +53,7 @@ Feature: Using the SectionActionDropdown
     And I open the section action dropdown
     And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-section-dropdown"
-    And I click selector ".ui-test-show-hide" once I see it
+    And I press the first ".ui-test-show-hide" element
     And I open the section action dropdown
     And I press the child number 4 of class ".pop-up-menu-item"
     And I wait until I don't see selector ".ui-test-show-hide"
