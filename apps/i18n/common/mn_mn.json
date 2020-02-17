@@ -1304,7 +1304,7 @@
   "studentFreeResponseAnswers": "Сурагчийн чөлөөтэй хариултын асуултууд",
   "studentOverviewTableHeader": "Хураалгалтын Статус",
   "studentsSuccessfullyMovedNotice": "Сурагчид амжилттай шилжсэн",
-  "studentsSuccessfullyMovedDetails": "{numStudents} сурагч(ид)-г энэ хэсгээс \"{хэсэг}\" хэсэг рүү амжилттай шилжүүлэв",
+  "studentsSuccessfullyMovedDetails": "{numStudents} сурагч(ид)-г энэ хэсгээс \"{section}\" хэсэг рүү амжилттай шилжүүлэв",
   "studentsSuccessfullyCopiedNotice": "Сурагчид амжилттай шилжсэн",
   "studentsSuccessfullyCopiedDetails": "{numStudents} сурагч(ид)-г энэ хэсгээс \"{section}\" хэсэг рүү амжилттай шилжүүлэв",
   "studentAccountsAndProgress": "Сурагчийн бүртгэл, ахиц дэвшил",
