@@ -705,7 +705,7 @@ module Pd::Application
             if [:title_i_status, :students_total, :urm_percent].include? k
               row.push(school_stats[k] || school_stats.try(k) || "")
             elsif k === :rural_status
-              row.push(yes_no_status(school_stats.rural_school?))
+              row.push(school_stats.rural_school?)
             else
               row.push(school_stats.percent_of_students(school_stats[k]) || "")
             end
@@ -725,11 +725,6 @@ module Pd::Application
 
     def get_latest_school_stats(school_id)
       School.find_by_id(school_id)&.school_stats_by_year&.order(school_year: :desc)&.first
-    end
-
-    def yes_no_status(status)
-      return "" if status.nil?
-      status ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
     end
 
     # @override
