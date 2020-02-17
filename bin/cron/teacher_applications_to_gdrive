@@ -38,7 +38,7 @@ def update_sheets(drive)
       app.meets_criteria,
       app.meets_scholarship_criteria,
       app.friendly_registered_workshop,
-      yes_no_string(stats&.rural_school?),
+      stats&.rural_school?,
       stats&.frl_eligible_percent,
       stats&.urm_percent
     ]
@@ -89,11 +89,6 @@ def notify_of_external_sharing(drive)
     Honeybadger.notify error_msg
     puts error_msg
   end
-end
-
-def yes_no_string(value)
-  return nil if value.nil?
-  value ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
 end
 
 def main
