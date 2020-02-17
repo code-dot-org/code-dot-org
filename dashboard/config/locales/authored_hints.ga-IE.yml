@@ -2,6 +2,112 @@
 ga-IE:
   data:
     authored_hints:
+      Dance_2019_01:
+        challenges: |-
+          **Dúshláin Roghnacha**
+
+          -   Roghnaigh amhrán difriúil.
+          -   Aistrigh an damhsóir go dtí áit nua.
+          -   Cruthaigh níos mó ná damhsóir amháin.
+      Dance_2019_02:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht amháin a dhéanamh.
+          -   Caithfidh tú ceann de na saigheada a bhrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 4 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          Úsáid níos mó ná bloc <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml> amháin.
+      Dance_2019_03:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don dá dhamhsóir gluaiseacht a dhéanamh.
+          -   Caithfidh tú na saigheada a bhrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 6 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   An damhsóir a rialú leis na saigheada clé/deasa.
+      Dance_2019_05:
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   An cúlra a athrú aon uair a athraíonn na damhsóirí a steip damhsa.
+      Dance_2019_06:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Cruthaigh príomhdhamhsóir agus grúpa damhsóirí tionlacain laistigh den chéad 4 thomhas san amhrán.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Cruthaigh níos mó ná grúpa amháin damhsóirí tionlacain.
+      Dance_2019_07:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Athraigh méid damhsóra amháin ar a laghad.
+
+          _Tagann an leibhéal seo chun críche tar éis 6 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Athraigh airíonna eile mar shampla leithead nó rothlú.
+      Dance_2019_08:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Athraigh an imir ar dhamhsóir amháin ar a laghad.
+
+          _Tagann an leibhéal seo chun críche tar éis 6 thomhas._
+        tint_hint: Ar thug tú faoi deara nár athraigh na damhsóirí go dtí an dath
+          beacht a roghnaigh tú? Tarlaíonn sé seo toisc go ndéanann an **imir** meascán
+          idir an dath a roghnaigh tú agus dath an damhsóra.
+      Dance_2019_09:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Brúigh an cnaipe "Críochnaigh", sin an méid!
+        repeat_every_ideas: |-
+          **An dteastaíonn cúpla smaoineamh nua uait?**
+
+          -   Athraigh méid an damhsóra laistigh de lúb le cur ag fás é.
+          -   Athraigh rothlú an damhsóra laistigh de lúb le cur ar casadh é.
+
+          _Agus is féidir uimhreacha diúltacha a úsáid chun a mhalairt d'éifeacht a fháil!_
+        next_previous: |-
+          **Dúshlán Roghnach**
+
+          -   Is féidir leat an bloc nua teagmhais a úsáid chun dul trí liosta steipeanna damhsa trí `(Randamach)`, `(Ar Aghaidh)`, nó `(Siar)` a roghnú.
+              <xml><block type="Dancelab_changeMoveEachLR">
+              <title name="GROUP">???</title>
+              <title name="MOVE">"rand"</title>
+              <title name="DIR">-1</title>
+              </block></xml>
+      Dance_Party_05:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Caithfidh an damhsóir dul trí cheithre steip dhamhsa ar a laghad roimh dheireadh an leibhéil.
+
+          _Tagann an leibhéal seo chun críche tar éis 12 tomhas._
+      Dance_Party_extras_alternate_2019:
+        alternate: Tá an bloc malartach sa gcatagóir "Damhsóirí".
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_b: Tar éis duit teachín éin amháin a chríochnú,
+          `léim` go dtí an ceann eile!
+        courseA_artist_loops_challenge2_c: Beidh GO LEOR blocanna ag teastáil uait
+          laistigh den lúb chun an dúshlán seo a réiteach.
+      courseE_bee_functions4:
+        courseE_bee_functions4_b: Úsáid an bloc uaine `téigh agus bailigh neachtar`
+          chun an fheidhm seo a úsáid.
       courseE_farmer_functions1:
         courseE_farmer_functions1_a: Tá leagan amach nua ar an mbosca uirlisí an uair
           seo! Cliceáil ar na catagóirí éagsúla le féachaint na blocanna atá agat.
