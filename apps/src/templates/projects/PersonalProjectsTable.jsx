@@ -325,7 +325,7 @@ class PersonalProjectsTable extends React.Component {
     const noProjects = this.props.personalProjectsList.length === 0;
 
     return (
-      <div style={styles.bottomMargin}>
+      <div id="uitest-personal-projects" style={styles.bottomMargin}>
         {!noProjects && (
           <Table.Provider
             columns={columns}
