@@ -695,6 +695,7 @@ ko:
     privacy_notice: "개인정보 보호정책"
     accept_label: '업데이트 된 <a href="%{tos_url}" target="_blank">서비스 약관</a> 과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>에 동의합니다.'
     accept_label_markdown: 업데이트 된 [서비스 약관](%{tos_url}) 과 [개인정보 보호정책](%{privacy_url})에 동의합니다.
+    accept_tos: Code.org에 가입하시면 [이용 약관](%{tos_url}) 및 [개인정보 보호정책](%{privacy_url})에 동의하는 것으로 간주됩니다.
     accept: "수락"
     print: "인쇄"
     reminder_desc: '<a href="%{tos_url}" target="_blank">서비스 약관</a>과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>을 업데이트 하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 업데이트 된 약관을 명시적으로 수락하기 전에는 JavaScript 교육 도구를 학생들에게 제공하지 못할수도 있습니다.'

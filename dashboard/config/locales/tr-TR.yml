@@ -896,6 +896,8 @@ tr:
       kabul ediyorum
     accept_label_markdown: Güncellenme Zamanı [Hizmet şartları](%{tos_url}) ve [Gizlilik
       politikasını](%{privacy_url}) kabul ediyorum
+    accept_tos: Code.org'a kaydolarak [Hizmet Şartları](%{tos_url}) ve [Gizlilik Politikası](%{privacy_url})
+      şartlarını kabul etmiş olursunuz.
     accept: Kabul et
     print: Yazdır
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve
