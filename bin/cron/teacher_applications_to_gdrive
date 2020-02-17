@@ -30,7 +30,7 @@ def update_sheets(drive)
       app.course,
       app.regional_partner.try(:name),
       app.status,
-      app.friendly_scholarship_status,
+      app.scholarship_status,
       app.school_type,
       app.sanitize_form_data_hash[:pay_fee],
       app.email,
