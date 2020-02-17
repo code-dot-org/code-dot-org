@@ -4,7 +4,7 @@ video_player: true
 theme: responsive
 ---
 # Get ready for CSFest!
-![Join Ciara and Russell Wilson for CSFest!](/images/fit-800/marketing/csfest-placeholder.jpg)
+![Join Ciara and Russell Wilson for CSFest!](/images/fit-800/marketing/csfest-placeholder1.png)
 ## Join Ciara and Russell Wilson for a celebration of computer science on April 2
 
 CSFest will bring together high school computer science students from Seattle area schools to celebrate the young adults who are learning this important 21st century subject and to help them imagine their future in computer science.
