@@ -21,17 +21,26 @@ end
 # by our programs team.
 def update_sheets(drive)
   # Update application sheet
-  applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at)]
+  applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
+                     meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status free_reduced_lunch_percent
+                     urm_percent)]
   Pd::Application::Teacher2021Application.find_each do |app|
+    stats = app.get_latest_school_stats(app.school_id)
     applications << [
       app.course,
       app.regional_partner.try(:name),
       app.status,
-      app.scholarship_status,
+      app.friendly_scholarship_status,
       app.school_type,
-      app.sanitize_form_data_hash[:principal_pay_fee],
+      app.sanitize_form_data_hash[:pay_fee],
       app.email,
-      app.created_at
+      app.created_at,
+      app.meets_criteria,
+      app.meets_scholarship_criteria,
+      app.friendly_registered_workshop,
+      yes_no_string(stats&.rural_school?),
+      stats&.frl_eligible_percent,
+      stats&.urm_percent
     ]
   end
 
@@ -80,6 +89,11 @@ def notify_of_external_sharing(drive)
     Honeybadger.notify error_msg
     puts error_msg
   end
+end
+
+def yes_no_string(value)
+  return nil if value.nil?
+  value ? Pd::Application::ApplicationBase::YES : Pd::Application::ApplicationBase::NO
 end
 
 def main
