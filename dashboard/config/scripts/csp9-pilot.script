@@ -13,6 +13,8 @@ level 'U9L1 google trends CFU', progression: 'Check For Understanding', assessme
 
 stage 'Exploring One Column'
 level 'CSP U9L2 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP U9L2 Making Bar Charts and Histograms', progression: 'Making Bar Charts and Histograms'
+level 'U9L2 CFU Histogram vs Bar Chart', progression: 'Check For Understanding', assessment: true
 
 stage 'Filtering and Cleaning Data'
 level 'CSP U9L3 SFLP 20-21', progression: 'Lesson Overview'
