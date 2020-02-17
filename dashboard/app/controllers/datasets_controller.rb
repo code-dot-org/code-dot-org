@@ -21,6 +21,15 @@ class DatasetsController < ApplicationController
 
   # POST /datasets/:dataset_name/
   def update
+    records, columns = @firebase.csv_as_table(params[:csv_data])
+    @firebase.delete_shared_table URI.escape(params[:dataset_name])
+    response = @firebase.upload_shared_table(URI.escape(params[:dataset_name]), records, columns)
+    data = {status: response.code}
+    if response.success?
+      data[:records] = records
+      data[:columns] = columns
+    end
+    render json: data
   end
 
   # GET /datasets/manifest/edit
