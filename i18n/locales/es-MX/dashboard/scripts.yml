@@ -11999,3 +11999,7 @@ es-MX:
               name: Explorar bibliotecas
             Libraries Investigate:
               name: Investigar bibliotecas
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nueva etapa
