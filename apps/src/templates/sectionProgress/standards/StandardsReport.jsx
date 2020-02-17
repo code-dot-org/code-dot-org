@@ -54,6 +54,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  currentCourse: {
+    marginBottom: 0
   }
 };
 
@@ -144,7 +147,9 @@ class StandardsReport extends Component {
                 teacherName={this.props.teacherName}
               />
               <div style={styles.reportContent}>
-                <h2 style={styles.headerColor}>{i18n.currentCourse()}</h2>
+                <h2 style={{...styles.headerColor, ...styles.currentCourse}}>
+                  {i18n.currentCourse()}
+                </h2>
                 <StandardsReportCurrentCourseInfo
                   section={this.props.section}
                   scriptFriendlyName={this.props.scriptFriendlyName}
