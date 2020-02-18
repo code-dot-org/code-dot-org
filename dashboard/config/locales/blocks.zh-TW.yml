@@ -990,7 +990,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
@@ -1034,7 +1034,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
           KEY:
             '"up"': 向上
             '"down"': 向下
@@ -1191,7 +1191,7 @@ zh-TW:
         options:
           CONDITION:
             '"when"': 當
-            '"while"': 每當
+            '"while"': 重複 判斷
       gamelab_turn:
         text: 角色 {SPRITE} 轉向 {DIRECTION} {N} 度
         options:

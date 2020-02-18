@@ -502,6 +502,7 @@ th:
   terms_interstitial:
     tos: "เงื่อนไขการให้บริการ"
     privacy: "นโยบายความเป็นส่วนตัว"
+    accept_tos: เมื่อลงชื่อเข้าใช้ Code.org แสดงว่าคุณเห็นด้วยกับ [เงื่อนไขการใช้บริการ] (%{tos_url}) และ [นโยบายความเป็นส่วนตัว](%{privacy_url}) ของเรา
     accept: "ยอมรับ"
     print: "พิมพ์"
   school_info_interstitial:

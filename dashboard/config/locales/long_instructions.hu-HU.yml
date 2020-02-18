@@ -2,7 +2,20 @@
 hu-HU:
   data:
     long_instructions:
+      2-3 Artist 1 new: Szia, én egy művész vagyok. Ha kódot írsz nekem, akkor szinte
+        bármit le tudok rajzolni. Használj fel néhány blokkot, hogy a szürke vonalakat
+        követve rajzoljak. (Minden vonal 100 pixel hosszú.)
+      2-3 Artist 2 new: Ebben a házban van egy félig kész fal. Minden oldal 100 hosszú,
+        de a félig kész fal csak 50. Fejezd be a falat.
+      2-3 Artist 3.4: |-
+        Az "ugrás" blokk vonalhúzás nélkül mozgatja a művészt.
+        Rajzolj szaggatott vonalat az "ugrás" és a "menj" blokkok segítségével.
+      2-3 Artist 3new: A piros kalap 100 pixel magas. Fejezd be a fekete kalapot,
+        ami 70 pixellel alacsonyabb. (A fekete kalap szélessége 50 pixel.)\_
       2-3 Artist 4: Segíts befejezni a cica házát!
+      2-3 Artist 6: "Erre a házra kell egy tető! Rajzold meg a háromszöget.  Tipp:
+        mindhárom oldal azonos hosszúságú.  \n\n <img src=\"https://images.code.org/8b10073fd1a7fe53b4da33ec2229894b-image-1468018903891.gif\"
+        width=\"300\"/>"
       2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
@@ -10,6 +23,8 @@ hu-HU:
       2-3 Artist Nested Loops Free Play: Szabad játék! Rajzolj valami izgalmasat egymásba
         ágyazott ciklusokkal!
       2-3 Bee Loops 3A: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
+      2-3 Maze 1: 'Tudsz segíteni nekem elkapni a csintalan malacot? Rakj egymás alá
+        néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
       2-3 Maze 13: Hadd jussak el a malachoz! Egyszerre csak egy 'előrelépni' blokkot
         használhatsz!
       2-3 Maze Loops 19: |-
@@ -258,6 +273,10 @@ hu-HU:
 
         -   Készíts egy új tömböt a kívánt célra. Különböző oktávok lehetnek, egy bizonyos kulcsban elrendezve, stb.
         -   Ha a \*\* jobb \*\* gombot megnyomja, a zümmögő véletlenszerűen írjon egy jegyet a tömbbe.
+      Course 4 Artist 1: Segíts nekem befejezni a dobozom rajzolását. (Minden vonal
+        200 pixel hosszú)
+      Course 4 Artist 13: Még mindig játszol? Itt egy üres vászon, amire azt rajzolsz,
+        amit csak akarsz!
       Course 4 Artist 2: Ciklusba tudnád rakni ezt a kód részletet, hogy a szürke
         négyzet kirajzolódjon? (Minden oldal 300 pixel hosszú)
       Course 4 Artist 3: Rendben, most próbáld meg kitalálni, hogy mi fog történni,
@@ -272,8 +291,28 @@ hu-HU:
         oldalú háromszög.
       Course 4 Artist 7: Az alábbi ismétlést ágyazd be egy másik ismétlésbe, hogy
         így rajzolj 10 elforgatott háromszöget.
+      Course 4 Artist 8: Rajzold meg ezt a napocskát egy ciklussal, ami 12 háromszöget
+        rajzol.
+      Course 4 Artist 8a: Emlékszel erre az alakzatra? Most megrajzolhatod úgy, hogy
+        nincsenek kiinduló blokkok!
       Course 4 Artist For Loops 6a: Végezz el három kis módosítást az előző kódon,
         hogy ezt kapd!
+      Course 4 Artist Vars 2: A "lépj előre 150" használata helyett a "menj" blokk
+        most egy "length" (hossz) nevű változót használ. Be tudod állítani a "length"
+        változó értékét 150-re a következő háromszög megrajzolásához?
+      Course 4 Artist Vars 4: Most egy olyan téglalapot szeretnék rajzolni, ami kétszer
+        olyan magas, mint amilyen széles. Van egy "width" (szélesség) nevű változónk,
+        amelynek értékét 100-ra kell beállítani. Ki tudod egészíteni a kódot matematikai
+        blokk használatával?
+      Course 4 Artist Vars 7: Használd az előző feladványban szerzett tudásod, és
+        hozd létre ezt a hatszöget a "sides" (oldalak) változó használatával. Nézd
+        meg, hogy melyik egyetlen értéket kell megváltoztatnod ahhoz, hogy háromszöget,
+        négyszöget, ötszöget vagy nyolcszöget rajzolj?
+      Course 4 Artist Vars 8: 'Szabad játék: kísérletezz az alakzat oldalszámával.
+        Tudod úgy módosítani az algoritmust, hogy az alakzat teljes mérete ugyanannyi
+        maradjon függetlenül az oldalainak számától? Tipp: Ha elosztod a kezdeti hosszot
+        az oldalak számával, az oldalak egyre rövidebbek lesznek, ahogy az oldalak
+        száma nő? '
       Course 4 Bee 1: "A méh nem tudja, mi van a felhő alatt! \nHasználd a 'ha' blokkot,
         hogy megtudd, virág van-e a felhő alatt. \nCsak akkor gyűjts nektárt, ha tényleg
         virágot találsz."
@@ -744,6 +783,20 @@ hu-HU:
         fedezd fel a világot."
       MC_HOC_2017_FP20x20_2019: "**Szabad játék:** Most rajtad múlik! Az Agent kódja
         segítségével fedezd fel a világot."
+      NEW Course 4 Artist Vars 12: Most csináld meg újra az előző pálya fejtörőjét
+        és rajzolj egy ötszöget 150 pixel széles oldalakkal.
+      NEW Course 4 Artist Vars 4: |-
+        Próbáljuk meg újra!
+
+        Be tudod állítani a `hossz` változó értékét 60-ra, hogy elkészítsd ezt a hatszögekből álló klassz mintát?
+      NEW Course 4 Artist Vars 6: Rajzold meg ezt a 100 képpont oldalhosszúságú ötszögekből
+        álló mintát úgy, hogy beállítod a `hossz` értékét, majd a megfelelő helyekre
+        elhelyezed a `hossz` változót. Látod, hogy csak egyszer kell beállítanod a
+        `hossz` változó értékét, és mindenhol a helyes értéket használ a kód?
+      NEW Course 4 Bee For Loops 2: "Építsd fel a kódot, hogy az összes nektárt összegyűjtsd.
+        \n\nFigyeld meg, hogy milyen hosszú kódra van szükség ennek a feladványnak
+        a megoldásához!\\\n(A következő feladványnál tanulunk egy ennél egyszerűbb
+        módszert.)"
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
@@ -753,9 +806,40 @@ hu-HU:
         gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik
         a megfelelő képernyőre. \n-   Futtassa az alkalmazást és tesztelje, hogy az
         összes gomb működik-e."
+      course1_maze_debugging_challenge1: Javísd ki a hibát! Távolítsd el a felesleges
+        blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
+      course2_artist_prog_challenge1: Rajzold meg a ház falait. Több jó megoldás is
+        van, csináld úgy, ahogy szeretnéd!
+      course2_artist_prog_challenge2: _Segíts nekem sárgával megrajzolni az utat!_
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseA_artist_loops2: |-
+        Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2018: |-
+        Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops2_2019: |-
+        Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
+
+        ![](https://images.code.org/04501f26a36673460f5c8fe04e3e7686-image-1498002095108.gif)
+      courseA_artist_loops3: "A művészünk ötször próbálja megrajzolni a vonalat, de
+        nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
+      courseA_artist_loops3_2018: "A művészünk ötször próbálja megrajzolni a vonalat,
+        de nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
+      courseA_artist_loops3_2019: "A művészünk ötször próbálja megrajzolni a vonalat,
+        de nem megy neki. Tudsz segíteni? \n\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)"
+      courseA_artist_loops4: |-
+        Most használj egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, hogy ötször megrajzold ezt a vonalat!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
+      courseA_artist_loops4_2018: |-
+        Most használj egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, hogy ötször megrajzold ezt a vonalat!
+
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops4_2019: |-
         Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
 
@@ -764,15 +848,118 @@ hu-HU:
         Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_collector_loops1: "**Szabad játék:** Ő itt Laurel, a Kalandor! Mozgasd
+        kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz blokkokat
+        a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a kincsekhez.
+        Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
+      courseA_collector_loops12: |-
+        _"Heuréka! Gyűjts össze annyi kincset, amennyit csak tudsz!"_\
+        (Nem kell az összeset.)
+      courseA_collector_loops12_2018: |-
+        _"Heuréka! Gyűjts össze annyi kincset, amennyit csak tudsz!"_\
+        (Nem kell az összeset.)
+      courseA_collector_loops12_2019: |-
+        _"Heuréka! Gyűjts össze annyi kincset, amennyit csak tudsz!"_\
+        (Nem kell az összeset.)
+      courseA_collector_loops1_2018: "**Szabad játék:** Ő itt Laurel, a Kalandor!
+        Mozgasd kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz
+        blokkokat a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a
+        kincsekhez. Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
+      courseA_collector_loops1_2019: "**Szabad játék:** Ő itt Laurel, a Kalandor!
+        Mozgasd kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz
+        blokkokat a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a
+        kincsekhez. Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
+      courseA_collector_loops2: |-
+        Mindhárom halmot szedd fel! Vidd oda Laurelt a kincs mindegyik darabjához, aztán használd ezt a blokkot:
+          <xml><block type="collector_collect"/></xml>
       courseA_collector_loops2_2019: 'Szerezd meg mind a három cölöpöt! Mozgasd Laurel-t
         minden egyes kincses darabhoz, majd használd a <xml><block type="collector_collect"
         block-text="get treasure"/></xml> blokkot. '
+      courseA_collector_loops3: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
+      courseA_collector_loops3_2018: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
       courseA_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
         mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
         blokk segítségével?
+      courseA_collector_loops_challenge1: _"Tudsz segíteni abban, hogy rámutatsz a
+        hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
+        hogy hány lépést is kell megtennem."_
+      courseA_collector_loops_challenge1_2018: _"Tudsz segíteni abban, hogy rámutatsz
+        a hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
+        hogy hány lépést is kell megtennem."_
+      courseA_collector_loops_challenge1_2019: _"Tudsz segíteni abban, hogy rámutatsz
+        a hibákra? Tudom, hogy melyik úton akarok menni, de nem vagyok biztos abban,
+        hogy hány lépést is kell megtennem."_
+      courseA_collector_preLoops7: |-
+        Mindhárom halmot szedd fel! Vidd oda Laurelt a kincs mindegyik darabjához, aztán használd ezt a blokkot:
+          <xml><block type="collector_collect"/></xml>
       courseA_maze_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
         hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseA_maze_seq1: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj meg odavinni
+        a rossz malachoz!"_
+      courseA_maze_seq10: |-
+        **Kihívás:** Kihívás: Menj körbe a TNT körül, hogy a madár eljusson a malacig!
+
+        ![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)
+      courseA_maze_seq11: |-
+        Itt az ideje egy rövidebb feladványnak!  Mozogj az egyik irányba, aztán egy másik irányba, hogy a madár eljusson a malacig.
+
+        ![expandable](https://images.code.org/bb4571384fc56702704a0c9395ee3695-image-1497996380902.gif)
+      courseA_maze_seq12: |-
+        Kapd el azt a malacot!
+
+        ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
+      courseA_maze_seq13_2019: Kapd el a malacot, bármilyen módon!
+      courseA_maze_seq1_2018: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj
+        meg odavinni a rossz malachoz!"_
+      courseA_maze_seq1_2019: _"Játssz egy kicsit ezekkel a blokkokal, és próbálj
+        meg odavinni a rossz malachoz!"_
+      courseA_maze_seq2: |-
+        _"Egy hiba! Javíts a kódon, hogy eljussak a malacig."_
+
+        ![expandable](https://images.code.org/4af4959874b3ca1fdd3008dc4f77add4-image-1497994904322.gif)
+      courseA_maze_seq3: |-
+        _"Javítsd ki a kódot, hogy eljuthassak a malacig!"_
+
+        ![expandable](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)
+      courseA_maze_seq4: "_\"Valami nem stimmel.\"_ \n\nTávolítsd el a blokkot, hogy
+        a madár eljusson a malacig!\n\n![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)"
+      courseA_maze_seq5: |-
+        Próbáld ezt önállóan megoldani az elejétől.
+
+        ![expandable](https://images.code.org/e4ef591b4580db478330c298d1af756f-image-1497997080163.gif)
+      courseA_maze_seq6: |-
+        Mozogj az egyik irányba, aztán egy másikba, hogy a madár elérjen a malacig!
+
+        ![expandable](https://images.code.org/8f71c406afa60c6898937d950c670205-image-1497996506419.gif)
+      courseA_maze_seq6_2018: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
+        elérjen a malacig!
+      courseA_maze_seq6_2019: Mozogj az egyik irányba, aztán egy másikba, hogy a madár
+        elérjen a malacig!
+      courseA_maze_seq7: |-
+        Találd ki, mi hiányzik, aztán adj hozzá blokkokat, hogy a madár eljusson a malacig!
+
+        ![expandable](https://images.code.org/35bdb628dabd4259b581286b071c02f3-image-1497996651260.gif)
+      courseA_maze_seq8: |-
+        Oldd meg ezt a szintet is: a madár jusson el a malacig!
+
+        ![expandable](https://images.code.org/fb4735244f74a4e001d1fa7b5c6028f9-image-1497998330218.gif)
+      courseA_maze_seq8_2018: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
+      courseA_maze_seq8_2019: 'Oldd meg ezt a szintet is: a madár jusson el a malacig!'
+      courseA_maze_seq9: |-
+        **Kihívás:** Javítsd ki a hibát blokkok hozzáadásával, hogy a madár eljusson a malacig!
+
+        ![expandable](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)
+      courseA_maze_seq_challenge1: Javísd ki a hibát! Távolítsd el a felesleges blokkokat,
+        és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
+      courseA_maze_seq_challenge1_2018: Javísd ki a hibát! Távolítsd el a felesleges
+        blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
+      courseA_maze_seq_challenge1_2019: Javísd ki a hibát! Távolítsd el a felesleges
+        blokkokat, és add hozzá azokat, amik hiányoznak. Kapja el a madár azt a malacot!
+      courseA_maze_seq_challenge2_2019: Tervezd meg az utat, hogy a madarat a malahoz
+        vezesd. Óvakodj a TNT-től, különben a tollak fognak elszállni!
       courseA_playLab_events1_2019: Ez egy Play Lab szint. A blokkokat húzd a munkaterületre,
         és nézd meg, mi történik!
       courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
@@ -796,6 +983,18 @@ hu-HU:
       courseB_Scrat_ramp3a_2019: Fogja meg a <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> blokkot az eszköztárból, és adja hozzá a többi blokk aljához,
         hogy befejezze ezt a kódot, majd kattintson az "▶ Futtatás" gombra.
+      courseB_artist_loops1_2019: Ez egy új típusú feladvány, főhősünk a "Művész".
+        Játssz egy kicsit, és rajzolj valami vidám dolgot.
+      courseB_collector_loops1: "**Szabad játék:** Ő itt Laurel, a Kalandor! Mozgasd
+        kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz blokkokat
+        a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a kincsekhez.
+        Legalább egyet meg kell szerezned ahhoz, hogy a szintet teljesítsd."
+      courseB_collector_loops10_2019: Segíts Laurelnek, hogy a barlang összes kincsét
+        megszerezze.
+      courseB_collector_loops3: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
+      courseB_collector_loops3_2018: Hogyan tudja Laurel mind az öt kincset begyűjteni
+        mindössze egyetlen <xml><block type="maze_moveEast"/></xml> használatával?
       courseB_collector_loops3_2019: Hogyan tudja Laurel megkapni mind az öt kincset
         mindössze egy<xml><block type="maze_moveEast" block-text="move east"/></xml>
         blokk segítségével?

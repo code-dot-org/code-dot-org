@@ -126,7 +126,7 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 
   unless sponsor
     weight = SecureRandom.random_number
-    donor = DB[:cdo_donors].all.find {|d| d[:twitter_weight_f] - weight >= 0}
+    donor = DB[:cdo_donors].all.find {|d| d[:weight_f] - weight >= 0}
     sponsor = donor[:name_s]
   end
 

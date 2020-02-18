@@ -13459,6 +13459,8 @@ en:
               name: Unit 6 STUDENT Survey
             Unit 6 TEACHER Survey:
               name: Unit 6 TEACHER Survey
+            'Lesson 6: Assessment Day':
+              name: 'Lesson 6: Assessment Day'
           title: CSP Unit 6 Pilot - Algorithms
           description_audience: ''
           description_short: ''
@@ -14104,6 +14106,44 @@ en:
             Variables Make Demo:
               name: Variables Make Demo
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csd2-projects-temp:
+          stages:
+            HTML  Project:
+              name: HTML  Project
+            CSS Project:
+              name: CSS Project
+          title: CSD Web Projects - TEMP
+          description_audience: ''
+          description_short: ''
+          description: Temporary place to hold the new mini-projects for CSD Web Development
+        csp9-pilot:
+          stages:
+            new stage:
+              name: new stage
+            Learning From Data:
+              name: Learning From Data
+            Exploring One Column:
+              name: Exploring One Column
+            Filtering and Cleaning Data:
+              name: Filtering and Cleaning Data
+            Exploring Two Columns - Discrete:
+              name: Exploring Two Columns - Discrete
+            Exploring Two Columns - Continuous:
+              name: Exploring Two Columns - Continuous
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, and Machine Learning
+            Machine Learning and Bias:
+              name: Machine Learning and Bias
+            Project - Tell a Data Story - Part 1:
+              name: Project - Tell a Data Story - Part 1
+            Project - Tell a Data Story - Part 2:
+              name: Project - Tell a Data Story - Part 2
+            'Lesson 10: Assessment Day':
+              name: 'Lesson 10: Assessment Day'
+          title: CSP Unit 9 Pilot - Data
           description_audience: ''
           description_short: ''
           description: ''

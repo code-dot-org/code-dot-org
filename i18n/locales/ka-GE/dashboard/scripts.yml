@@ -5778,3 +5778,7 @@ ka:
           stages:
             new stage:
               name: ახალი დონე
+        csp9-pilot:
+          stages:
+            new stage:
+              name: ახალი დონე

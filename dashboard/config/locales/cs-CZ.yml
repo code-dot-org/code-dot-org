@@ -362,6 +362,7 @@ cs:
       district_dashboard: Okresní řídicí panel
       label: Ahoj %{username}
       stats: Code studio
+      my_projects: Moje projekty
       settings: Můj účet
       logout: Odhlásit se
       signin: Přihlásit se
@@ -859,6 +860,8 @@ cs:
       osobních údajů</a>
     accept_label_markdown: Souhlasím s aktualizací [Podmínek poskytování služeb](%{tos_url})
       and [Ochranou osobních údajů](%{privacy_url})
+    accept_tos: Registrací na Code.org vyjadřujete souhlas s našimi [Podmínkami poskytování
+      služeb](%{tos_url}) a [Zásadami ochrany osobních údajů](%{privacy_url}).
     accept: Přijmout
     print: Tisk
     reminder_desc: Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní
@@ -1118,3 +1121,6 @@ cs:
     accept: Souhlasím
   gdpr_dialog:
     true: Ano
+  page_not_found_title: Stránka nebyla nalezena
+  page_not_found_header: 404 - Stránka nebyla nalezena
+  page_not_found_button: Zpět domů
