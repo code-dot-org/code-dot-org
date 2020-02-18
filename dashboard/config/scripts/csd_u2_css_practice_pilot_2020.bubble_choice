@@ -1,0 +1,12 @@
+name 'CSD U2 CSS practice_pilot_2020'
+display_name 'Styling Text with CSS'
+description 'Try out your new skills on these different challenges!'
+
+sublevels
+level 'CSD Web Headings Forgot Dash in Font Size'
+level 'CSD Web Headings Missing Paragraph Tag'
+level 'CSD Web Headings Wrong Tag in Rule Set'
+level 'CSD Web Headings Stylesheet Not Linked'
+level 'CSD Web Headings Add Heading Rule'
+level 'CSD Web Headings Add Paragraph Rule'
+level 'CSD Web Headings Add Style Sheet'
