@@ -156,8 +156,7 @@
       const file = inputFile.files[0];
       // limit csv to 500 kb
       const limit = 500000;
-      const fileSize = file.size;
-      if (fileSize > limit) {
+      if (file.size > limit) {
         window.alert('File must be less than 500 kb.')
         updateReplaceMappingSubmitButton(true);
       } else {
