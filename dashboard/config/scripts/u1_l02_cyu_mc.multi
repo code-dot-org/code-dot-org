@@ -11,10 +11,12 @@ markdown <<MARKDOWN
 
 What will the value of `score` be at the end of the program?
 
+**Note:** `<-` is used to represent a left facing arrow
+
 	var score
-	score ← 3
-	score ← score + 1
-	score ← "The score is: " + score
+	score <- 3
+	score <- score + 1
+	score <- "The score is: " + score
 MARKDOWN
 
 teacher_markdown <<MARKDOWN
