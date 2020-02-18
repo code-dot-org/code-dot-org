@@ -126,7 +126,7 @@ export default class EnrollmentsPanel extends React.Component {
 
     this.editEnrollmentRequest = $.ajax({
       method: 'POST',
-      url: `/api/v1/pd/enrollments/${selectedEnrollment.id}/edit`,
+      url: `/api/v1/pd/enrollment/${selectedEnrollment.id}/edit`,
       contentType: 'application/json',
       data: JSON.stringify(updatedNameSnakeCase)
     })
