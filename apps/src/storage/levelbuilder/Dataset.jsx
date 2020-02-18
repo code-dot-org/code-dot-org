@@ -46,13 +46,6 @@ class Dataset extends React.Component {
     isError: false
   };
 
-  displayNotice = (notice, isError) => {
-    this.setState({notice, isError}, () =>
-      setTimeout(() => this.setState({notice: null, isError: false}), 5000)
-    );
-    window.scrollTo(0, 0);
-  };
-
   importCsv = (csv, onComplete) => {
     $.ajax({
       url: `/datasets/${this.props.tableName}`,
@@ -66,10 +59,10 @@ class Dataset extends React.Component {
           Object.values(data.records),
           data.columns
         );
-        this.displayNotice('Upload succeeeded.', false);
+        this.setState({notice: 'Upload succeeded.', isError: false});
         onComplete();
       })
-      .fail(() => this.displayNotice('Upload failed.', false));
+      .fail(() => this.setState({notice: 'Upload failed.', isError: true}));
   };
 
   render() {
