@@ -8,7 +8,7 @@ level 'andrea_test1', progression: 'What is Deeper Learning', named: true
 
 stage 'Part 1'
 level 'andrea-test2', progression: 'President Question'
-level 'andrea-test3', progression: 'President Question'
+level 'andrea-test3', progression: 'Vice President Question'
 
 stage 'Part 2'
 variants
