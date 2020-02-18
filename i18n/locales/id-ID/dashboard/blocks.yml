@@ -1081,6 +1081,8 @@ id:
             '"left"': kiri
       gamelab_mouseLocation:
         text: Lokasi tetikus
+      gamelab_moveBackward:
+        text: pindah {SPRITE} {DISTANCE} piksel mundur
       gamelab_moveForward:
         text: move {SPRITE} {DISTANCE} piksel maju
       gamelab_moveInDirection:
@@ -1176,6 +1178,8 @@ id:
           DIRECTION:
             '"right"': kanan
             '"left"': kiri
+      gamelab_updateTitleWithColor:
+        text: tampilkan layar judul {BREAK} judul {TITLE} warna {COLOR}
       gamelab_whenDownArrow:
         text: saat panah bawah ditekan
       gamelab_whenKey:

@@ -2019,3 +2019,7 @@ pt:
           stages:
             new stage:
               name: nova fase
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nova fase

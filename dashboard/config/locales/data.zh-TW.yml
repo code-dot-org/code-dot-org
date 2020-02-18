@@ -180,8 +180,8 @@ zh-TW:
         jigsaw_8: 排列積木以組成圖像
         jigsaw_9: 排列積木以組成圖像
         jigsaw_10: 排列積木以組成圖像
-        jigsaw_11: 排列積木以組成圖像
-        jigsaw_12: 排列積木以組成圖像
+        jigsaw_11: 依照數字將這些積木排列好
+        jigsaw_12: 依照數字將這些積木排列好
         jigsaw_13: 解決這個難題！
         mazestep_1: 這是迷宮步驟說明
         mazestep_2: 這是迷宮步驟說明
@@ -312,7 +312,7 @@ zh-TW:
         C1_playlab_storytelling: Play Lab - 創作一個故事
         C1_planting_seed: 植物種植
         C1_building_foundation: 打好基礎
-        C1_going_places_safely: 安全的到達地點
+        C1_going_places_safely: 安全的遨遊網路世界
         C2_maze_intro: 迷宮簡介
         C2_artist_intro: 小藝術家簡介
         C2_zuck_repeat_loop: 迷宮 - 迴圈（Loops）
@@ -352,9 +352,9 @@ zh-TW:
         C4_bee_conditional: 蜜蜂 - 條件判斷（Conditionals）
         C4_variables_artist: 變數 - 藝術家
         C4_variables_playlab: 變數 - Play Lab
-        C4_for_loops: 計數迴圈（For Loops）
-        C4_for_loops_bee: 計數迴圈（For Loops）
-        C4_for_loops_no_bee: 計數迴圈（For Loops）
+        C4_for_loops: 計次迴圈（For Loops）
+        C4_for_loops_bee: 計次迴圈（For Loops）
+        C4_for_loops_no_bee: 計次迴圈（For Loops）
         C4_math_artist: 用數學來編程的小藝術家
         C4_function_edit: 編輯函式
         C4_function_create: 建立函式
@@ -363,7 +363,7 @@ zh-TW:
         C4_unplugged_algorithms: 演算法與七巧板
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: 信封裡的變數
-        C4_unplugged_forloops: 計數迴圈（For Loops）
+        C4_unplugged_forloops: 計次迴圈（For Loops）
         C4_unplugged_parameters: 用參數寫歌
         C4_unplugged_binary: 二進制（Binary）
         CSF_a_b_artist_loops: 藝術家中的迴圈（Loops）
@@ -493,6 +493,7 @@ zh-TW:
         csd_pair_programming: 結對編程
         csd_applab_parameters: 函式帶參數
         csd_problem_solving_process: 問題解決流程
+        CSF_Going_Places_Safely: 我的線上鄰居
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
         oceans_machine_learning: 機器學習

@@ -2921,6 +2921,7 @@ fr:
             Dance Party:
               name: Soirée Dansante
         dance-extras:
+          title: Continuer de Danser (2018)
           description: Allez au-delà de la première heure avec de longues idées de projets.
         coursef-2019:
           description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
@@ -3014,7 +3015,7 @@ fr:
             'null':
               name: 'invalide'
         dance-extras-gallery:
-          title: Continuez à danser
+          title: Continuer de Danser
           description: Allez au-delà de la première heure avec de longues idées de projets.
         coursec-2019:
           description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
@@ -3355,6 +3356,7 @@ fr:
             For Loops:
               name: Boucles « Pour »
         dance-extras-2019:
+          title: Continuer de Danser (2019)
           description: Allez au-delà de la première heure avec de longues idées de projets.
         csp10-pilot:
           stages:
@@ -3383,6 +3385,10 @@ fr:
             Conditionals:
               name: Instructions conditionnelles
         csp8-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape
+        csp9-pilot:
           stages:
             new stage:
               name: nouvelle étape

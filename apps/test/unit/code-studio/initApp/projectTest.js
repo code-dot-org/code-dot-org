@@ -477,43 +477,48 @@ describe('project.js', () => {
     });
   });
 
-  describe('setLibraryName()', () => {
-    it('updates the current library name', () => {
-      let oldName = 'initialLibrary';
-      let newName = 'newLibraryName';
-      setData({libraryName: oldName});
+  describe('setLibrarySharedClasses()', () => {
+    it('updates the list of shared classes', () => {
+      let oldClassList = [1];
+      let newClassList = [2];
+      setData({sharedWith: oldClassList});
       sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibraryName()).to.equal(oldName);
-      project.setLibraryName(newName);
-      expect(project.getCurrentLibraryName()).to.equal(newName);
-      expect(project.updateChannels_).to.have.been.called;
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      project.setLibrarySharedClasses(newClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(newClassList);
 
       setData({});
       project.updateChannels_.restore();
     });
 
-    it('does nothing if no name is passed', () => {
+    it('does nothing if the classes passed are not in an array', () => {
+      let oldClassList = [1];
+      setData({sharedWith: oldClassList});
       sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibraryName()).to.be.undefined;
-      project.setLibraryName();
-      expect(project.getCurrentLibraryName()).to.be.undefined;
-      expect(project.updateChannels_).to.have.not.been.called;
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      project.setLibrarySharedClasses(2);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
 
+      setData({});
       project.updateChannels_.restore();
     });
   });
 
-  describe('setLibraryDescription()', () => {
-    it('updates the current library description', () => {
-      let oldDescription = 'description';
-      let newDescription = 'My library does something cool';
-      setData({libraryDescription: oldDescription});
+  describe('setLibraryDetails()', () => {
+    it('updates the current library name and description', () => {
+      let oldName = 'initialLibrary';
+      let oldDescription = 'initialDescription';
+      let newName = 'newLibraryName';
+      let newDescription = 'newLibraryDescription';
+      setData({libraryName: oldName, libraryDescription: oldDescription});
       sinon.stub(project, 'updateChannels_');
 
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
       expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
-      project.setLibraryDescription(newDescription);
+      project.setLibraryDetails(newName, newDescription);
+      expect(project.getCurrentLibraryName()).to.equal(newName);
       expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
       expect(project.updateChannels_).to.have.been.called;
 
@@ -521,11 +526,13 @@ describe('project.js', () => {
       project.updateChannels_.restore();
     });
 
-    it('does nothing if no description is passed', () => {
+    it('does nothing if name and description are unchanged', () => {
       sinon.stub(project, 'updateChannels_');
 
+      expect(project.getCurrentLibraryName()).to.be.undefined;
       expect(project.getCurrentLibraryDescription()).to.be.undefined;
-      project.setLibraryDescription();
+      project.setLibraryDetails();
+      expect(project.getCurrentLibraryName()).to.be.undefined;
       expect(project.getCurrentLibraryDescription()).to.be.undefined;
       expect(project.updateChannels_).to.have.not.been.called;
 
