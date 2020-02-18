@@ -4,7 +4,7 @@ video_player: true
 theme: responsive
 ---
 # Get ready for CSFest!
-![Join Ciara and Russell Wilson for CSFest!](/images/fit-800/marketing/csfest-placeholder.jpg)
+![Join Ciara and Russell Wilson for CSFest!](/images/fit-500/marketing/csfest-placeholder1.png)
 ## Join Ciara and Russell Wilson for a celebration of computer science on April 2
 
 CSFest will bring together high school computer science students from Seattle area schools to celebrate the young adults who are learning this important 21st century subject and to help them imagine their future in computer science.
@@ -22,6 +22,11 @@ The celebration will be held on the morning of April 2. Location information wil
 
 The main event on stage features Seahawks quarterback Russell Wilson, award-winning singer-songwriter Ciara, members of Amazon's leadership team, and Code.org CEO Hadi Partovi. In addition, the celebration will also feature a career fair of local technology companies that offer job opportunities in computer science, and a university fair of local computer science learning opportunities for high school graduates.
 
+### **Confirm your attendance by March 5th**
+Schools invited must RSVP to this event no later than **March 5th**. The number of attendees from your school may be limited due to space. Note: If you were invited, you were sent an **RSVP password via email**.
+
+<center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWEe_KmgOXp3AexP3VvUz0GTZdMEPnjsrGCAdzFFM6S8GbdQ/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">RSVP to CSFest Seattle</iframe></center>
+
 ### **How do I know if my school is participating?**
 High school computer science classrooms from the Seattle, Highline, Federal Way, and Shoreline school districts are invited, as well as a handful of schools from the greater Puget Sound Area. A list of participating schools will be updated on this page below as they are confirmed.
 
@@ -29,11 +34,8 @@ If you are a computer science teacher or administrator at one of the high school
 
 If you’re a middle school or high school teacher in Puget Sound and your school doesn’t teach computer science, apply to the [Code.org Progressional Learning](https://code.org/educate/professional-learning) program to attend as an individual.
 
+### **List of Participating Schools**
+Computer science classrooms in the following schools have been confirmed to participate in this event to come. 
+
 ### **What if my school doesn’t teach computer science?**
 If your school doesn't teach computer science, [nominate a teacher for a scholarship](https://code.org/nominate) to learn how, because every student in every school should have this opportunity.
-
-### **List of Participating Schools**
-Computer science classrooms in the following schools have been confirmed to participate in this event:
-
-### **Confirm your attendance**
-Schools invited to this event can RSVP for your computer science classrooms using this form. The number of attendees from your school may be limited due to space.
