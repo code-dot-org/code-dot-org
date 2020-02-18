@@ -225,7 +225,7 @@ export default class EnrollmentsPanel extends React.Component {
               onMove={this.handleMoveEnrollmentsConfirmed}
             />
           </Button>
-        )}
+        )}{' '}
         {isWorkshopAdmin && (
           <Button
             bsSize="xsmall"
