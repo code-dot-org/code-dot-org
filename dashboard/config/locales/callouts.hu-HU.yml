@@ -32,6 +32,12 @@ hu-HU:
       Course 4 Artist Vars 6:
         degrees_per_side: 360-at oszd el az oldalak számával, így megkapod a szögek
           nagyságát fokban.
+      Course 4 Bee 1:
+        if_bee_nectar: Használd a "ha" blokkot, hogy eldöntsd hogy a méhnek kell-e
+          nektárt gyűjtenie
+      Course 4 Bee 3:
+        if_else_bee: Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a
+          virágból, és mézet csináljon, ha az nem virág
       Course 4 Bee Params 2:
         edit_get_nectar: 'Módosítsd e gomb segítségével a függvényt és változtasd
           meg az irányt: a méh irányt fog váltani, hogy begyűjtse a nektárt!'
@@ -181,12 +187,59 @@ hu-HU:
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_callout1: Használd ezt a parancsot, hogy
           a méh visszafelé mozogjon.
+      courseA_artist_loops4:
+        courseA_artist_loops4_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_artist_loops4_2018:
+        courseA_artist_loops4_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_artist_loops4_2019:
+        courseA_artist_loops4_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_collector_loops1:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseA_collector_loops3:
+        gradek_adventurer_loops2_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_collector_loops3_2018:
+        gradek_adventurer_loops2_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_collector_loops3_2019:
+        gradek_adventurer_loops2_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
+          közül mennyit használhatsz a feladvány megoldásához.
+      courseA_collector_preLoops2:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseA_collector_preLoops3:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseA_collector_preLoops4:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseA_collector_preLoops5:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseA_collector_preLoops6:
+        courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
       courseA_maze_ramp2_2019:
         courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
           is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
       courseA_maze_ramp3a_2018:
         courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
           is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseA_maze_seq1:
+        courseA_maze_seq1_1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseA_maze_seq2:
+        courseA_maze_seqA_callout1: Használd a lépés gombot, hogy lépésről lépésre
+          kövesd a program futását. Ez segíteni fog, hogy megtaláld a hibát!
+      courseA_maze_seq4:
+        made_of_stone: Ezek a blokkok kőből vannak. Elmozdíthatod őket, de nem törölhetők!
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
           futtatásra, hogy elinduljon a program.
@@ -196,6 +249,21 @@ hu-HU:
       courseB_Scrat_ramp3a_2019:
         courseC_maze_programming2_1: Ez itt a toolbox, de hívhatnánk szerszámosládának
           is. Extra blokkokat találhatsz itt, amikkel teljesítheted a feladatokat.
+      courseB_collector_loops1:
+        courseB_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
+      courseB_maze_seq1:
+        courseB_maze_seq1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseB_maze_seq1_2018:
+        courseB_maze_seq1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseB_maze_seq1_2019:
+        courseB_maze_seq1: Kattints a villanykörtére, ha segítségre van szükséged!
+      courseB_maze_seq2:
+        courseB_maze_seq2_callout1: Használd a lépés gombot, hogy lépésről lépésre
+          kövesd a program futását. Ez segíteni fog, hogy megtaláld a hibát!
+      courseC_collector_prog1:
+        courseC_collector_prog1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
+          a szakaszban megmutatjuk, hogy hogyan kell használni.
       courseC_maze_debugging5_2019:
         courseC_maze_debugging5_1: Ezek a blokkok zárolva vannak és nem törölhetők!
       courseC_maze_debugging9_2019:

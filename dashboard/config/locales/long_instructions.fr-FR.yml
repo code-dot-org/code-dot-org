@@ -6605,12 +6605,18 @@ fr-FR:
         Voici quelques idées:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
-      courseA_artist_loops_challenge2a: _"Aide moi à monter ce camp!"_Utilise les
-        blocs dans la boîte à outils pour dessiner ces 3 tentes.
-      courseA_artist_loops_challenge2a_2018: _"Aide moi à monter ce camp!"_Utilise
-        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
-      courseA_artist_loops_challenge2a_2019: _"Aide moi à monter ce camp!"_Utilise
-        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
       courseA_collector_loops1: |-
         **Jeu libre:** Voici Laurel l'aventurière! Bouge la pour récupérer autant de diamants que possible.
 
