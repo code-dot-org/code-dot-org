@@ -344,6 +344,8 @@ ms:
   terms_interstitial:
     tos: Terma Perkhidmatan
     privacy: Dasar Privasi
+    accept_tos: Dengan mendaftar masuk Code.org, anda bersetuju dengan [Terma Perkhidmatan](%{tos_url})
+      dan [Dasar Privasi](%{privacy_url})kami.
     print: Cetak
   school_info_interstitial:
     save: Simpan

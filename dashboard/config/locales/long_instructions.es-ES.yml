@@ -1390,6 +1390,22 @@ es-ES:
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde
         a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
         alcance la antorcha de redstone [redstone_torch]."
+      Gamelab StartScreen Intro: |-
+        # Empezar y Terminar Pantalla
+
+        Este seminario te enseñará cómo hacer pantallas de empiezo y fin en Game Lab, además de reiniciar el juego desde la pantalla final.
+
+        Presiona correr para jugar el juego a la izquierda. Sigue las instrucciones en la pantalla de empiezo para jugar. Una vez que el juego esté terminado, Sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la siguiente burbuja, verás el código para el juego y vas a empezar a añadir tu propio pantallas de empiezo y pantallas finales.
+
+        ## Pantalla de Empiezo
+
+        La pantalla de empiezo es la pantalla introductoria que aparece antes de que el jugador empiece a jugar. Generalmente hay un título del juego y algunas instrucciones básicas de cómo jugar. También puede que incluya el constructor del juego.
+
+        ## Pantalla Final
+
+        La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
       HOC 2018 Level_1: Necesitarás suministros para el viaje. Consigue un **barco**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).

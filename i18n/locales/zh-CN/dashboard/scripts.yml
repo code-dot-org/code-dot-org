@@ -11985,6 +11985,7 @@ zh-CN:
               name: 项目 - 决定制作者应用 第 3 部分
             'Lesson 15: Assessment Day':
               name: '单元 15：评估日'
+          title: 计算机科学原理第 4 单元 - 变量，条件和函数 ('20-'21)
         csp5-2020:
           stages:
             Lists Explore:
@@ -12027,6 +12028,7 @@ zh-CN:
               name: 第 5 单元学生问卷
             Unit 5 TEACHER Survey:
               name: 第 5 单元教师问卷
+          title: 列表、循环和遍历
         csp7-2020:
           stages:
             Parameters and Return Explore:
@@ -12057,3 +12059,7 @@ zh-CN:
               name: 第 7 单元教师问卷
             Variables Make Demo:
               name: 变量制作演示
+        csp9-pilot:
+          stages:
+            new stage:
+              name: 新的阶段

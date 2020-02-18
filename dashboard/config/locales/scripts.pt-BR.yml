@@ -2555,9 +2555,8 @@ pt-BR:
             Participate in a longitudinal study!:
               name: Participe de um estudo longitudinal!
             "[Deprecated - teacher cannot see results] CSP Culminating Assessment":
-              name: |2-
-
-                [Preterido - o professor não pode ver resultados] CSP Culminating Assessment
+              name: "[Preterido - o professor não pode ver resultados] CSP Avaliação
+                Culminante"
             'NOTE: Deprecated - teacher cannot see results. CSP Culminating Assessment':
               name: |2-
 
@@ -3341,9 +3340,7 @@ pt-BR:
             Shapes and Randomization:
               name: Formas e Randomização
             CS Discoveries End of Semester Survey:
-              name: |2-
-
-                 CS Discoveries - Pesquisa de fim de semestre
+              name: CS Discoveries - Pesquisa de fim de semestre
             CSD Post-Course Survey:
               name: Pesquisa Pós-Curso CSD
         grade2:
@@ -6864,9 +6861,8 @@ pt-BR:
           stages:
             new stage:
               name: nova fase
-          description_short: |2-
-
-            Versão alternativa da Unidade 3 do CSP para o grupo experimental A.
+          description_short: Versão alternativa da Unidade 3 do CSP para o grupo experimental
+            A.
           description: Esta unidade apresenta os conceitos fundamentais de programação
             de computadores para estudantes do grupo de sub objetivos A.
         new-express:
@@ -6884,9 +6880,7 @@ pt-BR:
             Loops in Artist:
               name: Laços no Artista
             Nested Loops Project in Frozen:
-              name: |2-
-
-                Projeto de Loops Aninhados em Frozen
+              name: Projeto de Loops Aninhados em Frozen
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
@@ -7109,45 +7103,28 @@ pt-BR:
         subgoals-assessment-staging:
           stages:
             subgoal assessments:
-              name: avaliações sub-objetivo
+              name: estimativas sub-objetivas
             lg by itself:
-              name: |2-
-
-                LG por si só
+              name: lg por si só
             test of single level lg:
-              name: |2-
-
-                teste de nível único lg
+              name: teste de nível único lg
             submittable question at end of lessson:
-              name: |2-
-
-                pergunta submetível no final da lição
+              name: pergunta submissível no final da lição
             all assessment items as standalone assessment levels:
               name: todos os itens de avaliação como níveis de avaliação independentes
             all assessment items clustered in levelgroup:
-              name: |2-
-
-                todos os itens de avaliação agrupados no levelgroup
+              name: todos os itens de avaliação agrupados no levelgroup
             submittable if last assessment item:
-              name: |2-
-
-                se submetido o último item de avaliação
+              name: submetido se o último item de avaliação
             assessment sandwiched between app lab levels:
-              name: |2-
-
-                avaliação  entre os níveis do laboratório de aplicativos
+              name: avaliação encaixada entre os níveis do laboratório de aplicativos
             all assessment items clustered in levelgroup as a single "test":
-              name: |2-
-
-                todos os itens de avaliação agrupados no levelgroup como um único "teste"
+              name: todos os itens de avaliação agrupados no levelgroup como um único
+                "teste"
             dummy:
-              name: |2-
-
-                manequim
+              name: manequim
             CSP 3 updates staging ground:
-              name: |2-
-
-                Atualizações do CSP 3
+              name: Atualizações do CSP 3
         hocali:
           stages:
             new stage:
@@ -7193,7 +7170,7 @@ pt-BR:
               name: Improvizando e Interagindo
             App Presentation:
               name: Apresentação de aplicativos
-          title: "(DEPRECATED) Unidade CSD 4 - O Processo de Design"
+          title: "(DESCONTINUADO) Unidade CSD 4 - O Processo de Design"
           description_short: 2016/17 Versão beta da CSD Unidade 4
         csp3-staging:
           stages:
@@ -7219,15 +7196,11 @@ pt-BR:
               name: Tarefa para prática - Projete uma cena digital
             Unit 3 Chapter 1 Assessment:
               name: Unidade 3 Capítulo 1 Avaliação
-          title: |2-
-
-            CSP 3 Alterações propostas no campo de armazenamento temporário
-          description_short: |2-
-
-            Campo temporário de preparação para alterações de outubro no csp3
-          description: |2-
-
-            Esta é uma réplica de níveis ao vivo em / s / csp3 com estágios novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.
+          title: CSP 3 Alterações propostas no campo de armazenamento temporário
+          description_short: Campo temporário de preparação para alterações de outubro
+            no csp3
+          description: "Esta é uma réplica de níveis ao vivo em / s/ csp3 com estágios
+            novos e modificados adicionados. NÃO EDITE NÍVEIS AO VIVO.\r\n"
         pwc:
           stages:
             new stage:
@@ -7237,9 +7210,7 @@ pt-BR:
             'Technology Foundations: What is a Computer?':
               name: Fundamentos de tecnologia - o que é um computador?
             'Data Science: Problem Solving with Big Data':
-              name: |2-
-
-                Ciência de dados: solução de problemas com big data
+              name: 'Ciência de dados: Solução de problemas com Big data'
             Personal Innovations:
               name: Inovações Pessoais
             What is a Computer?:
@@ -7267,9 +7238,7 @@ pt-BR:
               name: Design inteligente de roupas
             Intro to App Lab (13+):
               name: Introdução ao Laboratório de Apps (13+)
-          title: |2-
-
-            Currículo da PwC Acesse seu potencial
+          title: Currículo da PwC Acesse seu potencial
           description: Na PwC, acreditamos que todos os alunos têm o potencial de
             serem os líderes de amanhã e a força de trabalho orientada pela tecnologia.
             Acessar seu potencial é nosso compromisso para ajudar a diminuir a lacuna
@@ -7347,9 +7316,15 @@ pt-BR:
               name: 'Configuração: Portfólio Digital e Outras Ferramentas'
             Post-Course Survey:
               name: Pesquisa Pós-Curso
-          title: |2-
-
-            Explorar - Preparação de tarefas de desempenho do AP ('17 -'18)
+          title: Explorar - Preparação de tarefas de desempenho do AP ('17 -'18)
+          description: "\nEstas lições estão aqui para ajudá-lo a entender, se preparar
+            e executar a tarefa de exploração do desempenho do AP. Cada \"lição\"
+            contém links para documentos úteis pelos quais seu professor pode ajudá-lo.
+            \nNOTA: o segundo item da primeira lição não está diretamente relacionado
+            ao Explore PT, mas abrange as configurações e ferramentas técnicas gerais
+            necessárias para executar vários elementos das tarefas Explorar e Criar.\n\\
+            r\nEsta unidade foi atualizada pela última vez em novembro de 2017.\nLeia
+            mais sobre atualizações de currículo em forum.code.org/c/csp/updates."
         csp-create-2017:
           stages:
             Tech Setup - Your AP Digital Portfolio and Other Tools:
@@ -7362,14 +7337,31 @@ pt-BR:
               name: Criar PT - Complete a Tarefa
             Post-Course Survey:
               name: Pesquisa Pós-Curso
+          title: Criar - Preparação da tarefa de desempenho do AP ('17 -'18)
+          description: "\nEstas lições estão aqui para ajudá-lo a entender, preparar
+            e executar a tarefa de criação de desempenho do AP. Cada \"lição\" contém
+            links para documentos úteis pelos quais seu professor pode ajudá-lo. \nNOTA:
+            o primeiro item da primeira lição não está diretamente relacionado ao
+            Criar PT, mas abrange a configuração e as ferramentas gerais de tecnologia
+            necessárias para executar vários elementos das tarefas Explorar e Criar.\n\\
+            r\nEsta unidade foi atualizada pela última vez em dezembro de 2017. \nLeia
+            mais sobre atualizações de currículo em forum.code.org/c/csp/updates."
         csp3-reovery:
           stages:
             Under the sea recovery:
               name: Recuperação sob o mar
+          title: |2-
+
+            csp3 sob o mar -  recuperação do trabalho do estudante
         csp3-recovery:
           stages:
             Under the sea recovery:
               name: Recuperação sob o mar
+            standalone template:
+              name: modelo autônomo
+          title: |2-
+
+            Csp3 sob o mar -  recuperação do trabalho do estudante
         aws-demo:
           stages:
             new stage:
@@ -7383,9 +7375,9 @@ pt-BR:
           stages:
             special valentine:
               name: namorado especial
-          description_short: |2-
-
-            Divirta-se criando dia dos namorados
+            Valentine Puzzles:
+              name: Quebra-cabeças Valentine
+          description_short: Divirta-se criando dia dos namorados
         colehoc17:
           stages:
             new stage:
@@ -7421,7 +7413,7 @@ pt-BR:
             'Functions: Songwriting':
               name: 'Funções: Composição musical'
             MINECRAFT STAGE GOES HERE:
-              name: Estágio MINECRAFT começar aqui
+              name: Estágio MINECRAFT vai aqui
             Functions in Artist:
               name: Funções no Artista
             Functions in Bee:
@@ -7540,13 +7532,9 @@ pt-BR:
         unembeddedlevels:
           stages:
             CSD U3 Plotting Shapes Shape Lab - unembed:
-              name: |2-
-
-                Laboratório de formas de plotagem CSD U3 - sem montagem
+              name: Laboratório de formas de plotagem CSD U3 - sem montagem
             CSD U3 Entertainment Sample 1 - unembed:
-              name: |2-
-
-                CSD U3 - Amostra 1 de entretenimento  - sem montagem
+              name: CSD U3 Amostra 1 de entretenimento - sem montagem
             Only Stage:
               name: Somente fases
           title: Níveis não integrados
@@ -7602,9 +7590,7 @@ pt-BR:
             Project - Design a Game:
               name: Projeto - Projetar um Jogo
             CS Discoveries End of Semester Survey:
-              name: |2-
-
-                 CS Discoveries - Pesquisa de fim de semestre
+              name: CS Discoveries - Pesquisa de fim de semestre
           title: CSD Unidade 3 - Animações e Jogos
           description_short: Programação
           description: " Na Unidade 3, você aproveitará sua experiência de codificação
@@ -7892,9 +7878,7 @@ pt-BR:
                 Depois de incorporar o feedback dos colegas, a turma compartilha os
                 jogos concluídos.
             CS Discoveries End of Semester Survey:
-              name: |2-
-
-                 CS Discoveries - Pesquisa de fim de semestre
+              name: CS Discoveries - Pesquisa de fim de semestre
         csd2-2018:
           stages:
             Exploring Websites:
@@ -8094,9 +8078,7 @@ pt-BR:
             Nested Loops:
               name: Laços aninhados
             Nested Loops Project in Frozen:
-              name: |2-
-
-                Projeto de Loops Aninhados em Frozen
+              name: Projeto de Loops Aninhados em Frozen
             'How it Works: The Internet':
               name: 'Como Isto Funciona: A Internet'
             'Common Sense Education: Digital Citizenship':
@@ -10224,9 +10206,7 @@ pt-BR:
                 Depois de incorporar o feedback dos colegas, a turma compartilha os
                 jogos concluídos.
             CS Discoveries End of Semester Survey:
-              name: |2-
-
-                 CS Discoveries - Pesquisa de fim de semestre
+              name: CS Discoveries - Pesquisa de fim de semestre
             Post-Project Test:
               name: Teste pós-projeto
         csd4-2019:
@@ -11517,9 +11497,7 @@ pt-BR:
             Nested Loops:
               name: Laços aninhados
             Nested Loops Project in Frozen:
-              name: |2-
-
-                Projeto de Loops Aninhados em Frozen
+              name: Projeto de Loops Aninhados em Frozen
             Events in Star Wars:
               name: Eventos em Guerra nas Estrelas
             Introduction to Debugging:
@@ -11833,3 +11811,7 @@ pt-BR:
               name: Prática de Funções
             Functions Make:
               name: Criar Funções
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nova fase
