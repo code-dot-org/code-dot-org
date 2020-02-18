@@ -616,6 +616,25 @@ hu-HU:
       MC_HOC_2017_FP20x20_2019:
         MC_HOC_2017_13_Cole_a: Próbálj az Agenttel hidakat építtetni, hogy Alex vagy
           Steve túl tudjanak jutni a térkép szélein.
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_b: Nem kell ciklust használnod, ha csak
+          egyszer akarsz valamit végrehajtani.
+      course1_maze_seq_challenge1:
+        courseA_maze_seq_challenge2_a: Próbáld megszámolni az ujjaiddal a lépéseket.
+          Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Próbálj meg elindulni nyugatra.
+      course2_artist_prog_challenge2:
+        courseC_artist_prog_challenge2_a: "Tegyél blokkokat a ciklusba, hogy többször
+          végrehajtsa. Próbáld ki! <xml>\n  \n          <block type=\"controls_repeat\">\n
+          \           <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n
+          \             <block type=\"draw_move_by_constant_dropdown\">\n                <title
+          name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block
+          type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n
+          \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
+          \                 </block>\n                </next>\n              </block>\n
+          \             </statement></block></xml>"
       course3_bee_debugging_challenge1:
         courseD_bee_debugging_challenge1_a: Ennek a programnak miért csak az első
           fele működik? Gondolkodj el rajta, miért kell a méhnek hátrafelé mozognia.
@@ -686,10 +705,452 @@ hu-HU:
           </xml>
       course3_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
+      courseA_artist_loops2:
+        courseA_artist_loops2_a: Nem jössz rá, hogyan rajzolj vonalat? Próbáld csatlakoztatni
+          a blokkot a <xml><block type="when_run"/></xml>  blokkhoz, és nézd meg,
+          mi történik.
+        courseA_artist_loops2_b: Használd a <xml><block type="simple_move_right"/></xml>
+          blokkot, hogy megoldd a feladványt.
+      courseA_artist_loops2_2018:
+        courseA_artist_loops2_a: Nem jössz rá, hogyan rajzolj vonalat? Próbáld csatlakoztatni
+          a blokkot a <xml><block type="when_run"/></xml>  blokkhoz, és nézd meg,
+          mi történik.
+        courseA_artist_loops2_b: Használd a <xml><block type="simple_move_right"/></xml>
+          blokkot, hogy megoldd a feladványt.
+      courseA_artist_loops2_2019:
+        courseA_artist_loops2_a: Nem jössz rá, hogyan rajzolj vonalat? Próbáld csatlakoztatni
+          a blokkot a <xml><block type="when_run"/></xml>  blokkhoz, és nézd meg,
+          mi történik.
+        courseA_artist_loops2_b: Használd a <xml><block type="simple_move_right"/></xml>
+          blokkot, hogy megoldd a feladványt.
+      courseA_artist_loops3:
+        courseA_artist_loops3_a: Kövesd az ujjaddal a programot, hogy lásd, hol a
+          hiba.
+        courseA_artist_loops3_b: |-
+          Ilyen blokkot használj, hogy megoldd ezt a feladványt.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2018:
+        courseA_artist_loops3_a: Kövesd az ujjaddal a programot, hogy lásd, hol a
+          hiba.
+        courseA_artist_loops3_b: |-
+          Ilyen blokkot használj, hogy megoldd ezt a feladványt.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_artist_loops3_2019:
+        courseA_artist_loops3_a: Kövesd az ujjaddal a programot, hogy lásd, hol a
+          hiba.
+        courseA_artist_loops3_b: |-
+          Ilyen blokkot használj, hogy megoldd ezt a feladványt.
+
+          ![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)
+      courseA_collector_loops1:
+        courseA_collector_loops1_a: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        courseA_collector_loops1_b: Egy egyszerű megoldás lehet, ha keletre mész 2-szer,
+          aztán felveszed a kincset.
+      courseA_collector_loops1_2018:
+        courseA_collector_loops1_a: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        courseA_collector_loops1_b: Egy egyszerű megoldás lehet, ha keletre mész 2-szer,
+          aztán felveszed a kincset.
+      courseA_collector_loops1_2019:
+        courseA_collector_loops1_a: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        courseA_collector_loops1_b: Egy egyszerű megoldás lehet, ha keletre mész 2-szer,
+          aztán felveszed a kincset.
+      courseA_collector_loops2:
+        courseA_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+        courseA_collector_loops2_b: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2018:
+        courseA_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+        courseA_collector_loops2_b: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops2_2019:
+        courseA_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+        courseA_collector_loops2_b: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+      courseA_collector_loops3:
+        courseA_collector_loops3_a: Próbálj használni egy <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust!
+        courseA_collector_loops3_b: Emlékezz rá, hogy egynél több blokkot is tehetsz
+          egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> ciklusba.
+      courseA_collector_loops3_2018:
+        courseA_collector_loops3_a: Próbálj használni egy <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust!
+        courseA_collector_loops3_b: Emlékezz rá, hogy egynél több blokkot is tehetsz
+          egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> ciklusba.
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: |-
           Próbáld ezt használni
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> ciklus!
+        courseA_collector_loops3_b: Emlékezz rá, hogy egynél több blokkot is tehetsz
+          egy <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES"
+          config="3-10">???</title></block></xml> ciklusba.
+      courseA_collector_loops4:
+        courseA_collector_loops4_a: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
+        courseA_collector_loops4_b: Ne felejtsd el, hogy Laurelnek lefelé kell sétálnia,
+          és be kell gyűjtenie a kincset, miután befejezte a <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust!
+      courseA_collector_loops4_2018:
+        courseA_collector_loops4_a: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
+        courseA_collector_loops4_b: Ne felejtsd el, hogy Laurelnek lefelé kell sétálnia,
+          és be kell gyűjtenie a kincset, miután befejezte a <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust!
+      courseA_collector_loops4_2019:
+        courseA_collector_loops4_a: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
+        courseA_collector_loops4_b: Ne felejtsd el, hogy Laurelnek lefelé kell sétálnia,
+          és be kell gyűjtenie a kincset, miután befejezte a <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust!
+      courseA_collector_loops5:
+        courseA_collector_loops5_a: Ha nem tudod kitalálni, mi a helyes út, próbálj
+          használni egy darab papírt, hogy kitaláld, melyik nyilakra lesz szükséged
+          a megoldáshoz.
+        courseA_collector_loops5_b: Próbáld két részre osztani a feladványt, először
+          oldalra, aztán lefelé mozogva.
+        courseA_collector_loops5_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklussal kezdd, hogy
+          Laurel nyugat felé mozduljon és összegyűjtse a kincset.
+      courseA_collector_loops5_2018:
+        courseA_collector_loops5_a: Ha nem tudod kitalálni, mi a helyes út, próbálj
+          használni egy darab papírt, hogy kitaláld, melyik nyilakra lesz szükséged
+          a megoldáshoz.
+        courseA_collector_loops5_b: Próbáld két részre osztani a feladványt, először
+          oldalra, aztán lefelé mozogva.
+        courseA_collector_loops5_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklussal kezdd, hogy
+          Laurel nyugat felé mozduljon és összegyűjtse a kincset.
+      courseA_collector_loops5_2019:
+        courseA_collector_loops5_a: Ha nem tudod kitalálni, mi a helyes út, próbálj
+          használni egy darab papírt, hogy kitaláld, melyik nyilakra lesz szükséged
+          a megoldáshoz.
+        courseA_collector_loops5_b: Próbáld két részre osztani a feladványt, először
+          oldalra, aztán lefelé mozogva.
+        courseA_collector_loops5_c: <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklussal kezdd, hogy
+          Laurel nyugat felé mozduljon és összegyűjtse a kincset.
+      courseA_collector_loops6:
+        courseA_collector_loops6_a: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+        courseA_collector_loops6_b: A legrövidebb megoldásban 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklus van, egyik a
+          másik után.
+      courseA_collector_loops6_2018:
+        courseA_collector_loops6_a: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+        courseA_collector_loops6_b: A legrövidebb megoldásban 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklus van, egyik a
+          másik után.
+      courseA_collector_loops6_2019:
+        courseA_collector_loops6_a: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+        courseA_collector_loops6_b: A legrövidebb megoldásban 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklus van, egyik a
+          másik után.
+      courseA_collector_loops7:
+        courseA_collector_loops7_a: Ha nem tudod kitalálni, mi jön ezután, próbáld
+          meg futtatni a kódot, hogy lásd, meddig jut el Laurel.
+      courseA_collector_loops7_2018:
+        courseA_collector_loops7_a: Ha nem tudod kitalálni, mi jön ezután, próbáld
+          meg futtatni a kódot, hogy lásd, meddig jut el Laurel.
+      courseA_collector_loops7_2019:
+        courseA_collector_loops7_a: Ha nem tudod kitalálni, mi jön ezután, próbáld
+          meg futtatni a kódot, hogy lásd, meddig jut el Laurel.
+      courseA_collector_loops8:
+        courseA_collector_loops8_a: Ha problémád van, hogy kitaláld a megoldást, próbáld
+          meg leírni a mozdulatokat egy darab papírra és találd meg a mintát.
+        courseA_collector_loops8_b: Próbáld 3 részre osztani ezt a feladványt, és
+          mindegyikhez írj egy ciklust.
+        courseA_collector_loops8_c: Emlékezz arra, hogy a kód egy darabját is elkészítheted,
+          aztán nyomd meg a "Futtatás" gombot, hogy kitaláld, hogyan is kell tovább
+          lépned.
+      courseA_collector_loops8_2018:
+        courseA_collector_loops8_a: Ha problémád van, hogy kitaláld a megoldást, próbáld
+          meg leírni a mozdulatokat egy darab papírra és találd meg a mintát.
+        courseA_collector_loops8_b: Próbáld 3 részre osztani ezt a feladványt, és
+          mindegyikhez írj egy ciklust.
+        courseA_collector_loops8_c: Emlékezz arra, hogy a kód egy darabját is elkészítheted,
+          aztán nyomd meg a "Futtatás" gombot, hogy kitaláld, hogyan is kell tovább
+          lépned.
+      courseA_collector_loops8_2019:
+        courseA_collector_loops8_a: Ha problémád van, hogy kitaláld a megoldást, próbáld
+          meg leírni a mozdulatokat egy darab papírra és találd meg a mintát.
+        courseA_collector_loops8_b: Próbáld 3 részre osztani ezt a feladványt, és
+          mindegyikhez írj egy ciklust.
+        courseA_collector_loops8_c: Emlékezz arra, hogy a kód egy darabját is elkészítheted,
+          aztán nyomd meg a "Futtatás" gombot, hogy kitaláld, hogyan is kell tovább
+          lépned.
+      courseA_collector_loops9:
+        courseA_collector_loops9_a: 'Ha nem jössz rá elsőre, hogy hol használj ciklusokat,
+          próbáld meg lépésről-lépésre, és látni fogod az ismétlődést. '
+        courseA_collector_loops9_b: Próbálj tenni 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust egy másik ciklusba,
+          ezzel le tudod rövidíteni a kódodat!
+      courseA_collector_loops9_2018:
+        courseA_collector_loops9_a: 'Ha nem jössz rá elsőre, hogy hol használj ciklusokat,
+          próbáld meg lépésről-lépésre, és látni fogod az ismétlődést. '
+        courseA_collector_loops9_b: Próbálj tenni 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust egy másik ciklusba,
+          ezzel le tudod rövidíteni a kódodat!
+      courseA_collector_loops9_2019:
+        courseA_collector_loops9_a: 'Ha nem jössz rá elsőre, hogy hol használj ciklusokat,
+          próbáld meg lépésről-lépésre, és látni fogod az ismétlődést. '
+        courseA_collector_loops9_b: Próbálj tenni 2 <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ciklust egy másik ciklusba,
+          ezzel le tudod rövidíteni a kódodat!
+      courseA_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Próbáld megváltoztatni a számot minden
+          ciklusban, ha valami hibásnak tűnik.
+        courseA_collector_loops_challenge1_b: Nem kell ciklust használnod, ha csak
+          egyszer akarsz valamit végrehajtani.
+        courseA_collector_loops_challenge1_c: Kezdetben 6 gyémánt van a barlang jobb
+          oldalán, de amikor majd elindulsz dél felé, csak ötöt kell összegyűjtened.
+          Tudod, hogy miért?
+        courseA_collector_loops_challenge1_d: |-
+          A kezdésként megadott program az utolsó 2 gyémántot nem gyűjti be. Próbáld hozzáadni a kód legvégéhez ezt:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2018:
+        courseA_collector_loops_challenge1_a: Próbáld megváltoztatni a számot minden
+          ciklusban, ha valami hibásnak tűnik.
+        courseA_collector_loops_challenge1_b: Nem kell ciklust használnod, ha csak
+          egyszer akarsz valamit végrehajtani.
+        courseA_collector_loops_challenge1_c: Kezdetben 6 gyémánt van a barlang jobb
+          oldalán, de amikor majd elindulsz dél felé, csak ötöt kell összegyűjtened.
+          Tudod, hogy miért?
+        courseA_collector_loops_challenge1_d: |-
+          A kezdésként megadott program az utolsó 2 gyémántot nem gyűjti be. Próbáld hozzáadni a kód legvégéhez ezt:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge1_2019:
+        courseA_collector_loops_challenge1_a: Próbáld megváltoztatni a számot minden
+          ciklusban, ha valami hibásnak tűnik.
+        courseA_collector_loops_challenge1_b: Nem kell ciklust használnod, ha csak
+          egyszer akarsz valamit végrehajtani.
+        courseA_collector_loops_challenge1_c: Kezdetben 6 gyémánt van a barlang jobb
+          oldalán, de amikor majd elindulsz dél felé, csak ötöt kell összegyűjtened.
+          Tudod, hogy miért?
+        courseA_collector_loops_challenge1_d: |-
+          A kezdésként megadott program az utolsó 2 gyémántot nem gyűjti be. Próbáld hozzáadni a kód legvégéhez ezt:
+
+          <xml><block type="maze_moveEast">
+                                  <next>
+                                    <block type="collector_collect_simplified">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="collector_collect"/>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block></xml>
+      courseA_collector_loops_challenge2kp:
+        courseA_collector_loops_challenge2kp_b: Próbáld meg ezt az utat bejárni.
+        courseA_collector_loops_challenge2kp_a: Tudsz ciklust használni, hogy megoldd
+          ezt a feladványt?
+      courseA_collector_loops_challenge2kp_2018:
+        courseA_collector_loops_challenge2kp_b: Próbáld meg ezt az utat bejárni.
+        courseA_collector_loops_challenge2kp_a: Tudsz ciklust használni, hogy megoldd
+          ezt a feladványt?
+      courseA_collector_loops_challenge2kp_2019:
+        courseA_collector_loops_challenge2kp_b: Próbáld meg ezt az utat bejárni.
+        courseA_collector_loops_challenge2kp_a: Tudsz ciklust használni, hogy megoldd
+          ezt a feladványt?
+      courseA_collector_preLoops7:
+        courseA_collector_loops2_b: "Miután egy olyan területre értél, ahol kincs
+          van, használd ezt a blokkot, hogy felvedd a kincset. \n\n<xml>  <block type=\"collector_collect\"/></xml>"
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_a: Ha elakadnál, próbáld meg 2 részben megoldani
+          a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_a: Ha elakadnál, próbáld meg 2 részben megoldani
+          a feladványt, az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_b: Próbáld leírni a lépéseket papírra, hogy megtaláld
+          a megoldást!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_b: Próbáld leírni a lépéseket papírra, hogy megtaláld
+          a megoldást!
+      courseA_maze_seq1:
+        courseA_maze_seq1_a: |-
+          Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>
+            <block type="when_run"/>
+          </xml> alatt
+        courseA_maze_seq1_b: |-
+          A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq10:
+        courseA_maze_seq10_a: Ha problémád lenne, először próbáld meg leírni a lépéseket
+          egy darab papírra.
+        courseA_maze_seq10_b: 3 különböző irányba kell menned, hogy megoldd ezt a
+          feladványt.
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_a: Ha problémád lenne, először próbáld meg leírni a lépéseket
+          egy darab papírra.
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_a: Ha problémád lenne, először próbáld meg leírni a lépéseket
+          egy darab papírra.
+      courseA_maze_seq13:
+        courseA_maze_seq13_a: Ha nem tiszta az út előtted, használd az ujjaidat, hogy
+          megszámold, hány lépésből juthat el a madár a malacig.
+        courseA_maze_seq13_b: Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni,
+          és futtasd a kódot, hogy lásd, mi történik.
+        courseA_maze_seq13_c: A <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> blokkok segíteni fognak, hogy közelebb kerül
+          a malachoz.
+      courseA_maze_seq13_2018:
+        courseA_maze_seq13_a: Ha nem tiszta az út előtted, használd az ujjaidat, hogy
+          megszámold, hány lépésből juthat el a madár a malacig.
+        courseA_maze_seq13_b: Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni,
+          és futtasd a kódot, hogy lásd, mi történik.
+        courseA_maze_seq13_c: A <xml><block type="maze_moveNorth"/></xml><xml><block
+          type="maze_moveEast"/></xml> blokkok segíteni fognak, hogy közelebb kerül
+          a malachoz.
+      courseA_maze_seq13_2019:
+        courseA_maze_seq13_a: Ha nem tiszta az út előtted, használd az ujjaidat, hogy
+          megszámold, hány lépésből juthat el a madár a malacig.
+        courseA_maze_seq13_b: Ne félj attól, hogy hibázol! Próbálj blokkokat hozzáadni,
+          és futtasd a kódot, hogy lásd, mi történik.
+      courseA_maze_seq1_2018:
+        courseA_maze_seq1_a: |-
+          Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>
+            <block type="when_run"/>
+          </xml> alatt
+        courseA_maze_seq1_b: |-
+          A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq1_2019:
+        courseA_maze_seq1_a: |-
+          Ha nem mozdul a madár, ellenőrizd, hogy minden blokkot a helyére csatoltál-e a <xml>
+            <block type="when_run"/>
+          </xml> alatt
+        courseA_maze_seq1_b: |-
+          A madárnak 3 lépést kell tennie nyugat felé, hogy elkapja a malacot. Használd ezt a blokkot:
+
+          <xml><block type="maze_moveWest"/></xml>
+      courseA_maze_seq2:
+        courseA_maze_seq2_a: Ebből a programból hiányzik 1 blokk. Ki tudod találni,
+          hogy melyik az?
+        courseA_maze_seq2_b: Először próbáld futtatni a kódot. hogy lásd, meddig jut
+          a madár. Hová kell menned innen?
+      courseA_maze_seq3:
+        courseA_maze_seq3_a: A blokkok közül 1 rossz irányba küldi a madarat. Kitalálod,
+          hogy melyik az, és ki tudod cserélni a megfelelő blokkal?
+        courseA_maze_seq3_b: Próbáld a lépés gomb segítségével megtalálni, hogy hol
+          romlik el a program. Az első lépésnél? Vagy a másodiknál?
+        courseA_maze_seq3_c: A <xml><block type="maze_moveNorth"/></xml> blokk úgy
+          tűnik, nem jó irányba mozdítja el a madarat. Le tudod cserélni egy másik
+          blokkra?
+      courseA_maze_seq4:
+        courseA_maze_seq4_a: Ha elakadnál, próbáld meg kitalálni, hogy merre is kellene
+          menni, és távolítsd el azt a blokkot, ami a hibát okozza.
+        courseA_maze_seq4_b: Próbáld meg futtatni a kódot úgy, ahogy van. Van vele
+          probléma? Melyik blokkot tudod eltávolítani? Hogyan tudnád megjavítani?
+      courseA_maze_seq5:
+        courseA_maze_seq5_a: Próbáld leírni a lépéseket papírra, hogy megtaláld a
+          megoldást!
+        courseA_maze_seq5_b: 2 blokkra van szükséged, ami 2 irányba mutat.
+      courseA_maze_seq5_2018:
+        '1': Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!
+      courseA_maze_seq5_2019:
+        '1': Próbáld leírni a lépéseket papírra, hogy megtaláld a megoldást!
+      courseA_maze_seq6:
+        courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
+        courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
+          az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_maze_seq6_2018:
+        courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
+        courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
+          az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_maze_seq6_2019:
+        courseA_maze_seq6_a: A végső kódodnak 3 mozgásos blokkból kell állnia.
+        courseA_maze_seq6_b: Ha elakadnál, próbáld meg 2 részben megoldani a feladványt,
+          az első rész a sarokig tart, a második a saroknál kezdődik.
+      courseA_maze_seq7:
+        courseA_maze_seq7_a: Van 1 blokk, amit hozzá kell adnod, hogy a madár eljusson
+          a malacig.
+        courseA_maze_seq7_b: Ha nem tudod kitalálni, mit kell tenned, próbáld meg
+          lerajzolni a feladványt papírra, és használd az ujjaidat, hogy megtaláld,
+          merre is kell menned.
+      courseA_maze_seq8:
+        courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
+          hogy lásd, a madárnak merre is kellene mennie.
+      courseA_maze_seq8_2018:
+        courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
+          hogy lásd, a madárnak merre is kellene mennie.
+      courseA_maze_seq8_2019:
+        courseA_maze_seq8_a: Ha elakadtál, próbáld meg lerajzolni a képet egy lapra,
+          hogy lásd, a madárnak merre is kellene mennie.
+      courseA_maze_seq9:
+        courseA_maze_seq9_a: Elakadtál? Próbáld megtervezni a madár útját az ujjaddal.
+        courseA_maze_seq9_b: Ha nem tudod, mit tegyél, nyomd meg az "újrakezdés" gombot,
+          aztán futtasd a kódot, hogy lásd, hol is romlik el.
+        courseA_maze_seq9_c: 3 különböző irányba kell haladnod, hogy megoldd ezt a
+          feladványt.
+      courseA_maze_seq_challenge1:
+        courseA_maze_seq_challenge1_a: Két megoldása van ennek a feladványnak.
+      courseA_maze_seq_challenge1_2018:
+        courseA_maze_seq_challenge1_a: Két megoldása van ennek a feladványnak.
+      courseA_maze_seq_challenge1_2019:
+        courseA_maze_seq_challenge1_a: Két megoldása van ennek a feladványnak.
+      courseA_maze_seq_challenge2:
+        courseA_maze_seq_challenge2_a: Próbáld megszámolni az ujjaiddal a lépéseket.
+          Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!
+      courseA_maze_seq_challenge2_2018:
+        courseA_maze_seq_challenge2_a: Próbáld megszámolni az ujjaiddal a lépéseket.
+          Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!
+      courseA_maze_seq_challenge2_2019:
+        courseA_maze_seq_challenge2_a: Próbáld megszámolni az ujjaiddal a lépéseket.
+          Emlékezz rá, hogy az a hely, ahol állsz, nem számít a lépések közé!
+      courseB_collector_loops2:
+        courseB_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+      courseB_collector_loops2_2018:
+        courseB_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+      courseB_collector_loops2_2019:
+        courseB_collector_loops2_a: El kell mozdulnod, mielőtt kincset gyűjtenél.
+      courseB_collector_loops4:
+        courseB_collector_loops4_b: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
+      courseB_collector_loops4_2018:
+        courseB_collector_loops4_b: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
+      courseB_collector_loops4_2019:
+        courseB_collector_loops4_b: Ha ki akarod javítani, hogy Laurel meddig jusson
+          el, cseréld ki az ciklusban a számot.
       courseB_iceage_loops3_2019:
         courseB_iceage_loops3_a: |-
           Használd ezt az új blokkot!
@@ -763,6 +1224,24 @@ hu-HU:
         courseC_collector_prog4_b: Ne aggódj, hogy hibázol! Adj újabb blokkokat, és
           futtasd a kódot, hogy lásd, mi történik. Még akkor is hasznos ez a módszer,
           ha még nem oldottad meg teljesen a feladatot.
+      courseC_maze_debugging2:
+        courseC_maze_debugging2_c: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+      courseC_maze_debugging2_2018:
+        courseC_maze_debugging2_c: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+      courseC_maze_debugging2_2019:
+        courseC_maze_debugging2_c: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+      courseC_maze_debugging3:
+        courseC_maze_debugging3_b: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+      courseC_maze_debugging3_2018:
+        courseC_maze_debugging3_b: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
+      courseC_maze_debugging3_2019:
+        courseC_maze_debugging3_b: Nem tudsz rájönni, mi a gond? Próbáld futtatni
+          a kódot néhányszor, hogy lásd, mi is történik.
       courseC_maze_debugging_challenge1:
         courseC_maze_debugging_challenge1_a: Balra vagy jobbra? Tőled függ!
         courseC_maze_debugging_challenge1_b: A motkány útvonala valójában egy téglalap!

@@ -928,6 +928,8 @@ ro:
       Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>
     accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica
       de confidenţialitate](%{privacy_url})
+    accept_tos: Prin înregistrarea pe Code.org, îți exprimi acordul față de [Condițiile
+      serviciului](%{tos_url}) și [Politica privind confidențialitatea](%{privacy_url}).
     accept: Accept
     print: Tipărire
     reminder_desc: Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a>

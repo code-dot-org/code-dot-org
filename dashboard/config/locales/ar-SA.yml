@@ -841,6 +841,8 @@ ar:
       و <a href="%{privacy_url}" target="_blank"> سياسة الخصوصية</a> المحدثة
     accept_label_markdown: أوافق على [شروط الخدمة](%{tos_url}) و [سياسة الخصوصية](%{privacy_url})
       المحدثة
+    accept_tos: بتسجيل الدخول إلى موقع Code.org، أنت توافق على [شروط الخدمة] (%{tos_url})،
+      و[سياسة الخصوصية](%{privacy_url}).
     accept: اوافق
     print: طباعة
     reminder_desc: قمنا بتحديث <a href="%{tos_url}" target="_blank">شروط استعمال خدمتنا</a>

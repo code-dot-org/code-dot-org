@@ -533,6 +533,9 @@ ru:
       (для восстановления пароля)
     update: Обновить учетную запись
     account_successfully_updated: Учетная запись успешно обновлена.
+    auth_option_saved: Вы успешно связали свой %{provider} аккаунт при помощи электронной
+      почты %{email}.
+    auth_option_saved_no_email: Вы успешно связали ваш %{provider} аккаунт.
     update_email: Обновить
   user_level:
     completed: Завершено

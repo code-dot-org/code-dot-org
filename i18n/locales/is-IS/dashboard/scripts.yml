@@ -4635,3 +4635,7 @@ is:
           stages:
             new stage:
               name: nýr áfangi
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nýr áfangi

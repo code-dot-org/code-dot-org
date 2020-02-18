@@ -744,6 +744,7 @@ hi:
     privacy_notice: "गोपनीयता नोटिस"
     accept_label: 'मैं <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a> और <a href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> के लिए सहमत हूं।'
     accept_label_markdown: मैं [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url}) के लिए सहमत हूं।
+    accept_tos: Code.org के लिए साइन अप करके, आप हमारी [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url}) के लिए सहमति देते हैं।
     accept: "स्वीकार करें"
     print: "छापें"
     reminder_desc: 'हमने अपनी <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a> और <a href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> का अद्यतन किया है। कृपया उन्हें स्वीकार करने से पहले अच्छी तरह पढ़ लें। ध्यान दें कि अद्यतन की गई शर्तों को स्पष्ट रूप से स्वीकार करने से पहले JavaScript सिखाने वाले हमारे टूल्स आपके छात्रों के लिए उपलब्ध नहीं हो सकते।'
