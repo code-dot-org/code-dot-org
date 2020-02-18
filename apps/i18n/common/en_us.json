@@ -1011,6 +1011,7 @@
   "multipleChoiceQuestionsOverview": "Multiple choice questions overview ({numSubmissions} / {numStudents} students)",
   "multipleChoiceStudentOverview": "Multiple choice questions overview ({studentName})",
   "myCourses": "My Courses",
+  "myLibraries": "My Libraries",
   "myProjects": "My Projects",
   "name": "Name",
   "nameRequired": "Student name (required)",
