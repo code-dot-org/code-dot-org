@@ -129,18 +129,17 @@ class RegionalPartnersController < ApplicationController
 
     mappings, errors = parse_mappings_from_csv(csv)
 
-    if !errors.empty?
-      flash[:upload_error] = parse_upload_errors(errors)
-      redirect_to @regional_partner
-    else
+    if errors.empty?
       ActiveRecord::Base.transaction do
         # use destroy_all to ensure old mappings are soft deleted
         @regional_partner.mappings.destroy_all
         @regional_partner.mappings = mappings
       end
       flash[:notice] = "Successfully replaced mappings"
-      redirect_to @regional_partner
+    else
+      flash[:upload_error] = parse_upload_errors(errors)
     end
+    redirect_to @regional_partner
   end
 
   private

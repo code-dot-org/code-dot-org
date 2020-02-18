@@ -121,7 +121,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     assert_equal '98143', regional_partner_with_mapping.mappings.first.zip_code
   end
 
-  test 'replace mappings fails on invalid non-unique mapping' do
+  test 'replace mappings fails on invalid non-unique zip-code mapping' do
     create :regional_partner_with_mappings
     sign_in @workshop_admin
     mapping = fixture_file_upload('regional_partner_mappings.csv', 'text/csv')
