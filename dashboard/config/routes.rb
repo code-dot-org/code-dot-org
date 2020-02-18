@@ -224,7 +224,7 @@ Dashboard::Application.routes.draw do
   resources :libraries
 
   get 'datasets/manifest', to: 'datasets#show_manifest'
-  post 'datasets/manifest', to: 'datasets#updated_manifest'
+  post 'datasets/manifest', to: 'datasets#update_manifest'
 
   resources :levels do
     member do
