@@ -96,6 +96,7 @@ class StandardsViewHeaderButtons extends Component {
           handleConfirm={this.closeCreateReportDialogAndPrintReport}
           handleClose={this.closeCreateReportDialog}
           onCommentChange={this.onCommentChange}
+          sectionId={this.props.sectionId}
         />
       </div>
     );

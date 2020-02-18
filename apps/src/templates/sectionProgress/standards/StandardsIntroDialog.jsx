@@ -8,6 +8,7 @@ import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
 import {connect} from 'react-redux';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
+import {cstaStandardsURL} from './standardsConstants';
 
 const styles = {
   description: {
@@ -59,16 +60,12 @@ class StandardsIntroDialog extends Component {
       >
         <h2>{i18n.progressOnCSTAStandards()}</h2>
         <div style={styles.description}>
-          <p>
-            {i18n.progressOnCSTAStandardsDescription()}{' '}
-            <a
-              href="https://www.csteachers.org/page/standards"
-              target="_blank"
-              style={styles.boldText}
-            >
-              {i18n.CSTAStandards()}
-            </a>
-          </p>
+          <SafeMarkdown
+            openExternalLinksInNewTab={true}
+            markdown={i18n.progressOnCSTAStandardsDescription({
+              cstaLink: cstaStandardsURL
+            })}
+          />
         </div>
         <div style={styles.description}>
           <p>{i18n.useToView()}</p>
@@ -84,6 +81,7 @@ class StandardsIntroDialog extends Component {
             </li>
           </ul>
         </div>
+        <br />
         <div style={styles.description}>
           <SafeMarkdown markdown={i18n.standardsReminder()} />
         </div>

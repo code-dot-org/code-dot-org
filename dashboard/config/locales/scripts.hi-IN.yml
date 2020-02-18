@@ -18020,3 +18020,7 @@ hi:
               name: पुस्तकालयों की पड़ताल
             Libraries Investigate:
               name: पुस्तकालयों का निरीक्षण
+        csp9-pilot:
+          stages:
+            new stage:
+              name: नया चरण
