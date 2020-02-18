@@ -14435,3 +14435,81 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        csd6-2020:
+          title: CSD Unit 6 - Physical Computing ('19-'20)
+          description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          description_short: Learn to program with physical devices.
+          description_audience: ''
+          stages:
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_student: ''
+              description_teacher: ''
+            Designing Screens with Code:
+              name: Designing Screens with Code
+              description_student: ''
+              description_teacher: ''
+            The Circuit Playground:
+              name: The Circuit Playground
+              description_student: ''
+              description_teacher: ''
+            Input Unplugged:
+              name: Input Unplugged
+              description_student: ''
+              description_teacher: ''
+            Board Events:
+              name: Board Events
+              description_student: ''
+              description_teacher: ''
+            Getting Properties:
+              name: Getting Properties
+              description_student: ''
+              description_teacher: ''
+            Analog Input:
+              name: Analog Input
+              description_student: ''
+              description_teacher: ''
+            The Program Design Process:
+              name: The Program Design Process
+              description_student: ''
+              description_teacher: ''
+            'Project: Make a Game':
+              name: 'Project: Make a Game'
+              description_student: ''
+              description_teacher: ''
+            Arrays and Color LEDs:
+              name: Arrays and Color LEDs
+              description_student: ''
+              description_teacher: ''
+            Making Music:
+              name: Making Music
+              description_student: ''
+              description_teacher: ''
+            Arrays and For Loops:
+              name: Arrays and For Loops
+              description_student: ''
+              description_teacher: ''
+            Accelerometer:
+              name: Accelerometer
+              description_student: ''
+              description_teacher: ''
+            Functions with Parameters:
+              name: Functions with Parameters
+              description_student: ''
+              description_teacher: ''
+            Circuits and Physical Prototypes:
+              name: Circuits and Physical Prototypes
+              description_student: ''
+              description_teacher: ''
+            'Project: Prototype an Innovation':
+              name: 'Project: Prototype an Innovation'
+              description_student: ''
+              description_teacher: ''
+            Post-Project Test:
+              name: Post-Project Test
+              description_student: ''
+              description_teacher: ''
+            CS Discoveries Post Course survey:
+              name: CS Discoveries Post Course survey
+              description_student: ''
+              description_teacher: ''
