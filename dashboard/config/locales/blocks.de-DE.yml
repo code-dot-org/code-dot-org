@@ -916,7 +916,7 @@ de:
             '"left"': links
             '"down"': runter
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"enter"': Eingabetaste
             '"a"': a
             '"b"': b
@@ -1032,7 +1032,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"b"': b
             '"c"': c
@@ -1175,7 +1175,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1198,7 +1198,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1575,7 +1575,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s

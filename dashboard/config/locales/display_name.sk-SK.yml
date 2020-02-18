@@ -2,6 +2,7 @@
 sk-SK:
   data:
     display_name:
+      AB_Debug_Artist1: 'Umelec Odstraňovanie chýb #1 (AB)'
       App Lab Intro 8 - Video Getting Started: 'Video: Začíname'
       App Lab Intro 8 - Video Images and Sounds: 'Video: Obrázky a Zvuky'
       App Lab Intro 8 - Video Make It Interactive: 'Video: Sprav to interaktívne'
@@ -70,6 +71,9 @@ sk-SK:
       CSD U3 Variables Map: Premenné
       CSD U3 Variables Map_2018: Premenné
       CSD U3 Variables Map_2019: Premenné
+      CSD U5 Amazon Data Video_2019: Ako Amazon používa dáta
+      CSD U5 Netflix Data Video_2019: Ako Netflix používa dáta
+      CSD U5 Waze Data Video_2019: Ako Waze používa dáta
       CSD U6 for loop map: Cykly "For"
       CSD U6 for loop map_2018: Cykly "For"
       CSD U6 for loop map_2019: Cykly "For"
@@ -96,6 +100,9 @@ sk-SK:
       Introduction to Variables - Part 1_2018: Predstavenie premenných
       Introduction to Variables - Part 1_2019: Predstavenie premenných
       OPD-K5 WhatIsCS: Čo je informatika?
+      Oceans_Video_Machine_Learning: 'Video: Strojové učenie'
+      Oceans_Video_Societal_Implications: 'Video: Spoločenské následky'
+      Oceans_Video_Training_Data: 'Video: Dáta zo školení'
       courseA_video_Stevie: Stevie a jej veľký projekt
       courseA_video_Stevie_2018: Stevie a jej veľký projekt
       courseB_video_Unspotted: Príbeh o hľadaní chrobákov a chýb
