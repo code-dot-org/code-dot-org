@@ -55,7 +55,7 @@ class CreateStandardsReportStep2 extends Component {
           <li>
             <SafeMarkdown
               openExternalLinksInNewTab={true}
-              markdown={i18n.createStandardsReportSuggestion3({
+              markdown={i18n.createStandardsReportSuggestion4({
                 projectsLink: teacherDashboardUrl(
                   this.props.sectionId,
                   '/projects'
