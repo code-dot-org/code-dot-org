@@ -388,6 +388,18 @@ const reducer = combineReducers({
 });
 export default reducer;
 
+// Selectors
+
+export const getProjectLibraries = state => {
+  const {personalProjectsList} = state.projects;
+
+  if (personalProjectsList && personalProjectsList.projects) {
+    return _.filter(personalProjectsList.projects, p => p.libraryName);
+  } else {
+    return [];
+  }
+};
+
 export const setPublicProjects = () => {
   return dispatch => {
     $.ajax({

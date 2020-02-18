@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
+import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
 
 const styles = {
   container: {
@@ -47,6 +48,24 @@ const styles = {
   }
 };
 
+const galleryTabs = [
+  {
+    key: Galleries.PRIVATE,
+    url: '/projects',
+    headerText: i18n.myProjects()
+  },
+  {
+    key: Galleries.LIBRARIES,
+    url: '/projects/libraries',
+    headerText: i18n.myLibraries()
+  },
+  {
+    key: Galleries.PUBLIC,
+    url: '/projects/public',
+    headerText: i18n.publicProjects()
+  }
+];
+
 class ProjectsGallery extends Component {
   static propTypes = {
     limitedGallery: PropTypes.bool,
@@ -57,48 +76,34 @@ class ProjectsGallery extends Component {
     selectGallery: PropTypes.func.isRequired
   };
 
-  toggleToGallery = () => {
-    window.history.pushState(null, null, '/projects/public');
-    this.props.selectGallery(Galleries.PUBLIC);
-  };
-
-  toggleToMyProjects = () => {
-    window.history.pushState(null, null, '/projects');
-    this.props.selectGallery(Galleries.PRIVATE);
+  toggleTo = tab => {
+    window.history.pushState(null, null, tab.url);
+    this.props.selectGallery(tab.key);
   };
 
   render() {
     return (
       <div>
         <div style={styles.container} id="uitest-gallery-switcher">
-          <div
-            key={'private'}
-            style={[
-              styles.pill,
-              this.props.selectedGallery === Galleries.PRIVATE &&
-                styles.selectedPill
-            ]}
-            onClick={this.toggleToMyProjects}
-          >
-            {i18n.myProjects()}
-          </div>
-          <div
-            key={'public'}
-            style={[
-              styles.pill,
-              this.props.selectedGallery === Galleries.PUBLIC &&
-                styles.selectedPill
-            ]}
-            onClick={this.toggleToGallery}
-          >
-            {i18n.publicProjects()}
-          </div>
+          {galleryTabs.map(tab => (
+            <div
+              key={tab.key}
+              style={[
+                styles.pill,
+                this.props.selectedGallery === tab.key && styles.selectedPill
+              ]}
+              onClick={() => this.toggleTo(tab)}
+            >
+              {tab.headerText}
+            </div>
+          ))}
         </div>
-        {this.props.selectedGallery === Galleries.PUBLIC && (
-          <PublicGallery limitedGallery={this.props.limitedGallery} />
-        )}
         {this.props.selectedGallery === Galleries.PRIVATE && (
           <PersonalProjectsTable canShare={this.props.canShare} />
+        )}
+        {this.props.selectedGallery === Galleries.LIBRARIES && <LibraryTable />}
+        {this.props.selectedGallery === Galleries.PUBLIC && (
+          <PublicGallery limitedGallery={this.props.limitedGallery} />
         )}
       </div>
     );
