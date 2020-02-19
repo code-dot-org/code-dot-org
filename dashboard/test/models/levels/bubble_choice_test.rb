@@ -99,6 +99,7 @@ DSL
       description: @bubble_choice.description,
       name: @bubble_choice.name,
       type: @bubble_choice.type,
+      teacher_markdown: @bubble_choice.teacher_markdown,
       sublevels: @bubble_choice.summarize_sublevels
     }
 
