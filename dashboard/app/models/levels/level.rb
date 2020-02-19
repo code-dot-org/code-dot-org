@@ -155,6 +155,12 @@ class Level < ActiveRecord::Base
     !unplugged?
   end
 
+  # This does not include DSL levels which also use teacher markdown
+  # but access it in a different way
+  def include_teacher_only_markdown_editor?
+    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
+  end
+
   def enable_scrolling?
     is_a?(Blockly)
   end
