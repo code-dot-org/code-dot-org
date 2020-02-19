@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PreWorkshopSurvey from '@cdo/apps/code-studio/pd/pre_workshop_survey/PreWorkshopSurvey';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import Forrm from '@cdo/apps/code-studio/pd/forrm/Forrm';
+import Foorm from '@cdo/apps/code-studio/pd/foorm/Foorm';
 
 document.addEventListener('DOMContentLoaded', function(event) {
   ReactDOM.render(
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   );
 
   ReactDOM.render(
-    <Forrm {...getScriptData('props')} />,
+    <Foorm {...getScriptData('props')} />,
     document.getElementById('new-application-container')
   );
 });
