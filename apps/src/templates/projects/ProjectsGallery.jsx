@@ -79,6 +79,7 @@ class ProjectsGallery extends Component {
 
   componentWillMount() {
     // Add "My Libraries" tab if user is in experiment.
+    // TODO: Add myLibrariesTab to galleryTabs once experiment is complete.
     if (experiments.isEnabled(experiments.STUDENT_LIBRARIES)) {
       galleryTabs.splice(1, 0, myLibrariesTab);
     }
