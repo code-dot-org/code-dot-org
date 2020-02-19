@@ -583,15 +583,23 @@ var projects = (module.exports = {
       this.updateChannels_(callback);
     }
   },
-  setLibraryDetails(newName, newDescription, callback) {
+  setLibraryDetails(newName, newDescription, publishing = undefined) {
     current = current || {};
     if (
       current.libraryName !== newName ||
-      current.libraryDescription !== newDescription
+      current.libraryDescription !== newDescription ||
+      publishing !== undefined
     ) {
       current.libraryName = newName;
       current.libraryDescription = newDescription;
-      this.updateChannels_(callback);
+
+      if (publishing) {
+        current.publishLibrary = true; // Tells the server to set libraryPublishedAt timestamp.
+      } else {
+        current.libraryPublishedAt = null;
+      }
+
+      this.updateChannels_();
     }
   },
   setTitle(newName) {
