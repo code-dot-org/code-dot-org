@@ -144,7 +144,16 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  task scripts: SCRIPTS_DEPENDENCIES do
+  task :scripts do
+    SCRIPTS_DEPENDENCIES.each do |st|
+      start_time = Time.new
+      puts "Starting seed:#{st} at #{start_time}"
+      Rake::Task["seed:#{st}"].invoke
+      end_time = Time.new
+      elapsed_secs = end_time - start_time
+      puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
+    end
+
     update_scripts(incremental: false)
   end
 
