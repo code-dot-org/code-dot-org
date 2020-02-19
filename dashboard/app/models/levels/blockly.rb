@@ -74,7 +74,6 @@ class Blockly < Level
     encrypted_examples
     disable_if_else_editing
     show_type_hints
-    thumbnail_url
     include_shared_functions
     preload_asset_list
     skip_autosave
