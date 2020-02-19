@@ -374,7 +374,14 @@ module.exports = class Maze {
             if (this.executionInfo.terminationValue() === true) {
               successes.push(i);
             } else if (this.executionInfo.terminationValue() === Infinity) {
-              failures.push(i);
+              // terminationValue Infinity means executing took more than the maximum number of steps
+              // so we have declared it to be an infinite loop. If there are a lot of map configurations that result
+              // in infinite loops, the time required to check each one is perceived as buggy/glitchy. To prevent this
+              // perceived lag,  we should stop checking map configurations as soon as we detect an infinite loop
+              // and immediately show the result. It is possible that there is an infinite loop
+              // on only some map configurations. In these cases, we should always show the map configuration
+              // with first infinite loop we detect.
+              failures = [i];
               break;
             } else {
               failures.push(i);
