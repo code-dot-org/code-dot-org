@@ -113,6 +113,7 @@ class CollectionsApi {
           this._errorAction();
         } else if (success) {
           this._shouldCallBeforeFirstWriteHook = false;
+          this._beforeFirstWriteHook = null;
           fn();
         }
       });

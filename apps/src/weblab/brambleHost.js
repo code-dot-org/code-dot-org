@@ -313,6 +313,7 @@ function uploadAllFilesFromBramble(callback) {
       if (i < entries.length) {
         const entry = entries[i];
         getFileData(entry.path, (err, fileData) => {
+          // Always call the callback. If err is undefined, the callback will handle it gracefully.
           callback(err);
           if (!err) {
             webLab_.changeProjectFile(
