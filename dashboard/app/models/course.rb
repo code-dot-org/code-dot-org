@@ -43,6 +43,7 @@ class Course < ApplicationRecord
     family_name
     version_year
     is_stable
+    pilot_experiment
   )
 
   def to_param
