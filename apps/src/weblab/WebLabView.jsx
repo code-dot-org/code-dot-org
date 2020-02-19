@@ -166,6 +166,8 @@ class WebLabView extends React.Component {
             <BaseDialog
               isOpen={this.props.shouldShowError}
               handleClose={this.closeErrorDialog}
+              useUpdatedStyles
+              style={{padding: 12}}
             >
               <h1>{weblabMsg.uploadError()}</h1>
               <p>{weblabMsg.errorSavingProject()}</p>
@@ -173,11 +175,13 @@ class WebLabView extends React.Component {
                 <Button
                   onClick={() => window.location.reload()}
                   text={msg.reloadPage()}
+                  color={Button.ButtonColor.gray}
                 />
                 <Button
                   style={{position: 'absolute', right: 0}}
                   onClick={this.closeErrorDialog}
                   text={msg.dialogOK()}
+                  color={Button.ButtonColor.orange}
                 />
               </div>
             </BaseDialog>
