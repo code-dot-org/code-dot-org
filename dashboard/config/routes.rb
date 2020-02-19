@@ -675,6 +675,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 
+  post '/dashboardapi/v1/forrm/submission', to: 'api/v1/forrm/submissions#create', defaults: {format: 'json'}
+
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 
   get '/curriculum_tracking_pixel', to: 'curriculum_tracking_pixel#index'

@@ -24,7 +24,9 @@ class Pd::PreWorkshopSurveyController < ApplicationController
         workshopDate: @workshop_date,
         unitsAndLessons: Pd::PreWorkshopSurvey.units_and_lessons(@workshop),
         apiEndpoint: "/api/v1/pd/pre_workshop_surveys",
-        formData: @form_data
+        formData: @form_data,
+        formName: survey_name,
+        formVersion: latest_version
       }.to_json
     }
   end
