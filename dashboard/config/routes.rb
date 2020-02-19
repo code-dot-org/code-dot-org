@@ -55,6 +55,7 @@ Dashboard::Application.routes.draw do
   post 'maker/complete', to: 'maker#complete'
   get 'maker/application_status', to: 'maker#application_status'
   post 'maker/override', to: 'maker#override'
+  get 'maker/login_code', to: 'maker#login_code'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
