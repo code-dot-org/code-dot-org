@@ -223,7 +223,7 @@ export default class ProgressLegend extends Component {
               </div>
               <div style={styles.iconAndTextDivBottom}>
                 <FontAwesome icon="map-signs" style={styles.icon} />
-                {i18n.choiceLevel()}
+                {i18n.choice()}
               </div>
             </TD>
             <TD rowSpan={secondRowRowSpan}>
