@@ -225,6 +225,7 @@ module ProjectsList
       if with_library
         row_data[:libraryName] = project_value['libraryName']
         row_data[:libraryDescription] = project_value['libraryDescription']
+        row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
       end
 
       row_data.with_indifferent_access

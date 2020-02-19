@@ -155,6 +155,7 @@ class ChannelsApi < Sinatra::Base
     end
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
+    value = value.merge('libraryPublishedAt' => Time.now) if value['publishLibrary']
 
     # Channels for project-backed levels are created without a project_type. The
     # type is then determined by client-side logic when the project is updated.
