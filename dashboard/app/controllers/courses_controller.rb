@@ -121,7 +121,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment).to_h
   end
 
   def set_redirect_override
