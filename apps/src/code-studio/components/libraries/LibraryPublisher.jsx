@@ -102,6 +102,7 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription
     );
 
+    // Publish to S3
     libraryClientApi.publish(
       libraryJson,
       error => {
@@ -112,6 +113,8 @@ export default class LibraryPublisher extends React.Component {
         onPublishSuccess(libraryName);
       }
     );
+
+    // Write to projects database
     dashboard.project.setLibraryDetails(libraryName, libraryDescription);
   };
 
