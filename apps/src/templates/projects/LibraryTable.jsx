@@ -15,8 +15,7 @@ export const COLUMNS = {
   LIBRARY_NAME: 0,
   PROJECT_NAME: 1,
   DESCRIPTION: 2,
-  PUBLISHED: 3,
-  LAST_PUBLISHED: 4
+  LAST_PUBLISHED: 3
 };
 
 const styles = {
@@ -45,10 +44,19 @@ const projectNameFormatter = (name, {rowData}) => {
   );
 };
 
+const dateFormatter = time => {
+  if (time) {
+    const date = new Date(time);
+    return date.toLocaleDateString();
+  } else {
+    return null;
+  }
+};
+
 class LibraryTable extends React.Component {
   static propTypes = {
     // Provided by Redux
-    libraries: PropTypes.array.isRequired // TODO: ADD SHAPE
+    libraries: PropTypes.array.isRequired
   };
 
   state = {
@@ -137,6 +145,28 @@ class LibraryTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellName
+            }
+          }
+        }
+      },
+      {
+        property: 'libraryPublishedAt',
+        header: {
+          label: i18n.lastPublished(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...styles.headerCellName
+            }
+          },
+          transforms: [sortable]
+        },
+        cell: {
+          formatters: [dateFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
