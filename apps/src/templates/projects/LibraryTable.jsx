@@ -18,6 +18,8 @@ export const COLUMNS = {
   LAST_PUBLISHED: 3
 };
 
+const CELL_WIDTH = 250;
+
 const styles = {
   headerCellName: {
     borderWidth: '0px 1px 1px 0px',
@@ -28,7 +30,13 @@ const styles = {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: 250
+    width: CELL_WIDTH
+  },
+  truncateText: {
+    width: CELL_WIDTH,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
   }
 };
 
@@ -42,6 +50,10 @@ const projectNameFormatter = (name, {rowData}) => {
       isEditing={rowData.isEditing}
     />
   );
+};
+
+const descriptionFormatter = description => {
+  return <div style={styles.truncateText}>{description}</div>;
 };
 
 const dateFormatter = time => {
@@ -145,6 +157,7 @@ class LibraryTable extends React.Component {
           transforms: [sortable]
         },
         cell: {
+          formatters: [descriptionFormatter],
           props: {
             style: {
               ...tableLayoutStyles.cell,
