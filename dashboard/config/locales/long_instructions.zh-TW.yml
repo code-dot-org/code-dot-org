@@ -20,6 +20,10 @@ zh-TW:
       2-3 Artist Assessment 1: |-
         **評量：**把最後一顆牙齒畫完。
         這顆牙寬：25 像素；高：25像素。
+      2-3 Artist Debugging 11: |-
+        我的雪花有個缺口！
+
+        你可以找到是哪兒出了錯嗎？
       2-3 Artist Debugging 2: |-
         畫出貓鬍鬚的程式不正確。
 
@@ -219,32 +223,32 @@ zh-TW:
         -   在上一次的課程中，你是如何跟著問題解決流程的?
         -   在你每天的生活中，你是如何利用這個流程去解決問題?
       CSD U3 - Booleans Video: "# 布林表達式影片"
-      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 - Simple Counter Predict_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2018: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
         \   \\\r"
-      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56>\nPM.png>)\\\r\n
+      CSD U3 Counters explaining counters contained 2_2019: "# \n\n計數器模型（Counter Pattern）\\\r\n\\\r\n這個模型（Pattern）在程式設計中相當的重要。\\\r\n\\\r\n![](<https://images.code.org/83af2e40443ab294ba635f2a01a48ac7-image-1465506512065.06.56\nPM.png>)\\\r\n
         \   \\\r\n這會用來讓變數增加 1。你可能會稱之為 **計數器模型**，因為這可以讓變數往上數。\n我們很常使用到這個模型，尤其是在繪圖一類的迴圈。我們來看看它長得怎樣\\\r\n\\\r\n\n#
         做做這個\\\r\n\n\\\r\n這個程式會創造出\n一個變數`counter`，然後使用**計數器模型**來讓它開始計數。\n當你運行程式時，你覺得在畫面會出現什麼？\\\r\n\\\r\n\\*\n**解讀程式**
         然後預測輸出會是怎樣。\\\r\n\\*\n**運行程式** 來檢查是否和你的預測一致。\\\r\n\n-   **跟隔壁的人討論看看**.\n    看你能不能解釋你觀察到了什麼？\\\r\n
@@ -266,9 +270,9 @@ zh-TW:
       CSD U5 Netflix Data Video_2019: 透過觀看影片來了解Netflix如何解決此問題。在觀看同時，請思考要收集什麼樣的數據、以及該數據來自何處。
       CSD U5 black white images pixelation: "# 做做看\\\r\n\n\\\r\n輸入 0 或是 1 來完成這個 X
         形的圖案，如果你想要清除重來，可以點擊「可讀格式」。"
-      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
-      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
-      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n\\!\\[](\\<<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47>\nPM.png>)"
+      CSD U5 black white images pixelation 2: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+      CSD U5 black white images pixelation 2_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
+      CSD U5 black white images pixelation 2_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉\\\r\n\\\r\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47\nPM.png>)"
       CSD U5 black white images pixelation 3: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2018: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
       CSD U5 black white images pixelation 3_2019: "# 做做看\\\r\n\n\\\r\n使用像素化工具來畫出笑臉"
@@ -500,7 +504,7 @@ zh-TW:
       CourseD_Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區。連接到 <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 的後面。你的舞者應該就會在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木到工作區。連接到 <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 的後面。你的舞者應該就會在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂經過的時間。在本教學課程中，一小節的長度為四拍。
       CourseD_Dance_Party_03: |-
@@ -648,7 +652,7 @@ zh-TW:
       Dance_Party_02: |-
         讓這隻麋鹿跳舞！
 
-        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
+        拖曳出 <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> 程式積木 到工作區上。連接此程式積木在 <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> 程式積木的後面. 您的舞者應該在第 4 個小節之後開始新的動作。
 
         **小節**用於計算音樂中的時間。在本教學課程中，一小節的長度為四拍。
       Dance_Party_03: |-
@@ -1097,6 +1101,8 @@ zh-TW:
       courseA_harvester_loops1_2019: 幫助農夫撿起所有的玉米！
       courseA_harvester_loops7: 換你自己試試！
       courseA_harvester_loops7_2019: 換你自己試試！
+      courseA_harvester_loops9: 你能摘取到所有的玉米嗎？
+      courseA_harvester_loops9_2019: 你能摘取到所有的玉米嗎？
       courseA_harvester_seq1: 幫助農夫撿起所有的玉米！
       courseA_harvester_seq13: 幫助農夫撿起玉米！
       courseA_harvester_seq13_2019: 幫助農夫撿起玉米！
@@ -1105,6 +1111,8 @@ zh-TW:
         west"/></xml> 程式積木，讓農夫到達玉米的位置！ '
       courseA_harvester_seq3_2019: 使用 **三個** <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> 程式積木去收成玉米! 不要忘記最後要摘取玉米。
+      courseA_harvester_seq5: 你能找出程式中哪個地方出錯了嗎？修改它，幫農夫摘到玉米！
+      courseA_harvester_seq5_2019: 你能找出程式中哪個地方出錯了嗎？修改它，幫農夫摘到玉米！
       courseA_harvester_seq6: 自己試試！
       courseA_harvester_seq6_2019: 自己試試！
       courseA_harvester_seq9: 添加兩個積木以完成這個關卡！
@@ -1112,13 +1120,21 @@ zh-TW:
       courseA_maze_ramp2_2019: 將 <xml><block type="maze_moveEast" block-text="move
         east"/></xml> 程式積木和 <xml><block type="when_run" block-text="when run"/></xml>
         程式積木兩者連接起來，來完成你的程式碼, 然後按 "▶ 運行".
-      courseA_maze_ramp3a_2018: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth"/></xml>
-        程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
-      courseA_maze_ramp3a_2019: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth" block-text="move
-        north"/></xml> 程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
-      courseA_maze_ramp5a_2018: 自己試試這個！
-      courseA_maze_ramp5a_2019: 自己試試這個！
-      courseA_maze_seq1: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
+      courseA_maze_ramp3a_2018: 從工具箱拖曳出 <xml><block type="maze_moveNorth"/></xml>，把它接到現有程式的下面，程式就完成了，記得要點擊「▶
+        運行」按鈕。
+      courseA_maze_ramp3a_2019: 從工具箱拖曳出 <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml>，把它接到現有程式的下面，程式就完成了，記得要點擊「▶ 運行」按鈕。
+      courseA_maze_ramp3b_2018: |-
+        目前的程式裡有一個多餘的程式積木！
+
+        把它拖曳到工具箱的位置，就可以把這個用不到的積木收起來。
+      courseA_maze_ramp3b_2019: |-
+        目前的程式裡有一個多餘的程式積木！
+
+        把它拖曳到工具箱的位置，就可以把這個用不到的積木收起來。
+      courseA_maze_ramp5a_2018: 現在換你自己試試看了！
+      courseA_maze_ramp5a_2019: 現在換你自己試試看了！
+      courseA_maze_seq1: "「使用這些積木，試著讓我抓到這隻壞豬豬！」"
       courseA_maze_seq10: |-
         **挑戰：** 繞過 TNT 炸藥，讓鳥抓到豬！
 
@@ -1130,11 +1146,15 @@ zh-TW:
       courseA_maze_seq12_2018: 抓到那頭豬！
       courseA_maze_seq12_2019: 抓到那頭豬！
       courseA_maze_seq13_2019: 抓到這頭豬，不管你用什麼方法！
-      courseA_maze_seq1_2018: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
-      courseA_maze_seq1_2019: _「使用這些積木，試著讓我抓到這隻壞豬豬！」_
+      courseA_maze_seq1_2018: "「使用這些積木，試著讓我抓到這隻壞豬豬！」"
+      courseA_maze_seq1_2019: "「使用這些積木，試著讓我抓到這隻壞豬豬！」"
       courseA_maze_seq3: "_「修正這個程式，好讓我抓到這頭豬！」_\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/629cddc754f9ad02929f06fc68462e4d-image-1467924800613.gif\"\nwidth=\"200\"/>"
-      courseA_maze_seq4: "_\"有個地方不大正確。\"_\n\\\r\n\\\r\n「移除」一個積木好讓鳥能抓到這頭豬！\\\r\n\\\r\n<img
-        src=\"https://images.code.org/dd6d92233199ee0f524caa4051b99275-image-1467920800577.gif\"\nwidth=\"200px\"/>"
+      courseA_maze_seq4: |-
+        「有個地方不大正確。」
+
+        「移除」一個積木好讓鳥能抓到這頭豬！
+
+        ![expandable](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)
       courseA_maze_seq5: "在開始時試試這個。\\\r\n\\\r\n<img\nsrc=\"https://images.code.org/43001078c4df6feea1a6edf025192d85-image-1467929743355.gif\"\nwidth=\"200px\"/>"
       courseA_maze_seq5_2018: 測試一下吧。
       courseA_maze_seq5_2019: 測試一下吧。
@@ -1155,12 +1175,30 @@ zh-TW:
       courseA_maze_seq_challenge2_2019: 沿著這條路帶我去找那隻笨豬，記得躲開 TNT 炸藥，不然會見到我的羽毛滿天飛！
       courseA_playLab_events7_2018: _自由發揮：_ 在遊戲裡加入你想要的元素，你可以在 Jorge 遇到恐龍時，讓恐龍消失嗎？
       courseA_playLab_events7_2019: _自由發揮：_ 在遊戲裡加入你想要的元素，你可以在 Jorge 遇到恐龍時，讓恐龍消失嗎？
-      courseB_Scrat_ramp3a_2018: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth"/></xml>
-        程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
-      courseB_Scrat_ramp3a_2019: 從工具箱裡抓起一個 <xml><block type="maze_moveNorth" block-text="move
-        north"/></xml> 程式積木，然後把它加入在其他程式積木的下面來完成程式碼，接下來按 "▶ 運行".
-      courseB_Scrat_ramp5a_2018: 自己試試這個！
-      courseB_Scrat_ramp5a_2019: 自己試試這個！
+      courseB_Scrat_ramp1_2018: 讓鼠奎特拿到橡樹果實，把 <xml><block type="maze_moveEast"/></xml>
+        貼合到 <xml><block type="when_run"/></xml> 積木的下面，然後點擊「▶ 運行」按鈕！
+      courseB_Scrat_ramp1_2019: 讓鼠奎特拿到橡樹果實，把 <xml><block type="maze_moveEast" block-text="move
+        East"/></xml> 貼合到 <xml><block type="when_run" block-text="when run"/></xml>
+        積木的下面，然後點擊「▶ 運行」按鈕！
+      courseB_Scrat_ramp2_2018: 把兩個 <xml><block type="maze_moveEast"/></xml> 積木黏貼到
+        <xml><block type="when_run"/></xml> 下面，然後點擊「▶ 運行」按鈕，程式就完成了。
+      courseB_Scrat_ramp2_2019: 把兩個 <xml><block type="maze_moveEast" block-text="move
+        east"/></xml> 積木黏貼到 <xml><block type="when_run" block-text="when run"/></xml>
+        下面，然後點擊「▶ 運行」按鈕，程式就完成了。
+      courseB_Scrat_ramp3a_2018: 從工具箱拖曳出 <xml><block type="maze_moveNorth"/></xml>，把它接到現有程式的下面，程式就完成了，記得要點擊「▶
+        運行」按鈕。
+      courseB_Scrat_ramp3a_2019: 從工具箱拖曳出 <xml><block type="maze_moveNorth" block-text="move
+        north"/></xml>，把它接到現有程式的下面，程式就完成了，記得要點擊「▶ 運行」按鈕。
+      courseB_Scrat_ramp3b_2018: |-
+        目前的程式裡有一個多餘的程式積木！
+
+        把它拖曳到工具箱的位置，就可以把這個用不到的積木收起來。
+      courseB_Scrat_ramp3b_2019: |-
+        目前的程式裡有一個多餘的程式積木！
+
+        把它拖曳到工具箱的位置，就可以把這個用不到的積木收起來。
+      courseB_Scrat_ramp5a_2018: 現在換你自己試試看了！
+      courseB_Scrat_ramp5a_2019: 現在換你自己試試看了！
       courseB_artist_loops10: "你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一座大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
         Concert</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/f7bf86b0f86669d82ee2c1565738b9cb-image-1466794447737.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一個生日蛋糕</h4><br/><br/>\r\n</td>\r\n\r\n</tr>\r\n</table>\r"
       courseB_artist_loops10_2018: "你覺得當小藝術家回到家時看到了什麼？用你學過的技能來畫出這個圖形。\\\r\n\\\r\n\n<hr/>\r\n<h3>Ideas</h3>\r\n<table>\r\n<tr>\r\n<td>\r\n<img\nsrc=\"https://images.code.org/8f4f2a68dae2cf0aa82cc0a49ea4df04-image-1466787750475.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一隻唱歌的蝸牛</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/732ce5dd91c7f49f06e88da1a9f664f3-image-1466794904255.gif\"\nwidth=\"150\"/><br/>\r\n<h4>一座大城市</h4><br/><br/>\r\n</td>\r\n\r\n<td>\r\n<img\nsrc=\"https://images.code.org/37fdd6fdd761df09fd4949d5e43f0a7f-image-1466795165642.gif\"\nwidth=\"150\"/><br/>\r\n<h4>A
@@ -1227,9 +1265,25 @@ zh-TW:
       courseB_iceage_loops8: 你有辦法修好這個程式嗎？
       courseB_iceage_loops8_2019: 你有辦法修好這個程式嗎？
       courseB_maze_seq12_2019: 現在抓到那頭豬，不管你用什麼方法！
+      courseB_maze_seq1_2019: |-
+        玩一玩這些程式積木，看看它們能讓鼠奎特做什麼！
+
+        幫鼠奎特走到有橡樹果實的地方就可以過關。
       courseB_maze_seq3: _「修正這個程式，使我抓到這頭豬！」_
       courseB_maze_seq4_2019: 添加 2 個積木讓鳥移動到豬那裡。
       courseB_maze_seq9: "**挑戰：**繞開 TNT 炸蘗，讓鳥能夠抓到豬！"
+      courseB_playLab_events1: |-
+        這個遊戲稱為「Play Lab」。
+
+        看看你能不能善用每個積木。
+      courseB_playLab_events1_2018: |-
+        這個遊戲稱為「Play Lab」。
+
+        看看你能不能善用每個積木。
+      courseB_playLab_events1_2019: |-
+        這個遊戲稱為「Play Lab」。
+
+        看看你能不能善用每個積木。
       courseB_playlab_events2_2019: 在你點擊`運行`按鈕後，讓飛龍 Daisy 說些話。
       courseB_playlab_eventsFP_2019: "**自由發揮：** 發揮你的想像力，想想要怎麼樣讓遊戲更有趣？"
       courseB_starWars_prog11: '![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
@@ -1445,29 +1499,29 @@ zh-TW:
       courseD_farmer_while1_2018: "_「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」_\\\r\n\\\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_while1_2019: "_「嗨，我是個農夫。我需要你幫我將農地整平，好讓我可以耕作！」_\\\r\n\\\r\n移到土堆那兒，使用「移除」積木來把土堆刪掉。"
       courseD_farmer_while4: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while4_2018: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while4_2019: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while4_predict1: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while4_predict1_2018: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while4_predict1_2019: |-
-        _「我不知道這堆土裡有多少污泥！」_
+        「我不知道這堆土裡有多少污泥！」
 
-        使用`當…時`迴圈，幫助農夫移除全部的土堆。
+        使用`重複 判斷`迴圈，幫助農夫移除全部的土堆。
       courseD_farmer_while8: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while8_2018: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
       courseD_farmer_while8_2019: "**挑戰：**填滿所有的洞，使用的積木愈少愈好。 "
@@ -1519,6 +1573,8 @@ zh-TW:
         _「順著路徑，讓我抓到那頭豬！」_
 
         注意別被 TNT 炸到。
+      courseD_maze_ramp5a: 仔細的找出順序，看看你能不能順利的抓到那頭豬！
+      courseD_maze_ramp5a_2018: 仔細的找出順序，看看你能不能順利的抓到那頭豬！
       courseD_maze_ramp5a_2019: 仔細計算網格上的空格！
       courseD_maze_ramp5c: 幫憤怒鳥抓到豬。
       courseD_maze_ramp5c_2018: 幫憤怒鳥抓到豬。
@@ -1569,6 +1625,13 @@ zh-TW:
       courseE_farmer_functions10b: 使用你的新函式兩次以完成這個關卡。
       courseE_farmer_functions4b: 使用你的新函式以完成這個關卡。
       courseE_farmer_functions5c: 你的函式會在這裡派上用場。
+      courseE_farmer_functions9b: 仔細觀察這一關，你能想得到其中的規律嗎？
+      courseE_farmer_ramp11a: "我的老天鵝！這土堆太大了，很難看得出來要挖多少次才可以把它鏟平。\n\n* * *\n\n我們在工具箱放了一個新的積木，叫做
+        `重複 判斷…`。試試看，用它把地面的土堆移除乾淨！ "
+      courseE_farmer_ramp11a_2018: "我的老天鵝！這土堆太大了，很難看得出來要挖多少次才可以把它鏟平。\n\n* * *\n\n我們在工具箱放了一個新的積木，叫做
+        `重複 判斷…`。試試看，用它把地面的土堆移除乾淨！ "
+      courseE_farmer_ramp11a_2019: "我的老天鵝！這土堆太大了，很難看得出來要挖多少次才可以把它鏟平。\n\n* * *\n\n我們在工具箱放了一個新的積木，叫做
+        `重複 判斷…`。試試看，用它把地面的土堆移除乾淨！ "
       courseE_farmer_ramp11b: 讓我們再試試這個方法，不過這次有更多的土堆！
       courseE_farmer_ramp11b_2018: 讓我們再試試這個方法，不過這次有更多的土堆！
       courseE_farmer_ramp11b_2019: 讓我們再試試這個方法，不過這次有更多的土堆！

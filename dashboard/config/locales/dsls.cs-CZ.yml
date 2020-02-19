@@ -27,15 +27,16 @@ cs-CZ:
         title: Vícenásobná volba
       2-3 Big Event Match 1:
         answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         - {}
-        - {}
-        - {}
-        - {}
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Porovnej kombinaci tlačítek s tanečními pohyby.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - {}
         title: Porovnání
       2-3 Binary Match 1:
@@ -317,10 +318,11 @@ cs-CZ:
         title: Vícenásobná volba
       4-5 Internet Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
         questions:
         - text: Když DNS poslal tě ke stránce na adrese IP 100.42.50.110, na kterém
             website jsi?
@@ -863,76 +865,85 @@ cs-CZ:
 '
       K-1 Artist 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Které bloky vyřeší hádanku?
         title: Vícenásobná volba
       K-1 Artist 1 Multi 2:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Které bloky nakreslí čtverec?
         title: Vícenásobná volba
       K-1 Artist 2 Match 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        content2: Porovnej tvary založené na typu.
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        content2: Porovnej tvary podle typu.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
         title: Porovnání
       K-1 Bee 1 Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Kolik je to nektaru?
         title: Vícenásobná volba
       K-1 Bee 1 Multi 2:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Kolik je to nektaru?
         title: Vícenásobná volba
       K-1 Bee Loops Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Porovnej bloky
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Porovnání
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Porovnej kombinaci tlačítek s tanečními pohyby.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Porovnání
       K-1 Digital Footprint Multi 1:
         answers:
@@ -945,114 +956,137 @@ cs-CZ:
         title: Vícenásobná volba
       K-1 Getting Loopy Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
         title: Vícenásobná volba
       K-1 Happy Maps Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Kterou šipkou se dostane Flurb k pokladu?
         title: Vícenásobná volba
       K-1 Keep it Private Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
         questions:
-        - text: Které informace bys měl <strong>sdílet online</strong>?
+        - text: Jaké informace bys **neměl** sdílet online?
         title: Vícenásobná volba
       K-1 Maze Debugging Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Která volba by měla být posledním blokem?
         title: Vícenásobná volba
       K-1 Maze Loops Multi 1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Který opakovací blok je stejný?
         title: Vícenásobná volba
       K-1 Maze Loops Multi 2:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Vyber správný opakovací blok.
         title: Vícenásobná volba
       K-1 Maze Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         content2: Přiřaď hádanky k blokům
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         title: Porovnání
       K-1 Maze Multiple Choice 2:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Která odpověď řeší tuto úroveň?
         title: Bludiště
       K-1 Move It Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Kterým algoritmem se dostane Flurb ke květinám?
         title: Vícenásobná volba
       K-1 Plant a Seed Multi 1:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
-        - text: Který krok by měl jít na začátku tohoto algoritmu?
+        - text: Který krok by měl jít na začátek tohoto algoritmu?
         title: Vícenásobná volba
       K-1 Plant a Seed Multi 2:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
-        - text: Který krok by měl vyplnit prázdná pole pro tento algoritmus?
+        - text: Který krok by měl doplnit prázdné místo pro tento algoritmus?
         title: Vícenásobná volba
       K-1 Word Search Multi 1:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
-        - text: Které bloky vytváří "MOVE"?
+        - text: Které bloky vytvoří "MOVE"?
         title: Vícenásobná volba
       K-1 Word Search Multi 3:
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: SET
+        - text: SQUARE
+          correct: true
+        - text: SOUTH
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Které slovo je napsáno?
         title: Vícenásobná volba

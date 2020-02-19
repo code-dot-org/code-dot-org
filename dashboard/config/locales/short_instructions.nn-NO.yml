@@ -245,7 +245,10 @@ nn-NO:
         ti å fylle holet til det er heilt jamnt?  "
       4-5 While Loops 8: " Det er eit verkeleg djupt hol og ein verkeleg stor haug
         med jord. Kor mange spadetak må ein ta for å gjere bakken heilt flat?"
+      AB_Debug_PlayLab3: Flytt ridderen til hver av flaggene. Om noe går galt, se
+        etter feil!
       Alien Defender: 'Idé: lag eit forsvarsspel i spel-lab!'
+      CDEF_debugging_flappy2: Hvorfor funker ikke dette spillet?
       CSD U3 L5 Freeplay: "Endre verdien til petalSize fleire gonger. \nKorleis endrar
         det teikninga di?"
       CSD U3 L5 Freeplay_2018: "Endre verdien til petalSize fleire gonger. \nKorleis
@@ -1916,6 +1919,8 @@ nn-NO:
       courseF_bee_functions4: Funksjonen "flytt og hent nektar" snur bia, samlar inn
         nektar og returnerer til der den starta. Bruk denne funksjonen til å samle
         inn all nektaren.
+      express_maze_debugging9_2019: Bruk blokkene i verktøykassen til å bygge et program.
+        Få ekornet til nøtta.
       flappy_1: Fest ei blokk til "når klikk"-blokka, og trykk "Køyr". Klikk eller
         trykk på skjermen for å flyge Flakse til målet.
       flappy_11: Lag ditt eige Flakse-spel! Du kan endre alle bilda og alle reglane,

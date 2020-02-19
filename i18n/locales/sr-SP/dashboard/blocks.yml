@@ -116,7 +116,7 @@ sr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
@@ -124,7 +124,7 @@ sr:
       Dancelab_setDanceSpeedEach:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow

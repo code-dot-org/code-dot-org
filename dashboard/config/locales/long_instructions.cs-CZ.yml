@@ -48,17 +48,28 @@ cs-CZ:
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
         pomocí co nejméně bloků!
+      4-5 Artist 1: "Pomoz mi dokreslit mou krabičku. (Každá čára je dlouhá 300\npixelů) "
+      4-5 Artist 2: Opakuj tento kód pomocí bloku `opakuj` k dokončení čtverce.
+      4-5 Artist 3: "Tento obdélníkový záhon má obvod 600.\\\nDlouhá strana má délku
+        200. \n\nNakresli obdélník pomocí co nejméně bloků."
       4-5 Artist 3.5: |-
         Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo to zkus stisknutím "Spustit").
 
         Pak opakuj kód několikrát, aby se kresba dokončila!
       4-5 Artist Free Draw 1: Volná kresba! Nakresli co tě napadne.
+      4-5 Artist Patterns 1: Umíš nakreslit tento čtverec pomocí cyklu? Každá strana
+        je dlouhá 20 pixelů.
       4-5 Artist Patterns 7: Upravíme kód z poslední puzzlu, abychom udělali z toho
         složitěji vzorek. Všimni si, jak se teď překrývají kosodélníky, zkus změnit
         první "skok zpět" ze 100 na 50 (polovina dál) - teď jak daleko by měl umělec
         jít při druhém "skočit dozadu"?
       4-5 Bee Nested Loops 4: 'Sesbírej všechen nektar z každého květu a udělej med
         na každé plástvi. Použij vnořené cykly. '
+      4-5 Maze 9: "Nyní máme nový blok zvaný `opakuj dokud`.\\\nTo nám umožní opakovat
+        příkazy, dokud zombie nezíská slunečnici.  \n\nPoužij nový blok `opakuj dokud`
+        k vyřešení této hádanky s co nejmenším počtem příkazů."
+      4-5 Maze Assessment 1: "**Hodnocení:** Dostaň se ke slunečnici s co nejmenším
+        počtem bloků."
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 9: Nakresli zuby v tlamě aligátora!
       CSD U3 Entertainment Sample 4: |-
@@ -233,7 +244,7 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
@@ -426,18 +437,33 @@ cs-CZ:
         v korálovém útesu.
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 3: Používej tři opakovací cykly, abys dostal nektar a udělal med!
-      K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, med a k pohybu!
+      K-1 Bee Loops 2: Pohybuj se pomocí smyčky `opakuj` a potom získej nektar a připrav
+        med!
+      K-1 Bee Loops 3: Použij tři smyčky `opakuj`, abys dostal nektar a udělal med!
+      K-1 Bee Loops 4: Použij smyčku `opakuj` pro získání nektaru, vyrobení medu a
+        pro pohyb!
+      K-1 Bee Loops 5: Použij smyčku `opakuj`, aby dostal nektar a med!
+      K-1 Bee Loops 6: Použij smyčku `opakuj`, abys dostal nektar, med a k pohybu!
       K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
         zjednoduší."
+      K-1 Maze Loops 11: |-
+        Dostaň mě k prasátku!\
+        Smyčka `opakuj` to usnadní.
+      K-1 Maze Loops 12: |-
+        Dostaň mě k prasátku!\
+        Smyčka `opakuj` to usnadní.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
       K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 8: Použij smyčku `opakuj`, abys mě dostal k prasátku.
       K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
         cyklus 'Opakuj' abys mě dostal k prasátku!"
+      MC HOC 2016 SCORE LEVEL: "Některé hry počítají skóre. Zkus to také s těmito
+        Železnými Golemi a použij blok <xml>  <block type=\"craft_addScore\">\n    <title
+        name=\"SCORE\">1</title>\n  </block></xml>, abys získal bod, kdykoli se jich
+        dotneš.   \n\nVyhraješ, až získáš pět bodů!"
       MC_HOC_2017_01_RETRY: "Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc
         mu přišel agent!   \\\r\n \\\r\n   \\\r\nPřichyťte v pracovním prostoru blok
         „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou
@@ -510,11 +536,59 @@ cs-CZ:
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
+      Standalone_Artist_2: Nakresli tento kosočtverec s úhly 120 a 60 stupňů a stranami
+        dlouhými 150 pixelů.
+      Standalone_Artist_3: Umíš nakreslit tento šestiúhelník se stranami 100 pixelů
+        a otáčením 60 stupňů?
+      Standalone_Artist_4: Teď máš nový blok na hraní - cyklus. Ten bude opakovat
+        sadu příkazů. Co se stane, když tyto příkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Kolikrát musíš zopakovat tento kosočtverec, abys nakreslil
+        květinu?
+      Standalone_Artist_5.5: 'Všimni si, jak jsme zjednodušili kód kosočtverce tím,
+        že jsme ho změnili na cyklus. Můžeš zopakovat celou posloupnost 12 krát, abys
+        nakreslil květinu. Nápověda: Po skončení kosočtvercového cyklu ho budeš muset
+        otočit o 30 stupňů, abys nekreslil pořád přes stejný kosočtverec.'
+      Standalone_Artist_6: 'Zopakuj tento šestiúhelníkový kód 6 krát, abys vytvořil
+        obrázek. O kolik stupňů je potřeba pokaždé otočit? Nápověda: Vyděl počet stupňů
+        v kruhu počtem cyklů, které budeš potřebovat.'
+      Standalone_Artist_7: 'Funkce je dalším programovacím nástrojem, který ti pomůže
+        vyhnout se opakování. Tato funkce nakreslí květinu, takže ji můžeš použít
+        pokaždé, když chceš nakreslit květinu. Použij funkci a nový blok pro skok
+        k nakreslení těchto květin. Nápověda: Květiny jsou od sebe vzdálené 150 pixelů'
+      Standalone_Artist_8: Zde je funkce nazvaná `Nakresli tvar`, kterou jsme naprogramovali
+        k nakreslení šestiúhelníků. Spusť kód, abys viděl, co dělá a pak experimentuj
+        s funkcí, abys viděl, co se stane. Umíš s funkcí nakreslit vzor čtverců, trojúhelníků
+        nebo osmiúhelníků?
+      Standalone_Artist_9: Pusť se do toho a nakresli obrázek, jaký se ti bude líbit!
+        Máš dokonce i prázdnou funkci, kterou můžeš přimět, aby dělala, cokoli chceš!
+      'Widget: Text Compression': Hledej v textu vzory (opakující se slova nebo sousloví).
+        Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku,
+        symbol pro záznam se vloží do textu na místo vzoru.
       behaviors free play: "**Volná hra:** Vytvoř svoji vlastní vesmírnou scénu!"
-      course1_artist_loops_challenge2: Jdem si hrát. Nakresli tolik X kolik chceš!
-        Uděláš tři v řadě?
+      course1_artist_loops_challenge2: Pojďme si zahrát hru! Nakresli tolik X, kolik
+        můžeš! Uděláš tři v řadě?
+      course1_artist_loops_challenge3: |-
+        **Píp!**
+
+        _"Pomůžeš mi udělat dvě ptačí budky?"_
       course1_maze_seq_challenge2: V každém směru se můžeš posunout pouze čtyřikrát.
         Dokážeš najít cestu než ti dojdou bloky?
+      course1_playlab_events_challenge1: |-
+        \_ „Kde jsou schovaní moji kamarádi? V této hře se kliknutím na mě ukáže můj přítel Olive - kočka!“ \_
+
+        Kliknutím na Olive se objeví Robin! Dokážeš napsat kód, abys zobrazil i zbývající postavy?
+
+        V této hádance nezapomeň kliknout na rady! Rady ti pomohou vyřešit tento úkol krok za krokem!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        "Pojďme na párty! Zadej mým přátelům něco, co budou dělat, když na ně klikneš nebo na ně klepneš."\_
+
+        Co řeknou zvířata? Co jiného se stane?
+
+        V této hádance nezapomeň kliknout na rady! Rady ti poskytnou zábavné věci, které můžeš vyzkoušet!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj
         každé místečko, jestli je tam květina nebo plástev.

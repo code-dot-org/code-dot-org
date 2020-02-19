@@ -5001,3 +5001,7 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nowy etap

@@ -510,8 +510,7 @@ ta:
             '0.5': வேகக் குறைவு
             '0.25': வேகம் மிகக்குறைவு
       Dancelab_setDanceSpeedEach:
-        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்முன்னணி எஃபெக்டை அமைக்கவும்
-          {GROUP}"
+        text: "{GROUP} ன் நடன வேகத்தை {SPEED} ஆக்கவும்"
         options:
           GROUP:
             '"ALIEN"': ஏலியன்கள்

@@ -150,6 +150,7 @@
   personalize_certificate: "个性化你的证书"
   print_batch_certificates: "批量打印证书"
   print_certificates: "打印证书"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   print_ice_art_from_frozen: "打印来自冰雪奇缘的冰雪艺术家"
   want_a_blank_certificate_template: "需要空白证书模板来填写学生的名字？"
   landscape_recommended_certificates: "打印证书时，推荐选择 **风景**。"

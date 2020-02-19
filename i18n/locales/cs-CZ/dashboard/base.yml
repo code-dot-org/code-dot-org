@@ -143,7 +143,6 @@ cs:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovat nejméně 6 znaků"
     mismatch_password: "Zadaná dvě hesla se neshodují"
-    under_13_consent: "Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého rodiče nebo zákonného zástupce k používání služeb Code.org."
     student_consent: "Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno používat Code.org."
     agree_us_website: "Souhlasím s používáním webových stránek provozovaných ve Spojených státech."
     my_data_to_us: "Informace ohledně mého používání těchto stránek mohou být posílány do Spojených států a tamtéž i uchovávány."
@@ -327,6 +326,7 @@ cs:
       district_dashboard: 'Okresní řídicí panel'
       label: 'Ahoj %{username}'
       stats: 'Code studio'
+      my_projects: 'Moje projekty'
       settings: 'Můj účet'
       logout: 'Odhlásit se'
       signin: 'Přihlásit se'
@@ -720,6 +720,7 @@ cs:
     privacy_notice: "Ochrana osobních údajů"
     accept_label: 'Souhlasím s aktualizací <a href="%{tos_url}" target="_blank">Podmínek poskytování služeb</a> and <a href="%{privacy_url}" target="_blank">Ochranou osobních údajů</a>'
     accept_label_markdown: Souhlasím s aktualizací [Podmínek poskytování služeb](%{tos_url}) and [Ochranou osobních údajů](%{privacy_url})
+    accept_tos: Registrací na Code.org vyjadřujete souhlas s našimi [Podmínkami poskytování služeb](%{tos_url}) a [Zásadami ochrany osobních údajů](%{privacy_url}).
     accept: "Přijmout"
     print: "Tisk"
     reminder_desc: 'Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní podmínky</a>a<a href="%{privacy_url}" target="_blank">Ochranu osobních údajů </a>. Prosím čtěte pečlivě, než je potvrdíte. Berte v úvahu, že pokud studenti neřijmnou aktualizované podmínky, naše nástroje vyučující JavaScript jim mohou být nedostupné.'
@@ -942,3 +943,6 @@ cs:
     accept: 'Souhlasím'
   gdpr_dialog:
     yes: 'Ano'
+  page_not_found_title: "Stránka nebyla nalezena"
+  page_not_found_header: '404 - Stránka nebyla nalezena'
+  page_not_found_button: "Zpět domů"

@@ -362,7 +362,8 @@ de-DE:
         deines eigenen Musters!
       4-5 Bee Conditionals 1: Die Biene kann nicht unterscheiden, ob dies eine Blume
         oder eine Wabe ist. Sammle den Nektar nur aus Blüten, aber prüfe erst, ob
-        es sich um eine Wabe oder um eine Blüte handelt!
+        es sich um eine Wabe oder um eine Blüte handelt! Sei vorsichtig, es kann sich
+        ändern!
       4-5 Bee Conditionals 2: "Mehr Wolken! \n\nÜberprüfe unter jeder Wolke, ob sie
         eine Blume versteckt, bevor du Nektar sammelst.  \n\nDenkt daran: Nicht alle
         Wolken verbergen das Gleiche!"
@@ -590,6 +591,8 @@ de-DE:
         Möchtest Du noch einmal das Ausgangsdesign oder die Hinweise ansehen?  Klicke hier!
 
         Ansonsten leg mit Deinem eigenen Design los!
+      Course 4 Artist Vars 1: Kannst du mir helfen, ein gleichseitiges Dreieck zu
+        zeichnen? Es soll auf jeder Seite genau 100 Pixel lang sein.
       Course 4 Artist Vars 12: Setzen wir die Variable "Seiten" auf 5. Je mehr Seiten
         wir zu diesem Algorithmus hinzufügen, desto größer wird das ganze Muster!
         Beachte, dass es eine weitere Variable namens "Länge" gibt. Wir können sie
@@ -602,6 +605,9 @@ de-DE:
         der `Seiten`-Variablen im Inneren, um sicherzustellen, dass jede Form richtig
         passt.\\\nDer Umfang jedes Polygons beträgt 300 Pixel.\nBrauchst du Tipps?
         Klicke hier."
+      Course 4 Artist Vars 2: Statt „um 150 vorwärts bewegen“ verwendet der „Bewegen“-Baustein
+        jetzt eine Variable namens „Länge“. Kannst du „Länge“ auf 150 einstellen,
+        um dieses neue Dreieck zu zeichnen?
       Course 4 Artist Vars 4: Nun möchte ich ein Rechteck zeichnen, das doppelt so
         lang wie breit ist. Dazu haben wir eine Variable namens „Breite“, die auf
         100 eingestellt werden muss. Kannst Du die Mathematik-Bausteine verwenden,
@@ -1080,6 +1086,13 @@ de-DE:
         sollte auch von einem Längenparameter ausgehen, genau wie das Dreieck. Zeichne
         dieses Mal 3 Quadrate: 25, 50 und 75 Pixel lang, jeweils 100 Pixel voneinander
         entfernt.'
+      NEW Course 4 Artist Vars 4: 'Probieren wir es noch einmal. Kannst du die Variable
+        „Länge“ so einstellen, dass dieses coole Design aus Sechsecken entsteht? Hinweis:
+        Es ist ein Vielfaches von 10.'
+      NEW Course 4 Artist Vars 6: 'Zeichne dieses Muster, indem du die Längenvariable
+        an die richtigen Stellen setzt und dann den richtigen Wert für die Länge eingibst.
+        (Hinweis: Es ist ein Vielfaches von 10).So braucht man die Länge nur an einer
+        Stelle zu setzen - und der Code verwendet den richtigen Wert an jeder Stelle!'
       NEW Course 4 Bee For Loops 1: Benutze eine Schleife um den Nektar von jeder
         Blume zu sammeln.
       NEW Course 4 Bee For Loops 8: |-
@@ -1204,30 +1217,31 @@ de-DE:
       Standalone_Artist_1: Willkommen zu Künstler! Als Erstes versuchen wir, ein einfaches
         Quadrat zu zeichnen, indem wir den „Nach rechts drehen“-Baustein und den „Nach
         vorne bewegen“-Baustein verwenden. Jede Seite sollte 100 Pixel lang sein.
-      Standalone_Artist_2: Zeichne diesen Diamanten indem du Winkel von 120 und 60
-        Grad, sowie 150 Pixel lange Seiten verwendest.
+      Standalone_Artist_2: Zeichne diesen Diamanten, indem du Winkel von 120° und
+        60°, sowie 150 Pixel lange Seiten verwendest.
       Standalone_Artist_3: Kannst du ein Hexagon (Sechseck) mit 100 Pixel Seitenlänge
-        und 60°-Drehungen zeichnen?
-      Standalone_Artist_4: 'Nun kannst du mit einem neuen Block experimentieren: Der
-        Schleife. Diese wird die Befehle die in dem Block der Schleife sind wiederholen.
-        Was passiert, wenn du die Befehle in der Schleife sechs mal wiederholst?'
-      Standalone_Artist_5: Wie oft musst du eine Schleife, die die Befehle enthält
-        um einen Diamanten zu zeichnen wiederholen, um eine Blume zu zeichnen?
+        und 60°-Winkeln zeichnen?
+      Standalone_Artist_4: 'Nun kannst du mit einem neuen Baustein experimentieren:
+        Die Schleife. Diese wird die Befehle, die in dem Baustein der Schleife eingebettet
+        sind, wiederholen. Was passiert, wenn du die Befehle in der Schleife sechsmal
+        wiederholst?'
+      Standalone_Artist_5: Wie oft musst du eine Schleife, die die Befehle enthält,
+        um einen Diamanten zu zeichnen, wiederholen, um dann eine Blume zu zeichnen?
       Standalone_Artist_5.5: "Schau mal, wie schön wir den Blumen-Code vereinfacht
         haben, indem wir eine Schleife verwendet haben. Du kannst die ganze Folge
         12 Mal wiederholen, um die Blume zu zeichnen. \nHinweis: Du musst vor dem
         Ende der Diamantschleife noch eine 30 Grad Drehung einbauen, damit du gerade
         gezeichneten Diamanten nicht wieder übermalst."
       Standalone_Artist_6: "Wiederhole diesen Sechseck-Code 6 Mal, um die Figur zu
-        zeichnen. Um wie viel Grad musst du jedesmal drehen? \nHinweis: Teile die
+        zeichnen. Um wie viel Grad musst du jedes Mal drehen? \nHinweis: Teile die
         Gradzahl in einem Kreis (360°) durch die Anzahl der Wiederholungen."
       Standalone_Artist_7: "Eine Funktion ist ein weiteres Programmierwerkzeug, dass
-        dir hilft nicht immer wieder viel Code zu wiederholen. Die Funktion in diesem
-        Beispiel zeichnet eine Blume. Du kannst sie also immer benutzen (man sagt
-        auch aufrufen), wenn du eine Blume zeichnen möchtest indem du die Funktion
-        die die Blume zeichnet aufrufst. Benutze jetzt diese Funktion und den neuen
+        dir hilft nicht immer und immer wieder Code zu wiederholen. Die Funktion in
+        diesem Beispiel zeichnet eine Blume. Du kannst sie also immer benutzen (man
+        sagt auch aufrufen), wenn du eine Blume zeichnen möchtest, indem du die Funktion,
+        die die Blume zeichnet, aufrufst. Benutze jetzt diese Funktion und den neuen
         Springen-Baustein, um drei Blumen zu zeichnen. \nHinweis: Die Blumen liegen
-        jeweils 150 Pixel auseinander."
+        jeweils 150 Pixel auseinander"
       Standalone_Artist_8: Hier ist eine Funktion namens „Zeichne eine Figur“, die
         wir zum Zeichnen von Sechsecken programmiert haben. Führe den Code aus, um
         zu sehen, was er macht und experimentiere dann mit der Funktion, um zu sehen,
@@ -1317,12 +1331,11 @@ de-DE:
         Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
         \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
         auf ihren Smartphones ausprobieren."
-      bounce_1_basketball: "Berühre die Fahne. \\\r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
-        und starte das Programm mit „Ausführen“ \\\r\n\\\r\nKlicke mit der Maus auf
-        den Linkspfeil, um die Hand zur Fahne zu bewegen."
-      bounce_1_sports: "Berühre die Fahne. \\\r\nHänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
-        und starte das Programm mit „Ausführen“ \\\r\n\\\r\nKlicke mit der Maus auf
-        den Linkspfeil, um den Spieler zur Fahne zu bewegen."
+      bounce_1_basketball: Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
+        und starte das Programm mit „Ausführen“. Klicke mit der Maus auf den Linkspfeil,
+        um die Hand zur Fahne zu bewegen.
+      bounce_1_sports: Berühre die Fahne! Hänge einen Baustein an den „wenn-Pfeil-nach-links“-Baustein
+        und starte das Programm mit „Ausführen“ um den Spieler zur Flagge zu bewegen.
       bounce_2: Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“- und „wenn-Pfeil-nach-links“-Bausteine.
         Bewege den Schläger, um beide Ziele zu erreichen.
       bounce_2_basketball: Nun gibt es zwei Fahnen. Hänge einen Baustein an die „wenn-Pfeil-nach-rechts“-
@@ -1341,9 +1354,9 @@ de-DE:
       bounce_5_basketball: "Wir lassen nun einen Ball nach unten in Richtung der Hand
         fliegen.\\\r\n\\\r\nHänge einen Baustein an den \"wenn Ball die Hand trifft\"-Baustein,
         damit der Ball das Ziel erreicht."
-      bounce_5_sports: "Wir lassen nun einen Hockey-Puck nach unten in Richtung vom
-        Spieler fliegen.\\\r\n\\\r\nHänge einen Baustein an den \"wenn Ball den Spieler
-        trifft\"-Baustein, damit der Ball das Ziel erreicht."
+      bounce_5_sports: Wir lassen nun einen Hockey-Puck nach unten in Richtung vom
+        Spieler fliegen! Hänge einen Baustein an den "wenn Ball den Spieler trifft"-Baustein,
+        damit der Ball das Ziel erreicht.
       bounce_6: Jetzt ist das Ziel oben. Du musst Bausteine an beide "Wenn Ball auftrifft"-Bausteine
         anhängen, um diese Aufgabe zu lösen.
       bounce_6_basketball: Jetzt ist das Ziel oben. Nun musst du Bausteine an beide
@@ -1573,15 +1586,15 @@ de-DE:
         lösen.
       courseA_collector_preLoops7: Hier sind drei Stapel mit Schätzen. Sammle Sie
         alle ein!
-      courseA_harvester_loops1: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
-      courseA_harvester_loops10: Hilf der Erntemaschine alle fünf Ähren Mais zu pflücken!
-      courseA_harvester_loops10_2019: Hilf der Erntemaschine alle fünf Ähren Mais
-        zu pflücken!
+      courseA_harvester_loops1: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
+      courseA_harvester_loops10: Hilf dem Mähdrescher alle fünf Ähren Mais zu ernten!
+      courseA_harvester_loops10_2019: Hilf dem Mähdrescher alle fünf Ähren Mais zu
+        ernten!
       courseA_harvester_loops11: 'Versuchs noch einmal alleine! '
       courseA_harvester_loops11_2019: 'Versuchs noch einmal alleine! '
-      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den ganzen Mais zu pflücken!
-      courseA_harvester_loops2: Achte darauf, dass Du den ganzen Mais pflückst!
-      courseA_harvester_loops2_2019: Achte darauf, dass Du den ganzen Mais pflückst!
+      courseA_harvester_loops1_2019: Hilf dem Mähdrescher, den gesamten Mais zu ernten!
+      courseA_harvester_loops2: Achte darauf, dass Du den gesamten Mais erntest!
+      courseA_harvester_loops2_2019: Achte darauf, dass Du den gesamten Mais erntest!
       courseA_harvester_loops3: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
         pflücken?
       courseA_harvester_loops3_2019: Kannst du den ganzen Mais mit nur **einem** Gehe-Baustein
@@ -1590,13 +1603,13 @@ de-DE:
         Code zu finden?
       courseA_harvester_loops4_2019: Kannst du dem Mähdrescher helfen, den Fehler
         in ihrem Code zu finden?
-      courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende pflücken?
+      courseA_harvester_loops5: Versuchs selbst! Kannst du auch den Mais am Ende ernten?
       courseA_harvester_loops5_2019: Versuchs selbst! Kannst du auch den Mais am Ende
-        pflücken?
-      courseA_harvester_loops5a: Sieh dir den ganzen Mais an! Kannst du ihn ganz alleine
         ernten?
-      courseA_harvester_loops5a_2019: Sieh dir den ganzen Mais an! Kannst du ihn ganz
+      courseA_harvester_loops5a: Sieh dir den gesamten Mais an! Kannst du ihn ganz
         alleine ernten?
+      courseA_harvester_loops5a_2019: Sieh dir den gesamten Mais an! Kannst du ihn
+        ganz alleine ernten?
       courseA_harvester_loops5b: Kannst du deinen Code ändern, damit der Mähdrescher
         den gesamten Mais pflückt?
       courseA_harvester_loops5b_2019: Kannst du deinen Code ändern, damit der Mähdrescher
@@ -1608,17 +1621,17 @@ de-DE:
       courseA_harvester_loops7: 'Probier es selbst aus! '
       courseA_harvester_loops7_2019: 'Probier es selbst aus! '
       courseA_harvester_loops9: Kannst du herausfinden, wie man den gesamten Mais
-        pflückt?
+        erntet?
       courseA_harvester_loops9_2019: Kannst du herausfinden, wie man den gesamten
-        Mais pflückt?
+        Mais erntet?
       courseA_harvester_seq1: Spiele mit diesen Bausteinen um dem Mähdrescher zu helfen
         den Maiskolben einzusammeln.
-      courseA_harvester_seq10: Achte darauf, dass Du den ganzen Mais pflückst!
-      courseA_harvester_seq10_2019: Achte darauf, dass Du den ganzen Mais pflückst!
-      courseA_harvester_seq11: Versuche es selbst! Pflück den ganzen Mais.
-      courseA_harvester_seq11_2019: Versuche es selbst! Pflück den ganzen Mais.
-      courseA_harvester_seq12: Pflück den ganzen Mais.
-      courseA_harvester_seq12_2019: Pflück den ganzen Mais.
+      courseA_harvester_seq10: Achte darauf, dass Du den gesamten Mais erntest!
+      courseA_harvester_seq10_2019: Achte darauf, dass Du den gesamten Mais erntest!
+      courseA_harvester_seq11: Versuche es selbst! Ernte den gesamten Mais.
+      courseA_harvester_seq11_2019: Versuche es selbst! Ernte den gesamten Mais.
+      courseA_harvester_seq12: Pflücke den gesamten Mais.
+      courseA_harvester_seq12_2019: Pflücke den gesamten Mais.
       courseA_harvester_seq13: Spiele mit diesen Bausteinen um dem Mähdrescher zu
         helfen die Maiskolben einzusammeln.
       courseA_harvester_seq13_2019: Spiele mit diesen Bausteinen um dem Mähdrescher
@@ -1634,19 +1647,20 @@ de-DE:
       courseA_harvester_seq3_2019: Benutze drei `Gehe nach Norden` Bausteine und einen
         `Pflücke Mais` Baustein.
       courseA_harvester_seq4: Füge einen Baustein hinzu, um dem Mähdrescher zu helfen,
-        den Mais zu sammeln.
+        den Mais zu ernten.
       courseA_harvester_seq4_2019: Füge einen Baustein hinzu, um dem Mähdrescher zu
-        helfen, den Mais zu sammeln.
+        helfen, den Mais zu ernten.
       courseA_harvester_seq5: Finde den Fehler und behebe ihn!
       courseA_harvester_seq5_2019: Finde den Fehler und behebe ihn!
       courseA_harvester_seq6: Versuche es selbst!
       courseA_harvester_seq6_2019: Versuche es selbst!
       courseA_harvester_seq7: Versuche es selbst!
       courseA_harvester_seq7_2019: Versuche es selbst!
-      courseA_harvester_seq8: Jetzt muss der Erntemaschine zweimal Mais pflücken!
-      courseA_harvester_seq8_2019: Jetzt muss der Erntemaschine zweimal Mais pflücken!
-      courseA_harvester_seq9: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
-      courseA_harvester_seq9_2019: Füge zwei Blöcke hinzu, um dieses Puzzle zu beenden!
+      courseA_harvester_seq8: Jetzt muss der Mähdrescher zweimal Mais ernten!
+      courseA_harvester_seq8_2019: Jetzt muss der Mähdrescher zweimal Mais ernten!
+      courseA_harvester_seq9: Füge zwei Bausteine hinzu, um diese Aufgabe zu beenden!
+      courseA_harvester_seq9_2019: Füge zwei Bausteine hinzu, um diese Aufgabe zu
+        beenden!
       courseA_maze_ramp2_2018: Ziehe alle nötigen Blöcke zusammen, um deinen Code
         zu vervollständigen, klicke dann auf "Ausführen".
       courseA_maze_ramp2_2019: Ziehe alle nötigen Blöcke zusammen, um deinen Code
@@ -1876,8 +1890,8 @@ de-DE:
       courseB_iceage_loops1: Hilf Scrat über das Eis, um an die Eichel zu gelangen!
       courseB_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
       courseB_iceage_loops10_2019: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
-      courseB_iceage_loops11: Hilf Skrat zur Eichel zu gelangen!
-      courseB_iceage_loops11_2019: Hilf Skrat zur Eichel zu gelangen!
+      courseB_iceage_loops11: Hilf Scrat zur Eichel zu gelangen!
+      courseB_iceage_loops11_2019: Hilf Scrat zur Eichel zu gelangen!
       courseB_iceage_loops12: Gehe zur Eichel, wie du kannst!
       courseB_iceage_loops12_2019: Gehe zur Eichel, wie du kannst!
       courseB_iceage_loops1_2019: Hilf Scrat über das Eis, um an die Eichel zu gelangen!
@@ -1908,8 +1922,8 @@ de-DE:
       courseB_maze_seq11_2018: Es ist an Dir!  Bring Scrat zur Eichel.
       courseB_maze_seq11_2019: Es ist an Dir!  Bring Scrat zur Eichel.
       courseB_maze_seq12: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
-      courseB_maze_seq12_2018: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
-      courseB_maze_seq12_2019: Jetzt bekomme das Schwein auf irgendeine Art und Weise!
+      courseB_maze_seq12_2018: Erreiche die Eichel nun auf irgendeine Art und Weise!
+      courseB_maze_seq12_2019: Erreiche die Eichel nun auf irgendeine Art und Weise!
       courseB_maze_seq2: _"Ein Fehler! Repariere den Code, damit ich das Schwein bekomme."_
       courseB_maze_seq4_2018: Benutze **2** Bewegungsbausteine, um den Scrat zur Eichel
         zu bringen.
@@ -2466,11 +2480,20 @@ de-DE:
       courseD_collector_ramp10: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp8: Hilf Laurel alle Schätze einzusammeln.
       courseD_collector_ramp9: Hilf Laurel alle Schätze einzusammeln.
+      courseD_farmer_while2: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while2_2018: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while2_2019: Bringe mich zu dem Loch und fülle es mit sechs Schaufeln
+        Dreck, indem Du den `füllen`-Baustein benutzt.
+      courseD_farmer_while5: 'Hilf mir die ganze Erde wegzuschaffen. '
+      courseD_farmer_while5_2018: 'Hilf mir die ganze Erde wegzuschaffen. '
+      courseD_farmer_while5_2019: 'Hilf mir die ganze Erde wegzuschaffen. '
       courseD_iceage_loops1: Hilf Scrat über das Eis, um an die Eichel zu gelangen!
       courseD_iceage_loops10: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
       courseD_iceage_loops10_2019: Hilf Scrat, den ganzen Weg zur Eichel zu schaffen!
-      courseD_iceage_loops11: Hilf Skrat zur Eichel zu gelangen!
-      courseD_iceage_loops11_2019: Hilf Skrat zur Eichel zu gelangen!
+      courseD_iceage_loops11: Hilf Scrat zur Eichel zu gelangen!
+      courseD_iceage_loops11_2019: Hilf Scrat zur Eichel zu gelangen!
       courseD_iceage_loops12: Gehe zur Eichel, wie du kannst!
       courseD_iceage_loops12_2019: Gehe zur Eichel, wie du kannst!
       courseD_iceage_loops1_2019: Hilf Scrat über das Eis, um an die Eichel zu gelangen!
@@ -2543,7 +2566,7 @@ de-DE:
       courseD_scrat_ramp1: Für diese Aufgabe musst du alle Blöcke zusammensetzen,
         auf 'Ausführen' klicken und zusehen, wie es läuft!
       courseD_scrat_ramp5: Vermeiden Sie das gerissene Eis.
-      courseD_scrat_ramp7: Hilf Skrat zur Eichel zu gelangen!
+      courseD_scrat_ramp7: Hilf Scrat zur Eichel zu gelangen!
       courseE_aboutme_6: 'Weiter so! Versuche Deinem Poster mehr Funktionen hinzuzufügen,
         um es noch besser zu machen. '
       courseE_artist_functions1: 'Hallo. Ich Zombie-Künstler. Ich zeichnen liebe!
@@ -2602,6 +2625,24 @@ de-DE:
         Funktion macht, die du gerade erstellt hast?
       courseF_artist_fwp9: 'Freizeit: Zeichne etwas cooles! Spiele mit die Stiftbreite
         zu sehen, wie unterschiedlich Deine Zeichnungen aussehen kann!'
+      courseF_artist_variables2: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables2_2018: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables2_2019: 'Jetzt zeichne drei dieser Dreiecke direkt nebeneinander.   '
+      courseF_artist_variables4: Jetzt nutze die `length` Variable, damit der Künster
+        vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2018: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables4_2019: Jetzt nutze die `length` Variable, damit der
+        Künster vorwärts springt und runter `length` Pixel zwischen den Dreiecken.
+      courseF_artist_variables5: Füge weitere Schleifen am Ende deines Code ein um
+        drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und nach
+        oben!
+      courseF_artist_variables5_2018: Füge weitere Schleifen am Ende deines Code ein
+        um drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und
+        nach oben!
+      courseF_artist_variables5_2019: Füge weitere Schleifen am Ende deines Code ein
+        um drei weitere Dreiecke hinzuzufügen. Dieses mal bewege dich vorwärts und
+        nach oben!
       courseF_bee_for8: |-
         Jetzt hast du es! Wie hoch sollte deine Schrittweite sein, um 3, 6, 9, 12, 15 Nektarportionen zu sammeln?
         Hinweis: Was musst du jeder Zahl hinzufügen, um die Zahl danach zu bekommen?

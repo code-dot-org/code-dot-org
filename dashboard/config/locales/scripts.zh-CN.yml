@@ -2920,10 +2920,10 @@ zh-CN:
             Collisions:
               name: 碰撞
               description_student: 课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后,
-                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"置换"、"弹跳"
-                和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"推走"、"弹跳"
+                和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
               description_teacher: 学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。
-                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
             Functions:
               name: 函数
               description_student: 本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。
@@ -6979,10 +6979,10 @@ zh-CN:
             Collisions:
               name: 碰撞
               description_student: 课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后,
-                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"置换"、"弹跳"
-                和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"推走"、"弹跳"
+                和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
               description_teacher: 学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。
-                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
             Functions:
               name: 函数
               description_student: 本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。
@@ -10072,10 +10072,10 @@ zh-CN:
             Collisions:
               name: 碰撞
               description_student: 课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后,
-                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"置换"、"弹跳"
-                和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"推走"、"弹跳"
+                和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
               description_teacher: 学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。
-                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
             Functions:
               name: 函数
               description_student: 本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。
@@ -11886,10 +11886,10 @@ zh-CN:
             Collisions:
               name: 碰撞
               description_student: 课堂编程他们的精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后,
-                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"置换"、"弹跳"
-                和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                课堂里发挥灵感讨论其他的方法，两个精灵图可以相互作用。 然后, 他们将使用 "isTouching"的四个碰撞模块 ("碰撞"、"推走"、"弹跳"
+                和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
               description_teacher: 学生将编码出精灵图新的互动方式。在简要回顾他们如何使用 "isTouching" 块之后, 学生们发挥灵感讨论其他的方法，两个精灵图可以相互作用。
-                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"置换"、"弹跳" 和 "反弹 "), 让一个精灵图推走另一个穿过屏幕。
+                然后, 他们将使用 "isTouching" 的四个碰撞模块 ("碰撞"、"推走"、"弹跳" 和 "反弹"), 让一个精灵图推走另一个穿过屏幕。
             Functions:
               name: 函数
               description_student: 本课将介绍函数作为组织代码的方法，使其更易读，并删除重复的代码块。课堂学习更高层次或更抽象的步骤，更容易理解和推理的步骤，然后开始在游戏实验室创建函数。
@@ -12691,6 +12691,12 @@ zh-CN:
               name: 项目 - 制作库 第 3 部分
             Variables Make Demo:
               name: 变量制作演示
+            Unit 7 STUDENT Survey:
+              name: 第 7 单元学生问卷
+            Unit 7 TEACHER Survey:
+              name: 第 7 单元教师问卷
+            'Lesson 11: Assessment Day':
+              name: 第 11 单元：评估日
           title: 计算机科学原理 第 7 单元 试用 - 参数，返回值和库
         csp8-pilot:
           stages:
@@ -12703,3 +12709,113 @@ zh-CN:
             Create PT - Complete the Task:
               name: 创建 表演任务- 完成任务
           title: 计算机科学原理 第 8 单元 试用 - 创建表演任务 准备
+        csp4-2020:
+          stages:
+            Variables Explore:
+              name: 变量探索
+            Variables Investigate:
+              name: 变量调查
+            Variables Practice:
+              name: 变量练习
+            Variables Make:
+              name: 使用变量
+            Conditionals Explore:
+              name: 条件探索
+            Conditionals Investigate:
+              name: 条件调查
+            Conditionals Practice:
+              name: 条件练习
+            Conditional Make:
+              name: 使用条件
+            Functions Explore / Investigate:
+              name: 函数探索/调查
+            Functions Practice:
+              name: 函数练习
+            Functions Make:
+              name: 使用函数
+            Project - Decision Maker App Part 1:
+              name: 项目 - 决定制作者应用 第 1 部分
+            Project - Decision Maker App Part 2:
+              name: 项目 - 决定制作者应用 第 2 部分
+            Project - Decision Maker App Part 3:
+              name: 项目 - 决定制作者应用 第 3 部分
+            'Lesson 15: Assessment Day':
+              name: 单元 15：评估日
+          title: 计算机科学原理第 4 单元 - 变量，条件和函数 ('20-'21)
+        csp5-2020:
+          stages:
+            Lists Explore:
+              name: 列表探索
+            Lists Investigate:
+              name: 列表调查
+            Lists Practice:
+              name: 列表实践
+            Lists Make:
+              name: 制作列表
+            Loops Explore:
+              name: 循环探索
+            Loops Investigate:
+              name: 循环调查
+            Loops Practice:
+              name: 循环实践
+            Loops Make:
+              name: 制作循环
+            Traversals Explore:
+              name: 遍历探索
+            Traversals Investigate:
+              name: 遍历调研
+            Traversals Practice:
+              name: 遍历练习
+            Traversals Make:
+              name: 制作遍历
+            Semester Hackathon Part 1:
+              name: 学期黑客马拉松第 1 部分
+            Semester Hackathon Part 2:
+              name: 学期黑客马拉松第 2 部分
+            Semester Hackathon Part 3:
+              name: 学期黑客马拉松第 3 部分
+            Semester Hackathon Part 4:
+              name: 学期黑客马拉松第 4 部分
+            Semester Hackathon Part 5:
+              name: 学期黑客马拉松第 5 部分
+            'Lesson 18: Assessment Day':
+              name: 第 18 单元：评估日
+            Unit 5 STUDENT Survey:
+              name: 第 5 单元学生问卷
+            Unit 5 TEACHER Survey:
+              name: 第 5 单元教师问卷
+          title: 列表、循环和遍历
+        csp7-2020:
+          stages:
+            Parameters and Return Explore:
+              name: 参数和返回值探索
+            Parameters and Return Investigate:
+              name: 参数和返回值调研
+            Parameters and Return Practice:
+              name: 参数和返回值实践
+            Parameters and Return Make:
+              name: 参数和返回值制作
+            Libraries Explore:
+              name: 探索 库
+            Libraries Investigate:
+              name: 库调研
+            Libraries Practice:
+              name: 库实践
+            Project - Make a Library Part 1:
+              name: 项目 - 制作库 第 1 部分
+            Project - Make a Library Part 2:
+              name: 项目 - 制作库 第 2 部分
+            Project - Make a Library Part 3:
+              name: 项目 - 制作库 第 3 部分
+            Assessment Day:
+              name: 评估日
+            Unit 7 STUDENT Survey:
+              name: 第 7 单元学生问卷
+            Unit 7 TEACHER Survey:
+              name: 第 7 单元教师问卷
+            Variables Make Demo:
+              name: 变量制作演示
+        csp9-pilot:
+          stages:
+            new stage:
+              name: 新的阶段
