@@ -1,7 +1,7 @@
 
 require 'test_helper'
 
-class Api::V1::Forrm::SubmissionsControllerTest < ActionController::TestCase
+class Api::V1::Foorm::SubmissionsControllerTest < ActionController::TestCase
   test 'create succeeds' do
     post :create,
       params: {
