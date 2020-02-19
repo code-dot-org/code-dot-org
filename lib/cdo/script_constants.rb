@@ -117,6 +117,14 @@ module ScriptConstants
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
     ],
+    csd_2020: [
+      CSD1_2020_NAME = 'csd1-2020'.freeze,
+      CSD2_2020_NAME = 'csd2-2020'.freeze,
+      CSD3_2020_NAME = 'csd3-2020'.freeze,
+      CSD4_2020_NAME = 'csd4-2020'.freeze,
+      CSD5_2020_NAME = 'csd5-2020'.freeze,
+      CSD6_2020_NAME = 'csd6-2020'.freeze,
+    ],
     csd_2019: [
       CSD1_2019_NAME = 'csd1-2019'.freeze,
       CSD2_2019_NAME = 'csd2-2019'.freeze,
