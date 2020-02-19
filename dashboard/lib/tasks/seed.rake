@@ -340,7 +340,7 @@ namespace :seed do
       puts "Starting seed:#{st} at #{start_time}"
       Rake::Task["seed:#{st}"].invoke
       end_time = Time.new
-      elapsed_secs = b - a
+      elapsed_secs = end_time - start_time
       puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
     end
   end
