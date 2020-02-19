@@ -52,7 +52,7 @@ describe('EnrollmentsPanel', () => {
     assert(!wrapper.find('Spinner').exists(), 'Spinner was not rendered');
     assert(
       wrapper.find('WorkshopEnrollment').exists(),
-      'WorkshopEnrollment was rendered'
+      'WorkshopEnrollment was not rendered'
     );
   });
 
@@ -75,7 +75,7 @@ describe('EnrollmentsPanel', () => {
         .find('Button')
         .filterWhere(n => n.text().includes('Move (admin)'))
         .exists(),
-      'Move button was rendered'
+      'Move button was not rendered'
     );
   });
 
@@ -92,7 +92,7 @@ describe('EnrollmentsPanel', () => {
       />
     );
 
-    wrapper.instance().handleEnrollmentRefreshClick();
+    wrapper.instance().handleEnrollmentRefresh();
     assert(loadEnrollments.calledOnce);
   });
 
@@ -110,13 +110,21 @@ describe('EnrollmentsPanel', () => {
       />
     );
 
-    wrapper.instance().handleClickMove();
+    wrapper.instance().handleClickChangeEnrollments({
+      target: {name: 'moveEnrollment'}
+    });
     wrapper.update();
-    assert.isTrue(wrapper.state('isMoveEnrollmentsDialogOpen'));
+    assert(
+      wrapper.state('enrollmentChangeDialogOpen') === 'moveEnrollment',
+      'Move enrollments dialog was not opened'
+    );
 
-    wrapper.instance().handleMoveEnrollmentsCanceled();
+    wrapper.instance().handleChangeEnrollmentsCanceled();
     wrapper.update();
-    assert.isFalse(wrapper.state('isMoveEnrollmentsDialogOpen'));
+    assert(
+      wrapper.state('enrollmentChangeDialogOpen') === null,
+      'Move enrollments dialog was not closed'
+    );
   });
 
   it('move some enrollments', () => {
@@ -142,15 +150,17 @@ describe('EnrollmentsPanel', () => {
     );
 
     // Open the move enrollments dialog
-    wrapper.instance().handleClickMove();
+    wrapper.instance().handleClickChangeEnrollments({
+      target: {name: 'moveEnrollment'}
+    });
     wrapper.update();
-    assert.isTrue(wrapper.state('isMoveEnrollmentsDialogOpen'));
+    assert(wrapper.state('enrollmentChangeDialogOpen') === 'moveEnrollment');
 
     // Confirm the move with a fake destination workshop
     const destinationWorkshopId = 5;
     wrapper.instance().handleMoveEnrollmentsConfirmed(destinationWorkshopId);
     wrapper.update();
-    assert.isFalse(wrapper.state('isMoveEnrollmentsDialogOpen'));
+    assert(wrapper.state('enrollmentChangeDialogOpen') === null);
     assert.deepEqual([], wrapper.state('selectedEnrollments'));
 
     // Respond to the server request
@@ -159,6 +169,54 @@ describe('EnrollmentsPanel', () => {
       `/api/v1/pd/enrollments/move?destination_workshop_id=${destinationWorkshopId}&enrollment_ids[]=${
         enrollments[0].id
       }`,
+      [204, {}, '']
+    );
+    server.respond();
+    wrapper.update();
+    assert(loadEnrollments.calledOnce);
+  });
+
+  it('edit an enrollment', () => {
+    const workshop = Factory.build('workshop');
+    const enrollments = Factory.buildList('enrollment', 2);
+    const wrapper = shallow(
+      <EnrollmentsPanel
+        workshopId={String(workshop.id)}
+        workshop={workshop}
+        isLoadingEnrollments={false}
+        enrollments={enrollments}
+        isWorkshopAdmin
+        loadEnrollments={loadEnrollments}
+      />
+    );
+
+    // Select the first enrollment
+    wrapper.instance().handleClickSelect(enrollments[0]);
+    wrapper.update();
+    assert.deepEqual(
+      [_.pick(enrollments[0], ['id', 'email', 'first_name', 'last_name'])],
+      wrapper.state('selectedEnrollments')
+    );
+
+    wrapper.instance().handleClickChangeEnrollments({
+      target: {name: 'editEnrollmentName'}
+    });
+    wrapper.update();
+    assert(
+      wrapper.state('enrollmentChangeDialogOpen') === 'editEnrollmentName'
+    );
+
+    // Confirm the updated name
+    const updatedName = {firstName: 'Rubeus', lastName: 'Hagrid'};
+    wrapper.instance().handleEditEnrollmentConfirmed(updatedName);
+    wrapper.update();
+    assert(wrapper.state('enrollmentChangeDialogOpen') === null);
+    assert.deepEqual([], wrapper.state('selectedEnrollments'));
+
+    // Respond to the server request
+    server.respondWith(
+      'POST',
+      `/api/v1/pd/enrollment/${enrollments[0].id}/edit`,
       [204, {}, '']
     );
     server.respond();

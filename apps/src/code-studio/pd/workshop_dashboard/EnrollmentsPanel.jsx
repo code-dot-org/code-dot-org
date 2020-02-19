@@ -74,14 +74,14 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   handleMoveEnrollmentsConfirmed = destinationWorkshopId => {
-    this.setState({
-      enrollmentChangeDialogOpen: null,
-      selectedEnrollments: []
-    });
     this.handleMoveEnrollments(
       destinationWorkshopId,
       this.state.selectedEnrollments
     );
+    this.setState({
+      enrollmentChangeDialogOpen: null,
+      selectedEnrollments: []
+    });
   };
 
   handleMoveEnrollments = (destinationWorkshopId, selectedEnrollments) => {
@@ -111,11 +111,11 @@ export default class EnrollmentsPanel extends React.Component {
   };
 
   handleEditEnrollmentConfirmed = updatedName => {
+    this.handleEditEnrollment(updatedName, this.state.selectedEnrollments[0]);
     this.setState({
-      enrollmentChangeDialogOpen: false,
+      enrollmentChangeDialogOpen: null,
       selectedEnrollments: []
     });
-    this.handleEditEnrollment(updatedName, this.state.selectedEnrollments[0]);
   };
 
   handleEditEnrollment = (updatedName, selectedEnrollment) => {
