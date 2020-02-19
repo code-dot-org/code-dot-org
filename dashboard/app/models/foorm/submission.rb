@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: forrm_submissions
+# Table name: foorm_submissions
 #
 #  id           :integer          not null, primary key
 #  form_name    :string(255)      not null
@@ -10,6 +10,6 @@
 #  updated_at   :datetime         not null
 #
 
-class Forrm::Submission < ActiveRecord::Base
-  belongs_to :forrm_form
+class Foorm::Submission < ActiveRecord::Base
+  belongs_to :foorm_form
 end
