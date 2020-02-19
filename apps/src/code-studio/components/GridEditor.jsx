@@ -196,6 +196,10 @@ export default class GridEditor extends React.Component {
    * of options for each Cell.
    */
   computeNumMaps = grid => {
+    if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
+      // Variable map configurations are not supported in these skins.
+      return 1;
+    }
     let numMaps = 1;
     grid.forEach(row => {
       row.forEach(cell => {
