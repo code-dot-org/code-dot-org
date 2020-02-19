@@ -1,4 +1,5 @@
 name 'allthethings_bubble_choice'
+editor_experiment ''
 display_name 'Bubble Choice: All the Choices'
 description 'This is a BubbleChoice level. Choose one of the activities below to practice what you have learned!'
 
@@ -6,3 +7,7 @@ sublevels
 level 'AllTheThings_StandaloneVideo'
 level 'Web Lab 1'
 level 'Overworld Chop Tree - allthethings'
+
+markdown <<MARKDOWN
+
+MARKDOWN
