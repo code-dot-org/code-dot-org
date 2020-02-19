@@ -52,4 +52,16 @@ class Pd::ScholarshipInfoTest < ActiveSupport::TestCase
     csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfo::YES_EIR
     assert csp_scholarship_info.valid?
   end
+
+  # Test confirms that we can get a friendly scholarship status (without error)
+  test 'can get friendly scholarship name with CSP-specific scholarship status' do
+    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfo::YES_EIR
+    csp_scholarship_info.friendly_status_name
+  end
+
+  # Test confirms that we can get a friendly scholarship status (without error)
+  test 'can get friendly scholarship name with non-course specific scholarship status' do
+    csp_scholarship_info = build :pd_scholarship_info, scholarship_status: Pd::ScholarshipInfo::NO
+    csp_scholarship_info.friendly_status_name
+  end
 end

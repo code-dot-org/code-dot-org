@@ -32,6 +32,7 @@
 
 class Pd::Workshop < ActiveRecord::Base
   include Pd::WorkshopConstants
+  include SerializedProperties
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -45,6 +46,10 @@ class Pd::Workshop < ActiveRecord::Base
   belongs_to :regional_partner
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
+
+  serialized_attrs %w(
+    fee
+  )
 
   validates_inclusion_of :course, in: COURSES
   validates :capacity, numericality: {only_integer: true, greater_than: 0, less_than: 10000}

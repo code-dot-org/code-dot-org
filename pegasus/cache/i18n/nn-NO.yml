@@ -214,6 +214,8 @@ nn-NO:
     vil at heile verda skal lære.
   personalize_certificate: Tilpass diplomet
   print_certificates: Skriv ut diplomar
+  print_ice_art_from_frozen: Print iskunst fra Frozen-opplæringen
+  print_one_here_certificates: Print en her.
   share_achievement: Del det du har klart
   beyond_hour_message: Hald fram med dei <a href='http://studio.code.org'>andre kursa
     våre</a>, eller utforsk muligheitene for å <a href='/learn/beyond'>lære meir etter

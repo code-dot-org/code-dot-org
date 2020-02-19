@@ -1,8 +1,6 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
-import initializeCodeMirror, {
-  initializeCodeMirrorForJson
-} from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
 const VALID_COLOR = 'black';
@@ -37,18 +35,6 @@ $(document).ready(function() {
     }
   });
 
-  // Leniently validate and fix up custom block JSON using jsonic
-  if (document.getElementById('level_custom_blocks')) {
-    initializeCodeMirrorForJson('level_custom_blocks', {
-      validationDiv: 'custom-blocks-validation',
-      onBlur(blocks) {
-        if (!Array.isArray(blocks)) {
-          return [blocks];
-        }
-        return blocks;
-      }
-    });
-  }
   if (document.getElementById('level_custom_helper_library')) {
     initializeCodeMirror('level_custom_helper_library', 'javascript');
   }

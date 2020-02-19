@@ -117,6 +117,15 @@ module Google
       worksheet.save
     end
 
+    # Returns an ACL object for a spreadsheet document
+    # @param [String] document_key
+    # @return [GoogleDrive::Acl] ACL object that contains an array of GoogleDrive::AclEntry
+    def get_spreadsheet_acl(document_key)
+      document = @session.spreadsheet_by_key(document_key)
+      raise "Could not find document #{document_key}" unless document
+      document.acl
+    end
+
     private
 
     def path_to_title_array(path)
