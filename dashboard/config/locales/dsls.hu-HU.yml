@@ -1661,12 +1661,17 @@ hu-HU:
         - {}
       courseD_multi_scrat_predict1:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Semmi. A motkány egyáltalán nem mozdul.
+        - text: A motkány előrelép hármat, fordul, aztán ismét előre lép hármat, és
+            már ott is van a makknál!
+          correct: true
+        - text: A motkány előre fog lépni, aztán elfordul és jön a bumm.
+        - feedback: A "lépj előre" blokk az "ismételd" blokkon belül azt jelenti,
+            hogy a motkány hármat kép előre. Aztán fordul, és újabb három lépést tesz
+            előre, így ér a makkhoz!
         questions:
-        - {}
+        - text: Ez a kód egy új blokkot használ. Mit gondolsz, mi történik, amikor
+            a "Futtatás" gombra kattintasz?
       courseE_multi_bee_functions_predict1:
         answers:
         - correct: true

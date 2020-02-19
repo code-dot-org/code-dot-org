@@ -155,7 +155,6 @@ de:
     valid_password: "Gültiges Passwort!"
     invalid_password: "Das Passwort muss mindestens 6 Zeichen lang sein"
     mismatch_password: "Die eingegebenen Passwörter stimmen nicht überein"
-    under_13_consent: "Falls ich unter 13 Jahre alt bin, bestätige ich, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
     student_consent: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
     agree_us_website: "Ich akzeptiere die Nutzung einer Website mit Sitz in den USA."
     my_data_to_us: "Daten aus meiner Nutzung dieser Site können in die USA geschickt werden und dort gespeichert und verarbeitet werden."

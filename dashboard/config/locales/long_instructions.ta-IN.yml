@@ -11,9 +11,9 @@ ta-IN:
       CourseD_Dance_Party_02: |-
         நாம் இந்த மூஸை ஆடச் செய்வோம்!
 
-        ஒர்க்ஸ்பேசுக்குள் <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கை இழுக்கவும். ப்ளாக்கிற்கு அடியில் <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> அதை இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
+        <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> நிகழ்வு ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
 
-        **அளவீடுகள்** என்பன இசையில் நேரத்தை கணக்கிட பயன்படுகின்றன. இந்த பாடத்தில், ஒரு அளவீடு என்பது நான்கு பீட்கள் நீளம் கொண்டது.
+        **அளவீடுகள்** என்பன இசையில் நேரத்தைக் கணக்கிட பயன்படுகின்றன. இந்தப் பயிற்சியில், ஒரு அளவீடு (மெஷர்) என்பது நான்கு பீட்டுகள் நீளம் கொண்டது.
       CourseD_Dance_Party_04: |-
         _இந்த நடனத்திற்கு கொஞ்சம் ஃப்ளாஷ் தேவை!_
 
@@ -37,7 +37,7 @@ ta-IN:
       CourseD_Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -73,15 +73,12 @@ ta-IN:
         ஒர்க்ஸ்பேசுக்குள் “மேக் எ நியூ” பிளாக்கை இழுத்து, அதை “செட்அப்” பிளாக்குக்குள் உங்கள் முதல் டான்சரை உருவாக்குங்கள்.
 
         -   _நீங்கள் மேலதிக தகவல்களையோ அல்லது கூடுதல் சவால்களை விரும்பினாலோ லைட்பல்பை நீங்கள் இடதுபுறமாக க்ளிக் செய்யலாம்._"
-      Dance_Party_02: "இந்த மூஸ் நடனத்தைக் கற்றுக்கொள்வோம்! \n\n<xml><block type=\"Dancelab_changeMoveLR\"><title
-        name=\"SPRITE\">new\\_dancer</title><title name=\"MOVE\" config=\"MOVES.Dab,
-        MOVES.Drop, MOVES.Floss\">Floss</title><title name=\"DIR\">-1</title></block></xml>
-        ப்ளாக்கைப் பணியிடத்திற்கு இழுக்கவும். அதை <xml><block type=\"Dancelab_atTimestamp\"><title
-        name=\"TIMESTAMP\">4</title><title name=\"UNIT\">\"measures\"</title></block></xml>
-        ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் நடனக் கலைஞர் நான்காவது மெஷருக்குப்
-        பிறகு ஒரு புதிய நடன அசைவைத் தொடங்க வேண்டும். \n\n**மெஷர்கள்** என்பவை இசையில்
-        உள்ள நேரத்தை எண்ணப் பயன்படுத்தப்படுகிறது. இந்தப் பயிற்சியில், ஒரு மெஷர் என்பது
-        நான்கு பீட்டுகள் நீளம் கொண்டது."
+      Dance_Party_02: |-
+        நாம் இந்த மூஸை ஆடச் செய்வோம்!
+
+        <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> ப்ளாக்கைப் ஒர்க்ஸ்பேஸுக்கு இழுக்கவும். அதை <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> ப்ளாக்கிற்குக் கீழ் இணைக்கவும். உங்கள் டான்சர் நான்காவது அளவீடுக்குப் பின் ஒரு புதிய அசைவைத் தொடங்க வேண்டும்.
+
+        **அளவீடுகள்** என்பன இசையில் நேரத்தைக் கணக்கிட பயன்படுகின்றன. இந்தப் பயிற்சியில், ஒரு அளவீடு (மெஷர்) என்பது நான்கு பீட்டுகள் நீளம் கொண்டது.
       Dance_Party_03: "_இப்போது நாங்கள் ஃக்ரூவிங் செய்கிறோம்!_ \n\nஒரு <xml><block
         type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         ப்ளாக்கை உங்கள் பணியிடத்தில் சேர்க்கவும். 6 மெஷர்களுக்குப் பிறகு நடனக் கலைஞர்
@@ -109,7 +106,7 @@ ta-IN:
       Dance_Party_10: |-
         இப்போது நமக்கு ஒரு டான்சரின் ப்ராபர்ட்டிகளை எப்படி மாற்றுவது என்பது தெரிந்துவிட்டது. பின்வரும் ப்ளாக்கை பயன்படுத்தி அதே பண்புகளை தன்னியக்கமாக இசைக்கு பதில்வினை ஆற்றும் விதமாகச் செய்யலாம்:<xml>
           <block type="Dancelab_startMapping">
-            <title name="SPRITE">right\_unicorn</title>
+            <title name="SPRITE">right_unicorn</title>
             <title name="PROPERTY">"scale"</title>
             <title name="RANGE">"bass"</title>
           </block></xml>
@@ -120,12 +117,12 @@ ta-IN:
         \n\nநீங்கள் நடன அசைவை மாற்றலாம், நடனக் கலைஞரின் ப்ராப்பர்ட்டிகளை மாற்றலாம்
         அல்லது ஒரு முறை விரைவான அசைவை மேற்கொள்ளலாம். ஆக்கப்பூர்வமாக இருங்கள், மேலும்
         புதிய ப்ளாக்குகளுக்காக ஆராயுங்கள்!"
-      Dance_Party_11_5: "இந்த ப்ளாக்கைச் சரிபாருங்கள்: \n\n<xml>\n  <block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
-        \   <title name=\"N\">6</title>\n    <title name=\"COSTUME\">\"DUCK\"</title>\n
-        \   <title name=\"LAYOUT\">\"circle\"</title>\n  </block></xml> \n\nஇப்போது
-        நீங்கள் ஒரே நேரத்தில் பல நடனக் கலைஞர்களை உருவாக்கலாம்! \n\n”ஆல் டக்ஸ்” ப்ளாக்குகளில்
-        சிலவற்றைப் பயன்படுத்தி, எல்லா வாத்துகளும் ஒன்றாக நடனமாடச் செய்யும் குறியீட்டை
-        எழுத முயற்சிக்கவும்."
+      Dance_Party_11_5: "இந்த ப்ளாக்கை முயற்சித்துப் பாருங்கள்:\n\n<xml>\n  <block
+        type=\"Dancelab_makeNewDanceSpriteGroup\">\n    <title name=\"N\">6</title>\n
+        \   <title name=\"COSTUME\">\"DUCK\"</title>\n    <title name=\"LAYOUT\">\"circle\"</title>\n
+        \ </block></xml>\n\nஇப்போது ஒரே நேரத்தில் ஒரு டான்சர்களின் தொகுதியை உங்களால்
+        உருவாக்க இயலும்! \n\n “அனைத்து வாத்துக்கள்” ப்ளாக்குகளில் சிலவற்றை பயன்படுத்தி
+        அனைத்து வாத்துகளையும் ஒன்றுசேர்ந்து ஆடச் செய்ய முயற்சித்துப் பாருங்கள்."
       Dance_Party_11b: |-
         இது நடனப் போட்டிக்கான நேரம்! இடது அம்புக்குறியை நீங்கள் அழுத்துகையில் பூனை டேப் (dab) செய்யும். நீங்கள் வலது அம்புக்குறி விசையை அழுத்தி ரோபோவை ஒரு முறை ”டிராப்” செய்ய வையுங்கள், மற்றும் மேல் அம்புக்குறியை அழுத்தி ஒரு முறை ”கிளாப்” செய்ய வையுங்கள்.
 

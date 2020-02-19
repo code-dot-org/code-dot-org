@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import {TestResults} from '@cdo/apps/constants';
 
 const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
@@ -19,11 +20,22 @@ const initialState = {
   teacherComment: null
 };
 
+function sortByOrganizationId(standardsByConcept) {
+  return _.orderBy(standardsByConcept, 'organization_id', 'asc');
+}
+
 export default function sectionStandardsProgress(state = initialState, action) {
   if (action.type === ADD_STANDARDS_DATA) {
+    const sortedByConcept = _.orderBy(action.standardsData, 'concept', 'asc');
+    const groupedStandards = _.orderBy(
+      _.groupBy(sortedByConcept, 'concept'),
+      'concept',
+      'asc'
+    );
+    const sortedStandards = _.map(groupedStandards, sortByOrganizationId);
     return {
       ...state,
-      standardsData: action.standardsData
+      standardsData: _.flatten(sortedStandards)
     };
   }
   if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {
@@ -104,8 +116,15 @@ export const lessonsByStandard = state => {
       stages.forEach(stage => {
         if (standard.lesson_ids.includes(stage.id)) {
           let lessonDetails = {};
+          const lessonCompletionStatus = getLessonCompletionStatus(
+            state,
+            stage.id
+          );
           lessonDetails['name'] = stage.name;
           lessonDetails['lessonNumber'] = stage.relative_position;
+          lessonDetails['completed'] = lessonCompletionStatus.completed;
+          lessonDetails['numStudentsCompleted'] =
+            lessonCompletionStatus.numStudentsCompleted;
           lessonDetails['numStudents'] = numStudents;
           lessonDetails['url'] = stage.lesson_plan_html_url;
           lessonDetails['unplugged'] = stage.unplugged;
@@ -117,6 +136,64 @@ export const lessonsByStandard = state => {
   }
   return lessonsByStandardId;
 };
+
+export function getLessonCompletionStatus(state, stageId) {
+  // A lesson is "completed" by a student if at least 60% of the levels are
+  // completed.
+  const levelsPerLessonCompletionThreshold = 0.6;
+  // A lesson is "complete" for a section if passed by 80% of the students in
+  //the section.
+  const studentsPerSectionCompletionThreshold = 0.8;
+
+  let completionByLesson = {};
+
+  if (
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript &&
+    state.sectionProgress.studentLevelProgressByScript &&
+    state.sectionProgress.studentLevelProgressByScript[
+      state.scriptSelection.scriptId
+    ] &&
+    state.teacherSections.sections &&
+    state.teacherSections.selectedSectionId
+  ) {
+    const scriptId = state.scriptSelection.scriptId;
+    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+    const stage = _.find(stages, ['id', stageId]);
+    const numberStudentsInSection =
+      state.teacherSections.sections[state.teacherSections.selectedSectionId]
+        .studentCount;
+    const levelResultsByStudent =
+      state.sectionProgress.studentLevelProgressByScript[scriptId];
+
+    const studentIds = Object.keys(levelResultsByStudent);
+    const levelIds = _.map(stage.levels, 'activeId');
+    let numStudentsCompletedLesson = 0;
+    studentIds.forEach(studentId => {
+      let numLevelsInLessonCompletedByStudent = 0;
+      levelIds.forEach(levelId => {
+        if (
+          levelResultsByStudent[studentId][levelId] >=
+          TestResults.MINIMUM_PASS_RESULT
+        ) {
+          numLevelsInLessonCompletedByStudent++;
+        }
+      });
+      if (
+        numLevelsInLessonCompletedByStudent / levelIds.length >=
+        levelsPerLessonCompletionThreshold
+      ) {
+        numStudentsCompletedLesson++;
+      }
+    });
+    const completed =
+      numStudentsCompletedLesson / numberStudentsInSection >=
+      studentsPerSectionCompletionThreshold;
+    completionByLesson['completed'] = completed;
+    completionByLesson['numStudentsCompleted'] = numStudentsCompletedLesson;
+  }
+  return completionByLesson;
+}
 
 export function getStandardsCoveredForScript(scriptId) {
   return (dispatch, getState) => {

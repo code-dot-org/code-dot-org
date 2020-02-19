@@ -3375,6 +3375,13 @@ sk-SK:
           **Dobrovoľná výzva**
 
           Zmeň efekt pozadia v roznych častiach pesničky napojením nového bloku pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"takty"</title></block></xml>.
+      Dance_Party_05:
+        validation: |-
+          **Ako prejdem tento level?**
+
+          -   Pred ukončením úrovne musí tvoj tanečník absolvovať najmenej 4 rôzne tanečné pohyby.
+
+          _Tento level skončí po 12tich taktoch._
       Dance_Party_06:
         validation: |-
           **Ako prejdem túto úroveň?**
@@ -4133,9 +4140,17 @@ sk-SK:
           type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
           config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok,
           ktorý chceš zopakovať. "
+      courseA_harvester_loops5:
+        courseA_harvester_loops5_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
+          trasu!
+      courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
+          trasu!
       courseA_harvester_loops5b:
+        courseA_harvester_loops5b_a: Stlač `Spustiť` a uvidíš čo sa stane!
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
       courseA_harvester_loops5b_2019:
+        courseA_harvester_loops5b_a: Stlač `Spustiť` a uvidíš čo sa stane!
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
       courseA_harvester_loops6:
         courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
@@ -4143,6 +4158,54 @@ sk-SK:
       courseA_harvester_loops6_2019:
         courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
           a hľadaj v nich opakujúce sa vzory.
+      courseA_harvester_loops7:
+        courseA_harvester_loops7_b: Použi dva cykly na túto cestu.
+      courseA_harvester_loops7_2019:
+        courseA_harvester_loops7_b: Použi dva cykly na túto cestu.
+      courseA_harvester_loops9:
+        courseA_harvester_loops9_c: Aby ste pozbierali všetku kukuricu choďte touto
+          cestou.
+      courseA_harvester_loops9_2019:
+        courseA_harvester_loops9_c: Aby ste pozbierali všetku kukuricu choďte touto
+          cestou.
+      courseA_harvester_seq1:
+        courseA_harvester_seq1_a: |-
+          Použi tento blok na zobratie kukurice, keď ju záhradníčka nájde.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          Záhradníčka sa musí posunúť trikrát na východ, aby sa dostala ku kukurici. Použi tento blok:
+
+          <xml>
+            <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq10:
+        courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
+          trasu.
+      courseA_harvester_seq10_2019:
+        courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
+          trasu.
+      courseA_harvester_seq1_2019:
+        courseA_harvester_seq1_a: |-
+          Použi tento blok na zobratie kukurice, keď ju záhradníčka nájde.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+        courseA_harvester_seq1_b: |-
+          Záhradníčka sa musí posunúť trikrát na východ, aby sa dostala ku kukurici. Použi tento blok:
+
+          <xml>
+            <block type="maze_moveEast"/>
+          </xml>
+      courseA_harvester_seq3:
+        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
+          prísť na odpoveď.
+      courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
+          prísť na odpoveď.
       courseA_maze_ramp2_2018:
         '1': |-
           Tvoj kód by mal vyzerať takto:
@@ -4193,6 +4256,26 @@ sk-SK:
           Tvoj kód by mal vyzerať takto:
 
           <xml> <block type="when_run" deletable="false" movable="false"> <next> <block type="maze_moveWest"> <next> <block type="maze_moveWest"> </block> </next> </block> </next> </block> </xml>
+      courseA_maze_seq10_2018:
+        courseA_maze_seq10_b: Na vyriešenie tejto úlohy, budeš musieť ísť 3 rôznymi
+          smermi.
+      courseA_maze_seq10_2019:
+        courseA_maze_seq10_b: Na vyriešenie tejto úlohy, budeš musieť ísť 3 rôznymi
+          smermi.
+      courseA_maze_seq5_2018:
+        '2': |-
+          Budeš musieť použiť tento blok:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5_2019:
+        '2': |-
+          Budeš musieť použiť tento blok:
+
+          <xml><block type="maze_moveSouth"/></xml>
+      courseA_maze_seq5a_2018:
+        '1': Prečítaj si kroky nahlas a uvidíš či ti to pomôže prísť na odpoveď.
+      courseA_maze_seq5a_2019:
+        '1': Prečítaj si kroky nahlas a uvidíš či ti to pomôže prísť na odpoveď.
       courseA_playLab_events5:
         courseA_playLab_events5_b: |-
           Po kliknutí na obrázok si môžeš vybrať, ktorú klávesu (aký smer šípky) bude tento blok ovládať.
@@ -6031,11 +6114,6 @@ sk-SK:
         courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu
           presunúť blok `Pri spustení`.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
-          a blok `nastav postavu na ___ rýchlosť`.
-        courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu
-          presunúť blok `Pri spustení`.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_a: Na vyriešenie tejto úlohy použi blok `nastav pozadie`
           a blok `nastav postavu na ___ rýchlosť`.
         courseC_PlayLab_eventsA_b: Na vyriešenie tejto úlohy musíš na pracovnú plochu

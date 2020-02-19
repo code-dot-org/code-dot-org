@@ -1852,11 +1852,6 @@ hi-IN:
           ब्लॉक और `अभिनेता की गति ____ तक तय करें` ब्लॉक का उपयोग करें।
         courseC_PlayLab_eventsA_b: इस पहेली को हल करने के लिए आपको वर्कस्पेस में विशेषरूप
           से `जब चलाया जाए` इवेंट ब्लॉक खींचने की जरूरत होगी।
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: इस पहेली को हल करने के लिए `पृष्ठभूमि सेट करें`
-          ब्लॉक और `अभिनेता की गति ____ तक तय करें` ब्लॉक का उपयोग करें।
-        courseC_PlayLab_eventsA_b: इस पहेली को हल करने के लिए आपको वर्कस्पेस में विशेषरूप
-          से `जब चलाया जाए` इवेंट ब्लॉक खींचने की जरूरत होगी।
       courseC_PlayLab_eventsFP:
         idea1: |-
           _क्या आपको कोई सुझाव चाहिए?_
@@ -4011,7 +4006,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -4022,7 +4017,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>
@@ -4033,7 +4028,7 @@ hi-IN:
 
           <xml>  <block type="bee_whileNectarAmount">
               <title name="ARG1">nectarRemaining</title>
-              <title name="OP">></title>
+              <title name="OP">&gt;</title>
               <title name="ARG2">0</title>                    <statement name="DO">
                                 <block type="maze_nectar"/>
                               </statement>

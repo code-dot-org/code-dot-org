@@ -2171,10 +2171,13 @@ StudioApp.prototype.loadLibraryBlocks = function(config) {
     return;
   }
 
-  config.level.libraryCode = '';
+  config.level.projectLibraries = [];
   config.level.libraries.forEach(library => {
     config.dropletConfig.additionalPredefValues.push(library.name);
-    config.level.libraryCode += createLibraryClosure(library);
+    config.level.projectLibraries.push({
+      name: library.name,
+      code: createLibraryClosure(library)
+    });
     // TODO: add category management for libraries (blocked on spec)
     // config.dropletConfig.categories['libraryName'] = {
     //   id: 'libraryName',

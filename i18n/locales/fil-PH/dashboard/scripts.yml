@@ -8838,3 +8838,7 @@ fil:
               name: bagong yugto
             Create PT - Complete the Task:
               name: Lumkiha ng PT - Kompletuhin ang Gawain
+        csp9-pilot:
+          stages:
+            new stage:
+              name: bagong yugto

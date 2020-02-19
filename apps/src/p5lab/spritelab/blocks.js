@@ -521,7 +521,13 @@ export default {
       Blockly.BlockValueType.BEHAVIOR,
       'gamelab_behavior_get'
     );
-    if (blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE) {
+
+    // NOTE: On the page where behaviors are created (the functions/#/edit page)
+    // blockInstallOptions is undefined.
+    if (
+      !blockInstallOptions ||
+      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
+    ) {
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {
