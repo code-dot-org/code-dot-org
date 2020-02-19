@@ -357,8 +357,9 @@ module.exports = class Maze {
           // and failures
           var successes = [];
           var failures = [];
+          const numGrids = this.controller.map.staticGrids.length;
 
-          this.controller.map.staticGrids.forEach((grid, i) => {
+          for (let i = 0; i < numGrids; i++) {
             this.controller.map.useGridWithId(i);
             this.controller.subtype.reset();
 
@@ -372,6 +373,9 @@ module.exports = class Maze {
             this.onExecutionFinish_();
             if (this.executionInfo.terminationValue() === true) {
               successes.push(i);
+            } else if (this.executionInfo.terminationValue() === Infinity) {
+              failures.push(i);
+              break;
             } else {
               failures.push(i);
             }
@@ -380,7 +384,7 @@ module.exports = class Maze {
             this.controller.subtype.drawer.reset();
             this.prepareForExecution_();
             studioApp().reset(false);
-          });
+          }
 
           // The user's code needs to succeed against all possible grids
           // to be considered actually successful; if there are any
