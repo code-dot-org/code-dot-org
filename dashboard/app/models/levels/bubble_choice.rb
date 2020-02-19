@@ -150,4 +150,8 @@ class BubbleChoice < DSLDefined
   def self.parent_levels(level_name)
     where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
   end
+
+  def supports_markdown?
+    true
+  end
 end
