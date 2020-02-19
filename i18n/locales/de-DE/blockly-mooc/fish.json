@@ -50,7 +50,7 @@
     "fishlong-predicting-init2": "Mal sehen, wie die KI \"{Wort}\" Fische identifiziert.",
     "fishlong-pond-init1": "Basierend auf deinem Training, hat die KI {n, plural,one {einen anderen Fisch} other {einige andere Fische}} als \"{Wort}\" identifiziert.  Wie hat die KI das gemacht?",
     "fishlong-pond-init2": "Du kannst mehr trainieren, wenn du die Ergebnisse verbessern willst.",
-    "fishlong-pond-init3": "Oder Du kannst der KI ein neues Wort beibringen, indem Du Neues Wort auswählst.",
+    "fishlong-pond-init3": "Oder du kannst der KI ein neues Wort beibringen, indem du Neues Wort auswählst.",
     "didYouKnow": "Wusstest du schon?",
     "continue": "Weiter",
     "areYouSure": "Bist du sicher?",

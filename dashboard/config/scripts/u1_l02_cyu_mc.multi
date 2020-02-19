@@ -1,4 +1,5 @@
 name 'U1 L02 CYU MC'
+editor_experiment ''
 wrong '1'
 right 'The score is: 4’
 wrong '4'
@@ -9,6 +10,8 @@ markdown <<MARKDOWN
 
 
 What will the value of `score` be at the end of the program?
+
+**Note:** `<-` is used to represent a left facing arrow
 
 	var score
 	score <- 3

@@ -94,7 +94,7 @@ zh-TW:
         title: 大事件
         desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
       GoingPlacesSafely:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       GraphPaperProgramming:
         title: 方格紙編程
@@ -139,7 +139,7 @@ zh-TW:
         title: Mad Glibs
         desc: 抽象概念（Abstraction）是一個資訊電腦科學家最需要了解的重要技巧之一。這個活動會讓你的學生分析故事間的差異性，進而讓他們把故事抽象化。這些被抽象化的故事就會變成有趣又瘋狂的新故事的範本。
       ForLoopFun:
-        title: 有趣的計數迴圈
+        title: 有趣的計次迴圈
         desc: 我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。
       SongwritingWithParameters:
         title: 用參數寫歌
@@ -184,7 +184,7 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       courseA_unplugged_goingPlacesSafely:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseABC_unplugged_bigEvent:
         title: 大事件
@@ -238,7 +238,7 @@ zh-TW:
         title: 信封變數
         desc: 在計算機科學中，變數提供了很大的自由度。這節課有助於解釋什麼是變數，以及我們如何用不同的方法來使用它們。在這節課實施前，需要先（或同時）清楚抽象概念。
       courseF_unplugged_forLoopFun:
-        title: 有趣的計數迴圈
+        title: 有趣的計次迴圈
         desc: 我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。
       courseF_unplugged_songwritingParameters:
         title: 用參數寫歌
@@ -252,7 +252,7 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       GoingPlacesSafely_2018:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseA_unplugged_loops_2018:
         title: 迴圈的不插電活動
@@ -324,7 +324,7 @@ zh-TW:
         title: 快樂地圖
         desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       GoingPlacesSafely_2019:
-        title: 安全的到達地點
+        title: 安全的遨遊網路世界
         desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       courseA_unplugged_loops_2019:
         title: 迴圈的不插電活動

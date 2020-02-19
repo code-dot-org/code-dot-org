@@ -752,6 +752,8 @@ ko:
       target="_blank">개인정보 보호정책</a>에 동의합니다.
     accept_label_markdown: 업데이트 된 [서비스 약관](%{tos_url}) 과 [개인정보 보호정책](%{privacy_url})에
       동의합니다.
+    accept_tos: Code.org에 가입하시면 [이용 약관](%{tos_url}) 및 [개인정보 보호정책](%{privacy_url})에
+      동의하는 것으로 간주됩니다.
     accept: 수락
     print: 인쇄
     reminder_desc: <a href="%{tos_url}" target="_blank">서비스 약관</a>과 <a href="%{privacy_url}"
