@@ -206,7 +206,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: content_type,
       from: from_survey,
-      subject: "Help us improve Code.org #{workshop.course} workshops!",
+      subject: "Help us improve Code.org #{@workshop.course} workshops!",
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
