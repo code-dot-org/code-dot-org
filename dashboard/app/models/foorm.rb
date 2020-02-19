@@ -1,5 +1,5 @@
-module Forrm
+module Foorm
   def self.table_name_prefix
-    'forrm_'
+    'foorm_'
   end
 end

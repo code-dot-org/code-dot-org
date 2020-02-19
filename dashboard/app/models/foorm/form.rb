@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: forrm_forms
+# Table name: foorm_forms
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)      not null
@@ -11,20 +11,20 @@
 #
 # Indexes
 #
-#  index_forrm_forms_on_name_and_version  (name,version) UNIQUE
+#  index_foorm_forms_on_name_and_version  (name,version) UNIQUE
 #
 
-class Forrm::Form < ActiveRecord::Base
+class Foorm::Form < ActiveRecord::Base
   include Seeded
 
-  has_many :forrm_submissions
+  has_many :foorm_submissions
 
   def self.setup
-    forrms = Dir.glob('config/forrms/**/*.json').sort.map.with_index(1) do |path, id|
-      # Given: "config/forrms/surveys/pd/pre_workshop_survey.0.json"
+    foorms = Dir.glob('config/foorms/**/*.json').sort.map.with_index(1) do |path, id|
+      # Given: "config/foorms/surveys/pd/pre_workshop_survey.0.json"
       # we get full_name: "surveys/pd/pre_workshop_survey"
       #      and version: 0
-      unique_path = path.partition("config/forrms/")[2]
+      unique_path = path.partition("config/foorms/")[2]
       filename_and_version = File.basename(unique_path, ".json")
       filename, version = filename_and_version.split(".")
       version = version.to_i
@@ -43,7 +43,7 @@ class Forrm::Form < ActiveRecord::Base
 
     transaction do
       reset_db
-      Forrm::Form.import! forrms
+      Foorm::Form.import! foorms
     end
   end
 end

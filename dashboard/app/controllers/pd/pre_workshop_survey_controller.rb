@@ -8,11 +8,11 @@ class Pd::PreWorkshopSurveyController < ApplicationController
     return render :submitted if Pd::PreWorkshopSurvey.exists?(pd_enrollment_id: @pd_enrollment.id)
     return render_404 unless @workshop.try(:pre_survey?)
 
-    #form_json = File.read("config/forrms/surveys/pd/pre_workshop_survey.1.json")
+    #form_json = File.read("config/foorms/surveys/pd/pre_workshop_survey.1.json")
 
     survey_name = "surveys/pd/pre_workshop_survey"
-    latest_version = Forrm::Form.where(name: survey_name).maximum(:version)
-    form_data = Forrm::Form.where(name: survey_name, version: latest_version).first
+    latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
+    form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
     @form_data = JSON.parse(form_data.questions)
 
     @workshop_date = @workshop.sessions.first.start.strftime('%-m/%-d/%y')

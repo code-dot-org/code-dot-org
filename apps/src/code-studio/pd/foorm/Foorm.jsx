@@ -27,7 +27,7 @@ export default class Foorm extends React.Component {
   onComplete = (survey, options) => {
     console.log('Survey results: ' + JSON.stringify(survey.data));
     $.ajax({
-      url: '/dashboardapi/v1/forrm/submission',
+      url: '/dashboardapi/v1/foorm/submission',
       type: 'post',
       dataType: 'json',
       data: {
