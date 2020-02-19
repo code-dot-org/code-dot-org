@@ -48,7 +48,7 @@ class Ability
       Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
       :maker_discount,
-      :show_manifest,
+      :edit_manifest,
       :update_manifest
     ]
     cannot :index, Level
@@ -243,7 +243,7 @@ class Ability
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
 
-      can [:show_manifest, :update_manifest], :dataset
+      can [:edit_manifest, :update_manifest, :index, :show, :update], :dataset
     end
 
     if user.persisted?
