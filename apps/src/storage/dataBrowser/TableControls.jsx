@@ -8,7 +8,7 @@ import VisualizerModal from './dataVisualizer/VisualizerModal';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
+import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 import experiments from '../../util/experiments';
 
@@ -72,7 +72,7 @@ class TableControls extends React.Component {
 
           {!this.props.readOnly && (
             <ConfirmDeleteButton
-              body={applabMsg.confirmClearTable()}
+              body={msg.confirmClearTable()}
               buttonText="Clear table"
               containerStyle={{width: 103, marginLeft: 10}}
               buttonId="clearTableButton"
