@@ -601,6 +601,20 @@ class CourseTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
+  test "self.valid_courses: omits pilot courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :course, pilot_experiment: 'my-experiment'
+    assert Course.any?(&:pilot?)
+
+    refute Course.valid_courses(user: student).any? {|c| c[:pilot_experiment]}
+    refute Course.valid_courses(user: teacher).any? {|c| c[:pilot_experiment]}
+    assert Course.valid_courses(user: pilot_teacher).any? {|c| c[:pilot_experiment]}
+    assert Course.valid_courses(user: levelbuilder).any? {|c| c[:pilot_experiment]}
+  end
+
   test "update_teacher_resources" do
     course = create :course
     course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
