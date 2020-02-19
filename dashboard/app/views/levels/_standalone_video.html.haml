@@ -12,7 +12,7 @@
   - @slides = get_slides_by_video_key(@level.video_key)
 
   - unless @level.video_full_width
-    %h1= "Video: #{video.localized_name}"
+    %h1= "#{t('video.label')}: #{video.localized_name}"
   %div= render(inline: @level.long_instructions, type: :md) if @level.long_instructions
 
   .video-content
