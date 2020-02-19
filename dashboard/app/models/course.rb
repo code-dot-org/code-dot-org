@@ -204,11 +204,18 @@ class Course < ApplicationRecord
     info[:version_year] = version_year || ScriptConstants::DEFAULT_VERSION_YEAR
     info[:version_title] = localized_version_title
     info[:is_stable] = stable?
+    info[:pilot_experiment] = pilot_experiment
     info[:category] = I18n.t('courses_category')
     info[:script_ids] = user ?
       scripts_for_user(user).map(&:id) :
       default_course_scripts.map(&:script_id)
     info
+  end
+
+  def self.all_courses
+    Rails.cache.fetch('valid_courses/all') do
+      Course.all
+    end
   end
 
   # Get the set of valid courses for the dropdown in our sections table. This
@@ -222,9 +229,17 @@ class Course < ApplicationRecord
     if user && has_any_course_experiments?(user)
       return Course.valid_courses_without_cache(user: user)
     end
-    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
+
+    courses = Rails.cache.fetch("valid_courses/#{I18n.locale}") do
       Course.valid_courses_without_cache
     end
+
+    if user && has_any_pilot_access?(user)
+      pilot_courses = all_courses.select {|c| c.has_pilot_access?(user)}
+      courses = courses.concat(pilot_courses.map(&:assignable_info))
+    end
+
+    courses
   end
 
   # @param user [User]
@@ -550,5 +565,32 @@ class Course < ApplicationRecord
   # from the current year.
   def self.get_version_year_options
     (2017..(DateTime.now.year + 1)).to_a.map(&:to_s)
+  end
+
+  def pilot?
+    !!pilot_experiment
+  end
+
+  def has_pilot_experiment?(user)
+    return false unless pilot_experiment
+    SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
+  end
+
+  def has_pilot_access?(user = nil)
+    return false unless pilot? && user
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    return true if has_pilot_experiment?(user)
+
+    # A user without the experiment has pilot script access if
+    # one of their teachers has the pilot experiment enabled.
+    user.teachers.any? {|t| has_pilot_experiment?(t)}
+  end
+
+  # returns true if the user is a levelbuilder, or a teacher with any pilot
+  # script experiments enabled.
+  def self.has_any_pilot_access?(user = nil)
+    return false unless user&.teacher?
+    return true if user.permission?(UserPermission::LEVELBUILDER)
+    all_courses.any? {|course| course.has_pilot_experiment?(user)}
   end
 end
