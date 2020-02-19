@@ -206,12 +206,20 @@ class LibraryTable extends React.Component {
       sort: orderBy
     })(this.props.libraries);
 
-    // TODO: display message if no libraries
+    const hasLibraries = this.props.libraries.length > 0;
+
     return (
-      <Table.Provider columns={columns} style={tableLayoutStyles.table}>
-        <Table.Header />
-        <Table.Body rows={sortedRows} rowKey="channel" />
-      </Table.Provider>
+      <div>
+        {hasLibraries && (
+          <Table.Provider columns={columns} style={tableLayoutStyles.table}>
+            <Table.Header />
+            <Table.Body rows={sortedRows} rowKey="channel" />
+          </Table.Provider>
+        )}
+        {!hasLibraries && (
+          <h3 style={{textAlign: 'center'}}>{i18n.noLibraries()}</h3>
+        )}
+      </div>
     );
   }
 }
