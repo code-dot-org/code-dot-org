@@ -22,11 +22,9 @@ level 'CSP U9L3 Data Cleaning', progression: 'Cleaning Data'
 level 'CSP U9L3 Data Filtering', progression: 'Filtering Data'
 level 'U9L3 CFU manually cleaning data', progression: 'Check For Understanding', assessment: true
 
-stage 'Exploring Two Columns - Discrete'
+stage 'Exploring Two Columns'
 level 'CSP U9L4 SFLP 20-21', progression: 'Lesson Overview'
-
-stage 'Exploring Two Columns - Continuous'
-level 'CSP U9L5 SFLP 20-21', progression: 'Lesson Overview'
+level 'U9L4 CFU Two Column vs One', progression: 'Check For Understanding', assessment: true
 
 stage 'Big Data, Crowdsourcing, and Machine Learning'
 level 'CSP U9L6 SFLP 20-21', progression: 'Lesson Overview'
