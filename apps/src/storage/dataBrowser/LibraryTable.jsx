@@ -7,6 +7,7 @@ import color from '../../util/color';
 import {showPreview} from '../redux/data';
 import {getDatasetInfo} from './dataUtils';
 import experiments from '../../util/experiments';
+import moment from 'moment/moment';
 
 const styles = {
   tableName: {
@@ -64,6 +65,7 @@ class LibraryTable extends React.Component {
 
     // Provided via redux
     libraryManifest: PropTypes.object.isRequired,
+    locale: PropTypes.string,
     onShowPreview: PropTypes.func.isRequired
   };
 
@@ -90,6 +92,10 @@ class LibraryTable extends React.Component {
       return null;
     }
 
+    if (this.props.locale) {
+      moment.locale(this.props.locale);
+    }
+
     return (
       <div>
         <a style={styles.tableName} onClick={this.toggleCollapsed}>
@@ -98,9 +104,16 @@ class LibraryTable extends React.Component {
         </a>
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
-            {/* TODO: Add last updated time */}
             <div style={styles.tableDescription}>
               {datasetInfo.description}
+              {datasetInfo.lastUpdated && (
+                <span style={{display: 'inline-block'}}>
+                  {msg.lastUpdated({
+                    // Date format: Aug 2 1985 08:30 PM (https://momentjs.com/docs/#/i18n/)
+                    time: moment(datasetInfo.lastUpdated).format('lll')
+                  })}
+                </span>
+              )}
               {datasetInfo.sourceUrl && (
                 <span style={{display: 'inline-block'}}>
                   {msg.dataSource() + ': '}
@@ -135,7 +148,8 @@ class LibraryTable extends React.Component {
 
 export default connect(
   state => ({
-    libraryManifest: state.data.libraryManifest || {}
+    libraryManifest: state.data.libraryManifest || {},
+    locale: state.pageConstants && state.pageConstants.locale
   }),
   dispatch => ({
     onShowPreview(tableName) {
