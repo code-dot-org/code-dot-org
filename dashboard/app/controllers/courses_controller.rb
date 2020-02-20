@@ -66,9 +66,12 @@ class CoursesController < ApplicationController
       return
     end
 
-    if course.pilot? && !course.has_pilot_access?(current_user)
-      render :no_access
-      return
+    if course.pilot?
+      authenticate_user!
+      unless course.has_pilot_access?(current_user)
+        render :no_access
+        return
+      end
     end
 
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
