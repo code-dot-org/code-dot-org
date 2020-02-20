@@ -799,7 +799,11 @@ class Script < ActiveRecord::Base
       Script::CSD6_2019_NAME,
       Script::CSD1_PILOT_NAME,
       Script::CSD2_PILOT_NAME,
-      Script::CSD3_PILOT_NAME
+      Script::CSD3_PILOT_NAME,
+      Script::CSD2_2020_NAME,
+      Script::CSD3_2020_NAME,
+      Script::CSD4_2020_NAME,
+      Script::CSD6_2020_NAME
     ].include?(name)
   end
 
