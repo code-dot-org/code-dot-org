@@ -7,7 +7,6 @@ export default class EditEnrollmentNameDialog extends React.Component {
   static propTypes = {
     selectedEnrollment: PropTypes.object,
     show: PropTypes.bool,
-    onShow: PropTypes.func,
     onCancel: PropTypes.func,
     onEdit: PropTypes.func
   };
@@ -26,7 +25,7 @@ export default class EditEnrollmentNameDialog extends React.Component {
 
   // set initial value for each input field when modal is shown
   componentDidUpdate(prevProps) {
-    if (prevProps.show === false && this.props.show === true) {
+    if (!prevProps.show && this.props.show) {
       this.setState({
         firstName: this.props.selectedEnrollment.first_name,
         lastName: this.props.selectedEnrollment.last_name

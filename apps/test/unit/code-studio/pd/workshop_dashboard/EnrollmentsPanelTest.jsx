@@ -4,7 +4,10 @@ import {shallow, mount} from 'enzyme';
 import {assert} from 'chai';
 import sinon from 'sinon';
 import {Factory} from 'rosie';
-import EnrollmentsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/EnrollmentsPanel';
+import EnrollmentsPanel, {
+  MOVE_ENROLLMENT_BUTTON_NAME,
+  EDIT_ENROLLMENT_NAME_BUTTON_NAME
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/EnrollmentsPanel';
 import './workshopFactory';
 
 describe('EnrollmentsPanel', () => {
@@ -111,11 +114,12 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: 'moveEnrollment'}
+      target: {name: MOVE_ENROLLMENT_BUTTON_NAME}
     });
     wrapper.update();
     assert(
-      wrapper.state('enrollmentChangeDialogOpen') === 'moveEnrollment',
+      wrapper.state('enrollmentChangeDialogOpen') ===
+        MOVE_ENROLLMENT_BUTTON_NAME,
       'Move enrollments dialog was not opened'
     );
 
@@ -151,10 +155,13 @@ describe('EnrollmentsPanel', () => {
 
     // Open the move enrollments dialog
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: 'moveEnrollment'}
+      target: {name: MOVE_ENROLLMENT_BUTTON_NAME}
     });
     wrapper.update();
-    assert(wrapper.state('enrollmentChangeDialogOpen') === 'moveEnrollment');
+    assert(
+      wrapper.state('enrollmentChangeDialogOpen') ===
+        MOVE_ENROLLMENT_BUTTON_NAME
+    );
 
     // Confirm the move with a fake destination workshop
     const destinationWorkshopId = 5;
@@ -199,11 +206,12 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleClickChangeEnrollments({
-      target: {name: 'editEnrollmentName'}
+      target: {name: EDIT_ENROLLMENT_NAME_BUTTON_NAME}
     });
     wrapper.update();
     assert(
-      wrapper.state('enrollmentChangeDialogOpen') === 'editEnrollmentName'
+      wrapper.state('enrollmentChangeDialogOpen') ===
+        EDIT_ENROLLMENT_NAME_BUTTON_NAME
     );
 
     // Confirm the updated name
