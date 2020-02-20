@@ -69,21 +69,48 @@ module Pd
         regionalPartnerName: workshop.regional_partner&.name,
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
+      if params[:use_foorm]
+        # once we have surveys per day parameterize this on day number
+        survey_name = "surveys/pd/workshop_daily_survey_day_0"
+        latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
+        form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
+        @form_data = JSON.parse(form_data.questions)
+        @script_data = {
+          props: {
+            apiEndpoint: "/api/v1/pd/pre_workshop_surveys",
+            formData: @form_data,
+            formName: survey_name,
+            formVersion: latest_version,
+            surveyData: {
+              workshop_course: workshop.course
+            }
+          }.to_json
+        }
+        render :new_general_foorm
+      else
+        return if experimental_redirect! @form_id, @form_params
 
-      return if experimental_redirect! @form_id, @form_params
-
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/workshop_survey/day/#{day}",
-            form_id: @form_id,
-            workshop_course: workshop.course,
-            workshop_subject: workshop.subject,
-            regional_partner_name: workshop.regional_partner&.name,
-          }
-        )
+        if CDO.newrelic_logging
+          NewRelic::Agent.record_custom_event(
+            "RenderJotFormView",
+            {
+              route: "GET /pd/workshop_survey/day/#{day}",
+              form_id: @form_id,
+              workshop_course: workshop.course,
+              workshop_subject: workshop.subject,
+              regional_partner_name: workshop.regional_partner&.name,
+            }
+          )
+        end
       end
+    end
+
+    # General workshop daily survey using new form system.
+    # GET '/pd/workshop_survey/day/:day/foorm'
+    # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
+    def new_general_foorm
+      params[:use_foorm] = true
+      new_general
     end
 
     # POST /pd/workshop_survey/submit

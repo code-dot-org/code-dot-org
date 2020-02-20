@@ -7,7 +7,8 @@ export default class Foorm extends React.Component {
   static propTypes = {
     formData: PropTypes.object.isRequired,
     formName: PropTypes.string.isRequired,
-    formVersion: PropTypes.number.isRequired
+    formVersion: PropTypes.number.isRequired,
+    surveyData: PropTypes.object
   };
 
   constructor(props) {
@@ -43,7 +44,11 @@ export default class Foorm extends React.Component {
       return <div>Thank you for submitting</div>;
     } else {
       return (
-        <Survey.Survey model={this.surveyModel} onComplete={this.onComplete} />
+        <Survey.Survey
+          model={this.surveyModel}
+          onComplete={this.onComplete}
+          data={this.props.surveyData}
+        />
       );
     }
   }
