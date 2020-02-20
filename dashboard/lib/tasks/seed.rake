@@ -125,7 +125,7 @@ namespace :seed do
   end
 
   SCRIPTS_DEPENDENCIES = [
-    :environment,
+    #:environment,
     :games,
     :custom_levels,
     :dsls,
@@ -144,7 +144,7 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  task :scripts do
+  task scripts: :environment do
     SCRIPTS_DEPENDENCIES.each do |st|
       start_time = Time.new
       puts "Starting seed:#{st} at #{start_time}"
