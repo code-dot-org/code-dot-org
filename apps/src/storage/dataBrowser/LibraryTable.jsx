@@ -49,12 +49,8 @@ const styles = {
   lastUpdated: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: '12px',
-    color: color.light_gray
-  },
-  lastUpdatedTime: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontSize: '12px',
-    color: color.light_gray
+    color: color.light_gray,
+    display: 'inline-block'
   }
 };
 
@@ -105,15 +101,14 @@ class LibraryTable extends React.Component {
         {!this.state.collapsed && (
           <div style={styles.collapsibleContainer}>
             <div style={styles.tableDescription}>
-              {datasetInfo.description}
               {datasetInfo.lastUpdated && (
-                <span style={{display: 'inline-block'}}>
+                <span style={styles.lastUpdated}>
                   {msg.lastUpdated({
-                    // Date format: Aug 2 1985 08:30 PM (https://momentjs.com/docs/#/i18n/)
-                    time: moment(datasetInfo.lastUpdated).format('lll')
+                    time: moment(datasetInfo.lastUpdated).fromNow()
                   })}
                 </span>
               )}
+              <p>{datasetInfo.description}</p>
               {datasetInfo.sourceUrl && (
                 <span style={{display: 'inline-block'}}>
                   {msg.dataSource() + ': '}
