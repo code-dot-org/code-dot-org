@@ -581,9 +581,19 @@ class Course < ApplicationRecord
     return true if user.permission?(UserPermission::LEVELBUILDER)
     return true if has_pilot_experiment?(user)
 
-    # A user without the experiment has pilot script access if
-    # one of their teachers has the pilot experiment enabled.
-    user.teachers.any? {|t| has_pilot_experiment?(t)}
+    # A user without the experiment has pilot script access if one of their
+    # teachers has the pilot experiment enabled, AND they are either currently
+    # assigned to or have progress in the course.
+    #
+    # This logic is subtly different from the logic we use for pilot script
+    # access: because we do not record when a user is assigned to a course, we
+    # will fail to detect if a user was previously assigned to a pilot course in
+    # which they made no progress.
+
+    is_assigned = user.sections_as_student.any? {|s| s.course == self}
+    has_progress = !!UserScript.find_by(user: user, script: default_scripts)
+    has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
+    (is_assigned || has_progress) && has_pilot_teacher
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
