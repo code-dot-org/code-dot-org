@@ -14143,6 +14143,8 @@ en:
               name: Project - Tell a Data Story - Part 2
             'Lesson 10: Assessment Day':
               name: 'Lesson 10: Assessment Day'
+            Exploring Two Columns:
+              name: Exploring Two Columns
           title: CSP Unit 9 Pilot - Data
           description_audience: ''
           description_short: ''
@@ -14632,3 +14634,5 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        moneppo-1:
+          stages: {}
