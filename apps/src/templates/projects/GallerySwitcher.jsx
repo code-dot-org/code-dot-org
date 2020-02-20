@@ -3,11 +3,9 @@ import i18n from '@cdo/locale';
 import color from '../../util/color';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
-import {selectGallery} from './projectsRedux';
+import {selectGallery} from './projectsRedux.js';
 import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';
-import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
-import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 
 const styles = {
   container: {
@@ -49,10 +47,6 @@ const styles = {
 
 class GallerySwitcher extends Component {
   static propTypes = {
-    limitedGallery: PropTypes.bool,
-    canShare: PropTypes.bool.isRequired,
-
-    // Provided by Redux
     selectedGallery: PropTypes.string.isRequired,
     selectGallery: PropTypes.func.isRequired
   };
@@ -76,37 +70,29 @@ class GallerySwitcher extends Component {
 
   render() {
     return (
-      <div>
-        <div style={styles.container} id="uitest-gallery-switcher">
-          <div
-            key={'private'}
-            style={[
-              styles.pill,
-              this.props.selectedGallery === Galleries.PRIVATE &&
-                styles.selectedPill
-            ]}
-            onClick={this.toggleToMyProjects}
-          >
-            {i18n.myProjects()}
-          </div>
-          <div
-            key={'public'}
-            style={[
-              styles.pill,
-              this.props.selectedGallery === Galleries.PUBLIC &&
-                styles.selectedPill
-            ]}
-            onClick={this.toggleToGallery}
-          >
-            {i18n.publicProjects()}
-          </div>
+      <div style={styles.container} id="uitest-gallery-switcher">
+        <div
+          key={'private'}
+          style={[
+            styles.pill,
+            this.props.selectedGallery === Galleries.PRIVATE &&
+              styles.selectedPill
+          ]}
+          onClick={this.toggleToMyProjects}
+        >
+          {i18n.myProjects()}
         </div>
-        {this.props.selectedGallery === Galleries.PUBLIC && (
-          <PublicGallery limitedGallery={this.props.limitedGallery} />
-        )}
-        {this.props.selectedGallery === Galleries.PRIVATE && (
-          <PersonalProjectsTable canShare={this.props.canShare} />
-        )}
+        <div
+          key={'public'}
+          style={[
+            styles.pill,
+            this.props.selectedGallery === Galleries.PUBLIC &&
+              styles.selectedPill
+          ]}
+          onClick={this.toggleToGallery}
+        >
+          {i18n.publicProjects()}
+        </div>
       </div>
     );
   }
