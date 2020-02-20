@@ -10080,7 +10080,7 @@ en:
               description_student: Learn how computers store pictures using a language with only two options.
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: Artist Binary
+              name: Binary Images with Artist
               description_student: In this lesson, you will learn how to make images using only 0s and 1s.
               description_teacher: This series of online lessons will have students learning to make images using on and off.
             Build a Star Wars Game:
@@ -14143,6 +14143,8 @@ en:
               name: Project - Tell a Data Story - Part 2
             'Lesson 10: Assessment Day':
               name: 'Lesson 10: Assessment Day'
+            Exploring Two Columns:
+              name: Exploring Two Columns
           title: CSP Unit 9 Pilot - Data
           description_audience: ''
           description_short: ''
@@ -14632,3 +14634,5 @@ en:
               name: CS Discoveries Post Course survey
               description_student: ''
               description_teacher: ''
+        moneppo-1:
+          stages: {}
