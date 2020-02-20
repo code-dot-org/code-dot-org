@@ -30,9 +30,9 @@ class RedshiftImport
           rename_primary_key(
             schema,
             backup_table,
-            old_primary_key['name'],
-            BACKUP_TABLE_PREFIX + old_primary_key['name'],
-            old_primary_key['columns']
+            old_primary_key[:name],
+            BACKUP_TABLE_PREFIX + old_primary_key[:name],
+            old_primary_key[:columns]
           )
         end
 
@@ -41,9 +41,9 @@ class RedshiftImport
           rename_primary_key(
             schema,
             target_table,
-            primary_key['name'],
-            primary_key['name'].partition(TEMP_TABLE_PREFIX).last,
-            primary_key['columns']
+            primary_key[:name],
+            primary_key[:name].partition(TEMP_TABLE_PREFIX).last,
+            primary_key[:columns]
           )
         end
 
