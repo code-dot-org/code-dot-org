@@ -140,11 +140,9 @@ class CoursesControllerTest < ActionController::TestCase
 
   no_access_msg = "You don&#39;t have access to this course."
 
-  test_user_gets_response_for(:show, response: :success, user: nil,
-                              params: -> {{course_name: @pilot_course.name}}, name: 'signed out user cannot view pilot course'
-  ) do
-    assert response.body.include? no_access_msg
-  end
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {{course_name: @pilot_course.name}},
+                              name: 'signed out user cannot view pilot script'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
                               params: -> {{course_name: @pilot_course.name}}, name: 'student cannot view pilot course'
