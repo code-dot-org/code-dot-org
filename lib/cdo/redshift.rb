@@ -38,10 +38,12 @@ class RedshiftClient
 
   def exec(sql_query)
     result = @conn.exec(sql_query)
-    # result_status is an undocumented method that returns the integer query status.
-    # res_status is an undocumented method that returns the string identifier for a given integer query status.
+    # result_status is an undocumented PG::Result method that returns the integer query status.
+    # res_status is an undocumented PG::Result method that returns the string code for a given integer query status.
+    # API - https://www.rubydoc.info/gems/pg/PG/Result
+    # Source - https://github.com/ged/ruby-pg/blob/master/lib/pg/result.rb
     result_status = result.res_status(result.result_status)
-    unless QUERY_SUCCESS_CODES.include? result_status
+    unless (QUERY_SUCCESS_CODES + QUERY_WARNING_CODES).include? result_status
       @conn.exec('ROLLBACK;')
       raise PostgreSQLQueryError.new(result_status)
     end
