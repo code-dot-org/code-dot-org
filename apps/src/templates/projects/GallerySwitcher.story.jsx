@@ -4,13 +4,10 @@ import {Galleries} from './projectConstants';
 import projects, {selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {action} from '@storybook/addon-actions';
 
 const createProjectsStore = function() {
   return createStore(combineReducers({projects}));
-};
-
-const DEFAULT_PROPS = {
-  canShare: true
 };
 
 export default storybook => {
@@ -23,7 +20,7 @@ export default storybook => {
         store.dispatch(selectGallery(Galleries.PRIVATE));
         return (
           <Provider store={store}>
-            <GallerySwitcher {...DEFAULT_PROPS} />
+            <GallerySwitcher showGallery={action('showGallery')} />
           </Provider>
         );
       }
@@ -36,7 +33,7 @@ export default storybook => {
         store.dispatch(selectGallery(Galleries.PUBlIC));
         return (
           <Provider store={store}>
-            <GallerySwitcher {...DEFAULT_PROPS} />
+            <GallerySwitcher showGallery={action('showGallery')} />
           </Provider>
         );
       }
