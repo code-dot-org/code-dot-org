@@ -27,6 +27,12 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
 
+    # Generate encrypted code to display to user
+    auth_user = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    pre_secret = Time.now.strftime('%Y%m%dT%H%M%S%z') + auth_user['authentication_id'] + auth_user['credential_type']
+    secret = Encryption.encrypt_string(pre_secret)
+    p secret
+
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
     return redirect_to '/home?open=rosterDialog' if just_authorized_google_classroom?
