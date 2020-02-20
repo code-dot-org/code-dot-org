@@ -1,3 +1,6 @@
-= render partial: 'pd/jotform_loader'
-= jotform_iframe @form_id, @form_params
-= render partial: 'pd/jotform_embed'
+- if params[:use_jotform]
+  = render partial: 'pd/jotform_loader'
+  = jotform_iframe @form_id, @form_params
+  = render partial: 'pd/jotform_embed'
+- else
+  Hello!
