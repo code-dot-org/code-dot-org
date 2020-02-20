@@ -23,8 +23,19 @@ class TeacherScore < ApplicationRecord
     stage_id,
     score
   )
-    #Find all the students in the section.
-    # Find all the levels in the lesson
+    student_ids = Section.find(section_id).students.pluck(:id)
+    level_ids = Stage.find(stage_id).script_levels.map(&:level_id)
+
+    student_ids.each do |student_id|
+      level_ids.each do |level_id|
+        TeacherScore.score_level_for_student(
+          teacher_id,
+          student_id,
+          level_id,
+          score
+        )
+      end
+    end
   end
 
   def self.score_level_for_student(
