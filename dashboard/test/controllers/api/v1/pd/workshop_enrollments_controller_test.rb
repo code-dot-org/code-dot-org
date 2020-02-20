@@ -413,7 +413,8 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ::ActionController::TestC
     }
 
     enrollment.reload
-    assert_equal({'first_name' => 'Harry', 'last_name' => 'Potter'}, enrollment.attributes.slice('first_name', 'last_name'))
+    assert_equal 'Harry', enrollment.first_name
+    assert_equal 'Potter', enrollment.last_name
   end
 
   test 'non-workshop-admins cannot move enrollments' do

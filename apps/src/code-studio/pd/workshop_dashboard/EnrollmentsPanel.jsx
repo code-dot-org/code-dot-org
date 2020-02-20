@@ -9,10 +9,10 @@ import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
 
-const BUTTON_NAMES = {
-  moveEnrollment: 'moveEnrollment',
-  editEnrollmentName: 'editEnrollmentName'
-};
+const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
+const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
+
+export {MOVE_ENROLLMENT_BUTTON_NAME, EDIT_ENROLLMENT_NAME_BUTTON_NAME};
 
 /**
  * View and manage the list of teachers enrolled in a workshop.
@@ -212,13 +212,13 @@ export default class EnrollmentsPanel extends React.Component {
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length === 0}
             onClick={this.handleClickChangeEnrollments}
-            name={BUTTON_NAMES.moveEnrollment}
+            name={MOVE_ENROLLMENT_BUTTON_NAME}
           >
             Move (admin)
             <MoveEnrollmentsDialog
               show={
                 this.state.enrollmentChangeDialogOpen ===
-                BUTTON_NAMES.moveEnrollment
+                MOVE_ENROLLMENT_BUTTON_NAME
               }
               selectedEnrollments={this.state.selectedEnrollments}
               onCancel={this.handleChangeEnrollmentsCanceled}
@@ -231,13 +231,13 @@ export default class EnrollmentsPanel extends React.Component {
             bsSize="xsmall"
             disabled={this.state.selectedEnrollments.length !== 1}
             onClick={this.handleClickChangeEnrollments}
-            name={BUTTON_NAMES.editEnrollmentName}
+            name={EDIT_ENROLLMENT_NAME_BUTTON_NAME}
           >
             Edit name (admin)
             <EditEnrollmentNameDialog
               show={
                 this.state.enrollmentChangeDialogOpen ===
-                BUTTON_NAMES.editEnrollmentName
+                EDIT_ENROLLMENT_NAME_BUTTON_NAME
               }
               selectedEnrollment={this.state.selectedEnrollments[0]}
               onCancel={this.handleChangeEnrollmentsCanceled}
