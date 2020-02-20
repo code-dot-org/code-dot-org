@@ -127,7 +127,7 @@ style_min: false
   $(document).ready(function() {
     // Send through some values that the JavaScript will need.
     var tutorialExplorerManager = new window.TutorialExplorerManager({
-      tutorials: #{tutorials_contents.to_json.html_safe},
+      tutorials: #{tutorials_contents.to_json},
       locale: "#{request.locale}",
       roboticsButtonUrl: "/learn/robotics",
       showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
