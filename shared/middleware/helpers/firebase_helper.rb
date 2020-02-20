@@ -51,6 +51,11 @@ class FirebaseHelper
     {columns: columns, records: records}
   end
 
+  def get_shared_table_list
+    response = @firebase.get("/v3/channels/shared/counters/tables")
+    response.body
+  end
+
   def get_library_manifest
     response = @firebase.get("/v3/channels/shared/metadata/manifest")
     response.body
