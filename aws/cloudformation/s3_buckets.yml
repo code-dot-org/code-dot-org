@@ -38,3 +38,43 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  # for curriculumbuilder
+  CurriculumBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'cdo-curriculum-devel'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
+      VersioningConfiguration:
+        Status: 'Enabled'
+      LoggingConfiguration:
+        DestinationBucketName: 'cdo-logs'
+        LogFilePrefix: 's3/cdo-curriculum-devel'
+      PolicyDocument: {
+        "Version": "2008-10-17",
+        "Statement": [
+            {
+                "Sid": "PublicReadForGetBucketObjects",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": "*"
+                },
+                "Action": "s3:GetObject",
+                "Resource": "arn:aws:s3:::cdo-curriculum-devel/*"
+            },
+            {
+                "Sid": "",
+                "Effect": "Allow",
+                "Principal": {
+                    "AWS": "arn:aws:iam::475661607190:user/josh@code.org"
+                },
+                "Action": "s3:*",
+                "Resource": [
+                    "arn:aws:s3:::cdo-curriculum-devel/*",
+                    "arn:aws:s3:::cdo-curriculum-devel"
+                ]
+            }
+        ]
+      }
