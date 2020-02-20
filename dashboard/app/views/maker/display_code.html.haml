@@ -1,0 +1,15 @@
+%h1= 'Login to the Maker App with Google'
+
+%p Please copy and paste this code into the Maker App to login to Code.org
+
+%input#maker-code{:type=>"text", :readonly=>true, :value=>"code"}
+
+%button#btn-copy{ type: 'copy' } Copy
+
+:javascript
+  $(document).ready(function() {
+    $('#btn-copy').click(function() {
+      $('#maker-code').select();
+      document.execCommand("copy");
+    });
+  });
