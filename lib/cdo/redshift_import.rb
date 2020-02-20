@@ -5,10 +5,10 @@ class RedshiftImport
   TEMP_TABLE_PREFIX = '_import_'.freeze
   BACKUP_TABLE_PREFIX = '_old_'.freeze
 
-  # DMS Replication Tasks import data into temporary / staging tables prefixed with "_import_".
-  # Complete import of staged data from production database into Redshift by truncating each
-  # target table, moving all of the rows from each import table to its corresponding target table, and then dropping
-  # each temporary / staging import table.
+  # DMS Replication Tasks import data from the production MySQL database into temporary / staging tables prefixed with
+  # "_import_" to avoid disrupting usage of the Analytics/Reporting solutions during the lengthy Full Load process.
+  # Complete import of staged data by renaming the current table to "_old_", renaming the staging table, and then
+  # dropping the old table.
   # @param schemas [String] Array of Redshift schemas in which to complete data import.
   def self.complete_table_import(schemas)
     schemas.each do |schema|
@@ -23,8 +23,9 @@ class RedshiftImport
         rename_table(schema, import_table, target_table)
 
         # Rename the primary key from '_import_[foo]_primary' to '[foo]_primary' so that the next time the
-        # DMS Replication Task runs and creates the staging table it can create the primary key with a matching name.
-        # Also rename the back table's primary key.
+        # DMS Replication Task runs and creates the staging table it can create the primary key without being blocked
+        # by an existing primary key with that name.
+        # Also rename the backup table's primary key.
         old_primary_key = RedshiftImport.primary_key(schema, backup_table)
         if old_primary_key
           rename_primary_key(
@@ -93,10 +94,11 @@ class RedshiftImport
     # Example: "{1}" or "{2,1}"
     constraint_column_ids_list = result[0]['constraint_column_ids']
 
-    # Strip the curly braces off.  I will do anything to avoid using a regular expression.
+    # Strip the curly braces off.
     constraint_column_ids_list.slice!("\{")
     constraint_column_ids_list.slice!("\}")
 
+    # Get the names of the columns that a primary key is composed of.
     column_query = <<~SQL
       SELECT a.attname AS column_name
       FROM   pg_catalog.pg_tables t
@@ -138,6 +140,13 @@ class RedshiftImport
     redshift_client.exec(query)
   end
 
+  # Get name and columns of primary key constraint for a specific table, if constraint exists.
+  # @param schema [String] Redshift schema that contains the table.
+  # @param table [String] Redshift table that has the primary key constraint.
+  # @param current_index_name [String] Current name of primary key.
+  # @param new_index_name [String] New primary key name.
+  # @param columns [Array] Array of column names that primary key is composed of.
+  # Returns PG:Result (https://github.com/ged/ruby-pg/blob/master/lib/pg/result.rb).
   def self.rename_primary_key(schema, table, current_index_name, new_index_name, columns)
     redshift_client = RedshiftClient.instance
     query = <<~SQL
