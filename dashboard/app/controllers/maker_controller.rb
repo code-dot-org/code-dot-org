@@ -113,6 +113,11 @@ class MakerController < ApplicationController
   def login_code
   end
 
+  # GET /maker/display_code
+  # renders a page for users to copy and paste a login key
+  def display_code
+  end
+
   # POST /maker/complete
   # Called when eligible teacher clicks "Get Code."
   # Assigns a discount code and sends it back.
