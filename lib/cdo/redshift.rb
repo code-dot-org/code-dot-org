@@ -41,7 +41,10 @@ class RedshiftClient
     # result_status is an undocumented method that returns the integer query status.
     # res_status is an undocumented method that returns the string identifier for a given integer query status.
     result_status = result.res_status(result.result_status)
-    raise PostgreSQLQueryError.new(result_status) unless QUERY_SUCCESS_CODES.include? result_status
+    unless QUERY_SUCCESS_CODES.include? result_status
+      @conn.exec('ROLLBACK;')
+      raise PostgreSQLQueryError.new(result_status)
+    end
     result
   end
 end

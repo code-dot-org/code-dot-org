@@ -24,10 +24,28 @@ class RedshiftImport
 
         # Rename the primary key from '_import_[foo]_primary' to '[foo]_primary' so that the next time the
         # DMS Replication Task runs and creates the staging table it can create the primary key with a matching name.
-        backup_primary_key = RedshiftImport.primary_key(schema, backup_table)
-        rename_index(schema, backup_table, backup_primary_key, BACKUP_TABLE_PREFIX + backup_primary_key) if backup_primary_key
+        # Also rename the back table's primary key.
+        old_primary_key = RedshiftImport.primary_key(schema, backup_table)
+        if old_primary_key
+          rename_primary_key(
+            schema,
+            backup_table,
+            old_primary_key['name'],
+            BACKUP_TABLE_PREFIX + old_primary_key['name'],
+            old_primary_key['columns']
+          )
+        end
+
         primary_key = RedshiftImport.primary_key(schema, target_table)
-        rename_index(schema, target_table, primary_key, primary_key.partition(TEMP_TABLE_PREFIX).last) if primary_key
+        if primary_key
+          rename_primary_key(
+            schema,
+            target_table,
+            primary_key['name'],
+            primary_key['name'].partition(TEMP_TABLE_PREFIX).last,
+            primary_key['columns']
+          )
+        end
 
         # Drop the old production table.
         drop_table(schema, backup_table)
@@ -51,22 +69,52 @@ class RedshiftImport
     redshift_client.exec(query).map {|row| row['tablename']}
   end
 
-  # Get name of primary key constraint for a specific table, if constraint exists.
+  # Get name and columns of primary key constraint for a specific table, if constraint exists.
   # @param schema [String] Redshift schema.
   # @param table [String] The Redshift table.
-  # Returns Name of primary key constraint on the specified table, if it exists, otherwise nil.
+  # Returns hash containing name of primary key and an array of the column names it constrains.
   def self.primary_key(schema, table)
     redshift_client = RedshiftClient.instance
-    query = <<~SQL
-      SELECT constraint_name
-      FROm information_schema.table_constraints
-      WHERE constraint_schema = '#{schema}'
-        AND table_name = '#{table}'
-        AND constraint_type = 'PRIMARY KEY';
+    primary_key_query = <<~SQL
+      SELECT co.conname AS constraint_name
+        ,    co.conkey AS constraint_column_ids
+      FROM   pg_catalog.pg_tables t
+        INNER JOIN pg_catalog.pg_class cl ON (cl.relname = t.tablename AND cl.relkind = 'r') -- relkind 'r' is an ordinary table
+        INNER JOIN pg_catalog.pg_constraint co ON (co.conrelid = cl.oid AND co.contype = 'p') -- contype 'p' is primary key
+        INNER JOIN pg_catalog.pg_namespace n ON cl.relnamespace = n.oid
+      WHERE  t.schemaname = '#{schema}'
+        AND  t.tablename = '#{table}'
+        AND  n.nspname = '#{schema}';
     SQL
-    result = redshift_client.exec(query)
+    result = redshift_client.exec(primary_key_query)
     return nil if result.ntuples == 0
-    return result[0]['constraint_name'] if result.ntuples == 1
+
+    # This is a comma delimited list enclosed in curly braces, cast to string from the an integer array datatype.
+    # Example: "{1}" or "{2,1}"
+    constraint_column_ids_list = result[0]['constraint_column_ids']
+
+    # Strip the curly braces off.  I will do anything to avoid using a regular expression.
+    constraint_column_ids_list.slice!("\{")
+    constraint_column_ids_list.slice!("\}")
+
+    column_query = <<~SQL
+      SELECT a.attname AS column_name
+      FROM   pg_catalog.pg_tables t
+        INNER JOIN pg_catalog.pg_class cl ON (cl.relname = t.tablename AND cl.relkind = 'r') --  'r' is a table
+        INNER JOIN pg_catalog.pg_constraint co ON (co.conrelid = cl.oid AND co.contype = 'p') -- 'p' is primary key
+        INNER JOIN pg_catalog.pg_attribute a ON cl.oid = a.attrelid
+        INNER JOIN pg_catalog.pg_namespace n ON cl.relnamespace = n.oid
+      WHERE  t.schemaname = '#{schema}'
+        AND  t.tablename = '#{table}'
+        AND  n.nspname = '#{schema}'
+        AND  a.attnum IN (#{constraint_column_ids_list});
+    SQL
+    primary_key_column_names = redshift_client.exec(column_query).map {|row| row['column_name']}
+    key = {
+      name: result[0]['constraint_name'],
+      columns: primary_key_column_names
+    }
+    return key if result.ntuples == 1
     raise StandardError.new "Error getting primary key constraint for specified table.  More than 1 result returned."
   end
 
@@ -90,14 +138,13 @@ class RedshiftImport
     redshift_client.exec(query)
   end
 
-  # TODO: (suresh) Fix name of method, and stop hard coding column name.
-  def self.rename_index(schema, table, current_index_name, new_index_name)
+  def self.rename_primary_key(schema, table, current_index_name, new_index_name, columns)
     redshift_client = RedshiftClient.instance
     query = <<~SQL
       SET search_path TO #{schema};
       BEGIN;
       ALTER TABLE #{table} DROP CONSTRAINT #{current_index_name};
-      ALTER TABLE #{table} ADD CONSTRAINT #{new_index_name} PRIMARY KEY (id);
+      ALTER TABLE #{table} ADD CONSTRAINT #{new_index_name} PRIMARY KEY (#{columns.join(',')});
       COMMIT;
     SQL
     redshift_client.exec(query)
