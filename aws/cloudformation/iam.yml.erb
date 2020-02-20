@@ -258,6 +258,23 @@ Resources:
       Path: /
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy'
+  CurriculumbuilderDevRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: curriculumBuilderDevRole
+      AssumeRolePolicyDocument:
+        Statement:
+          - Action: 'sts:AssumeRole'
+            Effect: 'Allow'
+            Principal: !Sub "arn:aws:iam::${AWS::AccountId}:role/Developer"
+      PolicyDocument:
+        Statement:
+        - Effect: Allow
+          Action:
+            - s3:*
+          Resource:
+            - 'arn:aws:s3:::cdo-curriculum-devel'
+            - 'arn:aws:s3:::cdo-curriculum-devel/*'
 Outputs:
   DevPermissions:
     Description: Developer Permissions
