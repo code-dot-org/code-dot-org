@@ -108,6 +108,11 @@ class MakerController < ApplicationController
     render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
   end
 
+  # GET /maker/login_code
+  # renders a page for users to enter a login key
+  def login_code
+  end
+
   # POST /maker/complete
   # Called when eligible teacher clicks "Get Code."
   # Assigns a discount code and sends it back.

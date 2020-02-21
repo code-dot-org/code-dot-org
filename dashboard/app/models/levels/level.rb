@@ -74,6 +74,7 @@ class Level < ActiveRecord::Base
     editor_experiment
     teacher_markdown
     bubble_choice_description
+    thumbnail_url
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
@@ -152,6 +153,12 @@ class Level < ActiveRecord::Base
 
   def finishable?
     !unplugged?
+  end
+
+  # This does not include DSL levels which also use teacher markdown
+  # but access it in a different way
+  def include_teacher_only_markdown_editor?
+    uses_droplet? || is_a?(Blockly) || is_a?(ExternalLink) || is_a?(Weblab) || is_a?(CurriculumReference) || is_a?(StandaloneVideo)
   end
 
   def enable_scrolling?
@@ -532,10 +539,6 @@ class Level < ActiveRecord::Base
 
     unless contained_levels.empty?
       summary[:contained_levels] = contained_levels.map(&:summary_for_lesson_plans)
-    end
-
-    if summary[:sublevels]
-      summary[:sublevels] = summary[:sublevels].map {|level| level[:summary]}
     end
 
     summary
