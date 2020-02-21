@@ -129,7 +129,7 @@ class ProjectsController < ApplicationController
   @@project_level_cache = {}
 
   # GET /projects/:tab_name
-  # Where a valid :tab_name is (nil|public|library)
+  # Where a valid :tab_name is (nil|public|libraries)
   def index
     unless params[:tab_name] == 'public'
       return redirect_to '/projects/public' unless current_user
@@ -198,7 +198,7 @@ class ProjectsController < ApplicationController
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
-      redirect_to projects_public_path, flash: {alert: 'Only project validators can feature projects.'}
+      redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
     end
   end
 
