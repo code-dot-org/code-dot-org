@@ -1,5 +1,5 @@
 require 'json'
-require 'URI'
+require 'uri'
 
 class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
