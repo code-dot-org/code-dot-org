@@ -9,10 +9,8 @@ import Spinner from '../components/spinner';
 import WorkshopEnrollment from './components/workshop_enrollment';
 import WorkshopPanel from './WorkshopPanel';
 
-const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
-const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
-
-export {MOVE_ENROLLMENT_BUTTON_NAME, EDIT_ENROLLMENT_NAME_BUTTON_NAME};
+export const MOVE_ENROLLMENT_BUTTON_NAME = 'moveEnrollment';
+export const EDIT_ENROLLMENT_NAME_BUTTON_NAME = 'editEnrollmentName';
 
 /**
  * View and manage the list of teachers enrolled in a workshop.
