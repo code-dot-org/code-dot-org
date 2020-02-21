@@ -542,6 +542,7 @@ describe('entry tests', () => {
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
+    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
