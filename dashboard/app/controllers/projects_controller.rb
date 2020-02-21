@@ -132,7 +132,7 @@ class ProjectsController < ApplicationController
   # Where a valid :tab_name is (nil|public|library)
   def index
     unless params[:tab_name] == 'public'
-      return redirect_to projects_public_path unless current_user
+      return redirect_to '/projects/public' unless current_user
       return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
