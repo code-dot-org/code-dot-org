@@ -158,7 +158,7 @@ GIT
 
 GIT
   remote: https://github.com/wjordan/puma.git
-  revision: c0f187bc4eba3b1391b9e7c4c4ce39e3cc03fbac
+  revision: d37165cb72a0eb68c8ec2431db39a7693e616bb0
   branch: debugging
   specs:
     puma (3.12.0)

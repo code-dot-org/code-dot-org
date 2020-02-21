@@ -34,9 +34,8 @@ require 'gctools/oobgc'
 out_of_band {GC::OOB.run}
 
 # Log thread backtraces and GC stats from all worker processes every second when enabled.
-require 'puma/plugin/log_app_stats'
-LogAppStats.stats_proc = -> {Gatekeeper.allows('logAppStatsPegasus')}
-plugin :log_app_stats
+plugin :log_stats
+LogStats.threshold = -> {DCDO.get('logStatsPegasus', nil)}
 worker_check_interval 1
 thread_backtraces
 gc_stats
