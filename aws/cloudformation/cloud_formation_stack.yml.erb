@@ -359,7 +359,8 @@ Resources:
       DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
       HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
-      LoadBalancerNames: [Ref: LoadBalancer, Ref: ALB]
+      LoadBalancerNames: [Ref: LoadBalancer]
+      TargetGroupARNs: [Ref: ALBTargetGroup]
       MetricsCollection:
         - Granularity: 1Minute
   FrontendLaunchConfig:
