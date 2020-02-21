@@ -47,7 +47,9 @@ class Ability
       Pd::Application::Teacher1920Application,
       Pd::Application::Teacher2021Application,
       Pd::InternationalOptIn,
-      :maker_discount
+      :maker_discount,
+      :edit_manifest,
+      :update_manifest
     ]
     cannot :index, Level
 
@@ -240,6 +242,8 @@ class Ability
       # Ability for LevelStarterAssetsController. Since the controller does not have
       # a corresponding model, use lower/snake-case symbol instead of class name.
       can [:upload, :destroy], :level_starter_asset
+
+      can [:edit_manifest, :update_manifest, :index, :show, :update], :dataset
     end
 
     if user.persisted?
