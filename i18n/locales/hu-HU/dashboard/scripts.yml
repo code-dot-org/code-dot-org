@@ -424,6 +424,8 @@ hu:
               name: Húrok és Képek
         CSPPD:
           stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
             What is CSP?:
               name: Mi a CSP?
         CSPLessonSamples:
@@ -432,6 +434,18 @@ hu:
               name: Lecke 14
             Lesson 15:
               name: Lecke 15
+        ECSPD:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
+        sciencePD:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
+        rbo-reference:
+          stages:
+            reference:
+              name: hivatkozás
         cspunit3:
           description_short: Programozás
           stages:
@@ -451,6 +465,14 @@ hu:
               name: Tanári nyitólap
             The Design Recipe:
               name: A dizájn receptje
+        ECSPD-NexTech:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
+        ECSPD-iZone:
+          stages:
+            Teaching Strategies:
+              name: Tanítási stratégiák
         algebraPD-NexTech:
           stages:
             Evaluation Blocks:
@@ -463,6 +485,14 @@ hu:
               name: Értékelési blokk
             Teacher Dashboard:
               name: Tanári nyitólap
+        sciencePD-NexTech:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
+        sciencePD-iZone:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         sciencePD2:
           description: '2. Fázis: Online összetett nyári tanulmány'
           description_short: '2. Fázis: Online összetett nyári tanulmány'
@@ -676,14 +706,20 @@ hu:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit3:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit4:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ECSPD3-Unit5:
           stages:
             Getting Started:
@@ -852,6 +888,10 @@ hu:
               name: Sprite mozgatási módszerek
             Functions:
               name: funkciók
+        2016_sciencePD_phase1:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         TEMP CSD Unit 3:
           description_short: Programozás
         CSF_Secret_Sample:
@@ -862,6 +902,10 @@ hu:
               name: Értékelési blokk
             Teacher Dashboard:
               name: Tanári nyitólap
+        sciencePD1:
+          stages:
+            Using Computer Models in Science:
+              name: Számítógépes modellek használata a tudományban
         MikeTest:
           stages:
             Artist Functions:
@@ -942,14 +986,20 @@ hu:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit3:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit4:
           stages:
             Getting Started:
               name: Első lépések
+            Teaching Strategies:
+              name: Tanítási stratégiák
         ecs-unit5:
           stages:
             Getting Started:

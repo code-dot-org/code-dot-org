@@ -35,6 +35,8 @@ zh-CN:
       2-3 Bee Conditionals 9: 收集每朵花的花蜜。
       2-3 Bee Functions 3: 收集每朵花的花蜜。
       2-3 Bee Functions 6: 现在用同样的函数来从三朵花里收集花蜜。
+      2-3 Bee Functions Assessment 1: 评估：用给定的函数从每朵花上收集花蜜。
+      2-3 Bee Functions Assessment 2: 评估：创建一个函数来转向、往前移动、并酿造三个蜂蜜，然后让蜜蜂返回出发的位置并向后转。
       2-3 Bee Loops 2A: 这次，用循环来收集所有花蜜。
       2-3 Bee Loops 3A: 用一个`重复`循环来收集所有花蜜。
       2-3 Maze 10: 带我去找那个绿色的小恶魔！（小心 TNT 炸药）
@@ -104,7 +106,9 @@ zh-CN:
       4-5 While Loops 5: 哇，这里有两个洞！能写一个程序，一铲铲填土，直到地面平整吗？
       4-5 While Loops 6: 哇，这里有一大堆土！能写一个程序，将它一铲铲移除，直到地面平整吗？
       4-5 While Loops 7: 哇，这里有三堆土！能写一个程序，将它们一铲铲移除，直到地面平整吗？
+      AB_Debug_PlayLab3: 将骑士移到每个标记上。如果出现问题，就看看哪里出错了！
       Alien Defender: 项目创意：在游戏实验室里制作一个塔防游戏！
+      CDEF_debugging_flappy2: 为什么这个游戏不能运行？
       CSD U3 Boolean Modify: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Modify_2018: 修改代码，以便使所有的console.log命令打印“真”。
       CSD U3 Boolean Modify_2019: 修改代码，以便使所有的console.log命令打印“真”。
@@ -526,6 +530,15 @@ zh-CN:
       Virtual Pet 8_2019: '自由发挥：你的长颈鹿还能做些什么呢？ '
       Virtual Pet Freeplay: '自由发挥：你的长颈鹿还能做些什么呢？ '
       'Widget: Text Compression': 在文本中找到规律（如重复的单词或词组）。在右侧的词典中输入你所发现的规律。当你将其输入到字典中时，以文本形式表现的规律就会用符号替代。
+      behaviors 1: 预测一下！
+      behaviors 2: 火箭起飞，目标星际！
+      behaviors 3: 帮助流浪者超过机器人！
+      behaviors 3a: 调试：让所有的星星都以同样的方式旋转！
+      behaviors 4: 预测一下！
+      behaviors 5: 按对角线移动宇航员。
+      behaviors 6: 让球滚动起来。
+      behaviors 7: 驶向地平线！
+      behaviors free play: 自由发挥：创建自己的外太空场景！
       bounce_1: 在“当按左方向键时”模块下面添加模块，然后按“运行”。使用左方向键来移动挡板来到达终点目标。
       bounce_10: 顶部有一个目标。添加 "得分点" 和 "得分对手点" 方块到"当球在球门" 和 "当球错过桨" 方块，来做一个游戏。看看你能在对手得分两次之前得分多少分。
       bounce_10_basketball: 现在，目标在顶部！将"得分"和"对手得分"模块附加到到“当进球得分”和"当球未命中手"块来制作游戏。看看在对手获得两分前，你可以获得多少分。
@@ -646,6 +659,7 @@ zh-CN:
       courseA_collector_loops1_2019: 四处移动罗瑞尔, 得到尽可能多的宝藏!
       courseA_collector_loops2: 收集所有三个土堆来通关。
       courseA_collector_loops2_2018: 收集所有三个土堆来通关。
+      courseA_collector_loops2_2019: 得到所有 3 堆宝藏！将罗瑞尔移动到每堆宝藏上，然后使用收集模块。
       courseA_collector_loops4: 修复罗瑞尔的路径得到所有这些宝藏。
       courseA_collector_loops4_2018: 修复罗瑞尔的路径得到所有这些宝藏。
       courseA_collector_loops4_2019: 修复罗瑞尔的路径得到所有这些宝藏。
@@ -671,6 +685,15 @@ zh-CN:
       courseA_collector_loops_challenge2kp: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2018: 收集至少 **3** 件的宝藏通过这个关。
       courseA_collector_loops_challenge2kp_2019: 收集至少 **3** 件的宝藏通过这个关。
+      courseA_collector_preLoops1: |-
+        这是冒险家罗瑞尔！
+
+        点击 "运行" 让她走到宝藏那里，并获得它。
+      courseA_collector_preLoops2: |-
+        太好了！现在可以加上自己的代码了！
+
+        将 `获得宝藏` 模块粘到程序下 ，然后点击 "运行"。
+      courseA_collector_preLoops3: 将两个 `东-->` 模块和一个 `获得宝藏` 模块粘帖到程序的底部，然后点击 "运行"。
       courseA_collector_preLoops7: 收集所有三个土堆来通关。
       courseA_harvester_loops1: 帮助收割者采摘所有的玉米！
       courseA_harvester_loops10: 帮助收割者捡起所有5束玉米！
@@ -771,8 +794,10 @@ zh-CN:
       courseA_maze_seq_challenge2_2019: 沿着这条路带我去找那只笨猪。躲开 TNT 炸药，不然我的羽毛就要被炸飞了！
       courseA_playLab_events1: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
       courseA_playLab_events1_2018: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么!
+      courseA_playLab_events1_2019: 这是一个游戏实验室关卡。 把模块移到工作区看会发生什么！
       courseA_playLab_events2: 乔治狗想说“大家好”。你可以帮它吗？
       courseA_playLab_events2_2018: 乔治狗想说“大家好”。你可以帮它吗？
+      courseA_playLab_events2_2019: 乔治狗想说 “大家好”。可以帮帮它吗？
       courseA_playLab_events3: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2018: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
       courseA_playLab_events3_2019: 将`向左移动`模块连接到工作区中的`当点击向左时`的事件模块下。
@@ -1773,7 +1798,9 @@ zh-CN:
       courseD_iceage_loops8_2019: '你能修好这段代码吗？ '
       courseD_iceage_loops9: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
       courseD_iceage_loops9_2019: 橡子太远了！你能用循环帮助斯奎特到达那里吗？
+      courseD_maze_intro4_2019: 帮助红鸟抓到猪。
       courseD_maze_intro5a_2019: 注意顺序，看看你能否找出如何到达那头猪！
+      courseD_maze_intro5c_2019: 小心 TNT 炸药！帮助红鸟到达猪的位置。
       courseD_maze_nestedLoops3: 用尽可能少的模块让僵尸到达向日葵。
       courseD_maze_nestedLoops3_2018: 用尽可能少的模块让僵尸到达向日葵。
       courseD_maze_nestedLoops3_2019: 用尽可能少的模块让僵尸到达向日葵。
@@ -1809,6 +1836,7 @@ zh-CN:
       courseD_maze_ramp5b_2019: 在这个迷宫中领航，帮助小鸟找到猪！
       courseD_maze_ramp5c: 帮小鸟到达猪那里。
       courseD_maze_ramp5c_2018: 帮小鸟到达猪那里。
+      courseD_maze_ramp5c_2019: 当心碎冰！帮助斯奎特得到橡子。
       courseD_maze_ramp5d: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2018: 帮小鸟到达那只猪。
       courseD_maze_ramp5d_2019: 帮小鸟到达那只猪。
@@ -1874,6 +1902,7 @@ zh-CN:
         当你将几个同样的模块排成一列时，试试将它们挪到`重复`循环里。这能更少的代码做到相同的事情！
       courseD_scrat_ramp7: 帮助斯奎特得到橡子！
       courseD_scrat_ramp8: 用你学到的东西让斯奎特得到橡子!
+      courseE_aboutme_6: '继续！试试为海报加入更多功能，让它更好。 '
       courseE_artist_concept1: '重新创建这幅图。 '
       courseE_artist_concept1_2018: '重新创建这幅图。 '
       courseE_artist_concept4: 重新创建这幅图。
@@ -2301,6 +2330,7 @@ zh-CN:
       ramp_artist_loops3_2019: 使用 "重复" 循环绘制五色虚线。
       ramp_artist_loops4: 当您在循环的最后添加了右转72度后, 会发生什么？
       ramp_artist_loops4_2018: 当您在循环的最后添加了右转72度后, 会发生什么？
+      ramp_artist_loops4_2019: 循环一组 "向前移动" 和 "向右转 144 度" 模块，来创建星星图案。
       ramp_artist_loops5: 使用循环来绘制这个楼梯。
       ramp_artist_loops5_2018: 使用循环来绘制这个楼梯。
       ramp_artist_loops5_2019: 使用循环来绘制这个楼梯。

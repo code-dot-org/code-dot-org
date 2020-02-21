@@ -2198,6 +2198,8 @@ sk-SK:
         - {}
         questions:
         - {}
+      csd-post-survey-2017-levelgroup-2018-2nd-semester:
+        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
       csd-post-survey-2018-markdown-with-link-to-survey_v2:
         markdown: |+
           # Objavujeme informatiku - Záverečný dotazník
@@ -2217,6 +2219,8 @@ sk-SK:
 
 
 
+      csd-post-survey-levelgroup-2018:
+        title: Objavujeme Informatiku Koniec kurzu Študentský dotazník
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel pomocou tohto kódu pozbiera 4 drahokamy.

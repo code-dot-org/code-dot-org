@@ -1,5 +1,5 @@
 require 'json'
-require 'URI'
+require 'uri'
 
 class DatasetsController < ApplicationController
   before_action :require_levelbuilder_mode
@@ -10,6 +10,9 @@ class DatasetsController < ApplicationController
 
   # GET /datasets
   def index
+    tables = @firebase.get_shared_table_list
+    @datasets = tables.map {|name, _| name}
+    @live_datasets = LIVE_DATASETS
   end
 
   # GET /datasets/:dataset_name/
@@ -41,9 +44,7 @@ class DatasetsController < ApplicationController
   def update_manifest
     parsed_manifest = JSON.parse(params['manifest'])
     response = @firebase.set_library_manifest parsed_manifest
-    data = {status: response.code}
-    data[:msg] = response.body unless response.success?
-    render json: data
+    return head response.code
   rescue JSON::ParserError
     render json: {msg: 'Invalid JSON'}
   end

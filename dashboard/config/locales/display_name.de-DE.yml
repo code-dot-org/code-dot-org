@@ -25,7 +25,7 @@ de-DE:
       CSD Board Sensors Map_2018: Analoge Sensoren
       CSD Board Sensors Map_2019: Analoge Sensoren
       CSD LEDs Map_2019: 'Circuit Playground: Einführung'
-      CSD Problem Solving Process Video: 'Video: Ablauf Problemlösung'
+      CSD Problem Solving Process Video: 'Video: Problemlösungs-Prozess'
       CSD U1L02 TFMD_2018: Unterrichtsübersicht
       CSD U1L02 TFMD_2019: Unterrichtsübersicht
       CSD U1L03 TFMD_2018: Unterrichtsübersicht
@@ -245,6 +245,11 @@ de-DE:
       CSD U5 binary video: Binär und Daten
       CSD U5 binary video_2018: Binär und Daten
       CSD U5 binary video_2019: Binär und Daten
+      CSD U5 black white images pixelation 2_2019: Schwarz-Weiß-Pixelations-Widget
+      CSD U5 black white images pixelation 3_2019: Schwarz-Weiß-Pixelations-Widget
+      CSD U5 black white images pixelation 4_2019: Schwarz-Weiß-Pixelations-Widget
+      CSD U5 black white images pixelation 5_2019: Schwarz-Weiß-Pixelations-Widget
+      CSD U5 black white images pixelation_2019: Schwarz-Weiß-Pixelations-Widget
       CSD U5L01 autoSFLP_2018: Unterrichtsübersicht
       CSD U5L01 autoSFLP_2019: Unterrichtsübersicht
       CSD U5L02 autoSFLP_2018: Unterrichtsübersicht
@@ -431,8 +436,8 @@ de-DE:
       courseF_project_1: Sprite Lab Beispielprojekt
       csd U3 conditional statements video: 'Video: "Wenn/Sonst" Anweisungen'
       csd U3 conditional statements video_2019: 'Video: Bedingte Anweisungen'
-      csd u5 recommender sample: Beispielapp
-      csd u5 recommender sample_2019: Beispielapp
+      csd u5 recommender sample: Beispiel-App
+      csd u5 recommender sample_2019: Beispiel-App
       csd-pre-survey-2017-levelgroup_2018: Unterrichtsübersicht
       csd-pre-survey-levelgroup_2019: Unterrichtsübersicht
       scrat_loops_C-F_video: Schleifen im Ice Age Video

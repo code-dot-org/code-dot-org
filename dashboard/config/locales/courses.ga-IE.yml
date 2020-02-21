@@ -12,6 +12,16 @@ ga:
           assignment_family_title: Fionnachtana sa Ríomheolaíocht
           title: Fionnachtana sa Ríomheolaíocht ('17-'18)
           version_title: "'17-'18"
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú.
         allthethingscourse:
           title: cúrsauilechuimsitheach
           description_short: Seo é cúrsa ina bhfuil chuile rud
@@ -23,10 +33,35 @@ ga:
           assignment_family_title: Fionnachtana sa Ríomheolaíocht
           title: Fionnachtana sa Ríomheolaíocht ('18-'19)
           version_title: "'18-'19"
+          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú.
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
         csp-2018:
           assignment_family_title: Foras Feasa ar an Ríomheolaíocht
           title: Foras Feasa ar an Ríomheolaíocht ('18-'19)
           version_title: "'18-'19"
           description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
         csp-2019:
+          title: Foras Feasa ar an Ríomheolaíocht ('19-'20)
+          version_title: "'19-'20"
           description_short: Foghlaim bunchoincheapa sa ríomheolaíocht.
+        csd-2019:
+          title: Fionnachtana sa Ríomheolaíocht ('19-'20)
+          version_title: "'19-'20"
+          description_short: Bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú.
+          description_student: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
+          description_teacher: Is éard atá i bhFionnachtana sa Ríomheolaíocht (CS
+            Discoveries) ná bunchúrsa ríomheolaíochta a chabhraíonn le daltaí a ndéantús
+            féin a chruthú, agus an ríomheolaíocht a úsáid mar mhodh féinléirithe,
+            cumarsáide, réitithe fadhbanna, agus spraoi.
