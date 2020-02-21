@@ -35,13 +35,13 @@ class FirebaseHelper
     id = 1
     table = CSV.parse(csv_data, headers: true)
     table.each do |row|
-      record = OpenStruct.new
-      record.id = id
+      record = {}
+      record['id'] = id
       table.headers.each do |col|
         value = (number? row[col]) ? row[col].to_f : row[col]
         record[col] = value
       end
-      records[id] = record.to_h.to_json
+      records[id] = record.to_json
       id += 1
     end
     # add id as first column
