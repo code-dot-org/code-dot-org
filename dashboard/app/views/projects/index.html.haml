@@ -6,7 +6,7 @@
   projects_data[:projectCount] = fetch_project_count['total_projects']
 
   if current_user
-    projects_data[:canViewAdvancedTools] = !current_user.under_13? && current_user.terms_version.present?
+    projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
     projects_data[:canShare] = !current_user.sharing_disabled?
   end
 

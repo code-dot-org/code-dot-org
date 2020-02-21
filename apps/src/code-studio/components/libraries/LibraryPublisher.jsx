@@ -23,7 +23,8 @@ const styles = {
   },
   info: {
     fontSize: 12,
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    lineHeight: 1.2
   },
   textInput: {
     fontSize: 14,
@@ -257,6 +258,7 @@ export default class LibraryPublisher extends React.Component {
         {this.displayDescription()}
         <Heading2>{i18n.catProcedures()}</Heading2>
         {this.displayFunctions()}
+        <div style={styles.info}>{i18n.libraryFunctionRequirements()}</div>
         <div style={{position: 'relative'}}>
           <Button
             style={{marginTop: 20}}

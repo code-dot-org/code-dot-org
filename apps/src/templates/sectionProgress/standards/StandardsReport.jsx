@@ -19,7 +19,8 @@ import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsR
 import {
   getNumberLessonsCompleted,
   getNumberLessonsInScript,
-  setTeacherCommentForReport
+  setTeacherCommentForReport,
+  lessonsByStandard
 } from './sectionStandardsProgressRedux';
 import StandardsLegendForPrint from './StandardsLegendForPrint';
 import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo';
@@ -30,6 +31,7 @@ import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/
 import {loadScript} from '../sectionProgressRedux';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const styles = {
   printView: {
@@ -52,6 +54,9 @@ const styles = {
   },
   table: {
     width: '100%'
+  },
+  currentCourse: {
+    marginBottom: 0
   }
 };
 
@@ -72,7 +77,8 @@ class StandardsReport extends Component {
     numLessonsInUnit: PropTypes.number,
     getStandardsCoveredForScript: PropTypes.func.isRequired,
     setTeacherCommentForReport: PropTypes.func.isRequired,
-    setScriptId: PropTypes.func.isRequired
+    setScriptId: PropTypes.func.isRequired,
+    lessonsByStandard: PropTypes.object
   };
 
   componentDidMount() {
@@ -117,62 +123,87 @@ class StandardsReport extends Component {
   render() {
     const {scriptFriendlyName} = this.props;
     const linkToOverview = this.getLinkToOverview();
+    // This information is required to show all the information in the table but has
+    // to be calculated after componentDidMount pulls in the information about
+    // the state from the opener window.
+    const teacherDashboardInformationHasLoaded =
+      this.props.numLessonsInUnit !== 0 &&
+      this.props.lessonsByStandard !== null;
     return (
       <div>
-        <PrintReportButton onClick={this.printReport} />
-        <div id="printArea" style={styles.printView}>
-          <StandardsReportHeader
-            sectionName={this.props.sectionName}
-            teacherName={this.props.teacherName}
+        {!teacherDashboardInformationHasLoaded && (
+          <FontAwesome
+            id="uitest-spinner"
+            icon="spinner"
+            className="fa-pulse fa-5x"
           />
-          <div style={styles.reportContent}>
-            <h2 style={styles.headerColor}>{i18n.currentCourse()}</h2>
-            <StandardsReportCurrentCourseInfo
-              section={this.props.section}
-              scriptFriendlyName={this.props.scriptFriendlyName}
-              scriptData={this.props.scriptData}
-              scriptDescription={this.props.scriptDescription}
-              numStudentsInSection={this.props.numStudentsInSection}
-              numLessonsCompleted={this.props.numLessonsCompleted}
-              numLessonsInUnit={this.props.numLessonsInUnit}
-            />
-            {this.props.teacherComment && (
-              <div>
-                <h2 style={styles.headerColor}>{i18n.teacherComments()}</h2>
-                <p>{this.props.teacherComment}</p>
+        )}
+        {teacherDashboardInformationHasLoaded && (
+          <div>
+            <PrintReportButton onClick={this.printReport} />
+            <div id="printArea" style={styles.printView}>
+              <StandardsReportHeader
+                sectionName={this.props.sectionName}
+                teacherName={this.props.teacherName}
+              />
+              <div style={styles.reportContent}>
+                <h2 style={{...styles.headerColor, ...styles.currentCourse}}>
+                  {i18n.currentCourse()}
+                </h2>
+                <StandardsReportCurrentCourseInfo
+                  section={this.props.section}
+                  scriptFriendlyName={this.props.scriptFriendlyName}
+                  scriptData={this.props.scriptData}
+                  scriptDescription={this.props.scriptDescription}
+                  numStudentsInSection={this.props.numStudentsInSection}
+                  numLessonsCompleted={this.props.numLessonsCompleted}
+                  numLessonsInUnit={this.props.numLessonsInUnit}
+                />
+                {this.props.teacherComment && (
+                  <div>
+                    <h2 style={styles.headerColor}>{i18n.teacherComments()}</h2>
+                    <p>{this.props.teacherComment}</p>
+                  </div>
+                )}
+                <h2 style={styles.headerColor}>
+                  {i18n.CSTAStandardsPracticed()}
+                </h2>
+                <StandardsProgressTable
+                  style={styles.table}
+                  isViewingReport={true}
+                />
+                <StandardsLegendForPrint />
+                <h2 style={styles.headerColor}>
+                  {i18n.standardsHowToForPrint()}
+                </h2>
+                <SafeMarkdown
+                  openExternalLinksInNewTab={true}
+                  markdown={i18n.standardsHowToDetailsForPrint({
+                    courseName: scriptFriendlyName,
+                    courseLink: linkToOverview,
+                    cstaLink: cstaStandardsURL
+                  })}
+                />
+                <h2 style={styles.headerColor}>
+                  {i18n.standardsGetInvolved()}
+                </h2>
+                <SafeMarkdown
+                  markdown={i18n.standardsGetInvolvedDetailsForPrint({
+                    adminLink: pegasus('/administrator'),
+                    parentLink: pegasus('/help'),
+                    teacherLink: '/courses'
+                  })}
+                />
               </div>
-            )}
-            <h2 style={styles.headerColor}>{i18n.CSTAStandardsPracticed()}</h2>
-            <StandardsProgressTable
-              style={styles.table}
-              isViewingReport={true}
-            />
-            <StandardsLegendForPrint />
-            <h2 style={styles.headerColor}>{i18n.standardsHowToForPrint()}</h2>
-            <SafeMarkdown
-              openExternalLinksInNewTab={true}
-              markdown={i18n.standardsHowToDetailsForPrint({
-                courseName: scriptFriendlyName,
-                courseLink: linkToOverview,
-                cstaLink: cstaStandardsURL
-              })}
-            />
-            <h2 style={styles.headerColor}>{i18n.standardsGetInvolved()}</h2>
-            <SafeMarkdown
-              markdown={i18n.standardsGetInvolvedDetailsForPrint({
-                adminLink: pegasus('/administrator'),
-                parentLink: pegasus('/help'),
-                teacherLink: '/courses'
-              })}
-            />
-          </div>
-          <div style={styles.footer}>
-            <div style={styles.mission}>
-              <SafeMarkdown markdown={i18n.missionStatement()} />
+              <div style={styles.footer}>
+                <div style={styles.mission}>
+                  <SafeMarkdown markdown={i18n.missionStatement()} />
+                </div>
+              </div>
             </div>
+            <PrintReportButton onClick={this.printReport} />
           </div>
-        </div>
-        <PrintReportButton onClick={this.printReport} />
+        )}
       </div>
     );
   }
@@ -192,7 +223,8 @@ export default connect(
     teacherName: state.currentUser.userName,
     sectionName: sectionName(state, state.sectionData.section.id),
     numLessonsCompleted: getNumberLessonsCompleted(state),
-    numLessonsInUnit: getNumberLessonsInScript(state)
+    numLessonsInUnit: getNumberLessonsInScript(state),
+    lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
     loadScript(scriptId) {

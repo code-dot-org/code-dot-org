@@ -916,8 +916,8 @@ de:
             '"left"': links
             '"down"': runter
             '"right"': rechts
-            '"space"': Weltall
-            '"enter"': enter
+            '"space"': Abstand
+            '"enter"': Eingabetaste
             '"a"': a
             '"b"': b
             '"c"': c
@@ -994,6 +994,8 @@ de:
         text: "erstelle neuen Sprite\n genannt {NAME} \n mit Kostüm {COSTUME} \n in {LOCATION}"
       gamelab_destroy:
         text: entferne {THIS}
+      gamelab_draggable:
+        text: verschiebbar sein
       gamelab_edgesDisplace:
         text: der Rand hindert {SPRITE} an der Bewegung
       gamelab_getProp:
@@ -1029,7 +1031,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"b"': b
             '"c"': c
@@ -1074,6 +1076,8 @@ de:
             '"left"': links
       gamelab_mouseLocation:
         text: Mausposition
+      gamelab_moveBackward:
+        text: bewege {SPRITE} {DISTANCE} Pixel rückwärts
       gamelab_moveForward:
         text: bewege {SPRITE} {DISTANCE} Pixel vorwärts
       gamelab_moveInDirection:
@@ -1120,6 +1124,7 @@ de:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': Höhle
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': Stadt
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': Spielfeld
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': Wüste
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaxie
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': Raster
@@ -1169,7 +1174,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1192,7 +1197,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1568,7 +1573,7 @@ de:
             '"down"': runter
             '"left"': links
             '"right"': rechts
-            '"space"': Weltall
+            '"space"': Abstand
             '"a"': a
             '"w"': w
             '"s"': s
@@ -1619,9 +1624,14 @@ de:
             '"decorativeStoneBricks"': dekorative Ziegelsteine
             '"blueCoralBlock"': blaue Koralle-Baustein
             '"pinkCoralBlock"': rosa Korallen-Baustein
+            '"magentaCoralBlock"': magenta Koralle-Baustein
             '"redCoralBlock"': roter Korallen-Baustein
             '"yellowCoralBlock"': gelber Korallen-Baustein
             '"blueDeadCoralBlock"': blaue tote Koralle-Baustein
+            '"pinkDeadCoralBlock"': pinker tote Korallen-Baustein
+            '"magentaDeadCoralBlock"': magenta tote Koralle-Baustein
+            '"readDeadCoralBlock"': roter tote Korallen-Baustein
+            '"yellowDeadCoralBlock"': gelber tote Koralle-Baustein
             '"prismarine"': Prismarin
             '"darkPrismarine"': dunkler Prismarin
             '"seaLantern"': Seelaterne

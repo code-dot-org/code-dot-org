@@ -227,15 +227,22 @@ describe('StudioApp', () => {
       expect(config.dropletConfig.blocks).to.deep.equal(targetBlocks);
     });
 
-    it('given a library, adds all library closures to libraryCode', () => {
+    it('given a library, adds all library closures to projectLibraries', () => {
       let config = initialConfig;
-      let librarycode =
-        createLibraryClosure(sampleLibrary.libraries[0]) +
-        createLibraryClosure(sampleLibrary.libraries[1]);
+      let librarycode = [
+        {
+          name: sampleLibrary.libraries[0].name,
+          code: createLibraryClosure(sampleLibrary.libraries[0])
+        },
+        {
+          name: sampleLibrary.libraries[1].name,
+          code: createLibraryClosure(sampleLibrary.libraries[1])
+        }
+      ];
 
       config.level.libraries = sampleLibrary.libraries;
       studioApp().loadLibraryBlocks(config);
-      expect(config.level.libraryCode).to.deep.equal(librarycode);
+      expect(config.level.projectLibraries).to.deep.equal(librarycode);
     });
 
     it('given a library, adds all functions to codeFunctions', () => {

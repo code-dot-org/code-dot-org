@@ -155,7 +155,6 @@ sk:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovať aspoň 6 znakov"
     mismatch_password: "Zadané dve heslá sa nezhodujú"
-    under_13_consent: "Ak mám menej ako 13 rokov potvrdzujem že mám súhlas rodiča alebo zákonného zástupcu používať stránku a služby Code.org."
     student_consent: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
     agree_us_website: "Súhlasím s používaním stránky prevádzkovanej z územia Spojených štátov amerických (USA)."
     my_data_to_us: "Údaje z používania tejto stránky môžu byť zaslané a uložené alebo spracované v Spojených štátoch amerických (USA)."
@@ -454,6 +453,8 @@ sk:
     enter_parent_email: "Zadaj emailovú adresu rodiča alebo zákonného zástupcu (pre obnovenie hesla)"
     update: "Aktualizujte konto"
     account_successfully_updated: "Konto bolo úspešne aktualizované."
+    auth_option_saved: "Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom %{email}."
+    auth_option_saved_no_email: "Úspešne si si prepojil/a svoj %{provider} účet."
     update_email: "Aktualizovať"
   user_level:
     completed: 'Dokončené'
@@ -770,6 +771,7 @@ sk:
     privacy_notice: "Ochrana osobných údajov"
     accept_label: 'Súhlasím s <a href="%{tos_url}" target="_blank">Podmienkami poskytovania služby</a> a so <a href="%{privacy_url}" target="_blank">Zásadami ochrany osobných údajov</a>.'
     accept_label_markdown: Súhlasím s [Podmienkami poskytovania služby](%{tos_url}) a so [Zásadami ochrany osobných údajov](%{privacy_url}).
+    accept_tos: Zaregistrovaním sa na Code.org, súhlasíš s našimi [Zmluvnými podmienkami](%{tos_url}) a [Ochranou súkromia](%{privacy_url}).
     accept: "Prijať"
     print: "Tlačiť"
     reminder_desc: 'Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné podmienky</a> a <a href="%{privacy_url}" target="_blank"> Zásady ochrany osobných údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.'
