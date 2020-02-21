@@ -35,6 +35,15 @@
   If not, please explain why this change does not need to be tested.
 -->
 
+<!--
+  Before deploying a risky change, consider taking some of the following steps
+  to reduce the risk of your change:
+
+  1. Write a dev spec for your change, and get it reviewed by other engineers
+  2. Announce your change to the team as a whole in advance of deploying
+  3. Put this change behind a DCDO flag
+-->
+
 # Reviewer Checklist:
 
 - [ ] Tests provide adequate coverage
