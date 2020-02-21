@@ -48,11 +48,15 @@ module.exports = function (grunt) {
      * simply clone said file from english.
      */
     const dest = this.files[0].orig.dest;
+    console.log(`dest: ${dest}`);
     locales.forEach(function (locale) {
       namespaces.forEach(function (namespace) {
         const expected = path.join(dest, locale, namespace + '.js');
         if (!grunt.file.exists(expected)) {
-          grunt.file.copy(expected.replace(locale, 'en_us'), expected);
+          const fallback = expected.replace(locale, 'en_us');
+          console.log(`expected: ${expected}`);
+          console.log(`fallback: ${fallback}`);
+          grunt.file.copy(fallback, expected);
         }
       });
     });
