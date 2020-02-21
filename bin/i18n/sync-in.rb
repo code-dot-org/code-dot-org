@@ -17,6 +17,7 @@ def sync_in
   HocSyncUtils.sync_in
   localize_level_content
   localize_block_content
+  localize_shared_functions
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
@@ -83,6 +84,28 @@ def get_i18n_strings(level)
   end
 
   i18n_strings.delete_if {|_, value| value.blank?}
+end
+
+def localize_shared_functions
+  puts "Preparing shared functions strings"
+
+  shared_function_strings = {}
+  SharedBlocklyFunction.all.where(level_type: 'GameLabJr').each do |func|
+    shared_function_strings[func.name] = Hash.new
+    shared_function_strings[func.name]["name"] = func.name
+    shared_function_strings[func.name]["description"] = func.description
+  end
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/shared_functions.yml"), 'w') do |file|
+    # Format strings for consumption by the rails i18n engine
+    formatted_data = {
+      "en" => {
+        "data" => {
+          "shared_functions" => shared_function_strings.to_h
+        }
+      }
+    }
+    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
+  end
 end
 
 def localize_level_content

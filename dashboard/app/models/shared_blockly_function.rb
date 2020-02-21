@@ -51,9 +51,11 @@ class SharedBlocklyFunction < ApplicationRecord
           JSON.parse(arguments).each do |name, type|
             xml.arg(name: name, type: type)
           end
-          xml.description description
+          localized_description = I18n.t("data.shared_blockly_function.#{name}.description", default: description, smart: true)
+          xml.description localized_description
         end
-        xml.title(name, name: 'NAME')
+        localized_name = I18n.t("data.shared_blockly_function.#{name}.name", default: name, smart: true)
+        xml.title(localized_name, name: 'NAME')
         xml.statement(name: 'STACK') do
           xml << stack.gsub(/\n */, '')
         end

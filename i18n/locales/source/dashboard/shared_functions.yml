@@ -1,0 +1,40 @@
+---
+en:
+  data:
+    shared_functions:
+      moving north:
+        name: moving north
+        description: move a sprite upwards across the screen
+      spinning right:
+        name: spinning right
+        description: rotate a sprite to its right
+      moving east:
+        name: moving east
+        description: move a sprite to the right across the screen
+      spinning left:
+        name: spinning left
+        description: rotate a sprite to its left
+      patrolling:
+        name: patrolling
+        description: move a sprite across the screen, reversing direction if it touches the edges
+      growing:
+        name: growing
+        description: change the size of a sprite
+      wandering:
+        name: wandering
+        description: move a sprite, changing its direction randomly
+      moving west:
+        name: moving west
+        description: move a sprite to the left across the screen
+      jittering:
+        name: jittering
+        description: randomly change the size of a sprite
+      moving south:
+        name: moving south
+        description: move a sprite downwards across the screen
+      swimming left and right:
+        name: swimming left and right
+        description: move a sprite horizontally, reversing direction if it touches the edges of the screen
+      shrinking:
+        name: shrinking
+        description: change the size of a sprite
