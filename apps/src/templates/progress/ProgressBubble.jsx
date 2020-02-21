@@ -148,7 +148,8 @@ class ProgressBubble extends React.Component {
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
-    const hideNumber = levelIcon === 'lock' || level.paired || level.bonus;
+    const hideNumber =
+      level.letter || levelIcon === 'lock' || level.paired || level.bonus;
 
     const style = {
       ...styles.main,
@@ -232,6 +233,9 @@ class ProgressBubble extends React.Component {
                 ...(level.isConceptLevel && styles.diamondContents)
               }}
             >
+              {level.letter && (
+                <span id="test-bubble-letter"> {level.letter} </span>
+              )}
               {levelIcon === 'lock' && <FontAwesome icon="lock" />}
               {pairingIconEnabled && level.paired && (
                 <FontAwesome icon="users" />

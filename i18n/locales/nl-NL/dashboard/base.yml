@@ -131,7 +131,6 @@ nl:
     valid_password: "Geldig wachtwoord!"
     invalid_password: "Wachtwoord moet ten minste 6 tekens lang zijn"
     mismatch_password: "De twee wachtwoorden komen niet overeen"
-    under_13_consent: "Indien ik jonger dan 13 jaar ben, bevestig ik dat ik toestemming heb van mijn ouders of wettelijke voogd om gebruik te maken van de diensten van Code.org."
     agree_us_website: "Ik ga akkoord met het gebruik van een website die in de Verenigde Staten gevestigd is."
     my_data_to_us: "Gegevens over mijn gebruik van deze site mogen worden verzonden naar en opgeslagen of verwerkt worden in de Verenigde Staten."
     additional_information: "We hebben aanvullende informatie nodig om door te kunnen gaan met uw registratie."

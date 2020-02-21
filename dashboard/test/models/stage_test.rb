@@ -79,6 +79,31 @@ class StageTest < ActiveSupport::TestCase
     assert_equal [level.id], summary[:levels].first[:ids]
   end
 
+  test "summary of levels for lesson plan" do
+    script = create :script
+    level = create :level
+    stage = create :stage, script: script, name: 'My Stage'
+    script_level = create :script_level, script: script, stage: stage, levels: [level]
+
+    expected_summary_of_levels = [
+      {
+        id: script_level.id,
+        position: script_level.position,
+        named_level: script_level.named_level?,
+        bonus_level: !!script_level.bonus,
+        assessment: script_level.assessment,
+        progression: script_level.progression,
+        path: script_level.path,
+        level_id: level.id,
+        type: level.class.to_s,
+        name: level.name,
+        display_name: level.display_name
+      }
+    ]
+
+    assert_equal expected_summary_of_levels, stage.summary_for_lesson_plans[:levels]
+  end
+
   test "last_progression_script_level" do
     stage = create :stage
     create :script_level, stage: stage

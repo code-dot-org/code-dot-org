@@ -3927,3 +3927,7 @@ es:
           stages:
             new stage:
               name: nueva etapa
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nueva etapa

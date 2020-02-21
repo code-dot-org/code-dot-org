@@ -3191,7 +3191,7 @@ it-IT:
           per ripetere certi schemi ricorrenti. Può essere di aiuto scrivere prima
           il programma senza usare i cicli e poi cercare di individuare gli schemi
           che si ripetono.\n\n### Quando ne vedi uno, sposta quell'insieme di blocchi
-          all'interno di un blocco di `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
+          all'interno di un blocco `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
           ### **Ciclo** - L'esecuzione ripetuta di una certa azione\n\n* ### **Ripetere**
           - Fare qualcosa più e più volte \n"
       courseF_markdown_loops_intro:

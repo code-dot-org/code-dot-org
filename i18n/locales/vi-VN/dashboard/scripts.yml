@@ -1572,6 +1572,8 @@ vi:
           stages:
             Hour of Code 2015:
               name: Giờ lập trình 2015
+        oceans:
+          title: Trí Tuệ Nhân Tạo cho Đại Dương
         CSPPD3-Unit3-pt2:
           stages:
             Challenge Overview:
@@ -5497,3 +5499,7 @@ vi:
               name: giai đoạn mới
             Create PT - Complete the Task:
               name: Tạo PT - hoàn thành nhiệm vụ
+        csp9-pilot:
+          stages:
+            new stage:
+              name: giai đoạn mới
