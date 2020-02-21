@@ -69,7 +69,7 @@ module Pd
         regionalPartnerName: workshop.regional_partner&.name,
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
-      if params[:use_foorm]
+      if params[:foorm]
         # once we have surveys per day parameterize this on day number
         survey_name = "surveys/pd/workshop_daily_survey_day_0"
         latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
@@ -77,7 +77,6 @@ module Pd
         @form_data = JSON.parse(form_data.questions)
         @script_data = {
           props: {
-            apiEndpoint: "/api/v1/pd/pre_workshop_surveys",
             formData: @form_data,
             formName: survey_name,
             formVersion: latest_version,
@@ -103,14 +102,6 @@ module Pd
           )
         end
       end
-    end
-
-    # General workshop daily survey using new form system.
-    # GET '/pd/workshop_survey/day/:day/foorm'
-    # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
-    def new_general_foorm
-      params[:use_foorm] = true
-      new_general
     end
 
     # POST /pd/workshop_survey/submit

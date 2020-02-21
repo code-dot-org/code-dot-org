@@ -10,7 +10,7 @@ class Pd::PreWorkshopSurveyController < ApplicationController
 
     #form_json = File.read("config/foorms/surveys/pd/pre_workshop_survey.1.json")
 
-    survey_name = "surveys/pd/pre_5_day_workshop_survey"
+    survey_name = "surveys/pd/pre_workshop_survey"
     latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
     form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
     @form_data = JSON.parse(form_data.questions)
