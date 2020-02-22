@@ -11,12 +11,13 @@ require 'cdo/chat_client'
 def main
   ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
 
-  production_tasks = Cdo::DMS.production_replication_tasks
+  # Get list of tasks that should be executed daily.
+  daily_tasks = Cdo::DMS.replication_tasks('daily')
 
   # Spawn one thread for each replication task, so we can start and monitor them independently.
   threads = []
   Thread.abort_on_exception = true
-  production_tasks.each do |task|
+  daily_tasks.each do |task|
     threads << Thread.new {Cdo::DMS.start_replication_task(task.replication_task_arn)}
   end
   threads.each(&:join)
