@@ -68,17 +68,17 @@ module Cdo
       end
     end
 
-    # Get list of production Replication Tasks and return as an array of
-    # Aws::DatabaseMigrationService::Types::ReplicationTask
-    # https://docs.aws.amazon.com/ja_jp/sdk-for-ruby/v3/api/Aws/DatabaseMigrationService/Types/ReplicationTask.html
-    def self.production_replication_tasks
+    # Get list of Replication Tasks that should be run on a specified schedule.
+    # @param schedule [String] Frequency that task should be executed ('daily', 'weekly', etc.)
+    # Returns array of Aws::DatabaseMigrationService::Types::ReplicationTask
+    def self.replication_tasks(schedule)
       dms_client = Aws::DatabaseMigrationService::Client.new
       replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
       replication_tasks.select do |task|
         dms_client.
           list_tags_for_resource({resource_arn: task.replication_task_arn}).
           tag_list.
-          any? {|tag| tag.key == 'environment' && tag.value == 'production'}
+          any? {|tag| tag.key == 'schedule' && tag.value == schedule}
       end
     end
 
@@ -122,7 +122,7 @@ module Cdo
 
     # Start a replication task and wait until it completes, raising an error if the task did not complete within a
     # configurable time period or did not complete successfully.
-    # @replication_task_arn [String]
+    # @param replication_task_arn [String]
     def self.start_replication_task(replication_task_arn)
       CDO.log.info "Starting DMS Replication Task: #{replication_task_arn}"
       task = replication_task_status(replication_task_arn)
