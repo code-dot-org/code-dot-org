@@ -8,7 +8,9 @@ export default class Foorm extends React.Component {
     formData: PropTypes.object.isRequired,
     formName: PropTypes.string.isRequired,
     formVersion: PropTypes.number.isRequired,
-    surveyData: PropTypes.object
+    surveyData: PropTypes.object,
+    submitApi: PropTypes.string,
+    submitParams: PropTypes.object
   };
 
   constructor(props) {
@@ -27,15 +29,19 @@ export default class Foorm extends React.Component {
 
   onComplete = (survey, options) => {
     console.log('Survey results: ' + JSON.stringify(survey.data));
+    let requestData = {
+      answers: survey.data,
+      form_name: this.props.formName,
+      form_version: this.props.formVersion
+    };
+    if (this.props.submitParams) {
+      requestData = {...this.props.submitParams, ...requestData};
+    }
     $.ajax({
-      url: '/dashboardapi/v1/foorm/submission',
+      url: this.props.submitApi || '/dashboardapi/v1/foorm/submission',
       type: 'post',
       dataType: 'json',
-      data: {
-        answers: survey.data,
-        form_name: this.props.formName,
-        form_version: this.props.formVersion
-      }
+      data: requestData
     });
   };
 
