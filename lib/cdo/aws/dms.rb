@@ -130,8 +130,8 @@ module Cdo
       dms_client.start_replication_task(
         {
           replication_task_arn: replication_task_arn,
-          # TODO: (suresh) 'not-started' is not the correct status of a Replication Task that has not ever been executed.
-          start_replication_task_type: task.status != 'not-started' ? 'reload-target' : 'start-replication'
+          # If a Replication Task has never been executed before, start it, otherwise, reload it.
+          start_replication_task_type: task.status == 'ready' ? 'start-replication' : 'reload-target'
         }
       )
 
@@ -148,7 +148,7 @@ module Cdo
       attempts = 1
       task = replication_task_status(replication_task_arn)
       while attempts <= max_attempts && task.status != 'stopped'
-        CDO.log.info "Attempt: #{attempts} of #{max_attempts} / #{task}"
+        CDO.log.info "Replication Task ARN: #{task.arn} / Status: #{task.status} / Attempt: #{attempts} of #{max_attempts}"
 
         attempts += 1
         task = replication_task_status(replication_task_arn)
