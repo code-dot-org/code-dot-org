@@ -19,7 +19,7 @@ const styles = {
     width: 270,
     boxSizing: 'border-box',
     borderRight: '1px solid gray',
-    overflowY: 'hidden',
+    overflowY: 'auto',
     padding: 10
   },
   divider: {
