@@ -894,6 +894,8 @@ uk:
       сервісу</a> та <a href="%{privacy_url}" target="_blank">Політикою конфіденційності</a>.
     accept_label_markdown: Я погоджуюсь з [Умовами використання сервісу](%{tos_url})
       та [Політикою конфіденційності](%{privacy_url}).
+    accept_tos: Реєструючись на Code.org, ви погоджуєтесь з нашими [Умовами надання
+      послуг](%{tos_url}) та [Політикою конфіденційності](%{privacy_url}).
     accept: Підтвердити
     print: Друк
     reminder_desc: Увага! Ми оновили <a href="%{tos_url}" target="_blank">Правила

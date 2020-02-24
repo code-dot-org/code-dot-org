@@ -526,6 +526,9 @@ sk:
       obnovenie hesla)
     update: Aktualizujte konto
     account_successfully_updated: Konto bolo úspešne aktualizované.
+    auth_option_saved: Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom
+      %{email}.
+    auth_option_saved_no_email: Úspešne si si prepojil/a svoj %{provider} účet.
     update_email: Aktualizovať
   user_level:
     completed: Dokončené
@@ -944,6 +947,8 @@ sk:
       údajov</a>.
     accept_label_markdown: Súhlasím s [Podmienkami poskytovania služby](%{tos_url})
       a so [Zásadami ochrany osobných údajov](%{privacy_url}).
+    accept_tos: Zaregistrovaním sa na Code.org, súhlasíš s našimi [Zmluvnými podmienkami](%{tos_url})
+      a [Ochranou súkromia](%{privacy_url}).
     accept: Prijať
     print: Tlačiť
     reminder_desc: Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné

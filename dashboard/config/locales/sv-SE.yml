@@ -737,6 +737,8 @@ sv:
       </a> och <a href="%{privacy_url}" target="_blank"> Sekretesspolicy</a>
     accept_label_markdown: Jag samtycker till att de uppdaterade [Användarvillkoren](%{tos_url})
       och [Sekretesspolicy](%{privacy_url})
+    accept_tos: Genom att registrera dig på Code.org godkänner du våra [Servicevillkor](%{tos_url})
+      och vår [Integritetspolicy](%{privacy_url}).
     accept: Godkänn
     print: Skriv ut
     reminder_desc: Vi har uppdaterat våra <a href="%{tos_url}" target="_blank"> Användarvillkor</a>

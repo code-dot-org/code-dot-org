@@ -135,12 +135,12 @@ class ProjectsController < ApplicationController
       return
     end
 
-    redirect_to projects_public_path unless current_user
+    return redirect_to projects_public_path unless current_user
   end
 
   # GET /projects/public
   def public
-    render template: 'projects/index', locals: {is_public: current_user&.present?, limited_gallery: limited_gallery?}
+    render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
   end
 
   def project_and_featured_project_fields

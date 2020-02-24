@@ -23,6 +23,18 @@ CROWDIN_PROJECTS = {
 }
 
 class I18nScriptUtils
+  # Because we log many of the i18n operations to slack, we often want to
+  # explicitly force stdout to operate syncronously, rather than buffering
+  # output and dumping a whole lot of output into slack all at once.
+  #
+  # See the sync_up and sync_down methods in particular for usage.
+  def self.with_syncronous_stdout
+    old_sync = $stdout.sync
+    $stdout.sync = true
+    yield
+    $stdout.sync = old_sync
+  end
+
   # Output the given data to YAML that will be consumed by Crowdin. Includes a
   # couple changes to the default `data.to_yaml` serialization:
   #

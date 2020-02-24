@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-02-20T05:58:43.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "## Reflection\r\n\r\nHow are the questions you can investigate with scatter or crosstab charts different from the ones you can investigate with bar charts or histograms?",
+    "encrypted_solution": "Vsmc+n1vl4qDivdS99l7DHCWjvcDhnYdc80MKQf4Kov8k2bKltEcqGaDsjlx\nGSUCiUEyHG03UMbG4Cdlb1qQ29ZtGLEwVJB62Lz7u8oKTU5ECIZlQBpUzIvc\n5g6x/X7b2Q9cLpvmxCItPfr6893WG23QaV1q0xsI3GdqIE1uwIJkKc5+f/ih\nY09uTyamLb+Dw7c8wgvQ5xZPW32l/BLtJNP6vO0dyfYOjOfYDz/5x23khno7\n3u+9d3Ju3rxTwKbGndRB7gtFuGQncK9xr296OkMEe64DvvhjqtHuWdUzAo4X\nILEjAKIYD9Gqu1cODTiiUeyLskCBn2o9HNe6WSIhBkyKH9Erm5cMS6Y4EBYj\naGYkO6JEZpytrurJ/Ket0io2pKBTlWajWvHBRPPuSoCy/80e44fgf2m8FKMc\nGeX5YNNmXkMsH1aQmUaNhykHGc7I\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19985,
+    "name_suffix": "_2019",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-08-19 16:02:07 +0000\",\"changed\":[\"notes\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-11-14 18:56:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-13 21:07:36 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2020-02-20 06:01:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
