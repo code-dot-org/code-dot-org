@@ -270,6 +270,33 @@ module Pd
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF101 (Intro) post-workshop survey.
+    # The JotForm survey, on submit, will redirect to the new_facilitator route for user
+    # to submit facilitator surveys.
+    # GET workshop_survey/csf/post101(/:enrollment_code)
+    def new_csf_post101
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF101 workshops the current user enrolled in.
+      enrolled_workshops = nil
+      if params[:enrollment_code].present?
+        enrolled_workshops = Workshop.joins(:enrollments).
+          where(pd_enrollments: {code: params[:enrollment_code]})
+
+        return render_404 if enrolled_workshops.blank?
+      else
+        enrolled_workshops = Workshop.
+          where(course: COURSE_CSF, subject: SUBJECT_CSF_101).
+          enrolled_in_by(current_user)
+
+        return render :not_enrolled if enrolled_workshops.blank?
+      end
+
+      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+      ## return render :no_attendance unless attended_workshop
+
+      render_csf_survey(POST_INTRO_SURVEY, attended_workshop)
+    end
+
     # Display CSF201 (Deep Dive) post-workshop survey.
     # The JotForm survey, on submit, will redirect to the new_facilitator route for user
     # to submit facilitator surveys.
@@ -360,7 +387,7 @@ module Pd
     end
 
     def render_csf_survey(survey_name, workshop)
-      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
+      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name unless params[:foorm]
 
       # There are facilitator surveys after post workshop survey.
       # Use sessionId to create URL query to those facilitator surveys.
@@ -381,23 +408,40 @@ module Pd
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
 
-      return redirect_general(key_params) if response_exists_general?(key_params)
-      return if experimental_redirect! @form_id, @form_params
+      if params[:foorm]
+        # once we have surveys per day parameterize this on day number
+        survey_name = "surveys/pd/pd_workshop_survey"
+        latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
+        form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
+        @form_data = JSON.parse(form_data.questions)
+        @script_data = {
+          props: {
+            formData: @form_data,
+            formName: survey_name,
+            formVersion: latest_version
+          }.to_json
+        }
 
-      if CDO.newrelic_logging
-        NewRelic::Agent.record_custom_event(
-          "RenderJotFormView",
-          {
-            route: "GET /pd/workshop_survey/csf/#{survey_name}",
-            form_id: @form_id,
-            workshop_course: workshop.course,
-            workshop_subject: workshop.subject,
-            regional_partner_name: workshop.regional_partner&.name,
-          }
-        )
+        render :new_general_foorm
+      else
+        return redirect_general(key_params) if response_exists_general?(key_params)
+        return if experimental_redirect! @form_id, @form_params
+
+        if CDO.newrelic_logging
+          NewRelic::Agent.record_custom_event(
+            "RenderJotFormView",
+            {
+              route: "GET /pd/workshop_survey/csf/#{survey_name}",
+              form_id: @form_id,
+              workshop_course: workshop.course,
+              workshop_subject: workshop.subject,
+              regional_partner_name: workshop.regional_partner&.name,
+            }
+          )
+        end
+
+        render :new_general
       end
-
-      render :new_general
     end
 
     def key_params
