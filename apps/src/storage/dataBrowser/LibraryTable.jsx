@@ -27,7 +27,7 @@ const styles = {
     fontSize: '14px',
     padding: '1px 7px 2px',
     height: '30px',
-    width: '95px',
+    width: '90px',
     margin: 10,
     marginLeft: 0
   },
@@ -39,7 +39,7 @@ const styles = {
     color: color.white,
     padding: '1px 7px 2px',
     height: '30px',
-    width: '95px',
+    width: '90px',
     margin: 10,
     marginRight: 0
   },
