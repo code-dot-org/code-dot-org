@@ -29,23 +29,58 @@
        },
        {
         "value": "6_10",
-        "text": "6-10"
+        "text": "6 - 10"
        },
        {
         "value": "11_15",
-        "text": "11-15"
+        "text": "11 - 15"
        },
        {
         "value": "16_20",
-        "text": "16-20"
+        "text": "16 - 20"
        },
        {
         "value": "21_30",
-        "text": "21-30"
+        "text": "21 - 30"
        },
        {
         "value": "30_more",
         "text": "30 or more (full year)"
+       }
+      ]
+     },
+     {
+      "type": "radiogroup",
+      "name": "section_time_minutes",
+      "title": "At your school, on average, how many MINUTES PER WEEK will a typical section of {workshop_course} meet?",
+      "choices": [
+       {
+        "value": "50_less",
+        "text": "50 or less"
+       },
+       {
+        "value": "51_100",
+        "text": "51 - 100"
+       },
+       {
+        "value": "101_150",
+        "text": "101 - 150"
+       },
+       {
+        "value": "151_200",
+        "text": "151 - 200"
+       },
+       {
+        "value": "201_250",
+        "text": "201 - 250"
+       },
+       {
+        "value": "251_300",
+        "text": "251 - 300"
+       },
+       {
+        "value": "301_more",
+        "text": "301 or more"
        }
       ]
      },

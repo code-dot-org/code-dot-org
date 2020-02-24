@@ -50,14 +50,24 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     :user_id,
     :pd_workshop_id
   )
+  validates :pd_workshop, presence: true
 
   validate :day_for_subject
+
+  def save_with_foorm_submission(answers, form_name, form_version)
+    ActiveRecord::Base.transaction do
+      create_foorm_submission!(form_name: form_name, form_version: form_version, answers: answers)
+      save!
+    end
+  end
 
   private
 
   def day_for_subject
-    unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
-      errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+    if pd_workshop
+      unless VALID_DAYS[CATEGORY_MAP[pd_workshop.subject]].include? day
+        errors[:day] << "Day #{day} is not valid for workshop subject #{pd_workshop.subject}"
+      end
     end
   end
 end
