@@ -47,15 +47,12 @@ module.exports = function (grunt) {
      * encountered. Any combinations that are missing a built file should
      * simply clone said file from english.
      */
-    const dest = this.files[0].orig.dest;
-    console.log(`dest: ${dest}`);
+    const {dest} = this.options();
     locales.forEach(function (locale) {
       namespaces.forEach(function (namespace) {
         const expected = path.join(dest, locale, namespace + '.js');
         if (!grunt.file.exists(expected)) {
           const fallback = expected.replace(locale, 'en_us');
-          console.log(`expected: ${expected}`);
-          console.log(`fallback: ${fallback}`);
           grunt.file.copy(fallback, expected);
         }
       });

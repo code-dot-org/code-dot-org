@@ -374,6 +374,9 @@ describe('entry tests', () => {
   // Takes a key-value .json file and runs it through MessageFormat to create a localized .js file.
   config.messages = {
     all: {
+      options: {
+        dest: 'build/locales'
+      },
       files: [
         {
           // e.g., build/js/i18n/bounce/ar_sa.json -> build/package/js/ar_sa/bounce_locale.js
