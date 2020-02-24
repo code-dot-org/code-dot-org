@@ -79,6 +79,7 @@ module Pd
     }
 
     CSF_SURVEY_NAMES = [
+      POST_INTRO_SURVEY = 'post101',
       PRE_DEEPDIVE_SURVEY = 'pre201',
       POST_DEEPDIVE_SURVEY = 'post201',
     ]
@@ -87,7 +88,7 @@ module Pd
     # Index valule is then saved to 'day' column in WorkshopDailySurvey table.
     CSF_SURVEY_INDEXES = {
       PRE_DEEPDIVE_SURVEY => 0,
-      POST_DEEPDIVE_SURVEY => 1,
+      POST_DEEPDIVE_SURVEY => 1
     }
   end
 end
