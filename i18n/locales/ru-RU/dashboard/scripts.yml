@@ -3109,3 +3109,45 @@ ru:
           stages:
             Conditionals:
               name: Условные команды
+        csd2-2020:
+          stages:
+            CSS Classes:
+              name: CSS классы
+        csd5-2020:
+          stages:
+            ASCII and Binary Representation:
+              name: ASCII и Двоичное Представление
+            Representing Images:
+              name: Представление изображений
+            Representing Numbers:
+              name: Представления чисел
+            Making Decisions with Data:
+              name: Использование данных для принятия решений
+        csd6-2020:
+          description_short: Программирование с физическими устройствами
+          stages:
+            Analog Input:
+              name: Иной ввод
+            Arrays and For Loops:
+              name: Множества и цикл for
+            Functions with Parameters:
+              name: Процедуры с параметрами
+            'Project: Prototype an Innovation':
+              name: 'Проект: Прототип Инновации'
+        csd3-2020:
+          description_short: "Программирование"
+          stages:
+            Plotting Shapes:
+              name: Рисование фигур
+            Variables:
+              name: переменные
+            Random Numbers:
+              name: Случайные числа
+            Conditionals:
+              name: Условные команды
+            Velocity:
+              name: Скорость
+            Collision Detection:
+              name: Обнаружение столкновений
+            Functions:
+              name: функции
