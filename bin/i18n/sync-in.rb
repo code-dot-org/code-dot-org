@@ -89,12 +89,12 @@ def localize_level_content
   puts "Preparing level content"
 
   block_category_strings = {}
+  level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-    base_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
@@ -118,11 +118,11 @@ def localize_level_content
       # they have a version year, so this ordering is important
       script_i18n_directory =
         if ScriptConstants.script_in_category?(:hoc, script.name)
-          File.join(base_directory, "Hour of Code")
+          File.join(level_content_directory, "Hour of Code")
         elsif script.version_year
-          File.join(base_directory, script.version_year)
+          File.join(level_content_directory, script.version_year)
         else
-          File.join(base_directory, "other")
+          File.join(level_content_directory, "other")
         end
 
       FileUtils.mkdir_p script_i18n_directory
@@ -144,12 +144,12 @@ def localize_level_content
       # Note we could try here to remove the old version of the file both from
       # the filesystem and from github, but it would be significantly harder to
       # also remove it from Crowdin.
-      matching_files = Dir.glob(File.join(base_directory, "**", script_i18n_name)).reject do |other_filename|
+      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
         other_filename == script_i18n_filename
       end
       unless matching_files.empty?
         # Clean up the file paths, just to make our output a little nicer
-        base = Pathname.new(base_directory)
+        base = Pathname.new(level_content_directory)
         relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base) }
         relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
         STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(" and ")} already exists"
