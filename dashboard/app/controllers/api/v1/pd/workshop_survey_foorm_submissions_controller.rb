@@ -1,11 +1,11 @@
-class Api::V1::Pd::WorkshopSurveySubmissionsController < ApplicationController
+class Api::V1::Pd::WorkshopSurveyFoormSubmissionsController < ApplicationController
   def create
     answers = params[:answers].to_json
     form_name = params[:form_name]
     form_version = params[:form_version]
     submission = ::Foorm::Submission.create(form_name: form_name, form_version: form_version, answers: answers)
 
-    survey_submission = ::Pd::WorkshopSurveySubmission.new(
+    survey_submission = ::Pd::WorkshopSurveyFoormSubmission.new(
       foorm_submission_id: submission.id,
       user_id: params[:user_id],
       pd_session_id: params[:pd_session_id],

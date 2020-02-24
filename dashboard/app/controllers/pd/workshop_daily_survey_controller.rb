@@ -83,7 +83,7 @@ module Pd
             surveyData: {
               workshop_course: workshop.course
             },
-            submitApi: "/dashboardapi/v1/pd/workshop_survey_submission",
+            submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
             submitParams: {
               user_id: current_user.id,
               pd_session_id: session&.id,
