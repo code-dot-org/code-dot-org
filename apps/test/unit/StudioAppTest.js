@@ -7,6 +7,7 @@ import {
   restoreStudioApp,
   makeFooterMenuItems
 } from '@cdo/apps/StudioApp';
+import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -179,6 +180,36 @@ describe('StudioApp', () => {
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('playAudio', () => {
+    let playStub, isPlayingStub;
+    beforeEach(() => {
+      playStub = sinon.stub(Sounds.getSingleton(), 'play');
+      isPlayingStub = sinon.stub(Sounds.getSingleton(), 'isPlaying');
+    });
+
+    afterEach(() => {
+      playStub.restore();
+      isPlayingStub.restore();
+    });
+
+    it('does not play audio over itself when noOverlap is true', () => {
+      isPlayingStub.onCall(0).returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).not.to.have.been.called;
+
+      isPlayingStub.onCall(1).returns(false);
+      studioApp().playAudio('testAudio', {noOverlap: true});
+      expect(playStub).to.have.been.calledOnce;
+    });
+
+    it('does play audio over itself when noOverlap is false or unspecified', () => {
+      isPlayingStub.returns(true);
+      studioApp().playAudio('testAudio', {noOverlap: false});
+      studioApp().playAudio('testAudio');
+      expect(playStub).to.have.been.calledTwice;
     });
   });
 
