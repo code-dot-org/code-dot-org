@@ -4275,3 +4275,7 @@ fr:
           stages:
             new stage:
               name: nouvelle étape
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nouvelle étape
