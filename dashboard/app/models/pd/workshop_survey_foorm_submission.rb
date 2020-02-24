@@ -19,7 +19,7 @@
 #  index_pd_workshop_survey_submissions_on_user_id              (user_id)
 #
 
-class Pd::WorkshopSurveySubmission < ApplicationRecord
+class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
   include Pd::WorkshopSurveyConstants
 
   VALID_DAYS = {
