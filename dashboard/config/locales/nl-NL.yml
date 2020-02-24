@@ -549,6 +549,7 @@ nl:
     download: Video downloaden
     show_notes: Toon Notities
     show_video: Toon Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Uw browser wordt niet ondersteund. Probeer uw browser te
