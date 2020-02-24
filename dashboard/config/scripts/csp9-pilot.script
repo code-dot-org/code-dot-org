@@ -31,6 +31,13 @@ level 'CSP U9L6 SFLP 20-21', progression: 'Lesson Overview'
 
 stage 'Machine Learning and Bias'
 level 'CSP U9L7 SFLP 20-21', progression: 'Lesson Overview'
+level 'Oceans_Video_Machine_Learning', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_FishVTrash', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_CreaturesVTrashDemo', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_CreaturesVTrash', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Video_Training_Data', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Short', progression: 'AI for Oceans - Machine Learning'
+level 'Oceans_Long', progression: 'AI for Oceans - Machine Learning'
 
 stage 'Project - Tell a Data Story - Part 1'
 level 'CSP U9L8 SFLP 20-21', progression: 'Lesson Overview'
