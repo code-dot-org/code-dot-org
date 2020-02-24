@@ -8,8 +8,8 @@ export default class Foorm extends React.Component {
     formData: PropTypes.object.isRequired,
     formName: PropTypes.string.isRequired,
     formVersion: PropTypes.number.isRequired,
+    submitApi: PropTypes.string.isRequired,
     surveyData: PropTypes.object,
-    submitApi: PropTypes.string,
     submitParams: PropTypes.object
   };
 
@@ -38,7 +38,7 @@ export default class Foorm extends React.Component {
       requestData = {...this.props.submitParams, ...requestData};
     }
     $.ajax({
-      url: this.props.submitApi || '/dashboardapi/v1/foorm/submission',
+      url: this.props.submitApi,
       type: 'post',
       dataType: 'json',
       data: requestData
