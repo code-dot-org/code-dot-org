@@ -542,7 +542,6 @@ describe('entry tests', () => {
     'levels/_bubble_choice':
       './src/sites/studio/pages/levels/_bubble_choice.js',
     'levels/_content': './src/sites/studio/pages/levels/_content.js',
-    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_contract_match':
       './src/sites/studio/pages/levels/_contract_match.js',
     'levels/_curriculum_reference':
@@ -558,6 +557,7 @@ describe('entry tests', () => {
     'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
     'levels/_standalone_video':
       './src/sites/studio/pages/levels/_standalone_video.js',
+    'levels/_teacher_markdown': './src/sites/studio/pages/levels/_teacher_markdown.js',
     'levels/_teacher_panel':
       './src/sites/studio/pages/levels/_teacher_panel.js',
     'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
