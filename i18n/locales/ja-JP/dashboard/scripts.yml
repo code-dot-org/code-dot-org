@@ -1796,3 +1796,17 @@ ja:
               name: 条件
             'Events: The Big Event':
               name: 'イベント: おおきなイベント'
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: パラメーター付き関数
+        csd3-2020:
+          stages:
+            Variables:
+              name: 変数（へんすう）
+            Conditionals:
+              name: 条件
+            Velocity:
+              name: 速度
+            Functions:
+              name: 関数(かんすう) 
