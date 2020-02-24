@@ -86,8 +86,6 @@ class HocSyncUtils
         FileUtils.mkdir_p(dest_dir)
         FileUtils.cp(source_path, File.join(dest_dir, dest_name))
       end
-
-      puts "Copied locale #{prop[:unique_language_s]}"
     end
   end
 

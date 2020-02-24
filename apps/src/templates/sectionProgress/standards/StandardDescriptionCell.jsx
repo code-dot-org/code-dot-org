@@ -18,7 +18,8 @@ const styles = {
     flexDirection: 'row'
   },
   lessonsAreaTitle: {
-    marginRight: 10
+    marginRight: 10,
+    width: '28%'
   },
   tooltip: {
     textAlign: 'center'

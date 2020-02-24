@@ -110,7 +110,8 @@ cron-user-hierarchy-pii:
 - dashboard.user_geos
 - dashboard.user_school_infos
 cron-user-levels:
-- dashboard.user_levels:
-    export_to_staging_table: true
+- dashboard.user_levels
 cron-level-sources-pii:
-- dashboard.level_sources
+- dashboard.level_sources:
+    skip_staging_table: true
+    schedule: 'weekly'
