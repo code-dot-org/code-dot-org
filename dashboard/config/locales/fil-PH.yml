@@ -603,6 +603,7 @@ fil:
     download: I-download ang video
     show_notes: Ipakita ang mga Notes
     show_video: Ipakita ang Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Ang iyong browser ay hindi suportado. Paki-upgrade ang
