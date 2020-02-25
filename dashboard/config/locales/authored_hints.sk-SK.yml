@@ -3439,9 +3439,11 @@ sk-SK:
 
           _Táto úroveň končí po 7 taktoch._
       Function intro Ryan:
+        Function_intro_Ryan_b: Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
           volať dvakrát, aby ste vyriešili tento hlavolam.
       Function intro Ryan_2019:
+        Function_intro_Ryan_b: Ak správne zavoláš funkcie, toto je cesta ktorou pôjdeš...
         Function_intro_Ryan_a: Funkciu môžete volať v programe viackrát. Skúste ju
           volať dvakrát, aby ste vyriešili tento hlavolam.
       HOC 2018 Level_10:
@@ -4082,6 +4084,10 @@ sk-SK:
       courseA_artist_loops7_2019:
         courseA_artist_loops7_a: Nevieš prísť na to, kam máš dať cyklus? Skús napísať
           kód krok za krokom a pohľadaj v ňom nejaký vzor.
+      courseA_artist_loops9_2018:
+        courseA_artist_loops9_b: |-
+          Blok, ktorý pridáš má ísť do vnútra cyklu <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">5</title></block>
+          </xml>.
       courseA_collector_loops2:
         courseA_collector_loops2_a: Musíš sa pohnúť predtým, ako dokážeš pozbierať
           nejaký drahokam.
@@ -4130,42 +4136,129 @@ sk-SK:
       courseA_collector_loops8_2019:
         courseA_collector_loops8_a: Ak máš problém s vyriešením tejto úlohy, skús
           si zapísať všetky kroky na papier a pohľadať v nich vzor.
+      courseA_harvester_loops1:
+        courseA_harvester_loops1_a: |-
+          Keď sa dostaneš ku kukurici, použi tento blok, aby si ju zobral!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops1_2019:
+        courseA_harvester_loops1_a: |-
+          Keď sa dostaneš ku kukurici, použi tento blok, aby si ju zobral!
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_loops2:
+        courseA_harvester_loops2_a: "Tvoj kód bude mať **štyri** bloky `posuň sa na
+          západ` <xml><block type=\"maze_moveWest\"/></xml> \n\na **štyri** bloky
+          `zober kukuricu` <xml><block type=\"harvester_corn\"/></xml>."
+        courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
+          povedať krok po kroku. '
+      courseA_harvester_loops2_2019:
+        courseA_harvester_loops2_b: 'Ak sa ti stále nedarí, vyskúšaj si to nahlas
+          povedať krok po kroku. '
       courseA_harvester_loops3:
+        courseA_harvester_loops3_a: |-
+          Na pomoc využi takýto blok `opakuj`!
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>
         courseA_harvester_loops3_b: "Na opakovanie kódu vytiahni cyklus `opakuj`  (<xml><block
           type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
           config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok,
           ktorý chceš zopakovať. "
       courseA_harvester_loops3_2019:
+        courseA_harvester_loops3_a: |-
+          Na pomoc využi takýto blok `opakuj`!
+
+          <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">4</title>
+            </block></xml>
         courseA_harvester_loops3_b: "Na opakovanie kódu vytiahni cyklus `opakuj`  (<xml><block
           type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\"
           config=\"2-10\">4</title>\n  </block></xml> ), a potom vlož dovnútra blok,
           ktorý chceš zopakovať. "
+      courseA_harvester_loops4:
+        courseA_harvester_loops4_a: Neboj sa kliknúť na `Spustiť` a uvidíš, čo sa
+          stane!
+        courseA_harvester_loops4_b: Koľko je tam kukuríc? Koľko krát sa tvoj kód zopakuje?
+      courseA_harvester_loops4_2019:
+        courseA_harvester_loops4_a: Neboj sa kliknúť na `Spustiť` a uvidíš, čo sa
+          stane!
+        courseA_harvester_loops4_b: Koľko je tam kukuríc? Koľko krát sa tvoj kód zopakuje?
       courseA_harvester_loops5:
+        courseA_harvester_loops5_b: |-
+          Hotový kód bude mať **jeden** cyklus `opakuj`  <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              </block></xml>, **jeden** blok `posuň sa na juh`   <xml><block type="maze_moveSouth" limit="1"/></xml>, a **jeden** blok `posuň sa na východ`   <xml><block type="maze_moveEast" limit="1"/> </xml>.
         courseA_harvester_loops5_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu!
       courseA_harvester_loops5_2019:
+        courseA_harvester_loops5_b: |-
+          Hotový kód bude mať **jeden** cyklus `opakuj`  <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+              </block></xml>, **jeden** blok `posuň sa na juh`   <xml><block type="maze_moveSouth" limit="1"/></xml>, a **jeden** blok `posuň sa na východ`   <xml><block type="maze_moveEast" limit="1"/> </xml>.
         courseA_harvester_loops5_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu!
+      courseA_harvester_loops5a:
+        courseA_harvester_loops5a_a: |-
+          Budeš potrebovať jeden cyklus `opakovať` <xml> <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+            </block></xml> za druhým.
+        courseA_harvester_loops5a_b: Jeden cyklus zopakuje `posuň sa na juh`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, a druhý zopakuje `posuň sa na východ`<xml><block
+          type="maze_moveEast" limit="1"/></xml>
+        courseA_harvester_loops5a_c: Použi túto cestu na presun jedným smerom a potom
+          druhým.
+      courseA_harvester_loops5a_2019:
+        courseA_harvester_loops5a_a: |-
+          Budeš potrebovať jeden cyklus `opakovať` <xml> <block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">6</title>
+            </block></xml> za druhým.
+        courseA_harvester_loops5a_b: Jeden cyklus zopakuje `posuň sa na juh`<xml><block
+          type="maze_moveSouth" limit="1"/></xml>, a druhý zopakuje `posuň sa na východ`<xml><block
+          type="maze_moveEast" limit="1"/></xml>
+        courseA_harvester_loops5a_c: Použi túto cestu na presun jedným smerom a potom
+          druhým.
       courseA_harvester_loops5b:
         courseA_harvester_loops5b_a: Stlač `Spustiť` a uvidíš čo sa stane!
+        courseA_harvester_loops5b_b: Opakujú sa tvoje cykly správny počet krát?
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
       courseA_harvester_loops5b_2019:
         courseA_harvester_loops5b_a: Stlač `Spustiť` a uvidíš čo sa stane!
+        courseA_harvester_loops5b_b: Opakujú sa tvoje cykly správny počet krát?
         courseA_harvester_loops5b_c: Posuň sa najprv jedným smerom a potom druhým.
       courseA_harvester_loops6:
         courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
           a hľadaj v nich opakujúce sa vzory.
+        courseA_harvester_loops6_b: Choď touto cestou, aby si pozbieral/a všetku kukuricu.
       courseA_harvester_loops6_2019:
         courseA_harvester_loops6_a: Ak sa zasekneš, vyskúšaj si spísať kroky na papier
           a hľadaj v nich opakujúce sa vzory.
+        courseA_harvester_loops6_b: Choď touto cestou, aby si pozbieral/a všetku kukuricu.
       courseA_harvester_loops7:
+        courseA_harvester_loops7_a: |-
+          Budeš potrebovať dva `opakovať` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>cykly po sebe!
         courseA_harvester_loops7_b: Použi dva cykly na túto cestu.
       courseA_harvester_loops7_2019:
+        courseA_harvester_loops7_a: |-
+          Budeš potrebovať dva `opakovať` <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>cykly po sebe!
         courseA_harvester_loops7_b: Použi dva cykly na túto cestu.
       courseA_harvester_loops9:
+        courseA_harvester_loops9_a: Rozdeľ si túto úlohu na 3 časti. Prvá časť do
+          jedného rohu, druhá časť do druhého rohu a tretia časť na koniec.
+        courseA_harvester_loops9_b: Neboj sa spustiť si kód po každom kroku, aby si
+          zistil/a čo robí!
         courseA_harvester_loops9_c: Aby ste pozbierali všetku kukuricu choďte touto
           cestou.
       courseA_harvester_loops9_2019:
+        courseA_harvester_loops9_a: Rozdeľ si túto úlohu na 3 časti. Prvá časť do
+          jedného rohu, druhá časť do druhého rohu a tretia časť na koniec.
+        courseA_harvester_loops9_b: Neboj sa spustiť si kód po každom kroku, aby si
+          zistil/a čo robí!
         courseA_harvester_loops9_c: Aby ste pozbierali všetku kukuricu choďte touto
           cestou.
       courseA_harvester_seq1:
@@ -4182,11 +4275,33 @@ sk-SK:
             <block type="maze_moveEast"/>
           </xml>
       courseA_harvester_seq10:
+        courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
+          na papier.
+        courseA_harvester_seq10_b: Najprv použi `Posuň sa na východ`, potom `Posuň
+          sa na sever`. Zopakuj to 2-krát. Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.
       courseA_harvester_seq10_2019:
+        courseA_harvester_seq10_a: Nevieš sa pohnúť? Skús svoje kroky najprv rozpísať
+          na papier.
+        courseA_harvester_seq10_b: Najprv použi `Posuň sa na východ`, potom `Posuň
+          sa na sever`. Zopakuj to 2-krát. Nezabudni na žiadnu kukuricu!
         courseA_harvester_seq10_c: Na pozbieranie všetkej kukurice, vyskúšaj túto
           trasu.
+      courseA_harvester_seq13:
+        courseA_bee_seq1_a: |-
+          Použi tento blok na zobratie kukurice, keď sa k nej záhradníčka dostane.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
+      courseA_harvester_seq13_2019:
+        courseA_bee_seq1_a: |-
+          Použi tento blok na zobratie kukurice, keď sa k nej záhradníčka dostane.
+
+          <xml>
+            <block type="harvester_corn"/>
+          </xml>
       courseA_harvester_seq1_2019:
         courseA_harvester_seq1_a: |-
           Použi tento blok na zobratie kukurice, keď ju záhradníčka nájde.
@@ -4200,12 +4315,88 @@ sk-SK:
           <xml>
             <block type="maze_moveEast"/>
           </xml>
+      courseA_harvester_seq2:
+        courseA_harvester_seq2_a: Nezabudni použiť <xml><block type="harvester_corn"/></xml>
+          na zobratie kukurice!
+      courseA_harvester_seq2_2019:
+        courseA_harvester_seq2_a: Nezabudni použiť <xml><block type="harvester_corn"/></xml>
+          na zobratie kukurice!
       courseA_harvester_seq3:
+        courseA_harvester_seq3_a: |-
+          Nezabudol/la si použiť tento blok?
+
+          <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
           prísť na odpoveď.
       courseA_harvester_seq3_2019:
+        courseA_harvester_seq3_a: |-
+          Nezabudol/la si použiť tento blok?
+
+          <xml><block type="harvester_corn"/></xml>
         courseA_harvester_seq3_b: Prečítaj si kroky nahlas a uvidíš či ti to pomôže
           prísť na odpoveď.
+      courseA_harvester_seq4:
+        courseA_harvester_seq4_a: Koľko krokov delí záhradníčku a kukuricu? Koľko
+          blokov už máš na ploche?
+        courseA_harvester_seq4_b: |-
+          Budeš potrebovať 5 blokov `Posuň sa na východ` a jeden blok `Zober kukuricu`:
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq4_2019:
+        courseA_harvester_seq4_a: Koľko krokov delí záhradníčku a kukuricu? Koľko
+          blokov už máš na ploche?
+        courseA_harvester_seq4_b: |-
+          Budeš potrebovať 5 blokov `Posuň sa na východ` a jeden blok `Zober kukuricu`:
+
+          <xml><block type="harvester_corn"/></xml>
+      courseA_harvester_seq5:
+        courseA_harvester_seq5_a: Ktorý blok pošle záhradníčku nesprávnym smerom?
+        courseA_harvester_seq5_b: Musíš odstrániť jeden blok.
+        courseA_harvester_seq5_c: |-
+          Zahoď tento blok do koša!
+
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq5_2019:
+        courseA_harvester_seq5_a: Ktorý blok pošle záhradníčku nesprávnym smerom?
+        courseA_harvester_seq5_b: Musíš odstrániť jeden blok.
+        courseA_harvester_seq5_c: |-
+          Zahoď tento blok do koša!
+
+          <xml><block type="maze_moveNorth"/></xml>
+      courseA_harvester_seq6:
+        courseA_harvester_seq6_a: Ak nevieš ako ďalej, skús si svoj postup povedať
+          nahlas. Možno ti to pomôže nájsť cestu.
+      courseA_harvester_seq6_2019:
+        courseA_harvester_seq6_a: Ak nevieš ako ďalej, skús si svoj postup povedať
+          nahlas. Možno ti to pomôže nájsť cestu.
+      courseA_harvester_seq7:
+        courseA_harvester_seq7_a: Vyskúšaj úlohu vyriešiť v dvoch častiach, prvá pred
+          zabočením a druhá po zabočení.
+        courseA_harvester_seq7_b: Nejde to? Toto je cesta, ktorou by sa mala záhradníčka
+          vybrať.
+      courseA_harvester_seq7_2019:
+        courseA_harvester_seq7_a: Vyskúšaj úlohu vyriešiť v dvoch častiach, prvá pred
+          zabočením a druhá po zabočení.
+        courseA_harvester_seq7_b: Nejde to? Toto je cesta, ktorou by sa mala záhradníčka
+          vybrať.
+      courseA_harvester_seq8:
+        courseA_harvester_seq8_a: Tvoj hotový kód by mal mať **4** bloky na posúvanie
+          a **2** bloky na zbieranie.
+      courseA_harvester_seq8_2019:
+        courseA_harvester_seq8_a: Tvoj hotový kód by mal mať **4** bloky na posúvanie
+          a **2** bloky na zbieranie.
+      courseA_harvester_seq9:
+        courseA_harvester_seq9_a: Spusti si kód niekoľko krát, aby si zistil/a čo
+          robí. Kde sa záhradníčka zastaví?
+        courseA_harvester_seq9_b: Nezabudni pozbierať všetku kukuricu! Budeš potrebovať
+          **3** bloky zober kukuricu.
+        courseA_harvester_seq9_c: Na pozbieranie všetkej kukurice, vyskúšaj túto trasu.
+      courseA_harvester_seq9_2019:
+        courseA_harvester_seq9_a: Spusti si kód niekoľko krát, aby si zistil/a čo
+          robí. Kde sa záhradníčka zastaví?
+        courseA_harvester_seq9_b: Nezabudni pozbierať všetku kukuricu! Budeš potrebovať
+          **3** bloky zober kukuricu.
+        courseA_harvester_seq9_c: Na pozbieranie všetkej kukurice, vyskúšaj túto trasu.
       courseA_maze_ramp2_2018:
         '1': |-
           Tvoj kód by mal vyzerať takto:
@@ -9520,6 +9711,15 @@ sk-SK:
       courseE_artist_ramp9_2:
         courseD_artist_ramp12_b: Môžeš použiť šípku nadol s rozbaľovacou ponukou na
           blokoch "otoč sa o", aby si zistil aký uhol potrebuješ!
+      courseE_bee_concept3_2018:
+        courseE_bee_concept3a_a: Vyskúšaj použiť vnorené cykly `opakuj` alebo `pokiaľ`,
+          aby si vyriešil túto úlohu.
+      courseE_farmer_functions1a_2018:
+        courseE_farmer_functions1a_a: Uisti sa, že si prečítaš definíciu funkcie.
+          Dokážeš povedať čo robí?
+      courseE_farmer_functions1a_2019:
+        courseE_farmer_functions1a_a: Uisti sa, že si prečítaš definíciu funkcie.
+          Dokážeš povedať čo robí?
       courseE_farmer_functions4b:
         courseE_farmer_functions4b_a: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
@@ -9528,6 +9728,39 @@ sk-SK:
         courseE_farmer_functions5c_b: Neboj sa urobiť chybu! Pokús sa pridať bloky
           a spustiť kód, aby si uvidel, čo sa stane, aj keď si ešte nevyriešil celú
           úlohu.
+      courseE_farmer_functions7a1_2018:
+        courseE_farmer_functions7a1_2018_b: Nezabudni funkciu použiť potom ako si
+          ju dokončil/a!
+      courseE_farmer_functions7a1_2019:
+        courseE_farmer_functions7a1_2018_b: Nezabudni funkciu použiť potom ako si
+          ju dokončil/a!
+      courseE_farmer_functions8a1_2018:
+        courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
+          funkcie, ako v poslednej úlohe.
+      courseE_farmer_functions8a1_2019:
+        courseE_farmer_functions8a1_2018a: Začni túto úlohu naprogramovaním rovnakej
+          funkcie, ako v poslednej úlohe.
+      courseE_farmer_ramp11b:
+        courseE_farmer_ramp11b_a: Umiestniť cyklus `pokiaľ` vo vnútri cyklu `opakuj`,
+          aby bol tvoj kód kratší.
+      courseE_farmer_ramp11b_2018:
+        courseE_farmer_ramp11b_a: Umiestniť cyklus `pokiaľ` vo vnútri cyklu `opakuj`,
+          aby bol tvoj kód kratší.
+      courseE_farmer_ramp11b_2019:
+        courseE_farmer_ramp11b_a: Umiestniť cyklus `pokiaľ` vo vnútri cyklu `opakuj`,
+          aby bol tvoj kód kratší.
+      courseE_farmer_ramp12_forswap:
+        courseE_farmer_ramp12_b: Stále budeš musieť použiť cyklus `opakuj` obalený
+          okolo celého kódu, aby si farmárke povedal, koľkokrát musí ísť vpred a zobrať
+          šalát.
+      courseE_farmer_ramp12_forswap_2018:
+        courseE_farmer_ramp12_b: Stále budeš musieť použiť cyklus `opakuj` obalený
+          okolo celého kódu, aby si farmárke povedal, koľkokrát musí ísť vpred a zobrať
+          šalát.
+      courseE_farmer_ramp12_forswap_2019:
+        courseE_farmer_ramp12_b: Stále budeš musieť použiť cyklus `opakuj` obalený
+          okolo celého kódu, aby si farmárke povedal, koľkokrát musí ísť vpred a zobrať
+          šalát.
       courseF_artist_for1:
         courseF_artist_for1_a: |-
           Vieš nakresliť niečo takéto?
