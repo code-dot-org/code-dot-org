@@ -26,7 +26,7 @@ social:
 How computer science is used and applied in the real world is a crucial part of learning computer science. That is why we’re focusing on #CSforGood as the theme for the Hour of Code this year. We can help students understand some of the challenges that people around the world face and inspire them to think more deeply about the role computer science can play in creating a more equitable and sustainable world.
 
 <center>
-<img src="/images/fit-500/marketing/sdg-new-image-csforgood.jpg">
+<a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals"><img src="/images/fit-500/marketing/sdg-new-image-csforgood.jpg"></a>
 </center>
 
 Using the <a href="https://www.un.org/sustainabledevelopment/">United Nations’ Sustainable Development Goals (SDGs)</a> as a guide, our goal is to convey to students how computer science can make a positive impact in our world - from self-driving car technology that can make our roads safer, to data science techniques that can identify disease earlier and keep us healthier. <br><br>
