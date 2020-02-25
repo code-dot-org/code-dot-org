@@ -96,7 +96,6 @@ def localize_level_content
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
   # which relies on running a shell command
   Dir.chdir(Rails.root) do
-
     Script.all.each do |script|
       next unless ScriptConstants.i18n? script.name
       script_strings = {}
@@ -130,7 +129,6 @@ def localize_level_content
       script_i18n_name = "#{script.name}.json"
       script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
 
-
       # If a script is updated such that its destination directory changes
       # after creation, we can end up in a situation in which we have multiple
       # copies of the script file in the repo, which makes it difficult for the
@@ -153,7 +151,7 @@ def localize_level_content
         base = Pathname.new(level_content_directory)
         relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
         relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(" and ")} already exists"
+        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
         next
       end
 
