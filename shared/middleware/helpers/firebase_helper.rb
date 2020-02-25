@@ -1,5 +1,7 @@
 require 'csv'
 require 'firebase'
+require 'time'
+require 'uri'
 
 # A wrapper around the firebase gem. For gem documentation, see
 # https://github.com/oscardelben/firebase-ruby.
@@ -50,24 +52,36 @@ class FirebaseHelper
   end
 
   def delete_shared_table(table_name)
-    response = @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
+    escaped_table_name = URI.escape(table_name)
+    response = @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
     return response unless response.success?
-    response = @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
+    response = @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
     return response unless response.success?
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
   end
 
   def upload_shared_table(table_name, records, columns)
-    response = @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
+    escaped_table_name = URI.escape(table_name)
+    response = @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
     return response unless response.success?
-    response = @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
+    response = @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
     return response unless response.success?
-    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    response = @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
     return response unless response.success?
     columns.each do |column|
-      response = @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
+      response = @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column})
     end
     return response
+  end
+
+  def upload_live_table(table_name, records, columns)
+    delete_shared_table(table_name)
+    upload_shared_table(table_name, records, columns)
+    response = @firebase.get("/v3/channels/shared/metadata/manifest/tables/")
+    return response unless response.success?
+    tables = response.body
+    index = tables.find_index {|table| table['name'] == table_name}
+    @firebase.set("/v3/channels/shared/metadata/manifest/tables/#{index}/lastUpdated", Time.now.to_i * 1000) unless index.nil?
   end
 
   def get_shared_table(table_name)
