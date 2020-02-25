@@ -44,7 +44,8 @@ class MultiCheckboxSelector extends Component {
     style: PropTypes.any,
     disabled: PropTypes.bool,
     noHeader: PropTypes.bool,
-    // For cases where items are objects and we need to do a deep comparison to // determine if they're selected.
+    // For cases where items are objects and we need to do a deep comparison to
+    // determine if they're selected.
     checkById: PropTypes.bool
   };
 
