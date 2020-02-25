@@ -11,4 +11,5 @@
 #
 
 class Foorm::Submission < ActiveRecord::Base
+  belongs_to :foorm_form
 end
