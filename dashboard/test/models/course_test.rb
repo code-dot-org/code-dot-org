@@ -166,7 +166,7 @@ class CourseTest < ActiveSupport::TestCase
     summary = course.summarize
 
     assert_equal [:name, :id, :title, :assignment_family_title,
-                  :family_name, :version_year,
+                  :family_name, :version_year, :pilot_experiment,
                   :description_short, :description_student,
                   :description_teacher, :scripts, :teacher_resources,
                   :has_verified_resources, :versions, :show_assign_button], summary.keys
@@ -601,10 +601,92 @@ class CourseTest < ActiveSupport::TestCase
     experiment.destroy
   end
 
+  test "self.valid_courses: omits pilot courses" do
+    student = create :student
+    teacher = create :teacher
+    levelbuilder = create :levelbuilder
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :course, pilot_experiment: 'my-experiment'
+    assert Course.any?(&:pilot?)
+
+    refute Course.valid_courses(user: student).any? {|c| c[:pilot_experiment]}
+    refute Course.valid_courses(user: teacher).any? {|c| c[:pilot_experiment]}
+    assert Course.valid_courses(user: pilot_teacher).any? {|c| c[:pilot_experiment]}
+    assert Course.valid_courses(user: levelbuilder).any? {|c| c[:pilot_experiment]}
+  end
+
   test "update_teacher_resources" do
     course = create :course
     course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
 
     assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
+  end
+
+  test 'has pilot access' do
+    course = create :course
+    pilot_course = create :course, pilot_experiment: 'my-experiment'
+    script_in_pilot_course = create :script
+    create :course_script, course: pilot_course, script: script_in_pilot_course, position: 1
+
+    student = create :student
+    teacher = create :teacher
+
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+
+    # student in a pilot teacher's section which is assigned to a pilot course
+    pilot_section = create :section, user: pilot_teacher, course: pilot_course
+    assigned_pilot_student = create(:follower, section: pilot_section).student_user
+
+    # teacher in a pilot teacher's section, assigned to the course
+    teacher_in_section = create :teacher
+    create(:follower, section: pilot_section, student_user: teacher_in_section)
+
+    # student who has progress in a pilot course, but is not currently assigned to it
+    other_section = create :section, user: pilot_teacher, course: pilot_course
+    pilot_student_with_progress = create :student
+    create(:follower, section: other_section, student_user: pilot_student_with_progress)
+    create :user_script, user: pilot_student_with_progress, script: script_in_pilot_course
+
+    # student of pilot teacher, without assignment or progress
+    non_pilot_section = create :section, user: pilot_teacher
+    student_of_pilot_teacher = create(:follower, section: non_pilot_section).student_user
+
+    levelbuilder = create :levelbuilder
+
+    refute course.pilot?
+    refute course.has_pilot_access?
+    refute course.has_pilot_access?(student)
+    refute course.has_pilot_access?(teacher)
+    refute course.has_pilot_access?(pilot_teacher)
+    refute course.has_pilot_access?(assigned_pilot_student)
+    refute course.has_pilot_access?(teacher_in_section)
+    refute course.has_pilot_access?(pilot_student_with_progress)
+    refute course.has_pilot_access?(student_of_pilot_teacher)
+    refute course.has_pilot_access?(levelbuilder)
+
+    assert pilot_course.pilot?
+    refute pilot_course.has_pilot_access?
+    refute pilot_course.has_pilot_access?(student)
+    refute pilot_course.has_pilot_access?(teacher)
+    assert pilot_course.has_pilot_access?(pilot_teacher)
+    assert pilot_course.has_pilot_access?(assigned_pilot_student)
+    assert pilot_course.has_pilot_access?(teacher_in_section)
+    assert pilot_course.has_pilot_access?(pilot_student_with_progress)
+    refute course.has_pilot_access?(student_of_pilot_teacher)
+    assert pilot_course.has_pilot_access?(levelbuilder)
+  end
+
+  test 'has any pilot access' do
+    student = create :student
+    teacher = create :teacher
+    pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    create :course, pilot_experiment: 'my-experiment'
+    levelbuilder = create :levelbuilder
+
+    refute Course.has_any_pilot_access?
+    refute Course.has_any_pilot_access?(student)
+    refute Course.has_any_pilot_access?(teacher)
+    assert Course.has_any_pilot_access?(pilot_teacher)
+    assert Course.has_any_pilot_access?(levelbuilder)
   end
 end
