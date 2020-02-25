@@ -9,7 +9,5 @@ class CreateTeacherScores < ActiveRecord::Migration[5.0]
       t.timestamps
     end
     add_index :teacher_scores, :user_level_id
-    add_index :teacher_scores, :teacher_id
-    add_index :teacher_scores, :created_at
   end
 end
