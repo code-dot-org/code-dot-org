@@ -47,7 +47,7 @@ class Foorm::Form < ActiveRecord::Base
     end
   end
 
-  def self.get_latest_version_and_form_for_name(form_name)
+  def self.get_form_and_latest_version_for_name(form_name)
     latest_version = Foorm::Form.where(name: form_name).maximum(:version)
     form = Foorm::Form.where(name: form_name, version: latest_version).first
     return form, latest_version

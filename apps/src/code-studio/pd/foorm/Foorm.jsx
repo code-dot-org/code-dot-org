@@ -28,7 +28,6 @@ export default class Foorm extends React.Component {
   }
 
   onComplete = (survey, options) => {
-    console.log('Survey results: ' + JSON.stringify(survey.data));
     let requestData = {
       answers: survey.data,
       form_name: this.props.formName,
