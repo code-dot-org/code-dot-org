@@ -303,6 +303,8 @@ zh-CN:
         CSD_U6_checkWin: 检查玩家是否赢了
       CSD U6 tugowar variables 3_2019:
         CSD_U6_checkWin: 检查玩家是否赢了
+      CSDU4 - Design Mode - 3:
+        '': 使用 setText 模块来改变 titleLabel 的文本
       Course 4 Artist 4:
         repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环
       Course 4 Artist 7:
