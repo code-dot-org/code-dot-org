@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {TeacherScores} from './standardsConstants';
 
 const styles = {
   buttonsGroup: {
@@ -24,8 +26,10 @@ class StandardsViewHeaderButtons extends Component {
     sectionId: PropTypes.number,
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
+    selectedLessons: PropTypes.array.isRequired
   };
+
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
@@ -69,6 +73,24 @@ class StandardsViewHeaderButtons extends Component {
     });
   };
 
+  onSaveUnpluggedLessonStatus = () => {
+    const {sectionId, selectedLessons} = this.props;
+    const stageIds = _.map(selectedLessons, 'id');
+    stageIds.forEach(stageId => {
+      let url = `/dashboardapi/v1/teacher_scores/${sectionId}/${stageId}/${
+        TeacherScores.COMPLETE
+      }`;
+      $.ajax({
+        url: url,
+        type: 'post',
+        dataType: 'json',
+        data: {}
+      }).done(() => {
+        this.closeLessonStatusDialog();
+      });
+    });
+  };
+
   render() {
     return (
       <div style={styles.buttonsGroup}>
@@ -81,7 +103,7 @@ class StandardsViewHeaderButtons extends Component {
         />
         <LessonStatusDialog
           isOpen={this.state.isLessonStatusDialogOpen}
-          handleConfirm={this.closeLessonStatusDialog}
+          handleConfirm={this.onSaveUnpluggedLessonStatus}
         />
         <Button
           onClick={this.openCreateReportDialog}
@@ -107,7 +129,8 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId
+    scriptId: state.scriptSelection.scriptId,
+    selectedLessons: state.sectionStandardsProgress.selectedLessons
   }),
   dispatch => ({
     setTeacherCommentForReport(comment) {
