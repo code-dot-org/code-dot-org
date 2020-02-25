@@ -14744,3 +14744,81 @@ en:
               name: Events in Play Lab
               description_student: Use events to create a story or make an interactive game.
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and apply all of the coding skills that they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+        coursec-2020:
+          title: Course C (2019)
+          description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+          stages:
+            Screen Out the Mean:
+              name: Screen Out the Mean
+              description_student: In this lesson, you'll learn what to do if something online makes you feel angry, sad, or scared.
+              description_teacher: "This lesson helps children to recognize that it is essential to tell a trusted adult if something online makes them feel angry, sad, or scared. \r\n\r\nStudents learn that other people can sometimes act like bullies when they are online. They will explore what cyberbullying means and what they can do when they encounter it. After reading a scenario about mean online behavior, students discuss what cyberbullying is, how it can make people feel, and how to respond. Finally, they use their knowledge to create a simple tip sheet on cyberbullying in their journal.\r\n"
+            Powerful Passwords:
+              name: Powerful Passwords
+              description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
+              description_teacher: "Students explore why people use passwords, learn the benefits of using passwords, and discover strategies for creating and keeping strong, secure passwords.\r\n\r\nStudents learn password tips, test their existing passwords with an interactive game, and create new passwords using guidelines for powerful passwords.\r\n"
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+              description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
+              description_teacher: Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: Learn about sequences and algorithms with Angry Birds.
+              description_teacher: Using characters from the game Angry Birds, students will develop sequential algorithms to move a bird from one side of a maze to the pig at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: Find problems in puzzles and practice your debugging skills.
+              description_teacher: Debugging is an essential element of learning to program. In this lesson, students will encounter puzzles that have been solved incorrectly. They will need to step through the existing code to identify errors, including incorrect loops, missing blocks, extra blocks, and blocks that are out of order.
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: Write algorithms to help Laurel the Adventurer collect lots of gems!
+              description_teacher: In this series of puzzles, students will continue to develop their understanding of algorithms and debugging. With a new character, Laurel the Adventurer, students will create sequential algorithms to get Laurel to pick up treasure as she walks along a path.
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: Create beautiful images by programming the Artist.
+              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
+            Binary Bracelets:
+              name: Binary Bracelets
+              description_student: Create your very own binary bracelet and learn how computers remember information!
+              description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+              description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
+              description_teacher: Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: 'Help BB-8 through mazes using loops! '
+              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to help BB-8 traverse a maze more efficiently than before.
+            Loops in Harvester:
+              name: Loops in Harvester
+              description_student: Let's use loops to help the harvester collect some veggies!
+              description_teacher: "In the preceding stage, students used loops to create fantastic drawings. Now they're going to loop new actions in order to help the harvester collect multiple veggies growing in large bunches.\r\n"
+            Looking Ahead:
+              name: Looking Ahead
+              description_student: Avoid the lava! Here you will start to learn about conditionals in the world of Minecraft.
+              description_teacher: This lesson was originally created for the Hour of Code, alongside the Minecraft team. Students will get the chance to practice ideas that they have learned up to this point, as well as getting a sneak peek at conditionals!
+            Sticker Art with Loops:
+              name: Sticker Art with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+              description_student: 'Play a fun game to learn about events. '
+              description_teacher: Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: Build you own Flappy Bird game however you like, then share it with your friends!
+              description_teacher: In this special stage, students get to build their own Flappy Bird game by using event handlers to detect mouse clicks and object collisions. At the end of the level, students will be able to customize their game by changing the visuals or rules.
+            Events in Play Lab:
+              name: Events in Play Lab
+              description_student: It's time to get creative and make a game in Play Lab!
+              description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all the coding skills they've learned to create an animated game. It's time to get creative and make a game in Play Lab!
+            Picturing Data:
+              name: Picturing Data
+              description_student: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
+              description_teacher: Data can be used to help students understand their world and answer interesting questions. In this lesson, students will collect data from a Play Lab project and visualize it using different kinds of graphs.
+            'End of Course Project: Create a Play Lab Game':
+              name: 'End of Course Project: Create a Play Lab Game'
+              description_student: Get those hands ready for plenty of coding! It's time to start building your project.
+              description_teacher: 'This capstone lesson takes students through the process of designing, developing, and showcasing their own Play Lab projects! To ensure this process goes smoothly, we have provided a step-by-step structure for students to follow, from planning on paper to coding on our website. In addition, we offer ideas to help teachers facilitate a showcase finale! '
