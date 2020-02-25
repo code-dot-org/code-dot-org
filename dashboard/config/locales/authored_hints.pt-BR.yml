@@ -7595,6 +7595,9 @@ pt-BR:
         courseC_PlayLab_eventsA_b: Você precisará arrastar especificamente um bloco
           de eventos `quando correr` para o espaço de trabalho para resolver esse
           quebra-cabeça.
+      courseC_PlayLab_eventsA_embed_2019:
+        courseC_PlayLab_eventsA_a: Use as setas do teclado para mover o pinguim. Você
+          não precisa escrever nenhum código para concluir este nível.
       courseC_PlayLab_eventsFP:
         idea1: |-
           _Precisa de uma idéia?_

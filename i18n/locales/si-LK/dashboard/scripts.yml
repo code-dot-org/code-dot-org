@@ -1622,3 +1622,16 @@ si:
           stages:
             Conditionals:
               name: කන්ඩිෂනලස්
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: පරාමිතියන් සහිත ශ්‍රිත
+        csd3-2020:
+          description_short: "ක්‍රමලේඛනය"
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්

@@ -509,6 +509,7 @@ pl:
     download: 'Pobierz wideo'
     show_notes: 'Pokaż Notatki'
     show_video: 'Pokaż Wideo'
+    label: 'Wideo'
   compatibility:
     upgrade:
       unsupported_message: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może nie działać właściwie."

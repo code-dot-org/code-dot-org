@@ -565,6 +565,7 @@ bg:
     notes_coming_soon: Бележки за този клип очаквайте скоро.
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
+    label: Видео
   compatibility:
     upgrade:
       unsupported_message: Вашият браузър не се поддържа. Моля, надстройте браузъра

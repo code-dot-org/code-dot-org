@@ -686,6 +686,7 @@ pt-BR:
     download: Baixar Vídeo
     show_notes: Mostrar as notas
     show_video: Mostrar o vídeo
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador

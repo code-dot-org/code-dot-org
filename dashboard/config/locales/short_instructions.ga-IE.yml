@@ -204,6 +204,10 @@ ga-IE:
         seo chun an ceann seo a dhéanamh!
       Course 4 Bee Params 5: Anois tosaímis as an nua. An féidir leat feidhm nua darb
         ainm "bailigh 5 neachtar" a chruthú a ghlacann le paraiméadar "treo"?
+      Course 4 Bee Params 6: Nár mhaith dá mbeifeá in ann an neachtar go léir a bhailiú
+        le feidhm amháin? Cuir paraiméadar nua "líon neachtar" le d'fheidhm a rialaíonn
+        an méid neachtair le bailiú. Ba chóir duit ainm nua a chur ar an bhfeidhm
+        freisin!
       Course 4 EC 1a: Gan rialacha. Gan leideanna. An dúshlán amháin!
       Course 4 EC 1b: Gan rialacha. Gan leideanna. An dúshlán amháin!
       Course 4 EC 2a: Gan rialacha. Gan leideanna. An dúshlán amháin!
@@ -226,6 +230,14 @@ ga-IE:
       Course 4 SCV 4: Réitigh an dúshlán seo leis an líon is lú blocanna agus is féidir.
       Course 4 SCV 5: Réitigh an dúshlán seo leis an líon is lú blocanna agus is féidir.
       Course 4 SCV 6: Cliceáil anseo chun na treoracha a fheiceáil arís.
+      CourseD_Dance_Party_01: Tarraing an bloc `déan... nua` go dtí an spás oibre,
+        agus ceangail laistigh den bhloc `socrú` é.
+      CourseD_Dance_Party_02: Tabhair ar an mús steip nua a thosú tar éis 4 thomhas!
+      CourseD_Dance_Party_03: Anois tabhair ar an damhsóir steip nua a thosú tar éis
+        6 thomhas!
+      CourseD_Dance_Party_04: Cuir éifeacht chúlra le do chlár.
+      CourseD_Dance_Party_05: Úsáid bloc nua eile le tabhairt ar an damhsóir a steip
+        a athrú gach dhá thomhas.
       Crack Random Substitution: Treoracha
       Crack a Caesar Cipher: Treoracha
       Dance_2019_01: 'Tarraing an bloc <xml><block type="Dancelab_makeAnonymousDanceSprite"
@@ -240,12 +252,20 @@ ga-IE:
         a tharlóidh! '
       Dance_2019_04: Tabhair ar an damhsóir gluaiseacht nua a thosú tar éis an cheathrú
         tomhas.
+      Dance_2019_05: Anois tabhair ar an damhsóir steip nua a thosú tar éis 6 thomhas!
       Dance_2019_06: Socraigh grúpa damhsóirí tionlacain timpeall an phríomhdhamhsóra
         sa lár.
       Dance_2019_07: Athraigh méid an ghrúpa damhsóirí tionlacain.
       Dance_2019_08: Athraigh an imir ar dhuine de na damhsóirí (nó ar an ngrúpa ar
         fad)!
       Dance_2019_09: Bí cruthaitheach leis na blocanna nua seo!
+      Dance_Party_01: Tarraing an bloc `déan... nua` go dtí an spás oibre, agus ceangail
+        laistigh den bhloc `socrú` é.
+      Dance_Party_02: Tabhair ar an mús steip nua a thosú tar éis 4 thomhas!
+      Dance_Party_03: Anois tabhair ar an damhsóir steip nua a thosú tar éis 6 thomhas!
+      Dance_Party_04: Cuir éifeacht chúlra le do chlár.
+      Dance_Party_05: Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú
+        gach dhá thomhas.
       Dance_Party_extras_alternate_2019: Anonn agus Anall! (Cliceáil "Tuilleadh" chun
         na mionsonraí a fháil)
       Dance_Party_extras_battle: Foirne Damhsa (Cliceáil "Tuilleadh" chun na mionsonraí
@@ -2033,6 +2053,10 @@ ga-IE:
         a úsáid chun cabhrú le Scrat é a fháil?
       courseD_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
         lúba a úsáid chun cabhrú le Scrat é a fháil?
+      courseD_maze_intro4_2019: Cabhraigh le Ruán an mhuc a bhaint amach.
+      courseD_maze_intro5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
+      courseD_maze_intro5c_2019: Seachain an TNT! Cabhraigh le Ruán an mhuc a bhaint
+        amach.
       courseD_maze_nestedLoops3: Cabhraigh leis an zombaí an lus gréine a shroicheadh
         leis an líon is lú blocanna agus is féidir.
       courseD_maze_nestedLoops3_2018: Cabhraigh leis an zombaí an lus gréine a shroicheadh
@@ -2075,6 +2099,7 @@ ga-IE:
       courseD_maze_ramp5: Seachain an TNT.
       courseD_maze_ramp5_2018: Seachain an TNT.
       courseD_maze_ramp5_2019: Seachain an TNT.
+      courseD_maze_ramp5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5d: Cabhraigh leis an éan an mhuc a bhaint amach.
