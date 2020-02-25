@@ -88,6 +88,7 @@ ky:
   video:
     notes: Видео жокпу? Эскертмелери көрсөт.
     show_notes: Эскертмелери көрсөт
+    label: Видео
   compatibility:
     upgrade:
       link: Дагы кара

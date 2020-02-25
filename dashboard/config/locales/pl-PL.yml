@@ -607,6 +607,7 @@ pl:
     download: Pobierz wideo
     show_notes: Pokaż Notatki
     show_video: Pokaż Wideo
+    label: Wideo
   compatibility:
     upgrade:
       unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić

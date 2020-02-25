@@ -1007,3 +1007,12 @@ bn:
           stages:
             Conditionals:
               name: শর্তযুক্ত
+        csd3-2020:
+          description_short: "প্রোগ্রামিং"
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি

@@ -976,7 +976,7 @@ ky:
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
             Artist Binary:
-              name: Сүрөтчү бинардык система
+              name: Сүрөтчү менен бинардык сүрөттөр
         coursee-2019:
           stages:
             Programming in Artist:
@@ -1149,3 +1149,11 @@ ky:
           stages:
             Conditionals:
               name: Шартуулар
+        csd3-2020:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар

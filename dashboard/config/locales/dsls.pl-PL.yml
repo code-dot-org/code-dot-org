@@ -538,6 +538,47 @@ pl-PL:
           * [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+      CSD U2 L1 Overview:
+        markdown: |
+          # Podsumowanie
+          Ta lekcja obejmuje cele, które może spełniać witryna internetowa, zarówno dla użytkowników, jak i twórców. Klasa bada garstkę najczęściej używanych witryn w Stanach Zjednoczonych i omawia, w jaki sposób każda z tych witryn jest przydatna dla użytkowników i jak może służyć również jej twórcom.
+          ## Słownictwo
+
+          * ** Strona internetowa** - lokalizacja połączona z Internetem, która utrzymuje jedną lub więcej stron w sieci Www.
+          ## Źródła
+
+          * [Cel stron internetowych- Poradnik](https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+      CSD U2 L2 Overview:
+        markdown: "Ta lekcja wprowadza strony internetowe jako środek ekspresji osobistej.
+          Na początku klasa na omawia różne sposoby wyrażania się przez ludzi oraz
+          dzieli się swoimi zainteresowaniami i pomysłami, później klasa patrzy na
+          kilka przykładowych stron internetowych wykonanych przez studentów z poprzedniego
+          kursu. Ostatecznie zastanawia się i wymienia listę tematów i zainteresowań
+          do zawarcia w osobistej stronie internetowej, tworząc materiały do rozbudowywania
+          w pozostałej części  tego modułu.\n## Słownictwo\n\n* **Zawartość witryny
+          internetowej** - Surowy tekst, obrazy, oraz inne elementy zawarte w stronie
+          internetowej \n\n## Materiały\n\n* [Zarys osobistej witryny internetowej
+          - Przewodnik z  ćwiczeniami](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+      CSD U2 L3 Overview:
+        markdown: "#Podsumowanie\n\nTa lekcja wprowadza język HTML jako rozwiązanie
+          do problemu udostępniania z komputera zarówno zawartości oraz struktury
+          witryny internetowej. Ta lekcja zaczyna się krótkim oddzielnym ćwiczeniem
+          demonstrującym wyzwania efektywnego udostępniania struktur strony internetowej.
+          Klasa patrzy na stronę HTML w Web Lab i omawia jak tagi języka HTML pomagają
+          rozwiązać problem, później używają HTML'a żeby napisać pierwszą stronę internetową
+          w tym module. \n## Słownictwo\n\n* **HTML** - Hypertext Markup Language,
+          język używany do tworzenia stron internetowych\n* **Element HTML ** - część
+          strony internetowej, zaznaczona znacznikiem otwierającym a czasami zamykana
+          znacznikiem zamykającym \n* **Znacznik HTML ** - Specjalny zestaw liter
+          określających początek i koniec elementu HTML'a oraz jego atrybut \n* **Zawartość
+          strony internetowej** - Surowy tekst, obrazy, oraz inne elementy zawarte
+          na stronie internetowej\n* **Struktura strony** - Cel różnych części treści
+          strony internetowej, pomaga komputerowi określić jak zawartość powinna być
+          wyświetlana\n\n## Wprowadzony kod\n\n* **[HTML](//studio.code.org/docs/weblab/html/)**
+          - `<html></html>`\n* **[Doctype](//studio.code.org/docs/weblab/doctype/)**
+          - `<!DOCTYPE>`\n* **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`\n*
+          **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>`\n* **[Head](//studio.code.org/docs/weblab/head/)**
+          - `<head></head>`\n"
       CSD U2 Top Websites:
         markdown: |
           # Ranking najczęściej odwiedzanych stron w Stanach Zjednoczonych

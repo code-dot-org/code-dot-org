@@ -1020,49 +1020,49 @@ sr-SP:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
+        - text: Д
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: А
+        - text: Б
+        - text: Ц
         - {}
         questions:
         - {}

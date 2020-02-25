@@ -514,6 +514,7 @@ he:
     download: 'הורד סרטון'
     show_notes: 'הצג הערות'
     show_video: 'הצג סרטון'
+    label: 'סרטון'
   compatibility:
     upgrade:
       unsupported_message: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
