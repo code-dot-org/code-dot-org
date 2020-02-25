@@ -49,16 +49,12 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
       pd_session_id: pd_session_id,
       day: day
     )
-    if submissions.empty?
-      return false
-    end
 
     if form_name
-      # if any submission has the given form name return true, otherwise return false
-      return submissions.any? {|submission| submission.foorm_submission.form_name == form_name}
+      submissions = submissions.joins(:foorm_submission).where(foorm_submissions: {form_name: form_name})
     end
 
-    return true
+    !submissions.empty?
   end
 
   private
