@@ -17,6 +17,11 @@ const libraries = [
   }
 ];
 
+const DEFAULT_PROPS = {
+  libraries,
+  personalProjectsList: []
+};
+
 export default storybook => {
   storybook
     .storiesOf('Projects/LibraryTable', module)
@@ -25,12 +30,12 @@ export default storybook => {
       {
         name: 'Libraries',
         description: 'Table of currently published project libraries',
-        story: () => <LibraryTable libraries={libraries} />
+        story: () => <LibraryTable {...DEFAULT_PROPS} />
       },
       {
         name: 'No libraries',
         description: 'Display when the user has no published project libraries',
-        story: () => <LibraryTable libraries={[]} />
+        story: () => <LibraryTable {...DEFAULT_PROPS} libraries={[]} />
       }
     ]);
 };
