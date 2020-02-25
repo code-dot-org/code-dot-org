@@ -221,7 +221,6 @@ module ScriptConstants
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
-    K5_ONLINE_PD = 'K5-OnlinePD'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     PIXELATION = 'pixelation'.freeze,
