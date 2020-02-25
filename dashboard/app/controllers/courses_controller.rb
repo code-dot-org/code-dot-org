@@ -66,6 +66,14 @@ class CoursesController < ApplicationController
       return
     end
 
+    if course.pilot?
+      authenticate_user!
+      unless course.has_pilot_access?(current_user)
+        render :no_access
+        return
+      end
+    end
+
     # Attempt to redirect user if we think they ended up on the wrong course overview page.
     override_redirect = VersionRedirectOverrider.override_course_redirect?(session, course)
     if !override_redirect && redirect_course = redirect_course(course)
@@ -121,7 +129,7 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    params.permit(:version_year, :family_name, :has_verified_resources).to_h
+    params.permit(:version_year, :family_name, :has_verified_resources, :pilot_experiment).to_h
   end
 
   def set_redirect_override

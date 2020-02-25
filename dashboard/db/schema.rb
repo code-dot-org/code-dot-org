@@ -377,6 +377,23 @@ ActiveRecord::Schema.define(version: 20200220203659) do
     t.index ["student_user_id"], name: "index_followers_on_student_user_id", using: :btree
   end
 
+  create_table "foorm_forms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "name",                     null: false
+    t.integer  "version",                  null: false
+    t.text     "questions",  limit: 65535, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.index ["name", "version"], name: "index_foorm_forms_on_name_and_version", unique: true, using: :btree
+  end
+
+  create_table "foorm_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.string   "form_name",                  null: false
+    t.integer  "form_version",               null: false
+    t.text     "answers",      limit: 65535, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
   create_table "gallery_activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id",                            null: false
     t.bigint   "user_level_id",                                   unsigned: true
