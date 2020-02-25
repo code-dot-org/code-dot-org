@@ -11,8 +11,6 @@
 #
 # Indexes
 #
-#  index_teacher_scores_on_created_at     (created_at)
-#  index_teacher_scores_on_teacher_id     (teacher_id)
 #  index_teacher_scores_on_user_level_id  (user_level_id)
 #
 

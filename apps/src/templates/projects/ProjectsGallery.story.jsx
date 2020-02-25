@@ -1,17 +1,20 @@
 import React from 'react';
-import GallerySwitcher from './GallerySwitcher';
+import ProjectsGallery from './ProjectsGallery';
 import {Galleries} from './projectConstants';
 import projects, {selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import {action} from '@storybook/addon-actions';
 
 const createProjectsStore = function() {
   return createStore(combineReducers({projects}));
 };
 
+const DEFAULT_PROPS = {
+  canShare: true
+};
+
 export default storybook => {
-  return storybook.storiesOf('Projects/GallerySwitcher', module).addStoryTable([
+  return storybook.storiesOf('Projects/ProjectsGallery', module).addStoryTable([
     {
       name: 'Gallery Switcher with My Projects selected initially',
       description: '',
@@ -20,7 +23,7 @@ export default storybook => {
         store.dispatch(selectGallery(Galleries.PRIVATE));
         return (
           <Provider store={store}>
-            <GallerySwitcher showGallery={action('showGallery')} />
+            <ProjectsGallery {...DEFAULT_PROPS} />
           </Provider>
         );
       }
@@ -33,7 +36,7 @@ export default storybook => {
         store.dispatch(selectGallery(Galleries.PUBlIC));
         return (
           <Provider store={store}>
-            <GallerySwitcher showGallery={action('showGallery')} />
+            <ProjectsGallery {...DEFAULT_PROPS} />
           </Provider>
         );
       }

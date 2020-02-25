@@ -9,11 +9,18 @@ module Cdo
         rules = []
         remove_rules = []
 
+        # Default is to execute each FULL LOAD Replication Task on a daily schedule.
+        schedule = 'daily'
+
         task.each do |schema|
           properties = nil
+
           schema, properties = schema.first if schema.is_a?(Hash)
           schema, table = schema.split '.'
           schema = CDO["#{schema}_db_name"]
+
+          # The level sources
+          schedule = properties['schedule'] if properties && properties['schedule']
 
           rules << {
             'rule-type': 'selection',
@@ -24,10 +31,10 @@ module Cdo
             'rule-action': 'include'
           }
 
-          # Conditionally add transformation rule to prefix target table name with '_import_', so we can
-          # prototype exporting an Aurora table to a staging Redshift table, which is later swapped into the target table.
-          # TODO: (suresh) Replace this with a transformation rule to prefix ALL tables once prototyping is complete.
-          if schema == 'dashboard_production'
+          # Add transformation rule to prefix target table name with '_import_', so we import each production MySQL
+          # table to a staging Redshift table, which is later swapped into the target table when the FULL LOAD is
+          # complete.
+          unless properties && properties['skip_staging_table']
             rules << {
               'rule-type': 'transformation',
               'rule-action': 'add-prefix',
@@ -78,7 +85,7 @@ module Cdo
             to_h
         end
 
-        [task_name, {rules: rules}]
+        [task_name, {rules: rules}, schedule]
       end
     end
   end
