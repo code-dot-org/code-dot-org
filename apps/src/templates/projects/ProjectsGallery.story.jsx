@@ -16,7 +16,7 @@ const DEFAULT_PROPS = {
 export default storybook => {
   return storybook.storiesOf('Projects/ProjectsGallery', module).addStoryTable([
     {
-      name: 'Gallery Switcher with My Projects selected initially',
+      name: 'Projects Gallery with My Projects selected initially',
       description: '',
       story: () => {
         const store = createProjectsStore();
@@ -29,7 +29,7 @@ export default storybook => {
       }
     },
     {
-      name: 'Gallery Switcher with Public Gallery selected initially',
+      name: 'Projects Gallery with Public Gallery selected initially',
       description: '',
       story: () => {
         const store = createProjectsStore();
