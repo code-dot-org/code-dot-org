@@ -35,6 +35,7 @@ def get_i18n_strings(level)
       short_instructions
       long_instructions
       failure_message_overrides
+      teacher_markdown
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -183,6 +184,7 @@ def select_redactable(i18n_strings)
     authored_hints
     long_instructions
     short_instructions
+    teacher_markdown
   )
 
   redactable = i18n_strings.select do |key, _|
