@@ -49,8 +49,6 @@ class LessonStatusDialog extends Component {
   }
 }
 
-export const UnconnectedLessonStatusDialog = LessonStatusDialog;
-
 export default connect(state => ({
   selectedLessons: state.sectionStandardsProgress.selectedLessons
 }))(LessonStatusDialog);
