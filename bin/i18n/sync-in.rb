@@ -151,7 +151,7 @@ def localize_level_content
       unless matching_files.empty?
         # Clean up the file paths, just to make our output a little nicer
         base = Pathname.new(level_content_directory)
-        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base) }
+        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
         relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
         STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(" and ")} already exists"
         next
