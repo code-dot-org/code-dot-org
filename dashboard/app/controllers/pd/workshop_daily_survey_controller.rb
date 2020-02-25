@@ -18,6 +18,7 @@ module Pd
     # for the relevant session id.
     # The pre-workshop survey, which has no session id, will redirect to thanks.
     def new_general
+      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
       unless validate_new_general_parameters(workshop)
@@ -69,21 +70,20 @@ module Pd
     # GET '/pd/workshop_survey/foorm/day/:day'
     # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
     #
-    # Currently only generates day 0 survey, any other day will generate a 404
-    # If survey has been completed already will redirect to thanks page
+    # Currently only generates a day 0 survey, any other day will redirect to a 404.
+    # If survey has been completed already will redirect to thanks page.
     def new_general_foorm
       workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      day = params[:day].to_i
+      if day > 0
+        return render_404
+      end
 
       unless validate_new_general_parameters(workshop)
         return
       end
 
-      day = params[:day].to_i
       session = get_session_for_workshop_and_day(workshop, day)
-
-      if day > 0
-        return render_404
-      end
 
       # once we have surveys per day parameterize this on day number
       survey_name = "surveys/pd/workshop_daily_survey_day_0"
