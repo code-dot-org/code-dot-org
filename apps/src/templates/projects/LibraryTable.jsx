@@ -68,7 +68,8 @@ const dateFormatter = time => {
 class LibraryTable extends React.Component {
   static propTypes = {
     // Provided by Redux
-    libraries: PropTypes.array.isRequired
+    libraries: PropTypes.array.isRequired,
+    personalProjectsList: PropTypes.array
   };
 
   state = {
@@ -192,6 +193,11 @@ class LibraryTable extends React.Component {
   };
 
   render() {
+    if (!this.props.personalProjectsList) {
+      // Projects haven't loaded from server yet, so display nothing.
+      return null;
+    }
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -227,5 +233,6 @@ class LibraryTable extends React.Component {
 export const UnconnectedLibraryTable = LibraryTable;
 
 export default connect(state => ({
-  libraries: getProjectLibraries(state)
+  libraries: getProjectLibraries(state),
+  personalProjectsList: state.projects.personalProjectsList.projects
 }))(LibraryTable);
