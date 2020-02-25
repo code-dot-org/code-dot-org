@@ -668,6 +668,7 @@ sk:
     download: Stiahnuť video
     show_notes: Zobraziť poznámky
     show_video: Zobraziť video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte

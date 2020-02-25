@@ -219,7 +219,7 @@
           "text": "The `src` and `alt` attributes are switched"
         },
         {
-          "text": "The the file extension (.jpg) is missing from the image address"
+          "text": "The file extension (.jpg) is missing from the image address"
         },
         {
           "text": "The image address is not given as a `src` attribute"

@@ -329,3 +329,9 @@ ur:
           stages:
             Conditionals:
               name: شرائط
+        csd3-2020:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
