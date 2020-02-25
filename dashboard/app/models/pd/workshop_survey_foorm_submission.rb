@@ -61,6 +61,26 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
     end
   end
 
+  def self.has_submitted_form?(user_id, pd_workshop_id, pd_session_id, day, form_name)
+    submissions = Pd::WorkshopSurveyFoormSubmission.where(
+      user_id: user_id,
+      pd_workshop_id: pd_workshop_id,
+      pd_session_id: pd_session_id,
+      day: day
+    )
+    if submissions.empty?
+      return false
+    end
+
+    if form_name
+      # if any submission has the given form name return true, otherwise return false
+      submissions.each {|submission| return true if submission.foorm_submission.form_name == form_name}
+      return false
+    end
+
+    return true
+  end
+
   private
 
   def day_for_subject

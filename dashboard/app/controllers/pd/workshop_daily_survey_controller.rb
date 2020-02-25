@@ -47,37 +47,30 @@ module Pd
         return render :no_attendance unless session.attendances.exists?(teacher: current_user)
       end
 
-      @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
-
       # Pass these params to the form and to the submit redirect to identify unique responses
       key_params = {
         environment: Rails.env,
         userId: current_user.id,
         workshopId: workshop.id,
         day: day,
-        formId: @form_id,
         sessionId: session&.id,
       }
 
-      return redirect_general(key_params) if response_exists_general?(key_params)
+      if params[:foorm] && day == 0
 
-      @form_params = key_params.merge(
-        userName: current_user.name,
-        userEmail: current_user.email,
-        workshopCourse: workshop.course,
-        workshopSubject: workshop.subject,
-        regionalPartnerName: workshop.regional_partner&.name,
-        submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
-      )
-      if params[:foorm]
         # once we have surveys per day parameterize this on day number
         survey_name = "surveys/pd/workshop_daily_survey_day_0"
-        latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
-        form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
-        @form_data = JSON.parse(form_data.questions)
+
+        if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
+          return redirect_general(key_params)
+        end
+
+        form, latest_version = Foorm::Form.get_latest_version_and_form_for_name(survey_name)
+        form_data = JSON.parse(form.questions)
+
         @script_data = {
           props: {
-            formData: @form_data,
+            formData: form_data,
             formName: survey_name,
             formVersion: latest_version,
             surveyData: {
@@ -94,6 +87,21 @@ module Pd
         }
         render :new_general_foorm
       else
+        @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
+
+        key_params[:formId] = @form_id
+
+        return redirect_general(key_params) if response_exists_general?(key_params)
+
+        @form_params = key_params.merge(
+          userName: current_user.name,
+          userEmail: current_user.email,
+          workshopCourse: workshop.course,
+          workshopSubject: workshop.subject,
+          regionalPartnerName: workshop.regional_partner&.name,
+          submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
+        )
+
         return if experimental_redirect! @form_id, @form_params
 
         if CDO.newrelic_logging
