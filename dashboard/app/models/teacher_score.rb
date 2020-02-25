@@ -24,7 +24,9 @@ class TeacherScore < ApplicationRecord
     score
   )
     student_ids = Section.find(section_id).students.pluck(:id)
-    level_ids = Stage.find(stage_id).script_levels.map(&:level_id)
+    stage = Stage.find(stage_id)
+    script_id = stage.script.id
+    level_ids = stage.script_levels.map(&:level_id)
 
     student_ids.each do |student_id|
       level_ids.each do |level_id|
@@ -32,6 +34,7 @@ class TeacherScore < ApplicationRecord
           teacher_id,
           student_id,
           level_id,
+          script_id,
           score
         )
       end
@@ -42,9 +45,10 @@ class TeacherScore < ApplicationRecord
     teacher_id,
     student_id,
     level_id,
+    script_id,
     score
   )
-    user_level = UserLevel.find_or_create_by(user_id: student_id, level_id: level_id)
+    user_level = UserLevel.find_or_create_by(user_id: student_id, level_id: level_id, script_id: script_id)
 
     TeacherScore.create(
       user_level_id: user_level.id,
