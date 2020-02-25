@@ -15064,3 +15064,121 @@ en:
               name: End of Course Project
               description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
               description_teacher: "The next five lessons provide an opportunity for students to put their coding skills to use in a capstone project. This project will help individuals gain experience with coding and produce an exemplar to share with peers and loved ones. This is intended to be a multi-lesson or multi-week project where students spend time brainstorming, learning about the design process, building, and then presenting their final work. \r\n\r\nIn the \"Explore\" stage, students will play around with pre-built Artist and Sprite Lab programs for inspiration. Next, students will learn about the design process and how to implement it in their own projects. They will then be given the space to create their own project in Artist, Sprite Lab, or any other interface that you are comfortable providing. (This is likely the longest stage of the project.) Students will then revise their code after testing and peer review. Finally, students will be able to present their finished work to their classmates."
+        express-2020:
+          title: Express Course (2019)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+          stages:
+            Dance Party:
+              name: Dance Party
+              description_student: ''
+              description_teacher: ''
+            Programming in Maze:
+              name: Programming in Maze
+              description_student: ''
+              description_teacher: ''
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: ''
+              description_teacher: ''
+            Programming in Collector:
+              name: Programming in Collector
+              description_student: ''
+              description_teacher: ''
+            Programming in Artist:
+              name: Programming in Artist
+              description_student: ''
+              description_teacher: ''
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: ''
+              description_teacher: ''
+            Loops in Artist:
+              name: Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Bee:
+              name: Nested Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            Nested Loops in Frozen:
+              name: Nested Loops in Frozen
+              description_student: ''
+              description_teacher: ''
+            'Concept Practice with Minecraft ':
+              name: 'Concept Practice with Minecraft '
+              description_student: ''
+              description_teacher: ''
+            Conditionals in Bee:
+              name: Conditionals in Bee
+              description_student: ''
+              description_teacher: ''
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: ''
+              description_teacher: ''
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Conditionals in Minecraft: Voyage Aquatic'
+              description_student: ''
+              description_teacher: ''
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: ''
+              description_teacher: ''
+            Conditionals & Loops in Harvester:
+              name: Conditionals & Loops in Harvester
+              description_student: ''
+              description_teacher: ''
+            Functions in Minecraft:
+              name: Functions in Minecraft
+              description_student: ''
+              description_teacher: ''
+            Functions in Harvester:
+              name: Functions in Harvester
+              description_student: ''
+              description_teacher: ''
+            Functions in Artist:
+              name: Functions in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables as Constant in Artist:
+              name: Variables as Constant in Artist
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Bee:
+              name: Variables that Change in Bee
+              description_student: ''
+              description_teacher: ''
+            Variables that Change in Artist:
+              name: Variables that Change in Artist
+              description_student: ''
+              description_teacher: ''
+            For Loops in Bee:
+              name: For Loops in Bee
+              description_student: ''
+              description_teacher: ''
+            For Loops in Artist:
+              name: For Loops in Artist
+              description_student: ''
+              description_teacher: ''
+            Learning Sprites with Sprite Lab:
+              name: Learning Sprites with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Editing Behaviors:
+              name: Editing Behaviors
+              description_student: ''
+              description_teacher: ''
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+              description_student: ''
+              description_teacher: ''
+            Build A Project:
+              name: Build A Project
+              description_student: ''
+              description_teacher: ''
