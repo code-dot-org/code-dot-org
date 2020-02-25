@@ -1,0 +1,93 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2020-02-25T15:52:02.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "basketball",
+    "ideal": "5",
+    "scale": {
+      "snapRadius": 2
+    },
+    "soft_buttons": [
+      "leftButton",
+      "rightButton"
+    ],
+    "short_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,8]]",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "fail_on_ball_exit": "false",
+    "use_flag_goal": "false",
+    "long_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You will need to have two sets of `move` events coded for this to work:\\n\\n<xml>\\n  <block type=\\\"bounce_whenLeft\\\" deletable=\\\"false\\\" x=\\\"20\\\" y=\\\"20\\\">\\n    <next>\\n      <block type=\\\"bounce_moveLeft\\\"/>\\n    </next>\\n  </block>\\n  <block type=\\\"bounce_whenRight\\\" deletable=\\\"false\\\" x=\\\"180\\\" y=\\\"20\\\">\\n    <next>\\n      <block type=\\\"bounce_moveRight\\\"/>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"courseD_bounce_events2s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9ecf8e2d49ca28cbfa5eb3b223f3b9d9/courseD_bounce_events2s.mp3\"}]",
+    "parent_level_id": 15063,
+    "name_suffix": "_2020",
+    "embed": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:11:09 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:21:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:38:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:39:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:44:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"solution_blocks\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 01:54:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\",\"markdown_instructions\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-08-06 17:25:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":568,\"changed_by_email\":\"meilani.eyre@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false" x="180" y="20"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_moveRight"/>
+        <block type="bounce_moveLeft"/>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false" x="180" y="20">
+          <next>
+            <block type="bounce_moveRight"/>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Bounce>
