@@ -35,6 +35,7 @@ def get_i18n_strings(level)
       short_instructions
       long_instructions
       failure_message_overrides
+      teacher_markdown
     ).each do |prop|
       i18n_strings[prop] = level.try(prop)
     end
@@ -89,6 +90,7 @@ def localize_level_content
   puts "Preparing level content"
 
   block_category_strings = {}
+  level_content_directory = "../#{I18N_SOURCE_DIR}/course_content"
 
   # We have to run this specifically from the Rails directory because
   # get_i18n_strings relies on level.dsl_text which relies on level.filename
@@ -99,6 +101,10 @@ def localize_level_content
       script_strings = {}
       script.script_levels.each do |script_level|
         level = script_level.oldest_active_level
+        # Don't localize encrypted levels; the whole point of encryption is to
+        # keep the contents of certain levels secret.
+        next if level.encrypted?
+
         url = I18nScriptUtils.get_level_url_key(script, level)
         script_strings[url] = get_i18n_strings(level)
 
@@ -112,23 +118,48 @@ def localize_level_content
       end
       script_strings.delete_if {|_, value| value.blank?}
 
-      script_i18n_directory = "../#{I18N_SOURCE_DIR}/course_content"
-
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
         if ScriptConstants.script_in_category?(:hoc, script.name)
-          File.join(script_i18n_directory, "Hour of Code")
+          File.join(level_content_directory, "Hour of Code")
         elsif script.version_year
-          File.join(script_i18n_directory, script.version_year)
+          File.join(level_content_directory, script.version_year)
         else
-          File.join(script_i18n_directory, "other")
+          File.join(level_content_directory, "other")
         end
+
       FileUtils.mkdir_p script_i18n_directory
-      script_i18n_filename = File.join(script_i18n_directory, "#{script.name}.json")
-      File.open(script_i18n_filename, 'w') do |file|
-        file.write(JSON.pretty_generate(script_strings))
+      script_i18n_name = "#{script.name}.json"
+      script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
+
+      # If a script is updated such that its destination directory changes
+      # after creation, we can end up in a situation in which we have multiple
+      # copies of the script file in the repo, which makes it difficult for the
+      # sync out to know which is the canonical version.
+      #
+      # To prevent that, here we proactively check for existing files in the
+      # filesystem with the same filename as our target script file, but a
+      # different directory. If found, we refuse to create the second such
+      # script file and notify of the attempt, so the issue can be manually
+      # resolved.
+      #
+      # Note we could try here to remove the old version of the file both from
+      # the filesystem and from github, but it would be significantly harder to
+      # also remove it from Crowdin.
+      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
+        other_filename == script_i18n_filename
       end
+      unless matching_files.empty?
+        # Clean up the file paths, just to make our output a little nicer
+        base = Pathname.new(level_content_directory)
+        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
+        relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
+        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+        next
+      end
+
+      File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end
   end
 
@@ -183,6 +214,7 @@ def select_redactable(i18n_strings)
     authored_hints
     long_instructions
     short_instructions
+    teacher_markdown
   )
 
   redactable = i18n_strings.select do |key, _|
