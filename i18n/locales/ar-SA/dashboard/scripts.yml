@@ -1671,3 +1671,16 @@ ar:
           stages:
             Conditionals:
               name: الجمل الشرطية
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: الدوال والمعاملات
+        csd3-2020:
+          description_short: "البرمجة"
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال

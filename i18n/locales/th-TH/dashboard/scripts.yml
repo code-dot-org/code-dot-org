@@ -1544,7 +1544,7 @@ th:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Artist Binary:
-              name: ศิลปินศูนย์หนึ่ง
+              name: ศิลปิน Binary
             Dance Party:
               name: Dance Party
         coursee-2019:
@@ -1873,3 +1873,15 @@ th:
           stages:
             Conditionals:
               name: เงื่อนไข 
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: ฟังก์ชันกับพารามิเตอร์
+        csd3-2020:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน
