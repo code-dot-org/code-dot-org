@@ -99,7 +99,7 @@ social:
       locale: "#{locale_code}",
       robotics: true,
       backButton: true,
-      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });
