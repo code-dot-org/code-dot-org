@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: pd_workshop_survey_submissions
+# Table name: pd_workshop_survey_foorm_submissions
 #
 #  id                  :integer          not null, primary key
 #  foorm_submission_id :integer          not null
@@ -13,33 +13,14 @@
 #
 # Indexes
 #
-#  index_pd_workshop_survey_submissions_on_foorm_submission_id  (foorm_submission_id) UNIQUE
-#  index_pd_workshop_survey_submissions_on_pd_session_id        (pd_session_id)
-#  index_pd_workshop_survey_submissions_on_pd_workshop_id       (pd_workshop_id)
-#  index_pd_workshop_survey_submissions_on_user_id              (user_id)
+#  index_pd_workshop_survey_foorm_submissions_on_pd_session_id   (pd_session_id)
+#  index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id  (pd_workshop_id)
+#  index_pd_workshop_survey_foorm_submissions_on_user_id         (user_id)
+#  index_workshop_survey_foorm_submissions_on_foorm_id           (foorm_submission_id) UNIQUE
 #
 
 class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
   include Pd::WorkshopSurveyConstants
-
-  VALID_DAYS = {
-    LOCAL_CATEGORY => (0..5).to_a.freeze,
-    ACADEMIC_YEAR_1_CATEGORY => [1].freeze,
-    ACADEMIC_YEAR_2_CATEGORY => [1].freeze,
-    ACADEMIC_YEAR_3_CATEGORY => [1].freeze,
-    ACADEMIC_YEAR_4_CATEGORY => [1].freeze,
-    ACADEMIC_YEAR_1_2_CATEGORY => [1, 2].freeze,
-    ACADEMIC_YEAR_3_4_CATEGORY => [1, 2].freeze,
-    VIRTUAL_1_CATEGORY => [1].freeze,
-    VIRTUAL_2_CATEGORY => [1].freeze,
-    VIRTUAL_3_CATEGORY => [1].freeze,
-    VIRTUAL_4_CATEGORY => [1].freeze,
-    VIRTUAL_5_CATEGORY => [1].freeze,
-    VIRTUAL_6_CATEGORY => [1].freeze,
-    VIRTUAL_7_CATEGORY => [1].freeze,
-    VIRTUAL_8_CATEGORY => [1].freeze,
-    CSF_CATEGORY => CSF_SURVEY_INDEXES.values.freeze
-  }
 
   belongs_to :foorm_submission, class_name: 'Foorm::Submission'
   belongs_to :user
@@ -74,8 +55,7 @@ class Pd::WorkshopSurveyFoormSubmission < ApplicationRecord
 
     if form_name
       # if any submission has the given form name return true, otherwise return false
-      submissions.each {|submission| return true if submission.foorm_submission.form_name == form_name}
-      return false
+      return submissions.any? {|submission| submission.foorm_submission.form_name == form_name}
     end
 
     return true
