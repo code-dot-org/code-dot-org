@@ -154,4 +154,8 @@ class BubbleChoice < DSLDefined
   def supports_markdown?
     true
   end
+
+  def icon
+    'fa fa-sitemap'
+  end
 end
