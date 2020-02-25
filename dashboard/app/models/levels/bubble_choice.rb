@@ -156,6 +156,6 @@ class BubbleChoice < DSLDefined
   end
 
   def icon
-    'fa fa-map-signs'
+    'fa fa-sitemap'
   end
 end
