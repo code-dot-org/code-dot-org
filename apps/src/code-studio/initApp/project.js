@@ -479,6 +479,9 @@ var projects = (module.exports = {
 
   __TestInterface: {
     // Used by UI tests
+    getCurrent() {
+      return current;
+    },
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
