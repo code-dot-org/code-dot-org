@@ -594,8 +594,10 @@ var projects = (module.exports = {
       current.libraryDescription = newDescription;
 
       if (publishing) {
-        current.publishLibrary = true; // Tells the server to set libraryPublishedAt timestamp.
-      } else {
+        // Tells the server to set libraryPublishedAt timestamp.
+        current.publishLibrary = true;
+      } else if (publishing === false) {
+        // Unpublishing, so nullify libraryPublishedAt timestamp.
         current.libraryPublishedAt = null;
       }
 
