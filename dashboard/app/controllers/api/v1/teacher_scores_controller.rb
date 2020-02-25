@@ -1,6 +1,5 @@
-class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
+class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   authorize_resource
-  load_resource only: :create
 
   # POST /teacher_scores/:section_id/:stage_id/:score
   def score_stage_for_section
@@ -10,6 +9,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JsonApiController
       params[:stage_id],
       params[:score]
     )
+    head :no_content
   end
 
   private
