@@ -6,7 +6,10 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
-import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
+import {
+  setTeacherCommentForReport,
+  getUnpluggedLessonsForScript
+} from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {TeacherScores} from './standardsConstants';
 
@@ -27,7 +30,8 @@ class StandardsViewHeaderButtons extends Component {
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
-    selectedLessons: PropTypes.array.isRequired
+    selectedLessons: PropTypes.array.isRequired,
+    unpluggedLessons: PropTypes.array.isRequired
   };
 
   state = {
@@ -74,11 +78,26 @@ class StandardsViewHeaderButtons extends Component {
   };
 
   onSaveUnpluggedLessonStatus = () => {
-    const {sectionId, selectedLessons} = this.props;
-    const stageIds = _.map(selectedLessons, 'id');
-    stageIds.forEach(stageId => {
+    const {sectionId, selectedLessons, unpluggedLessons} = this.props;
+    const selectedStageIds = _.map(selectedLessons, 'id');
+    selectedStageIds.forEach(stageId => {
       let url = `/dashboardapi/v1/teacher_scores/${sectionId}/${stageId}/${
         TeacherScores.COMPLETE
+      }`;
+      $.ajax({
+        url: url,
+        type: 'post',
+        dataType: 'json',
+        data: {}
+      }).done(() => {
+        this.closeLessonStatusDialog();
+      });
+    });
+    const stageIds = _.map(unpluggedLessons, 'id');
+    const unselectedStageIds = _.difference(stageIds, selectedStageIds);
+    unselectedStageIds.forEach(stageId => {
+      let url = `/dashboardapi/v1/teacher_scores/${sectionId}/${stageId}/${
+        TeacherScores.INCOMPLETE
       }`;
       $.ajax({
         url: url,
@@ -130,7 +149,8 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 export default connect(
   state => ({
     scriptId: state.scriptSelection.scriptId,
-    selectedLessons: state.sectionStandardsProgress.selectedLessons
+    selectedLessons: state.sectionStandardsProgress.selectedLessons,
+    unpluggedLessons: getUnpluggedLessonsForScript(state)
   }),
   dispatch => ({
     setTeacherCommentForReport(comment) {
