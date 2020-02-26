@@ -3,7 +3,10 @@ import React, {Component} from 'react';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 import {connect} from 'react-redux';
-import {getUnpluggedLessonsForScript} from './sectionStandardsProgressRedux';
+import {
+  getUnpluggedLessonsForScript,
+  setSelectedLessons
+} from './sectionStandardsProgressRedux';
 
 const styles = {
   lessonListItem: {
@@ -14,7 +17,13 @@ const styles = {
 
 class LessonStatusList extends Component {
   static propTypes = {
-    unpluggedLessonList: PropTypes.array
+    unpluggedLessonList: PropTypes.array,
+    setSelectedLessons: PropTypes.func.isRequired,
+    selectedLessons: PropTypes.array.isRequired
+  };
+
+  handleChange = selectedLessons => {
+    this.props.setSelectedLessons(selectedLessons);
   };
 
   render() {
@@ -23,8 +32,9 @@ class LessonStatusList extends Component {
         noHeader={true}
         items={this.props.unpluggedLessonList}
         itemPropName="lesson"
-        selected={[]}
-        onChange={() => {}}
+        selected={this.props.selectedLessons}
+        checkById={true}
+        onChange={this.handleChange}
       >
         <ComplexLessonComponent />
       </MultiCheckboxSelector>
@@ -59,6 +69,14 @@ ComplexLessonComponent.propTypes = {
 
 export const UnconnectedLessonStatusList = LessonStatusList;
 
-export default connect(state => ({
-  unpluggedLessonList: getUnpluggedLessonsForScript(state)
-}))(LessonStatusList);
+export default connect(
+  state => ({
+    unpluggedLessonList: getUnpluggedLessonsForScript(state),
+    selectedLessons: state.sectionStandardsProgress.selectedLessons
+  }),
+  dispatch => ({
+    setSelectedLessons(selected) {
+      dispatch(setSelectedLessons(selected));
+    }
+  })
+)(LessonStatusList);

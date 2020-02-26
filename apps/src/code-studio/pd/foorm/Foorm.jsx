@@ -5,9 +5,12 @@ import React from 'react';
 
 export default class Foorm extends React.Component {
   static propTypes = {
-    formData: PropTypes.object.isRequired,
+    formQuestions: PropTypes.object.isRequired,
     formName: PropTypes.string.isRequired,
-    formVersion: PropTypes.number.isRequired
+    formVersion: PropTypes.number.isRequired,
+    submitApi: PropTypes.string.isRequired,
+    surveyData: PropTypes.object,
+    submitParams: PropTypes.object
   };
 
   constructor(props) {
@@ -21,20 +24,23 @@ export default class Foorm extends React.Component {
 
     Survey.StylesManager.applyTheme('default');
 
-    this.surveyModel = new Survey.Model(this.props.formData);
+    this.surveyModel = new Survey.Model(this.props.formQuestions);
   }
 
   onComplete = (survey, options) => {
-    console.log('Survey results: ' + JSON.stringify(survey.data));
+    let requestData = {
+      answers: survey.data,
+      form_name: this.props.formName,
+      form_version: this.props.formVersion
+    };
+    if (this.props.submitParams) {
+      requestData = {...this.props.submitParams, ...requestData};
+    }
     $.ajax({
-      url: '/dashboardapi/v1/foorm/submission',
+      url: this.props.submitApi,
       type: 'post',
       dataType: 'json',
-      data: {
-        answers: survey.data,
-        form_name: this.props.formName,
-        form_version: this.props.formVersion
-      }
+      data: requestData
     });
   };
 
@@ -43,7 +49,11 @@ export default class Foorm extends React.Component {
       return <div>Thank you for submitting</div>;
     } else {
       return (
-        <Survey.Survey model={this.surveyModel} onComplete={this.onComplete} />
+        <Survey.Survey
+          model={this.surveyModel}
+          onComplete={this.onComplete}
+          data={this.props.surveyData}
+        />
       );
     }
   }
