@@ -1,0 +1,24 @@
+name 'U9L1 google trends CFU'
+editor_experiment ''
+title 'What does the visualization actually show?'
+description ' '
+question ' '
+wrong 'People like dogs more than cats'
+right 'People search for "dogs" more frequently than "cats"'
+wrong 'There was a sharp increase in the dog population sometime between 2014 and 2015'
+wrong 'The popularity of dogs as pets is slightly increasing over time, while the popularity of cats is relatively flat'
+
+
+markdown <<MARKDOWN
+Below is an image from Google Trends that plots Cats and Dogs. 
+
+Choose the most accurate description of what this data is actually showing based on what you know about how Google Trends works.
+
+<a href="https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png" target=_blank><img src="https://images.code.org/bd40b81c105978fe26ff787a6bf82795-image-1469633006237.png"><br>Click to Enlarge</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The most accurate description is that **People search for "dogs" more frequently than "cats"**.
+
+All of the other responses inject some form of *rationale or reason* for why dogs are searched for more frequently than cats, rather than just describing what the data shows.  From this graph alone we have no idea why it's showing this way.
+MARKDOWN

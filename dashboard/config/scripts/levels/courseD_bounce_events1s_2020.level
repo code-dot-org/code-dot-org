@@ -1,0 +1,79 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2020-02-25T15:52:02.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "basketball",
+    "instructions_important": "true",
+    "scale": {
+      "snapRadius": 2
+    },
+    "soft_buttons": [
+      "leftButton"
+    ],
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0]]",
+    "short_instructions": "Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the net.",
+    "long_instructions": "Get to the hoop!     \r\n\r\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "fail_on_ball_exit": "false",
+    "use_flag_goal": "false",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You need to add the `move left` block to the `when left arrow` event to make this game work:\\n\\n <xml> <block type=\\\"bounce_whenLeft\\\" deletable=\\\"false\\\" x=\\\"20\\\" y=\\\"20\\\">\\n    <next>\\n      <block type=\\\"bounce_moveLeft\\\"/>\\n    </next>\\n  </block>\\n   \\n   </xml>\",\"hint_id\":\"courseD_bounce_events1s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/678346cdb89c6440eec5cdaa5ba29826/courseD_bounce_events1s.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to press \\\"Run\\\" and get the hand to the basket in order to solve this puzzle.\",\"hint_id\":\"courseD_bounce_events1s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4d24872eceeb9651a46d20078f9764c1/courseD_bounce_events1s.mp3\"}]",
+    "parent_level_id": 15062,
+    "name_suffix": "_2020",
+    "embed": "false",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "free_play": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:07:54 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"instructions_important\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 01:11:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:21:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:25:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:29:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:41:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:46:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"authored_hints\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-06-13 22:07:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_moveLeft"/>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Bounce>

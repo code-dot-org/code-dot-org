@@ -1,5 +1,7 @@
 require 'csv'
 require 'firebase'
+require 'time'
+require 'uri'
 
 # A wrapper around the firebase gem. For gem documentation, see
 # https://github.com/oscardelben/firebase-ruby.
@@ -27,23 +29,56 @@ class FirebaseHelper
   end
 
   def delete_shared_table(table_name)
-    @firebase.delete("/v3/channels/shared/counters/tables/#{table_name}")
-    @firebase.delete("/v3/channels/shared/storage/tables/#{table_name}/records")
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    escaped_table_name = URI.escape(table_name)
+    @firebase.delete("/v3/channels/shared/counters/tables/#{escaped_table_name}")
+    @firebase.delete("/v3/channels/shared/storage/tables/#{escaped_table_name}/records")
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
   end
 
   def upload_shared_table(table_name, records, columns)
-    @firebase.set("/v3/channels/shared/counters/tables/#{table_name}", {"lastId": records.length, "rowCount": records.length})
-    @firebase.set("/v3/channels/shared/storage/tables/#{table_name}/records", records)
-    @firebase.delete("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    escaped_table_name = URI.escape(table_name)
+    @firebase.set("/v3/channels/shared/counters/tables/#{escaped_table_name}", {"lastId": records.length, "rowCount": records.length})
+    @firebase.set("/v3/channels/shared/storage/tables/#{escaped_table_name}/records", records)
+    @firebase.delete("/v3/channels/shared/metadata/tables/#{escaped_table_name}/columns")
     columns.each do |column|
-      @firebase.push("v3/channels/shared/metadata/tables/#{table_name}/columns", {columnName: column})
+      @firebase.push("v3/channels/shared/metadata/tables/#{escaped_table_name}/columns", {columnName: column})
     end
   end
 
-  def get_library_manifest
-    response = @firebase.get("v3/channels/shared/metadata/manifest")
+  def upload_live_table(table_name, records, columns)
+    delete_shared_table(table_name)
+    upload_shared_table(table_name, records, columns)
+    response = @firebase.get("/v3/channels/shared/metadata/manifest/tables/")
+    return response unless response.success?
+    tables = response.body
+    index = tables.find_index {|table| table['name'] == table_name}
+    @firebase.set("/v3/channels/shared/metadata/manifest/tables/#{index}/lastUpdated", Time.now.to_i * 1000) unless index.nil?
+  end
+
+  def get_shared_table(table_name)
+    columns_response = @firebase.get("/v3/channels/shared/metadata/tables/#{table_name}/columns")
+    columns = columns_response.body ? columns_response.body.map {|_, value| value['columnName']} : []
+
+    records_response = @firebase.get("/v3/channels/shared/storage/tables/#{table_name}/records")
+    records = records_response.body || []
+
+    {columns: columns, records: records}
+  end
+
+  def get_shared_table_list
+    response = @firebase.get("/v3/channels/shared/counters/tables")
     response.body
+  end
+
+  def get_library_manifest
+    response = @firebase.get("/v3/channels/shared/metadata/manifest")
+    response.body
+  end
+
+  # Important Note: this firebase database is shared across all of our environments.
+  # Changes made using this function will be visible immediately in all environments (including prod)
+  def set_library_manifest(manifest)
+    @firebase.set("/v3/channels/shared/metadata/manifest", manifest)
   end
 
   def self.delete_channel(encrypted_channel_id)

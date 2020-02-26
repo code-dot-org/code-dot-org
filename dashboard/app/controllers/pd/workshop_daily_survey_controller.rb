@@ -20,32 +20,12 @@ module Pd
     def new_general
       # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
       day = params[:day].to_i
-      return render_404 if day < 0
-
-      workshop =
-        if params[:enrollmentCode].present?
-          Pd::Enrollment.find_by!(code: params[:enrollmentCode]).workshop
-        else
-          Workshop.
-          where(course: [COURSE_CSD, COURSE_CSP]).
-          where.not(subject: SUBJECT_FIT).
-          nearest_attended_or_enrolled_in_by(current_user)
-        end
-
-      return render :not_enrolled unless workshop
-      # There's no pre-workshop survey for academic year workshops
-      return render_404 if day == 0 && !workshop.summer?
-      # There's no post workshop survey for summer workshops
-      return render_404 if day == 5 && workshop.summer?
-
-      session = nil
-      if day > 0
-        session = workshop.sessions[day - 1]
-        return render_404 unless session
-        return render :too_late unless session.open_for_attendance? || day == workshop.sessions.size
-
-        return render :no_attendance unless session.attendances.exists?(teacher: current_user)
+      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      unless validate_new_general_parameters(workshop)
+        return
       end
+
+      session = get_session_for_workshop_and_day(workshop, day)
 
       @form_id = WorkshopDailySurvey.get_form_id_for_subject_and_day workshop.subject, day
 
@@ -56,7 +36,7 @@ module Pd
         workshopId: workshop.id,
         day: day,
         formId: @form_id,
-        sessionId: session&.id,
+        sessionId: session&.id
       }
 
       return redirect_general(key_params) if response_exists_general?(key_params)
@@ -69,46 +49,76 @@ module Pd
         regionalPartnerName: workshop.regional_partner&.name,
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
-      if params[:foorm]
-        # once we have surveys per day parameterize this on day number
-        survey_name = "surveys/pd/workshop_daily_survey_day_0"
-        latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
-        form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
-        @form_data = JSON.parse(form_data.questions)
-        @script_data = {
-          props: {
-            formData: @form_data,
-            formName: survey_name,
-            formVersion: latest_version,
-            surveyData: {
-              workshop_course: workshop.course
-            },
-            submitApi: "/dashboardapi/v1/pd/workshop_survey_submission",
-            submitParams: {
-              user_id: current_user.id,
-              pd_session_id: session&.id,
-              day: day,
-              pd_workshop_id: workshop.id
-            }
-          }.to_json
-        }
-        render :new_general_foorm
-      else
-        return if experimental_redirect! @form_id, @form_params
 
-        if CDO.newrelic_logging
-          NewRelic::Agent.record_custom_event(
-            "RenderJotFormView",
-            {
-              route: "GET /pd/workshop_survey/day/#{day}",
-              form_id: @form_id,
-              workshop_course: workshop.course,
-              workshop_subject: workshop.subject,
-              regional_partner_name: workshop.regional_partner&.name,
-            }
-          )
-        end
+      return if experimental_redirect! @form_id, @form_params
+
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/day/#{day}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
       end
+    end
+
+    # General workshop daily survey using foorm system.
+    # GET '/pd/workshop_survey/foorm/day/:day'
+    # Where day 0 is the pre-workshop survey, and days 1-5 are the 1st through 5th sessions (index 0-4)
+    #
+    # Currently only generates a day 0 survey, any other day will redirect to a 404.
+    # If survey has been completed already will redirect to thanks page.
+    def new_general_foorm
+      workshop = get_workshop_for_new_general(params[:enrollmentCode], current_user)
+      day = params[:day].to_i
+      if day > 0
+        return render_404
+      end
+
+      unless validate_new_general_parameters(workshop)
+        return
+      end
+
+      session = get_session_for_workshop_and_day(workshop, day)
+
+      # once we have surveys per day parameterize this on day number
+      survey_name = "surveys/pd/workshop_daily_survey_day_0"
+      key_params = {
+        environment: Rails.env,
+        userId: current_user.id,
+        workshopId: workshop.id,
+        day: day,
+        sessionId: session&.id,
+      }
+
+      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
+        return redirect_general(key_params)
+      end
+
+      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
+      form_data = JSON.parse(form.questions)
+
+      @script_data = {
+        props: {
+          formData: form_data,
+          formName: survey_name,
+          formVersion: latest_version,
+          surveyData: {
+            workshop_course: workshop.course
+          },
+          submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+          submitParams: {
+            user_id: current_user.id,
+            pd_session_id: session&.id,
+            day: day,
+            pd_workshop_id: workshop.id
+          }
+        }.to_json
+      }
     end
 
     # POST /pd/workshop_survey/submit
@@ -448,6 +458,59 @@ module Pd
       @key_params ||= params.require(:key).tap do |key_params|
         raise ActiveRecord::RecordNotFound unless key_params[:environment] == Rails.env
       end
+    end
+
+    def get_workshop_for_new_general(enrollment_code, current_user)
+      if enrollment_code
+        Pd::Enrollment.find_by!(code: enrollment_code).workshop
+      else
+        Workshop.
+          where(course: [COURSE_CSD, COURSE_CSP]).
+          where.not(subject: SUBJECT_FIT).
+          nearest_attended_or_enrolled_in_by(current_user)
+      end
+    end
+
+    def get_session_for_workshop_and_day(workshop, day)
+      day > 0 ? workshop.sessions[day - 1] : nil
+    end
+
+    def validate_new_general_parameters(workshop)
+      # Accept days 0 through 4. Day 5 is the post workshop survey and should use the new_post route
+      day = params[:day].to_i
+      if day < 0
+        render_404
+        return false
+      end
+
+      unless workshop
+        render :not_enrolled
+        return false
+      end
+
+      # There's no pre-workshop survey for academic year workshops and
+      # there's no post workshop survey for summer workshops
+      if (day == 0 && !workshop.summer?) || (day == 5 && workshop.summer?)
+        render_404
+        return false
+      end
+
+      if day > 0
+        session = get_session_for_workshop_and_day(workshop, day)
+        unless session
+          render_404
+          return false
+        end
+        unless session.open_for_attendance? || day == workshop.sessions.size
+          render :too_late
+          return false
+        end
+        unless session.attendances.exists?(teacher: current_user)
+          render :no_attendance
+          return false
+        end
+      end
+      return true
     end
   end
 end

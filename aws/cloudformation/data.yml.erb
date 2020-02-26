@@ -121,13 +121,13 @@ Resources:
          # Default value: 1000 KB (1 MB)
          writeBufferSize: 8.megabytes / 1.kilobyte
       }.map{|x|x.join('=')}.join(';')%>
-<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings| -%>
-  DMS<%=task_name.underscore.camelize%>FullLoad:
+<% Cdo::DMS.tasks(aws_dir('dms/tasks.yml')).each do |task_name, table_mappings, schedule| -%>
+  DMS<%=task_name.underscore.camelize%>:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref TableauSync
-      ReplicationTaskIdentifier: <%= task_name %>-full-load-no-cdc
+      ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref AuroraReaderEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
@@ -136,8 +136,8 @@ Resources:
           <%= table_mappings.to_json %>
       Tags:
         -
-          Key: environment
-          Value: <%=rack_env.to_s%>
+          Key: schedule
+          Value: <%=schedule%>
 <% end -%>
   DMSS3Role:
     Type: AWS::IAM::Role
