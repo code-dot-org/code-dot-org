@@ -100,11 +100,11 @@ module Pd
       end
 
       form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
-      form_data = JSON.parse(form.questions)
+      form_questions = JSON.parse(form.questions)
 
       @script_data = {
         props: {
-          formData: form_data,
+          formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
           surveyData: {

@@ -4,6 +4,7 @@ import {TestResults} from '@cdo/apps/constants';
 const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
+const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
 
 // Action creators
 export const addStandardsData = standardsData => {
@@ -13,11 +14,16 @@ export const setTeacherCommentForReport = teacherComment => ({
   type: SET_TEACHER_COMMENT_FOR_REPORT,
   teacherComment
 });
+export const setSelectedLessons = selected => ({
+  type: SET_SELECTED_LESSONS,
+  selected
+});
 
 // Initial State
 const initialState = {
   standardsData: [],
-  teacherComment: null
+  teacherComment: null,
+  selectedLessons: []
 };
 
 function sortByOrganizationId(standardsByConcept) {
@@ -42,6 +48,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
     return {
       ...state,
       teacherComment: action.teacherComment
+    };
+  }
+  if (action.type === SET_SELECTED_LESSONS) {
+    return {
+      ...state,
+      selectedLessons: action.selected
     };
   }
   return state;
