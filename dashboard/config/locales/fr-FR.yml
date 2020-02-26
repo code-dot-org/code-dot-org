@@ -683,6 +683,7 @@ fr:
     download: Télécharger la vidéo
     show_notes: Afficher les notes
     show_video: Afficher la vidéo
+    label: Vidéo
   compatibility:
     upgrade:
       unsupported_message: Votre navigateur n'est pas supporté. Merci de mettre à

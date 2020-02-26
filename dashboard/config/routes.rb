@@ -436,6 +436,7 @@ Dashboard::Application.routes.draw do
       delete 'enrollments/:enrollment_code', action: 'cancel', controller: 'workshop_enrollments'
       post 'enrollment/:enrollment_id/scholarship_info', action: 'update_scholarship_info', controller: 'workshop_enrollments'
       post 'enrollments/move', action: 'move', controller: 'workshop_enrollments'
+      post 'enrollment/:id/edit', action: 'edit', controller: 'workshop_enrollments'
 
       # persistent namespace for FiT Weekend registrations, can be updated/replaced each year
       post 'fit_weekend_registrations', to: 'fit_weekend_registrations#create'
@@ -488,6 +489,7 @@ Dashboard::Application.routes.draw do
     post 'misc_survey/submit', to: 'misc_survey#submit'
 
     get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
+    get 'workshop_survey/foorm/day/:day', to: 'workshop_daily_survey#new_general_foorm'
     post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
     get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
     get 'workshop_survey/facilitators/:session_id(/:facilitator_index)', to: 'workshop_daily_survey#new_facilitator'
@@ -680,6 +682,8 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
   get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
+
+  post '/dashboardapi/v1/pd/workshop_survey_foorm_submission', to: 'api/v1/pd/workshop_survey_foorm_submissions#create', defaults: {format: 'json'}
 
   post '/safe_browsing', to: 'safe_browsing#safe_to_open', defaults: {format: 'json'}
 

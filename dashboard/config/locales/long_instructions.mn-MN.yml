@@ -3017,8 +3017,7 @@ mn-MN:
       courseA_maze_ramp3a_2019: Хэрэгслийн хайрцагнаас <xml><block type="maze_moveNorth"
         block-text="move north"/></xml> блокыг авч, тус кодыг дуусгахын тулд үүнийг
         бусад блокийн доод талд нэмээд, дараа нь "▶ тоглуулах"-г дараарай.
-      courseA_maze_seq1: \_ "Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу аваачаарай!"
-        \_
+      courseA_maze_seq1: _"Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу аваачаарай!"_
       courseA_maze_seq10: "**Сорилт:** TNT-ийг тойроод шувууг гахай руу аваачаарай!
         \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
       courseA_maze_seq11: |-
@@ -3030,10 +3029,10 @@ mn-MN:
 
         ![expandable](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)
       courseA_maze_seq13_2019: Гахайгаа чадах ямар нэг аргаар аваарай!
-      courseA_maze_seq1_2018: \_ "Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу
-        аваачаарай!" \_
-      courseA_maze_seq1_2019: \_ "Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу
-        аваачаарай!" \_
+      courseA_maze_seq1_2018: _"Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу
+        аваачаарай!"_
+      courseA_maze_seq1_2019: _"Эдгээр блокуудаар тоглож, намайг өөдгүй гахай руу
+        аваачаарай!"_
       courseA_maze_seq2: |-
         _"Алдаа гарлаа! Намайг гахай руу аваачихын тулд кодыг засаарай."_
 
@@ -3090,21 +3089,27 @@ mn-MN:
         Ажлын талбар дээр байгаа <xml><block type="studio_move">
             <title name="SPRITE">1</title>
             <title name="DIR">8</title>
-          </block></xml> блокийг [blockly блок] [1] үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
+          </block></xml> блокийг <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
 
         Энэ түвшинг дуусгахын тулд Хорхег туг руу аваачаарай!
       courseA_playLab_events3_2018: |-
         Ажлын талбар дээр байгаа <xml><block type="studio_move">
             <title name="SPRITE">1</title>
             <title name="DIR">8</title>
-          </block></xml> блокийг [blockly блок] [1] үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
+          </block></xml> блокийг <xml><block type="studio_whenArrow">
+            <title name="VALUE">left</title>
+          </block></xml> үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
 
         Энэ түвшинг дуусгахын тулд Хорхег туг руу аваачаарай!
       courseA_playLab_events3_2019: |-
         Ажлын талбар дээр байгаа <xml><block type="studio_move" block-text="move dog west">
             <title name="SPRITE">1</title>
             <title name="DIR">8</title>
-          </block></xml> блокийг [blockly блок] [1] үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
+          </block></xml> блокийг <xml><block type="studio_whenArrow" block-text="when left arrow">
+            <title name="VALUE">left</title>
+          </block></xml> үйл явдлын блок руу холбосноор Хорхе нохойг шилжихэд тусална уу.
 
         Энэ түвшинг дуусгахын тулд Хорхег туг руу аваачаарай!
       courseA_playLab_events4: Баруун сумыг дарахад Хорхег баруун тийш шилжүүлэхийн
