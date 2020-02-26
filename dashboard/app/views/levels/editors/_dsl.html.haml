@@ -19,6 +19,8 @@
 - if @level.filename
   = "Filename: #{@level.filename}"
 .field
+  // Make sure the encrypted property is a boolean before we try to use it to set the checkbox
+  - @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
   = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this entire file"}
   %p Use this if you want to prevent devious students from finding answers in our git repo
 
