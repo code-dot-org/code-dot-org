@@ -3,6 +3,9 @@ import {UnconnectedLibraryTable as LibraryTable} from './LibraryTable';
 
 const libraries = [
   {
+    id: '1',
+    channel: 'abc123',
+    type: 'applab',
     libraryName: 'My First Library',
     name: 'Library Project',
     libraryDescription:
@@ -10,6 +13,9 @@ const libraries = [
     libraryPublishedAt: 1575586799000 // Random epoch timestamp in the past
   },
   {
+    id: '2',
+    channel: 'def456',
+    type: 'applab',
     libraryName: 'New Library',
     name: 'Library Project V2',
     libraryDescription: 'A second try',
