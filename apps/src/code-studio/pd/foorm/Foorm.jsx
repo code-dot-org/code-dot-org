@@ -5,7 +5,7 @@ import React from 'react';
 
 export default class Foorm extends React.Component {
   static propTypes = {
-    formData: PropTypes.object.isRequired,
+    formQuestions: PropTypes.object.isRequired,
     formName: PropTypes.string.isRequired,
     formVersion: PropTypes.number.isRequired,
     submitApi: PropTypes.string.isRequired,
@@ -24,7 +24,7 @@ export default class Foorm extends React.Component {
 
     Survey.StylesManager.applyTheme('default');
 
-    this.surveyModel = new Survey.Model(this.props.formData);
+    this.surveyModel = new Survey.Model(this.props.formQuestions);
   }
 
   onComplete = (survey, options) => {
