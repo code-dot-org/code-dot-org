@@ -8,7 +8,7 @@ with pledged as
   from dashboard_production_pii.census_submissions cs
     join dashboard_production.census_submissions_school_infos cssi on cssi.census_submission_id = cs.id
     join dashboard_production.school_infos si on si.id = cssi.school_info_id
-where pledged = 1
+  where pledged = 1
 ),
 -- which schools hosted an HoC event?
 -- filters to appropriate signups based on the following
@@ -88,7 +88,7 @@ students_and_teachers as
     COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND se.script_id IN (select distinct script_id from analysis.course_structure where course_name_short in ('csp')) THEN f.student_user_id ELSE NULL END) students_csp_l365,
     COUNT(DISTINCT CASE WHEN u_students.current_sign_in_at >= dateadd (day,-364,getdate ()::DATE) AND scr.name IN ('starwars','starwarsblocks','mc','minecraft','hourofcode','flappy','artist','frozen','infinity','playlab','gumball','iceage','sports','basketball','hero','applab-intro','aquatic','dance','dance-extras','dance-extras-2019','oceans') THEN f.student_user_id ELSE NULL END) students_hoc
   from dashboard_production_pii.users u
-  JOIN dashboard_production.school_infos si
+    JOIN dashboard_production.school_infos si
       ON u.school_info_id = si.id
     LEFT JOIN dashboard_production.sections se
       ON se.user_id = u.id
