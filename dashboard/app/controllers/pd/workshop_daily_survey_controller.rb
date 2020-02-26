@@ -281,12 +281,11 @@ module Pd
     end
 
     # Display CSF101 (Intro) post-workshop survey.
-    # The JotForm survey, on submit, will redirect to the new_facilitator route for user
-    # to submit facilitator surveys.
+    # The survey, on submit, will display thanks.
     # GET workshop_survey/csf/post101(/:enrollment_code)
     def new_csf_post101
       # Use enrollment_code to find a specific workshop
-      # or search all CSF101 workshops the current user enrolled in.
+      # or search all CSF101 workshops the current user is enrolled in.
       enrolled_workshops = nil
       if params[:enrollment_code].present?
         enrolled_workshops = Workshop.joins(:enrollments).
@@ -301,10 +300,21 @@ module Pd
         return render :not_enrolled if enrolled_workshops.blank?
       end
 
-      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
-      ## return render :no_attendance unless attended_workshop
+      survey_name = "surveys/pd/pd_workshop_survey"
 
-      render_csf_survey(POST_INTRO_SURVEY, attended_workshop)
+      # Find the workshop attended.
+      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+
+      # Render a message if no attendance for this workshop.
+      return render :no_attendance unless attended_workshop
+
+      # Render a thanks message if already submitted.
+      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
+        render :thanks
+        return
+      end
+
+      render_csf_survey_foorm(survey_name, attended_workshop)
     end
 
     # Display CSF201 (Deep Dive) post-workshop survey.
@@ -397,7 +407,7 @@ module Pd
     end
 
     def render_csf_survey(survey_name, workshop)
-      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name unless params[:foorm]
+      @form_id = WorkshopDailySurvey.get_form_id CSF_CATEGORY, survey_name
 
       # There are facilitator surveys after post workshop survey.
       # Use sessionId to create URL query to those facilitator surveys.
@@ -418,40 +428,46 @@ module Pd
         submitRedirect: url_for(action: 'submit_general', params: {key: key_params})
       )
 
-      if params[:foorm]
-        # once we have surveys per day parameterize this on day number
-        survey_name = "surveys/pd/pd_workshop_survey"
-        latest_version = Foorm::Form.where(name: survey_name).maximum(:version)
-        form_data = Foorm::Form.where(name: survey_name, version: latest_version).first
-        @form_data = JSON.parse(form_data.questions)
-        @script_data = {
-          props: {
-            formData: @form_data,
-            formName: survey_name,
-            formVersion: latest_version
-          }.to_json
-        }
+      return redirect_general(key_params) if response_exists_general?(key_params)
+      return if experimental_redirect! @form_id, @form_params
 
-        render :new_general_foorm
-      else
-        return redirect_general(key_params) if response_exists_general?(key_params)
-        return if experimental_redirect! @form_id, @form_params
-
-        if CDO.newrelic_logging
-          NewRelic::Agent.record_custom_event(
-            "RenderJotFormView",
-            {
-              route: "GET /pd/workshop_survey/csf/#{survey_name}",
-              form_id: @form_id,
-              workshop_course: workshop.course,
-              workshop_subject: workshop.subject,
-              regional_partner_name: workshop.regional_partner&.name,
-            }
-          )
-        end
-
-        render :new_general
+      if CDO.newrelic_logging
+        NewRelic::Agent.record_custom_event(
+          "RenderJotFormView",
+          {
+            route: "GET /pd/workshop_survey/csf/#{survey_name}",
+            form_id: @form_id,
+            workshop_course: workshop.course,
+            workshop_subject: workshop.subject,
+            regional_partner_name: workshop.regional_partner&.name,
+          }
+        )
       end
+
+      render :new_general
+    end
+
+    def render_csf_survey_foorm(survey_name, workshop)
+      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
+      form_questions = JSON.parse(form.questions)
+
+      @script_data = {
+        props: {
+          formQuestions: form_questions,
+          formName: survey_name,
+          formVersion: latest_version,
+          surveyData: {
+            workshop_course: workshop.course
+          },
+          submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+          submitParams: {
+            user_id: current_user.id,
+            pd_workshop_id: workshop.id
+          }
+        }.to_json
+      }
+
+      render :new_general_foorm
     end
 
     def key_params
