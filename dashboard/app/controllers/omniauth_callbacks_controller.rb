@@ -24,7 +24,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # POST /users/auth/maker_google_oauth2
   def maker_google_oauth2
-    p params[:uid]
+    secret = Encryption.decrypt_string_utf8(params[:uid])
+    p secret
   end
 
   # GET /users/auth/google_oauth2/callback
