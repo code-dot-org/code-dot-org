@@ -29,7 +29,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     user_level_count_before = UserLevel.all.count
 
     TeacherScore.score_level_for_student(
-      @teacher.id, @student_1.id, @level_1.id, @score
+      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count
@@ -60,7 +60,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     user_level_count_before = UserLevel.all.count
 
     TeacherScore.score_level_for_student(
-      @teacher.id, @student_1.id, @level_1.id, @score
+      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count

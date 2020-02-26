@@ -54,7 +54,7 @@
   "ifTooltip": "Ha a megadott irányban létezik egy útvonal, akkor csinálj bizonyos intézkedéseket.",
   "ifelseFlowerTooltip": "Ha van virág vagy méhsejt a megadott irányban, akkor az első blokk műveleteit végezd el, különben a második blokk műveleteit.",
   "ifelseTooltip": "Ha van egy út a megadott irányban, akkor csináld az első blokk műveletek. Másképp csinál a második blokk műveletek.",
-  "insufficientHoney": "A megfelelő blokkokat használtad, de a mézből is megfelelő mennyiséget kell készítened.",
+  "insufficientHoney": "Mézből is megfelelő mennyiséget kell készítened.",
   "insufficientNectar": "A megfelelő blokkokat használtad, de a nektárból is megfelelő mennyiséget kell gyűjtened.",
   "lettuce": "saláta",
   "lettuceTooltip": "Takarítsd be a salátát",
@@ -113,5 +113,5 @@
   "word": "Ezt a szót keresd",
   "wrongCropError": "Nem tudom innen a termést betakarítani.",
   "yes": "Igen",
-  "youSpelled": "Amit találtál"
+  "youSpelled": "amit találtál"
 }

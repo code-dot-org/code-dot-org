@@ -680,6 +680,7 @@ ru:
     download: Скачать видео
     show_notes: Показать заметки
     show_video: Показать видео
+    label: Видео
   compatibility:
     upgrade:
       unsupported_message: Ваш браузер не поддерживается. Пожалуйста, обновите свой

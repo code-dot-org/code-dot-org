@@ -166,3 +166,7 @@ my:
               name: Loops
             Variables:
               name: Variables
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables

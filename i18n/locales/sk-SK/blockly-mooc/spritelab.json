@@ -1,12 +1,12 @@
 {
-  "errorLoadingAnimation": "",
-  "reinfFeedbackMsg": "",
+  "errorLoadingAnimation": "Vyzerá to, že sa tvoja anmácia \"{animationName}\" nechce načítať. Uisti sa, že máš dobré internetové pripojenie a vyskúšaj stránku znova načítať. Ak tento problém pokračuje, je možné, že táto animácia nefunguje. V takom prípade ju budeš musieť pred pokračovaním odstrániť.",
+  "reinfFeedbackMsg": "Hotovo! Stlač \"Pokračovať\" aby si sa dostal/a do ďalšieho levelu.",
   "shareGame": "Zdieľaj svoju hru:",
   "spritelabFeedbackCreateFishWithBehavior": "",
   "spritelabFeedbackMoveFishLeftRight": "",
   "spritelabFeedbackChangeBackgroundColor": "",
-  "spritelabFeedbackCreateTwoSprites": "",
-  "spritelabFeedbackTwoSpritesWithCostumes": "",
+  "spritelabFeedbackCreateTwoSprites": "Musíš vytvoriť presne dve postavy.",
+  "spritelabFeedbackTwoSpritesWithCostumes": "Tvoje dve postavičky potrebujú rozdielne kostýmy.",
   "spritelabFeedbackTwoSpritesWithCostumesAndBehaviors": "",
   "spritelabFeedbackClickSprite": "",
   "spritelabFeedbackUseSpinningBehavior": "",
@@ -22,5 +22,5 @@
   "spritelabFeedbackMoveUpNotDown": "",
   "spritelabFeedbackRobotFasterThanRover": "",
   "spritelabFeedbackDifferentStarRotation": "",
-  "spritelabFeedbackAstronautMoveToCorner": ""
+  "spritelabFeedbackAstronautMoveToCorner": "Postavička astronauta sa musí presunúť do jedného z rohov."
 }

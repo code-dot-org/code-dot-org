@@ -1768,3 +1768,19 @@ cs:
           stages:
             Conditionals:
               name: Podmínky
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkce s Parametry
+        csd3-2020:
+          title: CSD Jednotka 3 - Animace and hry ('18-'19)
+          description_short: "Programování"
+          stages:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce

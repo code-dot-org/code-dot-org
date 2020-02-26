@@ -650,6 +650,7 @@ ro:
     download: Descarcă Video
     show_notes: Arată note
     show_video: Arată video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade

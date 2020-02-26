@@ -1,0 +1,153 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-02-25T15:49:44.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75,\"sprite\":2},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":3},{\"tileType\":0},{\"tileType\":16,\"size\":0.75,\"sprite\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0},{\"tileType\":16,\"size\":0.75},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "true",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "true",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "true",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "first_sprite_index": "0",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"*Need an idea?*\\n\\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\\n\\n<img src= \\\"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\\\" style=\\\"width: 200px\\\">\\n\",\"hint_id\":\"idea1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4f25338cf0ad66a7bccb8369ad8dd78c/courseC_PlayLab_eventsFP_2019.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"*Need an idea?*\\n\\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\\n\\n<img src= \\\"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\\\" style=\\\"width: 200px\\\">\",\"hint_id\":\"idea2\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd3e8e689ecf774bf00bc8c8fad41773/courseC_PlayLab_eventsFP_2019.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"*Need an idea?*\\n\\n**Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.\",\"hint_id\":\"idea3\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/40125e5207a75c566f445df29c5ac03e/courseC_PlayLab_eventsFP_2019.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "remove_items_when_actor_collides": "false",
+    "parent_level_id": 15553,
+    "name_suffix": "_2020",
+    "show_type_hints": "false",
+    "encrypted": "false",
+    "encrypted_examples": "AoNDoUEgyxrSZ/G61QN63TElqiL2lFPjVqMqYH/rD6xG4lfWXkrYZaGiLi3f\nJM+hIZoX3kxTxk26R2ayHDlod3re9Y3x6Q+dftggSOrKIGeI1u5mcVGFYuxo\nY9EvafjukeEbIGfXgbTWPyM+g4O5WDQCiM+fnUkjlsOW3ee7KFCUL+PEqYgl\n/Yd4wUU66dPdNIKnLDg9QnjOT2qqXrFHqg==\n",
+    "mini_rubric": "false",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
+    "default_num_example_blocks": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-02-06 19:29:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"projectile_collisions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 19:45:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-05-29 19:49:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-07-08 20:36:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-08 21:14:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-08 22:04:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 22:54:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 23:00:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 23:01:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"},{\"changed_at\":\"2019-07-19 23:13:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":958,\"changed_by_email\":\"stephanie.wong@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="studio_setBackground">
+          <title name="VALUE">"cave"</title>
+        </block>
+        <block type="studio_setSprite">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"witch"</title>
+        </block>
+        <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+        </block>
+        <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_repeatForever"/>
+        <block type="studio_showTitleScreen">
+          <title name="TITLE">type title here</title>
+          <title name="TEXT">type text here</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">25</title>
+        </block>
+        <block type="studio_stop">
+          <title name="SPRITE">0</title>
+        </block>
+        <block type="studio_wait">
+          <title name="VALUE">500</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Ouch!</title>
+        </block>
+        <block type="studio_saySprite">
+          <title name="SPRITE">0</title>
+          <title name="TEXT">type here</title>
+        </block>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">7</title>
+        </block>
+        <block type="studio_throw">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">"airplane"</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_makeProjectile">
+          <title name="VALUE">"airplane"</title>
+          <title name="ACTION">"bounce"</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+        </block>
+        <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">0</title>
+        </block>
+        <block type="studio_vanish">
+          <title name="SPRITE">0</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Studio>

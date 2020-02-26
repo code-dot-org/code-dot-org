@@ -7,14 +7,14 @@ Background:
 
 Scenario: Can Toggle to the Public Project Gallery
   Given I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
-  And element "#public-gallery" is not visible
+  And I wait until element "#uitest-personal-projects" is visible
+  And element "#uitest-public-projects" is not visible
   Then I navigate to the public gallery via the gallery switcher
 
 Scenario: Can Publish and Unpublish a Project (Button Version)
   Given I make a "playlab" project named "Publishable Project"
   Given I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
+  And I wait until element "#uitest-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Publishable Project"
@@ -27,7 +27,7 @@ Scenario: Can Publish and Unpublish a Project (Button Version)
 Scenario: Can Rename a Project
   Given I make a "playlab" project named "Old Name"
   Given I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
+  And I wait until element "#uitest-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Old Name"
@@ -42,7 +42,7 @@ Scenario: Can Rename a Project
 Scenario: Can Remix a Project
   Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
+  And I wait until element "#uitest-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "Remix Template"
@@ -53,7 +53,7 @@ Scenario: Can Remix a Project
 Scenario: Can Delete a Project
   Given I make a "playlab" project named "To Be Deleted"
   Given I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
+  And I wait until element "#uitest-personal-projects" is visible
   And I wait until element ".ui-personal-projects-table" is visible
   And the project table contains 1 row
   And the first project in the table is named "To Be Deleted"

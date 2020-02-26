@@ -1,0 +1,93 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:42:59.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "skin": "artist",
+    "short_instructions": "Draw a line forward five times.",
+    "x": "75",
+    "y": "200",
+    "start_direction": "90",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "free_play": "false",
+    "slider_speed": ".2",
+    "embed": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "false",
+    "disable_sharing": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Trace slowly through the program with your finger to see where it goes wrong.\",\"hint_id\":\"courseA_artist_loops3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5ffee89a4a049f2850a4c9ffb8493a8/courseA_artist_loops3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use a block like this to solve this puzzle.\\n\\n![](https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png)\",\"hint_id\":\"courseA_artist_loops3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3635465b710d21fcbf44245c22c2677f/courseA_artist_loops3.mp3\"}]",
+    "long_instructions": "Our artist is trying to draw a line five times, but can't get it right. Can you help?\r\n\r\n![expandable](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)",
+    "instructions_important": "false",
+    "images": "[\r\n  {\"filename\": \"https://images.code.org/e5a687cd12d59ca95e391294fb9491df-image-1477105710995.png\", \"position\": [0, 0]}\r\n]",
+    "ideal": "6",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15663,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 17:26:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 21:59:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:03:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-16 15:44:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="2-6">???</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="simple_move_right">
+              <next>
+                <block type="simple_move_right">
+                  <next>
+                    <block type="simple_move_right">
+                      <next>
+                        <block type="simple_move_right">
+                          <next>
+                            <block type="simple_move_right"/>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

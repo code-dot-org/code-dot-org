@@ -65,16 +65,17 @@ Scenario: UnPublished, Featured Projects Do Not Show
 
 Scenario: Can Toggle to the Personal Project Gallery
   Given I am on "http://studio.code.org/projects/public"
-  And I wait until element "#public-gallery" is visible
-  And element "#react-personal-projects" is not visible
+  And I wait until element "#projects-page" is visible
+  And I wait until element "#uitest-public-projects" is visible
+  And element "#uitest-personal-projects" is not visible
   Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
   Then check that I am on "http://studio.code.org/projects"
-  And I wait until element "#react-personal-projects" is visible
-  And element "#public-gallery" is not visible
+  And I wait until element "#uitest-personal-projects" is visible
+  And element "#uitest-public-projects" is not visible
 
 Scenario: Can See App Lab/Game Lab View More Links
   Given I am on "http://studio.code.org/projects/public"
-  Then I wait until element "#public-gallery" is visible
+  And I wait until element "#projects-page" is visible
   Then I wait until element ".ui-project-app-type-area" is in the DOM
   And the project gallery contains 9 project types
   And the project gallery contains 9 view more links
