@@ -672,7 +672,7 @@ Dashboard::Application.routes.draw do
   # Routes used by standards info dialog
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
 
-  post '/dashboardapi/v1/teacher_scores/:section_id/:stage_id/:score', to: 'api/v1/teacher_scores#score_stage_for_section'
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stage_for_section'
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

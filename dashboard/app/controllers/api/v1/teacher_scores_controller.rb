@@ -1,7 +1,8 @@
 class Api::V1::TeacherScoresController < Api::V1::JsonApiController
+  before_action :authenticate_user!
   authorize_resource
 
-  # POST /teacher_scores/:section_id/:stage_id/:score
+  # POST /teacher_scores
   def score_stage_for_section
     TeacherScore.score_stage_for_section(
       current_user.id,
@@ -14,8 +15,9 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
 
   private
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Never trust parameters from the scary internet, only allow the following
+  # list through.
   def teacher_score_params
-    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id)
+    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :stage_id)
   end
 end

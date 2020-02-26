@@ -79,16 +79,19 @@ class StandardsViewHeaderButtons extends Component {
 
   onSaveUnpluggedLessonStatus = () => {
     const {sectionId, selectedLessons, unpluggedLessons} = this.props;
+    let url = '/dashboardapi/v1/teacher_scores';
     const selectedStageIds = _.map(selectedLessons, 'id');
     selectedStageIds.forEach(stageId => {
-      let url = `/dashboardapi/v1/teacher_scores/${sectionId}/${stageId}/${
-        TeacherScores.COMPLETE
-      }`;
       $.ajax({
         url: url,
         type: 'post',
+        contentType: 'application/json',
         dataType: 'json',
-        data: {}
+        data: JSON.stringify({
+          section_id: sectionId,
+          stage_id: stageId,
+          score: TeacherScores.COMPLETE
+        })
       }).done(() => {
         this.closeLessonStatusDialog();
       });
@@ -96,14 +99,16 @@ class StandardsViewHeaderButtons extends Component {
     const stageIds = _.map(unpluggedLessons, 'id');
     const unselectedStageIds = _.difference(stageIds, selectedStageIds);
     unselectedStageIds.forEach(stageId => {
-      let url = `/dashboardapi/v1/teacher_scores/${sectionId}/${stageId}/${
-        TeacherScores.INCOMPLETE
-      }`;
       $.ajax({
         url: url,
         type: 'post',
+        contentType: 'application/json',
         dataType: 'json',
-        data: {}
+        data: JSON.stringify({
+          section_id: sectionId,
+          stage_id: stageId,
+          score: TeacherScores.INCOMPLETE
+        })
       }).done(() => {
         this.closeLessonStatusDialog();
       });
