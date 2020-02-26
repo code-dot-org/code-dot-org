@@ -37,9 +37,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       p "Wrong provider. Please make sure you are logging in with Google"
       # TODO: Bail out of log-in
     end
-    # Regex - check that the string is all numbers
+    # Check user id all numbers
+    if secret.scan(/\D/).empty?
+      # Authorize user
+    else
+      p "Invalid user id"
+      # TODO: Bail out of log-in
+    end
     p secret
-    # Log in the user
   end
 
   # GET /users/auth/google_oauth2/callback
