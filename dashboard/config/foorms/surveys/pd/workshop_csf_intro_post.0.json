@@ -1,5 +1,5 @@
 {
-  "title": "Satisfaction Survey for Code.org's CS Discoveries 5-day Summer Professional Development Workshop",
+  "title": "Satisfaction Survey for Code.org's CS Fundamentals 5-day Summer Professional Development Workshop",
   "pages": [
     {
       "name": "page1",
@@ -28,7 +28,7 @@
         {
           "type": "radiogroup",
           "name": "will_teach_csd_next_year",
-          "title": "Will you be teaching/are you teaching CS Discoveries 5-day Summer in the next school year? ",
+          "title": "Will you be teaching/are you teaching CS Fundamentals 5-day Summer in the next school year? ",
           "isRequired": true,
           "choices": [
             {
