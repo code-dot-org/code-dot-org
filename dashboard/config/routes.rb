@@ -157,6 +157,7 @@ Dashboard::Application.routes.draw do
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
     get '/reset_session', to: 'sessions#reset'
     get '/users/existing_account', to: 'registrations#existing_account'
+    post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
