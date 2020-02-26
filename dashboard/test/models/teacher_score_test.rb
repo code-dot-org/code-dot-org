@@ -11,16 +11,16 @@ class TeacherScoreTest < ActiveSupport::TestCase
     @section.add_student(@student_2)
     @section.add_student(@student_3)
     @script = create :script
-    @stage = create :stage
     @script_level = create(
       :script_level,
       script: @script,
-      stage: @stage,
       levels: [
         create(:maze, name: 'test level 1')
       ]
     )
+    @stage = @script_level.stage
     @score = 100
+    @score_2 = 0
     @level_1 = @script_level.levels[0]
   end
 
@@ -90,5 +90,37 @@ class TeacherScoreTest < ActiveSupport::TestCase
     assert_equal(user_level_count_after, user_level_count_before + student_count)
 
     assert_equal(teacher_scores_count_after, teacher_scores_count_before + student_count)
+  end
+
+  test 'get scores for stage for student' do
+    TeacherScore.score_level_for_student(
+      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
+    )
+
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id, @teacher.id), {@level_1.id => @score})
+  end
+
+  test 'get scores for stage for student looks at most recent score' do
+    TeacherScore.score_level_for_student(
+      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
+    )
+
+    TeacherScore.score_level_for_student(
+      @teacher.id, @student_1.id, @level_1.id, @script.id, @score_2
+    )
+
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id, @teacher.id), {@level_1.id => @score_2})
+  end
+
+  test 'teacher marked stage complete for student returns false when no teacher scoring' do
+    refute TeacherScore.teacher_marked_stage_complete_for_student?(@stage.id, @student_1.id, @teacher.id)
+  end
+
+  test 'teacher marked stage complete for student returns true when student in section when stage marked complete' do
+    TeacherScore.score_stage_for_section(
+      @teacher.id, @section.id, @stage.id, @score
+    )
+
+    assert TeacherScore.teacher_marked_stage_complete_for_student?(@stage.id, @student_1.id, @teacher.id)
   end
 end
