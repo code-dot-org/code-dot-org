@@ -116,7 +116,7 @@ sr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
@@ -124,7 +124,7 @@ sr:
       Dancelab_setDanceSpeedEach:
         options:
           SPEED:
-            '1': normal
+            '1': нормално
             '2': fast
             '4': very fast
             '0.5': slow
@@ -322,7 +322,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whenKeyReleased:
         options:
           KEY:
@@ -331,7 +333,9 @@ sr:
             '"left"': стрелица лево
             '"right"': стрелица десно
             '"w"': w
+            '"a"': А
             '"s"': Југ
+            '"d"': Д
       Mikelab_whileKeyPressed:
         options:
           KEY:

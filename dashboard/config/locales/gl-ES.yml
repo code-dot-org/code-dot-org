@@ -543,6 +543,7 @@ gl:
     download: Baixar Vídeo
     show_notes: Amosar notas
     show_video: Amosar video
+    label: Vídeo
   compatibility:
     upgrade:
       link: Aprender máis

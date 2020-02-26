@@ -16,7 +16,7 @@ hu:
       not_saved: 'Kérjük, javítsd a következő hibákat:'
       too_young: 'Erre a tartalomra életkori korlátozás van érvényben, és nem elérhető fiatalabb diákok számára.'
       teacher_must_accept_terms: 'Ez a tartalom életkor korlátozással rendelkezik, és fiatalabb diákok számára nem elérhető. Kérje tanárát, hogy fogadja el a frissített Általános Szerződési Feltételeket, hogy hozzáférjen ehhez a tartalomhoz. A tanár ezt megteheti, ha bejelentkezik a Kód Stúdióba, ha rákattint a Kódex stúdió kezdőlapjának tetején található "Felülvizsgálat frissítések" gombra.'
-      pair_programmer: 'Jelenleg páros programozást végzel olyan diákkal, aki nem fér hozzá ehhez a tartalomhoz. A tartalom eléréséhez állítsd le a programozást, és próbáld újra.'
+      pair_programmer: 'Jelenleg párban programozol egy olyan diáktársaddal, aki ehhez a tartalomhoz nem férhet hozzá. Hogy elérd ezt a tartalmat, állítsd le a páros programozást, és próbáld újra.'
   activerecord:
     errors:
       messages:
@@ -27,7 +27,7 @@ hu:
     attributes:
       user:
         name: 'Megjelenítendő név'
-        name_example: 'Megjelenítendő név (pl. hideg, Coder vagy Jane S.)'
+        name_example: 'Megjelenítendő név (pl. Menő Kódoló)'
         email: 'Email'
         parent_email: 'Szülő/gondviselő e-mail'
         personal_email: "Személyes elektronikus levél cím <a href=\"%{url}\">(kattintson ide, ha nem rendelkezik e-mail címmel)</a>"
@@ -39,8 +39,8 @@ hu:
         locale: 'Nyelv'
         age: 'Kor'
         gender: 'Nem'
-        edit_header: 'Felhasználói Adatok Szerkesztése'
-        finish_sign_up_header: 'A profil létrehozásának befejezése'
+        edit_header: 'Felhasználói adatok szerkesztése'
+        finish_sign_up_header: 'A profilod létrehozásának befejezése'
         finish_sign_up_subheader: 'Töltsd ki az alábbi adatokat <strong>%{email}</strong> Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_markdown: 'Töltsd ki az alábbi adatokat **%{email}** Code.org fiókod létrehozásához.'
         finish_sign_up_subheader_provider: 'Töltsd ki az alábbi adatokat a Code.org felhasználó fiókod befejezéséhez <strong>%{provider}</strong><strong>%{email}</strong>.'
@@ -90,12 +90,12 @@ hu:
   prize: 'díj'
   more_info: 'További információk'
   auth:
-    continue_with: 'Bejelentkezés ezzel: %{provider}'
+    continue_with: 'Folytatás ezzel: %{provider}'
     sign_in_with: 'Bejelentkezés ezzel a fiókkal:  %{provider}'
     signed_in: 'Bejelentkezve!'
     signed_out_markdown: '### Kijelentkezett innen: [Code.org](%{url}).'
     already_signedup: 'Már regisztrált?'
-    notyet_signedup: "Még nem csatlakozott?"
+    notyet_signedup: "Még nem csatlakoztál?"
     google_oauth2: 'Google fiók'
     twitter: 'Twitter'
     facebook: 'Facebook'
@@ -480,6 +480,7 @@ hu:
     notes_coming_soon: 'Ehhez a videóhoz hamarosan lesznek jegyzetek.'
     autoplay_option: 'Videók automatikus lejátszása'
     download: 'Videó letöltése'
+    label: 'Videó'
   compatibility:
     upgrade:
       link: "Tudj meg többet"
@@ -653,6 +654,7 @@ hu:
     privacy: "Adatvédelmi Elvek"
     accept_label: 'Elfogadom a frissített <a href="%{tos_url}" target="_blank">Felhasználási feltételeket</a> és az <a href="%{privacy_url}" target="_blank">Adatvédelmi irányelveket</a>'
     accept_label_markdown: Elfogadom a frissített [Felhasználási feltételeket](%{tos_url}) és az [Adatvédelmi irányelveket](%{privacy_url})
+    accept_tos: A Code.org weboldalra történő feliratkozással elfogadod az [Általános Szerződési Feltételeinket](%{tos_url}) és az [Adatvédelmi irányelveinket](%{privacy_url}).
     print: "Nyomtatás"
   school_info_interstitial:
     save: "Mentés"

@@ -73,6 +73,9 @@ class BubbleChoice < DSLDefined
     summary = {
       display_name: display_name,
       description: description,
+      name: name,
+      type: type,
+      teacher_markdown: teacher_markdown,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
 
@@ -100,12 +103,23 @@ class BubbleChoice < DSLDefined
   def summarize_sublevels(script_level: nil, user_id: nil)
     summary = []
     sublevels.each_with_index do |level, index|
-      level_info = {
-        id: level.id,
-        display_name: level.display_name || level.name,
-        description: level.try(:bubble_choice_description),
-        thumbnail_url: level.try(:thumbnail_url)
-      }
+      level_info = level.summary_for_lesson_plans
+
+      alphabet = ('a'..'z').to_a
+
+      level_info.merge!(
+        {
+          id: level.id,
+          description: level.try(:bubble_choice_description),
+          thumbnail_url: level.try(:thumbnail_url),
+          position: index + 1,
+          letter: alphabet[index],
+          icon: level.try(:icon)
+        }
+      )
+
+      # Make sure display name gets set even if we don't have the display_name property
+      level_info[:display_name] = level.display_name || level.name
 
       level_info[:url] = script_level ?
         build_script_level_url(script_level, {sublevel_position: index + 1}) :
@@ -113,6 +127,7 @@ class BubbleChoice < DSLDefined
 
       if user_id
         level_info[:perfect] = UserLevel.find_by(level: level, user_id: user_id)&.perfect?
+        level_info[:status] = level_info[:perfect] ? SharedConstants::LEVEL_STATUS.perfect : SharedConstants::LEVEL_STATUS.not_tried
       end
 
       summary << level_info
@@ -134,5 +149,13 @@ class BubbleChoice < DSLDefined
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
     where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+  end
+
+  def supports_markdown?
+    true
+  end
+
+  def icon
+    'fa fa-sitemap'
   end
 end

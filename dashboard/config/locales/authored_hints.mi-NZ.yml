@@ -51,6 +51,31 @@ mi-NZ:
 
           -   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)
           -   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.
+      CourseD_Dance_Party_08:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata**
+
+          -   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.
+
+          _Ka mutu a muri i ngā wāhanga e 5._
+        challenges: |-
+          **He Wero ano**
+
+          -   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe
+      CourseD_Dance_Party_09:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   Me tinihia te tae mo etahi kaikanikani.
+
+          _Ka mutu tēnei taumata a muri ngā wāhanga e 7._
+      CourseD_Dance_Party_10:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   Me tinihia ngā ahuatanga mo ngā kaikanikani e rua neke atu.
+
+          _Ka mutu tēnei taumata a muri ngā wāhanga e 7._
       CourseD_Dance_Party_11:
         validation: |-
           **Me pewhea ka oti i tenei taumata?**
@@ -140,6 +165,13 @@ mi-NZ:
           **He Wero Ano**
 
           Tapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.
+      Dance_Party_05:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   I mua te mutunga o tēnei taumata me māhia to kaikanikani kia e 4 ngā nekehanga rereke.
+
+          _Ka mutu tēnei taumata a muri ng a wāhanga 12._
       Dance_Party_06:
         validation: |-
           **Me pwhea ka oti i tenei taumata?**
@@ -152,6 +184,31 @@ mi-NZ:
 
           -   Tapiri atu he kaikanikani tuatoru (maha ake i te toru mena e pirangi ana!)
           -   Kia rereke katoa nga nekehanga o nga kaikanikani ki etahi whahanga o te waiata.
+      Dance_Party_08:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata**
+
+          -   Kia rereke atu i te 100 te rahi mo e rua o ngā kaikanikani.
+
+          _Ka mutu a muri i ngā wāhanga e 5._
+        challenges: |-
+          **He Wero ano**
+
+          -   Me tinihia ngā ahuatanga kia rereke (te rahi, te whānui, era atu momo mea.) kei a koe
+      Dance_Party_09:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   Me tinihia te tae mo etahi kaikanikani.
+
+          _Ka mutu tēnei taumata a muri ngā wāhanga e 7._
+      Dance_Party_10:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   Me tinihia ngā ahuatanga mo ngā kaikanikani e rua neke atu.
+
+          _Ka mutu tēnei taumata a muri ngā wāhanga e 7._
       Dance_Party_11:
         validation: |-
           **Me pewhea ka oti i tenei taumata?**

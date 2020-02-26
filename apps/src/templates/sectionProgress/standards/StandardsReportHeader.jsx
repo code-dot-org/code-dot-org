@@ -74,7 +74,7 @@ export default class StandardsReportHeader extends Component {
             <span style={styles.infoStrings}>{this.props.teacherName}</span>
             <span style={styles.infoStrings}>{this.props.sectionName}</span>
             <span style={styles.infoStrings}>
-              {new Date().toLocaleString()}
+              {new Date().toLocaleDateString()}
             </span>
           </div>
         </div>

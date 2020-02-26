@@ -789,10 +789,31 @@ pl-PL:
       Standalone_Artist_1: Artysta zaprasza! Najpierw, spróbuj utworzyć kwadrat przy
         użyciu bloków "skręć w prawo" i "idź do przodu". Każdy bok powinien mieć długość
         100 pikseli.
+      Standalone_Artist_2: Narysuj ten diament z kontami 120 i 60 stopni i długościami
+        boków 150 pikseli.
+      Standalone_Artist_3: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
+        i obrotami 60 stopni?
+      Standalone_Artist_4: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
+        zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
+        6 razy?
+      Standalone_Artist_5: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
+      Standalone_Artist_5.5: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując
+        pętlę. Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat.
+        Wskazówka: Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować
+        cały czas tego samego diamentu.'
+      Standalone_Artist_6: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór.
+        O ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
+        liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
+      Standalone_Artist_7: 'Funkcja jest kolejnym narzędziem programowania, które
+        pomaga unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej
+        za każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
+        by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
       Standalone_Artist_8: Tutaj jest funkcja o nazwie "rysuj kształt", którą zaprogramowaliśmy,
         by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj
         z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała
         wzory złożone z kwadratów, trójkątów lub ośmiokątów?
+      Standalone_Artist_9: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet
+        pustą funkcję, którą możesz wykorzystać, by robiła, co chcesz!
       Underground Avoiding Lava: Pod niektórymi z tych bloków ukrywa się lawa, którą
         musisz przykryć, zanim przejdziesz po niej. Przyda się do tego warunek "jeżeli".
         Dodaj polecenie "idź do przodu" we właściwym miejscu, aby wydobyć coś z tych

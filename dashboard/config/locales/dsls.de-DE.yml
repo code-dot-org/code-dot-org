@@ -392,8 +392,8 @@ de-DE:
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STERN**"
+        - text: "**RAMPE**"
         content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
           vorhandenen Fähigkeitsgruppen.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -628,22 +628,22 @@ de-DE:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
+          In dieser Lektion lernst du die verschiedenen Arten von Ein- und Ausgabegeräten, die von Computern verwendet werden, und die Arten von Informationen, die sie senden und empfangen.
 
           ## Vokabular
 
-          * **Eingabe** - Eine Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
+          * **Eingabe** - Ein Gerät oder eine Komponente, die es ermöglicht, Informationen an einen Computer weiterzugeben.
           * **Ausgabe** - Ein Gerät oder eine Komponente, die Informationen von einem Computer empfängt.
 
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Eingabe und Ausgabe - Aktivitätsleitfaden](https://docs.google.com/document/d/1ObS_kxkXoueaotPYFAEkcCDzn690zumqoLLnrU5kY2Q/export?format=pdf)
       CSD U1 Lesson 6 Overview:
         markdown: |
           # Übersicht
 
-          In dieser Lektion lernen Sie, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
+          In dieser Lektion lernst du, wie die Datenverarbeitung von Mensch und Computer angewandt wird, um Eingaben in Ausgaben umzuwandeln.
 
           ## Vokabuar
 
@@ -674,13 +674,13 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Für dieses Projekt entwerfen Sie Ihre eigene App, die ein Problem löst, das Sie definieren können.
+          Für dieses Projekt entwirfst du Deine eigene App, die ein Problem löst, das du definieren kannst.
 
-          ## Resourcen
+          ## Ressourcen
 
           * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
-          * [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
-          * [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+          * [Apps und Problemlösungen - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
+          * [Apps und Problemlösungen - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
       CSD U2 Design Project:
         content1: hier die Beschreibung
       CSD U2 Design Project_2018:
@@ -2544,7 +2544,7 @@ de-DE:
       Unit 1 Lesson 3 Overview:
         markdown: |
           # Übersicht
-          In dieser Lektion wenden Sie den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Ihnen hilft, Problemlösungen zu entwickeln und zu verbessern.
+          In dieser Lektion wendest du den Problemlösungsprozess auf eine Vielzahl von Problemen an, um zu untersuchen, wie jeder Schritt Dir hilft, Problemlösungen zu entwickeln und zu verbessern.
 
           ## Resourcen
           * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
@@ -3191,7 +3191,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3210,7 +3210,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3709,12 +3709,12 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
 
 
-          ## Resourcen
+          ## Ressourcen
 
-          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
       grade2_multi_collector_A_predict1:
         answers:
         - text: Mit diesem Code wird Laurel 4 Schätze einsammeln.

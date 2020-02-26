@@ -2278,3 +2278,26 @@ bs:
           stages:
             Conditionals:
               name: Uvjeti
+        csd2-2020:
+          stages:
+            Images:
+              name: Slike
+        csd5-2020:
+          description_short: Naučite kako ljudi koriste računala za rješavanje problema
+            podataka.
+        csd6-2020:
+          stages:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije sa Parametrima
+        csd3-2020:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Velocity:
+              name: Brzina
+            Functions:
+              name: Funkcije

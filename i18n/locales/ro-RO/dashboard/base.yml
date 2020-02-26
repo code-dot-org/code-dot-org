@@ -538,6 +538,7 @@ ro:
     download: 'Descarcă Video'
     show_notes: 'Arată note'
     show_video: 'Arată video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Browser-ul nu este acceptat. Vă rugăm să faceţi upgrade browser-ului la <a href='%{supported_browsers_url}', target='_blank'> unul din browserele noastre acceptate</a>. Puteţi încerca vizualizarea paginii, dar aşteptati-va ca functionalitatea sa fie nesatisfacatoare."
@@ -746,6 +747,7 @@ ro:
     privacy_notice: "Confidențialitate"
     accept_label: 'Sunt de acord sa actualizez <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>'
     accept_label_markdown: Sunt de acord sa actualizez [Termenii](%{tos_url}) şi [Politica de confidenţialitate](%{privacy_url})
+    accept_tos: Prin înregistrarea pe Code.org, îți exprimi acordul față de [Condițiile serviciului](%{tos_url}) și [Politica privind confidențialitatea](%{privacy_url}).
     accept: "Accept"
     print: "Tipărire"
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'

@@ -33,7 +33,6 @@ class Weblab < Level
     is_project_level
     encrypted_examples
     submittable
-    thumbnail_url
   )
 
   def self.create_from_level_builder(params, level_params)

@@ -686,6 +686,7 @@ it:
     download: Scarica il video
     show_notes: Mostra le spiegazioni
     show_video: Mostra il video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Il tuo browser non è supportato. Si prega di aggiornare
@@ -1276,6 +1277,11 @@ it:
     tuo/a insegnante su quale lezione dovresti essere.
   hidden_script: Il tuo insegnante non si aspettava che tu arrivassi qui. Per favore,
     chiedigli in quale lezione dovresti essere.
+  no_course_access_student: Non hai accesso a questo corso. Per favore chiedi al tuo
+    insegnante in quale corso dovresti essere.
+  no_course_access_teacher: Non hai accesso a questo corso. Se credi che dovresti
+    avere accesso a questo corso, sei pregato di scrivere a support@code.org così
+    che possiamo correggere la situazione.
   no_script_access_student: Non hai accesso a questa unità. Perfavore chiedi al tuo
     insegnante in quale unità dovresti essere.
   no_script_access_teacher: Non hai accesso a questa unità. Se credi che dovresti

@@ -20,11 +20,22 @@ const initialState = {
   teacherComment: null
 };
 
+function sortByOrganizationId(standardsByConcept) {
+  return _.orderBy(standardsByConcept, 'organization_id', 'asc');
+}
+
 export default function sectionStandardsProgress(state = initialState, action) {
   if (action.type === ADD_STANDARDS_DATA) {
+    const sortedByConcept = _.orderBy(action.standardsData, 'concept', 'asc');
+    const groupedStandards = _.orderBy(
+      _.groupBy(sortedByConcept, 'concept'),
+      'concept',
+      'asc'
+    );
+    const sortedStandards = _.map(groupedStandards, sortByOrganizationId);
     return {
       ...state,
-      standardsData: action.standardsData
+      standardsData: _.flatten(sortedStandards)
     };
   }
   if (action.type === SET_TEACHER_COMMENT_FOR_REPORT) {

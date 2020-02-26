@@ -150,12 +150,12 @@
   personalize_certificate: "个性化你的证书"
   print_batch_certificates: "批量打印证书"
   print_certificates: "打印证书"
+  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   print_ice_art_from_frozen: "打印来自冰雪奇缘的冰雪艺术家"
   want_a_blank_certificate_template: "需要空白证书模板来填写学生的名字？"
   landscape_recommended_certificates: "打印证书时，推荐选择 **风景**。"
   print_one_here_certificates: "打印一份。"
   enter_certificate_names: "输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。"
-  certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   share_achievement: "分享你的成绩"
   beyond_hour_message: "请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。"
   leaderboards_for_hoc: "编程一小时的排行榜。"
@@ -684,7 +684,7 @@
   dashboard_sections_print_secrets: "然后您可以打印一叠包含账户信息的卡片以单独分发给您的学生们。"
   dashboard_sections_switch_section: '切换学习小组'
   dashboard_sections_close: "关闭"
-  dashboard_sections_move_students_desc: "选择学生转到新的章节。转移的学生不会清除他们的进展。"
+  dashboard_sections_move_students_desc: "选择学生转到新的小组。转移的学生不会清除他们的进展。"
   dashboard_sections_one_per_teacher: "对每一位老师来说，学生仅能在一个学习小组中。你的学生想加入一个新的学习小组，他就要离开原来的小组。"
   dashboard_sections_move_to_section: '移动到此节︰'
   dashboard_sections_enter_code: '输入此节代码︰'
@@ -692,7 +692,7 @@
   dashboard_sections_other_section: "其他老师"
   dashboard_sections_both_sections: "你想要学生两个部分都参加吗？"
   dashboard_sections_yes_both: "是的，我想要复制学生到本小组和新小组中"
-  dashboard_sections_no_move: "不，我想移动学生到新章节中。"
+  dashboard_sections_no_move: "不，我想移动学生到新小组中。"
   dashboard_sections_move_students: "转移学生"
   dashboard_sections_assign_hoc_script_desc: "参与编程一小时？"
   dashboard_sections_assign_hoc_script_msg: "请注意，在12月3日至11日期间，由于无法预测的网站访问量，我们不能保存课程进度。但课程中其它部分还可以使用。你也许仍需要给学生分派课程、颁发证书。（大多数教师会事先<a href='%{certificate_url}'>打印</a>这些证书。）在本周之外的其它时间里，学生进度和报告会正常保存。"

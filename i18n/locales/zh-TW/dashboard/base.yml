@@ -90,7 +90,7 @@ zh-TW:
   unplugged_activity: '不插電活動'
   of: "／"
   more: "更多"
-  less: "更少"
+  less: "較少"
   try_hoc: "點擊這裡體驗一小時玩程式 >> "
   try_k8intro: "試試我們為年級 K-8 所設計的計算機科學課程（15-25 小時）"
   k8intro: "K-8 資訊科學介紹課程 （15-25 小時）"
@@ -561,8 +561,9 @@ zh-TW:
     notes_coming_soon: '影片說明即將推出。'
     autoplay_option: '自動播放影片'
     download: '下載影片'
-    show_notes: '顯示筆記'
+    show_notes: '顯示文字說明'
     show_video: '顯示影片'
+    label: '影片'
   compatibility:
     upgrade:
       unsupported_message: "你的瀏覽器不支援。請改用[支援的瀏覽器版本](%{supported_browsers_url})。你還是可以瀏覽此頁面，但有些功能會無法正常運作。"
@@ -903,7 +904,7 @@ zh-TW:
     csf_nested_loops: '巢狀迴圈'
     csf_functions: '函式'
     csf_variables: '變數'
-    csf_for_loops: '計數迴圈（For Loops）'
+    csf_for_loops: '計次迴圈（For Loops）'
     csf_internet: '網際網路 Internet'
     csf_warmup: '熱身'
     csd1_1: '第 1 章：解決問題的流程'

@@ -1,7 +1,7 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 import {combineReducers} from 'redux';
 import _ from 'lodash';
-import {Galleries} from './projectConstants';
+import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
 import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {channels as channelsApi} from '../../clientApi';
@@ -387,6 +387,30 @@ const reducer = combineReducers({
   personalProjectsList
 });
 export default reducer;
+
+export const setPublicProjects = () => {
+  return dispatch => {
+    $.ajax({
+      method: 'GET',
+      url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+      dataType: 'json'
+    }).done(projectLists => {
+      dispatch(setProjectLists(projectLists));
+    });
+  };
+};
+
+export const setPersonalProjects = () => {
+  return dispatch => {
+    $.ajax({
+      method: 'GET',
+      url: '/api/v1/projects/personal',
+      dataType: 'json'
+    }).done(personalProjectsList => {
+      dispatch(setPersonalProjectsList(personalProjectsList));
+    });
+  };
+};
 
 const fetchProjectToUpdate = (projectId, onComplete) => {
   $.ajax({

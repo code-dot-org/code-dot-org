@@ -62,6 +62,11 @@ class Experiment < ApplicationRecord
       allow_joining_via_url: true
     },
     {
+      name: 'csp-2020-access',
+      label: 'CSP 2020 Access',
+      allow_joining_via_url: true
+    },
+    {
       name: 'denny-science-piloters',
       label: 'Denny Science Pilot',
       allow_joining_via_url: true
