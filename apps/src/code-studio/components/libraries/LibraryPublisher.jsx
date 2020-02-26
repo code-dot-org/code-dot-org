@@ -242,7 +242,7 @@ export default class LibraryPublisher extends React.Component {
         dashboard.project.setLibraryDetails(undefined, undefined, false);
       },
       error => {
-        console.warn(`Error publishing library: ${error}`);
+        console.warn(`Error unpublishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_UNPUBLISH});
       }
     );
