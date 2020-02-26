@@ -1,0 +1,32 @@
+#!/usr/bin/env ruby
+
+# This syncs content changes from the shared dropbox folder to our github repo
+# on the staging machine. This is required for contents changes from dropbox to
+# be deployed.
+
+system("sudo apt-get install -y unison")
+
+FOLDERS = {
+  "advocacy.code.org" => "/home/ubuntu/staging/pegasus/sites.v3/advocacy.code.org",
+  "applab-docs-1" => "/home/ubuntu/staging/pegasus/sites.v3/code.org/public/applab/docs1",
+  "applab-docs" => "/home/ubuntu/staging/pegasus/sites.v3/code.org/public/applab/docs",
+  "code.org" => "/home/ubuntu/staging/pegasus/sites.v3/code.org",
+  "csedweek.org" => "/home/ubuntu/staging/pegasus/sites.v3/csedweek.org",
+  "curriculum-6-8" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-6-8",
+  "curriculum-algebra" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-algebra",
+  "curriculum-course1" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-course1",
+  "curriculum-course2" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-course2",
+  "curriculum-course3" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-course3",
+  "curriculum-course4" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-course4",
+  "curriculum-csp" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-csp",
+  "curriculum-docs" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-docs",
+  "curriculum-misc" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-misc",
+  "curriculum-science" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-science",
+  "curriculum-unplugged" => "/home/ubuntu/staging/pegasus/sites/virtual/curriculum-unplugged",
+  "emails" => "/home/ubuntu/staging/pegasus/emails",
+  "hourofcode.com" => "/home/ubuntu/staging/pegasus/sites.v3/hourofcode.com"
+}
+
+FOLDERS.each do |key, value|
+  system("unison ~/Dropbox/Shared/#{key} #{value} -silent")
+end
