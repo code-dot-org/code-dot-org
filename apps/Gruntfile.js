@@ -682,6 +682,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/fit_weekend_registration/new':
       './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_daily_survey/new_general_foorm':
+      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
       './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel':
