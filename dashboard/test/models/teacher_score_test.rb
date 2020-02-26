@@ -111,16 +111,4 @@ class TeacherScoreTest < ActiveSupport::TestCase
 
     assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id, @teacher.id), {@level_1.id => @score_2})
   end
-
-  test 'teacher marked stage complete for student returns false when no teacher scoring' do
-    refute TeacherScore.teacher_marked_stage_complete_for_student?(@stage.id, @student_1.id, @teacher.id)
-  end
-
-  test 'teacher marked stage complete for student returns true when student in section when stage marked complete' do
-    TeacherScore.score_stage_for_section(
-      @teacher.id, @section.id, @stage.id, @score
-    )
-
-    assert TeacherScore.teacher_marked_stage_complete_for_student?(@stage.id, @student_1.id, @teacher.id)
-  end
 end
