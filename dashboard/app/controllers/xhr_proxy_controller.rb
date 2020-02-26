@@ -74,6 +74,7 @@ class XhrProxyController < ApplicationController
     maker.ifttt.com
     noaa.gov
     numbersapi.com
+    pastebin.com
     random.org
     restcountries.eu
     rhcloud.com
