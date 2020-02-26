@@ -80,6 +80,22 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to section_path(id: @picture_section.code)
   end
 
+  test "former picture section member cannot log in with picture" do
+    former_picture_section_user = create(:follower, section: @picture_section).student_user
+    follower = Follower.where(section: @picture_section.id, student_user_id: former_picture_section_user.id).first
+    @picture_section.remove_student(former_picture_section_user, follower, {})
+
+    assert_no_difference 'former_picture_section_user.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, params: {
+        id: @picture_section.code,
+        user_id: former_picture_section_user.id,
+        secret_picture_id: former_picture_section_user.secret_picture_id
+      }
+    end
+
+    assert_redirected_to section_path(id: @picture_section.code)
+  end
+
   test "valid log_in wih word" do
     assert_difference '@word_user_1.reload.sign_in_count' do # devise Trackable fields are updated
       post :log_in, params: {
@@ -98,6 +114,22 @@ class SectionsControllerTest < ActionController::TestCase
         id: @word_section.code,
         user_id: @word_user_1.id,
         secret_words: "not correct"
+      }
+    end
+
+    assert_redirected_to section_path(id: @word_section.code)
+  end
+
+  test "former word section member cannot log in with word" do
+    former_word_section_user = create(:follower, section: @word_section).student_user
+    follower = Follower.where(section: @word_section.id, student_user_id: former_word_section_user.id).first
+    @word_section.remove_student(former_word_section_user, follower, {})
+
+    assert_no_difference 'former_word_section_user.reload.sign_in_count' do # devise Trackable fields are not updated
+      post :log_in, params: {
+        id: @word_section.code,
+        user_id: former_word_section_user.id,
+        secret_words: former_word_section_user.secret_words
       }
     end
 
