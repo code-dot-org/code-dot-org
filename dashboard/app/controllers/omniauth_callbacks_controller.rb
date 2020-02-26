@@ -25,6 +25,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # POST /users/auth/maker_google_oauth2
   def maker_google_oauth2
     secret = Encryption.decrypt_string_utf8(params[:uid])
+    time = DateTime.strptime(secret[0, 20], '%Y%m%dT%H%M%S%z')
+    time_difference = (Time.now - time) / 1.minute
+    if time_difference >= 5
+      p "Token has expired. Please try to log in again"
+    end
     p secret
   end
 
