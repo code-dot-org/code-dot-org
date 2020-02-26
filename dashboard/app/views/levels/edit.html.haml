@@ -17,8 +17,6 @@
       - if @standalone
         %p the level cannot be renamed because it is a standalone project level.
       .field
-        // Make sure the encrypted property is a boolean before we try to use it to set the checkbox
-        - @level.properties['encrypted'] = @level.properties['encrypted'].to_bool
         = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :encrypted, description: "Encrypt this level's properties"}
 
   / Only enter name to create new records of certain level types.
