@@ -22,6 +22,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  # POST /users/auth/maker_google_oauth2
+  def maker_google_oauth2
+    p params[:uid]
+  end
+
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
