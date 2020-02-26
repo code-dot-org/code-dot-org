@@ -300,7 +300,7 @@ module Pd
         return render :not_enrolled if enrolled_workshops.blank?
       end
 
-      survey_name = "surveys/pd/pd_workshop_survey"
+      survey_name = "surveys/pd/workshop_csf_intro_post"
 
       # Find the workshop attended.
       attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
@@ -456,9 +456,6 @@ module Pd
           formQuestions: form_questions,
           formName: survey_name,
           formVersion: latest_version,
-          surveyData: {
-            workshop_course: workshop.course
-          },
           submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
           submitParams: {
             user_id: current_user.id,
