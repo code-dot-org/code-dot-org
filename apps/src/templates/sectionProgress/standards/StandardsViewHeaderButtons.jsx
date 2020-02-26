@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
-import {LessonStatusDialog} from './LessonStatusDialog';
+import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
