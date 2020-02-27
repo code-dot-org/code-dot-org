@@ -5194,3 +5194,76 @@ de:
               name: Einheit 5 SCHÜLER Umfrage
             Unit 5 TEACHER Survey:
               name: Einheit 5 LEHRER Umfrage
+        csd2-2020:
+          stages:
+            Exploring Web Pages:
+              name: Erkunde Webseiten
+            Intro to HTML:
+              name: Einführung in HTML
+            Headings:
+              name: Überschriften
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+            Intellectual Property:
+              name: Geistiges Eigentum
+            Images:
+              name: Bilder
+            Project - Building a Webpage:
+              name: Projekt - Erstellung einer Webseite
+        csd1-2020:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            Exploring Problem Solving:
+              name: Problemlösung erforschen
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
+        csd4-2020:
+          stages:
+            Analysis of Design:
+              name: Analyse der Planung
+            User Interfaces:
+              name: Benutzeroberflächen
+        csd5-2020:
+          stages:
+            Patterns and Representation:
+              name: Muster und Darstellung
+            ASCII and Binary Representation:
+              name: ASCII- und Binärdarstellung
+            Representing Numbers:
+              name: Zahlendarstellung
+            Structuring Data:
+              name: Daten strukturieren
+        csd6-2020:
+          stages:
+            Making Music:
+              name: Musik machen
+            Functions with Parameters:
+              name: Funktionen mit Parametern
+            'Project: Prototype an Innovation':
+              name: 'Projekt: Prototyp einer Innovation'
+        csd3-2020:
+          description_short: Programmierung
+          stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
+            Variables:
+              name: Variablen
+            Random Numbers:
+              name: Zufällige Zahlen
+            Sprite Properties:
+              name: Sprite Eigenschaften
+            Conditionals:
+              name: Bedingungen
+            Velocity:
+              name: Geschwindigkeit
+            Collisions:
+              name: Kollisionen
+            Functions:
+              name: Funktionen

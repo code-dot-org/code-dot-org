@@ -556,6 +556,7 @@ es-MX:
     download: 'Descargar el video'
     show_notes: 'Mostrar notas'
     show_video: 'Mostrar el video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Tu navegador no es compatible. Por favor, actualízalo a <a href='%{supported_browsers_url}', target='_blank'>uno de nuestros navegadores compatibles</a>. Puedes tratar de ver la página, pero la funcionalidad podría verse afectada."

@@ -560,6 +560,7 @@ de:
     download: 'Video herunterladen'
     show_notes: 'Zeige Hinweise'
     show_video: 'Video anzeigen'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
