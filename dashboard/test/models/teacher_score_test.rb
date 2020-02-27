@@ -81,7 +81,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     student_count = @section.students.count
 
     TeacherScore.score_stage_for_section(
-      @teacher.id, @section.id, @stage.id, @score
+      @section, @stage.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count

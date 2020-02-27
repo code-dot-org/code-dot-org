@@ -7,7 +7,6 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
     section = Section.find(params[:section_id])
     if section.user_id == current_user.id
       TeacherScore.score_stage_for_section(
-        current_user.id,
         section,
         params[:stage_id],
         params[:score]
