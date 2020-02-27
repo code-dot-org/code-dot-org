@@ -1,15 +1,14 @@
-%h1= 'Login to the Maker App with Google'
+%h1= I18n.t('maker.google_oauth.login_with_google')
 
-%p Please copy and paste this code into the Maker App to login to Code.org
+%p= I18n.t('maker.google_oauth.copy_code')
 
-%input#maker-code{:type=>"text", :readonly=>true, :value=>@secret_code}
-
-%button#btn-copy{ type: 'copy' } Copy
+= text_field_tag :maker_code, @secret_code, readonly: true
+= button_tag I18n.t(:copy), id: "btn-copy"
 
 :javascript
   $(document).ready(function() {
     $('#btn-copy').click(function() {
-      $('#maker-code').select();
+      $('#maker_code').select();
       document.execCommand("copy");
     });
   });
