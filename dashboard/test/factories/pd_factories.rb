@@ -1433,4 +1433,23 @@ FactoryGirl.define do
     application_status 'confirmation'
     to {application.user.email}
   end
+
+  factory :foorm_form, class: 'Foorm::Form' do
+    sequence(:name) {|n| "FormName#{n}"}
+    version 0
+    questions '{}'
+  end
+
+  factory :daily_workshop_day_0_foorm_submission, class: 'Foorm::Submission' do
+    form_name "surveys/pd/workshop_daily_survey_day_0"
+    form_version 0
+    answers "{'question1':'answer1'}"
+  end
+
+  factory :pd_workshop_survey_foorm_submission, class: 'Pd::WorkshopSurveyFoormSubmission' do
+    association :foorm_submission, factory: :daily_workshop_day_0_foorm_submission
+    association :pd_workshop, factory: :csp_summer_workshop
+    association :user, factory: :teacher
+    day 0
+  end
 end
