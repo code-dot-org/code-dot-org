@@ -50,8 +50,13 @@ export default class JavaScriptModeErrorHandler {
    */
   getAsyncOutputWarning() {
     const lineNumber = this.getNearestUserCodeLine_();
-    return errorString =>
-      this.output_(errorString, LogLevel.WARNING, lineNumber);
+    return error => {
+      if (error.msg) {
+        this.output_(error.msg, LogLevel.WARNING, lineNumber);
+      } else {
+        this.output_(error, LogLevel.WARNING, lineNumber);
+      }
+    };
   }
 
   /**
