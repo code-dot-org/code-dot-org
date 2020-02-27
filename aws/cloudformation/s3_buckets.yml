@@ -38,3 +38,17 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
+  # for curriculumbuilder
+  CurriculumBucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'cdo-curriculum-devel'
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: 'aws:kms'
+      VersioningConfiguration:
+        Status: 'Enabled'
+      LoggingConfiguration:
+        DestinationBucketName: 'cdo-logs'
+        LogFilePrefix: 's3/cdo-curriculum-devel'

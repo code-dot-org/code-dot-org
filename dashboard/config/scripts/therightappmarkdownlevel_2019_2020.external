@@ -1,0 +1,17 @@
+name 'TheRightAppMarkdownLevel_2019_2020'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# The Right App
+
+* Everyone uses computers these days, especially smartphones. 
+* Smartphone apps help people do things like talk to friends, listen to music, shop, or just browse the web.
+* It is important for programmers to understand others' needs and design apps with them in mind!
+
+![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,0 +1,6 @@
+name 'courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020'
+question 'Look closely at the code below. How much honey will the bee make when you click "Run"?'
+wrong '4', feedback: 'Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+right '8', feedback: 'Correct!'
+wrong '12', feedback: 'Incorrect. The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'
+wrong 'I don\'t know.', feedback: 'The bee collects 2 nectar in a loop moving forward, then 2 nectar in a loop down.  This is all inside of another loop that happens twice. 4 times 2 is 8!'

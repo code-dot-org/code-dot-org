@@ -966,25 +966,21 @@ class User < ActiveRecord::Base
   def self.authenticate_with_section_and_secret_words(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_WORD
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_words: params[:secret_words],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_words: params[:secret_words],
+      followers: {section: section}
+    )
   end
 
   def self.authenticate_with_section_and_secret_picture(section:, params:)
     return if section.login_type != Section::LOGIN_TYPE_PICTURE
 
-    User.
-      joins('inner join followers on followers.student_user_id = users.id').
-      find_by(
-        id: params[:user_id],
-        secret_picture_id: params[:secret_picture_id],
-        'followers.section_id' => section.id
-      )
+    User.joins(:sections_as_student).find_by(
+      id: params[:user_id],
+      secret_picture_id: params[:secret_picture_id],
+      followers: {section: section}
+    )
   end
 
   def user_levels_by_level(script)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200217185424) do
+ActiveRecord::Schema.define(version: 20200221223130) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -950,6 +950,20 @@ ActiveRecord::Schema.define(version: 20200217185424) do
     t.index ["user_id"], name: "index_pd_workshop_facilitator_daily_surveys_on_user_id", using: :btree
   end
 
+  create_table "pd_workshop_survey_foorm_submissions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "foorm_submission_id", null: false
+    t.integer  "user_id",             null: false
+    t.integer  "pd_session_id"
+    t.integer  "pd_workshop_id",      null: false
+    t.integer  "day"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.index ["foorm_submission_id"], name: "index_workshop_survey_foorm_submissions_on_foorm_id", unique: true, using: :btree
+    t.index ["pd_session_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_session_id", using: :btree
+    t.index ["pd_workshop_id"], name: "index_pd_workshop_survey_foorm_submissions_on_pd_workshop_id", using: :btree
+    t.index ["user_id"], name: "index_pd_workshop_survey_foorm_submissions_on_user_id", using: :btree
+  end
+
   create_table "pd_workshop_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "pd_enrollment_id",               null: false
     t.text     "form_data",        limit: 65535, null: false
@@ -1452,6 +1466,15 @@ ActiveRecord::Schema.define(version: 20200217185424) do
     t.string   "other_pd"
     t.text     "properties",       limit: 65535
     t.index ["studio_person_id"], name: "index_teacher_profiles_on_studio_person_id", using: :btree
+  end
+
+  create_table "teacher_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "user_level_id"
+    t.integer  "teacher_id"
+    t.integer  "score"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["user_level_id"], name: "index_teacher_scores_on_user_level_id", using: :btree
   end
 
   create_table "user_geos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
