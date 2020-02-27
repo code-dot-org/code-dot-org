@@ -515,7 +515,10 @@ class Documents < Sinatra::Base
       extensions.reverse.each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
-          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals)
+          # Symbolize the keys of the locals hash; previously, we supported
+          # using either symbols or strings in locals hashes but ActionView
+          # only allows symbols.
+          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
