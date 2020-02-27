@@ -219,18 +219,12 @@ class LibraryTable extends React.Component {
     ];
   };
 
-  unpublishLibrary = channelId => {
-    this.props.unpublishProjectLibrary(channelId, (error, _) => {
-      // TODO: handle error
-    });
-  };
-
   actionsFormatter = (_, {rowData}) => {
     return (
       <Button
         text={i18n.unpublish()}
         color={Button.ButtonColor.orange}
-        onClick={() => this.unpublishLibrary(rowData.channel)}
+        onClick={() => this.props.unpublishProjectLibrary(rowData.channel)}
       />
     );
   };
