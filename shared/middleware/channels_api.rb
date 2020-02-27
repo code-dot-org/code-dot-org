@@ -155,6 +155,8 @@ class ChannelsApi < Sinatra::Base
     end
     bad_request unless value.is_a? Hash
     value = value.merge('updatedAt' => Time.now)
+
+    # Set libraryPublishedAt timestamp if we are publishing a project library.
     publish_library = value.delete('publishLibrary')
     value = value.merge('libraryPublishedAt' => Time.now) if publish_library
 
