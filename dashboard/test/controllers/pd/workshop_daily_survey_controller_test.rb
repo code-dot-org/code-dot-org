@@ -52,6 +52,16 @@ module Pd
       assert_response :not_found
     end
 
+    test 'daily summer workshop foorm survey returns 404 for days outside of range 0-4' do
+      setup_summer_workshop
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/foorm/day/-1'
+      assert_response :not_found
+
+      get '/pd/workshop_survey/foorm/day/5'
+      assert_response :not_found
+    end
+
     test 'daily academic year workshop survey results 404 for days outside of 1' do
       setup_academic_year_workshop
       sign_in @enrolled_academic_year_teacher
@@ -70,6 +80,13 @@ module Pd
       assert_not_enrolled
     end
 
+    test 'pre-workshop foorm survey displays not enrolled message when not enrolled' do
+      sign_in unenrolled_teacher
+      get '/pd/workshop_survey/foorm/day/0'
+      assert_response :success
+      assert_not_enrolled
+    end
+
     test 'pre-workshop survey redirects to thanks when a response exists' do
       setup_summer_workshop
       create :pd_workshop_daily_survey, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
@@ -77,6 +94,16 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/0'
+      assert_redirected_to action: 'thanks'
+    end
+
+    test 'pre-workshop foorm survey redirects to thanks when a response exists' do
+      setup_summer_workshop
+      create :pd_workshop_survey_foorm_submission, pd_workshop: @summer_workshop, user: @enrolled_summer_teacher,
+             day: 0
+
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/foorm/day/0'
       assert_redirected_to action: 'thanks'
     end
 
@@ -105,6 +132,14 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       get '/pd/workshop_survey/day/0'
+      assert_response :success
+    end
+
+    test 'pre-workshop foorm survey displays foorm when enrolled' do
+      setup_summer_workshop
+
+      sign_in @enrolled_summer_teacher
+      get '/pd/workshop_survey/foorm/day/0'
       assert_response :success
     end
 

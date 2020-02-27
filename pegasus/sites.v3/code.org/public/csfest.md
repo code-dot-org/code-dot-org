@@ -26,7 +26,6 @@ The main event on stage features Seahawks quarterback Russell Wilson, award-winn
 Invited schools must RSVP to this event no later than **March 5th**. The number of attendees from your school may be limited due to space. Note: If you were invited, you were sent an **RSVP password via email**.
 
 <center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWEe_KmgOXp3AexP3VvUz0GTZdMEPnjsrGCAdzFFM6S8GbdQ/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">RSVP to CSFest Seattle</iframe></center>
-
 ### **How do I know if my school is participating?**
 Computer science classrooms from the Seattle, Highline, Federal Way, and Shoreline school districts are invited, as well as a handful of schools from the greater Puget Sound Area. A list of participating schools will be updated on this page below as they are confirmed.
 
@@ -39,3 +38,9 @@ Computer science classrooms in the following schools have been confirmed to part
 
 ### **What if my school doesn’t teach computer science?**
 If your school doesn't teach computer science, [nominate a teacher for a scholarship](https://code.org/nominate) to learn how, because every student in every school should have this opportunity.
+
+
+<div style="text-align:center;" markdown=1>
+    In partnership with:
+    ![Amazon Future Engineer](/images/fit-300/marketing/csfest-partner-AFE-logo.png) ![Why Not You Foundation] (/images/fit-300/marketing/csfest-partner-WNY-logo.png)
+</div>
