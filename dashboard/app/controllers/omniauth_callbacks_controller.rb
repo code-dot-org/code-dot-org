@@ -24,6 +24,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # POST /users/auth/maker_google_oauth2
   def maker_google_oauth2
+    # TODO: rename uid - universal id
     secret = Encryption.decrypt_string_utf8(params[:uid])
     time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
     time_difference = (Time.now - time) / 1.minute
@@ -40,6 +41,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # Check user id all numbers
     if secret.scan(/\D/).empty?
       # Authorize user
+      # Look up user and use devise to sign user in
+      user = AuthenticationOption.find_by(credential_type: 'google_oauth2', authentication_id: secret)&.user
+      sign_in_and_redirect user
     else
       p "Invalid user id"
       # TODO: Bail out of log-in
