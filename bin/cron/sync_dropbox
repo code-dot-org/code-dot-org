@@ -32,7 +32,11 @@ FOLDERS = {
 
 FOLDERS.each do |key, value|
   # 'unison' will sync the two folders. It will return true on success and false on failure.
-  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/
-  success = system("unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent")
+  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierceg/unison/
+  command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignoreinodenumbers -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
+  if key == "code.org"
+    command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
+  end
+  success = system(command)
   throw "Error syncing Dropbox and staging with the sync_dropbox cron job. Check job output for more details." unless success
 end
