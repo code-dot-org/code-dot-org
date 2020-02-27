@@ -13,6 +13,7 @@ import {ReloadAfterEditSectionDialog} from './EditSectionDialog';
 import {beginEditingSection} from './teacherSectionsRedux';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   shortH1: {
@@ -52,7 +53,27 @@ class TeacherDashboardHeaderWithButtons extends React.Component {
     this.selectedSection = this.props.sections[this.props.selectedSectionId];
   }
 
-  getDropdownOptions() {
+  experimentDropdownButton() {
+    if (
+      experiments.isEnabled(
+        experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT
+      )
+    ) {
+      return (
+        <DropdownButton size="narrow" color="gray" text={i18n.switchSection()}>
+          {this.getDropdownOptions('from_button_switch_section')}
+        </DropdownButton>
+      );
+    } else {
+      return (
+        <DropdownButton size="narrow" color="gray" text={i18n.selectSection()}>
+          {this.getDropdownOptions('from_button_select_section')}
+        </DropdownButton>
+      );
+    }
+  }
+
+  getDropdownOptions(optionMetricName) {
     let self = this;
     let sections = this.props.sections;
     let options = Object.keys(sections).map(function(key, i) {
@@ -62,7 +83,7 @@ class TeacherDashboardHeaderWithButtons extends React.Component {
         recordSwitchToSection(
           section.id,
           self.selectedSection.id,
-          'from_button'
+          optionMetricName
         );
       };
       let icon = undefined;
@@ -111,13 +132,7 @@ class TeacherDashboardHeaderWithButtons extends React.Component {
                 text={i18n.editSectionDetails()}
                 style={styles.buttonWithMargin}
               />
-              <DropdownButton
-                size="narrow"
-                text={i18n.selectSection()}
-                color="gray"
-              >
-                {this.getDropdownOptions()}
-              </DropdownButton>
+              {this.experimentDropdownButton()}
             </div>
           </div>
         </div>
