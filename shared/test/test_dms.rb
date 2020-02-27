@@ -42,7 +42,7 @@ class TestDMS < Minitest::Test
       }
     )
 
-    @task_completed_success = @task_starting.deep_merge(
+    @task_completed_successfully = @task_starting.deep_merge(
       {
         status: 'stopped',
         stop_reason: 'Stop Reason FULL_LOAD_ONLY_FINISHED',
@@ -54,6 +54,43 @@ class TestDMS < Minitest::Test
         }
       }
     )
+
+    @task_completed_successfully_table_statistics = [
+      {
+        "schema_name": "my_favorite_schema",
+        "table_name": "my_favorite_table",
+        "inserts": 0,
+        "deletes": 0,
+        "updates": 0,
+        "ddls": 0,
+        "full_load_rows": 2_147_483_647,
+        "full_load_condtnl_chk_failed_rows": 0,
+        "full_load_error_rows": 0,
+        "last_update_time": Time.parse("2020-01-01T17:20:00.000-00:00"),
+        "table_state": "Table completed",
+        "validation_pending_records": 0,
+        "validation_failed_records": 0,
+        "validation_suspended_records": 0,
+        "validation_state": "Not enabled"
+      },
+      {
+        "schema_name": "my_favorite_schema",
+        "table_name": "my_bestie_table",
+        "inserts": 0,
+        "deletes": 0,
+        "updates": 0,
+        "ddls": 0,
+        "full_load_rows": 314159,
+        "full_load_condtnl_chk_failed_rows": 0,
+        "full_load_error_rows": 0,
+        "last_update_time": Time.parse("2020-01-01T17:21:00.000-00:00"),
+        "table_state": "Table completed",
+        "validation_pending_records": 0,
+        "validation_failed_records": 0,
+        "validation_suspended_records": 0,
+        "validation_state": "Not enabled"
+      }
+    ]
 
     @task_completed_unsuccessfully = @task_starting.deep_merge(
       {
@@ -72,46 +109,11 @@ class TestDMS < Minitest::Test
   def test_replication_task_status
     Aws.config[:databasemigrationservice] = {
       stub_responses: {
-        describe_replication_tasks: {"replication_tasks": [@task_completed_success]},
+        describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
         describe_table_statistics:
           {
             "replication_task_arn": @task_arn,
-            "table_statistics": [
-              {
-                "schema_name": "my_favorite_schema",
-                "table_name": "my_favorite_table",
-                "inserts": 0,
-                "deletes": 0,
-                "updates": 0,
-                "ddls": 0,
-                "full_load_rows": 2_147_483_647,
-                "full_load_condtnl_chk_failed_rows": 0,
-                "full_load_error_rows": 0,
-                "last_update_time": Time.parse("2020-01-01T17:20:00.000-00:00"),
-                "table_state": "Table completed",
-                "validation_pending_records": 0,
-                "validation_failed_records": 0,
-                "validation_suspended_records": 0,
-                "validation_state": "Not enabled"
-              },
-              {
-                "schema_name": "my_favorite_schema",
-                "table_name": "my_bestie_table",
-                "inserts": 0,
-                "deletes": 0,
-                "updates": 0,
-                "ddls": 0,
-                "full_load_rows": 314159,
-                "full_load_condtnl_chk_failed_rows": 0,
-                "full_load_error_rows": 0,
-                "last_update_time": Time.parse("2020-01-01T17:21:00.000-00:00"),
-                "table_state": "Table completed",
-                "validation_pending_records": 0,
-                "validation_failed_records": 0,
-                "validation_suspended_records": 0,
-                "validation_state": "Not enabled"
-              }
-            ]
+            "table_statistics": @task_completed_successfully_table_statistics
           }
       }
     }
