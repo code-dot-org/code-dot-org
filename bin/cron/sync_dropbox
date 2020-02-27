@@ -38,5 +38,5 @@ FOLDERS.each do |key, value|
     command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
   end
   success = system(command)
-  throw "Error syncing Dropbox and staging with the sync_dropbox cron job. Check job output for more details." unless success
+  throw "Error syncing Dropbox #{key} and staging #{value} with the sync_dropbox cron job. Check job output for more details." unless success
 end
