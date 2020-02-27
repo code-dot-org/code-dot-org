@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'timecop'
 
 class TeacherScoreTest < ActiveSupport::TestCase
   setup do
@@ -101,13 +102,17 @@ class TeacherScoreTest < ActiveSupport::TestCase
   end
 
   test 'get scores for stage for student looks at most recent score' do
-    TeacherScore.score_level_for_student(
-      @teacher.id, @student_1.id, @level_1.id, @script.id, @score
-    )
+    Timecop.freeze do
+      TeacherScore.score_level_for_student(
+        @teacher.id, @student_1.id, @level_1.id, @script.id, @score
+      )
 
-    TeacherScore.score_level_for_student(
-      @teacher.id, @student_1.id, @level_1.id, @script.id, @score_2
-    )
+      Timecop.travel(1.day)
+
+      TeacherScore.score_level_for_student(
+        @teacher.id, @student_1.id, @level_1.id, @script.id, @score_2
+      )
+    end
 
     assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id), {@level_1.id => @score_2})
   end
