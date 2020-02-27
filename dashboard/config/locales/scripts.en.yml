@@ -14916,6 +14916,10 @@ en:
               name: Dance Party
               description_student: Time to celebrate! In this lesson, you will program your own interactive dance party.
               description_teacher: In this lesson, students will program their own interactive dance party. This activity requires sound as the tool was built to respond to music.
+            Dance Part:
+              name: Dance Part
+            End of Course Project:
+              name: End of Course Project
         coursee-2020:
           title: Course E (2019)
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
