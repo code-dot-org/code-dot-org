@@ -97,7 +97,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
       @teacher.id, @student_1.id, @level_1.id, @script.id, @score
     )
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id, @teacher.id), {@level_1.id => @score})
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id), {@level_1.id => @score})
   end
 
   test 'get scores for stage for student looks at most recent score' do
@@ -109,6 +109,46 @@ class TeacherScoreTest < ActiveSupport::TestCase
       @teacher.id, @student_1.id, @level_1.id, @script.id, @score_2
     )
 
-    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id, @teacher.id), {@level_1.id => @score_2})
+    assert_equal(TeacherScore.get_level_scores_for_stage_for_student(@stage.id, @student_1.id), {@level_1.id => @score_2})
+  end
+
+  test 'get scores for stage for section' do
+    TeacherScore.score_stage_for_section(
+      @teacher.id, @section.id, @stage.id, @score
+    )
+
+    assert_equal(
+      TeacherScore.get_level_scores_for_stage_for_section(
+        @stage.id,
+        @section.id
+      ),
+      {
+        @student_1.id => {@level_1.id => @score},
+        @student_2.id => {@level_1.id => @score},
+        @student_3.id => {@level_1.id => @score}
+      }
+    )
+  end
+
+  test 'get scores for script for section' do
+    TeacherScore.score_stage_for_section(
+      @teacher.id, @section.id, @stage.id, @score
+    )
+
+    assert_equal(
+      TeacherScore.get_level_scores_for_script_for_section(
+        @script.id,
+        @section.id
+      ),
+      {
+        @script.id => {
+          @stage.id => {
+            @student_1.id => {@level_1.id => @score},
+            @student_2.id => {@level_1.id => @score},
+            @student_3.id => {@level_1.id => @score}
+          }
+        }
+      }
+    )
   end
 end

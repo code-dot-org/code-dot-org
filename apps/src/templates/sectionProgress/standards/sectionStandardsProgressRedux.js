@@ -5,6 +5,8 @@ const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
+const ADD_STUDENT_LEVEL_SCORES =
+  'sectionStandardsProgress/ADD_STUDENT_LEVEL_SCORES';
 
 // Action creators
 export const addStandardsData = standardsData => {
@@ -18,12 +20,17 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
+export const addStudentLevelScores = scoresData => ({
+  type: ADD_STUDENT_LEVEL_SCORES,
+  scoresData
+});
 
 // Initial State
 const initialState = {
   standardsData: [],
   teacherComment: null,
-  selectedLessons: []
+  selectedLessons: [],
+  studentLevelScoresByStage: {}
 };
 
 function sortByOrganizationId(standardsByConcept) {
@@ -56,6 +63,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
       selectedLessons: action.selected
     };
   }
+  if (action.type === ADD_STUDENT_LEVEL_SCORES) {
+    return {
+      ...state,
+      studentLevelScoresByStage: action.scoresData
+    };
+  }
   return state;
 }
 
@@ -85,6 +98,23 @@ export function getUnpluggedLessonsForScript(state) {
   }
 
   return _.map(unpluggedStages, filterStageData);
+}
+
+export function getStudentLevelScores(scriptId, sectionId) {
+  return (dispatch, getState) => {
+    $.ajax({
+      url: '/dashboardapi/v1/teacher_scores/get',
+      type: 'post',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        script_id: scriptId,
+        section_id: sectionId
+      })
+    }).then(data => {
+      const scoresData = data;
+      dispatch(addStudentLevelScores(scoresData));
+    });
+  };
 }
 
 export function getNumberLessonsCompleted(state) {

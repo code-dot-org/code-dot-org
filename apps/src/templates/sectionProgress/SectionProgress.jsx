@@ -30,7 +30,10 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {
+  getStandardsCoveredForScript,
+  getStudentLevelScores
+} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -80,12 +83,17 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     showStandardsIntroDialog: PropTypes.bool,
-    getStandardsCoveredForScript: PropTypes.func.isRequired
+    getStandardsCoveredForScript: PropTypes.func.isRequired,
+    getStudentLevelScores: PropTypes.func.isRequired
   };
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
     this.props.getStandardsCoveredForScript(this.props.scriptId);
+    this.props.getStudentLevelScores(
+      this.props.scriptId,
+      this.props.section.id
+    );
   }
 
   componentDidUpdate() {
@@ -278,6 +286,9 @@ export default connect(
     },
     getStandardsCoveredForScript(scriptId) {
       dispatch(getStandardsCoveredForScript(scriptId));
+    },
+    getStudentLevelScores(scriptId, sectionId) {
+      dispatch(getStudentLevelScores(scriptId, sectionId));
     }
   })
 )(SectionProgress);
