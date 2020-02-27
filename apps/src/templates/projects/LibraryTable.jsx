@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import orderBy from 'lodash/orderBy';
+import _ from 'lodash';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {getProjectLibraries} from './projectsRedux';
+import {unpublishProjectLibrary} from './projectsRedux';
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import Button from '@cdo/apps/templates/Button';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,
   PROJECT_NAME: 1,
   DESCRIPTION: 2,
-  LAST_PUBLISHED: 3
+  LAST_PUBLISHED: 3,
+  ACTIONS: 4
 };
 
 const CELL_WIDTH = 250;
@@ -37,6 +39,9 @@ const styles = {
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
     overflow: 'hidden'
+  },
+  centeredCell: {
+    textAlign: 'center'
   }
 };
 
@@ -68,8 +73,8 @@ const dateFormatter = time => {
 class LibraryTable extends React.Component {
   static propTypes = {
     // Provided by Redux
-    libraries: PropTypes.array.isRequired,
-    personalProjectsList: PropTypes.array
+    personalProjectsList: PropTypes.array,
+    unpublishProjectLibrary: PropTypes.func.isRequired
   };
 
   state = {
@@ -188,8 +193,46 @@ class LibraryTable extends React.Component {
             }
           }
         }
+      },
+      {
+        property: 'actions',
+        header: {
+          label: i18n.quickActions(),
+          props: {
+            style: {
+              ...tableLayoutStyles.headerCell,
+              ...tableLayoutStyles.unsortableHeader
+            }
+          }
+        },
+        cell: {
+          formatters: [this.actionsFormatter],
+          props: {
+            style: {
+              ...tableLayoutStyles.cell,
+              ...styles.cellName,
+              ...styles.centeredCell
+            }
+          }
+        }
       }
     ];
+  };
+
+  unpublishLibrary = channelId => {
+    this.props.unpublishProjectLibrary(channelId, (error, _) => {
+      // TODO: handle error
+    });
+  };
+
+  actionsFormatter = (_, {rowData}) => {
+    return (
+      <Button
+        text={i18n.unpublish()}
+        color={Button.ButtonColor.orange}
+        onClick={() => this.unpublishLibrary(rowData.channel)}
+      />
+    );
   };
 
   render() {
@@ -197,6 +240,11 @@ class LibraryTable extends React.Component {
       // Projects haven't loaded from server yet, so display nothing.
       return null;
     }
+
+    const libraries = _.filter(
+      this.props.personalProjectsList,
+      p => p.libraryName
+    );
 
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
@@ -209,10 +257,10 @@ class LibraryTable extends React.Component {
     const sortedRows = sort.sorter({
       columns,
       sortingColumns,
-      sort: orderBy
-    })(this.props.libraries);
+      sort: _.orderBy
+    })(libraries);
 
-    const hasLibraries = this.props.libraries.length > 0;
+    const hasLibraries = libraries.length > 0;
 
     return (
       <div>
@@ -232,7 +280,13 @@ class LibraryTable extends React.Component {
 
 export const UnconnectedLibraryTable = LibraryTable;
 
-export default connect(state => ({
-  libraries: getProjectLibraries(state),
-  personalProjectsList: state.projects.personalProjectsList.projects
-}))(LibraryTable);
+export default connect(
+  state => ({
+    personalProjectsList: state.projects.personalProjectsList.projects
+  }),
+  dispatch => ({
+    unpublishProjectLibrary(channelId, onComplete) {
+      dispatch(unpublishProjectLibrary(channelId, onComplete));
+    }
+  })
+)(LibraryTable);
