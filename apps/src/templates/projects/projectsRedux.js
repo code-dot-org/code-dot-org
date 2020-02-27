@@ -468,7 +468,7 @@ export function unpublishProject(projectId) {
   };
 }
 
-export const unpublishProjectLibrary = (projectId, onComplete) => {
+export const unpublishProjectLibrary = (projectId, onComplete = () => {}) => {
   return dispatch => {
     fetchProjectToUpdate(projectId, (error, data) => {
       if (error) {
