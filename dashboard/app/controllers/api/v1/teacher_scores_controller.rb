@@ -3,14 +3,18 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   authorize_resource
 
   # POST /teacher_scores
-  def score_stage_for_section
-    TeacherScore.score_stage_for_section(
-      current_user.id,
-      params[:section_id],
-      params[:stage_id],
-      params[:score]
-    )
-    head :no_content
+  def score_stages_for_section
+    TeacherScore.transaction do
+      params[:stage_scores].each do |stage_score|
+        TeacherScore.score_stage_for_section(
+          current_user.id,
+          params[:section_id],
+          stage_score[:stage_id],
+          stage_score[:score]
+        )
+      end
+      head :no_content
+    end
   end
 
   # POST /teacher_scores/get
