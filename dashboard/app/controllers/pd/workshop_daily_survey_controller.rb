@@ -280,6 +280,43 @@ module Pd
       render_csf_survey(PRE_DEEPDIVE_SURVEY, workshop)
     end
 
+    # Display CSF101 (Intro) post-workshop survey.
+    # The survey, on submit, will display thanks.
+    # GET workshop_survey/csf/post101(/:enrollment_code)
+    def new_csf_post101
+      # Use enrollment_code to find a specific workshop
+      # or search all CSF101 workshops the current user is enrolled in.
+      enrolled_workshops = nil
+      if params[:enrollment_code].present?
+        enrolled_workshops = Workshop.joins(:enrollments).
+          where(pd_enrollments: {code: params[:enrollment_code]})
+
+        return render_404 if enrolled_workshops.blank?
+      else
+        enrolled_workshops = Workshop.
+          where(course: COURSE_CSF, subject: SUBJECT_CSF_101).
+          enrolled_in_by(current_user)
+
+        return render :not_enrolled if enrolled_workshops.blank?
+      end
+
+      survey_name = "surveys/pd/workshop_csf_intro_post"
+
+      # Find the workshop attended.
+      attended_workshop = enrolled_workshops.with_nearest_attendance_by(current_user)
+
+      # Render a message if no attendance for this workshop.
+      return render :no_attendance unless attended_workshop
+
+      # Render a thanks message if already submitted.
+      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, attended_workshop.id, nil, nil, survey_name)
+        render :thanks
+        return
+      end
+
+      render_csf_survey_foorm(survey_name, attended_workshop)
+    end
+
     # Display CSF201 (Deep Dive) post-workshop survey.
     # The JotForm survey, on submit, will redirect to the new_facilitator route for user
     # to submit facilitator surveys.
@@ -408,6 +445,26 @@ module Pd
       end
 
       render :new_general
+    end
+
+    def render_csf_survey_foorm(survey_name, workshop)
+      form, latest_version = Foorm::Form.get_form_and_latest_version_for_name(survey_name)
+      form_questions = JSON.parse(form.questions)
+
+      @script_data = {
+        props: {
+          formQuestions: form_questions,
+          formName: survey_name,
+          formVersion: latest_version,
+          submitApi: "/dashboardapi/v1/pd/workshop_survey_foorm_submission",
+          submitParams: {
+            user_id: current_user.id,
+            pd_workshop_id: workshop.id
+          }
+        }.to_json
+      }
+
+      render :new_general_foorm
     end
 
     def key_params
