@@ -1,10 +1,10 @@
-%h1= 'Login to the Maker App with Google'
+%h1= I18n.t('maker.google_oauth.login_with_google')
 
-%p Please enter the code provided when you logged in via Google on your default browser
+%p= I18n.t('maker.google_oauth.enter_code')
 
 %input#input-text{:type=>"text"}
 
-%button#btn-submit{ type: 'submit' } Submit
+%button#btn-submit{ type: 'submit' }= I18n.t(:submit)
 
 :javascript
   $(document).ready(function() {
