@@ -52,10 +52,7 @@
     "mini_rubric": "false",
     "tts_short_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
     "tts_long_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
