@@ -31,4 +31,13 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :no_content
   end
+
+  test 'score_stage_for_section is forbidden for teacher who does not own section' do
+    sign_in @teacher
+    section_2 = create :section
+    post '/dashboardapi/v1/teacher_scores', params: {
+      section_id: section_2.id, stage_id: @stage.id, score: 100
+    }
+    assert_response :forbidden
+  end
 end

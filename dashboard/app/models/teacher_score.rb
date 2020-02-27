@@ -17,11 +17,11 @@
 class TeacherScore < ApplicationRecord
   def self.score_stage_for_section(
     teacher_id,
-    section_id,
+    section,
     stage_id,
     score
   )
-    student_ids = Section.find(section_id).students.pluck(:id)
+    student_ids = section.students.pluck(:id)
     stage = Stage.find(stage_id)
     script_id = stage.script.id
     level_ids = stage.script_levels.map(&:level_id)

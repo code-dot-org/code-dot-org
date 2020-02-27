@@ -4,13 +4,18 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
 
   # POST /teacher_scores
   def score_stage_for_section
-    TeacherScore.score_stage_for_section(
-      current_user.id,
-      params[:section_id],
-      params[:stage_id],
-      params[:score]
-    )
-    head :no_content
+    section = Section.find(params[:section_id])
+    if section.user_id == current_user.id
+      TeacherScore.score_stage_for_section(
+        current_user.id,
+        section,
+        params[:stage_id],
+        params[:score]
+      )
+      head :no_content
+    else
+      head :forbidden
+    end
   end
 
   private
