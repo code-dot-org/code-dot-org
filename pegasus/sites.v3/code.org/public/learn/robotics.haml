@@ -96,7 +96,7 @@ social:
       locale: "#{request.locale}",
       robotics: true,
       backButton: true,
-      disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])}
+      disabledTutorials: #{DCDO.get('learn_hide_tutorials', [])}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
   });
