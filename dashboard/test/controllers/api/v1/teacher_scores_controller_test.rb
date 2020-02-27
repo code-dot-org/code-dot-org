@@ -1,12 +1,13 @@
 require 'test_helper'
 
-class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
+class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
   self.use_transactional_test_case = true
   setup_all do
     @teacher = create :teacher
     @student = create :student
     @section = create :section, user: @teacher
     @stage = create :stage
+    @stage_2 = create :stage
     @script = create :script
   end
 
@@ -40,11 +41,52 @@ class Api::V1::TeacherFeedbacksControllerTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  test 'score_stage_for_section succeeds for teacher' do
+  test 'score_stages_for_section succeeds for teacher' do
     sign_in @teacher
-    post '/dashboardapi/v1/teacher_scores', params: {
-      section_id: @section.id, stage_id: @stage.id, score: 100
-    }
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: @section.id, stage_scores: [{stage_id: @stage.id, score: 100}, {stage_id: @stage_2.id, score: 0}]}
+    assert_response :no_content
+  end
+
+  test 'score_stages_for_section fails if stage is not found' do
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << create(:student)
+    sign_in teacher
+
+    script = create :script
+    script_level = create(
+      :script_level,
+      script: script,
+      levels: [
+        create(:maze, name: 'test level 1')
+      ]
+    )
+    stage = script_level.stage
+    destroyed_stage = create :stage
+    destroyed_stage.destroy
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}, {stage_id: destroyed_stage.id, score: 0}]}
+    refute TeacherScore.where(teacher_id: teacher.id).exists?
+    assert_response :forbidden
+  end
+
+  test 'score_stages_for_section succeeds with only one stage' do
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << create(:student)
+    sign_in teacher
+
+    script = create :script
+    script_level = create(
+      :script_level,
+      script: script,
+      levels: [
+        create(:maze, name: 'test level 1')
+      ]
+    )
+    stage = script_level.stage
+
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}]}
+    assert TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :no_content
   end
 
