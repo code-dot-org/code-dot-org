@@ -18,7 +18,8 @@ def main
   threads = []
   Thread.abort_on_exception = true
   daily_tasks.each do |task|
-    threads << Thread.new {Cdo::DMS.start_replication_task(task.replication_task_arn)}
+    # Wait 12 hours (make 72 attempts, once every 10 minutes) for tasks to complete successfully.
+    threads << Thread.new {Cdo::DMS.start_replication_task(task.replication_task_arn, 72, 600)}
   end
   threads.each(&:join)
 
