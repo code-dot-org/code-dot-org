@@ -83,6 +83,9 @@ module Cdo
     end
 
     # Get current status of a Replication Task including table statistics.
+    # @param replication_task_arn [String] ARN of the task.
+    # Returns an OStruct containing the attributes returned by describe_replication_tasks and describe_table_statistics
+    # that are relevant to assessing whether a task has completed successfully.
     def self.replication_task_status(replication_task_arn)
       task = OpenStruct.new(arn: replication_task_arn)
 
