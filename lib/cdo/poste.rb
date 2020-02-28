@@ -114,6 +114,7 @@ module Poste
       body = IO.read(path)
 
       @engine = {
+        '.haml' => TextRender::HamlEngine,
         '.html' => TextRender::ErbEngine,
         '.md' => TextRender::MarkdownEngine,
       }[File.extname(path).downcase]
