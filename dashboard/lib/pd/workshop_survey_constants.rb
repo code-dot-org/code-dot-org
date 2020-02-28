@@ -79,7 +79,6 @@ module Pd
     }
 
     CSF_SURVEY_NAMES = [
-      POST_INTRO_SURVEY = 'post101',
       PRE_DEEPDIVE_SURVEY = 'pre201',
       POST_DEEPDIVE_SURVEY = 'post201',
     ]
