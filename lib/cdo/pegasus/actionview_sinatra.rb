@@ -59,7 +59,7 @@ module ActionViewSinatra
     end
 
     def params
-      {}
+      @sinatra.params || {}
     end
 
     # make locals hash directly accessible from templates; our old renderer
