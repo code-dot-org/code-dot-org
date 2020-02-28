@@ -21,7 +21,7 @@
       "buttonId": "teacher-apps-closing-2020-sign-up"
     },
     "teacher-apps-nominate-2020": {
-      "image": "http://localhost:3000/shared/images/fill-970x562/teacher-announcement/professional-learning-2019-trophy.jpg",
+      "image": "https://code.org/shared/images/fill-970x562/teacher-announcement/professional-learning-2019-trophy.jpg",
       "title": "Know An Awesome Teacher?",
       "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
       "buttonText": "Nominate a Teacher",
