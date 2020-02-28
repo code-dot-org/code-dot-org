@@ -1,5 +1,6 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 import {combineReducers} from 'redux';
+import $ from 'jquery';
 import _ from 'lodash';
 import {Galleries, MAX_PROJECTS_PER_CATEGORY} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
