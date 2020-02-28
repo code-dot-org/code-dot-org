@@ -6,8 +6,6 @@
 
 require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
-require_relative '../../dashboard/config/environment'
-exit unless rack_env?(:staging) && CDO.dashboard_hostname == 'staging-studio.code.org'
 
 FOLDERS = {
   "advocacy.code.org" => "sites.v3/advocacy.code.org",
@@ -32,9 +30,11 @@ FOLDERS = {
 
 FOLDERS.each do |key, value|
   # 'unison' will sync the two folders. It will return true on success and false on failure.
-  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierceg/unison/
-  command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignoreinodenumbers -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
+  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+  command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
   if key == "code.org"
+    # The applab-docs and applab-docs-1 folders on dropbox are synced separately even though
+    # they are sub-paths of the code.org folder on git.
     command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
   end
   success = system(command)
