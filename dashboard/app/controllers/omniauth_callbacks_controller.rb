@@ -28,31 +28,28 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
     time_difference = (Time.now - time) / 1.minute
 
-    # Reject - code was generated more than 5 minutes ago
+    # Reject - code was generated more than 5 minutes ago or incorrect provider
     if time_difference >= 5
-      @errors = "Token has expired. Please try to log in again"
-      render
-    end
-
-    if secret.ends_with?('google_oauth2')
-      secret.slice!('google_oauth2')
+      flash.now[:alert] = "Token has expired. Please log in again for a new token."
+      render 'maker/login_code'
+      return
+    elsif !secret.ends_with?('google_oauth2')
+      flash.now[:alert] = "Wrong provider. Please make sure you are logging in with Google."
+      render 'maker/login_code'
+      return
     else
-      p "Wrong provider. Please make sure you are logging in with Google"
-      # TODO: Bail out of log-in
+      secret.slice!('google_oauth2')
     end
 
     # Check user id all numbers
     if secret.scan(/\D/).empty?
-      # Authorize user
       # Look up user and use devise to sign user in
       user = AuthenticationOption.find_by(credential_type: 'google_oauth2', authentication_id: secret)&.user
       sign_in_and_redirect user
     else
-      p "Invalid user id"
-      # TODO: Bail out of log-in
+      flash.now[:alert] = "Invalid user id. Please try logging in again."
+      render 'maker/login_code'
     end
-
-    p secret
   end
 
   # GET /users/auth/google_oauth2/callback
