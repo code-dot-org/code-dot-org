@@ -123,7 +123,9 @@ module Cdo
     # Start a replication task and wait until it completes, raising an error if the task did not complete within a
     # configurable time period or did not complete successfully.
     # @param replication_task_arn [String]
-    def self.start_replication_task(replication_task_arn)
+    # @param max_attempts [Integer] Number of times to check whether task has completed successfully before failing.
+    # @param delay [Integer] Number of seconds to wait between checking task status.
+    def self.start_replication_task(replication_task_arn, max_attempts, delay)
       CDO.log.info "Starting DMS Replication Task: #{replication_task_arn}"
       task = replication_task_status(replication_task_arn)
       dms_client = Aws::DatabaseMigrationService::Client.new
@@ -135,8 +137,7 @@ module Cdo
         }
       )
 
-      # Wait 30 hours, checking every 10 minutes.  As of early-2020, it takes about 30 hours for the level_sources task to complete.
-      wait_until_replication_task_completed(replication_task_arn, 180, 600)
+      wait_until_replication_task_completed(replication_task_arn, max_attempts, delay)
 
       CDO.log.info "DMS Task Completed Successfully: #{replication_task_arn}"
     rescue StandardError => error
