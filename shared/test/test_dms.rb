@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require_relative 'test_helper'
+require 'active_support/core_ext/object/deep_dup'
 require 'cdo/aws/dms'
 require 'aws-sdk-databasemigrationservice'
 
@@ -104,6 +105,22 @@ class TestDMS < Minitest::Test
         }
       }
     )
+
+    @task_completed_unsuccessfully_table_statistics = @task_completed_successfully_table_statistics.deep_dup
+    @task_completed_unsuccessfully_table_statistics[0].deep_merge({"table_state": "Table Loading"})
+
+    @start_task_response = {
+      "migration_type": "full-load",
+      "replication_instance_arn": "arn:aws:dms:us-east-1:1234567890:task:LKJIHGFEDCBA",
+      "replication_task_arn": @task_arn,
+      "replication_task_creation_date": Time.parse("2020-01-01T00:00:00.000-00:00"),
+      "replication_task_identifier": "my-favorite-task",
+      "replication_task_settings": "{\"escapedJSON\": true}",
+      "source_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ABCDEFGHIJKL",
+      "status": "starting",
+      "table_mappings": "{\"escapedJSON\": true}",
+      "target_endpoint_arn": "arn:aws:dms:us-east-1:1234567890:task:ZYXWVUTSRQPO"
+    }
   end
 
   def test_replication_task_status
@@ -124,5 +141,39 @@ class TestDMS < Minitest::Test
     assert_equal 0, task.tables_errored
     assert_equal 'Table completed', task[:table_statistics][0][:table_state]
     assert_equal 314159, task[:table_statistics][1][:full_load_rows]
+  end
+
+  def test_start_replication_task_that_completes_successfully
+    Aws.config[:databasemigrationservice] = {
+      stub_responses: {
+        start_replication_task: {replication_task: @start_task_response},
+        describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
+        describe_table_statistics:
+          {
+            "replication_task_arn": @task_arn,
+            "table_statistics": @task_completed_successfully_table_statistics
+          }
+      }
+    }
+
+    Cdo::DMS.start_replication_task(@task_arn, 1, 1)
+  end
+
+  def test_start_replication_task_that_completes_unsuccessfully
+    Aws.config[:databasemigrationservice] = {
+      stub_responses: {
+        start_replication_task: {replication_task: @start_task_response},
+        describe_replication_tasks: {"replication_tasks": [@task_completed_unsuccessfully]},
+        describe_table_statistics:
+          {
+            "replication_task_arn": @task_arn,
+            "table_statistics": @task_completed_successfully_table_statistics
+          }
+      }
+    }
+
+    assert_raises(StandardError) do
+      Cdo::DMS.start_replication_task(@task_arn, 1, 1)
+    end
   end
 end
