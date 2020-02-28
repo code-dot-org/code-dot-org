@@ -103,6 +103,8 @@ class DelivererTest < Minitest::Test
 
   private
 
+  # Given a "kind" of form, get an id of a form of that kind. If there is no
+  # such form currently in the test DB, create one from a fixture.
   def get_form_id_from_kind(kind)
     result = POSTE_DB[:forms].where(kind: kind).first
     return result[:id] unless result.nil?
