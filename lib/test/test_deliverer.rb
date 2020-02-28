@@ -52,6 +52,30 @@ class DelivererTest < Minitest::Test
     assert_equal [email], @fake_smtp.to_addresses
   end
 
+  # Test all emails against saved fixtures. We expect this test (specifically,
+  # the fixtures used by this test) to require an update every time the content
+  # of an email template is changed. If this becomes an unweildy requirement,
+  # this test could be simplified to merely verify that the emails render
+  # without error.
+  #
+  # To add fixtures for a new email, you must:
+  #
+  #   1. Add a params json
+  #     - A JSON file containing any params that must be passed to the template
+  #     - To the directory lib/test/fixtures/deliverer/params
+  #     - With the same name as that of the email template
+  #   2. (optionally) Add a forms json
+  #     - If the email expects to receive a `form_id` parameter, instead give
+  #       it a `form_type`, and create a matching JSON file in
+  #       lib/test/fixtures/deliverer/forms containing the `data` and
+  #       `processed_data` fields of the form.
+  #   3. Add 'expected' fixtures
+  #     - In lib/test/fixtures/deliverer/expected, create a directory with the
+  #       same name as that of the email template and create the following files
+  #       containing the expected content of the rendered email:
+  #       - header.yaml
+  #       - body.html
+  #       - body.txt
   def test_deliverer_render_all
     Dir.each_child(Poste.emails_dir) do |email|
       name = File.basename(email, ".*")
@@ -85,14 +109,14 @@ class DelivererTest < Minitest::Test
 
     form_data = JSON.parse(File.read(FIXTURES_DIR + "forms/#{kind}.json"))
     return PEGASUS_DB[:forms].insert(
-      secret: SecureRandom.hex,
+      secret: "unique-secret-for-#{kind}",
       kind: kind,
       email: "",
       data: form_data["data"].to_json,
       processed_data: form_data["processed_data"].to_json,
-      created_at: Time.now,
+      created_at: Time.parse("2020-02-27 16:50:16 -0800"),
       created_ip: '',
-      updated_at: Time.now,
+      updated_at: Time.parse("2020-02-27 16:50:16 -0800"),
       updated_ip: ''
     )
   end
