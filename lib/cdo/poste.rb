@@ -110,8 +110,13 @@ module Poste
   end
 
   class Template
-    def initialize(body, engine=TextRender::MarkdownEngine)
-      @engine = engine
+    def initialize(path)
+      body = IO.read(path)
+
+      @engine = {
+        '.html' => TextRender::ErbEngine,
+        '.md' => TextRender::MarkdownEngine,
+      }[File.extname(path).downcase]
 
       if match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
         @header = match[:header].strip
@@ -302,15 +307,7 @@ class Deliverer
     path = Poste.resolve_template(name)
     raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
-    engine = {
-      '.haml' => TextRender::HamlEngine,
-      '.html' => TextRender::ErbEngine,
-      '.md' => TextRender::MarkdownEngine,
-      '.txt' => TextRender::MarkdownEngine,
-      '.yml' => TextRender::YamlEngine,
-    }[File.extname(path).downcase]
-
-    @templates[name] = Poste::Template.new IO.read(path), engine
+    @templates[name] = Poste::Template.new path
   end
 
   private
