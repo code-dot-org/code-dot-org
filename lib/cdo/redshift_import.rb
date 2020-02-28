@@ -17,6 +17,8 @@ class RedshiftImport
         target_table = import_table.partition(TEMP_TABLE_PREFIX).last
         backup_table = BACKUP_TABLE_PREFIX + target_table
 
+        CDO.log.info "Dropping existing table #{schema}.#{target_table} and renaming newly imported #{import_table}."
+
         # Rename existing table to back it up, if it exists.
         begin
           rename_table(schema, target_table, backup_table)
