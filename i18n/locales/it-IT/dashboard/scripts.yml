@@ -4591,3 +4591,28 @@ it:
               name: La festa degli alieni con il Laboratorio dei personaggi
             Private and Personal Information:
               name: Cittadinanza digitale - Dati personali e altri dati
+        csd2-2020:
+          description_short: "  Imparare a costruire il tuo sito web con Sviluppo Web."
+        csd1-2020:
+          stages:
+            Intro to Problem Solving:
+              description_student: 'La classe lavora in gruppi per progettare barche di "carta stagnola" che dovranno reggere il maggior numero possibile di monetine. Alla fine della lezione i gruppi rifletteranno sull''esperienza fatta, con particolare riferimento alle strategie di problem solving che utilizzeranno nel resto del corso. '
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funzioni con parametri
+        csd3-2020:
+          description_short: "Impara a programmare animazioni, arte interattiva e giochi in Sviluppo Giochi."
+          stages:
+            Drawing in Game Lab:
+              name: Disegnare in Sviluppo Giochi
+            Variables:
+              name: Variabili
+            Conditionals:
+              name: Istruzioni condizionali
+            Velocity:
+              name: Velocità
+            Collision Detection:
+              name: Rilevamento delle Collisioni
+            Functions:
+              name: Funzioni

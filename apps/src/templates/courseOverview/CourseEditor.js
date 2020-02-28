@@ -28,6 +28,7 @@ export default class CourseEditor extends Component {
     title: PropTypes.string.isRequired,
     familyName: PropTypes.string,
     versionYear: PropTypes.string,
+    pilotExperiment: PropTypes.string,
     descriptionShort: PropTypes.string,
     descriptionStudent: PropTypes.string,
     descriptionTeacher: PropTypes.string,
@@ -45,6 +46,7 @@ export default class CourseEditor extends Component {
       title,
       familyName,
       versionYear,
+      pilotExperiment,
       descriptionShort,
       descriptionStudent,
       descriptionTeacher,
@@ -95,6 +97,14 @@ export default class CourseEditor extends Component {
               </option>
             ))}
           </select>
+        </label>
+        <label>
+          Pilot Experiment
+          <input
+            name="pilot_experiment"
+            defaultValue={pilotExperiment}
+            style={styles.input}
+          />
         </label>
         <label>
           Short Description (used in course cards on homepage)

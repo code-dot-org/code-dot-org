@@ -545,6 +545,7 @@ es:
     download: 'Descargar vídeo'
     show_notes: 'Mostrar notas'
     show_video: 'Mostrar video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."

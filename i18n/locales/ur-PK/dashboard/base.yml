@@ -171,6 +171,7 @@ ur:
     subtitle: 'یہ ویڈیوز اور اشارے دیکھیں'
   video:
     tab: 'ویڈیو.'
+    label: 'ویڈیو'
   compatibility:
     upgrade:
       link: "مزید سیکھے"

@@ -524,3 +524,11 @@ ms:
           stages:
             Conditionals:
               name: Bersyarat
+        csd3-2020:
+          stages:
+            Variables:
+              name: Pembolehubah
+            Conditionals:
+              name: Bersyarat
+            Functions:
+              name: Fungsi

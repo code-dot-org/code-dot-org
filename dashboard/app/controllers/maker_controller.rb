@@ -117,9 +117,9 @@ class MakerController < ApplicationController
   # renders a page for users to copy and paste a login key
   def display_code
     # Generate encrypted code to display to user
-    auth_user = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
     @secret_code = Encryption.encrypt_string_utf8(
-      Time.now.strftime('%Y%m%dT%H%M%S%z') + auth_user['authentication_id'] + auth_user['credential_type']
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
     )
   end
 

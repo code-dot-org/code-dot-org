@@ -53,6 +53,8 @@ my:
   teacher:
     panel:
       answer_viewer: 'ဆရာအဖွဲ့'
+  video:
+    label: 'ဗီဒီယို'
   compatibility:
     upgrade:
       link: "ဆက်သင်ယူရန်"

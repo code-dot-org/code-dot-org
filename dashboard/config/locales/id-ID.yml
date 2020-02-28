@@ -660,6 +660,7 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban

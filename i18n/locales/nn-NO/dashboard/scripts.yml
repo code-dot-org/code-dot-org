@@ -2209,7 +2209,7 @@ nn:
             'Unplugged: Binary':
               name: Binære bilete
             Artist Binary:
-              name: 'Kunstnar: binær'
+              name: 'Kunstnar: Binærbilete'
             Dance Party:
               name: Dansefest
         coursee-2019:
@@ -2463,3 +2463,19 @@ nn:
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksjonar med parameter
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variablar
+            Sprite Properties:
+              name: Eigenskapar ved Sprite
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Fart
+            Functions:
+              name: Funksjonar

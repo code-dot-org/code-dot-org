@@ -48,6 +48,7 @@ tr:
         finish_sign_up_header: 'Hesabınızı oluşturmayı bitirin'
         finish_sign_up_subheader: 'Code.org hesabı oluşturmayı bitirmek için sıradaki bilgileri doldurun <strong>%{email}</strong>.'
         finish_sign_up_subheader_markdown: '**%{email}** İçin hesap oluşturmayı tamamlamak için sıradaki bilgileri doldurunuz.'
+        reset_password_token: "Takip ettiğiniz şifre sıfırlama bağlantısı"
         error:
           future: gelecekte olması mümkün değil
   beta: "beta"
@@ -111,6 +112,7 @@ tr:
     clever: 'Akıllı Hesap'
     powerschool: 'Güç okulu'
     forgot_password: 'Şifrenizi mi unuttunuz?'
+    migration_success: 'Başarılı! Yeni hesap deneyimimizi güncellediniz.'
     need_confirmation: "Onay talimatlarını almadınız mı?"
     need_unlock: "Kilit açma talimatlarını almadınız mı?"
     not_linked: "Üzgünüz, Code.org hesabın senin %{provider}a bağlı değildir. Parolanızı yazarak oturum açmanız gerekecek."
@@ -523,6 +525,7 @@ tr:
     download: 'Videoyu indir'
     show_notes: 'Notları göster'
     show_video: 'Videoyu görüntüle'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Tarayıcınız desteklenmiyor. Lütfen tarayıcınızı <a href='%{supported_browsers_url}', target='_blank'> desteklenen tarayıcılardan birine</a> yükseltin. Sayfayı görüntüleyebilirsiniz ama önemli özellikler çalışmayabilir."

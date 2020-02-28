@@ -1406,6 +1406,14 @@ es-ES:
         ## Pantalla Final
 
         La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen base code: |-
+        # Código del Juego
+
+        Este es el código para el juego sin las pantallas de empiezo y fin. La función 'gameStatus' (llamada en línea 43 y definida en línea 208) chequea si el usuario ha ganado o perdido, pero sólo añade un mensaje de texto a la pantalla. El juego también continúa aún después de que el juego esté terminado.
+
+        ## Haz Esto
+
+        Lee el código, en particular el código antes del loop de dibujar (línea 1-24), dentro del loop de dibujar (línea 27-43), y dentro de la función de 'gameStatus'(línea 209-224). Está bien si no entiendes todo en el juego, pero deberías ver el código antes del loop de dibujar pone los sprites, y el código dentro del loop de dibujar controla el juego.
       HOC 2018 Level_1: Necesitarás suministros para el viaje. Consigue un **barco**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).

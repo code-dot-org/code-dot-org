@@ -1776,12 +1776,12 @@ mn-MN:
         Лаурелийг бүгдийг нь авахад туслахын тулд кодыг бичээрэй."
       courseA_collector_loops9_2019: "**Сорилт:** Эрдэнэс эдгээр шатаар дээш явдаг!
         Лаурелийг бүгдийг нь авахад туслахын тулд кодыг бичээрэй."
-      courseA_collector_loops_challenge1: \_ "Намайг зарим алдаа илрүүлэхэд тусалж
-        чадах уу?"\_
-      courseA_collector_loops_challenge1_2018: \_ "Намайг зарим алдаа илрүүлэхэд тусалж
-        чадах уу?"\_
-      courseA_collector_loops_challenge1_2019: \_ "Намайг зарим алдаа илрүүлэхэд тусалж
-        чадах уу?"\_
+      courseA_collector_loops_challenge1: _"Намайг зарим алдаа илрүүлэхэд тусалж чадах
+        уу?"_
+      courseA_collector_loops_challenge1_2018: _"Намайг зарим алдаа илрүүлэхэд тусалж
+        чадах уу?"_
+      courseA_collector_loops_challenge1_2019: _"Намайг зарим алдаа илрүүлэхэд тусалж
+        чадах уу?"_
       courseA_collector_loops_challenge2: 'Бүх эрдэнэсийг аваарай! '
       courseA_collector_loops_challenge2kp: Энэ үеийг давахын тулд дор хаяж **3**
         эрдэнэс цуглуулаарай.

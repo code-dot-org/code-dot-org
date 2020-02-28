@@ -4,8 +4,10 @@ hu-HU:
     dsls:
       2-3 Algorithms Multi 1:
         answers:
-        - text: Kezdj egy négyzettel<br/>Rakj egy háromszöget a négyzetre<br/>Rakj
-            egy háromszöget a négyzet alá
+        - text: |-
+            Kezdj egy négyzettel
+            Rakj egy háromszöget a négyzetre
+            Rakj egy háromszöget a négyzet alá
         - correct: true
         - text: Kezdj egy négyzettel<br/>Rakj egy paralelogrammát a négyzet fölé<br/>Rakj
             egy háromszöget a paralelogramma jobb oldalára

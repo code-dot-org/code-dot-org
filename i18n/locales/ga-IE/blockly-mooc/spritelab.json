@@ -1,5 +1,5 @@
 {
-  "errorLoadingAnimation": "",
+  "errorLoadingAnimation": "Níl ag éirí linn do bheochan \"{animationName}\" a lódáil. Deimhnigh go bhfuil tú ceangailte leis an Idirlíon agus ansin athlódáil an leathanach. Má mhaireann an fhadhb, d'fhéadfadh sé go bhfuil an bheochan briste. Sa chás sin, ba chóir duit an bheochan a bhaint.",
   "reinfFeedbackMsg": "Tá tú críochnaithe! Cliceáil \"Ar aghaidh\" chun dul go dtí an chéad leibhéal eile.",
   "shareGame": "Comhroinn do chluiche:",
   "spritelabFeedbackCreateFishWithBehavior": "Caithfidh tú iasc amháin ar a laghad a chruthú agus iompar a thabhairt dó.",
@@ -21,6 +21,6 @@
   "spritelabFeedbackThreeSpritesWithCostumes": "Ní mór duit trí eachtrán le trí chulaith éagsúla a chruthú.",
   "spritelabFeedbackMoveUpNotDown": "Ní mór don sprid dul suas (ó thuaidh) in áit dul síos (ó dheas).",
   "spritelabFeedbackRobotFasterThanRover": "Bhain an róbat an taobh deas den scáileán amach roimh an bhfánaí.",
-  "spritelabFeedbackDifferentStarRotation": "Ní mór do na sprideanna leis na cultacha réalta casadh an méid céanna.",
+  "spritelabFeedbackDifferentStarRotation": "Ní mór do na sprideanna leis na cultacha réalta an méid céanna casadh a dhéanamh.",
   "spritelabFeedbackAstronautMoveToCorner": "Ní mór don spásaire dul go dtí ceann de na ceithre chúinne."
 }

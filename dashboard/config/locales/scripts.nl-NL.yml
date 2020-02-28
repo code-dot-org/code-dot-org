@@ -2410,3 +2410,20 @@ nl:
           stages:
             new stage:
               name: nieuw niveau
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Functies met Parameters
+        csd3-2020:
+          description_short: Programmeren
+          stages:
+            Variables:
+              name: Variabelen
+            Conditionals:
+              name: Voorwaardelijke instructies
+            Velocity:
+              name: Snelheid
+            Collision Detection:
+              name: Botsingdetectie
+            Functions:
+              name: Functies

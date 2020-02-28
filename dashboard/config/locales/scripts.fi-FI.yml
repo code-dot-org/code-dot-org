@@ -1819,3 +1819,17 @@ fi:
           stages:
             Conditionals:
               name: Ehtolausekkeet
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrilliset funktiot
+        csd3-2020:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot
