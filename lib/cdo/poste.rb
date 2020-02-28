@@ -111,40 +111,63 @@ module Poste
 
   class Template
     def initialize(body, engine=TextRender::MarkdownEngine)
+      @engine = engine
+
       if match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
-        @header = TextRender::YamlEngine.new(match[:header].strip)
-        @html = engine.new(match[:html].strip)
-        @text = TextRender::ErbEngine.new(match[:text].strip)
+        @header = match[:header].strip
+        @html = match[:html].strip
+        @text = match[:text].strip
       elsif match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?\z)/m)
-        @header = TextRender::YamlEngine.new(match[:header].strip)
-        @html = engine.new(match[:html].strip)
+        @header = match[:header].strip
+        @html = match[:html].strip
       else
-        @html = engine.new(body.strip)
+        @html = body.strip
       end
     end
 
     def render(params={})
       if params.key?('form_id')
-        form = Form2.from_row(DB[:forms].where(id: params['form_id']).first)
+        form = Form2.from_row(POSTE_DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
         params.merge! form.processed_data
         params['form'] = form
       end
       locals = OpenStruct.new(params).instance_eval {binding}
 
-      header = @header.result(locals) unless @header.nil?
+      header = render_header(locals)
+
       # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
       # For more information, see https://www.pivotaltracker.com/story/show/104750788.
-      tracking_id = header['litmus_tracking_id'] unless header.nil?
-
-      html = @html.result(locals) if @html
-      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
-      # logic in the click tracking method to clean up or canonicalize the HTML.
-      html = Nokogiri::HTML(html).to_html if html
-      html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
-      text = @text.result(locals) unless @text.nil?
+      tracking_id = header['litmus_tracking_id']
+      html = render_html(locals, tracking_id, params[:encrypted_id])
+      text = render_text(locals)
 
       [header, html, text]
+    end
+
+    private
+
+    def render_header(locals={})
+      return {} unless @header.present?
+
+      TextRender::YamlEngine.new(@header).result(locals)
+    end
+
+    def render_html(locals={}, tracking_id=nil, encrypted_id=nil)
+      return nil unless @html.present?
+
+      html = @engine.new(@html).result(locals)
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html
+      html = inject_litmus_tracking html, tracking_id, encrypted_id
+
+      html
+    end
+
+    def render_text(locals={})
+      return nil unless @text.present?
+      TextRender::ErbEngine.new(@text).result(locals)
     end
 
     def inject_litmus_tracking(html, tracking_id, unique_id)
