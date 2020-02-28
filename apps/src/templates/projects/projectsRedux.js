@@ -75,7 +75,7 @@ export function setPersonalProjectsList(personalProjectsList) {
   return {type: SET_PERSONAL_PROJECTS_LIST, personalProjectsList};
 }
 
-function updatePersonalProjectData(projectId, data) {
+export function updatePersonalProjectData(projectId, data) {
   return {type: UPDATE_PERSONAL_PROJECT_DATA, projectId, data};
 }
 
