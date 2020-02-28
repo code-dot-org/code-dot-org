@@ -475,7 +475,9 @@ export const unpublishProjectLibrary = (projectId, onComplete = () => {}) => {
         onComplete(error, data);
       } else {
         new LibraryClientApi(projectId).unpublish(data, (error, serverData) => {
-          dispatch(updatePersonalProjectData(projectId, serverData));
+          if (!error) {
+            dispatch(updatePersonalProjectData(projectId, serverData));
+          }
           onComplete(error, serverData);
         });
       }
