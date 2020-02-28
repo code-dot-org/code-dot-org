@@ -1,7 +1,8 @@
 import React from 'react';
+import {action} from '@storybook/addon-actions';
 import {UnconnectedLibraryTable as LibraryTable} from './LibraryTable';
 
-const libraries = [
+const personalProjectsList = [
   {
     id: '1',
     channel: 'abc123',
@@ -20,12 +21,19 @@ const libraries = [
     name: 'Library Project V2',
     libraryDescription: 'A second try',
     libraryPublishedAt: Date.now()
+  },
+  // This project does not have a library so it *should not* be displayed in the table.
+  {
+    id: '3',
+    channel: 'ghi789',
+    type: 'applab',
+    name: 'Library Project V2'
   }
 ];
 
 const DEFAULT_PROPS = {
-  libraries,
-  personalProjectsList: []
+  personalProjectsList,
+  unpublishProjectLibrary: action('unpublishing')
 };
 
 export default storybook => {
@@ -41,7 +49,9 @@ export default storybook => {
       {
         name: 'No libraries',
         description: 'Display when the user has no published project libraries',
-        story: () => <LibraryTable {...DEFAULT_PROPS} libraries={[]} />
+        story: () => (
+          <LibraryTable {...DEFAULT_PROPS} personalProjectsList={[]} />
+        )
       }
     ]);
 };
