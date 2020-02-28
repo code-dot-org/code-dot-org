@@ -1,4 +1,5 @@
 require 'cdo/redshift'
+require 'pg'
 
 class RedshiftImport
   # Database Migration Service Replication Tasks load data from Aurora into staging Redshift tables with a prefix.
@@ -16,8 +17,14 @@ class RedshiftImport
         target_table = import_table.partition(TEMP_TABLE_PREFIX).last
         backup_table = BACKUP_TABLE_PREFIX + target_table
 
-        # Rename existing table to back it up.
-        rename_table(schema, target_table, backup_table)
+        # Rename existing table to back it up, if it exists.
+        begin
+          rename_table(schema, target_table, backup_table)
+        rescue PG::UndefinedTable => undefined_table_error
+          # When a new table created in the source MySQL database is imported for the first time, there won't be an
+          # existing table in Redshift to backup.
+          CDO.log.info "Unable to back up table #{schema}.#{target_table} because it does not exist. #{undefined_table_error}"
+        end
 
         # Make staging table the production table.
         rename_table(schema, import_table, target_table)
