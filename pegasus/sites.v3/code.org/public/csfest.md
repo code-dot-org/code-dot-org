@@ -40,7 +40,13 @@ Computer science classrooms in the following schools have been confirmed to part
 If your school doesn't teach computer science, [nominate a teacher for a scholarship](https://code.org/nominate) to learn how, because every student in every school should have this opportunity.
 
 
-<div style="text-align:center;" markdown=1>
+<center>
     In partnership with:
-    ![Amazon Future Engineer](/images/fit-300/marketing/csfest-partner-AFE-logo.png) ![Why Not You Foundation] (/images/fit-300/marketing/csfest-partner-WNY-logo.png)
-</div>
+    <div style="height: 20px;"></div>
+</center>
+
+<center>
+    ![Amazon Future Engineer](/images/marketing/csfest-partner-AFE-logo.png)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ![Why Not You Foundation](/images/fit-200/marketing/csfest-partner-WhyNotYou-logo.png)
+</center>

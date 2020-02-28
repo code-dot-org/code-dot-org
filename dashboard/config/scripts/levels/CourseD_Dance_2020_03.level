@@ -57,10 +57,7 @@
     "long_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to `(Random)` for something totally unpredictable!",
     "short_instructions": "It's time for a dance-off! Program each dancer to move when you press different keys. Choose your favorite move for each dancer or set it to \"(Random)\" for something totally unpredictable! ",
     "encrypted": "false",
-    "mini_rubric": "false",
-    "encrypted_examples": [
-
-    ]
+    "mini_rubric": "false"
   },
   "published": true,
   "notes": "",

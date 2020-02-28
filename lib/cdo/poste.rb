@@ -1,5 +1,6 @@
 require 'base64'
 require 'cdo/db'
+require 'cdo/form'
 require 'cdo/parse_email_address_string'
 require 'cdo/pegasus/text_render'
 require 'digest/md5'
