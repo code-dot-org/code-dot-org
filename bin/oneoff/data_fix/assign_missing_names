@@ -12,42 +12,42 @@ require_relative '../../../dashboard/config/environment'
 # However, SQL also (for some reason) gives us rows for which the name consists
 # of UTF-8 characters for this query, so we also have to manually check each
 # user to verify that they should be in this category.
-nameless_ids = [
-  1153345,
-  864602,
-  133851,
-  608542,
-  696600,
-  71494,
-  35372,
-  126181,
-  47503111,
-  1036186,
-  60738,
-  60748,
-  60758,
-  61062,
-  109360,
-  118679,
-  161255,
-  167576,
-  561774,
-  592377,
-  607386,
-  734153,
-  929807,
-  941597,
-  959314,
-  1086099,
-  1088349,
-  1120082,
-  1156829,
-  1178677,
-  1241156,
-  1270890,
-  992802,
+nameless_ids = %w(
+  1153345
+  864602
+  133851
+  608542
+  696600
+  71494
+  35372
+  126181
+  47503111
+  1036186
+  60738
+  60748
+  60758
+  61062
+  109360
+  118679
+  161255
+  167576
+  561774
+  592377
+  607386
+  734153
+  929807
+  941597
+  959314
+  1086099
+  1088349
+  1120082
+  1156829
+  1178677
+  1241156
+  1270890
+  992802
   1229386
-]
+).map(&:to_i).freeze
 
 # Now, for each 'nameless' user, we check to see that they are actually
 # nameless and invalid, and if so we assign them a name; specifically, we
