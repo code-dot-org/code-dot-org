@@ -11,21 +11,14 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     @script = create :script
   end
 
-  test 'score_stage_for_section is restricted if signed out' do
+  test 'score_stage_for_section is forbidden if signed out' do
     post '/dashboardapi/v1/teacher_scores', params: {
       section_id: @section.id, stage_id: @stage.id, score: 100
     }
     assert_response 302
   end
 
-  test 'get_teacher_scores_for_script is restricted if signed out' do
-    post '/dashboardapi/v1/teacher_scores/get', params: {
-      section_id: @section.id, script_id: @script.id
-    }
-    assert_response 302
-  end
-
-  test 'score_stage_for_section is restricted if student' do
+  test 'score_stage_for_section is forbidden if student' do
     sign_in @student
     post '/dashboardapi/v1/teacher_scores', params: {
       section_id: @section.id, stage_id: @stage.id, score: 100
@@ -33,17 +26,33 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  test 'get_teacher_scores_for_script is restricted if student' do
-    sign_in @student
-    post '/dashboardapi/v1/teacher_scores/get', params: {
-      section_id: @section.id, script_id: @script.id
-    }
-    assert_response :forbidden
-  end
-
-  test 'score_stages_for_section succeeds for teacher' do
+  test 'score_stage_for_section is forbidden for teacher who does not own section' do
     sign_in @teacher
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: @section.id, stage_scores: [{stage_id: @stage.id, score: 100}, {stage_id: @stage_2.id, score: 0}]}
+    section_2 = create :section
+    post '/dashboardapi/v1/teacher_scores', params: {
+      section_id: section_2.id, stage_id: @stage.id, score: 100
+    }
+    assert_response :forbidden
+  end
+
+  test 'score_stages_for_section succeeds with only one stage' do
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    section.students << create(:student)
+    sign_in teacher
+
+    script = create :script
+    script_level = create(
+      :script_level,
+      script: script,
+      levels: [
+        create(:maze, name: 'test level 1')
+      ]
+    )
+    stage = script_level.stage
+
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}]}
+    assert TeacherScore.where(teacher_id: teacher.id).exists?
     assert_response :no_content
   end
 
@@ -69,25 +78,19 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_response :forbidden
   end
 
-  test 'score_stages_for_section succeeds with only one stage' do
-    teacher = create :teacher
-    section = create :section, teacher: teacher
-    section.students << create(:student)
-    sign_in teacher
+  test 'get_teacher_scores_for_script is restricted if signed out' do
+    post '/dashboardapi/v1/teacher_scores/get', params: {
+      section_id: @section.id, script_id: @script.id
+    }
+    assert_response 302
+  end
 
-    script = create :script
-    script_level = create(
-      :script_level,
-      script: script,
-      levels: [
-        create(:maze, name: 'test level 1')
-      ]
-    )
-    stage = script_level.stage
-
-    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: 100}]}
-    assert TeacherScore.where(teacher_id: teacher.id).exists?
-    assert_response :no_content
+  test 'get_teacher_scores_for_script is restricted if student' do
+    sign_in @student
+    post '/dashboardapi/v1/teacher_scores/get', params: {
+      section_id: @section.id, script_id: @script.id
+    }
+    assert_response :forbidden
   end
 
   test 'get_teacher_scores_for_script succeeds for teacher' do
