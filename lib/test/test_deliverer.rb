@@ -54,7 +54,7 @@ class DelivererTest < Minitest::Test
 
   # Test all emails against saved fixtures. We expect this test (specifically,
   # the fixtures used by this test) to require an update every time the content
-  # of an email template is changed. If this becomes an unweildy requirement,
+  # of an email template is changed. If this becomes an unwieldy requirement,
   # this test could be simplified to merely verify that the emails render
   # without error.
   #
