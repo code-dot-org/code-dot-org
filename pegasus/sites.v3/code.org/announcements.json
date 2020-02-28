@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "teacher-apps-open-2020",
+    "/home": "teacher-apps-nominate-2020",
     "/courses": "teacher-apps-open-2020"
   },
   "banners": {
@@ -19,6 +19,14 @@
       "buttonText": "Join us",
       "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
       "buttonId": "teacher-apps-closing-2020-sign-up"
+    },
+    "teacher-apps-nominate-2020": {
+      "image": "https://code.org/shared/images/fill-970x562/teacher-announcement/professional-learning-2019-trophy.jpg",
+      "title": "Know an Awesome Teacher?",
+      "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
+      "buttonText": "Nominate a Teacher",
+      "buttonUrl": "https://code.org/nominate",
+      "buttonId": "teacher-apps-nominate-2020-button"
     }
   }
 }
