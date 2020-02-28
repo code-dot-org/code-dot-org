@@ -6,6 +6,7 @@ require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
+require_relative '../../pegasus/src/database'
 
 module Poste
   def self.logger
