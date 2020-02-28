@@ -14,6 +14,9 @@ class FakeSmtp
 end
 
 class DelivererTest < Minitest::Test
+  ROOT_DIR = Pathname.new(__dir__) + "../../"
+  FIXTURES_DIR = Pathname.new(__dir__) + "fixtures/deliverer/"
+
   def setup
     @fake_smtp = FakeSmtp.new
     Deliverer.any_instance.stubs(:reset_connection).returns(@fake_smtp)
@@ -47,5 +50,50 @@ class DelivererTest < Minitest::Test
     assert_match "<html><body>", @fake_smtp.message
     assert_equal "noreply@code.org", @fake_smtp.from_address
     assert_equal [email], @fake_smtp.to_addresses
+  end
+
+  def test_deliverer_render_all
+    Dir.each_child(Poste.emails_dir) do |email|
+      name = File.basename(email, ".*")
+      template = @deliverer.load_template(name)
+
+      params_file = FIXTURES_DIR + "params/#{name}.json"
+      assert params_file.exist?, "Could not find params for #{name} email test. Please add a #{params_file.relative_path_from(ROOT_DIR)} fixture containing any required parameters for email template."
+      params = JSON.parse(File.read(params_file))
+
+      # Simulate the effects of associating a form with an email by putting a
+      # "form_kind" entry in the fixture params which references one of our
+      # form fixtures.
+      if params.key?("form_kind")
+        params["form_id"] = get_form_id_from_kind(params.delete("form_kind"))
+      end
+
+      header, html, text = template.render(params)
+      expected_dir = File.join(FIXTURES_DIR, 'expected', name)
+
+      assert_equal header, YAML.load_file(File.join(expected_dir, 'header.yaml'))
+      assert_equal html.to_s, File.read(File.join(expected_dir, 'body.html'))
+      assert_equal text.to_s, File.read(File.join(expected_dir, 'body.txt'))
+    end
+  end
+
+  private
+
+  def get_form_id_from_kind(kind)
+    result = POSTE_DB[:forms].where(kind: kind).first
+    return result[:id] unless result.nil?
+
+    form_data = JSON.parse(File.read(FIXTURES_DIR + "forms/#{kind}.json"))
+    return PEGASUS_DB[:forms].insert(
+      secret: SecureRandom.hex,
+      kind: kind,
+      email: "",
+      data: form_data["data"].to_json,
+      processed_data: form_data["processed_data"].to_json,
+      created_at: Time.now,
+      created_ip: '',
+      updated_at: Time.now,
+      updated_ip: ''
+    )
   end
 end
