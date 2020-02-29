@@ -82,7 +82,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
     student_count = @section.students.count
 
     TeacherScore.score_stage_for_section(
-      @section, @stage.id, @score
+      @section.id, @stage.id, @score
     )
 
     teacher_scores_count_after = TeacherScore.all.count
@@ -119,7 +119,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
 
   test 'get scores for stage for section' do
     TeacherScore.score_stage_for_section(
-      @teacher.id, @section.id, @stage.id, @score
+      @section.id, @stage.id, @score
     )
 
     assert_equal(
@@ -137,7 +137,7 @@ class TeacherScoreTest < ActiveSupport::TestCase
 
   test 'get scores for script for section' do
     TeacherScore.score_stage_for_section(
-      @teacher.id, @section.id, @stage.id, @score
+      @section.id, @stage.id, @score
     )
 
     assert_equal(
