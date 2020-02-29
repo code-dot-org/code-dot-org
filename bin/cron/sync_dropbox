@@ -50,12 +50,12 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     end
     stdout, _, _ = Open3.capture3(command)
     if stdout != ""
-      error_message = error_message + stdout + "\n"
+      error_message = error_message + "Dropbox #{key}. staging #{value}. " + stdout + "\n"
     end
   end
   current_time = Time.now
   if alert_slack && error_message != ""
-    Slack.message("@here Error syncing Dropbox #{key} and staging #{value} \n" + error_message, {channel: "sync-dropbox-staging"})
+    Slack.message("@here Error syncing Dropbox and staging\n" + error_message, {channel: "sync-dropbox-staging"})
     alert_slack = false
   end
   while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
