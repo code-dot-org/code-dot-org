@@ -4,6 +4,8 @@
 # on the staging machine. This is required for contents changes from dropbox to
 # be deployed.
 
+SCRIPT_START = Time.now
+
 require_relative '../../lib/cdo/only_one'
 exit unless only_one_running?(__FILE__)
 
@@ -28,15 +30,25 @@ FOLDERS = {
   "hourofcode.com" => "sites.v3/hourofcode.com"
 }.freeze
 
-FOLDERS.each do |key, value|
-  # 'unison' will sync the two folders. It will return true on success and false on failure.
-  # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
-  command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
-  if key == "code.org"
-    # The applab-docs and applab-docs-1 folders on dropbox are synced separately even though
-    # they are sub-paths of the code.org folder on git.
-    command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
+INTERVAL_SECONDS = 5
+TOTAL_SECONDS = 60 - INTERVAL_SECONDS
+while (Time.now - SCRIPT_START) < TOTAL_SECONDS
+  attempt_start = Time.now
+  FOLDERS.each do |key, value|
+    # 'unison' will sync the two folders. It will return true on success and false on failure.
+    # For full details, see unison's man page. Docs are also here: https://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html
+    command = "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value} -silent -ignore \"Name .dropbox\" -auto -perms 0 -dontchmod"
+    if key == "code.org"
+      # The applab-docs and applab-docs-1 folders on dropbox are synced separately even though
+      # they are sub-paths of the code.org folder on git.
+      command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
+    end
+    success = system(command)
+    throw "Error syncing Dropbox #{key} and staging #{value} with the sync_dropbox cron job. Check job output for more details." unless success
   end
-  success = system(command)
-  throw "Error syncing Dropbox #{key} and staging #{value} with the sync_dropbox cron job. Check job output for more details." unless success
+  current_time = Time.now
+  while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
+    sleep 0.1
+    current_time = Time.now
+  end
 end
