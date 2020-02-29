@@ -92,9 +92,9 @@ class StandardsViewHeaderButtons extends Component {
       };
     }
 
-    for (var i = 0; i < unselectedStageIds.length; i++) {
-      unselectedStageScores[i] = {
-        stage_id: selectedStageIds[i],
+    for (var j = 0; j < unselectedStageIds.length; j++) {
+      unselectedStageScores[j] = {
+        stage_id: unselectedStageIds[j],
         score: TeacherScores.INCOMPLETE
       };
     }
