@@ -6,7 +6,10 @@
 
 SCRIPT_START = Time.now
 
-require_relative '../../lib/cdo/only_one'
+require_relative "../../lib/cdo/only_one"
+require_relative "../../deployment"
+require "cdo/slack"
+require "open3"
 exit unless only_one_running?(__FILE__)
 
 FOLDERS = {
@@ -32,6 +35,8 @@ FOLDERS = {
 
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 60 - INTERVAL_SECONDS
+error_message = ""
+alert_slack = true
 while (Time.now - SCRIPT_START) < TOTAL_SECONDS
   attempt_start = Time.now
   FOLDERS.each do |key, value|
@@ -43,10 +48,16 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
       # they are sub-paths of the code.org folder on git.
       command << " -ignore \"Path */public/applab/docs\" -ignore \"Path */public/applab/docs1\""
     end
-    success = system(command)
-    throw "Error syncing Dropbox #{key} and staging #{value} with the sync_dropbox cron job. Check job output for more details." unless success
+    stdout, _, _ = Open3.capture3(command)
+    if stdout != ""
+      error_message = error_message + stdout + "\n"
+    end
   end
   current_time = Time.now
+  if alert_slack && error_message != ""
+    Slack.message("@here Error syncing Dropbox #{key} and staging #{value} \n" + error_message, {channel: "sync-dropbox-staging"})
+    alert_slack = false
+  end
   while current_time - attempt_start < INTERVAL_SECONDS && (current_time - SCRIPT_START) < TOTAL_SECONDS
     sleep 0.1
     current_time = Time.now
