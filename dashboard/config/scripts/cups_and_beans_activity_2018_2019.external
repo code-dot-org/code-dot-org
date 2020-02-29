@@ -1,4 +1,5 @@
 name 'Cups and Beans Activity_2018_2019'
+editor_experiment ''
 title 'title'
 css 'unplugged'
 description 'description here'
@@ -30,9 +31,6 @@ In this activity, cups filled with beans will represent information going back a
 
 **Once you have done the activity or seen the demonstration, consider this table of key terms and takeaways below.**
 
-
-
-
 ---
 
 ### Main Takeaways and Terminology: 
@@ -53,13 +51,12 @@ teacher_markdown <<MARKDOWN
 # Cups and Beans Activity
 
 You can either do this as a teacher demonstration *(recommended)* using:
+
 * [Teacher Demonstration Guide: Public Key Bean Counting](https://docs.google.com/document/d/1l0KDF33-gWIssZGqfuHgD0QpF50Pdyqras46FeuNLgc)
 
 or, as student activity for groups of 3 using:
+
 * [Student Activity Guide: Public Key Bean Counting](https://docs.google.com/document/d/1pke6gAilW5xhoRgxhsRRcLYHTjqxDOAbzVZuwImxg8M/edit) (for groups of 3)
-
-
-
 
 ### Teacher Demonstration Synopsis: 
 
@@ -72,13 +69,10 @@ or, as student activity for groups of 3 using:
 * Demonstrate the Information Exchange process
     * Alice make a public key
     * Bob use public key to encrypt message
-    * Alice decrypt 
+    * Alice decrypt
     * (Eve sees all information going back and forth but cannot decrypt)
 
 * Recap the mechanics of how public key cryptography works
 
-* Cups and Beans - What’s the point?
-
-
-
+* Cups and Beans - What's the point?
 MARKDOWN
