@@ -9,7 +9,6 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
       TeacherScore.transaction do
         params[:stage_scores].each do |stage_score|
           TeacherScore.score_stage_for_section(
-            current_user.id,
             params[:section_id],
             stage_score[:stage_id],
             stage_score[:score]
