@@ -351,7 +351,7 @@ namespace :seed do
   task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
 end
 
-def time_subtasks(subtasks, namespace='seed', timing_info=True)
+def time_subtasks(subtasks, namespace='seed', timing_info=true)
   subtasks.each do |st|
     full_name = "#{namespace}:#{st}"
 
