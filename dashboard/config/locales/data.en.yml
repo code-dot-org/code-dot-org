@@ -586,11 +586,11 @@ en:
         oceans_machine_learning: Machine Learning
         oceans_training_data: Training Data
         oceans_societal_implications: Societal Implications
-        hoc_dance_congrats_2019: Dance Party 2019 - Party On!
-        hoc_dance_warmup_2019: Dance Party 2019 - Warm Up
-        hoc_dance_events_2019: Dance Party 2019 - Events
-        hoc_dance_measures_2019: Dance Party 2019 - Measures
-        hoc_dance_properties_2019: Dance Party 2019 - Properties
+        hoc_dance_congrats_2019: Dance Party - Party On!
+        hoc_dance_warmup_2019: Dance Party - Warm Up
+        hoc_dance_events_2019: Dance Party - Events
+        hoc_dance_measures_2019: Dance Party - Measures
+        hoc_dance_properties_2019: Dance Party - Properties
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

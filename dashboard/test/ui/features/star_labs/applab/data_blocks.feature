@@ -22,5 +22,10 @@ Feature: App Lab Data Blocks
     And I wait for the page to fully load
     And element "#runButton" is visible
     And I open the debug console
+
+    # TODO: Remove race condition where table does not yet exist when "#runButton" is clicked.
+    # Related ticket to fix: codedotorg.atlassian.net/browse/STAR-987
+    And I wait for 1.5 seconds
+
     Then I press "runButton"
     And I wait until element "#successLabel" is visible within element "#divApplab"

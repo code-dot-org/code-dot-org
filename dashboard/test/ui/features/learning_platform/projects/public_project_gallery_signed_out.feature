@@ -5,10 +5,10 @@ Background:
 
 Scenario: Public Gallery Shows Expected Elements
   Then I wait until element "#header-banner" is visible
-  Then I wait until element "#public-gallery" is visible
+  Then I wait until element "#uitest-public-projects" is visible
 
 Scenario: Public Gallery Shows Expected Project Types
-  Then I wait until element "#public-gallery" is visible
+  Then I wait until element "#uitest-public-projects" is visible
   Then I wait until element ".ui-project-app-type-area" is in the DOM
   And the project gallery contains 9 project types
   And element ".ui-dance" contains text "Dance Party"

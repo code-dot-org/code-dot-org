@@ -578,6 +578,7 @@ en:
     download: 'Download Video'
     show_notes: 'Show Notes'
     show_video: 'Show Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Your browser is not supported. Please upgrade your browser to [one of our supported browsers](%{supported_browsers_url}). You can try viewing the page, but expect functionality to be broken."
@@ -1061,6 +1062,8 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   hidden_script: "Your teacher didn't expect you to be here. Please ask your teacher which unit you should be on."
+  no_course_access_student: "You don't have access to this course. Please ask your teacher which course you should be on."
+  no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
   no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
   no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'

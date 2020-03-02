@@ -57,6 +57,16 @@ module ScriptConstants
       EXPRESS_2019_NAME = 'express-2019'.freeze,
       PRE_READER_EXPRESS_2019_NAME = 'pre-express-2019'.freeze,
     ],
+    csf_2020: [
+      COURSEA_2020_NAME = 'coursea-2020'.freeze,
+      COURSEB_2020_NAME = 'courseb-2020'.freeze,
+      COURSEC_2020_NAME = 'coursec-2020'.freeze,
+      COURSED_2020_NAME = 'coursed-2020'.freeze,
+      COURSEE_2020_NAME = 'coursee-2020'.freeze,
+      COURSEF_2020_NAME = 'coursef-2020'.freeze,
+      EXPRESS_2020_NAME = 'express-2020'.freeze,
+      PRE_READER_EXPRESS_2020_NAME = 'pre-express-2020'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -116,6 +126,14 @@ module ScriptConstants
       CSD1_PILOT_NAME = 'csd1-pilot'.freeze,
       CSD2_PILOT_NAME = 'csd2-pilot'.freeze,
       CSD3_PILOT_NAME = 'csd3-pilot'.freeze,
+    ],
+    csd_2020: [
+      CSD1_2020_NAME = 'csd1-2020'.freeze,
+      CSD2_2020_NAME = 'csd2-2020'.freeze,
+      CSD3_2020_NAME = 'csd3-2020'.freeze,
+      CSD4_2020_NAME = 'csd4-2020'.freeze,
+      CSD5_2020_NAME = 'csd5-2020'.freeze,
+      CSD6_2020_NAME = 'csd6-2020'.freeze,
     ],
     csd_2019: [
       CSD1_2019_NAME = 'csd1-2019'.freeze,
@@ -213,7 +231,6 @@ module ScriptConstants
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
-    K5_ONLINE_PD = 'K5-OnlinePD'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     PIXELATION = 'pixelation'.freeze,

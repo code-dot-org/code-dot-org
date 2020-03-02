@@ -85,6 +85,15 @@ FirebaseStorage.clearAllData = function(onSuccess, onError) {
  */
 FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
   key = fixKeyName(key, onError);
+  try {
+    validateFirebaseKey(key);
+  } catch (e) {
+    onError({
+      type: WarningType.KEY_INVALID,
+      msg: `The key is invalid. ${e.message}`
+    });
+    return;
+  }
 
   const keyRef = getKeysRef().child(key);
   keyRef.once(

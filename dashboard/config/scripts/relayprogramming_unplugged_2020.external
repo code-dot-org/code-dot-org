@@ -1,0 +1,10 @@
+name 'RelayProgramming-Unplugged_2020'
+video_key 'C2_relay_programming'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Relay Programming
+
+Break into teams and work together to write programs that draw pictures.
+MARKDOWN
