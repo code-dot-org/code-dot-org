@@ -10,8 +10,8 @@ describe('StandardsViewHeaderButtons', () => {
         sectionId={1}
         setTeacherCommentForReport={() => {}}
         scriptId={100}
-        selectedLessons={() => {}}
-        unpluggedLessons={() => {}}
+        selectedLessons={[]}
+        unpluggedLessons={[]}
       />
     );
 
@@ -27,8 +27,8 @@ describe('StandardsViewHeaderButtons', () => {
         sectionId={1}
         setTeacherCommentForReport={() => {}}
         scriptId={100}
-        selectedLessons={() => {}}
-        unpluggedLessons={() => {}}
+        selectedLessons={[]}
+        unpluggedLessons={[]}
       />
     );
 
