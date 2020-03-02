@@ -55,7 +55,8 @@ Dashboard::Application.routes.draw do
   post 'maker/complete', to: 'maker#complete'
   get 'maker/application_status', to: 'maker#application_status'
   post 'maker/override', to: 'maker#override'
-  get 'maker/login_code', to: 'maker#login_code'
+  get 'maker/google_oauth_login_code', to: 'maker#login_code'
+  get 'maker/display_google_oauth_code', to: 'maker#display_code'
 
   # Media proxying
   get 'media', to: 'media_proxy#get', format: false
@@ -673,6 +674,8 @@ Dashboard::Application.routes.draw do
 
   # Routes used by standards info dialog
   post '/dashboardapi/v1/users/:user_id/set_standards_report_info_to_seen', to: 'api/v1/users#set_standards_report_info_to_seen'
+
+  post '/dashboardapi/v1/teacher_scores', to: 'api/v1/teacher_scores#score_stage_for_section'
 
   # We want to allow searchs with dots, for instance "St. Paul", so we specify
   # the constraint on :q to match anything but a slash.

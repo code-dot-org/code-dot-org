@@ -16,20 +16,19 @@
 
 class TeacherScore < ApplicationRecord
   def self.score_stage_for_section(
-    teacher_id,
-    section_id,
+    section,
     stage_id,
     score
   )
-    student_ids = Section.find(section_id).students.pluck(:id)
-    stage = Stage.find(stage_id)
-    script_id = stage.script.id
+    student_ids = section.students.pluck(:id)
+    stage = Stage.find(stage_id) # Get from cache?
+    script_id = stage.script_id
     level_ids = stage.script_levels.map(&:level_id)
 
     student_ids.each do |student_id|
       level_ids.each do |level_id|
         TeacherScore.score_level_for_student(
-          teacher_id,
+          section.user_id,
           student_id,
           level_id,
           script_id,
