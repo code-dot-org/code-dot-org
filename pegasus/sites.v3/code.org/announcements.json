@@ -26,7 +26,8 @@
       "body": "Let them know how amazing they are by nominating them for a Professional Learning Scholarship today!",
       "buttonText": "Nominate a Teacher",
       "buttonUrl": "https://code.org/nominate",
-      "buttonId": "teacher-apps-nominate-2020-button"
+      "buttonId": "teacher-apps-nominate-2020-button",
+      "backgroundColor": "#59b9dc"
     }
   }
 }
