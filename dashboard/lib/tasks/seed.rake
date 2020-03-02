@@ -145,15 +145,7 @@ namespace :seed do
   end
 
   task scripts: :environment do
-    SCRIPTS_DEPENDENCIES.each do |st|
-      start_time = Time.new
-      puts "Starting seed:#{st} at #{start_time}"
-      Rake::Task["seed:#{st}"].invoke
-      end_time = Time.new
-      elapsed_secs = end_time - start_time
-      puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
-    end
-
+    time_subtasks(SCRIPTS_DEPENDENCIES)
     update_scripts(incremental: false)
   end
 
@@ -343,20 +335,33 @@ namespace :seed do
 
   desc "seed all dashboard data"
   task :all do
-    subtasks = [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
-    subtasks.each do |st|
-      start_time = Time.new
-      puts "Starting seed:#{st} at #{start_time}"
-      Rake::Task["seed:#{st}"].invoke
-      end_time = Time.new
-      elapsed_secs = end_time - start_time
-      puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
-    end
+    full_seed_tasks = [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+    # Don't do full seed on adhocs, so startup is faster.
+    subtasks = rack_env?(:adhoc) ? [:ui_test] : full_seed_tasks
+    time_subtasks(subtasks)
   end
-  task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools]
+  task :ui_test do
+    subtasks = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools]
+    time_subtasks(subtasks)
+  end
   desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
 
   desc "seed only dashboard data required for tests"
   task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
+end
+
+def time_subtasks(subtasks, namespace='seed', timing_info=True)
+  subtasks.each do |st|
+    full_name = "#{namespace}:#{st}"
+
+    start_time = Time.new
+    puts "Starting #{full_name} at #{start_time}" if timing_info
+
+    Rake::Task[full_name].invoke
+
+    end_time = Time.new
+    elapsed_secs = end_time - start_time
+    puts "Finished #{full_name} at #{end_time}, took #{elapsed_secs} seconds" if timing_info
+  end
 end
