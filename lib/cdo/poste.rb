@@ -141,11 +141,7 @@ module Poste
       locals = OpenStruct.new(params).instance_eval {binding}
 
       header = render_header(locals)
-
-      # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
-      # For more information, see https://www.pivotaltracker.com/story/show/104750788.
-      tracking_id = header['litmus_tracking_id']
-      html = render_html(locals, tracking_id, params[:encrypted_id])
+      html = render_html(locals, header['litmus_tracking_id'], params[:encrypted_id])
       text = render_text(locals)
 
       [header, html, text]
