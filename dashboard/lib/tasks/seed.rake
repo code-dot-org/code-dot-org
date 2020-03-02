@@ -125,7 +125,7 @@ namespace :seed do
   end
 
   SCRIPTS_DEPENDENCIES = [
-    :environment,
+    #:environment,
     :games,
     :custom_levels,
     :dsls,
@@ -144,7 +144,16 @@ namespace :seed do
     update_scripts(script_files: script_files)
   end
 
-  task scripts: SCRIPTS_DEPENDENCIES do
+  task scripts: :environment do
+    SCRIPTS_DEPENDENCIES.each do |st|
+      start_time = Time.new
+      puts "Starting seed:#{st} at #{start_time}"
+      Rake::Task["seed:#{st}"].invoke
+      end_time = Time.new
+      elapsed_secs = end_time - start_time
+      puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
+    end
+
     update_scripts(incremental: false)
   end
 
@@ -333,7 +342,17 @@ namespace :seed do
   end
 
   desc "seed all dashboard data"
-  task all: [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+  task :all do
+    subtasks = [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+    subtasks.each do |st|
+      start_time = Time.new
+      puts "Starting seed:#{st} at #{start_time}"
+      Rake::Task["seed:#{st}"].invoke
+      end_time = Time.new
+      elapsed_secs = end_time - start_time
+      puts "Finished seed:#{st} at #{end_time}, took #{elapsed_secs} seconds"
+    end
+  end
   task ui_test: [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools]
   desc "seed all dashboard data that has changed since last seed"
   task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
