@@ -59,13 +59,24 @@ module ActionViewSinatra
     end
 
     def params
-      {}
+      @sinatra.params || {}
     end
 
-    # allow templates to throw a Sinatra::NotFound error to trigger a 404
-    def render(*args)
-      super(*args)
+    # make locals hash directly accessible from templates; our old renderer
+    # supported this and some templates rely on this functionality (see
+    # views/pd_survey_controls/multi_select.haml for an example).
+    #
+    # TODO: update templates to no longer rely on this and remove.
+    def locals
+      @locals || {}
+    end
+
+    def render(options = {}, locals = {})
+      # save locals hash for access by the locals method
+      @locals = locals
+      super(options, locals)
     rescue ActionView::Template::Error => e
+      # allow templates to throw a Sinatra::NotFound error to trigger a 404
       raise e.cause if e.cause.is_a?(Sinatra::NotFound)
       raise e
     end

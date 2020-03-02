@@ -602,6 +602,7 @@ ka:
     download: ვიდეოს გადმოწერა
     show_notes: ჩანიშვნების ჩვენება
     show_video: ვიდეოს ჩვენება
+    label: ვიდეო
   compatibility:
     upgrade:
       unsupported_message: თქცენი ბრაუზერი არ არის მხარდაჭერილი. თხოვთ, განაახლეთ

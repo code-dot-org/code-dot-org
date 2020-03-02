@@ -66,20 +66,16 @@ end
 def main
   fb = FirebaseHelper.new('shared')
   records, columns = get_top200_data(TOP_200_US_URL)
-  fb.delete_shared_table('Top%20200%20USA')
-  fb.upload_shared_table('Top%20200%20USA', records, columns)
+  fb.upload_live_table('Top 200 USA', records, columns)
 
   records, columns = get_top200_data(TOP_200_WORLD_URL)
-  fb.delete_shared_table('Top%20200%20Worldwide')
-  fb.upload_shared_table('Top%20200%20Worldwide', records, columns)
+  fb.upload_live_table('Top 200 Worldwide', records, columns)
 
   records, columns = get_viral50_data(VIRAL_50_US_URL)
-  fb.delete_shared_table('Viral%2050%20USA')
-  fb.upload_shared_table('Viral%2050%20USA', records, columns)
+  fb.upload_live_table('Viral 50 USA', records, columns)
 
   records, columns = get_viral50_data(VIRAL_50_WORLD_URL)
-  fb.delete_shared_table('Viral%2050%20Worldwide')
-  fb.upload_shared_table('Viral%2050%20Worldwide', records, columns)
+  fb.upload_live_table('Viral 50 Worldwide', records, columns)
 end
 
 main if only_one_running?(__FILE__)

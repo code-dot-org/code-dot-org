@@ -2050,3 +2050,27 @@ sv:
           stages:
             Conditionals:
               name: Villkor
+        csd2-2020:
+          stages:
+            Images:
+              name: Bilder
+        csd5-2020:
+          stages:
+            Representing Images:
+              name: Representerar bilder
+            Problem Solving and Data:
+              name: Problemlösning och data
+            Automating Data Decisions:
+              name: Automatisera databeslut
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funktioner med parametrar
+        csd3-2020:
+          stages:
+            Variables:
+              name: variabler
+            Conditionals:
+              name: Villkor
+            Functions:
+              name: funktioner

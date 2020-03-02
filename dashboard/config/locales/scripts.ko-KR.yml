@@ -1934,3 +1934,22 @@ ko:
           stages:
             Conditionals:
               name: 조건
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: 함수(값 전달)
+        csd3-2020:
+          description_short: 프로그래밍
+          stages:
+            Variables:
+              name: 변수
+            Sprite Properties:
+              name: 스프라이트 속성
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수

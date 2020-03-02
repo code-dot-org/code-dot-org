@@ -688,6 +688,7 @@ de:
     download: Video herunterladen
     show_notes: Zeige Hinweise
     show_video: Video anzeigen
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Ihr Browser wird nicht unterstützt. Bitte aktualisieren

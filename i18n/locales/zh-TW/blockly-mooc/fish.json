@@ -63,7 +63,7 @@
     "run": "運行",
     "mostImportantParts": "這些是魚類重要的部位：",
     "clickIndividualFish": "點擊一條魚查看牠的資料。",
-    "mostImportantPartsDescription": "",
+    "mostImportantPartsDescription": "在確定這條魚是“ * {word} *”還是“ ** {notWord} **”時，這些是最重要的魚類部分。",
     "newWord": "新詞語",
     "finish": "完成",
     "trainMore": "訓練更多",

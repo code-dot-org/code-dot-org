@@ -1682,3 +1682,16 @@ da:
           stages:
             Conditionals:
               name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funktioner med parametre
+        csd3-2020:
+          description_short: "Programmering"
+          stages:
+            Variables:
+              name: Variabler
+            Conditionals:
+              name: Betingelser
+            Functions:
+              name: Funktioner

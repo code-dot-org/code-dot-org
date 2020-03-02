@@ -56,8 +56,8 @@ class ManifestEditor extends React.Component {
       contentType: 'application/json',
       data: JSON.stringify({manifest: this.refs.content.value})
     })
-      .done(data => this.displayNotice('Manifest Saved', false))
-      .fail(() => this.displayNotice('Error', true));
+      .done(() => this.displayNotice('Manifest Saved', false))
+      .fail(err => this.displayNotice(`Error: ${err.statusText}`, true));
   };
 
   componentDidMount() {

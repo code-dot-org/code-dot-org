@@ -6929,7 +6929,7 @@ de-DE:
           ![](<https://images.code.org/411fca4606a09641e6eedf5069ac4efa-image-1499710237929.08.27 AM.png>)
       courseC_artist_loopsPrePre1a_2018:
         courseC_artist_loopsPrePre1a_a: |-
-          Der erste Block, den du brauchst, ist:
+          Der erste Baustein, den du brauchst, ist:
 
           <xml>  <block type="jump_to_xy" id="callMe">
               <title name="XPOS">200</title>
@@ -6944,7 +6944,7 @@ de-DE:
             </block></xml>
       courseC_artist_loopsPrePre1a_2019:
         courseC_artist_loopsPrePre1a_a: |-
-          Der erste Block, den du brauchst, ist:
+          Der erste Baustein, den du brauchst, ist:
 
           <xml>  <block type="jump_to_xy" id="callMe">
               <title name="XPOS">200</title>
@@ -7877,14 +7877,14 @@ de-DE:
             </block>
           </xml>
       courseD_bounce_events5s_2018:
-        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+        courseD_bounce_events5s_a: Du musst die Hand nicht bewegen, um dieses Rätsel
           zu lösen.
         courseD_bounce_events5s_b: |-
           Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
 
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events5s_2019:
-        courseD_bounce_events5s_a: Sie müssen die Hand nicht bewegen, um dieses Rätsel
+        courseD_bounce_events5s_a: Du musst die Hand nicht bewegen, um dieses Rätsel
           zu lösen.
         courseD_bounce_events5s_b: |-
           Stelle sicher, dass du diesen Code in deinem Arbeitsbereich hinzugefügt hast:
@@ -7892,24 +7892,24 @@ de-DE:
           <xml>  <block type="bounce_whenPaddleCollided" deletable="false"> <next> <block type="bounce_bounceBall"/></next></block></xml>
       courseD_bounce_events6s_2018:
         courseD_bounce_events6s_a: |-
-          Hast du eine Ereignis, das so aussieht?
+          Hast du ein Ereignis, das so aussieht?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
           du nicht die Hand bewegen, um zu gewinnen.
       courseD_bounce_events6s_2019:
         courseD_bounce_events6s_a: |-
-          Hast du eine Ereignis, das so aussieht?
+          Hast du ein Ereignis, das so aussieht?
 
           <xml><block type="bounce_whenWallCollided" deletable="false"><next><block type="bounce_bounceBall"></block></next></block></block></xml>
         courseD_bounce_events6s_b: Wenn du den Code richtig geschrieben hast, musst
           du nicht die Hand bewegen, um zu gewinnen.
       courseD_bounce_events7s_2018:
         courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
-          wenn du Lust dazu hast!
+          wenn du magst!
       courseD_bounce_events7s_2019:
         courseD_bounce_events7s_a: Du kannst Sounds an mehreren Stellen hinzufügen,
-          wenn du Lust dazu hast!
+          wenn du magst!
       courseD_collector_debugging2a_2018:
         courseD_collector_debugging2a_c: |-
           Was passiert dann?

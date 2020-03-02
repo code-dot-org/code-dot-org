@@ -550,6 +550,10 @@ ga:
               name: Stiúideo
             Web Lab:
               name: Saotharlann an Ghréasáin
+            Sprite Lab:
+              name: Saotharlann na Sprideanna
+            Mini Rubric:
+              name: Miontreoirlínte
         algebraPD2b:
           description: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
           description_short: 'Céim 2 ar líne: Staidéar Cumaiscthe sa Samhradh'
@@ -743,7 +747,7 @@ ga:
             Hour of Code 2015:
               name: An Uair Chódála 2015
         oceans:
-          title: I.S. ar son an Aigéin
+          title: AI ar son an Aigéin
           description: Foghlaim conas is féidir intleacht shaorga agus meaisínfhoghlaim
             a úsáid chun dul i ngleic le fadhbanna domhanda.
           description_short: Foghlaim conas is féidir intleacht shaorga agus meaisínfhoghlaim
@@ -814,22 +818,34 @@ ga:
               name: 'Foras Feasa ar an Ríomheolaíocht: Réamhshuirbhé'
             The Internet:
               name: An tIdirlíon
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
+        csp2-2017:
+          stages:
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
         csp3-2017:
           description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
             trí dhearadh ó bharr anuas agus líníocht "turtair".
           stages:
             Creating Functions:
               name: Feidhmeanna a chruthú
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
         csp4-2017:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
         csp5-2017:
           stages:
             Events Unplugged:
               name: Imeachtaí Díphlugáilte
             While Loops:
               name: Lúba "Chomh fada is"
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
         CSDU3-Draft:
           description_short: Códáil
           stages:
@@ -968,6 +984,8 @@ ga:
               name: Feidhmeanna
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
         grade2:
@@ -1134,6 +1152,9 @@ ga:
           title: Códáil do chluiche spóirt féin
           description_short: Cumaisc na rialacha ó spóirt éagsúla
           description: Cumaisc na rialacha ó spóirt éagsúla
+          stages:
+            Sports:
+              name: Spórt
         2016_sciencePD-phase2b:
           stages:
             Welcome!:
@@ -1168,6 +1189,14 @@ ga:
               name: Fáilte!
             Wrap-Up:
               name: Clabhsúr
+        csppostap-2017:
+          stages:
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
+        gamelab-demo:
+          stages:
+            Simple Sprite Movement:
+              name: Gluaiseacht Shimplí Sprideanna
         csd6-draft:
           stages:
             Lists:
@@ -1180,6 +1209,8 @@ ga:
           stages:
             Introduction:
               name: Réamhrá
+            Sprites:
+              name: Sprideanna
         coursed-ramp:
           stages:
             Introduction:
@@ -1206,6 +1237,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -1226,6 +1259,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -1348,6 +1383,32 @@ ga:
               name: Feidhmeanna a chruthú
           description_short: Foghlaim bunphrionsabail an ríomhchláraithe in JavaScript
             trí dhearadh ó bharr anuas agus líníocht "turtair".
+        applab-intro:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Buneolas ar an tSaotharlann Aipeanna - Roghnaigh do Scéal Féin
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Buneolas ar an tSaotharlann Aipeanna - Roghnaigh do Scéal Féin
+                2
+            Intro to AppLab - Your First App:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip
+            Intro to AppLab - Your First App 2:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 2
+            Intro to AppLab - Your First App 3:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 3
+            Intro to AppLab - Your First App 4:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 4
+            Intro to AppLab - Getting Started:
+              name: Buneolas ar an tSaotharlann Aipeanna - Tús Maith
+            Intro to App Lab:
+              name: Buneolas ar an tSaotharlann Aipeanna
+          title: Buneolas ar an tSaotharlann Aipeanna
+          description_short: Cruthaigh aip de do chuid féin in JavaScript le ríomhchlár
+            bunaithe ar bhlocanna nó ar théacs. Má tá taithí agat ar ríomhchlárú le
+            blocanna cheana, is féidir leat cur le do chuid scileanna.
+          description: Cruthaigh aip de do chuid féin in JavaScript le ríomhchlár
+            bunaithe ar bhlocanna nó ar théacs. Má tá taithí agat ar ríomhchlárú le
+            blocanna cheana, is féidir leat cur le do chuid scileanna.
         e-f-ramp:
           stages:
             Building a Foundation:
@@ -1416,6 +1477,8 @@ ga:
           stages:
             Simple Encryption:
               name: Criptiú Simplí
+            Intro to App Lab:
+              name: Buneolas ar an tSaotharlann Aipeanna
         hero:
           stages:
             Minecraft Hour of Code:
@@ -1424,6 +1487,33 @@ ga:
             Chódála!
           description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair Chódála!
             Téigh ar aistear trí Minecraft le cód.
+        applab-intro-staging:
+          stages:
+            Intro to AppLab - Choose Your Own Adventure:
+              name: Buneolas ar an tSaotharlann Aipeanna - Roghnaigh do Scéal Féin
+            Intro to AppLab - Choose Your Own Adventure 2:
+              name: Buneolas ar an tSaotharlann Aipeanna - Roghnaigh do Scéal Féin
+                2
+            Intro to AppLab - Your First App:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip
+            Intro to AppLab - Your First App 2:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 2
+            Intro to AppLab - Your First App 3:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 3
+            Intro to AppLab - Your First App 4:
+              name: Buneolas ar an tSaotharlann Aipeanna - Do Chéad Aip 4
+            Intro to AppLab - Getting Started:
+              name: Buneolas ar an tSaotharlann Aipeanna - Tús Maith
+            Intro to App Lab:
+              name: Buneolas ar an tSaotharlann Aipeanna
+        csp-explore-2017:
+          stages:
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
+        csp-create-2017:
+          stages:
+            Post-Course Survey:
+              name: Suirbhé Iarchúrsa
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1462,6 +1552,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -1472,6 +1564,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -1519,6 +1613,8 @@ ga:
               name: Athróga i gClúdach Litreach
             For Loop Fun:
               name: Spraoi le Lúba
+            Learning Sprites with Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda
             Binary Bracelets:
@@ -1611,6 +1707,8 @@ ga:
               name: Coinníollacha le Cártaí
             Minecraft Hour of Code:
               name: An Uair Chódála Minecraft
+            Learning Sprites with Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda
         coursef-2018:
@@ -1634,6 +1732,8 @@ ga:
               name: Ceapadh Ceoil le Paraiméadair
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
+            Learning Sprites with Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda
         csp1-2018:
@@ -1682,6 +1782,7 @@ ga:
               name: Umar Iasc - Sprideanna a Chruthú
             Alien Dance Party - Input:
               name: Cóisir Dhamhsa Eachtardhomhanda - Ionchur
+          description_audience: Daltaí i gCúrsa E/F
         pre-express-2018:
           description_short: 'Bunchúrsa ríomheolaíochta dírithe ar réamhléitheoirí:
             scoth an ábhair ónár gcúrsaí do ghasúir sa chiondargairdín agus sa chéad
@@ -1708,6 +1809,7 @@ ga:
             Alien Dance Party - Input:
               name: Cóisir Dhamhsa Eachtardhomhanda - Ionchur
         spritelab-simple:
+          description_audience: Daltaí i gCúrsa E/F
           stages:
             Fish Tank - Creating Sprites:
               name: Umar Iasc - Sprideanna a Chruthú
@@ -1753,6 +1855,8 @@ ga:
             Dance Party:
               name: Cóisir Dhamhsa
         dance-extras:
+          description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
+            a leanann Cóisir Dhamhsa Code.org.
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursef-2019:
           description_short: Foghlaim na coincheapa go léir i mBuntús na Ríomheolaíochta
@@ -1774,6 +1878,12 @@ ga:
               name: An tEalaíontóir
             Events with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            Editing Behaviors:
+              name: Iompair i Saotharlann na Sprideanna
+            Virtual Pet:
+              name: Peata Fíorúil i Saotharlann na Sprideanna
+            Data from Sprite Lab:
+              name: Sonraí ó Shaotharlann na Sprideanna
             Internet:
               name: An tIdirlíon
             Crowdsourcing:
@@ -1819,6 +1929,8 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+            About Me:
+              name: Maidir Liomsa i Saotharlann na Sprideanna
             Swimming Fish with Sprite Lab:
               name: Éisc ar snámh i Saotharlann na Sprideanna
             Songwriting:
@@ -1833,6 +1945,8 @@ ga:
               name: Athróga i gClúdach Litreach
             For Loop Fun:
               name: Spraoi le Lúba
+            Learning Sprites with Sprite Lab:
+              name: Ag foghlaim Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda
             Binary Bracelets:
@@ -1845,6 +1959,10 @@ ga:
               name: An tIdirlíon
             Crowdsourcing:
               name: Sluafhoinsiú
+            Editing Behaviors:
+              name: Iompair i Saotharlann na Sprideanna
+            Virtual Pet with Sprite Lab:
+              name: Peata Fíorúil i Saotharlann na Sprideanna
             Dance Party:
               name: Cóisir Dhamhsa
         andrea-test:
@@ -1853,6 +1971,8 @@ ga:
               name: nialas
         dance-extras-gallery:
           title: Lean ort ag damhsa
+          description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
+            a leanann Cóisir Dhamhsa Code.org.
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
         coursec-2019:
           description_short: Foghlaim buntús na ríomheolaíochta agus cruthaigh ealaín,
@@ -1908,6 +2028,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -1976,10 +2098,26 @@ ga:
               name: Sluafhoinsiú
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
+            Conditionals in Sprite Lab:
+              name: Ráitis Choinníollacha i Saotharlann na Sprideanna
             Building a Foundation:
               name: Dúshraith a Leagan
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+            Events in Sprite Lab:
+              name: Teagmhais i Saotharlann na Sprideanna
+            Functions in Sprite Lab:
+              name: Feidhmeanna i Saotharlann na Sprideanna
+        csp3-pilot-staging:
+          stages:
+            Introduction to Design Mode:
+              name: Buneolas ar an Mód Deartha
+        csp7-pilot-staging:
+          stages:
+            Libraries:
+              name: Leabharlanna
         express-2018-vn:
           stages:
             Graph Paper Programming:
@@ -1992,6 +2130,8 @@ ga:
           stages:
             Variables:
               name: Athróga
+            Sprites:
+              name: Sprideanna
             Conditionals:
               name: Coinníollacha
             Velocity:
@@ -2000,6 +2140,10 @@ ga:
               name: Feidhmeanna
             Sprite Properties:
               name: Airíonna na Spride
+        csp3-pilot:
+          stages:
+            Introduction to Design Mode:
+              name: Buneolas ar an Mód Deartha
         csl-vn:
           stages:
             Loops in Ice Age:
@@ -2021,6 +2165,8 @@ ga:
           stages:
             Computer Science Fundamentals:
               name: Buntús na Ríomheolaíochta
+            Sequencing:
+              name: Seicheamhú
             Loops:
               name: Lúba
             Conditionals:
@@ -2029,16 +2175,24 @@ ga:
               name: Teagmhais
             Functions:
               name: Feidhmeanna
+            'Diving Deeper: Courses E and F':
+              name: 'Níos Doimhne: Cúrsaí E agus F'
+            Sprite Lab:
+              name: Saotharlann na Sprideanna
             Variables:
               name: Athróga
             For Loops:
               name: Lúba "Do Gach"
         dance-extras-2019:
           description: Thar an uair chódála le tionscadail níos uaillmhianaí.
+          description_short: Téigh thar an Uair Chódála leis an ngníomhaíocht seo
+            a leanann Cóisir Dhamhsa Code.org.
         time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Coinníollacha
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
         time4cs-control-unit-2:
@@ -2047,15 +2201,43 @@ ga:
               name: Sluafhoinsiú
             Conditionals with Cards:
               name: Coinníollacha le Cártaí
+        time4cs-experiment-unit-2:
+          stages:
+            Evaluating a Project in Sprite Lab:
+              name: Tionscadal a Mheasúnú i Saotharlann na Sprideanna
+            Conditionals in Sprite Lab:
+              name: Ráitis Choinníollacha i Saotharlann na Sprideanna
+            Functions in Sprite Lab:
+              name: Feidhmeanna i Saotharlann na Sprideanna
         time4cs-control-unit-1:
           stages:
             Conditionals:
               name: Coinníollacha
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Coinníollacha
+            Learning Sprites with Sprite Lab:
+              name: Sprideanna a fhoghlaim i Saotharlann na Sprideanna
             Alien Dance Party with Sprite Lab:
               name: Cóisir Dhamhsa Eachtardhomhanda le Saotharlann na Sprideanna
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Feidhmeanna a ghlacann le Paraiméadair
+        csd3-2020:
+          stages:
+            Variables:
+              name: Athróga
+            Sprite Properties:
+              name: Airíonna na Spride
+            Conditionals:
+              name: Coinníollacha
+            Velocity:
+              name: Treoluas
+            Functions:
+              name: Feidhmeanna

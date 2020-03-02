@@ -666,6 +666,7 @@ is:
     download: Hala niður myndband
     show_notes: Sýna athugasemdir
     show_video: Sýna myndband
+    label: Myndband
   compatibility:
     upgrade:
       unsupported_message: Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a

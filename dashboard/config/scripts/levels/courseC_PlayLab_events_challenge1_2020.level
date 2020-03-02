@@ -1,0 +1,296 @@
+<Studio>
+  <config><![CDATA[{
+  "game_id": 33,
+  "created_at": "2020-02-25T15:49:44.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "skin": "studio",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n  // return ((Studio.playerScore > 4) && (Studio.sprite[0].displayX < 100));\r\n  return ((Studio.playerScore > 4) || (Studio.tickCount > 450)); \r\n}",
+    "failure_condition": "function () {\r\n}",
+    "timeout_after_when_run": "false",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":16,\"size\":0.75,\"sprite\":2},{\"tileType\":0},{\"tileType\":0,\"sprite\":0},{\"tileType\":0,\"sprite\":2},{\"tileType\":16,\"size\":0.75,\"sprite\":3},{\"tileType\":0,\"sprite\":1},{\"tileType\":16,\"size\":0.75,\"sprite\":4},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "short_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. \r\nPlay the game and move Waddles with the arrows until you score enough points.",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "free_play": "false",
+    "disable_sharing": "false",
+    "edge_collisions": "false",
+    "projectile_collisions": "false",
+    "allow_sprites_outside_playspace": "false",
+    "sprites_hidden_to_start": "false",
+    "coordinate_grid_background": "false",
+    "wall_map_collisions": "false",
+    "block_moving_into_walls": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "first_sprite_index": "0",
+    "project_template_level_name": "grade2_playlab_project_template_2020",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use this block to move actors to different places on the game space.\\n\\n<xml> <block type=\\\"studio_setSpritePosition\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">12</title>\\n  </block></xml>\\n\",\"hint_id\":\"courseC_PlayLab_events_challenge_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e04de3d99bd4414762944ae365b63c98/courseC_PlayLab_events_challenge1_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using `set actor 1 to the middle left position` when it touches either of the other actors. This will reset the game so the player can keep trying!\",\"hint_id\":\"courseC_PlayLab_events_challenge_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f406cffbbf52c91d941af46cb56967b/courseC_PlayLab_events_challenge1_2018.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You might also want to try changing the speed of the different actors to make the game easier or more challenging!\\n\\n<xml>  <block type=\\\"studio_setSpriteSpeed\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Studio.SpriteSpeed.FAST</title>\\n  </block></xml>\",\"hint_id\":\"courseC_PlayLab_events_challenge_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b1032e6d0b69ef884ce1184c0a2261a8/courseC_PlayLab_events_challenge1_2018.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_PlayLab_events_challenge1_1\",\r\n  \"callout_text\": \"This block lets you move actors to different parts of the game space.\",\r\n  \"element_id\": \"#new\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "Use a new block to make Waddles automatically move back to the start when he runs into the Dinosaur and when he scores a point. This will make your game more challenging and fun!\r\n\r\nPlay the game and move Waddles with the arrows until you score 5 or more points. Waddles must be moved to the `middle left` position of the screen to complete this challenge.",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/0b5d06628b7510904ee392a94065352a=development/2069.png",
+    "disable_procedure_autopopulate": "false",
+    "parent_level_id": 15554,
+    "name_suffix": "_2020",
+    "top_level_procedure_autopopulate": "false",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "timeout_failure_tick": "500",
+    "remove_items_when_actor_collides": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 15:02:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-28 15:04:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-29 20:29:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-07 19:13:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-07 19:42:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2018-07-27 23:00:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"timeout_after_when_run\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-27 23:01:13 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-27 23:02:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-27 23:04:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2018-07-27 23:06:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run"/>
+        <block type="studio_whenUp">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenDown">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenLeft">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenRight">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_moveDistance">
+              <title name="SPRITE">1</title>
+              <title name="DIR">1</title>
+              <title name="DISTANCE">400</title>
+              <next>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">1</title>
+                  <title name="DIR">4</title>
+                  <title name="DISTANCE">400</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          <next>
+            <block type="studio_playSound">
+              <title name="SOUND">random</title>
+              <next>
+                <block type="studio_saySpriteChoices">
+                  <title name="SPRITE">0</title>
+                  <title name="VALUE">Ouch!</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">2</title>
+          <next>
+            <block type="studio_changeScore">
+              <title name="VALUE">1</title>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="when_run" limit="1"/>
+        <block type="studio_setSpritePosition" id="new">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+        </block>
+        <block type="studio_setBackground">
+          <title name="VALUE">"cave"</title>
+        </block>
+        <block type="studio_move">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+        </block>
+        <block type="studio_moveDistance">
+          <title name="SPRITE">1</title>
+          <title name="DIR">1</title>
+          <title name="DISTANCE">400</title>
+        </block>
+        <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Ouch!</title>
+        </block>
+        <block type="studio_playSound">
+          <title name="SOUND">random</title>
+        </block>
+        <block type="studio_changeScore">
+          <title name="VALUE">1</title>
+        </block>
+        <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+        </block>
+        <block type="studio_repeatForever"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="studio_setSpritePosition">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">12</title>
+        </block>
+      </xml>
+    </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">random</title>
+              <next>
+                <block type="studio_setSpriteSpeed">
+                  <title name="SPRITE">0</title>
+                  <title name="VALUE">Studio.SpriteSpeed.VERY_FAST</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenUp">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenDown">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">4</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenLeft">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">8</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenRight">
+          <next>
+            <block type="studio_move">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+            </block>
+          </next>
+        </block>
+        <block type="studio_repeatForever">
+          <statement name="DO">
+            <block type="studio_moveDistance">
+              <title name="SPRITE">1</title>
+              <title name="DIR">1</title>
+              <title name="DISTANCE">400</title>
+              <next>
+                <block type="studio_moveDistance">
+                  <title name="SPRITE">1</title>
+                  <title name="DIR">4</title>
+                  <title name="DISTANCE">400</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          <next>
+            <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+              <next>
+                <block type="studio_playSound">
+                  <title name="SOUND">random</title>
+                  <next>
+                    <block type="studio_saySpriteChoices">
+                      <title name="SPRITE">0</title>
+                      <title name="VALUE">Ouch!</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">2</title>
+          <next>
+            <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+              <next>
+                <block type="studio_changeScore">
+                  <title name="VALUE">1</title>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Studio>

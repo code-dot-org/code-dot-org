@@ -97,11 +97,11 @@ zh-CN:
     sign_out_of_markdown: "#### 当前使用了 %{provider} 登录，[单击这里](%{url}) 来注销 %{provider}。"
     already_signedup: 已经注册了吗？
     notyet_signedup: 还未注册吗？
-    google_oauth2: 谷歌
+    google_oauth2: 谷歌账号
     twitter: Twitter
     facebook: Facebook
-    windowslive: 微软
-    microsoft_v2_auth: 微软
+    windowslive: 微软账号
+    microsoft_v2_auth: 微软账号
     clever: Clever
     powerschool: Powerschool
     forgot_password: 忘记了您的密码吗？
@@ -263,7 +263,7 @@ zh-CN:
       no_teacher: 找不到用户名 %{teacher_email_or_code}。请让该用户先注册，再次尝试添加。
       section_not_found: 找不到代码 '%{section_code}' 节.
       blank_code: 请输入一节代码
-      cant_join_own_section: 对不起，你不能加入你自己的部分.
+      cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
     mail:
       student_disassociated:
@@ -506,13 +506,13 @@ zh-CN:
     print_certificate: 打印证书
   certificate_sponsor_message: "%{sponsor_name} 慷慨的赞助了你的学习。"
   move_students:
-    new_section_dne: 抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。
-    section_code_cant_be_current_section: 当前章节不能与新建单元相同。
+    new_section_dne: 抱歉，小组 %{new_section_code} 不存在。请输入不同的小组代码。
+    section_code_cant_be_current_section: 当前小组不能与新建小组相同。
     current_section_dne: 抱歉，小组%{current_section_code} 不存在。请输入一个不同的小组代码。
     student_ids_not_entered: 请提供 student_ids。
     student_not_found: 无法找到这一个或多个学生。
-    all_students_must_be_in_current_section: 所有的学生都必须注册到您的章节中。
-    already_enrolled_in_new_section: 您无法移动这些学生，因为他们已经在这个新的小组里了。
+    all_students_must_be_in_current_section: 所有的学生都必须注册到小组中。
+    already_enrolled_in_new_section: 无法移动这些学生，因为他们已经在这个新的小组里了。
     third_party_login: 不能将从第三方工具同步的学生移动到另一个小组。
   share:
     title: 在代码工作室学习
@@ -578,6 +578,7 @@ zh-CN:
     download: 下载视频
     show_notes: 显示备注
     show_video: 显示视频
+    label: 视频
   compatibility:
     upgrade:
       unsupported_message: 您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',

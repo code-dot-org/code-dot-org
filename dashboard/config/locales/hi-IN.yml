@@ -651,6 +651,7 @@ hi:
     download: वीडियो डाउनलोड करें
     show_notes: नोट्स दिखाएं
     show_video: वीडियो दिखाएं
+    label: वीडीयो
   compatibility:
     upgrade:
       unsupported_message: आपका ब्राउजर समर्थित नहीं है। कृपया अपने ब्राउजर को <a

@@ -411,3 +411,13 @@ uz:
           stages:
             Conditionals:
               name: Shart buyruqlari
+        csd3-2020:
+          stages:
+            Variables:
+              name: O‘zgaruvchilar
+            Sprite Properties:
+              name: Sprait hususiyatlari
+            Conditionals:
+              name: Shart buyruqlari
+            Functions:
+              name: Funksiyalar

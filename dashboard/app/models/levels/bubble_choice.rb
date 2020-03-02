@@ -75,6 +75,7 @@ class BubbleChoice < DSLDefined
       description: description,
       name: name,
       type: type,
+      teacher_markdown: teacher_markdown,
       sublevels: summarize_sublevels(script_level: script_level, user_id: user_id)
     }
 
@@ -148,5 +149,13 @@ class BubbleChoice < DSLDefined
   # @return [Array<BubbleChoice>] The BubbleChoice parent level(s) of the given sublevel.
   def self.parent_levels(level_name)
     where("properties -> '$.sublevels' LIKE ?", "%\"#{level_name}\"%")
+  end
+
+  def supports_markdown?
+    true
+  end
+
+  def icon
+    'fa fa-sitemap'
   end
 end

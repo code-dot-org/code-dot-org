@@ -4,7 +4,7 @@
   "danceFeedbackNoBackground": "Caithfidh tú éifeacht chúlra a chur leis.",
   "danceFeedbackTooManyDancers": "Fainic anois! Má chuireann tú bloc `déan ceann nua` laistigh den bhloc `gach dara tomhas`, cruthóidh tú go leor leor damhsóirí.",
   "danceFeedbackUseSetSize": "Úsáid an bloc `socraigh méid damhsóir_tionlacain2` chun an damhsóir sin a chrapadh.",
-  "danceFeedbackUseSetTint": "Úsáid an bloc `socraigh an imir` chun imir an damhsóra a athrú.",
+  "danceFeedbackUseSetTint": "Úsáid an bloc `socraigh imir` chun imir an damhsóra a athrú.",
   "danceFeedbackUseStartMapping": "Bain triail as an mbloc <xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">aonbheannach_ar_dheis</title><title name=\"PROPERTY\">\"scála\"</title><title name=\"RANGE\">\"dord\"</title></block></xml>.",
   "danceFeedbackStartNewMove": "Ní dhearna do dhamhsóir gluaiseacht nua tar éis an cheathrú tomhas.",
   "danceFeedbackNeedDifferentDance": "Caithfidh tú damhsa difriúil a úsáid.",

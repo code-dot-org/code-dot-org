@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import i18n from '@cdo/locale';
+import {connect} from 'react-redux';
 import BaseDialog from '../../BaseDialog';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import Button from '../../Button';
@@ -15,10 +16,12 @@ const styles = {
   }
 };
 
-export class LessonStatusDialog extends Component {
+class LessonStatusDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    // redux
+    selectedLessons: PropTypes.array.isRequired
   };
 
   render() {
@@ -46,4 +49,6 @@ export class LessonStatusDialog extends Component {
   }
 }
 
-export const UnconnectedLessonStatusDialog = LessonStatusDialog;
+export default connect(state => ({
+  selectedLessons: state.sectionStandardsProgress.selectedLessons
+}))(LessonStatusDialog);

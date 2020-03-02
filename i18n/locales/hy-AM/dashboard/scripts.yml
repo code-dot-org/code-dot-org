@@ -1625,3 +1625,16 @@ hy:
           stages:
             Conditionals:
               name: conditionals
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Գործառույթները պարամետրերով
+        csd3-2020:
+          description_short: "Programming"
+          stages:
+            Variables:
+              name: փոփոխականների
+            Conditionals:
+              name: conditionals
+            Functions:
+              name: գործառույթները
