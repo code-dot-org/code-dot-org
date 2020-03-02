@@ -1,12 +1,15 @@
 {
   "https://studio.code.org/s/csd5-2018/stage/1/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Representation Matters][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n-   [Meals Data][4] - Resource ([PDF][5] \\| [DOCX][6])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/2/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Representing Information][1] - Exemplar 1 ([PDF][2])\n-   [Representing Information][3] - Exemplar 2 ([PDF][4])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/3/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [ASCII][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/4/puzzle/1": {
     "display_name": "Lesson Overview"
@@ -37,31 +40,39 @@
     "long_instructions": "# Do This\n\nNow it's your turn. Draw anything you want in the pixelation widget. Feel free to change the width and height of your image if you wish."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Representing Numbers - Exemplar ([Google Doc][1] \\| [PDF][2])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/2": {
-    "long_instructions": "# 5-Bit Number\n\nWhen you only had four bits, the highest number that you could make was fifteen.  Now you'll have a chance to work with more bits to make higher numbers.\n\nIn this activity, the dots are replaced with numbers, but you still add up everything that's showing to see what number the binary code stands for.  The left-most bit doesn't have a number yet, so you'll have to give it one.\n\n# Do This\n\n-   Click on the bits to turn them on and off, and see the different numbers you can make.\n-   With your partner, discuss the pattern in the numbers.  Decide what number you think should go in the left most box.\n-   Click \"Edit\" to change the value of the left most bit.\n-   Once you've decided on the value, try to make the following numbers: 16, 27, 31"
+    "long_instructions": "# 5-Bit Number\n\nWhen you only had four bits, the highest number that you could make was fifteen.  Now you'll have a chance to work with more bits to make higher numbers.\n\nIn this activity, the dots are replaced with numbers, but you still add up everything that's showing to see what number the binary code stands for.  The left-most bit doesn't have a number yet, so you'll have to give it one.\n\n# Do This\n\n-   Click on the bits to turn them on and off, and see the different numbers you can make.\n-   With your partner, discuss the pattern in the numbers.  Decide what number you think should go in the left most box.\n-   Click \"Edit\" to change the value of the left most bit.\n-   Once you've decided on the value, try to make the following numbers: 16, 27, 31",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/3": {
-    "long_instructions": "# 6-Bit Number\n\nThis widget helps you to calculate 6-bit binary numbers.\n\n# Do This\n\n-   With your partner, answer the following questions:\n    1.  What's the biggest number you can make with this widget?\n    2.  The record for most skips by a dog and person in one minute is 59.  How would you encode 59 in binary?"
+    "long_instructions": "# 6-Bit Number\n\nThis widget helps you to calculate 6-bit binary numbers.\n\n# Do This\n\n-   With your partner, answer the following questions:\n    1.  What's the biggest number you can make with this widget?\n    2.  The record for most skips by a dog and person in one minute is 59.  How would you encode 59 in binary?",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/4": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\n\n[][0]\n\n1.  Most number of people lifted and thrown in two minutes. (4 bits)\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\n\n# Do This\n\n-   Decode the two numbers from the binary string."
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers of 4, 5, or 6 bits.  You can use it to find the two world records encoded in the binary string below.\n\n[][0]\n\n1.  Most number of people lifted and thrown in two minutes. (4 bits)\n2.  Most canned drinks opened by a parrot in one minute. (6 bits)\n\n# Do This\n\n-   Decode the two numbers from the binary string.",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/5": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\n\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\n\n[][0]\n\n1.  Longest tail on a dog (in inches) (5 bits)\n2.  Most spoons balanced on someone's face (5 bits)\n\n# Do This\n\n-   Decode the two numbers from a the binary string.\n    -   _Hint: You'll need to read the numbers in order, with the first answer using the first five bits, and the second answer using the five bits after that._"
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a widget that can calculate numbers up to to eight bits. You can use it to find the values of the two world records below.\n\nDon't forget to make sure that the \"1\" bit is always the right most bit.  If you have extra bits on the left side of the widget, just keep them turned off.\n\n[][0]\n\n1.  Longest tail on a dog (in inches) (5 bits)\n2.  Most spoons balanced on someone's face (5 bits)\n\n# Do This\n\n-   Decode the two numbers from a the binary string.\n    -   _Hint: You'll need to read the numbers in order, with the first answer using the first five bits, and the second answer using the five bits after that._",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/6": {
-    "long_instructions": "# Decoding multiple numbers\n\nHere's a new bit string.  This time, you don't know the bit length of the two numbers.  Try to decode the numbers without knowing the bit length.\n\n[][0]\n\n1.  Largest wind chime, in feet (? bits)\n2.  Furthest arrow shot with someone's feet (in feet) (? bits)\n\n# Do This\n\n-   Try to decode the two numbers from the binary string.\n-   Discuss with your partner why you cannot know for sure whether your answer is correct."
+    "long_instructions": "# Decoding multiple numbers\n\nHere's a new bit string.  This time, you don't know the bit length of the two numbers.  Try to decode the numbers without knowing the bit length.\n\n[][0]\n\n1.  Largest wind chime, in feet (? bits)\n2.  Furthest arrow shot with someone's feet (in feet) (? bits)\n\n# Do This\n\n-   Try to decode the two numbers from the binary string.\n-   Discuss with your partner why you cannot know for sure whether your answer is correct.",
+    "teacher_markdown": "Without knowing the length of each of the numbers, students will not be certain of their answers, but they should be able to at least find one possible solution.  Allow students to discuss any differences in their answers.  They should eventually see that they need to know the bit length of each number to answer the question."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/7": {
-    "long_instructions": "# Bit Length\n\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\n\nFor example, the following binary string could be decoded many different ways.\n\n[][0]\n\nIf you split the string like this, the string reads 10, 84.\n\n[][1] [][2]\n\nIf you split it like this, the string reads 42, 20.\n\n[][3] [][4]\n\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same two numbers, but each number takes up exactly eight bits, no matter how many bits it actually needs.\n\n[][5]\n\n# Do This\n\n-   Use the binary widget to decode the string that uses eight bit numbers.\n-   Check you answer with a partner to see whether you got the same answer."
+    "long_instructions": "# Bit Length\n\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\n\nFor example, the following binary string could be decoded many different ways.\n\n[][0]\n\nIf you split the string like this, the string reads 10, 84.\n\n[][1] [][2]\n\nIf you split it like this, the string reads 42, 20.\n\n[][3] [][4]\n\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same two numbers, but each number takes up exactly eight bits, no matter how many bits it actually needs.\n\n[][5]\n\n# Do This\n\n-   Use the binary widget to decode the string that uses eight bit numbers.\n-   Check you answer with a partner to see whether you got the same answer.",
+    "teacher_markdown": "Answers for this level can be found in the exemplar linked on [Level 1][0]."
   },
   "https://studio.code.org/s/csd5-2018/stage/5/puzzle/8": {
     "display_name": "Binary and Data"
   },
   "https://studio.code.org/s/csd5-2018/stage/6/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Keeping Data Secret - Exemplar ([PDF][1])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/6/puzzle/2": {
     "dsls": {
@@ -76,7 +87,8 @@
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/7/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Pet Records][1] - Exemplar ([PDF][2])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/7/puzzle/2": {
     "dsls": {
@@ -91,7 +103,8 @@
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/8/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Create a Representation - Project Guide ([Google Doc][1] \\| [PDF][2])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/8/puzzle/2": {
     "dsls": {
@@ -99,24 +112,29 @@
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/9/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Problem Solving with Data - Exemplar ([PDF][1])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/10/puzzle/1": {
     "display_name": "Lesson Overview"
   },
   "https://studio.code.org/s/csd5-2018/stage/10/puzzle/2": {
-    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from."
+    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Web Pix\" questions on their activity guide before showing this video.  After the video, they should answer the third question.\n\n_You can hide the \"For Teachers Only\" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the \"View as Student\" option._"
   },
   "https://studio.code.org/s/csd5-2018/stage/10/puzzle/3": {
     "display_name": "Collecting Information About Users",
-    "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from."
+    "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Routz\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
   "https://studio.code.org/s/csd5-2018/stage/10/puzzle/4": {
     "display_name": "Collecting Information About Users",
-    "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from."
+    "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question."
   },
   "https://studio.code.org/s/csd5-2018/stage/11/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Structuring Data - Exemplar ([PDF][1])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/11/puzzle/2": {
     "dsls": {
@@ -131,10 +149,12 @@
     "long_instructions": "# Pizza Party\n\nWhen people work with data, they know to leave off answers that don't make sense, and that some answers, such as \"peppers\", \"pepppers\" and \"green peppers\", actually meant the same thing. Computers don't know how to do this, so we have to clean the data before the computer is able to use it.\n\nThis version of the app has a second column for data to be cleaned.\n\n## Do this\n\n-   Click \"Run\" to see the new list of answers to be cleaned.\n-   Click on each answer that needs to be cleaned and correct it so that the computer will chart it properly. (You may want to delete some answers entirely.)\n-   When you are finished, click \"Show Chart\" to see the new chart of cleaned answers."
   },
   "https://studio.code.org/s/csd5-2018/stage/12/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   [Making Decisions with Data][1] - Exemplar ([PDF][2] \\| [DOCX][3])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/13/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Interpreting Data - Exemplar ([PDF][1])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/13/puzzle/2": {
     "dsls": {
@@ -143,14 +163,17 @@
     }
   },
   "https://studio.code.org/s/csd5-2018/stage/14/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Automating Data Decisions - Exemplar ([PDF][1])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/15/puzzle/1": {
-    "display_name": "Lesson Overview"
+    "display_name": "Lesson Overview",
+    "teacher_markdown": "[][0]\n\n-   Make a Recommendation - Project Guide Exemplar ([PDF][1])\n-   Make a Recommendation - Peer Review Exemplar ([PDF][2])\n\n[/][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/15/puzzle/2": {
     "display_name": "Sample App",
-    "long_instructions": "# Sample App\n\nHere is an example of an app that uses data to help the user solve a problem.  With a partner, play through the app a few times to see how it works.\n\nDiscuss the following questions with your partner:\n\n-   What choice does the app help the user to make? \n-   What data does it use to make that recommendation?\n-   How do you think the creators of the app decided on the algorithm that they use to make the choice?"
+    "long_instructions": "# Sample App\n\nHere is an example of an app that uses data to help the user solve a problem.  With a partner, play through the app a few times to see how it works.\n\nDiscuss the following questions with your partner:\n\n-   What choice does the app help the user to make? \n-   What data does it use to make that recommendation?\n-   How do you think the creators of the app decided on the algorithm that they use to make the choice?",
+    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\n\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view][0]"
   },
   "https://studio.code.org/s/csd5-2018/stage/15/puzzle/3": {
     "dsls": {
