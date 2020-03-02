@@ -125,7 +125,6 @@ namespace :seed do
   end
 
   SCRIPTS_DEPENDENCIES = [
-    #:environment,
     :games,
     :custom_levels,
     :dsls,
@@ -149,11 +148,11 @@ namespace :seed do
     update_scripts(incremental: false)
   end
 
-  task scripts_incremental: SCRIPTS_DEPENDENCIES do
+  task scripts_incremental: SCRIPTS_DEPENDENCIES + [:environment] do
     update_scripts(incremental: true)
   end
 
-  task scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+  task scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:environment] do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
