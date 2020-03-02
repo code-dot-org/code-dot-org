@@ -6,10 +6,6 @@ require File.expand_path('../config/application', __FILE__)
 Dashboard::Application.load_tasks
 
 namespace :dashboard do
-  task setup_db: ['db:setup_or_migrate'] do
-    # Seeding takes a long time, and adhocs don't need full seeding for most use cases.
-    # Developers can ssh to the adhoc and run seeding commands there if they need additional seeded data.
-    seed_task = rack_env?(:adhoc) ? 'seed:ui_test' : 'seed:all'
-    Rake::Task[seed_task].invoke('trace')
+  task setup_db: ['db:setup_or_migrate', 'seed:all'] do
   end
 end
