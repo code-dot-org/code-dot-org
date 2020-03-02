@@ -5,6 +5,7 @@
     <description>rotate a sprite to its right</description>
   </mutation>
   <title name="NAME">spinning right</title>
+  <key name="NAME">spinning right</key>
   <statement name="STACK">
     <block type="gamelab_turn">
       <title name="DIRECTION">"right"</title>

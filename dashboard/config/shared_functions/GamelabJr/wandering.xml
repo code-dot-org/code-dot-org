@@ -5,6 +5,7 @@
     <description>move a sprite, changing its direction randomly</description>
   </mutation>
   <title name="NAME">wandering</title>
+  <key name="NAME">wandering</key>
   <statement name="STACK">
     <block type="controls_if">
       <value name="IF0">

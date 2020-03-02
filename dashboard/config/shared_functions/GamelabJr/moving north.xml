@@ -5,6 +5,7 @@
     <description>move a sprite upwards across the screen</description>
   </mutation>
   <title name="NAME">moving north</title>
+  <key name="NAME">moving north</key>
   <statement name="STACK">
     <block type="gamelab_moveInDirection">
       <title name="DIRECTION">"North"</title>

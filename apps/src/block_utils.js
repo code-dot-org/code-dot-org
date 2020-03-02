@@ -446,6 +446,14 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     let startBlocksDocument = startBlocksDom.ownerDocument.evaluate
       ? startBlocksDom.ownerDocument
       : document;
+    console.log(startBlocksDocument);
+    const key = ownerDocument.evaluate(
+      'key[@name="NAME"]/text()',
+      func,
+      null,
+      XPathResult.STRING_TYPE,
+      null
+    ).stringValue;
     const name = ownerDocument.evaluate(
       'title[@name="NAME"]/text()',
       func,
@@ -453,6 +461,7 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
       XPathResult.STRING_TYPE,
       null
     ).stringValue;
+    console.log(name);
     const type = ownerDocument.evaluate(
       '@type',
       func,
@@ -462,16 +471,18 @@ exports.appendNewFunctions = function(blocksXml, functionsXml) {
     ).stringValue;
     const alreadyPresent =
       startBlocksDocument.evaluate(
-        `//block[@type="${type}"]/title[@name="NAME"][text()="${name}"]`,
+        `//block[@type="${type}"]/key[@name="NAME"][text()="${key}"]`,
         startBlocksDom,
         null,
         XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE,
         null
       ).snapshotLength > 0;
+    console.log(key + ' is alreadyPresent: ' + alreadyPresent);
     if (!alreadyPresent) {
       startBlocksDom.ownerDocument.firstChild.appendChild(func);
     }
   }
+  console.log(startBlocksDom);
   return xml.serialize(startBlocksDom);
 };
 

@@ -5,6 +5,7 @@
     <description>change the size of a sprite</description>
   </mutation>
   <title name="NAME">shrinking</title>
+  <key name="NAME">shrinking</key>
   <statement name="STACK">
     <block type="gamelab_changePropBy">
       <title name="PROPERTY">"scale"</title>

@@ -56,6 +56,7 @@ class SharedBlocklyFunction < ApplicationRecord
         end
         localized_name = I18n.t("data.shared_blockly_function.#{name}.name", default: name, smart: true)
         xml.title(localized_name, name: 'NAME')
+        xml.key(name, name: 'NAME')
         xml.statement(name: 'STACK') do
           xml << stack.gsub(/\n */, '')
         end

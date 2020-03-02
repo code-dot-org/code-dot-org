@@ -5,6 +5,7 @@
     <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
   </mutation>
   <title name="NAME">swimming left and right</title>
+  <key name="NAME">swimming left and right</key>
   <statement name="STACK">
     <block type="controls_if">
       <mutation elseif="1"/>
