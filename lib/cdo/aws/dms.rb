@@ -128,8 +128,7 @@ module Cdo
         return task
       end
 
-      # Start the replication task and wait until it completes, raising an error if the task did not complete within a
-      # configurable time period or did not complete successfully.
+      # Start the replication task and wait until it completes successfully.
       # @param max_attempts [Integer] Number of times to check whether task has completed successfully before failing.
       # @param delay [Integer] Number of seconds to wait between checking task status.
       def start(max_attempts, delay)
@@ -142,31 +141,43 @@ module Cdo
             start_replication_task_type: task.status == 'ready' ? 'start-replication' : 'reload-target'
           }
         )
+        # Wait 10 minutes, checking once a minute for task to start running.
+        @dms_client.wait_until(
+          :replication_task_running,
+          {
+            filters: [
+              {
+                name: 'replication-task-arn',
+                values: [@arn]
+              }
+            ],
+            without_settings: true
+          },
+          {max_attempts: 60, delay: 10}
+        )
+        # Once it's running, wait for it to complete.
+        @dms_client.wait_until(
+          :replication_task_stopped,
+          {
+            filters: [
+              {
+                name: 'replication-task-arn',
+                values: [@arn]
+              }
+            ],
+            without_settings: true
+          },
+          {max_attempts: max_attempts, delay: delay}
+        )
 
-        wait_until_completed(max_attempts, delay)
+        unless completed_successfully?
+          raise StandardError.new("Replication Task #{@arn} did not complete successfully.  Task Status - #{status}")
+        end
 
         CDO.log.info "DMS Task Completed Successfully: #{@arn}"
       rescue StandardError => error
         CDO.log.info "Error executing DMS Replication Task #{@arn} - #{error.message}"
         raise error
-      end
-
-      def wait_until_completed(max_attempts, delay)
-        attempts = 1
-        task = status
-        while attempts <= max_attempts && task.status != 'stopped'
-          CDO.log.info "Replication Task ARN: #{task.arn} / Status: #{task.status} / Attempt: #{attempts} of #{max_attempts}"
-
-          attempts += 1
-          task = status
-          sleep delay
-        end
-
-        return task if replication_task_completed_successfully?(task.arn)
-
-        raise StandardError.new("Timeout after waiting #{attempts * delay} seconds or Replication Task" \
-          " #{@arn} did not complete successfully.  Task Status - #{task}"
-        )
       end
 
       # Determine whether a Full Load Replication Task has completed successfully.
