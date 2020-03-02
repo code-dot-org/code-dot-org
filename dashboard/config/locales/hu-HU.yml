@@ -562,6 +562,7 @@ hu:
     notes_coming_soon: Ehhez a videóhoz hamarosan lesznek jegyzetek.
     autoplay_option: Videók automatikus lejátszása
     download: Videó letöltése
+    label: Videó
   compatibility:
     upgrade:
       link: Tudj meg többet

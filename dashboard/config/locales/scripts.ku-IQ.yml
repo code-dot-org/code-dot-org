@@ -407,3 +407,11 @@ ku:
           stages:
             Conditionals:
               name: مەرجیەکان
+        csd3-2020:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان

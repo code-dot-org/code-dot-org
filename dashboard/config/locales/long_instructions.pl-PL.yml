@@ -336,6 +336,22 @@ pl-PL:
         style=\"width:500px\">\n:::\n\n::: details [**Czym jest tag HTML?**]\n\nTag
         HTML to specjalny zestaw znaków które mówią maszynie gdzie znajduje się początek
         lub koniec elementu HTML oraz jaki jest to typ elementu.\n\n:::"
+      CSD U2 Inspector Warm Up: "<div style=\"float: right; height: 250px; width:
+        40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\n<details>\n\n<summary><strong>How
+        do I use the Inspector Tool?</strong>\n\n</summary>\n\nNarzędzie Inspektor
+        jest świetnym sposobem żeby dowiedzieć się więcej na temat nieznanego kodu
+        w Web Lab.  Żeby włączyć Narzędzie Inspektor, naciśnij <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        PM.png\" style=\"width:100px\">. Będziesz wiedzieć, że Narzędzie Inspektor
+        jest włączone ponieważ przycisk zmieni swój kolor na biały i powie \"Inspektor:On\".
+        Kiedy włączysz Narzędzie Inspektor, będziesz mógł najechać kursorem na cokolwiek
+        w obszarze podglądu a Web Lab podświetli fragment kodu, który sprawia, że
+        część strony się pojawia. \n\n</details>\n</div>\n\n# Eksploruj HTML\n\nTo
+        jest strona internetowa napisana w języku HTML, w języku stron internetowych.
+        Nauczysz się więcej jak to działa, ale najpierw zbadaj ten język za pomocą
+        Narzędzia Inspektora. \n\n# Zrób To\n\n-   Kliknij na Wskazówkę  \"How do
+        I use the Inspector Tool?\" po prawej stronie żeby nauczyć się jak używać
+        tego narzędzia. \n-   Wykonuj polecenia na stronie internetowej aby odkryć
+        ją i porozmawiaj z partnerem jak ona działa."
       CSD U2 Inspector Warm Up_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -362,6 +378,13 @@ pl-PL:
 
         -   Jak myślisz, dlaczego profesjonalni programiści używają programowania w parach.?
         -   W jaki sposób programowanie w parach może pomóc w jeszcze lepszym programowaniu?
+      CSD U2 challenge: "# Wyzwanie\n\nSkontaktuj się z nauczycielem zanim przystąpisz
+        do tego wyzwania.\n\nTa strona jest tylko częściowo ukończona, i ma pewne
+        błędy. Na szczęście są pewne komendy, które powinny ci pomóc z dokończeniem
+        tej strony, według zamiaru autora. \n\n# Zrób to\n\n-   Spójrz na kod i z
+        osobą z pary omów jak powinna wyglądać ta strona. \n-   Pracujcie razem żeby
+        ukończyć tą stronę, zwracając uwagę na formatowanie. \n-   Porównajcie się
+        z inną parą żeby zobaczyć czy wasze strony są takie same."
       CSD U3 Entertainment Sample 3: "# Animowany Komiks\\\r\n\n\\\r \nŁączenie obrazów,
         tekstu i niektórych subtelnych animacji może naprawdę doprowadzić do ciekawych
         komiksów lub graficznych historii.  Kliknij przycisk \"Uruchom\", aby zobaczyć
@@ -412,6 +435,39 @@ pl-PL:
 
         -   Czym różniły się komputery od maszyn, które pojawiły się przed nimi?
         -   Pomyśl o czymś, co robisz na komputerze. Jakiego rodzaju dane, wyniki, pamięć i przetwarzanie mają miejsce?
+      CSDU2 - Type Anything: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma w której jesteś nazywa się Web Lab. Znajdują się tutaj trzy główne części ekranu Web Lab.
+
+        # Zrób To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> żeby zobaczyć to w podglądzie!
+      CSDU2 - Type Anything_2018: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma w której jesteś nazywa się Web Lab. Znajdują się tutaj trzy główne części ekranu Web Lab.
+
+        # Zrób To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> żeby zobaczyć to w podglądzie!
+      CSDU2 - Type Anything_2019: |-
+        <img src="https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg" style="width:400px; float:right">
+
+        # Witamy w Web Lab!
+
+        Platforma w której jesteś nazywa się Web Lab. Znajdują się tutaj trzy główne części ekranu Web Lab.
+
+        # Zrób To
+
+        -   Spróbuj napisać coś w obszarze roboczym.
+        -   Naciśnij <img src="https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png" style="width:150px"> żeby zobaczyć to w podglądzie!
       Course 4 Artist For Loops 6a: Zrób trzy niewielkie zmiany w kodzie z poprzedniego
         poziomu, aby to otrzymać!
       CourseD_Dance_Party_01: |-
@@ -861,6 +917,31 @@ pl-PL:
         wełnę z obu owiec.
       Overworld Shear Sheep_2019: Czas strzyżenia owiec! Użyj polecenia `shear`, aby
         zebrać wełnę z obu owiec.
+      Standalone_Artist_2: Narysuj ten diament z kontami 120 i 60 stopni i długościami
+        boków 150 pikseli.
+      Standalone_Artist_3: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
+        i obrotami 60 stopni?
+      Standalone_Artist_4: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
+        zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
+        6 razy?
+      Standalone_Artist_5: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
+      Standalone_Artist_5.5: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując
+        pętlę. Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat.
+        Wskazówka: Musisz wykonać obrót o 30 stopni po każdym diamencie, by nie rysować
+        cały czas tego samego diamentu.'
+      Standalone_Artist_6: 'Wykonaj ten sześciokąt w pętli 6 razy, aby utworzyć wzór.
+        O ile stopni będzie trzeba wykonać obrót za każdym razem? Wskazówka: podzielić
+        liczbę stopni w okręgu przez ile razy jest wykonywana pętla.'
+      Standalone_Artist_7: 'Funkcja jest kolejnym narzędziem programowania, które
+        pomaga unikać powtarzania się. Ta funkcja rysuje kwiat, możesz więc użyć jej
+        za każdym razem, gdy chcesz narysować kwiat. Użyj funkcji i nowego bloku skoku,
+        by narysować te kwiaty. Wskazówka: Kwiaty są oddalone od siebie o 150 pikseli'
+      Standalone_Artist_8: Tutaj jest funkcja o nazwie "Rysuj kształt", którą zaprogramowaliśmy,
+        by rysować sześciokąty. Uruchom kod, aby zobaczyć, co robi, a następnie eksperymentuj
+        z tą funkcją, aby zobaczyć co się dzieje. Czy mógłbyś spowodować, by rysowała
+        wzory złożone z kwadratów, trójkątów lub ośmiokątów?
+      Standalone_Artist_9: Teraz idź dalej i twórz obrazki, jakie chcesz! Masz nawet
+        pustą funkcję, którą możesz wykorzystać, by robiła, co chcesz!
       'Widget: Text Compression': Poszukaj wzorców (powtarzające się słowa lub frazy)
         w tekście. Wprowadź do słownika po prawej stronie wzorce, które widzisz. Podczas
         ich wpisywania do słownika, symbol wpisu jest wstawiany do tekstu zamiast

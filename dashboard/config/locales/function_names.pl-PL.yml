@@ -155,6 +155,8 @@ pl-PL:
         jump: skocz
       Standalone_Artist_7:
         draw a flower: narysuj kwiatka
+      Standalone_Artist_9:
+        my function: moja funkcja
       course3_artist_functions_challenge1:
         do something: wykonaj coś
       course3_artist_functions_challenge2:

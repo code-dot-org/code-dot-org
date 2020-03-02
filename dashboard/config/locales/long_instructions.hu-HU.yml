@@ -19,9 +19,38 @@ hu-HU:
       2-3 Artist 9 NEW: Fejezd be a sárkányt
       2-3 Artist Free Play: Szabad játék! Rajzolj, amit akarsz.
       2-3 Artist Nested Loops 10: Ismételd a ciklust 12-szer, hogy elkészítsd a mintát!
+      2-3 Artist Nested Loops 11: Ismételd 4-szer a kódot, hogy elkészítsd a mintát.
+        Minden kör után fordulj 90 fokot.
       2-3 Artist Nested Loops 12: Ismételd a kódot 12-szer hogy elkészítsd a köröket.
+      2-3 Artist Nested Loops 2: Ismételd a háromszög rajzolást 6-szor. Minden háromszög
+        után el kell fordulnod 60 fokot, mielőtt nekikezdesz a következő rajzolásának.
+      2-3 Artist Nested Loops 3: A háromszög rajzolását 12-szer kell ismételned ennek
+        a mintának a megrajzolásához. Oszd el a teljes körfordulat fokszámát (360)
+        a rajzolni kívánt formák számával (12), hogy kiszámold, hány fokot kell fordulni
+        az egyes formák rajzolása után.
+      2-3 Artist Nested Loops 4: 'Ismételd 12 alkalommal a gyémánt rajzolást a virág
+        megrajzolásához. Tipp: a 12 gyémánt hasonló, mint a korábban rajzolt 12 háromszög
+        - mennyit kell fordulni egy-egy forma megrajzolása után?'
+      2-3 Artist Nested Loops 5: Rajzold meg ennek az épületnek az ablakait egymásba
+        ágyazott ciklusokkal. Az alakok oldalai 20 pixel szélesek, és 20 pixel távolságra
+        vannak egymástól.
+      2-3 Artist Nested Loops 6: A dinoszaurusz hátán 8 tüske van. A tüskék oldalai
+        30 pixel hosszúak. Ismételd a háromszög rajzolást 8-szor, de ne feledj el
+        előre haladni minden egyes háromszög után!
+      2-3 Artist Nested Loops 7: Ismételd 10-szer ezt a háromszöget a Nap megrajzolásához.
+        Minden háromszög után el kell fordulnod. Kitalálhatod, hány fokkal kell elfordulni,
+        ha elosztod a teljes fordulat fokszámát a Napot alkotó formák számával.
+      2-3 Artist Nested Loops 8: Most rajzoljunk a képre füvet. A fűcsomók 50 képpont
+        távolságra vannak egymástól.
+      2-3 Artist Nested Loops 9: A kép egy virág rajzolásával lesz teljes. Ismételd
+        a gyémánt rajzolását 12-szer, hogy megrajzold a virágot.
       2-3 Artist Nested Loops Free Play: Szabad játék! Rajzolj valami izgalmasat egymásba
         ágyazott ciklusokkal!
+      2-3 Bee Conditionals 13: 'Gyűjts nektárt és készíts mézet! Tipp: mi történik,
+        ha a piros virágra alkalmazod a "ha nektár" feltételt? Meg tudod csinálni
+        ezt a feladatot egy ciklussal.'
+      2-3 Bee Conditionals 14: Gyűjts nektárt és készíts mézet. Vigyázz, ne gyűjts
+        nektárt a lila virágból, ha nincs benne nektár.
       2-3 Bee Loops 3A: Fel tudsz használni egy ciklust a nektár összegyűjtéséhez?
       2-3 Maze 1: 'Tudsz segíteni nekem elkapni a csintalan malacot? Rakj egymás alá
         néhány "előrelépni" blokkot, és kattints a "Futtatás"-ra. '
@@ -797,6 +826,8 @@ hu-HU:
         \n\nFigyeld meg, hogy milyen hosszú kódra van szükség ennek a feladványnak
         a megoldásához!\\\n(A következő feladványnál tanulunk egy ennél egyszerűbb
         módszert.)"
+      NEW Course 4 Bee For Loops 4: 'A számláló ciklusban a ??? helyére írd a legtöbb
+        nektár számát, amit a méhnek össze kell gyűjtenie. '
       Overworld Move to Sheep: Adj hozzá egy második előrelépni parancsot, hogy elérd
         a bárányt.
       Overworld Move to Sheep_2019: Adj hozzá egy második előrelépni parancsot, hogy
@@ -814,6 +845,63 @@ hu-HU:
       course4_artist_fwp_challenge1: Próbálja meg futtatni ezt a programot, és változtassa
         meg, hogy lássa, mi történik. Ki tudja kitalálni, hogyan fog működni? (Akár
         törölheti az egészet, és írhat helyette valami teljesen mást)
+      courseA_artist_loops10: |-
+        ## Ideje visszatérni a szárazföldre. Segíts nekem azzal, hogy köveket raksz a vízbe, így ne fogok beleesni!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2018: |-
+        ## Ideje visszatérni a szárazföldre. Segíts nekem azzal, hogy köveket raksz a vízbe, így ne fogok beleesni!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops10_2019: |-
+        ## Ideje visszatérni a szárazföldre. Segíts nekem azzal, hogy köveket raksz a vízbe, így ne fogok beleesni!
+
+        ![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)
+      courseA_artist_loops11: |-
+        ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2018: |-
+        ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops11_2019: |-
+        ## Segíts nekem megépíteni a lépcsőt, így láthatom, ahogy a hajó elmegy.
+
+        ![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
+      courseA_artist_loops12: |-
+        A művész látott valami mókás dolgot a távolban. Rajzold le, hogy szerinted mit látott.
+
+        * * *
+
+        ### Néhány tipp
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2018: |-
+        A művész látott valami mókás dolgot a távolban. Rajzold le, hogy szerinted mit látott.
+
+        * * *
+
+        ### Néhány tipp
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
+      courseA_artist_loops12_2019: |-
+        A művész látott valami mókás dolgot a távolban. Rajzold le, hogy szerinted mit látott.
+
+        * * *
+
+        ### Néhány tipp
+
+        ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)
+        ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)
+        ![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)
+        ![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)
       courseA_artist_loops2: |-
         Segíts a művésznek megrajzolni ezt a vonalat kétszer egymás után.
 
@@ -844,10 +932,102 @@ hu-HU:
         Most használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml> ciklust, a vonal megrajzolásához ötször!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="2-6">5</title></block></xml>
+      courseA_artist_loops5: |-
+        ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2018: |-
+        ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops5_2019: |-
+        ## Rajzolj egy hét lépés hosszú vonalat. Ez lesz a horizontunk.
+
+        ![expandable](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
+      courseA_artist_loops6: |-
+        ## Tegyünk a háttérbe egy szép hegyet
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2018: |-
+        ## Tegyünk a háttérbe egy szép hegyet
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops6_2019: |-
+        ## Tegyünk a háttérbe egy szép hegyet
+
+        ![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
+      courseA_artist_loops7: |-
+        ## Használd a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámokat adj a vízhez.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
+      courseA_artist_loops7_2018: |-
+        ## Használd a <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámokat adj a vízhez.
+
+        ![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops7_2019: |-
         Használd a <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml> ciklust, hogy hullámos legyen a víz!
 
         <xml><block type="controls_repeat_simplified_dropdown" block-text="repeat"><title name="TIMES" config="3-10">???</title></block></xml>
+      courseA_artist_loops8: |-
+        ## Szükségünk van egy hajóra vezető létrára.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2018: |-
+        ## Szükségünk van egy hajóra vezető létrára.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops8_2019: |-
+        ## Szükségünk van egy hajóra vezető létrára.
+
+        ![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
+      courseA_artist_loops9: |-
+        ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2018: |-
+        ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops9_2019: |-
+        ## **Kihívás:** A kikötőbe vezető lépcső összetörött. Segíts nekem megjavítani.
+
+        ![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1: |-
+        Használhatsz ciklust, hogy több vonalat rajzolj meg egyszerre egymás után.
+
+        Tudsz házat rajzolni? Rajzold úgy, ahogy csak szeretnéd! Próbálj találni olyan mintát, ami ismétlődik.
+
+        Itt van néhány ötlet:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2018: |-
+        Használhatsz ciklust, hogy több vonalat rajzolj meg egyszerre egymás után.
+
+        Tudsz házat rajzolni? Rajzold úgy, ahogy csak szeretnéd! Próbálj találni olyan mintát, ami ismétlődik.
+
+        Itt van néhány ötlet:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge1_2019: |-
+        Használhatsz ciklust, hogy több vonalat rajzolj meg egyszerre egymás után.
+
+        Tudsz házat rajzolni? Rajzold úgy, ahogy csak szeretnéd! Próbálj találni olyan mintát, ami ismétlődik.
+
+        Itt van néhány ötlet:
+
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
+      courseA_artist_loops_challenge2a: |-
+        _"Segíts nekem felállítani ezt a három sátrat!"_
+
+        Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Segíts nekem felállítani ezt a három sátrat!"_
+
+        Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Segíts nekem felállítani ezt a három sátrat!"_
+
+        Használd a blokkokat az eszköztárban, hogy megrajzold ezt a három sátrat.
       courseA_collector_loops1: "**Szabad játék:** Ő itt Laurel, a Kalandor! Mozgasd
         kürbe, hogy annyi kincset gyűjtsön össze, amennyit csak lehet. \n\nHúzz blokkokat
         a munkaterületre, aztán próbáld meg kitalálni, hogyan juthatsz a kincsekhez.
@@ -964,6 +1144,18 @@ hu-HU:
         és nézd meg, mi történik!
       courseA_playLab_events2_2019: Jorge, a kutya azt szeretné mondani, hogy "Hi
         there". Tudsz segíteni neki?
+      courseA_playLab_events3: "Segíts Jorgénak, a kutyának mozogni azzal, hogy egy
+        <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
+        \   <title name=\"DIR\">8</title>\n  </block></xml> blokkot csatolsz a <xml><block
+        type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>
+        eseményhez, ami már eleve ott van a munkaterüelten. \n\nVidd a kutyát a zászlóhoz,
+        hogy teljesítsd a szintet!"
+      courseA_playLab_events3_2018: "Segíts Jorgénak, a kutyának mozogni azzal, hogy
+        egy <xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n
+        \   <title name=\"DIR\">8</title>\n  </block></xml> blokkot csatolsz a <xml><block
+        type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml>
+        eseményhez, ami már eleve ott van a munkaterüelten. \n\nVidd a kutyát a zászlóhoz,
+        hogy teljesítsd a szintet!"
       courseA_playLab_events3_2019: |-
         Segít Jorge kutyának mozogni a <xml><block type="studio_move" block-text="move dog west">
             <title name="SPRITE">1</title>
@@ -973,6 +1165,46 @@ hu-HU:
           </block></xml> esemény blokkhoz kapcsolva, amelyek már a munkaterületen vannak.
 
         Vidd Jorge-t a zászlóhoz a szint teljesítéséhez!
+      courseA_playLab_events4: És most adj további blokkokat a programhoz, amivel
+        Jorge jobbra mozog majd, amikor a jobbra nyílra kattintasz.
+      courseA_playLab_events5: Adj eseményeket, hogy Jorge a "fel" és a "le" nyilak
+        hatására felfelé, illetve lefelé mozduljon.
+      courseA_playLab_events5_2018: Adj eseményeket, hogy Jorge a "fel" és a "le"
+        nyilak hatására felfelé, illetve lefelé mozduljon.
+      courseA_playLab_events5_2019: Adj eseményeket, hogy Jorge a "fel" és a "le"
+        nyilak hatására felfelé, illetve lefelé mozduljon.
+      courseA_playLab_events6_2019: Tegyük érdekesebbé mindezt azzal, hogy megváltoztatod
+        a hátteret és egy véletlen hangot lejátszol, amikor rákattintasz Jorgéra.
+      courseA_playlab_events_challenge1: "Ha rákattintasz Olive cicára, akkor Robin,
+        a madár megjelenik! Tudsz olyan kódot írni, ami megmutatja a többi barátomat
+        is? \n\nA tippek segítenek ebben a projektben lépésről lépésre.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseA_playlab_events_challenge1_2018: "Ha rákattintasz Olive cicára, akkor
+        Robin, a madár megjelenik! Tudsz olyan kódot írni, ami megmutatja a többi
+        barátomat is? \n\nA tippek segítenek ebben a projektben lépésről lépésre.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseA_playlab_events_challenge1_2019: "Ha rákattintasz Olive cicára, akkor
+        Robin, a madár megjelenik! Tudsz olyan kódot írni, ami megmutatja a többi
+        barátomat is? \n\nA tippek segítenek ebben a projektben lépésről lépésre.\n\n![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png>)"
+      courseA_playlab_events_challenge2: |-
+        Mindenki csináljon valamit, amikor rákattintasz. Mit mondjanak az állatok? Mi jelenjen még meg?
+
+        Ebben a feladványban érdemes rákattintani a tippekre, vicces dolgokat mutatunk, amit kipróbálhatsz!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2018: |-
+        Mindenki csináljon valamit, amikor rákattintasz. Mit mondjanak az állatok? Mi jelenjen még meg?
+
+        Ebben a feladványban érdemes rákattintani a tippekre, vicces dolgokat mutatunk, amit kipróbálhatsz!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      courseA_playlab_events_challenge2_2019: |-
+        Mindenki csináljon valamit, amikor rákattintasz. Mit mondjanak az állatok? Mi jelenjen még meg?
+
+        Ebben a feladványban érdemes rákattintani a tippekre, vicces dolgokat mutatunk, amit kipróbálhatsz!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       courseB_Scrat_ramp1_2019: Ahhoz, hogy Scrat eljusson a makkhoz, kattints a <xml><block
         type="maze_moveEast" block-text="move East"/></xml> blokkra a <xml><block
         type="when_run" block-text="when run"/></xml> blokk alján, majd nyomd meg
@@ -1165,3 +1397,15 @@ hu-HU:
         Ez a lépcső jóval nagyobb, de ugyanúgy készült, mint az előző feladvány!
 
         Javítsd ki a ciklust, hogy teljesítsd a feladványt.
+      ramp_artist_loops7: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával!
+      ramp_artist_loops7_2018: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával!
+      ramp_artist_loops7_2019: Keress egy mintát, és rövidítsd le ezt a kódot ciklusok
+        használatával!
+      ramp_artist_loops8: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt a kódot
+        ciklusok használatával."
+      ramp_artist_loops8_2018: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt
+        a kódot ciklusok használatával."
+      ramp_artist_loops8_2019: "**Kihívás:** Keress egy mintát, és rövidítsd le ezt
+        a kódot ciklusok használatával."

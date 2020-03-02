@@ -9,6 +9,9 @@ describe('StandardsViewHeaderButtons', () => {
       <StandardsViewHeaderButtons
         sectionId={1}
         setTeacherCommentForReport={() => {}}
+        scriptId={100}
+        selectedLessons={[]}
+        unpluggedLessons={[]}
       />
     );
 
@@ -16,13 +19,16 @@ describe('StandardsViewHeaderButtons', () => {
       .find('Button')
       .at(0)
       .simulate('click');
-    expect(wrapper.find('LessonStatusDialog')).to.have.length(1);
+    expect(wrapper.find('Connect(LessonStatusDialog)')).to.have.lengthOf(1);
   });
   it('opens create report dialog', () => {
     const wrapper = shallow(
       <StandardsViewHeaderButtons
         sectionId={1}
         setTeacherCommentForReport={() => {}}
+        scriptId={100}
+        selectedLessons={[]}
+        unpluggedLessons={[]}
       />
     );
 

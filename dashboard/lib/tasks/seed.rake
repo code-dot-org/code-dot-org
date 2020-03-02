@@ -26,6 +26,10 @@ namespace :seed do
     DonorSchool.setup
   end
 
+  task foorms: :environment do
+    Foorm::Form.setup
+  end
+
   SCRIPTS_GLOB = Dir.glob('config/scripts/**/*.script').sort.flatten.freeze
   UI_TEST_SCRIPTS = [
     '20-hour',
@@ -334,7 +338,7 @@ namespace :seed do
 
   desc "seed all dashboard data"
   task :all do
-    full_seed_tasks = [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+    full_seed_tasks = [:videos, :concepts, :scripts, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms]
     # Don't do full seed on adhocs, so startup is faster.
     subtasks = rack_env?(:adhoc) ? [:ui_test] : full_seed_tasks
     time_subtasks(subtasks)
@@ -343,11 +347,12 @@ namespace :seed do
     subtasks = [:videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools]
     time_subtasks(subtasks)
   end
+
   desc "seed all dashboard data that has changed since last seed"
-  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools]
+  task incremental: [:videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :ap_school_codes, :ap_cs_offerings, :ib_school_codes, :ib_cs_offerings, :state_cs_offerings, :donors, :donor_schools, :foorms]
 
   desc "seed only dashboard data required for tests"
-  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools]
+  task test: [:videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :foorms]
 end
 
 def time_subtasks(subtasks, namespace='seed', timing_info=true)

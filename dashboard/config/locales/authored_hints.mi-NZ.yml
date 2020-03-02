@@ -165,6 +165,13 @@ mi-NZ:
           **He Wero Ano**
 
           Tapiri atu he paraka hou ki raro i te paraka takunetanga[blocky block] [0] ki te tīni te papamuri kia rereke ki etahi wahanga o te waiata.
+      Dance_Party_05:
+        validation: |-
+          **Me pewhea te oti i tēnei taumata?**
+
+          -   I mua te mutunga o tēnei taumata me māhia to kaikanikani kia e 4 ngā nekehanga rereke.
+
+          _Ka mutu tēnei taumata a muri ng a wāhanga 12._
       Dance_Party_06:
         validation: |-
           **Me pwhea ka oti i tenei taumata?**

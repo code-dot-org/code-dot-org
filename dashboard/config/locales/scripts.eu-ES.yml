@@ -1630,3 +1630,17 @@ eu:
           stages:
             Conditionals:
               name: Baldintzak
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrodun funtzioak
+        csd3-2020:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak

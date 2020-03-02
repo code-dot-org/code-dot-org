@@ -486,6 +486,7 @@ nl:
     download: 'Video downloaden'
     show_notes: 'Toon Notities'
     show_video: 'Toon Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Uw browser wordt niet ondersteund. Probeer uw browser te upgraden naar <a href='%{supported_browsers_url}', target='_blank'> een van onze ondersteunde browsers</a>. U kunt proberen de pagina te bekijken, maar verwacht problemen met de functionaliteit."

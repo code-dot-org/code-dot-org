@@ -5660,19 +5660,19 @@ mn-MN:
                 </block></xml>
       courseA_artist_loops2:
         courseA_artist_loops2_a: Хэрхэн шугам зурахаа мэдэхгүй байна уу? Юу болж байгааг
-          харахын тулд блокуудыг [blockly блок] [0] руу холбож эхлээрэй.
-        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок [blockly блок]
-          [0]-г ашиглаарай.
+          харахын тулд блокуудыг <xml><block type="when_run"/></xml> руу холбож эхлээрэй.
+        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок <xml><block type="simple_move_right"/></xml>-г
+          ашиглаарай.
       courseA_artist_loops2_2018:
         courseA_artist_loops2_a: Хэрхэн шугам зурахаа мэдэхгүй байна уу? Юу болж байгааг
-          харахын тулд блокуудыг [blockly блок] [0] руу холбож эхлээрэй.
-        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок [blockly блок]
-          [0]-г ашиглаарай.
+          харахын тулд блокуудыг <xml><block type="when_run"/></xml> руу холбож эхлээрэй.
+        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок <xml><block type="simple_move_right"/></xml>-г
+          ашиглаарай.
       courseA_artist_loops2_2019:
         courseA_artist_loops2_a: Хэрхэн шугам зурахаа мэдэхгүй байна уу? Юу болж байгааг
-          харахын тулд блокуудыг [blockly блок] [0] руу холбож эхлээрэй.
-        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок [blockly блок]
-          [0]-г ашиглаарай.
+          харахын тулд блокуудыг <xml><block type="when_run"/></xml> руу холбож эхлээрэй.
+        courseA_artist_loops2_b: Энэ тааврыг шийдэхийн тулд энэ блок <xml><block type="simple_move_right"/></xml>-г
+          ашиглаарай.
       courseA_artist_loops3:
         courseA_artist_loops3_a: Хаана алдаа байгааг харахын тулд хуруугаараа програм
           дундуур аажуухан гүйлгэж үзээрэй.
@@ -5698,44 +5698,53 @@ mn-MN:
         courseA_artist_loops4_a: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
         courseA_artist_loops4_b: |-
-          Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой тул
+          Та зөвхөн нэг <xml><block type="simple_move_right"/></xml>-г ашиглах боломжтой тул
 
-          блок, [blockly блок] [1] гогцооны дотор талд үүнийг оруулаарай.
+          блок, <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай.
       courseA_artist_loops4_2018:
         courseA_artist_loops4_a: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
         courseA_artist_loops4_b: |-
-          Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой тул
+          Та зөвхөн нэг <xml><block type="simple_move_right"/></xml>-г ашиглах боломжтой тул
 
-          блок, [blockly блок] [1] гогцооны дотор талд үүнийг оруулаарай.
+          блок, <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай.
       courseA_artist_loops4_2019:
         courseA_artist_loops4_a: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
         courseA_artist_loops4_b: |-
-          Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой тул
+          Та зөвхөн нэг <xml><block type="simple_move_right"/></xml>-г ашиглах боломжтой тул
 
-          блок, [blockly блок] [1] гогцооны дотор талд үүнийг оруулаарай.
+          блок, <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="2-6">5</title></block></xml> гогцооны дотор талд үүнийг оруулаарай.
       courseA_artist_loops5:
-        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд [blockly блок] [0] блокуудын
-          талаар олж мэдсэн зүйлээ ашиглаж үзээрэй!
+        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> блокуудын талаар олж
+          мэдсэн зүйлээ ашиглаж үзээрэй!
         courseA_artist_loops5_b: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
-        courseA_artist_loops5_c: "Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой
-          тул блок, \\[\n\nblockly блок] [1] \n\nгогцооны дотор талд үүнийг оруулаарай."
+        courseA_artist_loops5_c: "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г
+          ашиглах боломжтой тул блок, \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nгогцооны дотор
+          талд үүнийг оруулаарай."
       courseA_artist_loops5_2018:
-        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд [blockly блок] [0] блокуудын
-          талаар олж мэдсэн зүйлээ ашиглаж үзээрэй!
+        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> блокуудын талаар олж
+          мэдсэн зүйлээ ашиглаж үзээрэй!
         courseA_artist_loops5_b: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
-        courseA_artist_loops5_c: "Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой
-          тул блок, \\[\n\nblockly блок] [1] \n\nгогцооны дотор талд үүнийг оруулаарай."
+        courseA_artist_loops5_c: "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г
+          ашиглах боломжтой тул блок, \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nгогцооны дотор
+          талд үүнийг оруулаарай."
       courseA_artist_loops5_2019:
-        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд [blockly блок] [0] блокуудын
-          талаар олж мэдсэн зүйлээ ашиглаж үзээрэй!
+        courseA_artist_loops5_a: Энэ тааврыг дуусгахын тулд <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> блокуудын талаар олж
+          мэдсэн зүйлээ ашиглаж үзээрэй!
         courseA_artist_loops5_b: Та давталтыг 4-өөс дээш удаа хийхийг хүсч байвал,
           блокны дээд хэсэгт байгаа тоог өөрчилж болно.
-        courseA_artist_loops5_c: "Та зөвхөн нэг [blockly блок] [0]-г ашиглах боломжтой
-          тул блок, \\[\n\nblockly блок] [1] \n\nгогцооны дотор талд үүнийг оруулаарай."
+        courseA_artist_loops5_c: "Та зөвхөн нэг <xml><block type=\"simple_move_right\"/></xml>-г
+          ашиглах боломжтой тул блок, \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title
+          name=\"TIMES\" config=\"3-10\">???</title></block></xml> \n\nгогцооны дотор
+          талд үүнийг оруулаарай."
       courseA_artist_loops6:
         courseA_artist_loops6_a: Толгод хэрхэн байрлуулахыг мэдэхгүй байна уу? Нэг
           нь юу зурж байгааг харахын тулд блокуудтай бага зэрэг тоглож үзээрэй.
@@ -5756,22 +5765,27 @@ mn-MN:
           алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.
         courseA_artist_loops7_b: Эхлээд нэг долгионы кодыг бичээд, дараа нь нөгөө
           хоёрыг зурахын тулд үүнийг давтана уу.
-        courseA_artist_loops7_c: Та [blockly блок] [0] гогцоон дээр нэгээс илүү тооны
-          блок байрлуулж болно гэдгийг санаарай.
+        courseA_artist_loops7_c: Та <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> гогцоон дээр нэгээс
+          илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_artist_loops7_2018:
         courseA_artist_loops7_a: Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо
           алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.
         courseA_artist_loops7_b: Эхлээд нэг долгионы кодыг бичээд, дараа нь нөгөө
           хоёрыг зурахын тулд үүнийг давтана уу.
-        courseA_artist_loops7_c: Та [blockly блок] [0] гогцоон дээр нэгээс илүү тооны
-          блок байрлуулж болно гэдгийг санаарай.
+        courseA_artist_loops7_c: |-
+          Та <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> гогцоон дээр нэгээс илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_artist_loops7_2019:
         courseA_artist_loops7_a: Гогцоо хаана байрлуулахаа мэдэхгүй байна уу? Кодоо
           алхам алхамаар бичиж дүрсийг гаргаж үзээрэй.
         courseA_artist_loops7_b: Эхлээд нэг долгионы кодыг бичээд, дараа нь нөгөө
           хоёрыг зурахын тулд үүнийг давтана уу.
-        courseA_artist_loops7_c: Та [blockly блок] [0] гогцоон дээр нэгээс илүү тооны
-          блок байрлуулж болно гэдгийг санаарай.
+        courseA_artist_loops7_c: |-
+          Та <xml><block type="controls_repeat_simplified_dropdown">
+              <title name="TIMES" config="3-10">???</title>
+            </block></xml> гогцоон дээр нэгээс илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_artist_loops8:
         courseA_artist_loops8_a: Танд зориулж юу бичигдсэнийг харахын тулд кодыг ажиллуулж
           үзээрэй.
@@ -5850,21 +5864,21 @@ mn-MN:
         courseA_collector_loops1_a: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Энгийн шийдэл бол дорно зүг 2 удаа шилжиж, дараа
           нь эрдэнэс цуглуулах явдал юм.
       courseA_collector_loops1_2018:
         courseA_collector_loops1_a: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Энгийн шийдэл бол дорно зүг 2 удаа шилжиж, дараа
           нь эрдэнэс цуглуулах явдал юм.
       courseA_collector_loops1_2019:
         courseA_collector_loops1_a: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
         courseA_collector_loops1_b: Энгийн шийдэл бол дорно зүг 2 удаа шилжиж, дараа
           нь эрдэнэс цуглуулах явдал юм.
       courseA_collector_loops2:
@@ -5873,31 +5887,33 @@ mn-MN:
         courseA_collector_loops2_b: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2018:
         courseA_collector_loops2_a: Та ямарваа эрдэнэс цуглуулахаасаа өмнө шилжих
           хэрэгтэй.
         courseA_collector_loops2_b: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops2_2019:
         courseA_collector_loops2_a: Та ямарваа эрдэнэс цуглуулахаасаа өмнө шилжих
           хэрэгтэй.
         courseA_collector_loops2_b: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
       courseA_collector_loops3:
         courseA_collector_loops3_a: <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> гогцоо ашиглаж үзээрэй!
-        courseA_collector_loops3_b: Та [blockly блок] [0] гогцоон дээр нэгээс илүү
-          тооны блок байрлуулж болно гэдгийг санаарай.
+        courseA_collector_loops3_b: Та <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> гогцоон дээр нэгээс
+          илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_collector_loops3_2018:
         courseA_collector_loops3_a: <xml><block type="controls_repeat_simplified_dropdown"><title
           name="TIMES" config="3-10">???</title></block></xml> гогцоо ашиглаж үзээрэй!
-        courseA_collector_loops3_b: Та [blockly блок] [0] гогцоон дээр нэгээс илүү
-          тооны блок байрлуулж болно гэдгийг санаарай.
+        courseA_collector_loops3_b: Та <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> гогцоон дээр нэгээс
+          илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_collector_loops3_2019:
         courseA_collector_loops3_a: |-
           <xml><block type="controls_repeat_simplified_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
@@ -5905,8 +5921,9 @@ mn-MN:
            олс!-г
 
           ашиглаж үзээрэй!
-        courseA_collector_loops3_b: Та [blockly блок] [0] гогцоон дээр нэгээс илүү
-          тооны блок байрлуулж болно гэдгийг санаарай.
+        courseA_collector_loops3_b: Та <xml><block type="controls_repeat_simplified_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> гогцоон дээр нэгээс
+          илүү тооны блок байрлуулж болно гэдгийг санаарай.
       courseA_collector_loops4:
         courseA_collector_loops4_a: Лаурел хэр хол явахыг өөрчлөхийн тулд, гогцооны
           ажиллаж болох удааг өөрчлөөрэй.
@@ -6121,7 +6138,7 @@ mn-MN:
         courseA_collector_loops2_b: |-
           Та эрдэнэс бүхий талбайд нүүж ирсэний дараа эдгээрийг цуглуулахын тулд дараах блокийг ашиглаарай.
 
-          [blockly блок] [0]
+          <xml>  <block type="collector_collect"/></xml>
       courseA_harvester_loops2_2019:
         courseA_harvester_loops2_a: "Таны кодод **дөрвөн** баруун тийш шилжих байна\n\n<xml><block
           type=\"maze_moveWest\"/></xml>\n\nблокууд ба **дөрвөн** <xml>\n`pick corn`\n
