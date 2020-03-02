@@ -89,7 +89,9 @@ module.exports = class Maze {
 
     this.controller = new MazeController(level, skin, config, {
       methods: {
-        playAudio: studioApp().playAudio.bind(studioApp()),
+        playAudio: (sound, options) => {
+          studioApp().playAudio(sound, {...options, noOverlap: true});
+        },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
         getTestResults: studioApp().getTestResults.bind(studioApp())

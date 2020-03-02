@@ -29,7 +29,7 @@ theme: responsive
     -if request.params['names']
       - request.params['names'].each do |name|
         =CGI::unescape(name)
-        ="&#x000A;"
+        !="&#x000A;"
   %br
   %br
   != I18n.t(:landscape_recommended_certificates, markdown: true)

@@ -1225,8 +1225,11 @@ sk-SK:
   express-2018_name: Zrýchlený kurz (2018)
   pre-express-2018_name: Zrýchlený kurz pre predškolákov (2018)
   express-2019_name: Zrýchlený kurz (2019)
+  csd2_name: 'Lekcia 2: Vývoj webových stránok'
+  csd3_name: 'Lekcia 3: Animácie a hry'
   accelerated_name: Zrýchlený kurz
   express_name: Zrýchlený kurz
+  pre-express_name: Zrýchlený kurz pre predškolákov
   20-hour_name: Zrýchlený kurz
   algebra_name: Informatika v algebre - celý kurz
   AlgebraA_name: Informatika v algebre - Kurz A

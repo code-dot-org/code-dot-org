@@ -110,13 +110,6 @@ class Documents < Sinatra::Base
       settings.template_extnames +
       settings.exclude_extnames +
       ['.fetch']
-    set :markdown,
-      renderer: ::TextRender::MarkdownEngine::HTMLWithDivBrackets,
-      autolink: true,
-      tables: true,
-      space_after_headers: true,
-      fenced_code_blocks: true,
-      lax_spacing: true
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
     Sass::Plugin.options[:template_location] = shared_dir('css')
@@ -161,6 +154,41 @@ class Documents < Sinatra::Base
         base = settings.configs[base][:base]
       end
     end
+
+    @actionview ||= begin
+      # Lazily require actionview_sinatra here, because it it turn will require
+      # ActionView::Base, which will in turn run the ActiveSupport load hooks for
+      # the class.
+      #
+      # This can cause some issues for environments that want to load both
+      # Pegasus and Dashboard, since if ActionView is loaded outside the context
+      # of Rails it won't load all functionality, and ActionView won't be
+      # re-initialized when it _does_ get loaded by Rails.
+      #
+      # This is similar to the lazy loading we need to do for Haml:
+      # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
+      require 'cdo/pegasus/actionview_sinatra'
+      ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+      ActionViewSinatra::Base.new(self)
+    end
+
+    update_actionview_assigns
+    @actionview.instance_variable_set("@_request", request)
+  end
+
+  # This will make all instance variables on our sinatra controller also
+  # available from our views. Inspired by similar behavior in Rails' controller
+  # logic:
+  # https://github.com/rails/rails/blob/c4d3e202e10ae627b3b9c34498afb45450652421/actionpack/lib/abstract_controller/rendering.rb#L66-L77
+  #
+  # If in the future Sinatra's controller functionality is replaced by Rails,
+  # this can probably go away.
+  def update_actionview_assigns
+    view_assigns = {}
+    instance_variables.each do |name|
+      view_assigns[name[1..-1]] = instance_variable_get(name)
+    end
+    @actionview.assign(view_assigns)
   end
 
   # Language selection
@@ -254,14 +282,14 @@ class Documents < Sinatra::Base
     unless ['', 'none'].include?(layout)
       template = resolve_template('layouts', settings.template_extnames, layout)
       raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join('')})
+      body render_template(template, {body: body.join('').html_safe})
     end
 
     theme = @header['theme'] || 'default'
     unless ['', 'none'].include?(theme)
       template = resolve_template('themes', settings.template_extnames, theme)
       raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join('')})
+      body render_template(template, {body: body.join('').html_safe})
     end
   end
 
@@ -363,10 +391,6 @@ class Documents < Sinatra::Base
         rescue
           ''
         end
-    end
-
-    def preprocess_markdown(markdown_content)
-      markdown_content.gsub(/```/, "```\n")
     end
 
     def resolve_static(subdir, uri)
@@ -481,8 +505,6 @@ class Documents < Sinatra::Base
     end
 
     def render_(body, path=nil, line=0, locals={})
-      options = {locals: locals, line: line, path: path}
-
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
       # Now, apply the processing operations implied by each extension to the
@@ -492,10 +514,11 @@ class Documents < Sinatra::Base
       result = body
       extensions.reverse.each do |extension|
         case extension
-        when '.erb', '.html'
-          result = erb result, options
-        when '.haml'
-          result = haml result, options
+        when '.erb', '.html', '.haml', '.md'
+          # Symbolize the keys of the locals hash; previously, we supported
+          # using either symbols or strings in locals hashes but ActionView
+          # only allows symbols.
+          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at
@@ -506,9 +529,6 @@ class Documents < Sinatra::Base
 
           cache :static
           result = send_file(cache_file)
-        when '.md'
-          preprocessed = preprocess_markdown result
-          result = markdown preprocessed, options
         when '.partial'
           result = render_partials(result)
         when '.redirect', '.moved', '.301'
