@@ -116,7 +116,11 @@ export default class LibraryPublisher extends React.Component {
     );
 
     // Write to projects database
-    dashboard.project.setLibraryDetails(libraryName, libraryDescription, true);
+    dashboard.project.setLibraryDetails(
+      libraryName,
+      libraryDescription,
+      true /* publishing */
+    );
   };
 
   displayNameInput = () => {
@@ -239,7 +243,11 @@ export default class LibraryPublisher extends React.Component {
     libraryClientApi.delete(
       () => {
         onUnpublishSuccess();
-        dashboard.project.setLibraryDetails(undefined, undefined, false);
+        dashboard.project.setLibraryDetails(
+          undefined,
+          undefined,
+          false /* publishing */
+        );
       },
       error => {
         console.warn(`Error unpublishing library: ${error}`);
