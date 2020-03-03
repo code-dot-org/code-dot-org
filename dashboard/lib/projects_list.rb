@@ -229,7 +229,6 @@ module ProjectsList
     # single library or a list of libraries.
     def get_library_row_data(project, channel_id, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['libraryName'],
