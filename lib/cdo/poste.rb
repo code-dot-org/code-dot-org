@@ -3,6 +3,7 @@ require 'cdo/db'
 require 'cdo/form'
 require 'cdo/parse_email_address_string'
 require 'cdo/pegasus/text_render'
+require 'cdo/markdown_handler'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
@@ -308,8 +309,8 @@ eos
 
     def renderer
       @@renderer ||= begin
-        require 'cdo/pegasus/actionview_sinatra'
-        ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+        require 'action_view'
+        MarkdownHandler.register unless MarkdownHandler.registered?
         ActionView::Base.new
       end
     end
