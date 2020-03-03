@@ -103,13 +103,9 @@ export function getUnpluggedLessonsForScript(state) {
 export function fetchStudentLevelScores(scriptId, sectionId) {
   return (dispatch, getState) => {
     $.ajax({
-      url: '/dashboardapi/v1/teacher_scores/get',
-      type: 'post',
-      contentType: 'application/json',
-      data: JSON.stringify({
-        script_id: scriptId,
-        section_id: sectionId
-      })
+      method: 'GET',
+      dataType: 'json',
+      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
     }).then(data => {
       const scoresData = data;
       dispatch(setStudentLevelScores(scoresData));

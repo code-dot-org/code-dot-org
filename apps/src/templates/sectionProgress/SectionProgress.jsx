@@ -111,6 +111,10 @@ class SectionProgress extends Component {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
     this.props.fetchStandardsCoveredForScript(scriptId);
+    this.props.fetchStudentLevelScores(
+      this.props.scriptId,
+      this.props.section.id
+    );
 
     firehoseClient.putRecord(
       {
