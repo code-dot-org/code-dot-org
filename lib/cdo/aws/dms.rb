@@ -71,22 +71,26 @@ module Cdo
     class ReplicationTask
       # Get list of Replication Tasks that should be run on a specified schedule.
       # @param schedule [String] Frequency that task should be executed ('daily', 'weekly', etc.)
-      # Returns array of Aws::DatabaseMigrationService::Types::ReplicationTask
+      # Returns array of Cdo::DMS::ReplicationTask
       def self.tasks_by_frequency(schedule)
         dms_client = Aws::DatabaseMigrationService::Client.new
         replication_tasks = dms_client.describe_replication_tasks({without_settings: true}).replication_tasks
-        replication_tasks.select do |task|
+        aws_tasks = replication_tasks.select do |task|
           dms_client.
             list_tags_for_resource({resource_arn: task.replication_task_arn}).
             tag_list.
             any? {|tag| tag.key == 'schedule' && tag.value == schedule}
         end
+        aws_tasks.map do |aws_task|
+          Cdo::DMS::ReplicationTask.new(aws_task.replication_task_arn)
+        end
       end
 
       # @param arn [String] Replication Task ARN
-      def initialize(arn)
+      # @param client [Aws::DatabaseMigrationService:Client] optionally pass in a DMS client.
+      def initialize(arn, client = Aws::DatabaseMigrationService::Client.new)
         @arn = arn
-        @dms_client = Aws::DatabaseMigrationService::Client.new
+        @dms_client = client
       end
 
       # Get current status of the Replication Task including table statistics.
