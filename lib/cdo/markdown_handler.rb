@@ -13,6 +13,15 @@ class MarkdownHandler
   end
 
   def self.register(*args)
-    ActionView::Template.register_template_handler :md, MarkdownHandler.new(*args)
+    handler = MarkdownHandler.new(*args)
+    ActionView::Template.register_template_handler(:md, handler)
+  end
+
+  def self.registered
+    ActionView::Template.registered_template_handler(:md)
+  end
+
+  def self.registered?
+    registered.present?
   end
 end
