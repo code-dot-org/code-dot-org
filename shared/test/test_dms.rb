@@ -107,7 +107,7 @@ class TestDMS < Minitest::Test
     )
 
     @task_completed_unsuccessfully_table_statistics = @task_completed_successfully_table_statistics.deep_dup
-    @task_completed_unsuccessfully_table_statistics[0].deep_merge({"table_state": "Table Loading"})
+    @task_completed_unsuccessfully_table_statistics[0].deep_merge({"table_state": "Before load"})
 
     @start_task_response = {
       "migration_type": "full-load",
@@ -135,12 +135,12 @@ class TestDMS < Minitest::Test
       }
     }
 
-    task = Cdo::DMS.replication_task_status(@task_arn)
-    assert_equal 'stopped', task.status
-    assert task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED')
-    assert_equal 0, task.tables_errored
-    assert_equal 'Table completed', task[:table_statistics][0][:table_state]
-    assert_equal 314159, task[:table_statistics][1][:full_load_rows]
+    task_status = Cdo::DMS::ReplicationTask.new(@task_arn).status
+    assert_equal 'stopped', task_status.status
+    assert task_status.stop_reason.include?('FULL_LOAD_ONLY_FINISHED')
+    assert_equal 0, task_status.tables_errored
+    assert_equal 'Table completed', task_status[:table_statistics][0][:table_state]
+    assert_equal 314159, task_status[:table_statistics][1][:full_load_rows]
   end
 
   def test_start_replication_task_that_completes_successfully
@@ -156,7 +156,8 @@ class TestDMS < Minitest::Test
       }
     }
 
-    Cdo::DMS.start_replication_task(@task_arn, 1, 1)
+    task = Cdo::DMS::ReplicationTask.new(@task_arn)
+    task.start(1, 1)
   end
 
   def test_start_replication_task_that_completes_unsuccessfully
@@ -172,8 +173,10 @@ class TestDMS < Minitest::Test
       }
     }
 
+    task = Cdo::DMS::ReplicationTask.new(@task_arn)
+
     assert_raises(StandardError) do
-      Cdo::DMS.start_replication_task(@task_arn, 1, 1)
+      task.start(1, 1)
     end
   end
 end
