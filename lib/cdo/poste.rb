@@ -339,7 +339,6 @@ class Deliverer
       params.merge(
         {
           recipient: OpenStruct.new(recipient),
-          encrypted_id: encrypted_id,
           unsubscribe_link: unsubscribe_url,
           tracking_pixel: poste_url("/o/#{encrypted_id}"),
         }
