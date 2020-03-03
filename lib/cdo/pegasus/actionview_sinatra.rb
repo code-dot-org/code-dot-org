@@ -1,8 +1,9 @@
 require 'action_view'
+require 'cdo/markdown_handler'
 require 'haml'
 require 'haml/template'
 require 'redcarpet'
-require 'cdo/markdown_handler'
+require 'sinatra/base'
 
 module ActionViewSinatra
   class MarkdownRenderer < Redcarpet::Render::HTML
