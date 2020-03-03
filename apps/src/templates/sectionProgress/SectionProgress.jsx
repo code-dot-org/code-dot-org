@@ -30,7 +30,10 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {
+  fetchStandardsCoveredForScript,
+  fetchStudentLevelScores
+} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -80,12 +83,17 @@ class SectionProgress extends Component {
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
     showStandardsIntroDialog: PropTypes.bool,
-    getStandardsCoveredForScript: PropTypes.func.isRequired
+    fetchStandardsCoveredForScript: PropTypes.func.isRequired,
+    fetchStudentLevelScores: PropTypes.func.isRequired
   };
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
-    this.props.getStandardsCoveredForScript(this.props.scriptId);
+    this.props.fetchStandardsCoveredForScript(this.props.scriptId);
+    this.props.fetchStudentLevelScores(
+      this.props.scriptId,
+      this.props.section.id
+    );
   }
 
   componentDidUpdate() {
@@ -102,7 +110,11 @@ class SectionProgress extends Component {
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
     this.props.loadScript(scriptId);
-    this.props.getStandardsCoveredForScript(scriptId);
+    this.props.fetchStandardsCoveredForScript(scriptId);
+    this.props.fetchStudentLevelScores(
+      this.props.scriptId,
+      this.props.section.id
+    );
 
     firehoseClient.putRecord(
       {
@@ -276,8 +288,11 @@ export default connect(
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
     },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
+    fetchStandardsCoveredForScript(scriptId) {
+      dispatch(fetchStandardsCoveredForScript(scriptId));
+    },
+    fetchStudentLevelScores(scriptId, sectionId) {
+      dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   })
 )(SectionProgress);

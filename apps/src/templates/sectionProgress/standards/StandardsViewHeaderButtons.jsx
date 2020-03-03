@@ -79,39 +79,37 @@ class StandardsViewHeaderButtons extends Component {
 
   onSaveUnpluggedLessonStatus = () => {
     const {sectionId, selectedLessons, unpluggedLessons} = this.props;
-    let url = '/dashboardapi/v1/teacher_scores';
-    const selectedStageIds = _.map(selectedLessons, 'id');
-    selectedStageIds.forEach(stageId => {
-      $.ajax({
-        url: url,
-        type: 'post',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify({
-          section_id: sectionId,
-          stage_id: stageId,
-          score: TeacherScores.COMPLETE
-        })
-      }).done(() => {
-        this.closeLessonStatusDialog();
-      });
-    });
+    let selectedStageScores = [];
+    let unselectedStageScores = [];
     const stageIds = _.map(unpluggedLessons, 'id');
+    const selectedStageIds = _.map(selectedLessons, 'id');
     const unselectedStageIds = _.difference(stageIds, selectedStageIds);
-    unselectedStageIds.forEach(stageId => {
-      $.ajax({
-        url: url,
-        type: 'post',
-        contentType: 'application/json',
-        dataType: 'json',
-        data: JSON.stringify({
-          section_id: sectionId,
-          stage_id: stageId,
-          score: TeacherScores.INCOMPLETE
-        })
-      }).done(() => {
-        this.closeLessonStatusDialog();
-      });
+
+    for (var i = 0; i < selectedStageIds.length; i++) {
+      selectedStageScores[i] = {
+        stage_id: selectedStageIds[i],
+        score: TeacherScores.COMPLETE
+      };
+    }
+
+    for (var j = 0; j < unselectedStageIds.length; j++) {
+      unselectedStageScores[j] = {
+        stage_id: unselectedStageIds[j],
+        score: TeacherScores.INCOMPLETE
+      };
+    }
+
+    $.ajax({
+      url: '/dashboardapi/v1/teacher_scores',
+      type: 'post',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({
+        section_id: sectionId,
+        stage_scores: selectedStageScores.concat(unselectedStageScores)
+      })
+    }).done(() => {
+      this.closeLessonStatusDialog();
     });
   };
 
