@@ -95,7 +95,7 @@ module Pd
         sessionId: session&.id,
       }
 
-      if Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
+      if !params[:force_show] && Pd::WorkshopSurveyFoormSubmission.has_submitted_form?(current_user.id, workshop.id, session&.id, day, survey_name)
         return redirect_general(key_params)
       end
 
