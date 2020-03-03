@@ -119,6 +119,7 @@ module Poste
         '.html' => TextRender::ErbEngine,
         '.md' => TextRender::MarkdownEngine,
       }[File.extname(path).downcase]
+      @template_type = File.extname(path)[1..-1]
 
       @header, @html, @text = parse_template(IO.read(path))
 
@@ -240,10 +241,6 @@ module Poste
       end
 
       html = @engine.new(@html).result(bound)
-      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
-      # logic in the click tracking method to clean up or canonicalize the HTML.
-      html = Nokogiri::HTML(html).to_html
-      html = inject_litmus_tracking html, tracking_id, encrypted_id
 
       if html && actionview_result && html != actionview_result
         Honeybadger.notify(
@@ -255,6 +252,11 @@ module Poste
           }
         )
       end
+
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html
+      html = inject_litmus_tracking html, tracking_id, encrypted_id
 
       html
     end
