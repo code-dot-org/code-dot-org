@@ -154,7 +154,7 @@ module Poste
       locals = params.symbolize_keys
 
       header = render_header(bound, locals)
-      html = render_html(bound, locals, header['litmus_tracking_id'], params[:encrypted_id])
+      html = render_html(bound, locals)
       text = render_text(bound, locals)
 
       [header, html, text]
@@ -217,7 +217,7 @@ module Poste
       result
     end
 
-    def render_html(bound, locals={}, tracking_id=nil, encrypted_id=nil)
+    def render_html(bound, locals={})
       return nil unless @html.present?
 
       if @actionview_html
@@ -256,7 +256,6 @@ module Poste
       # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
       # logic in the click tracking method to clean up or canonicalize the HTML.
       html = Nokogiri::HTML(html).to_html
-      html = inject_litmus_tracking html, tracking_id, encrypted_id
 
       html
     end
@@ -296,16 +295,6 @@ module Poste
 
       result
     end
-
-    def inject_litmus_tracking(html, tracking_id, unique_id)
-      return html unless tracking_id && unique_id
-      litmus_blob = <<-eos
-<style>@media print{ #_t { background-image: url('https://#{tracking_id}.emltrk.com/#{tracking_id}?p&d=#{unique_id}');}} div.OutlookMessageHeader {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} table.moz-email-headers-table {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} blockquote #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} #MailContainerBody #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')}</style><div id="_t"></div>
-<img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=#{unique_id}" width="1" height="1" border="0" />
-eos
-      html.gsub("</body>", litmus_blob + "\n</body>")
-    end
-
     def renderer
       @@renderer ||= begin
         require 'cdo/pegasus/actionview_sinatra'
