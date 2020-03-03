@@ -126,8 +126,19 @@ module Poste
       # alongside the given one; we will use this to help build confidence that
       # switching our templates over to actionview can be done without changing
       # the resulting rendered HTML
-      if File.exists?(path + ".actionview")
-        @actionview_header, @actionview_html, @actionview_text = parse_template(IO.read(path + ".actionview"))
+      actionview_path = path + ".actionview"
+      if File.exists?(actionview_path)
+        @actionview_header, @actionview_html, @actionview_text = parse_template(IO.read(actionview_path))
+      else
+        # Warn if there is no such path, in case a new email template gets
+        # added to our system before this experiment has concluded.
+        Honeybadger.notify(
+          error_class: 'No email template to render with ActionView',
+          error_message: "Could not find actionview-specific #{actionview_path.inspect} email template",
+          context: {
+            path: path
+          }
+        )
       end
     end
 
