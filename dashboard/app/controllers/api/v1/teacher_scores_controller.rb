@@ -21,13 +21,18 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
     end
   end
 
-  # POST /teacher_scores/get
+  # GET /teacher_scores/<:section_id>/<:script_id>
   def get_teacher_scores_for_script
-    @teacher_scores = TeacherScore.get_level_scores_for_script_for_section(
-      params[:script_id],
-      params[:section_id]
-    )
-    render json: @teacher_scores, each_serializer: Api::V1::TeacherScoreSerializer
+    section = Section.find(params[:section_id])
+    if section.user_id == current_user.id
+      @teacher_scores = TeacherScore.get_level_scores_for_script_for_section(
+        params[:script_id],
+        params[:section_id]
+      )
+      render json: @teacher_scores, each_serializer: Api::V1::TeacherScoreSerializer
+    else
+      head :forbidden
+    end
   end
 
   private
