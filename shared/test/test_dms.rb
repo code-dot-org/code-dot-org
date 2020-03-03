@@ -124,8 +124,9 @@ class TestDMS < Minitest::Test
   end
 
   def test_replication_task_status
-    Aws.config[:databasemigrationservice] = {
-      stub_responses: {
+    dms_client = Aws::DatabaseMigrationService::Client.new(
+      stub_responses:
+      {
         describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
         describe_table_statistics:
           {
@@ -133,9 +134,9 @@ class TestDMS < Minitest::Test
             "table_statistics": @task_completed_successfully_table_statistics
           }
       }
-    }
+    )
 
-    task_status = Cdo::DMS::ReplicationTask.new(@task_arn).status
+    task_status = Cdo::DMS::ReplicationTask.new(@task_arn, dms_client).status
     assert_equal 'stopped', task_status.status
     assert task_status.stop_reason.include?('FULL_LOAD_ONLY_FINISHED')
     assert_equal 0, task_status.tables_errored
@@ -144,8 +145,9 @@ class TestDMS < Minitest::Test
   end
 
   def test_start_replication_task_that_completes_successfully
-    Aws.config[:databasemigrationservice] = {
-      stub_responses: {
+    dms_client = Aws::DatabaseMigrationService::Client.new(
+      stub_responses:
+      {
         start_replication_task: {replication_task: @start_task_response},
         describe_replication_tasks: {"replication_tasks": [@task_completed_successfully]},
         describe_table_statistics:
@@ -154,26 +156,27 @@ class TestDMS < Minitest::Test
             "table_statistics": @task_completed_successfully_table_statistics
           }
       }
-    }
+    )
 
-    task = Cdo::DMS::ReplicationTask.new(@task_arn)
+    task = Cdo::DMS::ReplicationTask.new(@task_arn, dms_client)
     task.start(1, 1)
   end
 
   def test_start_replication_task_that_completes_unsuccessfully
-    Aws.config[:databasemigrationservice] = {
-      stub_responses: {
+    dms_client = Aws::DatabaseMigrationService::Client.new(
+      stub_responses:
+      {
         start_replication_task: {replication_task: @start_task_response},
         describe_replication_tasks: {"replication_tasks": [@task_completed_unsuccessfully]},
         describe_table_statistics:
           {
             "replication_task_arn": @task_arn,
-            "table_statistics": @task_completed_successfully_table_statistics
+            "table_statistics": @task_completed_unsuccessfully_table_statistics
           }
       }
-    }
+    )
 
-    task = Cdo::DMS::ReplicationTask.new(@task_arn)
+    task = Cdo::DMS::ReplicationTask.new(@task_arn, dms_client)
 
     assert_raises(StandardError) do
       task.start(1, 1)
