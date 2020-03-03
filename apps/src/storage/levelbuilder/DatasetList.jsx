@@ -32,7 +32,6 @@ class DatasetList extends React.Component {
         <br />
         <p> Add a dataset </p>
         <input
-          ref="nameInput"
           type="text"
           onChange={e => this.setState({newTableName: e.target.value})}
         />
