@@ -30,25 +30,23 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     # Reject - code was generated more than 5 minutes ago or incorrect provider
     if time_difference >= 5
-      flash.now[:alert] = "Token has expired. Please log in again for a new token."
-      render 'maker/login_code'
-      return
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
+      return render maker_login_code_path
     elsif !secret.ends_with?('google_oauth2')
-      flash.now[:alert] = "Wrong provider. Please make sure you are logging in with Google."
-      render 'maker/login_code'
-      return
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
+      return render maker_login_code_path
     else
-      secret.slice!('google_oauth2')
+      secret.slice!(AuthenticationOption::GOOGLE)
     end
 
     # Check user id all numbers
     if secret.scan(/\D/).empty?
       # Look up user and use devise to sign user in
-      user = AuthenticationOption.find_by(credential_type: 'google_oauth2', authentication_id: secret)&.user
+      user = AuthenticationOption.find_by(credential_type: AuthenticationOption::GOOGLE, authentication_id: secret)&.user
       sign_in_and_redirect user
     else
-      flash.now[:alert] = "Invalid user id. Please try logging in again."
-      render 'maker/login_code'
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')
+      render maker_login_code_path
     end
   end
 
