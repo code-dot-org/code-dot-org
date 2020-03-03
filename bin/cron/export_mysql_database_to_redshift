@@ -8,24 +8,30 @@ exit unless rack_env?(:production) && CDO.dashboard_hostname == 'studio.code.org
 require 'cdo/aws/dms'
 require 'cdo/chat_client'
 
+# Max time to wait for all tasks to complete import into staging tables.
+TASK_EXECUTION_TIME = 16.hours
+# Delay between each check on task status.
+TASK_STATUS_DELAY = 10.minutes
+
 def main
-  ChatClient.message 'cron-daily', 'Beginning export from Aurora MySQL database to Redshift.'
+  ChatClient.message 'data', 'Beginning export from Aurora MySQL database to Redshift.'
 
   # Get list of tasks that should be executed daily.
-  daily_tasks = Cdo::DMS.replication_tasks('daily')
+  daily_tasks = Cdo::DMS::ReplicationTask.tasks_by_frequency('daily')
 
   # Spawn one thread for each replication task, so we can start and monitor them independently.
   threads = []
   Thread.abort_on_exception = true
   daily_tasks.each do |task|
-    # Wait 12 hours (make 72 attempts, once every 10 minutes) for tasks to complete successfully.
-    threads << Thread.new {Cdo::DMS.start_replication_task(task.replication_task_arn, 72, 600)}
+    # Wait 16 hours (make 96 attempts, once every 10 minutes) for tasks to complete successfully.
+    # The user_levels task takes the longest (~10 hours).
+    threads << Thread.new {task.start(TASK_EXECUTION_TIME.div(TASK_STATUS_DELAY), TASK_STATUS_DELAY)}
   end
   threads.each(&:join)
 
-  ChatClient.message'cron-daily', "Completed export from Aurora MySQL database to Redshift."
+  ChatClient.message'data', "Completed export from Aurora MySQL database to Redshift."
 rescue StandardError => error
-  ChatClient.message'cron-daily', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
+  ChatClient.message'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
 end
 
