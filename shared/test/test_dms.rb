@@ -135,7 +135,7 @@ class TestDMS < Minitest::Test
       }
     }
 
-    task_status = Cdo::DMS::ReplicationTask.new(@arn).status
+    task_status = Cdo::DMS::ReplicationTask.new(@task_arn).status
     assert_equal 'stopped', task_status.status
     assert task_status.stop_reason.include?('FULL_LOAD_ONLY_FINISHED')
     assert_equal 0, task_status.tables_errored
