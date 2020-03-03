@@ -2,49 +2,44 @@ require 'action_view'
 require 'haml'
 require 'haml/template'
 require 'redcarpet'
+require 'cdo/markdown_handler'
 
 module ActionViewSinatra
-  class MarkdownHandler
-    class HTMLWithDivBrackets < Redcarpet::Render::HTML
-      def preprocess(full_document)
-        full_document.gsub(/```/, "```\n")
-      end
+  class MarkdownRenderer < Redcarpet::Render::HTML
+    OPTIONS = {
+      autolink: true,
+      tables: true,
+      space_after_headers: true,
+      fenced_code_blocks: true,
+      lax_spacing: true
+    }
 
-      def postprocess(full_document)
-        process_div_brackets(full_document)
-      end
-
-      private
-
-      # CDO-Markdown div_brackets extension.
-      # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
-      def process_div_brackets(full_document)
-        full_document.
-          gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
-          gsub(/<p>\[(.*)\]<\/p>/) do
-          value = $1
-          if value[0] == '#'
-            attribute = 'id'
-            value = value[1..-1]
-          else
-            attribute = 'class'
-          end
-
-          "<div #{attribute}='#{value}'>"
-        end
-      end
+    def preprocess(full_document)
+      full_document.gsub(/```/, "```\n")
     end
 
-    def self.call(template)
-      @renderer ||= Redcarpet::Markdown.new(
-        HTMLWithDivBrackets,
-        autolink: true,
-        tables: true,
-        space_after_headers: true,
-        fenced_code_blocks: true,
-        lax_spacing: true
-      )
-      "#{@renderer.render(template.source).inspect}.html_safe"
+    def postprocess(full_document)
+      process_div_brackets(full_document)
+    end
+
+    private
+
+    # CDO-Markdown div_brackets extension.
+    # Convert `[tag]...[/tag]` to `<div class='tag'>...</div>`.
+    def process_div_brackets(full_document)
+      full_document.
+        gsub(/<p>\[\/(.*)\]<\/p>/, '</div>').
+        gsub(/<p>\[(.*)\]<\/p>/) do
+        value = $1
+        if value[0] == '#'
+          attribute = 'id'
+          value = value[1..-1]
+        else
+          attribute = 'class'
+        end
+
+        "<div #{attribute}='#{value}'>"
+      end
     end
   end
 
@@ -52,6 +47,8 @@ module ActionViewSinatra
     def initialize(sinatra, *args)
       @sinatra = sinatra
       super(*args)
+
+      MarkdownHandler.register(MarkdownRenderer, MarkdownRenderer::OPTIONS)
     end
 
     def response
