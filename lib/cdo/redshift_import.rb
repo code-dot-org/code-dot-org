@@ -20,13 +20,9 @@ class RedshiftImport
         CDO.log.info "Dropping existing table #{schema}.#{target_table} and renaming newly imported #{import_table}."
 
         # Rename existing table to back it up, if it exists.
-        begin
-          rename_table(schema, target_table, backup_table)
-        rescue PG::UndefinedTable => undefined_table_error
-          # When a new table created in the source MySQL database is imported for the first time, there won't be an
-          # existing table in Redshift to backup.
-          CDO.log.info "Unable to back up table #{schema}.#{target_table} because it does not exist. #{undefined_table_error}"
-        end
+        # When a new table created in the source MySQL database is imported for the first time, there won't be an
+        # existing table in Redshift to backup.
+        rename_table(schema, target_table, backup_table)
 
         # Make staging table the production table.
         rename_table(schema, import_table, target_table)
@@ -147,6 +143,8 @@ class RedshiftImport
       ALTER TABLE #{current_table_name} RENAME TO #{new_table_name};
     SQL
     redshift_client.exec(query)
+  rescue PG::UndefinedTable => undefined_table_error
+    CDO.log.info "Unable to rename table #{schema}.#{current_table_name} because it does not exist. #{undefined_table_error}"
   end
 
   # Get name and columns of primary key constraint for a specific table, if constraint exists.
@@ -161,7 +159,7 @@ class RedshiftImport
     query = <<~SQL
       SET search_path TO #{schema};
       BEGIN;
-      ALTER TABLE #{table} DROP CONSTRAINT #{current_index_name};
+      ALTER TABLE #{table} DROP CONSTRAINT #{current_index_name}; -- Does not fail if constraint doesn't exist.
       ALTER TABLE #{table} ADD CONSTRAINT #{new_index_name} PRIMARY KEY (#{columns.join(',')});
       COMMIT;
     SQL
