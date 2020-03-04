@@ -1730,3 +1730,43 @@ lt:
               name: Greitis
             Functions:
               name: Komandų kūrimas
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Saugus naršymas internete
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Virtualūs pirštų antspaudai
+            Move It, Move It:
+              name: Judėk, judėk
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Dvejetainės apyrankės
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programavimas komandoje
+            Conditionals with Cards:
+              name: Sąlyginiai sakiniai su kortomis
+            'Unplugged: Binary':
+              name: 'Be kompiuterio: dvejetainiai skaičiai'
+            Artist Binary:
+              name: 'Meninkas: dvejetainis'
+            Digital Citizenship:
+              name: Virtuali pilietybė
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internetas
+            Crowdsourcing:
+              name: Komandinis programavimas
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Rašanti bitė
