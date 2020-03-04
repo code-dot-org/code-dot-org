@@ -593,7 +593,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :student, :google_sso_provider
     user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
 
-    #Generate token with corrupted user id
+    #Generate token with corrupted authentication id
     secret_code = Encryption.encrypt_string_utf8(
       Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "test" + user_auth['credential_type']
     )
