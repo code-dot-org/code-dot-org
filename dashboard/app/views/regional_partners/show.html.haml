@@ -20,13 +20,21 @@
 %p
   %strong Urban:
   = @regional_partner.urban? ? 'Yes' : 'No'
-- %w(csd csp).each do |course|
-  - %w(teacher facilitator).each do |role|
-    - %w(open close).each do |state|
-      %p
-        %strong
-          = "Apps #{state} date for #{course.upcase} #{role.pluralize}"
-        = @regional_partner.send("apps_#{state}_date_#{course}_#{role}".to_sym)
+%p
+  %strong Application open/close dates
+  %table
+    %tr
+      %th Application type
+      %th Open date
+      %th Close date
+    - %w(csd csp).each do |course|
+      - %w(teacher facilitator).each do |role|
+        %tr
+          %td
+            %strong= "#{course.upcase} #{role}"
+          %td= @regional_partner.send("apps_open_date_#{course}_#{role}".to_sym)
+          %td= @regional_partner.send("apps_close_date_#{course}_#{role}".to_sym)
+%p &nbsp;
 %p
   %strong Apps Priority Deadline Date
   = @regional_partner.apps_priority_deadline_date

@@ -63,6 +63,25 @@ class RegionalPartner < ActiveRecord::Base
     has_csf
   )
 
+  # Provide *_as_date helper methods for dates stored as strings in the properties blob.
+  # Returns the parsed date if present, nil if not, and will raise on a parse error.
+  %w(
+    apps_open_date_csd_teacher
+    apps_open_date_csd_facilitator
+    apps_open_date_csp_teacher
+    apps_open_date_csp_facilitator
+    apps_close_date_csd_teacher
+    apps_close_date_csd_facilitator
+    apps_close_date_csp_teacher
+    apps_close_date_csp_facilitator
+    apps_priority_deadline_date
+  ).each do |date_attribute|
+    define_method("#{date_attribute}_as_date") do
+      value = send(date_attribute.to_sym)
+      Date.parse(value) unless value.nil?
+    end
+  end
+
   PRINCIPAL_APPROVAL_TYPES = [
     ALL_REQUIRE_APPROVAL = 'all_teachers_required'.freeze,
     SELECTIVE_APPROVAL = 'required_per_teacher'.freeze

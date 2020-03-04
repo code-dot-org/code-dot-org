@@ -14,17 +14,21 @@
   .field
     = f.label :urban
     = f.check_box :urban
-  - %w(csd csp).each do |course|
-    - %w(teacher facilitator).each do |role|
-      .field
-        = f.label nil, "Apps Open Date for #{course.upcase} #{role} (YYYY-MM-DD)"
-        = f.text_field "apps_open_date_#{course}_#{role}".to_sym
-      .field
-        = f.label nil, "Apps Close Date for #{course.upcase} #{role} (YYYY-MM-DD)"
-        = f.text_field "apps_close_date_#{course}_#{role}".to_sym
+  %h3 Application open/close dates
+  %table
+    %tr
+      %th Application type
+      %th Open date
+      %th Close date
+    - %w(csd csp).each do |course|
+      - %w(teacher facilitator).each do |role|
+        %tr
+          %td= "#{course.upcase} #{role}"
+          %td= f.date_field "apps_open_date_#{course}_#{role}".to_sym, value: @regional_partner.send("apps_open_date_#{course}_#{role}_as_date".to_sym)
+          %td= f.date_field "apps_close_date_#{course}_#{role}".to_sym, value: @regional_partner.send("apps_close_date_#{course}_#{role}_as_date".to_sym)
   .field
-    = f.label nil, "Apps Priority Deadline Date (YYYY-MM-DD)"
-    = f.text_field :apps_priority_deadline_date
+    = f.label nil, "Apps Priority Deadline Date"
+    = f.date_field :apps_priority_deadline_date, value: @regional_partner.apps_priority_deadline_date_as_date
   .field
     = f.label nil, "Applications Principal Approval"
     .applications_principal_approval
