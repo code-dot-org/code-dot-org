@@ -1530,3 +1530,45 @@ hr:
               name: Uvjeti
             Functions:
               name: Funkcije
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Sigurna putovanja
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tvoj digitalni trag
+            Move It, Move It:
+              name: Pomakni, pomakni
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binarne narukvice
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Odnosno programiranje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+            'Unplugged: Binary':
+              name: 'Izvanmrežno: Logički operatori'
+            Artist Binary:
+              name: Umjetnik binarno
+            Digital Citizenship:
+              name: Digitalno građanstvo
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        coursef-2020:
+          stages:
+            For Loop Fun:
+              name: For Petlja Zabava
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Slovkanje
