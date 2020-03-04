@@ -35,9 +35,9 @@ def main
   # the import process
   RedshiftImport.complete_table_import(Cdo::DMS.redshift_schemas_imported_from_database)
 
-  ChatClient.message'data', "Completed export from Aurora MySQL database to Redshift."
+  ChatClient.message 'data', "Completed export from Aurora MySQL database to Redshift."
 rescue StandardError => error
-  ChatClient.message'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
+  ChatClient.message 'data', "Error during export from Aurora MySQL database to Redshift #{error.message}", color: 'red'
   raise error
 end
 
