@@ -661,3 +661,4 @@ ca:
     accept: 'D''acord'
   gdpr_dialog:
     yes: 'Sí'
+  copy: 'Copiar'
