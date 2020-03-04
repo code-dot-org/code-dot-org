@@ -16,6 +16,7 @@ require_relative 'redact_restore_utils'
 def sync_in
   HocSyncUtils.sync_in
   localize_level_content
+  localize_project_content
   localize_block_content
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
@@ -84,6 +85,28 @@ def get_i18n_strings(level)
   end
 
   i18n_strings.delete_if {|_, value| value.blank?}
+end
+
+def localize_project_content
+  puts "Preparing project content"
+  project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
+  project_strings = {}
+
+  Dir.chdir(Rails.root) do
+    ProjectsController::STANDALONE_PROJECTS.each do |key, value|
+      next unless value["i18n"]
+      level = Level.find_by_name(value["name"])
+      url = "https://studio.code.org/p/#{key}"
+      project_strings[url] = get_i18n_strings(level)
+      # Block categories are handled differently below and are generally covered by the script levels
+      project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+    end
+    project_strings.delete_if {|_, value| value.blank?}
+
+    File.open(project_content_file, "w") do |file|
+      file.write(JSON.pretty_generate(project_strings))
+    end
+  end
 end
 
 def localize_level_content
