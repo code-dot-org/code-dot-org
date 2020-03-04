@@ -200,7 +200,7 @@ const fakeState = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: {}
+    studentLevelScoresByStage: {92: {662: {}}}
   },
   teacherSections: teacherSections
 };
@@ -263,6 +263,21 @@ const stateForTeacherMarkedIncompletedLesson = {
   teacherSections: teacherSections
 };
 
+const stateForTeacherMarkedAndProgress = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageComplete
+  },
+  teacherSections: teacherSections
+};
+
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
 
@@ -285,137 +300,204 @@ describe('sectionStandardsProgressRedux', () => {
     });
   });
 
-  // describe('lessonsByStandard', () => {
-  //   it('gets the correct lessons and completion by standard, no progress', () => {
-  //     assert.deepEqual(lessonsByStandard(fakeState), {
-  //       4: [
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 3,
-  //           name: 'Happy Maps',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/3'
-  //         }
-  //       ],
-  //       16: [
-  //         {
-  //           completed: false,
-  //           lessonNumber: 1,
-  //           name: 'Going Places Safely',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/1'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         }
-  //       ],
-  //       17: [
-  //         {
-  //           completed: false,
-  //           lessonNumber: 1,
-  //           name: 'Going Places Safely',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/1'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         }
-  //       ]
-  //     });
-  //   });
-  //
-  //   it('gets the correct lessons and completion by standard, completed lesson', () => {
-  //     assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
-  //       4: [
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 3,
-  //           name: 'Happy Maps',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/3'
-  //         }
-  //       ],
-  //       16: [
-  //         {
-  //           completed: true,
-  //           lessonNumber: 1,
-  //           name: 'Going Places Safely',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 4,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/1'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         }
-  //       ],
-  //       17: [
-  //         {
-  //           completed: true,
-  //           lessonNumber: 1,
-  //           name: 'Going Places Safely',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 4,
-  //           unplugged: true,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/1'
-  //         },
-  //         {
-  //           completed: false,
-  //           lessonNumber: 2,
-  //           name: 'Learn to Drag and Drop',
-  //           numStudents: 4,
-  //           numStudentsCompleted: 0,
-  //           unplugged: false,
-  //           url: 'https://curriculum.code.org/csf-19/coursea/2'
-  //         }
-  //       ]
-  //     });
-  //   });
-  // });
+  describe('lessonsByStandard', () => {
+    it('gets the correct lessons and completion by standard, no progress, no scores', () => {
+      assert.deepEqual(lessonsByStandard(fakeState), {
+        4: [
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+
+    // Plugged lessons calculate completion based on progress.
+    // Unplugged lessons calculate completion based on teacher score.
+    it('gets the correct lessons and completion by standard, completed lesson based only on progress', () => {
+      assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
+        4: [
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+
+    it('gets the correct lessons and completion by standard, plugged lesson completion based on progress, unplugged based on teacher score', () => {
+      assert.deepEqual(lessonsByStandard(stateForTeacherMarkedAndProgress), {
+        4: [
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: true,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 1,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: true,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 1,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+  });
 
   describe('getUnpluggedLessonsForScript', () => {
     it('gets the unplugged lessons for script', () => {
@@ -440,7 +522,10 @@ describe('sectionStandardsProgressRedux', () => {
     it('incomplete when no teacher scores for stage', () => {
       expect(
         getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
-      ).to.equal(false);
+      ).to.deep.equal({
+        completed: false,
+        numStudentsCompleted: 0
+      });
     });
 
     it('incomplete when teacher scores stage as incomplete', () => {
@@ -450,7 +535,10 @@ describe('sectionStandardsProgressRedux', () => {
           scriptId,
           stageId
         )
-      ).to.equal(false);
+      ).to.deep.equal({
+        completed: false,
+        numStudentsCompleted: 0
+      });
     });
 
     it('complete when teacher scores stage as complete', () => {
@@ -460,7 +548,10 @@ describe('sectionStandardsProgressRedux', () => {
           scriptId,
           stageId
         )
-      ).to.equal(true);
+      ).to.deep.equal({
+        completed: true,
+        numStudentsCompleted: 1
+      });
     });
   });
 

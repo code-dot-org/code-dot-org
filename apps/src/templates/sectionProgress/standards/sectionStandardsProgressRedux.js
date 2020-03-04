@@ -193,6 +193,10 @@ export function getLessonCompletionStatus(state, stageId) {
 }
 
 export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
+  let completionByLesson = {};
+  completionByLesson['completed'] = false;
+  completionByLesson['numStudentsCompleted'] = 0;
+
   if (
     state.sectionStandardsProgress.studentLevelScoresByStage &&
     state.sectionStandardsProgress.studentLevelScoresByStage[scriptId] &&
@@ -203,16 +207,27 @@ export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
         stageId
       ];
 
-    const completedScore = _.find(_.values(levelScoresByStudent), function(
-      studentScore
-    ) {
-      return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
-    });
+    const studentScoresComplete = _.filter(
+      _.values(levelScoresByStudent),
+      function(studentScore) {
+        return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
+      }
+    );
 
-    return !!completedScore;
-  } else {
-    return false;
+    const numStudentCompleted = studentScoresComplete.length;
+
+    // If any student in the section has a teacher score indicating
+    // completion for the lesson, the lesson is considered completed for the
+    // section. When a teacher marks a lesson complete for a section, the
+    // lesson is marked complete for each student in the section, so we can
+    // infer that if it's marked complete for one student in the section,
+    // it's marked complete for all students in the section.
+    const completed = numStudentCompleted >= 1;
+
+    completionByLesson['completed'] = completed;
+    completionByLesson['numStudentsCompleted'] = numStudentCompleted;
   }
+  return completionByLesson;
 }
 
 export function getPluggedLessonCompletionStatus(state, stage) {
