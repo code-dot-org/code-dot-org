@@ -129,7 +129,7 @@ module Poste
       # switching our templates over to actionview can be done without changing
       # the resulting rendered HTML
       actionview_path = path + ".actionview"
-      if File.exists?(actionview_path)
+      if File.exist?(actionview_path)
         @actionview_header, @actionview_html, @actionview_text = parse_template(IO.read(actionview_path))
       else
         # Warn if there is no such path, in case a new email template gets
@@ -214,7 +214,7 @@ module Poste
           }
         )
       end
-      
+
       result
     end
 
