@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200221223130) do
+ActiveRecord::Schema.define(version: 20200304010927) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1469,7 +1469,7 @@ ActiveRecord::Schema.define(version: 20200221223130) do
   end
 
   create_table "teacher_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",              unsigned: true
     t.integer  "teacher_id"
     t.integer  "score"
     t.datetime "created_at",    null: false
