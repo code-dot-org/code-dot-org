@@ -25,7 +25,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # POST /users/auth/maker_google_oauth2
   def maker_google_oauth2
     if params[:secret_code].nil_or_empty?
-      flash.now[:alert] = "Please enter your login code."
+      flash.now[:alert] = I18n.t('maker.google_oauth.error_no_code')
       return render 'maker/login_code'
     end
 

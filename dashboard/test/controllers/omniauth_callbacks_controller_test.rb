@@ -544,7 +544,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_template 'maker/login_code'
 
     # Check that flash alert displays desired message
-    expected_error = "Please enter your login code."
+    expected_error = I18n.t('maker.google_oauth.error_no_code')
     assert_select ".container .alert-danger", expected_error
   end
 
@@ -622,7 +622,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     post :maker_google_oauth2, params: {secret_code: secret_code}
 
     #Then I am signed in
-    user.reload
     assert_equal user.id, signed_in_user_id
   end
 

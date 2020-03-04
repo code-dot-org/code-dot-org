@@ -8,7 +8,7 @@ class SessionsController < Devise::SessionsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     if params[:maker]
-      redirect_to '/users/auth/google_oauth2'
+      redirect_to user_google_oauth2_omniauth_authorize_path
       return
     end
     @already_hoc_registered = params[:already_hoc_registered]

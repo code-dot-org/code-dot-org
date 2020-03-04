@@ -1218,3 +1218,4 @@ en:
       error_token_expired: 'Token has expired. Please log in again for a new token.'
       error_wrong_provider: 'Wrong provider. Please make sure you are logging in with Google.'
       error_invalid_user: 'Invalid user id. Please try logging in again.'
+      error_no_code: 'Please enter your login code.'
