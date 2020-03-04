@@ -165,12 +165,16 @@ describe('castValue', () => {
     expect(castValue('1')).to.equal(1);
     expect(castValue('0.2')).to.equal(0.2);
     expect(castValue('1.2345e3')).to.equal(1234.5);
-    expect(castValue('123abc')).to.equal('123abc');
-    expect(castValue('NaN')).to.equal('NaN');
+    expect(() => castValue('123abc')).to.throw(/Unexpected error parsing JSON/);
+    expect(() => castValue('NaN')).to.throw(/Unexpected error parsing JSON/);
   });
 
   it('converts "null" to null', () => {
     expect(castValue('null')).to.equal(null);
+  });
+
+  it('converts "undefined" to undefined', () => {
+    expect(castValue('undefined')).to.equal(undefined);
   });
 
   it('treats quoted strings as strings', () => {
@@ -179,28 +183,20 @@ describe('castValue', () => {
     expect(castValue('"true"')).to.equal('true');
   });
 
-  it('parses arrays', () => {
-    expect(castValue('[1,2,3]')).to.deep.equal([1, 2, 3]);
-  });
-
-  it('parses objects', () => {
-    expect(castValue('{"a":1}')).to.deep.equal({a: 1});
-  });
-
-  it('parses nested arrays and objects', () => {
-    expect(
+  it('Does not allow arrays or objects', () => {
+    expect(() => castValue('[1,2,3]')).to.throw(/Invalid entry type: object/);
+    expect(() => castValue('{"a":1}')).to.throw(/Invalid entry type: object/);
+    expect(() =>
       castValue('{"a":[2,"3",{"d":"true"}],"x":{"y":false}}')
-    ).to.deep.equal({
-      a: [2, '3', {d: 'true'}],
-      x: {y: false}
-    });
+    ).to.throw(/Invalid entry type: object/);
   });
 
-  it('leaves other strings unchanged', () => {
-    expect(castValue('foo')).to.equal('foo');
-    expect(castValue('undefined')).to.equal('undefined');
-    expect(castValue('"foo')).to.equal('"foo');
-    expect(castValue('""foo""')).to.equal('""foo""');
+  it('Does not allow unquoted or misquoted strings', () => {
+    expect(() => castValue('foo')).to.throw(/Unexpected error parsing JSON/);
+    expect(() => castValue('"foo')).to.throw(/Unexpected error parsing JSON/);
+    expect(() => castValue('""foo""')).to.throw(
+      /Unexpected error parsing JSON/
+    );
   });
 });
 
@@ -214,12 +210,8 @@ describe('editableValue', () => {
   it('puts quotes around boolean strings', () => {
     expect(editableValue('true')).to.equal('"true"');
   });
-  it('doesnt puts quotes around other strings', () => {
-    expect(editableValue('foo')).to.equal('foo');
-  });
-  it('stringifies objects and arrays', () => {
-    expect(editableValue({a: 1})).to.equal('{"a":1}');
-    expect(editableValue([1, 2])).to.equal('[1,2]');
+  it('puts quotes around other strings', () => {
+    expect(editableValue('foo')).to.equal('"foo"');
   });
 });
 
@@ -241,8 +233,9 @@ describe('what happens if you edit and then immediately save a value', () => {
   it('preserves other strings', () => {
     expect(castValue(editableValue('foo'))).to.equal('foo');
   });
-  it('converts null to the empty string', () => {
-    expect(castValue(editableValue(null))).to.equal('');
+  it('preserves null and undefined', () => {
+    expect(castValue(editableValue(null))).to.equal(null);
+    expect(castValue(editableValue(undefined))).to.equal(undefined);
   });
 });
 
@@ -253,7 +246,7 @@ describe('what we show based on what the user enters', () => {
       expect(displayableValue(castValue('true'))).to.equal('true');
     });
     it('shows quotes around other string values', () => {
-      expect(displayableValue(castValue('foo'))).to.equal('"foo"');
+      expect(displayableValue(castValue('"foo"'))).to.equal('"foo"');
     });
   });
 
@@ -270,31 +263,6 @@ describe('what we show based on what the user enters', () => {
       expect(displayableValue(castValue('"\\"foo\\""'))).to.equal(
         '"\\"foo\\""'
       );
-    });
-  });
-
-  describe('when the user enters unmatching quotes', () => {
-    it('adds quotes around and escapes mismatched quotes', () => {
-      // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('"foo'))).to.equal('"\\"foo"');
-      expect(displayableValue(castValue('"1'))).to.equal('"\\"1"');
-    });
-    it('adds quotes around and escapes multiple sets of quotes', () => {
-      // double-backslashes here will appear as single backslashes in the ui
-      expect(displayableValue(castValue('""foo""'))).to.equal(
-        '"\\"\\"foo\\"\\""'
-      );
-    });
-  });
-
-  describe('when the user enters JSON', () => {
-    it('recognizes well-formed objects and arrays', () => {
-      expect(displayableValue(castValue('{"a":1}'))).to.equal('{"a":1}');
-      expect(displayableValue(castValue('[1,2]'))).to.equal('[1,2]');
-    });
-    it('treats malformed objects and arrays as strings', () => {
-      expect(displayableValue(castValue('{a:1}'))).to.equal('"{a:1}"');
-      expect(displayableValue(castValue('[1,2'))).to.equal('"[1,2"');
     });
   });
 });
