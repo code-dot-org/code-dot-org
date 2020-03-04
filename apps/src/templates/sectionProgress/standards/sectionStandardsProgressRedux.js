@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
+import {TeacherScores} from './standardsConstants';
 
 const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
@@ -176,6 +177,50 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
+  console.log("we're in getLessonCompletionStatus");
+  if (
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript
+  ) {
+    const scriptId = state.scriptSelection.scriptId;
+    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+    const stage = _.find(stages, ['id', stageId]);
+    if (stage.unplugged) {
+      return getUnpluggedLessonCompletionStatus(state, stageId);
+    } else {
+      return getPluggedLessonCompletionStatus(state, stage);
+    }
+  }
+}
+
+export function getUnpluggedLessonCompletionStatus(state, stageId) {
+  console.log('in getUnpluggedLessonCompletionStatus');
+  if (
+    state.sectionStandardsProgress.studentLevelScoresByStage &&
+    state.scriptSelection.scriptId
+  ) {
+    const scriptId = state.scriptSelection.scriptId;
+    const levelScoresByStudent =
+      state.sectionStandardsProgress.studentLevelScoresByStage[scriptId][
+        stageId
+      ];
+    console.log('levelScoresByStudent', levelScoresByStudent);
+    console.log(
+      '_.values(levelScoresByStudent',
+      _.values(levelScoresByStudent)
+    );
+
+    let completed = false;
+
+    _.find(_.values(levelScoresByStudent), function(studentScore) {
+      return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
+    });
+
+    return completedScore;
+  }
+}
+
+export function getPluggedLessonCompletionStatus(state, stage) {
   // A lesson is "completed" by a student if at least 60% of the levels are
   // completed.
   const levelsPerLessonCompletionThreshold = 0.6;
@@ -196,8 +241,6 @@ export function getLessonCompletionStatus(state, stageId) {
     state.teacherSections.selectedSectionId
   ) {
     const scriptId = state.scriptSelection.scriptId;
-    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
-    const stage = _.find(stages, ['id', stageId]);
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
