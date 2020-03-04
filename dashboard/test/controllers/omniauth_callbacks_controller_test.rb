@@ -3,10 +3,11 @@ require 'test_helper'
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
   include UsersHelper
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
-    CDO.stubs(:properties_encryption_key).returns("thisisafakekeyyy")
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
   test "login: authorizing with known facebook account signs in" do
