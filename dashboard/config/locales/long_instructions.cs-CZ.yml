@@ -48,17 +48,28 @@ cs-CZ:
         Smyčky jsou tví kamarádi! Použij je tak, abys dokončil tuto hádanku s co nejmenším počtem bloků.
       2-3 Maze 15: V této hádance ti dva cykly `opakuj` pomohou dostat se k prasátku
         pomocí co nejméně bloků!
+      4-5 Artist 1: "Pomoz mi dokreslit mou krabičku. (Každá čára je dlouhá 300\npixelů) "
+      4-5 Artist 2: Opakuj tento kód pomocí bloku `opakuj` k dokončení čtverce.
+      4-5 Artist 3: "Tento obdélníkový záhon má obvod 600.\\\nDlouhá strana má délku
+        200. \n\nNakresli obdélník pomocí co nejméně bloků."
       4-5 Artist 3.5: |-
         Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo to zkus stisknutím "Spustit").
 
         Pak opakuj kód několikrát, aby se kresba dokončila!
       4-5 Artist Free Draw 1: Volná kresba! Nakresli co tě napadne.
+      4-5 Artist Patterns 1: Umíš nakreslit tento čtverec pomocí cyklu? Každá strana
+        je dlouhá 20 pixelů.
       4-5 Artist Patterns 7: Upravíme kód z poslední puzzlu, abychom udělali z toho
         složitěji vzorek. Všimni si, jak se teď překrývají kosodélníky, zkus změnit
         první "skok zpět" ze 100 na 50 (polovina dál) - teď jak daleko by měl umělec
         jít při druhém "skočit dozadu"?
       4-5 Bee Nested Loops 4: 'Sesbírej všechen nektar z každého květu a udělej med
         na každé plástvi. Použij vnořené cykly. '
+      4-5 Maze 9: "Nyní máme nový blok zvaný `opakuj dokud`.\\\nTo nám umožní opakovat
+        příkazy, dokud zombie nezíská slunečnici.  \n\nPoužij nový blok `opakuj dokud`
+        k vyřešení této hádanky s co nejmenším počtem příkazů."
+      4-5 Maze Assessment 1: "**Hodnocení:** Dostaň se ke slunečnici s co nejmenším
+        počtem bloků."
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 9: Nakresli zuby v tlamě aligátora!
       CSD U3 Entertainment Sample 4: |-
@@ -199,7 +210,7 @@ cs-CZ:
       Dance_2019_05: |-
         _Nyní to rozhýbeme!_
 
-        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
       Dance_2019_06: "Pomocí tohoto bloku vytvoř skupinu menších doprovodných tanečníků
         kolem hlavního tanečníka uprostřed. \n  <xml><block type=\"Dancelab_makeNewDanceSpriteGroup\">\n
         \   <title name=\"N\">???</title>\n    <title name=\"COSTUME\" config=\"&quot;BEAR&quot;,
@@ -233,13 +244,13 @@ cs-CZ:
       Dance_Party_02: |-
         Roztančeme tohoto losa!
 
-        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new\_dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">takty</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
+        Do pracovního prostoru přetáhni blok <xml><block type="Dancelab_changeMoveLR"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml>. Připoj ho pod blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml>. Po čtvrtém taktu by měl tanečník začít nový pohyb.
 
         **Takty** se používají v hudbě k počítání času. Takt v tomto cvičení je dlouhý čtyři doby.
       Dance_Party_03: |-
         _Nyní to rozhýbeme!_
 
-        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">takty</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
+        Do pracovního prostoru přidej blok <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml>. Po 6 taktech přiměj tanečníka začít nový pohyb.
       Dance_Party_04: |-
         _Tento tanec potřebuje trochu jiskry!_
 
@@ -293,6 +304,14 @@ cs-CZ:
 
         **Použij klávesy k rozhejbání robota klesnout-zatleskat-klesnout-zatleskat co nejrychleji!**
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      Dance_Party_extras_alternate_2019: "# Sem a tam!\n\nNěkdy můžeš chtít vytvořit
+        sestavu tanečních pohybů, které si vybereš. Právě to umí tento nový blok.
+        \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\nPohyby, které si vybereš výše, se budou postupně stále opakovat. \n\n-
+        \  Vytvoř jinou taneční figuru pro hlavního tanečníka vpředu! \n-   Použij
+        jiná čísla pro změnu rychlosti střídání pohybů. Pro rychlejší střídání vyzkoušej
+        `1` nebo `0,5`!"
       Dance_Party_extras_battle: |-
         # Taneční skupiny
 
@@ -319,6 +338,15 @@ cs-CZ:
         -   Experimentuj s dalšími délkami not (jako např. 0,5 pro poloviční notu nebo 0,125 pro osminovou notu).
         -   Přidej nějaké události „po taktu“.
         -   Přepni „takty“ za „sekundy“ a zkus časovat tance tímto způsobem.
+      Dance_Party_extras_every_beat_2019: |-
+        "# Čtvrťové noty
+
+        Většina našich tanců používala celé takty, ale každý takt obsahuje 4 čtvrťové noty. Tento tanec používá blok <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml>, aby tanečník na každou čtvrťovou notu tlesknul, ale jenom během prvních 4 taktů.
+
+        Zkus měnit čísla v blocích a dívej se, jak se tanec změní.
+
+        -   Experimentuj s jinými délkami not (například 0,5 pro půlovou notu nebo 0,125 pro osminovou notu).
+        -   Přidej nějaké další události.".
       Dance_Party_extras_layout: |-
         # Pojďme utvořit sestavu!
 
@@ -335,6 +363,11 @@ cs-CZ:
         -   Vytvoř druhou skupinu tanečníků s jiným rozložením
         -   Změň rozložení při stisknutí klávesy
         -   Změň vlastnost, když tanečníci změní sestavu
+      Dance_Party_extras_mixed_2019: "# Více tlačítek\n\nTento tanec ti umožní automaticky
+        ovládat vlastnosti tanečníků v reálném čase, když tančí. Zkus provést další
+        změny vlastností, když stiskneš tlačítka. Například: \n\n-   Nastav náhodný
+        odstín tanečníka, když stiskneš „dolů“. \n-   Přidej skupinu tanečníků s náhodným
+        rozložením, když stiskneš „mezeru“."
       Dance_Party_extras_on_beat: |-
         # Basy, středy a výšky
 
@@ -360,13 +393,14 @@ cs-CZ:
         -   Zobraz a skryj tanečníky pomocí šipek s klávesami
         -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
       Dance_Party_extras_visible_2019: |-
-        # Kam by šli?
+        # Čtvrťové noty
 
-        Tento tanec zobrazuje a skrývá dvě různé skupiny tanečníků. Zkontroluj to a poté zkus přidat svůj vlastní styl.
+        Většina našich tanců používala celé takty, ale každý takt obsahuje 4 čtvrťové noty. Tento tanec používá [blockly block][0], aby tanečník po 5. taktu na každou čtvrťovou notu tlesknul.
 
-        -   Přidej další skupinu tanečníků
-        -   Zobraz a skryj tanečníky pomocí šipek s klávesami
-        -   Skryj všechny své tanečníky a přepni se na vzrušující efekt pozadí
+        Zkus změnit čísla v bloku a podívat se, jak se tanec změní.
+
+        -   Experimentuj s jinými délkami not (například 0,5 pro půlovou notu nebo 0,125 pro osminovou notu).
+        -   Přidej nějaké další události.
       Function intro Ryan: "Máte v pracovním prostoru **funkci** s názvem „postavit
         most“. Veškerý kód, který potřebujete k překročení řeky, je do ní vložen!
         \\\r\n \\\r\nPřichyťte malý zelený blok dvakrát do pracovního prostoru, čímž
@@ -384,7 +418,7 @@ cs-CZ:
         okolo černého betonu. Tak aktivuješ **potrubí** ![](https://images.code.org/7773cf30f42e6727a23c8cb364d4664b-image-1538699800030.png)
         a dokončíš tuto výzvu!
       HOC 2018 Level_12: Blahopřejeme! Čeká na tebe otevřený vodní svět. Vybuduj korálový
-        útes! Sopku! Vrak! Záleží to na tobě
+        útes! Sopku! Vrak! Záleží jen na tobě.
       HOC 2018 Level_2: Lodě jsou pro pohyb na otevřené vodě mnohem lepší, než plavání!
         Vydej se na konec doku a naskoč na palubu.
       HOC 2018 Level_3: Popadni vesla a naviguj svou loď přes otevřenou vodu tak,
@@ -403,18 +437,33 @@ cs-CZ:
         v korálovém útesu.
       HOC 2018 Level_9b: Dostal(a) jsi se k útesu, nyní hledej **Srdce moře** ![](https://images.code.org/3035926d2a37aa695b5d47413adcffa2-image-1538699398781.png)
         ! Dostaň se pomocí modrého a červeného korálu k **truhle** s pokladem ![](https://images.code.org/af697397dd70e5b6b93b00eb46c558af-image-1538699377397.png).
-      K-1 Bee Loops 3: Používej tři opakovací cykly, abys dostal nektar a udělal med!
-      K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, med a k pohybu!
+      K-1 Bee Loops 2: Pohybuj se pomocí smyčky `opakuj` a potom získej nektar a připrav
+        med!
+      K-1 Bee Loops 3: Použij tři smyčky `opakuj`, abys dostal nektar a udělal med!
+      K-1 Bee Loops 4: Použij smyčku `opakuj` pro získání nektaru, vyrobení medu a
+        pro pohyb!
+      K-1 Bee Loops 5: Použij smyčku `opakuj`, aby dostal nektar a med!
+      K-1 Bee Loops 6: Použij smyčku `opakuj`, abys dostal nektar, med a k pohybu!
       K-1 Maze Loops 10: "Dostaň mě k prasátku!\\\rPoužití cyklu 'opakuj' to hodně
         zjednoduší."
+      K-1 Maze Loops 11: |-
+        Dostaň mě k prasátku!\
+        Smyčka `opakuj` to usnadní.
+      K-1 Maze Loops 12: |-
+        Dostaň mě k prasátku!\
+        Smyčka `opakuj` to usnadní.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
       K-1 Maze Loops 3: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 5: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 6: Dostaň mě k prasátku! Určitě použij 'opakuj'.
       K-1 Maze Loops 7: Dostaň mě k prasátku! Určitě použij 'opakuj'.
+      K-1 Maze Loops 8: Použij smyčku `opakuj`, abys mě dostal k prasátku.
       K-1 Maze Loops Assessment 1: "Podívej na vše, co jsme se naučili!\\\rPoužij
         cyklus 'Opakuj' abys mě dostal k prasátku!"
+      MC HOC 2016 SCORE LEVEL: "Některé hry počítají skóre. Zkus to také s těmito
+        Železnými Golemi a použij blok <xml>  <block type=\"craft_addScore\">\n    <title
+        name=\"SCORE\">1</title>\n  </block></xml>, abys získal bod, kdykoli se jich
+        dotneš.   \n\nVyhraješ, až získáš pět bodů!"
       MC_HOC_2017_01_RETRY: "Hráč {currentPlayerName} je uvězněn v domě, ale na pomoc
         mu přišel agent!   \\\r\n \\\r\n   \\\r\nPřichyťte v pracovním prostoru blok
         „pohyb vpřed“ k bloku „při spuštění“, abyste agenta přesunuli na nášlapnou
@@ -487,11 +536,59 @@ cs-CZ:
       Overworld Move to Sheep: Abys došel k ovci, přidej druhý příkaz "posunout vpřed".
       Overworld Move to Sheep_2019: Abys došel k ovci, přidej druhý příkaz "posunout
         vpřed".
+      Standalone_Artist_2: Nakresli tento kosočtverec s úhly 120 a 60 stupňů a stranami
+        dlouhými 150 pixelů.
+      Standalone_Artist_3: Umíš nakreslit tento šestiúhelník se stranami 100 pixelů
+        a otáčením 60 stupňů?
+      Standalone_Artist_4: Teď máš nový blok na hraní - cyklus. Ten bude opakovat
+        sadu příkazů. Co se stane, když tyto příkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Kolikrát musíš zopakovat tento kosočtverec, abys nakreslil
+        květinu?
+      Standalone_Artist_5.5: 'Všimni si, jak jsme zjednodušili kód kosočtverce tím,
+        že jsme ho změnili na cyklus. Můžeš zopakovat celou posloupnost 12 krát, abys
+        nakreslil květinu. Nápověda: Po skončení kosočtvercového cyklu ho budeš muset
+        otočit o 30 stupňů, abys nekreslil pořád přes stejný kosočtverec.'
+      Standalone_Artist_6: 'Zopakuj tento šestiúhelníkový kód 6 krát, abys vytvořil
+        obrázek. O kolik stupňů je potřeba pokaždé otočit? Nápověda: Vyděl počet stupňů
+        v kruhu počtem cyklů, které budeš potřebovat.'
+      Standalone_Artist_7: 'Funkce je dalším programovacím nástrojem, který ti pomůže
+        vyhnout se opakování. Tato funkce nakreslí květinu, takže ji můžeš použít
+        pokaždé, když chceš nakreslit květinu. Použij funkci a nový blok pro skok
+        k nakreslení těchto květin. Nápověda: Květiny jsou od sebe vzdálené 150 pixelů'
+      Standalone_Artist_8: Zde je funkce nazvaná `Nakresli tvar`, kterou jsme naprogramovali
+        k nakreslení šestiúhelníků. Spusť kód, abys viděl, co dělá a pak experimentuj
+        s funkcí, abys viděl, co se stane. Umíš s funkcí nakreslit vzor čtverců, trojúhelníků
+        nebo osmiúhelníků?
+      Standalone_Artist_9: Pusť se do toho a nakresli obrázek, jaký se ti bude líbit!
+        Máš dokonce i prázdnou funkci, kterou můžeš přimět, aby dělala, cokoli chceš!
+      'Widget: Text Compression': Hledej v textu vzory (opakující se slova nebo sousloví).
+        Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku,
+        symbol pro záznam se vloží do textu na místo vzoru.
       behaviors free play: "**Volná hra:** Vytvoř svoji vlastní vesmírnou scénu!"
-      course1_artist_loops_challenge2: Jdem si hrát. Nakresli tolik X kolik chceš!
-        Uděláš tři v řadě?
+      course1_artist_loops_challenge2: Pojďme si zahrát hru! Nakresli tolik X, kolik
+        můžeš! Uděláš tři v řadě?
+      course1_artist_loops_challenge3: |-
+        **Píp!**
+
+        _"Pomůžeš mi udělat dvě ptačí budky?"_
       course1_maze_seq_challenge2: V každém směru se můžeš posunout pouze čtyřikrát.
         Dokážeš najít cestu než ti dojdou bloky?
+      course1_playlab_events_challenge1: |-
+        \_ „Kde jsou schovaní moji kamarádi? V této hře se kliknutím na mě ukáže můj přítel Olive - kočka!“ \_
+
+        Kliknutím na Olive se objeví Robin! Dokážeš napsat kód, abys zobrazil i zbývající postavy?
+
+        V této hádance nezapomeň kliknout na rady! Rady ti pomohou vyřešit tento úkol krok za krokem!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
+      course1_playlab_events_challenge2: |-
+        "Pojďme na párty! Zadej mým přátelům něco, co budou dělat, když na ně klikneš nebo na ně klepneš."\_
+
+        Co řeknou zvířata? Co jiného se stane?
+
+        V této hádance nezapomeň kliknout na rady! Rady ti poskytnou zábavné věci, které můžeš vyzkoušet!
+
+        ![](<https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png>)
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med. Nektar můžeš sbírat pouze z květin a med vyrábět do pláství. Zkontroluj
         každé místečko, jestli je tam květina nebo plástev.
@@ -585,9 +682,8 @@ cs-CZ:
         Teď se podíváme, jestli zvládneme vytvořit dvě čáry,
         které svírají úhel 90 stupňů. Budeš potřebovat blok "otoč"
         i blok "posuň".
-      frozen snowflake branch: |-
-        Zkus použít blok "vytvoř rameno vločky"
-        k vytvoření tří ramen, což začíná vypadat jako vločka.
+      frozen snowflake branch: Zkus použít blok "vytvoř rameno vločky" k vytvoření
+        tří ramen, což začne vypadat jako vločka.
       frozen snowflake full: Teď to zopakujme osmkrát k vytvoření krásné sněhové vločky!
       frozen snowflower: |-
         Složité sněhové vzory mohou být vytvořeny z
@@ -605,30 +701,3 @@ cs-CZ:
         Dokážeš vytvořit sněhovou vločku s použitím
         bloku "opakuj" pro nakreslení čtverce 10 krát, a bloku "otočit" k otočení o 36
         stupňů mezi každými čtverci?
-      Dance_Party_extras_alternate_2019: |-
-        # Zpět a dopředu!
-
-        Někdy můžete chtít vytvořit model tanečních tahů, které si vyberete. Tento nový blok vám to umožní.
-
-        <xml><block type="Dancelab_alternateMoves"><title name="GROUP">sprites</title><title name="N">2</title><title name="MOVE1">MOVES.Roll</title><title name="MOVE2">MOVES.ClapHigh</title></block></xml>
-
-        Tahy, které zvolíte výše, se budou opakovat v posloupnosti navždy.
-
-        \-Vytvořte střídavé vedení pro hlavní tanečnici vpředu!
-        \-Pro změnu rychlosti alternativního pohybu použijte různá čísla. Zkuste ' 1 ' nebo ' 0,5 ' pro rychlejší střídání!
-      Dance_Party_extras_every_beat_2019: |-
-        # Čtvrtletí-poznámky
-
-        Většina našich tanců použila celá opatření, ale každé opatření se skládá ze 4 čtvrtletích. Tento tanec používá <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> aby tanečnice tleskají každé čtvrtině, ale jen pro prvních 4 opatření.
-
-        Zkuste změnit čísla v blocích, abyste viděli, jak se tanec mění.
-
-        \-Experimentovat s jinými stopami (např. 0,5 pro poloviční lístek nebo 0,125 pro osmou poznámku).
-        \-Přidejte další události.
-      Dance_Party_extras_mixed_2019: |-
-        # Další tlačítka
-
-        Tento tanec vám umožní ovládat vlastnosti tanečníků v reálném čase, zatímco oni tančí automaticky. Zkuste změnit jiné vlastnosti, když stisknete tlačítka. Například:
-
-        -   Náhodně odstín tanečníka, když stisknete tlačítko „dolů“.
-        -   Přidejte skupinu tanečníků s náhodným uspořádáním, když stisknete „prostor“.

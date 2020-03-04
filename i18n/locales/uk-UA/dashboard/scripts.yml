@@ -1691,6 +1691,7 @@ uk:
             Dance Party:
               name: Танцювальна вечірка
           title: Танцювальна вечірка
+          description_short: Під пісні Кеті Пері, Мадонни, Джея Бальвіна, Сіа, Кіта Урбана, Сіари та ще 25 виконавців!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1965,7 +1966,7 @@ uk:
               name: Цикли For
         dance-extras-2019:
           description: Рухайся далі однієї години з розширеними проектними ідеями.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Умови
@@ -1975,3 +1976,30 @@ uk:
               name: Краудсорсинг
             Conditionals with Cards:
               name: Листівки та умови
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Умови
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Умови
+        csd2-2020:
+          stages:
+            CSS Classes:
+              name: Класи CSS
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Функції з параметрами
+        csd3-2020:
+          description_short: "Програмування"
+          stages:
+            Variables:
+              name: змінні
+            Conditionals:
+              name: Умови
+            Velocity:
+              name: Швидкість
+            Functions:
+              name: функції

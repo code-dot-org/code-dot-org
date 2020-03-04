@@ -244,6 +244,7 @@ ur:
             Dance Party:
               name: ڈانس پارٹی
           title: ڈانس پارٹی
+          description_short: کیٹی پیری، میڈونا، جے بالون، سیا، کیتھ اربن، سیارا، اور مزید 25 کی خاصیت بنانا!
         dance--draft:
           stages:
             Dance Party:
@@ -312,7 +313,21 @@ ur:
               name: ایونٹس/واقعات
             Variables:
               name: متغیرات
+        time4cs-original-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
         time4cs-control-unit-1:
           stages:
+            Conditionals:
+              name: شرائط
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: شرائط
+        csd3-2020:
+          stages:
+            Variables:
+              name: متغیرات
             Conditionals:
               name: شرائط

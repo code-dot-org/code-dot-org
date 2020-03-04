@@ -142,6 +142,9 @@ class InlineAudio extends React.Component {
 
     const src = this.getAudioSrc();
     const audio = new Audio(src);
+    // iOS Safari does not automatically attempt to load the audio source,
+    // so we need to manually load.
+    audio.load();
 
     audio.addEventListener('canplay', () => {
       this.setState({loaded: true});

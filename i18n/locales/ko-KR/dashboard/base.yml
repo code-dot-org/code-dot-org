@@ -131,7 +131,6 @@ ko:
     valid_password: "사용 가능한 비밀번호!"
     invalid_password: "비밀번호는 최소 6 문자 이상이어야 합니다"
     mismatch_password: "입력한 비밀번호가 일치하지 않습니다."
-    under_13_consent: "본인이 13세 미만일 경우, 본인은 본인의 부모 또는 법적 보호자로부터 Code.org 서비스 사용을 허락받았음을 확인합니다."
     agree_us_website: "본인은 미국에 기반을 두고 있는 웹사이트 사용에 동의합니다."
     my_data_to_us: "본인의 본 사이트 사용에 따른 데이터는 미국으로 전송되어 보관 또는 처리될 수 있습니다."
     additional_information: "가입하기 위해서는 추가적인 정보가 필요합니다."
@@ -305,7 +304,7 @@ ko:
       stats: "통계"
       help_us: "도움주기"
       teach: "가르치기"
-      about: "안내"
+      about: "소개"
     user:
       classroom: '선생님 홈페이지'
       district_dashboard: '대시보드 구역'
@@ -330,7 +329,7 @@ ko:
       eval: '평가'
       flappy: '플래피'
       frozen: '겨울왕국'
-      gamelab: 'Game Lab'
+      gamelab: '게임 연구소'
       gamelab_jr: '게임 연구소 (베타)'
       gumball: '검볼의 어메이징 월드'
       iceage: '아이스 에이지'
@@ -338,10 +337,12 @@ ko:
       minecraft_adventurer: 'Minecraft 모험가'
       minecraft_designer: '마인크래프트'
       playlab: 'Play Lab'
+      spritelab: '스프라이트 연구소'
       starwars: '스타워즈'
       starwarsblocks: '스타워즈 (블록)'
       starwarsblocks_hour: '스타워즈 (블록)'
       weblab: '웹 연구소'
+      view_all: '모든 프로젝트 보기...'
     popup:
       progress_for_user: "%{name} 의 진도"
       progress: '내 진도'
@@ -561,7 +562,7 @@ ko:
       title: "갤러리"
       body: "다른 사람이 만든 앱과 이미지 갤러리 보기"
     gamelab:
-      title: "Game Lab"
+      title: "게임 연구소"
       audience: "13세 이상"
       cta: "방법 알아보기"
     hoc-encryption:
@@ -619,6 +620,8 @@ ko:
     help_support: "도움말 및 지원"
     documentation: "문서"
     tutorials: "튜토리얼"
+  free_response:
+    placeholder: "이름을 입력하세요."
   multi:
     wrong_title: "오답"
     wrong_body: "정답이 아닙니다. 다시 시도해 보세요."
@@ -692,6 +695,7 @@ ko:
     privacy_notice: "개인정보 보호정책"
     accept_label: '업데이트 된 <a href="%{tos_url}" target="_blank">서비스 약관</a> 과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>에 동의합니다.'
     accept_label_markdown: 업데이트 된 [서비스 약관](%{tos_url}) 과 [개인정보 보호정책](%{privacy_url})에 동의합니다.
+    accept_tos: Code.org에 가입하시면 [이용 약관](%{tos_url}) 및 [개인정보 보호정책](%{privacy_url})에 동의하는 것으로 간주됩니다.
     accept: "수락"
     print: "인쇄"
     reminder_desc: '<a href="%{tos_url}" target="_blank">서비스 약관</a>과 <a href="%{privacy_url}" target="_blank">개인정보 보호정책</a>을 업데이트 하였습니다. 수락하기 전에 다시한번 확인해 주시기 바랍니다. 업데이트 된 약관을 명시적으로 수락하기 전에는 JavaScript 교육 도구를 학생들에게 제공하지 못할수도 있습니다.'
@@ -800,6 +804,7 @@ ko:
     csf_events: '이벤트'
     csf_binary: '2진'
     csf_conditionals: '조건'
+    csf_spritelab: '스프라이트 연구소'
     csf_nested_loops: '중첩 반복'
     csf_functions: '함수'
     csf_variables: '변수'

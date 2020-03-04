@@ -1643,7 +1643,7 @@ fa:
               name: متغیرها
             For Loops:
               name: حلقه های "برای"
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: شرطی ها
@@ -1653,3 +1653,24 @@ fa:
               name: کمک گیری جمعی
             Conditionals with Cards:
               name: شرطی ها با کارتها
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: شرطی ها
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: شرطی ها
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: معادله با پارامترها
+        csd3-2020:
+          description_short: "برنامه نویسی"
+          stages:
+            Variables:
+              name: متغیرها
+            Conditionals:
+              name: شرطی ها
+            Functions:
+              name: توابع

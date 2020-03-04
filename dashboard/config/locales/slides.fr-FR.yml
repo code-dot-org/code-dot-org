@@ -3698,13 +3698,160 @@ fr:
           résoudre, et écrire le logiciel pour que cette idée devienne une réalité.
     hoc_dance_warmup:
       1:
-        text: 'Heure de Code | Fête dansante : Échauffement'
+        text: 'Heure de Code | Soirée Dansante : Échauffement'
+      2:
+        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
+          et créateur d'iLuminate.
+      3:
+        text: L'informatique est liée à la créativité, de plein de manières différentes,
+          de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
+          vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je
+          fais avec des costumes au lumière. On peut faire tellement de choses, une
+          fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
+          infinies.
+      4:
+        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
+          en programmant votre propre soirée dansante ! Nous avons sélectionné de
+          la musique branchée et une équipe de grands danseurs avec lesquels vous
+          pourrez jouer.
+      5:
+        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
+          modifier leurs mouvements de danse, les faire répondre à la musique et les
+          rendre interactifs.
+      6:
+        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
+          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+      7:
+        text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
+          disponibles dans cet espace au fur et à mesure des cours.
+      8:
+        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
+          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
+          votre programme.
+      9:
+        text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
+          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+      10:
+        text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
+          d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
+          de configuration orange. Ce danseur là est un chat et il s'appelle "my_first_dancer".
+          Vous pouvez changer le nom en cliquant ici.
+      11:
+        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
+          jeu, avec ça.
+      12:
+        text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
+          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
+          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
+          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
+          apparaissent dans l'espace de lecture et la musique démarre.
+      13:
+        text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
+          vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
+          compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va
+          ?
     hoc_dance_events:
       1:
-        text: 'Heure de Code | Fête dansante : Événements'
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: |-
+          Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler la
+          technologie, car elle contrôle littéralement nos vies.
+      3:
+        text: Pour générer différents mouvements de danse au bon moment avec la musique,
+          vous pouvez utiliser les Évènements. Un événement demande à votre programme
+          d’écouter quelque chose, puis d’y réagir tout de suite.
+      4:
+        text: À titre d’exemple, certains événements consistent en un clic de souris,
+          un bouton fléché ou appuyer sur l'écran. L'événement vous utilisez écoutera
+          en changement en la chanson. Le changement incitera votre danseur à faire
+          une nouvelle danse.
+      5:
+        text: Les danseurs professionnels font leur chorégraphie en comptant les temps
+          de la chanson.
+      6:
+        text: En musique, une mesure fait référence à un certain nombre de temps.
+          En général, dans les chansons, une mesure dure 4 temps.
+      7:
+        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
+          vert. Ce bloc Évènement dit « après 4 mesures ».
+      8:
+        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
+          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
+          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
+          chanson, avant de commencer sa danse.
+      9:
+        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+      10:
+        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
+          Et juste au bon moment, le danseur commencera.
+    hoc_dance_properties:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
+          une Amazon Future Ingénieure.
+      3:
+        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
+          critique, et après des heures de travail, on a quelque chose de vraiment
+          cool et gratifiant.
+      4:
+        text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
+          vous avez programmés pour différents types de mouvements de danse. Mais
+          comment fonctionnent ces mouvements ?
+      5:
+        text: Chaque mouvement de danse est constitué d’une série d’images appelées
+          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
+          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
+          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
+          bouge. C’est là le secret derrière chaque animation.
+      6:
+        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
+          aussi ses propriétés qui décrivent des choses comme la position du danseur
+          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
+          vous utiliserez le bloc Définir.
+      7:
+        text: |-
+          Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir. Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser le bloc Définir dans votre programme. Choisissez ensuite le danseur que vous
+          voulez modifier et tapez la taille que vous voulez qu’ils aient à l’écran.
+      8:
+        text: |-
+          La taille normale est 100. Si vous choisissez un nombre inférieur, cela réduira
+          la taille des danseurs. Plus le danseur est petit, plus il semble éloigné.
+      9:
+        text: À l'aide du bloc Définir, vous pouvez également modifier les dimensions,
+          la rotation, la position et la couleur d'un danseur. En jouant avec ces
+          propriétés, vous pouvez faire plein de modifications, et les relier à différentes
+          parties de la chanson.
+      10:
+        text: N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur
+          déjà existant. Veillez à ce que votre bloc Définir soit après celui Créer
+          un nouveau danseur. N'hésitez pas à faire des expériences, à être créatif
+          et à vous amuser.
     hoc_dance_congrats:
       1:
-        text: 'Heure de Code | Fête dansante : C’est la fête !'
+        text: 'Heure de Code | Soirée Dansante : C’est la fête !'
+      2:
+        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
+          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
+          avec votre propre design à partager avec vos amis.
+      3:
+        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
+          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
+          le bloc Disposition pour organiser les danseurs de différentes façons à
+          l'écran.
+      4:
+        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
+          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
+          ?
+      5:
+        text: Ou bien une chorégraphie avec vos amis ?
+      6:
+        text: Ou encore autre chose qui regrouperait tout ?
+      7:
+        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
+          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
+          !
     MC_2018_loops:
       2:
         text: Bienvenue, aventuriers ! Je m'appelle Poulpe. J'ai remarqué que vous
@@ -3718,13 +3865,180 @@ fr:
         text: 'Poulpe : Félicitations !'
     hoc_dance_warmup_2019:
       1:
-        text: 'Heure de Code | Fête dansante : Échauffement'
+        text: 'Heure de Code | Soirée Dansante : Échauffement'
+      2:
+        text: Bonjour Je m'appelle Miral Kotb et je suis danseur, développeur de logiciels
+          et créateur d'iLuminate.
+      3:
+        text: L'informatique est liée à la créativité, de plein de manières différentes,
+          de façon incommensurable. Une fois que vous êtes capable d'écrire un logiciel,
+          vous pouvez matérialiser vos idées dans n'importe quoi. C’est ce que je
+          fais avec des costumes au lumière. On peut faire tellement de choses, une
+          fois qu’on a les outils pour écrire un logiciel. Les possibilités sont vraiment
+          infinies.
+      4:
+        text: Au cours de la prochaine heure, vous allez commencer avec l'informatique
+          en programmant votre propre soirée dansante ! Nous avons sélectionné de
+          la musique branchée et une équipe de grands danseurs avec lesquels vous
+          pourrez jouer.
+      5:
+        text: Vous utiliserez des blocs de code pour choisir différents danseurs,
+          modifier leurs mouvements de danse, les faire répondre à la musique et les
+          rendre interactifs.
+      6:
+        text: Vous verrez que votre écran est divisé en 3 parties principales. Sur
+          la gauche se trouve l'espace de jeu où vos danseurs se présenteront.
+      7:
+        text: La zone centrale est une boîte à outils. De nouveaux blocs de code seront
+          disponibles dans cet espace, au fur et à mesure des cours.
+      8:
+        text: À droite, vous avez l’espace de travail. Vous pouvez faire glisser des
+          blocs depuis la boîte à outils jusqu’à l'espace de travail, pour construire
+          votre programme.
+      9:
+        text: Les instructions pour chaque niveau seront affichées en haut de l'écran.
+          Si vous avez besoin d'un indice, il vous suffit de cliquer sur l'ampoule.
+      10:
+        text: Pour commencer, faisons un nouveau danseur avec ce bloc rouge. Faites-le
+          d’abord glisser en dehors de la boîte à outils et accrochez-le sous ce bloc
+          de configuration orange. Ce danseur là est un chat.
+      11:
+        text: Vous pouvez aussi changer l'endroit où il apparaît dans l'espace de
+          jeu, avec ça.
+      12:
+        text: Au-dessus de l’espace de jeu, il y a un menu permettant de sélectionner
+          de la musique. Il y a une tonne de chansons à choisir, alors amusez-vous
+          à trouver votre chanson préférée. Sous l'espace de jeu, il y a le bouton
+          Exécuter. Lorsque vous appuyez sur Exécuter, les danseurs de votre programme
+          apparaissent dans l'espace de lecture et la musique démarre.
+      13:
+        text: Essayez tout seul ! Et si vous vous sentez coincé, c'est pas grave,
+          vous n’avez qu’à vous lever et bouger. Avant que vous ne vous en rendiez
+          compte, vous aurez déjà créé votre propre soirée dansante. Alors, on y va?
     hoc_dance_events_2019:
       1:
-        text: 'Heure de Code | Fête dansante : Événements'
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m’appelle Erin et je suis un ingénieur en logiciel chez code.org.
+          J’ai contribué à l’élaboration de Dance Party !
+      3:
+        text: Pour générer différents mouvements de danse au bon moment avec la musique,
+          vous pouvez utiliser les Évènements. Un événement demande à votre programme
+          d’écouter quelque chose, puis d’y réagir tout de suite.
       4:
         text: 'Quelques exemples d''évènements sont: l''écoute des clics de souris,
           l’activation d’une touche fléchée du clavier ou un tapotement de l''écran.'
+      5:
+        text: Là vous allez programmer un danseur pour faire un mouvement lorsque
+          vous appuyez sur les boutons fléchés de votre écran, ou sur les touches
+          de votre clavier.
+      6:
+        text: Vous pouvez utiliser le bloc d’événements « quand flèche du haut » et
+          le connecter à un bloc « faire une fois ». Lorsque vous appuyez sur la flèche
+          du haut, le code associé au bloc de flèche « quand en haut » s’exécute.
+          Quelle danse allez-vous choisir ?
+      7:
+        text: Veillez à ce que le type de danseur que vous choisissez corresponde
+          bien à l'un des danseurs que vous avez créés dans le bloc de configuration,
+          sinon il ne se passera rien.
+      8:
+        text: Pour finir, vous pouvez créer plus d'événements comme celui-ci, pour
+          que vos danseurs effectuent des mouvements différents avec chaque touche.
+          Essayez-le et avec les quelques lignes de code, vous pourrez créer votre
+          propre danse interactive !
+    hoc_dance_measures_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Temps'
+      2:
+        text: |-
+          Je m’appelle Aloe Blacc, je suis un chanteur, compositeur-interprète. Je pense qu’il est crucial d’avoir des connaissances en informatique, car c'est l'avenir. Je crois qu'il faut être à même de contrôler la
+          technologie, car elle contrôle littéralement nos vies.
+      3:
+        text: L’événement que nous allons utiliser maintenant va écouter les variations
+          dans le morceau. Cette variation incitera votre danseur à faire une nouvelle
+          danse.
+      4:
+        text: |-
+          Les danseurs professionnels font leur chorégraphie en comptant les temps de la chanson. En musique, une mesure fait référence à un certain nombre de temps. En général, dans les chansons, une mesure dure 4
+          temps.
+      5:
+        text: Pour que vos danseurs se déchaînent, vous aurez besoin d'un bloc Évènement
+          vert. Ce bloc Évènement dit « après 4 mesures ».
+      6:
+        text: Si vous faites glisser un bloc violet « Faire pour toujours », vous
+          pouvez choisir une danse pour votre danseur. Parce que c'est dans le bloc
+          d'événements « après 4 mesures », votre danseur attendra 4 mesures de la
+          chanson, avant de commencer sa danse.
+      7:
+        text: Surveillez bien le compteur de mesures situé en haut de la zone d'affichage.
+      8:
+        text: Recherchez et écoutez l'événement qui déclenchera le code de danse.
+          Et juste au bon moment, le danseur commencera.
+    hoc_dance_properties_2019:
+      1:
+        text: 'Heure de Code | Soirée Dansante : Événements'
+      2:
+        text: Je m'appelle Maria, je suis étudiante à l'Université de Washington et
+          une Amazon Future Ingénieure.
+      3:
+        text: J'adore l'informatique car ça allie résolution de problèmes et pensée
+          critique, et après des heures de travail, on a quelque chose de vraiment
+          cool et gratifiant.
+      4:
+        text: Jusque-là, vous avez pu jouer avec différents types de danseurs, que
+          vous avez programmés pour différents types de mouvements de danse. Mais
+          comment fonctionnent ces mouvements ?
+      5:
+        text: Chaque mouvement de danse est constitué d’une série d’images appelées
+          Cadres. Chaque cadre est légèrement différent de celui qui précède. Quand
+          votre programme s'exécute, votre ordinateur affiche un cadre après l'autre.
+          Ils s'affichent tellement vite que cela donne l'impression que la danseuse
+          bouge. C’est là le secret derrière chaque animation.
+      6:
+        text: Non seulement vous pouvez changer les mouvements d'un danseur, mais
+          aussi ses propriétés qui décrivent des choses comme la position du danseur
+          à l'écran, sa taille et sa couleur. Pour modifier les propriétés d'un danseur,
+          vous utiliserez le bloc Définir.
+      7:
+        text: Pour modifier les propriétés d'un danseur, vous utiliserez le bloc Définir.
+          Utilisons-le pour rendre nos danseuses plus petites. Faites d’abord glisser
+          le bloc Définir dans votre programme.
+      8:
+        text: Choisissez ensuite le danseur que vous voulez modifier et tapez la taille
+          que vous voulez qu'ils aient à l'écran. La taille normale est 100. Si vous
+          choisissez un nombre inférieur, cela réduira la taille des danseurs. Plus
+          le danseur est petit, plus il semble éloigné.
+      9:
+        text: À l'aide du bloc Définir, vous pouvez également modifier les dimensions,
+          la rotation, la position et la couleur d'un danseur. En jouant avec ces
+          propriétés, vous pouvez faire plein de modifications, et les relier à différentes
+          parties de la chanson.
+      10:
+        text: |-
+          N'oubliez pas que vous ne pouvez définir que les propriétés d'un danseur déjà existant. Veillez à ce que votre bloc Définir soit après celui
+          Créer un nouveau danseur. N'hésitez pas à faire des expériences, à être créatif
+          et à vous amuser !
     hoc_dance_congrats_2019:
       1:
-        text: 'Heure de Code | Fête dansante : C’est la fête !'
+        text: 'Heure de Code | Soirée Dansante : C’est la fête !'
+      2:
+        text: Félicitations ! Vous venez d'apprendre les bases de l'informatique.
+          Maintenant, vous pouvez utiliser ces blocs pour créer une soirée dansante
+          avec votre propre design à partager avec vos amis.
+      3:
+        text: Si vous regardez dans la boîte à outils, vous trouverez de tout nouveaux
+          blocs que vous n'aviez pas vus avant. Vous pouvez, par exemple, utiliser
+          le bloc Disposition pour organiser les danseurs de différentes façons à
+          l'écran.
+      4:
+        text: Regardez et faites des tests avec ces nouveaux blocs et fonctionnalités.
+          Vous voulez créer une danse dont la chorégraphie colle à votre morceau préféré
+          ?
+      5:
+        text: Ou bien une chorégraphie avec vos amis ?
+      6:
+        text: Ou encore autre chose qui regrouperait tout ?
+      7:
+        text: À la fin du didacticiel, vous pouvez partager un lien vers votre création
+          avec vos amis. Laissez libre cours à votre imagination et amusez-vous bien
+          !

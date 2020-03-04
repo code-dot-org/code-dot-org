@@ -1758,7 +1758,7 @@ it:
       2:
         text: I parametri ti permettono di passare ad una funzione dei valori che
           vengono utilizzati come variabili all'interno della funzione stessa. Aggiungi
-          a questa funzione un parametro chiamato "Lunghezza" ("Length") da utilizzare
+          a questa funzione un parametro chiamato "Lunghezza" (_Length_) da utilizzare
           per creare quadrati di diverse dimensioni. Nell'editor della funzione, come
           abbiamo già visto, puoi modificare il nome e la descrizione della funzione,
           ma puoi anche aggiungere un parametro. Scrivi il nome del parametro nello
@@ -3158,7 +3158,7 @@ it:
       5:
         text: Quando aggiungi un nuovo elemento alla tua schermata ottieni un ID generico
           come button1. Sarebbe un'ottima cosa cambiare questo ID generico con qualcosa
-          di più significativo come "rightButton" ("pulsanteDestro"). In modo da riconoscerlo
+          di più significativo come "rightButton" (_pulsanteDestro_). In modo da riconoscerlo
           facilmente nel programma.
       6:
         text: Se aggiungi un elemento per sbaglio, basta trascinarlo via o premere

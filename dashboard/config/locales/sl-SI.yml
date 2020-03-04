@@ -522,6 +522,8 @@ sl:
     report_bug: Sporoči napako
     support: Pomoč
     support_url: "//support.code.org"
+  free_response:
+    placeholder: Vnesite vaš odgovor tukaj
   multi:
     wrong_title: Nepravilen odgovor
     wrong_body: Odgovor, ki ste ga vnesli, ni pravilen.  Prosimo, poskusite znova!

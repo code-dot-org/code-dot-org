@@ -2,29 +2,13 @@ name 'csp-u5-exam1-list-iteration-2_2020'
 editor_experiment ''
 
 
-wrong '
-<pre>
-[apple, dream]
-</pre>
-'
+wrong '`[apple, dream]`'
 
-right '
-<pre>
-[bug, car, ear]
-</pre>
-'
+right '`[bug, car, ear]`'
 
-wrong '
-<pre>
-[bug, car, ear, food]
-</pre>
-'
+wrong '`[bug, car, ear, food]`'
 
-wrong '
-<pre>
-[apple, dream, food]
-</pre>
-'
+wrong '`[apple, dream, food]`'
 
 markdown <<MARKDOWN
 ```

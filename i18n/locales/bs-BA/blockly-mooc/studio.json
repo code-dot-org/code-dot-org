@@ -34,6 +34,7 @@
   "bird": "ptica",
   "calloutPutCommandsHereRunStart": "Ovdje dodajte komande koje će se izvršiti prilikom pokretanja",
   "calloutBlocklyPlaceGoUpHere": "Postavi \"Idi gore\" blok ovdje kako bi išao/la gore",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Kliknite na zaglavlje događaja kako bi vidjeli blokove događaja funkcije.",
   "calloutUseArrowButtons": "Koristi ovu dugmad ili strelice na tastaturi kako bi aktivirao/la događaje kretanja",
   "calloutUseArrowButtonsAutoSteer": "Sakrili smo kod koji si napisao/la, ali još uvijek možeš koristiti strelice na tastaturi za kretanje",

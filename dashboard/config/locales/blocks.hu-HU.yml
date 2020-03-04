@@ -20,26 +20,26 @@ hu:
             '"SLOTH"': lajhárok
             '"UNICORN"': Egyszarvúak
           MOVE1:
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
           MOVE2:
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -77,14 +77,14 @@ hu:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -98,14 +98,14 @@ hu:
             '"next"': "(Következő)"
             '"prev"': "(Előző)"
             '"rand"': "(Véletlen)"
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -166,7 +166,7 @@ hu:
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.XClapSide: Tapsol
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
@@ -175,7 +175,7 @@ hu:
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Fej + csípő
             MOVES.XHop: Hopp
             MOVES.XHighKick: Rúg
@@ -197,7 +197,7 @@ hu:
           MOVE:
             '"rand"': "(Véletlen)"
             MOVES.XBend: Hajlít
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.XClapSide: Tapsol
             MOVES.ClapHigh: Taps fent
             MOVES.Dab: Legyintés
@@ -206,7 +206,7 @@ hu:
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.XHeadHips: Fej + csípő
             MOVES.XHop: Hopp
             MOVES.XHighKick: Rúg
@@ -225,7 +225,7 @@ hu:
       Dancelab_everyMeasuresRange:
         text: 'ismételd meg {N} ütemenként {START} után '
       Dancelab_everySeconds:
-        text: 'minden {N} {UNIT} '
+        text: 'ismételd meg minden {N} {UNIT} után '
         options:
           UNIT:
             '"measures"': ütem
@@ -273,13 +273,13 @@ hu:
         options:
           DANCE:
             MOVES.ClapHigh: Taps fent
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -357,10 +357,15 @@ hu:
           FORMAT:
             '"border"': határ
             '"inner"': belső négyzet
+            '"diamond"': gyémánt
             '"circle"': kör
             '"grid"': rács
+            '"top"': felső sor
             '"row"': sor
+            '"bottom"': alsó sor
+            '"left"': bal oszlop
             '"column"': oszlop
+            '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
             '"random"': véletlen
@@ -484,7 +489,7 @@ hu:
       Dancelab_onPointerUp:
         text: mutató felfelé mozgatásakor
       Dancelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Dancelab_setBackground:
         text: 'háttérszín beállítása: {COLOR}'
       Dancelab_setBackgroundEffect:
@@ -497,13 +502,13 @@ hu:
             '"diamonds"': Gyémántok
             '"disco_ball"': Diszkógömb
             '"fireworks"': Tűzijáték
-            '"swirl"': Hipnó
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
             '"rainbow"': Szivárvány
             '"snowflakes"': Hó
-            '"text"': Dalcím
+            '"text"': Dalcímek
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
             '"spiral"': Spirál
@@ -511,16 +516,18 @@ hu:
             '"stars"': Csillagok
           PALETTE:
             '"rave"': Fekete-fehér
-            '"cool"': Kékek
+            '"cool"': Laza
             '"electronic"': Elektronikus
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
             '"tropical"': Trópusi
-            '"vintage"': Régi
+            '"vintage"': Régies
             '"warm"': Vörösek
       Dancelab_setBackgroundEffectWithPalette:
-        text: háttéreffekt beállítása {PALETTE} {EFFECT}
+        text: |-
+          "Háttéreffektus beállítása
+          {PALETTE} {EFFECT}"
         options:
           EFFECT:
             '"none"': Egyik sem
@@ -533,7 +540,7 @@ hu:
             '"fireworks"': Tűzijáték
             '"flowers"': Virágok
             '"growing_stars"': Növekvő csillagok
-            '"swirl"': Hipnó
+            '"swirl"': Hipno
             '"kaleidoscope"': Kaleidoszkóp
             '"lasers"': Lézer táncparkett
             '"splatter"': Festékfröccsenés
@@ -541,7 +548,7 @@ hu:
             '"ripples_random"': Véletlenszerű lüktetés
             '"ripples"': Lüktetés
             '"snowflakes"': Hó
-            '"text"': Dalcím
+            '"text"': Dalcímek
             '"squiggles"': Kígyóvonalak
             '"galaxy"': Világűr
             '"sparkles"': Ragyogás
@@ -551,13 +558,13 @@ hu:
             '"music_wave"': Hullámok
           PALETTE:
             '"rave"': Fekete-fehér
-            '"cool"': Kékek
+            '"cool"': Laza
             '"electronic"': Elektronikus
             '"iceCream"': Fagyi
             '"default"': Világos
             '"neon"': Neon
             '"tropical"': Trópusi
-            '"vintage"': Régi
+            '"vintage"': Régies
             '"warm"': Vörösek
       Dancelab_setDanceSpeed:
         text: "{SPRITE} táncolási sebességének módosítása: {SPEED}"
@@ -911,7 +918,7 @@ hu:
             '"left"': balra
             '"down"': le
             '"right"': jobbra
-            '"space"': szóköz
+            '"space"': űr
             '"enter"': enter
             '"a"': a
             '"b"': b
@@ -1095,9 +1102,9 @@ hu:
       gamelab_printText:
         text: nyomtatás {TEXT}
       gamelab_randColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       gamelab_randomLocation:
         text: véletlen hely
       gamelab_removeAllBehaviors:
@@ -1372,13 +1379,13 @@ hu:
         options:
           DANCE:
             MOVES.ClapHigh: Taps fent
-            MOVES.Clown: Bohóc
+            MOVES.Clown: Gangnam
             MOVES.Dab: Legyintés
             MOVES.DoubleJam: Duplázás
             MOVES.Drop: Spárga
             MOVES.Floss: Lenget
             MOVES.Fresh: Friss
-            MOVES.Roll: Testforgás
+            MOVES.Roll: Csípőkörzés
             MOVES.Kick: Csillag
             MOVES.ThisOrThat: Ez vagy az
             MOVES.Rest: Egyik sem
@@ -1411,7 +1418,7 @@ hu:
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_randomColor:
-        text: Véletlen szín
+        text: véletlen szín
       Mikelab_removeBehaviorSimple:
         text: sprite {SPRITE} abbahagyja {BEHAVIOR}
       Mikelab_repeatUntilComplete:

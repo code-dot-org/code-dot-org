@@ -565,6 +565,7 @@ bg:
     notes_coming_soon: Бележки за този клип очаквайте скоро.
     autoplay_option: Автоматично изпълнение на видеата
     download: Изтегляне на видео
+    label: Видео
   compatibility:
     upgrade:
       unsupported_message: Вашият браузър не се поддържа. Моля, надстройте браузъра
@@ -713,6 +714,8 @@ bg:
     support: Получаване на помощ
     support_url: "//support.code.org"
     help_resources: Помощ и ресурси
+  free_response:
+    placeholder: Въведете отговора си тук
   multi:
     wrong_title: Неправилен отговор
     wrong_body: Отговорът, който сте въвели не е правилен.  Моля опитайте отново!

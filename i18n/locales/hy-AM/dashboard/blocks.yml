@@ -68,6 +68,7 @@ hy:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': ադամանդ
             '"random"': կամայական
       Dancelab_makeAnonymousDanceSprite:
         options:

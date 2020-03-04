@@ -98,6 +98,7 @@ ky:
           GROUP:
             sprites: баары
           FORMAT:
+            '"diamond"': алмаз
             '"random"': туш келди
       Dancelab_makeAnonymousDanceSprite:
         options:

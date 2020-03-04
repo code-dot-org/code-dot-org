@@ -38,11 +38,14 @@ describe('SectionProgress', () => {
             levels: [{id: 789}]
           }
         ],
-        csf: false
+        csf: true,
+        hasStandards: true
       },
       isLoadingProgress: false,
       scriptFriendlyName: 'My Script',
-      showStandardsIntroDialog: false
+      showStandardsIntroDialog: false,
+      fetchStandardsCoveredForScript: () => {},
+      fetchStudentLevelScores: () => {}
     };
   });
 

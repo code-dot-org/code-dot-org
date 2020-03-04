@@ -1,4 +1,5 @@
 name 'Simple Decisions with if-statements_2018_2019'
+editor_experiment ''
 title 'title'
 description 'description here'
 css 'unplugged'
@@ -103,11 +104,9 @@ We simply want the game to be able to end, and for that we need a simple `if` st
 
 **All that's needed** here is enough understanding to write a simple  `if` statement to end the game. Like this:
 
-```
-if (score == 20){
-    setScreen(...);
-}
-```
+	if (score == 20){
+	    setScreen(...);
+	}
 
 So if students get hung up on this page just encourage them to move on.
 MARKDOWN

@@ -1642,7 +1642,7 @@ si:
               name: විචල්‍යන්
             For Loops:
               name: ලූපයන් සඳහා
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: කන්ඩිෂනලස්
@@ -1652,3 +1652,24 @@ si:
               name: Crowdsourcing වැඩසටහන
             Conditionals with Cards:
               name: කාඩ්පත් සමඟ කොන්දේසික
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: කන්ඩිෂනලස්
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: කන්ඩිෂනලස්
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: පරාමිතියන් සහිත ශ්‍රිත
+        csd3-2020:
+          description_short: ක්‍රමලේඛනය
+          stages:
+            Variables:
+              name: විචල්‍යන්
+            Conditionals:
+              name: කන්ඩිෂනලස්
+            Functions:
+              name: ශ්‍රිතයන්

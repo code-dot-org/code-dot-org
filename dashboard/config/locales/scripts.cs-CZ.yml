@@ -9,7 +9,7 @@ cs:
         cspexams_category_name: Praktický test z principů informatiky
         csp17_category_name: Principy informatiky 2016-2017
         hoc_category_name: Hodina kódu
-        math_category_name: Matematika
+        math_category_name: Matematické
       name:
         course1:
           title: Kurz 1
@@ -71,7 +71,7 @@ cs:
             'Artist: Loops':
               name: 'Umělec: Cykly'
             'Artist: Nested Loops':
-              name: 'Umělec: Vnořené smyčky'
+              name: 'Umělec: Vnořené cykly'
             'Artist: Sequence':
               name: 'Umělec: posloupnost'
             'Bee: Conditionals':
@@ -89,7 +89,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             'Maze: Loops':
               name: 'Bludiště: cykly'
             'Maze: Sequence':
@@ -97,7 +97,7 @@ cs:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
             Relay programming:
-              name: Relay programování
+              name: Štafetové programování
             'Studio: Create a Story':
               name: 'Hravá laboratoř: Vytvoř příběh'
             The Big Event:
@@ -119,7 +119,7 @@ cs:
             'Artist: Functions':
               name: 'Malíř: Funkce'
             'Artist: Nested Loops':
-              name: 'Umělec: Vnořené smyčky'
+              name: 'Umělec: Vnořené cykly'
             'Artist: Patterns':
               name: 'Umělec: Vzorky'
             'Bee: Conditionals':
@@ -254,7 +254,7 @@ cs:
             'Artist: Loops':
               name: 'Umělec: Cykly'
             'Artist: Nested Loops':
-              name: 'Umělec: Vnořené smyčky'
+              name: 'Umělec: Vnořené cykly'
             'Artist: Sequence':
               name: 'Umělec: posloupnost'
             'Bee: Conditionals':
@@ -315,10 +315,10 @@ cs:
         netsim:
           title: Simulátor Internetu
         20-hour:
-          title: Zrychlený úvodní kurz CS
-          description: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
-            věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň
-            K-8), ale jistě bude bavit studenty jakéhokoliv věku.
+          title: Zrychlený úvodní kurz informatiky
+          description: Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky
+            a programování obsáhnuté v kurzích 2-4. Kurz je navrhnut pro žáky staré
+            10 - 18 let. Pokud máš zájem o detailnejší kurz, vyzkoušej kurzy 2-4!
           description_short: Tento 20 hodinový kurz zahrnuje základní pojmy informatiky
             a programování z kurzů 2-4.
           description_audience: Stáří 10-13
@@ -334,11 +334,11 @@ cs:
             Functions:
               name: Funkce
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Introduction to Computer Science:
-              name: Úvod do počítačové vědy
+              name: Úvod do informatiky
             Relay Programming:
-              name: Relay programování
+              name: Štafetové programování
             Song Writing:
               name: Psaní Písně
             The Artist:
@@ -633,7 +633,7 @@ cs:
             Getting Loopy:
               name: Bláznit
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Happy Maps:
               name: Šťastné mapy
             Move it, Move it:
@@ -692,7 +692,7 @@ cs:
             Hour of Code 2015:
               name: Hodina kódu 2013
         mc:
-          title: Hodina kódu Minecraftu
+          title: Hodina kódu s Minecraftem
           description: Používej bloky kódu, abys vzal Steva nebo Alex na dobrodružství
             ve světě Minecraftu
           description_short: Prozkoumej svět Minecraftu pomocí kódu
@@ -809,7 +809,7 @@ cs:
             'Jigsaw: Learn to drag and drop':
               name: 'Skládačky: Naučte se přetáhnout'
             Loops:
-              name: Smyčky
+              name: Cykly
             Programming:
               name: Programování
             'Real-life Algorithms: Plant a Seed':
@@ -827,7 +827,7 @@ cs:
             'Jigsaw: Learn to drag and drop':
               name: 'Skládačky: Naučte se přetáhnout'
             Loops:
-              name: Smyčky
+              name: Cykly
             Programming:
               name: Programování
             Unspotted Bugs:
@@ -869,7 +869,7 @@ cs:
         grade3:
           stages:
             'Artist: Nested Loops':
-              name: 'Umělec: Vnořené smyčky'
+              name: 'Umělec: Vnořené cykly'
             Bee Debugging:
               name: Včelí ladění
             Bounce:
@@ -911,7 +911,7 @@ cs:
             Functions with Parameters:
               name: Funkce s Parametry
             Loops:
-              name: Smyčky
+              name: Cykly
             Nested Loops:
               name: Vnořené cykly
             Variables:
@@ -989,6 +989,8 @@ cs:
               name: Budování nadace
         coursed-draft:
           stages:
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programování'
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1249,6 +1251,8 @@ cs:
               name: Úvod
             Nested Loops:
               name: Vnořené cykly
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programování'
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1263,6 +1267,8 @@ cs:
           stages:
             Introduction:
               name: Úvod
+            'Algorithms: Relay Programming':
+              name: 'Algoritmy: Štafetové programování'
             Building a Foundation:
               name: Budování nadace
             Nested Loops:
@@ -1300,11 +1306,11 @@ cs:
         hero:
           stages:
             Minecraft Hour of Code:
-              name: Hodina kódu Minecraftu
+              name: Hodina kódu s Minecraftem
           description_short: Minecraft je zpět se zbrusu novou aktivitou pro Hodinu
             kódu!
-          description: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
-            Cestuj hrou Minecraft s kódem.
+          description: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj
+            Minecraft s kódem.
         course-e-2018:
           stages:
             Building a Foundation:
@@ -1379,7 +1385,7 @@ cs:
         express-2018:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1409,9 +1415,9 @@ cs:
             Crowdsourcing:
               name: Crowdsourcing
             Relay Programming:
-              name: Relay programování
+              name: Štafetové programování
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
         courseb-2018:
           assignment_family_title: Kurz B
           stages:
@@ -1425,7 +1431,7 @@ cs:
           assignment_family_title: Kurz D
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Introduction:
               name: Úvod
             Building a Foundation:
@@ -1439,9 +1445,9 @@ cs:
             Artist Binary:
               name: Umělecké binární
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Relay Programming:
-              name: Relay programování
+              name: Štafetové programování
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1475,7 +1481,7 @@ cs:
             Conditionals with Cards:
               name: Podmínky s kartami
             Minecraft Hour of Code:
-              name: Hodina kódu Minecraftu
+              name: Hodina kódu s Minecraftem
         coursef-2018:
           assignment_family_title: Kurz F
           stages:
@@ -1543,8 +1549,8 @@ cs:
             Dance Party:
               name: Dance Party
           title: Taneční večírek
-          description_short: S Katy Perry, Madonnou, J. Balvinem, Siou, Keithem Urbanem,
-            Ciarou a 25 dalšími!
+          description_short: Vystupují Katy Perry, Madonna, J. Balvin, Sia, Keith
+            Urban, Ciara a dalších 25 umělců!
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         frozen-2018-test-b:
           stages:
@@ -1554,7 +1560,8 @@ cs:
           stages:
             Aquatic:
               name: Vodní
-          description_short: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou!
+          description_short: Pomocí kreativity, schopnosti řešit problémy a sily kódu
+            objav a vybuduj podvodní svět!
         dance--draft:
           stages:
             Dance Party:
@@ -1590,9 +1597,9 @@ cs:
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
             Relay Programming:
-              name: Relay programování
+              name: Štafetové programování
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1622,7 +1629,7 @@ cs:
         express-2019:
           stages:
             Relay Programming:
-              name: Relay programování
+              name: Štafetové programování
             Conditionals with Cards:
               name: Podmínky s kartami
             Envelope Variables:
@@ -1738,7 +1745,7 @@ cs:
         express-2018-vn:
           stages:
             Graph Paper Programming:
-              name: Programování Na Milimetrovém Papíru
+              name: Programování na čtverečkovaném papíru
         csd2-pilot:
           stages:
             Lists:
@@ -1769,7 +1776,7 @@ cs:
         k5-onlinepd-2019:
           stages:
             Loops:
-              name: Smyčky
+              name: Cykly
             Conditionals:
               name: Podmínky
             Events:
@@ -1782,7 +1789,7 @@ cs:
               name: For cykly
         dance-extras-2019:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Podmínky
@@ -1792,3 +1799,27 @@ cs:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Podmínky s kartami
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Podmínky
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Podmínky
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkce s Parametry
+        csd3-2020:
+          title: CSD Jednotka 3 - Animace and hry ('18-'19)
+          description_short: Programování
+          stages:
+            Variables:
+              name: Proměnné
+            Random Numbers:
+              name: Náhodná čísla
+            Conditionals:
+              name: Podmínky
+            Functions:
+              name: Funkce

@@ -34,6 +34,7 @@
   "bird": "fugl",
   "calloutPutCommandsHereRunStart": "Settu skipanir hér til að láta þær keyra þegar forritið fer af stað",
   "calloutBlocklyPlaceGoUpHere": "Settu \"færa upp\" kubb hér til að fara upp",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Smelltu á titilinn Atvik til að sjá kubba fyrir atvikaföll.",
   "calloutUseArrowButtons": "Ýttu á þessa hnappa eða örvarlyklana á lyklaborðinu til að kveikja atvik tengd hreyfingum",
   "calloutUseArrowButtonsAutoSteer": "Við höfum falið kóðann sem þú skrifaðir, en þú getur samt notað örvarlyklana til að færa",

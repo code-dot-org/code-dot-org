@@ -153,25 +153,7 @@ FactoryGirl.define do
         ops_first_name 'District'
         ops_last_name 'Person'
       end
-      # Creates a teacher optionally enrolled in a workshop,
-      # or marked attended on either all (true) or a specified list of workshop sessions.
-      factory :pd_workshop_participant do
-        transient do
-          workshop nil
-          enrolled true
-          attended false
-        end
-        after(:create) do |teacher, evaluator|
-          raise 'workshop required' unless evaluator.workshop
-          create :pd_enrollment, :from_user, user: teacher, workshop: evaluator.workshop if evaluator.enrolled
-          if evaluator.attended
-            attended_sessions = evaluator.attended == true ? evaluator.workshop.sessions : evaluator.attended
-            attended_sessions.each do |session|
-              create :pd_attendance, session: session, teacher: teacher
-            end
-          end
-        end
-      end
+
       transient {pilot_experiment nil}
       after(:create) do |teacher, evaluator|
         if evaluator.pilot_experiment
@@ -1128,6 +1110,20 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+  end
+
+  factory :regional_partner_with_mappings, parent: :regional_partner do
+    sequence(:name) {|n| "Partner#{n}"}
+    group 1
+    mappings do
+      [
+        create(
+          :pd_regional_partner_mapping,
+          zip_code: 98143,
+          state: nil
+        )
+      ]
+    end
   end
 
   factory :regional_partner_with_summer_workshops, parent: :regional_partner do

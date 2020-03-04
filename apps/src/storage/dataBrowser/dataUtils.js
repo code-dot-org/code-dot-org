@@ -1,4 +1,3 @@
-import {tables} from './datasetManifest.json';
 /** @file Utility functions for the data browser. */
 
 /**
@@ -19,7 +18,7 @@ export const ChartType = {
   CROSS_TAB: 4
 };
 
-export function getDatasetInfo(tableName) {
+export function getDatasetInfo(tableName, tables = []) {
   return tables.find(table => table.name === tableName);
 }
 

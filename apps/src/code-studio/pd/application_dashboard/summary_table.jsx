@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import {Table, Button} from 'react-bootstrap';
-import {StatusColors, ApplicationStatuses} from './constants';
+import {StatusColors, getApplicationStatuses} from './constants';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 
@@ -65,7 +65,7 @@ export class SummaryTable extends React.Component {
       return (
         <tr key={i}>
           <td style={{...styles.statusCell[status]}}>
-            {ApplicationStatuses[this.props.applicationType][status] ||
+            {getApplicationStatuses(this.props.applicationType)[status] ||
               _.upperFirst(status)}
           </td>
           {this.showLocked && <td>{statusData.locked}</td>}

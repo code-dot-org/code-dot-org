@@ -541,6 +541,7 @@ es-MX:
           del medio?"
         star2_callout: Quita este bloque 'disfraz' y, en su lugar, usa el bloque "este
           sprite".
+        this_sprite_callout: Recoloca este bloque de disfraz debajo con este.
       behaviors 4:
         behaviors_edit: Haz clic aquí para ver cómo funciona este comportamiento.
       behaviors 5:

@@ -247,6 +247,8 @@ cs-CZ:
           To znamená, že obě kratší strany mají dohromady 200 pixelů.
 
           \*\* Co znamená 200/2? \*\*
+        4-5_Artist_3_b: Pokud hned nevidíš, kde smyčka `opakuj` jde použít, zkus kódovat
+          celé řešení a hledej opakující se vzor.
       4-5 Artist 4:
         4-5_Artist_4_a: |-
           V kruhu je 360 stupňů!
@@ -294,6 +296,23 @@ cs-CZ:
           prostoru. V jakém pořadí by měly následovat?
         4-5 Bee Conditionals 6_b: Ujistěte se, že alespoň **3**krát zkontrolujete,
           zda má květ více než **0** nektaru.
+      4-5 Maze 10:
+        4-5_Maze_10_a: |-
+          Pokud nemůžeš hned přijít na to, jak vyřešit hádanku pomocí smyček, zkus ji vyřešit delší cestou a potom hledej vzor.
+
+          Co bys měl vložit do bloku `opakuj dokud`, aby se kód zkrátil?
+      4-5 Maze 5:
+        4-5_Maze_5_a: Zkus použít smyčku `opakuj` kdykoli budeš potřebovat použít
+          `posuň se vpřed` na více než dva kroky.
+        4-5_Maze_5_b: V hádance můžeš použít více než jednu smyčku `opakuj`.
+      4-5 Maze 6:
+        4-5_Maze_6_a: |-
+          Zkus sledovat cestu prstem.\
+          Je to nejkratší cesta, kterou můžeš najít?
+      4-5 Maze 7:
+        4-5_Maze_7_a: |-
+          **Chceš, aby tvůj kód byl co nejkratší?**
+          Hledej ve svých blocích vzory. Vidíš něco, co se opakuje? Zkus místo toho vložit smyčku!
       Course 4 Artist 11:
         Course_4_Artist_11_b: 'Dvě třetiny trojúhelníku mají délku 80 pixelů a otočka
           vpravo je o 120 stupňů. '
@@ -402,7 +421,7 @@ cs-CZ:
 
           -   Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
-          _Tato úroveň končí po 8 taktech._
+          _Tato úroveň končí po 7 taktech._
       CourseE_HOC 2018 Level_10:
         voyage_aquatic_10a: Vidíš **Mořské lucerny** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)?
           Jak je můžeš využít, aby ses dostal skrz oceánský monument?
@@ -619,6 +638,8 @@ cs-CZ:
           -   Použij blok `když je stisknuta šipka vlevo`, abys přiměl(a) Robota k tanečnímu pohybu, když stiskneš tuto klávesu.
 
           _Tato úroveň končí po 7 taktech._
+      Dance_Party_extras_alternate_2019:
+        alternate: Blok „střídat“ je v kategorii „Tanečníci“.
       Function intro Ryan:
         Function_intro_Ryan_a: Funkci můžete ve svém programu zavolat vícekrát. Zkuste
           ji zavolat dvakrát, abyste vyřešili tuto hádanku.
@@ -742,9 +763,61 @@ cs-CZ:
         MC_HOC_2017_13_Cole_a: Zkuste pomocí agenta postavit několik mostů, aby mohla
           Alex nebo Steve projít za kraj mapy.
       course1_artist_loops_challenge1:
+        courseA_artist_loops_challenge1_a: |-
+          Můžeš použít podobnou smyčku k vytvoření zdí a střechy. Zkus opakovat různé bloky.
+
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+
+          Vytvoř svoje vlastní nebo stiskni ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) pro nějaké nápady!
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)"
+      course1_artist_loops_challenge2:
+        harvey_tictactoe: Můžeš použít bloky `skoč` k přesunu na jiná místa.
+      course1_artist_loops_challenge3:
+        courseA_artist_loops_challenge2_b: Když dokončíš jednu ptačí budku, `skoč`
+          na další!
+        courseA_artist_loops_challenge2_c: Pro tuto výzvu budete potřebovat SPOUSTU
+          bloků uvnitř smyčky.
+      course1_collector_loops_challenge1:
+        courseA_collector_loops_challenge1_a: Pokud se něco pokazí, zkus změnit čísla
+          v každé smyčce.
+        courseA_collector_loops_challenge1_c: Na pravé straně jeskyně je 6 drahokamů,
+          ale musíš se posunout a sbírat pouze 5 krát. Víš proč?
+      course1_collector_loops_challenge2:
+        courseA_collector_loops_challenge2_b: K vyřešení této hádanky potřebuješ pouze
+          jeden \[] [0] blok.
+        courseA_collector_loops_challenge2_a: |-
+          Než se přesuneš na jih, můžeš se vrátit po stejné cestě.
+
+          ![](<https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png>)
+      course1_collector_loops_challenge3:
+        courseB_collector_loops_challenge1_b: |-
+          Začni opakováním příkazů „posuň se na jih“ a „získej poklad“.
+
+          <xml>
+            <block type="maze_moveSouth"/><next>
+            <block type="collector_collect"/></next>
+            </xml>
+        courseB_collector_loops_challenge1_a: |-
+          Severní vzor je mírně odlišný od jižního.
+
+          <xml>
+            <block type="collector_collect"/><next>
+            <block type="maze_moveNorth"/></next>next>
+            </xml>
+      course1_maze_debugging_challenge1:
+        courseA_maze_seq_challenge1_a: Některé cesty povedou k TNT, pokud se posuneš
+          příliš daleko.
+      course1_maze_debugging_challenge2:
+        courseB_maze_seq_challenge2_b: Uspořádej bloky a jdi prostřední cestou.
+      course1_maze_seq_challenge2:
+        courseB_maze_seq_challenge1_b: Zkus začít pohybem na západ.
+      course1_playlab_events_challenge1:
+        courseA_playlab_events_challenge1_e: |-
+          Nakonec udělej Wendel - kouzelníka po kliknutí na Spiff!
+
+          [blockly block] [0]
       course2_collector_loops_challenge2:
         courseC_maze_loops_challenge2_a: Původní kód by fungoval skvěle - pokud by
           tam byl jeden kousek pokladu na každé hromádce!
@@ -954,5 +1027,3 @@ cs-CZ:
           Pokud je hádanka příliš složitá, zkuste budovat svou funkci po částech.
 
           Přidejte pár bloků a vyzkoušejte to. Přidejte další a zkuste to znovu. Brzy se vám to podaří!
-      Dance_Party_extras_alternate_2019:
-        alternate: Alternativní blok je v kategorii „Tanečníci“.

@@ -89,7 +89,9 @@ module.exports = class Maze {
 
     this.controller = new MazeController(level, skin, config, {
       methods: {
-        playAudio: studioApp().playAudio.bind(studioApp()),
+        playAudio: (sound, options) => {
+          studioApp().playAudio(sound, {...options, noOverlap: true});
+        },
         playAudioOnFailure: studioApp().playAudioOnFailure.bind(studioApp()),
         loadAudio: studioApp().loadAudio.bind(studioApp()),
         getTestResults: studioApp().getTestResults.bind(studioApp())
@@ -357,8 +359,9 @@ module.exports = class Maze {
           // and failures
           var successes = [];
           var failures = [];
+          const numGrids = this.controller.map.staticGrids.length;
 
-          this.controller.map.staticGrids.forEach((grid, i) => {
+          for (let i = 0; i < numGrids; i++) {
             this.controller.map.useGridWithId(i);
             this.controller.subtype.reset();
 
@@ -372,6 +375,16 @@ module.exports = class Maze {
             this.onExecutionFinish_();
             if (this.executionInfo.terminationValue() === true) {
               successes.push(i);
+            } else if (this.executionInfo.terminationValue() === Infinity) {
+              // terminationValue Infinity means executing took more than the maximum number of steps
+              // so we have declared it to be an infinite loop. If there are a lot of map configurations that result
+              // in infinite loops, the time required to check each one is perceived as buggy/glitchy. To prevent this
+              // perceived lag,  we should stop checking map configurations as soon as we detect an infinite loop
+              // and immediately show the result. It is possible that there is an infinite loop
+              // on only some map configurations. In these cases, we should always show the map configuration
+              // with first infinite loop we detect.
+              failures = [i];
+              break;
             } else {
               failures.push(i);
             }
@@ -380,7 +393,7 @@ module.exports = class Maze {
             this.controller.subtype.drawer.reset();
             this.prepareForExecution_();
             studioApp().reset(false);
-          });
+          }
 
           // The user's code needs to succeed against all possible grids
           // to be considered actually successful; if there are any
@@ -611,7 +624,7 @@ module.exports = class Maze {
    */
   prepareForExecution_() {
     this.executionInfo = new ExecutionInfo({
-      ticks: 1e4
+      ticks: 1000
     });
     this.resultsHandler.executionInfo = this.executionInfo;
     this.result = ResultType.UNSET;

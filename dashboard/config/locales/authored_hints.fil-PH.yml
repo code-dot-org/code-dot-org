@@ -745,96 +745,95 @@ fil-PH:
 
           -   Tiyakin na magpapakita ang dancer sa screen.
 
-          _Magwawakas ang lebel na ito matapos ang 4 na measure._"
+          _Magwawakas ang lebel na ito matapos ang 4 na measure._
         challenges: |-
-          "**Mga Opsyonal na Hamon**
+          **Mga Opsyonal na Hamon**
 
           -   Pumili ng naiibang awit na patugtugin.
           -   Bigyan ng ibang pangalan ang dancer.".
       CourseD_Dance_Party_02:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangan ng dancer na lumipat sa bagong galaw makalipas ang 4 na measure.
 
-          _Matatapos ang lebel makalipas ang 7 measure._"
+          _Matatapos ang lebel makalipas ang 7 measure._
       CourseD_Dance_Party_03:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
-          \*Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
+          -   Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
 
-          _Magwawakas ang lebel na ito makalipas ang 11 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 11 measure._
       CourseD_Dance_Party_04:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangang pabaguhin mo Ang background effect minsan bago ang ikapitong measure ng awit.
 
-          _Magwawakas ang lebel na ito matapos ang 9 na measure._"
+          _Magwawakas ang lebel na ito matapos ang 9 na measure._
         challenges: |-
-          "**Opsyonal na Hamon**
+          **Opsyonal na Hamon**
 
-          Baguhin ang background effect sa iba't ibang punto ng awit sa pamamagitan ng pagkonekta sa bagong block sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> ang mga event.".
+          Baguhin ang background effect sa iba't ibang punto ng awit sa pamamagitan ng pagkonekta sa bagong block sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> ang mga event.
       CourseD_Dance_Party_06:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangang may kahit dalawang dancer ka.
 
-          _Magwawakas ang lebel na ito makalipas ang 5 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 5 measure._
         challenges: |-
-          "**Opsyonal na Hamon**
+          **Opsyonal na Hamon**
 
-          \*Magdagdag ng ikatlong dancer (o sindami ng gusto mo!)
-
-          -   Ipagawa sa lahat ng iyong mga dancer ang i-ba't ibang galaw sa iba't ibang punto ng awit.".
+          -   Magdagdag ng ikatlong dancer (o sindami ng gusto mo!)
+          -   Ipagawa sa lahat ng iyong mga dancer ang i-ba't ibang galaw sa iba't ibang punto ng awit.
       CourseD_Dance_Party_08:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Ang dalawang dancer ay kailangamg may laki na hindi 100.
 
-          _Magwawakas ang lebel na ito makalipas ang 5 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 5 measure._
         challenges: |-
-          "**Opsyonal na Hamon**
+          **Opsyonal na Hamon**
 
-          -   Mag-eksperimento sa pamamagitan ng pagpapalit ng ibang mga property (lapad, taas, rotation, atbp.)"
+          -   Mag-eksperimento sa pamamagitan ng pagpapalit ng ibang mga property (lapad, taas, rotation, atbp.)
       CourseD_Dance_Party_09:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Palitan ang tint ng kahit isang dancer.
 
-          _Magwawakas ang lebel na ito makalipas ang 7 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 7 measure._
       CourseD_Dance_Party_10:
         validation: |-
           "**Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangang magbago ang mga property ng para sa dalawa o higit pang mga dancer.
 
-          _Magwawakas ang lebel na ito makalipas ang 7 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 7 measure._
       CourseD_Dance_Party_11:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Maging mapanlikha lamang!
 
-          _Magwawakas ang lebel na ito makalipas ang 7 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 7 measure._
       CourseD_Dance_Party_11_5:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Maging mapanlikha lamang!
 
-          _Magwawakas ang lebel na ito makalipas ang 7 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 7 measure._
       CourseD_Dance_Party_11b:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Gamitin ang `kapag pnindot ang pakaliwang arrow` na block para ipagawa sa Robot ang isang galaw sa sayaw kapag pinindot mo ito.
 
-          _Magwawakas ang lebel na ito makalipas ang 7 measure._"
+          _Magwawakas ang lebel na ito makalipas ang 7 measure._
       Dance_2019_01:
         validation: |-
           "**Paano ako makakapasa sa lebel na ito?**
@@ -874,7 +873,7 @@ fil-PH:
           -   Patugunin ang dancer sa pakaliwa at pakanang mga arrow key.
       Dance_2019_04:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangan ng dancer na lumipat sa bagong galaw makalipas ang 4 na measure.
 
@@ -883,7 +882,7 @@ fil-PH:
         validation: |-
           **Paano ako makakapasa sa lebel na ito?**
 
-          \*Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
+          -   Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
 
           _Magwawakas ang lebel na ito makalipas ang 11 measure._
         challenges: |-
@@ -958,7 +957,7 @@ fil-PH:
           -   Bigyan ng ibang pangalan ang dancer.".
       Dance_Party_02:
         validation: |-
-          "**Paano ako makakapasa sa lebel na ito?**
+          **Paano ako makakapasa sa lebel na ito?**
 
           -   Kailangan ng dancer na lumipat sa bagong galaw makalipas ang 4 na measure.
 
@@ -967,7 +966,7 @@ fil-PH:
         validation: |-
           **Paano ako makakapasa sa lebel na ito?**
 
-          \*Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
+          -   Matapos ang 6 na measure, kailangang gagawa ang iyong dancer ng naiibang sayaw kaysa dati makalipas ang 4 na measure.
 
           _Magwawakas ang lebel na ito makalipas ang 11 measure._
       Dance_Party_04:
@@ -981,6 +980,11 @@ fil-PH:
           **Opsyonal na Hamon**
 
           Baguhin ang background effect sa iba't ibang punto ng awit sa pamamagitan ng pagkonekta sa bagong block sa ilalim ng <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> ang mga event.
+      Dance_Party_05:
+        validation: "**Paano ako makakapasa sa lebel na ito?** \n\n-   Kailangang
+          umikot ang iyong dancer sa pinakamababa 4 na iba't ibang galaw ng sayaw
+          bago magwawakas ang lebel. \n\n_Magwawakas ang lebel na ito makalipas ang
+          12 measure_"
       Dance_Party_06:
         validation: |-
           **Paano ako makakapasa sa lebel na ito?**
@@ -1039,6 +1043,8 @@ fil-PH:
           -   Gamitin ang `kapag pnindot ang pakaliwang arrow` na block para ipagawa sa Robot ang isang galaw sa sayaw kapag pinindot mo ito.
 
           _Magwawakas ang lebel na ito makalipas ang 7 measure._
+      Dance_Party_extras_alternate_2019:
+        alternate: Ang kahaliling block ay nasa kategorya ng "Mga Dancer".
       Function intro Ryan:
         Function_intro_Ryan_b: Kung tatawagin mo ang mga functions nang tamo, ito
           ang landas na lalakbayin mo...
@@ -3553,10 +3559,3 @@ fil-PH:
           subukang gawin ang iyong function nang paunti-unti.      \n\nMagdagdag ng
           ilang mga bloke, pagkatapos ay subukan ito. Magdagdag pa, pagkatapos ay
           subukan ito ulit. Maya-maya, makakarating ka rin doon!"
-      Dance_Party_05:
-        validation: "**Paano ako makakapasa sa lebel na ito?** \n\n-   Kailangang
-          umikot ang iyong dancer sa pinakamababa 4 na iba't ibang galaw ng sayaw
-          bago magwawakas ang lebel. \n\n_Magwawakas ang lebel na ito makalipas ang
-          12 measure_"
-      Dance_Party_extras_alternate_2019:
-        alternate: Ang kahaliling block ay sa "mananayaw" kategorya.

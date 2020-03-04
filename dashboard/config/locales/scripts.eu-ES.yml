@@ -1612,7 +1612,7 @@ eu:
               name: Aldagaiak
             For Loops:
               name: For begiztak
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Baldintzak
@@ -1622,3 +1622,25 @@ eu:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Baldintzak Txartelekin
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Baldintzak
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Baldintzak
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrodun funtzioak
+        csd3-2020:
+          stages:
+            Variables:
+              name: Aldagaiak
+            Sprite Properties:
+              name: Sprite-n Propietateak
+            Conditionals:
+              name: Baldintzak
+            Functions:
+              name: Funtzioak

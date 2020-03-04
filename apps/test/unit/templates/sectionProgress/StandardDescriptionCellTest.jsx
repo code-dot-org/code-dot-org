@@ -10,13 +10,26 @@ import {
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
     description: fakeStandards[1].description,
-    lessonsForStandardStatus: lessonCompletedByStandard[1].lessons
+    lessonsForStandardStatus: lessonCompletedByStandard[1],
+    isViewingReport: null
   };
 
   it('shows the correct number of progress boxes for lessons', () => {
     const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
     expect(wrapper.find('ProgressBoxForLessonNumber')).to.have.lengthOf(
-      lessonCompletedByStandard[1].lessons.length
+      lessonCompletedByStandard[1].length
+    );
+  });
+  it('does not show the tooltip in the standards report view', () => {
+    const wrapper = shallow(
+      <StandardDescriptionCell {...DEFAULT_PROPS} isViewingReport={true} />
+    );
+    expect(wrapper.find('ReactTooltip')).to.have.lengthOf(0);
+  });
+  it('shows the tooltips for each lesson when not viewing the standards report', () => {
+    const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
+    expect(wrapper.find('ReactTooltip')).to.have.lengthOf(
+      lessonCompletedByStandard[1].length
     );
   });
 });

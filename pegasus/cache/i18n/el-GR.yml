@@ -338,7 +338,7 @@ el-GR:
   studiobar_elementary_title: Βασικά μαθήματα
   studiobar_elementary_body: Τα τρία νέα μαθήματά μας για K &#8209; 5
   studiobar_dance_title: Πάρτι Χορού
-  studiobar_dance_body: Δημιουργήστε και μοιραστείτε το δικό σας Πάρτι Χορού
+  studiobar_dance_body: Δημιουργήστε και κοινοποιήστε τα δικά σας Dance Party
   studiobar_hoc_title: Η Ώρα του Κώδικα
   studiobar_hoc_body: Μάθετε κώδικα με τα Θυμωμένα Πουλιά
   studiobar_flappy_title: Flappy κώδικας
@@ -1984,6 +1984,9 @@ el-GR:
   hoc_overview_dance_subtitle: Γράψτε κώδικα για ένα Πάρτι Χορού και μοιραστείτε το
     με τους φίλους σας. Συμμετέχουν οι Katy Perry, Madonna, J. Balvin, Sia, Keith
     Urban, Ciara, και πολλοί άλλοι!
+  hoc_overview_dance_2019_subtitle: Κωδικοποιήστε ένα χορευτικό πάρτι (Dance Party)
+    για να το κοινοποιήσετε στους φίλους σας. Με τους Katy Perry, Shawn Mendes, Panic!
+    At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, και 34 ακόμη!
   hoc_overview_title: Δραστηριότητες για την Ώρα του Κώδικα από το Code.org
   hoc_overview_subtitle: Η <a href="https://hourofcode.com">Ώρα του Κώδικα</a> είναι
     ένα παγκόσμιο κίνημα που φθάνει σε δεκάδες εκατομμύρια μαθητές σε πάνω από 180

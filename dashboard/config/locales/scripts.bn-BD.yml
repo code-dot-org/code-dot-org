@@ -996,7 +996,7 @@ bn:
               name: চলকগুলো
             For Loops:
               name: ফর লুপ
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: শর্তযুক্ত
@@ -1004,3 +1004,20 @@ bn:
           stages:
             Conditionals with Cards:
               name: কার্ড সঙ্গে শর্ত
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: শর্তযুক্ত
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: শর্তযুক্ত
+        csd3-2020:
+          description_short: প্রোগ্রামিং
+          stages:
+            Variables:
+              name: চলকগুলো
+            Conditionals:
+              name: শর্তযুক্ত
+            Functions:
+              name: ফাংশনগুলি

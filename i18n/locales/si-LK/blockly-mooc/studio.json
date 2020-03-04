@@ -34,6 +34,7 @@
   "bird": "කුරුල්ලා",
   "calloutPutCommandsHereRunStart": "මෙම වැඩසටහන ආරම්භ කරනවිට එය ක්‍රියාත්මක කිරීමට මෙහි විධාන දාන්න",
   "calloutBlocklyPlaceGoUpHere": "ඉහළට යෑම සඳහා \"ඉහලට යන්න\" බ්ලොක් එකක් එකතුකරන්න",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "අවස්ථාවට කාර්යය බිම් කොටස් බලන්න සිදුවීම් ශීර්ෂකය මත ක්ලික් කරන්න.",
   "calloutUseArrowButtons": "චලනයන් සහිත සිද්ධි පූරණය කිරීමට ඔබගේ යතුරුපුවරුවේ ඇති මෙම බොත්තම් හෝ ඊතල යතුරු ඔබාගෙන සිටින්න",
   "calloutUseArrowButtonsAutoSteer": "අපි ඔබ ලියූ කේතය සඟවා අැත, නමුත් ඔබ තවමත් චලනය කිරීමට ඊතල යතුරු භාවිතා කළ හැකිය",

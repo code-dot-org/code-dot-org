@@ -106,6 +106,8 @@ class FilesTest < FilesApiTestBase
     dog_image_body = 'stub-dog-contents'
     cat_image_filename = @api.randomize_filename('cat.png')
     cat_image_body = 'stub-cat-contents'
+    hamster_image_filename = @api.randomize_filename('hamster.jfif')
+    hamster_image_body = 'stub-hamster-contents'
 
     # Make sure we have a clean starting point
     delete_all_file_versions(dog_image_filename, cat_image_filename)
@@ -131,6 +133,16 @@ class FilesTest < FilesApiTestBase
     }
     assert_fileinfo_equal(expected_cat_image_info, actual_cat_image_info)
 
+    # Upload hamster.jfif and check the response
+    response = post_file_data(@api, hamster_image_filename, hamster_image_body, 'image/jpg')
+    actual_hamster_image_info = JSON.parse(response)
+    expected_hamster_image_info = {
+      'filename' => hamster_image_filename.sub('.jfif', '.jpg'),
+      'category' => 'image',
+      'size' => hamster_image_body.length
+    }
+    assert_fileinfo_equal(expected_hamster_image_info, actual_hamster_image_info)
+
     file_infos = @api.list_objects
     assert_fileinfo_equal(actual_dog_image_info, file_infos['files'][0])
     assert_fileinfo_equal(actual_cat_image_info, file_infos['files'][1])
@@ -143,6 +155,7 @@ class FilesTest < FilesApiTestBase
     assert_equal dog_image_body, last_response.body
 
     assert_newrelic_metrics %w(
+      Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
       Custom/ListRequests/FileBucket/BucketHelper.app_size
     )

@@ -37,12 +37,8 @@ hi-IN:
         Course_4_Artist_11_b: '2/3 त्रिकोण की \*80 की लंबाई\*\* है और यह **120 डिग्री**
           दाएं मुड़ता है। '
       CourseD_Dance_Party_01:
-        validation: |-
-          "**मैं यह स्तर कैसे पास करूं?**
-
-          -   सुनिश्चित करें कि डांसर स्क्रीन पर दिखाई देता है।
-
-          _यह स्तर 4 संगीत प्रविधियों के बाद समाप्त होता है।_"
+        validation: "\\*\\* मैं इस लेवल को कैसे पास करूं? \\*\\*\n\n-   आपके स्क्रीन
+          पर एक डांसर दिखना चाहिए \n\n\\_ यह  लेवल 4 उपायों के बाद ख़त्म होता है"
         challenges: |-
           "**वैकल्पिक चुनौतियां**
 
@@ -105,12 +101,8 @@ hi-IN:
           मूव के लिए सक्रिय करने हेतु `जब दाएं तीर वाला बटन दबाया जाए` ब्लॉक का उपयोग
           करें। _यह स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_"
       Dance_2019_01:
-        validation: |-
-          "**मैं यह स्तर कैसे पास करूं?**
-
-          -   सुनिश्चित करें कि डांसर स्क्रीन पर दिखाई देता है।
-
-          _यह स्तर 4 संगीत प्रविधियों के बाद समाप्त होता है।_"
+        validation: "\\*\\* मैं इस लेवल को कैसे पास करूं? \\*\\*\n\n-   आपके स्क्रीन
+          पर एक डांसर दिखना चाहिए \n\n\\_ यह  लेवल 4 उपायों के बाद ख़त्म होता है"
         challenges: |-
           **ऐच्छिक चुनौतियां**
 
@@ -212,12 +204,8 @@ hi-IN:
               <title name="DIR">-1</title>
               </block></xml>
       Dance_Party_01:
-        validation: |-
-          "**मैं यह स्तर कैसे पास करूं?**
-
-          -   सुनिश्चित करें कि डांसर स्क्रीन पर दिखाई देता है।
-
-          _यह स्तर 4 संगीत प्रविधियों के बाद समाप्त होता है।_"
+        validation: "\\*\\* मैं इस लेवल को कैसे पास करूं? \\*\\*\n\n-   आपके स्क्रीन
+          पर एक डांसर दिखना चाहिए \n\n\\_ यह  लेवल 4 उपायों के बाद ख़त्म होता है"
         challenges: |-
           "**वैकल्पिक चुनौतियां**
 
@@ -248,6 +236,13 @@ hi-IN:
           **वैकल्पिक चुनौती**
 
           <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> इवेंट्स के नीचे नए ब्लॉक से जोड़ते हुए गाने के दौरान अलग बिंदुओं पर पृष्ठभूमि प्रभाव बदलें।
+      Dance_Party_05:
+        validation: |-
+          **मैं यह स्तर कैसे पास करूं?**
+
+          -   स्तर खत्म होने से पहले आपके डांसर को कम से कम 4 अलग-अलग डांस मूव्स के द्वारा चक्कर बनाने की जरूरत है।
+
+          _यह स्तर 12 संगीत प्रविधियों के बाद समाप्त होता है।_
       Dance_Party_06:
         validation: |-
           "**मैं यह स्तर कैसे पास करूं?**
@@ -279,6 +274,8 @@ hi-IN:
         validation: "**मैं यह स्तर कैसे पास करूं?** - आपके दबाने पर रोबोट को डांस
           मूव के लिए सक्रिय करने हेतु `जब दाएं तीर वाला बटन दबाया जाए` ब्लॉक का उपयोग
           करें। _यह स्तर 7 संगीत प्रविधियों के बाद समाप्त होता है।_"
+      Dance_Party_extras_alternate_2019:
+        alternate: वैकल्पिक ब्लॉक "डांसर्स" श्रेणी में हैं।
       course1_artist_loops_challenge3:
         courseA_artist_loops_challenge2_a: इस <xml>  <block type="simple_move_up_left"/></xml>
           तरह के ब्लॉक्स से आपका कलाकार तिरछा मूव कर पाएगा!
@@ -1609,13 +1606,70 @@ hi-IN:
       courseC19_playLab_EOC4:
         courseE_playLab_scaffold4_a: अंक जोड़ने के लिए `अंक स्कोर करें` और एक घटाने
           के लिए `अंक हटाएं` का उपयोग करें।
+      courseC_PlayLab_events1:
+        courseC_PlayLab_events1_a: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2018:
+        courseC_PlayLab_events1_a: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
+      courseC_PlayLab_events1_2019:
+        courseC_PlayLab_events1_a: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
       courseC_PlayLab_events2:
+        courseC_PlayLab_events2_a: |-
+          इन दो ब्लॉक्स को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
         courseC_PlayLab_events2_b: कौन-सा अभिनेता बोलता है, इसमें बदलाव करने के लिए
           दूसरे `अभिनेता __ कहता है` ब्लॉक पर ड्रॉपडाउन मेन्यु का उपयोग करें।
       courseC_PlayLab_events2_2018:
+        courseC_PlayLab_events2_a: |-
+          इन दो ब्लॉक्स को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
         courseC_PlayLab_events2_b: कौन-सा अभिनेता बोलता है, इसमें बदलाव करने के लिए
           दूसरे `अभिनेता __ कहता है` ब्लॉक पर ड्रॉपडाउन मेन्यु का उपयोग करें।
       courseC_PlayLab_events2_2019:
+        courseC_PlayLab_events2_a: |-
+          इन दो ब्लॉक्स को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+            <block type="studio_saySpriteChoices">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Hi there.</title>
+            </block>
+          </xml>
         courseC_PlayLab_events2_b: कौन-सा अभिनेता बोलता है, इसमें बदलाव करने के लिए
           दूसरे `अभिनेता __ कहता है` ब्लॉक पर ड्रॉपडाउन मेन्यु का उपयोग करें।
       courseC_PlayLab_events3:
@@ -1623,16 +1677,46 @@ hi-IN:
           पिक्सल तक दाएं की ओर मूव करने की जरूरत है।
         courseC_PlayLab_events3_b: क्या टूलबॉक्स में कोई ऐसा ब्लॉक है, जो अभिनेता
           को मूव करने वाला प्रतीत होता हो?
+        courseC_PlayLab_events3_c: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
       courseC_PlayLab_events3_2018:
         courseC_PlayLab_events3_a: इस पहेली को हल करने के लिए आपको जॉर्ज को लगभग 25
           पिक्सल तक दाएं की ओर मूव करने की जरूरत है।
         courseC_PlayLab_events3_b: क्या टूलबॉक्स में कोई ऐसा ब्लॉक है, जो अभिनेता
           को मूव करने वाला प्रतीत होता हो?
+        courseC_PlayLab_events3_c: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
       courseC_PlayLab_events3_2019:
         courseC_PlayLab_events3_a: इस पहेली को हल करने के लिए आपको जॉर्ज को लगभग 25
           पिक्सल तक दाएं की ओर मूव करने की जरूरत है।
         courseC_PlayLab_events3_b: क्या टूलबॉक्स में कोई ऐसा ब्लॉक है, जो अभिनेता
           को मूव करने वाला प्रतीत होता हो?
+        courseC_PlayLab_events3_c: |-
+          इस ब्लॉक को `जब चलाया जाए` ब्लॉक में जोड़ें:
+
+          <xml>
+          <block type="studio_moveDistance">
+              <title name="SPRITE">0</title>
+              <title name="DIR">2</title>
+              <title name="DISTANCE">25</title>
+            </block>
+          </xml>
       courseC_PlayLab_events4:
         courseC_PlayLab_events4_b: जब "चलाएं" बटन पर क्लिक किया जाता है, तो ऑलिव द
           कैट तक पहुंचने के लिए जॉर्ज को **100** पिक्सल दाएं मूव करने की जरूरत है।
@@ -1756,11 +1840,6 @@ hi-IN:
           ब्लॉक और `अभिनेता की गति ____ तक तय करें` ब्लॉक का उपयोग करें।
         courseC_PlayLab_eventsA_b: इस पहेली को हल करने के लिए आपको वर्कस्पेस में विशेषरूप
           से `जब चलाया जाए` इवेंट ब्लॉक खींचने की जरूरत होगी।
-      courseC_PlayLab_eventsA_embed_2019:
-        courseC_PlayLab_eventsA_a: इस पहेली को हल करने के लिए `पृष्ठभूमि सेट करें`
-          ब्लॉक और `अभिनेता की गति ____ तक तय करें` ब्लॉक का उपयोग करें।
-        courseC_PlayLab_eventsA_b: इस पहेली को हल करने के लिए आपको वर्कस्पेस में विशेषरूप
-          से `जब चलाया जाए` इवेंट ब्लॉक खींचने की जरूरत होगी।
       courseC_PlayLab_eventsFP:
         idea1: |-
           _क्या आपको कोई सुझाव चाहिए?_
@@ -1801,26 +1880,98 @@ hi-IN:
 
           **पिनबॉल** - तीर वाली कुंजियों का उपयोग करते हुए एक चरित्र को मूव करवाएं (`जब ऊपर वाला तीर हो`, `जब नीचे वाला तीर हो` ब्लॉक्स का उपयोग करें), फिर बेतरतीब ध्वनियां प्ले करें, जब यह स्क्रीन पर अन्य चरित्रों के साथ टकराए।
       courseC_PlayLab_events_challenge1:
+        courseC_PlayLab_events_challenge_a: |-
+          आप अभिनेताओं को गेम स्पेस पर अलग-अलग स्थानों पर मूव करने के लिए इस ब्लॉक का उपयोग कर सकते हैं।
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: "`अभिनेता 1 को मध्य बाईं पोजीशन पर सेट
           करें` का उपयोग करने की कोशिश करें, जब यह अन्य अभिनेताओं में से किसी एक को
           छूता है। इससे गेम रीसेट हो जाएगी ताकि खिलाड़ी कोशिश करना जारी रख सके !"
+        courseC_PlayLab_events_challenge_c: |-
+          आप गेम को और आसान या अधिक चुनौतीपूर्ण बनाने के लिए विभिन्न अभिनेताओं की गति को बदलने का प्रयास भी करना चाह सकते हैं!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_PlayLab_events_challenge1_2018:
+        courseC_PlayLab_events_challenge_a: |-
+          आप अभिनेताओं को गेम स्पेस पर अलग-अलग स्थानों पर मूव करने के लिए इस ब्लॉक का उपयोग कर सकते हैं।
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: "`अभिनेता 1 को मध्य बाईं पोजीशन पर सेट
           करें` का उपयोग करने की कोशिश करें, जब यह अन्य अभिनेताओं में से किसी एक को
           छूता है। इससे गेम रीसेट हो जाएगी ताकि खिलाड़ी कोशिश करना जारी रख सके !"
+        courseC_PlayLab_events_challenge_c: |-
+          आप गेम को और आसान या अधिक चुनौतीपूर्ण बनाने के लिए विभिन्न अभिनेताओं की गति को बदलने का प्रयास भी करना चाह सकते हैं!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_PlayLab_events_challenge1_2019:
+        courseC_PlayLab_events_challenge_a: |-
+          आप अभिनेताओं को गेम स्पेस पर अलग-अलग स्थानों पर मूव करने के लिए इस ब्लॉक का उपयोग कर सकते हैं।
+
+          <xml> <block type="studio_setSpritePosition">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">12</title>
+            </block></xml>
         courseC_PlayLab_events_challenge_b: "`अभिनेता 1 को मध्य बाईं पोजीशन पर सेट
           करें` का उपयोग करने की कोशिश करें, जब यह अन्य अभिनेताओं में से किसी एक को
           छूता है। इससे गेम रीसेट हो जाएगी ताकि खिलाड़ी कोशिश करना जारी रख सके !"
+        courseC_PlayLab_events_challenge_c: |-
+          आप गेम को और आसान या अधिक चुनौतीपूर्ण बनाने के लिए विभिन्न अभिनेताओं की गति को बदलने का प्रयास भी करना चाह सकते हैं!
+
+          <xml>  <block type="studio_setSpriteSpeed">
+              <title name="SPRITE">0</title>
+              <title name="VALUE">Studio.SpriteSpeed.FAST</title>
+            </block></xml>
       courseC_artist_loop1:
         courseC_artist_loop1_a: आपको लूप में कोई बदलाव करने की जरूरत नहीं है, बस एक
           ब्लॉक को इसके ऊपर रखें।
+        courseC_artist_loop1_b: |-
+          यह वह ब्लॉक है, जिसके लिए आपको एक पैटर्न सेट करने की जरूरत होगी:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          अपनी पसंद का कोई भी पैटर्न चुनें!
       courseC_artist_loop1_2018:
         courseC_artist_loop1_a: आपको लूप में कोई बदलाव करने की जरूरत नहीं है, बस एक
           ब्लॉक को इसके ऊपर रखें।
+        courseC_artist_loop1_b: |-
+          यह वह ब्लॉक है, जिसके लिए आपको एक पैटर्न सेट करने की जरूरत होगी:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          अपनी पसंद का कोई भी पैटर्न चुनें!
       courseC_artist_loop1_2019:
         courseC_artist_loop1_a: आपको लूप में कोई बदलाव करने की जरूरत नहीं है, बस एक
           ब्लॉक को इसके ऊपर रखें।
+        courseC_artist_loop1_b: |-
+          यह वह ब्लॉक है, जिसके लिए आपको एक पैटर्न सेट करने की जरूरत होगी:
+
+          <xml>
+          <block type="draw_line_style_pattern">
+              <title name="VALUE">DEFAULT</title>
+            </block>
+          </xml>
+
+          अपनी पसंद का कोई भी पैटर्न चुनें!
       courseC_artist_loops5a:
         courseC_artist_loops5a_a: उनके चित्र बदलने के लिए `स्टिकर चित्रित करें` ब्लॉक्स
           पर ड्रॉप डाउन मेन्यु का उपयोग करें।
@@ -2120,6 +2271,24 @@ hi-IN:
           के लिए <xml><block type="collector_collect"/></xml> ब्लॉक का उपयोग करें।
         courseC_collector_prog1_b: सबसे आसान समाधान एक बार आगे की ओर मूव करके, फिर
           खजाना एकत्र करना होगा।
+      courseC_collector_prog2:
+        courseC_collector_prog2_a: आप अपने प्रोग्राम को और छोटा बनाने के लिए चार <xml><block
+          type="maze_move"><title name="DIR">moveForward</title></block></xml> ब्लॉक्स
+          का उपयोग कर सकते हैं या <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक का उपयोग कर सकते
+          हैं।
+      courseC_collector_prog2_2018:
+        courseC_collector_prog2_a: आप अपने प्रोग्राम को और छोटा बनाने के लिए चार <xml><block
+          type="maze_move"><title name="DIR">moveForward</title></block></xml> ब्लॉक्स
+          का उपयोग कर सकते हैं या <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक का उपयोग कर सकते
+          हैं।
+      courseC_collector_prog2_2019:
+        courseC_collector_prog2_a: आप अपने प्रोग्राम को और छोटा बनाने के लिए चार <xml><block
+          type="maze_move"><title name="DIR">moveForward</title></block></xml> ब्लॉक्स
+          का उपयोग कर सकते हैं या <xml><block type="controls_repeat_dropdown"><title
+          name="TIMES" config="3-10">???</title></block></xml> ब्लॉक का उपयोग कर सकते
+          हैं।
       courseC_collector_prog3:
         courseC_collector_prog3_a: प्रोग्राम केवल वही ब्लॉक्स चलाएगा, जो <xml><block
           type="when_run"/></xml> ब्लॉक से जुड़े हुए हैं।
@@ -2468,6 +2637,30 @@ hi-IN:
         courseC_harvester_loops_challenge1_b: आप `आगे की ओर मूव करें` और `कॉर्न लें`
           को जितनी बार जरूरत हो, दोहरा सकते हैं, फिर प्रत्येक कोने पर `दाएं मुड़`
           सकते हैं।
+        courseC_harvester_loops_challenge1_c: |-
+          बीच में कॉर्न एकत्र करने का बेहतर तरीका है, `दोहराएं` ब्लॉक को दूसरे `दोहराएं` ब्लॉक के अंदर रखना।
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge1a_2018:
         courseC_harvester_loops_challenge1_a: लूप्स के बिना यह बहुत ज्यादा मुश्किल
           है!
@@ -2480,6 +2673,30 @@ hi-IN:
         courseC_harvester_loops_challenge1_b: आप `आगे की ओर मूव करें` और `कॉर्न लें`
           को जितनी बार जरूरत हो, दोहरा सकते हैं, फिर प्रत्येक कोने पर `दाएं मुड़`
           सकते हैं।
+        courseC_harvester_loops_challenge1_c: |-
+          बीच में कॉर्न एकत्र करने का बेहतर तरीका है, `दोहराएं` ब्लॉक को दूसरे `दोहराएं` ब्लॉक के अंदर रखना।
+
+          <xml><block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">4</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></xml>
       courseC_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: इसे हल करने का एक रास्ता मोड़दार प्रतीत
           होता है। दूसरा रास्ता घुमावदार लगता है! इस तरह की पहेली को हल करने के बहुत
@@ -2721,12 +2938,21 @@ hi-IN:
         courseC_maze_programming1_0: सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक
           साथ कटे हैं, फिर दुबारा "चलाएं" पर क्लिक करें।
       courseC_maze_programming2:
+        courseC_maze_programming2_a: <xml><block type="maze_moveForward"/></xml> ब्लॉक
+          का उपयोग करने के लिए, इसे टूलबॉक्स में से बाहर खींचें और इसे <xml><block
+          type="when_run"/></xml> ब्लॉक के साथ जोड़ दें।
         courseC_maze_programming2_b: सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक
           साथ कटे हैं, फिर दुबारा "चलाएं" पर क्लिक करें।
       courseC_maze_programming2_2018:
+        courseC_maze_programming2_a: <xml><block type="maze_moveForward"/></xml> ब्लॉक
+          का उपयोग करने के लिए, इसे टूलबॉक्स में से बाहर खींचें और इसे <xml><block
+          type="when_run"/></xml> ब्लॉक के साथ जोड़ दें।
         courseC_maze_programming2_b: सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक
           साथ कटे हैं, फिर दुबारा "चलाएं" पर क्लिक करें।
       courseC_maze_programming2_2019:
+        courseC_maze_programming2_a: <xml><block type="maze_moveForward"/></xml> ब्लॉक
+          का उपयोग करने के लिए, इसे टूलबॉक्स में से बाहर खींचें और इसे <xml><block
+          type="when_run"/></xml> ब्लॉक के साथ जोड़ दें।
         courseC_maze_programming2_b: सुनिश्चित करें कि सभी ब्लॉक्स पूरी तरह से एक
           साथ कटे हैं, फिर दुबारा "चलाएं" पर क्लिक करें।
       courseC_maze_programming3:
@@ -2867,12 +3093,24 @@ hi-IN:
       courseC_maze_programming_challenge2:
         courseC_maze_programming_challenge2_a: _"यदि आप मुझे पीछे की ओर भेजते हैं,
           तो अतिरिक्त सावधानी बरतें कि मैं सही तरफ मुड़ जाऊं!"_
+        courseC_maze_programming_challenge2_b: |-
+          सबसे छोटा समाधान केवल 5 ब्लॉक्स का उपयोग करता है, लेकिन यह इस ब्लॉक का उपयोग करता है:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2018:
         courseC_maze_programming_challenge2_a: _"यदि आप मुझे पीछे की ओर भेजते हैं,
           तो अतिरिक्त सावधानी बरतें कि मैं सही तरफ मुड़ जाऊं!"_
+        courseC_maze_programming_challenge2_b: |-
+          सबसे छोटा समाधान केवल 5 ब्लॉक्स का उपयोग करता है, लेकिन यह इस ब्लॉक का उपयोग करता है:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_maze_programming_challenge2_2019:
         courseC_maze_programming_challenge2_a: _"यदि आप मुझे पीछे की ओर भेजते हैं,
           तो अतिरिक्त सावधानी बरतें कि मैं सही तरफ मुड़ जाऊं!"_
+        courseC_maze_programming_challenge2_b: |-
+          सबसे छोटा समाधान केवल 5 ब्लॉक्स का उपयोग करता है, लेकिन यह इस ब्लॉक का उपयोग करता है:
+
+          <xml><block type="controls_repeat_dropdown"><title name="TIMES" config="3-10">???</title></block></xml>
       courseC_starWars_loops1:
         courseC_starWars_loops1_a: जब BB-8 लोहे के चूरे पर उलटता है तो वह अपने आप
           इसे उठा लेता है।
@@ -3539,7 +3777,21 @@ hi-IN:
         courseD_artist_binary8_c: गलती होने से न डरें! यह देखने के लिए कि क्या होगा,
           युग्मक लिखने और कोड चलाने का प्रयास करें, चाहे आपने अभी तक पहेली को हल नहीं
           किया है।
+      courseD_bee_conditionals1_predict1:
+        courseD_bee_conditionals1_a: इससे पहले कि आप मधुरस प्राप्त करने का प्रयास
+          करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या
+          बादल के नीचे फूल है।
+      courseD_bee_conditionals1_predict1_2018:
+        courseD_bee_conditionals1_a: इससे पहले कि आप मधुरस प्राप्त करने का प्रयास
+          करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या
+          बादल के नीचे फूल है।
+      courseD_bee_conditionals1_predict1_2019:
+        courseD_bee_conditionals1_a: इससे पहले कि आप मधुरस प्राप्त करने का प्रयास
+          करें, आपको यह देखने के लिए `इफ` ब्लॉक का उपयोग करने की जरूरत होगी कि क्या
+          बादल के नीचे फूल है।
       courseD_bee_conditionals2:
+        courseD_bee_conditionals2_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals2_b: इस पहेली का रास्ता बनाने के लिए आप `दोहराएं`
           लूप या `जब आगे रास्ता हो` का उपयोग कर सकते हैं।
         courseD_bee_conditionals2_c: आपको मधु के छत्तों को देखने की जरूरत नहीं है,
@@ -3547,6 +3799,8 @@ hi-IN:
         courseD_bee_conditionals2_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals2_2018:
+        courseD_bee_conditionals2_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals2_b: इस पहेली का रास्ता बनाने के लिए आप `दोहराएं`
           लूप या `जब आगे रास्ता हो` का उपयोग कर सकते हैं।
         courseD_bee_conditionals2_c: आपको मधु के छत्तों को देखने की जरूरत नहीं है,
@@ -3557,30 +3811,40 @@ hi-IN:
         courseD_bee_conditionals2_c: आपको मधु के छत्तों को देखने की जरूरत नहीं है,
           बादलों की नीचे केवल फूल या खाली स्थान होंगे।
       courseD_bee_conditionals3:
+        courseD_bee_conditionals3_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals3_b: आप मधुमक्खी को आगे की ओर मूव करते रहने के लिए
           `दोहराएं` लूप या `व्हाइल` लूप का उपयोग कर सकते हैं। उसी का उपयोग करें, जो
           भी आपको पसंद हो!
         courseD_bee_conditionals3_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals3_2018:
+        courseD_bee_conditionals3_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals3_b: आप मधुमक्खी को आगे की ओर मूव करते रहने के लिए
           `दोहराएं` लूप या `व्हाइल` लूप का उपयोग कर सकते हैं। उसी का उपयोग करें, जो
           भी आपको पसंद हो!
         courseD_bee_conditionals3_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals4:
+        courseD_bee_conditionals4_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
           block ब्लॉक का उपयोग करते हुए, आपको आगे की ओर मूव करके फूल को देखें। यदि
           वहां फूल है, तो मधुमक्खी को क्या करना चाहिए?
         courseD_bee_conditionals4_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals4_2018:
+        courseD_bee_conditionals4_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals4_c: <xml><block type="maze_untilBlocked"/></xml>
           block ब्लॉक का उपयोग करते हुए, आपको आगे की ओर मूव करके फूल को देखें। यदि
           वहां फूल है, तो मधुमक्खी को क्या करना चाहिए?
         courseD_bee_conditionals4_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals5:
+        courseD_bee_conditionals5_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals5_a: आयताकार रास्ते की प्रत्येक भुजा को भी एक रास्ता
           मानें। बाहर की तरफ `दोहराएं` ब्लॉक के साथ नेस्टड लूप और अंदर `जब आगे रास्ता
           हो` लूप स्थापित करें। नीचे की ओर जाने के लिए मधुमक्खी को कितने रास्तों की
@@ -3597,6 +3861,8 @@ hi-IN:
         courseD_bee_conditionals5_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals5_2018:
+        courseD_bee_conditionals5_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals5_a: आयताकार रास्ते की प्रत्येक भुजा को भी एक रास्ता
           मानें। बाहर की तरफ `दोहराएं` ब्लॉक के साथ नेस्टड लूप और अंदर `जब आगे रास्ता
           हो` लूप स्थापित करें। नीचे की ओर जाने के लिए मधुमक्खी को कितने रास्तों की
@@ -3610,6 +3876,8 @@ hi-IN:
         courseD_bee_conditionals5_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals6:
+        courseD_bee_conditionals6_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals6_a: प्रत्येक बादल के नीचे मधु के छत्ते को देखने के
           लिए `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।
         courseD_bee_conditionals6_b: इस स्थिति में, आपको बादलों के नीचे फूलों को देखने
@@ -3619,6 +3887,8 @@ hi-IN:
         courseD_bee_conditionals6_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals6_2018:
+        courseD_bee_conditionals6_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals6_a: प्रत्येक बादल के नीचे मधु के छत्ते को देखने के
           लिए `इफ` स्टेटमेंट का उपयोग करना सुनिश्चित करें।
         courseD_bee_conditionals6_b: इस स्थिति में, आपको बादलों के नीचे फूलों को देखने
@@ -3635,6 +3905,8 @@ hi-IN:
         courseD_bee_conditionals6_c: क्या ऐसी लूप है, जिसे आप अपने कोड को अधिक सरल
           बनाने के लिए उपयोग कर सकते हैं?
       courseD_bee_conditionals7:
+        courseD_bee_conditionals7_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals7_a: "**यााद रखें:** यह पहेली हर बार चलाने पर बदल
           जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक (`इफ/एल्स`) का उपयोग
           करना चाहेंगे।"
@@ -3644,6 +3916,8 @@ hi-IN:
         courseD_bee_conditionals7_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals7_2018:
+        courseD_bee_conditionals7_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals7_a: "**यााद रखें:** यह पहेली हर बार चलाने पर बदल
           जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक (`इफ/एल्स`) का उपयोग
           करना चाहेंगे।"
@@ -3672,6 +3946,8 @@ hi-IN:
           जाती है। \n\nआप चुनौती को हल करने के लिए नियमबद्ध ब्लॉक (`इफ/एल्स`) का उपयोग
           करना चाहेंगे।"
       courseD_bee_conditionals8:
+        courseD_bee_conditionals8_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals8_c: आप प्रत्येक रास्ते के अंत तक जाना किस प्रकार
           सुनिश्चित कर सकते हैं, चाहे रास्ता कितना लंबा हो?
         courseD_bee_conditionals8_d: |-
@@ -3681,6 +3957,8 @@ hi-IN:
         courseD_bee_conditionals8_hintVid2: इस पहेली को हल करने में मदद के लिए यह
           वीडियो देखें।
       courseD_bee_conditionals8_2018:
+        courseD_bee_conditionals8_hintVid1: क्या शुरुआत करने में मदद की जरूरत है?  वीडियो
+          देखें!
         courseD_bee_conditionals8_c: आप प्रत्येक रास्ते के अंत तक जाना किस प्रकार
           सुनिश्चित कर सकते हैं, चाहे रास्ता कितना लंबा हो?
         courseD_bee_conditionals8_d: |-
@@ -4035,6 +4313,70 @@ hi-IN:
           दोहराएं ब्लॉक्स का उपयोग करें।
         courseD_maze_ramp7_c: यदि आप अपने कोड को और आसान बनाना चाहते हैं, तो आप एक
           दोहराएं लूप को दूसरे के अंदर रख सकते हैं! इसे **नेस्टड लूप** कहा जाता है।
+      courseD_playLab_cond1:
+        courseD_playLab_cond1_a: इस चुनौती को हल करने के लिए, `जब ऊपरी तीर` इवेंट
+          में `अभिनेता 1 को ऊपर मूव करें` ब्लॉक जोड़ें, फिर हर दूसरी दिशा के लिए वही
+          करें।
+        courseD_playLab_cond1_b: इसमें बदलाव करने के लिए कि वे किस दिशा में जाते हैं,
+          `जब तीर` और `अभिनेता को मूव करें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग
+          करें।
+        courseD_playLab_cond1_c: जब आप "चलाएं” पर क्लिक करें तो दोनों झंडों के लिए
+          पेगलॉग को मूव करना याद रखें!
+      courseD_playLab_cond1_2018:
+        courseD_playLab_cond1_a: इस चुनौती को हल करने के लिए, `जब ऊपरी तीर` इवेंट
+          में `अभिनेता 1 को ऊपर मूव करें` ब्लॉक जोड़ें, फिर हर दूसरी दिशा के लिए वही
+          करें।
+        courseD_playLab_cond1_b: इसमें बदलाव करने के लिए कि वे किस दिशा में जाते हैं,
+          `जब तीर` और `अभिनेता को मूव करें` ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग
+          करें।
+        courseD_playLab_cond1_c: जब आप "चलाएं” पर क्लिक करें तो दोनों झंडों के लिए
+          पेगलॉग को मूव करना याद रखें!
+      courseD_playLab_cond2:
+        courseD_playLab_cond2_a: इस पहेली में सफल होने के लिए, `जब अभिनेता 1, अभिनेता
+          2 को छूता है` इवेंट के नीचे `अंक प्राप्त करें` ब्लॉक का उपयोग करें।
+      courseD_playLab_cond2_2018:
+        courseD_playLab_cond2_a: इस पहेली में सफल होने के लिए, `जब अभिनेता 1, अभिनेता
+          2 को छूता है` इवेंट के नीचे `अंक प्राप्त करें` ब्लॉक का उपयोग करें।
+      courseD_playLab_cond3:
+        courseD_playLab_cond3_a: आपको अपनी `हमेशा दोहराएं` लूप में दो ब्लॉक जोड़ने
+          की जरूरत होगी।  एक ड्रैगन (अभिनेता 2) के लिए बेतरतीब भावों को चुनेगा और
+          दूसरा दुबारा लूप बनाने से पहले 1 सेकंड प्रतीक्षा करेगा।
+      courseD_playLab_cond3_2018:
+        courseD_playLab_cond3_a: आपको अपनी `हमेशा दोहराएं` लूप में दो ब्लॉक जोड़ने
+          की जरूरत होगी।  एक ड्रैगन (अभिनेता 2) के लिए बेतरतीब भावों को चुनेगा और
+          दूसरा दुबारा लूप बनाने से पहले 1 सेकंड प्रतीक्षा करेगा।
+      courseD_playLab_cond3a:
+        courseD_playLab_cond3_c: "-   `इफ` ड्रैगन खुश है।\n    -   `अंक प्राप्त करें`\n
+          \   -   `अंक प्राप्त करें`  \n\n-   `एल्स` `अंक प्राप्त करें`"
+      courseD_playLab_cond3a_2018:
+        courseD_playLab_cond3_c: "-   `इफ` ड्रैगन खुश है।\n    -   `अंक प्राप्त करें`\n
+          \   -   `अंक प्राप्त करें`  \n\n-   `एल्स` `अंक प्राप्त करें`"
+      courseD_playLab_cond4:
+        courseD_playLab_cond4_a: आप समुद्री डाकू का पीछा करने के लिए निंजा को सक्रिय
+          करने हेतु `जब चलाया जाए` इवेंट का उपयोग करना चाहेंगे।
+        courseD_playLab_cond4_b: "`मुखौटे वाले हर निंजा को अभिनेता का पीछा करने के
+          लिए सेट करें` नामक खास ब्लॉक है, जो समुद्री डाकू की खोज पर निंजा को गरम
+          रखेगा!"
+        courseD_playLab_cond4_c: "`जब अभिनेता 1, अभिनेता 3 को छूता है` इवेंट के नीचे
+          `गेम को हार के तौर पर समाप्त करें` ब्लॉक रखें।"
+      courseD_playLab_cond4_2018:
+        courseD_playLab_cond4_a: आप समुद्री डाकू का पीछा करने के लिए निंजा को सक्रिय
+          करने हेतु `जब चलाया जाए` इवेंट का उपयोग करना चाहेंगे।
+        courseD_playLab_cond4_b: "`मुखौटे वाले हर निंजा को अभिनेता का पीछा करने के
+          लिए सेट करें` नामक खास ब्लॉक है, जो समुद्री डाकू की खोज पर निंजा को गरम
+          रखेगा!"
+        courseD_playLab_cond4_c: "`जब अभिनेता 1, अभिनेता 3 को छूता है` इवेंट के नीचे
+          `गेम को हार के तौर पर समाप्त करें` ब्लॉक रखें।"
+      courseD_playLab_cond5:
+        courseD_playLab_cond5_a: इस पहेली को हल करने के लिए `इफ` स्टेटमेंट का उपयोग
+          करें, जो तुलना करती है कि `स्कोर` `>` 5 है या नहीं।
+        courseD_playLab_cond5_b: आपके पास वर्कस्पेस में एक से अधिक `हमेशा दोहराएं`
+          लूप हो सकती है।
+      courseD_playLab_cond5_2018:
+        courseD_playLab_cond5_a: इस पहेली को हल करने के लिए `इफ` स्टेटमेंट का उपयोग
+          करें, जो तुलना करती है कि `स्कोर` `>` 5 है या नहीं।
+        courseD_playLab_cond5_b: आपके पास वर्कस्पेस में एक से अधिक `हमेशा दोहराएं`
+          लूप हो सकती है।
       courseD_playLab_cond6:
         courseD_playLab_cond6_a: निंजा की गति धीमी करने में मदद के लिए प्रोग्राम के
           शुरू में `मुखौटे वाले निंजा की गति सेट करें` ब्लॉक जोड़ें।
@@ -4373,6 +4715,8 @@ hi-IN:
           4 भुजाएं खींचने के लिए, दोहराएं लूप के अंदर `200 पिक्सल तक आगे की ओर मूव करें` ब्लॉक रखें और सुनिश्चित करें कि लूप 4 बार खींचने के लिए सेट है।
 
           उसके बाद मुड़ना न भूलें!
+        courseE_artist_ramp8_c: 'आपकी लूप के अंदर दो ब्लॉक्स होने चाहिएं: `आगे की
+          ओर मूव करें` और `90 डिग्री तक दाएं मुड़ें`।'
       courseE_artist_ramp8_2:
         courseE_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
           block, and change the 100 to a 200.
@@ -4380,13 +4724,17 @@ hi-IN:
           4 भुजाएं खींचने के लिए, दोहराएं लूप के अंदर `200 पिक्सल तक आगे की ओर मूव करें` ब्लॉक रखें और सुनिश्चित करें कि लूप 4 बार खींचने के लिए सेट है।
 
           उसके बाद मुड़ना न भूलें!
+        courseE_artist_ramp8_c: 'आपकी लूप के अंदर दो ब्लॉक्स होने चाहिएं: `आगे की
+          ओर मूव करें` और `90 डिग्री तक दाएं मुड़ें`।'
       courseE_artist_ramp9:
+        courseD_artist_ramp12_a: यह वर्ग के समान कैसे है?  यह अलग कैसे है?
         courseD_artist_ramp12_b: यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप `मुड़ें`
           ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग कर सकते हैं!
         courseD_artist_ramp12_c: प्रत्येक भुजा खींचने के लिए, आपको 100 पिक्सल आगे
           की ओर मूव करने, फिर 120 डिग्री दाएं मुड़ने की जरूरत होगी। आपको कितनी भुजाओं
           की जरूरत है?
       courseE_artist_ramp9_2:
+        courseD_artist_ramp12_a: यह वर्ग के समान कैसे है?  यह अलग कैसे है?
         courseD_artist_ramp12_b: यह देखने के लिए आपको कौन-से कोण की जरूरत है, आप `मुड़ें`
           ब्लॉक्स पर ड्रॉप डाउन मेन्यु का उपयोग कर सकते हैं!
         courseD_artist_ramp12_c: प्रत्येक भुजा खींचने के लिए, आपको 100 पिक्सल आगे
@@ -4808,12 +5156,3 @@ hi-IN:
           चाहिए, आपको केवल दो ब्लॉक्स जोड़ने होंगे। '
         iceage_warn_ice_age_b: प्रोग्राम शुरू होने के बाद तुरंत उन्हें सक्रिय करने
           के लिए `जब चलाया जाए` इवेंट के नीचे दोनों नए ब्लॉक्स जोड़ें।
-      Dance_Party_05:
-        validation: |-
-          **मैं यह स्तर कैसे पास करूं?**
-
-          -   स्तर खत्म होने से पहले आपके डांसर को कम से कम 4 अलग-अलग डांस मूव्स के द्वारा चक्कर बनाने की जरूरत है।
-
-          _यह स्तर 12 संगीत प्रविधियों के बाद समाप्त होता है।_
-      Dance_Party_extras_alternate_2019:
-        alternate: वैकल्पिक ब्लॉक “नर्तकियों” श्रेणी में है।

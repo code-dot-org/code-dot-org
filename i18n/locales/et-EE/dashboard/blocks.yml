@@ -319,6 +319,7 @@ et:
           FORMAT:
             '"border"': piir
             '"inner"': ruudu sees
+            '"diamond"': teemant
             '"circle"': ring
             '"grid"': ruudustikus
             '"row"': rida

@@ -30,10 +30,14 @@ describe('ProgressViewHeader', () => {
     const wrapper = shallow(
       <ProgressViewHeader {...DEFAULT_PROPS} currentView={'standards'} />
     );
-    expect(wrapper.find('StandardsViewHeaderButtons')).to.have.lengthOf(1);
+    expect(
+      wrapper.find('Connect(StandardsViewHeaderButtons)')
+    ).to.have.lengthOf(1);
   });
   it('does not show buttons when in standards view', () => {
     const wrapper = shallow(<ProgressViewHeader {...DEFAULT_PROPS} />);
-    expect(wrapper.find('StandardsViewHeaderButtons')).to.have.lengthOf(0);
+    expect(
+      wrapper.find('Connect(StandardsViewHeaderButtons)')
+    ).to.have.lengthOf(0);
   });
 });

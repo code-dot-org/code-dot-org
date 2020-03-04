@@ -19,7 +19,7 @@ cs:
         invalid_plural: jsou neplatné
     attributes:
       user:
-        name: Zobrazit jméno
+        name: Zobrazované jméno
         name_example: Zobrazované jméno (např. Cool kodér nebo Jana S.)
         email: E-mail
         parent_email: E-mail rodiče/zákonného zástupce
@@ -27,7 +27,7 @@ cs:
           nemáte e-mailovou adresu)</a>
         personal_email_markdown: Osobní e-mailová adresa [(klikněte zde pokud nemáte
           e-mailovou adresu)](%{url})
-        username: uživatelské jméno
+        username: Uživatelské jméno
         password: Heslo
         password_confirmation: Potvrzení hesla
         current_password: Současné heslo
@@ -58,34 +58,34 @@ cs:
   previous_page: Předchozí stránka
   next_page: Další strana
   next_resource: Další zdroj
-  cancel: Storno
+  cancel: Zrušit
   okay: Dobře
   or: nebo
   heading_x_of_y: "%{heading} (stránky %{x} %{y})"
   join_section:
     code:
       placeholder: Kód sekce (ABCDEF)
-      instructions_short: Zadejte svůj 6 písmenný kód oddílu
+      instructions_short: Zadejte svůj 6-místný kód
       submit: Připojit se
   add_hint_form:
     placeholder: Zadej zde svůj tip
     submit: Přidat tip
   appname: Code.org
-  stage: fáze
+  stage: Úroveň
   stage_number: Fáze %{number}
-  puzzle: Rébus
-  trophies: trofeje
-  courses: kurzy
+  puzzle: Úloha
+  trophies: Trofeje
+  courses: Kurzy
   courses_page:
-    title_student: Poznat Code studio
+    title_student: Naučte se informatiku
     title_teacher: Vyučujte informatiku
   unplugged_activity: Aktivita bez počítače
   of: z
   more: VÍCE
   less: MÉNĚ
   try_hoc: Zkus Hodinu Kódu kliknutím zde >> 
-  try_k8intro: Vyzkoušej náš kurz K-8 Úvod do informatiky (15-25 hodin)
-  k8intro: Kurz K-8 Úvod do počítačové vědy (15-25 hodin)
+  try_k8intro: Vyzkoušej náš kurz Úvod do informatiky (15-25 vyučovacích hodin)
+  k8intro: Kurz Úvod do informatiky (15-25 vyučovacích hodin)
   already_started: 'Už jsi začal? Pokračuj zde >> '
   demos: 'Admin: Všechny Ukázky'
   continue: Pokračovat
@@ -100,14 +100,14 @@ cs:
       [Click here](%{url}) se odhlásíte ze služby %{provider}."
     already_signedup: Již jsi zaregistrován?
     notyet_signedup: Ještě ses nepřidal?
-    google_oauth2: Google účet
+    google_oauth2: Google
     twitter: Twitter
     facebook: Facebook
-    windowslive: Microsoft účet
-    microsoft_v2_auth: Microsoft účet
+    windowslive: Microsoft
+    microsoft_v2_auth: Microsoft
     clever: Chytrý účet
     powerschool: PowerSchool účet
-    forgot_password: Zapomněl jsi heslo?
+    forgot_password: Zapomenuté heslo?
     migration_success: Povedlo se! Přepnuli jste účet do nové podoby.
     demigration_success: Nové podoba účtu je nyní vypnuta.
     need_confirmation: Nedostal jsi instrukce pro potvrzení?
@@ -165,8 +165,6 @@ cs:
     valid_password: Platné heslo!
     invalid_password: Heslo musí obsahovat nejméně 6 znaků
     mismatch_password: Zadaná dvě hesla se neshodují
-    under_13_consent: Pokud jsem mladší 13 let, mohu potvrdit, že mám souhlas svého
-      rodiče nebo zákonného zástupce k používání služeb Code.org.
     student_consent: Potvrzuji, že mám od svých rodičů nebo zákonného zástupce dovoleno
       používat Code.org.
     agree_us_website: Souhlasím s používáním webových stránek provozovaných ve Spojených
@@ -177,7 +175,7 @@ cs:
     user_type_button: Aktualizovat typ účtu
     user_type_label: Typ účtu
     user_type_teacher: Učitel
-    user_type_student: student
+    user_type_student: Student
     field_is_required: je požadováno
     accept_terms: Musíte souhlasit pro vytvoření účtu
     error: Došlo k chybě.
@@ -218,7 +216,7 @@ cs:
   signin:
     try_heading: Chcete zkusit kódovat bez registrace?
     try_hoc: Nejprve vyzkoušej Hodinu kódování
-    try_20hours: Vyzkoušej náš 20hodinový Úvod do informatiky
+    try_20hours: Vyzkoušej náš 20-hodinový Úvod do informatiky
   signinsection:
     welcome: Vítejte v %{section_name}
     name: Vyber si své jméno
@@ -322,7 +320,7 @@ cs:
           a hesla
   nav:
     header:
-      finished_hoc: Dokončil jsem Hodinu Kódu
+      finished_hoc: Hotovo!
       sign_in_to_save: Přihlaš se pro uložení pokroku
       my_dashboard: Můj přehled
       course_catalog: Katalog kurzů
@@ -364,9 +362,10 @@ cs:
       district_dashboard: Okresní řídicí panel
       label: Ahoj %{username}
       stats: Code studio
+      my_projects: Moje projekty
       settings: Můj účet
       logout: Odhlásit se
-      signin: Přihlásit
+      signin: Přihlásit se
       signup: Vytvořit účet
       already_registered: Už jste zaregistrováni?
       pair_programming: Programování ve dvojicích
@@ -398,12 +397,12 @@ cs:
       starwarsblocks_hour: Hvězdné války (kostky)
       weblab: Web Lab
     popup:
-      progress_for_user: pokrok je %{name}
+      progress_for_user: Pokrok užívatele %{name}
       progress: Tvůj pokrok
       lines: 'Celkem řádků kódu: %{lines}'
       close: ZAVŘÍT
       mastery: Pojmy
-      puzzle_map: Fáze
+      puzzle_map: Úrovně
       prizes: Posbírej všech %{total_trophies} trofejí a vyhraj ceny!
       prize_earned: Všech %{total_trophies} trofejí získáno. Vyhrál jsi!
       prize_us_only: "(Pouze studenti z USA)"
@@ -423,7 +422,7 @@ cs:
     student_teacher_disassociated: Odebrali jste %{teacher_name} jako svého učitele.
     panel:
       answer_viewer: Učitelský panel
-      student: student
+      student: Student
       viewing_solution: Zobrazení řešení
       try_it_yourself: Vyzkoušejte to sami
       section: Sekce
@@ -528,9 +527,9 @@ cs:
     trynow: Vyzkoušej hned
     add_hint_help: Prosím, pomozte nám s přidáním chytrých tipů na Code.org výukové
       programy
-    20hour_overview: Tento 20-ti hodinový kurz představuje základní koncepty počítačových
-      věd a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
-      ale jistě bude bavit studenty jakéhokoliv věku.
+    20hour_overview: Tento 20-ti hodinový kurz představuje základní koncepty informatiky
+      a programování. Kurz je navrhnut pro děti od 1. po 7. třídu, ale jistě bude
+      bavit žáky jakéhokoliv věku.
     test_videos_help: Vyzkoušejte náš nový video přehrávač ve vaší škole
     try_beta_courses: Novinka! Vyzkoušejte naše beta kurzy pro žáky 1. stupně ZŠ
     use_as_teacher: Použijte jako učitel tento web
@@ -552,7 +551,7 @@ cs:
     already_enrolled_in_new_section: Tyto studenty nelze přesunout, protože tento
       učitel je již má v další části.
   share:
-    title: Poznat Code studio
+    title: Code studio
     description: Každý se může naučit informatiku. Udělejte hry, aplikace a umění
       s kódem.
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
@@ -561,7 +560,7 @@ cs:
     female: Žena
     none: Raději bych neodpovídal/a
   user_type:
-    student: student
+    student: Student
     teacher: Učitel
   footer:
     thank_you: Děkujeme, našim <a href="https://code.org/about/donors"> dárcům</a>,
@@ -683,9 +682,9 @@ cs:
         kurz tenkého kódu!
     20-hour:
       title: Zrychlený kurz
-      body: Tento 20-ti hodinový kurz představuje základní koncepty počítačových věd
-        a programování. Kurz je navrhnut pro děti od 1. po 7. třídu (stupeň K-8),
-        ale jistě bude bavit studenty jakéhokoliv věku.
+      body: Tento 20-ti hodinový kurz pokrývá základní koncepty informatiky a programování
+        obsáhnuté v kurzích 2-4. Kurz je navrhnut pro žáky staré 10 - 18 let. Pokud
+        máš zájem o detailnejší kurz, vyzkoušej kurzy 2-4!
       body_short: Naučit se základní informatiku ve zrychlené verzi kurzy 2-4.
     hoc2014:
       try_new_tutorial: Vyzkoušej náš nový výukový kurz Hour of Code v beta verzi
@@ -724,8 +723,8 @@ cs:
       title: Minecraft
     hero:
       title: Minecraft
-      body: Minecraft je zpět pro hodinu kódu se zcela novou aktivitou! Cestuj hrou
-        Minecraft s kódem.
+      body: Minecraft je zpět v Hodině kódu se zcela novou aktivitou! Procestuj Minecraft
+        s kódem.
     unplugged:
       title: Lekce bez počítače
       audience: Od 4 let
@@ -733,8 +732,7 @@ cs:
         se můžete naučit základy informatiky, ať už máte počítače ve třídě nebo ne!
         Vyzkoušejte tyto lekce jako samostatný kurz nebo jako doplňkové lekce pro
         jakýkoli kurz informatiky.
-      body_short: Pokud nemáte přístup k počítačům ve třídě, vyzkoušejte tyto lekce
-        bez počítače.
+      body_short: Pokud nemáte přístup k počítačům, vyzkoušejte tyto lekce bez počítače.
     unplugged_conditionals:
       title: Podmínky
     widgets:
@@ -768,6 +766,8 @@ cs:
     help_support: Pomoc a podpora
     documentation: Dokumentace
     tutorials: Návody
+  free_response:
+    placeholder: Zadejte svou odpověď zde
   multi:
     wrong_title: Nesprávná odpověď
     wrong_body: Odpověď, kterou jste zadali, není správné.  Opakujte akci!
@@ -827,7 +827,7 @@ cs:
     startover_body: Toto znovu nastaví puzzle do původního stavu a odstraní všechny
       bloky, které jsi přidal nebo změnil.
     startover_ok: Začít znovu
-    startover_cancel: Storno
+    startover_cancel: Zrušit
   time:
     hour: 1 hodina
     day: den
@@ -860,6 +860,8 @@ cs:
       osobních údajů</a>
     accept_label_markdown: Souhlasím s aktualizací [Podmínek poskytování služeb](%{tos_url})
       and [Ochranou osobních údajů](%{privacy_url})
+    accept_tos: Registrací na Code.org vyjadřujete souhlas s našimi [Podmínkami poskytování
+      služeb](%{tos_url}) a [Zásadami ochrany osobních údajů](%{privacy_url}).
     accept: Přijmout
     print: Tisk
     reminder_desc: Aktualizovali jsme naše <a href="%{tos_url}" target="_blank">Smluvní
@@ -982,7 +984,7 @@ cs:
     main_course: Hlavní kurs
     csf_digcit: Digitální občanství
     csf_jigsaw: Skládačka
-    csf_loops: Smyčky
+    csf_loops: Cykly
     csf_events: Události
     csf_binary: Binární
     csf_conditionals: Podmínky
@@ -1012,7 +1014,7 @@ cs:
     csp_conditionals: Podmínky
     csp_functions: Funkce
     csp_lists: Seznamy
-    csp_loops: Smyčky
+    csp_loops: Cykly
   external_links:
     disclaimer: Zřeknutí se
     leaving_domain: Opouštíte tuto doménu na stránku, která není provázaná se společností
@@ -1103,9 +1105,9 @@ cs:
         none: Raději bych neodpovídal/a
       subjects:
         cs: Informatika
-        math: Matematika
+        math: Matematické
         science: Věda
-        la: Jazykové umění
+        la: Jazyky
       resources:
         kodable: Kodable
       robotics:
@@ -1119,3 +1121,6 @@ cs:
     accept: Souhlasím
   gdpr_dialog:
     true: Ano
+  page_not_found_title: Stránka nebyla nalezena
+  page_not_found_header: 404 - Stránka nebyla nalezena
+  page_not_found_button: Zpět domů

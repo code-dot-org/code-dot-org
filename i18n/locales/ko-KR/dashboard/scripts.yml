@@ -553,6 +553,8 @@ ko:
               name: 스튜디오
             Web Lab:
               name: 웹 연구소
+            Sprite Lab:
+              name: 스프라이트 연구소
         algebraPD2b:
           description: '단계 2 온라인: 혼합된 여름 공부'
           description_short: '단계 2 온라인: 혼합된 여름 공부'
@@ -847,7 +849,7 @@ ko:
         allthehiddenthings:
           stages:
             Game Lab:
-              name: Game Lab
+              name: 게임 연구소
         CSDU4-Draft:
           stages:
             Design Mode:
@@ -1647,7 +1649,7 @@ ko:
             Dance Party:
               name: 댄스 파티
           title: 댄스 파티
-          description_short: 케이티 페리, 마돈나, J 발빈, 시아, 키스 어번, 시애라 외 25명 이상의 가수들이 포함되어 있습니다!
+          description_short: Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara 등 25팀과 함께합니다!
           description: 나만의 댄스 파티의 코드를 만들고 친구와 공유하세요!
         frozen-2018-test-b:
           stages:
@@ -1756,7 +1758,7 @@ ko:
             Binary Bracelets:
               name: 2진 팔찌
         gamelab:
-          title: Game Lab
+          title: 게임 연구소
         coursea-2019:
           stages:
             'Programming: Happy Maps':
@@ -1883,13 +1885,15 @@ ko:
               name: 이벤트
             Functions:
               name: 함수
+            Sprite Lab:
+              name: 스프라이트 연구소
             Variables:
               name: 변수
             For Loops:
               name: 반복을 위한
         dance-extras-2019:
           description: 확장된 프로젝트 아이디어로 첫 번째 시간을 뛰어넘으세요.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: 조건
@@ -1899,3 +1903,30 @@ ko:
               name: 클라우드소싱
             Conditionals with Cards:
               name: 조건선택 카드
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: 조건
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: 조건
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: 함수(값 전달)
+        csd3-2020:
+          description_short: "프로그래밍"
+          stages:
+            Variables:
+              name: 변수
+            Sprite Properties:
+              name: 스프라이트 속성
+            Conditionals:
+              name: 조건
+            Velocity:
+              name: 속도
+            Collision Detection:
+              name: 충돌 감지
+            Functions:
+              name: 함수

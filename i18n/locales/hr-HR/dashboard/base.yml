@@ -422,6 +422,8 @@ hr:
     report_bug: "Prijavi grešku"
     support: "Dobivanje pomoći"
     support_url: "//support.code.org"
+  free_response:
+    placeholder: "Ovdje unesite vaš odgovor"
   multi:
     wrong_title: "Netočan odgovor"
     wrong_body: "Odgovor koji ste unijeli nije ispravan.  Molimo pokušajte ponovo!"

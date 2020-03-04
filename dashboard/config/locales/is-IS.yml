@@ -133,6 +133,13 @@ is:
       aðgang.
     already_linked: Aðgangur þinn hjá %{provider} er nú þegar tengdur við Code.org
       aðgang þinn.
+    existing_account:
+      account_exists: Góðar fréttir! Þú ert þegar með Code.org aðgang með netfanginu
+        %{email}
+      sign_in: Skráðu þig inn og við munum tengja upplýsingar þínar hjá %{provider}.
+      sign_up: Ekki netfangið þitt? Viltu stofna nýjan aðgang með öðru netfangi? Við
+        munum líka tengja upplýsingar þínar hjá %{provider} ef þú velur að stofna
+        nýjan aðgang.
   signup_form:
     email_signup: Skráðu þig með netfangi
     student_count: "%{count} nemendur hafa þegar skráð sig."
@@ -179,8 +186,6 @@ is:
     valid_password: Gilt lykilorð!
     invalid_password: Lykilorð verður að vera að minnsta kosti 6 stafir
     mismatch_password: Lykilorðin tvö sem þú slóst inn eru ekki eins
-    under_13_consent: Ef ég er undir 13 ára aldri, staðfesti ég hér með að ég hef
-      samþykki foreldris eða forráðamanns til að nota þjónustur Code.org.
     student_consent: Ég staðfesti að ég hef leyfi foreldris eða löglegs forráðamanns
       til að nota þjónustur Code.org.
     agree_us_website: Ég samþykki að nota vef sem er staðsettur í Bandaríkjunum.
@@ -661,6 +666,7 @@ is:
     download: Hala niður myndband
     show_notes: Sýna athugasemdir
     show_video: Sýna myndband
+    label: Myndband
   compatibility:
     upgrade:
       unsupported_message: Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a
@@ -674,6 +680,9 @@ is:
       gamelab_unsupported_tablet: Leikjamiðjan virkar best á borð- eða fartölvu með
         mús og lyklaborði. Það gætu komið upp vandamál við notkun þessa verkfæris
         á núverandi tæki.
+      oceans_unsupported_browser: Þessi vafri er ekki studdur fyrir þetta kennsluefni.
+        Vinsamlegast reyndu að opna þessa síðu með Edge, Chrome, Firefox eða öðrum
+        nýlegum vafra.
       weblab_unsupported_browser: Því miður eru nú að koma upp vandamál við notkun
         Vefsmiðjunnar í þessum vafra. Þú gætir prófað að nota annan vafra þar til
         lausn finnst. Við biðjumst afsökunar á þessu.
@@ -837,6 +846,8 @@ is:
     help_support: Hjálp og stuðningur
     documentation: Skjölun
     tutorials: Kennslutímar
+  free_response:
+    placeholder: Skráðu svar þitt hér
   multi:
     wrong_title: Rangt svar
     wrong_body: Svarið sem þú gafst er ekki rétt. Vinsamlegast reyndu aftur!
@@ -1149,8 +1160,13 @@ is:
     time4cs_c3: Líf í Everglades
     time4cs_c4: Utanaðkomandi áhrif í Everglades
     time4cs_c5: Borgarar til hins betra í Everglades
+    time4cs_c6: Skilyrðingar (upprifjun)
     k5_getting_started: Fyrstu skrefin
+    k5_csf_intro: Kynntu þér námskeiðin um Undirstöðuatriði tölvunarfræði
+    k5_coding_concepts: Forritunarhugtök og kennsluaðferðir
     k5_next_steps: Næstu skref
+    k5_basic_concepts: Grunnhugtök forritunar og framkvæmd kennslu
+    k5_diving_deeper: 'Kafað dýpra: Námskeið E og F'
   external_links:
     disclaimer: Afsal ábyrgðar
     leaving_domain: Þú ert nú að yfirgefa þetta vefsvæði og fara á svæði sem Code.org

@@ -762,6 +762,11 @@ id:
         csd_problem_solving_process: Proses Pemecahan Masalah
         CSF_Going_Places_Safely: Tetangga daring saya
         CSF_SpriteLab_SpritesInAction_v2: Sprite dalam aksi
+        hoc_dance_congrats_2019: Pesta Tari 2019 - Pesta Digelar!
+        hoc_dance_warmup_2019: Pesta Tari 2019 - Pemanasan
+        hoc_dance_events_2019: Pesta Tari 2019 - Acara
+        hoc_dance_measures_2019: Pesta Tari 2019 - Birama
+        hoc_dance_properties_2019: Pesta Tari 2019 - Properti
     callout:
       text:
         drag_blocks: Tarik blok "gerak" dan letakkan di bawah blok lain

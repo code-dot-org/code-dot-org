@@ -98,12 +98,19 @@ cs-CZ:
         Dokážeš vyřešit tuto hádanku s využitím
         co nejmenšího počtu bloků?
       2-3 Maze Loops Assessment 1: 'Hodnocení: Dostaň mě ke slunečnici s jen 5 bloky! '
+      4-5 Artist 1: "Pomoz mi dokreslit mou krabičku. (Každá čára je dlouhá 300\npixelů) "
+      4-5 Artist 2: Opakuj tento kód pomocí bloku `opakuj` k dokončení čtverce.
+      4-5 Artist 3: |-
+        Tento obdélníkový záhon má obvod 600.
+        Dlouhá strana má délku 200. Nakresli obdélník pomocí co nejméně bloků.
       4-5 Artist 3.5: Ok, zkus přijít na to, co se stane, když spustíš tento kód (nebo
         to zkus stisknutím "Spustit"). Pak opakuj kód několikrát, aby se kresba dokončila!
       4-5 Artist 4: Kolik stupňů je v kruhu? Opakuj bloky k vytvoření kruhu z barev.
       4-5 Artist Assessment 1: 'Hodnocení: Použij cykly k nakreslení rovnostranného
         trojúhelníku. Každá strana je 300 pixelů.'
       4-5 Artist Free Draw 1: Volná kresba! Nakresli co tě napadne.
+      4-5 Artist Patterns 1: Umíš nakreslit tento čtverec pomocí cyklu? Každá strana
+        je dlouhá 20 pixelů.
       4-5 Artist Patterns 7: Upravíme kód z poslední puzzlu, abychom udělali z toho
         složitěji vzorek. Všimni si, jak se teď překrývají kosodélníky, zkus změnit
         první "skok zpět" ze 100 na 50 (polovina dál) - teď jak daleko by měl umělec
@@ -133,6 +140,15 @@ cs-CZ:
       4-5 Maze 6: |-
         Dokážeš vyřešit tuto hádanku s využitím
         co nejmenšího počtu bloků?
+      4-5 Maze 7: Dostaň zombie co nejrychleji ke slunečnici. Dokážeš vyřešit hádanku
+        pomocí méně než 11 bloků?
+      4-5 Maze 8: Dostaň zombie ke slunečnici použitím co nejméně bloků. (Vyhni se
+        masožrovkám!)
+      4-5 Maze 9: "Nyní máme nový blok zvaný `opakuj dokud`.\\\nTo nám umožní opakovat
+        příkazy, dokud zombie nezíská slunečnici.  \n\nPoužij nový blok `opakuj dokud`
+        k vyřešení této hádanky s co nejmenším počtem příkazů."
+      4-5 Maze Assessment 1: 'Hodnocení: Dostaň se ke slunečnici s co nejmenším počtem
+        bloků.'
       4-5 Nested Loops 5: Zacykluj daný kód k vytvoření větrného mlýnu.
       4-5 Nested Loops 9: Nakresli zuby v tlamě aligátora!
       Alien Defender: 'Nápad na projekt: Vytvořte obranou hru v Play Lab!'
@@ -342,6 +358,30 @@ cs-CZ:
       Dance_Party_11b: Přiměj Robota, aby "poklesl", když stiskneš šipku vpravo, a
         "high clap", když stiskneš šipku nahoru. Střídej pokles-clap co nejrychleji!
       Dance_Party_12: Roztoč to! Vytvoř si svůj vlastní tanec a sdílej ho s kamarády.
+      Dance_Party_extras_alternate_2019: Sem a tam! (Pro podrobnosti klikni na „Více“)
+      Dance_Party_extras_battle: Taneční posádky (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_battle_2019: Taneční posádky (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_every_beat: Quarter Notes (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_every_beat_2019: Quarter Notes (Podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_layout: Pojďme se dostat do formace! (Podrobnosti klikněte
+        na „Více“)
+      Dance_Party_extras_layout_2019: Pojďme se dostat do formace! (Podrobnosti klikněte
+        na „Více“)
+      Dance_Party_extras_mixed_2019: Více tlačítek (Pro podrobnosti klikni na „Více“)
+      Dance_Party_extras_on_beat: Bass, střední a výšek (podrobnosti klikněte na tlačítko
+        „Více“)
+      Dance_Party_extras_on_beat_2019: Bass, střední a výšek (podrobnosti klikněte
+        na tlačítko „Více“)
+      Dance_Party_extras_speed: Urychlit to nahoru, zpomalit to (Podrobnosti klikněte
+        na tlačítko „Více“)
+      Dance_Party_extras_speed_2019: Urychlit to nahoru, zpomalit to (Podrobnosti
+        klikněte na tlačítko „Více“)
+      Dance_Party_extras_visible: Kam šli? (Podrobnosti klikněte na „Více“)
+      Dance_Party_extras_visible_2019: Kam šli? (Podrobnosti klikněte na „Více“)
       Find the Wizard: Vytvořte, co chcete. Toto je příklad hry kde hádáte čísla!
       FoodFight: Toto je příklad hry jakou můžete vytvořit v play lab.
       Function intro Ryan: Použijte dvakrát funkci „postavit most“ a udělejte cestu
@@ -385,15 +425,18 @@ cs-CZ:
         Zařiď, aby Anna získala bod, když se dotkne
         sněhové vločky. Pak klikni na "Spustit" a ovládej jí tak, aby se dotkla každé vločky.
       K-1 Artist Loops 1: Nakresli tuto čáru pohybem 4 krát na východ.
-      K-1 Artist Loops 2: Nyní nakresli stejnou čáru pomocí cyklu.
+      K-1 Artist Loops 2: Nyní nakresli stejnou čáru pomocí smyčky.
       K-1 Artist Loops 3: Umíš opakovat tyto bloky k nakreslení 6 čar?
-      K-1 Artist Loops 4: Dovedeš nám pomoci cyklu nakreslit horní části tohoto hradu?
-      K-1 Artist Loops 5: Co můžeš 4x opakovat k nakreslení těchto schodů?
-      K-1 Artist Loops 7: Cykly ti pomohou dokončit tento vzor.
+      K-1 Artist Loops 4: Mohla by nám smyčka pomoci nakreslit vrchol tohoto hradu?
+      K-1 Artist Loops 5: Co můžeš 4 krát opakovat k nakreslení těchto schodů?
+      K-1 Artist Loops 6: 'Tenhle úkol potřebuje dvě smyčky: jednu na schody nahoru
+        a druhou dolů.'
+      K-1 Artist Loops 7: Smyčky ti pomohou dokončit tento vzor.
       K-1 Artist Loops 8: Schodiště má delší schody.
       K-1 Artist Loops 9: Jaký je nejjednodušší postup pro nakreslení těchto schodů?
       K-1 Artist Loops Free Play: Volná hry, nakresli něco zábavného!
       K-1 Artist1 1: Nakresli nohu člověka jednou čarou
+      K-1 Artist1 10: Kresli a skákej, abys udělal přerušovanou čáru k pokladu X
       K-1 Artist1 2: Nakresli fousek na kočce dvěma čárami!
       K-1 Artist1 3: Nakreslete dvě čáry na východ a dvě čáry na sever k dokončení
         domu!
@@ -402,18 +445,19 @@ cs-CZ:
       K-1 Artist1 6: Dokonči obrázek s použitím skokového bloku!
       K-1 Artist1 9: Kreslením a skoky vytvoř přerušovanou čáru
       K-1 Artist2 1: Nakresli čtverec pod trojúhelníkem.
-      K-1 Artist2 2: Skok a nakresli čtverec vedle domu.
+      K-1 Artist2 2: Skoč a nakresli čtverec vedle domu.
       K-1 Artist2 3: Nakresli čtverec nad jiným čtvercem
       K-1 Artist2 4: Nakresli obdélník k dokončení mostu.
       K-1 Artist2 5: Nakresli obdélník k dokončení podpěry mostu
       K-1 Artist2 6: Nakresli dva čtverce, aby udělaly obdélník!
-      K-1 Artist2 Assessment1: 'Hodnocení: Nakresli čtverec vedle jiné čtverce.'
+      K-1 Artist2 Assessment1: 'Hodnocení: Nakresli čtverec vedle jiného čtverce.'
       K-1 Artist2 Free Draw: Nakresli cokoli!
       K-1 Artist2_7: Nakresli obdélník, aby dal horní zásuvku prádelníku!
       K-1 Bee 1: Přesuň si mě ke květu, abych dostal nektar, pak k plástvi udělat
         med
       K-1 Bee 11: Získej tři nektary a pak udělej jeden med
       K-1 Bee 13: Získej tři nektary a pak udělej jeden med!
+      K-1 Bee 14: Zaveď mě k nektaru, seber ho, přiveďte mě k medu a udělejte med!
       K-1 Bee 15: Získej dva nektary, abys udělal dva medy!
       K-1 Bee 2: Přesuň si mě ke květu, abych dostal nektar, pak k plástvi udělat
         med
@@ -421,43 +465,76 @@ cs-CZ:
         med
       K-1 Bee 4: Získej tři nektary a pak udělej dva medy!
       K-1 Bee 5: Získej tři nektary a pak udělej tři medy!
-      K-1 Bee 6: Získej tři nektary a pak udělej dva medy!
+      K-1 Bee 6: Získej dva nektary a pak udělej dva medy!
       K-1 Bee 7: Získej tři nektary a pak udělej dva medy!
       K-1 Bee 9: Získej tři nektary a pak udělej dva medy!
-      K-1 Bee Loops 1: Dostaň tento nektar, abys udělal med!
-      K-1 Bee Loops 10: Získej všechen nektar a vyrob z něj med.
-      K-1 Bee Loops 11: Získej všechen nektar a vyrob z něj med!
-      K-1 Bee Loops 12: Získej všechen nektar a vyrob z něj med.
-      K-1 Bee Loops 3: Používej tři opakovací cykly, abys dostal nektar a udělal med!
-      K-1 Bee Loops 5: Použij cykly, aby dostal nektar a med!
-      K-1 Bee Loops 6: Použij cykly, abys dostal nektar, med a k pohybu!
-      K-1 Bee Loops 9: Získej všechen nektar a vyrob z něj med.
+      K-1 Bee Loops 1: Získej nektar, abys udělal med!
+      K-1 Bee Loops 10: Získej všechen nektar a udělej z něj med.
+      K-1 Bee Loops 11: Získej všechen nektar a udělej z něj med!
+      K-1 Bee Loops 12: Získej všechen nektar a udělej z něj med.
+      K-1 Bee Loops 2: Pohybuj se pomocí smyčky `opakuj` a potom získej nektar a připrav
+        med!
+      K-1 Bee Loops 3: Použij tři smyčky `opakuj`, abys dostal nektar a udělal med!
+      K-1 Bee Loops 4: Použij smyčku `opakuj` pro získání nektaru, vyrobení medu a
+        pro pohyb!
+      K-1 Bee Loops 5: Použij smyčku `opakuj`, aby dostal nektar a med!
+      K-1 Bee Loops 6: Použij smyčku `opakuj`, abys dostal nektar, med a k pohybu!
+      K-1 Bee Loops 7: Získej nektar a udělej med!
+      K-1 Bee Loops 8: Získej nektar a udělej med!
+      K-1 Bee Loops 9: Získej všechen nektar a udělej z něj med.
       K-1 Bee Puzzle 12: Získej tři nektary a pak udělej dva medy
+      K-1 Building a Foundation Assessment: Postav třístupňovou pyramidu, nejsou žádné
+        jiné příkazy, takže si jen hraj s dílky, dokud to nevyřešíš!
       K-1 Maze 10: 'Jdi kolem TNT, abys mne dostal k prasátku! '
+      K-1 Maze 11: 'Najdi cestu a přiveď mě k tomu pošetilému prasátku. Vyhni se TNT,
+        nebo bude létat peří! Rada: Je ode mne na jih.'
       K-1 Maze 2: Posun mne na východ, abys mne dostal k prasátku!
-      K-1 Maze 3: Posuň mne na jih, aby mne dostal k prasátku!
-      K-1 Maze 4: Přesuň mne na jih, abys mne dostal k prasátku!
+      K-1 Maze 3: Přesuň mne na jih, abys mne dostal k prasátku!
+      K-1 Maze 4: Přesuň mne na sever, abys mne dostal k prasátku!
       K-1 Maze 5: Posun mne na východ, abys mne dostal k prasátku!
       K-1 Maze 6: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
       K-1 Maze 7: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
       K-1 Maze 8: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
       K-1 Maze 9: Přesuň mne jedním způsobem, poté druhým, abys mne dostal k prasátku!
       K-1 Maze Loops 1: Dostaň mne k prasátku!
+      K-1 Maze Loops 10: Dostaň mě k prasátku! Použitím smyčky `opakuj` to bude mnohem
+        snazší.
+      K-1 Maze Loops 11: |-
+        Dostaň mě k prasátku!\
+        Smyčka `opakuj` to usnadní.
+      K-1 Maze Loops 12: Dostaň mě k prasátku! Smyčka `opakuj` to usnadní.
       K-1 Maze Loops 2: Použij Opakovací blok, abys mne dostal k prasátku!
+      K-1 Maze Loops 3: Dostaň mě k prasátku! Nezapomeň použít smyčku `opakuj`.
+      K-1 Maze Loops 5: Dostaň mě k prasátku! Nezapomeň použít smyčku `opakuj`.
+      K-1 Maze Loops 6: Dostaň mě k prasátku! Nezapomeň použít smyčku `opakuj`.
+      K-1 Maze Loops 7: Dostaň mě k prasátku! Nezapomeň použít smyčku `opakuj`.
+      K-1 Maze Loops 8: Použij smyčku `opakuj`, abys mě dostal k prasátku.
       K-1 Maze Loops Assessment 1: Podívej na to co jsme se naučili! Použij cykly,
         abys mne dostal k prasátku!
+      K-1 Maze Loops Assessment 2: Použij smyčku `opakuj`, abys mě dostal k prasátku!
+      K-1 Maze Sequence Assessment 1: "Uvidíme, co jsi se naučil! \nPosuň jedním směrem,
+        potom druhým, abys mě dostal k prasátku."
+      K-1 Maze Sequence Assessment 2: Posuň jedním směrem, potom druhým, abys mě dostal
+        k prasátku.
+      K-1 artist 1 level 10: Nakresli přerušovanou čáru použitím bloků kresli a skoč
       K-1 artist 1 level 9: Kreslit toto pomocí tří čar
       K-1 maze debug 1: Změň kód, abys mne dostal k prasátku!
       K-1 maze debug 10: Odlaď tuto úroveň uspořádáním a změnou bloků, abys mne dostal
         mne k prasátku!
       K-1 maze debug 11: "Toto je test! \\\r Odlaď tuto úroveň uspořádáním a změnou
         bloků, abys mne dostal k prasátku"
+      K-1 maze debug 2: Zjisti, co chybí a pak přidej bloky, abys mne dostal k prasátku!
+      K-1 maze debug 3: Něco není úplně správně. ODSTRAŇ bloky, abys mě dostal k prasátku!
+      K-1 maze debug 4: Projdi tyto bloky a oprav je! Myslím, že jsem mohl jít špatným
+        směrem.
       K-1 maze debug 5: Odlaď tuto úroveň uspořádáním a změnou bloků, abys mne dostal
         mne k prasátku!
       K-1 maze debug 6: Odlaď tuto úroveň uspořádáním a změnou bloků, abys mne dostal
         mne k prasátku!
       K-1 maze debug 7: Odlaď tuto úroveň uspořádáním a změnou bloků, abys mne dostal
         mne k prasátku!
+      K-1 maze debug 8: Odlaď tuto úroveň uspořádáním a přidáním bloků, abys mne dostal
+        k prasátku!
       K-1 maze debug 9: Odlaď tuto úroveň uspořádáním a změnou bloků, abys mne dostal
         mne k prasátku!
       MC HOC 2016 Level 10: Je čas vytvořit si vlastní verzi Minecraftu! Vytvářej
@@ -466,7 +543,7 @@ cs-CZ:
         do bloku "Při vytvoření" a rozhýbej ji.
       MC HOC 2016 Level 3: Výborně, slepice se začala hýbat! Ale pak se zastavila.
         V hrách se slepice hýbou bez přestání. Použij smyčku "navždy opakovat", aby
-        slepice stále pokyn opakovala
+        slepice stále pokyn opakovala.
       MC HOC 2016 Level 4: Teď to nevypadá dobře, jak se slepice hýbou jen jedním
         směrem. Hry používají náhodné pohyby, aby postavy vypadaly opravdově. Použij
         blok "otoč náhodně".
@@ -538,10 +615,10 @@ cs-CZ:
         potřeba hodně dřeva. Pokácej všechny 3 stromy.
       Overworld Chop Trees_2019: Potřebujeme postavit dům před západem slunce. Na
         dům je potřeba hodně dřeva. Pokácej všechny 3 stromy.
-      Overworld Free Play 20x20: Blahopřejeme! Dokončil jsi všechny naše hádanky!
-        Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
-      Overworld Free Play 20x20_2019: Blahopřejeme! Dokončil jsi všechny naše hádanky!
-        Teď těž, buduj a vytvoř něco jedinečného cokoli, co jsi se naučil až dosud.
+      Overworld Free Play 20x20: Blahopřejeme! Všechny úlohy splněny! Teď těž, buduj
+        a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
+      Overworld Free Play 20x20_2019: Blahopřejeme! Všechny úlohy splněny! Teď těž,
+        buduj a vytvoř něco jedinečného s využitím všeho, co jsi se až dosud naučil.
       Overworld House Frame Chosen: Postav zbytek tvého domu z jakéhokoliv materiálu,
         který se ti líbí. Povel "opakuj" se bude hodit.
       Overworld House Frame Chosen_2019: Postav zbytek tvého domu z jakéhokoliv materiálu,
@@ -566,13 +643,34 @@ cs-CZ:
         vlny z obou ovcí.
       Overworld Shear Sheep_2019: Čas stříhání ovcí! Použij povel "ostříhej" k získání
         vlny z obou ovcí.
-      Standalone_Artist_1: Vítej u umělce! Za prvé pokusme se udělat jednoduchý čtverec
+      Standalone_Artist_1: Vítej u Umělce! Za prvé pokusme se udělat jednoduchý čtverec
         pomocí otočení pravého bloku a bloku vpřed. Každá strana by měla být dlouhá
         100 pixelů.
+      Standalone_Artist_2: Nakresli tento kosočtverec s úhly 120 a 60 stupňů a stranami
+        dlouhými 150 pixelů.
+      Standalone_Artist_3: Umíš nakreslit tento šestiúhelník se stranami 100 pixelů
+        a otáčením 60 stupňů?
+      Standalone_Artist_4: Teď máš nový blok na hraní - cyklus. Ten bude opakovat
+        sadu příkazů. Co se stane, když tyto příkazy zopakuješ 6 krát?
+      Standalone_Artist_5: Kolikrát musíš zopakovat tento kosočtverec, abys nakreslil
+        květinu?
+      Standalone_Artist_5.5: 'Všimni si, jak jsme zjednodušili kód kosočtverce tím,
+        že jsme ho změnili na cyklus. Můžeš zopakovat celou posloupnost 12 krát, abys
+        nakreslil květinu. Nápověda: Po skončení kosočtvercového cyklu ho budeš muset
+        otočit o 30 stupňů, abys nekreslil pořád přes stejný kosočtverec.'
+      Standalone_Artist_6: 'Zopakuj tento šestiúhelníkový kód 6 krát, abys vytvořil
+        obrázek. O kolik stupňů je potřeba pokaždé otočit? Nápověda: Vyděl počet stupňů
+        v kruhu počtem cyklů, které budeš potřebovat.'
+      Standalone_Artist_7: 'Funkce je dalším programovacím nástrojem, který ti pomůže
+        vyhnout se opakování. Tato funkce nakreslí květinu, takže ji můžeš použít
+        pokaždé, když chceš nakreslit květinu. Použij funkci a nový blok pro skok
+        k nakreslení těchto květin. Nápověda: Květiny jsou od sebe vzdálené 150 pixelů'
       Standalone_Artist_8: Zde je funkce nazvaná "Nakreslit tvar", kterou jsme naprogramovali
         k nakreslení šestiúhelníků. Spusť kód, abys viděl, co to dělá a pak experimentuj
         s funkcí, abys viděl, co se stane. Umíš nakreslit vzor čtverců, trojúhelníků
         nebo osmiúhelníků?
+      Standalone_Artist_9: Pusť se do toho a nakresli obrázek, jaký se ti bude líbit!
+        Máš dokonce i prázdnou funkci, kterou můžeš přimět, aby dělala, cokoli chceš!
       Underground Avoiding Lava: Pod některými z těchto bloků je ukrytá láva, kterou
         musíš před přesunem vpřed zakrýt. K tomu se hodí příkaz "pokud". Přidej jeden
         příkaz "posunout vpřed" na správné místo a vytěž bloky.
@@ -594,32 +692,53 @@ cs-CZ:
       Underground Mining Coal_2019: Nejcennější suroviny najdeš v podzemí, ale je
         tam tma. Rozmísti alespoň dvě pochodně a natěž nejméně 2 kusy uhlí.
       Virtual Pet 1 Predict: 'Co si myslíte, že se stane, když kliknete na mimozemšťana?  '
+      'Widget: Text Compression': Hledej v textu vzory (opakující se slova nebo sousloví).
+        Zadej vzory, které vidíš, do slovníku napravo. Když píšeš záznamy do slovníku,
+        symbol pro záznam se vloží do textu na místo vzoru.
       bounce_1: Připoj blok k bloku "šipka vlevo" a stiskni tlačítko "Run". Přesuň
         pálku pomocí levé šipky k dosažení cíle.
       bounce_10: Nyní je cíl na vrcholu. Spoj bloky "skóre" a "skóre protihráče" s
         bloky "když je míč v cíli" a "když míč mine pálku", abys vytvořil hru. Podívej
         se, kolik bodů můžeš získat předtím, než tvůj protihráč skóruje dvakrát.
+      bounce_10_basketball: Nyní je branka nahoře! Připoj bloky "přidej bod" a "přidej
+        bod soupeři" k blokům "když je míč v brance" a "když míč mine ruku", abys
+        vytvořil hru. Vyzkoušej si, kolik bodů můžeš získat, než tvůj protihráč dvakrát
+        skóruje.
+      bounce_10_sports: Nyní je branka nahoře! Připoj bloky "přidej bod" a "přidej
+        bod soupeři" k blokům "když je míč v brance" a "když míč mine hráče", abys
+        vytvořil hru. Vyzkoušej si, kolik bodů můžeš získat, než tvůj protihráč dvakrát
+        skóruje!
       bounce_11: Nyní můžeš připojit bloky k bloku "při spuštění". Musíš připojit
         nové "spuštění nového míče" bloku do více míst než jednom. Také zkus změnit
         scénu nebo rychlost pádla a míče, abys viděl kolik bodů můžeš skórovat než
         tvůj soupeř skóruje dvakrát.
+      bounce_11_basketball: Nyní můžeš připojit bloky k bloku "při spuštění". Budeš
+        muset připojit nový blok "hoď nový míč" na více než jedno místo. Vyzkoušej
+        si také změnu scény nebo rychlost ruky a míče a uvidíš, kolik bodů získaš,
+        než tvůj soupeř skóruje dvakrát!
+      bounce_11_sports: Nyní můžeš připojit bloky k bloku "při spuštění". Budeš muset
+        připojit nový blok "hoď nový míč" na více než jedno místo. Vyzkoušej si také
+        změnu scény nebo rychlost ruky a míče a uvidíš, kolik bodů získaš, než tvůj
+        soupeř skóruje dvakrát!
       bounce_12: Vytvoř si vlastní hru Bounce. Můžeš měnit všechny vizuální efekty
         a pravidla. Až budeš hotov, klepni na tlačítko Finish, abys nechal přátele
         zkusit tvou hru na svých telefonech.
       bounce_12_basketball: Vytvořte si vlastní basketbalovou hru. Můžete změnit všechna
-        pravidla. Až budete hotovi, klepněte na tlačítko Dokončit a nechte vaše kamarády
+        pravidla. Až budete hotovi, klepněte na tlačítko Dokončit a nechte své kamarády
         vyzkoušet hru na jejich telefonech.
       bounce_12_sports: Vytvoř si vlastní hru! Můžeš měnit všechny pravidla, míchat
         sporty.. Buď kreativní! Až budeš hotov, klepni na tlačítko dokončit, abys
-        nechal přátele zkusit tvou hru na svých telefonech.
+        nechal své přátele vyzkoušet tvou hru na svých telefonech.
       bounce_1_basketball: Připoj blok k bloku "když šipka vlevo" a stiskni tlačítko
-        "Spustit". Přesuň ruku pomocí levé šipky k dosažení cíle.
+        "Spustit". Přesuň ruku pomocí levé šipky, abys dosáhl cíle.
       bounce_1_sports: Dostaňte se k vlajce! Připojte blok k bloku "když vlevo šipka"a
         stiskněte tlačítko "Spustit", aby se hráč dostal k vlajce.
       bounce_2: Připoj blok k blokům "šipka vpravo" a "šipka vpravo". Přesunuj pálku
         k dosažení obou cílů.
+      bounce_2_basketball: Připoj blok k blokům "když šipka vpravo" a "když šipka
+        vlevo". Posuň rukou tak, aby dosáhla na oba cíle.
       bounce_2_sports: Nyní jsou tam dvě vlajky. Připojte blok k blokům "když šipka
-        ukazující vlevo" a "když šipka ukazující vpraco", aby se hráč mohl pohybovat
+        ukazující vlevo" a "když šipka ukazující vpravo", aby se hráč mohl pohybovat
         v obou směrech.
       bounce_3: Teď zkus něco podobného s blokem "šipka nahoru". Přesunuj pálku k
         dokončení úkolu nahoře.
@@ -627,6 +746,10 @@ cs-CZ:
         všech čtyř úkolů a dokončení hádanky.
       bounce_5: Pošleme míč směrem dolů k pálce. Přidej blok k bloku "když míč dopadne
         na pálku", abys zajistil, že se míč dostane ke konečnému terči.
+      bounce_5_basketball: Pošleme míč směrem dolů k ruku. Přidej blok k bloku "když
+        míč udeří do ruky", abys zajistil, že se míč dostane k vlajce.
+      bounce_5_sports: Hokejový puk letí dolů směrem k hráči! Připoj blok k bloku
+        "když míč zasáhne hráče", aby si zasáhl vlajku.
       bounce_6: Teď je splněný úkol nahoře. Potřebuješ spojit oba bloky "když se míč
         dotkne", abys dokončil hádanku.
       bounce_6_basketball: Teď je vlajka nahoře. Musíte připojit bloky k oběma blokům
@@ -635,11 +758,15 @@ cs-CZ:
         "když puk zasáhne", abyste vyřešili tuto hádanku.
       bounce_7: Připoj bloky ke každému bloku "když". Odrážej míč dokud nenarazí do
         konečného terče.
+      bounce_7_basketball: Připoj bloky ke každému "když" bloku. Odrážej míč, dokud
+        nezasáhne vlajku.
+      bounce_7_sports: Připoj bloky ke každému "když" bloku. Odrážej míč, dokud nezasáhne
+        vlajku.
       course1_artist_loops_challenge1: "Můžeš použít cykly ke kreslení více čar v
-        řadě.\\\r Umíš namalovat dům? Aby to vypadalo přesně tak, jak se vám líbí.
-        Zkus najít vzory které se opakují!"
-      course1_artist_loops_challenge2: Jdem si hrát. Nakresli tolik X kolik chceš!
-        Uděláš tři v řadě?
+        řadě.\\\\ \n\nUmíš namalovat dům? Aby to vypadalo přesně tak, jak se vám líbí.
+        Zkus najít vzory, které se opakují!"
+      course1_artist_loops_challenge2: Pojďme si zahrát hru! Nakresli tolik X, kolik
+        můžeš! Uděláš tři v řadě?
       course1_artist_loops_challenge3: '"Pomůžeš mi udělat dvě ptačí budky?"'
       course1_collector_loops_challenge1: '"Pomůžeš mi najít chyby? Vím jakým směrem
         jít, ale nejsem si jistý počtem kroků."'
@@ -648,13 +775,15 @@ cs-CZ:
       course1_collector_loops_challenge3: 'Tentokrát můžeš použít každý směr jen jednou.
         Získej všechny poklady! '
       course1_maze_debugging_challenge1: Odlaď tuto úroveň. Odstraň přebytečné a přidej
-        chybějící bloky. Dostaň ptáka k praseti!
+        chybějící bloky. Dostaň ptáčka k prasátku!
       course1_maze_seq_challenge1: '"Najdi cestu a veď mě k hloupému prasátku. Vyhni
         se TNT, nebo bude peří létat!"'
       course1_maze_seq_challenge2: V každém směru se můžeš posunout pouze čtyřikrát.
         Dokážeš najít cestu než ti dojdou bloky?
       course1_playlab_events_challenge1: '"Kde jsou schovaní mí kamarádi? Můžeš napsat
         program který ukáže zbytek mých kamarádů?"'
+      course1_playlab_events_challenge2: '"Pojďme na párty! Zadej mým přátelům něco,
+        co budou dělat, když na ně klikneš nebo na ně klepneš."'
       course2_bee_conditionals_challenge1: Sesbírej všechen nektar a vyrob všechen
         med.
       course2_bee_conditionals_challenge2: Sesbírej všechen nektar a vyrob všechen
@@ -896,9 +1025,8 @@ cs-CZ:
         Teď se podíváme, jestli zvládneme vytvořit dvě čáry,
         které svírají úhel 90 stupňů. Budeš potřebovat blok "otoč"
         i blok "posuň".
-      frozen snowflake branch: |-
-        Zkus použít blok "vytvoř rameno vločky"
-        k vytvoření tří ramen, což začíná vypadat jako vločka.
+      frozen snowflake branch: Zkus použít blok "vytvoř rameno vločky" k vytvoření
+        tří ramen, což začne vypadat jako vločka.
       frozen snowflake full: Teď to zopakujme osmkrát k vytvoření krásné sněhové vločky!
       frozen snowflower: |-
         Složité sněhové vzory mohou být vytvořeny z
@@ -926,41 +1054,3 @@ cs-CZ:
       grade5_artist_binary9: "Zde je vyšší rozlišení plátna na - 16 x 16 pixelů! \\\r
         \\\r je vidět, co se stane, když začneme být kreativní s bity?"
       k-1 maze 1: Dokážeš mne přesunout na západ k prasátku?
-      scrat 16: |-
-        Žalud! Žalud! Žalud! Použij blok "Když", aby mě tam dostal
-        s pomocí co nejnižšího počtu bloků.
-      scrat 17: |-
-        Dobrá, pro jistotu to uděláme znovu - toto se moc
-        neliší, ale pozor na stěny!
-      scrat 18: "Blok \"když-jinak\" vyhodnotí podmínku a pak provede \njednu věc
-        NEBO druhou. Abys mě dostal k žaludu, zkus využít tento nový blok."
-      scrat 19: Další cvičení pro blok "pokud-jinak". Zvládneš to na první pokus?
-      scrat 20: |-
-        Zvládneš přidat jen 3 bloky, abys mi pomohl vyřešit složitější
-        bludiště? Když to uděláš správně, dokážu projít libovolně klikatou cestu
-        bez ohledu na délku. Rychle! Led už taje!
-      Dance_Party_extras_alternate_2019: Tam a Vzadu! (Podrobnosti klikněte na „Více“)
-      Dance_Party_extras_battle: Taneční posádky (Podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_battle_2019: Taneční posádky (Podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_every_beat: Quarter Notes (Podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_every_beat_2019: Quarter Notes (Podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_layout: Pojďme se dostat do formace! (Podrobnosti klikněte
-        na „Více“)
-      Dance_Party_extras_layout_2019: Pojďme se dostat do formace! (Podrobnosti klikněte
-        na „Více“)
-      Dance_Party_extras_mixed_2019: Další tlačítka (podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_on_beat: Bass, střední a výšek (podrobnosti klikněte na tlačítko
-        „Více“)
-      Dance_Party_extras_on_beat_2019: Bass, střední a výšek (podrobnosti klikněte
-        na tlačítko „Více“)
-      Dance_Party_extras_speed: Urychlit to nahoru, zpomalit to (Podrobnosti klikněte
-        na tlačítko „Více“)
-      Dance_Party_extras_speed_2019: Urychlit to nahoru, zpomalit to (Podrobnosti
-        klikněte na tlačítko „Více“)
-      Dance_Party_extras_visible: Kam šli? (Podrobnosti klikněte na „Více“)
-      Dance_Party_extras_visible_2019: Kam šli? (Podrobnosti klikněte na „Více“)

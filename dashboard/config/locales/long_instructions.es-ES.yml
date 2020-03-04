@@ -357,6 +357,16 @@ es-ES:
 
         -   ¿Cómo siguió el proceso de resolución de problemas en la última lección?
         -   ¿Cómo podría utilizar este proceso en un problema en su vida cotidiana?
+      CSD U2 HTML Adding Paragraphs: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Adding Paragraphs pt 2: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px" markdown="1">
         <details>
@@ -453,6 +463,26 @@ es-ES:
 
         -   Coloque el texto que acaba de escribir dentro de al menos dos párrafos separados rodeándolo con las etiquetas `<p>` y `</p>`
         -   Comparar los resultados con un vecino. ¿Qué ha cambiado en la forma en que se muestra su texto?
+      CSD U2 HTML Adding Paragraphs_2018: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
+      CSD U2 HTML Adding Paragraphs_2019: |-
+        # Agregar Testo al Cuerpo
+
+        Cuando empieces un proyecto de Web Lab, automáticamente agregará las etiquetas de `<!DOCTYPE>`, `<html>`, `<head>`, y `<body>` al proyecto. Cuando agregues contenido a tus proyectos, deberás hacerlo entre las etiquetas de `<body>` y `</body>` porque debe ser el cuerpo de tu página web.
+
+        # Haz esto
+
+        -   Escribe tres oraciones separadas sobre cualquier tema de tu interés dentro de la etiqueta de cuerpo de tu página web.
+        -   Presiona "Actualizar y Guardar" si no ves los cambios en la área de vista previa.
+        -   Compara tu trabajo con el de un compañero. Asegúrate de colocar el código en el mismo lugar.
       CSD U2 HTML Debug Paragraphs_2019: |-
         <div class="no-pullthrough" style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">
         <details>
@@ -1273,11 +1303,11 @@ es-ES:
         Echa un vistazo a este bloque:
 
         <xml>
-        <block type="Dancelab_makeNewDanceSpriteGroup">
-        <title name="N">6</title>
-        <title name="COSTUME">"DUCK"</title>
-        <title name="LAYOUT">"circle"</title>
-        </block></xml>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <title name="N">6</title>
+            <title name="COSTUME">"DUCK"</title>
+            <title name="LAYOUT">"circle"</title>
+          </block></xml>
 
         ¡Ahora puedes crear un montón de bailarines a la vez!
 
@@ -1360,6 +1390,30 @@ es-ES:
         ya está implementado! \\\r\n \\\r\nLleva dos veces el pequeño bloque verde
         a tu espacio de trabajo para arreglar el camino y conseguir que {currentPlayerName}
         alcance la antorcha de redstone [redstone_torch]."
+      Gamelab StartScreen Intro: |-
+        # Empezar y Terminar Pantalla
+
+        Este seminario te enseñará cómo hacer pantallas de empiezo y fin en Game Lab, además de reiniciar el juego desde la pantalla final.
+
+        Presiona correr para jugar el juego a la izquierda. Sigue las instrucciones en la pantalla de empiezo para jugar. Una vez que el juego esté terminado, Sigue las instrucciones en la pantalla final para reiniciar el juego.
+
+        En la siguiente burbuja, verás el código para el juego y vas a empezar a añadir tu propio pantallas de empiezo y pantallas finales.
+
+        ## Pantalla de Empiezo
+
+        La pantalla de empiezo es la pantalla introductoria que aparece antes de que el jugador empiece a jugar. Generalmente hay un título del juego y algunas instrucciones básicas de cómo jugar. También puede que incluya el constructor del juego.
+
+        ## Pantalla Final
+
+        La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen base code: |-
+        # Código del Juego
+
+        Este es el código para el juego sin las pantallas de empiezo y fin. La función 'gameStatus' (llamada en línea 43 y definida en línea 208) chequea si el usuario ha ganado o perdido, pero sólo añade un mensaje de texto a la pantalla. El juego también continúa aún después de que el juego esté terminado.
+
+        ## Haz Esto
+
+        Lee el código, en particular el código antes del loop de dibujar (línea 1-24), dentro del loop de dibujar (línea 27-43), y dentro de la función de 'gameStatus'(línea 209-224). Está bien si no entiendes todo en el juego, pero deberías ver el código antes del loop de dibujar pone los sprites, y el código dentro del loop de dibujar controla el juego.
       HOC 2018 Level_1: Necesitarás suministros para el viaje. Consigue un **barco**
         ![](https://images.code.org/0b3162de9dc0abf3e0890d315b8cc699-image-1538697977747.png)
         del **cofre** ![](https://images.code.org/e0cf43fd36a50dd16ee06595047bfd8f-image-1538697999418.png).
@@ -1581,6 +1635,79 @@ es-ES:
       Underground If Statements_2019: Ahora las cosas se complican. Recoge tres bloques
         de piedra rojiza pero no te caigas en la lava. Usa un comando "si" para colocar
         roca sobre la lava que descubras.
+      Virtual Pet 2_2019: "¡Ahora es tu turno para crear tu propia mascota virtual!
+        Empieza por escogiendo una apariencia que te guste. \n\n1.  Haz un clic en
+        el tabulador de **disfraces** en el extremo superior izquierdo de tu pantalla
+        (junto a **Código**). \n2.  Edita el disfraz inicial, o añade un nuevo que
+        te guste. \n3.  Cambia el disfraz del sprite a tu propio en el código abajo.\n4.
+        \ ¡Haz un clic en **Corre** para ver la nueva apariencia de tu mascota!"
+      Virtual Pet 3_2019: |-
+        ¡Crea eventos para que tu mascota mueva en control!
+
+        Empieza por usar <xml><block type="gamelab_keyPressed" block-text="the while up key pressed event block"><title name="CONDITION">"while"</title><title name="KEY">"up"</title></block></xml> con <xml><block type="gamelab_moveInDirection" block-text="the move in direction action block"><title name="DIRECTION">"North"</title></block></xml> para hacer tu mascota mover hacia el norte **mientras** la tecla de flecha hacia arriba.
+
+        ¡Repite lo de arriba por las otras tres direcciones (Sur, Oeste, Este) y las teclas de flecha hacia arriba (abajo, izquierda, derecha)!
+      Virtual Pet 4_2019: "1.  Añade **dos** sprites a tu mundo. \n2.  Haz un sprite
+        aparecer como lo que a tu mascota le gusta comer, y lo otro como lo que no
+        le gusta comer.\n3.  Haz cada sprite de comida empezar el comportamiento de
+        **errar** inmediatamente después de que aparezca."
+      Virtual Pet 5_2019: |-
+        ¡Usa <xml><block type="gamelab_checkTouching" block-text="the when touching block"></block></xml> con <xml><block type="gamelab_jumpTo" block-text="the jump to location block"></block></xml> para **estimular** a "comer" en tu mundo virtual!
+
+        1.  Crea un evento que hace uno de tus sprites de comida saltar a una ubicación al azar cuando tu mascota lo toque.
+        2.  Repite lo de arriba para el otro sprite de comida.
+      Virtual Pet 6_2019: "¡Usa <xml><block type=\"variables_set\" block-text=\"the
+        set variable block\"><title name=\"VAR\">energy</title></block></xml> con
+        <xml><block type=\"math_change\" block-text=\"the change variable block\"><title
+        name=\"VAR\">energy</title></block></xml> para hacer que comer comida afecte
+        la energía de tu mascota! ¡Cuanta más energía lo tenga, más rápido se mueve!
+        \n\n1.  Asigna la variable 'energía' a 5 cuando el programa empiece.\n2.  Cuando
+        tu mascota coma la comida que le **gusta**, añade 1 a 'energía.\n3.  Cuando
+        tu mascota coma la comida que **no le gusta**, establece 'energía' a 5\n4.
+        \ Cambia cada evento de tecla de fecha  para que tu mascota ahora se mueva
+        'energía' píxeles en lugar de un número específico."
+      Virtual Pet 7_2019: "¡Puedes chequear el valor de la 'energía' de tu mascota
+        con <xml><block type=\"gamelab_printText\" block-text=\"the print block\"></block></xml>,
+        un bloque nuevo encontrado en la categorîa 'Mundo'! \n\nCrea un evento que
+        hace el valor de 'energía' imprimido cuando el sprite de mascota esté pinchado. "
+      behaviors 1: |-
+        ¡Haz una predicción! Estudia el código.
+
+        -   El sprite girará.
+        -   El sprite se reducirá.
+        -   El sprite moverá.
+        -   El sprite cambiará colores.
+      behaviors 2: |-
+        ¡Vuela el cohete hasta las estrellas!
+
+        -   Cambia el comportamiento del cohete para que vuele hacia arriba en la área de exhibidor.
+      behaviors 3: |-
+        ¡Ayuda el vagabundo aventajar el robot!
+
+        -   Edita el comportamiento del sprite de vagabundo (arriba) para que vaya más rápidamente que el robot.
+      behaviors 3a: |-
+        El <xml><block type="sprite_parameter_get" block-text="this sprite"><title name="VAR">this sprite</title></block></xml> bloque debería ser usado en lugar del bloque 'costume'. Este lo hará para cualquier sprite, en cualquier caso de qué disfraz usa.
+
+        **Depurar:** ¡Haz todas las estrellas girar en la misma dirección!
+      behaviors 4: "¡Haz una predicción! ¿Cuál vereda seguirá satélite para alcanzar
+        el sistema solar?"
+      behaviors 5: |-
+        Escribe tu propio comportamiento.
+
+        -   Escribe un nuevo comportamiento por este astronauta para dirigirlo hacia uno de los cuatro barcos en la área de exhibidor.
+      behaviors 6: |-
+        Hacer la pelota rodar.
+
+        -   Crea un comportamiento nuevo y úsalo para hacer la pelota rodar. Tu comportamiento debería combinar dos acciones diferentes.
+
+        ![](<https://images.code.org/4c81af6da51ce5b8ce83e9056dbfe34c-image-1567714812224.2019-09-05 16_19_45.gif>)
+      behaviors 7: |-
+        ¡Conduce hacia el horizonte!
+
+        -   Crea un comportamiento nuevo y úsalo para que el coche mueva hacia arriba (norte) y se reduzca. Si lo haces correcto, se vería conduciendo hacia el horizonte.
+
+        ![](<https://images.code.org/e0ea2b008bf557ea81e99a27dd03ef03-image-1567713536857.2019-09-05 15_58_25.gif>)
+      behaviors free play: "**Juego libre:** ¡Crea tu propio escena del espacio exterior!"
       course1_artist_loops_challenge2: |-
         ¡Vamos a jugar un juego!! Dibuja tantas X como tú
         puedas! ¿Puedes obtener 3 en una fila?
@@ -2589,6 +2716,10 @@ es-ES:
         de bloques posible.
       courseF_bee_for_challenge2_2019: Resuelve este rompecabezas con el menor número
         de bloques posible.
+      courseF_bee_variables_4_2019: |-
+        "¡Sigamos!"
+
+        Edite el código para que funcione por este desafío.
       frozen circle: Un círculo es una figura especial. ¿Puedes adivinar qué número
         debe reemplazar los signos de interrogación para dibujar un círculo?
       frozen circle function: Utiliza el nuevo bloque "Crear un círculo" para crear
@@ -2723,3 +2854,17 @@ es-ES:
         200 píxeles de lado.
       ramp_artist_loops9_2019: Resuelve este rompecabezas dibujando un cuadrado de
         200 píxeles de lado.
+      simconfig: |-
+        # Modificar y Predecir
+
+        Escoge una de las variables que controla esta simulación para modificar y predecir en qué manera cambiará el resultado.
+
+        Después de que hayas escrito tu predicción, ejecuta la simulación por 5 veces y escribe tus descubrimientos. ¿Fue precisa tu predicción?
+      simstarter: |-
+        # Coleccionando los Datos
+
+        Ejecuta esta simulación por 5 veces. Cada vez, usa el guión de la actividad Coleccionando los Datos para grabar:
+
+        -   ¿Cuántas manzanas coleccionó el elefante?
+        -   ¿Cuántas manzanas coleccionó hipopótamo?
+        -   ¿Cuánto tiempo pasó para que todas las manzanas estén coleccionadas?

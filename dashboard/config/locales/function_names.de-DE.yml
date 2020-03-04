@@ -35,6 +35,9 @@ de-DE:
         draw O: O zeichnen
         draw D: D zeichnen
         draw E: E zeichnen
+      2-3 Artist Functions 10:
+        big gear: großes Zahnrad
+        small gear: kleines Zahnrad
       2-3 Artist Functions 11:
         draw a hexagon: zeichne ein Sechseck
       2-3 Artist Functions 11.5:
@@ -49,12 +52,18 @@ de-DE:
         draw a square: zeichne ein Quadrat
       2-3 Artist Functions 9:
         draw a snowflake: zeichne eine Schneeflocke
+      2-3 Bee Functions 1:
+        get 2 nectar: sammle 2 Nektar
       2-3 Bee Functions 10:
         collect purple nectar: sammele violetten Nektar
       2-3 Bee Functions 2:
         get 5: erhalte 5
+      2-3 Bee Functions 9:
+        get 7 make 7: sammle 7 mache 7
       2-3 Bee Functions Assessment 1:
         get 7: erhalte 7
+      2-3 Bee Functions Assessment 2:
+        move and get 3: bewege und hole 3
       4-5 Artist 3:
         draw a flower: zeichne eine Blume
       4-5 Artist 6:
@@ -65,10 +74,19 @@ de-DE:
         draw a car: zeichne ein Auto
       4-5 Artist 8:
         draw circle: zeichne einen Kreis
+        draw goal: zeichne das Tor
       4-5 Bee Conditionals 7:
         check purple flower: prüfe die lila Blume
+      4-5 Bee Conditionals 8:
+        check flower make honey: überprüfe Blume mache Honig
       4-5 Bee Conditionals Assessment 1:
         get nectar or make honey: hole Nektar oder stelle Honig her
+      4-5 Bee Debugging 7:
+        make 3 honey: stelle 3 mal Honig her
+      4-5 Bee Debugging 8:
+        get 5 nectar: sammle 5 Nektar
+      4-5 Bee Debugging 9:
+        make all honey: stelle den gesamten Honig her
       Choose Your Own Adventure:
         story: Handlung
       Course 4 Artist Binary 1:
@@ -104,6 +122,18 @@ de-DE:
       Course 4 Artist Binary pre1:
         draw bit: zeichne ein bisschen
         draw: zeichne
+      Course 4 Bee Params 1:
+        get 3 nectar: sammle 3 Nektar
+      Course 4 Bee Params 2:
+        get 3 nectar: sammle 3 Nektar
+      Course 4 Bee Params 3:
+        get 3 nectar: sammle 3 Nektar
+      Course 4 Bee Params 4:
+        get 3 nectar: sammle 3 Nektar
+      Course 4 Bee Params 5:
+        get 5 nectar: sammle 5 Nektar
+      Course 4 Bee Params 6:
+        get 5 nectar: sammle 5 Nektar
       Course 4 Play Lab Params 1:
         jump: springen
       Course 4 Play Lab Params 2:
@@ -122,7 +152,7 @@ de-DE:
       Course 4 SCF 1a:
         get nectar: hole Nektar
       Course 4 SCF 2:
-        draw octagons: zeichne Oktagon
+        draw octagons: zeichne Oktagons
         draw an octagon: zeichne einen Oktagon
       Course 4 SCF 3:
         do something: Funktionsblock
@@ -136,16 +166,20 @@ de-DE:
       Function intro Ryan_2019:
         build bridge: baue Brücke
       Geometric Sun:
+        draw grass: zeichne Gras
         draw windows: zeichne Fenster
         rectangle: Rechteck
+        sun: Sonne
         diamond: Diamant
         window: Fenster
         draw a house: Zeichne ein Haus
         triangle: dreieck
         square: Quadrat
       Geometric Sun_2018:
+        draw grass: zeichne Gras
         draw windows: zeichne Fenster
         rectangle: Rechteck
+        sun: Sonne
         diamond: Diamant
         window: Fenster
         draw a house: Zeichne ein Haus
@@ -217,6 +251,10 @@ de-DE:
         draw a triangle: zeichne ein Dreieck
       NEW Course 4 Artist Params 3:
         draw a triangle: zeichne ein Dreieck
+      NEW Course 4 Artist Params 4:
+        draw a triangle with length: zeichne ein Dreieck mit der Länge
+      NEW Course 4 Artist Params 5:
+        draw a pentagon: zeichne ein Fünfeck
       NEW Course 4 Artist Params 6:
         draw a triangle: zeichne ein Dreieck
         draw a hexagon: zeichne ein Sechseck
@@ -224,6 +262,8 @@ de-DE:
         draw a sqaure: zeichne ein Quadrat
       NEW Course 4 Artist Params 7:
         draw a triangle: zeichne ein Dreieck
+      NEW Course 4 Artist Params 8:
+        draw a triangle with length: zeichne ein Dreieck mit der Länge
       NEW Course 4 Artist Params 9:
         draw a square: zeichne ein Quadrat
         do something: Funktionsblock
@@ -415,7 +455,7 @@ de-DE:
         draw bit: zeichne ein bisschen
       courseE_Dogger_2:
         stop_everything: stoppe_alles
-        lose: verlieren
+        lose: verliere
       courseE_artist_concept1:
         do something: Funktionsblock
         draw a hexagon: zeichne ein Sechseck
@@ -539,10 +579,18 @@ de-DE:
         do something: Funktionsblock
       courseE_artist_functions_predict2_2019:
         do something: Funktionsblock
+      courseE_bee_concept4:
+        honey nectar: Honignektar
       courseE_bee_functions1:
         do something: Funktionsblock
+      courseE_bee_functions2:
+        get 2 nectar: sammle 2 Nektar
       courseE_bee_functions3:
         get 5: erhalte 5
+      courseE_bee_functions7:
+        get 7 make 7: sammle 7 mache 7
+      courseE_bee_functions9:
+        get all nectar: sammle den gesamten Nektar
       courseE_bee_functions_challenge1:
         do something: Funktionsblock
       courseE_bee_functions_challenge2:
@@ -603,6 +651,26 @@ de-DE:
         draw an octagon: zeichne einen Oktagon
       courseF_bee_functions8a:
         do something: Funktionsblock
+      courseF_bee_variables_1_2018:
+        collect row: Reihe sammeln
+      courseF_bee_variables_1_2019:
+        collect row: Reihe sammeln
+      courseF_bee_variables_2_2018:
+        collect row: Reihe sammeln
+      courseF_bee_variables_2_2019:
+        collect row: Reihe sammeln
+      courseF_bee_variables_3_2018:
+        collect row: Reihe sammeln
+      courseF_bee_variables_3_2019:
+        collect row: Reihe sammeln
+      courseF_bee_variables_4_2018:
+        collect row: Reihe sammeln
+      courseF_bee_variables_4_2019:
+        collect row: Reihe sammeln
+      courseF_bee_variables_5_2018:
+        collect row: Reihe sammeln
+      courseF_bee_variables_5_2019:
+        collect row: Reihe sammeln
       courseF_bee_variables_6_2018:
         collect stairs: Sterne einsammeln
       courseF_bee_variables_6_2019:
@@ -612,8 +680,10 @@ de-DE:
       courseF_bee_variables_7_2019:
         collect: sammle
       courseF_bee_variables_8_2018:
+        move and increment: bewegen und inkrementieren
         collect: sammle
       courseF_bee_variables_8_2019:
+        move and increment: bewegen und inkrementieren
         collect: sammle
       grade5_artist_binary11:
         draw: zeichne

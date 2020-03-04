@@ -4204,6 +4204,11 @@ pl:
             Dance Party:
               name: Potańcówka
         dance-extras:
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
+          title: Nie przestawaj tańczyć (2018)
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursef-2019:
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
@@ -4357,7 +4362,11 @@ pl:
             'null':
               name: 'wartość null'
         dance-extras-gallery:
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
           title: Nie przestawaj tańczyć
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
         coursec-2019:
           description_short: Poznaj podstawy informatyki i twórz własne artystyczne dzieła, opowiadania i gry.
@@ -4800,6 +4809,10 @@ pl:
           stages:
             new stage:
               name: nowy etap
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: Debugowanie
         csl-vn:
           stages:
             Programming in Maze:
@@ -4880,7 +4893,12 @@ pl:
             For Loops:
               name: Pętle dla (for)
         dance-extras-2019:
+          title: Nie przestawaj tańczyć (2019)
           description: Wyjdź poza pierwszą godzinę dzięki rozszerzonym pomysłom na projekt.
+          description_short: Dzięki tej aktywności, która następuje, wyjdź poza Godzinę Kodowania do samouczka Potańcówki w Code.org.
+          stages:
+            Dance Party - Go Further:
+              name: Potańcówka - Przejdź dalej
         csp10-pilot:
           stages:
             new stage:
@@ -4889,7 +4907,7 @@ pl:
           stages:
             new stage:
               name: nowy etap
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Zdania z warunkami
@@ -4905,3 +4923,132 @@ pl:
           stages:
             Nested Loops in Maze:
               name: Zagnieżdżone pętle w labiryncie
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Zdania z warunkami
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Zdania z warunkami
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nowy etap
+        csd2-2020:
+          stages:
+            Intro to HTML:
+              name: Wprowadzenie do HTML
+            Headings:
+              name: Nagłówki
+            Digital Footprint:
+              name: Cyfrowy ślad
+            Styling Text with CSS:
+              name: Stylowanie tekstu przy użyciu CSS
+            Intellectual Property:
+              name: Własność intelektualna
+            Images:
+              name: Obrazki
+            CSS Classes:
+              name: Klasy CSS
+        csd1-2020:
+          stages:
+            Intro to Problem Solving:
+              name: Wstęp do rozwiązywania problemów
+            The Problem Solving Process:
+              name: Proces Rozwiązywania Problemów
+            Exploring Problem Solving:
+              name: Odkrywanie rozwiązywania problemów
+            What is a Computer?:
+              name: Czym jest komputer?
+            Input and Output:
+              name: Wejście i wyjście
+            Processing:
+              name: Przetwarzanie
+            Project - Propose an App:
+              name: Projekt - Propozycja aplikacji
+        csd4-2020:
+          stages:
+            Analysis of Design:
+              name: Analiza projektu
+            Understanding Your User:
+              name: Zrozumienie twojego użytkownika
+            User Interfaces:
+              name: Interfejsy użytkownika
+            Identifying User Needs:
+              name: Identyfikowanie potrzeb użytkownika
+            Designing Apps for Good:
+              name: Projektowanie aplikacji na dobre
+            Market Research:
+              name: Badania rynku
+            Prototype Testing:
+              name: Testowanie prototypu
+            Linking Screens:
+              name: Łączenie ekranów
+            Testing the App:
+              name: Testowanie aplikacji
+            Improving and Iterating:
+              name: Polepszanie i iterowanie
+            Project - App Presentation:
+              name: Projekt - Prezentacja aplikacji
+        csd5-2020:
+          stages:
+            Representing Numbers:
+              name: Reprezentacja liczb
+        csd6-2020:
+          stages:
+            Getting Properties:
+              name: Właściwości getterów
+            Analog Input:
+              name: Wejście analogowe
+            The Program Design Process:
+              name: Proces projektowania programu
+            'Project: Make a Game':
+              name: 'Projekt: Stwórz grę'
+            Making Music:
+              name: Tworzenie muzyki
+            Arrays and For Loops:
+              name: Tablice i pętle for
+            Accelerometer:
+              name: Akcelerometr
+            Functions with Parameters:
+              name: Funkcje z parametrami
+        csd3-2020:
+          description_short: "Programowanie"
+          stages:
+            Plotting Shapes:
+              name: Rysowanie kształtów
+            Drawing in Game Lab:
+              name: Rysowanie w laboratorium gier
+            Variables:
+              name: Zmienne
+            Sprite Properties:
+              name: Właściwości duszka
+            Booleans Unplugged:
+              name: Wyrażenia boolowskie bez komputera
+            Conditionals:
+              name: Zdania z warunkami
+            Keyboard Input:
+              name: Wejście klawiatury
+            Other Forms of Input:
+              name: Inne formy wejścia
+            Project - Interactive Card:
+              name: Projekt - Interaktywna karta
+            Velocity:
+              name: Prędkość
+            Collision Detection:
+              name: Wykrywanie kolizji
+            Collisions:
+              name: Kolizje
+            Functions:
+              name: Funkcje
+            The Game Design Process:
+              name: Proces projektowania gier
+            Using the Game Design Process:
+              name: Używanie procesu projektowania gier
+            Project - Design a Game:
+              name: Projekt - Zaprojektuj grę

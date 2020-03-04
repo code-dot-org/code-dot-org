@@ -1196,12 +1196,15 @@
               name: 'Virkelige algoritmer: Plante et frø'
           title: Kurs A
           assignment_family_title: Kurs A
+          description_short: En introduksjon til datavitenskap for førskolebarn.
         courseb-2017:
           stages:
             'Real-life Algorithms: Plant a Seed':
               name: 'Virkelige algoritmer: Plante et frø'
           title: Kurs B
           assignment_family_title: Kurs B
+          description_short: En introduksjon til datavitenskap for førskolebarn. (Likner
+            på Kurs A, med større variasjon for eldre barn.)
         coursec-2017:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1214,6 +1217,8 @@
               name: Løkker i løkker
           title: Kurs D
           assignment_family_title: Kurs D
+          description_short: Dekk rask konsepter fra kurs C, og fortsett med algoritmer,
+            nøstede løkker, betingelser og mer.
         coursee-2017:
           stages:
             Ice Age Play Lab:
@@ -1232,6 +1237,8 @@
               name: Løkker i løkker
           title: Kurs E
           assignment_family_title: Kurs E
+          description_short: Dekk rask konsepter fra kurs C og D, og fortsett med
+            funksjoner.
         coursef-2017:
           stages:
             Conditionals in Minecraft:
@@ -1244,6 +1251,8 @@
               name: Løkker i løkker i Bie/Zombie
           title: Kurs F
           assignment_family_title: Kurs F
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
+            din egen kunst, historier og spill.
         express-2017:
           stages:
             Introduction:
@@ -1428,6 +1437,7 @@
               name: Lister
         coursea-2018:
           assignment_family_title: Kurs A
+          description_short: En introduksjon til datavitenskap for førskolebarn.
           stages:
             'Debugging: Unspotted Bugs':
               name: Uoppdagede feil
@@ -1543,6 +1553,8 @@
               name: Kodetimen med Minecraft
         coursef-2018:
           assignment_family_title: Kurs F
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
+            din egen kunst, historier og spill.
           stages:
             'Programming: My Robotic Friends':
               name: Mine robotliknende venner
@@ -1629,6 +1641,8 @@
         dance-extras:
           description: Fortsett etter den første timen med større prosjektideer.
         coursef-2019:
+          description_short: Lær alle konsepter i Datavitenskap fundamenter og lag
+            din egen kunst, historier og spill.
           stages:
             Building a Foundation:
               name: Bygg ett grunnlag
@@ -1724,6 +1738,7 @@
         gamelab:
           title: Spill-lab
         coursea-2019:
+          description_short: En introduksjon til datavitenskap for førskolebarn.
           stages:
             'Programming: Happy Maps':
               name: Glade Kart
@@ -1854,7 +1869,7 @@
               name: For-løkker
         dance-extras-2019:
           description: Fortsett etter den første timen med større prosjektideer.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Betingelser
@@ -1864,3 +1879,27 @@
               name: Crowdsourcing
             Conditionals with Cards:
               name: Betingelser med kort
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Betingelser
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funksjoner med parametre
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variabler
+            Sprite Properties:
+              name: Figuregenskaper
+            Conditionals:
+              name: Betingelser
+            Velocity:
+              name: Hastighet
+            Functions:
+              name: Funksjoner

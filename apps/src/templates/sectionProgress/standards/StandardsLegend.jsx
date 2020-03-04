@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import ProgressBox from '@cdo/apps/templates/sectionProgress/ProgressBox';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
 
 const styles = {
   header: {
@@ -29,7 +29,8 @@ const styles = {
   },
   completedBoxes: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'center'
   }
 };
 
@@ -52,25 +53,17 @@ export default class StandardsLegend extends Component {
           <tbody>
             <tr>
               <td style={styles.td}>
-                <ProgressBox
-                  style={styles.boxStyle}
-                  started={false}
-                  incomplete={20}
-                  imperfect={0}
-                  perfect={0}
-                  stageIsAllAssessment={false}
-                  lessonNumber={10}
-                />
+                <div style={styles.completedBoxes}>
+                  <ProgressBoxForLessonNumber
+                    completed={false}
+                    lessonNumber={10}
+                  />
+                </div>
               </td>
               <td style={styles.td}>
                 <div style={styles.completedBoxes}>
-                  <ProgressBox
-                    style={styles.boxStyle}
-                    started={true}
-                    incomplete={0}
-                    imperfect={0}
-                    perfect={20}
-                    stageIsAllAssessment={false}
+                  <ProgressBoxForLessonNumber
+                    completed={true}
                     lessonNumber={8}
                   />
                 </div>

@@ -1997,7 +1997,7 @@ pt:
           stages:
             new stage:
               name: nova fase
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Condicionais
@@ -2007,3 +2007,32 @@ pt:
               name: Aberto ao público
             Conditionals with Cards:
               name: Condicionais com cartas
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        csp8-pilot:
+          stages:
+            new stage:
+              name: nova fase
+        csp9-pilot:
+          stages:
+            new stage:
+              name: nova fase
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funções com parâmetros
+        csd3-2020:
+          description_short: Programação
+          stages:
+            Variables:
+              name: Variáveis
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções

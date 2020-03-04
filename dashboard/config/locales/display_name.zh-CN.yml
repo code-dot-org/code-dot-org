@@ -2,6 +2,7 @@
 zh-CN:
   data:
     display_name:
+      AB_Debug_Artist1: '小艺术家 调试 #1 (AB)'
       Alien Defender: 外星人辩护人
       App Lab Intro 8 - Video Design Mode: 视频：设计模式
       App Lab Intro 8 - Video Getting Started: 视频：开始
@@ -18,8 +19,8 @@ zh-CN:
       AppLab Intro 7 - thisOrThatAddScreen: 交替摆臂
       AppLab Intro 7 - thisOrThatPersonalize: 交替摆臂
       AppLab Intro 7 - thisOrThatSetScreen: 交替摆臂
-      CDEF_video_SpritesInAction: 如何制作精灵
-      CDEF_video_SpritesInAction_2019: 如何制作精灵
+      CDEF_video_SpritesInAction: 如何制作精灵图
+      CDEF_video_SpritesInAction_2019: 如何制作精灵图
       CSD Board Buttons Map: 按钮和开关
       CSD Board Buttons Map_2018: 按钮和开关
       CSD Board Buttons Map_2019: 按钮和开关
@@ -52,6 +53,7 @@ zh-CN:
       CSD Set Scale Map_2018: 改变传感器的级别
       CSD Set Scale Map_2019: 改变传感器的级别
       CSD U1L02 TFMD_2018: 课程概述
+      CSD U1L02 TFMD_2019: 课程概述
       CSD U1L03 TFMD_2018: 课程概述
       CSD U1L03 TFMD_2019: 课程概述
       CSD U1L04 TFMD_2018: 课程概述
@@ -123,7 +125,9 @@ zh-CN:
       CSD U2 lists map_2019: HTML 中的列表
       CSD U2 publish video: 发布您的网站
       CSD U2L01 TFMD_2018: 课程概述
+      CSD U2L01 TFMD_2019: 课程概述
       CSD U2L02 TFMD_2018: 课程概述
+      CSD U2L02 TFMD_2019: 课程概述
       CSD U2L03 TFMD_2018: 课程概述
       CSD U2L03 TFMD_2019: 课程概述
       CSD U2L04 TFMD_2018: 课程概述
@@ -177,12 +181,12 @@ zh-CN:
       CSD U3 Drawing Squares to Corners: 使用网格
       CSD U3 Drawing Squares to Corners_2018: 使用网格
       CSD U3 Drawing Squares to Corners_2019: 使用网格
-      CSD U3 Entertainment Sample 3: 精灵场景
-      CSD U3 Entertainment Sample 3_2018: 精灵场景
-      CSD U3 Entertainment Sample 3_2019: 精灵场景
-      CSD U3 Entertainment Sample 4: 精灵场景
-      CSD U3 Entertainment Sample 4_2018: 精灵场景
-      CSD U3 Entertainment Sample 4_2019: 精灵场景
+      CSD U3 Entertainment Sample 3: 精灵图场景
+      CSD U3 Entertainment Sample 3_2018: 精灵图场景
+      CSD U3 Entertainment Sample 3_2019: 精灵图场景
+      CSD U3 Entertainment Sample 4: 精灵图场景
+      CSD U3 Entertainment Sample 4_2018: 精灵图场景
+      CSD U3 Entertainment Sample 4_2019: 精灵图场景
       CSD U3 Functions Call Function_2019: 视频：调用和定义函数
       CSD U3 Interactive Card Exemplar_2018: 互动卡
       CSD U3 Interactive Card Exemplar_2019: 互动卡
@@ -233,18 +237,19 @@ zh-CN:
       CSD U3 L9 Freeplay_2019: 自由发挥
       CSD U3 Plotting Shapes Shape Lab: 绘制形状
       CSD U3 Plotting Shapes Shape Lab_2018: 绘制形状
+      CSD U3 Plotting Shapes Shape Lab_2019: 绘制形状
       CSD U3 Random Number Map Level: 随机数
       CSD U3 Random Number Map Level_2018: 随机数
       CSD U3 Random Number Map Level_2019: 随机数
-      CSD U3 Scene Example: 精灵场景
-      CSD U3 Scene Example_2018: 精灵场景
-      CSD U3 Scene Example_2018_2019: 精灵场景
-      CSD U3 Sprite Properties Map: 精灵属性
-      CSD U3 Sprite Properties Map_2018: 精灵属性
-      CSD U3 Sprite Properties Map_2019: 精灵属性
-      CSD U3 Sprites Map: 创建精灵
-      CSD U3 Sprites Map_2018: 创建精灵
-      CSD U3 Sprites Map_2019: 创建精灵
+      CSD U3 Scene Example: 精灵图场景
+      CSD U3 Scene Example_2018: 精灵图场景
+      CSD U3 Scene Example_2018_2019: 精灵图场景
+      CSD U3 Sprite Properties Map: 精灵图属性
+      CSD U3 Sprite Properties Map_2018: 精灵图属性
+      CSD U3 Sprite Properties Map_2019: 精灵图属性
+      CSD U3 Sprites Map: 创建精灵图
+      CSD U3 Sprites Map_2018: 创建精灵图
+      CSD U3 Sprites Map_2019: 创建精灵图
       CSD U3 Sprites scene challenge: 挑战：扩展您的场景
       CSD U3 Sprites scene challenge_2018: 挑战：扩展您的场景
       CSD U3 Sprites scene challenge_2019: 挑战：扩展您的场景
@@ -278,9 +283,9 @@ zh-CN:
       CSD U3 collisions car intro: 示例游戏
       CSD U3 collisions car intro_2018: 示例游戏
       CSD U3 collisions car intro_2019: 示例游戏
-      CSD U3 collisions predict set velocity code: 精灵互动
-      CSD U3 collisions predict set velocity code_2018: 精灵互动
-      CSD U3 collisions predict set velocity code_2019: 精灵互动
+      CSD U3 collisions predict set velocity code: 精灵图互动
+      CSD U3 collisions predict set velocity code_2018: 精灵图互动
+      CSD U3 collisions predict set velocity code_2019: 精灵图互动
       CSD U3 finishing touches: 项目 - 最后的点缀
       CSD U3 finishing touches_2018: 项目 - 最后的点缀
       CSD U3 finishing touches_2019: 项目 - 最后的点缀
@@ -289,9 +294,9 @@ zh-CN:
       CSD U3 functions review_2018: 功能回顾
       CSD U3 functions review_2019: 功能回顾
       CSD U3 if else predict: 预测
-      CSD U3 interactions map: 精灵互动回顾
-      CSD U3 interactions map_2018: 精灵互动回顾
-      CSD U3 interactions map_2019: 精灵互动回顾
+      CSD U3 interactions map: 精灵图互动回顾
+      CSD U3 interactions map_2018: 精灵图互动回顾
+      CSD U3 interactions map_2019: 精灵图互动回顾
       CSD U3 istouching map: 碰撞检测回顾
       CSD U3 istouching map_2018: 碰撞检测回顾
       CSD U3 istouching map_2019: 碰撞检测回顾
@@ -322,10 +327,13 @@ zh-CN:
       CSD U3 shape size map: 形状和参数
       CSD U3 shape size map_2018: 形状和参数
       CSD U3 shape size map_2019: 形状和参数
-      CSD U3 velocity map: 精灵速度
-      CSD U3 velocity map_2018: 精灵速度
-      CSD U3 velocity map_2019: 精灵速度
+      CSD U3 velocity map: 精灵图速度
+      CSD U3 velocity map_2018: 精灵图速度
+      CSD U3 velocity map_2019: 精灵图速度
+      CSD U3L01 TFMD_2018: 课程概述
+      CSD U3L01 TFMD_2019: 课程概述
       CSD U3L02 TFMD_2018: 课程概述
+      CSD U3L02 TFMD_2019: 课程概述
       CSD U3L03 TFMD_2018: 课程概述
       CSD U3L03 TFMD_2019: 课程概述
       CSD U3L04 TFMD_2018: 课程概述
@@ -388,7 +396,9 @@ zh-CN:
       CSD U4 User Input Map_2018: 响应用户输入
       CSD U4 User Input Map_2019: 响应用户输入
       CSD U4L01 autoSFLP_2018: 课程概述
+      CSD U4L01 autoSFLP_2019: 课程概述
       CSD U4L02 autoSFLP_2018: 课程概述
+      CSD U4L02 autoSFLP_2019: 课程概述
       CSD U4L03 autoSFLP_2018: 课程概述
       CSD U4L03 autoSFLP_2019: 课程概述
       CSD U4L04 autoSFLP_2018: 课程概述
@@ -443,7 +453,9 @@ zh-CN:
       CSD U5 black white images pixelation_2018: 黑白像素化小工具
       CSD U5 black white images pixelation_2019: 黑白像素化小工具
       CSD U5L01 autoSFLP_2018: 课程概述
+      CSD U5L01 autoSFLP_2019: 课程概述
       CSD U5L02 autoSFLP_2018: 课程概述
+      CSD U5L02 autoSFLP_2019: 课程概述
       CSD U5L03 autoSFLP_2018: 课程概述
       CSD U5L03 autoSFLP_2019: 课程概述
       CSD U5L04 autoSFLP_2018: 课程概述
@@ -530,9 +542,12 @@ zh-CN:
       CSD U6 tugowar final: 让它成为你自己的
       CSD U6 tugowar final_2018: 让它成为你自己的
       CSD U6 tugowar final_2019: 让它成为你自己的
+      CSD U6L01 TFMD: 课程概述
       CSD U6L01 TFMD_2018: 课程概述
+      CSD U6L01 TFMD_2019: 课程概述
       CSD U6L02 TFMD: 课程概述
       CSD U6L02 TFMD_2018: 课程概述
+      CSD U6L02 TFMD_2019: 课程概述
       CSD U6L03 TFMD: 课程概述
       CSD U6L03 TFMD_2018: 课程概述
       CSD U6L03 TFMD_2019: 课程概述
@@ -587,9 +602,9 @@ zh-CN:
       CSD-Arrays: 修改和创建数组
       CSD-Arrays_2018: 修改数组
       CSD-Arrays_2019: 修改数组
-      'CSD: Animating Sprite Movement': 视频：精灵运动
-      'CSD: Animating Sprite Movement_2018': 视频：精灵运动
-      'CSD: Animating Sprite Movement_2019': 视频：精灵运动
+      'CSD: Animating Sprite Movement': 视频：精灵图运动
+      'CSD: Animating Sprite Movement_2018': 视频：精灵图运动
+      'CSD: Animating Sprite Movement_2019': 视频：精灵图运动
       'CSD: Animation Tab': '视频: "动画" 选项卡'
       'CSD: Animation Tab_2018': '视频: "动画" 选项卡'
       'CSD: Animation Tab_2019': '视频: "动画" 选项卡'
@@ -607,9 +622,9 @@ zh-CN:
       'CSD: Sprite Velocity': '视频: 速度'
       'CSD: Sprite Velocity_2018': '视频: 速度'
       'CSD: Sprite Velocity_2019': '视频: 速度'
-      'CSD: Sprites in Game Lab': '视频: 精灵简介'
-      'CSD: Sprites in Game Lab_2018': '视频: 精灵简介'
-      'CSD: Sprites in Game Lab_2019': '视频: 精灵简介'
+      'CSD: Sprites in Game Lab': '视频: 精灵图简介'
+      'CSD: Sprites in Game Lab_2018': '视频: 精灵图简介'
+      'CSD: Sprites in Game Lab_2019': '视频: 精灵图简介'
       CSDU4 Design Mode Video: 设计模式简介
       CSDU4 Design Mode Video_2018: 设计模式简介
       CSDU4 Design Mode Video_2019: 设计模式简介
@@ -622,6 +637,7 @@ zh-CN:
       CSDU4 Project Import: 应用程序项目：屏幕导入
       CSDU4 Project Import_2018: 应用程序项目：屏幕导入
       CSDU4 Project Import_2019: 应用程序项目：屏幕导入
+      CSDU6 - UI and Inputs - getNumber: getNumber
       CSDU6 - board event challenge_2018: 音效主板
       CSDU6 - board event challenge_2019: 音效主板
       CSDU6 buzzer 2d arrays_2018: 二维数组
@@ -637,22 +653,24 @@ zh-CN:
       'Course F: Artist Project - Revise_2018': 修改艺术家项目
       'Course F: Artist Project_2018': 课程 F 艺术家项目
       'Course F: Artist Project_2019': 课程 F 艺术家项目
-      CourseEF_video_IntroSpriteLab: 这是精灵实验室
-      CourseEF_video_IntroSpriteLab_2019: 这是精灵实验室
-      CourseEF_video_MakeSprite: 如何制作精灵
-      CourseEF_video_MakeSprite_2019: 如何制作精灵
-      CourseE_Project_SpriteLab: 课程 E 精灵实验室项目
-      CourseE_Project_SpriteLab_2019: 课程 E 精灵实验室项目
+      CourseEF_video_IntroSpriteLab: 这是精灵图实验室
+      CourseEF_video_IntroSpriteLab_2019: 这是精灵图实验室
+      CourseEF_video_MakeSprite: 如何制作精灵图
+      CourseEF_video_MakeSprite_2019: 如何制作精灵图
+      CourseE_Project_SpriteLab: 课程 E 精灵图实验室项目
+      CourseE_Project_SpriteLab_2019: 课程 E 精灵图实验室项目
       CourseE_hoops: '兔子 '
-      CourseF_Project_Revise_SpriteLab: 修改精灵实验室项目
-      CourseF_Project_SpriteLab: 课程 F 精灵实验室项目
-      CourseF_Project_SpriteLab_2019: 课程 F 精灵实验室项目
+      CourseF_Project_Revise_SpriteLab: 修改精灵图实验室项目
+      CourseF_Project_SpriteLab: 课程 F 精灵图实验室项目
+      CourseF_Project_SpriteLab_2019: 课程 F 精灵图实验室项目
+      Dance_Party_extras_alternate_2019: 不断重复
       Dance_Party_extras_battle: 舞蹈团队
       Dance_Party_extras_battle_2019: 舞蹈团队
       Dance_Party_extras_every_beat: 四分注释
       Dance_Party_extras_every_beat_2019: 四分注释
       Dance_Party_extras_layout: 进入阵型
       Dance_Party_extras_layout_2019: 进入阵型
+      Dance_Party_extras_mixed_2019: 更多按钮
       Dance_Party_extras_on_beat: 低音、中音和高音
       Dance_Party_extras_on_beat_2019: 低音、中音和高音
       Dance_Party_extras_speed: 加速、减速
@@ -686,8 +704,12 @@ zh-CN:
       MC_HOC_2017_05_Cole_2019: 这条河
       MC_HOC_2017_06_Cole: 高潮流
       MC_HOC_2017_06_Cole_2019: 高潮流
+      MC_HOC_2017_07_Cole: 通过雪山
+      MC_HOC_2017_07_Cole_2019: 通过雪山
       MC_HOC_2017_10_RETRY: 洞穴
       MC_HOC_2017_10_RETRY_2019: 洞穴
+      MC_HOC_2017_Ali: 空中堡垒
+      MC_HOC_2017_Ali_2019: 空中堡垒
       MC_HOC_2017_FP20x20: 自由游戏
       MC_HOC_2017_FP20x20_2019: 自由游戏
       Making Music_2018: 制作音乐
@@ -698,8 +720,11 @@ zh-CN:
       Oceans_Video_Training_Data: 视频：训练数据
       Revisiting the Counter Pattern_2018: 回顾计数模式
       Revisiting the Counter Pattern_2019: 回顾计数模式
+      Robot Doodle_2018: 机器人涂鸦
       The Accelerometer_2018: 加速传感器
       The Accelerometer_2019: 加速传感器
+      Using Accelerometer Events_2018: 使用加速传感器事件
+      Using Accelerometer Events_2019: 使用加速传感器事件
       'Video: Intro to CSS Part 2_2018': '视频: CSS 简介第2部分'
       'Video: Intro to CSS Part 2_2019': '视频: CSS 简介第2部分'
       'Video: Intro to CSS_2018': 视频：CSS简介
@@ -708,10 +733,12 @@ zh-CN:
       courseA_video_Stevie_2018: 斯蒂夫和大项目
       courseB_video_Unspotted: 没有斑点的Bug
       courseB_video_Unspotted_2018: 没有斑点的Bug
+      courseE_Dogger_2: 小狗示例
       courseF_artist_for1: For 循环自由游戏 (开始)
       courseF_artist_for1_2018: For 循环自由游戏 (开始)
       courseF_artist_for1_2019: For 循环自由游戏 (开始)
-      courseF_video_csMatters: 课程项目结束
+      courseF_project_1: 精灵图实验室示例项目
+      courseF_video_csMatters: 结课项目
       courseF_video_csMatters_2018: 视频：CS 事项
       csd U3 conditional statements video: '视频: "If/else" 声明'
       csd U3 conditional statements video_2019: 视频：条件表达式
@@ -721,5 +748,3 @@ zh-CN:
       csd-pre-survey-levelgroup_2019: 课程概述
       scrat_loops_C-F_video: 冰河时代视频中的循环
       scrat_loops_C-F_video_2019: 冰河时代视频中的循环
-      Dance_Party_extras_alternate_2019: 来来回回
-      Dance_Party_extras_mixed_2019: 更多按钮

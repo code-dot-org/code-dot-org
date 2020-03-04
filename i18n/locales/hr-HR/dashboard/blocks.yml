@@ -68,6 +68,7 @@ hr:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': dijamant
             '"random"': slučajno odabran
       Dancelab_makeAnonymousDanceSprite:
         options:

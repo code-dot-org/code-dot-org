@@ -13,6 +13,8 @@ const ABSOLUTE_CDO_CURRICULUM_REGEXP = new RegExp(
   'i'
 );
 
+export const DATA_URL_PREFIX_REGEX = new RegExp('^data:image');
+
 export const ICON_PREFIX = 'icon://';
 export const ICON_PREFIX_REGEX = new RegExp('^icon://');
 

@@ -15,6 +15,13 @@ id:
         Untuk mengakses layanan ini, hentikan program yang terpasang dan coba lagi.
   activerecord:
     errors:
+      models:
+        user:
+          attributes:
+            reset_password_token:
+              invalid: tidak valid. Perhatikan bahwa setiap tautan hanya dapat digunakan
+                satu kali untuk mereset kata sandi Anda, dan hanya tautan yang paling
+                baru terkirim akan berfungsi.
       messages:
         blank: diperlukan
         blank_plural: diperlukan
@@ -47,6 +54,7 @@ id:
           membuat akun Code.org dengan <strong>%{provider}</strong> untuk <strong>%{email}</strong>.
         finish_sign_up_subheader_provider_markdown: Mengisi informasi berikut untuk
           menyelesaikan membuat akun Code.org dengan **%{provider}** untuk **%{email}**.
+        reset_password_token: Tautan pengaturan ulang kata sandi yang telah Anda ikuti
         error:
           future: tidak mungkin di masa depan
   beta: Percobaan
@@ -65,6 +73,7 @@ id:
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
   join_section:
     code:
+      title: Bergabunglah dengan bagian di Code.org
       placeholder: Kode Bagian (ABCDEF)
       submit: Bergabung
   add_hint_form:
@@ -167,8 +176,6 @@ id:
     valid_password: Kata sandi valid!
     invalid_password: Kata sandi harus minimal 6 karakter
     mismatch_password: kedua password yang anda masukkan tidak sama
-    under_13_consent: Jika saya di bawah usia 13 tahun, saya mengkonfirmasi bahwa
-      saya telah saya orang tua atau wali hukum izin untuk menggunakan layanan Code.org.
     student_consent: Saya mengkonfirmasi bahwa saya telah saya orang tua atau wali
       hukum izin untuk menggunakan layanan Code.org.
     agree_us_website: Saya setuju untuk menggunakan sebuah situs web yang berbasis
@@ -327,7 +334,7 @@ id:
       finished_hoc: Saya selesai!
       sign_in_to_save: Masuk untuk mencatat kemajuan belajar
       my_dashboard: Dasbor saya
-      course_catalog: Katalog kursus
+      course_catalog: Katalog Kursus
       project_gallery: Proyek
       sections: Sesi
       help_support: Bantuan dan dukungan
@@ -340,6 +347,8 @@ id:
       app_lab_tutorials: Tutorial aplikasi Lab
       game_lab_documentation: Dokumentasi lab permainan
       game_lab_tutorials: Tutorial lab permainan
+      sprite_lab_documentation: Dokumentasi Lab Sprite
+      sprite_lab_tutorials: Tutorial Lab Sprite
       educate_overview: Ikhtisar Pendidik
       educate_elementary: Sekolah Dasar
       educate_middle: Sekolah Menengah Pertama
@@ -651,6 +660,7 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban
@@ -828,6 +838,8 @@ id:
     help_support: Bantuan dan dukungan
     documentation: Dokumentasi
     tutorials: Tutorial
+  free_response:
+    placeholder: Masukkan jawaban Anda di sini
   multi:
     wrong_title: Jawaban Salah
     wrong_body: Jawaban yang anda masukkan salah. Silakan coba lagi!
@@ -928,6 +940,8 @@ id:
       Ketentuan</a> dan <a href="%{privacy_url}" target="_blank">Kebijakan Pribadi</a>
     accept_label_markdown: Saya menyetujui [Syarat dan Ketentuan](%{tos_url}) dan
       [Kebijakan Pribadi](%{privacy_url})
+    accept_tos: Dengan mendaftar di Code.org, Anda setuju dengan [Ketentuan Layanan](%{tos_url})
+      dan [Kebijakan Privasi](%{privacy_url}) kami.
     accept: Terima
     print: Cetak
     reminder_desc: Kami sudah memperbarui <a href="%{tos_url}" target="_blank">Syarat

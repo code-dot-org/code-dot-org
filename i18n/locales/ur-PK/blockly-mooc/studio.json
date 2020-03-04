@@ -34,6 +34,7 @@
   "bird": "پرندہ",
   "calloutPutCommandsHereRunStart": "پروگرام شروع ھونے پہ کمانڈز چلانے کے لیے یہاں رکھیں",
   "calloutBlocklyPlaceGoUpHere": "اوپر جانے کے لیے \"Go Up\" یہاں رکھیں",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "",
   "calloutUseArrowButtons": "",
   "calloutUseArrowButtonsAutoSteer": "",

@@ -512,6 +512,8 @@ hy:
     report_bug: Report Bug
     support: Օգնություն ստանալ
     help_resources: Օգնություն եւ ռեսուրսներ
+  free_response:
+    placeholder: Մուտքագրեք Ձեր պատասխանն այստեղ
   multi:
     wrong_title: Սխալ պատասխանը
     wrong_body: 'Այս հարցի պատասխանը դու մտել ճիշտ չէ: Խնդրում եմ կրկին փորձեք!'

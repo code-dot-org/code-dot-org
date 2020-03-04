@@ -3,10 +3,6 @@ it-IT:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
-        questions:
-        - text: Scegli l'algoritmo che ti fa disegnare questa figura.
         answers:
         - text: Inizia con un quadrato<br/>Metti un triangolo sopra il quadrato<br/>Metti
             un triangolo sotto il quadrato
@@ -18,20 +14,28 @@ it-IT:
             un triangolo a destra del parallelogramma
         - text: Inizia con un quadrato<br/>Metti un triangolo sotto il quadrato<br/>Metti
             un parallelogramma a destra del triangolo
-      2-3 Algorithms Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: Inizia con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti
-          un altro triangolo sotto il quadrato
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
-        - text: Quale figura <em>non</em> può essere disegnata seguendo questo algoritmo?
+        - text: Scegli l'algoritmo che ti fa disegnare questa figura.
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 Algorithms Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+        content1: Inizia con un triangolo<br/>Metti un quadrato sotto il triangolo<br/>Metti
+          un altro triangolo sotto il quadrato
+        questions:
+        - text: Quale figura <em>non</em> può essere disegnata seguendo questo algoritmo?
+        title: Esercizio di Verifica (Risposte Multiple)
       2-3 Big Event Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
           di danza, usando la corrispondenza sopra illustrata.
@@ -40,13 +44,13 @@ it-IT:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
-      2-3 Binary Match 1:
         title: Esercizio di Verifica (Corrispondenza)
+      2-3 Binary Match 1:
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
         content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Utilizza la chiave qua sopra per associare ogni codice alla lettera
           cui è abbinato.
@@ -55,13 +59,14 @@ it-IT:
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
-        answers:
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        title: Esercizio di Verifica (Corrispondenza)
       2-3 Conditionals Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+          correct: true
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: |-
@@ -75,202 +80,200 @@ it-IT:
             Altrimenti<br>
             &emsp; Se (la CARTA è di CUORI)<br>
             &emsp; &emsp; Assegna alla TUA squadra 1 punto.
-        answers:
-        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
-        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
-          correct: true
-        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
-      2-3 Getting Loopy Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
-        questions:
-        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
-            i blocchi `ripeti`, cioè i <i>cicli</i>?
+      2-3 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
+        questions:
+        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
+            i blocchi `ripeti`, cioè i <i>cicli</i>?
+        title: Esercizio di Verifica (Risposte Multiple)
       2-3 Graph Paper Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Associa ad ogni figura il programma corretto.
         questions:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
-        answers:
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
+        title: Esercizio di Verifica (Corrispondenza)
       2-3 Graph Paper Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
-        questions:
-        - text: Quale programma ti fa disegnare questa figura?
         answers:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
-      2-3 Maze Match 2:
-        title: Esercizio di Verifica (Associazioni)
-        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
-        pre_title: Istruzioni
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        - text: Quale programma ti fa disegnare questa figura?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 Maze Match 2:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
-      2-3 Maze Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         questions:
-        - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
+        title: Esercizio di Verifica (Associazioni)
+      2-3 Maze Multi 2:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      2-3 Relay Programming Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - text: Quale programma **non** ti fa disegnare questa figura?
+        - text: Quale di queste sequenze di istruzioni mi fa arrivare fino al maialino?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
           correct: true
-      2-3 Relay Programming Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - text: Quale delle seguenti coppie figura-programma non contiene errori?
+        - text: Quale programma **non** ti fa disegnare questa figura?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 Relay Programming Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
           correct: true
-      2-3 artist debug multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
+        - text: Quale delle seguenti coppie figura-programma non contiene errori?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 artist debug multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
-      2-3 artist functions multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Scegli la sequenza di blocchi che disegna correttamente la figura
-            qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
-            illustrata ancora più a sinistra.
+        - text: Cosa dovresti modificare per ottenere un cerchio perfetto?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 artist functions multi 1:
         answers:
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Scegli la sequenza di blocchi che disegna correttamente la figura
+            qui a fianco usando la funzione `draw a rectangle` (<i>disegna un rettangolo</i>)
+            illustrata ancora più a sinistra.
+        title: Esercizio di Verifica (Risposte Multiple)
       2-3 artist loops match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Associa ogni figura con il ciclo che la disegna.
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
+        title: Esercizio di Verifica (Corrispondenza)
       2-3 artist loops multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: Quale figura viene disegnata da questo ciclo?
+        title: Esercizio di Verifica (Risposte Multiple)
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
-        - correct: true
         - {}
-      2-3 artist loops multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
+        - correct: true
         questions:
         - text: Quale figura viene disegnata da questo programma?
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        title: Esercizio di Verifica (Risposte Multiple)
       2-3 artist match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Associa ad ogni figura l'insieme dei blocchi che la completa.
         questions:
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
         - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
-        answers:
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
-        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
+        title: Esercizio di Verifica (Corrispondenza)
       2-3 bee conditionals multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale confronto qua sotto è vero?
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-      2-3 bee conditionals multi 3:
+        questions:
+        - text: Quale confronto qua sotto è vero?
         title: Esercizio di Verifica (Risposte Multiple)
+      2-3 bee conditionals multi 3:
+        answers:
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+          correct: true
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
         content1: "/script_assets/2-3_images/Bee/2-3_beeconditionals_multi_3_q.png,
           500"
         questions:
         - text: Scegli la sequenza di blocchi che risolve l'esercizio.
-        answers:
-        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
-        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
-          correct: true
-        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
-        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
-      2-3 bee loops multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
+      2-3 bee loops multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Quale sequenza di blocchi ti fa raccogliere tutto il nettare?
+        title: Esercizio di Verifica (Risposte Multiple)
       2-3 maze match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         questions:
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
         - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
-        answers:
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
-        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
+        title: Esercizio di Verifica (Corrispondenza)
       2-3 maze multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        title: Esercizio di Verifica (Risposte Multiple)
       4-5 Algorithms Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
+        - text: "<h4>il Giocatore 1 tira il dado</h4>"
+        - text: "<h4>Aggiungi il punteggio del Giocatore 1 al punteggio totale</h4>"
+        - text: "<h4>Confronta il punteggio dei giocatori per vedere chi vince</h4>"
         content1: Definisci l'ordine in cui le fasi di una Gara con i Dadi dovrebbero
           apparire in un algoritmo.
         questions:
@@ -278,24 +281,24 @@ it-IT:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>Imposta a 0 il punteggio del Giocatore 1</h4>"
-        - text: "<h4>il Giocatore 1 tira il dado</h4>"
-        - text: "<h4>Aggiungi il punteggio del Giocatore 1 al punteggio totale</h4>"
-        - text: "<h4>Confronta il punteggio dei giocatori per vedere chi vince</h4>"
+        title: Esercizio di Verifica (Corrispondenza)
       4-5 Algorithms Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Tra queste situazioni, quale è la più difficile da descrivere con
-            un algoritmo?
         answers:
         - text: Lavarsi i denti
         - text: Cuocere i biscotti
         - text: Acquistare i prodotti di una lista della spesa
         - text: " Una banana (il frutto)"
           correct: true
+        questions:
+        - text: Tra queste situazioni, quale è la più difficile da descrivere con
+            un algoritmo?
+        title: Esercizio di Verifica (Risposte Multiple)
       4-5 Computational Thinking Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
+        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
         content1: Ognuno di questi veicoli può essere individuato in base al numero
           di ruote e finestre che possiede per ciascun lato. Associa ogni veicolo
           alla lista di elementi che lo rappresenta.
@@ -304,13 +307,14 @@ it-IT:
         - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 1</h3>"
         - text: "<h3>Ruote per lato: 2<br/>Finestre per lato: 6</h3>"
         - text: "<h3>Ruote per lato: 3<br/>Finestre per lato: 2</h3>"
-        answers:
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a2.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a3.png"
-        - text: "/script_assets/4-5_images/unplugged/comp_thinking_2_a4.png"
+        title: Esercizio di Verifica (Corrispondenza)
       4-5 Computational Thinking Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        answers:
+        - text: Seattle _____ una _____ _____.
+        - text: _____ è una città  _____.
+          correct: true
+        - text: _____ è _____ una _____.
+        - text: Eugene è una città _____.
         content1: Ecco tre frasi. Quale degli schemi qua sotto è un'astrazione in
           grado di rappresentarle tutte e tre in modo corretto?
         questions:
@@ -318,73 +322,62 @@ it-IT:
             è una città media. <br>3. Hillview è una città piccola. <br>Quale degli
             schemi di frase qua sotto è un''astrazione in grado di rappresentarle
             tutte e tre in modo corretto?'
-        answers:
-        - text: Seattle _____ una _____ _____.
-        - text: _____ è una città  _____.
-          correct: true
-        - text: _____ è _____ una _____.
-        - text: Eugene è una città _____.
-      4-5 Crowdsourcing Multi 1:
         title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale di queste immagini rappresenta meglio l'intelligenza collettiva?
+      4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
           correct: true
-      4-5 Crowdsourcing Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Quale di queste attività sarebbe meglio compiere per esercitare l'intelligenza
-            collettiva?
+        - text: Quale di queste immagini rappresenta meglio l'intelligenza collettiva?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Pulire la propria camera
           correct: true
         - text: Mangiare il proprio dolce
         - text: Lavarsi i capelli
         - text: Lavarsi il viso
-      4-5 Digital Footprint Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Quale informazione tra quelle elencate qua sotto può essere condivisa
-            su internet?
+        - text: Quale di queste attività sarebbe meglio compiere per esercitare l'intelligenza
+            collettiva?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Il tuo compleanno
         - text: Il tuo cibo preferito
           correct: true
         - text: Il tuo indirizzo
         - text: Il numero della carta di credito di tua madre
-      4-5 Internet Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
-            in questa tabella ti farà arrivare il DNS?
+        - text: Quale informazione tra quelle elencate qua sotto può essere condivisa
+            su internet?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 Internet Multi 1:
         answers:
         - text: 23.23.224.106
         - text: 54.209.61.132
         - text: 64.14.68.10
         - text: 54.243.71.82
           correct: true
-      4-5 Internet Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
-            su quale sito web fra quelli elencati in questa tabella sei arrivato?
+        - text: Quando ti colleghi a code.org, a quale indirizzo IP fra quelli elencati
+            in questa tabella ti farà arrivare il DNS?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 Internet Multi 2:
         answers:
         - text: code.org
         - text: csisfun.com
           correct: true
         - text: thinkersmith.org
         - text: khanacademy.org
-      4-5 Songwriting Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
-        - text: Qual è il pezzo più lungo di questa canzone che puoi definire come
-            ritornello, in modo tale che il ritornello sia ripetuto esattamente ogni
-            volta che viene richiamato?
+        - text: Se il DNS ti ha fatto arrivare ad una pagina con indirizzo IP 100.42.50.110,
+            su quale sito web fra quelli elencati in questa tabella sei arrivato?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 Songwriting Multi 1:
         answers:
         - text: Lou, Lou, skip to my Lou,
         - text: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou,
@@ -396,8 +389,18 @@ it-IT:
         - text: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk,
             <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
             <br/>Skip to my Lou, my darlin.
+        content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
+        questions:
+        - text: Qual è il pezzo più lungo di questa canzone che puoi definire come
+            ritornello, in modo tale che il ritornello sia ripetuto esattamente ogni
+            volta che viene richiamato?
+        title: Esercizio di Verifica (Risposte Multiple)
       4-5 Suncatchers Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: Utilizzando i gruppi di istruzioni (o "skill") che vengono forniti,
           associa ogni programma alla parola che esso restituisce.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -406,112 +409,106 @@ it-IT:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a2.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a3.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_1_a4.png"
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: Esercizio di Verifica (Corrispondenza)
       4-5 Suncatchers Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
-        questions:
-        - text: Quale dei programmi qui sotto <em>non</em> produce la stessa sequenza
-            di istruzioni definita dal programma 1?
         answers:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
-      4-5 artist loops multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
-        - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
+        - text: Quale dei programmi qui sotto <em>non</em> produce la stessa sequenza
+            di istruzioni definita dal programma 1?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 artist loops multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 artist multi 1:
+        questions:
+        - text: Quale sequenza di blocchi disegna la figura geometrica qui a sinistra?
         title: Esercizio di Verifica (Risposte Multiple)
+      4-5 artist multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: Quale sequenza di blocchi ti fa disegnare un rettangolo avente il
             perimetro pari a 100 pixel?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 artist multi 2:
         answers:
+        - {}
         - {}
         - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Quale figura è simmetrica (rispetto ad un asse verticale)?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - correct: true
         - {}
-      4-5 bee conditionals multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
         content2: Un fiore viola può avere 3, 2 oppure 1 dose di nettare, ma non puoi
           saperlo prima di eseguire il programma. Quali blocchi controllano e raccolgono
           correttamente tutto il nettare da un fiore viola?
         questions:
         - text: Scegli la sequenza di blocchi che risolve l'esercizio.
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 bee debug multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      4-5 bee debug multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        - {}
         questions:
         - text: Quale versione della funzione è corretta?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Esercizio di Verifica (Risposte Multiple)
       4-5 bee loops multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        title: Esercizio di Verifica (Risposte Multiple)
       4-5 maze conditionals multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale sequenza di blocchi è corretta?
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      4-5 maze match 1:
-        title: Esercizio di Verifica (Associazioni)
-        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
-        pre_title: Istruzioni
         questions:
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
-        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        - text: Quale sequenza di blocchi è corretta?
+        title: Esercizio di Verifica (Risposte Multiple)
+      4-5 maze match 1:
         answers:
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a1.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a2.png"
         - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_a3.png"
-      4-5 maze multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: Associa ad ogni situazione la sequenza di blocchi corretta.
         questions:
-        - text: Quale sequenza di blocchi è corretta?
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q1.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q2.png"
+        - text: "/script_assets/4-5_images/maze/4-5_maze_match_1_q3.png"
+        title: Esercizio di Verifica (Associazioni)
+      4-5 maze multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Quale sequenza di blocchi è corretta?
+        title: Esercizio di Verifica (Risposte Multiple)
       Begin planning your project:
-        title: titolo
         content1: Descrizione qui
         markdown: "# Il processo di progettazione\nProgettare software significa risolvere
           tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
@@ -548,7 +545,6 @@ it-IT:
           la tua app con quella di un altro gruppo per migliorare entrambi i progetti\n1.
           **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018:
-        title: Inizia a pianificare il tuo progetto
         content1: Descrizione qui
         markdown: "# Il processo di progettazione\nProgettare software significa risolvere
           tanti piccoli problemi, in continuazione. Il problema principale nella progettazione
@@ -585,11 +581,8 @@ it-IT:
           la tua app con quella di un altro gruppo per migliorare entrambi i progetti\n1.
           **Presenta**\n   * Presenta il tuo prodotto finale!\n"
       Begin planning your project_2018_2019:
-        title: Inizia a pianificare il tuo progetto
         content1: Descrizione qui
       CSD Header Size MC:
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -600,9 +593,9 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
       CSD Header Size MC_2018:
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -613,9 +606,9 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
       CSD Header Size MC_2018_2019:
-        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
-          Scegli da una delle opzioni a destra.
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
@@ -626,6 +619,8 @@ it-IT:
             AM.png
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
       CSD U1 Lesson 5 Overview:
         markdown: |
           # Panoramica
@@ -679,16 +674,14 @@ it-IT:
           \n * [App e Risoluzione dei Problemi - Valutazione Pari](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           \n * [App e Risoluzione dei Problemi - Rubrica](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
       CSD U2 Design Project:
-        title: titolo
         content1: Descrizione qui
       CSD U2 Design Project_2018:
-        title: titolo
         content1: Descrizione qui
       CSD U2 Design Project_2018_2019:
-        title: titolo
+        content1: Descrizione qui
+      CSD U2 L1 Overview:
         content1: Descrizione qui
       CSD U2 L2 Overview:
-        title: titolo
         content1: Descrizione qui
         markdown: |
           # Panoramica
@@ -703,7 +696,6 @@ it-IT:
 
           * [Schizzo Sito Web Personale - Guida Attività](https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)
       CSD U2 L3 Overview:
-        title: titolo
         content1: Descrizione qui
         markdown: "# Panoramica\n\nQuesta lezione introduce all'HTML come una soluzione
           al problema di come comunicare sia il contenuto che la struttura di un sito
@@ -720,12 +712,11 @@ it-IT:
           una pagina web\n* **Struttura Sito Web** - Lo scopo dei differenti pezzi
           di contenuto in una pagina web, usata per aiutare il computer a determinare
           come dovrebbe essere mostrato quel contenuto.\n\n## Codice Introdotto\n\n*
-          **[HTML](//studio.code.org/docs/weblab/html/)** - `<html></html>` * **[Doctype](//studio.code.org/docs/weblab/doctype/)**
-          - `<!DOCTYPE>` * **[Paragraph](//studio.code.org/docs/weblab/P/)** - `<p></p>`
-          * **[Body](//studio.code.org/docs/weblab/body/)** - `<body></body>` * **[Head](//studio.code.org/docs/weblab/head/)**
+          **[HTML](//docs.code.org/weblab/html/)** - `<html></html>` * **[Doctype](//docs.code.org/weblab/doctype/)**
+          - `<!DOCTYPE>` * **[Paragraph](//docs.code.org/weblab/P/)** - `<p></p>`
+          * **[Body](//docs.code.org/weblab/body/)** - `<body></body>` * **[Head](//docs.code.org/weblab/head/)**
           - `<head></head>`\n"
       CSD U2 L4 Overview:
-        title: titolo
         content1: Descrizione qui
         markdown: |+
           # Panoramica
@@ -737,10 +728,9 @@ it-IT:
 
           ## Codice Introduzione
 
-          * **[Intestazione](//studio.code.org/docs/weblab/h/)** - `<h1></h1>`
+          * **[Intestazione](//docs.code.org/weblab/h/)** - `<h1></h1>`
 
       CSD U2 L5 Overview:
-        title: titolo
         content1: Descrizione qui
         markdown: |
           # Panoramica
@@ -756,7 +746,6 @@ it-IT:
           (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
           * [Investigazione Sociale - Guida Attività](https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
       CSD U2 L6 Overview:
-        title: titolo
         content1: Descrizione qui
         markdown: |+
           # Panoramica
@@ -766,9 +755,9 @@ it-IT:
           ## Codice Introdotto
 
 
-          * **[Elenco Disordinato](//studio.code.org/docs/weblab/ul/)** - `<ul></ul>`
-          *  **[Elenco Elementi](//studio.code.org/docs/weblab/li/)** - `<li></li>`
-          *  **[Elenco Ordinato](//studio.code.org/docs/weblab/ol/)** - `<ol></ol>`
+          * **[Elenco Disordinato](//docs.code.org/weblab/ul/)** - `<ul></ul>`
+          *  **[Elenco Elementi](//docs.code.org/weblab/li/)** - `<li></li>`
+          *  **[Elenco Ordinato](//docs.code.org/weblab/ol/)** - `<ol></ol>`
 
       CSD U2 Lesson 6 Overview:
         content1: Descrizione qui
@@ -812,15 +801,18 @@ it-IT:
           5. Yahoo.com - Un motore di ricerca, fornitore email e fonte di notizie
           6. Wikipedia.org - Un'enciclopedia libera con contenuti generati dagli utenti
       CSD U2 expand project:
-        title: titolo
         content1: Descrizione qui
       CSD U2 expand project_2018:
-        title: titolo
         content1: Descrizione qui
       CSD U2 expand project_2018_2019:
-        title: titolo
         content1: Descrizione qui
       CSD U2 image debug match:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Abbina il codice HTML buggato con la descrizione del suo bug.
         questions:
         - text: L'attributo 'src' è scritto in modo scorretto.
@@ -828,13 +820,18 @@ it-IT:
         - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
         - text: L'indirizzo immagine non è dato come attributo 'src'
         - text: C'è uno spazio nel nome del file
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
       CSD U2 lists match:
+        answers:
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         content1: Abbina la lista al codice che la compone.
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
@@ -846,19 +843,19 @@ it-IT:
         - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
-            AM.png
-        answers:
-        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
-            PM.png
-        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
-            PM.png
-        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
-            PM.png
-        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
-            PM.png
-        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
             AM.png
       CSD U2 lists match_2018:
+        answers:
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         content1: Abbina la lista al codice che la compone.
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
@@ -870,19 +867,19 @@ it-IT:
         - text: https://images.code.org/17bf31d6521c45f56301f6224732e514-image-1493336218041.32.29
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
-            AM.png
-        answers:
-        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
-            PM.png
-        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
-            PM.png
-        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
-            PM.png
-        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
-            PM.png
-        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
             AM.png
       CSD U2 lists match_2018_2019:
+        answers:
+        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
+            PM.png
+        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
+            PM.png
+        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
+            PM.png
+        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
+            PM.png
+        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
+            AM.png
         content1: Abbina la lista al codice che la compone.
         questions:
         - text: https://images.code.org/b7b998dd12e507d163d7dac0fcd37b8c-image-1493336218044.31.41
@@ -895,28 +892,19 @@ it-IT:
             PM.png
         - text: https://images.code.org/50e0264011243637e12e4972d573d278-image-1493399022792.02.38
             AM.png
-        answers:
-        - text: https://images.code.org/c77491ea22b3b977383bfd2ca3655df1-image-1493336218041.31.27
-            PM.png
-        - text: https://images.code.org/9007a23e2767b57e84ffad78675faf6a-image-1493336218044.50.09
-            PM.png
-        - text: https://images.code.org/d3be2ba9f4a398277f9663bbd5fdf783-image-1493336218042.31.59
-            PM.png
-        - text: https://images.code.org/1bbd9b340b51a295760f8daa4714cf84-image-1493336218035.32.21
-            PM.png
-        - text: https://images.code.org/72bbedfd40904b68f2020af0676e0c3a-image-1493399020395.02.32
-            AM.png
       CSD U2 project guide:
-        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U2 project guide_2018:
-        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U2 project guide_2018_2019:
-        title: Il tuo Sito Web Personale
         content1: Descrizione qui
       CSD U3 - conditionals - Matching:
-        title: 'Abbinamento: Comparazione Operatori'
+        answers:
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
         content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
         - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
@@ -926,14 +914,14 @@ it-IT:
         - {}
         - {}
         - {}
-        answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
+        title: 'Abbinamento: Comparazione Operatori'
       CSD U3 - conditionals - Matching_2018:
-        title: 'Abbinamento: Comparazione Operatori'
+        answers:
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
         content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
         - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
@@ -943,14 +931,14 @@ it-IT:
         - {}
         - {}
         - {}
-        answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
+        title: 'Abbinamento: Comparazione Operatori'
       CSD U3 - conditionals - Matching_2018_2019:
-        title: 'Abbinamento: Comparazione Operatori'
+        answers:
+        - text: cane.rotazione &lt; gatto.rotazione
+        - text: cane.x &lt; gatto.x
+        - text: cane.scala &gt; gatto.scala
+        - text: cane.x &gt; gatto.x
+        - text: cane.x == gatto.x
         content1: Abbina l'espressione booleana alla descrizione in inglese.
         questions:
         - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
@@ -960,44 +948,37 @@ it-IT:
         - {}
         - {}
         - {}
-        answers:
-        - text: cane.rotazione &lt; gatto.rotazione
-        - text: cane.x &lt; gatto.x
-        - text: cane.scala &gt; gatto.scala
-        - text: cane.x &gt; gatto.x
-        - text: cane.x == gatto.x
+        title: 'Abbinamento: Comparazione Operatori'
       CSD U3 Boolean MC:
-        title: titolo
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titolo
       CSD U3 Boolean MC_2018:
-        title: titolo
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titolo
       CSD U3 Boolean MC_2018_2019:
-        title: titolo
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: titolo
       CSD U3 Card Examples_2018:
-        title: Fare una Carta Interattiva
         content1: Descrizione qui
       CSD U3 Card Examples_2018_2019:
-        title: Fare una Carta Interattiva
         content1: Descrizione qui
       CSD U3 Functions Prediction define first:
         answers:
@@ -1018,210 +999,182 @@ it-IT:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      CSD U3 combining rep:
-        title: titolo
-        content1: Descrizione qui
-      CSD U3 combining rep_2018:
-        title: titolo
-        content1: Descrizione qui
-      CSD U3 combining rep_2018_2019:
-        title: titolo
-        content1: Descrizione qui
-      CSD U3 drawSprites placement match:
+        - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U3 combining rep:
+        content1: Descrizione qui
+      CSD U3 combining rep_2018:
+        content1: Descrizione qui
+      CSD U3 combining rep_2018_2019:
+        content1: Descrizione qui
+      CSD U3 drawSprites placement match:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 game intro:
-        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 game intro_2018:
-        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 game intro_2018_2019:
-        title: Crea il Tuo Gioco
         content1: Descrizione qui
       CSD U3 platform intro:
-        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U3 platform intro_2018:
-        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U3 platform intro_2018_2019:
-        title: Costruisci un Jumper Platform
         content1: Descrizione qui
       CSD U5 Encryption 1:
-        title: titolo
         content1: Descrizione qui
       CSD U5 Encryption 1_2018:
-        title: titolo
         content1: Descrizione qui
       CSD U5 Encryption 1_2018_2019:
-        title: titolo
         content1: Descrizione qui
       CSD U5 Encryption 2:
-        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 Encryption 2_2018:
-        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 Encryption 2_2018_2019:
-        title: Decodificare Stringhe Binarie
         content1: Descrizione qui
       CSD U5 L13 SFLP Interpreting Data:
-        title: titolo
         content1: Descrizione qui
       CSD U5 crosstab warmup:
-        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 crosstab warmup_2018:
-        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 crosstab warmup_2018_2019:
-        title: Sondaggio Pizza
         content1: Descrizione qui
       CSD U5 data visualization:
-        title: titolo
         content1: Descrizione qui
       CSD U5 data visualization_2018:
-        title: titolo
         content1: Descrizione qui
       CSD U5 data visualization_2018_2019:
-        title: titolo
         content1: Descrizione qui
       CSD U5 student record:
-        title: titolo
         content1: Descrizione qui
       CSD U5 student record_2018:
-        title: titolo
         content1: Descrizione qui
       CSD U5 student record_2018_2019:
-        title: titolo
         content1: Descrizione qui
       CSD U6 LED create intro:
-        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 LED create intro_2018:
-        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 LED create intro_2018_2019:
-        title: Fare un App Usando i Led
         content1: Descrizione qui
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 final intro:
         content1: Descrizione qui
       CSD U6 final intro_2018:
@@ -1229,23 +1182,32 @@ it-IT:
       CSD U6 final intro_2018_2019:
         content1: Descrizione qui
       CSD U6 setProperty predict multi:
-        title: Fai una previsione
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
         - {}
+        - correct: true
+        questions:
+        - {}
+        title: Fai una previsione
       CSD U6 setProperty predict multi_2018:
-        title: Fai una previsione
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - correct: true
         - {}
+        - correct: true
+        questions:
+        - {}
+        title: Fai una previsione
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Fai una previsione
       Dance_Party_extras_intro:
         markdown: |
           # Continua a ballare!
@@ -1409,35 +1371,36 @@ it-IT:
 
           </div>
       Internet Simulator Setup:
-        title: Impostazione Simulatore Internet
         content1: Descrizione qui
       Internet Simulator Setup 2:
-        title: titolo
         content1: Descrizione qui
       Internet Simulator Setup 3:
-        title: Impostazione Simulatore Internet 3
         content1: Descrizione qui
       K-1 Artist 1 Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Quale sequenza di blocchi ti fa completare il disegno?
         answers:
         - text: "/script_assets/k_1_images/artist_images/W|S|S.png"
         - text: "/script_assets/k_1_images/artist_images/E|S|S.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/S|E|E.png"
         - text: "/script_assets/k_1_images/artist_images/E|S.png"
-      K-1 Artist 1 Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
+        - text: Quale sequenza di blocchi ti fa completare il disegno?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Artist 1 Multi 2:
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - text: Quale sequenza di blocchi ti fa disegnare un quadrato?
+        title: Esercizio di Verifica (Risposte Multiple)
       K-1 Artist 2 Match 2:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
         content2: Associa ogni figura a destra con la figura a sinistra che è dello
           stesso tipo.
         questions:
@@ -1445,34 +1408,34 @@ it-IT:
         - text: "/script_assets/k_1_images/artist_images/large_square.png"
         - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
         - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
-        answers:
-        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
-        - text: "/script_assets/k_1_images/artist_images/small_square.png"
-        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
-        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        title: Esercizio di Verifica (Corrispondenza)
       K-1 Bee 1 Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        questions:
-        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
-            dosi di nettare ottieni?
         answers:
         - {}
         - correct: true
         - {}
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
-      K-1 Bee 1 Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
             dosi di nettare ottieni?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Bee 1 Multi 2:
         answers:
         - {}
         - {}
         - {}
         - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
           correct: true
+        questions:
+        - text: Sommando il nettare contenuto nei due fiori in alto a sinistra, quante
+            dosi di nettare ottieni?
+        title: Esercizio di Verifica (Risposte Multiple)
       K-1 Bee Loops Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Associa ciascun blocco sulla destra con il blocco sulla sinistra
           che esegue le stesse azioni.
         questions:
@@ -1480,13 +1443,12 @@ it-IT:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
         - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
-        answers:
-        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
-        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
-        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
-        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
-      K-1 Big Event Match 1:
         title: Esercizio di Verifica (Corrispondenza)
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
         content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Associa ogni sequenza di figure alla relativa sequenza di mosse
           di danza, usando la corrispondenza sopra illustrata.
@@ -1494,164 +1456,158 @@ it-IT:
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
         - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
-        answers:
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
-        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        title: Esercizio di Verifica (Corrispondenza)
       K-1 Digital Footprint Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
-        questions:
-        - text: Quale animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
           correct: true
-      K-1 Getting Loopy Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
-        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
-            i blocchi `ripeti`, cioè i <i>cicli</i>?
+        - text: Quale animale ha l'impronta digitale che lo rende <strong>il più insicuro</strong>?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Getting Loopy Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
-      K-1 Happy Maps Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
-        - text: Quale freccia fa arrivare il Flurb al tesoro?
+        - text: Come semplificheresti la sequenza di blocchi sulla sinistra usando
+            i blocchi `ripeti`, cioè i <i>cicli</i>?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Happy Maps Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
-      K-1 Keep it Private Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
-        - text: Quali informazioni dovresti <strong>non condividere online</strong>?
+        - text: Quale freccia fa arrivare il Flurb al tesoro?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Keep it Private Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
-      K-1 Maze Debugging Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
-            per farmi arrivare al maialino?
+        - text: Quali informazioni dovresti <strong>non condividere online</strong>?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Maze Debugging Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/WW.png"
-      K-1 Maze Loops Multi 1:
+        questions:
+        - text: Quale blocco devi aggiungere alla sequenza mostrata qua a sinistra
+            per farmi arrivare al maialino?
         title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Maze Loops Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
         questions:
         - text: Quale blocco `ripeti` fa gli stessi movimenti della sequenza di blocchi
             sulla sinistra?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Maze Loops Multi 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-      K-1 Maze Loops Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
         - text: Scegli il blocco `ripeti` che esegue gli stessi movimenti della sequenza
             di blocchi sulla sinistra.
-        answers:
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
-          correct: true
+        title: Esercizio di Verifica (Risposte Multiple)
       K-1 Maze Match 1:
-        title: Esercizio di Verifica (Corrispondenza)
-        content2: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare
-          al maialino.
-        pre_title: Istruzioni
-        questions:
-        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
-        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/ENE.png"
         - text: "/script_assets/k_1_images/move_blocks/WW.png"
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
-      K-1 Maze Multiple Choice 2:
-        title: 'Labirinto: Sequenze e Cicli'
+        content2: Associa ad ogni situazione la sequenza di blocchi che mi fa arrivare
+          al maialino.
         questions:
-        - text: Quale sequenza di blocchi mi fa arrivare al maialino?
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Esercizio di Verifica (Corrispondenza)
+      K-1 Maze Multiple Choice 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
-      K-1 Move It Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
-        - text: Quali frecce fanno arrivare il Flurb ai fiori?
+        - text: Quale sequenza di blocchi mi fa arrivare al maialino?
+        title: 'Labirinto: Sequenze e Cicli'
+      K-1 Move It Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
         - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
         - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
-      K-1 Plant a Seed Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
-        - text: Quale immagine scegli per descrivere il primo passo di questo algoritmo?
+        - text: Quali frecce fanno arrivare il Flurb ai fiori?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Plant a Seed Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
           correct: true
-      K-1 Plant a Seed Multi 2:
-        title: Esercizio di Verifica (Risposte Multiple)
-        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
         questions:
-        - text: Quale immagine scegli per descrivere il passo di questo algoritmo
-            rappresentato dal punto interrogativo?
+        - text: Quale immagine scegli per descrivere il primo passo di questo algoritmo?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Plant a Seed Multi 2:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
-      K-1 Word Search Multi 1:
-        title: Esercizio di Verifica (Risposte Multiple)
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
-        - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
-            parola "MOVE"?
+        - text: Quale immagine scegli per descrivere il passo di questo algoritmo
+            rappresentato dal punto interrogativo?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Word Search Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/WSS.png"
-      K-1 Word Search Multi 3:
-        title: Esercizio di Verifica (Risposte Multiple)
         questions:
-        - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
-            a scrivere?
+        - text: Quale sequenza di blocchi devi scegliere per scrivere le lettere della
+            parola "MOVE"?
+        title: Esercizio di Verifica (Risposte Multiple)
+      K-1 Word Search Multi 3:
         answers:
         - text: SET
         - text: SQUARE
           correct: true
         - text: SOUTH
+        questions:
+        - text: Con la sequenza di spostamenti che ti è stata data, quale parola riesci
+            a scrivere?
+        title: Esercizio di Verifica (Risposte Multiple)
       Multi-Screen Apps:
-        title: titolo
         content1: Descrizione qui
       New Challenge Introduction:
-        title: titolo
         content1: Descrizione qui
         markdown: "### Nuova Sfida: Decodifica un Codice a Sostituzione Casuale...
           con un nuovo componente\n\nChe succederebbe se invece di scivolare l'intero
@@ -1682,7 +1638,6 @@ it-IT:
           <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Sondaggio preliminare</a>
 
       OPD-K5 Stage3aGo:
-        title: titolo
         content1: Descrizione qui
       OPD-K5 Welcome 2:
         markdown: |+
@@ -1701,20 +1656,17 @@ it-IT:
 
 
       Prepare for your presentation:
-        title: titolo
         content1: Descrizione qui
         markdown: |
           # Presentazione del progetto
 
           È ora di presentare il tuo progetto! Il tuo insegnante ti fornirà maggiori dettagli su come presentare il tuo lavoro ai tuoi compagni di classe.
       Prepare for your presentation_2018:
-        title: Preparati per la tua presentazione
         markdown: |
           # Presentazione del progetto
 
           È ora di presentare il tuo progetto! Il tuo insegnante ti fornirà maggiori dettagli su come presentare il tuo lavoro ai tuoi compagni di classe.
       'Technique: Frequency Analysis':
-        title: Come decodificare un codice a sostituzione
         content1: Descrizione qui
         markdown: "# Decodificare i Codici a Sostituzione\n\nLa migliore tecnica per
           decodificare un codice a sostituzione casuale è conosciuta come **analisi
@@ -1748,7 +1700,6 @@ it-IT:
           ti ci vuole per decodificare un codice a sostituzione casuale?\n* È un bene
           o no?\n\n\n"
       Terminology Recap:
-        title: Questa era facile, che c'è poi?
         content1: Descrizione qui
         markdown: "#Pausa e Ricapitolare\n\nI messaggi codificati con il **codice
           di Cesare** sono molto facili da decodificare, specialmente con uno strumento
@@ -1793,27 +1744,24 @@ it-IT:
 
           * [Cos'è un Computer - Guida Attività](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
         - feedback: Sbagliato.
         - feedback: Sbagliata
-      behaviors 4 predict:
         questions:
         - {}
+      behaviors 4 predict:
         answers:
         - feedback: Sbagliato.
         - correct: true
           feedback: Corretto!
         - feedback: 'Sbagliato. '
         - feedback: Sbagliata
-      courseC_multi_artist_prog6_predict1:
         questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
+        - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1824,10 +1772,10 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so.
           feedback: L'artista disegna un quadrato.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1838,10 +1786,10 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so.
           feedback: L'artista disegna un quadrato.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
           feedback: Sbagliato. L'artista disegna un quadrato.
@@ -1852,10 +1800,10 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so.
           feedback: L'artista disegna un quadrato.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
         answers:
         - text: '4'
           feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
@@ -1869,10 +1817,10 @@ it-IT:
         - text: Non lo so.
           feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
             3 = 12!'
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
         answers:
         - text: '4'
           feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
@@ -1886,10 +1834,10 @@ it-IT:
         - text: Non lo so.
           feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
             3 = 12!'
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
         answers:
         - text: '4'
           feedback: 'Sbagliato. La contadina raccoglierà 4 zucche in ognuno dei 3
@@ -1903,10 +1851,10 @@ it-IT:
         - text: Non lo so.
           feedback: 'La contadina raccoglierà 4 zucche in ognuno dei 3 cicli: 4 x
             3 = 12!'
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quante zucche raccoglierà la contadina dopo che avrai premuto su "Esegui"?
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
@@ -1920,10 +1868,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
@@ -1937,10 +1885,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
-            errore che farà fallire l''esecuzione di questo programma? '
         answers:
         - text: Il programma non fallirà. Scrat riuscirà a raggiungere la ghianda.
           feedback: Sbagliato. Scrat va nella direzione sbagliata dopo l'ultima curva.
@@ -1954,10 +1902,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo errore è che Scrat va nella direzione sbagliata dopo
             l'ultima curva.
+        questions:
+        - text: 'Guarda attentamente il codice riportato di seguito.  Qual è il primo
+            errore che farà fallire l''esecuzione di questo programma? '
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
@@ -1971,10 +1919,10 @@ it-IT:
         - text: Non lo so.
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
@@ -1988,10 +1936,10 @@ it-IT:
         - text: Non lo so.
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino si fermerà un passo prima di raggiungere il maialino.
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
@@ -2005,9 +1953,10 @@ it-IT:
         - text: Non lo so.
           feedback: Questo programma fa in modo che l'uccellino raggiunga perfettamente
             il maialino.
+        questions:
+        - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1:
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
@@ -2020,9 +1969,9 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
@@ -2035,9 +1984,9 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 non si muoverà.
           feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
@@ -2050,10 +1999,9 @@ it-IT:
           feedback: Corretto!
         - text: Non lo so
           feedback: Il blocco "ripeti ... volte" fa andare avanti BB-8 per 5 volte.
+        questions:
+        - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
@@ -2068,10 +2016,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
@@ -2086,10 +2034,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: BB-8 andrà troppo avanti nel primo ciclo.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
@@ -2104,8 +2052,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il primo ciclo fa andare avanti BB-8 solo di 2 caselle, mentre
             dovrebbe andare avanti di 3.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_external_binary1:
-        title: Disegno Binario
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
           è un modo di rappresentare i dati usando solo due opzioni alternative. In
           questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
@@ -2118,7 +2068,6 @@ it-IT:
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
           muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018:
-        title: Disegno Binario
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
           è un modo di rappresentare i dati usando solo due opzioni alternative. In
           questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
@@ -2131,7 +2080,6 @@ it-IT:
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
           muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_external_binary1_2018_2019:
-        title: Disegno Binario
         markdown: "<h1>Disegna con il codice binario</h1>\n \n<h3>Il codice binario
           è un modo di rappresentare i dati usando solo due opzioni alternative. In
           questo caso <b>off</b> e <b>on</b> (<i>spento</i> e <i>acceso</i>).\n<br/>\nQui,
@@ -2144,9 +2092,6 @@ it-IT:
           float=\"left\"/><h3>In questa lezione, ti proponiamo una griglia in cui
           muoverti per creare dei disegni accendendo solo alcuni \"pixel\".</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
           feedback: Sbagliato.
@@ -2157,10 +2102,25 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
           feedback: Sbagliato.
@@ -2171,10 +2131,25 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
-            immagine verrà creata quando cliccherai su "Esegui"?
         answers:
         - text: A
           feedback: Sbagliato.
@@ -2185,10 +2160,25 @@ it-IT:
         - text: D
           correct: true
           feedback: Corretto!
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Che
+            immagine verrà creata quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
@@ -2202,10 +2192,17 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
@@ -2219,10 +2216,17 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
-            realizzerà questo programma quando cliccherai su "Esegui"?
         answers:
         - text: A
           correct: true
@@ -2236,13 +2240,17 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo interno realizza un pentagono e quello esterno lo ripete
             4 volte in cerchio.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dai un'occhiata al codice presente nell'area di lavoro. Che disegno
+            realizzerà questo programma quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
-            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
-            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
-            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
-            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
@@ -2258,13 +2266,13 @@ it-IT:
         - text: Non lo so.
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
-            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
-            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
-            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
-            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
@@ -2280,13 +2288,13 @@ it-IT:
         - text: Non lo so.
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
-            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
-            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
-            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
-            quando cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
@@ -2302,11 +2310,13 @@ it-IT:
         - text: Non lo so.
           feedback: Grazie al blocco `se c'è un fiore`, l'ape prende il nettare solo
             se c'è un fiore sotto alla nuvola.
+        questions:
+        - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
+            questa nuvola. Se c'è un fiore, l'ape dovrebbe raccogliere il nettare
+            una volta. Se non c'è alcun fiore, l'ape non dovrebbe fare nulla. Dai
+            un'occhiata al codice presente nell'area di lavoro. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
-            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
-            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
@@ -2320,11 +2330,11 @@ it-IT:
         - text: Non lo so.
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
-            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
-            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
@@ -2338,11 +2348,11 @@ it-IT:
         - text: Non lo so.
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
-            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
-            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
         answers:
         - text: L'ape prenderà il nettare da ogni fiore e farà il miele in ogni favo.
           correct: true
@@ -2356,132 +2366,131 @@ it-IT:
         - text: Non lo so.
           feedback: Il blocco `se c'è un fiore` permette all'ape di prendere il nettare
             da ogni fiore e fare il miele in ogni favo.
-      courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
-        answers:
-        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà solo 2 dosi di nettare.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà tutto il nettare.
-          correct: true
-          feedback: Corretto!
-        - text: Non lo so.
-          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
-            il nettare, riuscendo così a risolvere l'esercizio.
-      courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
-        answers:
-        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà solo 2 dosi di nettare.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà tutto il nettare.
-          correct: true
-          feedback: Corretto!
-        - text: Non lo so.
-          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
-            il nettare, riuscendo così a risolvere l'esercizio.
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
-        answers:
-        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà solo 2 dosi di nettare.
-          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
-            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
-        - text: L'ape raccoglierà tutto il nettare.
-          correct: true
-          feedback: Corretto!
-        - text: Non lo so.
-          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
-            il nettare, riuscendo così a risolvere l'esercizio.
-      courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
-        answers:
-        - text: '4'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: '8'
-          correct: true
-          feedback: Corretto!
-        - text: '12'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: Non lo so.
-          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-      courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
-        answers:
-        - text: '4'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: '8'
-          correct: true
-          feedback: Corretto!
-        - text: '12'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: Non lo so.
-          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
-        answers:
-        - text: '4'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: '8'
-          correct: true
-          feedback: Corretto!
-        - text: '12'
-          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-        - text: Non lo so.
-          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
-            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
-            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
-            x 2 = 8!
-      courseD_multi_collector_debugging10_predict1:
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
-            Perché, quando cliccherai su "Esegui", Laura non riuscirà a raccogliere
-            tutti i diamanti? Attenzione: Questa è una domanda difficile, leggi bene
-            tutte le opzioni prima di rispondere!'
+            Cosa pensi che succederà quando cliccherai su "Esegui"? Ricorda: sotto
+            ad ogni nuvola ci sarà sempre *un* fiore o *un* favo.'
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà solo 2 dosi di nettare.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà tutto il nettare.
+          correct: true
+          feedback: Corretto!
+        - text: Non lo so.
+          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
+            il nettare, riuscendo così a risolvere l'esercizio.
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà solo 2 dosi di nettare.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà tutto il nettare.
+          correct: true
+          feedback: Corretto!
+        - text: Non lo so.
+          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
+            il nettare, riuscendo così a risolvere l'esercizio.
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - text: L'ape andrà avanti e raccoglierà il nettare solo una volta.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà solo 2 dosi di nettare.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+            e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
+        - text: L'ape raccoglierà tutto il nettare.
+          correct: true
+          feedback: Corretto!
+        - text: Non lo so.
+          feedback: L'ape ripete tre volte il ciclo che la fa andare avanti e raccogliere
+            il nettare, riuscendo così a risolvere l'esercizio.
+        questions:
+        - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
+      courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: '8'
+          correct: true
+          feedback: Corretto!
+        - text: '12'
+          feedback: Sbagliato. L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        - text: Non lo so.
+          feedback: L'ape raccoglie 2 dosi di nettare nel primo ciclo spostandosi
+            in avanti, poi altre 2 dosi nel secondo ciclo andando verso il basso.
+            Tutto ciò è racchiuso in un altro ciclo che si ripete per due volte. 4
+            x 2 = 8!
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Quanto miele verrà prodotto quando cliccherai su "Esegui"?
+      courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laura girerà dalla parte sbagliata mentre cercherà di realizzare il
             percorso a quadrato.
@@ -2501,10 +2510,12 @@ it-IT:
           feedback: Laura girerà dalla parte sbagliata mentre cercherà di realizzare
             il percorso a quadrato *inoltre* il ciclo non sarebbe ripetuto un numero
             sufficiente di volte per consentire a Laura di raccogliere tutti i diamanti.
+        questions:
+        - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
+            Perché, quando cliccherai su "Esegui", Laura non riuscirà a raccogliere
+            tutti i diamanti? Attenzione: Questa è una domanda difficile, leggi bene
+            tutte le opzioni prima di rispondere!'
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
@@ -2523,10 +2534,10 @@ it-IT:
         markdown: |
           I germogli in questo esercizio potranno generare pannocchie o lattughe.
           <br/>
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
@@ -2545,10 +2556,10 @@ it-IT:
         markdown: |
           I germogli in questo esercizio potranno generare pannocchie o lattughe.
           <br/>
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            succederà quando cliccherai su "Esegui"?
         answers:
         - text: La contadina raccoglierà tutte le colture.
           feedback: Sbagliato. Non c'è alcuna istruzione per raccogliere la zucca.
@@ -2567,9 +2578,10 @@ it-IT:
         markdown: |
           I germogli in questo esercizio potranno generare pannocchie o lattughe.
           <br/>
-      courseD_multi_farmer_ramp13:
         questions:
-        - {}
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            succederà quando cliccherai su "Esegui"?
+      courseD_multi_farmer_ramp13:
         answers:
         - text: La contadina avanzerà fino alla fine del percorso e raccoglierà la
             zucca.
@@ -2593,10 +2605,9 @@ it-IT:
           Ecco un nuovo tipo di esercizio con dei blocchi simili a quelli che hai già visto. Riesci a prevedere ciò che accadrà quando eseguirai il seguente programma?
 
 
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
@@ -2611,10 +2622,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
@@ -2629,10 +2640,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
-            dopo l'esecuzione di questo programma?
         answers:
         - text: Nulla. Questo programma lascerà il terreno tutto livellato.
           feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
@@ -2647,10 +2658,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il ciclo `mentre` può essere eseguito tutte le volte che serve,
             ma non ci sono blocchi di codice per rimuovere i mucchi di terra.
+        questions:
+        - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
+            dopo l'esecuzione di questo programma?
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
@@ -2665,10 +2676,10 @@ it-IT:
         - text: Non lo so.
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
@@ -2683,10 +2694,10 @@ it-IT:
         - text: Non lo so.
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Non succederà nulla.
           feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
@@ -2701,10 +2712,10 @@ it-IT:
         - text: Non lo so.
           feedback: La contadina rimuove la terra mentre ce n'è, smettendo appena
             il mucchio è finito
-      courseD_multi_maze_until10_predict2:
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
+      courseD_multi_maze_until10_predict2:
         answers:
         - text: Lo zombie girerà immediatamente a destra e poco dopo si bloccherà.
           correct: true
@@ -2720,10 +2731,10 @@ it-IT:
           feedback: In questo programma, si cerca una possibile svolta a destra prima
             di controllare se è possibile andare avanti. Per questo motivo il programma
             fallisce.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Lo zombie oltrepasserà il bivio corretto e finirà per andare avanti
             e indietro per sempre.
@@ -2738,10 +2749,10 @@ it-IT:
         - text: Non lo so.
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Lo zombie oltrepasserà il bivio corretto e finirà per andare avanti
             e indietro per sempre.
@@ -2756,10 +2767,10 @@ it-IT:
         - text: Non lo so.
           feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
+        questions:
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
@@ -2776,10 +2787,10 @@ it-IT:
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
@@ -2796,10 +2807,10 @@ it-IT:
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
+        questions:
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
-            pensi che succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'uccellino non si muoverà.
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
@@ -2816,46 +2827,49 @@ it-IT:
           feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
-      courseD_multi_scrat_predict1:
         questions:
-        - text: In questo programma c'è un nuovo blocco. Cosa pensi che succederà
-            quando cliccherai su "Esegui"?
+        - text: Dai una bella occhiata al codice presente nell'area di lavoro. Cosa
+            pensi che succederà quando cliccherai su "Esegui"?
+      courseD_multi_scrat_predict1:
         answers:
         - text: Niente. Scrat non si muoverà.
-          feedback: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco
-            'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+          feedback: Sbagliato. Visto che il blocco `vai avanti` è inserito in un blocco
+            `ripeti ... volte`, Scrat si muoverà avanti per tre volte.
         - text: Scrat andrà avanti tre volte, girerà, quindi andrà avanti altre tre
             volte, facendolo arrivare alla ghianda!
           correct: true
           feedback: Corretto!
         - text: Scrat andrà avanti, quindi girerà e andrà a sbattere.
-          feedback: Sbagliato. Visto che il blocco 'vai avanti' è inserito in un blocco
-            'ripeti ... volte', Scrat si muoverà avanti per tre volte.
+          feedback: Sbagliato. Visto che il blocco `vai avanti` è inserito in un blocco
+            `ripeti ... volte`, Scrat si muoverà avanti per tre volte.
         - text: Non lo so.
           feedback: Visto che il blocco `vai avanti` è inserito in un blocco `ripeti
             ... volte`, Scrat si muove avanti per tre volte. Poi si gira e va avanti
             altre tre volte, arrivando quindi fino alla ghianda!
-      courseE_multi_bee_functions_predict1:
         questions:
-        - text: Qui trovi lo stesso programma del precedente esercizio, ma la quantità
-            di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai
-            su "Esegui"?
+        - text: In questo programma c'è un nuovo blocco. Cosa pensi che succederà
+            quando cliccherai su "Esegui"?
+      courseE_multi_bee_functions_predict1:
         answers:
         - text: Lo stesso programma funzionerà anche per risolvere questo esercizio.
           correct: true
           feedback: Corretto! Non importa che la quantità di miele sia diversa. La
             funzione è stata costruita proprio per gestire qualsiasi quantità di miele.
-        - feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
-            qualsiasi quantità di miele.
-        - feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
-            qualsiasi quantità di miele.
+        - text: L'ape non produrrà abbastanza miele.
+          feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
+            qualsiasi quantità di miele maggiore di zero.
+        - text: L'ape cercherà di produrre troppo miele.
+          feedback: Sbagliato. Il codice presente nella funzione è in grado di gestire
+            qualsiasi quantità di miele maggiore di zero.
         - text: Non lo so.
           feedback: Il programma funzionerà anche per risolvere questo esercizio.
             Il codice presente nella funzione è in grado di gestire qualsiasi quantità
-            di miele.
-      courseE_multi_farmer_functions11_predict:
+            di miele maggiore di zero.
         questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
+        - text: Qui trovi lo stesso programma del precedente esercizio, ma la quantità
+            di miele da produrre in questo caso è diversa. Cosa accadrà quando cliccherai
+            su "Esegui"?
+      courseE_multi_farmer_functions11_predict:
         answers:
         - text: La contadina raccoglierà due zucche.
           feedback: Sbagliato. Il programma non richiama la funzione "controlla e
@@ -2868,9 +2882,9 @@ it-IT:
         - text: La contadina raccoglierà le pannocchie.
           correct: true
           feedback: Corretto!
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
         answers:
         - text: La contadina raccoglierà due zucche.
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
@@ -2884,9 +2898,9 @@ it-IT:
         - text: La contadina raccoglierà le pannocchie.
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
         answers:
         - text: La contadina raccoglierà due zucche.
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
@@ -2900,9 +2914,9 @@ it-IT:
         - text: La contadina raccoglierà le pannocchie.
           feedback: Sbagliato. La contadina va avanti fino alla fine del percorso,
             poi si gira e torna indietro fino a quando raccoglie la lattuga.
+        questions:
+        - text: Guarda le funzioni definite qui sotto.  Cosa raccoglierà la contadina?
       courseE_prediction_artistFunction1:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
@@ -2916,9 +2930,9 @@ it-IT:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
@@ -2932,9 +2946,9 @@ it-IT:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Nulla. La funzione non viene richiamata nel programma.
           feedback: Sbagliato. La funzione è richiamata due volte nel programma.
@@ -2948,10 +2962,9 @@ it-IT:
           correct: true
           feedback: Corretto! La funzione è richiamata due volte nel programma, con
             un salto in mezzo.
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_bee_variables_8a_2018:
-        questions:
-        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
-            raccolto l'ape?
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
             variabile non è "raccogliere".
@@ -2967,10 +2980,10 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+        questions:
+        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
+            raccolto l'ape?
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
-            raccolto l'ape?
         answers:
         - text: L'ape non raccoglierà alcuna dose di nettare, perché il nome della
             variabile non è "raccogliere".
@@ -2986,6 +2999,9 @@ it-IT:
           feedback: La variabile viene impostata nuovamente a 0 prima delle ultime
             due chiamate della funzione, in cui viene aggiunto 1 ogni volta. Quindi
             poi l'ape raccoglie 2 dosi di nettare.
+        questions:
+        - text: Guarda il programma qui sotto. Alla fine, quante dosi di nettare avrà
+            raccolto l'ape?
       courseF_external_variableConstant:
         markdown: "<h2>Qualcosa in più sulle variabili</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\"
           style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>Hai appena
@@ -3175,7 +3191,7 @@ it-IT:
           per ripetere certi schemi ricorrenti. Può essere di aiuto scrivere prima
           il programma senza usare i cicli e poi cercare di individuare gli schemi
           che si ripetono.\n\n### Quando ne vedi uno, sposta quell'insieme di blocchi
-          all'interno di un blocco di `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
+          all'interno di un blocco `ripeti`!\n\n---\n\n## **Termini da conoscere**\n\n*
           ### **Ciclo** - L'esecuzione ripetuta di una certa azione\n\n* ### **Ripetere**
           - Fare qualcosa più e più volte \n"
       courseF_markdown_loops_intro:
@@ -3265,8 +3281,6 @@ it-IT:
 
 
       courseF_multi_artist_for10_predict1:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
@@ -3285,9 +3299,9 @@ it-IT:
             disegna una linea più lunga e più spessa.
         markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
           con contatore per cambiare la larghezza del pennello.  \n\n\n"
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
@@ -3306,9 +3320,9 @@ it-IT:
             disegna una linea più lunga e più spessa.
         markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
           con contatore per cambiare la larghezza del pennello.  \n\n\n"
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà una linea retta che aumenta di spessore procedendo
             da una parte all'altra dell'area di gioco.
@@ -3327,23 +3341,32 @@ it-IT:
             disegna una linea più lunga e più spessa.
         markdown: "In questo disegno, abbiamo usato la variabile `counter` del ciclo
           con contatore per cambiare la larghezza del pennello.  \n\n\n"
-      courseF_multi_artist_fwp2_predict1:
         questions:
-        - {}
+        - text: Cosa succederà quando cliccherai su "Esegui"?
+      courseF_multi_artist_fwp2_predict1:
         answers:
-        - correct: true
+        - text: L'artista utilizzerà la stessa funzione per disegnare due scatole
+            di dimensioni diverse.
+          correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+        - text: L'artista utilizzerà la due diverse funzioni per disegnare due scatole
+            di dimensioni diverse.
+          feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
             funzione per ottenere diversi risultati.
-        - feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
+        - text: L'artista utilizzerà la due diverse funzioni per disegnare due scatole
+            di dimensioni uguali.
+          feedback: Sbagliato. I parametri ti consentono di utilizzare una singola
             funzione per ottenere diversi risultati.
         - text: Non lo so.
           feedback: Il programma utilizza i parametri per consentire ad una singola
             funzione di creare caselle di dimensioni diverse.
+        markdown: |+
+          Abbiamo aggiunto dei parametri alla funzione `disegnare un quadrato`.  Fai clic sul pulsante blu "modifica" per vedere l'intera definizione della funzione.
+
+
+        questions:
+        - text: Cosa succederà quando eseguirai questo programma?
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
@@ -3358,10 +3381,10 @@ it-IT:
         - text: Non lo so.
           feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
+        questions:
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
@@ -3376,10 +3399,10 @@ it-IT:
         - text: Non lo so.
           feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
+        questions:
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - text: Abbiamo impostato la variabile "length" ("lunghezza") a 50. Cosa accadrà
-            quando cliccherai su "Esegui"?
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
           correct: true
@@ -3394,10 +3417,10 @@ it-IT:
         - text: Non lo so.
           feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
-      courseF_multi_bee_conditionals1_predict1:
         questions:
-        - text: Se non c'è un fiore, l'ape non deve fare nulla. Dai un'occhiata al
-            codice qui sotto. Cosa pensi che accadrà dopo aver cliccato su "Esegui"?
+        - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
+            quando cliccherai su "Esegui"?
+      courseF_multi_bee_conditionals1_predict1:
         answers:
         - text: 'L''ape andrà fin sotto la nuvola e cercherà in ogni caso di prendere
             una dose di nettare. '
@@ -3418,10 +3441,10 @@ it-IT:
           **una volta**.
 
 '
-      courseF_multi_bee_conditionals7_predict2:
         questions:
-        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
-            Cosa pensi che succederà quando cliccherai su "Esegui"?
+        - text: Se non c'è un fiore, l'ape non deve fare nulla. Dai un'occhiata al
+            codice qui sotto. Cosa pensi che accadrà dopo aver cliccato su "Esegui"?
+      courseF_multi_bee_conditionals7_predict2:
         answers:
         - text: L'ape prenderà il nettare da ogni fiore, altrimenti farà il miele.
           correct: true
@@ -3439,10 +3462,10 @@ it-IT:
         markdown: "A volte una nuvola copre un fiore, altre volte copre un favo! In
           ogni caso, sotto ogni nuvola ci sarà sempre solo **un** fiore o **un** favo.
           \n"
-      courseF_multi_bee_for3_predict1:
         questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa pensi che succederà quando cliccherai su "Esegui"?
+      courseF_multi_bee_for3_predict1:
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
@@ -3465,10 +3488,10 @@ it-IT:
           Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
 
 
+        questions:
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
@@ -3490,10 +3513,10 @@ it-IT:
           Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
 
 
+        questions:
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
-            cliccherai su "Esegui"?
         answers:
         - text: 'L''ape andrà avanti e raccoglierà tutto il nettare da ogni fiore. '
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
@@ -3515,30 +3538,41 @@ it-IT:
           Ah! Usando un <i>ciclo con contatore</i> (`per counter`), questo esercizio diventa molto più facile!
 
 
-      courseF_multi_bee_fwp9_predict1:
         questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
+        - text: Guarda il codice presente nell'area di lavoro. Cosa succederà quando
+            cliccherai su "Esegui"?
+      courseF_multi_bee_fwp9_predict1:
         answers:
-        - feedback: Sbagliato. La funzione è progettata per raccogliere il numero
+        - text: L'ape non raccoglierà nettare, né produrrà miele.
+          feedback: Sbagliato. La funzione è progettata per raccogliere il numero
             di dosi di nettare o di miele passato attraverso un parametro.
-        - correct: true
+        - text: 'Ad ogni scalino del percorso a gradinata, l''ape totalizzerà TRE
+            tra dosi di nettare e dosi di miele, poi DUE tra dosi di nettare e dosi
+            di miele. '
+          correct: true
           feedback: Corretto! La funzione è progettata per raccogliere il numero di
             dosi di nettare o di miele passato attraverso un parametro.
-        - feedback: Sbagliato. La funzione è progettata per raccogliere il numero
+        - text: 'L''ape raccoglierà una sola dose di nettare o produrrà una sola dose
+            di miele ad ogni iterazione del ciclo. '
+          feedback: Sbagliato. La funzione è progettata per raccogliere il numero
             di dosi di nettare o di miele passato attraverso un parametro.
         - text: Non lo so.
           feedback: Se clicchi per guardare com'è fatta all'interno la funzione, vedi
             che è progettata per raccogliere il numero di dosi di nettare o di miele
             passato attraverso un parametro.
-      courseF_multi_playlab_variables4c_predictive1:
+        markdown: |+
+          Sotto queste nuvole, ci può essere un fiore con esattamente UNA dose di nettare oppure un favo con esattamente UNA dose di miele. Prima di rispondere alla seguente domanda, clicca sul pulsante blu "modifica" della funzione per vedere cosa c'è all'interno.
+
+
         questions:
-        - text: Cosa succederebbe se l'utente inserisse il nome "Ali"?
+        - text: Cosa succederà quando cliccherai su "Esegui"?
+      courseF_multi_playlab_variables4c_predictive1:
         answers:
-        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." ("Piacere di conoscerti,
-            Ali.")'
+        - text: 'Il pirata direbbe: "Pleasure to meet you, Ali." (_Piacere di conoscerti,
+            Ali._)'
           correct: true
           feedback: 'Corretto. '
-        - text: 'Il pirata direbbe: "Pleasure to meet you." ("Piacere di conoscerti.")'
+        - text: 'Il pirata direbbe: "Pleasure to meet you." (_Piacere di conoscerti._)'
           feedback: Sbagliato. Nota che il blocco `unisci` permette di inserire il
             nome fornito nella frase del pirata.
         - text: 'Il pirata direbbe: "Ali."'
@@ -3551,10 +3585,10 @@ it-IT:
           blocco `chiedi` interrompe l'esecuzione del programma e chiede all'utente
           di inserire del testo. \n\nQualsiasi testo l'utente inserisca, viene memorizzato
           nella variabile posizionata alla fine del blocco `chiedi`.  In questo caso,
-          la variabile `name` (\"nome\").\n"
+          la variabile `name` (_nome_).\n"
+        questions:
+        - text: Cosa succederebbe se l'utente inserisse il nome "Ali"?
       coursee_prediction_artistfunction2:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
@@ -3568,9 +3602,9 @@ it-IT:
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
@@ -3584,9 +3618,9 @@ it-IT:
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - text: Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
           feedback: Sbagliato. Il ciclo usa la funzione "disegna un poligono" al posto
@@ -3600,6 +3634,8 @@ it-IT:
         - text: L'artista disegnerà quattro quadrati uno sopra l'altro.
           feedback: Sbagliato. Il ciclo gira di 90 gradi tra le due chiamate alla
             funzione "disegna un poligono".
+        questions:
+        - text: Cosa succederà quando cliccherai su "Esegui"?
       csd-pre-survey-2017-levelgroup:
         markdown: "# Panoramica\n\nLa classe lavora in gruppi per progettare barche
           con fogli di alluminio che possano supportare più centesimi possibili. Alla
@@ -3609,28 +3645,25 @@ it-IT:
           - Guida Attività (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
           [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
       grade2_multi_collector_A_predict1:
+        answers:
+        - text: Usando questo codice Laura raccoglierà 4 diamanti.
+          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
+            un diamante in una casella che non ne contiene.
+        - text: Il programma provocherà un errore perché Laura cercherà di raccogliere
+            un diamante in una casella che non ne contiene.
+          correct: true
+          feedback: Corretto!
+        - text: Usando questo codice Laura raccoglierà tutti i diamanti.
+          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
+            un diamante in una casella che non ne contiene.
+        - text: Non lo so.
+          feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
+            in una casella che non ne contiene.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Se il programma venisse eseguito fino alla fine (ignorando gli errori),
             quanti diamanti riuscirebbe a raccogliere Laura?
-        answers:
-        - text: Usando questo codice Laura raccoglierà 4 diamanti.
-          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
-            un diamante in una casella che non ne contiene.
-        - text: Il programma provocherà un errore perché Laura cercherà di raccogliere
-            un diamante in una casella che non ne contiene.
-          correct: true
-          feedback: Corretto!
-        - text: Usando questo codice Laura raccoglierà tutti i diamanti.
-          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
-            un diamante in una casella che non ne contiene.
-        - text: Non lo so.
-          feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
-            in una casella che non ne contiene.
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
@@ -3645,10 +3678,10 @@ it-IT:
         - text: Non lo so.
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
-            Cosa succederà quando cliccherai su "Esegui"?
         answers:
         - text: Usando questo codice Laura raccoglierà 4 diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
@@ -3663,5 +3696,6 @@ it-IT:
         - text: Non lo so.
           feedback: Il programma si blocca perché Laura cerca di raccogliere un diamante
             in una casella che non ne contiene.
-      gradek1_activity_beNice:
-        title: Il computer è tuo amico
+        questions:
+        - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
+            Cosa succederà quando cliccherai su "Esegui"?

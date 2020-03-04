@@ -308,5 +308,3 @@ lv-LV:
         uzstādījumu RANDOM fons, kad kaut kas notiek, piemēram, kad izvairās no šķēršļa.
       flappy_9: Lai pamainītu lietas, tā vietā, lai beigtu spēli, kad atduries pret
         šķērsli, iestati punktu skaitu atpakaļ uz 0.
-      scrat 19: Vēl viens uzdevums ar "ja-tad" bloku. Vai vari to atrisināt pareizi
-        no pirmā mēģinājuma?

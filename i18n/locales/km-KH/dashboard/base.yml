@@ -404,6 +404,7 @@ km:
     notes: 'គ្មាន​វីដេអូ​ទេ? មើល​កំណត់​ចំណាំ។'
     autoplay_option: 'ចាក់​វីដេអូ​ដោយ​ស្វ័យប្រវត្តិ'
     download: 'ទាញយក​វីដេអូ'
+    label: 'វីដេអូ'
   compatibility:
     upgrade:
       link: "សិក្សាបន្ថែម"

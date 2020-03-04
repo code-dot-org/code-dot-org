@@ -1457,7 +1457,7 @@ th:
             Dance Party:
               name: Dance Party
           title: งานเต้นรำ
-          description_short: มีเพลงของศิลปินดังต่างๆ เช่น Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และคนอื่นๆ อีก 25 คน!
+          description_short: ฟีเจอริ่งกับ Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara และอีก 25 คน!
           description: เขียนโค้ดสำหรับปาร์ตี้เต้นรำของคุณเอง เพื่อแชร์กับเพื่อนๆ ของคุณ!
         frozen-2018-test-b:
           stages:
@@ -1544,7 +1544,7 @@ th:
             Digital Citizenship:
               name: พลเมืองดิจิทัล
             Artist Binary:
-              name: ศิลปินศูนย์หนึ่ง
+              name: ศิลปิน Binary
             Dance Party:
               name: Dance Party
         coursee-2019:
@@ -1788,6 +1788,10 @@ th:
               name: เงื่อนไข 
             Functions:
               name: ฟังก์ชัน
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: การแก้ไขจุดบกพร่อง
         csl-vn:
           stages:
             Programming with Rey and BB-8:
@@ -1831,7 +1835,7 @@ th:
               name: การวนรอบ
         dance-extras-2019:
           description: ศึกษาต่อเนื่องจากขั้นพื้นฐานด้วยการใส่ไอเดียเพิ่มเติมให้กับโครงงาน
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: เงื่อนไข 
@@ -1861,3 +1865,23 @@ th:
               name: ฟังก์ชั่นในไมน์คราฟท์
             Functions with Harvester:
               name: ฟังก์ชั่นต่างๆ กับเรื่องเกษตรกร
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: เงื่อนไข 
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: เงื่อนไข 
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: ฟังก์ชันกับพารามิเตอร์
+        csd3-2020:
+          stages:
+            Variables:
+              name: ตัวแปร
+            Conditionals:
+              name: เงื่อนไข 
+            Functions:
+              name: ฟังก์ชัน

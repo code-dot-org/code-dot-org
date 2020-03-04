@@ -10,7 +10,7 @@ fi:
         course1:
           title: Kurssi 1
           description: Kurssi 1 on suunniteltu juuri lukemaan oppineille lapsille. Kurssin tavoitteina on opettaa lapsille taitoja, joita tarvitaan tietokoneohjelmien tekemisessä. Näitä taitoja ovat mm. yhteistyö, ongelmanratkaisutaito ja vaikeiden tehtävien ratkaisemisessa tarvittava sinnikkyys. Kurssin aikana oppilaat luovat oman pelin tai tarinan, jonka he voivat jakaa. Suositellaan esikoululaisille ja ekaluokkalaisille.
-          description_short: Kurssi 1 on suunniteltu juuri lukemaan oppineille.
+          description_short: Johdanto tietotekniikkaan juuri lukemaan oppineille.
           description_audience: 4+ -vuotiaille (lukutaidottomat)
           stages:
             'Artist: Loops':
@@ -52,8 +52,8 @@ fi:
         course2:
           title: Kurssi 2
           description: Kurssi 2 on tarkoitettu oppilaille, jotka osaavat jo lukea ja joilla on jo aiempaa ohjelmointikokemusta. Tällä kurssilla oppilaat luovat ohjelmia, jotka ratkaisevat pulmia, ja kehittävät vuorovaikutteisia pelejä ja tarinoita, joita he voivat jakaa. Suositellaan luokille 2-5.
-          description_short: Kurssi 2 on suunniteltu lukutaitoisille oppilaille.
-          description_audience: Iät 6+ (lukutaito vaadittu)
+          description_short: Johdanto tietotekniikkaan lukutaitoisille oppilaille.
+          description_audience: Yli 6-vuotiaille (lukutaito vaadittu)
           stages:
             'Artist: Debugging':
               name: 'Taiteilija: virheenkorjaus'
@@ -157,8 +157,8 @@ fi:
               name: Taiteilija
         hourofcode:
           title: Klassinen sokkelo
-          description: Kokeile tietojenkäsittelytieteen perusteita peleistä tuttujen hahmojen kanssa. Mukana mm. Angry Birds, Plants vs. Zombies sekä Scrat elokuvasta Ice Age!
-          description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
+          description: Kokeile tietotekniikan perusteita peleistä tuttujen hahmojen kanssa. Mukana mm. Angry Birds, Plants vs. Zombies sekä Scrat elokuvasta Ice Age!
+          description_short: Kokeile tietotekniikan perusteita hauskojen hahmojen seurassa!
           stages:
             Maze:
               name: Sokkelo
@@ -256,7 +256,7 @@ fi:
             Variables:
               name: Muuttujat
         algebra:
-          title: Tietotekniikkaa algebraan
+          title: Tietotekniikka algebrassa
           description: Opi funktionaalista ohjelmointia algebran avulla
           description_short: Opi funktionaalista ohjelmointia algebran avulla
           stages:
@@ -312,6 +312,8 @@ fi:
               name: Suunnitteluresepti
         K5PD:
           stages:
+            Computer Science Pedagogy:
+              name: Tietotekniikka pedagogiikassa
             Introduction to PD:
               name: Johdatus PD:hen (ammattitason kehittelyyn)
             Teacher Dashboard:
@@ -328,8 +330,8 @@ fi:
           description_short: Luo kuvia biteillä ja tavuilla.
         20-hour:
           title: Nopeutettu tietojenkäsittelyn johdantokurssi
-          description: Tämä 20 tunnin kurssi esittelee keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi peruskouluissa, mutta siinä on hauskaa opittavaa kaiken ikäisille.
-          description_short: Tämä 20-tuntinen kurssi kattaa kursseilla 2-4 käsitellyt tietojenkäsittelyn ja ohjelmoinnin ydinkäsitteet.
+          description: Tämä 20 tunnin kurssi esittelee kurssien 2-4 keskeiset tietotekniikan ja ohjelmoinnin käsitteet. Kurssi on suunniteltu käytettäväksi 10-18 vuotiaiden kanssa. Löydä täysi kokemus kursseissa 2-4!
+          description_short: Tämä 20-tuntinen kurssi kattaa kursseilla 2-4 käsitellyt tietotekniikan ja ohjelmoinnin ydinkäsitteet.
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
           stages:
             Abstraction:
@@ -345,7 +347,7 @@ fi:
             Graph Paper Programming:
               name: Ruutupaperiohjelmointi
             Introduction to Computer Science:
-              name: Johdanto tietojenkäsittelyyn
+              name: Johdanto tietotekniikkaan
             Relay Programming:
               name: Releohjelmointi
             Song Writing:
@@ -413,8 +415,8 @@ fi:
               name: Askel
         Hour of Code:
           title: Kooditunti 2013
-          description: Kokeile tietojenkäsittelytieteen perusteita Angry Birds ja Plants vs. Zombies -pelien hahmoilla!
-          description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
+          description: Kokeile tietotekniikan perusteita Angry Birds ja Plants vs. Zombies -pelien hahmoilla!
+          description_short: Kokeile tietotekniikan perusteita hauskojen hahmojen seurassa!
           stages:
             Hour of Code 2013:
               name: Kooditunti 2013
@@ -456,6 +458,8 @@ fi:
               name: Niin kauan kuin -silmukat
         algebraPD3:
           stages:
+            Computer Science Pedagogy:
+              name: Tietotekniikka pedagogiikassa
             Evaluation Blocks:
               name: Arviointilohkot
             Strings and Images:
@@ -583,7 +587,7 @@ fi:
         K5-OnlinePD:
           stages:
             Computer Science Fundamentals:
-              name: Tietojenkäsittelyn Perusteet
+              name: Tietotekniikan perusteet
         ECSPD2:
           description: 'Vaihe 2 Online: Sulautetut kesäopinnot'
           description_short: 'Vaihe 2 Online: Sulautetut kesäopinnot'
@@ -752,7 +756,7 @@ fi:
             'Unplugged: The Design Recipe':
               name: 'Tietokoneeton tekeminen: suunnitteluresepti'
         AlgebraB:
-          title: 'Tietotekniikkaa algebraan'
+          title: 'Tietotekniikka algebrassa'
           description: Opi funktionaalista ohjelmointia algebran avulla
           description_short: Opi funktionaalista ohjelmointia algebran avulla
           stages:
@@ -1047,12 +1051,12 @@ fi:
             Ice Age Play Lab:
               name: Ice Age Pelilabra
         classic-hoc-impact-study:
-          description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
+          description_short: Kokeile tietotekniikan perusteita hauskojen hahmojen seurassa!
           stages:
             Hour of Code 2013:
               name: Kooditunti 2013
         hoc-impact-study:
-          description_short: Kokeile tietojenkäsittelytieteen perusteita hauskojen hahmojen seurassa!
+          description_short: Kokeile tietotekniikan perusteita hauskojen hahmojen seurassa!
           stages:
             Hour of Code 2013:
               name: Kooditunti 2013
@@ -1527,7 +1531,7 @@ fi:
           stages:
             Dance Party:
               name: Tanssibileet
-          description_short: Mukana Katy Perry, Madonna, J.Balvinin, Sia, Keith Urban, Ciara ja 25 muuta!
+          description_short: Esittelyssä Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara ja 25 muuta!
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
         frozen-2018-test-b:
           stages:
@@ -1740,7 +1744,7 @@ fi:
         k5-onlinepd-2019:
           stages:
             Computer Science Fundamentals:
-              name: Tietojenkäsittelyn Perusteet
+              name: Tietotekniikan perusteet
             Loops:
               name: Silmukat
             Conditionals:
@@ -1755,7 +1759,7 @@ fi:
               name: Silmukat
         dance-extras-2019:
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Ehtolausekkeet
@@ -1765,3 +1769,25 @@ fi:
               name: Joukkoistaminen
             Conditionals with Cards:
               name: Ehtolauseet pelikorteilla
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Ehtolausekkeet
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Parametrilliset funktiot
+        csd3-2020:
+          stages:
+            Variables:
+              name: Muuttujat
+            Conditionals:
+              name: Ehtolausekkeet
+            Velocity:
+              name: Nopeus
+            Functions:
+              name: Funktiot

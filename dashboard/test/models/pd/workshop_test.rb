@@ -454,8 +454,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop.reload.destroy!
 
     assert workshop.reload.deleted?
-    refute Pd::Workshop.exists? workshop.attributes
-    assert Pd::Workshop.with_deleted.exists? workshop.attributes
+    refute Pd::Workshop.exists? id: workshop.id
+    assert Pd::Workshop.with_deleted.exists? id: workshop.id
 
     # Make sure dependent sessions and enrollments are also soft-deleted.
     assert session.reload.deleted?

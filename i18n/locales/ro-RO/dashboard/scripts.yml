@@ -3551,6 +3551,7 @@ ro:
               name: Petrecere dansantă
           title: Petrecere dansantă
           description_audience: '[șir gol]'
+          description_short: Împreună cu Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara și încă 25!
         frozen-2018-test-b:
           description: '[șir gol]'
           description_short: '[șir gol]'
@@ -4667,7 +4668,6 @@ ro:
           description_short: '[șir gol]'
           description: '[șir gol]'
         csp6-pilot:
-          title: '[șir gol]'
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
@@ -4761,7 +4761,7 @@ ro:
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
           description: '[șir gol]'
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Condiţionale
@@ -4776,6 +4776,286 @@ ro:
               name: Condiționale cu Carduri
           description_audience: '[șir gol]'
           description_short: '[șir gol]'
-          description: '[șir gol]'
         time4cs-experiment-unit-2:
           description_audience: '[șir gol]'
+        time4cs-control-unit-1:
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Sequencing in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming and Loops with the Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Simon Says:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Learning Sprites with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Alien Dance Party with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Private and Personal Information:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            About Me:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Access Ability:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals Review:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        time4cs-experiment-unit-1:
+          description: '[șir gol]'
+          description_short: '[șir gol]'
+          description_audience: '[șir gol]'
+          stages:
+            Sequencing in Maze:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Programming and Loops with the Artist:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Events: The Big Event':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Simon Says:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Learning Sprites with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Alien Dance Party with Sprite Lab:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Private and Personal Information:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            About Me:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Access Ability:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals Review:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csp7-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp8-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp4-2020:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp5-2020:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csp7-2020:
+          title: '[șir gol]'
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd2-projects-temp:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+        csp9-pilot:
+          description_audience: '[șir gol]'
+          description_short: '[șir gol]'
+          description: '[șir gol]'
+        csd2-2020:
+          description_audience: '[șir gol]'
+          stages:
+            Exploring Web Pages:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Intellectual Property:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Images:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Project - Planning Layout and Style:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Project - Building a Webpage:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Purpose of a  Websites:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Team Problem Solving:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sources and Research:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CSS Classes:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Planning a Multi-page Website:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Linking and Navigation:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Project - Website for a Purpose:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Peer Review and Final Touches:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd1-2020:
+          description_audience: '[șir gol]'
+          stages:
+            CS Discoveries Pre-survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd4-2020:
+          description_audience: '[șir gol]'
+          stages:
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd5-2020:
+          description_audience: '[șir gol]'
+          stages:
+            Representing Images:
+              description_teacher: În această lecţie elevii învață cum calculatoarele reprezintă imagini. Pentru a începe lecţia, ei consideră provocarea transformării complexității viziunii într-un model binar. Printr-o serie de imagini care arată cum se face această transformare, eleviilor li se prezintă conceptul de împărțire a imaginilor în pătrate sau "pixeli" care pot fi apoi pornite sau oprite în mod individual pentru a realiza întreaga imagine. Elevii parcurg apoi un set scurt de provocări folosind widget-ul de pixelare pentru a desena imagini alb-negru. Puzzle-uri sunt concepute pentru a apela unele din provocările reprezentării imaginilor în acest fel. În încheiere, elevii fac conexiuni între sistemul de reprezentare a imaginilor și sistemul de reprezentare a textului pe care l-au învățat în lecția anterioară.
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd6-2020:
+          description_audience: '[șir gol]'
+          stages:
+            Innovations in Computing:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Designing Screens with Code:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            The Circuit Playground:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Input Unplugged:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Board Events:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Getting Properties:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Analog Input:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            The Program Design Process:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Project: Make a Game':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Arrays and Color LEDs:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Making Music:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Arrays and For Loops:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Accelerometer:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Functions with Parameters:
+              name: Funcții cu Parametrii
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Circuits and Physical Prototypes:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            'Project: Prototype an Innovation':
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+        csd3-2020:
+          description_short: "Programare"
+          description_audience: '[șir gol]'
+          stages:
+            Shapes and Parameters:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Variables:
+              name: Variabile
+            Random Numbers:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprites and Animations:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Sprite Properties:
+              name: Proprietăți spiriduș
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Text and Captioned Scenes:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            Conditionals:
+              name: Condiţionale
+            Velocity:
+              name: Viteza
+            Functions:
+              name: Funcţii
+            Post-Project Test:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'
+            CS Discoveries Post Course survey:
+              description_student: '[șir gol]'
+              description_teacher: '[șir gol]'

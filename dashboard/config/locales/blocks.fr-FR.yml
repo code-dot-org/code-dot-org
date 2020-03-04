@@ -3,7 +3,7 @@ fr:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "{GROUP} changez toutes les {N} mesures \nentre {MOVE1} and {MOVE2}"
+        text: "{GROUP} change toutes les {N} mesures \nentre {MOVE1} et {MOVE2}"
         options:
           GROUP:
             sprites: tout
@@ -13,18 +13,18 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
             '"SLOTH"': paresseux
             '"UNICORN"': Licornes
           MOVE1:
-            MOVES.Roll: Mouvements de hanches
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Roll: Roulements de hanches
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
@@ -32,11 +32,11 @@ fr:
             MOVES.ThisOrThat: Ceci ou cela
             MOVES.Rest: Aucun
           MOVE2:
-            MOVES.Roll: Mouvements de hanches
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Roll: Roulements de hanches
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
@@ -67,7 +67,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -77,11 +77,11 @@ fr:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Mouvements de hanches
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Roll: Roulements de hanches
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
@@ -98,16 +98,17 @@ fr:
             '"next"': "(Suivant)"
             '"prev"': "(Précédent)"
             '"rand"': "(Aléatoire)"
-            MOVES.Roll: Mouvements de hanches
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.Roll: Roulements de hanches
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -119,11 +120,11 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
       Dancelab_changePropEachBy:
-        text: changez {GROUP} {PROPERTY} en {VAL}
+        text: changer {GROUP} {PROPERTY} par {VAL}
         options:
           GROUP:
             sprites: tout
@@ -133,7 +134,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -143,7 +144,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
       Dancelab_doMoveEachLR:
@@ -157,7 +158,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -165,28 +166,29 @@ fr:
             '"UNICORN"': Licornes
           MOVE:
             '"rand"': "(Aléatoire)"
-            MOVES.XBend: Pliez
-            MOVES.Roll: Mouvements de hanches
-            MOVES.XClapSide: Tapez
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.XBend: Fente
+            MOVES.Roll: Roulements de hanches
+            MOVES.XClapSide: Tape des mains
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.XFever: Disco
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
             MOVES.XHop: Saut
-            MOVES.XHighKick: Donnez un coup
+            MOVES.XHighKick: Coup de pied
             MOVES.XKnee: Genoux
             MOVES.XKneel: S'agenouiller
             MOVES.XOle: Olé
             MOVES.XArmsSide: Atteindre
-            MOVES.XSlide: Faire glisser
+            MOVES.XSlide: Glisser
             MOVES.Kick: Étoile
-            MOVES.XArmsUp: Étendu
+            MOVES.XArmsUp: Étirer
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
@@ -196,32 +198,35 @@ fr:
         options:
           MOVE:
             '"rand"': "(Aléatoire)"
-            MOVES.XBend: Pliez
-            MOVES.Roll: Mouvements de hanches
-            MOVES.XClapSide: Tapez
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.XBend: Fente
+            MOVES.Roll: Roulements de hanches
+            MOVES.XClapSide: Tape des mains
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Dab: Dab
             MOVES.XFever: Disco
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
             MOVES.Clown: Gangnam
             MOVES.XHeadHips: Tête + hanches
             MOVES.XHop: Saut
-            MOVES.XHighKick: Donnez un coup
+            MOVES.XHighKick: Coup de pied
             MOVES.XKnee: Genoux
             MOVES.XKneel: S'agenouiller
             MOVES.XOle: Olé
             MOVES.XArmsSide: Atteindre
-            MOVES.XSlide: Faire glisser
+            MOVES.XSlide: Glisser
             MOVES.Kick: Étoile
-            MOVES.XArmsUp: Étendu
+            MOVES.XArmsUp: Étirer
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
           DIR:
             '1': "→"
             "-1": "←"
+      Dancelab_eval:
+        text: evaluer {CODE}
       Dancelab_everyMeasuresRange:
         text: 'répéter toutes les {N} mesures après {START} '
       Dancelab_everySeconds:
@@ -243,7 +248,7 @@ fr:
             '"verse"': verset
             '"chorus"': chœur
       Dancelab_getEnergy:
-        text: 'obtenir {RANGE}'
+        text: obtenir {RANGE}
         options:
           RANGE:
             '"low"': grave
@@ -256,12 +261,12 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
       Dancelab_getTime:
-        text: "{UNIT} s’est écoulé"
+        text: heure actuelle en {UNIT}
         options:
           UNIT:
             '"measures"': mesures
@@ -272,16 +277,17 @@ fr:
           {DO1} {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
-            MOVES.Roll: Mouvements de hanches
+            MOVES.Roll: Roulements de hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Dancelab_ifTime:
         text: |-
@@ -320,7 +326,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -348,7 +354,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -379,7 +385,7 @@ fr:
             '"DOG"': chien
             '"DUCK"': canard
             '"FROG"': Grenouille
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': Ananas
             '"ROBOT"': robot
             '"SHARK"': Requin
@@ -398,7 +404,7 @@ fr:
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": aléatoire
       Dancelab_makeNewDanceSprite:
         text: |-
-          faire un nouvel {COSTUME}
+          faire un nouveau {COSTUME}
           appelé {NAME} à {LOCATION}
         options:
           COSTUME:
@@ -408,7 +414,7 @@ fr:
             '"DOG"': Chien
             '"DUCK"': Canard
             '"FROG"': Grenouille
-            '"MOOSE"': Orignal
+            '"MOOSE"': élan
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robot
             '"SHARK"': Requin
@@ -457,7 +463,7 @@ fr:
             '"DOG"': Chiens
             '"DUCK"': Canards
             '"FROG"': Grenouilles
-            '"MOOSE"': Orignal
+            '"MOOSE"': élan
             '"PINEAPPLE"': Ananas
             '"ROBOT"': Robots
             '"SHARK"': Requins
@@ -497,14 +503,14 @@ fr:
         options:
           EFFECT:
             '"none"': Aucun
-            '"circles"': Tunnel
+            '"circles"': Cercles
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
             '"disco_ball"': Boule disco
             '"fireworks"': Feux d'artifice
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
-            '"lasers"': Laser piste de danse
+            '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"snowflakes"': Neige
@@ -530,7 +536,7 @@ fr:
           EFFECT:
             '"none"': Aucun
             '"rand"': "(Aléatoire)"
-            '"circles"': Tunnel
+            '"circles"': Cercles
             '"quads"': Angles
             '"color_cycle"': Couleurs
             '"diamonds"': Diamants
@@ -540,7 +546,7 @@ fr:
             '"growing_stars"': Étoiles montantes
             '"swirl"': Hypno
             '"kaleidoscope"': Kaléidoscope
-            '"lasers"': Laser piste de danse
+            '"lasers"': Piste de danse laser
             '"splatter"': Éclaboussures de peinture
             '"rainbow"': Arc-en-ciel
             '"ripples_random"': Ondulations aléatoires
@@ -584,7 +590,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -644,7 +650,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
       Dancelab_setPropEach:
@@ -658,7 +664,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -668,7 +674,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -679,7 +685,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -694,7 +700,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -704,7 +710,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -721,7 +727,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -738,7 +744,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -763,7 +769,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -779,7 +785,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -798,7 +804,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -808,7 +814,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"tint"': nuance
@@ -823,7 +829,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"direction"': direction du mouvement
@@ -843,7 +849,7 @@ fr:
             '"DOG"': tous les chiens
             '"DUCK"': tous les canards
             '"FROG"': toutes les grenouilles
-            '"MOOSE"': tous les orignaux
+            '"MOOSE"': tous les élans
             '"PINEAPPLE"': tous les ananas
             '"ROBOT"': tous les robots
             '"SHARK"': tous les requins
@@ -853,7 +859,7 @@ fr:
             '"scale"': taille
             '"width"': largeur
             '"height"': hauteur
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position horizontale
             '"y"': position verticale
             '"direction"': direction du mouvement
@@ -885,7 +891,7 @@ fr:
             '"diamond"': diamant
             '"mural"': Mural
             '"safari"': Safari
-            '"network"': Network
+            '"network"': Réseau
             '"highway"': Autoroute
             '"stream"': Courant
             '"tile"': Tuile
@@ -954,7 +960,7 @@ fr:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: Lorsque {RANGE} pic
+        text: lorsque {RANGE} plafonne
         options:
           RANGE:
             '0': grave
@@ -964,6 +970,8 @@ fr:
         text: configuration
       Dancelab_whenSetup2:
         text: configuration
+      Dancelab_whenSetupSong:
+        text: 'configurer {SONG} '
       gamelab_addBehaviorSimple:
         text: le sprite {SPRITE} commence {BEHAVIOR}
       gamelab_allSpritesWithAnimation:
@@ -973,7 +981,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1003,7 +1011,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1136,7 +1144,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1232,7 +1240,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1248,13 +1256,15 @@ fr:
             "{x: 300, y: 100}": en haut à droite
             "{x: 100, y: 300}": en bas à gauche
             "{x: 300, y: 300}": en bas à droite
+      Mikelab_eval:
+        text: evaluer {CODE}
       Mikelab_getNext:
         text: obtenir l'objet suivant
       Mikelab_getProp:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1272,7 +1282,7 @@ fr:
             '"this"': ceci
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1307,7 +1317,7 @@ fr:
             '"this"': ceci
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1337,7 +1347,7 @@ fr:
             '"this"': ceci
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
@@ -1371,16 +1381,17 @@ fr:
           {DO1} {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Tapez des mains en haut
+            MOVES.ClapHigh: Tape des mains en l'air
             MOVES.Clown: Gangnam
             MOVES.Dab: Dab
-            MOVES.DoubleJam: Doubler la mise
-            MOVES.Drop: Drop
+            MOVES.DoubleJam: Double la mise
+            MOVES.Drop: Grand écart
             MOVES.Floss: Floss dance
             MOVES.Fresh: Fresh dance
-            MOVES.Roll: Mouvements de hanches
+            MOVES.Roll: Roulements de hanches
             MOVES.Kick: Étoile
             MOVES.ThisOrThat: Ceci ou cela
+            MOVES.Thriller: Zombie
             MOVES.Rest: Aucun
       Mikelab_ifLabel:
         text: |-
@@ -1428,7 +1439,7 @@ fr:
         options:
           PROPERTY:
             '"scale"': taille
-            '"rotation"': orientation
+            '"rotation"': angle
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement

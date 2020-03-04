@@ -58,6 +58,8 @@ my:
         options:
           GROUP:
             sprites: အားလုံး
+          FORMAT:
+            '"diamond"': စိန်
       Dancelab_makeNewDanceSpriteGroup:
         options:
           'N':

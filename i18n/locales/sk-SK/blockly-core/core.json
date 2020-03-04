@@ -316,7 +316,7 @@
     "RENAME_ALL": "Premenuj všetko %1",
     "RENAME_PARAMETER": "Premenuj parameter...",
     "RENAME_PARAMETER_TITLE": "Premenuj všetky '%1' parametre na:",
-    "RENAME_THIS": "Premenuj tento %1",
+    "RENAME_THIS": "Premenuj: %1",
     "RENAME_VARIABLE": "Premenuj premennú...",
     "RENAME_VARIABLE_TITLE": "Premenuj všetky %1 premenné na:",
     "TEXT_APPEND_APPENDTEXT": "pripoj text",

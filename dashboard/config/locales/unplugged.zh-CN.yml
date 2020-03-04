@@ -334,9 +334,19 @@ zh-CN:
           (如图像和颜色)。
       courseE_unplugged_privateInformation_2019:
         title: 私人和个人信息
+        desc: 由常识教育开发，本课程关于信息是否适合在网上安全的分享。
+      SongwritingParameters_2019:
+        title: 翻译丢失：en-US.data.unplugged.SongwritingParameters_2018.title
+        desc: '翻译丢失: en-US.data.unplugged.SongwritingParameters_2018.desc'
       courseE_unplugged_CnC_2019:
         title: 数字共享
         desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解尊重他人的所有权和版权的益处和挑战，特别是在数字作品领域。鼓励学生们要成为良好的数字公民，尊重艺术家的版权是重要的一部分。
+      Internet_2019:
+        title: 翻译丢失：en-US.data.unplugged.Internet_2018.title
+        desc: 翻译丢失：en-US.data.unplugged.Internet_2018.desc
+      Crowdsourcing_2019:
+        title: 翻译丢失：en-US.data.unplugged.Crowdsourcing_2018.title
+        desc: 翻译丢失：en-US.data.unplugged.Crowdsourcing_2018.desc
       GettingLoopy_2019:
         title: 越来越糊涂
         desc: 本课通过舞蹈活动介绍循环 (用来重复的指令) 的编程概念。学生们将学习简单的编排，然后跟着老师的指示，再重复它。
@@ -352,6 +362,13 @@ zh-CN:
       PaperPlanes_2019:
         title: '生活中的算法: 纸飞机'
         desc: 这节课程以制作纸飞机的方法为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
+      test-uid-passthrough:
+        desc: "# 招聘场景会议\r\n\r\n## Swipe Right for CS\r\n这次会议中会使用叫做 \"Swipe Right for
+          CS\" 的工具，由 MIT 合作伙伴开发。在 Swipe Right for CS 中，可以查看学生的资料，从而可以考虑说服学生注册你的计算机原理课程的具体方法。\r\n\r\n##
+          它是怎么运行的\r\n在使用 Swipe Right for CS时，会看到一系列可以告诉每个学生的话语。如果觉得某句话对说服学生注册有效，可向右滑动它。如果觉得没有用，可向左滑动。在会议期间，会分组讨论，解释你在哪些语言在说服学生注册上最有效的想法，可有机会看看组里的其他人的想法。\r\n<br><br><br><br>\r\n\r\n<span
+          style=\"display:none\">submitButton next-stage</span>\r\n\r\n<a class=\"btn
+          btn-large btn-primary submitButton\" href=\"https://swipe-right-for-cs.teachingsystemslab.org/start?cuid=<user_id/>\">点击这里打开
+          Swipe Right for CS!</a>\r\n\r\n"
       PlantASeed_2019:
         title: 真实算法： 播种一颗种子
         desc: 这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。
@@ -372,8 +389,21 @@ zh-CN:
       courseB_unplugged_CnC_2019:
         title: 创建并实践公平非常的伟大。
         desc: 通过团队的版权和创新来学习计算机科学基础，这门课帮助学生理解共享和灵感的创新过程。同时也促进了创新的表达，以及创新中的公平。
+      GraphingData_2019:
+        title: 图片数据
+        desc: 本课程中，学生会从剧本实验室项目或真实场景中收集数据，并用来做预测。
+      courseE_unplugged_accessAbility_2019:
+        title: 辅助功能
+        desc: 通过为假想的应用进行头脑风暴并设计辅助功能解决方案，来了解辅助功能以及同理心的价值。
+      courseE_simon_says_2019:
+        title: Simon 说
+        desc: "玩一下游戏，并思考一下什么命令能帮助得到正确的结果。\r\n\r\n![测试图片](https://code.org/images/logo.png)"
+      courseB_unplugged_passwords_2019:
+        title: 有用的密码
+        desc: 探索人们为什么要使用密码，学习使用密码的好处，探索如何创建并保存强大又安全的密码的方法。
       timeforcs_demo_crowdsourcing:
         title: 众包
+        desc: '_Josh 备注：: 与第一堂课不同，这节课更像是线下课程。_'
       timeforcs_demo_conditionals:
         title: 条件语句
         desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"

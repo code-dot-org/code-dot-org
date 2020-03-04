@@ -151,7 +151,6 @@ es:
     valid_password: "Contraseña válida!"
     invalid_password: "La Contraseña debe tener al menos 6 caracteres"
     mismatch_password: "Las dos contraseñas  introducidas no coinciden"
-    under_13_consent: "Si soy menor de 13 años, confirmo que tengo la autorización de mis padres o tutores legales para utilizar los servicios de Code.org."
     student_consent: "Confirmo que tengo la autorización de mis padres o guardianes legales para utilizar los servicios de Code.org."
     agree_us_website: "Estoy de acuerdo con el uso de un sitio web con sede en los Estados Unidos."
     my_data_to_us: "Los datos de mi uso de este sitio pueden ser enviados y almacenados o procesados en los Estados Unidos."
@@ -546,6 +545,7 @@ es:
     download: 'Descargar vídeo'
     show_notes: 'Mostrar notas'
     show_video: 'Mostrar video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       unsupported_message: "Su navegador no es compatible. Por favor, actualice su navegador a <a href='%{supported_browsers_url}', target='_blank'> uno de nuestros navegadores compatibles</a>. Puede tratar de ver la página, pero se espera una funcionalidad rota."
@@ -685,6 +685,8 @@ es:
     help_support: "Ayuda y soporte"
     documentation: "Documentacion"
     tutorials: "Tutoriales"
+  free_response:
+    placeholder: "Escribe aquí tu respuesta"
   multi:
     wrong_title: "Respuesta incorrecta"
     wrong_body: "La respuesta no es correcta. ¡Inténtalo de nuevo!"

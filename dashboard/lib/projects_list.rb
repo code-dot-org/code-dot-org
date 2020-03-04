@@ -123,10 +123,11 @@ module ProjectsList
     # @return [Hash<Array<Hash>>] A hash of lists of published libraries.
     def fetch_section_libraries(section)
       project_types = PUBLISHED_PROJECT_TYPE_GROUPS[:library]
-      section_students = section.students
+      section_users = section.students + [section.user]
+
       [].tap do |projects_list_data|
         student_storage_ids = PEGASUS_DB[:user_storage_ids].
-          where(user_id: section_students.pluck(:id)).
+          where(user_id: section_users.pluck(:id)).
           select_hash(:id, :user_id)
         student_storage_id_list = student_storage_ids.keys
         PEGASUS_DB[:storage_apps].
@@ -137,9 +138,11 @@ module ProjectsList
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
-            project_owner = section_students.find {|student| student.id == student_storage_ids[project[:storage_id]]}
+            project_owner = section_users.find {|user| user.id == student_storage_ids[project[:storage_id]]}
             project_data = get_library_row_data(project, channel_id, project_owner)
-            projects_list_data << project_data if project_data
+            if project_data && (project_owner.user_type == 'student' || project_data[:sharedWith].include?(section.id))
+              projects_list_data << project_data
+            end
           end
       end
     end
@@ -221,17 +224,17 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    # pull various fields out of the student and project records to populate
+    # pull various fields out of the user and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single library or a list of libraries.
-    def get_library_row_data(project, channel_id, student = nil)
+    def get_library_row_data(project, channel_id, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['libraryName'],
         description: project_value['libraryDescription'],
-        studentName: student&.name,
+        userName: user&.name,
+        sharedWith: project_value['sharedWith'] ? project_value['sharedWith'] : []
       }.with_indifferent_access
     end
 

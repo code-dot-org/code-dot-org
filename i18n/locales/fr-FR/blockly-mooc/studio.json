@@ -34,6 +34,7 @@
   "bird": "oiseau",
   "calloutPutCommandsHereRunStart": "Mets les commandes ici pour les exécuter au démarrage du programme.",
   "calloutBlocklyPlaceGoUpHere": "Place un bloc «&#160;Déplacer vers le haut&#160;» ici pour aller vers le haut.",
+  "calloutBlocklyPlaceMoveUpHere": "",
   "calloutClickEvents": "Clique sur l'en-tête «&#160;Événements&#160;» pour voir des blocs de fonction événements.",
   "calloutUseArrowButtons": "Appuie sur ces boutons ou sur les touches directionnelles de ton clavier pour déclencher les mouvements.",
   "calloutUseArrowButtonsAutoSteer": "Nous avons caché le code que tu as écrit, mais tu peux toujours utiliser les flèches de direction pour te déplacer.",

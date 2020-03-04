@@ -42,6 +42,7 @@ export const addScriptData = (scriptId, scriptData) => {
   const filteredScriptData = {
     id: scriptData.id,
     csf: scriptData.csf,
+    hasStandards: scriptData.hasStandards,
     title: scriptData.title,
     path: scriptData.path,
     stages: scriptData.stages
@@ -131,6 +132,7 @@ export const ViewType = {
 export const scriptDataPropType = PropTypes.shape({
   id: PropTypes.number.isRequired,
   csf: PropTypes.bool,
+  hasStandards: PropTypes.bool,
   title: PropTypes.string,
   path: PropTypes.string,
   stages: PropTypes.arrayOf(

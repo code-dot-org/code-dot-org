@@ -23,20 +23,20 @@
 #
 # Normally created when a teacher enrolls in a workshop with a corresponding PLC course.
 class Plc::EnrollmentUnitAssignment < ActiveRecord::Base
-  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
-  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
-  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
-  belongs_to :user, class_name: 'User'
-
   UNIT_STATUS_STATES = [
     START_BLOCKED = 'start_blocked'.freeze,
     IN_PROGRESS = 'in_progress'.freeze,
     COMPLETED = 'completed'.freeze
   ].freeze
 
-  after_save :enroll_user_in_required_modules
+  belongs_to :plc_user_course_enrollment, class_name: '::Plc::UserCourseEnrollment'
+  belongs_to :plc_course_unit, class_name: '::Plc::CourseUnit'
+  has_many :plc_module_assignments, class_name: '::Plc::EnrollmentModuleAssignment', foreign_key: 'plc_enrollment_unit_assignment_id', dependent: :destroy
+  belongs_to :user, class_name: 'User'
 
   validates :status, inclusion: {in: UNIT_STATUS_STATES}
+
+  after_save :enroll_user_in_required_modules
 
   def module_assignment_for_type(module_type)
     plc_module_assignments.joins(:plc_learning_module).find_by('plc_learning_modules.module_type': module_type)

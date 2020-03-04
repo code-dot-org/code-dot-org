@@ -154,8 +154,6 @@ sq:
     valid_password: Fjalëkalimi i vlefshëm!
     invalid_password: Fjalëkalimi duhet të ketë të paktën 6 karaktere
     mismatch_password: Dy fjalëkalimet që vendosët nuk përputhen
-    under_13_consent: Nëse jam nën moshën 13 vjeç, konfirmoj se kam lejen e prindit
-      ose të kujdestarit ligjor për të përdorur shërbimet e Code.org.
     student_consent: Konfirmoj se kam lejen e prindit ose të kujdestarit ligjor për
       të përdorur shërbimet e Code.org.
     agree_us_website: Unë pajtohem me përdorimin e një faqe interneti të themeluar
@@ -628,6 +626,8 @@ sq:
     support: Merr Ndihmë
     support_url: "//support.code.org"
     help_resources: Ndihmë dhe Burime
+  free_response:
+    placeholder: Shkruani përgjigjen tuaj këtu
   multi:
     wrong_title: Përgjigje e pasaktë
     wrong_body: Përgjigja që keni futur nuk është e saktë. Ju lutemi provojeni përsëri!

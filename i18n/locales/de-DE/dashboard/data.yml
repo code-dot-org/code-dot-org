@@ -358,6 +358,8 @@ de:
         CSF_collector_repeat_loops: Der Sammler Schleifen
         CSF_collector_text_blocks: 'Einführung in Informatik und Programmieren: Der Sammler'
         CSF_create_functions: Funktionen erstellen
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Informatik ist wichtig
         CSF_maze_intro_k1_blocks: Einführung in Code Studio
         CSF_maze_intro_text_blocks: Einführung in Code Studio
@@ -461,6 +463,7 @@ de:
         CSF_scrat_loops_K1: Schleifen in Ice Age
         CSF_scrat_loops_CF: Schleifen in Ice Age
         CSF_if_allskins: Der Wenn-Block
+        CSF_ifelse_allskins: Verwendung von Wenn/Sonst-Bausteinen
         CSF_loops_AB: Schleifen
         csd_gamelab_booleans: Boolesche Ausdrücke
         csd_gamelab_conditional_statements: Bedingte Anweisungen
@@ -473,21 +476,35 @@ de:
         mc_2018_intro: 'Minecraft: Voyage Aquatic Einführung'
         mc_2018_conditionals: 'Minecraft: Voyage Aquatic Bedingungen'
         mc_2018_closing: 'Minecraft: Voyage Aquatic Glückwunsch'
-        hoc_dance_warmup: Tanzparty - Warm Up
-        hoc_dance_congrats: Tanzparty -Party On!
+        hoc_dance_warmup: Tanzparty- Aufwärmen
+        hoc_dance_congrats: Tanzparty- Party los!
         c_and_c_great_to_create: Es ist großartig etwas zu erschaffen und fair zu spielen
         teaching_csf_how_it_works: 'Informatik Grundlagen: Wie der Kurs funktioniert'
+        elem_pd_2: Grundschul-Informatik - PD Video 2/2
         what_is_cs: Was ist Informatik?
         repeat_block: Benutze den Wiederholungsblock
+        lesson_planning: Unterrichtsplanung
         writing_first_program: Schreibe dein erstes Computerprogramm
         what_is_an_event: Was ist ein Ereignis?
         csd_pair_programming: Paarprogrammierung
+        csd_gamelab_functions: Aufrufen und Definieren von Funktionen
         csd_applab_parameters: Funktionen mit Parametern
         csd_applab_loops: Schleifen im App-Labor
+        CSF_Going_Places_Safely: Meine Online-Nachbarschaft
         CSF_SpriteLab_Intro_v2: Einführung Sprite Lab
         CSF_Spritelab_MakeSprite_v2: Wie man einen Sprite erstellt
         CSF_SpriteLab_SpritesInAction_v2: Sprites in Aktion
+        csd_debugging: Debugging
         csd_applab_designmode_short: App-Labor - Designmodus
+        csp-pd-welcome: Willkommen in der Familie!
+        oceans_machine_learning: Maschinelles Lernen
+        oceans_training_data: Trainingsdaten
+        oceans_societal_implications: Gesellschaftliche Auswirkungen
+        hoc_dance_congrats_2019: Tanzparty 2019-Party an!
+        hoc_dance_warmup_2019: Tanzparty 2019-Aufwärmen
+        hoc_dance_events_2019: Tanzparty 2019- Events
+        hoc_dance_measures_2019: Tanzparty 2019-Takte
+        hoc_dance_properties_2019: Tanzparty 2019- Eigenschaften
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

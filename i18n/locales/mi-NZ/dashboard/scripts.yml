@@ -1237,12 +1237,26 @@ mi:
           stages:
             Artist:
               name: Rehetoi
+        dance:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
         frozen-2018-test-b:
           stages:
             Artist:
               name: Rehetoi
         aquatic:
           title: 'Toihuke: Rerenga Moana'
+        dance--draft:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
+        dance-draft:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
+        dance-extras:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
         coursef-2019:
           stages:
             Building a Foundation:
@@ -1257,6 +1271,10 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+        dance-low:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1269,6 +1287,8 @@ mi:
               name: Ngā Atahanga Tāhūrua
             Artist Binary:
               name: Rehetoi Tāhūrua
+            Dance Party:
+              name: Te Pāti Kanikani
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1301,10 +1321,15 @@ mi:
               name: Te Ipurangi
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+            Dance Party:
+              name: Te Pāti Kanikani
         andrea-test:
           stages:
             'null':
               name: 'korenga'
+        dance-extras-gallery:
+          title: Me Kanikani Tonu
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
         coursec-2019:
           stages:
             'Real-life Algorithms: Paper Planes':
@@ -1395,6 +1420,10 @@ mi:
               name: Kupu Whakataki
             Nested Loops:
               name: Ngā Koromeke Tauroto
+        dance-2019:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
         k5-onlinepd-2019:
           stages:
             Loops:
@@ -1409,7 +1438,9 @@ mi:
               name: Ngā Taurangi
             For Loops:
               name: Mō Ngā Koromeke
-        time4cs-control-unit-1:
+        dance-extras-2019:
+          description: Neke atu i te kotahi haora, anei ethahi wero ano.
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Ngā Here
@@ -1417,3 +1448,23 @@ mi:
           stages:
             Crowdsourcing:
               name: Te Mahi ā-Ohu
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Ngā Here
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Ngā Here
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Ngā Taumahi Whai Tawhā
+        csd3-2020:
+          stages:
+            Variables:
+              name: Ngā Taurangi
+            Conditionals:
+              name: Ngā Here
+            Functions:
+              name: Ngā Taumahi

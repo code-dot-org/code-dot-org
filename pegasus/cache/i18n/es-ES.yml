@@ -225,6 +225,7 @@ es-ES:
   if_you_enjoyed: "¡Si te ha gustado aprender, invita a amigos para que lo intenten
     también! Queremos que todo el mundo pueda aprender."
   personalize_certificate: Personaliza tu certificado
+  print_certificates: Imprimir certificados
   share_achievement: Comparte tu logro
   beyond_hour_message: Continúa con nuestros <a href='http://studio.code.org'>otros
     cursos</a>, o explora otras opciones en <a href='/learn/beyond'>Aprender más allá
@@ -1262,6 +1263,8 @@ es-ES:
   pre-express-2018_name: Curso rápido prescolar (2018)
   express-2019_name: Curso Rápido (2017)
   pre-express-2019_name: Curso rápido prescolar (2017)
+  csd2_name: 'Unidad 2: Desarrollo Web'
+  csd3_name: 'Unidad 3: Animación y Juegos'
   accelerated_name: Curso acelerado
   express_name: Curso Rápido
   pre-express_name: Curso rápido prescolar

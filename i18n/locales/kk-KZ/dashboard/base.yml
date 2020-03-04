@@ -456,6 +456,8 @@ kk:
     report_bug: "Қате туралы хабарлау"
     support: "Көмек Сұрау"
     help_resources: "Көмек және ресурстар"
+  free_response:
+    placeholder: "Жауабыңызды мұнда еңгізіңіз"
   multi:
     wrong_title: "Дұрыс емес жауап"
     wrong_body: "Сіз еңгізген жауап дұрыс емес. Қайталап көріңіз!"

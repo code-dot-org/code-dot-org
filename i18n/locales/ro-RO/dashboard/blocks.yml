@@ -357,10 +357,15 @@ ro:
           FORMAT:
             '"border"': margine
             '"inner"': pătrat interior
+            '"diamond"': diamant
             '"circle"': cerc
             '"grid"': rețea
+            '"top"': rândul de sus
             '"row"': rând
+            '"bottom"': rândul de jos
+            '"left"': coloana stângă
             '"column"': coloană
+            '"right"': coloana dreaptă
             '"x"': încrucişat
             '"plus"': plus
             '"random"': aleator

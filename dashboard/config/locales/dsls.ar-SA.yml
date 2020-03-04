@@ -3,232 +3,235 @@ ar-SA:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: إختيارات متعددة
-        questions:
-        - text: اختر المعادلة للصورة المتاحة.
         answers:
         - text: ابدأ بمربع <br/> وضع مثلث أعلى المربع <br/> وضع مثلث أسفل المربع
-        - {}
+        - correct: true
         - text: ابدأ بمربع <br/> وضع متوازي أضلاع أعلى المربع <br/> وضع مثلث على يمين
             متوازي الأضلاع
         - text: ابدأ بمربع <br/> وضع مثلث أسفل المربع <br/> وضع متوازي الأضلاع على
             يمين المثلث
-      2-3 Algorithms Multi 2:
+        questions:
+        - text: اختر المعادلة للصورة المتاحة.
         title: إختيارات متعددة
+      2-3 Algorithms Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         content1: ابدأ بمثلث <br/> وضع مربع أسفل المثلث <br/> وضع مثلث آخر أسفل المربع
         questions:
         - text: أي صورة <em>لا</em> تتبع هذه الخوارزمية؟
+        title: إختيارات متعددة
+      2-3 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Big Event Match 1:
-        title: مطابقة
         content2: أنقرْ علي مجموعة الازرار المناسب التي تتناسب مع حركات الرقص.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: مطابقة
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: مطابقة
         content2: استعمل المفتاح لتربط الرمز مع الحرف المطابق له
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: مطابقة
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: إختيارات متعددة
         questions:
         - text: وفقا لقواعد اللعبة، وهو سجل فيها مجموعة من البطاقات بشكل صحيح؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      2-3 Getting Loopy Multi 1:
         title: إختيارات متعددة
+      2-3 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: كيف يمكنك تبسيط هذا التسلسل مع الحلقات ؟
+        title: إختيارات متعددة
+      2-3 Graph Paper Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 Graph Paper Match 1:
-        title: مطابقة
         content1: طابق الشبكة مع البرنامج.
         questions:
         - {}
         - {}
         - {}
+        title: مطابقة
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: إختيارات متعددة
         questions:
         - text: أي برنامج يصنع هذه الصورة ؟
-        answers:
-        - {}
-        - {}
-        - {}
+        title: إختيارات متعددة
       2-3 Maze Match 2:
-        title: تطابق المتاهة
+        answers:
+        - {}
+        - {}
+        - {}
         content1: طابق الألغاز مع المربعات البرمجية
-        pre_title: التعليمات
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: تطابق المتاهة
       2-3 Maze Multi 2:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: أي مجموعة من القطع البرمجية سوف توصلني إلى الخنزير؟
         title: متاهة - اختيار من متعدد
-        questions:
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 Relay Programming Multi 1:
-        title: إختيارات متعددة
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
-      2-3 Relay Programming Multi 2:
         title: إختيارات متعددة
+      2-3 Relay Programming Multi 2:
+        answers:
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: السرد صورة البرنامج الذي لا يحتوي على أخطاء؟
-        answers:
-        - {}
-        - {}
-        - {}
+        title: إختيارات متعددة
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
+        - correct: true
         - {}
         - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: مهام الرسام اختيار من متعدد واحد
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: اختار القطع الصحيحة لرسم هذه الصورة باستخدام المهام المعطاة
+        title: مهام الرسام اختيار من متعدد واحد
+      2-3 artist loops match 1:
         answers:
         - {}
         - {}
         - {}
-      2-3 artist loops match 1:
+        - {}
         content2: قم بمطابقة حلقة التكرار بالشكل
         questions:
         - {}
         - {}
         - {}
         - {}
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: حلقات الرسام اختيار من متعدد
         questions:
         - text: أي شكل تم إنشاءه بهذه الحلقة؟
+        title: حلقات الرسام اختيار من متعدد
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 artist loops multi 2:
-        title: حلقات الرسام اختيار من متعدد
+        - correct: true
         questions:
         - text: أي شكل تم إنشاءه بهذا البرنامج؟
+        title: حلقات الرسام اختيار من متعدد
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 artist match 1:
-        title: توصيل الفنان
         content1: قم بتويلالشكل مع المربعات لي أكمال الشكل.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: توصيل الفنان
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: أي مقارنة أدناه صحيحة ؟
+      2-3 bee conditionals multi 3:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      2-3 bee conditionals multi 3:
         questions:
         - text: اختر القطعة الأفضل.
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       2-3 bee loops multi 1:
-        title: حلقات النحلة - اختيار من متعدد - واحد
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: أي القطع تجمع كل الرحيق ؟
+        title: حلقات النحلة - اختيار من متعدد - واحد
+      2-3 maze match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      2-3 maze match 1:
-        title: المتاهة الجزء الأول
         content1: طابق الألغاز مع المربعات البرمجية
         questions:
         - {}
         - {}
         - {}
+        title: المتاهة الجزء الأول
+      2-3 maze multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 maze multi 1:
-        title: المتاهة - اختيار من متعدد - واحد
         questions:
         - text: أي مجموعة من المكعبات هي الجواب الصحيح ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: المتاهة - اختيار من متعدد - واحد
       4-5 Algorithms Match 1:
-        title: مطابقة
+        answers:
+        - text: "<h4>1 عين درجة الاعب 1 إلى 0</h4>"
+        - text: "<h4>1 دور لاعب الأول ليموت</h4>"
+        - text: "<h4>أضف لاعب 1 إلى مجموع نقاط</h4>"
+        - text: "<h4>مقارنة نقاط الاعبين لرؤية من الذي يفوز</h4>"
         content1: طابق خطوات لعبة "سباق النرد" إلى الترتيب الذي يجب أن تظهر ف نظام
           الحلول الحسابية (نظام الخوارزمي).
         questions:
@@ -236,101 +239,108 @@ ar-SA:
         - text: "<h4>2)</h4>"
         - text: "<h4>3)</h4>"
         - text: "<h4>4)</h4>"
-        answers:
-        - text: "<h4>1 عين درجة الاعب 1 إلى 0</h4>"
-        - text: "<h4>1 دور لاعب الأول ليموت</h4>"
-        - text: "<h4>أضف لاعب 1 إلى مجموع نقاط</h4>"
-        - text: "<h4>مقارنة نقاط الاعبين لرؤية من الذي يفوز</h4>"
+        title: مطابقة
       4-5 Algorithms Multi 1:
-        title: إختيارات متعددة
-        questions:
-        - text: وهو واحد من هذه العناصر هو أصعب لوصف خوارزمية ل؟
         answers:
         - text: تنظيف الأسنان
         - text: خبز البسكوت
         - text: الشراء من قائمة المشتروات
         - text: موز
+          correct: true
+        questions:
+        - text: وهو واحد من هذه العناصر هو أصعب لوصف خوارزمية ل؟
+        title: إختيارات متعددة
       4-5 Computational Thinking Match 1:
-        title: مطابقة
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: كل من هذه المركبات تم تفكيكها إلى أجزاء أصغر. طابق كل من هذه المركبات
           مع قائمتها المفككة.
         questions:
-        - text: "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب: 0</h3>"
-        - text: "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب: 1</h3>"
-        - text: "<h3>عجلات/الجانب: 2<br/>نوافذ/الجانب: 6</h3>"
-        - text: "<h3>عجلات/الجانب: 3<br/>نوافذ/الجانب: 2</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "<h3>عجلات لكل جانب: 2<br/>نوافذ لكل جانب: 0</h3>"
+        - text: "<h3>عجلات لكل جانب: 2<br/>نوافذ لكل جانب: 1</h3>"
+        - text: "<h3>عجلات لكل جانب: 2<br/>نوافذ لكل جانب: 6</h3>"
+        - text: "<h3>عجلات لكل جانب: 3<br/>نوافذ لكل جانب: 2</h3>"
+        title: مطابقة
       4-5 Computational Thinking Multi 1:
-        title: إختيارات متعددة
-        questions:
-        - text: سياتل مدينة كبيرة. <br/> Eugene ومدينة متوسطة الحجم <br/> Hillview
-            ومدينة صغيرة.
         answers:
         - text: سياتل _____ _____ _____.
         - text: _____ مدينة _____.
+          correct: true
         - text: _____ هو _____ _____.
         - text: Eugene مدينة _____.
-      4-5 Crowdsourcing Multi 1:
+        content1: ": فيما يلي ثلاث جمل. أي من القوالب الموجودة أدناه تمثل تجريداً
+          صحيحاً لهن، بحيث تطابق كل من الثلاثة نفس القالب؟"
+        questions:
+        - text: سياتل مدينة كبيرة. <br/> Eugene ومدينة متوسطة الحجم <br/> Hillview
+            ومدينة صغيرة.
         title: إختيارات متعددة
+      4-5 Crowdsourcing Multi 1:
+        answers:
+        - {}
+        - correct: true
         questions:
         - text: أي من هذه الصور أفضل يمثل crowdsourcing؟
-        answers:
-        - {}
-        - {}
-      4-5 Crowdsourcing Multi 2:
         title: إختيارات متعددة
-        questions:
-        - text: وهو واحد من هذه الأنشطة سيكون أفضل لممارسة crowdsourcing؟
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: تنظيف غرفتك
+          correct: true
         - text: أكل حلواك
         - text: مشّط شعرك
         - text: غسل وجهك
-      4-5 Digital Footprint Multi 1:
-        title: إختيارات متعددة
         questions:
-        - text: أي قطعة من المعلومات المدرجة أدناه بخير مشاركة على شبكة الإنترنت؟
+        - text: وهو واحد من هذه الأنشطة سيكون أفضل لممارسة crowdsourcing؟
+        title: إختيارات متعددة
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: عيد ميلادك
         - text: الطعام المفضل لديك
+          correct: true
         - text: عنوانك
         - text: رقم بطاقة الائتمان الخاصة بوالديك
-      4-5 Internet Multi 1:
+        questions:
+        - text: أي قطعة من المعلومات المدرجة أدناه بخير مشاركة على شبكة الإنترنت؟
         title: إختيارات متعددة
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: عند محاولة تسجيل الدخول إلى code.org، عنوان IP الذي هو الأكثر احتمالاً
             يأخذك إلى DNS؟
+        title: إختيارات متعددة
+      4-5 Internet Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 Internet Multi 2:
-        title: إختيارات متعددة
         questions:
         - text: إذا كان DNS قد أرسل لك صفحة في عنوان IP 100.42.50.110، الموقع الذي
             أنت على؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      4-5 Songwriting Multi 1:
         title: إختيارات متعددة
-        questions:
-        - {}
+      4-5 Songwriting Multi 1:
         answers:
         - text: لو، ولو، تخطي إلى بلدي لو،
         - text: لو، ولو، تخطي إلى بلدي لو، <br/> لو، ولو، تخطي إلى بلدي لو، <br/>
             لو، ولو، تخطي إلى بلدي لو، <br/> تخطي إلى بلدي لو، بلدي حبيبتي.
+          correct: true
         - {}
         - {}
+        questions:
+        - {}
+        title: إختيارات متعددة
       4-5 Suncatchers Match 1:
-        title: مطابقة
+        answers:
+        - text: "<h4>STACK</h4>"
+        - text: "<h4>STAMP</h4>"
+        - text: "<h4>STAR</h4>"
+        - text: "<h4>RAMP</h4>"
         content1: طابق كل برنامج مع كلمة التي يصنعاها ، عن طريق أستخدام مجموعة من
           مهارات المتاح اليك.
         questions:
@@ -338,106 +348,100 @@ ar-SA:
         - {}
         - {}
         - {}
-        answers:
-        - text: "<h4>STACK</h4>"
-        - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        title: مطابقة
       4-5 Suncatchers Multi 1:
-        title: إختيارات متعددة
+        answers:
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: أي من البرامج التالية <em>لا</em> تقوم بنفس التسلسل الدقيق كالبرنامج
             !؟
+        title: إختيارات متعددة
+      4-5 artist loops multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      4-5 artist loops multi 1:
-        title: حلقات الرسام اختيار من متعدد
         questions:
         - text: أي من القطع سوف ينشئ التصميم ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: حلقات الرسام اختيار من متعدد
       4-5 artist multi 1:
-        title: فنان - الاختيار المتعدد
-        questions:
-        - text: أي القطع يمكنه رسم مستطيل محيطه 100 ؟
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
+        questions:
+        - text: أي الكتل البرمجية يمكنها رسم مستطيل محيطه 100 ؟
+        title: الرسام - اختيار من متعدد
       4-5 artist multi 2:
-        title: فنان - الاختيار المتعدد
-        questions:
-        - text: ايهم الرسم المتماثل ؟
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
+        questions:
+        - text: أي الرسوم متماثل؟
+        title: الرسام - اختيار من متعدد
       4-5 bee conditionals multi 1:
-        title: النحلة الشرطية اختيار من متعدد
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
         questions:
         - text: اختر القطعة الأفضل.
+        title: النحلة الشرطية اختيار من متعدد
+      4-5 bee debug multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      4-5 bee debug multi 1:
-        title: تصحيح النحلة اختيار من متعدد
         questions:
         - text: أي إصدار من المهمة سوف يعمل ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: تصحيح النحلة اختيار من متعدد
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: أي القطع سوف تحل هذا اللغز ؟
         title: حلقات النحلة اختيار من متعدد
-        questions:
-        - text: أي القطع سوف تحل هذا اللغز ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: أي القطع تحل اللغز ؟
         title: المتاهة الشرطية - اختيار من متعدد
-        questions:
-        - text: أي القطع سوف تحل هذا اللغز ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: تطابق المتاهة
+        answers:
+        - {}
+        - {}
+        - {}
         content1: طابق الألغاز مع المربعات البرمجية
-        pre_title: التعليمات
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: تطابق المتاهة
       4-5 maze multi 1:
-        title: متاهة - اختيار من متعدد
-        questions:
-        - text: أي القطع سوف تحل هذا اللغز ؟
         answers:
+        - correct: true
         - {}
         - {}
         - {}
-        - {}
+        questions:
+        - text: أي القطع تحل اللغز ؟
+        title: متاهة - اختيار من متعدد
       Begin planning your project:
-        title: العنوان
         content1: الوصف هنا
       Begin planning your project_2018:
         content1: الوصف هنا
@@ -453,6 +457,11 @@ ar-SA:
           | [![Hungry Squirrel (Play Lab)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Hungry Squirrel (Play Lab")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [![Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | Try adding sounds to this game! | Try adding another scene to this story! |
 
+      BigEvent-Unplugged:
+        markdown: |
+          #الحدث الأكبر
+
+          في علوم الحاسوب، الأحداث هي الاجراءات التي يراقبها جهاز الحاسوب باستمرار، في هذا الدرس سوف تتفاعل بشكل مختلف استناداً إلى أي زر يتم الضغط عليه.
       BinaryBracelets-Unplugged:
         markdown: |
           # الإسورة_ الثنائية
@@ -460,106 +469,103 @@ ar-SA:
           اصنع اسورة تمثل اسمك بالطريقة التي يفهمها الحاسب
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryImages-Unplugged:
+        markdown: |
+          #الصور الثنائية
+
+
+          تواصل مع كيفية إعادة إنشاء صورة باستخدام قيمتين بسيطتين فقط.
       CSD Header Size MC:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD Header Size MC_2018_2019:
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - {}
       CSD U2 Design Project:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 Design Project_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 Design Project_2018_2019:
-        title: العنوان
+        content1: الوصف هنا
+      CSD U2 L1 Overview:
         content1: الوصف هنا
       CSD U2 L2 Overview:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 L3 Overview:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 L4 Overview:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 L5 Overview:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 L6 Overview:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 Lesson 6 Overview:
         content1: الوصف هنا
       CSD U2 expand project:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 expand project_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 expand project_2018_2019:
-        title: العنوان
         content1: الوصف هنا
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -572,71 +578,71 @@ ar-SA:
       CSD U2 project guide_2018_2019:
         content1: الوصف هنا
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: العنوان
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: العنوان
       CSD U3 Boolean MC_2018:
-        title: العنوان
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: العنوان
       CSD U3 Boolean MC_2018_2019:
-        title: العنوان
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: العنوان
       CSD U3 Card Examples_2018:
         content1: الوصف هنا
       CSD U3 Card Examples_2018_2019:
@@ -645,122 +651,119 @@ ar-SA:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Functions Prediction define first_2018_2019:
         answers:
         - {}
         - {}
-        - {}
+        - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
+        - correct: true
         - {}
         - {}
         - {}
+        questions:
         - {}
       CSD U3 combining rep:
-        title: العنوان
         content1: الوصف هنا
       CSD U3 combining rep_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U3 combining rep_2018_2019:
-        title: العنوان
         content1: الوصف هنا
       CSD U3 drawSprites placement match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
@@ -778,13 +781,10 @@ ar-SA:
       CSD U3 platform intro_2018_2019:
         content1: الوصف هنا
       CSD U5 Encryption 1:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 Encryption 1_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 Encryption 1_2018_2019:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 Encryption 2:
         content1: الوصف هنا
@@ -793,7 +793,6 @@ ar-SA:
       CSD U5 Encryption 2_2018_2019:
         content1: الوصف هنا
       CSD U5 L13 SFLP Interpreting Data:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 crosstab warmup:
         content1: الوصف هنا
@@ -802,22 +801,16 @@ ar-SA:
       CSD U5 crosstab warmup_2018_2019:
         content1: الوصف هنا
       CSD U5 data visualization:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 data visualization_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 data visualization_2018_2019:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 student record:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 student record_2018:
-        title: العنوان
         content1: الوصف هنا
       CSD U5 student record_2018_2019:
-        title: العنوان
         content1: الوصف هنا
       CSD U6 LED create intro:
         content1: الوصف هنا
@@ -826,28 +819,28 @@ ar-SA:
       CSD U6 LED create intro_2018_2019:
         content1: الوصف هنا
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 final intro:
         content1: الوصف هنا
@@ -856,225 +849,398 @@ ar-SA:
       CSD U6 final intro_2018_2019:
         content1: الوصف هنا
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      ConditionalsWithCards-Unplugged:
+        markdown: |
+          #الشرطية مع بطاقات
+
+          إلعب لعبة بطاقات وقم بإنشاء قواعد مثل "إذا رسمت بطاقة حمراء ، أحصل على نقطة" و "إذا رسمت بطاقة سوداء ، فستحصل على نقطة."
+      Dance_Party_extras_intro:
+        markdown: "# مواصلة الرقص!\n\n بالنسبة للجزء 2، أنت ستقوم بإنشاء المشروع الخاص
+          بك. لا توجد إلغاز هنا- بدلاً من ذلك توجد مجموعة من المشروعات التي تظهر طرقاً
+          مختلفة لصنع المزيد من حفلات الرقص الأكثر تطوراً.\n\n يمكنك القيام بهذه المستويات
+          _في أي ترتيب_. خذ جولة لإلقاء نظرة على طريقة إتمام شيء ما في المستوي السابق،
+          أو قم بتجميع الأفكار العامة ما بين المشروعات. جربها جميعاً، قم بانتقاء المفضلة،
+          واستغرق الوقت للعمل على إضافة هذا المشروع إلى مساحة عملك. \n\n<a class=\"btn
+          btn-large btn-primary next-stage submitButton pull-right\">مواصله</a>\n\n<div
+          class=\"clearfix\"></div>\n\n<div style=\"float: left; margin: 10px\">\n<a
+          href=\"2\">\n<h2>\nالحصول علي التشكيل\n</h2>\n\n<img src=\"https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"3\">\n<h2>\nأين ذهبوا ؟\n</h2>\n\n<img
+          src=\"https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"4\">\n<h2>\nأطقم الرقص\n</h2>\n\n<img
+          src=\"https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"5\">\n<h2>\nملاحظات ربع
+          سنوية\n</h2>\n\n<img src=\"https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"6\">\n<h2>\nباس ، منتصف
+          ، التريبل\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
+          style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nسرع الأمر ،
+          أبطئه\n</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          # استمر في الرقص!
+
+          بالنسبة للجزء 2 ، أنت بصدد إنشاء مشروعك الخاص. لا توجد هنا ألغاز - بدلاً من ذلك ، هناك مجموعة من المشاريع التي تعرض طرقًا مختلفة لإقامة حفلات رقص أكثر تعقيدًا.
+
+          يمكنك القيام بهذه المستويات _ في أي أمر_. اقفز في المكان لتعرف كيف تم القيام بشيء ما في المستوى السابق ، أو ادمج المفاهيم بين المشاريع. جرّبهم جميعًا ، واختر ما تفضله ، وقضي وقتك في العمل على الإضافة إلى هذا المشروع لجعله بنفسك.
+
+          <a class="btn btn-large btn-primary next-stage submitButton pull-right">مواصلة</a>
+
+          <div class="clearfix"></div>
+
+
+          <div style="float: left; margin: 10px">
+          <a href="2">
+          <h2>
+          ذهابا وإيابا
+          </h2>
+
+          <img src="https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="3">
+          <h2>
+          المزيد من أزرار
+          </h2>
+
+          <img src="https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif"></a>
+
+          </div>
+          <div style="float: left; margin: 10px">
+          <a href="4">
+          <h2>
+          ابق على تشكيل
+          </h2>
+
+          <img src="https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="5">
+          <h2>
+          أين يذهبون؟
+          </h2>
+
+          <img src="https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="6">
+          <h2>
+          اطقم الرقص
+          </h2>
+
+          <img src="https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="7">
+          <h2>
+          ملاحظات الربع
+          </h2>
+
+          <img src="https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="8">
+          <h2>
+          باس، منتصف، ثلاثة أضعاف
+          </h2>
+
+          <img src="https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif"></a>
+
+          </div>
+
+          <div style="float: left; margin: 10px">
+          <a href="9">
+          <h2>
+          تسريعه، تبطئ خطاها
+          </h2>
+
+          <img src="https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif"></a>
+
+          </div>
+      DesigningForAccessibilityMarkdownLevel_2019:
+        markdown: |
+          #التصميم لسهولة الوصول
+
+          *في عالم عِلم الحاسوب، **سهولة الوصول** تدور حول ابتكار تكنولوجيا للأشخاص ذوي الاحتياجات الخاصة.
+          *الاحتياجات الخاصة تشمل المادية، السمعية، البصرية، وغيرها الكثير.
+          *الاحتياجات الخاصة متنوعة وتؤثر في الأشخاص بطرق مختلفة ،بما في ذلك كيفية استخدامهم للتكنولوجيا مثل **تطبيقات الهواتف الذكية**.
+          *تصميم التطبيقات التي تسهّل للأشخاص ذوي الاحتياجات الخاصة الوصول إليها تجعل هذه التطبيقات أفضل للجميع أيضاً!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalCitizenship-Unplugged:
+        markdown: |
+          # المواطنة الرقمية
+
+          بعض المعلومات ليست آمنة لمشاركتها عبر الإنترنت. سيساعدك هذا الدرس على معرفة الفرق بين المعلومات الآمنة والمعلومات الخاصة.
+      DigitalFootprint-Unplugged:
+        markdown: |
+          #البصمة الرقمية الخاصة بك
+
+          وضع معلومات عن نفسك عبر الإنترنت يخلق بصمة رقمية.
+      GettingLoopy-Unplugged:
+        markdown: |
+          #حصول التكرار
+
+          يقدم هذا الدرس مفهوم برمجة التكرار من خلال نشاط الرقص.
+      GoingPlacesSafely-unplugged:
+        markdown: |
+          #التصفح بأمان
+          الانترنت عالم قوي،لكن أحياناً يكون خطيراً. لتبقى آمناً عند تصفح الإنترنت
+      GraphPaperProgramming-Unplugged:
+        markdown: |
+          #برمجة ورقة رسم بياني
+
+          اكتب خوارزميات يمكن لزملائك في الصف استخدامها لرسم صور.
+      HappyLoops-Unplugged:
+        markdown: |
+          #التكرار الممتع
+
+          في هذا الدرس، ستتعلم عن التكرار
+
+          ![](https://images.code.org/6aac7f675f0c69033f42ccac6a733f68-image-1557769673400.png)
+      HappyMaps-Unplugged:
+        markdown: |
+          #الخرائط الممتعة
+
+          انشاء خوارزمية لتحريك الشخصية من خلال المتاهة.
       Internet Simulator Setup:
         content1: الوصف هنا
       Internet Simulator Setup 2:
-        title: العنوان
         content1: الوصف هنا
       Internet Simulator Setup 3:
         content1: الوصف هنا
       K-1 Artist 1 Multi 1:
-        title: إختيارات متعددة
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: أي القطع سوف تحل هذا اللغز ؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: إختيارات متعددة
+      K-1 Artist 1 Multi 2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: ما هي القطع التي رسمت المربع؟
+        title: إختيارات متعددة
+      K-1 Artist 2 Match 2:
         answers:
         - {}
         - {}
         - {}
         - {}
-      K-1 Artist 2 Match 2:
-        title: مطابقة
         content2: طابق الاشكال بحسب النوعها.
         questions:
         - {}
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 1:
-        title: إختيارات متعددة
-        questions:
-        - text: كم نكتاراً في هذا؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee 1 Multi 2:
-        title: إختيارات متعددة
-        questions:
-        - text: كم نكتاراً في هذا؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Bee Loops Match 1:
         title: مطابقة
+      K-1 Bee 1 Multi 1:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: كم نكتاراً في هذا؟
+        title: إختيارات متعددة
+      K-1 Bee 1 Multi 2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: كم نكتاراً في هذا؟
+        title: إختيارات متعددة
+      K-1 Bee Loops Match 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: قم بمطابقة القطع
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: مطابقة
+      K-1 Big Event Match 1:
         answers:
         - {}
         - {}
         - {}
-        - {}
-      K-1 Big Event Match 1:
-        title: مطابقة
         content2: أنقرْ علي مجموعة الازرار المناسب التي تتناسب مع حركات الرقص.
         questions:
         - {}
         - {}
         - {}
+        title: مطابقة
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: إختيارات متعددة
+        - correct: true
         questions:
         - text: أي حيوان له البصمة الرقمية أن يترك له أو لها <strong>آخر غير آمنة</strong>؟
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Getting Loopy Multi 1:
         title: إختيارات متعددة
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: كيف يمكنك تبسيط هذا التسلسل مع الحلقات ؟
+        title: إختيارات متعددة
+      K-1 Happy Maps Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      K-1 Happy Maps Multi 1:
-        title: إختيارات متعددة
         questions:
         - text: السهم الذي يحصل فلورب الكنز؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Keep it Private Multi 1:
         title: إختيارات متعددة
+      K-1 Keep it Private Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: المعلومات التي يجب عليك <strong>عدم</strong> مشاركة على الإنترنت؟
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
         title: إختيارات متعددة
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
         questions:
         - text: ما هو الإختيار الذي يجب أن يكون هو الجزء الأخير؟
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: إختيارات متعددة
+      K-1 Maze Loops Multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
         questions:
         - text: الذي كرر كتلة هو نفسه؟
+        title: إختيارات متعددة
+      K-1 Maze Loops Multi 2:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Maze Loops Multi 2:
-        title: إختيارات متعددة
+        - correct: true
         questions:
         - text: اختيار كتلة التكرار الصحيح.
+        title: إختيارات متعددة
+      K-1 Maze Match 1:
         answers:
         - {}
         - {}
         - {}
-      K-1 Maze Match 1:
-        title: مطابقة
+        - {}
         content2: طابق الألغاز و القطع
-        pre_title: التعليمات
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: مطابقة
+      K-1 Maze Multiple Choice 2:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Maze Multiple Choice 2:
-        title: المتاهة
         questions:
         - text: ما الإجابة التي تحل هذا المستوى؟
+        title: المتاهة
+      K-1 Move It Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-        - {}
-      K-1 Move It Multi 1:
-        title: إختيارات متعددة
         questions:
         - text: الخوارزمية التي يحصل فلورب للزهور؟
+        title: إختيارات متعددة
+      K-1 Plant a Seed Multi 1:
         answers:
         - {}
         - {}
-        - {}
-        - {}
-      K-1 Plant a Seed Multi 1:
-        title: إختيارات متعددة
+        - correct: true
         questions:
         - text: ما الخطوة التي ينبغي أن تكون في بداية الخوارزمية؟
+        title: إختيارات متعددة
+      K-1 Plant a Seed Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Plant a Seed Multi 2:
-        title: إختيارات متعددة
         questions:
         - text: الخطوة التي ينبغي ملء الفراغ لهذه الخوارزمية؟
+        title: إختيارات متعددة
+      K-1 Word Search Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      K-1 Word Search Multi 1:
-        title: إختيارات متعددة
         questions:
         - text: الذي يمنع الإملائي "نقل"؟
-        answers:
-        - {}
-        - {}
-        - {}
-      K-1 Word Search Multi 3:
         title: إختيارات متعددة
-        questions:
-        - text: أي كلمة هي التي نُطِقَتْ؟
+      K-1 Word Search Multi 3:
         answers:
         - text: تعيين
         - text: مربع
+          correct: true
         - text: الجنوب
+        questions:
+        - text: أي كلمة هي التي نُطِقَتْ؟
+        title: إختيارات متعددة
+      MoveItMoveIt-Unplugged:
+        markdown: |
+          #حرّكها، حرّكها
+
+          استخدم الخريطة و أعطي أوامر للوصول إلى الهدف.
       Multi-Screen Apps:
-        title: العنوان
         content1: الوصف هنا
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
@@ -1087,10 +1253,8 @@ ar-SA:
 
           تعلم البرمجة عن طريق كتابة كود برمجي لأصدقائك!
       New Challenge Introduction:
-        title: العنوان
         content1: الوصف هنا
       OPD-K5 Stage3aGo:
-        title: العنوان
         content1: الوصف هنا
       PicturingData-Unplugged:
         markdown: |
@@ -1107,230 +1271,284 @@ ar-SA:
 
           ![](https://images.code.org/9e082a5564a289bccc8e2dd79a2cae9f-image-1557869939256.png)
       Prepare for your presentation:
-        title: العنوان
         content1: الوصف هنا
+      PrivatePersonalInformation-Unplugged:
+        markdown: |
+          #معلومات عامة وخاصة
+
+          تم تطوير هذا الدرس بواسطة Common Sense Education ، وهو يدور حول الفرق بين المعلومات الآمنة للمشاركة عبر الإنترنت والمعلومات غير الآمنة
+
+          ![](https://images.code.org/872576b170b9d8aec9b29f684a1ad94e-image-1557878406833.png)
+      RelayProgramming-Unplugged:
+        markdown: |
+          #تناوب البرمجة
+
+           التقسيم إلى فرق و العمل معًا لكتابة برامج التي ترسم صور.
       ScreenOutTheMean-Unplugged:
         markdown: |
           #حارب_التنمر
 
           اليوم سوف تتعلم ماذا يمكنك فعله عندما يؤذيك شخص سيء على الأنترنت.
+      SimonSays-Unplugged:
+        markdown: |
+          #يقول سيمون
+
+          العب لعبة وفكر في الأوامر المطلوب اتخاذها للحصول على النتيجة الصحيحة.
+      Songwriting-Unplugged:
+        markdown: |
+          #تأليف الأغاني
+
+          استخدم مفهوم الجوقة في أغنية لتتعلّم تعريف واستدعاء الدوال.
       'Technique: Frequency Analysis':
         content1: الوصف هنا
       Terminology Recap:
         content1: الوصف هنا
+      TheRightAppMarkdownLevel_2019:
+        markdown: |
+          #التطبيق الصحيح
+
+          *في وقتنا الحالي، الجميع يستخدم الحاسب الآلي، خصوصاً الهواتف الذكية.
+          *تساعد تطبيقات الهواتف الذكية الأشخاص على فعل أشياء مثل التحدث إلى الأصدقاء ،الاستماع إلى الموسيقى ، التسوق أو تصفح الانترنت فقط.
+          * من المهم للمبرمجين فهم احتياجات الآخرين وتصميم التطبيقات مع أخذها في الاعتبار
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       behaviors 4 predict:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: سوف يرسم الرسام خط مستقيم.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: الرسام سوف يرسم مربع.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
           feedback: الرسام سوف يرسم مربع.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: سوف يرسم الرسام خط مستقيم.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: الرسام سوف يرسم مربع.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
           feedback: الرسام سوف يرسم مربع.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: الرسام سوف يرسم مثلث بثلاث أضلاع.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: سوف يرسم الرسام خط مستقيم.
           feedback: خطأ. سوف يرسم الرسام مربع.
         - text: الرسام سوف يرسم مربع.
+          correct: true
           feedback: صحيح!
         - text: لا أعرف.
           feedback: الرسام سوف يرسم مربع.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
-            المزارع بعد ضغط زر "تشغيل"؟
         answers:
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '4'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
-        - feedback: صحيح!
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '12'
+          correct: true
+          feedback: صحيح!
+        - text: '15'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
         - text: لا أعرف.
           feedback: سيجمع المزارع 4 يقطينات في في كل دالة من دوال التكرار. 4 مضروب
             في 3 يساوي 12!
+        questions:
+        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
+            المزارع بعد ضغط زر "تشغيل"؟
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
-            المزارع بعد ضغط زر "تشغيل"؟
         answers:
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '4'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
-        - feedback: صحيح!
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '12'
+          correct: true
+          feedback: صحيح!
+        - text: '15'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
         - text: لا أعرف.
           feedback: سيجمع المزارع 4 يقطينات في في كل دالة من دوال التكرار. 4 مضروب
             في 3 يساوي 12!
+        questions:
+        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
+            المزارع بعد ضغط زر "تشغيل"؟
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
-            المزارع بعد ضغط زر "تشغيل"؟
         answers:
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '4'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
-        - feedback: صحيح!
-        - feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
+        - text: '12'
+          correct: true
+          feedback: صحيح!
+        - text: '15'
+          feedback: خطأ. المزارع سيجمع 4 يقطينات في في كل دالة من دوال التكرار. 4
             مضروب في 3 يساوي 12!
         - text: لا أعرف.
           feedback: سيجمع المزارع 4 يقطينات في في كل دالة من دوال التكرار. 4 مضروب
             في 3 يساوي 12!
+        questions:
+        - text: انظر جيداً إلى الكود البرمجي التالي. كم عدد اليقطينات التي سيجمعها
+            المزارع بعد ضغط زر "تشغيل"؟
       courseC_multi_maze_debugging8_predict1:
-        questions:
-        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
-            يخفق؟ '
         answers:
         - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
           feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
         - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          correct: true
           feedback: صحيح!
         - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
           feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
         - text: لا أعرف.
           feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
             الاخير. '
+        questions:
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
-            يخفق؟ '
         answers:
         - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
           feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
         - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          correct: true
           feedback: صحيح!
         - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
           feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
         - text: لا أعرف.
           feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
             الاخير. '
+        questions:
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
-            يخفق؟ '
         answers:
         - text: البرنامج لن يخفق. السنجاب سيحصل على الجوزة.
           feedback: غير صحيح. السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
         - text: السنجاب سيذهب إلى الطريق الخاطئ بعد الالتفافه الاخيرة.
+          correct: true
           feedback: صحيح!
         - text: السنجاب سيستخدم خطوات قليلة وسيتوقف قبل الوصول إلى الجوزة.
           feedback: غير صحيح. الخطوات الناقصة ستحدث بعد أن يتجه السنجاب للاتجاه الخاطئ.
         - text: لا أعرف.
           feedback: 'الخطأ الاول هو أن السنجاب سوف يذهب للاتجاه الخاطئ بعد الالتفاف
             الاخير. '
+        questions:
+        - text: 'تفحص جيداً الكود البرمجي التالي. ماهو اول خطأ يمكنه أن يجعل البرنامج
+            يخفق؟ '
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - text: سيصدم الطائر صندوق المتفجرات TNT.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: لا أعرف.
           feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
+        questions:
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - text: سيصدم الطائر صندوق المتفجرات TNT.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: لا أعرف.
           feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
+        questions:
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: سيكون الطائر بمسافة خطوة واحدة قبل الوصول إلى الخنزير.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - text: سيصدم الطائر صندوق المتفجرات TNT.
           feedback: خطأ. هذا الكود سوف يصل الطائر إلى الخنزير بطريقة صحيحة.
         - text: لا أعرف.
           feedback: هذا الكود البرمجي سيصل الطائر إلى الخنزير بطريقة صحيحة.
+        questions:
+        - text: راجع الكود البرمجي بدقة. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_starWars_predict1:
-        questions:
-        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
         answers:
         - text: BB-8 لن يتحرك.
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك خطوة واحدة للأمام
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك 5 مرات ويجمع كل قطع الحديد
+          correct: true
           feedback: صحيح!
         - text: لا أعرف
           feedback: بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        questions:
+        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
         answers:
         - text: BB-8 لن يتحرك.
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك خطوة واحدة للأمام
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك 5 مرات ويجمع كل قطع الحديد
+          correct: true
           feedback: صحيح!
         - text: لا أعرف
           feedback: بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        questions:
+        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
         answers:
         - text: BB-8 لن يتحرك.
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك خطوة واحدة للأمام
           feedback: غير صحيح. بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
         - text: BB-8 سوف يتحرك 5 مرات ويجمع كل قطع الحديد
+          correct: true
           feedback: صحيح!
         - text: لا أعرف
           feedback: بلوكة كرر سوف تجعل BB-8 يتحرك للامام 5 مرات.
+        questions:
+        - text: ماذا تتوقع سوف يحدث عندما تضغط على "تشغيل"؟
       courseC_multi_starWars_predict2:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: BB-8 سوف ينتقل بسرعة في دالة كرر الاولى.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
             بينما المطلوب أن يتحرك ثلاث خطوات.
         - text: BB-8 لن يتحرك كفاية في دالة كرر الاولى ليجمع كل قطع الحديد.
+          correct: true
           feedback: صحيح!
         - text: BB-8 سوف يجمع كل قطهع الحديد بدون أي مشاكل.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
@@ -1338,14 +1556,15 @@ ar-SA:
         - text: لا أعرف.
           feedback: دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط, بينما المطلوب
             أن يتحرك ثلاث خطوات.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: BB-8 سوف ينتقل بسرعة في دالة كرر الاولى.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
             بينما المطلوب أن يتحرك ثلاث خطوات.
         - text: BB-8 لن يتحرك كفاية في دالة كرر الاولى ليجمع كل قطع الحديد.
+          correct: true
           feedback: صحيح!
         - text: BB-8 سوف يجمع كل قطهع الحديد بدون أي مشاكل.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
@@ -1353,14 +1572,15 @@ ar-SA:
         - text: لا أعرف.
           feedback: دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط, بينما المطلوب
             أن يتحرك ثلاث خطوات.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
         answers:
         - text: BB-8 سوف ينتقل بسرعة في دالة كرر الاولى.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
             بينما المطلوب أن يتحرك ثلاث خطوات.
         - text: BB-8 لن يتحرك كفاية في دالة كرر الاولى ليجمع كل قطع الحديد.
+          correct: true
           feedback: صحيح!
         - text: BB-8 سوف يجمع كل قطهع الحديد بدون أي مشاكل.
           feedback: غير صحيح. دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط,
@@ -1368,547 +1588,632 @@ ar-SA:
         - text: لا أعرف.
           feedback: دالة كرر الأولى سوف تجعل BB-8 يمشي للامام خطوتان فقط, بينما المطلوب
             أن يتحرك ثلاث خطوات.
+        questions:
+        - text: أنظر جيداً إلى الكود البرمجي التالي. ماذا سيحدث لو ضغطت على زر التشغيل؟
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
           feedback: صحيح!
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
           feedback: صحيح!
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
+          correct: true
           feedback: صحيح!
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
           feedback: صحيح!
         - text: B
         - text: C
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
           feedback: صحيح!
         - text: B
         - text: C
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
+          correct: true
           feedback: صحيح!
         - text: B
         - text: C
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - text: 'انظر بعناية في الكود أدناه. ماذا برأيك سيحدث بعد النقر فوق "تشغيل"؟
+            تذكر: لن يكون هناك سوى * عسل واحد* أو *زهرة واحدة* خلف كل سحابة.'
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: صحيح!
+        - text: '12'
+        - text: لا أعرف.
         questions:
         - {}
-        answers:
-        - {}
-        - feedback: صحيح!
-        - {}
-        - text: لا أعرف.
       courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: صحيح!
+        - text: '12'
+        - text: لا أعرف.
         questions:
         - {}
-        answers:
-        - {}
-        - feedback: صحيح!
-        - {}
-        - text: لا أعرف.
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+        - text: '8'
+          correct: true
+          feedback: صحيح!
+        - text: '12'
+        - text: لا أعرف.
         questions:
         - {}
-        answers:
-        - {}
-        - feedback: صحيح!
-        - {}
-        - text: لا أعرف.
       courseD_multi_collector_debugging10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - text: سيصل الطائر إلى الخنزير.
+          correct: true
           feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
+        - correct: true
+        questions:
         - {}
+      courseE_project_exemplars_2019:
+        markdown: |+
+          #أمثلة مشروع
+
+          انت على وشك البدء بمشروعك النهائي. قبل البدأ، ألقِ نظرة على مشاريع كسبيل مثال.
+
+          ## مختبر المخلوقات الفضائية
+
+          | رقص العفريت (مختبر المخلوقات الفضائية) | لعبة الكعك (مختبر المخلوقات الفضائية) |
+          |---|---|
+          | [![Monster Dance (Sprite Lab)](https://images.code.org/85838ca11b728dce3e1513515c4510e3-image-1556826303297.png "Monster Dance (Sprite Lab")](https://studio.code.org/projects/spritelab/Cj3sVYGhWo2ujgwRoO1FscJazrDPT2qGfU59YXvFXxs/view) | [![Cupcake Game (Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png "Cupcake Game (Sprite Lab")](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) |
+          | حاول أضف نص أو سجل نقطة في اللعبة! | حاول أضف نص أو سجل نقطة في اللعبة! |
+
+          ## الفنان
+
+          | نمط (الفنان) | دالة الزهور (الفنان) |
+          |---|---|
+          | [![Pattern (Artist)](https://images.code.org/2432878706891dda080b69428ddc4a20-image-1556822714214.png "Pattern (Artist)")](https://studio.code.org/projects/artist/TznMeJRa4SnHWJvUBEoNUw/view) | [![Function Flowers (Artist)](https://images.code.org/1e6da38baf996dace44581572895a4b8-image-1556822184973.png "Function Flowers (Artist)")](https://studio.code.org/projects/artist/4uGqFaTnc7V9B6IqCqj21Q/view) |
+          | دعنا نبدع مع حلقات متداخلة! | لنكن مبدعين مع الوظائف! |
+
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
         - {}
         - text: لا أعرف.
-      courseF_multi_bee_for3_predict1:
         questions:
         - {}
+      courseF_multi_bee_for3_predict1:
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
-        - {}
+        - correct: true
         - {}
         - text: لا أعرف.
+        questions:
+        - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
-        - {}
+        - correct: true
         - {}
         - {}
         - text: لا أعرف.
-      coursee_prediction_artistfunction2:
         questions:
         - {}
+      coursee_prediction_artistfunction2:
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
-        - feedback: صحيح!
+        - correct: true
+          feedback: صحيح!
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
+        answers:
+        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          correct: true
+          feedback: صحيح!
+        - text: سوف تجمع لورا كل المجوهرات.
+          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
+        - text: لا أعرف.
+          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
         questions:
         - text: تفحص جيداً الكودالبرمجي. لو شغلنا البرنامج للنهاية (بغض النظر عن الأخطاء)
             كم عدد المجوهرات التي ستجمعها لورا؟
-        answers:
-        - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
-          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
-        - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
-          feedback: صحيح!
-        - text: سوف تجمع لورا كل المجوهرات.
-          feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
-        - text: لا أعرف.
-          feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
-            الكود؟
         answers:
         - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
           feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
         - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          correct: true
           feedback: صحيح!
         - text: سوف تجمع لورا كل المجوهرات.
           feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
         - text: لا أعرف.
           feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+        questions:
+        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
+            الكود؟
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
-            الكود؟
         answers:
         - text: سوف تجمع لورا 4 مجوهرات باستخدام هذا الكود البرمجي.
           feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
         - text: سوف تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+          correct: true
           feedback: صحيح!
         - text: سوف تجمع لورا كل المجوهرات.
           feedback: خطأ. لورا سوف تحاول أن تجمع لكن لاتوجد مجوهرات مما يسبب الخطأ.
         - text: لا أعرف.
           feedback: تحاول لورا الجمع ولكن لاتوجد مجوهرات مما يسبب خطأ.
+        questions:
+        - text: انضر جيداً إلى هذا الكود البرمجي. ماذا تضن أنه سيحدث لو شغلنا هذا
+            الكود؟

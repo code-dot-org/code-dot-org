@@ -2070,7 +2070,8 @@ fr-FR:
       Dance_2019_01:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
-          \*Assure-toi qu'un danseur apparaît à l'écran.
+
+          -   Assure-toi qu'un danseur apparaît à l'écran.
 
           _Ce niveau se termine après 4 mesures._
         challenges: |-
@@ -2081,7 +2082,7 @@ fr-FR:
           -   Crée plus d'un danseur.
       Dance_2019_02:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Le danseur doit effectuer un mouvement.
           -   Tu dois appuyer sur une touche fléchée.
@@ -2093,7 +2094,7 @@ fr-FR:
           -   Utilise plusieurs blocs <xml><block type="Dancelab_whenKey"><title name="KEY"></title></block></xml>.
       Dance_2019_03:
         validation: |-
-          **Comment puis-je réussir à passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau ?**
 
           -   Les deux danseurs doivent faire un mouvement.
           -   Il faut appuyer sur les touches fléchées.
@@ -2102,7 +2103,7 @@ fr-FR:
         challenges: |-
           **Défi facultatif**
 
-          -   Demande à un danseur de répondre aux touches fléchées gauche et droite.
+          -   Un danseur doit répondre aux touches fléchées gauche et droite.
       Dance_2019_04:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2123,9 +2124,9 @@ fr-FR:
           -   Change l’arrière-plan à chaque changement de danseur.
       Dance_2019_06:
         validation: |-
-          **Comment puis-je réussir à passer ce niveau?**
+          **Comment puis-je réussir à passer ce niveau ?**
 
-          -   Créez un danseur principal et un groupe de danseurs en renfort.
+          -   Crée un danseur principal et un groupe de danseurs en renfort.
 
           _Ce niveau se termine après 7 mesures._
         challenges: |-
@@ -2134,7 +2135,7 @@ fr-FR:
           -   Crée plusieurs groupes de danseurs de secours.
       Dance_2019_07:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Modifie la taille d'au moins un danseur après le début de la musique.
 
@@ -2142,30 +2143,30 @@ fr-FR:
         challenges: |-
           **Défi optionnel**
 
-          -   Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.).
+          -   Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.).
       Dance_2019_08:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
           -   Change la teinte d'au moins un danseur.
 
           _Ce niveau se termine après 6 mesures._
-        tint_hint: As-tu remarqué que tes danseurs ne changent pas pour la couleur
-          exacte que tu choisis? En effet, **les teintes** mélangent la couleur que
-          tu choisis avec les couleurs du danseur.
+        tint_hint: As-tu remarqué que tes danseurs n'ont pas la couleur exacte que
+          tu choisis ? En effet, **les teintes** mélangent la couleur que tu choisis
+          avec les couleurs du danseur.
       Dance_2019_09:
         validation: |-
-          **Comment puis-je passer ce niveau?**
+          **Comment puis-je passer ce niveau ?**
 
-          -   Appuie simplement sur le bouton "Terminer"!
+          -   Appuie simplement sur le bouton "Terminer" !
         repeat_every_ideas: |-
-          **Besoin d'idées?**
+          **Besoin d'idées ?**
 
           -   Change à plusieurs reprises la taille d'un danseur pour le faire grandir.
-          -   Modifie à plusieurs reprises la rotation d'un danseur pour le faire tourner.
+          -   Modifie à plusieurs reprises l'angle d'un danseur pour le faire tourner.
           -   Modifie à plusieurs reprises la position horizontale ou verticale d'un danseur pour le déplacer sur l'écran.
 
-          _Tu peux également utiliser des nombres négatifs pour créer un effet opposé!_
+          _Tu peux également utiliser des nombres négatifs pour créer un effet opposé !_
         next_previous: |-
           **Défi facultatif**
 
@@ -2208,9 +2209,9 @@ fr-FR:
 
           _Ce niveau se termine après 9 mesures._
         challenges: |-
-          "**Optional Challenge**
+          "**Défi Optionnel**
 
-          Change the background effect at different points during the song by connecting the new block under the <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> events.".
+          Change l'effet de fond à plusieurs moments de la chanson en connectant les nouveaux blocs sous les évènements <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml> .".
       Dance_Party_05:
         validation: "**Comment réussir ce niveau ?** \n\n-   Votre danseur doit effectuer
           au moins 4 mouvements de danse différents avant la fin du niveau. \n\n_Ce
@@ -2226,7 +2227,7 @@ fr-FR:
           **Défis optionnels**
 
           -   Ajoute un troisième danseur (ou autant que tu veux !)
-          -   Fait en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson.
+          -   Fais en sorte que tous tes danseurs exécutent différents mouvements à différents moments de la chanson.
       Dance_Party_08:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -2237,7 +2238,7 @@ fr-FR:
         challenges: |-
           **Défi optionnel**
 
-          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, rotation, etc.)
+          \*Expérimente en changeant d'autres propriétés (largeur, hauteur, angle, etc.)
       Dance_Party_09:
         validation: |-
           **Comment puis-je réussir ce niveau ?**
@@ -7053,11 +7054,6 @@ fr-FR:
         courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution
           commence\` sur l’espace de travail pour résoudre ce casse-tête.
       courseC_PlayLab_eventsA_2019:
-        courseC_PlayLab_eventsA_a: Utilise le bloc ˋdéfinir un arrière-plan`et le
-          bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.
-        courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution
-          commence\` sur l’espace de travail pour résoudre ce casse-tête.
-      courseC_PlayLab_eventsA_embed_2019:
         courseC_PlayLab_eventsA_a: Utilise le bloc ˋdéfinir un arrière-plan`et le
           bloc ˋaffecter à l’acteur une vitesse ____` pour résoudre ce casse-tête.
         courseC_PlayLab_eventsA_b: Tu devras faire glisser un bloc ˋquand l’exécution

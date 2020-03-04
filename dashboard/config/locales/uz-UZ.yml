@@ -121,6 +121,8 @@ uz:
       title: Shart buyruqlari
   gallery:
     report_abuse: Nosozlik haqida xabar berish
+  free_response:
+    placeholder: Javobingizni bu yerga yozing
   multi:
     wrong_title: Noto‘g‘ri javob
     wrong_body: Siz bergan javob noto‘g‘ri. Qaytadan urinib ko‘ring!

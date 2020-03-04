@@ -2481,7 +2481,7 @@ bg:
               name: Променливи
             For Loops:
               name: За циклите
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Условия
@@ -2491,3 +2491,28 @@ bg:
               name: Crowdsourcing кампания
             Conditionals with Cards:
               name: Условия с карти
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Условия
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Условия
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Функции с параметри
+        csd3-2020:
+          description_short: Програмиране
+          stages:
+            Variables:
+              name: Променливи
+            Sprite Properties:
+              name: Свойства на Спрайта
+            Conditionals:
+              name: Условия
+            Velocity:
+              name: Скорост
+            Functions:
+              name: Функции

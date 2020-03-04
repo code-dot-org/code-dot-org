@@ -916,15 +916,3 @@ sl-SI:
         tako da 10-krat narišeš kvadrat in z blokom "Obrni" vrtiš za 36 stopinj med
         vsakim kvadratom v snežinki?
       k-1 maze 1: Ali me lahko premakneš proti zahodu, da pridem do prašička?
-      scrat 16: Želod! Želod! Želod! Uporabi "če" kocko, da me pripelješ tja čim manj
-        kockami.
-      scrat 17: Pa poskusimo tole za vajo še enkrat - ni zelo drugače, a pazi na zid!
-      scrat 18: |-
-        Kocka "če drugo" preveri pogoj in nato naredi eno ALI drugo stvar. Da bi me pripeljal do želoda,
-        poskusi uporabiti to novo kocko.
-      scrat 19: |-
-        Še ena vaja za "če drugo" kocko. Ti lahko
-        uspe že v prvem poskusu?
-      scrat 20: "Ali lahko dodaš le tri kocke, da mi pomagaš rešiti bolj zapleten
-        labirint?\nČe boš naredil/a pravilno, bom lahko hodila po katerikoli\novinkasti
-        cesti, ne glede na to, \nkako dolga je.\nPohiti, led se topi!"

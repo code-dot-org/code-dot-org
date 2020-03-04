@@ -750,14 +750,22 @@ $default-modal-width: 640px;
   background-color: $orange;
 }
 
-#video {
+#videoTabContainer {
   padding: 0;
+}
+
+#video {
+  border-width: 0;
 }
 
 .video-player {
   width: 100%;
   height: 100%;
   margin: 0;
+}
+
+.vjs-tech:focus, .vjs-poster:focus {
+  outline: 0;
 }
 
 .video-player-rounded-corners {
@@ -2187,7 +2195,8 @@ a.download-video {
 .standalone-video,
 .curriculum-reference,
 .multi,
-.match {
+.match,
+.bubble-choice {
   #markdown.teacher {
     max-width: 1000px;
     border: 5px solid $cyan;
@@ -2282,6 +2291,10 @@ a.download-video {
   margin-left: 50px;
   margin-right: 50px;
   max-width: 100%;
+}
+
+.bubble-choice #markdown.teacher {
+  margin: 10px 0;
 }
 
 .multi.contained #markdown.teacher {

@@ -32,7 +32,7 @@ Scenario: Free Text Input Angle Helper
   And the Angle Helper circle is at coordinates (44,128)
 
   # updating the angle helper should update the text input
-  When I drag the Angle Helper circle to coordinates (5,5)
+  When I drag the Angle Helper circle to coordinates (31,31)
   Then the Angle Helper circle is at coordinates (31,31)
   Then the angle text is at "225"
 
@@ -51,7 +51,7 @@ Scenario: Dropdown Angle Helper
   And the Angle Helper circle is at coordinates (118,141)
 
   # updating the angle helper should update the dropdown
-  When I drag the Angle Helper circle to coordinates (200,5)
+  When I drag the Angle Helper circle to coordinates (137,98)
   Then the Angle Helper circle is at coordinates (137,98)
   Then the angle dropdown is at "0"
 

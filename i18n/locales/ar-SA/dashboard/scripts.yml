@@ -1400,9 +1400,9 @@ ar:
         dance:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
           title: حفلة رقص
-          description_short: تحييها كاتي بيري ومادونا وجيه بالفين وسيا وكيث أوربان وسيارا و 25 شخصية أخرى!
+          description_short: كاتي بيري، مادونا، جي بالفين، سيا، كيث أربان، سيارا، و25 مطرب ومطربة أخرين!
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         frozen-2018-test-b:
           stages:
@@ -1417,11 +1417,11 @@ ar:
         dance--draft:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         dance-draft:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         dance-extras:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
         coursef-2019:
@@ -1443,7 +1443,7 @@ ar:
         dance-low:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         coursed-2019:
           stages:
             'Algorithms: Graph Paper Programming':
@@ -1461,7 +1461,7 @@ ar:
             Artist Binary:
               name: ثنائي الفنان
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         coursee-2019:
           stages:
             Building a Foundation:
@@ -1499,7 +1499,7 @@ ar:
             Crowdsourcing:
               name: حشد المصادر
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
         andrea-test:
           stages:
             'null':
@@ -1633,7 +1633,7 @@ ar:
         dance-2019:
           stages:
             Dance Party:
-              name: حفلة رقص
+              name: حفلة الرقص
           description: برمِج حفلة الرقص الخاصة بك لمشاركتها مع أصدقائك.
         k5-onlinepd-2019:
           stages:
@@ -1653,7 +1653,7 @@ ar:
               name: للحلقات
         dance-extras-2019:
           description: تجاوز الساعة الأولى بأفكار مشاريع موسعة.
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: الجمل الشرطية
@@ -1663,3 +1663,24 @@ ar:
               name: حشد المصادر
             Conditionals with Cards:
               name: الشرطية مع بطاقات
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: الجمل الشرطية
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: الجمل الشرطية
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: الدوال والمعاملات
+        csd3-2020:
+          description_short: "البرمجة"
+          stages:
+            Variables:
+              name: المتغيرات
+            Conditionals:
+              name: الجمل الشرطية
+            Functions:
+              name: دوال

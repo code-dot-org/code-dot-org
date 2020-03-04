@@ -1394,7 +1394,7 @@ sr:
               name: Променљиве
             For Loops:
               name: Бројачке петље
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Кондиционали
@@ -1404,3 +1404,26 @@ sr:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Услови са картама
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Кондиционали
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Кондиционали
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Функције са параметрима
+        csd3-2020:
+          description_short: Programming
+          stages:
+            Variables:
+              name: Променљиве
+            Conditionals:
+              name: Кондиционали
+            Velocity:
+              name: Брзина
+            Functions:
+              name: Функције

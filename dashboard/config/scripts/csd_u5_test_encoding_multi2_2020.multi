@@ -1,0 +1,8 @@
+name 'CSD U5 test encoding multi2_2020'
+question 'Which of the following TWO things are necessary for any encoding system to work?'
+type 'multi2'
+wrong 'The system must only use two different elements to encode information.'
+right 'Everyone who uses it must agree on the rules of the system.'
+right 'The rules of the system must clear, so that there\’s only one way to interpret encoded information.'
+wrong 'The system should have a pattern, so that it is easy to remember.'
+wrong 'The key for the system should be kept secret so that people cannot spy on the information.'

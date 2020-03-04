@@ -3,9 +3,6 @@ cs-CZ:
   data:
     dsls:
       2-3 Algorithms Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Zvol algoritmus pro zadaný obrázek.
         answers:
         - text: Začni se čtvercem<br/> dej trojúhelník nad čtverec<br/> dje trojúhelník
             pod čtverec
@@ -14,224 +11,231 @@ cs-CZ:
             vpravo od rovnoběžník
         - text: Začni se čtverecem <br/> dej trojúhelník pod čtverec<br/> dej rovnoběžník
             napravo od trojúhelníku
-      2-3 Algorithms Multi 2:
-        title: Vícenásobná volba
-        content1: Začni s trojúhelníkem <br/> Dej čtverec pod trojúhelník <br/> dej
-          další trojúhelník pod čtverec
         questions:
-        - text: Který obrázek <em>nebude</em> se provede tímto algoritmem?
+        - text: Zvol algoritmus pro zadaný obrázek.
+        title: Vícenásobná volba
+      2-3 Algorithms Multi 2:
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        content1: Začni s trojúhelníkem <br/> Dej čtverec pod trojúhelník <br/> dej
+          další trojúhelník pod čtverec
+        questions:
+        - text: Který obrázek <em>nebude</em> se provede tímto algoritmem?
+        title: Vícenásobná volba
       2-3 Big Event Match 1:
-        title: Porovnání
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - {}
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Porovnej kombinaci tlačítek s tanečními pohyby.
         questions:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         - {}
-        - {}
-        - {}
-        - {}
+        title: Porovnání
+      2-3 Binary Match 1:
         answers:
         - {}
         - {}
         - {}
         - {}
-      2-3 Binary Match 1:
-        title: Porovnání
         content2: Použij klíč odpovídající každému kódu na tvůj dopis
         questions:
         - text: "<strong>N</strong>"
         - text: "<strong>O</strong>"
         - text: "<strong>P</strong>"
         - text: "<strong>Q</strong>"
+        title: Porovnání
+      2-3 Conditionals Multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Conditionals Multi 1:
-        title: Vícenásobná volba
         questions:
         - text: Která sada karet skórovala správně podle pravidel hry?
+        title: Vícenásobná volba
+      2-3 Getting Loopy Multi 1:
         answers:
-        - {}
-        - {}
         - correct: true
         - {}
-      2-3 Getting Loopy Multi 1:
-        title: Vícenásobná volba
+        - {}
+        - {}
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Vícenásobná volba
       2-3 Graph Paper Match 1:
-        title: Porovnání
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Přiřaď program k mřížce.
         questions:
         - {}
         - {}
         - {}
+        title: Porovnání
+      2-3 Graph Paper Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 Graph Paper Multi 1:
-        title: Vícenásobná volba
         questions:
         - text: Který program dělá tento obrázek?
+        title: Vícenásobná volba
+      2-3 Maze Match 2:
         answers:
         - {}
-        - correct: true
         - {}
-      2-3 Maze Match 2:
-        title: Porovnávací bludiště
+        - {}
         content1: Přiřaď bloky k hádankám
-        pre_title: Pokyny
         questions:
         - {}
         - {}
         - {}
+        title: Porovnávací bludiště
+      2-3 Maze Multi 2:
         answers:
         - {}
+        - correct: true
         - {}
         - {}
-      2-3 Maze Multi 2:
-        title: Bludištní vícenásobná volba
         questions:
         - text: Která sada bloků mě dostane k praseti?
+        title: Bludištní vícenásobná volba
+      2-3 Relay Programming Multi 1:
         answers:
         - {}
+        - {}
         - correct: true
-        - {}
-        - {}
-      2-3 Relay Programming Multi 1:
-        title: Vícenásobná volba
         questions:
         - {}
+        title: Vícenásobná volba
+      2-3 Relay Programming Multi 2:
         answers:
         - {}
         - {}
         - correct: true
-      2-3 Relay Programming Multi 2:
-        title: Vícenásobná volba
         questions:
         - text: Který obrázkový program se seznamem neobsahuje žádné chyby?
-        answers:
-        - {}
-        - {}
-        - correct: true
+        title: Vícenásobná volba
       2-3 artist debug multi 1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       2-3 artist functions multi 1:
-        title: Umělecká funkční vícenásobná volba jedna
-        questions:
-        - text: Vyber správné bloky k nakreslení tohoto obrázku pomocí zadané funkce
         answers:
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Vyber správné bloky k nakreslení tohoto obrázku pomocí zadané funkce
+        title: Umělecká funkční vícenásobná volba jedna
       2-3 artist loops match 1:
-        title: 'Umělec - cykly: Přiřazování 1'
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content2: Porovnej cykly k tvaru
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: 'Umělec - cykly: Přiřazování 1'
+      2-3 artist loops multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 artist loops multi 1:
-        title: 'Umělec - cykly: Vícenásobná volba'
         questions:
         - text: Který tvar se udělá tímto cyklem?
+        title: 'Umělec - cykly: Vícenásobná volba'
+      2-3 artist loops multi 2:
         answers:
         - {}
         - {}
-        - correct: true
         - {}
-      2-3 artist loops multi 2:
-        title: 'Umělec - cykly: Vícenásobná volba'
+        - correct: true
         questions:
         - text: Který tvar se udělá tímto programem?
+        title: 'Umělec - cykly: Vícenásobná volba'
+      2-3 artist match 1:
         answers:
         - {}
         - {}
         - {}
-        - correct: true
-      2-3 artist match 1:
-        title: Umělecké porovnání
+        - {}
         content1: Porovnej tvar s bloky, abys to dokončil.
         questions:
         - {}
         - {}
         - {}
         - {}
+        title: Umělecké porovnání
+      2-3 bee conditionals multi 1:
         answers:
         - {}
         - {}
+        - correct: true
         - {}
-        - {}
-      2-3 bee conditionals multi 1:
         questions:
         - text: Které dolní porovnání je pravdivé?
+      2-3 bee conditionals multi 3:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      2-3 bee conditionals multi 3:
+        - {}
         questions:
         - text: Vyber nejlepší bloky.
+      2-3 bee loops multi 1:
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      2-3 bee loops multi 1:
-        title: 'Včela - cykly: Vícenásobná volba 1'
+        - {}
         questions:
         - text: Které bloky sesbírají všechen nektar?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: 'Včela - cykly: Vícenásobná volba 1'
       2-3 maze match 1:
-        title: 'Bludiště: Přiřazování 1'
+        answers:
+        - {}
+        - {}
+        - {}
         content1: Přiřaď bloky k hádankám
         questions:
         - {}
         - {}
         - {}
-        answers:
-        - {}
-        - {}
-        - {}
+        title: 'Bludiště: Přiřazování 1'
       2-3 maze multi 1:
-        title: 'Bludiště: Vícenásobná volba 1'
-        questions:
-        - text: Která sada bloků je správnou odpovědí?
         answers:
         - {}
         - correct: true
         - {}
         - {}
+        questions:
+        - text: Která sada bloků je správnou odpovědí?
+        title: 'Bludiště: Vícenásobná volba 1'
       4-5 Algorithms Match 1:
-        title: Porovnání
+        answers:
+        - text: "<h4>Nastavit skóre hráče 1 na 0</h4>"
+        - text: "<h4>Hráče 1 zahrnout mezi zemřelé</h4>"
+        - text: "<h4>Přidat hráče 1 k zahrnutí do celkového skóre</h4>"
+        - text: "<h4>Porovnat hráčské skóre, aby bylo vidět, kdo vyhrává</h4>"
         content1: Porovnej kroky ve hře "s kostky" k pořadí, ve kterém by se měly
           objevit v algoritmu.
         questions:
@@ -239,23 +243,23 @@ cs-CZ:
         - text: "<h4>1)</h4>"
         - text: "<h4>1)</h4>"
         - text: "<h4>1)</h4>"
-        answers:
-        - text: "<h4>Nastavit skóre hráče 1 na 0</h4>"
-        - text: "<h4>Hráče 1 zahrnout mezi zemřelé</h4>"
-        - text: "<h4>Přidat hráče 1 k zahrnutí do celkového skóre</h4>"
-        - text: "<h4>Porovnat hráčské skóre, aby bylo vidět, kdo vyhrává</h4>"
+        title: Porovnání
       4-5 Algorithms Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Která z těchto položek je nejtěžší k popsání algoritmem?
         answers:
         - text: Čištění zubů
         - text: Pečení cukroví
         - text: Nakupování z nákupního lístku
         - text: Banán
           correct: true
+        questions:
+        - text: Která z těchto položek je nejtěžší k popsání algoritmem?
+        title: Vícenásobná volba
       4-5 Computational Thinking Match 1:
-        title: Porovnání
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
         content1: Každý z těchto vozidel byla rozložená na menší kousky. Porovnej
           každé vozidlo s jeho seznamem rozložením.
         questions:
@@ -263,80 +267,81 @@ cs-CZ:
         - text: "<h3>Kola/strana: 2 <br/> Windows/strana: 0</h3>"
         - text: "<h3>Kola/strana: 2 <br/> Windows/strana: 0</h3>"
         - text: "<h3>Kola/strana: 2 <br/> Windows/strana: 0</h3>"
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        title: Porovnání
       4-5 Computational Thinking Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Seattle je velké město. <br/> Eugene je střední město <br/> Hillview
-            je malé město.
         answers:
         - text: Seattle _____ _____ _____.
         - text: _____ je město _____.
           correct: true
         - text: _____ je _____ _____.
         - text: Eugene je město _____.
-      4-5 Crowdsourcing Multi 1:
-        title: Vícenásobná volba
         questions:
-        - text: Který z těchto obrázků představuje nejlépe crowdsourcing?
+        - text: Seattle je velké město. <br/> Eugene je střední město <br/> Hillview
+            je malé město.
+        title: Vícenásobná volba
+      4-5 Crowdsourcing Multi 1:
         answers:
         - {}
         - correct: true
-      4-5 Crowdsourcing Multi 2:
-        title: Vícenásobná volba
         questions:
-        - text: Které z těchto činností by byla nejlepší pro praktikování crowdsourcing?
+        - text: Který z těchto obrázků představuje nejlépe crowdsourcing?
+        title: Vícenásobná volba
+      4-5 Crowdsourcing Multi 2:
         answers:
         - text: Úklid tvého pokoje
           correct: true
         - text: Jíst tvůj dezert
         - text: Kartáčování tvých vlasů
         - text: Mytí tvého obličeje
-      4-5 Digital Footprint Multi 1:
-        title: Vícenásobná volba
         questions:
-        - text: Která informace níže uvedená je v pořádku ke sdílení na internetu?
+        - text: Které z těchto činností by byla nejlepší pro praktikování crowdsourcing?
+        title: Vícenásobná volba
+      4-5 Digital Footprint Multi 1:
         answers:
         - text: Tvoje narozeniny
         - text: Tvoje oblíbené jídlo
           correct: true
         - text: Tvoje adresa
         - text: Číslo kreditní karty rodičů
-      4-5 Internet Multi 1:
+        questions:
+        - text: Která informace níže uvedená je v pořádku ke sdílení na internetu?
         title: Vícenásobná volba
+      4-5 Internet Multi 1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
         questions:
         - text: Když se pokusíš přihlásit ke code.org, IP adresa je nejpravděpodobnější
             z DNS?
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-      4-5 Internet Multi 2:
         title: Vícenásobná volba
+      4-5 Internet Multi 2:
+        answers:
+        - text: code.org
+        - text: csisfun.com
+          correct: true
+        - text: thinkersmith.org
+        - text: khanacademy.org
         questions:
         - text: Když DNS poslal tě ke stránce na adrese IP 100.42.50.110, na kterém
             website jsi?
+        title: Vícenásobná volba
+      4-5 Songwriting Multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 Songwriting Multi 1:
-        title: Vícenásobná volba
         questions:
         - {}
+        title: Vícenásobná volba
+      4-5 Suncatchers Match 1:
         answers:
         - {}
-        - correct: true
         - {}
         - {}
-      4-5 Suncatchers Match 1:
-        title: Porovnání
+        - {}
         content1: Porovnej každý program na slovo, které dělá pomocí poskytované skupiny
           dovedností.
         questions:
@@ -344,106 +349,99 @@ cs-CZ:
         - {}
         - {}
         - {}
+        title: Porovnání
+      4-5 Suncatchers Multi 1:
         answers:
         - {}
+        - correct: true
         - {}
-        - {}
-        - {}
-      4-5 Suncatchers Multi 1:
-        title: Vícenásobná volba
         questions:
         - text: Který z programů pod <em>nemá</em> přesně stejné pořadí jako Program
             1?
+        title: Vícenásobná volba
+      4-5 artist loops multi 1:
         answers:
         - {}
         - correct: true
         - {}
-      4-5 artist loops multi 1:
-        title: 'Umělec - cykly: Vícenásobná volba'
+        - {}
         questions:
         - text: Které bloky vytváří návrh?
+        title: 'Umělec - cykly: Vícenásobná volba'
+      4-5 artist multi 1:
         answers:
         - {}
         - correct: true
         - {}
         - {}
-      4-5 artist multi 1:
-        title: Umělecká vícenásobná volba
         questions:
         - text: Které bloky nakreslí obdélník s obvodem 100?
+        title: Umělecká vícenásobná volba
+      4-5 artist multi 2:
         answers:
+        - {}
         - {}
         - correct: true
         - {}
-        - {}
-      4-5 artist multi 2:
-        title: Umělecká vícenásobná volba
         questions:
         - text: Která kresba je symetrická?
+        title: Umělecká vícenásobná volba
+      4-5 bee conditionals multi 1:
         answers:
         - {}
         - {}
         - correct: true
         - {}
-      4-5 bee conditionals multi 1:
-        title: Včelí podmínková vícenásobná volba
         questions:
         - text: Vyber nejlepší bloky.
+        title: Včelí podmínková vícenásobná volba
+      4-5 bee debug multi 1:
         answers:
-        - {}
         - {}
         - correct: true
         - {}
-      4-5 bee debug multi 1:
-        title: Včelí ladící vícenásobná volba
+        - {}
         questions:
         - text: Která verze funkce bude fungovat?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Včelí ladící vícenásobná volba
       4-5 bee loops multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Které bloky vyřeší puzzle?
         title: Včelí cyklická vícenásobná volba
-        questions:
-        - text: Které bloky vyřeší puzzle?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze conditionals multi 1:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - text: Které bloky vyřeší puzzle?
         title: Bludištní podmínková vícenásobná volba
-        questions:
-        - text: Které bloky vyřeší puzzle?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
       4-5 maze match 1:
-        title: Porovnávací bludiště
-        content1: Přiřaď bloky k hádankám
-        pre_title: Pokyny
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
-      4-5 maze multi 1:
-        title: Bludištní vícenásobná volba
+        content1: Přiřaď bloky k hádankám
         questions:
-        - text: Které bloky vyřeší puzzle?
+        - {}
+        - {}
+        - {}
+        title: Porovnávací bludiště
+      4-5 maze multi 1:
         answers:
         - correct: true
         - {}
         - {}
         - {}
-      Begin planning your project:
-        title: název
+        questions:
+        - text: Které bloky vyřeší puzzle?
+        title: Bludištní vícenásobná volba
       CSD Header Size MC:
         answers:
         - {}
@@ -462,146 +460,124 @@ cs-CZ:
         - correct: true
         - {}
         - {}
-      CSD U2 Design Project:
-        title: název
-      CSD U2 Design Project_2018:
-        title: název
-      CSD U2 Design Project_2018_2019:
-        title: název
-      CSD U2 L2 Overview:
-        title: název
-      CSD U2 L3 Overview:
-        title: název
-      CSD U2 L4 Overview:
-        title: název
-      CSD U2 L5 Overview:
-        title: název
-      CSD U2 L6 Overview:
-        title: název
-      CSD U2 expand project:
-        title: název
-      CSD U2 expand project_2018:
-        title: název
-      CSD U2 expand project_2018_2019:
-        title: název
       CSD U2 image debug match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U2 lists match_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 - conditionals - Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
         - {}
       CSD U3 Boolean MC:
-        title: název
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: název
       CSD U3 Boolean MC_2018:
-        title: název
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: název
       CSD U3 Boolean MC_2018_2019:
-        title: název
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
         - {}
+        questions:
+        - {}
+        title: název
       CSD U3 Functions Prediction define first:
         answers:
         - {}
@@ -621,167 +597,149 @@ cs-CZ:
         - correct: true
         - {}
       CSD U3 Keypress Matching:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Keypress Matching_2018_2019:
-        questions:
-        - {}
-        - {}
-        - {}
         answers:
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
       CSD U3 Sprite Movement Predict Multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprite Movement Predict Multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi:
-        questions:
-        - {}
         answers:
+        - {}
         - {}
         - correct: true
         - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
+        - {}
+        - {}
+        questions:
         - {}
       CSD U3 Sprites intro predict multi_2018_2019:
-        questions:
-        - {}
         answers:
-        - {}
         - correct: true
         - {}
         - {}
-      CSD U3 combining rep:
-        title: název
-      CSD U3 combining rep_2018:
-        title: název
-      CSD U3 combining rep_2018_2019:
-        title: název
-      CSD U3 drawSprites placement match:
+        - {}
         questions:
         - {}
-        - {}
-        - {}
-        - {}
+      CSD U3 drawSprites placement match:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
         - {}
         - {}
         - {}
         - {}
       CSD U3 drawSprites placement match_2019:
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
         - {}
         - {}
         - {}
         - {}
-      CSD U5 Encryption 1:
-        title: název
-      CSD U5 Encryption 1_2018:
-        title: název
-      CSD U5 Encryption 1_2018_2019:
-        title: název
-      CSD U5 L13 SFLP Interpreting Data:
-        title: název
-      CSD U5 data visualization:
-        title: název
-      CSD U5 data visualization_2018:
-        title: název
-      CSD U5 data visualization_2018_2019:
-        title: název
-      CSD U5 student record:
-        title: název
-      CSD U5 student record_2018:
-        title: název
-      CSD U5 student record_2018_2019:
-        title: název
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
       CSD U6 array multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 array multi_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       CSD U6 setProperty predict multi:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
         - {}
       CSD U6 setProperty predict multi_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
+        - {}
         - correct: true
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2018_2019:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
         - {}
       Dance_Party_extras_intro:
         markdown: "# Tancuj dál! \n\nVe 2. části budeš vytvářet svůj vlastní projekt.
@@ -809,228 +767,338 @@ cs-CZ:
           </div> \n\n<div style=\"float: left; margin: 10px\"> \n<a href=\"9\"> \n<h2>\n
           Zrychli, zpomal \n</h2>\n\n <img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>
           \n\n</div>\n"
+      Dance_Party_extras_intro_2019:
+        markdown: |
+          "# Tancuj dál!
+
+          Ve 2. části budeš vytvářet svůj vlastní projekt. Tady nenajdeš žádné hádanky - místo toho je tu několik projektů, které ukazují různé možnosti vytváření složitých tanečních párty.
+
+          Tyto úrovně můžeš procházet _v libovolném pořadí_. Přejdi do jiné a podívej se, jak se něco dělalo v předchozí úrovni, nebo kombinuj koncepty z různých projektů. Vyzkoušej je všechny, vyber si své oblíbené, věnuj čas rozvíjení projektu a přizpůsob si ho podle sebe.
+
+          <a class=""btn btn-large btn-primary next-stage submitButton pull-right“>Pokračovat</a>
+
+          <div class=""clearfix""></div>
+
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""2"">
+          <h2>
+          Sem a tam!
+          </h2>
+
+          <img src=""https://images.code.org/2ecaa2dc4e7c6f672ced7e043d8ae0ff-image-1573667207373.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""3"">
+          <h2>
+          Více tlačítek
+          </h2>
+
+          <img src=""https://images.code.org/b25c6c68477a794c3086cf1169a5782f-image-1573666336377.gif""></a>
+
+          </div>
+          <div style=""float: left; margin: 10px"">
+          <a href=""4"">
+          <h2>
+          Utvoř sestavu
+          </h2>
+
+          <img src=""https://images.code.org/70ad4cbc12321f301d43161f847bdee4-image-1541746835274.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""5"">
+          <h2>
+          Kam zmizeli?
+          </h2>
+
+          <img src=""https://images.code.org/524010de61c9af76e98bd2a5ccdba461-image-1541746855689.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""6"">
+          <h2>
+          Taneční skupiny
+          </h2>
+
+          <img src=""https://images.code.org/f4ccfd43f9a15d68a339b449be8e96c3-image-1541746870889.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""7"">
+          <h2>
+          Čtvrťové noty
+          </h2>
+
+          <img src=""https://images.code.org/6b538efe77ea6e19f1428f7c0e45c621-image-1541746886875.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""8"">
+          <h2>
+          Basy, středy a výšky
+          </h2>
+
+          <img src=""https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif""></a>
+
+          </div>
+
+          <div style=""float: left; margin: 10px"">
+          <a href=""9"">
+          <h2>
+          Zrychli, zpomal
+          </h2>
+
+          <img src=""https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif""></a>
+
+          </div>"
       EnvelopeVariables-Unplugged:
-        markdown: 'Proměnné umožňují spoustu svobody v oboru informatiky. Tato lekce
-          pomáhá vysvětlit, co jsou proměnné a jak je lze použít mnoha různými způsoby.
+        markdown: 'Proměnné nám v informatice dávají spoustu svobody. Tato lekce pomáhá
+          vysvětlit, co jsou proměnné a ukazuje různé způsoby jejich využití.
 
 '
-      Internet Simulator Setup 2:
-        title: název
       K-1 Artist 1 Multi 1:
-        title: Vícenásobná volba
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+        - text: "/script_assets/k_1_images/artist_images/E-S.png"
+        content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: Které bloky vyřeší hádanku?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
-      K-1 Artist 1 Multi 2:
         title: Vícenásobná volba
+      K-1 Artist 1 Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
+          correct: true
+        - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+        - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+        - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+        content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: Které bloky nakreslí čtverec?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
+        title: Vícenásobná volba
       K-1 Artist 2 Match 2:
-        title: Porovnání
-        content2: Porovnej tvary založené na typu.
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/artist_images/medium_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_square.png"
+        - text: "/script_assets/k_1_images/artist_images/large_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_triangle.png"
+        content2: Porovnej tvary podle typu.
+        questions:
+        - text: "/script_assets/k_1_images/artist_images/small_circle.png"
+        - text: "/script_assets/k_1_images/artist_images/large_square.png"
+        - text: "/script_assets/k_1_images/artist_images/medium_rectangle.png"
+        - text: "/script_assets/k_1_images/artist_images/small_triangle.png"
+        title: Porovnání
       K-1 Bee 1 Multi 1:
-        title: Vícenásobná volba
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+        content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: Kolik je to nektaru?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Vícenásobná volba
       K-1 Bee 1 Multi 2:
-        title: Vícenásobná volba
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+        - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
+        content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
         questions:
         - text: Kolik je to nektaru?
-        answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        title: Vícenásobná volba
       K-1 Bee Loops Match 1:
-        title: Porovnání
+        answers:
+        - text: "/script_assets/k_1_images/bee_images/4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/NNN.png"
+        - text: "/script_assets/k_1_images/bee_images/5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/EEEEE.png"
         content2: Porovnej bloky
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-      K-1 Big Event Match 1:
+        - text: "/script_assets/k_1_images/bee_images/r4_gnectar.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+        - text: "/script_assets/k_1_images/bee_images/r5_ghoney.png"
+        - text: "/script_assets/k_1_images/move_blocks/r5_E.png"
         title: Porovnání
+      K-1 Big Event Match 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Porovnej kombinaci tlačítek s tanečními pohyby.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        title: Porovnání
+      K-1 Digital Footprint Multi 1:
         answers:
         - {}
         - {}
-        - {}
-      K-1 Digital Footprint Multi 1:
-        title: Vícenásobná volba
+        - correct: true
         questions:
         - text: Které zvíře má digitální stopu, kterou zanechává <strong>, je mu nejvíce
             nebezpečná</strong>?
-        answers:
-        - {}
-        - {}
-        - correct: true
-      K-1 Getting Loopy Multi 1:
         title: Vícenásobná volba
+      K-1 Getting Loopy Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: Jak by si zjednodušil s cykly tuto posloupnost?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Happy Maps Multi 1:
         title: Vícenásobná volba
+      K-1 Happy Maps Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/up.png"
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/down.png"
+        - text: "/script_assets/k_1_images/unplugged_images/right.png"
+        content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: Kterou šipkou se dostane Flurb k pokladu?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Vícenásobná volba
       K-1 Keep it Private Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Které informace bys měl <strong>sdílet online</strong>?
         answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Debugging Multi 1:
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+        questions:
+        - text: Jaké informace bys **neměl** sdílet online?
         title: Vícenásobná volba
+      K-1 Maze Debugging Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/S.png"
+        - text: "/script_assets/k_1_images/move_blocks/E.png"
+        - text: "/script_assets/k_1_images/move_blocks/W.png"
+        content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: Která volba by měla být posledním blokem?
-        answers:
-        - correct: true
-        - {}
-        - {}
-        - {}
-      K-1 Maze Loops Multi 1:
         title: Vícenásobná volba
+      K-1 Maze Loops Multi 1:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+        - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+        content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: Který opakovací blok je stejný?
-        answers:
-        - correct: true
-        - {}
-        - {}
-      K-1 Maze Loops Multi 2:
         title: Vícenásobná volba
+      K-1 Maze Loops Multi 2:
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
+          correct: true
+        content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
         questions:
         - text: Vyber správný opakovací blok.
-        answers:
-        - {}
-        - {}
-        - correct: true
+        title: Vícenásobná volba
       K-1 Maze Match 1:
-        title: Porovnání
-        content2: Přiřaď hádanky k blokům
-        pre_title: Pokyny
-        questions:
-        - {}
-        - {}
-        - {}
-        - {}
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ENE.png"
+        - text: "/script_assets/k_1_images/move_blocks/WW.png"
+        - text: "/script_assets/k_1_images/move_blocks/WSS.png"
+        content2: Přiřaď hádanky k blokům
+        questions:
+        - text: "/script_assets/k_1_images/maze_images/maze_EN.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_ENE.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WW.png"
+        - text: "/script_assets/k_1_images/maze_images/maze_WSS.png"
+        title: Porovnání
       K-1 Maze Multiple Choice 2:
-        title: Bludiště
+        answers:
+        - text: "/script_assets/k_1_images/move_blocks/EN.png"
+        - text: "/script_assets/k_1_images/move_blocks/ES.png"
+        - text: "/script_assets/k_1_images/move_blocks/WS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/WN.png"
+        content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: Která odpověď řeší tuto úroveň?
-        answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        title: Bludiště
       K-1 Move It Multi 1:
-        title: Vícenásobná volba
+        answers:
+        - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+        - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+        content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: Kterým algoritmem se dostane Flurb ke květinám?
-        answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        title: Vícenásobná volba
       K-1 Plant a Seed Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Který krok by měl jít na začátku tohoto algoritmu?
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+        - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+        - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
+          correct: true
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
+        questions:
+        - text: Který krok by měl jít na začátek tohoto algoritmu?
+        title: Vícenásobná volba
       K-1 Plant a Seed Multi 2:
-        title: Vícenásobná volba
-        questions:
-        - text: Který krok by měl vyplnit prázdná pole pro tento algoritmus?
         answers:
-        - {}
-        - correct: true
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+        - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
+          correct: true
+        - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+        content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
+        questions:
+        - text: Který krok by měl doplnit prázdné místo pro tento algoritmus?
+        title: Vícenásobná volba
       K-1 Word Search Multi 1:
-        title: Vícenásobná volba
-        questions:
-        - text: Které bloky vytváří "MOVE"?
         answers:
-        - {}
-        - correct: true
-        - {}
-      K-1 Word Search Multi 3:
+        - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+        - text: "/script_assets/k_1_images/move_blocks/EESS.png"
+          correct: true
+        - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+        content1: "/script_assets/k_1_images/search_images/move.png, 450"
+        questions:
+        - text: Které bloky vytvoří "MOVE"?
         title: Vícenásobná volba
+      K-1 Word Search Multi 3:
+        answers:
+        - text: SET
+        - text: SQUARE
+          correct: true
+        - text: SOUTH
+        content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: Které slovo je napsáno?
-        answers:
-        - {}
-        - correct: true
-        - {}
-      Multi-Screen Apps:
-        title: název
-      New Challenge Introduction:
-        title: název
-      OPD-K5 Stage3aGo:
-        title: název
-      Prepare for your presentation:
-        title: název
+        title: Vícenásobná volba
       behaviors 1 predict:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
         - feedback: Nesprávně
-      behaviors 4 predict:
         questions:
         - {}
+      behaviors 4 predict:
         answers:
         - {}
         - text: Diagonálně
@@ -1038,679 +1106,681 @@ cs-CZ:
         - text: Cik cak
           feedback: 'Špatně. '
         - feedback: Nesprávně
-      courseC_multi_artist_prog6_predict1:
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
+        - {}
+        questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '12'
           correct: true
         - text: '15'
         - {}
-      courseC_multi_maze_debugging8_predict1:
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nevím
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nevím
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
         - text: Nevím
-      courseC_multi_starWars_predict2:
         questions:
         - {}
+      courseC_multi_starWars_predict2:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_artist_binary8_predict1:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
           correct: true
+        questions:
+        - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
         - text: B
         - text: C
         - text: D
           correct: true
-      courseD_multi_artist_nestedLoops9_predict1:
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1:
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
+        - {}
+        questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - text: A
           correct: true
         - text: B
         - text: C
         - {}
-      courseD_multi_bee_conditionals1_predict1:
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
+        - {}
+        questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - text: '4'
         - text: '8'
           correct: true
         - text: '12'
         - {}
-      courseD_multi_collector_debugging10_predict1:
         questions:
         - {}
+      courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_ramp13:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until10_predict2_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseD_multi_scrat_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_bee_functions_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseE_prediction_artistFunction1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - {}
         - correct: true
+        questions:
+        - {}
       courseF_bee_variables_8a_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_bee_variables_8a_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_for10_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - {}
         - correct: true
+        - {}
+        questions:
         - {}
       courseF_multi_artist_fwp2_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals1_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_conditionals7_predict2:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_for3_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_bee_fwp9_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
-        questions:
-        - {}
         answers:
         - correct: true
         - {}
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       coursee_prediction_artistfunction2_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019:
-        questions:
-        - {}
         answers:
         - {}
         - correct: true
         - {}
+        - {}
+        questions:
         - {}

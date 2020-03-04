@@ -408,6 +408,8 @@ az:
     support_url: "//support.code.org"
     documentation: Təlimat və sənədlər
     tutorials: Dərsliklər
+  free_response:
+    placeholder: Cavabınızı buraya daxil edin
   multi:
     wrong_title: Yanlış cavab
     wrong_body: Daxil etdiyiniz cavab yanlışdır. Lütfən, bir daha cəhd edin!

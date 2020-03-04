@@ -478,6 +478,11 @@ ar:
         csd_pair_programming: البرمجة الزوجية
         csd_applab_parameters: الدوال والمعاملات
         CSF_SpriteLab_SpritesInAction_v2: العفاريت تتحرك
+        hoc_dance_congrats_2019: حفلة الرقص 2019- الحفلة قيد التشغيل!
+        hoc_dance_warmup_2019: حفلة الرقص- إحماء
+        hoc_dance_events_2019: حفلة الرقص 2019- الأحداث
+        hoc_dance_measures_2019: حفلة الرقص 2019- الموازين الموسيقية
+        hoc_dance_properties_2019: حفلة الرقص 2019- الخصائص
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

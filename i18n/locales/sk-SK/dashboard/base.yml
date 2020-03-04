@@ -155,7 +155,6 @@ sk:
     valid_password: "Platné heslo!"
     invalid_password: "Heslo musí obsahovať aspoň 6 znakov"
     mismatch_password: "Zadané dve heslá sa nezhodujú"
-    under_13_consent: "Ak mám menej ako 13 rokov potvrdzujem že mám súhlas rodiča alebo zákonného zástupcu používať stránku a služby Code.org."
     student_consent: "Potvrdzujem, že mám súhlas rodiča alebo zákonného zástupcu používať stránkua služby Code.org."
     agree_us_website: "Súhlasím s používaním stránky prevádzkovanej z územia Spojených štátov amerických (USA)."
     my_data_to_us: "Údaje z používania tejto stránky môžu byť zaslané a uložené alebo spracované v Spojených štátoch amerických (USA)."
@@ -454,6 +453,8 @@ sk:
     enter_parent_email: "Zadaj emailovú adresu rodiča alebo zákonného zástupcu (pre obnovenie hesla)"
     update: "Aktualizujte konto"
     account_successfully_updated: "Konto bolo úspešne aktualizované."
+    auth_option_saved: "Úspešné prepojenie tvojho účtu %{provider} s tvojím emailom %{email}."
+    auth_option_saved_no_email: "Úspešne si si prepojil/a svoj %{provider} účet."
     update_email: "Aktualizovať"
   user_level:
     completed: 'Dokončené'
@@ -556,12 +557,14 @@ sk:
     download: 'Stiahnuť video'
     show_notes: 'Zobraziť poznámky'
     show_video: 'Zobraziť video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Váš ineternetový prehliadač nepodporujeme. Prosím aktualizujte si váš ineternetový prehliadač, <a href='%{supported_browsers_url}', target='_blank'> na jeden z našich podporovaných prehliadačov</a>. Môžete si pozrieť stránku, ale očakávajte poruchy niektorých funckionalít."
       link: "Zistiť viac"
       applab_unsupported_tablet: "App Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní App Labu na tomto zariadení sa môžu vyskytnúť chyby alebo probémy."
       gamelab_unsupported_tablet: "Game Lab funguje najlepšie na stolnom počítači alebo notebooku s myšou a klávesnicou. Pri používaní Game Lab na tomto zariadení sa môžu vyskytnúť chyby alebo problémy."
+      oceans_unsupported_browser: "Návod sa nedá otvoriť v tomto internetovom prehliadači. Skús otvoriť stránku cez Edge, Chrome, Firefox, alebo iný prehliadač."
       weblab_unsupported_browser: "Je nám ľúto, ale v tomto prehliadači nefunguje Web Lab správne. Do vyriešenia problému použite prosím iný internetový prehliadač. Ospravedlňujeme sa za prípadné nepríjemnosti."
       weblab_unsupported_locale_storage: "Pri používaní Web Labu v Inkognito móde (Private Browsing mode) môžete zaznamenať problémy. Spustite prosím váš projekt nanovo v normálnom móde. Ospravedlňujeme sa za prípadné komplikácie."
   slow_loading: 'Trvá to dlhšie než zvyčajne...'
@@ -694,6 +697,8 @@ sk:
     help_support: "Pomoc a podpora"
     documentation: "Dokumentácia"
     tutorials: "Návody"
+  free_response:
+    placeholder: "Zadajte vašu odpoveď"
   multi:
     wrong_title: "Nesprávna odpoveď"
     wrong_body: "Zadaná odpoveď je nesprávna.  Prosím skúste to znova!"
@@ -767,6 +772,7 @@ sk:
     privacy_notice: "Ochrana osobných údajov"
     accept_label: 'Súhlasím s <a href="%{tos_url}" target="_blank">Podmienkami poskytovania služby</a> a so <a href="%{privacy_url}" target="_blank">Zásadami ochrany osobných údajov</a>.'
     accept_label_markdown: Súhlasím s [Podmienkami poskytovania služby](%{tos_url}) a so [Zásadami ochrany osobných údajov](%{privacy_url}).
+    accept_tos: Zaregistrovaním sa na Code.org, súhlasíš s našimi [Zmluvnými podmienkami](%{tos_url}) a [Ochranou súkromia](%{privacy_url}).
     accept: "Prijať"
     print: "Tlačiť"
     reminder_desc: 'Aktualizovali sme naše <a href="%{tos_url}" target="_blank"> Zmluvné podmienky</a> a <a href="%{privacy_url}" target="_blank"> Zásady ochrany osobných údajov</a>. Prečítajte si ich starostlivo predtým, než s nimi budete súhlasiť. Všimnite si, že ak výslovne neakceptujete aktualizované podmienky, naše nástroje výučby JavaScript môžu byť nedostupné vašim študentom.'

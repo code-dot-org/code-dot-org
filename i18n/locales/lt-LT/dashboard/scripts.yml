@@ -1698,7 +1698,7 @@ lt:
               name: Kintamieji
             For Loops:
               name: Kartojimas
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Sąlyginiai sakiniai
@@ -1708,3 +1708,25 @@ lt:
               name: Komandinis programavimas
             Conditionals with Cards:
               name: Sąlyginiai sakiniai su kortomis
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Sąlyginiai sakiniai
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Komandos su parametrais
+        csd3-2020:
+          stages:
+            Variables:
+              name: Kintamieji
+            Conditionals:
+              name: Sąlyginiai sakiniai
+            Velocity:
+              name: Greitis
+            Functions:
+              name: Komandų kūrimas

@@ -68,6 +68,7 @@ lt:
       Dancelab_layoutSprites:
         options:
           FORMAT:
+            '"diamond"': deimantą
             '"random"': atsitiktinis
       Dancelab_makeAnonymousDanceSprite:
         options:

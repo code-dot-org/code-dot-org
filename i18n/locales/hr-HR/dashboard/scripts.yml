@@ -1500,7 +1500,7 @@ hr:
               name: Varijable
             For Loops:
               name: Petlja brojača
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Uvjeti
@@ -1510,3 +1510,23 @@ hr:
               name: Crowdsourcing
             Conditionals with Cards:
               name: Uvjeti s kartama
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Uvjeti
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funkcije s parametrima
+        csd3-2020:
+          stages:
+            Variables:
+              name: Varijable
+            Conditionals:
+              name: Uvjeti
+            Functions:
+              name: Funkcije

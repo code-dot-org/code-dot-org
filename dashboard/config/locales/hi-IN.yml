@@ -169,9 +169,6 @@ hi:
     valid_password: वैध पासवर्ड!
     invalid_password: पासवर्ड कम से कम ६ अंकों का होना चाहिए
     mismatch_password: आपके द्वारा दर्ज दो पासवर्ड एक समान नहीं हैं
-    under_13_consent: अगर मैं 13 साल से कम आयु का हूं, मैं पुष्टि करता हूं कि मैं
-      अपने माता पिता या कानूनी है गार्जियन Code.org सेवाओं का उपयोग करने की अनुमति
-      है ।
     student_consent: मैं पुष्टि करता हूं कि मैं अपने माता पिता या कानूनी है गार्जियन
       Code.org सेवाओं का उपयोग करने की अनुमति है ।
     agree_us_website: मैं एक संयुक्त राज्य अमेरिका में आधारित वेबसाइट का उपयोग कर
@@ -191,7 +188,7 @@ hi:
       अवसरों या अन्य कंप्यूटर साइंस के बारे में ईमेल भेज सकते हैं? (मोटे तौर पर माह
       में एक बार)
     email_preference_privacy: "(हमारी गोपनीयता नीति देखें)"
-    email_preference_yes: हाँ
+    email_preference_yes: हां
     email_preference_no: नहीं
     email_preference_required: आपको ईमेल प्राथमिकता बतानी होगी।
   school_info:
@@ -654,6 +651,7 @@ hi:
     download: वीडियो डाउनलोड करें
     show_notes: नोट्स दिखाएं
     show_video: वीडियो दिखाएं
+    label: वीडीयो
   compatibility:
     upgrade:
       unsupported_message: आपका ब्राउजर समर्थित नहीं है। कृपया अपने ब्राउजर को <a
@@ -833,6 +831,8 @@ hi:
     help_support: सहायता और समर्थन
     documentation: दस्तावेजीकरण
     tutorials: ट्यूटोरियल
+  free_response:
+    placeholder: अपना उत्तर यहाँ दर्ज करें
   multi:
     wrong_title: गलत जवाब
     wrong_body: आपके द्वारा दर्ज किया गया जवाब सही नहीं है।  कृपया दुबारा प्रयास करें!
@@ -932,6 +932,8 @@ hi:
       href="%{privacy_url}" target="_blank">गोपनीयता नीति</a> के लिए सहमत हूं।
     accept_label_markdown: मैं [सेवा की शर्तों](%{tos_url}) और [गोपनीयता नीति](%{privacy_url})
       के लिए सहमत हूं।
+    accept_tos: Code.org के लिए साइन अप करके, आप हमारी [सेवा की शर्तों](%{tos_url})
+      और [गोपनीयता नीति](%{privacy_url}) के लिए सहमति देते हैं।
     accept: स्वीकार करें
     print: छापें
     reminder_desc: हमने अपनी <a href="%{tos_url}" target="_blank">सेवा की शर्तों</a>
@@ -1321,7 +1323,7 @@ hi:
         csd: CS Discoveries
         csp: CS Principles
       email_opt_in:
-        opt_in_yes: हाँ
+        opt_in_yes: हां
         opt_in_no: नहीं
     international_opt_in:
       title: वर्कशॉप हाजिरी
@@ -1352,7 +1354,7 @@ hi:
     link_intro: विवरणों के लिए, हमारी
     privacy_policy: गोपनीयता नीति देखें
     logout: लॉगआउट करें
-    true: हाँ
+    true: हां
   page_not_found_title: पृष्ठ नहीं मिला
   page_not_found_header: '404: पृष्ठ नहीं मिला'
   page_not_found_description: जो पृष्ठ आप खोज रहे हैं, वह इस पते पर मौजूद नहीं है।

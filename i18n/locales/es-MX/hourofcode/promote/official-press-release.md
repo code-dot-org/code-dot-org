@@ -1,5 +1,5 @@
 ---
-title: Rueda de prensa sobre la Hora del Código para funcionarios electos
+title: Comunicado de prensa sobre la Hora del Código para funcionarios electos
 ---
 
 {{ signup_button }}

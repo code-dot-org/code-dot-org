@@ -1,0 +1,81 @@
+import React from 'react';
+import i18n from '@cdo/locale';
+import {shallow} from 'enzyme';
+import {expect} from '../../../util/deprecatedChai';
+import {UnconnectedTeacherDashboardHeaderWithButtons as TeacherDashboardHeaderWithButtons} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeaderWithButtons';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+const MOCK_SECTIONS = {
+  1: {
+    id: 1,
+    name: 'intro to computer science I'
+  },
+  2: {
+    id: 2,
+    name: 'intro to computer science II'
+  }
+};
+
+const MOCK_SCRIPT = {
+  name: 'Course D (2019)'
+};
+
+const DEFAULT_PROPS = {
+  sections: MOCK_SECTIONS,
+  selectedSectionId: 1,
+  selectedSectionScript: MOCK_SCRIPT,
+  openEditSectionDialog: () => {}
+};
+
+describe('TeacherDashboardHeaderWithButtons', () => {
+  it('renders section name in header', () => {
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
+    let h1Elements = wrapper.find('h1');
+    expect(h1Elements).to.have.lengthOf(1);
+    expect(h1Elements.contains('intro to computer science I')).to.equal(true);
+  });
+
+  it('renders selected section script name', () => {
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
+    expect(wrapper.contains('Course D (2019)')).to.equal(true);
+  });
+
+  it('renders dropdown button with links to sections, highlighting current section', () => {
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
+    let dropdownButton = wrapper.find('DropdownButton');
+    expect(dropdownButton).to.have.lengthOf(1);
+
+    let dropdownLinks = dropdownButton.find('a');
+    expect(dropdownLinks).to.have.lengthOf(2);
+
+    let checkmarkIcon = <FontAwesome icon="check" />;
+    expect(
+      dropdownLinks.at(0).contains('intro to computer science I')
+    ).to.equal(true);
+    expect(dropdownLinks.at(0).contains(checkmarkIcon)).to.equal(true);
+
+    expect(
+      dropdownLinks.at(1).contains('intro to computer science II')
+    ).to.equal(true);
+    expect(dropdownLinks.at(1).contains(checkmarkIcon)).to.equal(false);
+  });
+
+  it('renders button to edit section details', () => {
+    const wrapper = shallow(
+      <TeacherDashboardHeaderWithButtons {...DEFAULT_PROPS} />
+    );
+    let editSectionButton = wrapper.findWhere(
+      element =>
+        element.is('Button') &&
+        element.prop('text') === i18n.editSectionDetails()
+    );
+    expect(editSectionButton).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(EditSectionDialog)')).to.have.lengthOf(1);
+  });
+});

@@ -2440,6 +2440,9 @@ fr-FR:
       CSD U3 Plotting Shapes Shape Lab_2018: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
         this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
         you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
+      CSD U3 Plotting Shapes Shape Lab_2019: "# Drawing Shapes\\\r\n\n\\\r\nExplore\nusing
+        this tool that lets you draw different colored shapes. \\\r\n\\\r\nMake\nsure
+        you hit \"Run\" and try out turning on the grid to help you place shapes\nprecisely.\\\r\n\\\r\n![](<https://images.code.org/d52dbc112dcc088858c4b8f54be09aa1-image-1502914103923.07.59\nPM.png>)"
       CSD U3 Random Debug Cloud: "<img src=\"https://images.code.org/529b7e5ddda4683e6a0cc5b3028e4dbf-image-1490824752133.58.50\nPM.png\"
         style=\"float:right;height:150px\">\\\r\n\\\r\n\n# Debug - Using 4 Parameters\\\r\n\n\\\r\nNow\nthat
         the grass is working, let's add a cloud to the sky. Unfortunately, it\nlooks
@@ -5366,7 +5369,7 @@ fr-FR:
         a pattern like this! This puzzle is meant\nto be difficult.  Can you stick
         with it until you figure out the solution?  "
       CourseD_Dance_Party_01: |-
-        _Faisons une fête dansante !_
+        _Faisons une Soirée Dansante !_
 
         Faites glisser le bloc `créer un nouveau` dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
 
@@ -5503,29 +5506,29 @@ fr-FR:
 
         <img src="http://code.org/api/hour/begin_encryption.png">
       Dance_2019_01: |-
-        \_Faisons une soirée dansante! \_
+        _Faisons une soirée dansante !_
 
         Fais glisser le bloc <xml><block type="Dancelab_makeAnonymousDanceSprite" block-text="make a new dancer"><title name="COSTUME" config="&quot;CAT&quot;, &quot;PINEAPPLE&quot;">"CAT"</title><title name="LOCATION">{x: 200, y: 200}</title></block></xml> dans l'espace de travail et connecte-le à l'intérieur du bloc <xml><block type="Dancelab_whenSetup2" next_connection_disabled="true" block-text="setup"></block></xml> pour créer ton premier danseur.
 
         -   _Tu peux également cliquer sur l'ampoule située à gauche si tu souhaites plus d'informations ou des défis supplémentaires._
       Dance_2019_02: |-
-        Le bloc <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permet d'exécuter du code lorsque tu appuies sur la flèche vers le haut. Utilise le bloc <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> pour faire taper du danseur lorsque tu appuies sur la flèche vers le haut ou essaye un autre coup!
+        Le bloc <xml><block type="Dancelab_whenKey" block-text="when up pressed"></block></xml> te permet d'exécuter du code lorsque tu appuies sur la flèche vers le haut. Utilise le bloc <xml><block type="Dancelab_doMoveEachLR" block-text="do once"><title name="GROUP">"CAT"</title><title name="MOVE">MOVES.XClapSide</title><title name="DIR">-1</title></block></xml> pour que le chat tape des mains lorsque tu appuies sur la flèche vers le haut ou bien essaie un autre coup !
 
-        _Assure-toi d’appuyer sur ta flèche vers le haut ou sur ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) après avoir cliqué sur le bouton Exécuter!_
-      Dance_2019_03: Il est temps de danser! Programme chaque danseur pour qu'il bouge
-        lorsque tu appuies sur des touches différentes. Choisis ton coup préféré pour
+        _Assure-toi d’appuyer sur la flèche vers le haut ou sur ![](<https://images.code.org/419e704e6841c0b696016bf5029b8cb9-image-1571864825506.06.45 PM.png>) après avoir cliqué sur le bouton Exécuter !_
+      Dance_2019_03: Il est temps de danser ! Programme chaque danseur pour qu'il
+        bouge lorsque tu appuies sur des touches différentes. Choisis ta danse pour
         chaque danseur ou règle-le sur `(Aléatoire)` pour quelque chose de totalement
-        imprévisible!
+        imprévisible !
       Dance_2019_04: |-
-        Faisons bouger les danseurs au rythme de la musique!
+        Faisons bouger les danseurs au rythme de la musique !
 
-        Faites glisser le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> vers l'espace de travail. Connecte-le sous le bloc <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
+        Fais glisser le bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> vers l'espace de travail. Connecte-le sous le bloc <xml><block type="Dancelab_changeMoveEachLR"><title name="GROUP">"SHARK"</title><title name="MOVE">MOVES.ThisOrThat</title><title name="DIR">-1</title></block></xml>. Ton danseur devrait commencer un nouveau mouvement après la quatrième mesure.
 
         **Les mesures** sont utilisées pour compter le temps passé en musique. Dans ce tutoriel, une mesure dure quatre temps.
       Dance_2019_05: |-
         _Voilà qu'on danse !_
 
-        Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
+        Ajoute un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à ton espace de travail. Fais en sorte que le danseur commence un nouveau mouvement après 6 mesures.
       Dance_2019_06: |-
         Utilise ce nouveau bloc pour configurer un groupe de danseurs de secours plus petits autour d’un danseur principal au milieu.
 
@@ -5535,14 +5538,14 @@ fr-FR:
             <title name="LAYOUT">"circle"</title>
           </block></xml>
 
-        Maintenant, tu peux créer un groupe de danseurs en même temps!
+        Maintenant, tu peux créer un groupe de danseurs en même temps !
       Dance_2019_07: |-
         Chaque danseur a un ensemble de _propriétés_ qui contrôle ce à quoi il ressemble.
 
-        Utilisez <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> sous un bloc d’événements vert pour que les danseurs aient l'air plus proches ou plus éloignés.
+        Utilise <xml><block type="Dancelab_setPropEach" block-text="the set block"><title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">???</title><title name="PROPERTY">"scale"</title><title name="VAL">???</title></block></xml> sous un bloc d’événements vert pour que les danseurs aient l'air plus proches ou plus éloignés.
       Dance_2019_08: Les danseurs ont une propriété "teinte" qui peut ajouter une
-        couche de couleur. Essaye de changer la teinte de l'un de tes danseurs (ou
-        d'un groupe entier)!
+        couche de couleur. Essaie de changer la teinte de l'un de tes danseurs (ou
+        d'un groupe entier) !
       Dance_2019_09: |-
         Ce **nouveau bloc** est un type spécial d'événement qui se déclenche encore et encore.
 
@@ -5550,15 +5553,14 @@ fr-FR:
 
         Les autres nouveaux blocs de ta boîte à outils te permettent de modifier progressivement (ou de manière aléatoire!) les propriétés des danseurs au fil du temps.
 
-        \_Soit créatif et amuse-toi! \_
-      Dance_2019_10: Prends ton rythme ! Créez votre propre danse à partager avec
-        vos amis.
+        _Soit créatif et amuse-toi !_
+      Dance_2019_10: A toi de jouer ! Crée ta propre danse à partager avec tes amis.
       Dance_Party_01: |-
-        _Faisons une fête dansante !_
+        _Faisons une Soirée Dansante !_
 
-        Faites glisser le bloc `créer un nouveau` dans l’espace de travail, puis connectez-le à l’intérieur du bloc « configuration » pour créer votre premier danseur.
+        Fais glisser le bloc `créer un nouveau` dans l’espace de travail, puis connecte-le à l’intérieur du bloc « configuration » pour créer ton premier danseur.
 
-        -   _Vous pouvez également cliquer sur l'ampoule située à gauche si vous souhaitez plus d'informations ou des défis supplémentaires._
+        -   _Tu peux également cliquer sur l'ampoule située à gauche si tu souhaites plus d'informations ou des défis supplémentaires._
       Dance_Party_02: |-
         Faisons danser cet orignal !
 
@@ -5568,7 +5570,7 @@ fr-FR:
       Dance_Party_03: |-
         _Voilà qu'on danse !_
 
-        Ajoutez un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à votre espace de travail. Faites en sorte que le danseur commence un nouveau mouvement après 6 mesures.
+        Ajoutes un bloc <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">6</title><title name="UNIT">"measures"</title></block></xml> à ton espace de travail. Fais en sorte que le danseur commence un nouveau mouvement après 6 mesures.
       Dance_Party_04: |-
         _Cette danse a besoin d'être un peu plus éclatante!_
 
@@ -5580,14 +5582,14 @@ fr-FR:
       Dance_Party_06: |-
         _Nous avons besoin de plus de danseurs !_
 
-        Créez un danseur de sauvegarde appelé « backup\_dancer1 » pour danser avec le chat.
+        Crée un danseur de sauvegarde appelé « backup\_dancer1 » pour danser avec le chat.
       Dance_Party_08: |-
         Chaque danseur possède un ensemble de _propriétés_ qui contrôlent son apparence.
 
-        Vous pouvez donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Pouvez-vous donner la même taille aux deux danseurs de sauvegarde ?
+        Tu peux donner l’impression qu’un danseur est à l’arrière-plan en réduisant sa _taille_. Peux-tu donner la même taille aux deux danseurs de sauvegarde ?
       Dance_Party_09: |-
-        Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essayez de modifier la nuance de l’un de vos danseurs.
-        \*Les nuances vont mélanger la couleur que vous choisissez avec les couleurs du danseur.
+        Les danseurs ont une propriété « nuance » qui peut ajouter une couche de couleur. Essaie de modifier la nuance de l’un de tes danseurs.
+        \*Les nuances vont mélanger la couleur que tu choisis avec les couleurs du danseur.
       Dance_Party_10: |-
         Nous savons maintenant comment changer les propriétés d'un danseur. Nous pouvons également faire en sorte que les mêmes propriétés correspondent automatiquement à la musique en utilisant ce bloc :
         <xml>
@@ -5600,7 +5602,7 @@ fr-FR:
 
         Ce programme utilise le volume « grave » de la musique (les sons graves) pour contrôler la hauteur d'un danseur. Peux-tu aussi faire en sorte que l'autre danseur réponde à la musique ?
       Dance_Party_11: |-
-        Le bloc <xml><block type="Dancelab_whenKey"></block></xml> te permet d'exécuter le programme lorsque tu appuyes sur la flèche dirigée vers le haut.
+        Le bloc <xml><block type="Dancelab_whenKey"></block></xml> te permet d'exécuter le programme lorsque tu appuies sur la flèche dirigée vers le haut.
 
         Tu peux changer le mouvement de danse, changer les propriétés d'un danseur ou faire un mouvement rapide une seule fois. Sois créatif et cherche de nouveaux blocs !
       Dance_Party_11_5: |-
@@ -5616,20 +5618,20 @@ fr-FR:
         Maintenant, tu peux créer un groupe de danseurs à la fois !
 
         Essaie d’utiliser certains des blocs « tous les canards » pour concevoir un programme qui fera danser ensemble tous les canards.
-      Dance_Party_11b: Il est temps de danser ! Le Chat fait le dab lorsque vous appuyez
-        sur la touche fléchée gauche. Faites le Robot faire le « drop » lorsque vous
-        appuyez sur la touche fléchée droite.
-      Dance_Party_12: Prends ton rythme ! Créez votre propre danse à partager avec
-        vos amis.
-      Dance_Party_extras_alternate_2019: "# En avant, an arrière !\n\nVous pouvez
-        vouloir créer le modèle de mouvements de danse que vous voulez. C’est ce que
-        vous permet de faire ce nouveau bloc. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title
-        name=\"GROUP\">sprites</title><title name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title
-        name=\"MOVE2\">MOVES.ClapHigh</title></block></xml> \n\nLes mouvements que
-        vous avez choisis ci-dessus se répéteront indéfiniment. \n\n-   Créez une
-        répétition en alternance pour le danseur principal à l'avant ! \n-   Utilisez
-        différents nombres pour modifier le taux d'alternance des mouvements. Essayez
-        « 1 » ou « 0.5 » pour alterner plus rapidement !"
+      Dance_Party_11b: |-
+        Il est temps de danser ! Le Chat fait le dab lorsque tu appuies sur la touche fléchée gauche. Le Robot doit faire le « drop » lorsque tu appuies sur la touche fléchée droite.
+
+        **Utilise les touches pour que le Robot fasse drop-clap-drop-clap aussi vite que tu peux!**
+      Dance_Party_12: Prends ton rythme ! Crée ta propre danse à partager avec tes
+        amis.
+      Dance_Party_extras_alternate_2019: "# Va et viens !\n\nTu peux vouloir créer
+        le modèle de mouvements de danse que tu veux. C’est ce qui te permet de faire
+        ce nouveau bloc. \n\n<xml><block type=\"Dancelab_alternateMoves\"><title name=\"GROUP\">sprites</title><title
+        name=\"N\">2</title><title name=\"MOVE1\">MOVES.Roll</title><title name=\"MOVE2\">MOVES.ClapHigh</title></block></xml>
+        \n\nLes mouvements que tu as choisi ci-dessus se répéteront indéfiniment.
+        \n\n-   Crée une répétition en alternance pour le danseur principal à l'avant
+        ! \n-   Utilise différents nombres pour modifier le taux d'alternance des
+        mouvements. Essaye « 1 » ou « 0.5 » pour alterner plus rapidement !"
       Dance_Party_extras_battle: |-
         # Équipes de danse
 
@@ -5657,14 +5659,14 @@ fr-FR:
         -   Ajoute certains événements « après la mesure ».
         -   Change les « mesures » en « secondes » et essaie de chronométrer tes danses de cette façon.
       Dance_Party_extras_every_beat_2019: |-
-        "# Quarter Notes
+        # Noires
 
         La plupart de nos danses ont utilisé des mesures entières, mais chaque mesure est composée de 4 noires. Cette danse utilise <xml><block type="controls_if"><value name="IF0"><block type="logic_compare"><title name="OP">LT</title><value name="A"><block type="Dancelab_getTime"><title name="UNIT">"measures"</title></block></value><value name="B"><block type="math_number"><title name="NUM">5</title></block></value></block></value><statement name="DO0"></statement></block></xml> pour faire applaudir le danseur sur chaque noire mais uniquement pour les 4 premières mesures.
 
-        Essayez de changer les nombres dans le bloc pour voir comment cela modifie la danse.
+        Essaie de changer les nombres dans le bloc pour voir comment cela modifie la danse.
 
-        -   Essayez avec d'autres durées de notes (0,5 pour une blanche ou 0,125 pour une croche).
-        -   Ajoutez d'autres événements.".
+        -   Essaie avec d'autres durées de notes (0,5 pour une blanche ou 0,125 pour une croche).
+        -   Ajoute d'autres événements.
       Dance_Party_extras_layout: |-
         # Restons en formation !
 
@@ -5674,18 +5676,18 @@ fr-FR:
         -   Change la mise en page quand une touche est enfoncée
         -   Modifie une propriété lorsque les danseurs changent de formation
       Dance_Party_extras_layout_2019: |-
-        # Entrons en formation!
+        # Entrons en formation !
 
-        Découvrez cette danse qui utilise le bloc <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pour modifier la formation des danseurs de secours tout au long de la danse. Essayez l'une de ces idées pour l'étendre:
+        Découvre cette danse qui utilise le bloc <xml><block type="Dancelab_layoutSprites" block-text="layout"><title name="GROUP">"MOOSE"</title><title name="FORMAT">???</title></block></xml> pour modifier la formation des danseurs de secours tout au long de la danse. Essaye l'une de ces idées pour l'étendre:
 
-        -   Créer un deuxième groupe de danseurs dans une mise en page différente
-        -   Changer la disposition quand on appuie sur une touche
-        -   Changer une propriété quand les danseurs changent de formation
-      Dance_Party_extras_mixed_2019: "# Plus de touches\n\nCette danse vous permet
-        de contrôler les propriétés des danseurs en temps réel pendant qu'ils dansent
-        automatiquement. Essayez de modifier d’autres propriétés lorsque vous appuyez
-        sur les touches. Par exemple : \n\n-   Rendez la teinte du danseur aléatoire
-        en appuyant sur « bas ». \n-   Ajoutez un groupe de danseurs en aléatoire
+        -   Crée un deuxième groupe de danseurs disposés différemment
+        -   Change la disposition quand on appuie sur une touche
+        -   Change une propriété quand les danseurs changent de formation
+      Dance_Party_extras_mixed_2019: "# Plus de boutons\n\nCette danse te permet de
+        contrôler les propriétés des danseurs en temps réel pendant qu'ils dansent
+        automatiquement. Essaie de modifier d’autres propriétés lorsque tu appuies
+        sur les touches. Par exemple : \n\n-   Rends la teinte du danseur aléatoire
+        en appuyant sur « bas ». \n-   Ajoute un groupe de danseurs aléatoirement
         en appuyant sur « espace »."
       Dance_Party_extras_on_beat: |-
         # Grave, Médium et Aigü
@@ -5702,7 +5704,7 @@ fr-FR:
       Dance_Party_extras_speed_2019: |-
         # Accélère, ralentis
 
-        Cette danse finale utilise le bloc <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pour contrôler la vitesse de déplacement de chaque danseur. Essaye d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus amusantes.
+        Cette danse finale utilise le bloc <xml><block type="Dancelab_setDanceSpeedEach"><title name="GROUP">"SHARK"</title><title name="SPEED">2</title></block></xml> pour contrôler la vitesse de déplacement de chaque danseur. Essaie d’expérimenter avec différentes vitesses à différents moments de la chanson. N'hésite pas à continuer à bricoler sur cette danse, ou à revenir à l'une des danses précédentes pour les rendre encore plus amusantes.
       Dance_Party_extras_visible: |-
         # Où iraient-ils ?
 
@@ -5714,7 +5716,7 @@ fr-FR:
       Dance_Party_extras_visible_2019: |-
         # Où iraient-ils ?
 
-        Cette danse montre et cache deux groupes de danseurs différents. Jette-y un coup d'œil, puis essaie d'ajouter ton propre style.
+        Cette danse montre et cache deux groupes de danseurs différents. Jettes-y un coup d'œil, puis essaie d'ajouter ton propre style.
 
         -   Ajoute un autre groupe de danseurs
         -   Affiche et masque les danseurs à l'aide des touches fléchées
@@ -6547,17 +6549,6 @@ fr-FR:
       course4_harvester_nested_loops_challenge1: _"J'ai besoin d'aide à la ferme!
         Aide moi à récolter ce maïs en utilisant uniquement les blocs présent dans
         la boite à outils."_
-      courseA_artist_loops10: "## Time to head back to land.\n\nHelp me put down stones
-        so I don't fall in!\\\r\n\\\r\n![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
-      courseA_artist_loops10_2018: "## Time to head back to land.\n\nHelp me put down
-        stones so I don't fall in!\\\r\n\\\r\n![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
-      courseA_artist_loops10_2019: "## Time to head back to land.\n\nHelp me put down
-        stones so I don't fall in!\\\r\n\\\r\n![expandable](https://images.code.org/d3213d375d0271e114aa4313cdeb34be-image-1498064942606.gif)"
-      courseA_artist_loops11: "## Help me build steps to watch\n\nthe ship sail away.\\\r\n\\\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
-      courseA_artist_loops11_2018: "## Help me build steps to watch\n\nthe ship sail
-        away.\\\r\n\\\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
-      courseA_artist_loops11_2019: "## Help me build steps to watch\n\nthe ship sail
-        away.\\\r\n\\\r\n![expandable](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)"
       courseA_artist_loops12: "The artist saw something funny\nin the distance.  Draw
         what you think he saw.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n### Ideas\\\r\n\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
       courseA_artist_loops12_2018: "The artist saw something funny\nin the distance.
@@ -6588,21 +6579,8 @@ fr-FR:
       courseA_artist_loops6: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
       courseA_artist_loops6_2018: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
       courseA_artist_loops6_2019: "## Let's put a nice hill in the\n\nback.\\\r\n\\\r\n![expandable](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)"
-      courseA_artist_loops7: "## Use the <xml><block type=\"controls_repeat_simplified_dropdown\">\\<title\n\nname=\"TIMES\"
-        config=\"3-10\">???</title></block></xml> loop to add waves\nto the water.\\\r\n\\\r\n![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
-      courseA_artist_loops7_2018: "## Use the <xml><block type=\"controls_repeat_simplified_dropdown\">\\<title\n\nname=\"TIMES\"
-        config=\"3-10\">???</title></block></xml> loop to add waves\nto the water.\\\r\n\\\r\n![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
       courseA_artist_loops7_2019: "## Use the <xml><block type=\"controls_repeat_simplified_dropdown\">\\<title\n\nname=\"TIMES\"
         config=\"3-10\">???</title></block></xml> loop to add waves\nto the water.\\\r\n\\\r\n![expandable](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)"
-      courseA_artist_loops8: "## We need a ladder up to the\n\nboat.\\\r\n\\\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
-      courseA_artist_loops8_2018: "## We need a ladder up to the\n\nboat.\\\r\n\\\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
-      courseA_artist_loops8_2019: "## We need a ladder up to the\n\nboat.\\\r\n\\\r\n![expandable](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
-      courseA_artist_loops9: "## **Challenge:** The stairs down\n\nto the dock are
-        broken.  Help me fix them.\\\r\n\\\r\n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
-      courseA_artist_loops9_2018: "## **Challenge:** The stairs down\n\nto the dock
-        are broken.  Help me fix them.\\\r\n\\\r\n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
-      courseA_artist_loops9_2019: "## **Challenge:** The stairs down\n\nto the dock
-        are broken.  Help me fix them.\\\r\n\\\r\n![expandable](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
       courseA_artist_loops_challenge1: |-
         Tu peux utiliser une boucle pour dessiner plusieurs lignes dans une rangée.
 
@@ -6627,12 +6605,18 @@ fr-FR:
         Voici quelques idées:
 
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
-      courseA_artist_loops_challenge2a: _"Aide moi à monter ce camp!"_Utilise les
-        blocs dans la boîte à outils pour dessiner ces 3 tentes.
-      courseA_artist_loops_challenge2a_2018: _"Aide moi à monter ce camp!"_Utilise
-        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
-      courseA_artist_loops_challenge2a_2019: _"Aide moi à monter ce camp!"_Utilise
-        les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2018: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
+      courseA_artist_loops_challenge2a_2019: |-
+        _"Aide moi à monter ce camp!"_
+
+        Utilise les blocs dans la boîte à outils pour dessiner ces 3 tentes.
       courseA_collector_loops1: |-
         **Jeu libre:** Voici Laurel l'aventurière! Bouge la pour récupérer autant de diamants que possible.
 
@@ -6694,7 +6678,7 @@ fr-FR:
         finaliser ce code, puis clique "▶ Lancer".
       courseA_maze_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
-        blocs pour finaliser ce code, puis clique "▶ Lancer".
+        blocs pour finaliser ce code, puis clique sur "▶ Lancer".
       courseA_maze_seq1: _"Essaie de m'emmener jusqu'au cochon en utilisant ces blocs!"_
       courseA_maze_seq10: "**Défi:** Contourne la TNT pour que l'oiseau atteigne le
         cochon! \n\n![expandable](https://images.code.org/a656e421bc90e530a7e1ce636e507752-image-1497996976195.gif)"
@@ -6843,7 +6827,7 @@ fr-FR:
         finaliser ce code, puis clique "▶ Lancer".
       courseB_Scrat_ramp3a_2019: Attrape un <xml><block type="maze_moveNorth" block-text="move
         north"/></xml> bloc depuis la barre d'outils et ajoute le à la suite des autres
-        blocs pour finaliser ce code, puis clique "▶ Lancer".
+        blocs pour finaliser ce code, puis clique sur "▶ Lancer".
       courseB_artist_loops10: "Use what you have learned to\ndraw a picture of what
         you think the artist saw when he got home.\\\r\n\\\r\n\\_\\_\\_\\\r\n\n###
         \n\nIdeas\\\r\n\\\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\\\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\\\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\\\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"

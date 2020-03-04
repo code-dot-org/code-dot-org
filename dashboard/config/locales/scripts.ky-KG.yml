@@ -1165,7 +1165,7 @@ ky:
             Nested Loops in Frozen:
               name: Тоңгондогу салынган циклдар
             Artist Binary:
-              name: Сүрөтчү бинардык система
+              name: Сүрөтчү менен бинардык сүрөттөр
         coursee-2019:
           stages:
             Programming in Artist:
@@ -1338,7 +1338,7 @@ ky:
               name: Функциялар
             Variables:
               name: Өзгөрмөлөр
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Шартуулар
@@ -1358,3 +1358,19 @@ ky:
               name: Тоңгондогу салынган циклдар
             Functions with Artist:
               name: Сүрөтчү менен функциялар
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Шартуулар
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Шартуулар
+        csd3-2020:
+          stages:
+            Variables:
+              name: Өзгөрмөлөр
+            Conditionals:
+              name: Шартуулар
+            Functions:
+              name: Функциялар

@@ -1537,7 +1537,7 @@ gl:
               name: Variables
             For Loops:
               name: Bucles "Para" (For)
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Condicionais
@@ -1547,3 +1547,23 @@ gl:
               name: Colaboración Aberta
             Conditionals with Cards:
               name: Condicionais con cartas
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Condicionais
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funcións con parámetros
+        csd3-2020:
+          stages:
+            Variables:
+              name: Variables
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funcións

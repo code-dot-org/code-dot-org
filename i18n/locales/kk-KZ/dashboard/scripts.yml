@@ -1589,7 +1589,7 @@ kk:
               name: Айнымалылар
             For Loops:
               name: For ілмектері
-        time4cs-control-unit-1:
+        time4cs-original-unit-1:
           stages:
             Conditionals:
               name: Шарттар
@@ -1599,3 +1599,24 @@ kk:
               name: Кроудсорсинг
             Conditionals with Cards:
               name: Картаға қатысты шартты белгілер
+        time4cs-control-unit-1:
+          stages:
+            Conditionals:
+              name: Шарттар
+        time4cs-experiment-unit-1:
+          stages:
+            Conditionals:
+              name: Шарттар
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Параметрлі Функциялар
+        csd3-2020:
+          description_short: "Бағдарламалау"
+          stages:
+            Variables:
+              name: Айнымалылар
+            Conditionals:
+              name: Шарттар
+            Functions:
+              name: Функциялар

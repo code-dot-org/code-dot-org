@@ -84,7 +84,7 @@ zh-TW:
         turtle_1_3: 只能用 3 個積木來畫出一個正方形。
         turtle_1_4: 畫出一個三角形，三角形的每個邊的顏色要不一樣，使用「隨機取色」以在每次執行時使用不同的顏色。提示：你要思考要將轉向積木的轉向角度改成多少。
         turtle_1_5: 現在，練習一下，畫個三角形，然後再畫個正方形來繪製一個信封。
-        turtle_1_6: 你想得到要怎麼畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想，在畫正方形之前應該要轉多少度。
+        turtle_1_6: 你想的到要怎麼畫出這個三角形以及正方形嗎？提示： 先畫三角形，然後想想，在畫正方形之前應該要轉多少度。
         turtle_1_7: 好啦，讓我們試著提高一點難度，看看你有沒有辦法畫出這副綠色的眼鏡。正方形的邊長為 100 像素，兩個正方形之間間隔 50 像素。對了，不要忘記要用綠色來畫喔
           ！
         turtle_1_8: 試著想一想如果你運行程式會發生什麼事（你也可以直接點搫運行來看看）。接著，重複它幾次來完成這個圖案，每次畫的顏色都要不一樣。
@@ -180,8 +180,8 @@ zh-TW:
         jigsaw_8: 排列積木以組成圖像
         jigsaw_9: 排列積木以組成圖像
         jigsaw_10: 排列積木以組成圖像
-        jigsaw_11: 排列積木以組成圖像
-        jigsaw_12: 排列積木以組成圖像
+        jigsaw_11: 依照數字將這些積木排列好
+        jigsaw_12: 依照數字將這些積木排列好
         jigsaw_13: 解決這個難題！
         mazestep_1: 這是迷宮步驟說明
         mazestep_2: 這是迷宮步驟說明
@@ -300,7 +300,7 @@ zh-TW:
         C1_moveitmoveit_unplugged: 移動它，移動它
         C1_bigevent_unplugged: 大事件
         C1_getting_loopy: 學習迴圈
-        C1_pair_programming: 小組編程
+        C1_pair_programming: 結對編程
         C1_maze_intro_sequencing: 迷宮 - 序列（Sequencing）
         C1_maze_debugging: 迷宮 - 除錯（Debugging）
         C1_bee_level_intro: 蜜蜂關卡 - 簡介
@@ -312,7 +312,7 @@ zh-TW:
         C1_playlab_storytelling: Play Lab - 創作一個故事
         C1_planting_seed: 植物種植
         C1_building_foundation: 打好基礎
-        C1_going_places_safely: 安全的到達地點
+        C1_going_places_safely: 安全的遨遊網路世界
         C2_maze_intro: 迷宮簡介
         C2_artist_intro: 小藝術家簡介
         C2_zuck_repeat_loop: 迷宮 - 迴圈（Loops）
@@ -352,9 +352,9 @@ zh-TW:
         C4_bee_conditional: 蜜蜂 - 條件判斷（Conditionals）
         C4_variables_artist: 變數 - 藝術家
         C4_variables_playlab: 變數 - Play Lab
-        C4_for_loops: 計數迴圈（For Loops）
-        C4_for_loops_bee: 計數迴圈（For Loops）
-        C4_for_loops_no_bee: 計數迴圈（For Loops）
+        C4_for_loops: 計次迴圈（For Loops）
+        C4_for_loops_bee: 計次迴圈（For Loops）
+        C4_for_loops_no_bee: 計次迴圈（For Loops）
         C4_math_artist: 用數學來編程的小藝術家
         C4_function_edit: 編輯函式
         C4_function_create: 建立函式
@@ -363,7 +363,7 @@ zh-TW:
         C4_unplugged_algorithms: 演算法與七巧板
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: 信封裡的變數
-        C4_unplugged_forloops: 計數迴圈（For Loops）
+        C4_unplugged_forloops: 計次迴圈（For Loops）
         C4_unplugged_parameters: 用參數寫歌
         C4_unplugged_binary: 二進制（Binary）
         CSF_a_b_artist_loops: 藝術家中的迴圈（Loops）
@@ -486,14 +486,23 @@ zh-TW:
         hoc_dance_events: 舞蹈派對 - 事件（Evnets）
         hoc_dance_properties: 舞蹈派對 - 屬性（Properties）
         hoc_dance_congrats: 舞蹈派對 - 還不快動起來！
+        elem_pd_2: 小學的計算機科學 - PD 影片 2/2
+        what_is_cs: 計算機科學是什麼？
         lesson_planning: 教學計畫
-        csd_pair_programming: 小組編程
+        teaching_cs_pair_programming: 教授 CS 基礎知識：結對編程（Pair Programming）
+        csd_pair_programming: 結對編程
         csd_applab_parameters: 函式帶參數
         csd_problem_solving_process: 問題解決流程
+        CSF_Going_Places_Safely: 我的線上鄰居
         CSF_Spritelab_MakeSprite_v2: 如何建立一個角色
         CSF_SpriteLab_SpritesInAction_v2: 運行中的角色
         oceans_machine_learning: 機器學習
         oceans_training_data: 訓練數據
+        hoc_dance_congrats_2019: 舞蹈派對 2019 - 開跳！
+        hoc_dance_warmup_2019: 舞蹈派對 2019 - 熱身！
+        hoc_dance_events_2019: 舞蹈派對 2019 - 事件
+        hoc_dance_measures_2019: 舞蹈派對 2019 - 小節
+        hoc_dance_properties_2019: 舞蹈派對 2019 - 屬性
     callout:
       text:
         drag_blocks: 拖曳一個「移動」積木並將它放到其他積木下方
