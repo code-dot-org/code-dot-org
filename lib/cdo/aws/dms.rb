@@ -82,7 +82,7 @@ module Cdo
             any? {|tag| tag.key == 'schedule' && tag.value == schedule}
         end
         aws_tasks.map do |aws_task|
-          Cdo::DMS::ReplicationTask.new(aws_task.replication_task_arn)
+          Cdo::DMS::ReplicationTask.new(aws_task.replication_task_arn, dms_client)
         end
       end
 
