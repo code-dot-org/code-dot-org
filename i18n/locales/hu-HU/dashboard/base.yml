@@ -63,6 +63,7 @@ hu:
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   join_section:
     code:
+      title: 'Csatlakozz egy csoporthoz a Code.org-on'
       placeholder: "Szakasz kód (ABCDEF)"
       submit: 'Csatlakozás'
   add_hint_form:
@@ -798,3 +799,4 @@ hu:
     accept: 'Egyetértek'
   gdpr_dialog:
     yes: 'Igen'
+  copy: 'Másol'
