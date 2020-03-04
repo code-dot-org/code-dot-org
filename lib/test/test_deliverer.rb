@@ -78,6 +78,10 @@ class DelivererTest < Minitest::Test
   #       - body.txt
   def test_deliverer_render_all
     Dir.each_child(Poste.emails_dir) do |email|
+      # skip over 'actionview' templates; those are being used alongside the
+      # un-suffixed templates of the same name
+      next if email.end_with?("actionview")
+
       name = File.basename(email, ".*")
       template = @deliverer.load_template(name)
 
