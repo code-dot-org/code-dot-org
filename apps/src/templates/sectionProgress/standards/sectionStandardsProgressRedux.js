@@ -80,12 +80,16 @@ export function getUnpluggedLessonsForScript(state) {
     state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
   ) {
-    const stages =
-      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-        .stages;
+    const scriptId = state.scriptSelection.scriptId;
+    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
 
     unpluggedStages = _.filter(stages, function(stage) {
       return stage.unplugged;
+    });
+
+    unpluggedStages.forEach(stage => {
+      const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+      stage['completed'] = lessonCompletionStatus.completed;
     });
   }
 
@@ -94,7 +98,8 @@ export function getUnpluggedLessonsForScript(state) {
       id: stage.id,
       name: stage.name,
       number: stage.position,
-      url: stage.lesson_plan_html_url
+      url: stage.lesson_plan_html_url,
+      completed: stage.completed
     };
   }
 

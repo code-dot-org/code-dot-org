@@ -47,7 +47,7 @@ const ComplexLessonComponent = function({style, lesson}) {
     <div style={styles.lessonListItem}>
       <div>
         <ProgressBoxForLessonNumber
-          completed={false}
+          completed={lesson.completed}
           lessonNumber={lesson.number}
         />
       </div>
@@ -63,7 +63,8 @@ ComplexLessonComponent.propTypes = {
     id: PropTypes.number,
     name: PropTypes.string,
     number: PropTypes.number,
-    url: PropTypes.string
+    url: PropTypes.string,
+    completed: PropTypes.bool
   })
 };
 
