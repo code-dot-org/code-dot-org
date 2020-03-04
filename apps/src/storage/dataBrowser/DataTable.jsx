@@ -13,6 +13,7 @@ import {showWarning} from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from '../../util/color';
 import {connect} from 'react-redux';
+import SafeMarkdown from '../../templates/SafeMarkdown';
 import PaginationWrapper from '../../templates/PaginationWrapper';
 import msg from '@cdo/locale';
 import {WarningType} from '../constants';
@@ -233,7 +234,9 @@ class DataTable extends React.Component {
     return (
       <div>
         {this.state.showError ? (
-          <div style={styles.warning}>{msg.invalidDataEntryTypeWarning()}</div>
+          <div style={styles.warning}>
+            <SafeMarkdown markdown={msg.invalidDataEntryTypeWarning()} />
+          </div>
         ) : (
           // Blank space so layout stays the same whether or not warning is visible.
           <div style={{height: '3em'}} />
