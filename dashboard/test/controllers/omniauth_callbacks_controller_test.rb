@@ -6,6 +6,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    CDO.stubs(:properties_encryption_key).returns("thisisafakekey")
   end
 
   test "login: authorizing with known facebook account signs in" do
