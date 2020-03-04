@@ -4,6 +4,10 @@ require 'ostruct'
 
 module Cdo
   class DMS
+    def self.redshift_schemas_imported_from_database
+      %w(dashboard pegasus).map {|schema| CDO["#{schema}_db_name"]}.product(['', '_pii']).map(&:join)
+    end
+
     # Generates a set of DMS task definition hashes from a source YAML configuration file.
     def self.tasks(file)
       tasks = YAML.load_file(file)
