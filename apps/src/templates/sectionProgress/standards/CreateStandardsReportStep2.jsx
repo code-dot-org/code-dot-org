@@ -4,6 +4,8 @@ import i18n from '@cdo/locale';
 import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {connect} from 'react-redux';
 
 const styles = {
   textArea: {
@@ -20,10 +22,18 @@ const styles = {
   }
 };
 
-export class CreateStandardsReportStep2 extends Component {
+class CreateStandardsReportStep2 extends Component {
   static propTypes = {
+    sectionId: PropTypes.number,
     onBack: PropTypes.func.isRequired,
-    handleConfirm: PropTypes.func.isRequired
+    handleConfirm: PropTypes.func.isRequired,
+    onCommentChange: PropTypes.func.isRequired,
+    //redux
+    teacherComment: PropTypes.string
+  };
+
+  commentChanged = event => {
+    this.props.onCommentChange(event.target.value);
   };
 
   render() {
@@ -43,15 +53,24 @@ export class CreateStandardsReportStep2 extends Component {
             <SafeMarkdown markdown={i18n.createStandardsReportSuggestion2()} />
           </li>
           <li>
-            <a href="https://studio.code.org/projects" target="_blank">
-              {i18n.createStandardsReportSuggestion3()}
-            </a>
+            <SafeMarkdown
+              openExternalLinksInNewTab={true}
+              markdown={i18n.createStandardsReportSuggestion4({
+                projectsLink: teacherDashboardUrl(
+                  this.props.sectionId,
+                  '/projects'
+                )
+              })}
+            />
           </li>
         </ul>
         <textarea
           type="text"
-          value={i18n.createStandardsReportSampleNoteText()}
-          onChange={() => {}}
+          placeholder={i18n.createStandardsReportSampleNoteText()}
+          value={
+            this.props.teacherComment ? this.props.teacherComment : undefined
+          }
+          onChange={this.commentChanged}
           style={styles.textArea}
         />
         <DialogFooter>
@@ -64,6 +83,7 @@ export class CreateStandardsReportStep2 extends Component {
             text={i18n.createReport()}
             onClick={this.props.handleConfirm}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-generate-report-finish"
           />
         </DialogFooter>
       </div>
@@ -72,3 +92,7 @@ export class CreateStandardsReportStep2 extends Component {
 }
 
 export const UnconnectedCreateStandardsReportStep2 = CreateStandardsReportStep2;
+
+export default connect(state => ({
+  teacherComment: state.sectionStandardsProgress.teacherComment
+}))(CreateStandardsReportStep2);

@@ -310,7 +310,7 @@ html[dir='rtl'] .editor-column {
 
 // #codeWorkspace.readonly is used when we are displaying a workspace but it
 // is not editable (like someone else project), or when app is running
-#codeWorkspace.readonly, #codeWorkspace.dimmed {
+#codeWorkspace.readonly, #codeWorkspace.dimmed, .libraryCodeViewerContainer {
   // special cases for:
   .blocklySvg, // blockly
   .droplet-main-scroller, // droplet block view

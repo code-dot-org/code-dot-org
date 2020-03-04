@@ -12,7 +12,7 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import firehoseClient from '../../lib/util/firehose';
 import color from '../../util/color';
 import {h3Style} from '../../lib/ui/Headings';
-import {StandardsViewHeaderButtons} from './standards/StandardsViewHeaderButtons';
+import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 const styles = {
   heading: {
@@ -80,7 +80,9 @@ class ProgressViewHeader extends Component {
             {scriptFriendlyName}
           </a>
         </span>
-        {currentView === ViewType.STANDARDS && <StandardsViewHeaderButtons />}
+        {currentView === ViewType.STANDARDS && (
+          <StandardsViewHeaderButtons sectionId={this.props.section.id} />
+        )}
       </div>
     );
   }

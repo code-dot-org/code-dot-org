@@ -11,6 +11,7 @@ class PreviewModal extends React.Component {
   static propTypes = {
     importTable: PropTypes.func.isRequired,
     // Provided via Redux
+    libraryManifest: PropTypes.object.isRequired,
     isPreviewOpen: PropTypes.bool.isRequired,
     tableName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired
@@ -25,7 +26,10 @@ class PreviewModal extends React.Component {
     if (!this.props.isPreviewOpen) {
       return null;
     }
-    const datasetInfo = getDatasetInfo(this.props.tableName);
+    const datasetInfo = getDatasetInfo(
+      this.props.tableName,
+      this.props.libraryManifest.tables
+    );
     return (
       <BaseDialog isOpen handleClose={this.props.onClose} fullWidth fullHeight>
         <h1>{this.props.tableName}</h1>
@@ -44,7 +48,8 @@ class PreviewModal extends React.Component {
 export default connect(
   state => ({
     isPreviewOpen: state.data.isPreviewOpen,
-    tableName: state.data.tableName || ''
+    tableName: state.data.tableName || '',
+    libraryManifest: state.data.libraryManifest || {}
   }),
   dispatch => ({
     onClose() {

@@ -25,7 +25,7 @@ ami = commit[0..4]
 
 frontends = @frontends = rack_env?(:production) || ENV['FRONTENDS']
 database = @database = [:staging, :test, :levelbuilder].include?(rack_env) || ENV['DATABASE']
-load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS']
+load_balancer = @load_balancer = !rack_env?(:adhoc) || ENV['FRONTENDS'] || ENV['LOAD_BALANCER']
 alarms = @alarms = !rack_env?(:adhoc) || ENV['ALARMS']
 chef_version = '15.2.20'
 
@@ -208,7 +208,10 @@ Resources:
   AMI<%=ami%>: <%= lambda_fn.call 'AMIManager',
     DependsOn: "AMICreate#{ami}",
     InstanceId: {Ref: "WebServerAMI" } %>
-
+  FastSnapshotRestore: <%= lambda_fn.call 'FastSnapshotRestore',
+    ImageIds: [{Ref: "AMI#{ami}" }],
+    AvailabilityZones: AVAILABILITY_ZONES
+  %>
   ASGCount: <%= lambda_fn.call 'CountASG',
     Default: {
       MinSize: 2,
@@ -256,6 +259,76 @@ Resources:
         Timeout: 300
 <%   if !frontends && daemon_instance_id -%>
       Instances: [<%=daemon_instance_id%>]
+<%   elsif daemon %>
+      Instances:
+        - !Ref <%=daemon%>
+<%   end -%>
+
+  ALB:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Ref AWS::StackName
+      SecurityGroups: [!ImportValue VPC-ELBSecurityGroup]
+      Subnets: <%= public_subnets.to_json %>
+      LoadBalancerAttributes:
+        - Key: deletion_protection.enabled
+          Value: true
+
+  HTTPListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ALB
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+      - Type: forward
+        TargetGroupArn: !Ref ALBTargetGroup
+
+  HTTPSListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ALB
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+      - CertificateArn: <%=certificate_arn%>
+      SslPolicy: ELBSecurityPolicy-2016-08
+      DefaultActions:
+      - Type: forward
+        TargetGroupArn: !Ref ALBTargetGroup
+
+  ALBTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Ref AWS::StackName
+      VpcId: !ImportValue VPC
+      Port: 80
+      Protocol: HTTP
+      HealthCheckEnabled: true
+      HealthCheckProtocol: HTTP
+      HealthCheckPath: /health_check
+      HealthCheckPort: 80
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 5
+      HealthCheckIntervalSeconds: 10
+      HealthCheckTimeoutSeconds: 5
+      TargetGroupAttributes:
+        - Key: load_balancing.algorithm.type
+          Value: least_outstanding_requests
+        - Key: stickiness.enabled
+          Value: true
+        - Key: stickiness.type
+          Value: lb_cookie
+        - Key: stickiness.lb_cookie.duration_seconds
+          Value: 30
+<%   if !frontends && daemon_instance_id -%>
+      Targets:
+        - Id: <%=daemon_instance_id%>
+          Port: 80
+<%   elsif daemon %>
+      Targets:
+        - Id: !Ref <%=daemon%>
+          Port: 80
 <%   end -%>
 <% end -%>
 
@@ -287,10 +360,12 @@ Resources:
       HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
       LoadBalancerNames: [Ref: LoadBalancer]
+      TargetGroupARNs: [Ref: ALBTargetGroup]
       MetricsCollection:
         - Granularity: 1Minute
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
+    DependsOn: FastSnapshotRestore
     Properties:
       ImageId: !GetAtt [AMI<%=ami%>, ImageId]
       InstanceType: !Ref InstanceType
@@ -506,6 +581,7 @@ Resources:
       CacheSubnetGroupName: !Ref GeocoderSubnetGroup
       ClusterName: <%=stack_name[0..19]%> # Max 20 chars
       Engine: memcached
+      EngineVersion: 1.4
       NumCacheNodes: 2
       AZMode: cross-az
       PreferredAvailabilityZones: <%= availability_zones.first(2).to_json %>
@@ -599,6 +675,16 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
+        - PolicyName: DMSStartAndMonitorReplicationTasks
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dms:DescribeReplicationTasks
+                  - dms:DescribeTableStatistics
+                  - dms:ListTagsForResource
+                  - dms:StartReplicationTask
+                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions

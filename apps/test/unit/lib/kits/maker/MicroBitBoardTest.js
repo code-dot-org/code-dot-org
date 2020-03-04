@@ -2,6 +2,7 @@ import {expect} from '../../../../util/deprecatedChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/MicroBitBoard';
 import {MicrobitStubBoard} from './makeStubBoard';
 import sinon from 'sinon';
+import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 
 describe('MicroBitBoard', () => {
   let board;
@@ -15,6 +16,12 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
+  });
+
+  describe('Maker Board Interface', () => {
+    itImplementsTheMakerBoardInterface(MicroBitBoard, 'microbit', board => {
+      board.boardClient_ = new MicrobitStubBoard();
+    });
   });
 
   describe(`connect()`, () => {

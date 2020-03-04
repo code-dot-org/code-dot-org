@@ -17,6 +17,11 @@ module Encryption
     cipher.update(string) + cipher.final
   end
 
+  def self.encrypt_string_utf8(string)
+    encrypted = encrypt_string(string)
+    Base64.encode64(encrypted).encode('utf-8')
+  end
+
   def self.encrypt_object(clear)
     return clear if clear.blank?
 

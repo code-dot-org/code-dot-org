@@ -1,7 +1,7 @@
 name 'AP_practice_Qs_rqb_57_CSP_3_3_1'
 right '.PNG because it offers lossless compression, and is compatible for viewing on the web '
 wrong '.JPG because although it is lossy, it is compatible for viewing on the web.'
-wrong '.GIF because it is a lossless compression. Although it is lower quality than a PNG,  it offers the added feature of animation.'
+wrong '.GIF because it is a lossless compression. Although it is lower quality than a PNG, it offers the added feature of animation.'
 wrong 'Martin can choose any one of the 3 choices, and the quality of the prints will be the same'
 markdown <<MARKDOWN
 Martin is helping his Technology teacher create a website for his school. They decide to upload all the senior yearbook pictures to a link on the school website. Senior students can securely login and retrieve their yearbook picture from this link. The students will then be able to print the pictures digitally using a high resolution color printer made available to them at their school. Martin is nervous about his responsibility because he knows that these pictures are cherished, and valued by the seniors. Help Martin choose the correct format for saving the pictures, and uploading it to the website.

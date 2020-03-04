@@ -1,12 +1,8 @@
 name 'AP_practice_Qs_rqb_55_CSP_7_2_1'
-right 'Manual blood pressure monitor.
-'
-wrong 'Social media based health support groups
-'
-wrong 'Heart rate monitors in smart watches
-'
-wrong 'A database with patient information
-'
+right 'Manual blood pressure monitor.'
+wrong 'Social media based health support groups'
+wrong 'Heart rate monitors in smart watches'
+wrong 'A database with patient information'
 markdown <<MARKDOWN
 Which of these is NOT a computing-related innovation for the medical field?
 

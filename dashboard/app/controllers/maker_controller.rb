@@ -108,6 +108,21 @@ class MakerController < ApplicationController
     render json: {school_high_needs_eligible: school.try(:maker_high_needs?)}
   end
 
+  # GET /maker/login_code
+  # renders a page for users to enter a login key
+  def login_code
+  end
+
+  # GET /maker/display_code
+  # renders a page for users to copy and paste a login key
+  def display_code
+    # Generate encrypted code to display to user
+    user_auth = current_user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+    @secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
+  end
+
   # POST /maker/complete
   # Called when eligible teacher clicks "Get Code."
   # Assigns a discount code and sends it back.

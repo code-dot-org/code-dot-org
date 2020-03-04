@@ -1,0 +1,18 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-25T15:42:59.000Z",
+  "level_num": "custom",
+  "user_id": 302,
+  "properties": {
+    "video_key": "C1_artist_intro",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "instructions_important": "false",
+    "parent_level_id": 15660,
+    "name_suffix": "_2020"
+  },
+  "published": true,
+  "notes": "Is there a way for these videos to start automatically (and if so, is that a good idea for this stage)?"
+}]]></config>
+</StandaloneVideo>

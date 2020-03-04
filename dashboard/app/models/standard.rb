@@ -15,4 +15,14 @@
 
 class Standard < ActiveRecord::Base
   has_and_belongs_to_many :stages
+
+  def summarize
+    {
+      id: id,
+      organization: organization,
+      organization_id: organization_id,
+      description: description,
+      concept: concept
+    }
+  end
 end

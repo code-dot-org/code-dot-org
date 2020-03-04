@@ -236,6 +236,19 @@ pt-BR:
   if_you_enjoyed: Se você gostou do aprendizado, peça aos amigos para tentar também!  Queremos
     que o mundo todo aprenda.
   personalize_certificate: Personalize seu certificado
+  print_batch_certificates: Imprimir um lote de certificados
+  print_certificates: Imprimir certificados
+  certificate_sponsor_message: "%{sponsor_name} patrocinou o seu aprendizado"
+  print_ice_art_from_frozen: |2-
+
+    Imprimir arte de gelo a partir dos tutoriais de Frozen
+  want_a_blank_certificate_template: Quer um modelo de certificado em branco para
+    escrever os nomes dos seus alunos?
+  landscape_recommended_certificates: É recomendável escolher orientação ** Paisagem
+    ** ao imprimir os certificados.
+  print_one_here_certificates: Imprima um aqui.
+  enter_certificate_names: Digite até 30 nomes, ** um por linha **. Uma página imprimível
+    com personalizado%{script_name} de certificados será gerada.
   share_achievement: Compartilhar sua conquista
   beyond_hour_message: Faça nossos <a href='http://studio.code.org'>outros cursos</a>,
     ou veja mais opções para <a href='/learn/beyond'>Aprender além da Hora do Código</a>.
@@ -1290,6 +1303,7 @@ pt-BR:
   coursec-2019_name: Curso C (2019)
   coursed-2019_name: Curso D (2019)
   coursee-2019_name: Curso E (2019)
+  coursef-2019_name: Curso F (2019)
   express-2018_name: Curso Expresso (2018)
   pre-express-2018_name: Curso Expresso de Pré-Leitor (2018)
   express-2019_name: Curso Expresso (2019)
@@ -1297,6 +1311,7 @@ pt-BR:
   csd2_name: 'Unidade 2: Desenvolvimento para Web'
   csd3_name: 'Unidade 3: Jogos e Animação'
   accelerated_name: Curso acelerado
+  express_name: Curso Expresso
   pre-express_name: Curso Expresso para Fase de Alfabetização
   20-hour_name: Curso acelerado
   algebra_name: CC na Álgebra Curso Completo
@@ -2257,7 +2272,7 @@ pt-BR:
     tentar qualquer um dos mais de 200 tutoriais de uma hora, disponíveis em mais
     de 45 idiomas.
   hoc_overview_partner_activities_title: Mais atividades de parceiros
-  hoc_overview_partner_activities_body: O site da Hora do Código tem mais de 100 atividades
+  hoc_overview_partner_activities_body: O site da Hora do Código tem mais de 500 atividades
     de ciência da computação para todas as idades e níveis de experiência, desenvolvidos
     pela Code.org e parceiros.
   hoc_overview_partner_activities_link: Exibir atividades

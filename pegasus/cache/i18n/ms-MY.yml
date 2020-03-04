@@ -414,6 +414,7 @@ ms-MY:
   header_project_gallery: Projek
   header_educate_hoc: Hour of Code
   header_about: Tentang
+  header_help_support: 'Bantuan dan sokongan '
   header_report_bug: Laporkan masalah
   user_header_label: Hi %{username}
   user_header_settings: Akaun saya

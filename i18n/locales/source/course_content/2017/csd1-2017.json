@@ -1,4 +1,9 @@
 {
+  "https://studio.code.org/s/csd1-2017/lockable/1/puzzle/1": {
+    "dsls": {
+      "title": "CS Discoveries Student Pre-Course Survey"
+    }
+  },
   "https://studio.code.org/s/csd1-2017/stage/1/puzzle/1": {
     "dsls": {
       "markdown": "# Overview\n\nThe class works in groups to design aluminum foil boats that will support as many pennies as possible.  At the end of the lesson groups reflect on their experiences with the activity and make connections to the types of problem solving they will be doing for the rest of the course. \n\n\n## Resources\n\n* [Aluminum Boats](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n"
@@ -45,6 +50,11 @@
   "https://studio.code.org/s/csd1-2017/stage/9/puzzle/1": {
     "dsls": {
       "markdown": "# Overview\n\nFor this project you will design your own app that solves a problem that you get to define.\n\n## Resources\n\n* [Apps and Problem Solving - Project Guide](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)\n* [Apps and Problem Solving - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)\n* [Apps and Problem Solving - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)\n"
+    }
+  },
+  "https://studio.code.org/s/csd1-2017/stage/9/puzzle/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
     }
   }
 }

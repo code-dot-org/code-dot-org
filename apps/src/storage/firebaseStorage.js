@@ -49,6 +49,13 @@ function getKeysRef() {
   return kv;
 }
 
+FirebaseStorage.getLibraryManifest = function() {
+  return getSharedDatabase()
+    .child('metadata/manifest')
+    .once('value')
+    .then(snapshot => snapshot.val());
+};
+
 /**
  * @return {Promise<boolean>} whether the project channel exists
  */
@@ -78,6 +85,15 @@ FirebaseStorage.clearAllData = function(onSuccess, onError) {
  */
 FirebaseStorage.getKeyValue = function(key, onSuccess, onError) {
   key = fixKeyName(key, onError);
+  try {
+    validateFirebaseKey(key);
+  } catch (e) {
+    onError({
+      type: WarningType.KEY_INVALID,
+      msg: `The key is invalid. ${e.message}`
+    });
+    return;
+  }
 
   const keyRef = getKeysRef().child(key);
   keyRef.once(

@@ -30,12 +30,8 @@ level 'U73 CFU Param Return AP', progression: 'Check For Understanding: AP Pract
 
 stage 'Parameters and Return Make', flex_category: 'csp_parameters_return_values'
 level 'CSP U7L4 SFLP 20-21', progression: 'Lesson Overview'
-level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
-level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true
+level 'U7 Param Return Make RPS App_2020', progression: 'Try the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App Project_2020', progression: 'Make the Rock Paper Scissors App', assessment: true
 
 stage 'Libraries Explore', flex_category: 'csp_libraries'
 level 'CSP U7L5 SFLP 20-21', progression: 'Lesson Overview'
@@ -43,6 +39,7 @@ level 'U7 L04 Exit Ticket', progression: 'Check For Understanding', assessment: 
 
 stage 'Libraries Investigate', flex_category: 'csp_libraries'
 level 'CSP U7L6 SFLP 20-21', progression: 'Lesson Overview'
+level 'Full Year Pilot Experiments Dashboard - Libraries', progression: 'Turn On Student Created Libraries'
 level 'U7L6 States App Investigation', progression: 'States App'
 level 'U7L6 Pigify App Investigation', progression: 'Pigify App'
 level 'U7L6 CSP CFU Libraries', progression: 'Check For Understanding', assessment: true
@@ -68,10 +65,20 @@ stage 'Project - Make a Library Part 3', flex_category: 'csp_libraries'
 level 'CSP U7L10 SFLP 20-21', progression: 'Lesson Overview'
 level 'U7 Libraries Project Part 3', progression: 'Build Your Library', assessment: true
 
-stage 'Assessment Day'
+stage 'Lesson 11: Assessment Day', lockable: true
 level 'CSP U7L12 SFLP 20-21', progression: 'Lesson Overview'
+level 'CSP Unit 7 AP-Style Assessment _2020', progression: 'Unit 7 Exam', assessment: true
 
-stage 'Variables Make Demo', flex_category: 'csp_variables'
-level 'CSP Variables Make Test Level 1', progression: 'Lesson Overview'
-level 'U4 Variables Make Test Level 2', progression: 'Try the Photo Liker App'
-level 'U4 Variables Make Test Level 3', progression: 'Make the Photo Liker App', assessment: true
+stage 'Unit 7 STUDENT Survey', lockable: true, flex_category: 'required'
+level 'CSP U7 20-21 Student Pilot Survey', progression: 'Unit 7 STUDENT Survey', assessment: true
+
+stage 'Unit 7 TEACHER Survey', lockable: true, flex_category: 'required'
+level 'CSP U7 20-21 Teacher Pilot Survey', progression: 'Unit 7 TEACHER Survey', assessment: true
+
+stage '[OLD] Parameters and Return Make', flex_category: 'optional_stages'
+level 'U7 Param Return Make RPS App 1', progression: 'Try the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 2', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 3', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 4', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 5', progression: 'Build the Rock Paper Scissors App'
+level 'U7 Param Return Make RPS App 6', progression: 'Build the Rock Paper Scissors App', assessment: true

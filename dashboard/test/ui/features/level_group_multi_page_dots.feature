@@ -139,7 +139,6 @@ Scenario: optional free play level
   And check that the URL contains "/page/3"
 
   # Verify the bubble status and submit dialog contents are now complete
-
   Then I verify progress in the header of the current page is "perfect_assessment" for level 2
   Then I verify progress in the header of the current page is "perfect_assessment" for level 3
   Then I verify progress in the header of the current page is "perfect_assessment" for level 4

@@ -18,7 +18,8 @@ const styles = {
     flexDirection: 'row'
   },
   lessonsAreaTitle: {
-    marginRight: 10
+    marginRight: 10,
+    width: '28%'
   },
   tooltip: {
     textAlign: 'center'
@@ -31,7 +32,8 @@ const styles = {
 class StandardDescriptionCell extends Component {
   static propTypes = {
     description: PropTypes.string,
-    lessonsForStandardStatus: PropTypes.array
+    lessonsForStandardStatus: PropTypes.array,
+    isViewingReport: PropTypes.bool
   };
 
   getLessonBoxes = () => {
@@ -39,27 +41,29 @@ class StandardDescriptionCell extends Component {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         return (
           <span key={lesson.name}>
-            <ReactTooltip
-              id={lesson.name}
-              key={lesson.name}
-              role="tooltip"
-              wrapper="span"
-              effect="solid"
-              place="top"
-            >
-              <div style={styles.tooltip}>
-                <div style={styles.tooltipLessonName}>{lesson.name}</div>
-                <div>
-                  {lesson.completed ? i18n.completed() : i18n.notCompleted()}
+            {!this.props.isViewingReport && (
+              <ReactTooltip
+                id={lesson.name}
+                key={lesson.name}
+                role="tooltip"
+                wrapper="span"
+                effect="solid"
+                place="top"
+              >
+                <div style={styles.tooltip}>
+                  <div style={styles.tooltipLessonName}>{lesson.name}</div>
+                  <div>
+                    {lesson.completed ? i18n.completed() : i18n.notCompleted()}
+                  </div>
+                  <div>
+                    {i18n.completedStudentCount({
+                      numStudentsCompleted: lesson.numStudentsCompleted,
+                      numStudents: lesson.numStudents
+                    })}
+                  </div>
                 </div>
-                <div>
-                  {i18n.completedStudentCount({
-                    numStudentsCompleted: lesson.numStudentsCompleted,
-                    numStudents: lesson.numStudents
-                  })}
-                </div>
-              </div>
-            </ReactTooltip>
+              </ReactTooltip>
+            )}
             <ProgressBoxForLessonNumber
               key={lesson.lessonNumber}
               completed={lesson.completed}

@@ -64,9 +64,9 @@ class Pd::Enrollment < ActiveRecord::Base
   validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
+  after_create :set_default_scholarship_info
   after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (user_id_changed? || email_changed?)}
   after_save :authorize_teacher_account
-  after_create :set_default_scholarship_info
 
   serialized_attrs %w(
     role

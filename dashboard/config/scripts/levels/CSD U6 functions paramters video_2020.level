@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-02-18T17:35:21.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_applab_parameters",
+    "instructions_important": "false",
+    "display_name": "Functions with Parameters",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 16598,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "long_instructions": "## Questions to Consider\r\n\r\n* How do parameters make functions more useful?\r\n* How do you know when you can combine multiple functions into one?\r\n",
+    "teacher_markdown": "## Discussion Goals\r\n\r\nStudents will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2019-04-03 07:29:37 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-05-30 05:59:49 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

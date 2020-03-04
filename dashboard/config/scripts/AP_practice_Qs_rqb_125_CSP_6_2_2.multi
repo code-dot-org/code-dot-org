@@ -1,11 +1,8 @@
 name 'AP_practice_Qs_rqb_125_CSP_6_2_2'
 right 'Packets from a sender can take different routes to reach the same destination computer.'
-wrong 'All packets from a sender take the same exact path to reach the destination computer.
-'
-wrong 'Irrespective of the route taken, all packets must arrive to the destination computer at the same time.
-'
-wrong 'If even a single packet get dropped along the path, the entire message has to be resent to the destination computer.
-'
+wrong 'All packets from a sender take the same exact path to reach the destination computer.'
+wrong 'Irrespective of the route taken, all packets must arrive to the destination computer at the same time.'
+wrong 'If even a single packet get dropped along the path, the entire message has to be resent to the destination computer.'
 markdown <<MARKDOWN
 The Internet is a packet-switched system through which digital data is sent by breaking data into packets which contain both the data being transmitted and the control information for routing the data. Which one of the following statements is an accurate statement about packet-switching?
 MARKDOWN

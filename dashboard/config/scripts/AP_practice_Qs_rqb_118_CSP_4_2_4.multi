@@ -2,8 +2,7 @@ name 'AP_practice_Qs_rqb_118_CSP_4_2_4'
 wrong '30 minutes.'
 wrong '180 minutes'
 wrong '240 minutes'
-right '270 minutes
-'
+right '270 minutes'
 markdown <<MARKDOWN
 The program below prints report cards for Marymount High School. The procedure printRun(month, year) takes 30 minutes to run.  All other program steps can be assumed to happen nearly instantaneously.  Assume that `todayMonth` and `todayYear` are the current month and year.
 <pre>

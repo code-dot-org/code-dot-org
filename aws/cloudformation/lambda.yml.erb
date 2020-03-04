@@ -241,6 +241,34 @@ Resources:
           };
       Timeout: 30
       Runtime: nodejs6.10
+  FastSnapshotRestore:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Enables EBS Fast Snapshot Restore for the given AMI snapshot.'
+      FunctionName: FastSnapshotRestore
+      Code: <%=lambda_zip 'fast_snapshot_restore.rb', 'cfn_response.rb' %>
+      Handler: fast_snapshot_restore.handler
+      Runtime: ruby2.5
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt FastSnapshotRestoreRole.Arn
+  FastSnapshotRestoreRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
+      Policies:
+      - PolicyName: root
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action:
+            - "ec2:EnableFastSnapshotRestores"
+            - "ec2:DisableFastSnapshotRestores"
+            - "ec2:DescribeImages"
+            Resource: '*'
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
 Outputs:
   AMIManager:
     Value: !GetAtt AMIManager.Arn

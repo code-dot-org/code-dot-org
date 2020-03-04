@@ -61,6 +61,15 @@ class Stage < ActiveRecord::Base
     script_levels.first.oldest_active_level.unplugged?
   end
 
+  # This is currently only relevant to CSF levels, which use the Unplugged
+  # level type. As an alternative to the Unplugged level type, Levelbuilders
+  # can select if External/Markdown levels should display as unplugged.
+  def display_as_unplugged
+    script_levels = script.script_levels.select {|sl| sl.stage_id == id}
+    return false unless script_levels.first
+    script_levels.first.oldest_active_level.properties["display_as_unplugged"] == "true" || unplugged?
+  end
+
   def spelling_bee?
     script_levels = script.script_levels.select {|sl| sl.stage_id == id}
     return false unless script_levels.first
@@ -136,7 +145,8 @@ class Stage < ActiveRecord::Base
         lockable: !!lockable,
         levels: cached_levels.map {|l| l.summarize(false)},
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
-        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
+        description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: '')),
+        unplugged: display_as_unplugged
       }
 
       # Use to_a here so that we get access to the cached script_levels.

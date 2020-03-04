@@ -132,3 +132,5 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 
 # Patch to fix issue with systemd-resolved: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1805183
 include_recipe 'cdo-apps::resolved'
+
+include_recipe 'cdo-apps::rbspy'

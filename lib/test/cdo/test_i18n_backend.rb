@@ -153,15 +153,13 @@ class I18nSafeInterpolationTest < Minitest::Test
     assert_equal "%{hello} World", @backend.translate(@locale, 'test_missing_interpolation_argument', world: "World")
   end
 
-  # TODO: FND-974
-  # make this not be true
-  def test_missing_interpolation_arguments_are_not_logged
+  def test_missing_interpolation_arguments_are_logged
     @backend.store_translations(
       @locale,
       test_missing_interpolation_argument: "Hello %{world}"
     )
 
-    Honeybadger.expects(:notify).never
+    Honeybadger.expects(:notify)
     @backend.translate(@locale, 'test_missing_interpolation_argument')
   end
 end

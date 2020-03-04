@@ -37,9 +37,10 @@ import {
   ScoreableQuestions as FacilitatorScoreableQuestions,
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import _ from 'lodash';
 import {
-  ApplicationStatuses,
+  getApplicationStatuses,
   ApplicationFinalStatuses,
   ApplicationTypes,
   ScholarshipStatusRequiredStatuses
@@ -131,7 +132,7 @@ export class DetailViewContents extends React.Component {
       course: PropTypes.oneOf(['csf', 'csd', 'csp']),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
-      regional_partner_emails_sent_by_system: PropTypes.bool,
+      update_emails_sent_by_system: PropTypes.bool,
       regional_partner_id: PropTypes.number,
       locked: PropTypes.bool,
       notes: PropTypes.string,
@@ -248,7 +249,6 @@ export class DetailViewContents extends React.Component {
   }
 
   componentWillMount() {
-    this.statuses = ApplicationStatuses[this.props.viewType];
     if (
       this.props.applicationData.application_type ===
         ApplicationTypes.facilitator &&
@@ -291,14 +291,17 @@ export class DetailViewContents extends React.Component {
       this.setState({
         cantSaveStatusReason: `Please assign a scholarship status to this applicant before setting this
                               applicant's status to ${
-                                ApplicationStatuses[this.props.viewType][
-                                  event.target.value
-                                ]
+                                getApplicationStatuses(
+                                  this.props.viewType,
+                                  this.props.applicationData
+                                    .update_emails_sent_by_system
+                                )[event.target.value]
                               }.`,
         showCantSaveStatusDialog: true
       });
     } else if (
-      this.props.applicationData.regional_partner_emails_sent_by_system &&
+      this.props.applicationData.regional_partner_id &&
+      this.props.applicationData.update_emails_sent_by_system &&
       !workshopAssigned &&
       ['accepted_no_cost_registration', 'registration_sent'].includes(
         event.target.value
@@ -574,6 +577,11 @@ export class DetailViewContents extends React.Component {
     return (
       <ScholarshipDropdown
         scholarshipStatus={this.state.scholarship_status}
+        dropdownOptions={
+          CourseSpecificScholarshipDropdownOptions[
+            this.props.applicationData.course
+          ]
+        }
         onChange={this.handleScholarshipStatusChange}
         disabled={!this.state.editing}
       />
@@ -648,6 +656,10 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
+    const statuses = getApplicationStatuses(
+      this.props.viewType,
+      this.props.applicationData.update_emails_sent_by_system
+    );
     const selectControl = (
       <div>
         <FormControl
@@ -661,9 +673,9 @@ export class DetailViewContents extends React.Component {
           onChange={this.handleStatusChange}
           style={styles.statusSelect}
         >
-          {Object.keys(this.statuses).map((status, i) => (
+          {Object.keys(statuses).map((status, i) => (
             <option value={status} key={i}>
-              {this.statuses[status]}
+              {statuses[status]}
             </option>
           ))}
         </FormControl>

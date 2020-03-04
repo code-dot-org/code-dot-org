@@ -23,6 +23,18 @@ CROWDIN_PROJECTS = {
 }
 
 class I18nScriptUtils
+  # Because we log many of the i18n operations to slack, we often want to
+  # explicitly force stdout to operate syncronously, rather than buffering
+  # output and dumping a whole lot of output into slack all at once.
+  #
+  # See the sync_up and sync_down methods in particular for usage.
+  def self.with_syncronous_stdout
+    old_sync = $stdout.sync
+    $stdout.sync = true
+    yield
+    $stdout.sync = old_sync
+  end
+
   # Output the given data to YAML that will be consumed by Crowdin. Includes a
   # couple changes to the default `data.to_yaml` serialization:
   #
@@ -118,8 +130,12 @@ class I18nScriptUtils
     @levels_by_url ||= Hash.new do |hash, new_url|
       url_regex = %r{https://studio.code.org/s/(?<script_name>[A-Za-z0-9\s\-_]+)/stage/(?<stage_pos>[0-9]+)/(?<level_info>.+)}
       matches = new_url.match(url_regex)
+
       hash[new_url] =
-        if matches[:level_info].starts_with?("extras")
+        if matches.nil?
+          STDERR.puts "could not find level for url: #{new_url}"
+          nil
+        elsif matches[:level_info].starts_with?("extras")
           level_info_regex = %r{extras\?level_name=(?<level_name>.+)}
           level_name = matches[:level_info].match(level_info_regex)[:level_name]
           Level.find_by_name(CGI.unescape(level_name))

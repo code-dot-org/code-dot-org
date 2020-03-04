@@ -25,6 +25,7 @@ export class CreateStandardsReportStep1 extends Component {
             text={i18n.next()}
             onClick={this.props.onNext}
             color={Button.ButtonColor.orange}
+            className="uitest-standards-generate-report-next"
           />
         </DialogFooter>
       </div>
