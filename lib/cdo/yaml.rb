@@ -1,14 +1,15 @@
 require 'yaml'
 require 'cdo/erb'
-require 'cdo/pegasus/text_render'
 
 module Cdo
   # Extend YAML with customizations.
   module YAMLExtension
-    def parse_yaml_header(content, locals={})
+    def parse_yaml_header(content, locals=nil)
       match = content.match(/\A\s*^(?<yaml>---\s*\n.*?\n?)^(---\s*$\n?)/m)
       return [{}, content] unless match
-      [TextRender.yaml(match[:yaml], locals), match.post_match]
+      yaml = match[:yaml]
+      yaml = ERB.new(yaml).result_with_hash(locals) if locals.present?
+      [YAML.safe_load(yaml), match.post_match]
     end
 
     # Return +nil+ if file not found.
