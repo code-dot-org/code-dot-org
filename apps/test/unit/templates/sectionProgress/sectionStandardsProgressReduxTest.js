@@ -5,8 +5,9 @@ import sectionStandardsProgress, {
   getNumberLessonsInScript,
   lessonsByStandard,
   getPluggedLessonCompletionStatus,
-  getLessonCompletionStatus
+  getUnpluggedLessonCompletionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
 
 const stageId = 662;
 const scriptId = 92;
@@ -180,9 +181,14 @@ const sectionPartialCompletedLesson = {
   }
 };
 
-const studentLevelScoresByStage = {
-  92: {662: {100001: {10001: 100}}}
+const studentLevelScoresByStageComplete = {
+  92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
 };
+
+const studentLevelScoresByStageIncomplete = {
+  92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
+};
+
 // Construct state
 const fakeState = {
   sectionProgress: {
@@ -194,7 +200,7 @@ const fakeState = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData,
-    studentLevelScoresByStage: studentLevelScoresByStage
+    studentLevelScoresByStage: {}
   },
   teacherSections: teacherSections
 };
@@ -223,6 +229,36 @@ const stateForCompletedLesson = {
   },
   sectionStandardsProgress: {
     standardsData: standardsData
+  },
+  teacherSections: teacherSections
+};
+
+const stateForTeacherMarkedCompletedLesson = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageComplete
+  },
+  teacherSections: teacherSections
+};
+
+const stateForTeacherMarkedIncompletedLesson = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageIncomplete
   },
   teacherSections: teacherSections
 };
@@ -400,9 +436,31 @@ describe('sectionStandardsProgressRedux', () => {
     });
   });
 
-  describe('getLessonCompletionStatus', () => {
-    it('accurately differentiates between plugged and unplugged lessons', () => {
-      console.log(getLessonCompletionStatus(fakeState, stage.id));
+  describe('getUnPluggedLessonCompletionStatus', () => {
+    it('incomplete when no teacher scores for stage', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
+      ).to.equal(false);
+    });
+
+    it('incomplete when teacher scores stage as incomplete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.equal(false);
+    });
+
+    it('complete when teacher scores stage as complete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedCompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.equal(true);
     });
   });
 

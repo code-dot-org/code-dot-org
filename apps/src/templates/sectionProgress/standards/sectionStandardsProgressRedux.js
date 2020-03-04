@@ -177,7 +177,6 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
-  console.log("we're in getLessonCompletionStatus");
   if (
     state.scriptSelection.scriptId &&
     state.sectionProgress.scriptDataByScript
@@ -186,37 +185,33 @@ export function getLessonCompletionStatus(state, stageId) {
     const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
-      return getUnpluggedLessonCompletionStatus(state, stageId);
+      return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
     } else {
       return getPluggedLessonCompletionStatus(state, stage);
     }
   }
 }
 
-export function getUnpluggedLessonCompletionStatus(state, stageId) {
-  console.log('in getUnpluggedLessonCompletionStatus');
+export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
   if (
     state.sectionStandardsProgress.studentLevelScoresByStage &&
-    state.scriptSelection.scriptId
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId] &&
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId][stageId]
   ) {
-    const scriptId = state.scriptSelection.scriptId;
     const levelScoresByStudent =
       state.sectionStandardsProgress.studentLevelScoresByStage[scriptId][
         stageId
       ];
-    console.log('levelScoresByStudent', levelScoresByStudent);
-    console.log(
-      '_.values(levelScoresByStudent',
-      _.values(levelScoresByStudent)
-    );
 
-    let completed = false;
-
-    _.find(_.values(levelScoresByStudent), function(studentScore) {
+    const completedScore = _.find(_.values(levelScoresByStudent), function(
+      studentScore
+    ) {
       return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
     });
 
-    return completedScore;
+    return !!completedScore;
+  } else {
+    return false;
   }
 }
 
