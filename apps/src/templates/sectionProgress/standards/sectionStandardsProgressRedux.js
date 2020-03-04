@@ -1,14 +1,16 @@
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
 
-const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
+const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
+const SET_STUDENT_LEVEL_SCORES =
+  'sectionStandardsProgress/SET_STUDENT_LEVEL_SCORES';
 
 // Action creators
-export const addStandardsData = standardsData => {
-  return {type: ADD_STANDARDS_DATA, standardsData: standardsData};
+export const setStandardsData = standardsData => {
+  return {type: SET_STANDARDS_DATA, standardsData: standardsData};
 };
 export const setTeacherCommentForReport = teacherComment => ({
   type: SET_TEACHER_COMMENT_FOR_REPORT,
@@ -18,12 +20,17 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
+export const setStudentLevelScores = scoresData => ({
+  type: SET_STUDENT_LEVEL_SCORES,
+  scoresData
+});
 
 // Initial State
 const initialState = {
   standardsData: [],
   teacherComment: null,
-  selectedLessons: []
+  selectedLessons: [],
+  studentLevelScoresByStage: {}
 };
 
 function sortByOrganizationId(standardsByConcept) {
@@ -31,7 +38,7 @@ function sortByOrganizationId(standardsByConcept) {
 }
 
 export default function sectionStandardsProgress(state = initialState, action) {
-  if (action.type === ADD_STANDARDS_DATA) {
+  if (action.type === SET_STANDARDS_DATA) {
     const sortedByConcept = _.orderBy(action.standardsData, 'concept', 'asc');
     const groupedStandards = _.orderBy(
       _.groupBy(sortedByConcept, 'concept'),
@@ -54,6 +61,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
     return {
       ...state,
       selectedLessons: action.selected
+    };
+  }
+  if (action.type === SET_STUDENT_LEVEL_SCORES) {
+    return {
+      ...state,
+      studentLevelScoresByStage: action.scoresData
     };
   }
   return state;
@@ -85,6 +98,19 @@ export function getUnpluggedLessonsForScript(state) {
   }
 
   return _.map(unpluggedStages, filterStageData);
+}
+
+export function fetchStudentLevelScores(scriptId, sectionId) {
+  return (dispatch, getState) => {
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
+    }).then(data => {
+      const scoresData = data;
+      dispatch(setStudentLevelScores(scoresData));
+    });
+  };
 }
 
 export function getNumberLessonsCompleted(state) {
@@ -207,7 +233,7 @@ export function getLessonCompletionStatus(state, stageId) {
   return completionByLesson;
 }
 
-export function getStandardsCoveredForScript(scriptId) {
+export function fetchStandardsCoveredForScript(scriptId) {
   return (dispatch, getState) => {
     $.ajax({
       method: 'GET',
@@ -215,7 +241,7 @@ export function getStandardsCoveredForScript(scriptId) {
       url: `/dashboardapi/script_standards/${scriptId}`
     }).then(data => {
       const standardsData = data;
-      dispatch(addStandardsData(standardsData));
+      dispatch(setStandardsData(standardsData));
     });
   };
 }
