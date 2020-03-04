@@ -24,8 +24,6 @@ cs-CZ:
   learn_now: Učit se teď
   petition_message: Každý student v každé škole by měl mít možnost se naučit informatiku
   petition_sign_message: 'Pokud souhlasíš, napiš své jméno. Přidej se mezi # dalších.'
-  petition_sign_message_support: 'Pokud nás podporujete, podepište se. Přidejte se
-    k # ostatním.'
   petition_join_others: 'Připoj se k # ostatním'
   name: Jméno
   email: Email
@@ -321,7 +319,7 @@ cs-CZ:
   studiobar_dance_body: Vytvářej a sdílej své vlastní taneční večírky
   studiobar_hoc_title: Hodina kódu
   studiobar_hoc_body: Naučte se programovat s Angry Birds
-  studiobar_flappy_title: Tenký kód
+  studiobar_flappy_title: Flappy
   studiobar_flappy_body: Vytvořit a sdílej svojí vlastní hru Flappy
   studiobar_teacher_title: Připraveno pro učitele
   studiobar_teacher_body: Zaveďte studio programování (Code Studio) do vaší třídy
@@ -390,7 +388,7 @@ cs-CZ:
   homepage_slot_text_studio: Všechny naše výukové programy
   homepage_slot_text_course4: Kurz 4
   homepage_slot_text_shop: Obchod
-  homepage_slot_text_flappy: Tenký kód
+  homepage_slot_text_flappy: Flappy
   homepage_action_text_hoc: Hodina kódu pro každého studenta.
   homepage_action_text_num_served: "# si vyzkoušelo"
   homepage_action_text_join_us: Připojte se k nám
@@ -501,7 +499,7 @@ cs-CZ:
     vídeí </a> zobrazujících odborníky v technologiích
   playlab_choose_theme: Vyber si téma Play Lab
   playlab_classic_title: Klasické
-  playlab_gumball_title: Žvýkačku
+  playlab_gumball_title: Gumball
   playlab_iceage_title: Doba ledová - se blíží
   playlab_iceage_title_live: Doba ledová
   starwars_subtitle: Budování Galaxie s kódem
@@ -827,7 +825,7 @@ cs-CZ:
   dashboard_assessments_answers: Všechny odpovědi
   dashboard_surveys_answers: Průzkumy
   dashboard_percent: Procenta
-  dashboard_filter_by_stage: 'Filtrovat podle fáze:'
+  dashboard_filter_by_stage: 'Filtrovat podle úrovně:'
   dashboard_filter_all: Vše
   dashboard_download_csv: Stáhnout CSV
   dashboard_navigation_home_page: Učitelská domovská stránka
@@ -1160,6 +1158,14 @@ cs-CZ:
   coursee_name: Kurz E
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
+  coursea-2019_name: Kurz A (2019)
+  courseb-2019_name: Kurz B (2019)
+  coursec-2019_name: Kurz C (2019)
+  coursed-2019_name: Kurz D (2019)
+  coursee-2019_name: Kurz E (2019)
+  coursef-2019_name: Kurz F (2019)
+  express-2019_name: Rychlý kurz (2019)
+  pre-express-2019_name: Rychlý kurz pro předškoláky (2019)
   accelerated_name: Zrychlený kurz
   pre-express_name: Rychlý kurz pro předškoláky
   20-hour_name: Zrychlený kurz
