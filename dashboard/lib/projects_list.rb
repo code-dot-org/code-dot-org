@@ -34,7 +34,7 @@ module ProjectsList
       storage_id = storage_id_for_user_id(user_id)
       PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
-        project_data = get_project_row_data(project, channel_id)
+        project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
       personal_projects_list
@@ -210,18 +210,27 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    def get_project_row_data(project, channel_id, student = nil)
+    def get_project_row_data(project, channel_id, student = nil, with_library = false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
       return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
-      {
+
+      row_data = {
         channel: channel_id,
         name: project_value['name'],
         studentName: student&.name,
         thumbnailUrl: project_value['thumbnailUrl'],
         type: project_type(project_value['level']),
         updatedAt: project_value['updatedAt'],
-        publishedAt: project[:published_at],
-      }.with_indifferent_access
+        publishedAt: project[:published_at]
+      }
+
+      if with_library
+        row_data[:libraryName] = project_value['libraryName']
+        row_data[:libraryDescription] = project_value['libraryDescription']
+        row_data[:libraryPublishedAt] = project_value['libraryPublishedAt']
+      end
+
+      row_data.with_indifferent_access
     end
 
     # pull various fields out of the user and project records to populate
