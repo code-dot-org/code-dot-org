@@ -801,6 +801,7 @@
   "inProgress": "In progress",
   "inspireStudents": "Inspire students",
   "instructions": "Instructions",
+  "invalidDataEntryTypeWarning": "Value must be boolean, number, string, `undefined`, or `null`. Make sure to include quotes for strings like \"this\". ",
   "joinASection": "Join a section",
   "joinInstructions": "Joining Instructions",
   "joinSection": "Join section",

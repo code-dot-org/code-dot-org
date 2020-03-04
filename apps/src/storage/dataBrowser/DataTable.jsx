@@ -44,6 +44,10 @@ const styles = {
     height: 18,
     justifyContent: 'center',
     width: 18
+  },
+  warning: {
+    background: color.lighter_yellow,
+    padding: '1em'
   }
 };
 
@@ -52,7 +56,8 @@ const INITIAL_STATE = {
   pendingAdd: false,
   // The old name of the column currently being renamed or deleted.
   pendingColumn: null,
-  currentPage: 0
+  currentPage: 0,
+  showError: false
 };
 
 class DataTable extends React.Component {
@@ -81,6 +86,9 @@ class DataTable extends React.Component {
       this.setState(INITIAL_STATE);
     }
   }
+
+  showError = () => this.setState({showError: true});
+  hideError = () => this.setState({showError: false});
 
   addColumn = () => {
     const columnName = this.getNextColumnName();
@@ -224,6 +232,12 @@ class DataTable extends React.Component {
 
     return (
       <div>
+        {this.state.showError ? (
+          <div style={styles.warning}>{msg.invalidDataEntryTypeWarning()}</div>
+        ) : (
+          // Blank space so layout stays the same whether or not warning is visible.
+          <div style={{height: '3em'}} />
+        )}
         <div style={styles.pagination}>
           <PaginationWrapper
             totalPages={numPages}
@@ -281,6 +295,8 @@ class DataTable extends React.Component {
               <AddTableRow
                 tableName={this.props.tableName}
                 columnNames={columnNames}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             )}
 
@@ -291,6 +307,8 @@ class DataTable extends React.Component {
                 record={JSON.parse(rows[id])}
                 key={id}
                 readOnly={this.props.readOnly}
+                showError={this.showError}
+                hideError={this.hideError}
               />
             ))}
           </tbody>

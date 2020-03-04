@@ -16,7 +16,9 @@ const INITIAL_STATE = {
 class AddTableRow extends React.Component {
   static propTypes = {
     columnNames: PropTypes.array.isRequired,
-    tableName: PropTypes.string.isRequired
+    tableName: PropTypes.string.isRequired,
+    showError: PropTypes.func.isRequired,
+    hideError: PropTypes.func.isRequired
   };
 
   state = {...INITIAL_STATE};
@@ -29,13 +31,19 @@ class AddTableRow extends React.Component {
   }
 
   handleAdd = () => {
-    this.setState({isAdding: true});
-    FirebaseStorage.createRecord(
-      this.props.tableName,
-      _.mapValues(this.state.newInput, castValue),
-      () => this.setState(INITIAL_STATE),
-      msg => console.warn(msg)
-    );
+    this.props.hideError();
+    try {
+      const record = _.mapValues(this.state.newInput, castValue);
+      this.setState({isAdding: true});
+      FirebaseStorage.createRecord(
+        this.props.tableName,
+        record,
+        () => this.setState(INITIAL_STATE),
+        msg => console.warn(msg)
+      );
+    } catch (e) {
+      this.props.showError();
+    }
   };
 
   handleKeyUp = event => {
