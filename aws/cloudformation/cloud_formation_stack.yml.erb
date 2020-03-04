@@ -675,6 +675,16 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:ViaService: !Sub "rds.${AWS::Region}.amazonaws.com"
+        - PolicyName: DMSStartAndMonitorReplicationTasks
+          PolicyDocument:
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dms:DescribeReplicationTasks
+                  - dms:DescribeTableStatistics
+                  - dms:ListTagsForResource
+                  - dms:StartReplicationTask
+                Resource: !Sub "arn:aws:dms:${AWS::Region}:${AWS::AccountId}:task:*"
 <% end -%>
       ManagedPolicyArns: [!Ref CDOPolicy]
       PermissionsBoundary: !ImportValue IAM-DevPermissions
