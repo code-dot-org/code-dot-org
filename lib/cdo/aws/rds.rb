@@ -74,16 +74,43 @@ module Cdo
             {db_instance_identifier: instance.db_instance_identifier},
             {max_attempts: 20, delay: 60}
           )
-          rds_client.delete_db_cluster(
-            {
-              db_cluster_identifier: cluster_id,
-              skip_final_snapshot: true,
-            }
-          )
         end
+        rds_client.delete_db_cluster(
+          {
+            db_cluster_identifier: cluster_id,
+            skip_final_snapshot: true,
+          }
+        )
+        # Wait 20 minutes.  As of early-2020, it takes about 10 minutes to delete a clone of the production cluster.
+        wait_until_db_cluster_deleted(cluster_id, 10, 60)
       rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
         CDO.log.info "Cluster #{cluster_id} does not exist. #{error.message}.  No need to delete it."
       end
+    end
+
+    # The AWS SDK does not currently provide waiters for DBCluster operations.
+    def self.wait_until_db_cluster_deleted(db_cluster_id, max_attempts, delay)
+      rds_client = Aws::RDS::Client.new
+      attempts = 0
+      cluster_state = nil
+      while attempts <= max_attempts && cluster_state != 'deleted'
+        begin
+          # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
+          cluster_state = rds_client.
+            describe_db_clusters({db_cluster_identifier: db_cluster_id}).
+            db_clusters.
+            first.
+            status
+        rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
+          cluster_state = 'deleted'
+          CDO.log.info "Database Cluster #{db_cluster_id} has been deleted. #{error.message}"
+        end
+        attempts += 1
+        sleep delay
+      end
+      raise StandardError.new("Timeout after waiting #{max_attempts * delay} seconds for cluster" \
+      " #{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
+      )
     end
   end
 end
