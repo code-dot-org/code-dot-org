@@ -740,13 +740,6 @@ tr-TR:
         content1: açıklama burada
       CSD U3 combining rep_2018_2019:
         content1: açıklama burada
-      CSD U3 complex sprite movement SFLP:
-        markdown: 'Sınıf, yer çekimi simülasyonu, bir nesnenin zıplaması, sağa veya
-          sola süzülmek gibi, nesnelerin, daha karmaşık hareketlerini oluşturmak için
-          sayaç desenini kullanarak sürat özelliklerini birleştirmeyi öğrenir. Son
-          seviyelerde sınıf, bu hareketleri bir nesneyi hareket ettirmek ve kontrol
-          etmek için kullanır. Kontrol ettikleri nesneyi uçurarak etraftaki altınları
-          topladıkları basit bir oyun oluştururlar. '
       CSD U3 drawSprites placement match:
         answers:
         - {}

@@ -4,10 +4,13 @@ import sectionStandardsProgress, {
   getUnpluggedLessonsForScript,
   getNumberLessonsInScript,
   lessonsByStandard,
-  getLessonCompletionStatus
+  getPluggedLessonCompletionStatus,
+  getUnpluggedLessonCompletionStatus
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import {TeacherScores} from '@cdo/apps/templates/sectionProgress/standards/standardsConstants';
 
 const stageId = 662;
+const scriptId = 92;
 
 const teacherSections = {
   selectedSectionId: 1,
@@ -63,7 +66,7 @@ const scriptDataByScript = {
   92: {
     csf: true,
     hasStandards: true,
-    id: 92,
+    id: scriptId,
     path: '//localhost-studio.code.org:3000/s/coursea-2019',
     title: 'Course A (2019)',
     stages: [
@@ -90,7 +93,7 @@ const scriptDataByScript = {
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/1/extras'
       },
       {
-        script_id: 92,
+        script_id: scriptId,
         script_name: 'coursea-2019',
         script_stages: 3,
         id: 663,
@@ -112,7 +115,7 @@ const scriptDataByScript = {
           'http://localhost-studio.code.org:3000/s/coursea-2019/stage/2/extras'
       },
       {
-        script_id: 92,
+        script_id: scriptId,
         script_name: 'coursea-2019',
         script_stages: 3,
         id: 664,
@@ -137,6 +140,8 @@ const scriptDataByScript = {
     ]
   }
 };
+
+const stage = scriptDataByScript[scriptId].stages[0];
 
 const sectionCompletedLesson = {
   92: {
@@ -176,6 +181,14 @@ const sectionPartialCompletedLesson = {
   }
 };
 
+const studentLevelScoresByStageComplete = {
+  92: {662: {100001: {10001: TeacherScores.COMPLETE}}}
+};
+
+const studentLevelScoresByStageIncomplete = {
+  92: {662: {100001: {10001: TeacherScores.INCOMPLETE}}}
+};
+
 // Construct state
 const fakeState = {
   sectionProgress: {
@@ -186,7 +199,8 @@ const fakeState = {
     scriptId: 92
   },
   sectionStandardsProgress: {
-    standardsData: standardsData
+    standardsData: standardsData,
+    studentLevelScoresByStage: {92: {662: {}}}
   },
   teacherSections: teacherSections
 };
@@ -219,6 +233,51 @@ const stateForCompletedLesson = {
   teacherSections: teacherSections
 };
 
+const stateForTeacherMarkedCompletedLesson = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageComplete
+  },
+  teacherSections: teacherSections
+};
+
+const stateForTeacherMarkedIncompletedLesson = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageIncomplete
+  },
+  teacherSections: teacherSections
+};
+
+const stateForTeacherMarkedAndProgress = {
+  sectionProgress: {
+    scriptDataByScript: scriptDataByScript,
+    studentLevelProgressByScript: sectionCompletedLesson
+  },
+  scriptSelection: {
+    scriptId: 92
+  },
+  sectionStandardsProgress: {
+    standardsData: standardsData,
+    studentLevelScoresByStage: studentLevelScoresByStageComplete
+  },
+  teacherSections: teacherSections
+};
+
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
 
@@ -242,7 +301,7 @@ describe('sectionStandardsProgressRedux', () => {
   });
 
   describe('lessonsByStandard', () => {
-    it('gets the correct lessons and completion by standard, no progress', () => {
+    it('gets the correct lessons and completion by standard, no progress, no scores', () => {
       assert.deepEqual(lessonsByStandard(fakeState), {
         4: [
           {
@@ -307,8 +366,75 @@ describe('sectionStandardsProgressRedux', () => {
       });
     });
 
-    it('gets the correct lessons and completion by standard, completed lesson', () => {
+    // Plugged lessons calculate completion based on progress.
+    // Unplugged lessons calculate completion based on teacher score.
+    it('gets the correct lessons and completion by standard, completed lesson based only on progress', () => {
       assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
+        4: [
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          },
+          {
+            completed: false,
+            lessonNumber: 3,
+            name: 'Happy Maps',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/3'
+          }
+        ],
+        16: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ],
+        17: [
+          {
+            completed: false,
+            lessonNumber: 1,
+            name: 'Going Places Safely',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: true,
+            url: 'https://curriculum.code.org/csf-19/coursea/1'
+          },
+          {
+            completed: false,
+            lessonNumber: 2,
+            name: 'Learn to Drag and Drop',
+            numStudents: 4,
+            numStudentsCompleted: 0,
+            unplugged: false,
+            url: 'https://curriculum.code.org/csf-19/coursea/2'
+          }
+        ]
+      });
+    });
+
+    it('gets the correct lessons and completion by standard, plugged lesson completion based on progress, unplugged based on teacher score', () => {
+      assert.deepEqual(lessonsByStandard(stateForTeacherMarkedAndProgress), {
         4: [
           {
             completed: false,
@@ -335,7 +461,7 @@ describe('sectionStandardsProgressRedux', () => {
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
-            numStudentsCompleted: 4,
+            numStudentsCompleted: 1,
             unplugged: true,
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
@@ -355,7 +481,7 @@ describe('sectionStandardsProgressRedux', () => {
             lessonNumber: 1,
             name: 'Going Places Safely',
             numStudents: 4,
-            numStudentsCompleted: 4,
+            numStudentsCompleted: 1,
             unplugged: true,
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
@@ -392,9 +518,46 @@ describe('sectionStandardsProgressRedux', () => {
     });
   });
 
-  describe('getLessonCompletionStatus', () => {
+  describe('getUnPluggedLessonCompletionStatus', () => {
+    it('incomplete when no teacher scores for stage', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(fakeState, scriptId, stageId)
+      ).to.deep.equal({
+        completed: false,
+        numStudentsCompleted: 0
+      });
+    });
+
+    it('incomplete when teacher scores stage as incomplete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedIncompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.deep.equal({
+        completed: false,
+        numStudentsCompleted: 0
+      });
+    });
+
+    it('complete when teacher scores stage as complete', () => {
+      expect(
+        getUnpluggedLessonCompletionStatus(
+          stateForTeacherMarkedCompletedLesson,
+          scriptId,
+          stageId
+        )
+      ).to.deep.equal({
+        completed: true,
+        numStudentsCompleted: 1
+      });
+    });
+  });
+
+  describe('getPluggedLessonCompletionStatus', () => {
     it('accurately calculates no progress', () => {
-      expect(getLessonCompletionStatus(fakeState, stageId)).to.deep.equal({
+      expect(getPluggedLessonCompletionStatus(fakeState, stage)).to.deep.equal({
         completed: false,
         numStudentsCompleted: 0
       });
@@ -402,7 +565,10 @@ describe('sectionStandardsProgressRedux', () => {
 
     it('accurately calculates partial progress', () => {
       expect(
-        getLessonCompletionStatus(stateForPartiallyCompletedLesson, stageId)
+        getPluggedLessonCompletionStatus(
+          stateForPartiallyCompletedLesson,
+          stage
+        )
       ).to.deep.equal({
         completed: false,
         numStudentsCompleted: 2
@@ -411,7 +577,7 @@ describe('sectionStandardsProgressRedux', () => {
 
     it('accurately calculates > 80% of students completed > 60% of levels', () => {
       expect(
-        getLessonCompletionStatus(stateForCompletedLesson, stageId)
+        getPluggedLessonCompletionStatus(stateForCompletedLesson, stage)
       ).to.deep.equal({
         completed: true,
         numStudentsCompleted: 4

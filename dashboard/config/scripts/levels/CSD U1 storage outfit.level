@@ -190,10 +190,6 @@
       "toggleSwitch.isOpen": null,
       "onBoardEvent": null
     },
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "instructions_important": "false",
     "long_instructions": "# Super Helpful Instructions\r\n\r\nDo the thing!",
@@ -220,7 +216,8 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "widget_mode": "false",
-    "libraries_enabled": "false"
+    "libraries_enabled": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

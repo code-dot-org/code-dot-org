@@ -1406,6 +1406,17 @@ es-ES:
         ## Pantalla Final
 
         La pantalla final aparece después de que el usuario ha ganado o perdido el juego. A veces incluye marcador final, clasificación del jugador, o otra información. También puede haber una opción de jugar de nuevo.
+      Gamelab StartScreen State: |-
+        # El variable del estado del juego
+
+        Nuestra muestra tuvo cuatro argumentos (o **estados**) de que tenemos que hacer un seguimiento para exponer la pantalla correcta: "empezando", "jugando", "ganado", "perdido". La primera etapa para añadir una pantalla de empiezo o fin al juego es crear un variable para registrar los cambios en el estado del juego.
+
+        ## Haz Esto
+
+        -   Declara un variable llamado `estadodeljuego` en el inicio del programa. (un buen lugar para hacerlo estaría cerca de dónde `marcador` y `vidas` son declarados.)
+        -   Asigna el valor inicial de tu `estadodeljuego` a "empezando"
+
+        (Porque no estás usando ya este variable, verás un triángulo de advertencia junto a la línea donde está declarado. También no afecta cómo corre el programa.)
       Gamelab StartScreen base code: |-
         # Código del Juego
 
