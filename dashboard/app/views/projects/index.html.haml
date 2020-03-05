@@ -1,9 +1,9 @@
 :ruby
   @page_title = t('project.project_gallery')
   projects_data = {}
-  projects_data[:limitedGallery] = local_assigns[:limited_gallery]
+  projects_data[:limitedGallery] = @limited_gallery
+  projects_data[:currentTab] = @current_tab
   projects_data[:projectCount] = fetch_project_count['total_projects']
-  projects_data[:isPublic] = local_assigns[:is_public]
 
   if current_user
     projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)

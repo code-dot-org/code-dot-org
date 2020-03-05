@@ -960,11 +960,13 @@
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/12/puzzle/14": {
-    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far."
+    "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
+    "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
   },
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/1": {
     "short_instructions": "Get the artist to the center of the play area, then draw a sticker. ",
     "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!\n\nGet the artist to the center of the play area using the [blockly block][0] block, then use the [blockly block][1] block to make something appear.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][2]\n[expandable][3]\n[expandable][4]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops1a_a": "This is the first block you will need:\n\n[blockly block][0]",
       "courseC_artist_loops1a_b": "Use this block to draw the sticker!\n\n[blockly block][0]"
@@ -976,6 +978,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/2": {
     "short_instructions": "Change the direction your sticker is facing by adding a `turn` command to your code. ",
     "long_instructions": "Change the direction your sticker is facing by adding a `turn` command to your code. \n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops1b_a": "This is the first block you will need:\n\n[blockly block][0]\n\nYou can choose either left or right and any number of degrees."
     },
@@ -986,6 +989,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/3": {
     "short_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.",
     "long_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the `turn` and `repeat` blocks to make different patterns.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops2a_a": "Inside your loop, you will want to jump to the middle, then turn, then draw a sticker.",
       "courseC_artist_loops2a_b": "Click on the number at the top of the `repeat` loop to change how many times it repeats."
@@ -994,6 +998,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/4": {
     "short_instructions": "Now add a second sticker!",
     "long_instructions": "So much fun!  \n\nNow, add a second sticker right on top of the first one to make an image like the ones below.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting.\n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops3a_a": "You will want to add just one block inside of your loop, after the first sticker.",
       "courseC_artist_loops3a_b": "Your program should look like this!\n\n[blockly block][0]\n\nYou can use any stickers you like!"
@@ -1002,6 +1007,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/5": {
     "short_instructions": "Edit your code so that you jump forward between drawing the two stickers.",
     "long_instructions": "Edit your code so that you jump forward between drawing the two stickers. In this puzzle, make sure you have `jump to the middle center position` inside of your loop, so you stay in the center!\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops4a_a": "Use this block to jump forward:\n\n[blockly block][0]\n\nDon't forget to change how far!",
       "courseC_artist_loops4a_b": "Your program should look like this!\n\n[blockly block][0]"
@@ -1010,6 +1016,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/6": {
     "short_instructions": "Try adding lines!",
     "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops5b_a": "Use this block to set the pattern of your lines:\n\n[blockly block][0]",
       "courseC_artist_loops5b_b": "To make a design like the one above, you will want to move backward the same amount that you move forward.",
@@ -1019,6 +1026,7 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/7": {
     "short_instructions": "Add another sticker!",
     "long_instructions": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops6a_a": "To make a design like the one above, jump forward less than 75 pixels between each sticker."
     }
@@ -1026,13 +1034,15 @@
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/8": {
     "short_instructions": "Play with the loops and angles.",
     "long_instructions": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThe first image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
+    "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "courseC_artist_loops7a_a": "A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?\nCheck the suggested rotations to see that this works!"
     }
   },
   "https://studio.code.org/s/coursec-2019/stage/13/puzzle/9": {
     "short_instructions": "Now try something on your own!",
-    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]"
+    "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
   },
   "https://studio.code.org/s/coursec-2019/stage/14/puzzle/1": {
     "dsls": {
@@ -1194,6 +1204,7 @@
   },
   "https://studio.code.org/s/coursec-2019/stage/16/puzzle/12": {
     "short_instructions": "Create your own story. When you're done, click \"Finish\" to share with friends. See story ideas in the hints.",
+    "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
     "authored_hints": {
       "idea1": "_Need an idea?_\n\n**Who's there?** Make characters appear with random images, so no one knows who's showing up next.\n\n<img src= \"https://images.code.org/dbd6ece9d0fb213039ea5dccb91fc425-image-1563577859889.gif\" style=\"width: 200px\">",
       "idea2": "_Need an idea?_\n\n**Going on an Adventure** - Change the background, then have the characters talk about where they are now.\n\n<img src= \"https://images.code.org/a7f740d73074deb128cdc2826abda9e6-image-1563576781779.gif\" style=\"width: 200px\">",
