@@ -1591,26 +1591,6 @@ pt-BR:
           ## Exemplos
 
           [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
-      CSD U3 Collision Detection:
-        markdown: |
-          # Visão global
-
-          A turma aprende sobre a detecção de colisão no computador. Os pares exploram como um computador pode usar propriedades de localização e tamanho de sprites e matemática para detectar se dois sprites estão se tocando. Em seguida, a classe usa o bloco isTouching () para criar efeitos diferentes quando os sprites colidem, incluindo a reprodução de sons. Por último, eles usam suas novas habilidades para melhorar o jogo de sidescroller que eles começaram na última lição.
-
-          ## Vocabulário
-
-          * ** Abstração ** - Retirar diferenças específicas para fazer com que uma solução funcione para vários problemas.
-          * ** Depuração ** - Localizando e corrigindo problemas em seu algoritmo ou programa.
-          * ** Declaração If  ** - A estrutura de programação comum que implementa "instruções condicionais".
-
-          ## Código introduzido
-
-          * [sprite.debug] (// docs.code.org/gamelab/debug/)
-          * [sprite.isTouching ()] (// docs.code.org/gamelab/isTouching/)
-
-          ## Recursos
-
-          * [Detecção de colisão - Guia de atividades] (https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
       CSD U3 Collisions SFLP:
         markdown: |+
           # Visão global
@@ -1640,13 +1620,6 @@ pt-BR:
 
           * [Guia do Projeto - Jogo Defensor - Guia do Projeto] (https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
-        markdown: |+
-          # Iniciando sua pesquisa
-
-          Para saber mais sobre como a ciência da computação e a programação desempenham um papel no entretenimento, você precisará fazer algumas pesquisas. Tente pesquisar por "Ciência da Computação e &#95;&#95;&#95;&#95;&#95;&#95;" e experimentar diferentes tipos de entretenimento, como cinema, televisão, música, jogos, animação, moda, etc.
-
-
-      CSD U3 Entertainment_2018:
         markdown: |+
           # Iniciando sua pesquisa
 
@@ -2167,13 +2140,6 @@ pt-BR:
 
 
           ### Que informações você precisa para ajudá-lo a decodificá-lo?
-
-      CSD U3 complex sprite movement SFLP:
-        markdown: |+
-          # Visão global
-
-          A classe aprende a combinar as propriedades de velocidade dos sprites com o padrão de contador para criar movimentos de sprites mais complexos, como simular gravidade, fazer um sprite saltar e permitir que um sprite flutue para a esquerda ou para a direita. Nos níveis finais, a classe combina esses movimentos para animar e controlar um único sprite e construir um jogo simples no qual um personagem voa e coleta moedas.
-
 
       CSD U3 drawSprites placement match:
         answers:
@@ -5463,66 +5429,6 @@ pt-BR:
           # Simão Diz
 
           Jogue um jogo e pense sobre quais comandos são necessários para obter o resultado certo.
-      Social Sleuth:
-        markdown: |+
-          # Investigação Social
-
-          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
-
-          ## Perfis
-
-          Clique na foto de cada perfil para abrir-lo.
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
-      Social Sleuth_2018:
-        markdown: |+
-          # Investigação Social
-
-          Você vai precisar da <a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">Planilha de investigação social</a> para completar essa atividade.
-
-          ## Perfis
-
-          Clique na foto de cada perfil para abrir-lo.
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
       Social Sleuth_2018_2019:
         markdown: |+
           # Investigação Social

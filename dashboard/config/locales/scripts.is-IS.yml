@@ -5763,3 +5763,112 @@ is:
                 til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
+        coursea-2020:
+          title: Námskeið A (2019)
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
+          description_audience: 'Aldur: 4-7'
+          stages:
+            Going Places Safely:
+              name: Ferðast í öryggi
+            'Loops: Happy Loops':
+              description_teacher: Lykkjur eru mjög gagnlegt og öflugt verkfæri í
+                forritun. Til að skilja hve lykkjur geta verið gagnlegar, þarf að
+                haga því þannig að nemendur vilji fá auðveldari leið til að leysa
+                hversdagsleg verkefni.
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+        courseb-2020:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          stages:
+            Your Digital Footprint:
+              name: Stafræna fótsporið þitt
+            Move It, Move It:
+              name: Hreyfa sig, hreyfa sig
+            Sequencing in Maze:
+              name: Röð aðgerða í Völundarhúsi
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+        coursec-2020:
+          description_short: Lærðu grundvallaratriði tölvunarfræði og búðu til eigin
+            myndir, sögur og leiki.
+          description_audience: 'Aldur: 6-10'
+          stages:
+            Binary Bracelets:
+              name: Stafræn armbönd
+            Looking Ahead:
+              name: Horft fram á við
+        coursed-2020:
+          description_audience: 'Aldur: 7-11'
+          stages:
+            Relay Programming:
+              name: Boðhlaupsforritun
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld
+            Conditionals with Cards:
+              name: Skilyrði með kortum
+            'Unplugged: Binary':
+              name: 'Verkefni án tölvu: Tvíundir'
+            Artist Binary:
+              name: 'Listamaður: Tvíundir'
+            Digital Citizenship:
+              name: Stafrænn borgari
+            Dance Party:
+              name: Danspartý
+        coursee-2020:
+          description_audience: 'Aldur: 8 - 12'
+          stages:
+            Conditionals:
+              name: Skilyrði
+        coursef-2020:
+          description_short: Lærðu öll hugtökin í Grunnatriði tölvunarfræði og búðu
+            til eigin myndir, sögur og leiki.
+          description_audience: 'Aldur: 9-13'
+          stages:
+            Envelope Variables:
+              name: Umslagabreytur
+            For Loop Fun:
+              name: Fyndnar frá lykkjur
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+            Internet:
+              name: Internet
+            Virtual Pet:
+              description_student: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+              description_teacher: Í þessari kennslustund munu nemendur búa til gagnvirkt
+                sýndargæludýr sem lítur út og hegðar sér eins og þeir vilja. Nemendu
+                rmunu nota "Búninga" tæki Verusmiðjunnar til að sérsníða ásýnd gæludýrsins.
+                Þeir munu nota atvik, hegðun og önnur hugtök sem þeir hafa lært til
+                að blása lífi í gæludýrið!
+            The Power of Words:
+              name: Afl orða
+            Crowdsourcing:
+              name: Hópvistun
+        express-2020:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          stages:
+            Dance Party:
+              name: Danspartý
+            For Loops in Bee:
+              name: Frá-lykkjur með Býflugu
+            For Loops in Artist:
+              name: Frá-lykkjur með Listamanni
+        pre-express-2020:
+          description: Lærðu undirstöðuatriði í tölvunarfræði og öruggri netnotkun.
+            Í lok námskeiðsins getur þú búið til leik eða sögu og deilt með öðrum.
+          stages:
+            Programming in Harvester:
+              name: Forritun með Hirðinum
+            Spelling Bee:
+              name: Stafsetning
+            Loops in Ice Age:
+              name: Lykkjur í Ísöld

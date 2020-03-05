@@ -72,7 +72,7 @@ cs:
     submit: Přidat tip
   appname: Code.org
   stage: Úroveň
-  stage_number: Fáze %{number}
+  stage_number: Lekce %{number}
   puzzle: Úloha
   trophies: Trofeje
   courses: Kurzy
@@ -303,7 +303,7 @@ cs:
     submit: Odeslat
     destroy: Zrušit
     back: Zpět
-    confirm: Jsi si jistý?
+    confirm: Určitě?
     created: "%{model} byl úspěšně vytvořen."
     updated: "%{model} byl úspěšně aktualizován."
     destroyed: "%{model} byl/a úspěšně odstraněn/a."
@@ -383,7 +383,7 @@ cs:
       flappy: Flappy
       frozen: Frozen
       gamelab_jr: Game Lab (beta)
-      gumball: Žvýkačku
+      gumball: Gumball
       iceage: Doba ledová
       infinity: Nekonečno
       minecraft_adventurer: Minecraft Adventurer
@@ -543,7 +543,7 @@ cs:
     section_code_cant_be_current_section: Aktuální sekce nemůže být stejná jako nová
       sekce.
     current_section_dne: Omlouvám se, ale sekce %{current_section_code} neexistuje.
-      Zadejte jiný sekční kód.
+      Zadejte jiný kód sekce.
     student_ids_not_entered: Zadejte prosím student_ids.
     student_not_found: Nelze nalézt jednoho nebo více studentů.
     all_students_must_be_in_current_section: Všichni studenti musí být zapsáni v tvoji
@@ -595,7 +595,7 @@ cs:
     copyright: Autorská práva
     more: Více
     feedback: Poskytnout zpětnou vazbu
-    translate: Pomozte nám v překladu do vašehojazyka
+    translate: Pomozte nám v překladu do vašeho jazyka
     support: Nápověda a Komunita
     support_url: http://support.code.org
     tos_short: Podmínky
@@ -620,6 +620,7 @@ cs:
     notes_coming_soon: Poznámky pro toto video přijdou brzy.
     autoplay_option: Automatické přehrávání videí
     download: Stáhnout Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Váš prohlížeč není podporován. Nainstalujte a použijte
@@ -677,7 +678,7 @@ cs:
       title: Klasické bludiště
       body: Zkuste základy informatiky. Miliony lidí to už zkusili.
     flappy:
-      title: Tenký kód
+      title: Flappy
       body: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušej náš výukový
         kurz tenkého kódu!
     20-hour:
@@ -984,6 +985,7 @@ cs:
     main_course: Hlavní kurs
     csf_digcit: Digitální občanství
     csf_jigsaw: Skládačka
+    csf_sequencing: Sekvence
     csf_loops: Cykly
     csf_events: Události
     csf_binary: Binární
@@ -1124,3 +1126,4 @@ cs:
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
   page_not_found_button: Zpět domů
+  copy: Kopírovat

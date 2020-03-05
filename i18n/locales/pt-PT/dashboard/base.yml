@@ -841,3 +841,4 @@ pt:
   gdpr_dialog:
     yes: 'Sim'
   page_not_found_description: "A página que estavas a procurar não existe neste endereço. Verifica o endereço web e carrega novamente. Ou então, volta para a nossa página inicial."
+  copy: 'Copiar'
