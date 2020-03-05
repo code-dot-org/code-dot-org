@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
 import {Heading1} from '@cdo/apps/lib/ui/Headings';
-import {tableLayoutStyles, sortableOptions} from '@cdo/apps/templates/tables/tableConstants';
+import {
+  tableLayoutStyles,
+  sortableOptions
+} from '@cdo/apps/templates/tables/tableConstants';
 import i18n from '@cdo/locale';
 import {orderBy} from 'lodash';
 import * as sort from 'sortabular';
@@ -66,16 +69,16 @@ export default class SortedTableSelect extends React.Component {
     optionsDescriptionText: PropTypes.string,
     titleText: PropTypes.string,
     children: PropTypes.node
-  }
+  };
 
   state = {
     sortingColumns: DEFAULT_SORT,
     rowsChecked: [],
     selectedOption: undefined
-  }
+  };
 
   areAllSelected = () => {
-    return this.state.rowsChecked.count === this.props.rowData.count;
+    return this.state.rowsChecked.length === this.props.rowData.length;
   };
 
   toggleSelectAll = () => {
@@ -88,16 +91,19 @@ export default class SortedTableSelect extends React.Component {
     this.props.onRowChecked(rowsToCheck);
   };
 
-  toggleRowChecked = (id) => {
-    this.setState(state => {
-      if(state.rowsChecked.includes(id)) {
-        state.rowsChecked = state.rowsChecked.filter(row => row.id === id);
-      } else {
-        state.rowsChecked.push(id);
-      }
-      return state;
-    }, this.props.onRowChecked(this.state.rowsChecked));
-  }
+  toggleRowChecked = id => {
+    this.setState(
+      state => {
+        if (state.rowsChecked.includes(id)) {
+          state.rowsChecked = state.rowsChecked.filter(rowId => rowId !== id);
+        } else {
+          state.rowsChecked.push(id);
+        }
+        return state;
+      },
+      () => this.props.onRowChecked(this.state.rowsChecked)
+    );
+  };
 
   selectedRowHeaderFormatter = () => {
     return (
@@ -115,7 +121,7 @@ export default class SortedTableSelect extends React.Component {
       <input
         style={styles.checkbox}
         type="checkbox"
-        checked={this.state.rowsChecked.includes(rowData.id)}
+        checked={rowData.isChecked}
         onChange={() => this.toggleRowChecked(rowData.id)}
       />
     );
@@ -150,7 +156,6 @@ export default class SortedTableSelect extends React.Component {
         header: {
           label: i18n.name(),
           props: {
-            id: 'uitest-name-header',
             style: {
               ...tableLayoutStyles.headerCell
             }
@@ -159,7 +164,6 @@ export default class SortedTableSelect extends React.Component {
         },
         cell: {
           props: {
-            className: 'uitest-name-cell',
             style: {
               ...tableLayoutStyles.cell
             }
@@ -172,7 +176,7 @@ export default class SortedTableSelect extends React.Component {
   renderOptions = () => {
     const {options} = this.props;
     let selectOptions = options.map(option => {
-      return(
+      return (
         <option key={option.id} value={option.id}>
           {option.name}
         </option>
@@ -180,7 +184,7 @@ export default class SortedTableSelect extends React.Component {
     });
     selectOptions.unshift(<option key="empty" value="" />);
     return selectOptions;
-  }
+  };
 
   getSortingColumns = () => {
     return this.state.sortingColumns || {};
@@ -212,6 +216,11 @@ export default class SortedTableSelect extends React.Component {
       children
     } = this.props;
 
+    const decoratedRows = rowData.map(row => ({
+      ...row,
+      isChecked: this.state.rowsChecked.includes(row.id)
+    }));
+
     const sortingColumns = this.getSortingColumns();
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -223,26 +232,24 @@ export default class SortedTableSelect extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy
-    })(rowData);
-    return(
+    })(decoratedRows);
+    return (
       <div>
-        {titleText &&
-          <Heading1>{titleText}</Heading1>
-        }
+        {titleText && <Heading1>{titleText}</Heading1>}
         <div style={styles.container}>
           <Table.Provider columns={columns} style={styles.table}>
             <Table.Header />
             <Table.Body rows={sortedRows} rowKey="id" />
           </Table.Provider>
           <div style={styles.rightColumn}>
-            {descriptionText &&
+            {descriptionText && (
               <div style={styles.infoText}>{descriptionText}</div>
-            }
-            {optionsDescriptionText &&
+            )}
+            {optionsDescriptionText && (
               <label htmlFor="selectOption" style={styles.label}>
                 {optionsDescriptionText}
               </label>
-            }
+            )}
             <select
               name="selectOption"
               style={styles.input}
