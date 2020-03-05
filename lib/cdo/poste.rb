@@ -295,6 +295,7 @@ module Poste
 
       result
     end
+
     def renderer
       @@renderer ||= begin
         require 'cdo/pegasus/actionview_sinatra'
