@@ -5,7 +5,9 @@ has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit5/{LESSON}'
 project_widget_types ["basketball"]
-editor_experiment 'csp-piloters'
+pilot_experiment 'csp-2020-access'
+project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Lists Explore', flex_category: 'csp_lists'
 level 'CSP U5L1 SFLP 20-21', progression: 'Lesson Overview'
