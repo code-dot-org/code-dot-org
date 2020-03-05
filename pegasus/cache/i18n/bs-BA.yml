@@ -25,8 +25,6 @@ bs-BA:
   learn_now: Nauči sad
   petition_message: Svaki učenik u svakoj školi ima šansu da uči računarske nauke
   petition_sign_message: Ako se slažeš, napiši svoje ime. Pridruži se ostalima.
-  petition_sign_message_support: 'Ako nas podržavaš, potpiši svoje ime. Pridruži se
-    # drugih.'
   petition_join_others: 'Pridruži se # drugih'
   name: Ime
   email: Email
