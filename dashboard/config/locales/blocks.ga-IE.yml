@@ -358,10 +358,10 @@ ga:
             '"circle"': i gciorcal
             '"grid"': i ngreille
             '"top"': ina líne ag an mbarr
-            '"row"': ró
+            '"row"': ina ró
             '"bottom"': ina líne ag an mbun
             '"left"': i gcolún ar chlé
-            '"column"': colún
+            '"column"': ina gcolún
             '"right"': i gcolún ar dheis
             '"x"': i bpatrún cliathach
             '"plus"': ar chruth an phlus
@@ -465,10 +465,10 @@ ga:
             '"circle"': i gciorcal
             '"grid"': i ngreille
             '"top"': ina líne ag an mbarr
-            '"row"': ró
+            '"row"': ina ró
             '"bottom"': ina líne ag an mbun
             '"left"': i gcolún ar chlé
-            '"column"': colún
+            '"column"': ina gcolún
             '"right"': i gcolún ar dheis
             '"x"': i bpatrún cliathach
             '"plus"': ar chruth an phlus
@@ -666,7 +666,7 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setPropRandom:
-        text: randamaigh {SPRITE} {PROPERTY}
+        text: socraigh {PROPERTY} {SPRITE} go randamach
         options:
           PROPERTY:
             '"scale"': méid
@@ -677,7 +677,7 @@ ga:
             '"y"': ionad ingearach
             '"tint"': imir
       Dancelab_setPropRandomEach:
-        text: randamaigh {GROUP} {PROPERTY}
+        text: socraigh {PROPERTY} {GROUP} go randamach
         options:
           GROUP:
             sprites: uile
@@ -766,6 +766,7 @@ ga:
             'true': infheicthe
             'false': dofheicthe
       Dancelab_startMapping:
+        text: athraigh {PROPERTY} {SPRITE} ag leanúint {RANGE}
         options:
           PROPERTY:
             '"scale"': méid
@@ -780,6 +781,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_startMappingEach:
+        text: athraigh {PROPERTY} {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
@@ -808,6 +810,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_stopMapping:
+        text: stop ag athrú {PROPERTY} {SPRITE} ag leanúint {RANGE}
         options:
           PROPERTY:
             '"scale"': méid
@@ -823,6 +826,7 @@ ga:
             '"mid"': meán-raon
             '"treble"': tribil
       Dancelab_stopMappingEach:
+        text: stop ag athrú {PROPERTY} {GROUP} ag leanúint {RANGE}
         options:
           GROUP:
             sprites: uile
@@ -944,7 +948,7 @@ ga:
             '"8"': '8'
             '"9"': '9'
       Dancelab_whenPeak:
-        text: nuair a shroicheann {RANGE} buaic
+        text: nuair a shroicheann an {RANGE} buaic
         options:
           RANGE:
             '0': dord
@@ -1077,6 +1081,7 @@ ga:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': pluais
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': cathair
+            '"https://studio.code.org/blockly/media/skins/studio/background.png"': cúirt
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': fásach
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': réaltra
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': i
@@ -1108,6 +1113,8 @@ ga:
             '"height"': airde
       gamelab_setTint:
         text: athraigh dath {THIS} go {COLOR}
+      gamelab_showTitleScreen:
+        text: taispeáin scáileán an teidil {BREAK} teideal {TITLE} téacs {SUBTITLE}
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1119,6 +1126,8 @@ ga:
           DIRECTION:
             '"right"': ar dheis
             '"left"': ar chlé
+      gamelab_updateTitleWithColor:
+        text: taispeáin scáileán an teidil {BREAK} teideal {TITLE} dath {COLOR}
       gamelab_whenDownArrow:
         text: nuair a bhrúitear an tsaighead síos
       gamelab_whenKey:

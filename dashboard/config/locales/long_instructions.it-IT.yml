@@ -2207,6 +2207,41 @@ it-IT:
       NEW Course 4 Bee For Loops 8: Questo codice è da completare! Quale deve essere
         il passo in questo ciclo con contatore per raccogliere 3, 6, 9, 12, 15 dosi
         di nettare?
+      OPD-K5 CS Video: |-
+        ## Per cominciare - Perché Fondamenti di informatica?
+
+        Completerai questo corso gratuito in autoapprendimento utilizzando la stessa piattaforma che potrai usare in classe con i tuoi alunni.
+
+        Iniziamo mettendo a fuoco cosa sono i "Fondamenti di informatica" e come sono stati appresi da altri insegnanti e alunni in tutto il mondo. Nel prossimo livello vedremo come interagire con la piattaforma di studio che userai durante tutto il corso.
+
+        > ## Rifletti
+        >
+        > Quali sono le tue prime impressioni sui "Fondamenti di informatica"?
+        >
+        > Se sai l'inglese, [Twitta i tuoi pensieri][0] taggando @teachcode.
+        >
+        > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">Condividi su Twitter >></button></a><br><br>
+        > Non hai un account su Twitter? Ci puoi trovare anche su [Facebook][1] o [Instagram][2].
+      OPD-K5 FirstProgram: Guarda il video qui sotto che spiega il primo vero programma
+        che gli alunni scriveranno durante il [Corso A][0]. Nella prossima pagina
+        sarai tu che dovrai scrivere un simile programma!
+      OPD-K5 RepeatBlock: Guarda il video qui sotto che spiega come funzionano i cicli
+        ed introduce il blocco "Ripeti" nei corsi di "Fondamenti di informatica".
+      OPD-K5 Unplugged Video: |-
+        ## Uno sguardo avanti > "Senza computer"
+
+        <img src="https://images.code.org/ae83fdee9390a1155e5173b2a06f9773-image-1434399991310.JPG" class="level-image">
+
+        Nell'insegnamento dell'informatica, potresti pensare che sarebbe meglio avere a disposizione la tecnologia al massimo livello -- nuovi computer, connessione internet veloce, e le ultime applicazioni. Ma in Code.org, abbiamo trovato che alcune delle lezione di informatica con maggior impatto sono in realtà tradizionali, oppure con pochissima tecnologia o senza del tutto. In queste lezioni, gli studenti imparano i concetti del computer senza computer.
+
+        Ecco perché tutti i nostri corsi di Fondamenti di informatica usano attività tradizionali per presentare concetti di informatica con attività fisiche prima che gli studenti scrivano programmi al computer che utilizzano quei concetti. Un esempio di questo potrebbe essere una danza con movimenti ripetitivi con la classe per comprendere il concetto di come i cicli ripetono i comandi all'interno di un programma per computer. In questo modo, quando gli studenti scriveranno programmi usando i cicli,  l'attività tradizionale ha creato l'associazione con qualcosa di cui loro sono familiari e possono correlare questo nuovo concetto a quella attività.
+
+        Guarda il video qui sotto per comprendere i benefici dell'uso di attività tradizionale per insegnare l'informatica.
+
+        **Mentre percorri le lezioni 4-8**, avrai l'occasione di vedere alcune delle nostre attività tradizionali  per ognuno dei concetti chiave trattati in questo corso.
+      OPD-K5 WhatIsCS: Ti sei mai chiesto "Cos'è esattamente l'informatica?" oppure
+        "Perché alcuni programmi informatici sono scritti con delle parole ed altri
+        usando delle immagini?" Guarda questo video, è un'ottima introduzione all'informatica.
       Overworld Chop Tree: 'Il legno è una risorsa molto importante: serve per costruire
         molte cose. Raggiungi l''albero e usa l''istruzione `distruggi` per abbatterlo.'
       Overworld Chop Tree_2019: 'Il legno è una risorsa molto importante: serve per

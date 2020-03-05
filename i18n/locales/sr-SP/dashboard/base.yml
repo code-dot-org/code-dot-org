@@ -432,3 +432,4 @@ sr:
     accept: 'Слажем се'
   gdpr_dialog:
     yes: 'Да'
+  copy: 'Копирај'

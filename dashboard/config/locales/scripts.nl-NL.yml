@@ -2427,3 +2427,62 @@ nl:
               name: Botsingdetectie
             Functions:
               name: Functies
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Veilig Reizen
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Jouw Digitale Voetafdruk
+            Move It, Move It:
+              name: verplaats het, verplaats het
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binaire armbanden
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Estafette Programmeren
+            Build a Star Wars Game:
+              name: Bouw een Star Wars Spel!
+            Conditionals with Cards:
+              name: Statements met Kaarten
+            'Unplugged: Binary':
+              name: 'Unplugged: binair'
+            Artist Binary:
+              name: Kunstenaar Binary
+            Digital Citizenship:
+              name: Digitaal Burgerschap
+            Dance Party:
+              name: Dansfeest
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Voorwaardelijke instructies
+            'Functions: Songwriting':
+              description_teacher: Een van de meest prachtige structuren in de informatica
+                wereld is de functie. Functies (soms procedures genoemd) zijn mini
+                programma's die telkens opnieuw kunnen gebruikt worden binnen het
+                grotere geheel van je programma. Deze les helpt leerlingen intuïtief
+                te begrijpen waarom brokken code samenvoegen in functies een nuttige
+                praktijk is.
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelop variabelen
+            For Loop Fun:
+              name: For Lus fun
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansfeest
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spellingswedstrijd
