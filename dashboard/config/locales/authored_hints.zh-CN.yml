@@ -17,6 +17,7 @@ zh-CN:
       2-3 Artist 4:
         2-3_Artist_4_a: 要想完成这栋房子，唯一需要做的就是画个正方形。
       2-3 Artist 6:
+        2-3_Artist_6_a: '为了制造那些小的角度，需要每次比上个正方形转更 _多_ 的角度。   '
         2-3_Artist_6_b: 既然已经面向右边了。那么先往前走，再往左转来画三角形是最容易的。
         2-3_Artist_6_c: 三角形的每一条边都跟正方形一样长...100像素！
       2-3 Artist 7:
@@ -26,6 +27,7 @@ zh-CN:
       2-3 Artist 9 NEW:
         2-3_Artist_9_a: 这个菱形真的和边上的正方形一样
       2-3 Artist Debugging 10:
+        2-3_Artist_Debugging_10_a: 记住，要让控制面板 _宽_ 10个像素......所以要在更改的数量上 **加** 10 。
         2-3_Artist_Debugging_10_b: |-
           **反复试错是很正常的！**
 
@@ -41,6 +43,13 @@ zh-CN:
         2-3_Artist_Debugging_3_b: 如果程序运行得太快，看不清楚发生了什么，试着用滑块让它慢下来。
       2-3 Artist Debugging 7:
         2-3_Artist_Debugging_7_a: 如果让小艺术家在绘制第一条线后向后移动或跳，会发生什么？
+      2-3 Artist Debugging 8:
+        2-3_Artist_Debugging_8_a: |-
+          形状重复了多少次？
+
+          这个形状 _应该_ 重复多少次？
+
+          在程序的哪里更改？
       2-3 Artist Debugging 9:
         2-3_Artist_Debugging_9_a: 小艺术家在开始绘图之前还要再向左边旋转60度！
         2-3_Artist_Debugging_9_b: 不需要再添加别的模块来转整圈，只要在已有的 “向左转” 模块上增加 60 度就可以了！
@@ -63,6 +72,49 @@ zh-CN:
       2-3 Artist Functions 4:
         2-3_Artist_Functions_4_a: 艺术家需要在每个方块之间旋转 120 度来完成这个设计。
       2-3 Artist Loops New 11:
+        2-3_Artist_Loops_New_11_a: |-
+          记住上一关的代码是：
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">8</title>
+                  <statement name="DO">
+                    <block type="draw_colour" inline="true">
+                      <value name="COLOUR">
+                        <block type="colour_random"/>
+                      </value>
+                      <next>
+                        <block type="draw_turn_by_constant_dropdown">
+                          <title name="DIR">turnRight</title>
+                          <title name="VALUE" config="45,60,90,120,180">45</title>
+                          <next>
+                            <block type="draw_move_by_constant">
+                              <title name="DIR">moveForward</title>
+                              <title name="VALUE">50</title>
+                              <next>
+                                <block type="draw_turn_by_constant_dropdown">
+                                  <title name="DIR">turnLeft</title>
+                                  <title name="VALUE" config="45,60,90,120,180">90</title>
+                                  <next>
+                                    <block type="draw_move_by_constant">
+                                      <title name="DIR">moveForward</title>
+                                      <title name="VALUE">50</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: 新的转向代码应该在循环的**最后**。
       2-3 Artist Loops New 12:
         2-3_Artist Loops_New_12_a: 在开始画菱形之前，小艺术家需要左转 60 度走上正确的路径。
@@ -73,6 +125,8 @@ zh-CN:
           在每个菱形结束时，小艺术家已经朝向右边开始了下一步。
 
           这样就不用在开始前，再加一个`向左转`模块。
+        2-3_Artist_Loops_New_13_b: "画每个菱形的时候，小艺术家需要：   \n\n-   移动\n-   向右转120度\n-
+          \  移动\n-   向右转60度  \n\n然后重复上面的动作！"
       2-3 Artist Loops New 9:
         2-3_Artist_Loops_New_9_a: 小艺术家在开始画画之前，需要向右转45度。
         2-3_Artist_Loops_New_9_b: 这个 V 实际上是半个正方形。什么样的代码能画出半个正方形呢？
@@ -2772,6 +2826,33 @@ zh-CN:
       course2_harvester_loops_challenge1:
         courseC_harvester_loops_challenge1_a: 不用循环，是不可能成功的！
         courseC_harvester_loops_challenge1_b: 可以多次重复`向前移动`和`采摘玉米`然后在每个角落`右转`。
+        courseC_harvester_loops_challenge1_c: |-
+          采摘头 4 个玉米的最好方法是在 `重复` 模块里加上另一个 `重复` 模块。还可以将这个规律用到剩下的难关中！
+
+          <xml>
+            <block type="when_run" deletable="false" movable="false">
+              <next>
+                <block type="controls_repeat">
+                  <title name="TIMES">2</title>
+                  <statement name="DO">
+                    <block type="controls_repeat">
+                      <title name="TIMES">2</title>
+                      <statement name="DO">
+                        <block type="maze_move">
+                          <title name="DIR">moveForward</title>
+                          <next>
+                            <block type="harvester_corn"/>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="maze_turn">
+                          <title name="DIR">turnRight</title>
+                        </block>
+                      </next>
+                    </block>
+                  </statement>
+                  </block></next></block></xml>
       course2_harvester_loops_challenge2:
         courseC_harvester_loops_challenge2_a: 解决这个问题的一种方法看起来像是一个锯齿形。另一种方式看起来像一个螺旋！有很多不同的解决这个关卡的方案。请坚持下去!
         courseC_harvester_loops_challenge2_b: 你可以多次重复`前进`和`采摘莴苣`，然后在每个角落右转。
@@ -2786,7 +2867,12 @@ zh-CN:
       course2_maze_loops_challenge1:
         courseC_maze_loops_challenge1_a: 把这条路看成是三个不同的部分。每个都有可以重复的规律。
         courseC_maze_loops_challenge1_b: 在每个`重复`模块之间，`向左转`或`向右转`，让斯奎特为下一个规律作好准备 。
+        courseC_maze_loops_challenge1_c: |-
+          如果到了这里，只需要用 `向左转`，然后 `向前移动` 几次。别放弃！
+
+          ![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)
       course2_maze_programming_challenge2:
+        courseC_maze_programming_challenge2_a: _如果要让我倒退，要格外小心，确认我转向了正确的路！_
         courseC_maze_programming_challenge2_b: 最短的解决方案仅使用了 5 个模块，但它使用了`重复`模块！
       course3_artist_functions_challenge1:
         courseE_artist_functions_challenge1_a: 如果再次调用该函数，则可以在最后一个角落创造出相同的设计。也可以`跳到`所想其他位置，或者将整个改成自己想要的样子！
@@ -2881,6 +2967,13 @@ zh-CN:
           </block>
           </xml>
       course3_collector_debugging_challenge2:
+        courseD_collector_debugging_challenge2_a: "开始时，先聚焦于从前两堆中收集两个宝石。\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png>)\n用这些模块。\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
         courseD_collector_debugging_challenge2_b: "接下来, 在此行中收集剩余的宝石。 \n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
           AM.png>)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n\n<title
           name=\"DIR\">moveBackward</title>\n</block>\n<block type=\"controls_repeat\">\n<title
