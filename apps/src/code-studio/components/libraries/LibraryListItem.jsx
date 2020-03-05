@@ -20,10 +20,6 @@ const styles = {
     borderBottom: `1px solid ${color.lightest_gray}`,
     lineHeight: 1.5
   },
-  // TODO: RENAME THIS
-  libraryName: {
-    marginRight: 25
-  },
   libraryTitle: {
     fontFamily: "'Gotham 5r', sans-serif",
     fontSize: 16,
@@ -97,7 +93,7 @@ export class LibraryListItem extends React.Component {
 
     return (
       <div style={styles.listItem}>
-        <div style={[styles.libraryName, styles.overflowEllipsis]}>
+        <div style={[{marginRight: 25}, styles.overflowEllipsis]}>
           <a onClick={this.viewCode} style={styles.libraryTitle}>
             {library.name}
           </a>
