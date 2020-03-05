@@ -157,6 +157,7 @@ Dashboard::Application.routes.draw do
     get '/users/to_destroy', to: 'registrations#users_to_destroy'
     get '/reset_session', to: 'sessions#reset'
     get '/users/existing_account', to: 'registrations#existing_account'
+    post '/users/auth/maker_google_oauth2', to: 'omniauth_callbacks#maker_google_oauth2'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -190,7 +191,6 @@ Dashboard::Application.routes.draw do
   put '/featured_projects/:project_id/unfeature', to: 'featured_projects#unfeature'
   put '/featured_projects/:project_id/feature', to: 'featured_projects#feature'
 
-  get '/projects/public', to: 'projects#public'
   resources :projects, path: '/projects/', only: [:index] do
     collection do
       ProjectsController::STANDALONE_PROJECTS.each do |key, _|
@@ -204,6 +204,8 @@ Dashboard::Application.routes.draw do
         get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
         get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
       end
+
+      get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
     end
   end
 

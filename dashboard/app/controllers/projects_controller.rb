@@ -128,19 +128,16 @@ class ProjectsController < ApplicationController
 
   @@project_level_cache = {}
 
-  # GET /projects
+  # GET /projects/:tab_name
+  # Where a valid :tab_name is (nil|public|libraries)
   def index
-    if current_user.try(:admin)
-      redirect_to '/', flash: {alert: 'Labs not allowed for admins.'}
-      return
+    unless params[:tab_name] == 'public'
+      return redirect_to '/projects/public' unless current_user
+      return redirect_to '/', flash: {alert: 'Labs not allowed for admins.'} if current_user.admin
     end
 
-    return redirect_to projects_public_path unless current_user
-  end
-
-  # GET /projects/public
-  def public
-    render template: 'projects/index', locals: {is_public: true, limited_gallery: limited_gallery?}
+    @limited_gallery = limited_gallery?
+    @current_tab = params[:tab_name]
   end
 
   def project_and_featured_project_fields
@@ -201,7 +198,7 @@ class ProjectsController < ApplicationController
       combine_projects_and_featured_projects_data
       render template: 'projects/featured'
     else
-      redirect_to projects_public_path, flash: {alert: 'Only project validators can feature projects.'}
+      redirect_to '/projects/public', flash: {alert: 'Only project validators can feature projects.'}
     end
   end
 
