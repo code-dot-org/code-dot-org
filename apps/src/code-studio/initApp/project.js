@@ -479,6 +479,9 @@ var projects = (module.exports = {
 
   __TestInterface: {
     // Used by UI tests
+    getCurrent() {
+      return current;
+    },
     isInitialSaveComplete() {
       return initialSaveComplete;
     },
@@ -583,15 +586,25 @@ var projects = (module.exports = {
       this.updateChannels_(callback);
     }
   },
-  setLibraryDetails(newName, newDescription, callback) {
+  setLibraryDetails(newName, newDescription, publishing = undefined) {
     current = current || {};
     if (
       current.libraryName !== newName ||
-      current.libraryDescription !== newDescription
+      current.libraryDescription !== newDescription ||
+      publishing !== undefined
     ) {
       current.libraryName = newName;
       current.libraryDescription = newDescription;
-      this.updateChannels_(callback);
+
+      if (publishing) {
+        // Tells the server to set libraryPublishedAt timestamp.
+        current.publishLibrary = true;
+      } else if (publishing === false) {
+        // Unpublishing, so nullify libraryPublishedAt timestamp.
+        current.libraryPublishedAt = null;
+      }
+
+      this.updateChannels_();
     }
   },
   setTitle(newName) {

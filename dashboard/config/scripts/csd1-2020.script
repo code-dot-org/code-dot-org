@@ -35,6 +35,10 @@ level 'CSD U1L06 TFMD_2020', named: true
 
 stage 'Apps and Storage', flex_category: 'csd1_2'
 level 'CSD U1L07 TFMD_2020', named: true
+level 'CSD U1 storage outfit', named: true
+level 'CSD U1 storage friends', named: true
+level 'CSD U1 storage movies', named: true
+level 'CSD U1 storage video', named: true
 
 stage 'Project - Propose an App', flex_category: 'csd1_2'
 level 'CSD U1L09 TFMD_2020', named: true

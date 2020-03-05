@@ -3,9 +3,11 @@ require 'test_helper'
 class OmniauthCallbacksControllerTest < ActionController::TestCase
   include Mocha::API
   include UsersHelper
+  STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
   setup do
     @request.env["devise.mapping"] = Devise.mappings[:user]
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
   end
 
   test "login: authorizing with known facebook account signs in" do
@@ -535,6 +537,94 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     )
     assert_equal user.primary_contact_info.data_hash[:oauth_token], auth[:credentials][:token]
     assert_equal user.primary_contact_info.data_hash[:oauth_token_expiration], auth[:credentials][:expires_at]
+  end
+
+  test 'maker_google_oauth2: returns an error if no token' do
+    # Go to function with no parameters
+    post :maker_google_oauth2
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_no_code')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if token is expired' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token from 6 minutes ago
+    secret_code = Encryption.encrypt_string_utf8(
+      (Time.now - 6.minutes).strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_token_expired')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if provider is incorrect' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token with incorrect provider
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "Clever"
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_wrong_provider')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: returns an error if user if is invalid' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token with corrupted authentication id
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + "test" + user_auth['credential_type']
+    )
+
+    # Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    assert_template 'maker/login_code'
+
+    # Check that flash alert displays desired message
+    expected_error = I18n.t('maker.google_oauth.error_invalid_user')
+    assert_select ".container .alert-danger", expected_error
+  end
+
+  test 'maker_google_oauth2: logs in user if valid token' do
+    #Given I have a Google-Code.org account
+    user = create :student, :google_sso_provider
+    user_auth = user.authentication_options.find_by_credential_type(AuthenticationOption::GOOGLE)
+
+    #Generate token
+    secret_code = Encryption.encrypt_string_utf8(
+      Time.now.strftime('%Y%m%dT%H%M%S%z') + user_auth['authentication_id'] + user_auth['credential_type']
+    )
+
+    #Go to function
+    post :maker_google_oauth2, params: {secret_code: secret_code}
+
+    #Then I am signed in
+    assert_equal user.id, signed_in_user_id
   end
 
   test 'google_oauth2: signs in user if user is found by credentials' do
