@@ -89,11 +89,13 @@ class SectionProgress extends Component {
 
   componentDidMount() {
     this.props.loadScript(this.props.scriptId);
-    this.props.fetchStandardsCoveredForScript(this.props.scriptId);
-    this.props.fetchStudentLevelScores(
-      this.props.scriptId,
-      this.props.section.id
-    );
+    if (experiments.isEnabled(experiments.STANDARDS_REPORT)) {
+      this.props.fetchStandardsCoveredForScript(this.props.scriptId);
+      this.props.fetchStudentLevelScores(
+        this.props.scriptId,
+        this.props.section.id
+      );
+    }
   }
 
   componentDidUpdate() {
