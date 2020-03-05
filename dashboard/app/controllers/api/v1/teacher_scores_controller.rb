@@ -3,15 +3,33 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   authorize_resource
 
   # POST /teacher_scores
-  def score_stage_for_section
+  def score_stages_for_section
     section = Section.find(params[:section_id])
     if section.user_id == current_user.id
-      TeacherScore.score_stage_for_section(
-        section,
-        params[:stage_id],
-        params[:score]
+      TeacherScore.transaction do
+        params[:stage_scores].each do |stage_score|
+          TeacherScore.score_stage_for_section(
+            params[:section_id],
+            stage_score[:stage_id],
+            stage_score[:score]
+          )
+        end
+        head :no_content
+      end
+    else
+      head :forbidden
+    end
+  end
+
+  # GET /teacher_scores/<:section_id>/<:script_id>
+  def get_teacher_scores_for_script
+    section = Section.find(params[:section_id])
+    if section.user_id == current_user.id
+      @teacher_scores = TeacherScore.get_level_scores_for_script_for_section(
+        params[:script_id],
+        params[:section_id]
       )
-      head :no_content
+      render json: @teacher_scores, each_serializer: Api::V1::TeacherScoreSerializer
     else
       head :forbidden
     end
@@ -22,6 +40,6 @@ class Api::V1::TeacherScoresController < Api::V1::JsonApiController
   # Never trust parameters from the scary internet, only allow the following
   # list through.
   def teacher_score_params
-    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :stage_id)
+    params.require(:teacher_score).permit(:user_level_id, :score, :teacher_id, :section_id, :stage_id, :script_id)
   end
 end

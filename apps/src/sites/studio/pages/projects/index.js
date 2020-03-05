@@ -26,10 +26,18 @@ $(document).ready(() => {
   });
   const store = getStore();
 
-  const initialState = projectsData.isPublic
-    ? Galleries.PUBLIC
-    : Galleries.PRIVATE;
-  store.dispatch(selectGallery(initialState));
+  // Default to private gallery if no tab is specified.
+  const currentTab = (
+    projectsData.currentTab || Galleries.PRIVATE
+  ).toUpperCase();
+
+  if (!Object.values(Galleries).includes(currentTab)) {
+    console.error(
+      `Unknown /projects tab '${currentTab}'. Make sure to add this tab to the Galleries constant.`
+    );
+  }
+
+  store.dispatch(selectGallery(currentTab));
   store.dispatch(setPersonalProjects());
   store.dispatch(setPublicProjects());
 
