@@ -82,7 +82,7 @@ module Cdo
           }
         )
         # Wait 20 minutes.  As of early-2020, it takes about 10 minutes to delete a clone of the production cluster.
-        wait_until_db_cluster_deleted(cluster_id, 10, 60)
+        wait_until_db_cluster_deleted(cluster_id, 20, 60)
       rescue Aws::RDS::Errors::DBClusterNotFoundFault => error
         CDO.log.info "Cluster #{cluster_id} does not exist. #{error.message}.  No need to delete it."
       end
