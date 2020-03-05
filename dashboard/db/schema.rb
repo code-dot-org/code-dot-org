@@ -1478,7 +1478,7 @@ ActiveRecord::Schema.define(version: 20200304032242) do
   end
 
   create_table "teacher_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",              unsigned: true
     t.integer  "teacher_id"
     t.integer  "score"
     t.datetime "created_at",    null: false
