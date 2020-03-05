@@ -54,6 +54,18 @@ mi-NZ:
         He ahuatanga "tae" ta ia kaikanikani. Na tēnei ahuatanga ka tinihia te tae o te kaikanikani.
 
         -   Na tēnei ka tinihia te tae ki tōu ake hiahia.
+      CourseD_Dance_Party_10: |-
+        E mohio ana mātau pewhea te tini ngā ahuatanga o ngā kaikanikani. Ka taea hōki tātou ki te māhia ngā ahuatanga i tēnei paraka, kia timata i te wa ka tangi te waiata:
+        <xml>
+          <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+      CourseD_Dance_Party_11: |-
+        Ko te mahi o te paraka tauwhāinga hei whakahaere i te waehere ia wa ka pehi te pātuhi kōpere o runga.
+
+        Tēnā pea ka tinihia te nekehanga, ka tinihia ngā momo ahuatanga. Kia auaha o mahi. Me tirohia kia kitea he paraka hou!
       CourseD_Dance_Party_11_5: |-
         Tiro atu ki tēnei paraka:
 
@@ -66,6 +78,10 @@ mi-NZ:
 
         Inaianei ka tae e koe ki te hanga kia maha ngā kaikanikani i te wa kotahi!
         Me whakamahia te paraka "rakiraki katoa" kia kanikani kotahi ai ngā rakiraki katoa.
+      CourseD_Dance_Party_11b: |-
+        He whakataetae kanikani! Ka dab te ngeru ia wa ka pehi i te patuhi kōpere māui. Ka "drop" te Karetao ia wa ka pehi te patuhi kōpere mātau, ka "pakipaki" ia wa ka pehi te pātuhi kōpere o runga.
+
+        **whakamahia te Karetao kia drop, pakipaki, drop, pakipaki kia tere rawa atu!**
       CourseD_Dance_Party_12: Ka mau te wehi! Hangaia he kanikani ki te tohatoha atu
         ki o hoa.
       CourseE_HOC 2018 Level_1: Me kohia nga momo whakarato mo te rerenga. Tikina
@@ -138,6 +154,14 @@ mi-NZ:
         He ahuatanga "tae" ta ia kaikanikani. Na tēnei ahuatanga ka tinihia te tae o te kaikanikani.
 
         -   Na tēnei ka tinihia te tae ki tōu ake hiahia.
+      Dance_Party_10: |-
+        E mohio ana mātau pewhea te tini ngā ahuatanga o ngā kaikanikani. Ka taea hōki tātou ki te māhia ngā ahuatanga i tēnei paraka, kia timata i te wa ka tangi te waiata:
+        <xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
       Dance_Party_11: |-
         Na te paraka <xml><block type="Dancelab_whenKey"></block></xml> ka tae e koe te waehere ngā whakahaerenga ia wa ka pā i te patuhi pere.
 
@@ -155,6 +179,10 @@ mi-NZ:
         Ka taea te hanga kia maha ngā kaikanikani i te wa kotahi!
 
         Me whakamahia te paraka "rakiraki katoa" ki te waehere ngā rakiraki kia kanikani kia kotahi.
+      Dance_Party_11b: |-
+        He whakataetae kanikani! Ka dab te ngeru ia wa ka pehi i te patuhi kōpere māui. Ka "drop" te Karetao ia wa ka pehi te patuhi kōpere mātau, ka "pakipaki" ia wa ka pehi te pātuhi kōpere o runga.
+
+        **whakamahia te Karetao kia drop, pakipaki, drop, pakipaki kia tere rawa atu!**
       Dance_Party_12: Ka mau te wehi! Hangaia he kanikani ki te tohatoha atu ki o
         hoa.
       HOC 2018 Level_1: Me kohia nga momo whakarato mo te rerenga. Tikina he **waka**

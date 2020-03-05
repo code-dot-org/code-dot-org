@@ -1128,7 +1128,7 @@ it:
       gamelab_setBackground:
         text: imposta il colore dello sfondo {COLOR}
       gamelab_setBackgroundImage:
-        text: imposta il colore dello sfondo {IMG}
+        text: imposta lo sfondo {IMG}
         options:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta

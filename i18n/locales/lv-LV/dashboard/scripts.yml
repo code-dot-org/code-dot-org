@@ -1425,3 +1425,47 @@ lv:
               name: Ātrums
             Functions:
               name: Funkcijas
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Nokļūst galamērķos droši
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tavs digitālais nospiedums
+            Move It, Move It:
+              name: Ej, ej
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binārās aproces
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Releju programmēšana
+            Conditionals with Cards:
+              name: nosacījumi ar kārtēm
+            'Unplugged: Binary':
+              name: 'Atvienots: binārs'
+            Artist Binary:
+              name: 'Mākslinieks: Binārais'
+            Digital Citizenship:
+              name: Digitālā pilsonība
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Sazarojumi
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Aplokšņu mainīgie
+            For Loop Fun:
+              name: Jautrība ar "For" Cikliem
+            Internet:
+              name: Internets
+            Crowdsourcing:
+              name: Pūļa ieguve
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Burtošanas bite

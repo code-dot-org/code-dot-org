@@ -3230,7 +3230,7 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}

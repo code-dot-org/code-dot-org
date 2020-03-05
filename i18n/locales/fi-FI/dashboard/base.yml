@@ -899,3 +899,4 @@ fi:
   gdpr_dialog:
     heading: 'Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?'
     yes: 'Kyllä'
+  copy: 'Kopioi'

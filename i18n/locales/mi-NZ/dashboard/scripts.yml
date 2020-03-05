@@ -1241,6 +1241,7 @@ mi:
           stages:
             Dance Party:
               name: Te Pāti Kanikani
+          description_short: Me ngā waiata a Katy Perry, Madonna, J. Balvin, Keith Urban, Ciara me etahi atu!
         frozen-2018-test-b:
           stages:
             Artist:
@@ -1468,3 +1469,51 @@ mi:
               name: Ngā Here
             Functions:
               name: Ngā Taumahi
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Te Karore Haumaru
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tō Tapuwae Matihiko
+            Move It, Move It:
+              name: E Neke, E Neke
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Kōmore Ā-Rua
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Papatonotanga ā-Tānga
+            'Unplugged: Binary':
+              name: 'Momotu: Tāhūrua'
+            Artist Binary:
+              name: Rehetoi Tāhūrua
+            Digital Citizenship:
+              name: Te Kirirarautanga Matihiko
+            Dance Party:
+              name: Te Pāti Kanikani
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Ngā Here
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Ngā Taurangi Kōpaki
+            For Loop Fun:
+              name: Kia Ngahau te Mahi Koromeke
+            Internet:
+              name: Te Ipurangi
+            Crowdsourcing:
+              name: Te Mahi ā-Ohu
+        express-2020:
+          stages:
+            Dance Party:
+              name: Te Pāti Kanikani
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Ohu Takikupu
