@@ -27,11 +27,14 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {loadScript} from '../sectionProgressRedux';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {
+  fetchStandardsCoveredForScript,
+  fetchStudentLevelScores
+} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   printView: {
@@ -75,10 +78,11 @@ class StandardsReport extends Component {
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
-    getStandardsCoveredForScript: PropTypes.func.isRequired,
+    fetchStandardsCoveredForScript: PropTypes.func.isRequired,
     setTeacherCommentForReport: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
-    lessonsByStandard: PropTypes.object
+    lessonsByStandard: PropTypes.object,
+    fetchStudentLevelScores: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -89,7 +93,8 @@ class StandardsReport extends Component {
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
     this.props.loadScript(scriptIdFromTD);
-    this.props.getStandardsCoveredForScript(scriptIdFromTD);
+    this.props.fetchStandardsCoveredForScript(scriptIdFromTD);
+    this.props.fetchStudentLevelScores(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -230,8 +235,11 @@ export default connect(
     loadScript(scriptId) {
       dispatch(loadScript(scriptId));
     },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
+    fetchStandardsCoveredForScript(scriptId) {
+      dispatch(fetchStandardsCoveredForScript(scriptId));
+    },
+    fetchStudentLevelScores(scriptId, sectionId) {
+      dispatch(fetchStudentLevelScores(scriptId, sectionId));
     },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));

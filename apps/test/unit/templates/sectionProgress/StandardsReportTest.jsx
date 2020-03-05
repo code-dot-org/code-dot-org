@@ -18,7 +18,8 @@ describe('StandardsReport', () => {
       numStudentsInSection: 15,
       numLessonsCompleted: 5,
       numLessonsInUnit: 10,
-      getStandardsCoveredForScript: () => {},
+      fetchStandardsCoveredForScript: () => {},
+      fetchStudentLevelScores: () => {},
       setTeacherCommentForReport: comment => {
         DEFAULT_PROPS.teacherComment = comment;
       },
