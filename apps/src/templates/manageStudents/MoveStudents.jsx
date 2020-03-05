@@ -2,16 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import * as Table from 'reactabular-table';
-import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import Immutable from 'immutable';
-import {orderBy, compact} from 'lodash';
+import {compact} from 'lodash';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../Button';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/templates/Button';
+import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {
   updateStudentTransfer,
   transferStudents,
@@ -24,39 +20,14 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
-const TABLE_WIDTH = 300;
-const DIALOG_WIDTH = 800;
 const INPUT_WIDTH = 225;
-const CHECKBOX_CELL_WIDTH = 50;
+const DIALOG_WIDTH = 800;
 
 const styles = {
   dialog: {
     padding: PADDING,
     width: DIALOG_WIDTH,
     marginLeft: -(DIALOG_WIDTH / 2)
-  },
-  container: {
-    display: 'flex'
-  },
-  table: {
-    width: TABLE_WIDTH,
-    margin: 2
-  },
-  checkboxCell: {
-    width: CHECKBOX_CELL_WIDTH,
-    textAlign: 'center'
-  },
-  checkbox: {
-    margin: 0
-  },
-  rightColumn: {
-    flex: 1,
-    paddingLeft: PADDING,
-    paddingRight: PADDING
-  },
-  infoText: {
-    paddingTop: PADDING / 4,
-    paddingBottom: PADDING / 2
   },
   label: {
     paddingTop: PADDING / 2
@@ -76,13 +47,6 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     color: color.red,
     paddingBottom: PADDING / 2
-  }
-};
-
-const DEFAULT_SORT = {
-  1: {
-    direction: 'asc',
-    position: 0
   }
 };
 
@@ -123,7 +87,6 @@ class MoveStudents extends Component {
 
   state = {
     isDialogOpen: false,
-    sortingColumns: DEFAULT_SORT
   };
 
   openDialog = () => {
@@ -139,22 +102,6 @@ class MoveStudents extends Component {
     return this.props.studentData.map(s => s.id);
   };
 
-  areAllSelected = () => {
-    return Immutable.Set(this.props.transferData.studentIds).isSuperset(
-      this.getStudentIds()
-    );
-  };
-
-  toggleSelectAll = () => {
-    let studentIds = [];
-
-    if (!this.areAllSelected()) {
-      studentIds = this.getStudentIds();
-    }
-
-    this.props.updateStudentTransfer({studentIds});
-  };
-
   toggleStudentSelected = studentId => {
     let studentIds = [...this.props.transferData.studentIds];
 
@@ -168,96 +115,6 @@ class MoveStudents extends Component {
     this.props.updateStudentTransfer({studentIds});
   };
 
-  selectedStudentHeaderFormatter = () => {
-    return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={this.areAllSelected()}
-        onChange={this.toggleSelectAll}
-      />
-    );
-  };
-
-  selectedStudentFormatter = (_, {rowData}) => {
-    return (
-      <input
-        style={styles.checkbox}
-        type="checkbox"
-        checked={rowData.isChecked}
-        onChange={() => this.toggleStudentSelected(rowData.id)}
-      />
-    );
-  };
-
-  getColumns = sortable => {
-    return [
-      {
-        property: 'selected',
-        header: {
-          label: '',
-          formatters: [this.selectedStudentHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...styles.checkboxCell
-            }
-          }
-        },
-        cell: {
-          formatters: [this.selectedStudentFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.checkboxCell
-            }
-          }
-        }
-      },
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            id: 'uitest-name-header',
-            style: {
-              ...tableLayoutStyles.headerCell
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          props: {
-            className: 'uitest-name-cell',
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
-    ];
-  };
-
-  getSortingColumns = () => {
-    return this.state.sortingColumns || {};
-  };
-
-  // The user requested a new sorting column. Adjust the state accordingly.
-  onSort = selectedColumn => {
-    this.setState({
-      sortingColumns: sort.byColumn({
-        sortingColumns: this.state.sortingColumns,
-        // Custom sortingOrder removes 'no-sort' from the cycle
-        sortingOrder: {
-          FIRST: 'asc',
-          asc: 'desc',
-          desc: 'asc'
-        },
-        selectedColumn
-      })
-    });
-  };
-
   isValidDestinationSection = section => {
     const isSameAsSource = section.id === this.props.currentSectionId;
     const isExternallyRostered = ![
@@ -269,30 +126,20 @@ class MoveStudents extends Component {
     return !isSameAsSource && !isExternallyRostered;
   };
 
-  renderOptions = () => {
+  getOptions = () => {
     const {sections} = this.props;
     let options = Object.keys(sections).map(sectionId => {
       const section = sections[sectionId];
       if (this.isValidDestinationSection(section)) {
-        return (
-          <option key={section.id} value={section.id}>
-            {section.name}
-          </option>
-        );
+        return {id: section.id, name: section.name};
       } else {
         return null;
       }
     });
     options = compact(options);
 
-    // Add initial empty and final 'other teacher' options
-    options.unshift(<option key="empty" value="" />);
-    options.push(
-      <option key={OTHER_TEACHER} value={OTHER_TEACHER}>
-        {i18n.otherTeacher()}
-      </option>
-    );
-
+    // Add final 'other teacher' options
+    options.push({id: OTHER_TEACHER, name: i18n.otherTeacher()});
     return options;
   };
 
@@ -349,23 +196,6 @@ class MoveStudents extends Component {
   render() {
     const {studentData, transferData, transferStatus} = this.props;
     // Define a sorting transform that can be applied to each column
-    const sortable = wrappedSortable(
-      this.getSortingColumns,
-      this.onSort,
-      sortableOptions
-    );
-    const columns = this.getColumns(sortable);
-    const sortingColumns = this.getSortingColumns();
-    const decoratedRows = studentData.map(row => ({
-      ...row,
-      isChecked: transferData.studentIds.includes(row.id)
-    }));
-
-    const sortedRows = sort.sorter({
-      columns,
-      sortingColumns,
-      sort: orderBy
-    })(decoratedRows);
 
     const pendingTransfer = transferStatus.status === TransferStatus.PENDING;
 
@@ -382,28 +212,21 @@ class MoveStudents extends Component {
           style={styles.dialog}
           handleClose={this.closeDialog}
         >
-          <div style={styles.container}>
-            <Table.Provider columns={columns} style={styles.table}>
-              <Table.Header />
-              <Table.Body rows={sortedRows} rowKey="id" />
-            </Table.Provider>
-            <div style={styles.rightColumn}>
+          <SortedTableSelect
+            rowData={studentData}
+            onRowChecked={this.props.updateStudentTransfer}
+            options={this.getOptions()}
+            onChooseOption={this.onChangeSection}
+            descriptionText={i18n.selectStudentsToMove()}
+            optionsDescriptionText={`${i18n.moveToSection()}:`}
+            titleText={"Move Students"}
+          >
+            <div>
               {transferStatus.status === TransferStatus.FAIL && (
                 <div id="uitest-error" style={styles.error}>
                   {transferStatus.error}
                 </div>
               )}
-              <div style={styles.infoText}>{i18n.selectStudentsToMove()}</div>
-              <label htmlFor="sections" style={styles.label}>
-                {`${i18n.moveToSection()}:`}
-              </label>
-              <select
-                name="sections"
-                style={styles.input}
-                onChange={this.onChangeSection}
-              >
-                {this.renderOptions()}
-              </select>
               {transferData.otherTeacher && (
                 <div id="uitest-other-teacher">
                   <label htmlFor="sectionCode" style={styles.label}>
@@ -445,22 +268,20 @@ class MoveStudents extends Component {
                 </div>
               )}
             </div>
-          </div>
+          </SortedTableSelect>
           <DialogFooter>
             <Button
-              id="uitest-cancel"
               text={i18n.dialogCancel()}
               onClick={this.closeDialog}
               color={Button.ButtonColor.gray}
             />
             <Button
-              id="uitest-submit"
-              text={i18n.moveStudents()}
+              text={"Save changes"}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
               disabled={pendingTransfer || this.isButtonDisabled()}
               isPending={pendingTransfer}
-              pendingText={i18n.movingStudents()}
+              pendingText={"Saving changes..."}
             />
           </DialogFooter>
         </BaseDialog>
