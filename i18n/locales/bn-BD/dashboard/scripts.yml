@@ -1016,3 +1016,23 @@ bn:
               name: শর্তযুক্ত
             Functions:
               name: ফাংশনগুলি
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: রিলে-স্যুইচ প্রোগ্রামিং
+            Conditionals with Cards:
+              name: কার্ড সঙ্গে শর্ত
+            Artist Binary:
+              name: শিল্পী দ্বিমিক
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: শর্তযুক্ত
+        coursef-2020:
+          stages:
+            Internet:
+              name: ইন্টারনেট
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: বানান মৌমাছি

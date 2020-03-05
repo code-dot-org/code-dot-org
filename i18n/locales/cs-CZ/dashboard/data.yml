@@ -357,6 +357,10 @@ cs:
         CSF_collector_repeat_loops: Sběrač opakuje smyčku
         CSF_collector_text_blocks: 'Základy informatiky: Sběračka'
         CSF_create_functions: Vytváření funkcí
+        CSF_debugging_k1_blocks: Ladění
+        CSF_debugging_text_blocks: Ladění
+        CSF_maze_intro_k1_blocks: Úvod do Code studia
+        CSF_maze_intro_text_blocks: Úvod do Code studia
         CSF_my_robotic_friends: Mí robotičtí přátelé
         CSF_Power_of_Words: Síla slov
         CSF_Super_Digital_Citizen: Super digitální občan
@@ -415,6 +419,8 @@ cs:
         mc_2017_puzzle_3: Hodina kódu s Minecraftem - Cykly
         mc_2017_puzzle_8: Hodina kódu s Minecraftem - Funkce
         mc_2017_puzzle_12: Hodina kódu s Minecraftem - Volná hra
+        CSF_scrat_loops_K1: Cykly v době ledové
+        CSF_scrat_loops_CF: Cykly v době ledové
         CSF_loops_AB: Cykly
         CSF_StarWars_ProjectIntro: Úvod do projektu Star Wars
         hoc_dance_warmup: Dance Party - Na rozehřátí
@@ -424,6 +430,7 @@ cs:
         csd_pair_programming: Párové programování
         csd_applab_parameters: Funkce s Parametry
         CSF_Going_Places_Safely: Mé online sousedství
+        csd_debugging: Ladění
         csp-pd-welcome: Vítej v rodině!
         oceans_machine_learning: Strojové učení
         hoc_dance_congrats_2019: Dance Party 2019 - Jedeme dál!

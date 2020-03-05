@@ -4018,3 +4018,98 @@ es:
               description_teacher: En esta lección de varios días, los estudiantes usan el proceso de resolución de problemas de la Unidad 1 para crear un juego de salto de plataforma. Comienzan por mirar un ejemplo de un saltador de plataforma y luego definen cómo se verán sus juegos. A continuación, utilizan un proceso estructurado para planificar los fondos, las variables, los sprites y las funciones que necesitarán para implementar su juego. Después de escribir el código del juego, los estudiantes reflexionarán sobre cómo se puede mejorar el juego e implementarán esos cambios.
             Project - Design a Game:
               description_teacher: Los estudiantes planificarán y construirán su propio juego utilizando la guía del proyecto de las dos lecciones anteriores para guiar su proyecto. Trabajando individualmente o en parejas, los estudiantes primero decidirán el tipo de juego que les gustaría construir, tomando como inspiración un conjunto de juegos de muestra. Luego completarán una guía de proyecto en blanco donde describirán el comportamiento del juego y el alcance de las variables, sprites y funciones que necesitarán construir. En Code Studio, una serie de niveles les indica una secuencia general que pueden usar para implementar este plan. A mitad del proceso, los estudiantes compartirán sus proyectos para la revisión por pares e incorporarán comentarios a medida que finalicen su juego. Al final de la lección, los estudiantes compartirán sus juegos completados con sus compañeros de clase. Este proyecto abarcará múltiples clases y puede tomar fácilmente de 3-5 períodos de clase.
+        coursea-2020:
+          description_short: Una introducción a la informática para pre-lectores.
+          stages:
+            Going Places Safely:
+              name: Ir a Sitios Seguro
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Tu huella Digital
+            Move It, Move It:
+              name: Muévelo, Muévelo
+            Loops in Artist:
+              name: Bucles en Artista
+        coursec-2020:
+          description_short: Aprende los conceptos básicos de las ciencias de la computación y crea tu propio arte, historias y juegos.
+          description_audience: 'Edades de 6 a 10 años'
+          stages:
+            Powerful Passwords:
+              name: Contraseñas fuertes
+            Binary Bracelets:
+              name: Pulseras Binarias
+            Looking Ahead:
+              name: Observando hacia el futuro
+            Picturing Data:
+              name: Datos de gráfico
+        coursed-2020:
+          description_audience: 'Edades de 7 a 11 años'
+          stages:
+            Relay Programming:
+              name: Programación de Relevos
+              description_teacher: Esta actividad comenzará con una lección breve sobre depuración y persistencia, luego pasará rápidamente a una carrera contrarreloj mientras los estudiantes se agrupan en equipos y trabajan juntos para escribir una instrucción de un programa a la vez.
+            Build a Star Wars Game:
+              name: Construye un juego de la Guerra de las Galaxias
+              description_student: Siente la fuerza cuando construyes tu propio juego de la Guerra de las Galaxias en esta lección.
+              description_teacher: En esta lección, los estudiantes pondrán en práctica utilizando eventos para construir un juego que pueden compartir en línea. Con R2-D2 y otros personajes de Star Wars, los estudiantes serán guiados a través de eventos, luego le dadas espacio para crear su propio juego.
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
+            Loops in Artist:
+              name: Bucles en Artista
+            Conditionals with Cards:
+              name: Condicionales con tarjetas
+            'Unplugged: Binary':
+              name: 'Desconectado: binario'
+            Artist Binary:
+              name: Artista binario
+            Digital Citizenship:
+              name: Ciudadanía Digital
+            Dance Party:
+              name: Fiesta para bailar
+        coursee-2020:
+          description_audience: 'Edades de 8 a 12 años'
+          stages:
+            Conditionals:
+              name: Condicionales
+            Simon Says:
+              name: Simón dice
+              description_student: Juega un juego y piensa en qué comandos se necesitan para obtener el resultado correcto.
+            Access Ability:
+              name: Habilidad de acceso
+            'Functions: Songwriting':
+              description_teacher: Una de las estructuras más magníficas en el mundo de las ciencias de la computación es la función.  Las Funciones (a veces llamadas procedimientos) son mini programas que puedes utilizar una y otra vez dentro de tu programa más grande. Esta clase  ayudará a los alumnos a entender intuitivamente por qué la combinación de partes de código en funciones es una práctica tan útil.  
+        coursef-2020:
+          description_short: Aprende todos los conceptos de Fundamentos de Informática y crea tu propio arte, historia o juego.
+          description_audience: 'Edades de 9 a 13 años'
+          stages:
+            Envelope Variables:
+              name: Variables de sobre
+            For Loop Fun:
+              name: Diversión con bucles Para
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Colaboración Abierta
+            Digital Sharing:
+              name: Compartir digital
+              description_teacher: Prestada para los fundamentos de la Ciencia de la Computación por el equipo de Copyright y Creatividad, esta lección se ha creado para ayudar a los estudiantes a entender los retos y beneficios de respetar la propiedad y derechos de autos, en particular en entornos digitales. Se debería animar a los estudiantes a respetar los derechos de los artistas como una parte importante para ser un ciudadano digital ético.
+        express-2020:
+          title: Curso Rápido (2017)
+          description_short: 'Una introducción a la ciencia de la computación: combina lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
+          stages:
+            Dance Party:
+              name: Fiesta para bailar
+            Loops in Artist:
+              name: Bucles en Artista
+        pre-express-2020:
+          description_short: 'Introducción a las ciencias de la computación para preescolar: combina lo mejor de nuestros cursos de jardín de infantes y primer grado.'
+          stages:
+            Spelling Bee:
+              name: Concurso de Ortografía
+            Loops in Ice Age:
+              name: Bucles en la Edad del Hielo
+            Loops in Artist:
+              name: Bucles en Artista
