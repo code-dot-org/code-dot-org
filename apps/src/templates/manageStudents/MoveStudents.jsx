@@ -86,7 +86,7 @@ class MoveStudents extends Component {
   };
 
   state = {
-    isDialogOpen: false,
+    isDialogOpen: false
   };
 
   openDialog = () => {
@@ -214,12 +214,14 @@ class MoveStudents extends Component {
         >
           <SortedTableSelect
             rowData={studentData}
-            onRowChecked={this.props.updateStudentTransfer}
+            onRowChecked={studentIds =>
+              this.props.updateStudentTransfer({studentIds: studentIds})
+            }
             options={this.getOptions()}
             onChooseOption={this.onChangeSection}
             descriptionText={i18n.selectStudentsToMove()}
             optionsDescriptionText={`${i18n.moveToSection()}:`}
-            titleText={"Move Students"}
+            titleText={i18n.moveStudents()}
           >
             <div>
               {transferStatus.status === TransferStatus.FAIL && (
@@ -276,12 +278,12 @@ class MoveStudents extends Component {
               color={Button.ButtonColor.gray}
             />
             <Button
-              text={"Save changes"}
+              text={i18n.moveStudents()}
               onClick={this.transfer}
               color={Button.ButtonColor.orange}
               disabled={pendingTransfer || this.isButtonDisabled()}
               isPending={pendingTransfer}
-              pendingText={"Saving changes..."}
+              pendingText={i18n.movingStudents()}
             />
           </DialogFooter>
         </BaseDialog>
