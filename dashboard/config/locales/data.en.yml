@@ -591,6 +591,7 @@ en:
         hoc_dance_events_2019: Dance Party - Events
         hoc_dance_measures_2019: Dance Party - Measures
         hoc_dance_properties_2019: Dance Party - Properties
+        csd_what_computers_do: What Do Computers Do?
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

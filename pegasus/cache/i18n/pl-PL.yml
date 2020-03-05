@@ -27,8 +27,6 @@ pl-PL:
   petition_message: Każdy uczeń w każdej szkole powinien móc uczyć się informatyki
   petition_sign_message: 'Jeśli zgadzasz się, wpisz swoje nazwisko. Przyłącz się do
     # innych.'
-  petition_sign_message_support: 'Jeśli nas wspierasz, wpisz swoje nazwisko. Dołącz
-    do # innych.'
   petition_join_others: 'Dołącz do # innych'
   name: Imię/Nazwisko
   email: Adres e-mail
