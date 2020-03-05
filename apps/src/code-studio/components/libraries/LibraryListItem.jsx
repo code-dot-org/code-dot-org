@@ -1,51 +1,86 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 const styles = {
+  overflowEllipsis: {
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
   listItem: {
-    marginLeft: 7,
-    marginRight: 7,
+    padding: 8,
+    margin: 2,
     color: color.dark_charcoal,
     textAlign: 'left',
     display: 'flex',
-    borderBottom: 'inset'
+    borderBottom: `1px solid ${color.lightest_gray}`,
+    lineHeight: 1.5
   },
+  // TODO: RENAME THIS
   libraryName: {
-    fontSize: 'large',
-    marginTop: 10,
-    textOverflow: 'ellipsis',
-    flex: '0 0 250px',
-    overflow: 'hidden'
+    marginRight: 25
+  },
+  libraryTitle: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    fontSize: 16,
+    color: color.link_color,
+    ':hover': {
+      color: color.link_color
+    }
   },
   description: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    marginTop: 10,
-    lineHeight: '19px',
-    position: 'relative',
+    marginRight: 25,
+    flexShrink: 2
+  },
+  actions: {
+    display: 'flex',
     flexGrow: 1,
-    marginRight: 5
+    justifyContent: 'flex-end'
   },
-  viewCode: {
-    position: 'absolute',
-    right: 0,
-    background: 'inherit'
+  actionBtn: {
+    padding: 8,
+    fontSize: 18
   },
-  addButton: {
-    marginLeft: 'auto'
+  iconPadding: {
+    padding: '0 2px'
   },
-  author: {
-    color: color.black,
-    fontWeight: 'bold'
+  addBtn: {
+    color: color.dark_charcoal,
+    borderColor: color.dark_charcoal
+  },
+  updateBtn: {
+    color: color.orange,
+    backgroundColor: color.white,
+    borderColor: color.orange,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.orange
+    }
+  },
+  updateText: {
+    fontFamily: "'Gotham 5r', sans-serif",
+    paddingLeft: 5,
+    fontSize: 16
+  },
+  removeBtn: {
+    color: color.dark_red,
+    backgroundColor: color.white,
+    borderColor: color.dark_red,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.dark_red
+    }
   }
 };
 
-export default class LibraryListItem extends React.Component {
+export class LibraryListItem extends React.Component {
   static propTypes = {
     library: PropTypes.object.isRequired,
+    // TODO: RENAME TO onUpdate
     onRefresh: PropTypes.func,
     onRemove: PropTypes.func,
     onAdd: PropTypes.func,
@@ -59,47 +94,60 @@ export default class LibraryListItem extends React.Component {
 
   render() {
     let library = this.props.library;
+
     return (
-      <div className="assetRow" style={styles.listItem}>
-        <span style={styles.libraryName}>{library.name}</span>
-        <span style={styles.description}>
-          {library.description}
-          <br />
-          {library.userName && (
-            <span style={styles.author}>Author: {library.userName}</span>
-          )}
-          <a onClick={this.viewCode} style={styles.viewCode}>
-            {i18n.viewCode()}
+      <div style={styles.listItem}>
+        <div style={[styles.libraryName, styles.overflowEllipsis]}>
+          <a onClick={this.viewCode} style={styles.libraryTitle}>
+            {library.name}
           </a>
-        </span>
-        {this.props.onAdd && (
-          <button
-            style={styles.addButton}
-            type="button"
-            onClick={() => this.props.onAdd(library.id)}
-          >
-            <FontAwesome icon="plus" />
-          </button>
-        )}
-        {this.props.onRefresh && (
-          <button
-            type="button"
-            onClick={() => this.props.onRefresh(library.name)}
-            style={styles.refreshButton}
-          >
-            <FontAwesome icon="refresh" />
-          </button>
-        )}
-        {this.props.onRemove && (
-          <button
-            type="button"
-            onClick={() => this.props.onRemove(library.name)}
-            className="btn-danger"
-          >
-            <FontAwesome icon="trash-o" />
-          </button>
-        )}
+          {library.userName && (
+            <div style={[styles.author, styles.overflowEllipsis]}>
+              <InlineMarkdown
+                markdown={i18n.authorName({name: library.userName})}
+              />
+            </div>
+          )}
+        </div>
+        <div style={[styles.description, styles.overflowEllipsis]}>
+          {library.description}
+        </div>
+        <div style={styles.actions}>
+          {this.props.onAdd && (
+            <button
+              type="button"
+              key={'add-' + library.id}
+              onClick={() => this.props.onAdd(library.id)}
+              style={[styles.actionBtn, styles.addBtn]}
+            >
+              <FontAwesome icon="plus" style={styles.iconPadding} />
+            </button>
+          )}
+          {this.props.onRefresh && (
+            <button
+              type="button"
+              key={'update-' + library.id}
+              onClick={() => this.props.onRefresh(library.name)}
+              style={[styles.actionBtn, styles.updateBtn]}
+            >
+              <FontAwesome icon="refresh" style={{padding: '0 1px'}} />
+              <span style={styles.updateText}>{i18n.update()}</span>
+            </button>
+          )}
+          {this.props.onRemove && (
+            <button
+              type="button"
+              key={'remove-' + library.id}
+              onClick={() => this.props.onRemove(library.name)}
+              style={[styles.actionBtn, styles.removeBtn]}
+            >
+              <FontAwesome icon="trash-o" style={styles.iconPadding} />
+            </button>
+          )}
+        </div>
       </div>
     );
   }
 }
+
+export default Radium(LibraryListItem);
