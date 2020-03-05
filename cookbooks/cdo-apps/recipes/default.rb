@@ -134,3 +134,5 @@ include_recipe 'cdo-tippecanoe' if node['cdo-apps']['daemon']
 include_recipe 'cdo-apps::resolved'
 
 include_recipe 'cdo-apps::rbspy'
+
+include_recipe 'cdo-apps::syslog_permissions'
