@@ -14,4 +14,15 @@
         print-color-adjust: exact !important;
         font-family: "Gotham 4r", Sans-Serif;
     }
+    a {
+        text-decoration: none;
+    }
+}
+
+* {
+    font-family: "Gotham 4r", Sans-Serif;
+}
+
+a {
+    text-decoration: none;
 }
