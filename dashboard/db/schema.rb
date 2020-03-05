@@ -734,7 +734,7 @@ ActiveRecord::Schema.define(version: 20200304032242) do
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
   end
 
-  create_table "pd_legacy_survey_summary", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+  create_table "pd_legacy_survey_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "facilitator_id"
     t.string   "course"
     t.string   "subject"
