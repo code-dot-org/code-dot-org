@@ -103,6 +103,7 @@ export default class LibraryPublisher extends React.Component {
       libraryDescription
     );
 
+    // Publish to S3
     libraryClientApi.publish(
       libraryJson,
       error => {
@@ -113,7 +114,13 @@ export default class LibraryPublisher extends React.Component {
         onPublishSuccess(libraryName);
       }
     );
-    dashboard.project.setLibraryDetails(libraryName, libraryDescription);
+
+    // Write to projects database
+    dashboard.project.setLibraryDetails(
+      libraryName,
+      libraryDescription,
+      true /* publishing */
+    );
   };
 
   displayNameInput = () => {
@@ -236,10 +243,14 @@ export default class LibraryPublisher extends React.Component {
     libraryClientApi.delete(
       () => {
         onUnpublishSuccess();
-        dashboard.project.setLibraryDetails(undefined, undefined);
+        dashboard.project.setLibraryDetails(
+          undefined,
+          undefined,
+          false /* publishing */
+        );
       },
       error => {
-        console.warn(`Error publishing library: ${error}`);
+        console.warn(`Error unpublishing library: ${error}`);
         this.setState({publishState: PublishState.ERROR_UNPUBLISH});
       }
     );
@@ -247,6 +258,7 @@ export default class LibraryPublisher extends React.Component {
 
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
+
     return (
       <div>
         <Heading2>{i18n.libraryName()}</Heading2>
