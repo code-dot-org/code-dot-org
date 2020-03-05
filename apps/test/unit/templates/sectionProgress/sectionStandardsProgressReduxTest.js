@@ -4,7 +4,8 @@ import sectionStandardsProgress, {
   getUnpluggedLessonsForScript,
   getNumberLessonsInScript,
   lessonsByStandard,
-  getLessonCompletionStatus
+  getLessonCompletionStatus,
+  getNumberLessonsCompleted
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const stageId = 662;
@@ -416,6 +417,16 @@ describe('sectionStandardsProgressRedux', () => {
         completed: true,
         numStudentsCompleted: 4
       });
+    });
+  });
+
+  describe('getNumberLessonsCompleted', () => {
+    it('accurately calculates number of lessons completed when there is no student progress', () => {
+      expect(getNumberLessonsCompleted(fakeState)).to.equal(0);
+    });
+
+    it('accurately calculates the number of lessons completed when there is student progress', () => {
+      expect(getNumberLessonsCompleted(stateForCompletedLesson)).to.equal(1);
     });
   });
 });
