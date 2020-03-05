@@ -17,14 +17,21 @@ const styles = {
 
 class LessonStatusList extends Component {
   static propTypes = {
+    // Redux
     unpluggedLessonList: PropTypes.array,
     setSelectedLessons: PropTypes.func.isRequired,
-    selectedLessons: PropTypes.array.isRequired
+    selectedLessons: PropTypes.array.isRequired,
+    scriptId: PropTypes.number,
+    getUnpluggedLessonsForScript: PropTypes.func.isRequired
   };
 
   handleChange = selectedLessons => {
     this.props.setSelectedLessons(selectedLessons);
   };
+
+  componentDidMount() {
+    this.props.getUnpluggedLessonsForScript(this.props.scriptId);
+  }
 
   render() {
     return (
@@ -72,12 +79,16 @@ export const UnconnectedLessonStatusList = LessonStatusList;
 
 export default connect(
   state => ({
-    unpluggedLessonList: getUnpluggedLessonsForScript(state),
+    scriptId: state.scriptSelection.scriptId,
+    unpluggedLessonList: state.sectionStandardsProgress.unpluggedLessons,
     selectedLessons: state.sectionStandardsProgress.selectedLessons
   }),
   dispatch => ({
     setSelectedLessons(selected) {
       dispatch(setSelectedLessons(selected));
+    },
+    getUnpluggedLessonsForScript(scriptId) {
+      dispatch(getUnpluggedLessonsForScript(scriptId));
     }
   })
 )(LessonStatusList);

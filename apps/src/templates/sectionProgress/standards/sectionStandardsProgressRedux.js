@@ -6,6 +6,7 @@ const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
 const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
+const SET_UNPLUGGED_LESSONS = 'sectionStandardsProgress/SET_UNPLUGGED_LESSONS';
 const SET_STUDENT_LEVEL_SCORES =
   'sectionStandardsProgress/SET_STUDENT_LEVEL_SCORES';
 
@@ -21,6 +22,10 @@ export const setSelectedLessons = selected => ({
   type: SET_SELECTED_LESSONS,
   selected
 });
+export const setUnpluggedLessons = unpluggedLessons => ({
+  type: SET_UNPLUGGED_LESSONS,
+  unpluggedLessons
+});
 export const setStudentLevelScores = scoresData => ({
   type: SET_STUDENT_LEVEL_SCORES,
   scoresData
@@ -31,6 +36,7 @@ const initialState = {
   standardsData: [],
   teacherComment: null,
   selectedLessons: [],
+  unpluggedLessons: [],
   studentLevelScoresByStage: {}
 };
 
@@ -64,6 +70,12 @@ export default function sectionStandardsProgress(state = initialState, action) {
       selectedLessons: action.selected
     };
   }
+  if (action.type === SET_UNPLUGGED_LESSONS) {
+    return {
+      ...state,
+      unpluggedLessons: action.unpluggedLessons
+    };
+  }
   if (action.type === SET_STUDENT_LEVEL_SCORES) {
     return {
       ...state,
@@ -73,37 +85,49 @@ export default function sectionStandardsProgress(state = initialState, action) {
   return state;
 }
 
-export function getUnpluggedLessonsForScript(state) {
-  let unpluggedStages = [];
-  if (
-    state.sectionProgress.scriptDataByScript &&
-    state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
-  ) {
-    const scriptId = state.scriptSelection.scriptId;
-    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+export function getUnpluggedLessonsForScript(scriptId) {
+  return (dispatch, getState) => {
+    const state = getState();
+    let unpluggedStages = [];
+    if (
+      state.sectionProgress.scriptDataByScript &&
+      state.sectionProgress.scriptDataByScript[scriptId]
+    ) {
+      const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
 
-    unpluggedStages = _.filter(stages, function(stage) {
-      return stage.unplugged;
+      unpluggedStages = _.filter(stages, function(stage) {
+        return stage.unplugged;
+      });
+
+      unpluggedStages.forEach(stage => {
+        const lessonCompletionStatus = getLessonCompletionStatus(
+          state,
+          stage.id
+        );
+        stage['completed'] = lessonCompletionStatus.completed;
+      });
+    }
+
+    function filterStageData(stage) {
+      return {
+        id: stage.id,
+        name: stage.name,
+        number: stage.position,
+        url: stage.lesson_plan_html_url,
+        completed: stage.completed
+      };
+    }
+
+    const completedStages = _.filter(unpluggedStages, function(stage) {
+      return stage.completed;
     });
 
-    unpluggedStages.forEach(stage => {
-      const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
-      stage['completed'] = lessonCompletionStatus.completed;
-    });
-  }
+    dispatch(setSelectedLessons(completedStages));
 
-  function filterStageData(stage) {
-    return {
-      id: stage.id,
-      name: stage.name,
-      number: stage.position,
-      url: stage.lesson_plan_html_url,
-      completed: stage.completed
-    };
-  }
+    const filteredUnpluggedLessons = _.map(unpluggedStages, filterStageData);
 
-  return _.map(unpluggedStages, filterStageData);
+    dispatch(setUnpluggedLessons(filteredUnpluggedLessons));
+  };
 }
 
 export function fetchStudentLevelScores(scriptId, sectionId) {

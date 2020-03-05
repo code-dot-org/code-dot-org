@@ -8,7 +8,9 @@ import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import {
   setTeacherCommentForReport,
-  getUnpluggedLessonsForScript
+  getUnpluggedLessonsForScript,
+  fetchStudentLevelScores,
+  setStudentLevelScores
 } from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {TeacherScores} from './standardsConstants';
@@ -31,7 +33,9 @@ class StandardsViewHeaderButtons extends Component {
     setTeacherCommentForReport: PropTypes.func.isRequired,
     scriptId: PropTypes.number,
     selectedLessons: PropTypes.array.isRequired,
-    unpluggedLessons: PropTypes.array.isRequired
+    unpluggedLessons: PropTypes.array.isRequired,
+    getUnpluggedLessonsForScript: PropTypes.func.isRequired,
+    fetchStudentLevelScores: PropTypes.func.isRequired
   };
 
   state = {
@@ -41,6 +45,9 @@ class StandardsViewHeaderButtons extends Component {
   };
 
   openLessonStatusDialog = () => {
+    const {scriptId, sectionId} = this.props;
+    this.props.fetchStudentLevelScores(scriptId, sectionId);
+    this.props.getUnpluggedLessonsForScript(scriptId);
     this.setState({isLessonStatusDialogOpen: true});
   };
 
@@ -110,6 +117,7 @@ class StandardsViewHeaderButtons extends Component {
       })
     }).done(() => {
       this.closeLessonStatusDialog();
+      this.props.setStudentLevelScores(data);
     });
   };
 
@@ -153,11 +161,20 @@ export default connect(
   state => ({
     scriptId: state.scriptSelection.scriptId,
     selectedLessons: state.sectionStandardsProgress.selectedLessons,
-    unpluggedLessons: getUnpluggedLessonsForScript(state)
+    unpluggedLessons: state.sectionStandardsProgress.unpluggedLessons
   }),
   dispatch => ({
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
+    },
+    getUnpluggedLessonsForScript(scriptId) {
+      dispatch(getUnpluggedLessonsForScript(scriptId));
+    },
+    fetchStudentLevelScores(scriptId, sectionId) {
+      dispatch(fetchStudentLevelScores(scriptId, sectionId));
+    },
+    setStudentLevelScores(scores) {
+      dispatch(setStudentLevelScores(scores));
     }
   })
 )(StandardsViewHeaderButtons);
