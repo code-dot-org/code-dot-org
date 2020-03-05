@@ -14085,7 +14085,7 @@ en:
               name: Unit 5 STUDENT Survey
             Unit 5 TEACHER Survey:
               name: Unit 5 TEACHER Survey
-          title: Lists, Loops, and Traversals
+          title: CSP Unit 5 - Lists, Loops, and Traversals ('20-'21)
           description_audience: ''
           description_short: ''
           description: ''
@@ -14119,7 +14119,9 @@ en:
               name: Unit 7 TEACHER Survey
             Variables Make Demo:
               name: Variables Make Demo
-          title: ''
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
+          title: CSP Unit 7 - Parameters, Return, and Libraries ('20-'21)
           description_audience: ''
           description_short: ''
           description: ''
@@ -15256,3 +15258,197 @@ en:
               name: Make a Game in Play Lab
               description_student: ''
               description_teacher: ''
+        csp1-2020:
+          stages:
+            new stage:
+              name: new stage
+            Welcome to CSP:
+              name: Welcome to CSP
+            Representing Information:
+              name: Representing Information
+            Circle Square Patterns:
+              name: Circle Square Patterns
+            Binary Numbers:
+              name: Binary Numbers
+            Overflow and Rounding:
+              name: Overflow and Rounding
+            Representing Text:
+              name: Representing Text
+            Black and White Images:
+              name: Black and White Images
+            Color Images:
+              name: Color Images
+            Lossless Compression:
+              name: Lossless Compression
+            Lossy Compression:
+              name: Lossy Compression
+            Intellectual Property:
+              name: Intellectual Property
+            Project - Digital Information Dilemmas Part 1:
+              name: Project - Digital Information Dilemmas Part 1
+            Project - Digital Information Dilemmas Part 2:
+              name: Project - Digital Information Dilemmas Part 2
+            'Lesson 14: Assessment Day':
+              name: 'Lesson 14: Assessment Day'
+          title: CSP Unit 1 - Digital Information ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp2-2020:
+          stages:
+            new stage:
+              name: new stage
+            Welcome to the Internet:
+              name: Welcome to the Internet
+            Building a Network:
+              name: Building a Network
+            The Need for Addressing:
+              name: The Need for Addressing
+            Routers and Redundancy:
+              name: Routers and Redundancy
+            Packets:
+              name: Packets
+            DNS and HTTP:
+              name: DNS and HTTP
+            Project - Internet Dilemmas Part 1:
+              name: Project - Internet Dilemmas Part 1
+            Project - Internet Dilemmas Part 2:
+              name: Project - Internet Dilemmas Part 2
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+          title: CSP Unit 2 - The Internet ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp3-2020:
+          stages:
+            new stage:
+              name: new stage
+            Introduction to Apps:
+              name: Introduction to Apps
+            Introduction to Design Mode:
+              name: Introduction to Design Mode
+            Project - Designing an App Part 1:
+              name: Project - Designing an App Part 1
+            Project - Designing an App Part 2:
+              name: Project - Designing an App Part 2
+            The Need for Programming Languages:
+              name: The Need for Programming Languages
+            Intro to Programming:
+              name: Intro to Programming
+            Debugging:
+              name: Debugging
+            Project - Designing an App Part 3:
+              name: Project - Designing an App Part 3
+            Project - Designing an App Part 4:
+              name: Project - Designing an App Part 4
+            Project - Designing an App Part 5:
+              name: Project - Designing an App Part 5
+            'Lesson 11: Assessment Day':
+              name: 'Lesson 11: Assessment Day'
+          title: CSP Unit 3 - Intro to App Design ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp6-2020:
+          stages:
+            new stage:
+              name: new stage
+            Algorithms Solve Problems:
+              name: Algorithms Solve Problems
+            Algorithm Efficiency:
+              name: Algorithm Efficiency
+            Unreasonable Time:
+              name: Unreasonable Time
+            The Limits of Algorithms:
+              name: The Limits of Algorithms
+            Parallel and Distributed Algorithms:
+              name: Parallel and Distributed Algorithms
+            'Lesson 6: Assessment Day':
+              name: 'Lesson 6: Assessment Day'
+          title: CSP Unit 6 - Algorithms ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp8-2020:
+          stages:
+            new stage:
+              name: new stage
+            Create PT - Review the Task:
+              name: Create PT - Review the Task
+            Create PT - Make a Plan:
+              name: Create PT - Make a Plan
+            Create PT - Complete the Task:
+              name: Create PT - Complete the Task
+          title: CSP Unit 8 - Create PT Prep ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp9-2020:
+          stages:
+            new stage:
+              name: new stage
+            Learning From Data:
+              name: Learning From Data
+            Exploring One Column:
+              name: Exploring One Column
+            Filtering and Cleaning Data:
+              name: Filtering and Cleaning Data
+            Exploring Two Columns:
+              name: Exploring Two Columns
+            Big Data, Crowdsourcing, and Machine Learning:
+              name: Big Data, Crowdsourcing, and Machine Learning
+            Machine Learning and Bias:
+              name: Machine Learning and Bias
+            Project - Tell a Data Story - Part 1:
+              name: Project - Tell a Data Story - Part 1
+            Project - Tell a Data Story - Part 2:
+              name: Project - Tell a Data Story - Part 2
+            'Lesson 9: Assessment Day':
+              name: 'Lesson 9: Assessment Day'
+          title: CSP Unit 9 - Data ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp10-2020:
+          stages:
+            new stage:
+              name: new stage
+            Project - Innovation Simulation Part 1:
+              name: Project - Innovation Simulation Part 1
+            Project - Innovation Simulation Part 2:
+              name: Project - Innovation Simulation Part 2
+            Project - Innovation Simulation Part 3:
+              name: Project - Innovation Simulation Part 3
+            Data Policies and Privacy:
+              name: Data Policies and Privacy
+            The Value of Privacy:
+              name: The Value of Privacy
+            Project - Innovation Simulation Part 4:
+              name: Project - Innovation Simulation Part 4
+            Security Risks Part 1:
+              name: Security Risks Part 1
+            Security Risks Part 2:
+              name: Security Risks Part 2
+            'Project: Innovation Simulation Part 4':
+              name: 'Project: Innovation Simulation Part 4'
+            Project - Innovation Simulation Part 6:
+              name: Project - Innovation Simulation Part 6
+            Project - Innovation Simulation Part 7:
+              name: Project - Innovation Simulation Part 7
+            Protecting Data Part 1:
+              name: Protecting Data Part 1
+            Protecting Data Part 2:
+              name: Protecting Data Part 2
+            'Project: Innovation Simulation Part 5':
+              name: 'Project: Innovation Simulation Part 5'
+            'Project: Innovation Simulation Part 6':
+              name: 'Project: Innovation Simulation Part 6'
+            'Project: Innovation Simulation Part 7':
+              name: 'Project: Innovation Simulation Part 7'
+            'Lesson 14: Unit Assessment Day':
+              name: 'Lesson 14: Unit Assessment Day'
+          title: CSP Unit 10 - Cybersecurity and Global Impacts ('20-'21)
+          description_audience: ''
+          description_short: ''
+          description: ''
