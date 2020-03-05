@@ -202,10 +202,10 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       };
     case UPDATE_PERSONAL_PROJECT_DATA:
       var projectsList = [...state.projects];
-      var updatedProjectIdx = projectsList.findIndex(
-        p => p.channel === action.projectId
+      var updatedProjectIndex = projectsList.findIndex(
+        project => project.channel === action.projectId
       );
-      projectsList[updatedProjectIdx] = action.data;
+      projectsList[updatedProjectIndex] = action.data;
 
       return {
         ...state,

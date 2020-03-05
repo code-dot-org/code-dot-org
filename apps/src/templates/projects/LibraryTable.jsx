@@ -235,9 +235,8 @@ class LibraryTable extends React.Component {
       return null;
     }
 
-    const libraries = _.filter(
-      this.props.personalProjectsList,
-      p => p.libraryName
+    const libraries = this.props.personalProjectsList.filter(
+      project => project.libraryName
     );
 
     // Define a sorting transform that can be applied to each column
