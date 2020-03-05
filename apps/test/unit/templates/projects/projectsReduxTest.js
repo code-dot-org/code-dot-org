@@ -9,7 +9,8 @@ import projects, {
   cancelRenamingProject,
   saveSuccess,
   saveFailure,
-  unsetNameFailure
+  unsetNameFailure,
+  getProjectLibraries
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
 
@@ -251,6 +252,34 @@ describe('projectsRedux', () => {
         nextNextState.personalProjectsList.projects[3].projectNameFailure,
         undefined
       );
+    });
+  });
+
+  describe('getProjectLibraries', () => {
+    it('returns projects with libraries', () => {
+      const projects = [
+        {name: 'library-less project'},
+        {name: 'project w/ library', libraryName: 'my library!'}
+      ];
+      const state = {
+        projects: {
+          personalProjectsList: {projects}
+        }
+      };
+
+      const projectLibraries = getProjectLibraries(state);
+      assert.deepEqual([projects[1]], projectLibraries);
+    });
+
+    it('returns an empty array if no projects', () => {
+      const state = {
+        projects: {
+          personalProjectsList: {}
+        }
+      };
+
+      const projectLibraries = getProjectLibraries(state);
+      assert.deepEqual([], projectLibraries);
     });
   });
 });
