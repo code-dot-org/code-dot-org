@@ -4411,3 +4411,88 @@ fr:
               name: Détection de collision
             Functions:
               name: fonctions
+        coursea-2020:
+          description_short: Une introduction à l’informatique pour les primo-lecteurs.
+          stages:
+            Going Places Safely:
+              name: Se déplacer en toute sécurité
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Ton empreinte numérique
+            Move It, Move It:
+              name: Bouge, Bouge
+        coursec-2020:
+          description_short: Apprendre les rudiments de l’informatique et de créer
+            vos propres œuvres d’art, vos histoires et vos jeux.
+          stages:
+            Binary Bracelets:
+              name: Bracelets binaires
+            Looking Ahead:
+              name: Regarder en avant
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+              description_teacher: Cette activité débutera par une brève leçon sur
+                le débogage et la persistance, puis passera rapidement à une course
+                contre la montre pendant que les élèves se regroupent en équipes et
+                travaillent ensemble à la rédaction d'un programme, instruction par
+                instruction.
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+            Digital Citizenship:
+              name: Citoyenneté numérique
+            Dance Party:
+              name: Soirée Dansante
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+            'Functions: Songwriting':
+              description_teacher: Une des structures les plus magnifiques dans le
+                monde de l’informatique est la fonction.  Les fonctions (parfois appelées
+                procédures) sont des minis programmes que l’on peut utiliser encore
+                et encore à l'intérieur d’un plus grand programme. Cette leçon aidera
+                les élèves à comprendre intuitivement pourquoi associer des morceaux
+                de code à des fonctions est une pratique très utile.
+        coursef-2020:
+          description_short: Apprenez toutes les notions fondamentales de l’informatique
+            et créez vos propres œuvres d’arts, histoires ou jeux.
+          stages:
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+            Digital Sharing:
+              name: Partage numérique
+              description_teacher: Prêtée aux Fondamentaux de l’informatique par l'équipe
+                de Copyright and Creativity, cette leçon a pour but d'aider les élèves
+                à comprendre les défis et les avantages du respect de la propriété
+                et du droit d'auteur, en particulier dans les environnements numériques.
+                Les étudiants devraient être encouragés à respecter les droits des
+                artistes, qui constituent un élément important de leur citoyenneté
+                numérique.
+        express-2020:
+          title: Cour rapide (2017)
+          stages:
+            Dance Party:
+              name: Soirée Dansante
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Concours d'orthographe
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace

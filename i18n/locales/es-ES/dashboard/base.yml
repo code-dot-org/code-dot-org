@@ -1115,3 +1115,4 @@ es:
   page_not_found_header: '404: Página no encontrada'
   page_not_found_description: "La página que busca no existe en esta dirección. Verifique la dirección web y vuelva a enviarla. O regrese nuestra página de inicio."
   page_not_found_button: "Volver a la página de inicio"
+  copy: 'Copiar'

@@ -2049,3 +2049,67 @@ uk:
               name: Швидкість
             Functions:
               name: функції
+        coursea-2020:
+          description_audience: 'Вік: 4-7'
+          stages:
+            Going Places Safely:
+              name: Безпечне добирання
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+        courseb-2020:
+          description_audience: 'Вік: 5-8'
+          stages:
+            Your Digital Footprint:
+              name: Твій цифровий слід
+            Move It, Move It:
+              name: Рухайся, рухайся
+        coursec-2020:
+          description_audience: 'Вік: 6-10'
+          stages:
+            Binary Bracelets:
+              name: Двійкові браслети
+        coursed-2020:
+          description_audience: 'Вік: 7-11'
+          stages:
+            Relay Programming:
+              name: Естафетне програмування
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+            'Unplugged: Binary':
+              name: 'Безмашинні вправи: двійкова система'
+            Artist Binary:
+              name: 'Художник: двійкова система'
+            Digital Citizenship:
+              name: Цифрове громадянство
+            Dance Party:
+              name: Танцювальна вечірка
+        coursee-2020:
+          description_audience: 'Вік: 8-12'
+          stages:
+            Conditionals:
+              name: Умови
+        coursef-2020:
+          description_audience: 'Вік: 9-13'
+          stages:
+            Envelope Variables:
+              name: Конвертні змінні
+            For Loop Fun:
+              name: Ігри з циклами
+            Internet:
+              name: Інтернет
+            Crowdsourcing:
+              name: Краудсорсинг
+        express-2020:
+          description_audience: 'Вік: 9-18'
+          stages:
+            Dance Party:
+              name: Танцювальна вечірка
+        pre-express-2020:
+          description_audience: 'Вік: 4-8'
+          stages:
+            Spelling Bee:
+              name: Грамотна Бджілка
+            Loops in Ice Age:
+              name: Петлі в Ice Age

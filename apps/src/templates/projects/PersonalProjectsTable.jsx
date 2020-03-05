@@ -340,7 +340,9 @@ class PersonalProjectsTable extends React.Component {
             />
           </Table.Provider>
         )}
-        {noProjects && <h3>{i18n.noPersonalProjects()}</h3>}
+        {noProjects && (
+          <h3 style={{textAlign: 'center'}}>{i18n.noPersonalProjects()}</h3>
+        )}
       </div>
     );
   }
