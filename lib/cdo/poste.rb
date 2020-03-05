@@ -1,11 +1,13 @@
 require 'base64'
 require 'cdo/db'
+require 'cdo/form'
 require 'cdo/parse_email_address_string'
 require 'cdo/pegasus/text_render'
 require 'digest/md5'
 require_relative 'email_validator'
 require 'mail'
 require 'openssl'
+require 'cdo/honeybadger'
 
 module Poste
   def self.logger
@@ -109,50 +111,197 @@ module Poste
   end
 
   class Template
-    def initialize(body, engine=TextRender::MarkdownEngine)
-      if match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
-        @header = TextRender::YamlEngine.new(match[:header].strip)
-        @html = engine.new(match[:html].strip)
-        @text = TextRender::ErbEngine.new(match[:text].strip)
-      elsif match = body.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?\z)/m)
-        @header = TextRender::YamlEngine.new(match[:header].strip)
-        @html = engine.new(match[:html].strip)
+    def initialize(path)
+      @path = path
+
+      @engine = {
+        '.haml' => TextRender::HamlEngine,
+        '.html' => TextRender::ErbEngine,
+        '.md' => TextRender::MarkdownEngine,
+      }[File.extname(path).downcase]
+      @template_type = File.extname(path)[1..-1]
+
+      @header, @html, @text = parse_template(IO.read(path))
+
+      # Temporarily also load in a new 'actionview' template and render it
+      # alongside the given one; we will use this to help build confidence that
+      # switching our templates over to actionview can be done without changing
+      # the resulting rendered HTML
+      actionview_path = path + ".actionview"
+      if File.exist?(actionview_path)
+        @actionview_header, @actionview_html, @actionview_text = parse_template(IO.read(actionview_path))
       else
-        @html = engine.new(body.strip)
+        # Warn if there is no such path, in case a new email template gets
+        # added to our system before this experiment has concluded.
+        Honeybadger.notify(
+          error_class: 'No email template to render with ActionView',
+          error_message: "Could not find actionview-specific #{actionview_path.inspect} email template",
+          context: {
+            path: path
+          }
+        )
       end
     end
 
     def render(params={})
       if params.key?('form_id')
-        form = Form2.from_row(DB[:forms].where(id: params['form_id']).first)
+        form = Form2.from_row(POSTE_DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
         params.merge! form.processed_data
         params['form'] = form
       end
-      locals = OpenStruct.new(params).instance_eval {binding}
+      bound = OpenStruct.new(params).instance_eval {binding}
+      locals = params.symbolize_keys
 
-      header = @header.result(locals) unless @header.nil?
-      # TODO(andrew): Fix this so that we get a signal as to how often this is happening.
-      # For more information, see https://www.pivotaltracker.com/story/show/104750788.
-      tracking_id = header['litmus_tracking_id'] unless header.nil?
-
-      html = @html.result(locals) if @html
-      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
-      # logic in the click tracking method to clean up or canonicalize the HTML.
-      html = Nokogiri::HTML(html).to_html if html
-      html = inject_litmus_tracking html, tracking_id, params[:encrypted_id] if html
-      text = @text.result(locals) unless @text.nil?
+      header = render_header(bound, locals)
+      html = render_html(bound, locals)
+      text = render_text(bound, locals)
 
       [header, html, text]
     end
 
-    def inject_litmus_tracking(html, tracking_id, unique_id)
-      return html unless tracking_id && unique_id
-      litmus_blob = <<-eos
-<style>@media print{ #_t { background-image: url('https://#{tracking_id}.emltrk.com/#{tracking_id}?p&d=#{unique_id}');}} div.OutlookMessageHeader {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} table.moz-email-headers-table {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} blockquote #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')} #MailContainerBody #_t {background-image:url('https://#{tracking_id}.emltrk.com/#{tracking_id}?f&d=#{unique_id}')}</style><div id="_t"></div>
-<img src="https://#{tracking_id}.emltrk.com/#{tracking_id}?d=#{unique_id}" width="1" height="1" border="0" />
-eos
-      html.gsub("</body>", litmus_blob + "\n</body>")
+    private
+
+    def parse_template(content)
+      header = nil
+      html = nil
+      text = nil
+
+      if match = content.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?)^(---\s*$\n?)(?<text>\s*\n.*?\n?\z)/m)
+        header = match[:header].strip
+        html = match[:html].strip
+        text = match[:text].strip
+      elsif match = content.match(/^---\s*\n(?<header>.*?\n?)^(---\s*$\n?)(?<html>\s*\n.*?\n?\z)/m)
+        header = match[:header].strip
+        html = match[:html].strip
+      else
+        html = content.strip
+      end
+
+      [header, html, text]
+    end
+
+    def render_header(bound, locals={})
+      return {} unless @header.present?
+
+      if @actionview_header
+        begin
+          actionview_result = YAML.safe_load(renderer.render(inline: @actionview_header, type: :erb, locals: locals))
+        rescue => e
+          Honeybadger.notify(
+            error_class: 'Error rendering email with ActionView',
+            error_message: "Email template #{@path} could not render header",
+            context: {
+              locals: locals,
+              error: e
+            }
+          )
+          puts @path
+          puts e
+        end
+      end
+
+      result = TextRender::YamlEngine.new(@header).result(bound)
+
+      if result && actionview_result && result != actionview_result
+        Honeybadger.notify(
+          error_class: 'Incorrectly rendered email with ActionView',
+          error_message: "Email template #{@path} rendered the header incorrectly",
+          context: {
+            expected: result,
+            actual: actionview_result
+          }
+        )
+      end
+
+      result
+    end
+
+    def render_html(bound, locals={})
+      return nil unless @html.present?
+
+      if @actionview_html
+        begin
+          # All our emails regardless of the extension they use are parsed as ERB
+          # in addition to their regular template type.
+          html = renderer.render(inline: @actionview_html, type: :erb, locals: locals)
+          actionview_result = renderer.render(inline: html, type: @template_type)
+        rescue => e
+          Honeybadger.notify(
+            error_class: 'Error rendering email with ActionView',
+            error_message: "Email template #{@path} could not render html",
+            context: {
+              locals: locals,
+              error: e
+            }
+          )
+          puts @path
+          puts e
+        end
+      end
+
+      html = @engine.new(@html).result(bound)
+
+      if html && actionview_result && html != actionview_result
+        Honeybadger.notify(
+          error_class: 'Incorrectly rendered email with ActionView',
+          error_message: "Email template #{@path} rendered the html incorrectly",
+          context: {
+            expected: html,
+            actual: actionview_result
+          }
+        )
+      end
+
+      # Parse the html into a DOM and then re-serialize back to html text in case we were depending on that
+      # logic in the click tracking method to clean up or canonicalize the HTML.
+      html = Nokogiri::HTML(html).to_html
+
+      html
+    end
+
+    def render_text(bound, locals={})
+      return nil unless @text.present?
+
+      if @actionview_text
+        begin
+          actionview_result = renderer.render(inline: @actionview_text, type: :erb, locals: locals)
+        rescue => e
+          Honeybadger.notify(
+            error_class: 'Error rendering email with ActionView',
+            error_message: "Email template #{@path} could not render text",
+            context: {
+              locals: locals,
+              error: e
+            }
+          )
+          puts @path
+          puts e
+        end
+      end
+
+      result = TextRender::ErbEngine.new(@text).result(bound)
+
+      if result && actionview_result && result != actionview_result
+        Honeybadger.notify(
+          error_class: 'Incorrectly rendered email with ActionView',
+          error_message: "Email template #{@path} rendered the text incorrectly",
+          context: {
+            expected: result,
+            actual: actionview_result
+          }
+        )
+      end
+
+      result
+    end
+
+    def renderer
+      @@renderer ||= begin
+        require 'cdo/pegasus/actionview_sinatra'
+        ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
+        ActionView::Base.new
+      end
     end
   end
 end
@@ -191,7 +340,6 @@ class Deliverer
       params.merge(
         {
           recipient: OpenStruct.new(recipient),
-          encrypted_id: encrypted_id,
           unsubscribe_link: unsubscribe_url,
           tracking_pixel: poste_url("/o/#{encrypted_id}"),
         }
@@ -278,15 +426,7 @@ class Deliverer
     path = Poste.resolve_template(name)
     raise ArgumentError, "[Poste] '#{name}' template wasn't found." unless path
 
-    engine = {
-      '.haml' => TextRender::HamlEngine,
-      '.html' => TextRender::ErbEngine,
-      '.md' => TextRender::MarkdownEngine,
-      '.txt' => TextRender::MarkdownEngine,
-      '.yml' => TextRender::YamlEngine,
-    }[File.extname(path).downcase]
-
-    @templates[name] = Poste::Template.new IO.read(path), engine
+    @templates[name] = Poste::Template.new path
   end
 
   private
