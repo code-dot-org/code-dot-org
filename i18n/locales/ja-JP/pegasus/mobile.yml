@@ -17,7 +17,6 @@
   learn_now: "今すぐ学ぶ"
   petition_message: "すべての学校の、すべての生徒が、コンピュータサイエンスを学ぶ機会を得るべきです"
   petition_sign_message: 'ご賛同いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加ください。'
-  petition_sign_message_support: 'ご支援いただけるのであれば、お名前を登録し、 # 名が参加するメーリングリストにご参加下さい。'
   petition_join_others: '参加する # ほか'
   name: "名前"
   email: "Eメール"

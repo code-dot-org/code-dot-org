@@ -905,3 +905,4 @@ vi:
   gdpr_dialog:
     message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
     yes: 'Đồng ý'
+  copy: 'Sao chép'

@@ -178,6 +178,13 @@ class User < ActiveRecord::Base
     end
   end
 
+  # Validate that a user with the same authentication credentials does not already exist.
+  validate on: :create, if: -> {uid.present?} do |user|
+    # If the user has a unique authentication ID, fail if there is an existing User with that ID.
+    other = User.find_by_credential(type: user.provider, id: user.uid)
+    user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
+  end
+
   has_many :teacher_feedbacks, foreign_key: 'teacher_id', dependent: :destroy
 
   belongs_to :school_info

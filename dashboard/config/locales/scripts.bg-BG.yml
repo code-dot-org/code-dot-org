@@ -2516,3 +2516,47 @@ bg:
               name: Скорост
             Functions:
               name: Функции
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Достигаме безопасно до места
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Вашите дигитални отпечатъци
+            Move It, Move It:
+              name: Преместете го, преместете го
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Двоични гривни
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+            'Unplugged: Binary':
+              name: 'Ънплъгд: двоичен код'
+            Artist Binary:
+              name: 'Художник: Бинарен код'
+            Digital Citizenship:
+              name: Цифрови граждани
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Условия
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Плик с променливи
+            For Loop Fun:
+              name: Повторения за забавление
+            Internet:
+              name: Интернет
+            Crowdsourcing:
+              name: Crowdsourcing кампания
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Правопис
