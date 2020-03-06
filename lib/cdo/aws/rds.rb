@@ -47,6 +47,8 @@ module Cdo
           }
         )
         # Wait 30 minutes.  As of mid-2019, it takes about 15 minutes to provision a clone of the production cluster.
+        # The RDS SDK doesn't provide a waiter for cluster operations.  Once the db instance is provisioned, the
+        # cluster is ready.
         rds_client.wait_until(
           :db_instance_available,
           {db_instance_identifier: clone_instance_id},
