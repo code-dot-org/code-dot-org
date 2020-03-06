@@ -39,18 +39,25 @@ const styles = {
   },
   actionBtn: {
     padding: 8,
-    fontSize: 18
+    fontSize: 18,
+    backgroundColor: color.white,
+    ':hover': {
+      boxShadow: 'none'
+    }
   },
   iconPadding: {
     padding: '0 2px'
   },
   addBtn: {
-    color: color.dark_charcoal,
-    borderColor: color.dark_charcoal
+    color: color.link_color,
+    borderColor: color.link_color,
+    ':hover': {
+      color: color.white,
+      backgroundColor: color.link_color
+    }
   },
   updateBtn: {
     color: color.orange,
-    backgroundColor: color.white,
     borderColor: color.orange,
     ':hover': {
       color: color.white,
@@ -64,7 +71,6 @@ const styles = {
   },
   removeBtn: {
     color: color.dark_red,
-    backgroundColor: color.white,
     borderColor: color.dark_red,
     ':hover': {
       color: color.white,
