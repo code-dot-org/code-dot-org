@@ -37,7 +37,6 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
-
       personal_projects_list
     end
 
@@ -141,7 +140,7 @@ module ProjectsList
             channel_id = storage_encrypt_channel_id(project[:storage_id], project[:id])
             project_owner = section_users.find {|user| user.id == student_storage_ids[project[:storage_id]]}
             project_data = get_library_row_data(project, channel_id, project_owner)
-            if project_data && project_owner.user_type == 'student' || project_data[:sharedWith].include?(section.id)
+            if project_data && (project_owner.user_type == 'student' || project_data[:sharedWith].include?(section.id))
               projects_list_data << project_data
             end
           end
@@ -239,7 +238,6 @@ module ProjectsList
     # single library or a list of libraries.
     def get_library_row_data(project, channel_id, user = nil)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
       {
         channel: channel_id,
         name: project_value['libraryName'],

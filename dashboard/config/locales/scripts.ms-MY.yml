@@ -532,3 +532,25 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+            Dance Party:
+              name: Majlis Tari-Menari
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Bersyarat
+        coursef-2020:
+          stages:
+            Internet:
+              name: Internet
+        express-2020:
+          stages:
+            Dance Party:
+              name: Majlis Tari-Menari
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Lebah Ejaan

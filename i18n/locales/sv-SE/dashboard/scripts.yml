@@ -2074,3 +2074,53 @@ sv:
               name: Villkor
             Functions:
               name: funktioner
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Trygg resa
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Ditt digitala fotavtryck
+            Move It, Move It:
+              name: Flytta det, flytta den
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Binära armband
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Stafettprogrammering
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+            'Unplugged: Binary':
+              name: 'Ouppkopplad: Binärt'
+            Artist Binary:
+              name: Artist binär
+            Digital Citizenship:
+              name: Digitalt medborgarskap
+            Dance Party:
+              name: Dansparty
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Villkor
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Envelope variabler
+            For Loop Fun:
+              name: '''För'' loop skoj'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          stages:
+            Dance Party:
+              name: Dansparty
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Stavnings-bi

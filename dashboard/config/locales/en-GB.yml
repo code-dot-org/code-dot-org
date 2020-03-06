@@ -75,3 +75,4 @@ en-GB:
         opt_in_no: 'No'
   gdpr_dialog:
     true: 'Yes'
+  copy: Copy

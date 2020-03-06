@@ -21,6 +21,13 @@ ga-IE:
           -   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.
 
           _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_03:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
       CourseD_Dance_Party_04:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -39,6 +46,11 @@ ga-IE:
           -   Ní mór beirt damhsóirí a bheith ann ar a laghad.
 
           _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Cuir damhsóir eile (nó fiú níos mó!) leis an radharc
+          -   Tabhair ar gach damhsóir steipeanna difriúla a dhéanamh ag pointí difriúla san amhrán.
       CourseD_Dance_Party_08:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -46,6 +58,10 @@ ga-IE:
           -   Beirt damhsóirí a bhfuil méid difriúil ó 100 a bheith ann.
 
           _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Athraigh airíonna eile (leithead, airde, rothlú, srl.)
       CourseD_Dance_Party_09:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -126,6 +142,12 @@ ga-IE:
 
           _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
       Dance_2019_05:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
         challenges: |-
           **Dúshlán Roghnach**
 
@@ -202,6 +224,13 @@ ga-IE:
           -   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.
 
           _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_03:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
       Dance_Party_04:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -227,6 +256,11 @@ ga-IE:
           -   Ní mór beirt damhsóirí a bheith ann ar a laghad.
 
           _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Cuir damhsóir eile (nó fiú níos mó!) leis an radharc
+          -   Tabhair ar gach damhsóir steipeanna difriúla a dhéanamh ag pointí difriúla san amhrán.
       Dance_Party_08:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -234,6 +268,10 @@ ga-IE:
           -   Beirt damhsóirí a bhfuil méid difriúil ó 100 a bheith ann.
 
           _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Athraigh airíonna eile (leithead, airde, rothlú, srl.)
       Dance_Party_09:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**

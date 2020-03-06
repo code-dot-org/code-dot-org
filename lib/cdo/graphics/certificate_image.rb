@@ -6,7 +6,7 @@ require 'rmagick'
 require_relative '../script_constants'
 
 # The area in pixels under the "Certificate of Completion" on the certificate reserved for the name.
-CERT_NAME_AREA_WIDTH = 800
+CERT_NAME_AREA_WIDTH = 900
 CERT_NAME_AREA_HEIGHT = 80
 
 # This method returns a newly-allocated Magick::Image object.
@@ -105,10 +105,14 @@ def create_workshop_certificate_image(image_path, fields)
     string = field[:string].to_s
     next if string.empty?
 
-    y = field[:y] || 0
+    # The x,y position to center the text at.
     x = field[:x] || 0
+    y = field[:y] || 0
+    # The width/height in pixels of the bounding box for the text.
+    width = field[:width]
+    height = field[:height]
     pointsize = field[:pointsize] || 70
-    apply_text(background, string, pointsize, 'Times bold', 'rgb(87,87,87)', x, y, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
+    apply_text(background, string, pointsize, 'Times bold', 'rgb(87,87,87)', x, y, width, height)
   end
 
   background
@@ -153,7 +157,10 @@ def create_course_certificate_image(name, course=nil, sponsor=nil, course_title=
 
     image = Magick::Image.read(path).first
     apply_text(image, name, 75, 'Helvetica bold', 'rgb(118,101,160)', 0, -135, CERT_NAME_AREA_WIDTH, CERT_NAME_AREA_HEIGHT)
-    apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15)
+    # The area in pixels which will display the course title.
+    course_title_width = 1000
+    course_title_height = 60
+    apply_text(image, course_title, 47, 'Helvetica bold', 'rgb(29,173,186)', 0, 15, course_title_width, course_title_height)
   end
 
   unless sponsor

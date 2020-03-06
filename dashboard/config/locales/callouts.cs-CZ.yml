@@ -165,6 +165,10 @@ cs-CZ:
         craft_what_is_iron: Vytěž toto železo!
       Underground Iron_2019:
         craft_what_is_iron: Vytěž toto železo!
+      courseA_collector_preLoops1:
+        courseA_collector_preLoops1_1: Klikni sem, abys viděl pracovat kód!
+      courseD_maze_ramp3_2019:
+        stone_block_2: Šedé bloky není možné zahodit.
       frozen circle function with parameter:
         frozen_circle_function_with_parameter_circle: Použij blok "vytvořit kruh"
           a změň velikost.

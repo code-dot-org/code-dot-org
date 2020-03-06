@@ -2488,9 +2488,17 @@ sk-SK:
         `nakresli okno` a zavolaním tejto funkcie 5 krát. Pozor na dvere!
       courseE_artist_functions8: 'Výzva: Vytvor toľko funkcií, koľko potrebuješ na
         vytvorenie tejto kresby zloženej z 50-pixelových štvorcov.'
+      courseE_artist_functions8_2018: Na vytvorenie tohto dizajnu využi všetko čo
+        si sa už naučil/a.
+      courseE_artist_functions8_2019: Na vytvorenie tohto dizajnu využi všetko čo
+        si sa už naučil/a.
       courseE_artist_functions8a_2018: Vytvor funkciu pre jeden štvorec.
       courseE_artist_functions8a_2019: Vytvor funkciu pre jeden štvorec.
       courseE_artist_functions9: Vytvor tento obrázok len pomocou dostupných blokov.
+      courseE_artist_functions9_2018: "**Výzva:** Vytvor tento obrázok len pomocou
+        dostupných blokov."
+      courseE_artist_functions9_2019: "**Výzva:** Vytvor tento obrázok len pomocou
+        dostupných blokov."
       courseE_artist_functionsProj_2018: "**Inšpirácia:** Využi všetko, čo už vieš
         a nakresli obrázok, aký len chceš!"
       courseE_artist_functionsProj_2019: "**Inšpirácia:** Využi všetko, čo už vieš
@@ -2522,6 +2530,8 @@ sk-SK:
         a potom tekvicu.
       courseE_farmer_functions1a_2019: Pomôž záhradníčke pozbierať všetku kukuricu
         a potom tekvicu.
+      courseE_farmer_functions2ba_2018: Použi funkcie, čo vidíš dole, aby farmárka
+        pozbierala kukuricu a tekvice.
       courseE_farmer_functions3c1_2018: Táto funkcia volá iné funkcie!
       courseE_farmer_functions3c1_2019: Táto funkcia volá iné funkcie!
       courseE_farmer_functions3c_2018: Vyskúšaj dlhšiu cestu.

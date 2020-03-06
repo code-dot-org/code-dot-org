@@ -52,3 +52,11 @@ te:
           stages:
             Events:
               name: ఈవెంట్లు
+        coursed-2020:
+          stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
+        express-2020:
+          stages:
+            Dance Party:
+              name: డాన్స్ పార్టీ
