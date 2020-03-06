@@ -86,12 +86,14 @@ class TeacherScore < ApplicationRecord
     stage = Stage.find(stage_id)
     script_id = stage.script.id
     level_ids = stage.script_levels.map(&:level_id)
-    user_levels = UserLevel.where(user_id: student_id, level_id: level_ids, script_id: script_id)
+    user_levels = UserLevel.select(:id, :level_id).where(user_id: student_id, level_id: level_ids, script_id: script_id)
+    teacher_scores = TeacherScore.select(:score, :created_at, :user_level_id).where(
+      user_level_id: user_levels.pluck(:id)
+    )
+
     level_scores = {}
     user_levels.each do |user_level|
-      teacher_score = TeacherScore.where(
-        user_level_id: user_level.id
-      )&.order("created_at")&.last&.score
+      teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == user_level.id}.sort_by(&:created_at).last&.score
       if teacher_score
         level_scores[user_level.level_id] = teacher_score
       end
