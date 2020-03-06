@@ -1,15 +1,7 @@
-%h1= 'Login to the Maker App with Google'
+%h1= I18n.t('maker.google_oauth.login_with_google')
 
-%p Please enter the code provided when you logged in via Google on your default browser
+%p= I18n.t('maker.google_oauth.enter_code')
 
-%input#input-text{:type=>"text"}
-
-%button#btn-submit{ type: 'submit' } Submit
-
-:javascript
-  $(document).ready(function() {
-    $('#btn-submit').click(function() {
-      // ToDo: send submitted value to endpoint to validate login
-      console.log("Submitted: " + $('#input-text').val());
-    });
-  });
+= form_tag(users_auth_maker_google_oauth2_path) do
+  = text_field_tag :secret_code
+  = button_tag I18n.t(:submit), class: "btn-submit"

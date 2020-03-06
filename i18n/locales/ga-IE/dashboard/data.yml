@@ -514,11 +514,11 @@ ga:
         oceans_machine_learning: Meaisínfhoghlaim
         oceans_training_data: Sonraí Traenála
         oceans_societal_implications: Impleachtaí Sóisialta
-        hoc_dance_congrats_2019: Cóisir Dhamhsa 2019 - Tosaímis an chóisir seo!
-        hoc_dance_warmup_2019: Cóisir Dhamhsa 2019 - Téamh Suas
-        hoc_dance_events_2019: Cóisir Dhamhsa 2019 - Teagmhais
-        hoc_dance_measures_2019: Cóisir Dhamhsa 2019 - Tomhais
-        hoc_dance_properties_2019: Cóisir Dhamhsa 2019 - Airíonna
+        hoc_dance_congrats_2019: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        hoc_dance_warmup_2019: Cóisir Dhamhsa - Téamh Suas
+        hoc_dance_events_2019: Cóisir Dhamhsa - Teagmhais
+        hoc_dance_measures_2019: Cóisir Dhamhsa - Tomhais
+        hoc_dance_properties_2019: Cóisir Dhamhsa - Airíonna
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile é

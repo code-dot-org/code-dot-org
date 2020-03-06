@@ -789,13 +789,12 @@ pl-PL:
       Standalone_Artist_1: Artysta zaprasza! Najpierw, spróbuj utworzyć kwadrat przy
         użyciu bloków "skręć w prawo" i "idź do przodu". Każdy bok powinien mieć długość
         100 pikseli.
-      Standalone_Artist_2: Narysuj ten diament z kontami 120 i 60 stopni i długościami
-        boków 150 pikseli.
+      Standalone_Artist_2: Narysuj ten diament z kątami 120 i 60 stopni i długościami
+        boków na 150 pikseli.
       Standalone_Artist_3: Czy potrafisz narysować ten sześciokąt z bokami 100 pikseli
         i obrotami 60 stopni?
-      Standalone_Artist_4: Teraz masz do dyspozycji nowy blok, pętlę. Będzie powtarzał
-        zestaw poleceń. Co się stanie, jeśli te polecenia zostaną wykonane w pętli
-        6 razy?
+      Standalone_Artist_4: Teraz masz do dyspozycji nowy blok, pętlę. Będzie on powtarzał
+        zestaw poleceń. Co się stanie, jeśli wykonasz te polecenia w pętli 6 razy?
       Standalone_Artist_5: Ile razy musisz powtórzyć ten diament, by narysować kwiat?
       Standalone_Artist_5.5: 'Zwróć uwagę, jak uprościliśmy kod diamentu wykorzystując
         pętlę. Możesz teraz powtórzyć całę tę sekwencję 12 razy, aby narysować kwiat.

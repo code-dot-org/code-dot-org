@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import LessonStatusDialog from './LessonStatusDialog';
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
-import {setTeacherCommentForReport} from './sectionStandardsProgressRedux';
+import {
+  setTeacherCommentForReport,
+  getUnpluggedLessonsForScript
+} from './sectionStandardsProgressRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {TeacherScores} from './standardsConstants';
 
 const styles = {
   buttonsGroup: {
@@ -24,8 +29,11 @@ class StandardsViewHeaderButtons extends Component {
     sectionId: PropTypes.number,
     // redux
     setTeacherCommentForReport: PropTypes.func.isRequired,
-    scriptId: PropTypes.number
+    scriptId: PropTypes.number,
+    selectedLessons: PropTypes.array.isRequired,
+    unpluggedLessons: PropTypes.array.isRequired
   };
+
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
@@ -69,6 +77,42 @@ class StandardsViewHeaderButtons extends Component {
     });
   };
 
+  onSaveUnpluggedLessonStatus = () => {
+    const {sectionId, selectedLessons, unpluggedLessons} = this.props;
+    let selectedStageScores = [];
+    let unselectedStageScores = [];
+    const stageIds = _.map(unpluggedLessons, 'id');
+    const selectedStageIds = _.map(selectedLessons, 'id');
+    const unselectedStageIds = _.difference(stageIds, selectedStageIds);
+
+    for (var i = 0; i < selectedStageIds.length; i++) {
+      selectedStageScores[i] = {
+        stage_id: selectedStageIds[i],
+        score: TeacherScores.COMPLETE
+      };
+    }
+
+    for (var j = 0; j < unselectedStageIds.length; j++) {
+      unselectedStageScores[j] = {
+        stage_id: unselectedStageIds[j],
+        score: TeacherScores.INCOMPLETE
+      };
+    }
+
+    $.ajax({
+      url: '/dashboardapi/v1/teacher_scores',
+      type: 'post',
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({
+        section_id: sectionId,
+        stage_scores: selectedStageScores.concat(unselectedStageScores)
+      })
+    }).done(() => {
+      this.closeLessonStatusDialog();
+    });
+  };
+
   render() {
     return (
       <div style={styles.buttonsGroup}>
@@ -81,7 +125,7 @@ class StandardsViewHeaderButtons extends Component {
         />
         <LessonStatusDialog
           isOpen={this.state.isLessonStatusDialogOpen}
-          handleConfirm={this.closeLessonStatusDialog}
+          handleConfirm={this.onSaveUnpluggedLessonStatus}
         />
         <Button
           onClick={this.openCreateReportDialog}
@@ -107,7 +151,9 @@ export const UnconnectedStandardsViewHeaderButtons = StandardsViewHeaderButtons;
 
 export default connect(
   state => ({
-    scriptId: state.scriptSelection.scriptId
+    scriptId: state.scriptSelection.scriptId,
+    selectedLessons: state.sectionStandardsProgress.selectedLessons,
+    unpluggedLessons: getUnpluggedLessonsForScript(state)
   }),
   dispatch => ({
     setTeacherCommentForReport(comment) {

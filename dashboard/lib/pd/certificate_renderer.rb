@@ -34,6 +34,8 @@ module Pd
           pointsize: 70,
           x: 0,
           y: -240,
+          width: 1200,
+          height: 100,
         }
       ]
     end
@@ -45,11 +47,15 @@ module Pd
             string: workshop.course_name,
             y: -30,
             pointsize: 70,
+            width: 1600,
+            height: 100,
           },
           {
             string: workshop.friendly_subject,
             y: 65,
             pointsize: 60,
+            width: 1600,
+            height: 100,
           }
         ]
       else
@@ -58,6 +64,8 @@ module Pd
             string: workshop.course_name,
             y: -10,
             pointsize: 70,
+            width: 1600,
+            height: 100,
           }
         ]
       end
@@ -70,6 +78,8 @@ module Pd
           y: 143,
           x: -265,
           pointsize: 30,
+          width: 60,
+          height: 50,
         }
       ]
     end
@@ -80,6 +90,8 @@ module Pd
           string: workshop.workshop_date_range_string,
           y: 228,
           pointsize: 33,
+          width: 1000,
+          height: 50,
         }
       ]
     end
@@ -91,6 +103,8 @@ module Pd
           pointsize: 30,
           y: 475 - (50 * i),
           x: 330,
+          width: 500,
+          height: 50,
         }
       end
     end

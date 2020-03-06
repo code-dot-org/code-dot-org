@@ -359,12 +359,12 @@ cs:
             Studio:
               name: Studio
         flappy:
-          title: Tenký kód
+          title: Flappy
           description: Chcete napsat vlastní hru za méně než 10 minut? Vyzkoušej náš výukový kurz tenkého kódu!
           description_short: Napiš si vlastní tenkou hru za méně než 10 minut!
           stages:
             Flappy Code:
-              name: Tenký kód
+              name: Flappy
         jigsaw:
           title: Skládačka
           description: Vyzkoušej náš skládačkový výukový kurz
@@ -640,12 +640,12 @@ cs:
             While Loops:
               name: While (zatímco) cykly
         gumball:
-          title: Žvýkačka Play Lab
-          description: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
-          description_short: Vytvoř příběh nebo udělej hru s Play Lab žvýkačky!
+          title: Gumball Play Lab
+          description: Vytvoř si příběh nebo hru s Gumball Play Labem!
+          description_short: Vytvoř si příběh nebo hru s Gumball Play Labem!
           stages:
             Gumball Play Lab:
-              name: Žvýkačka Play Lab
+              name: Gumball Play Lab
         starwars:
           title: 'Hvězdné války: Budování galaxie s kódem'
           description: Nauč se programovat droidy a vytvoř si vlastní hru Star Wars ve vzdálené galaxii.
@@ -667,6 +667,8 @@ cs:
           stages:
             Hour of Code 2015:
               name: Hodina kódu 2013
+        oceans:
+          title: AI pomáhá oceánům
         ScienceP3OLPT3:
           stages:
             Welcome!:
@@ -772,6 +774,8 @@ cs:
               name: 'Včela: podmínky'
         gradeKinder:
           stages:
+            Debugging:
+              name: Ladění
             Events:
               name: Události
             'Jigsaw: Learn to drag and drop':
@@ -790,6 +794,8 @@ cs:
               name: Skládání písniček
         grade1:
           stages:
+            Debugging:
+              name: Ladění
             Events:
               name: Události
             'Jigsaw: Learn to drag and drop':
@@ -930,7 +936,7 @@ cs:
         flappy-impact-study:
           stages:
             Flappy Code:
-              name: Tenký kód
+              name: Flappy
         coursea-draft:
           stages:
             'Real-life Algorithms: Plant a Seed':
@@ -1047,6 +1053,8 @@ cs:
               name: Seznamy
             For Loops:
               name: For cykly
+            Map:
+              name: Mapa
             Functions with Parameters:
               name: Funkce s Parametry
         workshop-gamelab:
@@ -1138,12 +1146,18 @@ cs:
           assignment_family_title: Kurz C
         coursed-2017:
           stages:
+            Introduction:
+              name: Představení online úloh
             Nested Loops:
               name: Vnořené cykly
+            Debugging in Collector:
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
           title: Kurz D
           assignment_family_title: Kurz D
         coursee-2017:
           stages:
+            Introduction:
+              name: Představení online úloh
             Ice Age Play Lab:
               name: Doba ledová Play Lab
             Envelope Variables:
@@ -1160,6 +1174,8 @@ cs:
           assignment_family_title: Kurz E
         coursef-2017:
           stages:
+            Introduction:
+              name: Představení online úloh
             Building a Foundation:
               name: Budování nadace
           title: Kurz F
@@ -1229,6 +1245,8 @@ cs:
               name: Umělecké binární
             Building a Foundation:
               name: Budování nadace
+            Loops in Ice Age:
+              name: Cykly v době ledové
         new-express:
           stages:
             Introduction:
@@ -1393,6 +1411,7 @@ cs:
               name: Pohyb, pohyb
         coursed-2018:
           assignment_family_title: Kurz D
+          description: Studenti se naučí chápat vnořené cykly, while (dokud) cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
@@ -1400,6 +1419,8 @@ cs:
               name: Úvod
             Building a Foundation:
               name: Budování nadace
+            Debugging in Collector:
+              name: Ladění s Laurel
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1408,10 +1429,14 @@ cs:
               name: Binární obrázky
             Artist Binary:
               name: Umělecké binární
+            Loops in Ice Age:
+              name: Cykly v době ledové
             Graph Paper Programming:
               name: Programování na čtverečkovaném papíru
             Relay Programming:
               name: Štafetové programování
+            Introduction to Online Puzzles:
+              name: Představení online úloh
         coursec-2018:
           assignment_family_title: Kurz C
           stages:
@@ -1535,6 +1560,7 @@ cs:
         dance-extras:
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursef-2019:
+          title: Kurz F (2019)
           stages:
             Building a Foundation:
               name: Budování nadace
@@ -1556,11 +1582,21 @@ cs:
               name: Dance Party
           description_short: Nakóduj vlastní taneční party, kterou můžeš sdílet s přáteli! (Tato verze je pro pomalá připojení)
         coursed-2019:
+          title: Kurz D (2019)
+          description: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
           stages:
             'Algorithms: Graph Paper Programming':
               name: Programování na čtverečkovaném papíru
+              description_teacher: 'Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.'
+            Introduction to Online Puzzles:
+              name: Představení online úloh
             Relay Programming:
               name: Štafetové programování
+            Debugging in Collector:
+              name: Ladění s Laurel
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
+            Loops in Ice Age:
+              name: Cykly v době ledové
             Conditionals with Cards:
               name: Podmínky s kartami
             Digital Citizenship:
@@ -1572,6 +1608,7 @@ cs:
             Dance Party:
               name: Dance Party
         coursee-2019:
+          title: Kurz E (2019)
           stages:
             Building a Foundation:
               name: Budování nadace
@@ -1585,9 +1622,12 @@ cs:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
+            Simon Says:
+              name: Kuba řekl
             Songwriting:
               name: Skládání písniček
         express-2019:
+          title: Rychlý kurz (2019)
           stages:
             Relay Programming:
               name: Štafetové programování
@@ -1617,25 +1657,34 @@ cs:
           title: Nepřestávej tančit
           description: Pokračuj i po první hodině kódu rozšířením nápadů ve svém projektu.
         coursec-2019:
+          title: Kurz C (2019)
           stages:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmy ze života: Papírová letadla'
+            Programming in Collector:
+              description_teacher: V těchto úlohách si studenti rozšíří porozumění algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel získat poklad na cestě.
             'Events: The Big Event':
               name: Velká událost
             Binary Bracelets:
               name: Binární náramky
+            Powerful Passwords:
+              name: Silná hesla
         coursea-2019:
+          title: Kurz A (2019)
           stages:
             'Programming: Happy Maps':
               name: Šťastné mapy
             Going Places Safely:
               name: Cestování bezpečně
         courseb-2019:
+          title: Kurz B (2019)
           stages:
             Move It, Move It:
               name: Pohyb, pohyb
             Your Digital Footprint:
               name: Tvé digitální stopy
+            Loops in Ice Age:
+              name: Cykly v době ledové
             'Loops: Getting Loopy':
               name: Bláznit
         pre-express-2019:
@@ -1723,6 +1772,14 @@ cs:
               name: Funkce
             Random Numbers:
               name: Náhodná čísla
+        csp3-pilot:
+          stages:
+            Debugging:
+              name: Ladění
+        csl-vn:
+          stages:
+            Loops in Ice Age:
+              name: Cykly v době ledové
         peru-2019:
           stages:
             Introduction:
@@ -1736,6 +1793,8 @@ cs:
           description: Vytvoř si svůj vlastní taneční večírek a sdílej ho s kamarády!
         k5-onlinepd-2019:
           stages:
+            Sequencing:
+              name: Sekvence
             Loops:
               name: Cykly
             Conditionals:
@@ -1754,6 +1813,8 @@ cs:
           stages:
             Conditionals:
               name: Podmínky
+            Simon Says:
+              name: Kuba řekl
         time4cs-control-unit-2:
           stages:
             Crowdsourcing:
@@ -1764,10 +1825,14 @@ cs:
           stages:
             Conditionals:
               name: Podmínky
+            Simon Says:
+              name: Kuba řekl
         time4cs-experiment-unit-1:
           stages:
             Conditionals:
               name: Podmínky
+            Simon Says:
+              name: Kuba řekl
         csd6-2020:
           stages:
             Functions with Parameters:
@@ -1784,3 +1849,79 @@ cs:
               name: Podmínky
             Functions:
               name: Funkce
+        coursea-2020:
+          title: Kurz A (2019)
+          stages:
+            Going Places Safely:
+              name: Cestování bezpečně
+            Loops in Ice Age:
+              name: Cykly v době ledové
+        courseb-2020:
+          title: Kurz B (2019)
+          stages:
+            Your Digital Footprint:
+              name: Tvé digitální stopy
+            Move It, Move It:
+              name: Pohyb, pohyb
+        coursec-2020:
+          title: Kurz C (2019)
+          stages:
+            Powerful Passwords:
+              name: Silná hesla
+            Programming in Collector:
+              description_teacher: V těchto úlohách si studenti rozšíří porozumění algoritmů a ladění kódu. S novou postavičkou - dobrodružnou Laurel studenti vytvoří sekvenční algoritmy, pomocí nichž pomohou Laurel získat poklad na cestě.
+            Binary Bracelets:
+              name: Binární náramky
+        coursed-2020:
+          title: Kurz D (2019)
+          description: Studenti se naučí chápat cykly, podmínky a události (events). Kromě programování se studenti naučí o digitálním občanství.
+          stages:
+            'Algorithms: Graph Paper Programming':
+              description_teacher: 'Začněme formou "programování", kde bude jeden žák programovat druhého tak, aby kreslil obrazce. Žáci tak budou mít příležitost zažít některé ze základních principů programování zábavnou a přístupnou cestou. V této lekci žáci začnou tím, že se naučí používat symboly, aby pomocí nich instruovali jeden druhého k vybarvení určitých čtverců na čtverečkovaném papíře. Takto vznikne obrazec. Pokud na konci hodiny zbyde čas, můžou si žáci nějaké obrázky vymyslet sami.'
+            Introduction to Online Puzzles:
+              name: Představení online úloh
+            Relay Programming:
+              name: Štafetové programování
+            Debugging in Collector:
+              description_teacher: V této online aktivitě si studenti procvičí ladění kódu v prostředí "sběratele". Studenti budou procvičovat čtení a úpravu kódu při opravování úloh s jednoduchými algoritmy, cykly a vnořenými cykly. 
+            Loops in Ice Age:
+              name: Cykly v době ledové
+            Conditionals with Cards:
+              name: Podmínky s kartami
+            'Unplugged: Binary':
+              name: 'Nezapojené: binární'
+            Artist Binary:
+              name: Umělecké binární
+            Digital Citizenship:
+              name: Digitální občanství
+            Dance Party:
+              name: Dance Party
+        coursee-2020:
+          title: Kurz E (2019)
+          stages:
+            Conditionals:
+              name: Podmínky
+            Simon Says:
+              name: Kuba řekl
+        coursef-2020:
+          title: Kurz F (2019)
+          stages:
+            Envelope Variables:
+              name: Obálkové proměnné
+            For Loop Fun:
+              name: For cyklus zábavy
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          title: Rychlý kurz (2019)
+          stages:
+            Dance Party:
+              name: Dance Party
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Hláskovací včelka
+            Loops in Ice Age:
+              name: Cykly v době ledové

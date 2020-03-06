@@ -87,7 +87,7 @@ module Pd
     # Index valule is then saved to 'day' column in WorkshopDailySurvey table.
     CSF_SURVEY_INDEXES = {
       PRE_DEEPDIVE_SURVEY => 0,
-      POST_DEEPDIVE_SURVEY => 1,
+      POST_DEEPDIVE_SURVEY => 1
     }
 
     # valid day numbers for different workshop categories
