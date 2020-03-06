@@ -20,17 +20,15 @@ const styles = {
   linkBox: {
     cursor: 'auto',
     height: '32px',
-    margin: DEFAULT_MARGIN,
-    marginRight: 0,
+    marginBottom: 0,
     flex: 1,
     maxWidth: 400
   },
   header: {
     textAlign: 'left',
-    fontSize: 'x-large',
     color: color.purple,
-    margin: DEFAULT_MARGIN,
-    marginTop: 30
+    fontSize: 24,
+    marginTop: 20
   },
   libraryList: {
     maxHeight: '140px',
@@ -46,7 +44,8 @@ const styles = {
     whiteSpace: 'pre-wrap'
   },
   inputParent: {
-    display: 'flex'
+    display: 'flex',
+    alignItems: 'baseline'
   },
   add: {
     margin: DEFAULT_MARGIN,
@@ -237,11 +236,11 @@ export class LibraryManagerDialog extends React.Component {
           style={{...styles.dialog, ...(isViewingCode ? styles.hidden : {})}}
           useUpdatedStyles
         >
-          <div style={styles.header}>{i18n.libraryManage()}</div>
+          <h1 style={styles.header}>{i18n.libraryManage()}</h1>
           <div style={styles.libraryList}>{this.displayProjectLibraries()}</div>
-          <div style={styles.header}>{i18n.libraryClassImport()}</div>
+          <h1 style={styles.header}>{i18n.libraryClassImport()}</h1>
           <div style={styles.libraryList}>{this.displayClassLibraries()}</div>
-          <div style={styles.header}>{i18n.libraryIdImport()}</div>
+          <h1 style={styles.header}>{i18n.libraryIdImport()}</h1>
           <div style={styles.inputParent}>
             <input
               style={styles.linkBox}
