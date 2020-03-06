@@ -126,9 +126,7 @@ export function getNumberLessonsCompleted(state) {
         .stages;
 
     stages.forEach(stage => {
-      console.log(stage.id);
       const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
-      console.log(lessonCompletionStatus);
       if (lessonCompletionStatus.completed) {
         lessonsCompleted += 1;
       }
@@ -204,10 +202,8 @@ export function getLessonCompletionStatus(state, stageId) {
     const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
     const stage = _.find(stages, ['id', stageId]);
     if (stage.unplugged) {
-      console.log('unplugged');
       return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
     } else {
-      console.log('plugged');
       return getPluggedLessonCompletionStatus(state, stage);
     }
   }

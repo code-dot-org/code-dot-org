@@ -11,7 +11,7 @@ import sectionStandardsProgress, {
 import {
   stageId,
   scriptId,
-  stage,
+  pluggedStage,
   stateForTeacherMarkedAndProgress,
   stateForTeacherMarkedIncompletedLesson,
   stateForTeacherMarkedCompletedLesson,
@@ -114,11 +114,11 @@ describe('sectionStandardsProgressRedux', () => {
       assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
         4: [
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           },
@@ -143,11 +143,11 @@ describe('sectionStandardsProgressRedux', () => {
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
@@ -163,11 +163,11 @@ describe('sectionStandardsProgressRedux', () => {
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
@@ -179,11 +179,11 @@ describe('sectionStandardsProgressRedux', () => {
       assert.deepEqual(lessonsByStandard(stateForTeacherMarkedAndProgress), {
         4: [
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           },
@@ -208,11 +208,11 @@ describe('sectionStandardsProgressRedux', () => {
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
@@ -228,11 +228,11 @@ describe('sectionStandardsProgressRedux', () => {
             url: 'https://curriculum.code.org/csf-19/coursea/1'
           },
           {
-            completed: false,
+            completed: true,
             lessonNumber: 2,
             name: 'Learn to Drag and Drop',
             numStudents: 4,
-            numStudentsCompleted: 0,
+            numStudentsCompleted: 4,
             unplugged: false,
             url: 'https://curriculum.code.org/csf-19/coursea/2'
           }
@@ -299,7 +299,9 @@ describe('sectionStandardsProgressRedux', () => {
 
   describe('getPluggedLessonCompletionStatus', () => {
     it('accurately calculates no progress', () => {
-      expect(getPluggedLessonCompletionStatus(fakeState, stage)).to.deep.equal({
+      expect(
+        getPluggedLessonCompletionStatus(fakeState, pluggedStage)
+      ).to.deep.equal({
         completed: false,
         numStudentsCompleted: 0
       });
@@ -309,7 +311,7 @@ describe('sectionStandardsProgressRedux', () => {
       expect(
         getPluggedLessonCompletionStatus(
           stateForPartiallyCompletedLesson,
-          stage
+          pluggedStage
         )
       ).to.deep.equal({
         completed: false,
@@ -319,7 +321,7 @@ describe('sectionStandardsProgressRedux', () => {
 
     it('accurately calculates > 80% of students completed > 60% of levels', () => {
       expect(
-        getPluggedLessonCompletionStatus(stateForCompletedLesson, stage)
+        getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedStage)
       ).to.deep.equal({
         completed: true,
         numStudentsCompleted: 4
@@ -334,6 +336,12 @@ describe('sectionStandardsProgressRedux', () => {
 
     it('accurately calculates the number of lessons completed when there is student progress', () => {
       expect(getNumberLessonsCompleted(stateForCompletedLesson)).to.equal(1);
+    });
+
+    it('accurately calculates the number of lessons completed when there is student progress and teacher marked', () => {
+      expect(
+        getNumberLessonsCompleted(stateForTeacherMarkedAndProgress)
+      ).to.equal(2);
     });
   });
 });

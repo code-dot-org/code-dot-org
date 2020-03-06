@@ -60,9 +60,6 @@ export const lessonCompletedByStandard = {
   ]
 };
 
-export const stageId = 662;
-export const scriptId = 92;
-
 const teacherSections = {
   selectedSectionId: 1,
   sections: {
@@ -113,6 +110,9 @@ const standardsData = [
   }
 ];
 
+export const stageId = 662;
+export const scriptId = 92;
+
 const scriptDataByScript = {
   92: {
     csf: true,
@@ -132,7 +132,7 @@ const scriptDataByScript = {
         title: 'Lesson 1: Going Places Safely',
         flex_category: 'Digital Citizenship',
         lockable: false,
-        levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
+        levels: [],
         description_student: 'Learn the rules to safely visit places online.',
         description_teacher:
           'In collaboration with Common Sense Media, this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.',
@@ -154,7 +154,7 @@ const scriptDataByScript = {
         title: 'Lesson 2: Learn to Drag and Drop',
         flex_category: 'Sequencing',
         lockable: false,
-        levels: [],
+        levels: [{activeId: 10001}, {activeId: 10002}, {activeId: 10003}],
         description_student: 'Click and drag to finish the puzzles.',
         description_teacher:
           'This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.',
@@ -192,7 +192,7 @@ const scriptDataByScript = {
   }
 };
 
-export const stage = scriptDataByScript[scriptId].stages[0];
+export const pluggedStage = scriptDataByScript[scriptId].stages[1];
 
 const sectionCompletedLesson = {
   92: {
