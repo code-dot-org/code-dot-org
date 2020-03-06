@@ -1,11 +1,13 @@
 /*global dashboard*/
 import React from 'react';
 import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
 import libraryParser from './libraryParser';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
+import {unpublishProjectLibrary} from '@cdo/apps/templates/projects/projectsRedux';
 
 const styles = {
   alert: {
@@ -57,12 +59,15 @@ export const PublishState = {
  * An interactive page for a dialog that can be used to publish or unpublish
  * a library from a source project.
  */
-export default class LibraryPublisher extends React.Component {
+export class LibraryPublisher extends React.Component {
   static propTypes = {
     onPublishSuccess: PropTypes.func.isRequired,
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
-    libraryClientApi: PropTypes.object.isRequired
+    libraryClientApi: PropTypes.object.isRequired,
+
+    // Provided by Redux
+    unpublishProjectLibrary: PropTypes.func.isRequired
   };
 
   state = {
@@ -239,20 +244,29 @@ export default class LibraryPublisher extends React.Component {
   };
 
   unpublish = () => {
-    const {libraryClientApi, onUnpublishSuccess} = this.props;
-    libraryClientApi.delete(
-      () => {
+    const {
+      unpublishProjectLibrary,
+      libraryClientApi,
+      onUnpublishSuccess
+    } = this.props;
+
+    const onComplete = (error, _) => {
+      if (error) {
+        console.warn(`Error unpublishing library: ${error}`);
+        this.setState({publishState: PublishState.ERROR_UNPUBLISH});
+      } else {
         onUnpublishSuccess();
         dashboard.project.setLibraryDetails(
           undefined,
           undefined,
           false /* publishing */
         );
-      },
-      error => {
-        console.warn(`Error unpublishing library: ${error}`);
-        this.setState({publishState: PublishState.ERROR_UNPUBLISH});
       }
+    };
+    unpublishProjectLibrary(
+      libraryClientApi.channelId,
+      libraryClientApi,
+      onComplete
     );
   };
 
@@ -287,3 +301,12 @@ export default class LibraryPublisher extends React.Component {
     );
   }
 }
+
+export default connect(
+  state => ({}),
+  dispatch => ({
+    unpublishProjectLibrary(channelId, libraryApi, onComplete) {
+      dispatch(unpublishProjectLibrary(channelId, libraryApi, onComplete));
+    }
+  })
+)(LibraryPublisher);
