@@ -84,7 +84,7 @@ class TeacherScore < ApplicationRecord
 
   def self.get_level_scores_for_stage_for_student(stage_id, student_id)
     stage = Stage.find(stage_id)
-    script_id = stage.script.id
+    script_id = stage.script_id
     level_ids = stage.script_levels.map(&:level_id)
     user_levels = UserLevel.select(:id, :level_id).where(user_id: student_id, level_id: level_ids, script_id: script_id)
     teacher_scores = TeacherScore.select(:score, :created_at, :user_level_id).where(

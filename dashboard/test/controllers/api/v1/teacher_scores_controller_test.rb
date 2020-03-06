@@ -114,6 +114,38 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_equal formatted_response, "{#{script.id}:{#{stage.id}:{#{student.id}:{#{level.id}:#{score}}}}}"
   end
 
+  test 'get_teacher_scores_for_script query count' do
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    10.times do
+      student = create :student
+      section.students << student
+    end
+    sign_in teacher
+
+    script = create :script
+    script_level = create(
+      :script_level,
+      script: script,
+      levels: [
+        create(:maze, name: 'test level 1')
+      ]
+    )
+    level = script_level.levels[0]
+    stage = script_level.stage
+    score = 100
+
+    section.students.each do |student|
+      create :user_level, user: student, level: level, script: script
+    end
+
+    post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: score}]}
+
+    assert_queries 39 do
+      get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
+    end
+  end
+
   private
 
   def formatted_response
