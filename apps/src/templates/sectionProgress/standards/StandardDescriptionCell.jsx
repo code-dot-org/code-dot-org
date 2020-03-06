@@ -19,7 +19,7 @@ const styles = {
   },
   lessonsAreaTitle: {
     marginRight: 10,
-    width: '28%'
+    width: '30%'
   },
   tooltip: {
     textAlign: 'center'
