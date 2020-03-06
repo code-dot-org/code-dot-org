@@ -31,10 +31,6 @@ import {loadScript} from '../sectionProgressRedux';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {
-  fetchStandardsCoveredForScript,
-  fetchStudentLevelScores
-} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   printView: {
@@ -78,11 +74,9 @@ class StandardsReport extends Component {
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
-    fetchStandardsCoveredForScript: PropTypes.func.isRequired,
     setTeacherCommentForReport: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
-    lessonsByStandard: PropTypes.object,
-    fetchStudentLevelScores: PropTypes.func.isRequired
+    lessonsByStandard: PropTypes.object
   };
 
   componentDidMount() {
@@ -92,9 +86,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    this.props.loadScript(scriptIdFromTD);
-    this.props.fetchStandardsCoveredForScript(scriptIdFromTD);
-    this.props.fetchStudentLevelScores(scriptIdFromTD, this.props.section.id);
+    this.props.loadScript(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -232,14 +224,8 @@ export default connect(
     lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
-    },
-    fetchStandardsCoveredForScript(scriptId) {
-      dispatch(fetchStandardsCoveredForScript(scriptId));
-    },
-    fetchStudentLevelScores(scriptId, sectionId) {
-      dispatch(fetchStudentLevelScores(scriptId, sectionId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));
