@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200221223130) do
+ActiveRecord::Schema.define(version: 20200304032242) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -732,6 +732,15 @@ ActiveRecord::Schema.define(version: 20200221223130) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_pd_international_opt_ins_on_user_id", using: :btree
+  end
+
+  create_table "pd_legacy_survey_summaries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "facilitator_id"
+    t.string   "course"
+    t.string   "subject"
+    t.text     "data",           limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   create_table "pd_misc_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
@@ -1469,7 +1478,7 @@ ActiveRecord::Schema.define(version: 20200221223130) do
   end
 
   create_table "teacher_scores", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "user_level_id"
+    t.bigint   "user_level_id",              unsigned: true
     t.integer  "teacher_id"
     t.integer  "score"
     t.datetime "created_at",    null: false

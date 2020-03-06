@@ -272,6 +272,7 @@ export class LibraryPublisher extends React.Component {
 
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
+
     return (
       <div>
         <Heading2>{i18n.libraryName()}</Heading2>
