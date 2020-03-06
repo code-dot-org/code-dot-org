@@ -26,7 +26,6 @@ The main event on stage features Seahawks quarterback Russell Wilson, award-winn
 Invited schools must RSVP to this event no later than **March 5th**. The number of attendees from your school may be limited due to space. Note: If you were invited, you were sent an **RSVP password via email**.
 
 <center><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdWEe_KmgOXp3AexP3VvUz0GTZdMEPnjsrGCAdzFFM6S8GbdQ/viewform?embedded=true" width="640" height="650" frameborder="0" marginheight="0" marginwidth="0">RSVP to CSFest Seattle</iframe></center>
-
 ### **How do I know if my school is participating?**
 Computer science classrooms from the Seattle, Highline, Federal Way, and Shoreline school districts are invited, as well as a handful of schools from the greater Puget Sound Area. A list of participating schools will be updated on this page below as they are confirmed.
 
@@ -34,8 +33,34 @@ If you are a computer science teacher or administrator at a high schools that te
 
 If you’re a middle school or high school teacher in Puget Sound and your school doesn’t teach computer science, apply to the [Code.org Progressional Learning](https://code.org/educate/professional-learning) program to attend as an individual.
 
-### **List of Participating Schools**
-Computer science classrooms in the following schools have been confirmed to participate in this event to come.
+### **List of Participating Schools and Companies**
+Computer science classrooms in the following schools are confirmed to participate in this event: 
+- Pacific Middle School
+- Sylvester Middle School
+- Chinook Middle School
+- Franklin High School
+- Nathan Hale High School
+- Legacy High School
+- Thomas Jefferson High School
+- Lincoln High School
+- Todd Beamer High School
+- Liberty High School
+- Decatur High School
+
+We're also excited to welcome Zillow Group, Redfin, Adaptive Biotechnologies, Airbnb, Google, Eastern Washington University, Seattle Pacific University, University of Washington's Paul G. Allen School of Computer Science & Engineering, and more for our academic and career fair. 
 
 ### **What if my school doesn’t teach computer science?**
 If your school doesn't teach computer science, [nominate a teacher for a scholarship](https://code.org/nominate) to learn how, because every student in every school should have this opportunity.
+
+
+<center>
+    In partnership with:
+    <div style="height: 20px;"></div>
+</center>
+
+<center>
+    ![Amazon Future Engineer](/images/marketing/csfest-partner-AFE-logo.png)
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    ![Why Not You Foundation](/images/fit-200/marketing/csfest-partner-WhyNotYou-logo.png)
+</center>
+

@@ -1,4 +1,5 @@
 name 'Unit 5 Lesson 12 Introduction'
+editor_experiment ''
 title 'While Loops and Counting'
 css 'unplugged'
 
@@ -32,7 +33,7 @@ The series of problems and tasks in this lesson progressively build up a series 
 
 We ask students to **make a hypothesis**, then experiment with code, revise the hypothesis and so on, around some question.  Below are some guidelines about what students should find.
 
-**Insights: **The following insights should arise from this experiment:
+**Insights:** The following insights should arise from this experiment:
     
 * **Total Heads:** When trying to flip 5 heads, it is quite possible that it will only take 5 flips, but it may also easily take 15 or 20. Relative to the number of heads you are looking for, this is a massive range! When you are trying to flip 10,000 heads the likely range is typically between 19,000 and 21,000, and typically much closer. As you are looking for more flips, the relative width of the likely window shrinks.
     
