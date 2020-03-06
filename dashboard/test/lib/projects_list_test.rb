@@ -298,7 +298,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        value: {'libraryName': applab_lib_name, 'libraryDescription': description, 'hidden': true}.to_json,
         state: 'active'
       },
       {

@@ -4,7 +4,9 @@ student_detail_progress_view true
 has_verified_resources true
 has_lesson_plan true
 curriculum_path 'https://curriculum.code.org/{LOCALE}/cspilot/unit4/{LESSON}'
-editor_experiment 'csp-piloters'
+pilot_experiment 'csp-2020-access'
+project_sharing true
+curriculum_umbrella 'CSP'
 
 stage 'Variables Explore', flex_category: 'csp_variables'
 level 'CSP U4L1 SFLP 20-21', progression: 'Lesson Overview'

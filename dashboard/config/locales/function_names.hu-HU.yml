@@ -7,12 +7,12 @@ hu-HU:
       2-3 Artist 12:
         details: részletek
         draw eyebrow: rajzolj szemöldököt
-        draw pupil: rajzolj tanulót
+        draw pupil: rajzolj pupillát
       2-3 Artist 3.4:
         draw a circle: kör rajzolása
         draw a car: rajzolj autót
       2-3 Artist 7:
-        draw_rect: rajzolj_téglalap
+        draw_rect: rajzolj_téglalapot
       2-3 Artist Debugging 10:
         draw square: rajzolj négyzetet
         jump to controller top left: ugorj a szabályozóra bal fent

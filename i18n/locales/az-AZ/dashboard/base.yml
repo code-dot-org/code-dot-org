@@ -538,3 +538,4 @@ az:
     accept: 'Razıyam'
   gdpr_dialog:
     yes: 'Bəli'
+  copy: 'Köçür'

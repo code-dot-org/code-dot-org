@@ -493,9 +493,9 @@ hu:
         text: "Itt van a \"ha nyíl\" blokk és a \"mozgasd a szereplőt\" blokk. Ezeket a blokkokat összeillesztheted, hogy a szereplőket a nyilakkal mozgatni tudd."
     C4_bee_conditional:
       1:
-        text: "Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy lépnél vagy, akkor csinálj valamit. Ez akkor hasznos, ha nem tudjuk, hogy mennyi mézet vagy nektárt kell gyűjtenünk, mint például itt, és ezt kérdőjel jelzi."
+        text: "Ez egy feltételes blokk. Azt mondja, ha egy virágnál vagy méhsejtnél vagy, akkor csinálj valamit. Ez akkor hasznos, ha nem tudjuk, hogy mennyi mézet vagy nektárt kell gyűjtenünk, mint például itt, és ezt kérdőjel jelzi."
       2:
-        text: "Ebben a példában azt mondjuk, hogy ha egy virágnál vagyunk, akkor gyűjtsük be az összes nektárt, aztán egy másikkal pedig azt, hogy ha egy lépnél vagyunk, akkor készítsünk mézet. Kész is!"
+        text: "Ebben a példában azt mondjuk, hogy ha egy virágnál vagyunk, akkor gyűjtsük be az összes nektárt, aztán egy másikkal pedig azt, hogy ha egy méhsejtnél vagyunk, akkor készítsünk mézet. Kész is!"
     C4_conditionals:
       1:
         text: "Van egy új blokkunk, amit ha/különben blokknak hívunk. Ez egy feltételes utasítás, ugyanúgy, mint az if blokk, amit már korábbi feladványainkban használtunk. Azonban most van egy új tagja, ez a különben rész az alján. A ha/különben blokk lehetővé teszi, hogy a méh döntsön két művelet között. Ha a méh virágnál van, akkor azokat az utasításokat fogja elvégezni, amelyeket az első részbe teszel. Ha a méh nincs virágnál éppen, akkor azokat fogja végrehajtani, amiket a különbenhez tartozó részhez teszel."
@@ -580,7 +580,7 @@ hu:
       6:
         text: "A fehér terület a Munkaterület, és itt fogjuk építeni a programot."
       7:
-        text: "Ha a mozdulj balra blokkot a munkaterületre vonszolod, és a Futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
+        text: "Ha a mozdulj balra blokkot a munkaterületre húzod, és a futtatásra kattintasz, mi fog történni? BB-8 balra mozdul egyet a rácson."
       8:
         text: "És mi a helyzet, ha BB-8-nek valami mást is kell csinálnia a mozdulj balra blokk után? Hozzáadhatsz még egy blokkot a programhoz. Én most a mozdulj fel blokkot választom, és a mozdulj balra alá vonszolom, amíg a kiemelés meg nem jelenik. Ekkor elengedem, és a két blokk összekattan."
       9:
@@ -652,7 +652,7 @@ hu:
       9:
         text: "Ha ki akarsz törölni egy blokkot, csak húzd vissza az eszköztárba."
       10:
-        text: "Ha törölni szeretnél egy blokkot, csak vonszold vissza az eszköztárba."
+        text: "Miután megnyomtad a futtatást, bármikor visszatérhetsz a kezdeti állásba, és BB-8 is visszamegy oda, ahol a futtatás előtt állt. És most, gördüljünk tovább!"
     starwars_blocks_events:
       1:
         text: "Szia, az én nevem Charita Carter. Vezető kreatív producer vagyok a Walt Disney Imagineeringnél. Én vagyok felelős azokért a játékokért, amelyekkel a látogatóink találkoznak. Mindig keressük a lehetőségét annak, hogy fejlődjünk és emlékezetesebb élményt nyújtsunk a látogatóinknak, és a technológia alapvető ebben a folyamatban."

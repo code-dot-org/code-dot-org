@@ -380,3 +380,4 @@ ms:
     accept: 'saya setuju'
   gdpr_dialog:
     yes: 'Ya'
+  copy: 'Salin'
