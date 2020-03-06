@@ -19,6 +19,7 @@ import {
 import {createHiddenPrintWindow} from './utils';
 import testImageAccess from './code-studio/url_test';
 import {TestResults, KeyCodes} from './constants';
+import QRCode from 'qrcode.react';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1002,13 +1003,17 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
     );
   }
 
-  //  SMS-to-phone feature
+  //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
-  if (sharingPhone && options.sendToPhone) {
-    dom.addClickTouchEvent(sharingPhone, function() {
-      var sendToPhone = sharingDiv.querySelector('#send-to-phone');
-      if ($(sendToPhone).is(':hidden')) {
-        $(sendToPhone).show();
+  dom.addClickTouchEvent(sharingPhone, function() {
+    var sendToPhone = sharingDiv.querySelector('#send-to-phone');
+    if ($(sendToPhone).is(':hidden')) {
+      $(sendToPhone).show();
+
+      var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
+      ReactDOM.render(<QRCode value={options.shareLink} size={90} />, qrCode);
+
+      if (sharingPhone && options.sendToPhone) {
         var phone = $(sharingDiv.querySelector('#phone'));
         var submitted = false;
         var submitButton = sharingDiv.querySelector('#phone-submit');
@@ -1046,12 +1051,12 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
               trackEvent('SendToPhone', 'error');
             });
         });
-      } else {
-        // not hidden, hide
-        $(sendToPhone).hide();
       }
-    });
-  }
+    } else {
+      // not hidden, hide
+      $(sendToPhone).hide();
+    }
+  });
 
   var downloadReplayVideoContainer = sharingDiv.querySelector(
     '#download-replay-video-container'
