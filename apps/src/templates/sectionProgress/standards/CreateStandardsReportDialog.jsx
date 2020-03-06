@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import BaseDialog from '../../BaseDialog';
-import {CreateStandardsReportStep1} from './CreateStandardsReportStep1';
+import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';
 
 const styles = {
