@@ -119,8 +119,7 @@ export function getNumberLessonsCompleted(state) {
   if (
     state.sectionProgress.scriptDataByScript &&
     state.scriptSelection.scriptId &&
-    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId] &&
-    state.sectionStandardsProgress.standardsData
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
   ) {
     const stages =
       state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]

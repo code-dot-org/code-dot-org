@@ -77,3 +77,8 @@ Scenario: Pair Programming
   And I wait until element ".fa-users" is visible
   And I click selector ".pairing_name"
   And I wait until element ".pairing_summary" is visible
+
+Scenario: Unicode in display name
+  Given I create a student named "Caoimhín" and go home
+  And I wait until element ".display_name" is visible
+  And element ".display_name" contains text "Caoimhín"
