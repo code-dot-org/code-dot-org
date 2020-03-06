@@ -5,6 +5,7 @@ import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 const styles = {
   overflowEllipsis: {
@@ -100,9 +101,11 @@ export class LibraryListItem extends React.Component {
     return (
       <div style={styles.listItem}>
         <div style={[{marginRight: 25}, styles.overflowEllipsis]}>
-          <a onClick={this.viewCode} style={styles.libraryTitle}>
-            {library.name}
-          </a>
+          <Tooltip text={i18n.viewCode()} place="bottom">
+            <a onClick={this.viewCode} style={styles.libraryTitle}>
+              {library.name}
+            </a>
+          </Tooltip>
           {library.userName && (
             <div style={[styles.author, styles.overflowEllipsis]}>
               <InlineMarkdown
@@ -116,14 +119,16 @@ export class LibraryListItem extends React.Component {
         </div>
         <div style={styles.actions}>
           {this.props.onAdd && (
-            <button
-              type="button"
-              key={'add-' + library.id}
-              onClick={() => this.props.onAdd(library.id)}
-              style={[styles.actionBtn, styles.addBtn]}
-            >
-              <FontAwesome icon="plus" style={styles.iconPadding} />
-            </button>
+            <Tooltip text={i18n.add()} place="bottom">
+              <button
+                type="button"
+                key={'add-' + library.id}
+                onClick={() => this.props.onAdd(library.id)}
+                style={[styles.actionBtn, styles.addBtn]}
+              >
+                <FontAwesome icon="plus" style={styles.iconPadding} />
+              </button>
+            </Tooltip>
           )}
           {this.props.onRefresh && (
             <button
@@ -137,14 +142,16 @@ export class LibraryListItem extends React.Component {
             </button>
           )}
           {this.props.onRemove && (
-            <button
-              type="button"
-              key={'remove-' + library.id}
-              onClick={() => this.props.onRemove(library.name)}
-              style={[styles.actionBtn, styles.removeBtn]}
-            >
-              <FontAwesome icon="trash-o" style={styles.iconPadding} />
-            </button>
+            <Tooltip text={i18n.removeFromProject()} place="bottom">
+              <button
+                type="button"
+                key={'remove-' + library.id}
+                onClick={() => this.props.onRemove(library.name)}
+                style={[styles.actionBtn, styles.removeBtn]}
+              >
+                <FontAwesome icon="trash-o" style={styles.iconPadding} />
+              </button>
+            </Tooltip>
           )}
         </div>
       </div>
