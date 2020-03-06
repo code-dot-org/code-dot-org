@@ -1358,7 +1358,12 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
 
   #send-to-phone-right {
     float: left;
-    width: 40%
+    width: 40%;
+    margin-bottom: 0px;
+  }
+
+  #send-to-phone-qr-code {
+    margin-bottom: 0px;
   }
 
   button.saved-to-gallery {
