@@ -116,17 +116,21 @@ class StandardsViewHeaderButtons extends Component {
   render() {
     return (
       <div style={styles.buttonsGroup}>
-        <Button
-          onClick={this.openLessonStatusDialog}
-          color={Button.ButtonColor.gray}
-          text={i18n.updateUnpluggedProgress()}
-          size={'narrow'}
-          style={styles.button}
-        />
-        <LessonStatusDialog
-          isOpen={this.state.isLessonStatusDialogOpen}
-          handleConfirm={this.onSaveUnpluggedLessonStatus}
-        />
+        {this.props.unpluggedLessons.length > 0 && (
+          <div>
+            <Button
+              onClick={this.openLessonStatusDialog}
+              color={Button.ButtonColor.gray}
+              text={i18n.updateUnpluggedProgress()}
+              size={'narrow'}
+              style={styles.button}
+            />
+            <LessonStatusDialog
+              isOpen={this.state.isLessonStatusDialogOpen}
+              handleConfirm={this.onSaveUnpluggedLessonStatus}
+            />
+          </div>
+        )}
         <Button
           onClick={this.openCreateReportDialog}
           color={Button.ButtonColor.gray}
