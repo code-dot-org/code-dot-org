@@ -278,8 +278,8 @@ export default connect(
     personalProjectsList: state.projects.personalProjectsList.projects
   }),
   dispatch => ({
-    unpublishProjectLibrary(channelId, onComplete) {
-      dispatch(unpublishProjectLibrary(channelId, onComplete));
+    unpublishProjectLibrary(channelId, libraryApi, onComplete) {
+      dispatch(unpublishProjectLibrary(channelId, libraryApi, onComplete));
     }
   })
 )(LibraryTable);
