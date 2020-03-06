@@ -5,9 +5,9 @@ import i18n from '@cdo/locale';
 import {compact} from 'lodash';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import Button from '@cdo/apps/templates/Button';
-import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import {
   updateStudentTransfer,
   transferStudents,
@@ -20,8 +20,8 @@ import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
-const INPUT_WIDTH = 225;
 const DIALOG_WIDTH = 800;
+const INPUT_WIDTH = 225;
 
 const styles = {
   dialog: {
