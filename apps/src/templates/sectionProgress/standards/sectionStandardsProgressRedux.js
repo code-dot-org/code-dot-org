@@ -91,6 +91,11 @@ export function getUnpluggedLessonsForScript(state) {
 
   unpluggedStages.forEach(stage => {
     const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+    const selected = _.map(
+      state.sectionStandardsProgress.selectedLessons,
+      'id'
+    ).includes(stage.id);
+    stage['selected'] = selected;
     stage['completed'] = lessonCompletionStatus.completed;
   });
 
@@ -100,7 +105,8 @@ export function getUnpluggedLessonsForScript(state) {
       name: stage.name,
       number: stage.position,
       url: stage.lesson_plan_html_url,
-      completed: stage.completed
+      completed: stage.completed,
+      selected: stage.selected
     };
   }
 
