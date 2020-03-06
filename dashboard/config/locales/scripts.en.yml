@@ -15452,3 +15452,23 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+        csp-march-virtual:
+          stages:
+            Kick-off:
+              name: Kick-off
+            Changes:
+              name: Changes
+            Curriculum Investigations:
+              name: Curriculum Investigations
+            Wrap up:
+              name: Wrap up
+            new stage:
+              name: new stage
+            Pre-work:
+              name: Pre-work
+            Reflections:
+              name: Reflections
+          title: CS Principles Curriculum Training for Facilitators
+          description_audience: ''
+          description_short: ''
+          description: ''
