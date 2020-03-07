@@ -71,10 +71,15 @@ class TeacherScore < ApplicationRecord
   end
 
   def self.get_level_scores_for_stage_for_section(stage, section_id)
+    script_id = stage.script_id
     student_ids = Section.find(section_id).students.pluck(:id)
+    level_ids = stage.script_levels.map(&:level_id)
+    user_levels = UserLevel.select(:id, :level_id, :user_id).where(user_id: student_ids, level_id: level_ids, script_id: script_id)
+
     student_level_scores = {}
     student_ids.each do |student_id|
-      level_scores = get_level_scores_for_stage_for_student(stage, student_id)
+      student_user_levels = user_levels.select {|u_l| u_l.user_id == student_id}
+      level_scores = get_level_scores_for_stage_for_student(stage, student_user_levels)
       unless level_scores.empty?
         student_level_scores[student_id] = level_scores
       end
@@ -82,18 +87,15 @@ class TeacherScore < ApplicationRecord
     student_level_scores
   end
 
-  def self.get_level_scores_for_stage_for_student(stage, student_id)
-    script_id = stage.script_id
-    level_ids = stage.script_levels.map(&:level_id)
-    user_levels = UserLevel.select(:id, :level_id).where(user_id: student_id, level_id: level_ids, script_id: script_id)
+  def self.get_level_scores_for_stage_for_student(stage, student_user_levels)
     teacher_scores = TeacherScore.select(:score, :created_at, :user_level_id).where(
-      user_level_id: user_levels.pluck(:id)
+      user_level_id: student_user_levels.pluck(:id)
     )
     level_scores = {}
-    user_levels.each do |user_level|
-      teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == user_level.id}.sort_by(&:created_at).last&.score
+    student_user_levels.each do |u_l|
+      teacher_score = teacher_scores.select {|t_s| t_s.user_level_id == u_l.id}.sort_by(&:created_at).last&.score
       if teacher_score
-        level_scores[user_level.level_id] = teacher_score
+        level_scores[u_l.level_id] = teacher_score
       end
     end
     level_scores
