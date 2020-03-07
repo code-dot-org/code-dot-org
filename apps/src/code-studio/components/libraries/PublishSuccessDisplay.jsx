@@ -23,7 +23,8 @@ const styles = {
 export default class PublishSuccessDisplay extends React.Component {
   static propTypes = {
     libraryName: PropTypes.string.isRequired,
-    channelId: PropTypes.string.isRequired
+    channelId: PropTypes.string.isRequired,
+    onTeacherShareLibrary: PropTypes.func
   };
 
   copyChannelId = () => {
@@ -32,7 +33,7 @@ export default class PublishSuccessDisplay extends React.Component {
   };
 
   render = () => {
-    const {libraryName, channelId} = this.props;
+    const {libraryName, channelId, onTeacherShareLibrary} = this.props;
     return (
       <div>
         <Heading2>
@@ -55,6 +56,12 @@ export default class PublishSuccessDisplay extends React.Component {
               text={i18n.copyId()}
               style={styles.button}
             />
+            {onTeacherShareLibrary && (
+              <Button
+                onClick={onTeacherShareLibrary}
+                text={'manage sharing'}
+              />
+            )}
           </div>
         </div>
       </div>
