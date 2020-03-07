@@ -144,6 +144,18 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
     assert_queries 11 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
+
+    assert_equal section.students.count, 10
+
+    student = create :student
+    section.students << student
+    create :user_level, user: student, level: level, script: script
+
+    assert_equal section.students.count, 11
+
+    assert_queries 11 do
+      get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
+    end
   end
 
   private
