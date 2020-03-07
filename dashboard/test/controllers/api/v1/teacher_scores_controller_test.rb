@@ -141,7 +141,7 @@ class Api::V1::TeacherScoresControllerTest < ActionDispatch::IntegrationTest
 
     post '/dashboardapi/v1/teacher_scores', params: {section_id: section.id, stage_scores: [{stage_id: stage.id, score: score}]}
 
-    assert_queries 39 do
+    assert_queries 38 do
       get "/dashboardapi/v1/teacher_scores/#{section.id}/#{script.id}"
     end
   end
