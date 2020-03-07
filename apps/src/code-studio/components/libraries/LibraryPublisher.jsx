@@ -65,6 +65,7 @@ export class LibraryPublisher extends React.Component {
     onUnpublishSuccess: PropTypes.func.isRequired,
     libraryDetails: PropTypes.object.isRequired,
     libraryClientApi: PropTypes.object.isRequired,
+    onShareTeacherLibrary: PropTypes.func,
 
     // Provided by Redux
     unpublishProjectLibrary: PropTypes.func.isRequired
@@ -269,6 +270,7 @@ export class LibraryPublisher extends React.Component {
 
   render() {
     const {alreadyPublished} = this.props.libraryDetails;
+    const {onShareTeacherLibrary} = this.props;
 
     return (
       <div>
@@ -285,6 +287,14 @@ export class LibraryPublisher extends React.Component {
             onClick={this.publish}
             text={alreadyPublished ? i18n.update() : i18n.publish()}
           />
+          {onShareTeacherLibrary && (
+            <Button
+              style={{marginTop: 20}}
+              onClick={onShareTeacherLibrary}
+              text={'Manage Sharing'}
+              color={Button.ButtonColor.gray}
+            />
+          )}
           {alreadyPublished && (
             <Button
               style={styles.unpublishButton}

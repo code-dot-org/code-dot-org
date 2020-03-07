@@ -8,9 +8,11 @@ import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import Spinner from '../../pd/components/spinner';
 import PublishSuccessDisplay from './PublishSuccessDisplay';
+import ShareTeacherLibraries from './ShareTeacherLibraries';
 import LibraryPublisher from './LibraryPublisher';
 import loadLibrary from './libraryLoader';
 import LibraryClientApi from './LibraryClientApi';
+import {getStore} from '@cdo/apps/redux';
 
 const styles = {
   libraryBoundary: {
@@ -37,6 +39,7 @@ export const DialogState = {
   DONE_LOADING: 'done_loading',
   PUBLISHED: 'published',
   UNPUBLISHED: 'unpublished',
+  SHARE_TEACHER_LIBRARIES: 'share_teacher_libraries',
   ERROR: 'error'
 };
 
@@ -91,7 +94,7 @@ class LibraryCreationDialog extends React.Component {
     this.props.onClose();
   };
 
-  displayContent = () => {
+  displayPublisherContent = () => {
     const {libraryDetails, libraryClientApi} = this.state;
     return (
       <LibraryPublisher
@@ -104,11 +107,17 @@ class LibraryCreationDialog extends React.Component {
         onUnpublishSuccess={() =>
           this.setState({dialogState: DialogState.UNPUBLISHED})
         }
+        onShareTeacherLibrary={this.hasTeacherSections() ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES}) : undefined}
         libraryDetails={libraryDetails}
         libraryClientApi={libraryClientApi}
       />
     );
   };
+
+  hasTeacherSections() {
+    // debugger;
+    return getStore().getState().currentUser.userType === 'teacher';
+  }
 
   render() {
     let subtitleContent, bodyContent;
@@ -123,6 +132,7 @@ class LibraryCreationDialog extends React.Component {
           <PublishSuccessDisplay
             libraryName={libraryName}
             channelId={channelId}
+            onShareTeacherLibrary={this.hasTeacherSections() ? () => this.setState({dialogState: DialogState.SHARE_TEACHER_LIBRARIES}) : undefined}
           />
         );
         break;
@@ -134,7 +144,10 @@ class LibraryCreationDialog extends React.Component {
         break;
       case DialogState.DONE_LOADING:
         subtitleContent = i18n.libraryExportSubtitle();
-        bodyContent = this.displayContent();
+        bodyContent = this.displayPublisherContent();
+        break;
+      case DialogState.SHARE_TEACHER_LIBRARIES:
+        bodyContent = <ShareTeacherLibraries />;
         break;
       default:
         // If we get to this state, we've shipped a bug.
@@ -146,6 +159,8 @@ class LibraryCreationDialog extends React.Component {
         isOpen={dialogIsOpen}
         handleClose={this.handleClose}
         useUpdatedStyles
+        // fontSize is required for the table header in ShareTeacherLibraries.ShareTableSelect
+        style={{fontSize: '13px'}}
       >
         <Body>
           <PadAndCenter>
