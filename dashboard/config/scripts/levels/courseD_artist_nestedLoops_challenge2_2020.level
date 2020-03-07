@@ -1,0 +1,258 @@
+<Artist>
+  <config><![CDATA[{
+  "game_id": 23,
+  "created_at": "2020-02-25T15:54:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "artist",
+    "x": "175",
+    "y": "175",
+    "start_direction": "90",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "slider_speed": ".7",
+    "free_play": "false",
+    "short_instructions": "Fix the code to make this picture!",
+    "embed": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "impressive": "true",
+    "disable_sharing": "false",
+    "examples_required": "false",
+    "never_autoplay_video": "false",
+    "instructions_important": "false",
+    "discard_background": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To draw a regular octagon, the artist needs to turn 45 degrees 8 times.\",\"hint_id\":\"courseD_artist_nestedLoops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fa4a3b6422a66a4571ae3968abf38290/courseD_artist_nestedLoops_challenge2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To draw a regular hexagon, the artist needs to turn 60 degrees 6 times\",\"hint_id\":\"courseD_artist_nestedLoops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e1f44df20ff24783f50e8dc1c22354b3/courseD_artist_nestedLoops_challenge2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"To draw a square, the artist needs to turn 90 degrees 4 times.\",\"hint_id\":\"courseD_artist_nestedLoops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2d5792823c8ecb24e37da6101e7e4dc7/courseD_artist_nestedLoops_challenge2.mp3\"}]",
+    "long_instructions": "This code is just a little bit off!  Can you fix it to make the correct drawing in the workspace?\r\n\r\n- The first inner loop should make an octagon.\r\n- The second inner loop should make a hexagon.\r\n- The third inner loop should make a square.",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "callout_json": "[]",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/27645e0ea06e5399ba8cedbf8243a586=levelbuilder/25347.png",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 15100,
+    "name_suffix": "_2020",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-27 16:53:37 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:53:55 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:54:09 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:54:17 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:55:10 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:55:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:56:02 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:56:19 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:56:46 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 16:59:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"y\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:02:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:04:26 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:04:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:05:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:11:45 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:12:50 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:13:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:13:57 +0000\",\"changed\":[],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:21:26 +0000\",\"changed\":[\"solution_blocks\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:22:04 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:23:15 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:23:51 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:24:58 +0000\",\"changed\":[\"solution_blocks\",\"markdown_instructions\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:25:22 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:28:22 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:29:13 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:30:56 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:31:53 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:33:04 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:35:54 +0000\",\"changed\":[\"solution_blocks\",\"start_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-05-27 17:51:57 +0000\",\"changed\":[\"solution_blocks\",\"authored_hints\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-02 23:19:14 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-06-02 23:19:57 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-06-29 21:21:19 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"markdown_instructions\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-29 21:22:18 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-06-29 21:23:36 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-24 19:24:03 +0000\",\"changed\":[],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-15 20:24:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-15 20:29:13 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-15 22:32:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-15 22:43:43 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-12-15 22:48:21 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-12-15 22:48:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat" movable="false">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true" id="oct">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">8</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">50</title>
+                          <next>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE" config="45,60">45</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_colour" inline="true" id="hex">
+                          <value name="COLOUR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#ffa000</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">5</title>
+                              <statement name="DO">
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">50</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">turnLeft</title>
+                                      <title name="VALUE" config="72, 60">72</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_colour" inline="true" id="sqr">
+                                  <value name="COLOUR">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#ffff00</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">3</title>
+                                      <statement name="DO">
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">50</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant_dropdown">
+                                              <title name="DIR">turnLeft</title>
+                                              <title name="VALUE" config="90,120">120</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="jump_by_constant">
+                                          <title name="DIR">jumpForward</title>
+                                          <title name="VALUE">50</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant_dropdown" editable="false">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE" config="45,60,90,120,180">120</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml/>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat">
+              <title name="TIMES">3</title>
+              <statement name="DO">
+                <block type="draw_colour" inline="true">
+                  <value name="COLOUR">
+                    <block type="colour_picker">
+                      <title name="COLOUR">#ff0000</title>
+                    </block>
+                  </value>
+                  <next>
+                    <block type="controls_repeat">
+                      <title name="TIMES">8</title>
+                      <statement name="DO">
+                        <block type="draw_move_by_constant">
+                          <title name="DIR">moveForward</title>
+                          <title name="VALUE">50</title>
+                          <next>
+                            <block type="draw_turn_by_constant_dropdown">
+                              <title name="DIR">turnLeft</title>
+                              <title name="VALUE" config="45,60,90,120,180">45</title>
+                            </block>
+                          </next>
+                        </block>
+                      </statement>
+                      <next>
+                        <block type="draw_colour" inline="true">
+                          <value name="COLOUR">
+                            <block type="colour_picker">
+                              <title name="COLOUR">#ffa000</title>
+                            </block>
+                          </value>
+                          <next>
+                            <block type="controls_repeat">
+                              <title name="TIMES">6</title>
+                              <statement name="DO">
+                                <block type="draw_move_by_constant">
+                                  <title name="DIR">moveForward</title>
+                                  <title name="VALUE">50</title>
+                                  <next>
+                                    <block type="draw_turn_by_constant_dropdown">
+                                      <title name="DIR">turnLeft</title>
+                                      <title name="VALUE" config="45,60,90,120,180">60</title>
+                                    </block>
+                                  </next>
+                                </block>
+                              </statement>
+                              <next>
+                                <block type="draw_colour" inline="true">
+                                  <value name="COLOUR">
+                                    <block type="colour_picker">
+                                      <title name="COLOUR">#ffff00</title>
+                                    </block>
+                                  </value>
+                                  <next>
+                                    <block type="controls_repeat">
+                                      <title name="TIMES">4</title>
+                                      <statement name="DO">
+                                        <block type="draw_move_by_constant">
+                                          <title name="DIR">moveForward</title>
+                                          <title name="VALUE">50</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant_dropdown">
+                                              <title name="DIR">turnLeft</title>
+                                              <title name="VALUE" config="45,60,90,120,180">90</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </statement>
+                                      <next>
+                                        <block type="jump_by_constant">
+                                          <title name="DIR">jumpForward</title>
+                                          <title name="VALUE">50</title>
+                                          <next>
+                                            <block type="draw_turn_by_constant_dropdown">
+                                              <title name="DIR">turnRight</title>
+                                              <title name="VALUE" config="45,60,90,120,180">120</title>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Artist>

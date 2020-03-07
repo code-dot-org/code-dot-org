@@ -560,6 +560,7 @@ de:
     download: 'Video herunterladen'
     show_notes: 'Zeige Hinweise'
     show_video: 'Video anzeigen'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ihr Browser wird nicht unterstützt. Bitte aktualisieren Sie Ihren Browser auf <a href='%{supported_browsers_url}', target='_blank'> einen von uns unterstützten Browser</a>. Sie können versuchen diese Seite zu betrachten, aber es können Fehler auftreten."
@@ -879,6 +880,7 @@ de:
     content: 'Inhalt'
     practice: 'Lehrer Übungen'
     peer_review: 'Peer Review'
+    optional: 'Optional'
     main_course: 'Hauptkurs'
     extra_course_content: 'Extra Kurs Inhalte'
     csf_e_2: 'Kurs E Inhalt'
@@ -889,7 +891,9 @@ de:
     csf_events: 'Ereignisse'
     csf_online_safety: 'Online-Sicherheit'
     csf_binary: 'Binärdatei'
+    csf_data: 'Daten'
     csf_conditionals: 'Bedingungen'
+    csf_sprites: 'Sprites'
     csf_nested_loops: 'Verschachtelte Schleifen'
     csf_functions: 'Funktionen'
     csf_variables: 'Variablen'
@@ -1111,3 +1115,4 @@ de:
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
+  copy: 'Kopieren'

@@ -63,6 +63,7 @@ hu:
   heading_x_of_y: "%{heading} (oldal %{x} %{y})"
   join_section:
     code:
+      title: 'Csatlakozz egy csoporthoz a Code.org-on'
       placeholder: "Szakasz kód (ABCDEF)"
       submit: 'Csatlakozás'
   add_hint_form:
@@ -480,6 +481,7 @@ hu:
     notes_coming_soon: 'Ehhez a videóhoz hamarosan lesznek jegyzetek.'
     autoplay_option: 'Videók automatikus lejátszása'
     download: 'Videó letöltése'
+    label: 'Videó'
   compatibility:
     upgrade:
       link: "Tudj meg többet"
@@ -797,3 +799,4 @@ hu:
     accept: 'Egyetértek'
   gdpr_dialog:
     yes: 'Igen'
+  copy: 'Másol'

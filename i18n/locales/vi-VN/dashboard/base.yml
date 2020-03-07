@@ -509,6 +509,7 @@ vi:
     download: 'Tải video xuống'
     show_notes: 'Hiện ghi chú'
     show_video: 'Hiển thị Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Trình duyệt của bạn không được hỗ trợ. Hãy nâng cấp trình duyệt của bạn lên <a href='%{supported_browsers_url}', target='_blank'>một trong những trình duyệt được hỗ trợ của chúng tôi</a>. Bạn có thể thử xem trang nhưng mong đợi chức năng bị hỏng."
@@ -714,6 +715,7 @@ vi:
     privacy_notice: "Thông tin bảo mật"
     accept_label: 'Tôi đồng ý với cập nhật <a href="%{tos_url}" target="_blank">Điều khoản dịch vụ</a>và <a href="%{privacy_url}" target="_blank">Chính sách bảo mật</a>'
     accept_label_markdown: Tôi đồng ý với cập nhật [Điều khoản dịch vụ](%{tos_url})và [Chính sách bảo mật](%{privacy_url})
+    accept_tos: Bằng việc đăng ký trên Code.org, bạn đồng ý với [Điều khoản Dịch vụ](%{tos_url}) và [Chính sách Bảo mật](%{privacy_url} của chúng tôi).
     accept: "Đồng ý"
     print: "In"
     review_terms: "Xem những điều khoản mới"
@@ -903,3 +905,4 @@ vi:
   gdpr_dialog:
     message: 'Dữ liệu từ việc bạn sử dụng trang web này có thể được gửi đến và lưu trữ hoặc xử lý tại Hoa Kỳ.'
     yes: 'Đồng ý'
+  copy: 'Sao chép'

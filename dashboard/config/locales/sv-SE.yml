@@ -495,6 +495,7 @@ sv:
     autoplay_option: spela upp automatiskt
     download: Ladda ner video
     show_video: Visa video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Din webbläsare stöds inte. Uppgradera din webbläsare till
@@ -985,3 +986,4 @@ sv:
     privacy_policy: sekretesspolicy
     logout: Logga ut
     true: Ja
+  copy: Kopiera

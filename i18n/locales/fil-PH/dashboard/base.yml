@@ -494,6 +494,7 @@ fil:
     download: 'I-download ang video'
     show_notes: 'Ipakita ang mga Notes'
     show_video: 'Ipakita ang Video'
+    label: 'Video'
   compatibility:
     upgrade:
       unsupported_message: "Ang iyong browser ay hindi suportado. Paki-upgrade ang iyong browser sa <a href='%{supported_browsers_url}', target='_blank'>isa sa mga suportadong browser</a>. Maari mong subukang tingnan ang pahina, pero asahan mo na may mga sira na mga functionality."
@@ -950,3 +951,4 @@ fil:
     accept: 'Ako ay sumasang-ayon'
   gdpr_dialog:
     yes: 'Oo'
+  copy: 'Kopyahin'

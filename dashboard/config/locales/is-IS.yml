@@ -666,6 +666,7 @@ is:
     download: Hala niður myndband
     show_notes: Sýna athugasemdir
     show_video: Sýna myndband
+    label: Myndband
   compatibility:
     upgrade:
       unsupported_message: Vafrinn þinn er ekki studdur. Vinsamlegast uppfærðu í <a
@@ -1396,3 +1397,4 @@ is:
   page_not_found_description: Síðan sem þú ert að leita að finnst ekki á þessu veffangi.
     Athugaðu veffangið og prófaðu aftur. Eða farðu aftur á heimasíðu okkar.
   page_not_found_button: Aftur á heimasíðu
+  copy: Afrita

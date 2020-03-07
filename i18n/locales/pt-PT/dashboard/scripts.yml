@@ -1954,3 +1954,68 @@ pt:
           stages:
             new stage:
               name: nova fase
+        csd6-2020:
+          stages:
+            Functions with Parameters:
+              name: Funções com parâmetros
+        csd3-2020:
+          description_short: "Programação"
+          stages:
+            Variables:
+              name: Variáveis
+            Conditionals:
+              name: Condicionais
+            Functions:
+              name: Funções
+        coursea-2020:
+          stages:
+            Going Places Safely:
+              name: Ir a Locais de um modo Seguro
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Seu rastro digital
+            Move It, Move It:
+              name: Criando caminhos
+        coursec-2020:
+          stages:
+            Binary Bracelets:
+              name: Pulseiras binárias
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programação por revezamento
+            Conditionals with Cards:
+              name: Condicionais com cartas
+            'Unplugged: Binary':
+              name: 'Offline: binário'
+            Artist Binary:
+              name: 'Artista: binário'
+            Digital Citizenship:
+              name: Cidadania digital
+            Dance Party:
+              name: Festa da Dança
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Condicionais
+            'Functions: Songwriting':
+              description_teacher: Uma das estruturas mais incríveis no mundo da ciência da computação é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas que podem ser usados repetidas vezes dentro do programa maior. Esta aula ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos de códigos em funções é uma prática útil.  
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: Variáveis do envelope
+            For Loop Fun:
+              name: Diversão com laços for
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Aberto ao público
+        express-2020:
+          stages:
+            Dance Party:
+              name: Festa da Dança
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Escrever com a abelha

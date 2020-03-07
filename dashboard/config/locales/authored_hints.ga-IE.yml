@@ -2,13 +2,114 @@
 ga-IE:
   data:
     authored_hints:
-      Dance_2019_01:
+      CourseD_Dance_Party_01:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Deimhnigh go bhfuil damhsóir ar an scáileán.
+
+          _Tagann an leibhéal seo chun críche tar éis 4 thomhas._
         challenges: |-
           **Dúshláin Roghnacha**
 
-          -   Roghnaigh amhrán difriúil.
-          -   Aistrigh an damhsóir go dtí áit nua.
-          -   Cruthaigh níos mó ná damhsóir amháin.
+          -   Amhrán difriúil a roghnú.
+          -   Ainm nua a chur ar an damhsóir.
+      CourseD_Dance_Party_02:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_03:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
+      CourseD_Dance_Party_04:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór duit an éifeacht chúlra a athrú am éigin roimh an seachtú tomhas san amhrán.
+
+          _Tagann an leibhéal seo chun críche tar éis 9 dtomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          An éifeacht chúlra a athrú amanna éagsúla le linn an amhráin tríd an mbloc nua a cheangal faoi na teagmhais <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
+      CourseD_Dance_Party_06:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór beirt damhsóirí a bheith ann ar a laghad.
+
+          _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Cuir damhsóir eile (nó fiú níos mó!) leis an radharc
+          -   Tabhair ar gach damhsóir steipeanna difriúla a dhéanamh ag pointí difriúla san amhrán.
+      CourseD_Dance_Party_08:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Beirt damhsóirí a bhfuil méid difriúil ó 100 a bheith ann.
+
+          _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Athraigh airíonna eile (leithead, airde, rothlú, srl.)
+      CourseD_Dance_Party_09:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   An imir ar dhamhsóir amháin ar a laghad a athrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_10:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Na hairíonna a bhaineann le beirt (nó níos mó) damhsóirí a athrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_11:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Bí cruthaitheach! Sin an méid!
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_11_5:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Bí cruthaitheach! Sin an méid!
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      CourseD_Dance_Party_11b:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Úsáid an bloc `nuair a bhrúitear an tsaighead chlé` le tabhairt ar an Róbat steip nua a dhéanamh nuair a bhrúitear é.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_2019_01:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Deimhnigh go bhfuil damhsóir ar an scáileán.
+
+          _Tagann an leibhéal seo chun críche tar éis 4 thomhas._
+        challenges: |-
+          **Dúshláin Roghnacha**
+
+          -   Amhrán difriúil a roghnú.
+          -   An damhsóir a aistriú go dtí áit nua.
+          -   Níos mó ná damhsóir amháin a chruthú.
       Dance_2019_02:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -33,7 +134,20 @@ ga-IE:
           **Dúshlán Roghnach**
 
           -   An damhsóir a rialú leis na saigheada clé/deasa.
+      Dance_2019_04:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
       Dance_2019_05:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
         challenges: |-
           **Dúshlán Roghnach**
 
@@ -91,6 +205,43 @@ ga-IE:
               <title name="MOVE">"rand"</title>
               <title name="DIR">-1</title>
               </block></xml>
+      Dance_Party_01:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Deimhnigh go bhfuil damhsóir ar an scáileán.
+
+          _Tagann an leibhéal seo chun críche tar éis 4 thomhas._
+        challenges: |-
+          **Dúshláin Roghnacha**
+
+          -   Amhrán difriúil a roghnú.
+          -   Ainm nua a chur ar an damhsóir.
+      Dance_Party_02:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir steip nua a thosú tar éis 4 thomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_03:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór don damhsóir gluaiseacht nua a thosú idir an ceathrú agus an séú tomhas.
+
+          _Tagann an leibhéal seo chun críche tar éis 11 tomhas._
+      Dance_Party_04:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór duit an éifeacht chúlra a athrú am éigin roimh an seachtú tomhas san amhrán.
+
+          _Tagann an leibhéal seo chun críche tar éis 9 dtomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          An éifeacht chúlra a athrú amanna éagsúla le linn an amhráin tríd an mbloc nua a cheangal faoi na teagmhais <xml><block type="Dancelab_atTimestamp"><title name="TIMESTAMP">???</title><title name="UNIT">"measures"</title></block></xml>.
       Dance_Party_05:
         validation: |-
           **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
@@ -98,6 +249,64 @@ ga-IE:
           -   Caithfidh an damhsóir dul trí cheithre steip dhamhsa ar a laghad roimh dheireadh an leibhéil.
 
           _Tagann an leibhéal seo chun críche tar éis 12 tomhas._
+      Dance_Party_06:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Ní mór beirt damhsóirí a bheith ann ar a laghad.
+
+          _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Cuir damhsóir eile (nó fiú níos mó!) leis an radharc
+          -   Tabhair ar gach damhsóir steipeanna difriúla a dhéanamh ag pointí difriúla san amhrán.
+      Dance_Party_08:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Beirt damhsóirí a bhfuil méid difriúil ó 100 a bheith ann.
+
+          _Tagann an leibhéal seo chun críche tar éis 5 thomhas._
+        challenges: |-
+          **Dúshlán Roghnach**
+
+          -   Athraigh airíonna eile (leithead, airde, rothlú, srl.)
+      Dance_Party_09:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   An imir ar dhamhsóir amháin ar a laghad a athrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_10:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Na hairíonna a bhaineann le beirt (nó níos mó) damhsóirí a athrú.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_11:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Bí cruthaitheach! Sin an méid!
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_11_5:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Bí cruthaitheach! Sin an méid!
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
+      Dance_Party_11b:
+        validation: |-
+          **Cén chaoi a gcríochnóidh mé an leibhéal seo?**
+
+          -   Úsáid an bloc `nuair a bhrúitear an tsaighead chlé` le tabhairt ar an Róbat steip nua a dhéanamh nuair a bhrúitear é.
+
+          _Tagann an leibhéal seo chun críche tar éis 7 dtomhas._
       Dance_Party_extras_alternate_2019:
         alternate: Tá an bloc malartach sa gcatagóir "Damhsóirí".
       course1_artist_loops_challenge3:
@@ -105,6 +314,19 @@ ga-IE:
           `léim` go dtí an ceann eile!
         courseA_artist_loops_challenge2_c: Beidh GO LEOR blocanna ag teastáil uait
           laistigh den lúb chun an dúshlán seo a réiteach.
+      courseD_iceage_loops3_2019:
+        courseB_iceage_loops3_a: |-
+          Úsáid an bloc nua seo!
+
+           <xml><block type="controls_repeat_dropdown">
+              <title name="TIMES" config="2-10">5</title>
+            </block></xml>
+      courseD_maze_intro4_2019:
+        courseC_maze_programming4_a: Is féidir leat casadh ar chlé nó ar dheis ó dhearcadh
+          Ruáin. Má tá a aghaidh ar an taobh deas agus má chasann tú ar dheis, beidh
+          sé ag dul síos.
+      courseD_maze_intro5a_2019:
+        courseC_maze_programming5_b: Meabhraigh go ndéantar casadh ó dhearcadh Ruáin.
       courseE_bee_functions4:
         courseE_bee_functions4_b: Úsáid an bloc uaine `téigh agus bailigh neachtar`
           chun an fheidhm seo a úsáid.

@@ -383,6 +383,7 @@ it-IT:
         do something: fai qualcosa
       courseE_Dogger_2:
         stop_everything: ferma_tutto
+        lose: sconfitta
       courseE_artist_concept1:
         do something: fai qualcosa
         draw a hexagon: disegna un esagono

@@ -8,7 +8,8 @@ zh-CN:
             从一个正方形开始
             在正方形上放置一个三角形
             再在正方形下放置一个三角形
-        - correct: true
+        - text: "从一个三角形开始  \n在正方形右边放一个三角形  \n在正方形下面放一个平行四边形  \n在平行四边形右边放一个三角形"
+          correct: true
         - text: |-
             从一个正方形开始
             在正方形上面放置一个平行四边形
@@ -385,14 +386,19 @@ zh-CN:
         title: 选择题
       4-5 Songwriting Multi 1:
         answers:
-        - text: 走，走，快点走吧，
-        - text: "走，走，快点走吧，\n走，走，快点走吧， \n走，走，快点走吧，\n快点走吧，亲爱的。"
+        - text: Lou, Lou, skip to my Lou,
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin."
           correct: true
-        - {}
-        - {}
+        - text: "Lou, Lou, skip to my Lou,   \nLou, Lou, skip to my Lou,   \nLou,
+            Lou, skip to my Lou,   \nSkip to my Lou, my darlin.\n\nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,"
+        - text: "Fly's in the buttermilk,   \nShoo, fly, shoo,   \nFly's in the buttermilk,
+            \  \nShoo, fly, shoo,   \nFly's in the buttermilk,   \nShoo, fly, shoo,
+            \  \nSkip to my Lou, my darlin."
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
-        - {}
+        - text: 在这首歌里，哪一大段因为每次都能完全重复，所以能被称为副歌？
         title: 选择题
       4-5 Suncatchers Match 1:
         answers:
@@ -458,6 +464,7 @@ zh-CN:
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
+        content2: 紫色花里可能有 3，2，或 1 个花蜜，但不知道有多少。哪个模块能从紫花里正确检查，并收集所有的花蜜？
         questions:
         - text: 选择最好的模块。
         title: 蜜蜂条件语句选择题
@@ -583,6 +590,70 @@ zh-CN:
           # 二进制图片
 
           如何只用两个简单的值通讯，来重新创建出图片。
+      Building a UI with Design Mode:
+        markdown: |
+          # 欢迎使用应用实验室设计模式
+          在应用实验室的 "设计模式" 中，能够拖拽界面元素到应用中。
+
+          ### 词汇表
+          **用户界面（UI）** - 应用的 "用户界面（User Interface）" 或 **UI** 表示如何让人（用户）与计算机或应用进行交互。可能会从经验中了解一些用户界面的模式：
+
+          * **用户界面元素（UI Element）** 或目标，如按钮、图片、文本框、下拉菜单、屏幕等等。
+          * **用户界面事件** 或控制，如 *点击*，*滚动*，*移动鼠标*，*按下键盘按键*，等等。
+
+          应用实验室能轻松的将用户界面元素加入到应用中，并添加代码，在用户与这些元素交互时响应。这是两步的过程，将在本课中学习所有内容。
+
+          首先，看一下设计模式，并添加单个用户界面元素（按钮）到应用中。稍后会增加代码。
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          可以在应用区域看到一个新开关，可以在 "设计模式" 和 "代码模式" 间相互切换。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>添加元素就像将它拖放到应用中一样容易。元素在应用屏幕中之后，可以调整它的位置、大小，以及其它许多属性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>属性</em>选项卡会显示此元素可以修改的所有外观等属性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>元素标识（ID）</strong> 很重要，这是如何在代码中引用元素的方式。稍后将讨论元素标识。</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>可将用户能看到的按钮文本随意修改。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>注意：</strong>  向下滚动可能看到元素其它在下面 "隐藏" 的属性。</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **现在试试吧！**
+      CSD - Getters and Setters:
+        markdown: |
+          # 取值器 (getter) 和设置器 (setter)
+
+          # 设置器 (setter)
+
+          设置器是 **设置** 或改变信息的命令。所有设置器至少需要一个输入：想要设置的信息。
+
+          以前用过了 `setScreen()`。`setScreen()` 会改变用户当前看到的屏幕。`setScreen()` 的这个输入是要改变的新屏幕。
+
+          另一个要使用的设置器的示例是 `setText()`。
+
+          <img src="//curriculum.code.org/images/applab/setText.png" style="margin: 20px auto">
+
+          # 取值器 (getter)
+
+          取值器是用来 **获取** 信息的命令。取值器通常要求至少一个参数：从哪里获得信息。
+
+          `getText()` 是经常使用的取值器。可以从文本输入框这样的元素中读取文本。
+
+          <img src="//curriculum.code.org/images/applab/getText.png" style="margin: 20px auto">
+
+          在使用取值器时，将结果保存到变量中，通常是个好主意，这样能在程序中随时使用。
       CSD Header Size MC:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
@@ -1485,25 +1556,6 @@ zh-CN:
           ## 示例
 
           [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
-      CSD U3 Collision Detection:
-        markdown: |
-          # 概述
-
-          学生学习计算机上的碰撞。团队探索了计算机如何使用精灵图的位置和尺寸属性，以及数学来检测两个精灵图是否碰到了。然后，会使用 isTouching() 模块，当精灵图碰到时来创造一些不同的效果，比如播放声音。最后，使用这些新技能来改进上节课开始的滑动游戏。
-          ## 词汇表
-
-          * **抽象（abstraction）** - 简化不同问题的差异，使得一个方法能解决多个问题。
-          * **调试（debug）** - 在算法或程序中找到并修复问题。
-          * **如果语句** - 大多数程序结构中实现的 "条件语句"。
-
-          ## 引入的代码
-
-          * [sprite.debug](//docs.code.org/gamelab/debug/)
-          * [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
-
-          ## 资源
-
-          * [碰撞检测 - 活动指南](https://docs.google.com/document/d/16uOeOnjKEIQfWgHFjMyVkmurSVM1oDXjQPooSL7UlHs/export?format=pdf)
       CSD U3 Collisions SFLP:
         markdown: |+
           # 概述
@@ -1533,13 +1585,6 @@ zh-CN:
 
           * [项目指南 - 防守游戏 - 项目指南](https://docs.google.com/document/d/10tgS4d9feduPveRZSMzWV0TdyL6AL5VHHGFy_-m2XNQ/export?format=pdf)
       CSD U3 Entertainment:
-        markdown: |+
-          # 开始搜索
-
-          要了解计算机科学和编程是如何在娱乐中发挥作用的，需要做一些调查。搜索 "计算机科学和娱乐"，还可以找找不同类型的娱乐，比如电影，电视，音乐，游戏，动画，时尚等等。
-
-
-      CSD U3 Entertainment_2018:
         markdown: |+
           # 开始搜索
 
@@ -1993,13 +2038,6 @@ zh-CN:
 
 
           ### 什么信息能帮助解码？
-
-      CSD U3 complex sprite movement SFLP:
-        markdown: |+
-          # 概述
-
-          学生会学习组合精灵图的计数器模式和速度属性，来创建更复杂的精灵图的运动，比如模拟重力，跳跃，让精灵往左右飘。最后，学生会将这些运动组合到单个精灵图上，并创作一个来回飞，收集硬币的简单游戏。
-
 
       CSD U3 drawSprites placement match:
         answers:
@@ -3060,6 +3098,30 @@ zh-CN:
 
           * [进行推荐](https://docs.google.com/document/d/1pKeFH1OkWzfg3MFTPCezhK_r4p8xu7QUkPKSf5vV41c/export?format=pdf) - 项目指南
           * [进行推荐](https://docs.google.com/document/d/1ZdA-VIdyPZLONBFr7ojFeNfHCHYmacbrrphiR31k6Bk/export?format=pdf) - 相互评审
+      'CSD: getText vs getNumber':
+        markdown: "# getText 与 getNumber\n\n计算机用不同的方法来存储数据。两种计算机存储数据的方法是字符串和数字。 \n\n`getNumber()`
+          会试图返回数字。\n\n`getText()` 的返回会是字符串。通常，程序中的字符串会用 `\" \"` 标记。例如，所有标识名称都是字符串。可以用
+          `getText()` 来获取数字，但也会由 `\" \"` 括起来。\n\n## 为什么这很重要？\n\n通常，可以通过字符串的方式获得所有信息，但要进行数学操作时，需要数字才行。当要将两个字符串加到一起时，计算机会将两个字符串合并成一个。
+          \n\n因此，当进行 `\"2\" + \"2\"`，时，计算机的结果是 `\"22\"`。\n\n因此，当进行 `2 + 2` (注意，没有
+          `\" \"`) 计算机的结果是 `4`。\n"
+      'CSD: setProperty':
+        markdown: "# setProperty（设置属性）是如何工作的？\n\n`setProperty` 是能够设置界面元素属性的代码，比如，颜色、宽度、字体大小等等。任何能在设计模式中设置的属性都能在代码中使用
+          `setProperty`，来设置。\n\n<br><br>\n\n<div style=\"column-count: 3; column-gap:
+          20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%\">\n\n<p
+          style=\"break-after: always; -moz-column-break-after: always; -webkit-column-break-after:
+          always;\">\n\n\t<span style=\"color: #00adbc; font-size: 150%\">1.</span>
+          代码模式中，可以在界面元素工具栏中找到 <code>setProperty</code> 。<br>\n\n\t<span style=\"color:
+          #00adbc; font-size: 150%\">2.</span> 选择需要修改属性的元素标识\n</p>\n\n<p style=\"break-after:
+          always; -moz-column-break-after: always; -webkit-column-break-after: always;\">\n\n\t<span
+          style=\"color: #00adbc; font-size: 150%\">3.</span> 下拉菜单显示了这个元素可以设置的属性。这与该元素在<strong>设计模式</strong>中，能看到的属性列表是一样的。
+          \n</p>\n\n<p style=\"break-after: always; -moz-column-break-after: always;
+          -webkit-column-break-after: always;\">\n\n\t<span style=\"color: #00adbc;
+          font-size: 150%\">4.</span> 最后一个参数是为此属性要设置的值。要设置的是 background-color，可以设置成很多种值。\n</p>\n\n\n</div>\n\n<img
+          src=\"https://images.code.org/b7736bdcbde48f7951ebdc87135dd46c-image-1480536740764.png\"
+          style=\"display: block; margin: auto\">\n\n\n## 如何设置 \"background-color\"\n\n<span
+          style=\"color: #00adbc; font-size: 150%\">1.</span> *background-color* 是一个表达颜色的字符串（在引号中）。一般来说，可以将颜色表示为十六进制值，或者三个十进制的
+          RGB 值，如 *\"rgb(255,0,0)\"*\n\n<img src=\"https://images.code.org/43291bf1c067145771bf88a147d74d26-image-1480538343306.png\"
+          style=\"display: block; margin: auto\">\n"
       CSDU6 Innovation:
         markdown: |+
           # 创新研究
@@ -3165,6 +3227,19 @@ zh-CN:
 
           除了为每个主题推荐的站点列表，也可以看看一些众筹网站（例如，Kickstarter 和 Indiegogo），看一些刚刚开始成型的产品。
 
+      Choosing Good IDs:
+        markdown: "# 选择好的标识\n\n**好的标识** 是 **有意义和描述性的**。\n\n就像要给函数取个好名字一样，也需要用标识来描述元素的预期意图。
+          \ \n\n例如，如果在程序里有很多按钮，需要让每个标识都描述这个按钮做什么。 \n\n因此，不要用这样的标识：\n \n * `button1`
+          和 `button2`\n\n要让标识不仅能表示这是个按钮，还能表示这个按钮要用来做什么，比如：\n\n * `homeButton` 和 `saveButton`
+          或\n * `buttonHome` 和 `buttonSave` 或\n * `homeBtn` 和 `saveBtn`\n * 自己决定！\n\n<img
+          src=\"https://images.code.org/b33be9ee1521f2aa80fedcf22c929d44-image-1476910499958.png\"
+          style=\"display: block; margin: auto;\">\n\n# 标识的规则\n在创建描述性的又有意义的标识时，需要了解**一些标识的规则**。标识……\n\n*
+          是区分大小写的。\n* 不能包含空格。\n* *必须*以字母开始 (A-Z 或 a-z)，后面可以是任何字母和数字。\n* 可以包含连字符 (\"-\"),
+          下划线 (\"_\"), 冒号 (\":\"), 或点 (\".\")。\n\n**区分大小写？**\n\n这表示 `HomeButton` 和
+          `homeButton` 是不同的 (注意第一个的 H 是大写的)。\n\n这些差异乍看之下很烦人，但是一旦习惯了，并且实际上会赞赏计算机的要求是如此的精确。\n\n大小写和多词语拼写的标识有一些共同的风格：\n\n*
+          **\"Camelcase（首字母大写）\"** -- `aCamelcaseNameMightLookLikeThis`\n* **Underscores（下划线隔开）**
+          -- `Some_people_like_to_use_underscores_to_separate_words`\n* **dashes（连字符隔开）**
+          -- `Others-like-to-use-hyphens-or-dashes`\n\n选择什么风格由自己决定。这是自己的风格。有助于保持一致。\n\n\n\n\n"
       ConditionalsWithCards-Unplugged:
         markdown: |
           # 纸牌和条件语句
@@ -3476,10 +3551,51 @@ zh-CN:
           创建算法来移动角色通过迷宫。
       Internet Simulator Setup:
         content1: 描述
+        markdown: "# Code.org 的互联网模拟器\n\n_注意：本教程中列出的说明，是为需要单独使用互联网模拟器，而不使用 Code.org
+          计算机科学原理教案的教师准备的。如果计划将此活动用于 Code.org 计算机科学原理教案的一部分，可访问[计算机科学原理教案页面](https://code.org/educate/csp)。_\n\n###
+          内容\n这里包含 3 部分背景信息：\n\n* 什么是网络模拟器？概述（见下文）\n* [设置说明](/s/netsim/stage/1/puzzle/2)\n*
+          [常见问答](/s/netsim/stage/1/puzzle/3)\n \n### 什么是网络模拟器？概述：\n\n互联网模拟器是由 Code.org
+          为新的高中[计算机科学原理](https://code.org/educate/csp) 课程开发的工具。该工具旨在让学生获得尝试（和解决）与网络计算机相关的各种问题的经验。在教案的第
+          1、2 单元的多节课中都使用了互联网模拟器，成功的构建了互联网的不同层次。 \n\n如果考虑在课堂上使用该工具进行自己设计的活动，建议通过[课程计划](https://curriculum.code.org/csp/unit1)来熟悉它。
+          下一页的 **设置说明** 适用于希望独立于 Code.org 计算机科学原理教案，来使用互联网模拟器的教师。 \n\n本工具本身不会 _教授_
+          这些概念，它只是提供环境，让多名学生到一起能相互发送二进制、十进制或基于 ASCII 码的消息。**环境可以被配置** 为多种情况，来展示不同的问题，可视化主机间的连接和数据，并支持多种与互联网相关概念的学习。\n\n互联网模拟器被设计用于
+          *课堂* 中，让学生面对面合作来解决问题。这些问题通常会涉及发明一种通信协议，或通过结构化的方法来编码信息，并能通过互联网传输。 \n\n**在
+          Code.org 的计算机科学原理教案中**，通常以下列方式组织课程和活动：\n\n* **首先向学生提出挑战**\n * 例如，真实的互联网本来就不可靠，并且可能会丢弃消息\n*
+          **有机会尝试使用模拟器来理解问题** \n * 例如，查看路由器日志来了解，10-20% 的消息都被丢弃了，包的顺序可能错了\n* **有机会发明自己的方法来解决挑战**
+          \n  * 例如，发明自己的协议，来解决如何在不可靠的网络上可靠的发送消息\n* **最后，学生会研究协议或发明如何在 \"真实世界\" 工作**\n
+          * 例如，研究 TCP 实际上是如何工作的，并观看视频\n\n### 可以配置互联网模拟器做什么？\n\n从最基本的层次来看，互联网模拟器可以在单条没有协调或同步的共享线路上，发送单个比特。从高层次来看，可以模拟多个路由器间的不可靠连接，来使用
+          IP 地址，域名解析协议，以及类似于创建 TCP/IP 或 HTTP 所需要的固定大小的数据包。 \n\n互联网模拟器已经根据教学的某些主题进行了大量的配置。但如果要在班级中使用互联网模拟器，需要知道一些用户设置，以便进行控制或让学生用某种方法来设置。
+          \ \n\n例如：互联网模拟器的其中一项功能是可以显示二进制、十进制、十六进制以及以 ASCII 表示的任何发送的数据。在一些配置下，用户还可以设置
+          \"chunk size\" （块大小）来描述如何表示这些比特。在自己设计的课程中，可以选择某种已有的配置，但也需要要求学生只表示某种特定的比特，或希望将块大小设置为特定的值。\n\n更广泛的是，已提供的配置可能是讲授某个特定观点的起点。可能需要通过一些独创性和教学策略，来进一步优化模拟器的使用，以满足需求。\n\n\n
+          <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_下一页：设置说明_\n\n<a
+          class=\"btn btn-large btn-primary next-stage submitButton\">继续</a>\n"
       Internet Simulator Setup 2:
         content1: 描述
+        markdown: "# 互联网模拟器：设置说明\n\n1. **在代码工作室中创建小组。** 为了班级中的学生能相互通讯，需要在代码工作室关联到同一个小组中。作为教师账号登录后，需要为所有学生的加入创建小组。要创建小组：\n
+          * 浏览至教师面板的[小组](https://code.org/teacher-dashboard#/sections)部分\n * 点击 '新建小组'
+          按钮。推荐讲登录类型选为 'Email' 并将课程选为 'cspunit1'。 \n <br>\n<img src=\"https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png\"
+          width=\"600px\" />\n<br><br>\n2. **让学生加入小组。** 小组创建好后，点击小组的 '管理学生' 链接。学生创建了自己的代码工作室账号后，就可以让他们通过页面中的小组代码来加入。\n<br>\n<img
+          src=\"https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png\"
+          width=\"400px\" />\n<br><br>\n3. **将要使用的互联网模拟器版本的地址共享给学生。** 在 [code.org/internetsimulator](http://code.org/internetsimulator)
+          上已经有了几个不同的互联网模拟器配置。当找到自己的活动可以使用的配置后，将地址共享给学生。如果学生们都在同一个小组里，会在打开同样的地址后，自动连接到一起。
+          \ \n\n_下一页：常见问题_\n\n<a class=\"btn btn-large btn-primary next-stage submitButton\">继续</a>\n\n"
       Internet Simulator Setup 3:
         content1: 描述
+        markdown: |
+          # 互联网模拟器：常见问题
+
+          #### 哪里有设计用来使用互联网模拟器的活动？
+          为计算机科学原理课程设计的活动，包括特定的互联网模拟器，可以在[这里](https://code.org/educate/csp) 的单元课程计划中找到。许多课程计划都有 "老师的提示和技巧" 的支持视频，这些视频演示了在课堂活动中，如何将互联网模拟器作为一部分来使用。可以按原样使用这些活动，或者随时修改以适合自己的课堂！
+
+          #### 是否能为自己的班级定制互联网模拟器？
+          很遗憾，当前不能为 Code.org 之外的人员创建互联网模拟器的特殊配置和说明。我们已尝试提供了大量的配置，希望能适合您的课堂和活动。长期来看，希望能让其他人有办法配置此工具。
+
+          #### 当学生访问提供的互联网模拟器网址时，彼此看不见。该怎么办？
+          为了让学生们能在互联网模拟器的大厅里相互看到，他们需要在同一个小组中。再检查一下是否完成了前一页的小组设置说明，并确定有问题的学生都用特定的小组代码加入了。同时，有的学生可能已经使用过 Code.org，并存在于多个小组中，因此确保他们知道本小组的名称，并在进入大厅前，从下拉框中选择了此小组。
+
+
+          <a class="btn btn-large btn-primary next-stage submitButton">继续</a>
       Internet-Unplugged:
         markdown: |
           # 互联网
@@ -3720,6 +3836,92 @@ zh-CN:
           用地图和给出的命令来到达目标。
       Multi-Screen Apps:
         content1: 描述
+        markdown: |
+          # 制作多个屏幕
+
+          可能会想像一个典型的应用程序在使用过程中会看到多个 "屏幕" 或视图。下面是带有欢迎屏幕，游戏屏幕和游戏结束屏幕的典型示例。
+
+          <img src="https://images.code.org/27065f81b2bf53dea099a76868f66e8e-image-1477324003598.png" style="display: block; margin: auto">
+
+          ## 什么是屏幕？
+
+          在设计模式下，屏幕只是一个用户界面元素。但它有几个特别的属性。
+
+          1. 屏幕是可以容纳其它用户界面元素。
+          2. 一次只能有一个屏幕可见
+          3. 当屏幕被激活时，只有 "属于" 这个屏幕的元素才能可见。
+          4. **多个屏幕，只有同一个代码工作区**
+            * 即便 *设计元素* 可能分布在多个屏幕上，代码也不会像这样分布开。
+            * 只有一个代码工作区，容纳应用的所有代码。
+
+          ## 如何创建新屏幕
+
+          <div style="float: left; width: 33%">
+          有两种方法往应用里添加屏幕。首先，确保在<em>设计模式</em>中。
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          要么从显示区域上的下拉菜单中选择 <em>创建屏幕 ...</em>。 <strong>注意：</strong> 这个下拉菜单还用于在设计模式中切换屏幕。
+          <br><br>
+          <span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          或者从从工具箱中拖出一个屏幕。 <strong>注意：</strong>一旦松开屏幕元素，应用会显示<strong>新的空屏幕</strong>。 可以使用上方的下拉框返回其它屏幕。
+
+          </div>
+
+          ![](https://images.code.org/ed8f45d70a65329597c1623ddd756249-image-1477165123570.png)
+
+          ## 设置屏幕属性
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          在下拉菜单中选择要操作的屏幕。列表会包含所有创建出的屏幕的标识。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          在背景的空白区域上点击，来选择屏幕并设置它的属性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          屏幕也有标识。和其它界面元素一样，<em>给屏幕一个描述性并有意义的标识</em>是个好主意。这会让编码过程更轻松。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          如果屏幕上布满了界面元素，没有空白区域去点击选择屏幕，使用工作区的下拉菜单。它列出了包括屏幕在内，以及这个屏幕包含的所有界面元素。</p>
+          </div>
+
+          <img src="https://images.code.org/5f8934e6ae0fc2d9dfde8c9a0d93eec2-image-1477249243769.png" style="display: block; margin: auto;">
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 2; width: 50%; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          点击按钮来将当前屏幕设置为 "默认屏幕"，这表示在应用启动时，这个屏幕会首先显示。</p>
+
+
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span>
+          屏幕没有太多属性，但可以将屏幕的背景设为某种颜色或一张图片。图片会被拉伸或挤压来适配屏幕。</p>
+
+          </div>
+          <div style="clear: both">&nbsp;</div>
+
+          ## 使用 *setScreen* 命令来用代码改变屏幕
+
+          `setScreen` 命令会将需要的屏幕显示出来。通过屏幕的标识来指定。
+
+          <img src="https://images.code.org/005222ed01ade7940963ce149d637286-image-1477168080948.png" style="display: block; margin: auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          在界面元素工具箱中找到 <em>setScreen</em>，并拖到代码工作区。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          大多数情况下，是根据用户事件来修改屏幕。这里，<em>setScreen</em> 会被加到标识为 <em>smileyFace</em> 的 "click" 事件处理函数中。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          将屏幕标识设置为需要变化的。这里，当屏幕上的笑脸被点击时，要将说 "hello" 的屏幕换成说 "再见" 的。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          <strong>主要思想：多个屏幕 - 一个代码工作区。</strong> 这是处理 "click" 事件的代码，来设置为<em>有不同图片的另一个屏幕</em> - <em>goodbyeScreen</em>。现在不能看到那张图片或屏幕，因为没有选择那个屏幕。无论如何，它的代码可以写在这里。</p>
+
+          </div>
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # 我的循环机器人朋友们Jr.
@@ -3746,6 +3948,16 @@ zh-CN:
           [中学](https://code.org/educate/csd) 或 [高中](https://code.org/educate/csp)
           课程），建议您继续学习 [深入持续的专业发展机会](https://code.org/educate/professional-learning/middle-high)。\n\n##
           课程长度\n\n完成在线课程可能需要 3-7 个小时，体取决于先前的知识以及希望探究 Code.org 资源的深度。\n"
+      OPD-K5 Assessment:
+        markdown: "# 计划 > 其它资源\n\n作为教师登录 Code.org 后，可以看到更多学生没有的功能。已经了解了如何查找课程，创建部分并将课程分配给该部分。还可以：
+          \n\n- **跟踪学生进度**：[评估](https://support.code.org/hc/en-us/articles/115000693231-Viewing-student-progress)
+          所有学生的学习情况。\n- **课程进度**：作为学习者，可以在 Code.org 课程上查看自己的个人进度。学生也可以查看他自己的进度。但作为老师，也可以查看课程计划并查看每个难题的解决方案。\n-
+          **帮助和社区**: 访问 [support.code.org](https://support.code.org/)，可发布问题，答复其他教师的发现，阅读
+          Code.org 员工提供的常见问答。在这个页面，还可以直接联系 Code.org，提出任何问题。\n- **专业发展**：访问为教师提供的 [个人培训](https://code.org/professional-development-workshops)。\n-
+          **计算机科学演讲嘉宾**: [寻找聪明、热情和有吸引力的科技行业专业人员](https://code.org/volunteer/local)，他们非常愿意到班级中谈论自己的工作。\n\n<br/>\n---\n>
+          ## 访问 support.code.org\n> 如果遇到困难或有疑问，请确保查看了 support.code.org 上的支持文档！也可以直接通过此页面找到我们。[论坛](http://forum.code.org/t/teaching-conditionals/406/1)。\n\n>
+          <a href=\"http://support.code.org\" target=\"blank\"><button class=\"plc\">获得帮助
+          >></button></a>\n\n在论坛中发表评论后，返回此处，然后单击下面的按钮进入下一阶段。\n"
       OPD-K5 CS Courses:
         markdown: "# 计划 > Code.org 入门\n\n\n## 第 1 步：选择课程\n所有的课程 -- 从学前班到高中 -- 都列在了
           **[课程分类](https://studio.code.org/courses)**。要找到学习的计算机科学基础课程，访问 **[小学页面](https://code.org/educate/curriculum/elementary-school)**
@@ -3818,6 +4030,20 @@ zh-CN:
 
 
           > 这就是所有内容！如果要了解如何使用此平台，可随时回到此关。
+      OPD-K5 Celebrate:
+        markdown: |
+          # 下一步 > 该庆祝了！
+
+          祝贺完成了专业发展在线课程！如果已完成本培训的所有级别，则可以通过完成以下步骤立即下载并打印成就证书：
+
+          1. 访问[链接](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. 在输入狂中输入姓名。
+          3. 点击打印证书
+          4. 右击证书图片，并选择 "另存为"，即可将证书下载到自己的计算机。
+
+          别忘了... 可随时返回此在线课程来回顾学习，访问链接或资源，或者仅仅回忆一下！
+
+          感谢您的参与！迫不及待想听听您如何在课堂中实践计算机科学和代码工作室！
       OPD-K5 Congrats:
         markdown: "# 事件 > 回顾\n\n本阶段中，制作了一些有趣的游戏，组合了关键概念，并展示了学习成果。通过基于程序的其它部分来触发动作，事件提高了代码的能力。
           \ \n\n**花点时间来看看计算机科学基础教案是如何介绍事件的，并考虑如何在课堂中开展建议的活动。**\n\n![](https://images.code.org/8312823c84d52d7119ab0b5e99363d39-image-1549054807593.jpg)\n"
@@ -3830,6 +4056,12 @@ zh-CN:
           现在，已经完成了第 1-8 阶段，学会了计算机科学的基础。希望在这个过程中感到了喜悦！也希望您已经考虑好了如何将学到的东西，应用到教学实践中。
           <br/><br/>
           下个阶段中，会介绍一些最佳实践，以便在课堂上传授这些基础知识。
+      OPD-K5 Connect:
+        markdown: "# 下一步 > 建立联系\n\n除了进行进一步的正式培训之外，还可以考虑访问 code.org 社区以继续与他人进行非正式学习，或者只是寻求支持或建立同伴网络。这样做：
+          \ \n\n<br/><br/>\n\n> **继续参与 code.org 的教师专业学习社区：** 在本课程中一直使用的论坛将是前进的重要资源。不仅可以使用它来回顾本课程的学习内容，还可以在继续旅途中找到支持，甚至为需要专业知识的其他人提供支持。请立即将其添加为书签并经常访问：[http://forum.code.org/c/csf](http://forum.code.org/c/csf)
+          \ \n\n<br/>\n\n> **与推特中的 [@teachcode](http://twitter.com/teachcode) 联系。**
+          \ \n\n<br/>\n\n> **加入计算机科学教师协会 (CSTA):** [CSTA](http://csta.acm.org/index.html)
+          是一个遍布全国的教育工作者团体，致力于为学生提供计算机科学教育，同时提高公众对这一学科的认识。他们会举办年度会议和地区分会。\n"
       OPD-K5 Culture:
         markdown: |+
           # 最佳实践 > 课堂文化
@@ -3997,6 +4229,10 @@ zh-CN:
           以及 Code.org 社区中找到一起学习的人。\n\n## 寻找适合的学习体验\n\n最后，在线学习并不适合所有人。本课程没有指导者或内置机制可以与伙伴进行及时交流。如果发现自己需要更多的一对一关注，或者知道自己在一个有更多合作和参与机会的现实世界教室中学习得更好，建议选择我们的面对面的专业发展机会。\n\n<a
           href=\"http://code.org/professional-development-workshops\" target=\"blank\"><button>查找附近的面对面学习研讨会
           >></button></a>\n\n* * *\n\n## 有什么计划？\n\n现在花点时间考虑如何和何时完成此在线课程，以确保从体验中获得最大的收益。当草拟好计划后，继续深入研究第一阶段。\n"
+      OPD-K5 PostSurvey:
+        markdown: "# 入门 - 填写结束问卷\n\n感谢使用教师的计算机科学基础在线专业发展课程！ \n\n无论是否完成了整个课程，我们都希望听到您的反馈。请提交这份简短的问卷调查，以帮助我们改进此课程！\n\n<a
+          class=\"btn btn-large btn-primary submitButton\" href=\"https://form.jotform.com/90557778075168?user_id=<user_id/>\">
+          填写结束问卷</a>\n\n"
       OPD-K5 PreSurvey:
         markdown: |+
           # 开始 > 填写前置问卷
@@ -4015,6 +4251,21 @@ zh-CN:
           弹球\n\n![](//code.org/images/bounce.png)\n\n在弹球游戏中，要创建自己的游戏。 \n和像素鸟类似，此游戏的难题，会帮助学习创建自己游戏所需要的代码。\n\n*
           * *\n\n本系列中，将介绍 [计算机科学基础](http://code.org/educate/k5) 中的难题。这些难题可作为在线教程，帮助学生学习循环，事件，条件和函数等概念。\n\n在此专业发展体验中，将穿插一些难题的过程，使得有机会熟悉计算机科学基础中的编程概念以及学生会喜欢的角色。在本课程中，会注意到在不同的环境之间快速切换；是让愤怒的小鸟抓到猪，画图，或者让蜜蜂收集花蜜。在本课程中，这些切换会很快，以展示计算机科学基础中提供的一系列难题。学生将在每种环境上花费更多的时间。\n\n如果要更熟悉学生的体验，随时可以自行完成
           [计算机科学基础](http://studio.code.org/) 课程。但本课程通过提供一些最基本的难题和课程，将在短时间内提供很好预期的结果。\n"
+      OPD-K5 Stage10Start:
+        markdown: |
+          # 下一步 > 开始回顾
+
+          <img src="https://images.code.org/606dbb1b30885387e25bc1265f8966b2-image-1434150440566.JPG" width="450px">
+
+          ## 快完成了！
+
+          到目前为止，已经学习了编码的基础知识，探索了如何教授计算机科学，并为下一步创建简单的计划。
+
+          完成第 11 阶段，可以：
+
+          - 反思自己的学习
+          - 为下一步继续学习做计划
+          - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
       OPD-K5 Stage1Go:
         markdown: |
           # 入门 > 准备好了？开始！
@@ -4317,12 +4568,37 @@ zh-CN:
           \ \n\n\n完成第 9 阶段后，可以：\n\n- 了解讲授计算机科学的最佳实践\n\n> ## 展望：\n> 本阶段会覆盖以下最佳实践：\n\n>-
           建立积极的课堂文化，支持自主学习，试验和失败\n- 知道何时以及如何应用其他学科领域的教学设计策略\n- 使用策略性的分组方法，如 \"结对编程\"\n-
           明确的讲授元认知的解决问题的策略\n- \"线下\" 在很少技术，或没有技术的情况下讲授核心概念\n- 其它 Code.org 教师社区建议的最佳实践\n\n还为您提供了与社区分享最佳实践的机会。\n"
+      OPD-K5 Stage9Go:
+        markdown: |
+          # 计划 > 回顾
+
+          <img src="https://images.code.org/34e1d20a6ae73e28c6c88c5981fd6be6-image-1434411459379.JPG" width="450px">
+
+          本阶段中：
+
+          - 回顾教师面板和其他 Code.org 资源
+          - 规划如何将计算机科学融入自己的的实践中
+
+          在第 11 阶段，即最后阶段中会：
+
+          - 反思自己的学习
+          - 为下一步继续学习做计划
+          - 与对计算机科学教育感兴趣的全球教育工作者社区建立联系
       OPD-K5 Stage9Start:
         markdown: "# 计划 > 探索教师资源\n\n通过第 4-8 阶段，了解了计算机科学基础可用的一些 \"线下\" 和线上的学习资源，它们与当前学习的计算机科学概念一致。
           \n\n现在已经对如何编码以及如何教授计算机科学有了一些了解，是时候开始指定计划了。在这个阶段，会参观 Code.org 平台的 **[教师面板](http://studio.code.org/)**，和其它部分。
           \n\n完成第 10 阶段后，可以：\n\n- 浏览教师的资源\n- 浏览 Code.org **[教师面板](http://studio.code.org/)**\n-
           计划如何将计算机科学集成到实践中\n\n***\n\n下面是教师面板的截图。需要登录 Code.org 的教师账号才能看见它 - 登录后会是教师账号的默认界面。如果没有教师账号，可以
           **[免费注册](https://studio.code.org/users/sign_up)**。\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Using CS:
+        markdown: "# 计划 > 为代码工作室课程做准备\n\n了解 Code Studio 如何为自己和学生进行课堂设置。\n\n## 第 1
+          步：选择课程\n浏览 [小学课程页面](https://code.org/educate/curriculum/elementary-school)
+          并从计算机科学基础 A-F 课程中找到课程计划和完整的课程。如果对初中或高中课程感兴趣，可以找到所有年级的内容 - 从学前到高中高年级，其中所有人。所有课程都是免费的。与同事讨论，以确定如何将课程教案与各种科目整合在一起。
+          \n \n## 第 2 步：设置课堂小组\n设置课堂小组，可查看学生进度，打印学生的登录卡片，管理账号，打印可带回家的完成课程的证书。点击链接来
+          [观看简介](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)，其演示了如何在
+          Code.org 设置第一个计算机科学班级。 也可在 [支持文档](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
+          中找到所有步骤。\n\n## Step 3: 第 3 步：将课程分配给小组\n点击正在教学的课程 -- 应该可看到下面这样的页面。点击 \"分配课程\"
+          并将课程分配给某个小组。\n\n## 第 4 步：开始教学！\n所需要的只是一堂将计算机科学概念带入课堂的课程。一旦看到学生对计算机科学的热情，就可以进一步制定每日课程计划来指导学生，无需计算机即可进行的线下活动，以及与其他老师建立联系的论坛。\n\n\n\n"
       OPD-K5 Vocabulary:
         markdown: |
           # 计算机科学基础 > 关键词汇
@@ -4421,6 +4697,24 @@ zh-CN:
 
           > <a href="http://ctt.ec/Bfjw3" target="blank"><button class="default">在推特上分享 >></button></a><br><br>
           还没有推特账号？可以在 [Facebook](https://www.facebook.com/Code.org/) 或 [Instagram](https://www.instagram.com/codeorg/) 上找到我们。
+      OPD-K5 Your Plan:
+        markdown: |
+          # 计划 > 自己的计划
+
+          希望这一阶段能帮助介绍代码工作室上的可用资源。当考虑将来如何使用 code.org 或代码工作室资源中的任何内容教授计算机科学时，请花一点时间[与专业学习社区（PLC）分享自己的计划](http://forum.code.org/t/teaching-computer-science-your-plans/412)。
+
+          与我们分享：
+
+          - 课堂目标是什么？ 计算机科学或 code.org 资源将如何帮助实现这些目标？
+          - 当实现了其中某些目标时，最兴奋的是什么？
+          - 在尝试实现目标时会遇到哪些挑战？
+          - 有什么社区可能能帮助回答的问题？
+
+          发布初始的计划后，请随时重新访问[此话题](http://forum.code.org/t/teaching-computer-science-your-plans/412)，来向我们介绍最新的进展！
+
+          <a href="http://forum.code.org/t/teaching-computer-science-your-plans/412" target="blank"><button class="plc">发布自己的计划 >></button></a>
+
+          在论坛中发表评论后，返回此处，然后单击下面的按钮继续。
       OPD-Stage3Start:
         markdown: |
           # 展望 > 阶段概述
@@ -4430,6 +4724,131 @@ zh-CN:
           完成此阶段后，可以：
 
           - 通过了解课程中接下来的内容，来准备好 "掌握基础知识"
+      'Overview: Design Mode':
+        markdown: |
+          # 欢迎来到应用实验室设计模式
+          应用实验室中的 "设计模式" 可以让拖放用户界面元素到应用中
+
+          ### 词汇表
+          * **用户界面（UI）** - 用户如何与计算机或应用交互。
+          * **用户界面元素（UI Element）** 或目标，如按钮、图片、文本框、下拉菜单、屏幕等等。
+
+          ## 示例
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          在应用区域的上方，会看见一组新的开关，能在 "设计模式" 和 "代码模式" 间切换。
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>添加元素非常简单，当需要的时候，将它拖放到应用中即可。元素在应用屏幕中之后，可以调整它的位置、大小，以及其它属性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span><em>属性</em>选项卡会显示此元素可以修改的所有外观等属性。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span><strong>元素标识（ID）</strong> 很重要，这是如何在代码中引用元素的方式。稍后将讨论元素标识。</p>
+          </div>
+
+          ![](https://images.code.org/01a31ac3be66deb6d01a92a1edfffd21-image-1476726587662.png)
+
+
+          <div style="column-count: 2; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 66%; float: right">
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>可将用户能看到的按钮文本随意修改。</p>
+
+          <p style="break-after: always; -moz-column-break-after: always; -webkit-column-break-after: always;"><span style="font-weight: bold; color: #00adbc; font-size: 200%;">6.</span><strong>注意：</strong> 向下滚动可能看到元素其它在下面 "隐藏" 的属性。</p>
+          </div>
+
+          <div style="clear: both"></div>
+          <hr>
+
+          **现在试试吧！**
+      'Overview: If Statements':
+        markdown: |+
+          # 如果语句
+
+          ## 如果语句如何工作
+
+          <img src="https://images.code.org/361556bbff61bf91e2c737f745582dff-image-1479418505481.png" style="float: right; margin-left: 20px; margin-right: 20px">
+
+          如果语句能 *决定接下来运行哪些的代码*。
+
+          右边的图显示了 JavaScript 中基本 `如果` 语句的元素。
+
+          如果语句由两个基本的部分。
+
+          1. 要被评估的条件 (会被计算为 **true** 或 **false** 的布尔表达式)
+          2. *如果* 表达式满足，会运行的代码 - 在括号中
+
+          ## 可运行的示例
+          <img src="https://images.code.org/ca716e009ddb8dc397eb5a651a1ac2d7-image-1479420772852.png" style="display: block; margin: auto; float: right">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">1.</span>
+          程序按照期望一行行执行。显示消息，然后提示用户输入数字。无论用户输入的是什么，都会保存到变量 <code>age</code> 中，然后运行下一行...
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">2.</span>
+          当遇到 <code>如果</code> 语句后，<em>第一件事</em>，是评估括号中的条件。会检查在程序当前的情况下，是否变量 <code>age</code> 的值大于或等于 18。如果是，表达式就会 "<strong>返回 true</strong>"。否则返回 false。
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">3.</span>
+          console.log 语句 <em>只</em> 会在表达式为 true （满足）时执行。花括号内的代码会，且只会，在表达式为 true 的时候执行。否则，整段代码都会被 <em>忽略</em>。
+          </p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 150%;">4.</span>
+          这是在如果语句花括号后，执行的第一行代码。这行代码 <em>始终</em> 都会执行，但如果用户输入的年龄小于 18，整个如果语句都会被跳过，只会显示 "Thanks for verifying"。  (会很快修复这里的尴尬)。
+
+          </p>
+
+          <div style="clear: both">&nbsp;</div>
+
+
+      'Overview: Images':
+        markdown: "# 图片\n\n## 输入网络上的图片地址\n\n<img src=\"https://images.code.org/acf4542eda586e7b73bc27dd8746848c-image-1477675154724.png\"
+          style=\"width: 250px; float: right\">\n\n有几种方法获得图片的地址。  \n\n常用的方法（见右图）是，在网页上找到喜欢的图片，然后右击
+          （或按住 ctrl 点击）并选择像 \"复制图片地址\" 这样的选项，然后粘贴到应用实验室的文本框中。\n\n如果不确定，还可以点击像 \"在新标签页打开图片\"
+          这样的选项，这会单独打开图片，并在地址栏中显示图片的地址，可以将它复制粘贴到应用实验室中。\n\n**常见错误**：使用了 *图片所在网站* 的地址，而不是图片自己的地址。\n\n*
+          确保获得的是图片文件的地址 - 一般是以 **.jpg**, **.gif** 或 **.png** 结尾。\n* 如果地址是这样开头的，通常是错误的：`https://www.google.com/search?q=cat&espv=2&biw=1497....`
+          。\n\n\n## 上传自己的图片\n\n如果图片保存在自己的计算机中，可以通过 **资产管理器** 来上传到应用实验室。只需要 **点击上传文件**，然后根据屏幕上的对话框来选择。\n\n图片文件的类型必须是：**.jpg**,
+          **.png**, 或 **.gif**\n\n图片上传之后，要通过 **选择** 来将 image 选成对应的图片文件。如果添加了多个文件，每次上传的文件都会列出来，然后可以从中选择
+          *任何* 上传的文件。\n\n![](https://images.code.org/d64d7e3dadc882897e450b00a0fc6cb2-image-1476896824985.gif)\n\n###
+          点击 继续 来试试！\n\n\n"
+      'Overview: onEvent':
+        markdown: |
+          # 响应用户输入
+
+          需要使用代码模式，来让它能实际响应用户。应用实验室会等待程序中某个 **事件** 发生，并响应。`onEvent` 模块指定了等待事件发生的界面元素。
+
+          ## OnEvent
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          切换到代码模式</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          从工具栏中拖出一个 <code>onEvent</code> 模块到工作区中。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          使用下拉框从界面元素中，选择出需要响应某个事件的元素。在设计模式中添加的所有元素的标识都在这里列出了。</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          使用下拉框菜单，来选择需要响应的事件<em>类型</em>。 (这里先使用 "click" )。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          在函数里添加，<em>当</em>用户触发此事件时，需要运行的代码。函数会在每次用户触发此事件时运行一次。</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+      'Overview: setPosition':
+        markdown: "# setPosition 和屏幕尺寸\n\n`setPosition` 命令可以将界面元素移动到屏幕上的任何位置。\n\n<img
+          src=\"https://images.code.org/ee55080bb341528ca7e8ebc79f9f978b-image-1490369263385.27.12
+          AM.png\" style=\"display: block; margin: auto\">\n\n需要将实际的数字填入 `setPosition`
+          的参数，才能有效。 setPosition 的数字是 **屏幕的 x 和 y 坐标**。\n\n**提示：**\n\n* 0,0 是左上角。\n*
+          通过离屏幕上 **左上角** 多少个像素，来指定位置。  \n* 屏幕大小是 **320 x 450 像素**。  \n* 可以将鼠标 **悬停在屏幕上**
+          来查看任何点的 x、y 坐标。\n\n<div style=\"width: 100%; text-align: center\">\n<img
+          src=\"https://images.code.org/8b346602d75f2877c64e1793b6a04302-image-1476889124747.png\">\n\n<img
+          src=\"https://images.code.org/fc7e830fa2ea994b885c76618b484dfa-image-1476889137756.gif\">\n</div>\n"
       PicturingData-Unplugged:
         markdown: |
           # 描绘数据
@@ -4472,6 +4891,62 @@ zh-CN:
           # 接力编程
 
           分成小组，一起来写出能画图的程序。
+      Responding to User Input:
+        markdown: |+
+          # 响应用户输入
+
+          设计模式非常容易为应用布置用户界面，但是需要深入研究代码模式，使其真正响应用户。
+
+          在游戏实验室中，画图循环会一直运行，使用条件语句来检查用户输入，并进行交互。应用实验室，用另一种方式，等待响应应用里发生的某些 **事件**。这是应用实验室用来表示 "你好！有些事情发生了！" 的方法。这表示在不需要直接与应用交互时，不会运行任何代码，而代码会在这些事件发生时进行响应。
+          总的来说，使应用通过触发函数，来响应事件的编码任务称为 **事件处理**。
+
+          应用实验室中，所有事件都通过添加特殊的 `onEvent`（当事件发生时）模块来开始。使用方法：
+
+          <br><br>
+
+          <div style="column-count: 4; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 4; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          切换到代码模式</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          从工具箱中拖拽 <code>onEvent</code> 模块到工作区中。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">3.</span>
+          使用下拉框菜单，来选择需要设置响应某些事件的界面元素的<em>标识</em>。所有在设计模式添加的元素的标识都列在了这里。</p>
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">4.</span>
+          使用下拉框菜单，来选择需要响应的事件<em>类型</em>。 (这里先使用 "click" ).</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">5.</span>
+          在函数里添加，<em>当</em>用户触发此事件时，需要运行的代码。函数会在每次用户触发此事件时运行一次。</p>
+
+          </div>
+
+          ![](https://images.code.org/9b506faaaadf61338dc738a4eafb66b2-image-1476740205599.png)
+
+          ###  "Click" （点击）时改变屏幕
+
+          在事件驱动的编程中了解以下内容很重要：
+
+          * **用户触发事件** - 事件发生在当用户点击按钮，点击屏幕，移动鼠标，在键盘上输入，等等。
+          * **事件触发代码** - 当事件发生或 "触发" 时，可以用来触发特定的 JavaScript 函数。
+
+          应用实验室的 `onEvent` 模块是一种叫做 **事件监听器** 的事件处理函数。它将所有事件处理所需要的几个设置部分，打包为一个命令。这是标有所有内容的示例：
+
+          <img src="//curriculum.code.org/images/applab/onEvent_diagram.png" style="display: block; margin: 20px auto">
+
+          <div style="column-count: 3; column-gap: 20px; column-rule: 0.5px solid #00adbc; -moz-column-count: 3; width: 100%">
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">1.</span>
+          这是当用户点击 <em>button1</em> 时触发执行的回调函数。在这里，将乌龟简单的向前移动了 25 像素。事件处理函数通常不只一行，这只是一个简单的示例。</p>
+
+          <p><span style="font-weight: bold; color: #00adbc; font-size: 200%;">2.</span>
+          注意，此函数与以前见过的不同，它没有名字。又叫做 <em>回调函数</em>，这是个奇怪的术语。回调函数和普通函数的不同之处在于，不能直接从代码中调用。回调函数在指定的事件发生时，<strong>由系统来调用</strong>。回调函数是许多事件驱动编程中的常见模式。</p>
+          </div>
+
+
+          ### 接下来就要试试了！
+
       ScreenOutTheMean-Unplugged:
         markdown: |
           # 远离网络欺凌
@@ -4482,66 +4957,6 @@ zh-CN:
           # 西蒙说
 
           玩一玩游戏，想想需要什么命令来获得正确的结果。
-      Social Sleuth:
-        markdown: |+
-          # 社交侦探
-
-          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
-
-          ## 资料
-
-          点击图片来打开每个资料。
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
-      Social Sleuth_2018:
-        markdown: |+
-          # 社交侦探
-
-          需要<a href="https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/edit#">社交侦探清单</a>来完成活动。
-
-          ## 资料
-
-          点击图片来打开每个资料。
-
-          ### FaceSpace
-
-          | FaceSpace: Lizzie Dell  |  FaceSpace: John T | FaceSpace: Haley G.  |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-S5X0IfPmaq09YxGCbOFt3yo4N4PibaA1FBsc4iSdU/" target="_blank">  <img src="https://images.code.org/178adb09adb079a9cf8f465453f9da34-image-1480624941354.42.11 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/6qyeEpRZRNkkrkkEduW8G_VO0Y-W2Z6B2Xn5pbLsUpw/" target="_blank"><img src="https://images.code.org/5d141433497fc107a60f0c2e3c63cca8-image-1480624947223.41.59 PM.png" style="width:400px"></a>  |<a href="https://codeprojects.org/7vPoGl6YA2bop1bPaIwpYX4_ubrkEBBFau_8s3JGMoo/" target="_blank">  <img src="https://images.code.org/ced7e2ae3c4fc17b6e278de8339e9498-image-1480626229324.02.56 PM.png" style="width:400px"> </a> |
-
-
-          ### Chirpr
-
-          | Chirpr: @johnsnow  |  Chirpr:@flyinghail | Chirpr: @lillizard |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/F-CPrGMcIPZF27RUX8Z_0Qb4KFSCvlU96VSWV7IBD98/" target="_blank">  <img src="https://images.code.org/3a5e7e1136382288f1122354cf494783-image-1480625415782.49.59 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/Kff1I24rG71I-TnC--Uw5hTqZUAWO3iTzzHRHQ3h90U/" target="_blank">  <img src="https://images.code.org/c4ae8d208cfd5cb211d74f1ca4259210-image-1480627944701.31.37 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/c4e3JuM-nCcmYF4XbbxpJ4pX51wyClVZCDYr6HiMyHg/" target="_blank">  <img src="https://images.code.org/42fc1b77b07fbcb4d143a32f1208296f-image-1493301869142.03.52 AM.png" style="width:400px"> </a> |
-
-
-          ### instantframe
-
-          | instantframe: johnsnow  | instantframe: @photolizzie | instantframe:@desertrider |
-          | ---------  | ------ |  ------ |
-          | <a href="https://codeprojects.org/5Zw4FvstrOYxANYH2HFbV_mVuY-QWfrsdgga9S3DGxs/" target="_blank">  <img src="https://images.code.org/290cb1409343d57ab5ab9be93085004d-image-1480625573589.51.31 PM.png" style="width:400px"> </a> | <a href="https://codeprojects.org/JXB8ULbAJJHzC-hHoiiZFxZBT4S32HwF0krGoXSzdE8/" target="_blank">  <img src="https://images.code.org/8e7de383b0747275a075ed9839a118d0-image-1480625641547.53.30 PM.png" style="width:400px"> </a> |<a href="https://codeprojects.org/xnZk6nZxi0FKMVkwKrsQjvbGWDIwqBW9zDmuCCseMpc/" target="_blank">  <img src="https://images.code.org/c52c51816ce248336a86e3e7f6ec2209-image-1480626143808.01.54 PM.png" style="width:400px"> </a> |
-
       Social Sleuth_2018_2019:
         markdown: |+
           # 社交侦探
@@ -4625,6 +5040,17 @@ zh-CN:
 
           ##资料
           * [电脑是什么 - 活动指导](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      Unit 1 Lesson 6 Overview:
+        markdown: |
+          # 解决问题 - 计算机和逻辑：第 6 课 - 处理比特
+
+          ## 背景
+
+          这几颗中，会学习在处理前面设计的比特级的简单图像时，计算机如何处理这些二进制信息。
+
+          # 资源
+
+          * [像素过滤器](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - 活动指南 ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
       Unit 2 Lesson 10 Overview:
         markdown: |
           # 概述
@@ -4948,6 +5374,30 @@ zh-CN:
           feedback: 第一个循环只能让 BB-8 向前移动2格, 当它需要向前移动3格的时候。
         questions:
         - text: 仔细阅读下面的代码。 点击 "运行" 后，会发生什么？
+      courseD_external_binary1:
+        markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
+          <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>这里有个可以遍历的 \"像素\" 网格，通过将某些正方形像素设置为开，来画出图形。</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018:
+        markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
+          <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>这里有个可以遍历的 \"像素\" 网格，通过将某些正方形像素设置为开，来画出图形。</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
+      courseD_external_binary1_2018_2019:
+        markdown: "<h1>用二进制画画</h1>\n \n<h3>二进制是只用两个选项来表达信息的方法。在这里，用选项 <b>关</b> 和 <b>开</b>。\n<br/>\n用数字
+          <b>0</b> 来表达 \"关\"，用数字 <b>1</b> 来表达 \"开\"。\n<br/>\n<table>\n<tr><td><img
+          src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\"
+          width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\"
+          width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td
+          align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\"
+          float=\"left\"/><h3>这里有个可以遍历的 \"像素\" 网格，通过将某些正方形像素设置为开，来画出图形。</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
@@ -4959,6 +5409,21 @@ zh-CN:
         - text: D
           correct: true
           feedback: 叮咚！答对啦！
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_binary8_predict1_2018:
@@ -4972,6 +5437,21 @@ zh-CN:
         - text: D
           correct: true
           feedback: 叮咚！答对啦！
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_binary8_predict1_2018_2019:
@@ -4985,6 +5465,21 @@ zh-CN:
         - text: D
           correct: true
           feedback: 叮咚！答对啦！
+        markdown: |+
+          <table>
+          <tr>
+
+          <td style="padding: 0 30px 0 0;"> <b>A)</b> <img src="https://images.code.org/ca3e26e5b3008075d06db82c2831ab0b-image-1489438562132.43.39a.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>B)</b> <img src="https://images.code.org/6da194be0b14a041291648c12a307495-image-1489438503416.43.39.png" width="100px"/></td>
+
+          <td style="padding: 0 20px 0 0;"> <b>C)</b> <img src="https://images.code.org/dfaa00e3a6260742671d1ac4455fb5d5-image-1489438562133.43.39b.png" width="100px"/></td>
+
+
+          <td style="padding: 0 20px 0 0;"> <b>D)</b> <img src="https://images.code.org/7fc63ed5875b9f9785d0e88aec6eae47-image-1489439110649.43.39d.png" width="100px"/></td>
+          </tr></table>
+          <br/>
+
         questions:
         - text: 仔细看看下面的代码。当点击 "运行" 后，会生成哪个图形？
       courseD_multi_artist_nestedLoops9_predict1:

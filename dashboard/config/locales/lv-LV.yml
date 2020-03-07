@@ -352,6 +352,7 @@ lv:
     notes_coming_soon: Piezīmes šim video, drīzumā.
     autoplay_option: Automātiski atskaņot videoklipu
     download: Lejupielādēt videoklipu
+    label: Video
   compatibility:
     upgrade:
       link: Uzzini vairāk
@@ -573,3 +574,4 @@ lv:
     accept: es piekrītu
   gdpr_dialog:
     true: Jā
+  copy: Kopija

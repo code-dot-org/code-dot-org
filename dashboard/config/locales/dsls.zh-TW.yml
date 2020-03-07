@@ -80,9 +80,9 @@ zh-TW:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: 將右邊的程式放到正確的格子中。
         questions:
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
-        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: 配對
       2-3 Graph Paper Multi 1:
         answers:

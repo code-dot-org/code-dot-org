@@ -509,6 +509,7 @@ pl:
     download: 'Pobierz wideo'
     show_notes: 'Pokaż Notatki'
     show_video: 'Pokaż Wideo'
+    label: 'Wideo'
   compatibility:
     upgrade:
       unsupported_message: "Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić przeglądarkę do <a href='%{supported_browsers_url}', target='_blank'>jednej z obsługiwanych przez nas przeglądarek</a>. Możesz wyświetlić stronę, ale może nie działać właściwie."
@@ -975,3 +976,4 @@ pl:
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: "Powrót do strony domowej"
+  copy: 'Kopia/Kopiuj'

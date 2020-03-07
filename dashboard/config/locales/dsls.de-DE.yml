@@ -392,8 +392,8 @@ de-DE:
         answers:
         - text: "<h4>STACK</h4>"
         - text: "<h4>STAMP</h4>"
-        - text: "<h4>STAR</h4>"
-        - text: "<h4>RAMP</h4>"
+        - text: "**STERN**"
+        - text: "**RAMPE**"
         content1: Weise jedem Programm die Wörter zu, die es bildet, mithilfe der
           vorhandenen Fähigkeitsgruppen.
         content2: "/script_assets/4-5_images/unplugged/suncatchers_1.png"
@@ -3191,7 +3191,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3210,7 +3210,7 @@ de-DE:
           feedback: Falsch. Der Code veranlasst den Mähdrescher, wiederholt ein Treppenstufenmuster
             zu erstellen und jeden Mais oder Salat zu pflücken an dem er vorbeikommt.
             Der Kürbis wird nicht gpflückt.
-        - text: Der Mähdrescher pflückt alle Früchte, außer dem Kürbis.
+        - text: Der Mähdrescher erntet das gesamte Getreide, außer dem Kürbis.
           correct: true
           feedback: Richtig!
         - text: Ich weiß es nicht.
@@ -3230,7 +3230,7 @@ de-DE:
         - {}
         - text: Ich weiß es nicht.
         questions:
-        - {}
+        - text: " "
       courseD_multi_farmer_while10_predict2:
         answers:
         - {}

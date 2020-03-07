@@ -39,6 +39,7 @@ ga:
         Custom: Ealaíontóir
         CustomStudio: Spraotharlann
         Gamelab: An tSaotharlann Cluichíochta
+        Spritelab: Saotharlann na Sprideanna
     trophy:
       name:
         Bronze: Cré-umha
@@ -687,6 +688,7 @@ ga:
         csd_weblab_css_1: Buntús CSS - Cuid a haon
         csd_weblab_css_2: Buntús CSS - Cuid a dó
         csd_weblab_intro_3: Eolas bunúsach ar Shaotharlann an Ghréasáin - Cuid a trí
+        csp_applab_design: Buneolas ar an Mód Deartha
         csp_applab_functions: Buneolas ar Fheidhmeanna
         csp_applab_functions_parameters: Feidhmeanna a ghlacann le Paraiméadair
         csp_applab_loops: Lúba
@@ -717,7 +719,7 @@ ga:
         applab_hoc_welcome: Uair Chódála sa tSaotharlann Aipeanna - Fáilte
         applab_hoc_setproperty: Uair Chódála sa tSaotharlann Aipeanna - setProperty
         applab_hoc_onevent: Uair Chódála sa tSaotharlann Aipeanna - onEvent
-        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - Mód Deartha
+        applab_hoc_designmode: Uair Chódála sa tSaotharlann Aipeanna - An Mód Deartha
         applab_hoc_share: Uair Chódála sa tSaotharlann Aipeanna - Comhroinnt
         mc_2017_agent_intro: Uair Chódála Minecraft - An Gníomhaire
         mc_2017_repeat: Uair Chódála Minecraft - Lúba Athdhéanta
@@ -816,11 +818,11 @@ ga:
         oceans_machine_learning: Meaisínfhoghlaim
         oceans_training_data: Sonraí Traenála
         oceans_societal_implications: Impleachtaí Sóisialta
-        hoc_dance_congrats_2019: Cóisir Dhamhsa 2019 - Tosaímis an chóisir seo!
-        hoc_dance_warmup_2019: Cóisir Dhamhsa 2019 - Téamh Suas
-        hoc_dance_events_2019: Cóisir Dhamhsa 2019 - Teagmhais
-        hoc_dance_measures_2019: Cóisir Dhamhsa 2019 - Tomhais
-        hoc_dance_properties_2019: Cóisir Dhamhsa 2019 - Airíonna
+        hoc_dance_congrats_2019: Cóisir Dhamhsa - Tosaímis an chóisir seo!
+        hoc_dance_warmup_2019: Cóisir Dhamhsa - Téamh Suas
+        hoc_dance_events_2019: Cóisir Dhamhsa - Teagmhais
+        hoc_dance_measures_2019: Cóisir Dhamhsa - Tomhais
+        hoc_dance_properties_2019: Cóisir Dhamhsa - Airíonna
     callout:
       text:
         drag_blocks: Tarraing bloc "téigh ar aghaidh" agus ceangail faoin bhloc eile

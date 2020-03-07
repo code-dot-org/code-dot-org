@@ -686,6 +686,7 @@ pt-BR:
     download: Baixar Vídeo
     show_notes: Mostrar as notas
     show_video: Mostrar o vídeo
+    label: Vídeo
   compatibility:
     upgrade:
       unsupported_message: Seu navegador não é compatível. Atualize seu navegador
@@ -879,11 +880,13 @@ pt-BR:
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
     correct_title: Correto
     correct_body: Essa é a resposta correta.
+    toofew_title: Poucas respostas.
   multi-submittable:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar uma resposta.
     correct_title: Obrigado
     correct_body: Obrigado por enviar uma resposta.
+    toofew_title: Poucas respostas.
   level_group:
     wrong_title: Obrigado
     wrong_body: Obrigado por enviar respostas.
@@ -1272,6 +1275,11 @@ pt-BR:
     você deveria estar.
   hidden_script: Seu professor não esperava que estivesse aqui. Por favor, pergunte
     ao seu professor qual unidade você deveria estar.
+  no_course_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
+    ao seu professor em qual unidade você deveria estar.
+  no_course_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
+    deve ter acesso a esta unidade, por favor, escreva para support@code.org para
+    que possamos corrigir a situação.
   no_script_access_student: Você não tem acesso a esta unidade. Por favor, pergunte
     ao seu professor em qual unidade você deveria estar.
   no_script_access_teacher: Você não tem acesso a esta unidade. Se você acredita que
@@ -1429,3 +1437,4 @@ pt-BR:
     Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa
     página inicial.
   page_not_found_button: Volte para a página inicial
+  copy: Copiar

@@ -574,6 +574,7 @@ he:
     download: הורד סרטון
     show_notes: הצג הערות
     show_video: הצג סרטון
+    label: סרטון
   compatibility:
     upgrade:
       unsupported_message: הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}',
@@ -1130,3 +1131,4 @@ he:
     privacy_policy: מדיניות פרטיות
     logout: התנתק
     true: כן
+  copy: העתק

@@ -15,8 +15,8 @@ hu-HU:
         4_5_Bee_Conditionals_2_1: Emlékezz, ellenőrizni kell hogy van-e virág minden
           felhőben. A lépeket nem kell ellenőrizned.
       Course 4 Artist 4:
-        repeat_full_circle: Írd be a számát, hogy hányszor kell a zombinak mozognia,
-          hogy egy teljes kört leírjon
+        repeat_full_circle: Hányszor kell lépnie a zombinak, hogy egy teljes kört
+          megtegyen? Írd be ezt a számot!
       Course 4 Artist 7:
         repeat_blocks: Használd az "Ismételd" blokkot, és kerítsd körbe vele a munkaterületen
           lévő blokkokat
@@ -36,8 +36,8 @@ hu-HU:
         if_bee_nectar: Használd a "ha" blokkot, hogy eldöntsd hogy a méhnek kell-e
           nektárt gyűjtenie
       Course 4 Bee 3:
-        if_else_bee: Használd a "ha/különben" blokkot, hogy a méh nektárt kapjon a
-          virágból, és mézet csináljon, ha az nem virág
+        if_else_bee: Használd a "ha/különben" blokkot, hogy a méh nektárt gyűjtsön,
+          ha virágnál van - ám ha nem virágnál van, akkor csináljon mézet
       Course 4 Bee Params 2:
         edit_get_nectar: 'Módosítsd e gomb segítségével a függvényt és változtasd
           meg az irányt: a méh irányt fog váltani, hogy begyűjtse a nektárt!'
@@ -49,6 +49,9 @@ hu-HU:
         edit_add_parameter: Kattints a szerkesztésre, hogy paramétert adj a függvényedhez
       Course 4 Play Lab Vars 1:
         arrows_move_actor: A nyilak segítségével mozgasd a szereplőt!
+      Course 4 Play Lab Vars 9:
+        Course_4_Play_Lab_Vars_9_1: Minden blokkodat kategóriák szerint rendeztünk
+          el. Kattints a címükre, hogy kiderüljön, mi is van bennük.
       CourseD_Dance_Party_01:
         dance_callout_01: Add hozzá ezt a blokkot a programodhoz!
       CourseD_Dance_Party_02:
@@ -151,6 +154,9 @@ hu-HU:
           majd húzd a függvényed leírásába
       NEW Course 4 Artist Vars 6:
         place_length_variable: Húzd a hossza változót ide a kérdőjelek helyére
+      NEW Course 4 Bee For Loops 4:
+        bee_for_loop: Írd ide a legtöbb nektár számát, amit a méhnek egyszerre össze
+          kell gyűjtenie
       NEW Course 4 Bee For Loops 5:
         actions_category: Az eszközkészlet új külsőt kapott! Most már itt vannak a
           "Műveletek" blokkok is.
@@ -196,6 +202,21 @@ hu-HU:
       courseA_artist_loops4_2019:
         courseA_artist_loops4_1: Ez a szám azt mondja el, hogy ezek közül a blokkok
           közül mennyit használhatsz a feladvány megoldásához.
+      courseA_artist_loops7:
+        courseA_artist_loops7_1: Ez a szám azt jelenti, hogy csak egy blokkot használhatsz
+          ebből a típusból a végső megoldáshoz.
+      courseA_artist_loops7_2018:
+        courseA_artist_loops7_1: Ez a szám azt jelenti, hogy csak egy blokkot használhatsz
+          ebből a típusból a végső megoldáshoz.
+      courseA_artist_loops7_2019:
+        courseA_artist_loops7_1: Ez a szám azt jelenti, hogy csak egy blokkot használhatsz
+          ebből a típusból a végső megoldáshoz.
+      courseA_artist_loops8:
+        courseA_artist_loops8_1: Tudtad, hogy a sort visszahúzhatod, ahová csak szeretnéd?
+      courseA_artist_loops8_2018:
+        courseA_artist_loops8_1: Tudtad, hogy a sort visszahúzhatod, ahová csak szeretnéd?
+      courseA_artist_loops8_2019:
+        courseA_artist_loops8_1: Tudtad, hogy a sort visszahúzhatod, ahová csak szeretnéd?
       courseA_collector_loops1:
         courseA_collector_loops1_1: Újabb blokkokat látsz itt? Ne aggódj, még ebben
           a szakaszban megmutatjuk, hogy hogyan kell használni.
@@ -240,6 +261,30 @@ hu-HU:
           kövesd a program futását. Ez segíteni fog, hogy megtaláld a hibát!
       courseA_maze_seq4:
         made_of_stone: Ezek a blokkok kőből vannak. Elmozdíthatod őket, de nem törölhetők!
+      courseA_playLab_events4:
+        courseA_playlab_events4_callout1: Ez egy felirat
+      courseA_playLab_events4_2018:
+        courseA_playlab_events4_callout1: Ez egy felirat
+      courseA_playLab_events4_2019:
+        courseA_playlab_events4_callout1: Ez egy felirat
+      courseA_playLab_events5:
+        courseA_playLab_events5_1: Kattints ide, hogy megváltoztasd az esemény nyíl
+          irányát.
+      courseA_playLab_events5_2018:
+        courseA_playLab_events5_1: Kattints ide, hogy megváltoztasd az esemény nyíl
+          irányát.
+      courseA_playLab_events5_2019:
+        courseA_playLab_events5_1: Kattints ide, hogy megváltoztasd az esemény nyíl
+          irányát.
+      courseA_playLab_events6:
+        courseA_playLab_events6_1: Ez lehetővé teszi, hogy válassz egy véletlen hangot.
+          Vagyis addig nem tudhatod, hogy mit fogsz hallani, amíg meg nem hallod!
+      courseA_playLab_events6_2018:
+        courseA_playLab_events6_1: Ez lehetővé teszi, hogy válassz egy véletlen hangot.
+          Vagyis addig nem tudhatod, hogy mit fogsz hallani, amíg meg nem hallod!
+      courseA_playLab_events6_2019:
+        courseA_playLab_events6_1: Ez lehetővé teszi, hogy válassz egy véletlen hangot.
+          Vagyis addig nem tudhatod, hogy mit fogsz hallani, amíg meg nem hallod!
       courseB_Scrat_ramp1_2018:
         grade2_CaringForNewPet_0_1: Miután minden blokkot csatlakoztattál, nyomj a
           futtatásra, hogy elinduljon a program.

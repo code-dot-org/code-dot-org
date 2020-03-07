@@ -408,3 +408,19 @@ ku:
           stages:
             Conditionals:
               name: مەرجیەکان
+        csd3-2020:
+          stages:
+            Variables:
+              name: گۆڕاوەکان
+            Conditionals:
+              name: مەرجیەکان
+            Functions:
+              name: فرمانەکان
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: بەرنامەڕێژی بە پێشبڕکێ
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: مەرجیەکان

@@ -551,6 +551,7 @@ fr:
     download: 'Télécharger la vidéo'
     show_notes: 'Afficher les notes'
     show_video: 'Afficher la vidéo'
+    label: 'Vidéo'
   compatibility:
     upgrade:
       unsupported_message: "Votre navigateur n'est pas supporté. Merci de mettre à jour avec [un de nos navigateurs supportés](%{supported_browsers_url}). Vous pouvez afficher la page mais il risque d'y avoir des choses qui ne fonctionnent pas."
@@ -1119,3 +1120,4 @@ fr:
   page_not_found_header: '404 : Page introuvable'
   page_not_found_description: "La page recherchée n’existe pas à cette adresse. Vérifiez l’adresse web et réessayez, ou retournez à notre page d’accueil."
   page_not_found_button: "Retourner à la page d’accueil"
+  copy: 'Copier'

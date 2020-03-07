@@ -1,23 +1,37 @@
 import _ from 'lodash';
 import {TestResults} from '@cdo/apps/constants';
+import {TeacherScores} from './standardsConstants';
 
-const ADD_STANDARDS_DATA = 'sectionStandardsProgress/ADD_STANDARDS_DATA';
+const SET_STANDARDS_DATA = 'sectionStandardsProgress/SET_STANDARDS_DATA';
 const SET_TEACHER_COMMENT_FOR_REPORT =
   'sectionStandardsProgress/SET_TEACHER_COMMENT_FOR_REPORT';
+const SET_SELECTED_LESSONS = 'sectionStandardsProgress/SET_SELECTED_LESSONS';
+const SET_STUDENT_LEVEL_SCORES =
+  'sectionStandardsProgress/SET_STUDENT_LEVEL_SCORES';
 
 // Action creators
-export const addStandardsData = standardsData => {
-  return {type: ADD_STANDARDS_DATA, standardsData: standardsData};
+export const setStandardsData = standardsData => {
+  return {type: SET_STANDARDS_DATA, standardsData: standardsData};
 };
 export const setTeacherCommentForReport = teacherComment => ({
   type: SET_TEACHER_COMMENT_FOR_REPORT,
   teacherComment
 });
+export const setSelectedLessons = selected => ({
+  type: SET_SELECTED_LESSONS,
+  selected
+});
+export const setStudentLevelScores = scoresData => ({
+  type: SET_STUDENT_LEVEL_SCORES,
+  scoresData
+});
 
 // Initial State
 const initialState = {
   standardsData: [],
-  teacherComment: null
+  teacherComment: null,
+  selectedLessons: [],
+  studentLevelScoresByStage: {}
 };
 
 function sortByOrganizationId(standardsByConcept) {
@@ -25,7 +39,7 @@ function sortByOrganizationId(standardsByConcept) {
 }
 
 export default function sectionStandardsProgress(state = initialState, action) {
-  if (action.type === ADD_STANDARDS_DATA) {
+  if (action.type === SET_STANDARDS_DATA) {
     const sortedByConcept = _.orderBy(action.standardsData, 'concept', 'asc');
     const groupedStandards = _.orderBy(
       _.groupBy(sortedByConcept, 'concept'),
@@ -42,6 +56,18 @@ export default function sectionStandardsProgress(state = initialState, action) {
     return {
       ...state,
       teacherComment: action.teacherComment
+    };
+  }
+  if (action.type === SET_SELECTED_LESSONS) {
+    return {
+      ...state,
+      selectedLessons: action.selected
+    };
+  }
+  if (action.type === SET_STUDENT_LEVEL_SCORES) {
+    return {
+      ...state,
+      studentLevelScoresByStage: action.scoresData
     };
   }
   return state;
@@ -73,6 +99,19 @@ export function getUnpluggedLessonsForScript(state) {
   }
 
   return _.map(unpluggedStages, filterStageData);
+}
+
+export function fetchStudentLevelScores(scriptId, sectionId) {
+  return (dispatch, getState) => {
+    $.ajax({
+      method: 'GET',
+      dataType: 'json',
+      url: `/dashboardapi/v1/teacher_scores/${sectionId}/${scriptId}`
+    }).then(data => {
+      const scoresData = data;
+      dispatch(setStudentLevelScores(scoresData));
+    });
+  };
 }
 
 export function getNumberLessonsCompleted(state) {
@@ -138,6 +177,60 @@ export const lessonsByStandard = state => {
 };
 
 export function getLessonCompletionStatus(state, stageId) {
+  if (
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript
+  ) {
+    const scriptId = state.scriptSelection.scriptId;
+    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
+    const stage = _.find(stages, ['id', stageId]);
+    if (stage.unplugged) {
+      return getUnpluggedLessonCompletionStatus(state, scriptId, stageId);
+    } else {
+      return getPluggedLessonCompletionStatus(state, stage);
+    }
+  }
+}
+
+export function getUnpluggedLessonCompletionStatus(state, scriptId, stageId) {
+  let completionByLesson = {};
+  completionByLesson['completed'] = false;
+  completionByLesson['numStudentsCompleted'] = 0;
+
+  if (
+    state.sectionStandardsProgress.studentLevelScoresByStage &&
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId] &&
+    state.sectionStandardsProgress.studentLevelScoresByStage[scriptId][stageId]
+  ) {
+    const levelScoresByStudent =
+      state.sectionStandardsProgress.studentLevelScoresByStage[scriptId][
+        stageId
+      ];
+
+    const studentScoresComplete = _.filter(
+      _.values(levelScoresByStudent),
+      function(studentScore) {
+        return _.first(_.values(studentScore)) === TeacherScores.COMPLETE;
+      }
+    );
+
+    const numStudentCompleted = studentScoresComplete.length;
+
+    // If any student in the section has a teacher score indicating
+    // completion for the lesson, the lesson is considered completed for the
+    // section. When a teacher marks a lesson complete for a section, the
+    // lesson is marked complete for each student in the section, so we can
+    // infer that if it's marked complete for one student in the section,
+    // it's marked complete for all students in the section.
+    const completed = numStudentCompleted >= 1;
+
+    completionByLesson['completed'] = completed;
+    completionByLesson['numStudentsCompleted'] = numStudentCompleted;
+  }
+  return completionByLesson;
+}
+
+export function getPluggedLessonCompletionStatus(state, stage) {
   // A lesson is "completed" by a student if at least 60% of the levels are
   // completed.
   const levelsPerLessonCompletionThreshold = 0.6;
@@ -158,8 +251,6 @@ export function getLessonCompletionStatus(state, stageId) {
     state.teacherSections.selectedSectionId
   ) {
     const scriptId = state.scriptSelection.scriptId;
-    const stages = state.sectionProgress.scriptDataByScript[scriptId].stages;
-    const stage = _.find(stages, ['id', stageId]);
     const numberStudentsInSection =
       state.teacherSections.sections[state.teacherSections.selectedSectionId]
         .studentCount;
@@ -195,7 +286,7 @@ export function getLessonCompletionStatus(state, stageId) {
   return completionByLesson;
 }
 
-export function getStandardsCoveredForScript(scriptId) {
+export function fetchStandardsCoveredForScript(scriptId) {
   return (dispatch, getState) => {
     $.ajax({
       method: 'GET',
@@ -203,7 +294,7 @@ export function getStandardsCoveredForScript(scriptId) {
       url: `/dashboardapi/script_standards/${scriptId}`
     }).then(data => {
       const standardsData = data;
-      dispatch(addStandardsData(standardsData));
+      dispatch(setStandardsData(standardsData));
     });
   };
 }

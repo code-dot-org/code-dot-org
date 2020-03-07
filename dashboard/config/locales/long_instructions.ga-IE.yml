@@ -64,6 +64,113 @@ ga-IE:
       4-5 Nested Loops 5: Cuir an cód atá ann isteach i lúb chun muileann gaoithe
         a dhéanamh.
       4-5 Nested Loops 9: Tarraing na fiacla i mbéal an ailigéadair!
+      AppLab Intro 7 - Change Screen Color: "<div style=\"float:right\">\n\t<img src=\"https://images.code.org/bf9b1fb57751fa90c9b786339914ad70-image-1508521068798.34.54
+        AM.png\" style=\"height:150px\"> \n</div>\n\n**Sprioc:** Dath an scáileáin
+        a athrú go huaine. \n\n**Cén chaoi:** Tarraing bloc `setProperty()` isteach.
+        Úsáid na roghchláir aníos chun `\"background-color\"` an scáileáin a athrú
+        go `\"green\"`. Ansin cliceáil \"Rith\".\n\n**An bhfuil tú i bponc? Cliceáil
+        anseo:** ![expandable](https://images.code.org/3b5e70522b02867a1df1d5b5e481785e-image-1511279858395.gif)"
+      AppLab Intro 7 - Change Text 2: |-
+        <div style="float:right">
+        <img src="https://images.code.org/39ead723fbd2b047aa2d1e401cbfec8a-image-1506545619076.34.29 PM.png" style="height:200px;">
+        </div>
+
+        **Sprioc:** An téacs a mhéadú agus dath an téacs a athrú go gorm.
+
+        **Cén chaoi:**  Tá dhá líne chóid de dhíth. Socraigh `80` mar `"font-size"` ar `"label1"` agus `"blue"` mar `"text-color"`.
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/2d5d46a03082af3b01847aad6602e2ea-image-1511280140482.gif)
+      AppLab Intro 7 - Full Text: "<div style=\"float:right\">\n<img src=\"https://images.code.org/1e81d5bcdd69172f4127de55d045225f-image-1507565161167.05.19
+        AM.png\" style=\"height:200px\">\n</div>\n\n**Sprioc:** Cuir dath `\"red\"`
+        agus `\"blue\"` ar na cnaipí. Ansin, athraigh an téacs sa lipéad mór oráiste.\n\n**Cén
+        chaoi:** \n\n-   Meabhraigh gur féidir leat an luch a chur os cionn eiliminte
+        chun a `\"id\"` a fheiceáil.\n-   Socraigh `\"background-color\"` na gcnaipí
+        go `\"red\"` agus `\"blue\"`.\n-   Socraigh airí `\"text\"` an lipéid go dtí
+        rud ar bith, mar shampla `\"Fáilte go dtí m'aip!\"`.\n\n**An bhfuil tú i bponc?
+        Cliceáil anseo:** ![expandable](https://images.code.org/4bf99e7352e7c17a5bf73ced80171f6a-image-1511280628092.gif)"
+      AppLab Intro 7 - onEvent intro: |-
+        <img src="https://images.code.org/3d8c8487ea669563d3401c0009cd9462-image-1511281194897.gif" style="float:right;height:200px">
+
+        **Sprioc:** Beidh an scáileán gorm i dtús báire. Scríobh cód sa chaoi go dtiocfaidh dath uaine air nuair a chliceáiltear an cnaipe "Green-ify".
+
+        **Cén chaoi:** Cuir cód laistigh de `onEvent()` a shocraíonn `"background-color"` an scáileáin go `"green"`.
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/5ddf6b129bc04b79839b3661ccef788b-image-1511281012076.gif)
+      AppLab Intro 7 - onEvent twoButtons: |-
+        <img src="https://images.code.org/158c9258bfff18c2177440f201446c47-image-1507566793890.gif" style="float:right;height:200px">
+
+        **Sprioc:** Cabhraigh linn an aip thóirse seo a chur i gcrích. Tagann dath bán ar an scáileán nuair a chliceáiltear an cnaipe "On" cheana féin. Rith an aip agus bain triail as. Ansin, scríobh cód sa chaoi go dtiocfaidh dath dubh ar an scáileán nuair a chliceáiltear an cnaipe "Off".
+
+        **Cén chaoi:** Cuir cód laistigh den `onEvent()` folamh a shocraíonn `"background-color"` an scáileáin go `"black"` agus `"text-color"` an lipéid go `"white"`.
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/020b1d9b465aaf35967a528a92961c13-image-1511281772276.gif)
+      AppLab Intro 7 - playSound: "<img src=\"https://images.code.org/28176329f15dea1a863564b069e72aab-image-1511282702534.44.52
+        AM.png\" style=\"float:right;height:200px\">\n\n**Sprioc:** Tá an clár fuaime
+        seo beagnach déanta! Rith é le féachaint cén chaoi a n-oibríonn sé. Ansin,
+        cuir pictiúr, téacs, agus fuaim leis an gcnaipe deireanach.\n\n**Cén chaoi:**
+        \n\n-   Cuir `onEvent()` leis an gcód agus socraigh \"id\" mar `\"button4\"`.
+        Tarraing `playSound()` go dtí an `onEvent()` agus roghnaigh fuaim ón leabharlann.
+        \n-   Cuir `setProperty()` (lasmuigh den `onEvent()`) leis chun airí `\"image\"`
+        an chnaipe a athrú. Roghnaigh pictiúr ón tríú roghchlár aníos.\n-   Cuir `setProperty()`
+        amháin eile leis chun `\"text\"` an chnaipe a athrú.\n\n**An bhfuil tú i bponc?
+        Cliceáil anseo:** ![expandable](https://images.code.org/a3fdcb8954c5e8d585bef64df1ec5b1a-image-1511285408512.gif)"
+      AppLab Intro 7 - thisOrThatAddButton: |-
+        <img src="https://images.code.org/3feb07aaf3d933b094647479673a3293-image-1508373443129.37.00 PM.png" style="float:right;height:200px">
+
+        **Sprioc:** Cnaipe eile a chur leis an scáileán ar a bhfuil "Ar Dheis!" le `"cnaipeDeas"` mar `"id"`.
+
+        **Cén chaoi:** Sa Mód Deartha, tarraing cnaipe nua isteach. Cuir san áit cheart é agus socraigh an méid. Ansin socraigh na gnéithe éagsúla: `"id"`, `"text"`, `"background color"`, agus `"font size"`.
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/7035ad0445984cf889b159cf5682e35a-image-1508383186447.gif)
+      AppLab Intro 7 - thisOrThatAddScreen: |-
+        <img src="https://images.code.org/f102a1363aa575cc530379d9a4ee378c-image-1508382068883.00.59 PM.png" style="float:right;height:200px">
+
+        **Sprioc:** Scáileán nua darb ainm `"scaileanDeas"` a chruthú, agus lipéad "Chuaigh tú ar dheis!" a chur air.
+
+        **Cén chaoi:** Sa Mód Deartha, tarraing eilimint scáileáin nua isteach, agus athraigh an `"id"` go `"scaileanDeas"`. Ansin, tarraing an lipéad go dtí an scáileán agus athraigh an téacs go "Chuaigh tú ar dheis!".
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/11cf186acb0453cf9ec46929b763f568-image-1508383646159.gif)
+      AppLab Intro 7 - thisOrThatPersonalize: "<a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\"><img src=\"https://images.code.org/ba6c0db48cc1c3c28c135f1c2f67f361-image-1511244802597.10.18
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\"
+        target=\"_blank\"><img src=\"https://images.code.org/284b55697d786e0cd64350d0967c5dda-image-1511244806272.11.05
+        PM.png\" style=\"float:right;height:200px\"></a>\n<a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\"><img src=\"https://images.code.org/445181ff8d84861919512ba9b8e09586-image-1511244809994.12.40
+        PM.png\" style=\"float:right;height:200px\"></a>\n\n**Sprioc:** D'aip féin
+        a thógáil leis an tionscadal seo mar bhunús. Ansin comhroinn le cara é!\n\n**Cén
+        chaoi:** Ar dtús, caithfidh tú cinneadh a dhéanamh ar an sórt aipe ba mhaith
+        leat a thógáil. Ansin, tóg é le tuilleadh scáileán, cnaipí, téacs, fuaimeanna,
+        agus gníomhaíochtaí úsáideora. Tá cúpla bloc eile sa mbosca uirlisí ar féidir
+        triail a bhaint astu. Nuair a bheidh tú réidh, cliceáil \"Comhroinn\" len
+        é a sheoladh chugat féin nó chuig cara! \n\n<details>\n\n<summary><b>Smaointe:
+        Roghnaigh do Scéal Féin</b></summary>\n\nBain triail as an aip shamplach seo
+        <a href=\"https://studio.code.org/projects/applab/SMvVhgBX_GGyxg5LSEMrgg\"
+        target=\"_blank\">Roghnaigh do Scéal Féin</a> le tuiscint cén chaoi a n-oibríonn
+        sé. Seo duit cúpla smaoineamh le cuidiú leat do scéal féin a insint.\n\n<li>Scéal
+        faoin charachtar is ansa leat, fíordhuine nó carachtar ficseanúil.</li>\n<li>Scéal
+        bunaithe ar an leabhar nó scannán is ansa leat, nó ar scéal a chum tusa féin.</li>\n<li>Scéal
+        ina bhfuil cor gan súil leis, nó rogha dheacair mhorálta.</li>\n<br>\n</details>\n\n<details><summary><b>Smaointe:
+        Cártaí Beannachta</b></summary>\n\nBain triail as an aip shamplach seo <a
+        href=\"https://studio.code.org/projects/applab/SM_edi1btguZZiQaTtUT9Q\" target=\"_blank\">Cárta
+        Beannachta</a> le tuiscint cén chaoi a n-oibríonn sé. Seo duit cúpla smaointe
+        le cuidiú leat do chárta féin a chruthú.\n\n<li>Cárta a dhéanann ceiliúradh
+        ar bhreithlá, ar lá saoire, nó ar lá speisialta eile.</li>\n<li>Cárta buíochais
+        do dhuine a bhfuil meas agat air/uirthi.</li>\n<li>Cuireadh d'ócáid atá teacht
+        aníos.</li>\n<br>\n</details>\n\n<details><summary><b>Smaointe: Quiz Pearsantachta</b></summary>\n\nBain
+        triail as an aip shamplach seo <a href=\"https://studio.code.org/projects/applab/gx21oCP10-V4GlNMlSpwdQ\"
+        target=\"_blank\">Quiz Pearsantachta</a> le tuiscint cén chaoi a n-oibríonn
+        sé. Seo duit cúpla smaointe le cuidiú leat do quiz féin a chruthú.\n\n<li>Quiz
+        a mholann rud éigin a thaitneodh le duine, mar shampla béile, foireann spóirt,
+        leabhar, nó áit.</li>\n<li>Quiz a dhéanann \"tuar ar an todhchaí\", bunaithe
+        ar na freagraí.</li>\n<li>Quiz a chabhraíonn le daoine cinntí deacra a dhéanamh.</li>\n\n</details>"
+      AppLab Intro 7 - thisOrThatSetScreen: |-
+        <img src="https://images.code.org/acd1acf659a2504d38ff80256d8e870f-image-1508374065550.com-crop (1).gif" style="float:right;height:200px">
+
+        **Sprioc:** An `"scaileanDeas"` a oscailt nuair a chliceáiltear an `"cnaipeDeas"`.
+
+        **Cén chaoi:** Sa Mód Códála, cuir `onEvent()` nua le do chlár i gcomhair an chnaipe "Ar Dheis!". Cuir bloc `setScreen()` laistigh de sin a osclaíonn an `"scaileanDeas"`.
+
+        **An bhfuil tú i bponc? Cliceáil anseo:** ![expandable](https://images.code.org/64dfec0d9f9c2fc237abb90ef6a72f0e-image-1508384166252.gif)
       CSD Problem Solving Process Video: |-
         ## Ceisteanna
 
@@ -76,12 +183,61 @@ ga-IE:
         -   Smaoinigh ar rud éigin a dhéanann tú ar an ríomhaire. Cén cineál ionchurtha, aschurtha, stórais, agus próiseála atá ag tarlú?
       Course 4 Artist For Loops 6a: Athraigh trí rud bheaga sa chód ón leibhéal roimhe
         seo chun an ceann seo a dhéanamh!
+      Course 4 Bee Params 6: |-
+        Nár mhaith dá mbeifeá in ann an neachtar go léir a bhailiú le feidhm amháin?
+
+        Cuir paraiméadar nua `líon neachtar` le d'fheidhm a rialaíonn an méid neachtair le bailiú. Ba chóir duit ainm nua a chur ar an bhfeidhm freisin!
       CourseD_Dance_Party_01: |-
         _Déanaimis damhsa!_
 
-        Tarraing an bloc `make a new` go dtí an spás oibre, agus ceangail é laistigh den bhloc `setup` chun do chéad damhsóir a chruthú.
+        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socrú` chun do chéad damhsóir a chruthú.
 
         -   _Is féidir leat an bolgán solais ar chlé a chliceáil chun tuilleadh eolais nó dúshláin bhreise a fháil._
+      CourseD_Dance_Party_02: |-
+        Cuirimis an mús seo ag damhsa!
+
+        Tarraing an bloc <xml><block type="Dancelab_changeMoveLR" block-text="new_dancer do floss"><title name="SPRITE">new&#95;dancer</title><title name="MOVE" config="MOVES.Dab, MOVES.Drop, MOVES.Floss">Floss</title><title name="DIR">-1</title></block></xml> go dtí an spás oibre. Ceangail faoin bhloc teagmhais <xml><block type="Dancelab_atTimestamp" block-text="after 4 measures"><title name="TIMESTAMP">4</title><title name="UNIT">"measures"</title></block></xml> é. Tosóidh an damhsóir steip nua tar éis an ceathrú tomhas.
+
+        Úsáidtear **tomhais** chun am a mharcáil sa gceol. Sa chúrsa seo, tá ceithre bhuille i ngach tomhas.
+      CourseD_Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc teagmhais <xml><block
+        type=\"Dancelab_atTimestamp\" block-text=\"after 6 measures\"><title name=\"TIMESTAMP\">6</title><title
+        name=\"UNIT\">\"measures\"</title></block></xml> leis an spás oibre ionas
+        go dtosóidh an damhsóir steip nua tar éis sé thomhas."
+      CourseD_Dance_Party_04: |-
+        _Tá cuma leadránach ar an damhsa seo mar atá!_
+
+        Lorg an bloc nua sa mbosca uirlisí a chuireann éifeacht taobh thiar den damhsóir. Breathnaigh ar an mbealach a athraíonn na héifeachtaí in éineacht leis an gceol!
+      CourseD_Dance_Party_05: |-
+        Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú **gach dhá thomhas**!
+
+        -   Má roghnaíonn tú `(Ar Aghaidh)`, `(Siar)`, nó `(Randamach)`, déanfaidh an damhsóir steip difriúil gach uair a ritheann tú an cód.
+      CourseD_Dance_Party_06: |-
+        _Teastaíonn tuilleadh damhsóirí uainn!_
+
+        Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1` a dhéanfaidh damhsa leis an gcat.
+      CourseD_Dance_Party_08: |-
+        Tá tacar _airíonna_ ag gach damhsóir a rialaíonn an chuma atá air.
+
+        Is féidir leat damhsóir a chur sa chúlra trí _méid_ an damhsóra sin a laghdú. An bhfuil tú in ann an mhéid chéanna a chur ar an dá dhamhsóir tionlacain?
+      CourseD_Dance_Party_09: |-
+        Tá airí "imir" ag gach damhsóir lenar féidir leat sraith datha a chur leis. Athraigh an imir ar cheann de na damhsóirí.
+
+        -   Meascfar an imir a roghnaíonn tú le dathanna an damhsóra.
+      CourseD_Dance_Party_10: |-
+        Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
+          <block type="Dancelab_startMapping" block-text="right_unicorn begins following bass">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+
+        Úsáideann an cód seo an leibhéal "dord" (na fuaimeanna ísle) chun airde damhsóra amháin a athrú. An bhfuil tú in ann airíonna an damhsóra eile a athrú bunaithe ar an gceol?
+      CourseD_Dance_Party_11b: |-
+        Tá sé in am comórtas damhsa a dhéanamh! Déanann an Cat daba nuair a bhrúnn tú an tsaighead chlé. Tabhair ar an Róbat "titim" a dhéanamh nuair a bhrúnn tú an tsaighead dheas, agus "bualadh bos" a dhéanamh nuair a bhrúnn tú an tsaigheas suas.
+
+        **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
+      CourseD_Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn
+        le cairde é.
       Dance Party 2: "Bhí an t-eachtrán bródúil as a scileanna damhsa ar Mhars, ach
         anois ní féidir leis ach dul anonn is anall. \n\nAn féidir leat an t-iompar
         taobh istigh den bhloc <xml> <block type=\"gamelab_addBehaviorSimple\" inline=\"true\">\n
@@ -139,10 +295,12 @@ ga-IE:
         Is féidir leat airíonna na ndamhsóirí a athrú go leanúnach trí na blocanna nua i do bhosca uirlisí a chur laistigh den bhloc Athdhéan. Bí cruthaitheach agus déan spraoi!
 
         _Brúigh an cnaipe Críochnaigh nuair a bheidh tú críochnaithe._
+      Dance_2019_10: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_01: |-
         _Déanaimis damhsa!_
 
-        Tarraing an bloc `make a new` go dtí an spás oibre, agus ceangail é laistigh den bhloc `setup` chun do chéad damhsóir a chruthú.
+        Tarraing an bloc `déan ... nua` go dtí an spás oibre, agus ceangail é laistigh den bhloc `socrú` chun do chéad damhsóir a chruthú.
 
         -   _Is féidir leat an bolgán solais ar chlé a chliceáil chun tuilleadh eolais nó dúshláin bhreise a fháil._
       Dance_Party_02: |-
@@ -154,6 +312,35 @@ ga-IE:
       Dance_Party_03: "_Táimid ag racáil anois!_ \n\nCuir bloc <xml><block type=\"Dancelab_atTimestamp\"><title
         name=\"TIMESTAMP\">6</title><title name=\"UNIT\">\"measures\"</title></block></xml>
         leis an spás oibre ionas go dtosóidh an damhsóir steip nua tar éis sé thomhas."
+      Dance_Party_04: |-
+        _Tá cuma leadránach ar an damhsa seo mar atá!_
+
+        Lorg an bloc nua sa mbosca uirlisí a chuireann éifeacht taobh thiar den damhsóir. Breathnaigh ar an mbealach a athraíonn na héifeachtaí in éineacht leis an gceol!
+      Dance_Party_05: |-
+        Úsáid bloc nua eile le tabhairt ar an damhsóir a steip a athrú **gach dhá thomhas**!
+
+        -   Má roghnaíonn tú `(Ar Aghaidh)`, `(Siar)`, nó `(Randamach)`, déanfaidh an damhsóir steip difriúil gach uair a ritheann tú an cód.
+      Dance_Party_06: |-
+        _Teastaíonn tuilleadh damhsóirí uainn!_
+
+        Cruthaigh damhsóir tionlacain darb ainm `backup_dancer1` a dhéanfaidh damhsa leis an gcat.
+      Dance_Party_08: |-
+        Tá tacar _airíonna_ ag gach damhsóir a rialaíonn an chuma atá air.
+
+        Is féidir leat damhsóir a chur sa chúlra trí _méid_ an damhsóra sin a laghdú. An bhfuil tú in ann an mhéid chéanna a chur ar an dá dhamhsóir tionlacain?
+      Dance_Party_09: |-
+        Tá airí "imir" ag gach damhsóir lenar féidir leat sraith datha a chur leis. Athraigh an imir ar cheann de na damhsóirí.
+
+        -   Meascfar an imir a roghnaíonn tú le dathanna an damhsóra.
+      Dance_Party_10: |-
+        Anois, tuigimid conas is féidir airíonna an damhsóra a athrú. Is féidir na hairíonna céanna a athrú go huathoibríoch bunaithe ar an gceol leis an mbloc seo: <xml>
+          <block type="Dancelab_startMapping">
+            <title name="SPRITE">right_unicorn</title>
+            <title name="PROPERTY">"scale"</title>
+            <title name="RANGE">"bass"</title>
+          </block></xml>
+
+        Úsáideann an cód seo an leibhéal "dord" (na fuaimeanna ísle) chun airde damhsóra amháin a athrú. An bhfuil tú in ann airíonna an damhsóra eile a athrú bunaithe ar an gceol?
       Dance_Party_11: "Leis an mbloc <xml><block type=\"Dancelab_whenKey\"></block></xml>,
         is féidir leat cód a rith nuair a bhrúitear an tsaighead suas. \n\nD'fhéadfá
         an steip dhamhsa nó airíonna damhsóra a athrú, nó steip ghasta a dhéanamh
@@ -171,6 +358,12 @@ ga-IE:
         Ligeann sé duit grúpa damhsóirí a chruthú in aon iarraidh amháin!
 
         Bain triail as roinnt de na blocanna "gach lacha" chun cód a scríobh sa chaoi go ndéanfaidh na lachain damhsa le chéile.
+      Dance_Party_11b: |-
+        Tá sé in am comórtas damhsa a dhéanamh! Déanann an Cat daba nuair a bhrúnn tú an tsaighead chlé. Tabhair ar an Róbat "titim" a dhéanamh nuair a bhrúnn tú an tsaighead dheas, agus "bualadh bos" a dhéanamh nuair a bhrúnn tú an tsaigheas suas.
+
+        **Úsáid na heochracha agus tabhair ar an Róbat titim-bos-titim-bos a dhéanamh chomh gasta agus is féidir!**
+      Dance_Party_12: Bí ar do bhuille! Cruthaigh do dhamhsa féin agus comhroinn le
+        cairde é.
       Dance_Party_extras_alternate_2019: |-
         # Anonn agus Anall!
 
@@ -577,6 +770,10 @@ ga-IE:
         a úsáid chun cabhrú le Scrat é a fháil?
       courseD_iceage_loops9_2019: Tá an dearcán i bhfad bhfad ar siúl! An féidir leat
         lúba a úsáid chun cabhrú le Scrat é a fháil?
+      courseD_maze_intro4_2019: '_"Lean an cosán agus treoraigh go dtí an mhuc mé."_ '
+      courseD_maze_intro5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
+      courseD_maze_intro5c_2019: Seachain an TNT! Cabhraigh le Ruán an mhuc a bhaint
+        amach.
       courseD_maze_nestedLoops4: Treoraigh go dtí an lus gréine mé leis an líon is
         lú blocanna agus is féidir! Déan iarracht bloc "athdhéan" amháín a chur isteach
         i gceann eile, chun an méid cóid a laghdú.
@@ -592,6 +789,7 @@ ga-IE:
         agus cliceáil "Rith" lena chur ar siúl!
       courseD_maze_ramp1_2019: Sa dúshlán seo, ceangail na blocanna go léir le chéile
         agus cliceáil "Rith" lena chur ar siúl!
+      courseD_maze_ramp5a_2019: Áirigh na spásanna ar an ngreille go cúramach!
       courseD_maze_ramp5c: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2018: Cabhraigh leis an éan an mhuc a bhaint amach.
       courseD_maze_ramp5c_2019: Cabhraigh leis an éan an mhuc a bhaint amach.

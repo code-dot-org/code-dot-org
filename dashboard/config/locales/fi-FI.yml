@@ -1034,3 +1034,4 @@ fi:
   gdpr_dialog:
     heading: Annatko suostumuksesi Yhdysvalloissa sijaitsevan sivuston käyttöön?
     true: Kyllä
+  copy: Kopioi

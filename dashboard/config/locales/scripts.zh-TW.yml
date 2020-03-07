@@ -6425,3 +6425,322 @@ zh-TW:
           stages:
             new stage:
               name: 新的階段
+        csd2-2020:
+          stages:
+            Exploring Web Pages:
+              name: 瀏覽網頁
+            Headings:
+              name: 標題
+            Digital Footprint:
+              name: 數位足跡
+            Styling Text with CSS:
+              name: 透過 CSS 修改文字樣式
+            Intellectual Property:
+              name: 知識產權
+            Images:
+              name: 圖像
+            Styling Elements with CSS:
+              name: 透過 CSS 修改元素樣式
+            Project - Building a Webpage:
+              name: 專案 — 製作網頁
+            Purpose of a  Websites:
+              name: 網站的目的
+            Sources and Research:
+              name: 資料來源與研究
+            Planning a Multi-page Website:
+              name: 規劃多頁網站
+            Linking and Navigation:
+              name: 鏈接與導航
+        csd1-2020:
+          title: CSD 單元 1 - 問題解決 ('19-'20)
+          stages:
+            Intro to Problem Solving:
+              name: 問題解決能力的介紹
+            The Problem Solving Process:
+              name: 問題解決流程
+            Exploring Problem Solving:
+              name: 問題解決探索
+            What is a Computer?:
+              name: 電腦是什麼？
+            Input and Output:
+              name: 輸入與輸出
+        csd4-2020:
+          stages:
+            Analysis of Design:
+              name: 設計分析
+            Understanding Your User:
+              name: 瞭解您的使用者
+            User Interfaces:
+              name: 使用者介面
+            Identifying User Needs:
+              name: 確定使用者需求
+            Project - Paper Prototype:
+              name: 專案 - 紙上原型
+            Designing Apps for Good:
+              name: 設計良好的應用程式
+            Market Research:
+              name: 市場研究
+            Paper Prototypes:
+              name: 紙上原型
+            Prototype Testing:
+              name: 原型測試
+            Digital Design:
+              name: 數位設計
+            Testing the App:
+              name: 測試應用程式
+        csd5-2020:
+          title: CSD 單元 5 - 數據和社會
+          stages:
+            Representation Matters:
+              name: 表示事項
+            Patterns and Representation:
+              name: 模式和標記法
+            ASCII and Binary Representation:
+              name: ASCII 和 二進位表示法
+            Representing Images:
+              name: 表示圖像
+            Representing Numbers:
+              name: 數字表示法
+            Combining Representations:
+              name: 組合表示
+            Project - Create a Representation:
+              name: 專案 - 創建標記法
+            Problem Solving and Data:
+              name: 問題解決與數據
+            Problem Solving with Big Data:
+              name: 用大數據解決問題
+            Structuring Data:
+              name: 資料的建構
+            Making Decisions with Data:
+              name: 依數據來做決定
+            Interpreting Data:
+              name: 解譯數據
+            Automating Data Decisions:
+              name: 自動化數據決策
+            Project - Solve a Data Problem:
+              name: 專案 - 解決數據問題
+        csd6-2020:
+          title: CSD 單元 6 - 物理運算
+          description: 計算機科學探索的 6 個單位，學生使用 App Lab 還有 Maker Toolkit 與實體的電路板溝通，開發出一些程式。
+          description_short: 在實體裝置上開發程式
+          stages:
+            The Circuit Playground:
+              name: 電路（Circuit ）遊樂場
+            Input Unplugged:
+              name: 不插電介紹輸入（Input）
+            Analog Input:
+              name: 模擬輸入
+            'Project: Make a Game':
+              name: 專案：創建一個遊戲
+            Functions with Parameters:
+              name: 函式帶參數
+            'Project: Prototype an Innovation':
+              name: 專案：原型創新
+        csd3-2020:
+          title: CSD 單元 3 -互動式遊戲和動畫
+          description_short: Game Lab 編程環境介紹
+          stages:
+            Programming for Entertainment:
+              name: 娛樂用途的程式設計
+            Plotting Shapes:
+              name: 幾何繪圖
+            Drawing in Game Lab:
+              name: 用 Game Lab 繪圖
+            Variables:
+              name: 變數
+            Random Numbers:
+              name: 隨機取數
+            Sprite Movement:
+              name: 角色動作
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Keyboard Input:
+              name: 鍵盤輸入
+            Project - Interactive Card:
+              name: 專案 - 互動式卡片
+            Velocity:
+              name: 速度
+            Collision Detection:
+              name: 碰撞檢測
+            Complex Sprite Movement:
+              name: 複合角色動作
+            Collisions:
+              name: 碰撞
+            Functions:
+              name: 函式
+            Using the Game Design Process:
+              name: 使用遊戲設計流程
+            Project - Design a Game:
+              name: 專案 - 設計一個遊戲
+        coursea-2020:
+          title: 課程 A（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_short: 為學齡前兒童設計的計算機科學指引。
+          stages:
+            Going Places Safely:
+              name: 安全的遨遊網路世界
+              description_student: 學習瀏覽網路的安全守則。
+              description_teacher: 與 Common Sense 媒體合作，這課在讓學生學習到網站會要求提供私人訊息，並會討論如何負責的處理這類請求。學生也會對神奇的網路世界感到興奮，但他們必須遵守某些規則來維護自己的安全。
+            Learn to Drag and Drop:
+              name: 學習滑鼠的拖放
+            'Programming: Happy Maps':
+              name: 程式設計 - 快樂地圖
+              description_teacher: 如果學生理解規畫順序和將它循序編程之間的區別，那麼從演算法過渡到程式設計的時間就不會太長，這項活動將透過速記讀寫代碼的方式幫助學生獲得經驗。
+            Sequencing with Scrat:
+              name: 和鼠奎特一起學序列
+            Programming in Ice Age:
+              name: 在冰河歷險紀裡編程
+            Programming with Rey and BB-8:
+              name: 和 BB-8 與 Rey 一起寫程式
+            'Loops: Happy Loops':
+              name: 迴圈（Loops） - 快樂迴圈
+              description_teacher: 迴圈是程式設計中非常有用且強大的工具。為了理解迴圈的用處，就必須逼著學生去思考更簡潔的方式來解決平凡的問題。
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+            Loops in Collector:
+              name: 收藏家中的迴圈（Loops）
+              description_student: 幫探險家 Laurel 收集地底的寶藏。
+              description_teacher: 從「快樂迴圈」中建立重複指令的概念，這個階段會讓學生用迴圈更有效率的收集寶藏。
+        courseb-2020:
+          title: 課程 B（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡 5-8
+          stages:
+            Your Digital Footprint:
+              name: 你的數位足跡
+              description_teacher: 與 [r common-sense-media] 媒體合作，這課在讓學生瞭解訪問虛擬世界就像在現實世界中一樣要隨時注意自己的安全。學生還會學習到在網路上的訊息都會留下數位足跡（digital
+                footprint），至於痕跡的大小、利弊，就要靠他們自己來管理。
+            Move It, Move It:
+              name: 移動它，移動它
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
+            Programming in Harvester:
+              name: 和農夫一起學程式
+            'Loops: Getting Loopy':
+              name: 迴圈：學習迴圈
+            Loops in Collector:
+              name: 收藏家中的迴圈（Loops）
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+        coursec-2020:
+          title: 課程 C（2019）
+          description_short: 學習基本的計算機科學，創造屬於你自己的藝術、故事、遊戲作品。
+          description_audience: 年齡 6-10
+          stages:
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
+            Programming in Collector:
+              name: 和收藏家學編程（Program）
+            Binary Bracelets:
+              name: 二進制手環
+        coursed-2020:
+          title: 課程 D（2019）
+          description: 學生學習巢狀迴圈、當迴圈、條件與事件，除了編碼，學生還會學到什麼是數位公民。
+          description_audience: 年齡 7-11
+          stages:
+            Relay Programming:
+              name: 接力編程
+            Debugging in Collector:
+              name: 和收藏家學除錯（Debug）
+            Build a Star Wars Game:
+              name: 創建一個星際大戰遊戲！
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+            Nested Loops in Bee:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Conditionals with Cards:
+              name: 用撲克牌學習條件判斷（Conditionals）
+            'Unplugged: Binary':
+              name: 不插電活動 - 二進制
+            Artist Binary:
+              name: 小藝術家 - 二進制（Binary）
+            Digital Citizenship:
+              name: 數位公民
+              description_student: 有些資訊在網上分享是不安全的。本課將讓學生瞭解安全資訊和私人資訊之間的區別。
+              description_teacher: "與 [r common-sense-media] 媒體合作，這課有助學生批判性的思考某些網站的請求或要求的使用者訊息相關問題。\r\n\r\n學生會學到隱私訊息和個人訊息的不同，分辨在網路上分享什麼資料是安全的，什麼是不安全的。"
+            Dance Party:
+              name: 舞蹈派對
+        coursee-2020:
+          title: 課程 E（2019）
+          description_short: 預覽課程 C & D 的概念，進一步的學習函式。
+          description_audience: 年齡 8-12
+          stages:
+            Conditionals:
+              name: 條件判斷（Conditionals）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+            About Me:
+              name: 關於我
+            Access Ability:
+              name: 輔助功能
+            Nested Loops in Bee:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Nested Loops in Artist:
+              name: 小藝術家裡的巢狀迴圈（Nested Loops）
+            'Functions: Songwriting':
+              description_teacher: 在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+              description_student: 你能指出要如何利用函式提高編程效率嗎？
+        coursef-2020:
+          title: 課程 F（2019）
+          description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
+          description_audience: 年齡 9-13
+          stages:
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+              description_student: 你能指出要如何利用函式提高編程效率嗎？
+            Envelope Variables:
+              name: 信封變數
+            For Loop Fun:
+              name: 有趣的計次迴圈
+            For Loops in Artist:
+              name: 藝術家中的計數迴圈（For Loops）
+            Internet:
+              name: 網際網路 Internet
+            Crowdsourcing:
+              name: 群眾外包（Crowdsourcing）
+        express-2020:
+          title: 速學課程（2019）
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          description_audience: 年齡 9-18
+          stages:
+            Dance Party:
+              name: 舞蹈派對
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
+            Programming in Collector:
+              name: 和收藏家學編程（Program）
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）
+            Nested Loops in Bee:
+              name: 蜜蜂裡的巢狀迴圈（Nested Loops）
+            Functions in Minecraft:
+              name: Minecraft 中的函式
+            For Loops in Artist:
+              name: 藝術家中的計數迴圈（For Loops）
+            Alien Dance Party with Sprite Lab:
+              name: 用 Sprite Lab 創作外星人舞蹈派對
+        pre-express-2020:
+          description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
+          stages:
+            Learn to Drag and Drop:
+              name: 學習滑鼠的拖放
+            Sequencing with Scrat:
+              name: 和鼠奎特一起學序列
+            Programming in Maze:
+              name: 在迷宮中編程（Programming ）
+            Programming with Rey and BB-8:
+              name: 和 BB-8 與 Rey 一起寫程式
+            Programming in Harvester:
+              name: 和農夫一起學程式
+            Spelling Bee:
+              name: 拼字蜜蜂
+            Loops in Ice Age:
+              name: 冰河歷險紀中的迴圈
+            Loops in Collector:
+              name: 收藏家中的迴圈（Loops）
+            Loops in Artist:
+              name: 藝術家中的迴圈（Loops）

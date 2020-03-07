@@ -660,6 +660,7 @@ id:
     download: Ungah Video
     show_notes: Tampilkan Catatan
     show_video: Tampilkan Video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Peramban kamu tidak didukung. Harap tingkatkan Peramban
@@ -1307,3 +1308,4 @@ id:
   page_not_found_description: Halaman yang anda cari tidak ada di alamat ini. Periksa
     alamat web dan daftar ulang. Atau, kembali ke homepage.
   page_not_found_button: Pulang ke rumah
+  copy: Salin

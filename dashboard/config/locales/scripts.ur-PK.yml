@@ -329,3 +329,25 @@ ur:
           stages:
             Conditionals:
               name: شرائط
+        csd3-2020:
+          stages:
+            Variables:
+              name: متغیرات
+            Conditionals:
+              name: شرائط
+        coursed-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: شرائط
+        coursef-2020:
+          stages:
+            Envelope Variables:
+              name: لفافہ متغیرات
+        express-2020:
+          stages:
+            Dance Party:
+              name: ڈانس پارٹی

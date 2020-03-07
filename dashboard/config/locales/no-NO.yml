@@ -618,6 +618,7 @@
     download: Last ned video
     show_notes: Vis notat
     show_video: Vis video
+    label: Video
   compatibility:
     upgrade:
       unsupported_message: Nettleseren din støttes ikke. Vennligst oppdater til <a
@@ -1222,3 +1223,4 @@
   page_not_found_description: Siden du leter etter finnes ikke på denne adressen.
     Sjekk nettadressen og send på nytt, eller gå tilbake til hjemmesiden.
   page_not_found_button: Returner hjem
+  copy: Kopier

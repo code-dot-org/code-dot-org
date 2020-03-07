@@ -477,6 +477,7 @@ gl:
     download: 'Baixar Vídeo'
     show_notes: 'Amosar notas'
     show_video: 'Amosar video'
+    label: 'Vídeo'
   compatibility:
     upgrade:
       link: "Aprender máis"
@@ -718,3 +719,4 @@ gl:
     accept: 'Acepto'
   gdpr_dialog:
     yes: 'Si'
+  copy: 'Copiar'

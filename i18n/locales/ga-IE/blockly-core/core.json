@@ -375,7 +375,7 @@
     "TEXT_PROMPT_TYPE_TEXT": "taispeáin teachtaireacht ag iarraidh ar an úsáideoir téacs a chur isteach",
     "TEXT_TEXT_HELPURL": "",
     "TEXT_TEXT_TOOLTIP": "Litir, focal, nó líne théacs.",
-    "TEXT_TRIM_HELPURL": "",
+    "TEXT_TRIM_HELPURL": "https://code.google.com/p/blockly/wiki/Text#Trimming_%28removing%29_spaces",
     "TEXT_TRIM_OPERATOR_BOTH": "bain spásanna ón dá thaobh",
     "TEXT_TRIM_OPERATOR_LEFT": "bain spásanna ón taobh clé",
     "TEXT_TRIM_OPERATOR_RIGHT": "bain spásanna ón taobh deas",

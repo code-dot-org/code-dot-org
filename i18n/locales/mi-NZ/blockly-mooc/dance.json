@@ -1,12 +1,12 @@
 {
-  "danceFeedbackNeedNewDancer": "Me hanga koe i te kaikanikani.",
+  "danceFeedbackNeedNewDancer": "Me hanga koe i tetahi kaikanikani.",
   "danceFeedbackNoDancers": "Kāore ō kaikanikani.",
-  "danceFeedbackNoBackground": "",
+  "danceFeedbackNoBackground": "Me tāpiri atu he papamuri.",
   "danceFeedbackTooManyDancers": "",
-  "danceFeedbackUseSetSize": "",
-  "danceFeedbackUseSetTint": "",
-  "danceFeedbackUseStartMapping": "",
-  "danceFeedbackStartNewMove": "",
+  "danceFeedbackUseSetSize": "Whakamahia i te paraka `set backup_dancer2 size` kia whakaiti i te rahi o to kaikanikani.",
+  "danceFeedbackUseSetTint": "Whakamahia i te paraka `kowhiri te tae` ki te tini i te tae o te kaikanikani.",
+  "danceFeedbackUseStartMapping": "Tapirihia te paraka<xml><block type=\"Dancelab_startMapping\"><title name=\"SPRITE\">mairetahi_matau</title><title name=\"PROPERTY\">\"āwhata\"</title><title name=\"RANGE\">\"bass\"</title></block></xml> ki o mahi.",
+  "danceFeedbackStartNewMove": "E kore mahi to kaikanikani i teteahi nekehanga hou i muri i ngā wāhanga tuawha.",
   "danceFeedbackNeedDifferentDance": "",
   "danceFeedbackNeedEveryTwoMeasures": "",
   "danceFeedbackNeedMakeANewDancer": "",
@@ -18,5 +18,5 @@
   "danceFeedbackNeedLead": "",
   "danceFeedbackNeedBackup": "",
   "danceFeedbackSetSize": "",
-  "measure": ""
+  "measure": "Wāhanga:"
 }

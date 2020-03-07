@@ -6,6 +6,7 @@ export default class LibraryClientApi {
   constructor(channelId) {
     this.channelId = channelId;
     this.libraryApi = clientApi.create('/v3/libraries');
+    this.channelApi = clientApi.create('/v3/channels');
     this.cacheBustSuffix = new Date().getTime();
   }
 
@@ -23,6 +24,22 @@ export default class LibraryClientApi {
         }
       }
     );
+  }
+
+  unpublish(project, callback) {
+    // Clear library information from projects database on success
+    const onSuccess = () => {
+      const value = {
+        ...project,
+        libraryName: undefined,
+        libraryDescription: undefined,
+        libraryPublishedAt: null
+      };
+      this.channelApi.update(this.channelId, value, callback);
+    };
+
+    // Delete from S3
+    this.delete(onSuccess, callback);
   }
 
   fetchLatest(onSuccess, onError) {

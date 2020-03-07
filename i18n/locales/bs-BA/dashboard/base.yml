@@ -656,3 +656,4 @@ bs:
     accept: 'Slažem se'
   gdpr_dialog:
     yes: 'Da'
+  copy: 'Kopiraj'

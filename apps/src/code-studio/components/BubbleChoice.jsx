@@ -153,7 +153,11 @@ export default class BubbleChoice extends React.Component {
             )}
             <div style={styles.column}>
               <div style={styles.bubbleAndTitle}>
-                <ProgressBubble level={sublevel} disabled={false} />
+                <ProgressBubble
+                  level={sublevel}
+                  disabled={false}
+                  hideToolTips={true}
+                />
                 <a href={sublevel.url + location.search} style={styles.title}>
                   {sublevel.display_name}
                 </a>

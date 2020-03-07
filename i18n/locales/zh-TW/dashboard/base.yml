@@ -563,6 +563,7 @@ zh-TW:
     download: '下載影片'
     show_notes: '顯示文字說明'
     show_video: '顯示影片'
+    label: '影片'
   compatibility:
     upgrade:
       unsupported_message: "你的瀏覽器不支援。請改用[支援的瀏覽器版本](%{supported_browsers_url})。你還是可以瀏覽此頁面，但有些功能會無法正常運作。"
@@ -1136,3 +1137,4 @@ zh-TW:
   page_not_found_header: ' 404：找不到頁面'
   page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
   page_not_found_button: "返回主頁"
+  copy: '複製'

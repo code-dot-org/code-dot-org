@@ -408,6 +408,7 @@ fa:
     notes_coming_soon: یادداشت ها برای این ویدیو به زودی.
     autoplay_option: پخش خودکار فیلم ها
     download: دانلود ویدیو
+    label: ویدیو
   compatibility:
     upgrade:
       link: بیشتر بیاموزید
@@ -729,3 +730,4 @@ fa:
     accept: موافقم
   gdpr_dialog:
     true: بله
+  copy: رونوشت‌

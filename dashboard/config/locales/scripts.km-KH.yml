@@ -352,3 +352,15 @@ km:
           stages:
             Conditionals:
               name: លក្ខខណ្ឌ
+        csd3-2020:
+          stages:
+            Variables:
+              name: អ​ថេរ
+            Conditionals:
+              name: លក្ខខណ្ឌ
+            Functions:
+              name: អនុ​គមន៍
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: លក្ខខណ្ឌ

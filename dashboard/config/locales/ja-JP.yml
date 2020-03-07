@@ -531,6 +531,7 @@ ja:
     download: ビデオのダウンロード
     show_notes: コードの表示
     show_video: 写真・動画
+    label: ビデオ
   compatibility:
     upgrade:
       unsupported_message: お使いのブラウザーはサポートされていません。お使いのブラウザーを<a href='%{supported_browsers_url}',
@@ -993,3 +994,4 @@ ja:
     privacy_policy: プライバシーポリシー
     logout: ログアウト
     true: はい
+  copy: コピー

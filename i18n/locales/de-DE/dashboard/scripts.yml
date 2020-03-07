@@ -353,6 +353,8 @@ de:
               name: Offline Lektionen
             Writing computer programs:
               name: Computerprogramme schreiben
+            new stage:
+              name: neue Etappe
         netsim:
           title: Internet-Simulator
           stages:
@@ -826,10 +828,14 @@ de:
               name: Minecraft
             Multi:
               name: Multi
+            Multi2:
+              name: Multi2
             Netsim:
               name: Netsim
             Odometer:
               name: Wegmesser
+            PlayLab:
+              name: Spielelabor
             Star wars:
               name: Star wars
             Studio:
@@ -1035,6 +1041,7 @@ de:
             Wrap Up and Next Steps:
               name: Zusammenfassung und nächste Schritte
         asUnplugged:
+          description_audience: Alter 6-13
           stages:
             Binary Bracelets:
               name: Binäre Armbänder
@@ -1054,6 +1061,8 @@ de:
               name: Songschreiben
             The Big Event:
               name: Der große Event
+        afterschool1:
+          description_audience: Alter 7-13
         algebraPD3a:
           stages:
             Lesson Prep:
@@ -1138,6 +1147,7 @@ de:
             Unit 6 lessons:
               name: Lerneinheit 6 - Unterricht
         cspunit4draft:
+          description_short: Daten
           stages:
             Check Your Assumptions:
               name: Prüfe deine Voraussetzungen
@@ -1707,6 +1717,7 @@ de:
             What to Expect:
               name: Was Sie erwartet
         cspoptional:
+          description_short: Optional
           stages:
             Algorithms Detour - How Routers Learn:
               name: 'Algorithmen in Kürze: Wie Router lernen'
@@ -1760,6 +1771,10 @@ de:
           stages:
             Unit 1 Overview:
               name: Lerneinheit 1 - Übersicht
+        cspunit1-tools:
+          stages:
+            netsim:
+              name: netsim
         csp-facilitators:
           stages:
             Introduction to Events:
@@ -1786,7 +1801,10 @@ de:
               name: Präsentierung Deines Designs
             App Presentation:
               name: App-Präsentation
+        CSDU1-Draft:
+          description_short: Problemlösung
         CSDU2-Draft:
+          description_short: Webentwicklung
           stages:
             Describing Webpages:
               name: Webseiten beschreiben
@@ -1836,7 +1854,10 @@ de:
               name: Peer Review
             Describing Web Pages:
               name: Webseiten beschreiben
+        CSDU5-Draft:
+          description_short: Daten
         MikeTest:
+          description_audience: Alter 8-98
           stages:
             Artist Functions:
               name: Künstler Funktionen
@@ -1861,6 +1882,8 @@ de:
             Kindergarten Stage 1:
               name: Kindergarten Stage 1
         gradeKinder:
+          title: Kindergarten
+          description_audience: Alter 5-18
           stages:
             Debugging:
               name: Debugging
@@ -1881,6 +1904,8 @@ de:
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
         grade4:
+          title: 4. Klasse
+          description_audience: Alter 9-99
           stages:
             Build a Star Wars Game!:
               name: Erstelle ein Star Wars Spiel!
@@ -1895,6 +1920,8 @@ de:
             Songwriting:
               name: Songschreiben
         grade1:
+          title: 1. Klasse
+          description_audience: Alter 5-18
           stages:
             Debugging:
               name: Debugging
@@ -1919,6 +1946,8 @@ de:
             'Debugging: Unspotted Bugs':
               name: 'Fehlersuche: Ungeklärte Bugs'
         grade5:
+          title: 5. Klasse
+          description_audience: Alter 10-110
           stages:
             'Artist: For Loops':
               name: 'Künstler: "Zähle mit"-Schleifen'
@@ -2035,6 +2064,8 @@ de:
             Close & Next Steps:
               name: Schließen und nächste Schritte
         grade3:
+          title: 3. Klasse
+          description_audience: Alter 5-18
           stages:
             " Bee: Conditionals":
               name: " Biene: Bedingungen"
@@ -2097,11 +2128,17 @@ de:
               description_teacher: In dieser Lektion entwickeln die Schüler ihre Zeichenfähigkeiten weiter. Zu Beginn der Lektion verbindet eine lehrergeleitete Diskussion die erweiterte Blockfunktionalität (z.B. unterschiedlich große Formen) mit dem Bedarf an mehr Blockeingaben, oder "Parametern". Die Schüler lernen, mit Versionen von `ellipse()` und `rect()` zu zeichnen, die Parameter für Breite und Höhe enthalten. Sie lernen auch, den `background()`` Block zu benutzen. Am Ende der Progression werden die Schüler in den `randomNumber()` Block eingeführt. Durch die Kombination all dieser Fähigkeiten werden die Schüler am Ende der Lektion eine zufällige Regenbogenschlange zeichnen.
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Parameters and Randomization:
               name: Parameter und Randomisierung
         grade2:
+          title: 2. Klasse
+          description_audience: Alter 5-18
           stages:
             At The Dog Park:
               name: Im Hundepark
@@ -2169,6 +2206,8 @@ de:
           stages:
             Intro to Problem Solving:
               name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
             Representing Information:
@@ -2238,6 +2277,7 @@ de:
               name: Einfache Verschlüsselung
         fesbinary:
           title: Binärdatei
+          description_audience: Mike
           stages:
             Binary Bracelets:
               name: Binäre Armbänder
@@ -2251,6 +2291,8 @@ de:
               name: Spielelabor
         csd2-2017:
           stages:
+            new stage:
+              name: neue Etappe
             Quality Websites:
               name: Hochwertige Websites
             Website Design:
@@ -2287,6 +2329,8 @@ de:
               name: Erkunde Webseiten
             Intro to HTML:
               name: Einführung in HTML
+            Headers:
+              name: Kopfzeilen
             Lists:
               name: Listen
             Intellectual Property and Images:
@@ -2471,6 +2515,8 @@ de:
               name: 'Lektionen 7 - 9: Dokumentation, einfache Schleifen und Zufallszahlen'
         csdgraveyard:
           stages:
+            new stage:
+              name: neue Etappe
             Introduction to Styling with CSS:
               name: Einführung in das Styling mit CSS
             External Style Sheets:
@@ -2567,22 +2613,30 @@ de:
               name: '"Zähle mit"-Schleifen'
             List and For Loops:
               name: Listen und 'For'-Schleifen
+            Analog Input:
+              name: Analoger Eingang
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
             Map:
               name: Karte
             Making Music:
               name: Musik machen
+            Accelerometer:
+              name: Beschleunigungssensor
             Functions with Parameters:
               name: Funktionen mit Parametern
         workshop-gamelab:
           stages:
             Introduction:
               name: Einführung
+            Sprites:
+              name: Sprites
             Input:
               name: Eingabe
         csd5-draft:
           stages:
+            new stage:
+              name: neue Etappe
             Patterns and Representation:
               name: Muster und Darstellung
             ASCII and Binary Representation:
@@ -2608,12 +2662,18 @@ de:
         applab-2hour:
           description: Dieser Workshop ist so konzipiert, dass die Teilnehmer in 2 Stunden eine grundlegende Einführung in das App-Lab erhalten. Auch Schüler mit unterschiedlichen Wissenständen im Bereich der Informatik sollten in der Lage sein etwas zu erstellen und Spaß dabei haben.
           stages:
+            new stage:
+              name: neue Etappe
             Event Driven Programming:
               name: Ereignisgesteuerte Programmierung
         coursed-ramp:
           stages:
             Introduction:
               name: Einführung
+        workshop-maker:
+          stages:
+            Analog Input:
+              name: Analoger Eingang
         coursee-ramp:
           stages:
             Introduction:
@@ -2633,6 +2693,8 @@ de:
               name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
+            Analog Input:
+              name: Analoger Eingang
             Sensor Applications:
               description_teacher: Um an die Sensoren anzuknüpfen, die die Schülerinnen und Schüler in der vorherigen Lektion kennen gelernt haben, gehen wir durch drei Anwendungen, die jeweils auf einem anderen Sensor basieren. Diese drei Apps können den Schülern als Sprungbrett für das folgende Abschlussprojekt dienen.
             'Project: Prototype an Innovation':
@@ -2641,14 +2703,20 @@ de:
               description_student: Erfahre, wie Listen verwendet werden können, um mehrere Werte in einem einzigen Variablennamen zu speichern.
             Making Music:
               name: Musik machen
+            Accelerometer:
+              name: Beschleunigungssensor
             Functions with Parameters:
               name: Funktionen mit Parametern
             Circuits and Physical Prototypes:
               description_student: Verdrahten Sie einfache Schaltungen, um einen physischen Prototyp mit billigen und leicht zu findenden Materialien zu erstellen.
             Innovations in Computing_:
               description_student: Entdecke eine Vielzahl von neuen und innovativen Computerplattformen und erweitere dein Verständnis dafür, was ein Computer sein kann.
+            Analog Input_:
+              name: Analoger Eingang
             Making Music_:
               name: Musik machen
+            Accelerometer_:
+              name: Beschleunigungssensor
             Functions with Parameters_:
               name: Funktionen mit Parametern
             Circuits and Physical Prototypes_:
@@ -2670,12 +2738,16 @@ de:
               name: Variablen
             Programming for Entertainment:
               name: Programmieren zur Unterhaltung
+            Sprites:
+              name: Sprites
             Plotting Shapes:
               name: Formen plotten
             Conditionals:
               name: Bedingungen
             Complex Conditionals:
               name: Komplexe Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -2746,6 +2818,8 @@ de:
               name: Bilder
             Sources and Search Engines:
               name: Quellen und Suchmaschinen
+            Headers:
+              name: Kopfzeilen
             Intellectual Property and Images:
               name: Geistiges Eigentum und Bilder
             Lists:
@@ -2776,8 +2850,12 @@ de:
               name: Formen und Zufälligkeiten
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -2786,6 +2864,8 @@ de:
               name: Funktionen
             'null':
               name: 'nichts'
+            temp:
+              name: temporär
         coursef-ramp:
           stages:
             Introduction:
@@ -2824,8 +2904,11 @@ de:
               name: Quellen und Suchmaschinen
             Intellectual Property:
               name: Geistiges Eigentum
+          description_short: Webentwicklung
         artist-and-bb8:
           stages:
+            B8 BB8:
+              name: B8 BB8
             Ice Age Play Lab:
               name: Ice Age Spielelabor
             Bounce:
@@ -3038,8 +3121,16 @@ de:
               name: andere
             Thanks:
               name: Danke
+            " ":
+              name: " "
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: neue Etappe
         csp3-research-mxghyt:
           stages:
+            new stage:
+              name: neue Etappe
             The Need For Programming Languages:
               name: Wozu Programmiersprachen?
             Using Simple Commands:
@@ -3130,6 +3221,9 @@ de:
             Loops in Ice Age:
               name: Schleifen in Ice Age
         csp3-a:
+          stages:
+            new stage:
+              name: neue Etappe
           title: CSP Lektion 3 - Teilziele Gruppe A
         new-express:
           stages:
@@ -3191,6 +3285,14 @@ de:
               name: Zahlendarstellung
             8-bit Numbers:
               name: 8-Bit-Zahlen
+        subgoals-assessment-staging:
+          stages:
+            dummy:
+              name: dummy
+        hocali:
+          stages:
+            new stage:
+              name: neue Etappe
         csd4-old:
           stages:
             Analysis of Design:
@@ -3217,6 +3319,8 @@ de:
               name: Lerneinheit 3 Kapitel 1 Herausforderung
         pwc:
           stages:
+            new stage:
+              name: neue Etappe
             Personal Innovations:
               name: Persönliche Innovationen
             Simple Encryption:
@@ -3248,6 +3352,18 @@ de:
               name: Einführung in AppLab - Erste Schritte
             Intro to App Lab:
               name: Einführung in AppLab
+        csp-explore-2017:
+          stages:
+            new stage:
+              name: neue Etappe
+        aws-demo:
+          stages:
+            new stage:
+              name: neue Etappe
+        colehoc17:
+          stages:
+            new stage:
+              name: neue Etappe
         course-e-2018:
           stages:
             Building a Foundation:
@@ -3294,6 +3410,8 @@ de:
               name: Lichter
             For Loops:
               name: '"Zähle mit"-Schleifen'
+            Analog Input:
+              name: Analoger Eingang
             'Project: Prototype an Innovation':
               name: 'Projekt: Prototyp einer Innovation'
         csd3-1819draft:
@@ -3306,8 +3424,12 @@ de:
               name: Zeichnen im Game Lab
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3315,6 +3437,10 @@ de:
             Functions:
               name: Funktionen
           description_short: "Programmierung"
+        textbook:
+          stages:
+            new stage:
+              name: neue Etappe
         glj-behavior-test:
           stages:
             Cats and Dogs:
@@ -3330,8 +3456,12 @@ de:
               name: Zeichnen im Game Lab
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -3549,8 +3679,12 @@ de:
               name: Binäre Armbänder
         csd6-2018:
           stages:
+            Analog Input:
+              name: Analoger Eingang
             Making Music:
               name: Musik machen
+            Accelerometer:
+              name: Beschleunigungssensor
             Functions with Parameters:
               name: Funktionen mit Parametern
             'Project: Prototype an Innovation':
@@ -3665,6 +3799,8 @@ de:
           stages:
             Intro to Problem Solving:
               name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
             Input and Output:
@@ -3941,6 +4077,8 @@ de:
               name: Künstler
         dance:
           stages:
+            new stage:
+              name: neue Etappe
             Dance Party:
               name: Tanzparty
           title: Tanzparty
@@ -4130,6 +4268,8 @@ de:
           stages:
             Intro to Problem Solving:
               name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
             Input and Output:
@@ -4138,6 +4278,8 @@ de:
               name: Verarbeitung
         andrea-test:
           stages:
+            new stage:
+              name: neue Etappe
             module1:
               name: modul1
             module2:
@@ -4160,6 +4302,7 @@ de:
               name: Teil 2
             part 3:
               name: Teil 3
+          title: andrea-test
         dance-extras-gallery:
           title: Tanzt weiter
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
@@ -4271,6 +4414,10 @@ de:
               name: 'Fehlersuche: Ungeklärte Bugs'
             'Real-life Algorithms: Plant a Seed':
               name: 'Real-Life-Algorithmen: Pflanze Samen'
+        dani-test-script:
+          stages:
+            new stage:
+              name: neue Etappe
         csd2-2019:
           stages:
             Exploring Websites:
@@ -4298,8 +4445,12 @@ de:
               name: Zeichnen im Game Lab
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -4324,8 +4475,12 @@ de:
               name: Daten strukturieren
         csd6-2019:
           stages:
+            Analog Input:
+              name: Analoger Eingang
             Making Music:
               name: Musik machen
+            Accelerometer:
+              name: Beschleunigungssensor
             Functions with Parameters:
               name: Funktionen mit Parametern
             'Project: Prototype an Innovation':
@@ -4463,6 +4618,8 @@ de:
               name: Abschließende Herausforderung
         csp1-pilot:
           stages:
+            new stage:
+              name: neue Etappe
             Number Systems:
               name: Zahlensystem
             Black and White Images:
@@ -4491,8 +4648,16 @@ de:
               name: Einheit 1 LEHRER Umfrage
             Representing Information:
               name: Darstellung von Informationen
+        csd-tests:
+          stages:
+            Web Development:
+              name: Webentwicklung
         csd-videos:
           stages:
+            new stage:
+              name: neue Etappe
+            Web Development:
+              name: Webentwicklung
             Games and Animations:
               name: Spiele und Animationen
         time4csdemo:
@@ -4509,6 +4674,8 @@ de:
               name: Eingebettete Schleifen bei der Eiskönigin
             Build a Flappy Game:
               name: Erstelle ein Flappy-Spiel
+            Debate:
+              name: Diskutiere
           description_audience: 4. Klasse
         csp1-pilot-staging:
           stages:
@@ -4556,6 +4723,8 @@ de:
           title: 'Lerneinheit 6: Algorithmen'
         csp7-pilot-staging:
           stages:
+            new stage:
+              name: neue Etappe
             Unit 4 Assessment:
               name: Lerneinheit 4 Herausforderung
             Libraries:
@@ -4583,6 +4752,8 @@ de:
               name: Schleifen mit Rey und BB-8
         csp5-pilot:
           stages:
+            new stage:
+              name: neue Etappe
             Semester Hackathon Part 1:
               name: Semester-Hackathon Teil 1
             Semester Hackathon Part 2:
@@ -4626,6 +4797,8 @@ de:
           stages:
             Intro to Problem Solving:
               name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
             Exploring Problem Solving:
               name: Problemlösung erforschen
             Input and Output:
@@ -4669,8 +4842,12 @@ de:
               name: Zeichnen im Game Lab
             Variables:
               name: Variablen
+            Sprites:
+              name: Sprites
             Conditionals:
               name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
             Velocity:
               name: Geschwindigkeit
             Collisions:
@@ -4681,6 +4858,10 @@ de:
               name: Zufällige Zahlen
             Sprite Properties:
               name: Sprite Eigenschaften
+        maddie-test:
+          stages:
+            new stage:
+              name: neue Etappe
         csp3-pilot:
           stages:
             Project - Designing an App Part 1:
@@ -4713,6 +4894,10 @@ de:
               name: Schritt 1
             Step 2:
               name: Schritt 2
+        dlp19-csd-mod-w2:
+          stages:
+            new stage:
+              name: neue Etappe
         csd4-pilot:
           stages:
             Input and Output:
@@ -4721,6 +4906,8 @@ de:
               name: Verarbeitung
         csp2-pilot:
           stages:
+            new stage:
+              name: neue Etappe
             IP Addresses:
               name: IP Adressen
             Routers and Redundancy:
@@ -4737,6 +4924,8 @@ de:
               name: Die Notwendigkeit von Addressierung
         peru-2019:
           stages:
+            new stage:
+              name: neue Etappe
             Introduction:
               name: Einführung
             Nested Loops:
@@ -4792,6 +4981,8 @@ de:
           description: Überschreite die erste Stunde mit erweiterten Projektideen.
         csp10-pilot:
           stages:
+            new stage:
+              name: neue Etappe
             'Project: Innovation Simulation Part 1':
               name: 'Projekt: Innovationssimulation Teil 1'
             'Project: Innovation Simulation Part 2':
@@ -4806,6 +4997,10 @@ de:
               name: Datenschutz Teil 1
             Protecting Data Part 2:
               name: Datenschutz Teil 2
+        csp4-preview:
+          stages:
+            new stage:
+              name: neue Etappe
         time4cs-original-unit-1:
           stages:
             Conditionals:
@@ -4848,6 +5043,10 @@ de:
               name: Simon sagt
             About Me:
               name: Über mich
+        csp8-pilot:
+          stages:
+            new stage:
+              name: neue Etappe
         csp5-2020:
           stages:
             Semester Hackathon Part 1:
@@ -4864,3 +5063,227 @@ de:
               name: Einheit 5 SCHÜLER Umfrage
             Unit 5 TEACHER Survey:
               name: Einheit 5 LEHRER Umfrage
+        csp9-pilot:
+          stages:
+            new stage:
+              name: neue Etappe
+        csd2-2020:
+          stages:
+            Exploring Web Pages:
+              name: Erkunde Webseiten
+            Intro to HTML:
+              name: Einführung in HTML
+            Headings:
+              name: Überschriften
+            Digital Footprint:
+              name: Digitaler Fußabdruck
+            Intellectual Property:
+              name: Geistiges Eigentum
+            Images:
+              name: Bilder
+            Project - Building a Webpage:
+              name: Projekt - Erstellung einer Webseite
+        csd1-2020:
+          stages:
+            Intro to Problem Solving:
+              name: Einführung in die Problemlösung
+            The Problem Solving Process:
+              description_teacher: 'Diese Lektion führt in den formalen Problemlösungsprozess ein, den die Schülerinnen und Schüler im Laufe des Jahres anwenden werden: Definieren - Vorbereiten - Versuchen - Reflektieren. Die Lektion beginnt damit, dass die Schülerinnen und Schüler gebeten werden, ein Brainstorming über all die verschiedenen Arten von Problemen durchzuführen, denen sie im Alltag begegnen. Dann werden den Schülern die vier Schritte des Problemlösungsprozesses gezeigt und sie arbeiten zusammen, um diese abstrakten Schritte mit ihren tatsächlichen Erfahrungen bei der Problemlösung in Beziehung zu setzen. Zuerst setzen die Schülerinnen und Schüler diese Schritte mit dem Aluminiumboot-Problem aus der vorhergehenden Lektion in Beziehung, dann mit einem Problem, das sie gut lösen können, und dann mit einem Problem, das sie besser lösen wollen. Am Ende der Lektion sammelt die Klasse eine Liste von allgemein nützlichen Strategien für jeden Schritt des Prozesses, um Poster anzufertigen, die sie während der gesamten Einheit und des Jahres begleiten werden.'
+            Exploring Problem Solving:
+              name: Problemlösung erforschen
+            Input and Output:
+              name: Ein- und Ausgabe
+            Processing:
+              name: Verarbeitung
+        csd4-2020:
+          stages:
+            Analysis of Design:
+              name: Analyse der Planung
+            User Interfaces:
+              name: Benutzeroberflächen
+        csd5-2020:
+          stages:
+            Patterns and Representation:
+              name: Muster und Darstellung
+            ASCII and Binary Representation:
+              name: ASCII- und Binärdarstellung
+            Representing Numbers:
+              name: Zahlendarstellung
+            Structuring Data:
+              name: Daten strukturieren
+        csd6-2020:
+          stages:
+            Analog Input:
+              name: Analoger Eingang
+            Making Music:
+              name: Musik machen
+            Accelerometer:
+              name: Beschleunigungssensor
+            Functions with Parameters:
+              name: Funktionen mit Parametern
+            'Project: Prototype an Innovation':
+              name: 'Projekt: Prototyp einer Innovation'
+        csd3-2020:
+          description_short: "Programmierung"
+          stages:
+            Programming for Entertainment:
+              name: Programmieren zur Unterhaltung
+            Plotting Shapes:
+              name: Formen plotten
+            Drawing in Game Lab:
+              name: Zeichnen im Game Lab
+            Variables:
+              name: Variablen
+            Random Numbers:
+              name: Zufällige Zahlen
+            Sprite Properties:
+              name: Sprite Eigenschaften
+            Conditionals:
+              name: Bedingungen
+            Keyboard Input:
+              name: Tastatureingabe
+            Velocity:
+              name: Geschwindigkeit
+            Collisions:
+              name: Kollisionen
+            Functions:
+              name: Funktionen
+        coursea-2020:
+          title: Kurs A (2019)
+          description_short: Eine Einführung in die Informatik für Leseanfänger.
+          description_audience: 'Alter: 4-7'
+          stages:
+            Going Places Safely:
+              name: Sicher unterwegs
+            Learn to Drag and Drop:
+              name: Erlerne Drag und Drop
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
+              description_student: Programmiere Scrat, um die Eichel zu erreichen.
+            Programming in Ice Age:
+              description_student: Schreibe Programme, die Scrat helfen, die Eichel zu erreichen.
+              description_teacher: Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
+              description_student: Hilf Scrat, mehr Boden mit Hilfe von Schleifen abzudecken.
+            Loops in Collector:
+              description_student: Hilf Laurel, der Abenteurerin, den Schatz unter Tage zu sammeln.
+        courseb-2020:
+          title: Kurs B (2019)
+          description_audience: 'Alter: 5-8'
+          stages:
+            Your Digital Footprint:
+              name: Dein digitaler Fußabdruck
+            Move It, Move It:
+              name: Bewegung, Bewegung
+            Sequencing in Maze:
+              description_student: Hilf Red, dem Angry Bird, den Weg zu dem bösen Schwein zu folgen.
+            Loops in Collector:
+              description_student: Programmiere Laurel die Abenteurerin so, dass er in einer offenen Höhle Schätze sammelt.
+              description_teacher: In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Ein neuer Block `sammle Schatz` wird eingeführt, um ihr auf ihrer Reise zu helfen.
+        coursec-2020:
+          title: Kurs C (2019)
+          description_short: Lerne die Grundlagen der Informatik und erstelle Deine eigene Kunst, Geschichten und Spiele.
+          description_audience: 'Alter: 6-10'
+          stages:
+            Powerful Passwords:
+              name: Starke Passwörter
+            Programming in Collector:
+              description_student: Schreibe Algorithmen, um Laurel, die Abenteurerin, zu helfen, viele Edelsteine zu sammeln!
+              description_teacher: In dieser Reihe von Rätseln werden die Studenten ihr Verständnis von Algorithmen und Debugging weiterentwickeln. Mit einem neuen Charakter, Laurel der Abenteurerin, werden die Schüler sequentielle Algorithmen entwickeln, um Laurel dazu zu bringen, Schätze zu sammeln, während sie einen Weg entlang geht.
+            Programming in Artist:
+              description_student: Erstelle schöne Bilder durch die Programmierung des Zeichners.
+            Binary Bracelets:
+              name: Binäre Armbänder
+            Loops with Rey and BB-8:
+              name: Schleifen mit Rey und BB-8
+              description_student: 'Hilf BB-8 durch Labyrinthe mit Schleifen! '
+            Looking Ahead:
+              name: Nach vorne schauen
+            Build a Flappy Game:
+              name: Erstelle ein Flappy-Spiel
+              description_student: Baue dein eigenes Flappy Bird-Spiel, wie immer du möchtest, und teile es dann mit deinen Freunden!
+              description_teacher: In dieser speziellen Phase können die Schülerinnen und Schüler ihr eigenes Flappy Bird-Spiel bauen, indem sie mit Hilfe von Eventhandlern Mausklicks und Objektkollisionen erkennen. Am Ende des Levels sind die Schüler in der Lage, ihr Spiel anzupassen, indem sie die Grafik oder die Regeln ändern.
+        coursed-2020:
+          title: Kurs D (2019)
+          description_audience: 'Alter: 7-11'
+          stages:
+            Relay Programming:
+              name: Relais-Programmierung
+              description_teacher: Diese Aktivität beginnt mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die Schüler zu Teams zusammen finden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.
+            Loops in Ice Age:
+              name: Schleifen in Ice Age
+              description_student: In dieser Lektion wirst du den Wiederholungsbaustein verwenden, um Scrat dabei zu helfen, die Eichel so effizient wie möglich zu erreichen.
+              description_teacher: Als schnelles Update (oder Einführung) in die Verwendung von Schleifen werden die Schüler in dieser Phase den Baustein `repeat` verwenden, um Scrat effizienter an die Eichel zu bringen.
+            Nested Loops in Bee:
+              name: Eingebettete Schleifen bei der Biene
+            Conditionals with Cards:
+              name: Bedingungen mit Karten
+            Conditionals in Bee:
+              description_student: 'Nun, da du die Bedingungen verstanden hast, ist es an der Zeit, Bee so zu programmieren, dass die diese Bedingungen beim Sammeln von Honig und Nektar verwendet. '
+              description_teacher: Bis zu diesem Zeitpunkt haben die Schülerinnen und Schüler Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Konditionalzeichen, was ihnen erlaubt, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.
+            Conditionals & Loops in Harvester:
+              description_student: Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist.
+            'Unplugged: Binary':
+              name: 'Offline: Binär'
+            Artist Binary:
+              name: Künstler Binär
+            Digital Citizenship:
+              name: Digitalen Staatsbürgerschaft
+              description_teacher: "In Zusammenarbeit mit der Common Sense Education hilft diese Lektion den Schülern, kritisch über die Benutzerinformationen nachzudenken, die manche Websites anfordern oder benötigen. Die Schülerinnen und Schüler lernen den Unterschied zwischen privaten und persönlichen Informationen, wobei sie unterscheiden, was sicher und was unsicher ist, um es online zu teilen.\\r\n\\r\nDie Schülerinnen und Schüler werden auch untersuchen, was es bedeutet, verantwortungsvoll und respektvoll mit ihren Offline- und Online-Gemeinschaften umzugehen, um zu lernen, wie man gute digitale Bürger sein kann."
+            Dance Party:
+              name: Tanzparty
+        coursee-2020:
+          title: Kurs E (2019)
+          description: Beginne mit der Programmierung von Algorithmen, Schleifen, Bedingungen und Ereignissen und dann geht es weiter mit Funktionen. Im zweiten Teil dieses Kurses entwirfst und erstellst du ein Grundstein-Projekt, das du mit deinen Freunden und deiner Familie teilen kannst.
+          description_audience: 'Alter: 8-12'
+          stages:
+            Conditionals:
+              name: Bedingungen
+            Simon Says:
+              name: Simon sagt
+            About Me:
+              name: Über mich
+            Nested Loops in Bee:
+              name: Eingebettete Schleifen bei der Biene
+            Nested Loops in Artist:
+              name: Eingebettete Schleifen beim Künstler
+            Nested Loops in Frozen:
+              name: Eingebettete Schleifen bei der Eiskönigin
+        coursef-2020:
+          title: Kurs F (2019)
+          description: Lerne die Verwendung verschiedener Arten von Schleifen, Ereignissen, Funktionen und Bedingungen kennen. Untersuche verschiedene Problemlösungstechniken und diskutiere die gesellschaftlichen Auswirkungen von Computer und Internet. Im zweiten Teil dieses Kurses entwerfe und erstelle ein Capstone Projekt, das du mit Freunden und Familie teilen kannst.
+          description_short: Lernen Sie alle Konzepte in den Grundlagen der Informatik und erstellen Sie Ihre eigene Zeichnung, Geschichte oder Ihr eigenes Spiel.
+          description_audience: 'Alter: 9-13'
+          stages:
+            Envelope Variables:
+              name: Umschlag-Variablen
+            For Loop Fun:
+              name: '„Zähle mit“-Schleifenspaß'
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Crowdsourcing
+        express-2020:
+          title: Expresskurs (2019)
+          description_audience: 'Alter: 9-18'
+          stages:
+            Dance Party:
+              name: Tanzparty
+            Loops with Rey and BB-8:
+              name: Schleifen mit Rey und BB-8
+            Nested Loops in Bee:
+              name: Eingebettete Schleifen bei der Biene
+            Nested Loops in Frozen:
+              name: Eingebettete Schleifen bei der Eiskönigin
+        pre-express-2020:
+          description_audience: 'Alter: 4-8'
+          stages:
+            Learn to Drag and Drop:
+              name: Erlerne Drag und Drop
+            Sequencing with Scrat:
+              name: Sequenzen mit Scrat
+            Spelling Bee:
+              name: Buchstabierwettbewerb
+            Loops in Ice Age:
+              name: Schleifen in Ice Age

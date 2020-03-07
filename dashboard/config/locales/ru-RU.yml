@@ -680,6 +680,7 @@ ru:
     download: Скачать видео
     show_notes: Показать заметки
     show_video: Показать видео
+    label: Видео
   compatibility:
     upgrade:
       unsupported_message: Ваш браузер не поддерживается. Пожалуйста, обновите свой
@@ -1411,3 +1412,4 @@ ru:
     logout: Выйти
     true: Да
   page_not_found_title: Страница не найдена
+  copy: Копировать

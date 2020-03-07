@@ -607,6 +607,7 @@ pl:
     download: Pobierz wideo
     show_notes: Pokaż Notatki
     show_video: Pokaż Wideo
+    label: Wideo
   compatibility:
     upgrade:
       unsupported_message: Twoja przeglądarka nie jest obsługiwana. Prosimy uaktualnić
@@ -1196,3 +1197,4 @@ pl:
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_button: Powrót do strony domowej
+  copy: Kopia/Kopiuj

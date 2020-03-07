@@ -3392,3 +3392,144 @@ fr:
           stages:
             new stage:
               name: nouvelle étape
+        csd2-2020:
+          description_short: "  Apprends à construire ton propre site web avec le labo du web."
+          stages:
+            Digital Footprint:
+              description_teacher: "As students have recently spent some time thinking about the actual content that will go into their personal website, this lesson takes a step back from the unit-long project (publication of a personal website) to help students articulate what personal information they choose to share digitally and with whom.  It also reinforces the notion that much of the information that they choose to share digitally falls largely out of their control the moment it is released.  \\r\n\\r\nStudents begin by individually identifying appropriate audiences with whom they would be comfortable sharing given pieces of personal information.  They then look at several social media pages to determine what sorts of information people are sharing about themselves or one another.  Last, students reflect on what guidelines they think are appropriate for posting information online.\\r\n\\r\nThe ultimate point of this lesson is not to scare students, but rather to experientially bring students to realizing precisely what level of control they don’t have in releasing information into the web."
+            Styling Text with CSS:
+              description_teacher: "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on a HTML page about Guinness World Record holders, adding their own style to the provided page. In the last level, students apply what they have learned about styles for text elements to their personal web page.\\r\n\\r\n"
+            Intellectual Property:
+              name: Propriété intellectuelle
+            CSS Classes:
+              name: Classes CSS
+        csd4-2020:
+          stages:
+            Understanding Your User:
+              description_teacher: "Designers need to understand their users’ needs in order to create useful products.  This lesson encourages students to think about how to design for another person by role-playing as someone else using a user profile and reacting as that user to a series of products.  Each student is assigned a user profile describing a person, which they then use to choose appropriate products, critique product design, and suggest improvements to design.\\r\n"
+            Paper Prototypes:
+              description_teacher: "Before starting to design apps, we need to help students to better scope their expectations. Because students will eventually be prototyping these apps in App Lab, they will be in better shape if their ideas align with the kinds of apps that are easily prototyped in App Lab. Teams start this scoping by looking through several example apps designed to demonstrate apps that can be created with App Lab. Teams then can chose one (or more) of the apps as a basis for their own. From there, teams have some time to discuss the basic functionality of their app before using 3x5 index cards to develop paper prototypes.\\r\n"
+        csd6-2020:
+          title: 'Unité 6: Contrôle de systèmes physiques'
+          description: L'unité 6 explore le rôle du matériel dans l'informatique et comment différents capteurs peuvent donner des interactions plus efficaces que les traditionnels clavier, souris et écran. En utilisant App Lab et le Circuit Playground d'Adafruit, vous allez développer des programmes qui utilisent les mêmes interactions que les appareils mobiles, montrant ainsi comment un simple prototype peut devenir un produit fini. Le cours se termine par un concours créatif pour réaliser une de vos idées en utilisant le Circuit Playground.
+          description_short: Apprend à programmer des objets.
+          stages:
+            Innovations in Computing:
+              name: Innovations en informatique
+            Designing Screens with Code:
+              name: Dessiner des écrans en codant
+            The Circuit Playground:
+              name: Le Circuit Playground
+            Board Events:
+              name: Évènements en provenance du circuit
+            Getting Properties:
+              name: Lire les propriétés
+            Analog Input:
+              name: Entrée analogique
+            The Program Design Process:
+              name: Le processus de création d'un programme
+            'Project: Make a Game':
+              name: 'Projet: Réaliser un jeu'
+            Arrays and Color LEDs:
+              name: Tableaux et LEDs colorées
+            Arrays and For Loops:
+              name: Tableaux et boucles Pour
+            Accelerometer:
+              name: Accéléromètre
+            Functions with Parameters:
+              name: Fonctions avec Paramètres
+            Circuits and Physical Prototypes:
+              name: Circuits et prototypes physiques
+            'Project: Prototype an Innovation':
+              name: 'Projet: Réaliser un prototype innovant'
+        csd3-2020:
+          description_short: "Programmation"
+          stages:
+            Shapes and Parameters:
+              name: Formes et paramètres
+            Variables:
+              name: variables
+            Random Numbers:
+              name: Nombres aléatoires
+            Sprite Properties:
+              name: Propriétés du sprite
+            The Draw Loop:
+              name: La boucle Draw
+              description_student: Cette leçon présente la boucle draw, l’un des principaux paradigmes de programmation du labo des jeux. La classe combine la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. Ensuite, tout le monde utilise ce qu'il a appris pour mettre à jour la scène du sprite de la leçon précédente.
+              description_teacher: Dans cette leçon, les élèves se familiarisent avec la boucle d’étirage, l’un des principaux paradigmes de programmation du labo des jeux. Pour commencer la leçon, les élèves examinent des folioscopes afin de constater que le fait de montrer plusieurs images à la suite crée l’impression de mouvement. Les élèves regardent ensuite une vidéo expliquant comment la boucle draw du labo des jeux contribue à créer cette même impression dans leurs programmes. Les élèves combinent la boucle draw avec des nombres aléatoires pour manipuler des animations simples avec des points, puis des sprites. À la fin de la leçon, les élèves utilisent ce qu'ils ont appris pour mettre à jour la scène de sprites de la leçon précédente.
+            Conditionals:
+              name: Instructions conditionnelles
+            Velocity:
+              name: Vitesse
+            Collision Detection:
+              name: Détection de collision
+            Functions:
+              name: fonctions
+        coursea-2020:
+          description_short: Une introduction à l’informatique pour les primo-lecteurs.
+          stages:
+            Going Places Safely:
+              name: Se déplacer en toute sécurité
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Ton empreinte numérique
+            Move It, Move It:
+              name: Bouge, Bouge
+        coursec-2020:
+          description_short: Apprendre les rudiments de l’informatique et de créer vos propres œuvres d’art, vos histoires et vos jeux.
+          stages:
+            Binary Bracelets:
+              name: Bracelets binaires
+            Looking Ahead:
+              name: Regarder en avant
+        coursed-2020:
+          stages:
+            Relay Programming:
+              name: Programmation de relais
+              description_teacher: Cette activité débutera par une brève leçon sur le débogage et la persistance, puis passera rapidement à une course contre la montre pendant que les élèves se regroupent en équipes et travaillent ensemble à la rédaction d'un programme, instruction par instruction.
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
+            Conditionals with Cards:
+              name: Instructions conditionnelles avec des cartes
+            'Unplugged: Binary':
+              name: 'Débranché: Binaire'
+            Artist Binary:
+              name: Artiste binaire
+            Digital Citizenship:
+              name: Citoyenneté numérique
+            Dance Party:
+              name: Soirée Dansante
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Instructions conditionnelles
+            'Functions: Songwriting':
+              description_teacher: Une des structures les plus magnifiques dans le monde de l’informatique est la fonction.  Les fonctions (parfois appelées procédures) sont des minis programmes que l’on peut utiliser encore et encore à l'intérieur d’un plus grand programme. Cette leçon aidera les élèves à comprendre intuitivement pourquoi associer des morceaux de code à des fonctions est une pratique très utile.
+        coursef-2020:
+          description_short: Apprenez toutes les notions fondamentales de l’informatique et créez vos propres œuvres d’arts, histoires ou jeux.
+          stages:
+            Envelope Variables:
+              name: Les variables de l'enveloppe
+            For Loop Fun:
+              name: Jouons avec les boucles « Pour »
+            Internet:
+              name: Internet
+            Crowdsourcing:
+              name: Financement participatif
+            Digital Sharing:
+              name: Partage numérique
+              description_teacher: Prêtée aux Fondamentaux de l’informatique par l'équipe de Copyright and Creativity, cette leçon a pour but d'aider les élèves à comprendre les défis et les avantages du respect de la propriété et du droit d'auteur, en particulier dans les environnements numériques. Les étudiants devraient être encouragés à respecter les droits des artistes, qui constituent un élément important de leur citoyenneté numérique.
+        express-2020:
+          title: Cour rapide (2017)
+          stages:
+            Dance Party:
+              name: Soirée Dansante
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Concours d'orthographe
+            Loops in Ice Age:
+              name: Boucles dans l'Âge de Glace
