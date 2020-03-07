@@ -168,7 +168,6 @@ class Documents < Sinatra::Base
       # This is similar to the lazy loading we need to do for Haml:
       # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
       require 'cdo/pegasus/actionview_sinatra'
-      ActionView::Template.register_template_handler :md, ActionViewSinatra::MarkdownHandler
       ActionViewSinatra::Base.new(self)
     end
 
@@ -515,7 +514,10 @@ class Documents < Sinatra::Base
       extensions.reverse.each do |extension|
         case extension
         when '.erb', '.html', '.haml', '.md'
-          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals)
+          # Symbolize the keys of the locals hash; previously, we supported
+          # using either symbols or strings in locals hashes but ActionView
+          # only allows symbols.
+          result = @actionview.render(inline: result, type: extension[1..-1], locals: locals.symbolize_keys)
         when '.fetch'
           cache_file = cache_dir('fetch', request.site, request.path_info)
           unless File.file?(cache_file) && File.mtime(cache_file) > settings.launched_at

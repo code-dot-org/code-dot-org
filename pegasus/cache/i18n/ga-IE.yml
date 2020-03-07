@@ -21,15 +21,17 @@ ga-IE:
     none; font-weight: 400">An múinteoir ríomhaireachta tú? Féach ar acmhainní eile
     ó Sheachtain an Oideachais Ríomheolaíochta</a>'
   n_have_learned_an_hoc: "<h1>Bain triail as </h1><h2>An Uair Chódála</h2><h3># códálaí</h3>"
+  try_hoc_num_served: "<h1>Bain triail as</h1><h2>An Uair Chódála</h2><h3>%{num} códálaí</h3>"
   anybody_can_learn: Is féidir le héinne foghlaim.
   learn_now: Foghlaim Anois
   petition_message: Ba cheart go mbeadh an deis ag gach dalta i ngach scoil an ríomheolaíocht
     a fhoghlaim
   petition_sign_message: 'Má aontaíonn tú, sínigh d''ainm agus glac páirt sa liosta
     ríomhphoist in éindí le # eile.'
-  petition_sign_message_support: 'Má thacaíonn tú linn, sínigh d''ainm agus glac páirt
-    sa liosta ríomhphoist in éindí le # eile.'
+  petition_sign_message_num: Má aontaíonn tú, sínigh d'ainm agus glac páirt sa liosta
+    ríomhphoist in éindí le %{num} eile.
   petition_join_others: 'Téir le # eile'
+  petition_join_others_num: Glac páirt le %{num} duine eile
   name: Ainm
   email: Ríomhphost
   zipcode: Cód poist nó tír
@@ -57,9 +59,10 @@ ga-IE:
   hoc2014_teachers: Múinteoirí
   hoc2014_host: Óstáil an Uair Chódála
   hoc2014_everyone: Gach Duine
-  hoc2014_support: Sínigh an achainí &#x25BE;
+  hoc2014_support: Sínigh an achainí ▾
   hoc2014_whatishoc: Cad é An Uair Chódála?
   csedweek_map_header: 'Ócáidí #CSEdWeek / Uair Chódála ar fud an domhain'
+  csedweek_map_header_num: "%{num} ócáid CSEdWeek / Uair Chódála timpeall an domhain"
   csedweek_map_signup: Cláraigh d'imeacht féin
   csedweek_map_search_placeholder: Cuardaigh ócáidí Uair Chódála
   csedweek_map_search_search: Cuardaigh
@@ -2158,6 +2161,7 @@ ga-IE:
   user_header_gamelab: An tSaotharlann Cluichíochta
   user_header_playlab: Spraotharlann
   user_header_dance: Cóisir Dhamhsa
+  user_header_spritelab: Saotharlann na Sprideanna
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
   user_header_view_all: Gach Tionscadal...
@@ -2264,10 +2268,13 @@ ga-IE:
   hoc2018_mc_page_title: Cúrsaí Teagaisc Minecraft don Uair Chódála
   hoc2018_mc_details: Go leor teangacha | Brabhsálaithe nua-aimseartha agus táibléid
     | Aois 7+
+  hoc2018_mc_aquatic_announcement: Cláraigh do rang anois agus bain triail as ceann
+    de na 150 gníomhaíocht ÚRNUA mar chuid den Uair Chódála (3-9 Nollaig), ina measc,
+    ár ngníomhaíocht nua Minecraft, an Turas Uisceach! Cláraigh inniu.
   hoc2018_mc_aquatic_title: 'Minecraft: Turas Uisceach'
   hoc2018_mc_aquatic_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an
     Uair Chódála! Téigh ar aistear trí Minecraft le cód.
-  hoc2019_mc_aquatic_description: Taiscéal agus tóg domhain faoi uisce le cód.
+  hoc2019_mc_aquatic_description: Tóg agus taiscéal domhain faoi uisce le cód.
   hoc2018_mc_hero_title: 'Minecraft: Scéal Gaisce'
   hoc2018_mc_hero_description: Tá Minecraft ar ais le gníomhaíocht úrnua ar an Uair
     Chódála! Téigh ar aistear trí Minecraft le cód.
@@ -2295,6 +2302,8 @@ ga-IE:
     níos sine.
   hoc2018_mc_educators_box3_button: Aimsigh ceardlann
   hoc2018_mc_educators_box4_title: Tuilleadh acmhainní ríomheolaíochta
+  hoc2018_mc_educators_box4_desc: Feabhsaigh an saol i do phobal le scileanna digiteacha
+    agus le hacmhainní oideachais ríomheolaíochta ó Microsoft.
   hoc2018_mc_educators_box4_button: Tuilleadh acmhainní
   hoc2018_mc_watch_videos: Sula dtosóidh tú, féach ar cheann de na físeáin spreagúla
     seo
@@ -2358,23 +2367,54 @@ ga-IE:
     agus scagadh ceoil.
   hoc2018_dance_teacher_resources_tile1_button: Plean Ceachta
   hoc2018_dance_teacher_resources_tile2_title: Cóisir Dhamhsa Dhíphlugáilte
+  hoc2018_dance_teacher_resources_tile2_description: Níl aon ríomhairí de dhíth! Foghlaim
+    coincheapa códála le linn duit cóiréagrafaíocht a dhéanamh ar chóisir dhamhsa.
   hoc2018_dance_teacher_resources_tile2_button: Gníomhaíocht Dhíphlugáilte
+  hoc2018_dance_featured_student_creations_title: Tionscadail ar Taispeáint
   hoc2018_dance_videos_section_heading: Spreagadh
   hoc2018_dance_video_title_what_is_creativity: Cad is Cruthaitheacht ann?
   hoc2018_dance_view_creativity_video_playlist: Cad is Cruthaitheacht ann? Breathnaigh
     ar an tsraith iomlán (5 nóiméad)
   hoc2018_dance_amazon_sponsor_section_with_logo_title: I gcomhar le
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Is éard atá
+    in Amazon Future Engineer* ná clár cuimsitheach óige-go-gairm a bhfuil an sprioc
+    aige gasúir bhochta agus gasúir faoi mhíbhuntáiste a spreagadh, a mhúineadh, agus
+    a thraenáil chun gairmeacha sa ríomheolaíocht a chleachtadh. <a href='%{amazon_future_engineer_link}'
+    target='_blank'>Tuilleadh eolais</a>
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Tuilleadh eolais
+    faoi Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Maidir le hAmazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Foghlaim faoi chlár ó naíscoil-go-hollscoil
+    de chuid Amazon a chuireann acmhainní oideachasúla sa ríomheolaíocht ar fáil.
+    Gheobhaidh tú tuilleadh eolais faoi champaí samhraidh, ranganna ríomheolaíochta
+    ag an dara leibhéal, scoláireachtaí, agus intéirneachtaí.
   hoc2018_dance_amazon_about_future_engineer_button: Tuilleadh eolais
   hoc2018_dance_amazon_try_coding_this_summer_title: Bain triail as an gcódáil an
     samhradh seo
+  hoc2018_dance_amazon_try_coding_this_summer_description: Glac páirt i gcampa ríomheolaíochta
+    spraíúil, uileghabhálach, agus saor in aisce faoi scáth Amazon Future Engineer.
+    Tá campaí samhraidh ar fáil anois do dhaltaí ó chiondargairdín go dtí an t-ochtú
+    bliain in áiteanna éagsúla sna Stáit Aontaithe.
   hoc2018_dance_amazon_try_coding_this_summer_button: Glac páirt i gcampa samhraidh
   hoc2018_dance_amazon_scholarship_programs_title: Scoláireachtaí
+  hoc2018_dance_amazon_scholarship_programs_description: Tá Amazon ag tairiscint scoláireachtaí
+    suas le $10,000 sa bhliain do dhaltaí nach bhfuil dóthain acmhainní acu, atá cláraithe
+    le cúrsa AP CS nó atá tar éis an chúrsa sin a chríochnú, agus ar mhian leo céim
+    sa ríomheolaíocht a dhéanamh i gcoláiste nó in ollscoil ceithre bliana sna Stáit
+    Aontaithe.
   hoc2018_dance_amazon_scholarship_programs_button: Cuir iarratas isteach
   hoc2018_dance_amazon_internships_title: Intéirneacht in Amazon
+  hoc2018_dance_amazon_internships_description: Táthar ag glacadh le hiarratais ar
+    intéirneachtaí Amazon Future Engineer le haghaidh samhradh 2019 faoi láthair.
+    Mar intéirneach, beidh tú i do pháirtí le bainisteoir, le meantóir teicniúil,
+    agus le hintéirnigh eile chun gnéithe agus seirbhísí nua a chruthú ar son custaiméirí
+    Amazon. Tá intéirneachtaí ar fáil sna Stáit Aontaithe agus i gCeanada.
   hoc2018_dance_amazon_internships_button: Aimsigh intéirneacht
   hoc2018_dance_amazon_k8_programs_title: Cláir bhunscoile
   hoc2018_dance_amazon_funding_title: Aimsigh maoiniú do do chéim ríomheolaíochta
+  hoc2018_dance_amazon_future_engineer_footer: "* Thug go leor ealaíontóirí cead dúinn
+    a gcuid ceoil a úsáid sa gcúrsa seo ar Code.org, ach níl aon ráiteas tacaíochta
+    le hAmazon ag dul leis an gceadúnas seo."
   hoc2018_dance_measure: Tomhas
   hoc2018_dance_measure_colon: 'Tomhas:'
   hoc2018_aquatic_video1: 'Minecraft: Turas Uisceach - Réamheolas'
@@ -2391,6 +2431,10 @@ ga-IE:
     an seoladh ceart agat agus bain triail eile as. Nó, fill ar an leathanach baile.
   page_not_found_button: Baile
   hoc2018_mc_with_microsoft: I gcomhar le
+  hoc2018_mc_thank_microsoft: 'Táimid buíoch de Microsoft as tacaíocht a thabhairt
+    dár bhfís agus dár misean: deis a thabhairt do gach gasúr an ríomheolaíocht a
+    fhoghlaim chomh maith le scileanna tábhachtacha don saol sa 21ú haois.'
+  hoc2019_mc_mee_title: Minecraft AI ar son na Maitheasa
   hoc2019_mc_mee_description1: 'Tá an cúrsa teagaisc nua Minecraft don Uair Chódála
     ar fáil anois mar chuid de Minecraft: Education Edition ar Windows, Mac, agus
     iPad. Foghlaim an chódáil agus buneolas ar intleacht shaorga in éineacht le do

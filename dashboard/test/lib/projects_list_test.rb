@@ -13,7 +13,10 @@ class ProjectsListTest < ActionController::TestCase
       name: 'Bobs App',
       level: '/projects/applab',
       createdAt: '2017-01-24T16:41:08.000-08:00',
-      updatedAt: '2017-01-25T17:48:12.358-08:00'
+      updatedAt: '2017-01-25T17:48:12.358-08:00',
+      libraryName: 'bobsLibrary',
+      libraryDescription: 'A library by Bob.',
+      libraryPublishedAt: '2020-01-25T17:48:12.358-08:00'
     }.to_json
     @student_project = {id: 22, value: student_project_value}
 
@@ -46,6 +49,18 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal 'Bobs App', project_row['name']
     assert_equal 'applab', project_row['type']
     assert_equal '2017-01-25T17:48:12.358-08:00', project_row['updatedAt']
+  end
+
+  test 'get_project_row_data includes library data if with_library is true' do
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, false)
+    assert_nil project_row['libraryName']
+    assert_nil project_row['libraryDescription']
+    assert_nil project_row['libraryPublishedAt']
+
+    project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id, nil, true)
+    assert_equal 'bobsLibrary', project_row['libraryName']
+    assert_equal 'A library by Bob.', project_row['libraryDescription']
+    assert_equal '2020-01-25T17:48:12.358-08:00', project_row['libraryPublishedAt']
   end
 
   test 'get_published_project_and_user_data returns nil for App Lab project with sharing_disabled' do
@@ -283,7 +298,7 @@ class ProjectsListTest < ActionController::TestCase
         storage_id: @storage_id,
         id: 1,
         project_type: 'applab',
-        value: {'libraryName': applab_lib_name, 'libraryDescription': description}.to_json,
+        value: {'libraryName': applab_lib_name, 'libraryDescription': description, 'hidden': true}.to_json,
         state: 'active'
       },
       {
