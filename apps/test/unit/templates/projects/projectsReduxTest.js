@@ -1,6 +1,14 @@
 import {assert} from '../../../util/deprecatedChai';
+import sinon from 'sinon';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore
+} from '@cdo/apps/redux';
 import projects, {
   setPersonalProjectsList,
+  updatePersonalProjectData,
   publishSuccess,
   unpublishSuccess,
   deleteSuccess,
@@ -10,9 +18,10 @@ import projects, {
   saveSuccess,
   saveFailure,
   unsetNameFailure,
-  getProjectLibraries
+  unpublishProjectLibrary
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {stubFakePersonalProjectData} from '@cdo/apps/templates/projects/generateFakeProjects';
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 describe('projectsRedux', () => {
   const initialState = projects(undefined, {});
@@ -26,6 +35,31 @@ describe('projectsRedux', () => {
         stubFakePersonalProjectData
       );
     });
+  });
+
+  describe('updatePersonalProjectData', () => {
+    const personalProjects = [
+      {channel: 'abc123', name: 'first project'},
+      {channel: 'def456', name: 'second project'}
+    ];
+    const updatedProject = {
+      channel: 'def456',
+      name: 'second project (edited)'
+    };
+
+    const action = setPersonalProjectsList(personalProjects);
+    const nextState = projects(initialState, action);
+    const nextAction = updatePersonalProjectData(
+      updatedProject.channel,
+      updatedProject
+    );
+    const nextNextState = projects(nextState, nextAction);
+
+    const expectedProjects = [personalProjects[0], updatedProject];
+    assert.deepEqual(
+      nextNextState.personalProjectsList.projects,
+      expectedProjects
+    );
   });
 
   describe('publishSuccess', () => {
@@ -255,31 +289,57 @@ describe('projectsRedux', () => {
     });
   });
 
-  describe('getProjectLibraries', () => {
-    it('returns projects with libraries', () => {
-      const projects = [
-        {name: 'library-less project'},
-        {name: 'project w/ library', libraryName: 'my library!'}
-      ];
-      const state = {
-        projects: {
-          personalProjectsList: {projects}
-        }
-      };
+  describe('unpublishProjectLibrary', () => {
+    let server, store, libraryApiStub;
+    const projectId = 'abc123';
 
-      const projectLibraries = getProjectLibraries(state);
-      assert.deepEqual([projects[1]], projectLibraries);
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      stubRedux();
+      registerReducers({projects});
+      store = getStore();
+      libraryApiStub = sinon.createStubInstance(LibraryClientApi, {
+        unpublish: sinon.stub()
+      });
     });
 
-    it('returns an empty array if no projects', () => {
-      const state = {
-        projects: {
-          personalProjectsList: {}
-        }
-      };
+    afterEach(() => {
+      server.restore();
+      restoreRedux();
+    });
 
-      const projectLibraries = getProjectLibraries(state);
-      assert.deepEqual([], projectLibraries);
+    const setFetchPersonalProjectsResponse = status => {
+      server.respondWith('GET', `/v3/channels/${projectId}`, [
+        status,
+        {'Content-Type': 'application/json'},
+        JSON.stringify([])
+      ]);
+    };
+
+    it('unpublishes library', () => {
+      setFetchPersonalProjectsResponse(200);
+
+      const action = unpublishProjectLibrary(projectId, libraryApiStub);
+      store.dispatch(action);
+      server.respond();
+
+      assert(libraryApiStub.unpublish.calledOnce);
+    });
+
+    it('does not unpublish library if fetchProjectToUpdate fails', () => {
+      setFetchPersonalProjectsResponse(500);
+      const onCompleteSpy = sinon.spy();
+
+      const action = unpublishProjectLibrary(
+        projectId,
+        libraryApiStub,
+        onCompleteSpy
+      );
+      store.dispatch(action);
+      server.respond();
+
+      assert.equal(0, libraryApiStub.unpublish.callCount);
+      assert(onCompleteSpy.calledOnce);
     });
   });
 });
