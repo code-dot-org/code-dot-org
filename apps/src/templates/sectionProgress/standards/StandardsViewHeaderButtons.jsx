@@ -14,7 +14,6 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import firehoseClient from '../../../lib/util/firehose';
 import {TeacherScores} from './standardsConstants';
 
-
 const styles = {
   buttonsGroup: {
     display: 'flex',
@@ -39,7 +38,8 @@ class StandardsViewHeaderButtons extends Component {
   state = {
     isLessonStatusDialogOpen: false,
     isCreateReportDialogOpen: false,
-    comment: ''
+    comment: '',
+    commentUpdated: false
   };
 
   openLessonStatusDialog = () => {
@@ -103,15 +103,17 @@ class StandardsViewHeaderButtons extends Component {
         data_json: JSON.stringify({
           section_id: this.props.sectionId,
           script_id: this.props.scriptId,
-          added_comment: !!this.state.comment
+          added_or_changed_comment: this.state.commentUpdated
         })
       },
       {includeUserId: true}
     );
+    this.setState({commentUpdated: false});
   };
 
   onCommentChange = value => {
     this.setState({comment: value}, () => {
+      this.setState({commentUpdated: true});
       this.props.setTeacherCommentForReport(this.state.comment);
     });
   };
