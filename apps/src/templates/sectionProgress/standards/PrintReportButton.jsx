@@ -25,6 +25,7 @@ export default class PrintReportButton extends Component {
           iconClassName="fa"
           size={'narrow'}
           style={styles.button}
+          id="uitest-standards-print-button"
         />
       </div>
     );
