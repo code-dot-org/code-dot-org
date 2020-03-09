@@ -24,6 +24,8 @@
 #
 
 class Studio < Grid
+  before_save :update_goal_override
+
   serialized_attrs %w(
     first_sprite_index
     protaganist_sprite_index
@@ -112,6 +114,20 @@ class Studio < Grid
         function () {
         }
     JS
+  end
+
+  def update_goal_override
+    if goal_override.present? && goal_override.is_a?(String)
+      self.goal_override = JSON.parse(goal_override)
+    end
+  end
+
+  def self.goal_override
+    <<-JSON.strip_heredoc.chomp
+      {
+        "goalAnimation": null
+      }
+    JSON
   end
 
   def common_blocks(type)
