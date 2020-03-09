@@ -681,6 +681,9 @@ Resources:
               - Effect: Allow
                 Action:
                   - dms:DescribeReplicationTasks
+                Resource: "*"
+              - Effect: Allow
+                Action:
                   - dms:DescribeTableStatistics
                   - dms:ListTagsForResource
                   - dms:StartReplicationTask

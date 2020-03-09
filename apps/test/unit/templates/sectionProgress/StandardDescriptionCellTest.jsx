@@ -3,13 +3,13 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import StandardDescriptionCell from '@cdo/apps/templates/sectionProgress/standards/StandardDescriptionCell';
 import {
-  fakeStandards,
+  standardsData,
   lessonCompletedByStandard
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
-    description: fakeStandards[1].description,
+    description: standardsData[1].description,
     lessonsForStandardStatus: lessonCompletedByStandard[1],
     isViewingReport: null
   };
