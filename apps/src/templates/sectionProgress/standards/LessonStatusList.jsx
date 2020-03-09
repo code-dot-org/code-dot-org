@@ -57,8 +57,8 @@ const handleLessonLinkClick = function(lesson) {
   firehoseClient.putRecord(
     {
       study: 'teacher_dashboard_actions',
-      study_group: 'progress',
-      event: 'click_lesson_link',
+      study_group: 'standards',
+      event: 'click_unplugged_lesson_link',
       data_json: JSON.stringify({
         link: lesson.url,
         section_id: lesson.sectionId,
