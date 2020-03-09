@@ -1137,3 +1137,4 @@ zh-TW:
   page_not_found_header: ' 404：找不到頁面'
   page_not_found_description: "你要查找的頁面在該地址不存在。檢查網址並重新提交。或者，返回我們的主頁。"
   page_not_found_button: "返回主頁"
+  copy: '複製'

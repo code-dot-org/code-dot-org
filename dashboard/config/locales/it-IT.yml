@@ -70,6 +70,7 @@ it:
   previous_page: Pagina precedente
   next_page: Pagina successiva
   next_resource: Risorsa successiva
+  done_with_module: Lezione completata
   cancel: Annulla
   okay: Ok!
   or: o
@@ -1436,3 +1437,4 @@ it:
   page_not_found_description: La pagina che stai cercando non esiste a questo indirizzo.
     Controlla l'indirizzo web e riprova. Oppure, torna alla nostra homepage.
   page_not_found_button: Ritorna alla homepage
+  copy: Copia

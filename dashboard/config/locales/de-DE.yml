@@ -1138,6 +1138,7 @@ de:
     content: Inhalt
     practice: Lehrer Übungen
     peer_review: Peer Review
+    optional: Optional
     main_course: Hauptkurs
     extra_course_content: Extra Kurs Inhalte
     csf_e_2: Kurs E Inhalt
@@ -1148,7 +1149,9 @@ de:
     csf_events: Ereignisse
     csf_online_safety: Online-Sicherheit
     csf_binary: Binärdatei
+    csf_data: Daten
     csf_conditionals: Bedingungen
+    csf_sprites: Sprites
     csf_nested_loops: Verschachtelte Schleifen
     csf_functions: Funktionen
     csf_variables: Variablen
@@ -1427,3 +1430,4 @@ de:
   page_not_found_description: Die Seite die Sie suchen gibt es nicht unter dieser
     Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen
     Sie zurück zu unserer Webseite.
+  copy: Kopieren

@@ -28,8 +28,6 @@ fa-IR:
     باشد
   petition_sign_message: 'اگر شما موافق هستید، نام خود را ثبت کنید.  # به دیگران به
     پیوندید.'
-  petition_sign_message_support: 'اگر از ما حمایت می کنید، اسمتان را ثبت کنید. به
-    #دیگران بپیوندید.'
   petition_join_others: 'به #دیگران ملحق شوید'
   name: نام
   email: ایمیل

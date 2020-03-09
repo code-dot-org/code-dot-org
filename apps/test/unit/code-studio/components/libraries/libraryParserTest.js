@@ -249,7 +249,7 @@ describe('Library parser', () => {
     let emptyFunctions = [];
 
     function closureCreator(libraryName = '', code = '', functions = '') {
-      return `var ${libraryName} = (function() {${code}; return {${functions}}})();`;
+      return `var ${libraryName} = (function() {${code};\nreturn {${functions}}})();`;
     }
 
     it('is able to parse code with quotes', () => {
@@ -261,6 +261,18 @@ describe('Library parser', () => {
       };
       let newJson = parser.createLibraryClosure(originalJson);
       expect(newJson).to.deep.equal(closureCreator(emptyLibraryName, code));
+    });
+
+    // This is especially important when the user code ends with a comment
+    it('adds a newline to the end of the user code', () => {
+      let code = '// comment';
+      let originalJson = {
+        name: emptyLibraryName,
+        functions: emptyFunctions,
+        source: code
+      };
+      let newJson = parser.createLibraryClosure(originalJson);
+      expect(newJson).to.include('// comment;\nreturn');
     });
 
     it('is able to parse functions', () => {

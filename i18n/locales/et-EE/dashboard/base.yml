@@ -801,3 +801,4 @@ et:
     accept: 'Olen nõus'
   gdpr_dialog:
     yes: 'Jah'
+  copy: 'Kopeeri'

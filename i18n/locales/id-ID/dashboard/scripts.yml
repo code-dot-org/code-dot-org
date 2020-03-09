@@ -5299,3 +5299,72 @@ id:
             Project - Design a Game:
               name: Proyek - merancang sebuah permainan
               description_student: Kelas rencana dan membangun permainan asli menggunakan panduan proyek dari dua pelajaran sebelumnya. Bekerja secara individual atau berpasangan, kelas rencana, mengembangkan, dan memberikan umpan balik tentang permainan. Setelah memasukkan rekan umpan balik, permainan kelas saham selesai.
+        coursea-2020:
+          description_short: Pengenalan ilmu komputer untuk pra-pembaca.
+          stages:
+            Going Places Safely:
+              name: Pergi ke tempat-tempat dengan aman
+        courseb-2020:
+          stages:
+            Your Digital Footprint:
+              name: Digital Footprint Kamu
+            Move It, Move It:
+              name: Gerakkan itu, Gerakkan itu
+        coursec-2020:
+          stages:
+            Screen Out the Mean:
+              name: Berarti keluar layar
+            Binary Bracelets:
+              name: Gelang biner
+            Looking Ahead:
+              name: Melihat ke depan
+            'End of Course Project: Create a Play Lab Game':
+              description_student: Mendapatkan tangan mereka siap untuk banyak pengkodean! Saatnya untuk mulai membangun proyek anda.
+        coursed-2020:
+          stages:
+            'Algorithms: Graph Paper Programming':
+              name: 'Algoritma: Kertas Grafik Pemrograman'
+            Introduction to Online Puzzles:
+              name: Pengantar teka-Teki secara Online
+            Relay Programming:
+              name: Pemrograman bergiliran
+            Build a Star Wars Game:
+              description_student: Merasakan kekuatan seperti yang anda membangun anda sendiri Peran Bintang Permainan dalam pelajaran ini.
+            Conditionals with Cards:
+              name: Bersyarat dengan kartu
+            'Unplugged: Binary':
+              name: 'Dicabut: Biner'
+            Artist Binary:
+              name: Artis Biner
+            Digital Citizenship:
+              name: Kewarganegaraaan Digital
+            Dance Party:
+              name: Pesta Tari
+        coursee-2020:
+          stages:
+            Conditionals:
+              name: Kondisi
+            Private and Personal Information:
+              description_student: Internet adalah menyenangkan dan menarik, tetapi sangat penting untuk tetap aman. Pelajaran ini mengajarkan anda perbedaan antara informasi yang aman untuk berbagi dan informasi yang bersifat pribadi.
+        coursef-2020:
+          description_short: Pelajari seluruh konsep dalam dasar dasar ilmu komputer dan buat seni, cerita atau permainan anda sendiri.
+          stages:
+            Envelope Variables:
+              name: Sampul Variabel
+            For Loop Fun:
+              name: Untuk Loop Fun
+            Internet:
+              name: Internet
+            The Power of Words:
+              name: Kekuatan kata-Kata
+              description_student: Bullying tidak pernah baik-baik saja. Pelajaran ini akan mengajarkan anda tentang apa yang bisa dan tidak apa-apa untuk mengatakan secara online.
+            Crowdsourcing:
+              name: Sumber kerumunan
+        express-2020:
+          stages:
+            Dance Party:
+              name: Pesta Tari
+        pre-express-2020:
+          stages:
+            Spelling Bee:
+              name: Spelling Bee

@@ -819,3 +819,4 @@ gl:
     accept: Acepto
   gdpr_dialog:
     true: Si
+  copy: Copiar
