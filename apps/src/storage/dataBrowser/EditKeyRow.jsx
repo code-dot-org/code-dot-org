@@ -42,7 +42,7 @@ class EditKeyRow extends React.Component {
     this.setState({isSaving: true});
     FirebaseStorage.setKeyValue(
       this.props.keyName,
-      castValue(this.state.newValue),
+      castValue(this.state.newValue, /* allowUnquotedStrings */ true),
       this.resetState,
       msg => console.warn(msg)
     );

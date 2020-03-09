@@ -52,7 +52,9 @@ class EditTableRow extends React.Component {
   handleSave = () => {
     this.props.hideError();
     try {
-      const newRecord = _.mapValues(this.state.newInput, castValue);
+      const newRecord = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
       this.setState({isSaving: true});
       FirebaseStorage.updateRecord(
         this.props.tableName,

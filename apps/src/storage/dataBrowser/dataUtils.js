@@ -76,9 +76,10 @@ export function toBoolean(val) {
  * Parses string input as string, number, boolean, undefined, or null.
  * Throws an error if the input is not parseable as one of these types.
  * @param inputString {string}
+ * @param allowUnquotedStrings {boolean} if true, wraps bare words in quotes as strings
  * @returns {string|number|boolean|undefined|null}
  */
-export function castValue(inputString) {
+export function castValue(inputString, allowUnquotedStrings = false) {
   // 1. Remove leading and trailing whitespace
   inputString = inputString.trim();
   // 2. Check for undefined and null
@@ -95,6 +96,13 @@ export function castValue(inputString) {
     }
     return parsed;
   } catch (e) {
+    if (e instanceof SyntaxError) {
+      if (allowUnquotedStrings) {
+        return inputString;
+      } else {
+        throw e;
+      }
+    }
     throw new Error(`Unexpected error parsing JSON: ${e}`);
   }
 }

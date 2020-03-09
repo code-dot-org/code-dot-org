@@ -33,7 +33,9 @@ class AddTableRow extends React.Component {
   handleAdd = () => {
     this.props.hideError();
     try {
-      const record = _.mapValues(this.state.newInput, castValue);
+      const record = _.mapValues(this.state.newInput, inputString =>
+        castValue(inputString, /* allowUnquotedStrings */ false)
+      );
       this.setState({isAdding: true});
       FirebaseStorage.createRecord(
         this.props.tableName,

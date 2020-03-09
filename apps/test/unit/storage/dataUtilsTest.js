@@ -165,8 +165,8 @@ describe('castValue', () => {
     expect(castValue('1')).to.equal(1);
     expect(castValue('0.2')).to.equal(0.2);
     expect(castValue('1.2345e3')).to.equal(1234.5);
-    expect(() => castValue('123abc')).to.throw(/Unexpected error parsing JSON/);
-    expect(() => castValue('NaN')).to.throw(/Unexpected error parsing JSON/);
+    expect(() => castValue('123abc')).to.throw(/JSON Parse error/);
+    expect(() => castValue('NaN')).to.throw(/JSON Parse error/);
   });
 
   it('converts "null" to null', () => {
@@ -191,12 +191,14 @@ describe('castValue', () => {
     ).to.throw(/Invalid entry type: object/);
   });
 
-  it('Does not allow unquoted or misquoted strings', () => {
-    expect(() => castValue('foo')).to.throw(/Unexpected error parsing JSON/);
-    expect(() => castValue('"foo')).to.throw(/Unexpected error parsing JSON/);
-    expect(() => castValue('""foo""')).to.throw(
-      /Unexpected error parsing JSON/
-    );
+  it('Does not allow unquoted or misquoted strings unless allowUnquotedStrings is true', () => {
+    expect(() => castValue('foo', false)).to.throw(/JSON Parse error/);
+    expect(() => castValue('"foo', false)).to.throw(/JSON Parse error/);
+    expect(() => castValue('""foo""', false)).to.throw(/JSON Parse error/);
+
+    expect(castValue('foo', true)).to.equal('foo');
+    expect(castValue('"foo', true)).to.equal('"foo');
+    expect(castValue('""foo""', true)).to.equal('""foo""');
   });
 });
 
