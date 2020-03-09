@@ -89,12 +89,24 @@ export function getUnpluggedLessonsForScript(state) {
     });
   }
 
+  unpluggedStages.forEach(stage => {
+    const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+    const selected = _.map(
+      state.sectionStandardsProgress.selectedLessons,
+      'id'
+    ).includes(stage.id);
+    stage['selected'] = selected;
+    stage['completed'] = lessonCompletionStatus.completed;
+  });
+
   function filterStageData(stage) {
     return {
       id: stage.id,
       name: stage.name,
       number: stage.position,
-      url: stage.lesson_plan_html_url
+      url: stage.lesson_plan_html_url,
+      completed: stage.completed,
+      selected: stage.selected
     };
   }
 
@@ -115,7 +127,24 @@ export function fetchStudentLevelScores(scriptId, sectionId) {
 }
 
 export function getNumberLessonsCompleted(state) {
-  return 5;
+  let lessonsCompleted = 0;
+  if (
+    state.sectionProgress.scriptDataByScript &&
+    state.scriptSelection.scriptId &&
+    state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+  ) {
+    const stages =
+      state.sectionProgress.scriptDataByScript[state.scriptSelection.scriptId]
+        .stages;
+
+    stages.forEach(stage => {
+      const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+      if (lessonCompletionStatus.completed) {
+        lessonsCompleted += 1;
+      }
+    });
+  }
+  return lessonsCompleted;
 }
 
 export function getNumberLessonsInScript(state) {
