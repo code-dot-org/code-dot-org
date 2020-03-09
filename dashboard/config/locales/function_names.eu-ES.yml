@@ -96,6 +96,14 @@ eu-ES:
         do something: egin zerbait
       NEW Course 4 Play Lab Params 11:
         jump: salto egin
+      New Artist Project:
+        draw a star: marraztu izar bat
+        draw a circle: marraztu zirkulu bat
+        draw a triangle: marraztu triangelu bat
+        draw a house: marraztu etxe bat
+        draw a square: marraztu karratu bat
+      New Play Lab Project:
+        jump: salto egin
       Standalone_Artist_7:
         draw a flower: marraztu lore bat
       course3_artist_functions_challenge1:
@@ -152,8 +160,6 @@ eu-ES:
       courseE_artist_functions7:
         draw a house: marraztu etxe bat
       courseE_artist_functions7_2018:
-        draw a house: marraztu etxe bat
-      courseE_artist_functions7_2019:
         draw a house: marraztu etxe bat
       courseE_artist_functions8:
         do something: egin zerbait
