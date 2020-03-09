@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ProgressBox from '../ProgressBox';
 import firehoseClient from '../../../lib/util/firehose';
+import {connect} from 'react-redux';
 
 const styles = {
   lessonBox: {
@@ -10,28 +11,30 @@ const styles = {
   }
 };
 
-export default class ProgressBoxForLessonNumber extends Component {
+class ProgressBoxForLessonNumber extends Component {
   static propTypes = {
     completed: PropTypes.bool,
     lessonNumber: PropTypes.number,
     tooltipId: PropTypes.string,
-    linkToLessonPlan: PropTypes.string
+    linkToLessonPlan: PropTypes.string,
+    sectionId: PropTypes.number,
+    scriptId: PropTypes.number
   };
 
   handleClick = () => {
-    if (window.location.pathname.includes('standards_report')) {
-      firehoseClient.putRecord(
-        {
-          study: 'teacher_dashboard_actions',
-          study_group: 'standards_report',
-          event: 'click_progress_box',
-          data_json: JSON.stringify({
-            link: this.props.linkToLessonPlan
-          })
-        },
-        {includeUserId: true}
-      );
-    }
+    firehoseClient.putRecord(
+      {
+        study: 'teacher_dashboard_actions',
+        study_group: 'progress',
+        event: 'click_lesson_progress_box',
+        data_json: JSON.stringify({
+          link: this.props.linkToLessonPlan,
+          section_id: this.props.sectionId,
+          script_id: this.props.scriptId
+        })
+      },
+      {includeUserId: true}
+    );
   };
 
   render() {
@@ -64,3 +67,10 @@ export default class ProgressBoxForLessonNumber extends Component {
     }
   }
 }
+
+export const UnconnectedProgressBoxForLessonNumber = ProgressBoxForLessonNumber;
+
+export default connect(state => ({
+  sectionId: state.sectionData.section.id,
+  scriptId: state.scriptSelection.scriptId
+}))(ProgressBoxForLessonNumber);
