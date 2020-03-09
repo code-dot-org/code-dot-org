@@ -1011,7 +1011,8 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       $(sendToPhone).show();
 
       var qrCode = sharingDiv.querySelector('#send-to-phone-qr-code');
-      ReactDOM.render(<QRCode value={options.shareLink} size={90} />, qrCode);
+      var annotatedShareLink = options.shareLink + '?qr=true';
+      ReactDOM.render(<QRCode value={annotatedShareLink} size={90} />, qrCode);
 
       if (sharingPhone && options.sendToPhone) {
         var phone = $(sharingDiv.querySelector('#phone'));
