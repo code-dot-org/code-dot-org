@@ -25,7 +25,7 @@ class ProgressBoxForLessonNumber extends Component {
     firehoseClient.putRecord(
       {
         study: 'teacher_dashboard_actions',
-        study_group: 'progress',
+        study_group: 'standards',
         event: 'click_lesson_progress_box',
         data_json: JSON.stringify({
           link: this.props.linkToLessonPlan,
