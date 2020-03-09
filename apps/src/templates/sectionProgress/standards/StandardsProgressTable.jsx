@@ -27,7 +27,8 @@ const styles = {
     textAlign: 'center'
   },
   descriptionCell: {
-    maxWidth: 470
+    maxWidth: 470,
+    padding: '10px 10px 0px 10px'
   }
 };
 
