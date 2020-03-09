@@ -30,10 +30,6 @@ import {stageIsAllAssessment} from '@cdo/apps/templates/progress/progressHelpers
 import firehoseClient from '../../lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import ProgressViewHeader from './ProgressViewHeader';
-import {
-  fetchStandardsCoveredForScript,
-  fetchStudentLevelScores
-} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 
 const styles = {
   heading: {
@@ -82,20 +78,11 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
-    showStandardsIntroDialog: PropTypes.bool,
-    fetchStandardsCoveredForScript: PropTypes.func.isRequired,
-    fetchStudentLevelScores: PropTypes.func.isRequired
+    showStandardsIntroDialog: PropTypes.bool
   };
 
   componentDidMount() {
-    this.props.loadScript(this.props.scriptId);
-    if (experiments.isEnabled(experiments.STANDARDS_REPORT)) {
-      this.props.fetchStandardsCoveredForScript(this.props.scriptId);
-      this.props.fetchStudentLevelScores(
-        this.props.scriptId,
-        this.props.section.id
-      );
-    }
+    this.props.loadScript(this.props.scriptId, this.props.section.id);
   }
 
   componentDidUpdate() {
@@ -111,12 +98,7 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    this.props.loadScript(scriptId);
-    this.props.fetchStandardsCoveredForScript(scriptId);
-    this.props.fetchStudentLevelScores(
-      this.props.scriptId,
-      this.props.section.id
-    );
+    this.props.loadScript(scriptId, this.props.section.id);
 
     firehoseClient.putRecord(
       {
@@ -278,8 +260,8 @@ export default connect(
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setScriptId(scriptId) {
       dispatch(setScriptId(scriptId));
@@ -289,12 +271,6 @@ export default connect(
     },
     setCurrentView(viewType) {
       dispatch(setCurrentView(viewType));
-    },
-    fetchStandardsCoveredForScript(scriptId) {
-      dispatch(fetchStandardsCoveredForScript(scriptId));
-    },
-    fetchStudentLevelScores(scriptId, sectionId) {
-      dispatch(fetchStudentLevelScores(scriptId, sectionId));
     }
   })
 )(SectionProgress);
