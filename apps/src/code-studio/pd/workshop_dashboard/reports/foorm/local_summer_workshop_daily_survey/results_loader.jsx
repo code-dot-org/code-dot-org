@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import $ from 'jquery';
-import Spinner from '../../../components/spinner';
+import Spinner from '../../../../components/spinner';
 import Results from './results';
 import color from '@cdo/apps/util/color';
 
@@ -32,9 +32,9 @@ export class ResultsLoader extends React.Component {
   }
 
   load() {
-    const url = `/api/v1/pd/foorm/workshops/${
+    const url = `/api/v1/pd/workshops/${
       this.props.params['workshopId']
-    }/generic_survey_report`;
+    }/foorm/generic_survey_report`;
 
     this.loadRequest = $.ajax({
       method: 'GET',
@@ -45,9 +45,9 @@ export class ResultsLoader extends React.Component {
         this.setState({
           loading: false,
           questions: data['questions'],
-          answers: data['answers']
-          // sessions: Object.keys(data['this_workshop']),
-          // courseName: data['course_name'],
+          answers: data['this_workshop'],
+          sessions: Object.keys(data['this_workshop']),
+          courseName: data['course_name']
           // workshopRollups: data['workshop_rollups'],
           // facilitatorRollups: data['facilitator_rollups']
         });

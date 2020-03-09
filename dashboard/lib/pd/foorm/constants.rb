@@ -17,8 +17,8 @@ module Pd::Foorm
 
     ANSWER_TYPES = [
       ANSWER_TEXT = 'text'.freeze,
-      ANSWER_SINGLE_SELECT = 'select'.freeze,
-      ANSWER_MULTI_SELECT = 'multiselect'.freeze,
+      ANSWER_SINGLE_SELECT = 'singleSelect'.freeze,
+      ANSWER_MULTI_SELECT = 'multiSelect'.freeze,
       ANSWER_MATRIX = 'matrix'.freeze,
       ANSWER_RATING = 'rating'.freeze,
       # No answer, just question metadata, e.g. matrix heading
