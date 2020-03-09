@@ -18,6 +18,8 @@ ga:
     hoc_dance_congrats:
       1:
         text: 'An Uair Chódála | Cóisir Dhamhsa: Tosaímis an chóisir seo!'
+      5:
+        text: Nó comórtas damhsa le cairde?
     lesson_planning:
       2:
         text: Bíonn réamhchléachtadh, gníomhaíochtaí, agus achoimrí i gceist le gach
@@ -54,3 +56,5 @@ ga:
     hoc_dance_congrats_2019:
       1:
         text: 'An Uair Chódála | Cóisir Dhamhsa: Tosaímis an chóisir seo!'
+      5:
+        text: Nó comórtas damhsa le cairde?

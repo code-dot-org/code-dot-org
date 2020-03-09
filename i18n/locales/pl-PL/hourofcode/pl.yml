@@ -89,7 +89,7 @@ pl:
   ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
   activity: Aktywność
   name: Name
-  description: Description
+  description: Opis
   audience: Audience
   ai_resource_header: Nauczaj i Ucz się o AI
   ai_resource_minecraft: Minecraft AI for Good
@@ -111,7 +111,7 @@ pl:
   ai_resource_cognimates: Cognimates
   ai_resource_cognimates_desc: An AI education platform for building games, programming
     robots and training.
-  ai_audience_k12: K-12 (Reading required)
+  ai_audience_k12: K-12 (Wymaga czytania)
   ai_audience_hs: High school
   ai_activity_header: Activities Powered by AI and ML
   ai_activity_seeing_ai: Seeing AI
@@ -120,8 +120,8 @@ pl:
   ai_activity_quick_draw: Quick, Draw!
   ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
   ai_activity_teachable: Teachable Machine
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
+  ai_activity_teachable_desc: Naucz komputer rozpoznawać twoje własne obrazy, dźwięki
+    oraz pozy.
   ai_activity_experiments: AI Experiments with Google
   ai_activity_experiments_desc: Start exploring machine learning through pictures,
     drawings, language, music, and more.
