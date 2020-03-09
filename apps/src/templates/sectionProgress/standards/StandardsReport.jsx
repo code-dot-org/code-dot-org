@@ -27,7 +27,6 @@ import StandardsReportCurrentCourseInfo from './StandardsReportCurrentCourseInfo
 import StandardsReportHeader from './StandardsReportHeader';
 import color from '@cdo/apps/util/color';
 import _ from 'lodash';
-import {getStandardsCoveredForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import {loadScript} from '../sectionProgressRedux';
 import PrintReportButton from './PrintReportButton';
 import {cstaStandardsURL} from './standardsConstants';
@@ -75,7 +74,6 @@ class StandardsReport extends Component {
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number,
-    getStandardsCoveredForScript: PropTypes.func.isRequired,
     setTeacherCommentForReport: PropTypes.func.isRequired,
     setScriptId: PropTypes.func.isRequired,
     lessonsByStandard: PropTypes.object
@@ -88,8 +86,7 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    this.props.loadScript(scriptIdFromTD);
-    this.props.getStandardsCoveredForScript(scriptIdFromTD);
+    this.props.loadScript(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
@@ -227,11 +224,8 @@ export default connect(
     lessonsByStandard: lessonsByStandard(state)
   }),
   dispatch => ({
-    loadScript(scriptId) {
-      dispatch(loadScript(scriptId));
-    },
-    getStandardsCoveredForScript(scriptId) {
-      dispatch(getStandardsCoveredForScript(scriptId));
+    loadScript(scriptId, sectionId) {
+      dispatch(loadScript(scriptId, sectionId));
     },
     setTeacherCommentForReport(comment) {
       dispatch(setTeacherCommentForReport(comment));

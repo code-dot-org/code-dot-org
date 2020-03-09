@@ -27,7 +27,8 @@ const styles = {
     textAlign: 'center'
   },
   descriptionCell: {
-    maxWidth: 470
+    maxWidth: 470,
+    padding: '10px 10px 0px 10px'
   }
 };
 
@@ -153,7 +154,7 @@ class StandardsProgressTable extends Component {
     return dataColumns;
   };
 
-  getNumLessonsCompleted = (standard, index) => {
+  getNumLessonsCompletedForStandard = (standard, index) => {
     let count = 0;
     if (this.props.lessonsByStandard[standard.id]) {
       this.props.lessonsByStandard[standard.id].forEach(lesson => {
@@ -171,7 +172,7 @@ class StandardsProgressTable extends Component {
     const rowData = standards.map((standard, index) => {
       return {
         ...standard,
-        numCompleted: this.getNumLessonsCompleted(standard, index),
+        numCompleted: this.getNumLessonsCompletedForStandard(standard, index),
         lessonsForStandardStatus: this.props.lessonsByStandard[standard.id]
           ? this.props.lessonsByStandard[standard.id]
           : []
