@@ -908,7 +908,7 @@ module Pd::Application
       assert_nil application.scholarship_status
 
       application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_EIR)
-      application.valid?
+      assert application.valid?
     end
 
     test 'course-specific scholarship statuses invalid for CSD application' do
