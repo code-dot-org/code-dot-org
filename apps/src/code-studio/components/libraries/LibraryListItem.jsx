@@ -83,8 +83,7 @@ const styles = {
 export class LibraryListItem extends React.Component {
   static propTypes = {
     library: PropTypes.object.isRequired,
-    // TODO: RENAME TO onUpdate
-    onRefresh: PropTypes.func,
+    onUpdate: PropTypes.func,
     onRemove: PropTypes.func,
     onAdd: PropTypes.func,
     onViewCode: PropTypes.func
@@ -130,11 +129,11 @@ export class LibraryListItem extends React.Component {
               </button>
             </Tooltip>
           )}
-          {this.props.onRefresh && (
+          {this.props.onUpdate && (
             <button
               type="button"
               key={'update-' + library.id}
-              onClick={() => this.props.onRefresh(library.name)}
+              onClick={() => this.props.onUpdate(library.name)}
               style={[styles.actionBtn, styles.updateBtn]}
             >
               <FontAwesome icon="refresh" style={{padding: '0 1px'}} />

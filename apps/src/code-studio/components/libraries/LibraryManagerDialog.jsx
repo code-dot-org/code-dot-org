@@ -182,7 +182,7 @@ export class LibraryManagerDialog extends React.Component {
         <LibraryListItem
           key={library.name}
           library={library}
-          onRefresh={undefined}
+          onUpdate={undefined}
           onRemove={this.removeLibrary}
           onViewCode={() => this.viewCode(library)}
         />
