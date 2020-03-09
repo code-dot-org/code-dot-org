@@ -82,7 +82,7 @@ const teacherSections = {
   }
 };
 
-const standardsData = [
+export const standardsData = [
   {
     id: 16,
     organization: 'CSTA',
