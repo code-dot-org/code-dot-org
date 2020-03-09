@@ -89,12 +89,24 @@ export function getUnpluggedLessonsForScript(state) {
     });
   }
 
+  unpluggedStages.forEach(stage => {
+    const lessonCompletionStatus = getLessonCompletionStatus(state, stage.id);
+    const selected = _.map(
+      state.sectionStandardsProgress.selectedLessons,
+      'id'
+    ).includes(stage.id);
+    stage['selected'] = selected;
+    stage['completed'] = lessonCompletionStatus.completed;
+  });
+
   function filterStageData(stage) {
     return {
       id: stage.id,
       name: stage.name,
       number: stage.position,
-      url: stage.lesson_plan_html_url
+      url: stage.lesson_plan_html_url,
+      completed: stage.completed,
+      selected: stage.selected
     };
   }
 
