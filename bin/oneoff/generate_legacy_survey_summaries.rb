@@ -131,15 +131,17 @@ def snapshot_summer_workshops_from_jotform(course)
     facilitator_report = {}
 
     unless all_their_completed_workshops.empty?
-      rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, false)
+      # Do workshop rollups, then facilitator rollups.
+      [false, true].each do |facilitator_rollups|
+        rollup = report_facilitator_rollup(id, all_their_completed_workshops.first, facilitator_rollups)
 
-      key = "facilitator_#{id}_all_ws"
-      rollup[:rollups][key][:averages].each do |string_key, average|
-        # We have found a string_key and an average, now find out the actual string for the key
-        question_text = rollup[:questions][string_key]
-        unless question_text.nil?
-          question_text.gsub!("{facilitatorName}", f.name)
-          facilitator_report[question_text] = average
+        key = "facilitator_#{id}_all_ws"
+        rollup[:rollups][key][:averages].each do |string_key, average|
+          # We have found a string_key and an average, now find out the actual string for the key
+          question_text = rollup[:questions][string_key]
+          unless question_text.nil?
+            facilitator_report[question_text] = average
+          end
         end
       end
     end
