@@ -1140,6 +1140,15 @@ de-DE:
         Textzeichen abbilden, um textbasierte Informationen hin und her zu senden.
         Mit einem textbasierten Protokoll kannst du alle Arten von Informationen einfach
         darstellen und kommunizieren. '
+      New Gumball Project: Erstelle alles, was dir gefällt und teile es!
+      New Ice Age Project: Erstelle alles, was dir gefällt und teile es!
+      New Infinity Project: Erstelle alles, was dir gefällt und teile es!
+      New Minecraft Hero Project: "**Freies Spiel:**  Jetzt kannst du auf eigene Faust
+        losziehen!"
+      New Sports Project: "Jetzt bist Du an der Reihe: Erstelle dein eigenes Spiel.
+        Du kannst alle Regeln verändern und unterschiedliche Sportarten mischen.\\\r\n\\\r
+        \nWenn Du fertig bist, klicke auf \"Fertig\" und lass' Deine Freunde das Spiel
+        auf ihren Smartphones ausprobieren."
       Overworld Avoid Monsters: In einen Creeper hinein zu laufen, ist eine schlechte
         Idee. Bewege dich vorsichtig an den Creeper vorbei und erreiche dein sicheres
         Zuhause.
@@ -2082,11 +2091,11 @@ de-DE:
         helfen kannst, die Schätze einzusammeln.
       courseC_collector_prog1_2019: Spiel mit den Blöcken und schau, ob du Laurel
         helfen kannst, die Schätze einzusammeln.
-      courseC_collector_prog2: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
-      courseC_collector_prog2_2018: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2_2018: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
-      courseC_collector_prog2_2019: Bewegen Laurel zum Schatz und benutze dann 'sammle'
+      courseC_collector_prog2_2019: Bewege Laurel zum Schatz und benutze dann 'sammle'
         um ihn aufzuheben.
       courseC_collector_prog3: Ordne diese Blöcke so an, dass der Schatz eingesammelt
         wird, und löse damit die Aufgabe.
@@ -2123,12 +2132,12 @@ de-DE:
       courseC_collector_prog9: _"Lass uns alle Schätze sammeln!"_
       courseC_collector_prog9_2018: _"Lass uns alle Schätze sammeln!"_
       courseC_collector_prog9_2019: _"Lass uns alle Schätze sammeln!"_
-      courseC_collector_prog_challenge1: Schau genau! Kannst du alle **10** Schätze
+      courseC_collector_prog_challenge1: Schau genau hin! Kannst du alle **10** Schätze
         einsammeln?
-      courseC_collector_prog_challenge1_2018: Schau genau! Kannst du alle **10** Schätze
-        einsammeln?
-      courseC_collector_prog_challenge1_2019: Schau genau! Kannst du alle **10** Schätze
-        einsammeln?
+      courseC_collector_prog_challenge1_2018: Schau genau hin! Kannst du alle **10**
+        Schätze einsammeln?
+      courseC_collector_prog_challenge1_2019: Schau genau hin! Kannst du alle **10**
+        Schätze einsammeln?
       courseC_collector_prog_challenge2: Sammle mindesten **10** Schätze ein um diese
         Herausforderung zu beenden!
       courseC_collector_prog_challenge2_2018: Sammle mindesten **10** Schätze ein
