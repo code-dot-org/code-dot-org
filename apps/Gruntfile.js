@@ -585,8 +585,10 @@ describe('entry tests', () => {
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
-    'datasets/show_manifest':
-      './src/sites/studio/pages/datasets/show_manifest.js',
+    'datasets/show': './src/sites/studio/pages/datasets/show.js',
+    'datasets/index': './src/sites/studio/pages/datasets/index.js',
+    'datasets/edit_manifest':
+      './src/sites/studio/pages/datasets/edit_manifest.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_all': './src/sites/studio/pages/levels/editors/_all.js',
     'levels/editors/_applab':
@@ -680,6 +682,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
     'pd/fit_weekend_registration/new':
       './src/sites/studio/pages/pd/fit_weekend_registration/new.js',
+    'pd/workshop_daily_survey/new_general_foorm':
+      './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
     'pd/workshop_enrollment/new':
       './src/sites/studio/pages/pd/workshop_enrollment/new.js',
     'pd/workshop_enrollment/cancel':

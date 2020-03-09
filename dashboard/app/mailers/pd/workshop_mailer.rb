@@ -206,7 +206,7 @@ class Pd::WorkshopMailer < ActionMailer::Base
 
     mail content_type: content_type,
       from: from_survey,
-      subject: 'How was your Code.org workshop?',
+      subject: "Help us improve Code.org #{@workshop.course} workshops!",
       to: email_address(@enrollment.full_name, @enrollment.email)
   end
 
@@ -274,9 +274,12 @@ class Pd::WorkshopMailer < ActionMailer::Base
       "Your upcoming #{workshop.course_name} workshop"
     elsif workshop.local_summer?
       if @is_first_pre_survey_email
-        "Your upcoming #{workshop.course} workshop and next steps"
-      else
+        # This is always sent once, usually 10-days before, but can be closer
+        # if they sign up less than 10 days before.
         "See you soon for your upcoming #{workshop.course} workshop!"
+      else
+        # This is sent for the first enrollment, and also for the 3-day reminder.
+        "You’re enrolled! View details for your upcoming #{workshop.course} workshop"
       end
     else
       'Your upcoming Code.org workshop and next steps'

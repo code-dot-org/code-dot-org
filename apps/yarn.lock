@@ -1608,10 +1608,10 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.11":
-  version "1.3.11"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.11.tgz#9417863d62420371173015300c2a3917a780e67a"
-  integrity sha512-Pu9GFNzzRJKUKSLIBhvuY3+GHZRxMmFxcF2ZKdJzZnAImHmxdpFblrJcp7tEWohEMmoKFl92iKo0grNrdlNvug==
+"@code-dot-org/js-interpreter@1.3.12":
+  version "1.3.12"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.12.tgz#0f4c8d4a181cfb2602333967425e5b052ae3b636"
+  integrity sha512-oOq7EBIEPrbk5pd9QWn+pW1YHkmBn39Wifh9xNtInPWOYYIgxrye//ndZcUO09jN3CHPssWCCJ3AOVH1+oZQMw==
   dependencies:
     yargs "^7.0.1"
 
@@ -15209,6 +15209,11 @@ supports-color@^6.1.0:
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-6.1.0.tgz#0764abc69c63d5ac842dd4867e8d025e880df8f3"
   dependencies:
     has-flag "^3.0.0"
+
+survey-react@^1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/survey-react/-/survey-react-1.5.8.tgz#acd34b1eb234ea3f38ee12a3fe5c18495bfbd389"
+  integrity sha512-BgjTiPnzs7Tlp8D0VZZ2Rz+fjyQ3uKMkAJQWtY6OiOXtfeQvHlIiUrCd+CYaUjslzXugTgDK+qLWfFuqjUzQAg==
 
 svg-tag-names@^1.1.0:
   version "1.1.1"

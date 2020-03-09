@@ -60,6 +60,21 @@ cp_in apps/node_modules/@code-dot-org/ml-activities/i18n/oceans.json i18n/locale
 orig_dir=pegasus/cache/i18n
 loc_dir=i18n/locales/source/pegasus
 mkdir -p $loc_dir
-
 perl -i ./bin/i18n-codeorg/lib/fix-ruby-yml.pl $orig_dir/en-US.yml
 cp_in $orig_dir/en-US.yml $loc_dir/mobile.yml
+
+### Markdown
+mkdir -p i18n/locales/source/markdown
+loc_dir=i18n/locales/source/markdown/public/international/
+mkdir -p $loc_dir
+orig_file=pegasus/sites.v3/code.org/public/international/about.md.partial
+loc_file=i18n/locales/source/markdown/public/international/about.md
+cp_in $orig_file $loc_file
+loc_dir=i18n/locales/source/markdown/public/educate/curriculum/
+mkdir -p $loc_dir
+orig_file=pegasus/sites.v3/code.org/public/educate/curriculum/csf-transition-guide.md
+cp_in $orig_file $loc_dir
+loc_dir=i18n/locales/source/markdown/public/
+mkdir -p $loc_dir
+orig_file=pegasus/sites.v3/code.org/public/csforgood.md
+cp_in $orig_file $loc_dir

@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#import-standards').click(function(e) {
     var script = $('#select option:selected').val();
     var url =
-      'http://www.codecurricula.com/metadata/' + script + '/standards.json';
+      'https://curriculum.code.org/metadata/' + script + '/standards.json';
     $.ajax({
       url: url,
       type: 'get'

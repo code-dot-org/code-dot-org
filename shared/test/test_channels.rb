@@ -99,6 +99,35 @@ class ChannelsTest < Minitest::Test
     Timecop.return
   end
 
+  def test_update_channel_and_publish_library
+    # Create channel
+    post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_nil result['libraryPublishedAt']
+
+    # Update channel where publishLibrary is false
+    post "/v3/channels/#{channel_id}", {publishLibrary: false}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_nil result['libraryPublishedAt']
+
+    # Update channel where publishLibrary is true
+    post "/v3/channels/#{channel_id}", {publishLibrary: true}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    assert last_response.successful?
+
+    get "/v3/channels/#{channel_id}"
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    refute_nil result['libraryPublishedAt']
+  end
+
   def test_delete_channel
     post '/v3/channels', {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
