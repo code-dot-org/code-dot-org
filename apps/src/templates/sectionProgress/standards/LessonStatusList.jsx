@@ -44,15 +44,17 @@ class LessonStatusList extends Component {
 
 const ComplexLessonComponent = function({style, lesson}) {
   return (
-    <a href={lesson.url} target={'_blank'} style={styles.lessonListItem}>
+    <div style={styles.lessonListItem}>
       <div>
         <ProgressBoxForLessonNumber
           completed={false}
           lessonNumber={lesson.number}
         />
       </div>
-      <span style={{paddingLeft: 10}}>{lesson.name}</span>
-    </a>
+      <a style={{paddingLeft: 10}} href={lesson.url} target={'_blank'}>
+        {lesson.name}
+      </a>
+    </div>
   );
 };
 ComplexLessonComponent.propTypes = {
