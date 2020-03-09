@@ -2034,3 +2034,7 @@ th:
               name: ฉากมหาสมุทรกับลูป
             Loops in Artist:
               name: ลูปกับศิลปิน
+        csp3-2020:
+          stages:
+            Debugging:
+              name: การแก้ไขจุดบกพร่อง
