@@ -30,7 +30,8 @@ class ProgressBoxForLessonNumber extends Component {
         data_json: JSON.stringify({
           link: this.props.linkToLessonPlan,
           section_id: this.props.sectionId,
-          script_id: this.props.scriptId
+          script_id: this.props.scriptId,
+          in_report: window.location.pathname.includes('standards_report')
         })
       },
       {includeUserId: true}
