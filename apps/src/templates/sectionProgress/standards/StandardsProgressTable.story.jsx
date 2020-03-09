@@ -1,6 +1,6 @@
 import React from 'react';
 import {UnconnectedStandardsProgressTable as StandardsProgressTable} from './StandardsProgressTable';
-import {fakeStandards, lessonCompletedByStandard} from './standardsTestHelpers';
+import {standardsData, lessonCompletedByStandard} from './standardsTestHelpers';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
@@ -25,7 +25,7 @@ export default storybook => {
         story: () => (
           <Provider store={store}>
             <StandardsProgressTable
-              standards={fakeStandards}
+              standards={standardsData}
               lessonsByStandard={lessonCompletedByStandard}
             />
           </Provider>
