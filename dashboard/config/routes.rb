@@ -430,10 +430,9 @@ Dashboard::Application.routes.draw do
         get :experiment_survey_report, action: :experiment_survey_report, controller: 'workshop_survey_report'
         get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
-        resources :foorm do
-          get :generic_survey_report, action: :generic_survey_report, controller: 'workshop_survey_foorm_report_controller'
-          post :workshop_survey_submission, action: :create, controller: 'workshop_survey_foorm_submissions_controller'
-        end
+
+        get 'foorm/generic_survey_report', action: :generic_survey_report, controller: 'workshop_survey_foorm_report_controller'
+        post 'foorm/workshop_survey_submission', action: :create, controller: 'workshop_survey_foorm_submissions_controller'
       end
       resources :workshop_summary_report, only: :index
       resources :teacher_attendance_report, only: :index

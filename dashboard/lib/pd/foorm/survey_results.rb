@@ -8,11 +8,17 @@ module Pd::Foorm
     def self.get_summary_for_workshop(workshop_id)
       return unless workshop_id
 
+      ws_data = Pd::Workshop.find(workshop_id)
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_id)
 
       parsed_forms = Pd::Foorm::FoormParser.parse_forms(forms)
-      summarized_answers = summarize_answers(form_submissions, parsed_forms, ws_submissions)
-      [parsed_forms, summarized_answers]
+      summarized_answers = summarize_answers_by_survey(form_submissions, parsed_forms, ws_submissions)
+
+      {
+        course_name: ws_data.course,
+        questions: parsed_forms,
+        this_workshop: summarized_answers
+      }
     end
 
     def self.get_rollup_for_workshop(workshop_id)
@@ -31,22 +37,22 @@ module Pd::Foorm
     # Where the value for a question name is an array answers for a text question or a summary of answer choices for select/matrix
     # questions. If question is a matrix responses will be nested.
     # num_respondents/answers within the hash is used only for multi-select
-    def self.summarize_answers(foorm_submissions, parsed_forms, ws_submissions)
+    def self.summarize_answers_by_survey(foorm_submissions, parsed_forms, ws_submissions)
       workshop_summary = {}
       foorm_submissions.each do |submission|
         form_key = get_form_key(submission.form_name, submission.form_version)
         survey_key = get_survey_key(ws_submissions.where(foorm_submission_id: submission.id).first)
         next unless parsed_forms[form_key] && parsed_forms[form_key][:questions]
         form_questions = parsed_forms[form_key][:questions]
-        workshop_summary[form_key] ||= {}
-        current_workshop_summary = workshop_summary[form_key][survey_key] || {num_respondents: 0}
-        current_workshop_summary[:num_respondents] += 1
-        workshop_summary[form_key][survey_key] = get_single_submission_summary(submission, current_workshop_summary, form_questions)
+        workshop_summary[survey_key] ||= {response_count: 0}
+        workshop_summary[survey_key][:response_count] += 1
+        current_workshop_summary = workshop_summary[survey_key][form_key] || {}
+        workshop_summary[survey_key][form_key] = add_single_submission_to_summary(submission, current_workshop_summary, form_questions)
       end
       workshop_summary
     end
 
-    def self.get_single_submission_summary(submission, current_workshop_summary, form_questions)
+    def self.add_single_submission_to_summary(submission, current_workshop_summary, form_questions)
       answers = JSON.parse(submission.answers)
       answers.each do |name, answer|
         # parse answer based on question type (which will tell us answer format)
