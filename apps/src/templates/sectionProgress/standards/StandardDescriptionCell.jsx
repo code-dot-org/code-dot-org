@@ -17,6 +17,14 @@ const styles = {
     display: 'flex',
     flexDirection: 'row'
   },
+  lessonBoxes: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  lessonBox: {
+    marginBottom: 10
+  },
   lessonsAreaTitle: {
     marginRight: 10,
     width: '30%'
@@ -40,7 +48,7 @@ class StandardDescriptionCell extends Component {
     if (this.props.lessonsForStandardStatus) {
       return this.props.lessonsForStandardStatus.map((lesson, index) => {
         return (
-          <span key={lesson.name}>
+          <span key={lesson.name} style={styles.lessonBox}>
             {!this.props.isViewingReport && (
               <ReactTooltip
                 id={lesson.name}
@@ -95,7 +103,7 @@ class StandardDescriptionCell extends Component {
           <span style={styles.lessonsAreaTitle}>
             {i18n.availableLessons({numLessons: this.getNumberLessons()})}
           </span>
-          {this.getLessonBoxes()}
+          <div style={styles.lessonBoxes}>{this.getLessonBoxes()}</div>
         </div>
       </div>
     );
