@@ -889,7 +889,7 @@ module Pd::Application
       end
     end
 
-    test 'test update scholarship status' do
+    test 'update scholarship status' do
       application = create :pd_teacher2021_application
       assert_nil application.scholarship_status
 
@@ -901,6 +901,18 @@ module Pd::Application
 
       application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_OTHER)
       assert_equal Pd::ScholarshipInfoConstants::YES_OTHER, application.scholarship_status
+
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_EIR)
+      assert_equal Pd::ScholarshipInfoConstants::YES_EIR, application.scholarship_status
+    end
+
+    test 'course-specific scholarship statuses' do
+      application = create :pd_teacher2021_application, course: 'csd'
+      assert_nil application.scholarship_status
+
+      # This application status is only valid for CSP applications
+      application.update_scholarship_status(Pd::ScholarshipInfoConstants::YES_EIR)
+      assert_nil application.scholarship_status
     end
 
     test 'associated models cache prefetch' do
