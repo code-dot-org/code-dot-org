@@ -19,12 +19,13 @@ const styles = {
 
 class LessonStatusList extends Component {
   static propTypes = {
+    dialog: PropTypes.string,
+    // redux
     unpluggedLessonList: PropTypes.array,
     setSelectedLessons: PropTypes.func.isRequired,
     selectedLessons: PropTypes.array.isRequired,
     sectionId: PropTypes.number,
-    scriptId: PropTypes.number,
-    dialog: PropTypes.string
+    scriptId: PropTypes.number
   };
 
   componentWillMount() {
