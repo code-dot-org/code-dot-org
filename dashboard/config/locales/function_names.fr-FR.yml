@@ -355,6 +355,20 @@ fr-FR:
       NEW Course 4 Play Lab Params 11:
         jump: sauter
         patrol: patrouiller
+      New Artist Project:
+        draw a star: dessine une étoile
+        draw a circle: dessine un cercle
+        draw a pinwheel: dessiner une girouette
+        draw a triangle: dessine un triangle
+        draw a shape: dessiner une forme
+        draw a house: dessine une maison
+        draw a square: dessine un carré
+      New Minecraft Hero Project:
+        function 1: fonction 1
+        function 2: fonction 2
+      New Play Lab Project:
+        jump: sauter
+        patrol: patrouiller
       Robot Doodle:
         25 pixel square: carré de 25 pixels
         draw head: dessiner la tête
@@ -635,7 +649,6 @@ fr-FR:
         draw a house: dessine une maison
       courseE_artist_functions7_2019:
         draw a window: dessiner une fenêtre
-        draw a house: dessine une maison
       courseE_artist_functions8:
         do something: faire quelque chose
         draw a line of squares: dessiner une ligne de carrés
