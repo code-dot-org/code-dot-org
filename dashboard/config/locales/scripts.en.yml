@@ -15292,8 +15292,8 @@ en:
               name: 'Lesson 14: Assessment Day'
           title: CSP Unit 1 - Digital Information ('20-'21)
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: Explore the challenges and impacts of representing information about the world around you in bits.
+          description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
         csp2-2020:
           stages:
             new stage:
@@ -15471,4 +15471,4 @@ en:
           title: CS Principles Curriculum Training for Facilitators
           description_audience: ''
           description_short: ''
-          description: ''
+          description: Welcome message here
