@@ -1,5 +1,5 @@
 - content_for(:head) do
-  - # only add a single script, even if this view is included multiple times in the page
+  -# only add a single script, even if this view is included multiple times in the page
   - js_path = webpack_asset_path('js/levels/_teacher_markdown.js')
   - unless content_for(:head) && content_for(:head).include?(js_path)
     %script{src: js_path}
